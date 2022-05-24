@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:vue/essential", "standard"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "globals": {
+    "aegis": "readonly",
+    "NProgress": "readonly"
+  },
+  "plugins": ["vue"],
+  "rules": {
+    "indent": ["error", 2],
+    "vue/multi-word-component-names": 0
+  }
+}
