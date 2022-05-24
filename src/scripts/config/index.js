@@ -1,0 +1,154 @@
+const getVueApiDocs = require('../docs/vue');
+const { BASE_PATH_URL, VUE_TITILE_MAP, TNode, TYPES_COMBINE_MAP, COMPONENT_API_MD_MAP } = require('./const');
+const path = require('path');
+
+/**
+ * apiBasePath 表示 API 文档的输出路径
+ * apiEnglishBasePath: '',
+ * apiEnglishBasePath 表示 API 英文文档输出路径
+ * tsBasePath 表示 API 的 TS 类型定义文件输出路径
+ * propsBasePath 表示 props 文件的输出路径
+ * tsBaseFileName 值为 USE_FILE_NAME 表示文件命名为 TdButtonProps.ts，USE_TYPE_NAME 表示文件命名为 type.ts，否则表示文件命名为 index.ts
+ * globalPath 表示各框架全局变量文件输出路径
+ * globalTplPath 表示各框架特有全局变量定义文件
+ * unitBasePath 表示单元测试文件输出路径
+ * getDocs 表示框架获取 API 文档的方法
+ * titleMap 表示 API 文档的表头和内容字段
+ * commonTypePath 用于 API 文档，全局通用的 TS 类型定义位置，不同框架路径不同，用于文档描述
+ * componentPath 用于 API 文档，组件路径地址，不同的框架组件类型定义路径不同
+ * commonRelativePath 用于 API 类型定义文件中。type 文件位置相对于 通用类型文件位置(common/global) 的路径
+ * componentRelativiePath 用于 API 类型定义文件中。types 文件位置相对于组件文件位置的路径（某些组件的 API 类型包含另一个组件的 TS 类型）
+ *
+ * vscodePath 输出 API 文档，用于 vscode 提示插件（项目：vscode-tdesign）
+ */
+const FRAMEWORK_MAP = {
+  'Vue(PC)': {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-vue/examples`,
+    apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue/examples`,
+    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue/examples/$compName/usage`,
+    tsBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-vue/src/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/vue.tpl'),
+    unitBasePath: '',
+    commonTypePath: 'https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts',
+    componentPath: 'https://github.com/Tencent/tdesign-vue/tree/develop/src/',
+    commonRelativePath: '../common',
+    componentRelativiePath: '../',
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue`,
+    TNode,
+  },
+  'VueNext(PC)': {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/examples`,
+    apiEnglishBasePath: '',
+    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue-next/examples/$compName/usage`,
+    tsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-vue-next/src/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/vue3.tpl'),
+    unitBasePath: '',
+    commonTypePath: 'https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts',
+    componentPath: 'https://github.com/Tencent/tdesign-vue-next/tree/develop/src/',
+    commonRelativePath: '../common',
+    componentRelativiePath: '../',
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue`,
+    TNode,
+  },
+  'React(PC)': {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-react/src`,
+    apiEnglishBasePath: '',
+    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-react/src/$compName/_usage`,
+    tsBasePath: `${BASE_PATH_URL}/tdesign-react/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-react/src`,
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-react/src/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/react.tpl'),
+    unitBasePath: '',
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+    commonTypePath: 'https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts',
+    componentPath: 'https://github.com/Tencent/tdesign-react/blob/develop/src/',
+    commonRelativePath: '../common',
+    componentRelativiePath: '../',
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
+    TNode,
+  },
+  'Angular(PC)': {
+    apiBasePath: '',
+    apiEnglishBasePath: '',
+    tsBasePath: '',
+    unitBasePath: '',
+  },
+  'Vue(Mobile)': {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-mobile-vue/src`,
+    apiEnglishBasePath: '',
+    tsBasePath: `${BASE_PATH_URL}/tdesign-mobile-vue/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-mobile-vue/src`,
+    // tsBaseFileName 值为 USE_FILE_NAME 表示文件命名为 TdButtonProps.ts，值为空表示文件命名为 index.ts
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-mobile-vue/src/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/vue3.tpl'),
+    unitBasePath: '',
+    commonTypePath: 'https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts',
+    componentPath: 'https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/',
+    commonRelativePath: '../common',
+    componentRelativiePath: '../',
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/mobile`,
+    TNode,
+  },
+  'React(Mobile)': {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-mobile-react/src`,
+    apiEnglishBasePath: '',
+    tsBasePath: `${BASE_PATH_URL}/tdesign-mobile-react/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-mobile-react/src`,
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-mobile-react/src/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/react.tpl'),
+    unitBasePath: '',
+    commonTypePath: 'https://github.com/TDesignOteam/tdesign-mobile-react/blob/develop/src/common.ts',
+    componentPath: 'https://github.com/TDesignOteam/tdesign-mobile-react/tree/develop/src/',
+    commonRelativePath: '../common',
+    componentRelativiePath: '../',
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/mobile`,
+    TNode,
+  },
+  'Angular(Mobile)': {
+    apiBasePath: '',
+    apiEnglishBasePath: '',
+    tsBasePath: '',
+    unitBasePath: '',
+  },
+  Miniprogram: {
+    apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
+    apiEnglishBasePath: '',
+    tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
+    propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
+    tsBaseFileName: 'USE_TYPE_NAME',
+    globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/src/common/common.ts`,
+    globalTplPath: path.resolve(__dirname, '../types/global/miniprogram.tpl'),
+    unitBasePath: '',
+    commonTypePath: 'https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts',
+    componentPath: 'https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/',
+    commonRelativePath: '../common/common',
+    componentRelativiePath: '../',
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/miniprogram`,
+    getDocs: getVueApiDocs,
+    titleMap: VUE_TITILE_MAP,
+  },
+};
+
+module.exports = {
+  FRAMEWORK_MAP,
+  COMPONENT_API_MD_MAP,
+  TYPES_COMBINE_MAP,
+};

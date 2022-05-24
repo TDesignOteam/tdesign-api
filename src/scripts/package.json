@@ -1,0 +1,24 @@
+{
+  "name": "tdesign-generate-api",
+  "version": "1.0.4",
+  "description": "generate props/ts/api.md for API",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "api:download": "node ./download.js",
+    "api:docs": "npm run api:download && node ./index.js",
+    "api:vscode": "npm run api:download && node ./vscode"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "dayjs": "^1.9.7",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.20",
+    "prettier": "^2.6.2",
+    "shelljs": "^0.8.4"
+  }
+}
