@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "a tool for manage API",
   "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
@@ -45,7 +49,7 @@
     "typescript": "^3.9.6"
   },
   "scripts": {
-    "lint": "eslint ./src --max-warnings 0 --ext .ts,.tsx --fix",
+    "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
     "dev": "cross-env NODE_ENV=dev nodemon",
     "watch": "rm -rf dist/* && tsc --w",
     "build": "rm -rf dist/* && tsc",

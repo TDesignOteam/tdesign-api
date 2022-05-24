@@ -1,6 +1,6 @@
 {
-    "watch": ["src"],
+    "watch": ["packages/server"],
     "ext": "ts",
-    "exec": "ts-node -r tsconfig-paths/register src/server/app.ts"
+    "exec": "ts-node -r tsconfig-paths/register packages/server/app.ts"
   }
   

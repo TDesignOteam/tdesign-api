@@ -24,7 +24,7 @@ app.use(cors({
 /** Routes */
 app.use(componentRoutes);
 
-const staticPath = path.resolve('src/frontend/_site');
+const staticPath = path.resolve('packages/frontend/_site');
 
 // 将 vite 打包好的项目目录作为 Koa 静态文件服务的目录
 app.use(serve(staticPath));

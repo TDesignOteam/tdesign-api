@@ -5,7 +5,7 @@
     "dev": "vite",
     "watch": "vite build --watch",
     "build": "vite build",
-    "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./src --fix"
+    "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./packages --fix"
   },
   "dependencies": {
     "axios": "^0.20.0",
