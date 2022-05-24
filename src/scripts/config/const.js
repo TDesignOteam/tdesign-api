@@ -248,12 +248,10 @@ module.exports = {
     '该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC',
     '*/'].join('\n * '),
   TNode: 'TNode',
-  // 这里配置好之后，可以在 API 文档中显示「查看通用类型定义」
+  // 这里配置好后，可以在 API 文档中显示「查看通用类型定义」
   TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType'],
-  // 真实路径
+  // 生成路径
   BASE_PATH_URL: path.resolve(process.cwd(), '../'),
-  // 开发或者测试路径
-  // BASE_PATH_URL: '.',
   VUE_TITILE_MAP,
   COMPONENT_API_MD_MAP,
   TYPES_COMBINE_MAP,

@@ -27,7 +27,6 @@ function download() {
       axios.request({
         method: 'get',
         url: `http://${url}/cmp/map`,
-        // url: 'http://radosgw.open.oa.com/bkicon-default-9/tdesign-web-0.0.2/fonts/iconcool.json',
       }),
       axios.request({
         method: 'get',
