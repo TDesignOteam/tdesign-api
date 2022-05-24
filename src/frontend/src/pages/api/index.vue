@@ -102,7 +102,7 @@ import 'codemirror/theme/base16-dark.css'
 import ApiList from './list.vue'
 import ApiOperation from './operation'
 import Import from './import'
-import { cmpApiInstance } from '../../services/git-helper'
+import { cmpApiInstance } from '../../services/api-server'
 import {
   Select as TSelect,
   Option as TOption,

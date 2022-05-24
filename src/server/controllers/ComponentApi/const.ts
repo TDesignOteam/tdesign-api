@@ -71,7 +71,7 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
   [P_VUE_MOBILE]: 'Vue(Mobile)',
   [P_REACT_MOBILE]: 'React(Mobile)',
   [P_ANGULAR_PC]: 'Angular(PC)',
-  [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
+  // [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
   [P_MINIPROGRAM]: 'Miniprogram',
 };
 

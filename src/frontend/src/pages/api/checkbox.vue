@@ -7,7 +7,6 @@
       @change="onCheckedAllChange"
     >全部</t-checkbox>
     <t-checkbox-group
-      name="city"
       v-model="checkedList"
       :options="options"
       @change="onChange"
@@ -34,7 +33,6 @@ export default {
 
   data () {
     return {
-      // checkedAll: false,
       indeterminate: false,
       checkedList: []
     }
@@ -69,7 +67,6 @@ export default {
       this.checkedList = checked ? this.options.map(e => e.value) : []
     },
     onChange (checkedList) {
-      // console.log(checkedList.length, this.options.length);
       this.indeterminate = !!checkedList.length && !this.checkedAll
     }
   }

@@ -6,7 +6,6 @@ package-lock.json
 lib
 Dockerfile
 dist
-_site
 package
 tmp*
 temp*

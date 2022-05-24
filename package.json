@@ -50,7 +50,7 @@
     "watch": "rm -rf dist/* && tsc --w",
     "build": "rm -rf dist/* && tsc",
     "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
-    "reload": "npm run build && pm2 reload git-helper --parallel 32 --update-env"
+    "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env"
   },
   "author": "TDesign",
   "license": "ISC"

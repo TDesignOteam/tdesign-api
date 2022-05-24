@@ -1,4 +1,4 @@
-import { BaseObject, QueryColumns, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
+import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
 import moment from 'moment';
 import {
   PLATFORM_MAP,
@@ -10,6 +10,7 @@ import {
   API_CATEGORY,
 } from './const';
 import TAPI from '../../services';
+import execScript from '../../services/execute';
 
 function handleSuccess(resolve: Function) {
   return (data: any) => {
@@ -167,10 +168,25 @@ async function queryRecords(params?: BaseObject) {
   };
 }
 
+async function generateAPI(params?: any) {
+  const component = params.component;
+  const platforms = params.platforms;
+  console.log(platforms);
+  
+  if (platforms) {
+    platforms.map((platform: string) => execScript({ component, platform }));
+  }
+  return {
+    code: 0,
+    msg: 'success',
+  };
+}
+
 export default {
   apiCreate,
   getMap,
   queryRecords,
   apiDelete,
   apiUpdate,
+  generateAPI,
 };

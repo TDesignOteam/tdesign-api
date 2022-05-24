@@ -34,4 +34,11 @@ router.get('/map', (ctx: Koa.Context) => {
   };
 });
 
+router.post('/generate-api', (ctx: Koa.Context) => {
+  ctx.body = {
+    code: 0,
+    data: ComponentApiController.generateAPI(ctx.request.body),
+  };
+});
+
 export default router.routes();

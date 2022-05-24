@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import { cmpApiInstance } from '../../services/git-helper'
+import { cmpApiInstance } from '../../services/api-server'
 import {
   BaseTable as TTable,
   Button as TButton,
