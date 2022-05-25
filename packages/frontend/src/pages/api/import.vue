@@ -390,7 +390,6 @@ export default {
   .t-form-content,
   .t-form-item > label {
     display: inline-block;
-    vertical-align: top;
   }
 
   .t-form-content.platform,

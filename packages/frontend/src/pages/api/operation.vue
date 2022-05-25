@@ -40,6 +40,15 @@
               <site-checkbox v-model="formData.platform" :options="map.platform_framework" ></site-checkbox>
             </div>
           </div>
+          <div class="t-form-item">
+            <label>Live demo：</label>
+            <div class="t-form-content">
+              <t-checkbox
+                :checked="checkedAll"
+                @change="onCheckedAllChange"
+              >全部</t-checkbox>
+            </div>
+          </div>
         </form>
       </div>
     </t-dialog>
