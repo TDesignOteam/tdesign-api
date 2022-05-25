@@ -2,6 +2,7 @@ const getVueApiDocs = require('../docs/vue');
 const { BASE_PATH_URL, VUE_TITILE_MAP, TNode, TYPES_COMBINE_MAP, COMPONENT_API_MD_MAP } = require('./const');
 const path = require('path');
 
+console.log('BASE_PATH_URL', BASE_PATH_URL);
 /**
  * apiBasePath 表示 API 文档的输出路径
  * apiEnglishBasePath: '',
