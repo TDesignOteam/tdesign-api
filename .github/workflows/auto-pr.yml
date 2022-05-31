@@ -2,7 +2,7 @@ name: Auto PR
 
 on:
   pull_request:
-    branches: [main]
+    branches: [auto-pr]
     types: [opened, synchronize, reopened, closed]
     # paths:
     #   - "packages/products"
@@ -19,7 +19,7 @@ jobs:
         with:
           repository: TDesignOteam/tdesign-vue-test
           path: target
-      - run: echo '${{ GITHUB_WORKSPACE} }}'
+      - run: echo '${{ GITHUB_WORKSPACE }}'
       - run: |
           cp -fr ${GITHUB_WORKSPACE}/target/tdesign-vue-test/* src/packages/products/tdesign-vue
           git status
