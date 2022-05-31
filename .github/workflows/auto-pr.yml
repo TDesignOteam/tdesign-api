@@ -2,7 +2,7 @@ name: Auto PR
 
 on:
   pull_request:
-    branches: [develop]
+    branches: [feat/auto-pr]
     types: [opened, synchronize, reopened, closed]
     paths:
       - "packages/products"
@@ -28,4 +28,3 @@ jobs:
           git add .
           git commit -m "chore: changelog's changes"
           git push
-          
