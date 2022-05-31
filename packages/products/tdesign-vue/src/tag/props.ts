@@ -65,6 +65,11 @@ export default {
       return ['dark', 'light', 'outline', 'light-outline'].includes(val);
     },
   },
+  /** zeotest */
+  zeotest: {
+    type: [String, Boolean] as PropType<TdTagProps['zeotest']>,
+    default: false,
+  },
   /** 点击时触发 */
   onClick: Function as PropType<TdTagProps['onClick']>,
   /** 如果关闭按钮存在，点击关闭按钮时触发 */
