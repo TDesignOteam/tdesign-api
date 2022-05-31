@@ -19,9 +19,8 @@ jobs:
         with:
           repository: TDesignOteam/tdesign-vue-test
           path: target
-      - run: echo '${{ GITHUB_WORKSPACE }}'
       - run: |
-          cp -fr ${GITHUB_WORKSPACE}/target/tdesign-vue-test/* src/packages/products/tdesign-vue
+          cp -fr target/tdesign-vue-test/* src/packages/products/tdesign-vue
           git status
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
