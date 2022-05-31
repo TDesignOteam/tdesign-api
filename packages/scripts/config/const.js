@@ -251,8 +251,8 @@ module.exports = {
   // 这里配置好后，可以在 API 文档中显示「查看通用类型定义」
   TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType'],
   // 生成路径
-  // BASE_PATH_URL: path.resolve(process.cwd(), './packages/products'),
-  BASE_PATH_URL: path.resolve(process.cwd(), '../'),
+  BASE_PATH_URL: path.resolve(process.cwd(), './packages/products'),
+  // BASE_PATH_URL: path.resolve(process.cwd(), '../'),
   VUE_TITILE_MAP,
   COMPONENT_API_MD_MAP,
   TYPES_COMBINE_MAP,

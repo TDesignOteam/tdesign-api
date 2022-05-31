@@ -1,0 +1,31 @@
+name: Auto PR
+
+on:
+  pull_request:
+    branches: [develop]
+    types: [opened, synchronize, reopened, closed]
+    paths:
+      - "packages/products"
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.merged == false
+    steps:
+      - run: echo "Clone tdesign-vue"
+      - uses: actions/checkout@v3
+        with:
+          repository: TDesignOteam/tdesign-vue-test
+          path: tdesign-vue
+      - run: |
+          cp -fr ${GITHUB_WORKSPACE}/tdesign-vue/* packages/products/tdesign-vue
+          git status
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -b feat/API-modify
+          git add .
+          git commit -m "chore: changelog's changes"
+          git push
+          
