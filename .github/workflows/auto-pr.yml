@@ -2,7 +2,7 @@ name: Auto PR
 
 on:
   pull_request:
-    branches: [auto-pr]
+    branches: [main]
     types: [opened, synchronize, reopened, closed]
     # paths:
     #   - "packages/products"
