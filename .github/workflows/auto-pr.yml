@@ -19,7 +19,7 @@ jobs:
         with:
           repository: TDesignOteam/tdesign-vue-test
           path: target
-      - run: echo '${{ github.GITHUB_WORKSPACE }}'
+      - run: echo '${{ github.workspace }}'
       - run: |
           cp -fr ./target/tdesign-vue-test/* ./src/packages/products/tdesign-vue
           cd ./target/tdesign-vue-test/
