@@ -22,6 +22,8 @@ jobs:
       - run: echo '${{ github.workspace }}'
       - run: ls ${{ github.workspace }}
       - run: |
+          pwd
+          ls
           cp -rf ${{ github.workspace }}/packages/products/tdesign-vue/ ${{ github.workspace }}/tdesign-vue-test/
           cd ../tdesign-vue-test/
           git status
