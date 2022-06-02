@@ -8,28 +8,30 @@ on:
     #   - "packages/products"
 
 jobs:
-  diff:
+  auto_push:
     runs-on: ubuntu-latest
     if: >
       github.event_name == 'pull_request' &&
       github.event.pull_request.merged == false
     steps:
-      - run: echo "Clone tdesign-vue"
-      - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
-        with:
-          repository: TDesignOteam/tdesign-vue-test
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          path: tdesign-vue-test
-      - run: echo '${{ github.workspace }}'
-      - run: ls -a
-      - run: |
-          cp -rf packages/products/tdesign-vue/ tdesign-vue-test/
-          cd tdesign-vue-test/
-          git status
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git checkout -b feat/API-modify
-          git add .
-          git commit -m "feat: modify API"
-          git push --set-upstream origin feat/API-modify
+      - name: Get current date
+        run: echo "NOW::$(date +'%Y-%m-%d/%H:%M:%S')" >> $GITHUB_ENV
+      - name: Clone repos
+        - run: echo "Clone tdesign-vue"
+        - uses: actions/checkout@v3
+        - uses: actions/checkout@v3
+          with:
+            repository: TDesignOteam/tdesign-vue-test
+            token: ${{ secrets.PERSONAL_TOKEN }}
+            path: tdesign-vue-test
+      - name: Push to registry
+        - run: |
+            cp -rf packages/products/tdesign-vue/* tdesign-vue-test/
+            cd tdesign-vue-test/
+            git status
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git checkout -b feat/API-modify-$NOW
+            git add .
+            git commit -m "feat: modify API"
+            git push --set-upstream origin feat/API-modify-$NOW
