@@ -22,7 +22,7 @@ jobs:
       - run: echo '${{ github.workspace }}'
       - run: ls ${{ github.workspace }}
       - run: |
-          cp -rf ${{ github.workspace }}/tdesign-vue-test/* ./packages/products/tdesign-vue
+          cp -rf ./packages/products/tdesign-vue/ ../tdesign-vue-test/
           cd ../tdesign-vue-test/
           git status
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
