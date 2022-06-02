@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: TDesignOteam/tdesign-vue-test
+          token: ${{ secrets.PERSONAL_TOKEN }}
           path: tdesign-vue-test
       - run: echo '${{ github.workspace }}'
       - run: ls -a
