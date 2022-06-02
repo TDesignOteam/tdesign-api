@@ -30,5 +30,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git checkout -b feat/API-modify
           git add .
-          git commit -m "chore: changelog's changes"
-          git push
+          git commit -m "feat: modify API"
+          git push --set-upstream origin feat/API-modify
