@@ -26,6 +26,7 @@ jobs:
             path: tdesign-vue-test
       - name: Push to registry
         - run: |
+            echo $NOW
             cp -rf packages/products/tdesign-vue/* tdesign-vue-test/
             cd tdesign-vue-test/
             git status
