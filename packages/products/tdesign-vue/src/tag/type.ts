@@ -54,6 +54,11 @@ export interface TdTagProps {
    */
   variant?: 'dark' | 'light' | 'outline' | 'light-outline';
   /**
+   * zeotest
+   * @default false
+   */
+  zeotest?: string | boolean;
+  /**
    * 点击时触发
    */
   onClick?: (context: { e: MouseEvent }) => void;
