@@ -1,11 +1,11 @@
-name: Auto PR
+name: Auto tdesign-vue PR
 
 on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, closed]
     paths:
-      - "packages/products/**"
+      - "packages/products/tdesign-vue/**"
 jobs:
   auto-push:
     runs-on: ubuntu-latest
@@ -19,13 +19,13 @@ jobs:
         with:
           repository: TDesignOteam/tdesign-vue-test
           token: ${{ secrets.PERSONAL_TOKEN }}
-          path: tdesign-vue-test
+          path: target-repo
       - name: Get current time
         run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
       - run: |
-          cp -rf packages/products/tdesign-vue/ tdesign-vue-test/
-          cd tdesign-vue-test/
+          cp -rf packages/products/tdesign-vue/ target-repo/
+          cd target-repo/
           git status
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

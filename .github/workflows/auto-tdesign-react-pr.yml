@@ -1,0 +1,36 @@
+name: Auto tdesign-react PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, closed]
+    paths:
+      - "packages/products/tdesign-react/**"
+jobs:
+  auto-push:
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.merged == false
+    steps:
+      - run: echo "Clone tdesign-react"
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: TDesignOteam/tdesign-react-test
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          path: target-repo
+      - name: Get current time
+        run: |
+          echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
+      - run: |
+          cp -rf packages/products/tdesign-react/ target-repo/
+          cd target-repo/
+          git status
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -b feat/API-modify-${{ env.NOW }}
+          git add .
+          git commit -m "feat: modify API"
+          git push --set-upstream origin feat/API-modify-${{ env.NOW }}
+
