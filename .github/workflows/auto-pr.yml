@@ -13,12 +13,12 @@ jobs:
     if: >
       github.event_name == 'pull_request' &&
       github.event.pull_request.merged == false
+    env: 
+      MY_DATE: '2020-10-07T12:00:00+01:00'
     steps:
-      - name: Get current date
+      # - name: Get current date
         # id: date
         # run: echo "::set-output name=date::$(date +'%Y-%m-%d/%H:%M:%S')"
-        env: 
-          MY_DATE: '2020-10-07T12:00:00+01:00'
       - name: Clone repos
         - run: echo "Clone tdesign-vue"
         - uses: actions/checkout@v3
