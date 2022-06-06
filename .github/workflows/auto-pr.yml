@@ -15,7 +15,8 @@ jobs:
       github.event.pull_request.merged == false
     steps:
       - name: Get current date
-        run: echo "NOW::$(date +'%Y-%m-%d/%H:%M:%S')" >> $GITHUB_ENV
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d/%H:%M:%S')"
       - name: Clone repos
         - run: echo "Clone tdesign-vue"
         - uses: actions/checkout@v3
@@ -31,7 +32,7 @@ jobs:
             git status
             git config --local user.email "github-actions[bot]@users.noreply.github.com"
             git config --local user.name "github-actions[bot]"
-            git checkout -b feat/API-modify-$NOW
+            git checkout -b feat/API-modify-${{ steps.date.outputs.date }}
             git add .
             git commit -m "feat: modify API"
-            git push --set-upstream origin feat/API-modify-$NOW
+            git push --set-upstream origin feat/API-modify-${{ steps.date.outputs.date }}
