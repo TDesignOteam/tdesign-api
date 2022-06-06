@@ -5,7 +5,7 @@ on:
     branches: [main]
     types: [opened, synchronize, reopened, closed]
     paths:
-      - "packages/products"
+      - "packages/products/**"
 jobs:
   auto-push:
     runs-on: ubuntu-latest
