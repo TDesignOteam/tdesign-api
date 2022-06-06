@@ -16,7 +16,6 @@ jobs:
     steps:
       - name: Get current date
         run: echo "NOW::$(date +'%Y-%m-%d/%H:%M:%S')" >> $GITHUB_ENV
-        run: echo $NOW
       - name: Clone repos
         - run: echo "Clone tdesign-vue"
         - uses: actions/checkout@v3
