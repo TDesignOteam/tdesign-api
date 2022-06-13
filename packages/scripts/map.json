@@ -77,6 +77,10 @@
         "value": "16"
       },
       {
+        "label": "Angular(Mobile)",
+        "value": "32"
+      },
+      {
         "label": "Miniprogram",
         "value": "64"
       }
@@ -543,6 +547,10 @@
         "label": "输入框"
       },
       {
+        "value": "InputAdornment",
+        "label": "输入装饰器"
+      },
+      {
         "value": "InputConfig",
         "label": "输入框全局配置",
         "type": "TS"
@@ -777,6 +785,11 @@
         "type": "TS"
       },
       {
+        "value": "TableEditableCellConfig",
+        "label": "表格可编辑列配置",
+        "type": "TS"
+      },
+      {
         "value": "TableRowState",
         "label": "表格行数据状态",
         "type": "TS"
@@ -784,6 +797,11 @@
       {
         "value": "TableScroll",
         "label": "表格滚动配置",
+        "type": "TS"
+      },
+      {
+        "value": "TableTreeConfig",
+        "label": "表格树形结构配置",
         "type": "TS"
       },
       {

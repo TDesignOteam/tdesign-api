@@ -369,7 +369,7 @@ function getVueApiDocs(componentMap, current, framework, language) {
         // API 规范：事件同时也需要作为 props
         if (category === 'Events' && !isMiniprogram) {
           const eventApi = formatEventToProps(newApi);
-          md.Props.apis.push(eventApi);
+          md.Props && md.Props.apis.push(eventApi);
         }
         // 插件返回值也需要放在文档中
         if (category === 'Return') {

@@ -44,15 +44,15 @@ module.exports = {
 }
 
 // 输出 API 到组件 markdown 文档中，从 ## API 后（小程序和 mobile-vue 此处的逻辑相同）
-function outputComponentMD(file, apiData) {
+function outputComponentMD(file, apiData, isVscode) {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
       return console.error(err);
     }
     // 自动生成的 API 文档会自动替换 SIGNATURE 之后的内容
     // 如果 SIGNATURE 不存在，则会自动在文末补充
-    const SIGNATURE = `## API${os.EOL}`;
-    let APIIndex = data.lastIndexOf(SIGNATURE);
+    const SIGNATURE = isVscode ? '/** 当前文件为自动生成，请勿手动调整 */' : `## API${os.EOL}`;
+    const APIIndex = data.lastIndexOf(SIGNATURE);
     let result = APIIndex !== -1
       ? `${data.slice(0, APIIndex + 7)}${apiData}`
       : `${data}\n${SIGNATURE}\n${apiData}`;
@@ -98,21 +98,34 @@ function generateDocs(baseData, framework, extra) {
         return console.error(err);
       }
       // vscode 插件文档
-      const apiData = `${isVscode ? getApiData(api[cmp]) : api[cmp]}\n`;
+      let apiData = `${isVscode ? getApiData(api[cmp]) : api[cmp]}\n`;
+      if (isVscode) {
+        apiData = apiData.replace(/\${/g, '\\${');
+      }
       // 输出到组件文件中
-      const language = extra && extra.language && extra.language !== 'zh' ? `_${extra.language.toLocaleLowerCase()}` : '';
+      const langMap = { zh: '', en: '.en-US' };
+      const language = extra && extra.language && langMap[extra.language];
       // const basePath = `${folder}/${getDocFileName(cmp, framework)}`;
-      const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language}.md`;
+      const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
       const mdfile = isVscode
         ? path.resolve(folder, `t-${kebabCase(cmp)}.js`)
         : apiDocsFilePath;
-      if (fs.existsSync(mdfile)) {
-        outputComponentMD(mdfile, apiData);
-      } else {
-        fs.writeFile(mdfile, ':: BASE_DOC ::\n', 'utf8', (err) => {
+
+      if (isVscode) {
+        fs.writeFile(mdfile, apiData, 'utf8', (err) => {
           if (err) return console.error(err);
-          outputComponentMD(mdfile, apiData);
+          console.log(chalk.green(`generate docs: ${mdfile} has been created.`));
         });
+      } else {
+        if (fs.existsSync(mdfile)) {
+          outputComponentMD(mdfile, apiData, isVscode);
+        } else {
+          const text = isVscode ? '' : ':: BASE_DOC ::\n';
+          fs.writeFile(mdfile, text, 'utf8', (err) => {
+            if (err) return console.error(err);
+            outputComponentMD(mdfile, apiData, isVscode);
+          });
+        }
       }
       // :: BASE_DOC ::
       // 如果旧文件 api.md 存在，就删除

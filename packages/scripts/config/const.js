@@ -232,12 +232,13 @@ const GLOBAL_TYPES = [
   'KeysType',
   'HTMLElementAttributes',
   'ComponentType',
+  'TScroll',
 ];
 
 // InputEvent is not included in SyntheticEvent, but SyntheticEvent includes FormEvent
 // FormEvent comes from onChange/onInput/onInvalid/onReset/onSubmit .etc.
 const REACT_EVENTS = ['MouseEvent', 'KeyboardEvent', 'ClipboardEvent', 'FocusEvent', 'WheelEvent', 'FormEvent', 'TransitionEvent', 'ChangeEvent', 'DragEvent', 'CompositionEvent'];
-const REACT_TYPES = ['CSSProperties', 'ComponentType'].concat(REACT_EVENTS);
+const REACT_TYPES = ['CSSProperties'].concat(REACT_EVENTS);
 
 module.exports = {
   GLOBAL_TYPES,
@@ -248,11 +249,13 @@ module.exports = {
     '该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC',
     '*/'].join('\n * '),
   TNode: 'TNode',
-  // 这里配置好后，可以在 API 文档中显示「查看通用类型定义」
-  TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType'],
-  // 生成路径
+  // 这里配置好之后，可以在 API 文档中显示「查看通用类型定义」
+  TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'TScroll'],
+  // 真实路径
   BASE_PATH_URL: path.resolve(process.cwd(), './packages/products'),
   // BASE_PATH_URL: path.resolve(process.cwd(), '../'),
+  // 开发或者测试路径
+  // BASE_PATH_URL: '.',
   VUE_TITILE_MAP,
   COMPONENT_API_MD_MAP,
   TYPES_COMBINE_MAP,

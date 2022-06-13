@@ -71,7 +71,7 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
   [P_VUE_MOBILE]: 'Vue(Mobile)',
   [P_REACT_MOBILE]: 'React(Mobile)',
   [P_ANGULAR_PC]: 'Angular(PC)',
-  // [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
+  [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
   [P_MINIPROGRAM]: 'Miniprogram',
 };
 
@@ -122,6 +122,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'RadioGroup', label: '单选框组' },
   { value: 'Table', label: '表格', type: 'TS' },
   { value: 'TableCol', label: '表格列', type: 'TS' },
+  { value: 'TableEditableCellConfig', label: '表格可编辑列配置', type: 'TS' },
+  { value: 'TableTreeConfig', label: '表格树形结构配置', type: 'TS' },
   { value: 'TableColumnFilter', label: '表格列过滤条件配置', type: 'TS' },
   { value: 'TableScroll', label: '表格滚动配置', type: 'TS' },
   { value: 'BaseTable', label: '基础表格' },
@@ -234,6 +236,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'BackTop', label: '回到顶部' },
   { value: 'Container', label: '布局容器' },
   { value: 'ColorPicker', label: '颜色选择器' },
+  { value: 'InputAdornment', label: '输入装饰器' },
   { value: 'InfiniteScroll', label: '无限滚动' },
   { value: 'ConfigProvider', label: '全局配置', type: 'TS' },
   { value: 'GlobalConfigProvider', label: '全局配置(是 ConfigProvider 的别名)', type: 'TS' },

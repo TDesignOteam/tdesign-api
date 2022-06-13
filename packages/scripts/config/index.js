@@ -2,7 +2,6 @@ const getVueApiDocs = require('../docs/vue');
 const { BASE_PATH_URL, VUE_TITILE_MAP, TNode, TYPES_COMBINE_MAP, COMPONENT_API_MD_MAP } = require('./const');
 const path = require('path');
 
-console.log('BASE_PATH_URL', BASE_PATH_URL);
 /**
  * apiBasePath 表示 API 文档的输出路径
  * apiEnglishBasePath: '',
@@ -39,7 +38,7 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
-    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue`,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue2`,
     TNode,
   },
   'VueNext(PC)': {
@@ -58,7 +57,7 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
-    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue`,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue3`,
     TNode,
   },
   'React(PC)': {
@@ -102,7 +101,7 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
-    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/mobile`,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue_mobile`,
     TNode,
   },
   'React(Mobile)': {
@@ -120,7 +119,7 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
-    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/mobile`,
+    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react_mobile`,
     TNode,
   },
   'Angular(Mobile)': {
