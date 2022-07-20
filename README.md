@@ -22,6 +22,11 @@
 
 本地生成了相关文件，修改 db 中的数据后，需要将所有修改都以 PR 方式提交到仓库中，找其他同学 review，PR 合并后 GitHub Action 会自动根据本次提交的内容自动向对应 TDesign 组件仓库创建分支，并提交本次修改的代码。
 
+例：https://github.com/TDesignOteam/tdesign-api/pull/12
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/7600149/179970060-fc0ba2c1-ffdf-4653-915f-c65de75667b8.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/7600149/179970192-ba69c8f0-0e85-4dc2-86ce-fc46c846c246.png">
+
 你可以自行发起 PR，也可以让开发者在对应分支上继续实现。
 
 例：https://github.com/TDesignOteam/tdesign-react-test/pull/6
