@@ -171,10 +171,10 @@ async function queryRecords(params?: BaseObject) {
 async function generateAPI(params?: any) {
   const component = params.component;
   const platforms = params.platforms;
-  console.log(platforms);
+  const isLocal = params.isLocal;
   
   if (platforms) {
-    platforms.map((platform: string) => execScript({ component, platform }));
+    platforms.map((platform: string) => execScript({ component, platform, isLocal }));
   }
   return {
     code: 0,

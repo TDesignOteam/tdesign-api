@@ -40,8 +40,9 @@ const pick = require('lodash/pick');
  * component 参数为大驼峰
  * language 可选值：空/en（空表示中文，en 表示英文）
  * isUseDefault 指定是否支持useDefault的受控和非受控逻辑（空表示不支持）
+ * isLocal 是否在本地统计目录下对应生成相关文件
  */
-const [component, framework, language, isUseDefault, isUseUnitTest] = process.argv.slice(2);
+const [component, framework, language, isUseDefault, isUseUnitTest, isLocal] = process.argv.slice(2);
 let selfUseDefault = isUseDefault;
 
 start();
@@ -52,7 +53,6 @@ function isAll(r) {
 
 function start() {
   const components = map.data.components.map(item => item.value);
-  console.log(JSON.stringify(components));
   const r = validateParams(components);
   if (!r) return;
   console.log(chalk.blue(`\n ----- API 相关文件自动生成开始（框架：${framework}） ------ \n`));

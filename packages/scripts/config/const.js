@@ -257,7 +257,7 @@ module.exports = {
   TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'TScroll'],
   // 真实路径
   BASE_PATH_URL: path.resolve(process.cwd(), './packages/products'),
-  // BASE_PATH_URL: path.resolve(process.cwd(), '../'),
+  BASE_PATH_URL_LOCAL: path.resolve(process.cwd(), '../'),
   // 开发或者测试路径
   // BASE_PATH_URL: '.',
   VUE_TITILE_MAP,
