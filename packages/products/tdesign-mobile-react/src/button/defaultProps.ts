@@ -10,6 +10,7 @@ export const buttonDefaultProps: TdButtonProps = {
   loading: false,
   shape: 'rectangle',
   size: 'medium',
+  theme: 'default',
   type: 'button',
   variant: 'base',
 };

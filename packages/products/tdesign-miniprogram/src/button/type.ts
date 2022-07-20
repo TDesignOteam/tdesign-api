@@ -30,8 +30,7 @@ export interface TdButtonProps {
     value?: any;
   };
   /**
-   * 是否禁用按钮
-   * @default false
+   * 禁用状态
    */
   disabled?: {
     type: BooleanConstructor;
@@ -42,7 +41,7 @@ export interface TdButtonProps {
    */
   externalClasses?: {
     type: ArrayConstructor;
-    value?: ['t-class', 't-class-icon'];
+    value?: ['t-class', 't-class-icon', 't-class-loading'];
   };
   /**
    * 是否为幽灵按钮（镂空按钮）
@@ -59,6 +58,14 @@ export interface TdButtonProps {
   icon?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 图标属性，透传至 icon
+   * @default {}
+   */
+  iconProps?: {
+    type: ObjectConstructor;
+    value?: object;
   };
   /**
    * 是否显示为加载状态

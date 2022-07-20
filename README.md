@@ -20,7 +20,8 @@
 
 ### 提交
 
-本地生成了相关文件，修改 db 中的数据后，需要将所有修改都以 PR 方式提交到仓库中，找其他同学 review，PR 合并后 GitHub Action 会自动根据本次提交的内容自动向对应 TDesign 组件仓库创建分支，并提交本次修改的代码。
+本地生成了相关文件，修改 db 中的数据后，需要将所有修改都以 PR 方式提交到仓库中，找其他同学 review，PR 合并后 GitHub Action 会自动根据本次提交的内容，使用 @github-actions
+github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，并提交本次修改的代码。
 
 例：https://github.com/TDesignOteam/tdesign-api/pull/12
 

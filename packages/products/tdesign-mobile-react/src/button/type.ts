@@ -4,7 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, SizeEnum } from '../common';
+import { TNode, TElement, SizeEnum } from '../common';
+import { MouseEvent } from 'react';
 
 export interface TdButtonProps {
   /**
@@ -13,13 +14,13 @@ export interface TdButtonProps {
    */
   block?: boolean;
   /**
-   * 按钮内容
+   * 按钮内容，同 content
    */
-  content?: string | TNode;
+  children?: TNode;
   /**
    * 按钮内容
    */
-  default?: string | TNode;
+  content?: TNode;
   /**
    * 禁用状态
    */
@@ -37,7 +38,7 @@ export interface TdButtonProps {
   /**
    * 按钮内部图标，可完全自定义
    */
-  icon?: TNode;
+  icon?: TElement;
   /**
    * 是否显示为加载状态
    * @default false
@@ -56,27 +57,28 @@ export interface TdButtonProps {
   /**
    * 右侧内容，可用于定义右侧图标
    */
-  suffix?: TNode;
+  suffix?: TElement;
   /**
    * 渲染按钮的 HTML 标签，默认使用标签 `<button>` 渲染，可以自定义为 `<a>` `<div>` 等。透传全部 HTML 属性，如：`href/target/data-*` 等。⚠️ 禁用按钮 `<button disabled>`无法显示 Popup 浮层信息，可通过修改 `tag=div` 解决这个问题
    */
   tag?: 'button' | 'a' | 'div';
   /**
-   * 组件风格，依次为默认色、品牌色、危险色、警告色、成功色
+   * 组件风格，依次为品牌色、危险色
+   * @default default
    */
-  theme?: 'default' | 'primary' | 'danger' | 'warning' | 'success';
+  theme?: 'default' | 'primary' | 'danger';
   /**
    * 按钮类型
    * @default button
    */
   type?: 'submit' | 'reset' | 'button';
   /**
-   * 按钮形式，基础、线框、虚线、文字
+   * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'dashed' | 'text';
+  variant?: 'base' | 'outline' | 'text';
   /**
    * 点击时触发
    */
-  onClick?: (e: MouseEvent) => void;
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
 }
