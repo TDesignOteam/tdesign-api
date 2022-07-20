@@ -74,8 +74,8 @@ function formatOneType(api, oneType) {
   let r = type;
   if (type === 'string' && api.field_enum) {
     r = api.field_enum.split('/')
-      .map(val => `'${val.trim()}'`)
-      .join(' | ');
+    .map(val => `'${val.trim()}'`.replace(/''/g, '\''))
+    .join(' | ');
   }
   return r;
 }

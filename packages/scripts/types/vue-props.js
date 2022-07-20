@@ -174,7 +174,13 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     if (api.field_enum && currentFramework !== 'Miniprogram') {
       const enumData = api.field_enum
         .split('/')
-        .map(item => getEnumValue(api, item))
+        .map((item) => {
+          let tmp = getEnumValue(api, item);
+          if (typeof tmp === 'string') {
+            tmp = tmp.replace(/''/g, '\'');
+          }
+          return tmp;
+        })
         .join(', ');
       const requiredValidate = api.field_required ? '' : 'if (!val) return true;\n';
       const intent = '      ';

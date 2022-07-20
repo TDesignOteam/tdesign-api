@@ -189,6 +189,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'DateRangePicker', label: '日期范围选择器' },
   { value: 'DatePickerPanel', label: '日期选择器面板' },
   { value: 'DateRangePickerPanel', label: '日期范围选择器面板' },
+  { value: 'TimeLine', label: '时间轴' },
+  { value: 'TimeLineItem', label: '时间轴' },
   { value: 'TimePicker', label: '时间选择器' },
   { value: 'TimeRangePicker', label: '时间范围选择器' },
   { value: 'TimePickerPanel', label: '时间选择器面板' },
@@ -196,6 +198,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Transfer', label: '穿梭框' },
   { value: 'TreeSelect', label: '树选择' },
   { value: 'Drawer', label: '模态抽屉' },
+  { value: 'Jumper', label: '跳转' },
   { value: 'Anchor', label: '锚点' },
   { value: 'AnchorItem', label: '锚点项' },
   { value: 'AnchorTarget', label: '锚点目标' },
@@ -292,7 +295,6 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Radio', label: '单选框' },
   { value: 'RadioGroup', label: '单选框组' },
   { value: 'Picker', label: '选择器' },
-  { value: 'PickerItem', label: '选择器子项' },
   { value: 'DateTimePicker', label: '日期时间选择器' },
   { value: 'DateTimeRangePicker', label: '日期时间范围选择器' },
   { value: 'Tag', label: '标签' },
@@ -335,6 +337,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Breadcrumb', label: '面包屑' },
   { value: 'BreadcrumbItem', label: '面包屑项' },
   { value: 'Calendar', label: '日历' },
+  { value: 'Overlay', label: '遮罩层' },
   { value: 'Transition', label: '动画' },
 ];
 

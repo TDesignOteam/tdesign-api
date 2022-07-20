@@ -560,6 +560,10 @@
         "label": "数字输入框"
       },
       {
+        "value": "Jumper",
+        "label": "跳转"
+      },
+      {
         "value": "Layout",
         "label": "布局"
       },
@@ -826,6 +830,14 @@
         "label": "标签输入框"
       },
       {
+        "value": "TimeLine",
+        "label": "时间轴"
+      },
+      {
+        "value": "TimeLineItem",
+        "label": "时间轴"
+      },
+      {
         "value": "TimePicker",
         "label": "时间选择器"
       },
@@ -970,10 +982,6 @@
         "label": "选择器"
       },
       {
-        "value": "PickerItem",
-        "label": "选择器子项"
-      },
-      {
         "value": "DateTimePicker",
         "label": "日期时间选择器"
       },
@@ -1073,6 +1081,10 @@
         "value": "TableColumnController",
         "label": "表格自定义显示列配置",
         "type": "TS"
+      },
+      {
+        "value": "Overlay",
+        "label": "遮罩层"
       },
       {
         "value": "Transition",

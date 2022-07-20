@@ -1,5 +1,5 @@
 /**
- * React 需要单独生存 defaultProps
+ * React 需要单独生成 defaultProps
  */
 const fs = require('fs');
 const path = require('path');

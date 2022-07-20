@@ -48,7 +48,7 @@ const COMPONENT_API_MD_MAP = {
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
   Tabs: ['Tabs', 'TabPanel'],
   TabBar: ['TabBar', 'TabBarItem'],
-  Form: ['Form', 'FormItem', 'FormRule', 'FormErrorMessage'],
+  Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Message: MESSAGE_LIST,
   Notification: NOTIFICATION_LIST,
@@ -92,6 +92,7 @@ const COMPONENT_API_MD_MAP = {
   ConfigProvider: GLOBAL_CONFIG_PROVIDER,
   RangeInput: ['RangeInput', 'RangeInputPopup'],
   Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
+  TimeLine: ['TimeLine', 'TimeLineItem'],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -110,7 +111,7 @@ const TYPES_COMBINE_MAP = {
     list: NOTIFICATION_LIST,
   },
   Form: {
-    list: ['Form', 'FormItem', 'FormRule', 'FormErrorMessage'],
+    list: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
   },
   Select: {
     list: ['Select', 'Option', 'OptionGroup'],
@@ -208,6 +209,9 @@ const TYPES_COMBINE_MAP = {
   },
   Watermark: {
     list: ['Watermark', 'WatermarkText', 'WatermarkImage'],
+  },
+  TimeLine: {
+    list: ['TimeLine', 'TimeLineItem'],
   },
 };
 
