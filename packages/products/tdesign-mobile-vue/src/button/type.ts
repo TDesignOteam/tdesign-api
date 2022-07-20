@@ -17,10 +17,6 @@ export interface TdButtonProps {
    */
   content?: string | TNode;
   /**
-   * 按钮内容
-   */
-  default?: string | TNode;
-  /**
    * 禁用状态
    */
   disabled?: boolean;
@@ -62,19 +58,15 @@ export interface TdButtonProps {
    */
   tag?: 'button' | 'a' | 'div';
   /**
-   * 组件风格，依次为默认色、品牌色、危险色、警告色、成功色
+   * 组件风格，依次为品牌色、危险色
+   * @default default
    */
-  theme?: 'default' | 'primary' | 'danger' | 'warning' | 'success';
+  theme?: 'default' | 'primary' | 'danger';
   /**
-   * 按钮类型
-   * @default button
-   */
-  type?: 'submit' | 'reset' | 'button';
-  /**
-   * 按钮形式，基础、线框、虚线、文字
+   * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'dashed' | 'text';
+  variant?: 'base' | 'outline' | 'text';
   /**
    * 点击时触发
    */

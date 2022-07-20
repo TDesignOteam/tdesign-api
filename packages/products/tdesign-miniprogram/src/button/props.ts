@@ -19,10 +19,9 @@ const props: TdButtonProps = {
   customDataset: {
     type: Object,
   },
-  /** 是否禁用按钮 */
+  /** 禁用状态 */
   disabled: {
     type: Boolean,
-    value: false,
   },
   /** 组件类名 */
   externalClasses: {
@@ -37,6 +36,11 @@ const props: TdButtonProps = {
   icon: {
     type: String,
     value: '',
+  },
+  /** 图标属性，透传至 icon */
+  iconProps: {
+    type: Object,
+    value: {},
   },
   /** 是否显示为加载状态 */
   loading: {
