@@ -30,6 +30,5 @@ export default async function executeSQL(sqlStr: string, write?: boolean) {
     } catch (error) {
       return error;
       console.error('Execute Error: ', error);
-      
     }
 }

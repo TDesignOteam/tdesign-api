@@ -29,12 +29,12 @@ class TAPI {
       let { field_name: fieldName } = params;
       // 处理 API名称以支持模糊查询，LIKE %xxx%
       if (fieldName) {
-        expr.and(`field_name like '%${fieldName}%'`);
+        expr.and(`field_name like "%${fieldName}%"`);
         delete params.field_name;
       }
       // 处理其他参数
       Object.keys(params).map(paramName => {
-        expr.and(`${paramName} = '${params[paramName]}'`);
+        expr.and(`${paramName} = "${params[paramName]}"`);
       });
     }
     // 分页参数设置
@@ -71,7 +71,7 @@ class TAPI {
   }
 
   public static async update(params: {}, id: number) {
-    const updateSQL = squel.update().table(tableName).where(`id = ${id}`);
+    const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
     
     Object.keys(params).map(param => updateSQL.set(param, params[param]));
     const res = await executeSQL(updateSQL.toString(), true);
