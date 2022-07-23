@@ -33,7 +33,7 @@ npm run api:docs ALL 'Miniprogram' onlyDocs
 参数组合使用
 
 ```bash
-npm run api:docs Button 'Vue(PC)' useDefault,isLocal,onlyDocs,isUseUnitTest
+npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
 ```
 
 

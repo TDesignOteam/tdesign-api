@@ -19,7 +19,7 @@
  * 命名行示例：npm run api:docs Button 'Miniprogram'
  * 
  * ======= 参数之间使用逗号分隔 =======
- * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,isLocal,onlyDocs,isUseUnitTest
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
  *
  */
 const { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } = require('./common');
@@ -39,10 +39,10 @@ const pick = require('lodash/pick');
  * component 参数为大驼峰
  * allParams 全部指令参数，具体内容见 parseParams
  */
-// const [component, framework, language, isUseDefault, isUseUnitTest, isLocal] = process.argv.slice(2);
+// const [component, framework, language, isUseDefault, isUseUnitTest, finalProject] = process.argv.slice(2);
 const [component, framework, allParams] = process.argv.slice(2);
 
-const { isUseDefault, onlyDocs, isLocal, isUseUnitTest } = parseParams(allParams);
+const { isUseDefault, onlyDocs, isUseUnitTest } = parseParams(allParams);
 
 let selfUseDefault = isUseDefault;
 
@@ -59,7 +59,7 @@ if (component && !isAll(component)) {
  * 解析参数字符串
  * onlyDocs 输出纯文档，不包含任何 API 定义
  * useDefault 是否使用 hook useDefault/useVModel 处理受控和非受控（部分 Vue2 组件使用的是 mapProps）
- * isLocal 是否在当前项目目录下生成对应生成相关文件，默认输出到各框架项目目录中
+ * finalProject 是否在当前项目目录下生成对应生成相关文件，默认输出到各框架项目目录中
  * isUseUnitTest 是否输出单测用例
  * 
  * @param {String} str 参数字符串
@@ -69,7 +69,7 @@ function parseParams(str) {
   return {
     onlyDocs: str.includes('onlyDocs'),
     useDefault: str.includes('useDefault'),
-    isLocal: str.includes('isLocal'),
+    finalProject: str.includes('finalProject'),
     isUseUnitTest: str.includes('isUseUnitTest'),
   };
 }

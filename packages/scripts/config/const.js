@@ -244,6 +244,10 @@ const GLOBAL_TYPES = [
 const REACT_EVENTS = ['MouseEvent', 'KeyboardEvent', 'ClipboardEvent', 'FocusEvent', 'WheelEvent', 'FormEvent', 'TransitionEvent', 'ChangeEvent', 'DragEvent', 'CompositionEvent'];
 const REACT_TYPES = ['CSSProperties'].concat(REACT_EVENTS);
 
+const [component, framework, allParams] = process.argv.slice(2);
+// const { finalProject } = parseParams(allParams);
+const finalProject = allParams && allParams.includes('finalProject');
+
 module.exports = {
   GLOBAL_TYPES,
   REACT_EVENTS,
@@ -255,8 +259,10 @@ module.exports = {
   TNode: 'TNode',
   // 这里配置好之后，可以在 API 文档中显示「查看通用类型定义」
   TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'TScroll'],
-  // 真实路径
-  BASE_PATH_URL: path.resolve(process.cwd(), './packages/products'),
+  // 真实路径，默认为当前项目，finalProject 值为 true，则表示直接输出到项目中，方便快速测试类型定义
+  BASE_PATH_URL: finalProject
+    ? path.resolve(process.cwd(), '../')
+    : path.resolve(process.cwd(), './packages/products'),
   BASE_PATH_URL_LOCAL: path.resolve(process.cwd(), '../'),
   // 开发或者测试路径
   // BASE_PATH_URL: '.',
