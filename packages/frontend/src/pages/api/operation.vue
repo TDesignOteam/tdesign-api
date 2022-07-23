@@ -26,7 +26,7 @@
                 filterable
               >
                 <t-option
-                  v-for="(item, index) in map.components"
+                  v-for="(item, index) in componentList"
                   :key="index"
                   :label="`${item.value} ${item.label}`"
                   :value="item.value"
@@ -41,6 +41,15 @@
             </div>
           </div>
           <div class="t-form-item">
+            <label style='vertical-align: top;'>参数：</label>
+            <div class="t-form-content">
+              <t-checkbox v-model="formData.finalProject">输出文件到各框架仓库</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.onlyDocs">仅输出 API 文档</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.useDefault">输出 useDefault/useVModel 文件(Vue2)</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.isUseUnitTest">输出单测用例（实验功能）</t-checkbox>
+            </div>
+          </div>
+          <div class="t-form-item">
             <label>Live demo：</label>
             <div class="t-form-content">
               <t-checkbox
@@ -48,6 +57,10 @@
                 @change="onCheckedAllChange"
               >全部</t-checkbox>
             </div>
+          </div>
+          <div class="t-form-item">
+            <label>最终命令行：</label>
+            <div>{{ commandLine }}</div>
           </div>
         </form>
       </div>
@@ -84,12 +97,32 @@ export default {
       generateFilesVisible: false,
       formData: {
         platform: [],
-        component: ''
+        component: '',
+        finalProject: false,
       }
     }
   },
 
-  computed: {},
+  computed: {
+    componentList () {
+      return [{ label: '全部', value: 'ALL' }].concat(this.map.components);
+    },
+    commandLine() {
+      let component = formData.component;
+      const params = {
+        finalProject: formData.finalProject,
+        onlyDocs: formData.onlyDocs,
+        useDefault: formData.useDefault,
+        isUseUnitTest: formData.isUseUnitTest,
+      };
+      // 组件全选的情况下，只能输出全部 API 文档
+      if (component.toLocaleLowerCase() === 'all') {
+        params.onlyDocs = true;
+      }
+      const commandParams = Object.keys(params).filter(key => params[key]).join();
+      return `npm run api:docs ${component} '${formData.platform}' ${commandParams}`;
+    },
+  },
 
   watch: {},
 
