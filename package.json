@@ -57,9 +57,9 @@
     "build-front": "rm -rf dist/* && tsc",
     "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
     "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env",
-    "api:download": "node packages/script/download.js",
-    "api:docs": "npm run api:download && node packages/script/index.js",
-    "api:vscode": "npm run api:download && node packages/script/vscode"
+    "api:download": "node packages/scripts/download.js",
+    "api:docs": "npm run api:download && node packages/scripts/index.js",
+    "api:vscode": "npm run api:download && node packages/scripts/vscode"
   },
   "author": "TDesign",
   "license": "ISC"
