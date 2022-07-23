@@ -61082,9 +61082,6 @@
     {
       "id": 1542,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32",
@@ -61099,7 +61096,7 @@
       ],
       "field_default_value": "''",
       "field_enum": "",
-      "field_desc_zh": "用于自定义右侧搜索操作内容，如：填充“搜索”文本",
+      "field_desc_zh": "用于自定义搜索框右侧内容，如：“取消”",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -61117,9 +61114,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -61128,6 +61122,45 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 2854,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "autocompleteOptions",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "联想词列表，如果不存在或长度为 0 则不显示联想框。支持自定义联想词为任意内容。如果 `group` 值为 `true` 则表示当前项为分组标题",
+      "field_desc_en": "autocomplete words list",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-23 03:25:31",
+      "update_time": "2022-07-23 03:25:31",
+      "event_output": null,
+      "custom_field_type": "Array<AutocompleteOption>【type AutocompleteOption = string | { label: string | TNode; group?: boolean }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -94288,5 +94321,5 @@
       ]
     }
   ],
-  "total": 2229
+  "total": 2230
 }
