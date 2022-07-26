@@ -43,9 +43,9 @@ const pick = require('lodash/pick');
 // const [component, framework, language, isUseDefault, isUseUnitTest, finalProject] = process.argv.slice(2);
 const [component, framework, allParams] = process.argv.slice(2);
 
-const { isUseDefault, onlyDocs, isUseUnitTest } = parseParams(allParams);
+const { useDefault, onlyDocs, isUseUnitTest } = parseParams(allParams);
 
-let selfUseDefault = isUseDefault;
+let selfUseDefault = useDefault;
 
 // 全量组件，改动较大，限制为暂时只能生成文档，不能生成 TS 文件
 if (isAll(component) && onlyDocs) {
@@ -95,6 +95,7 @@ function generateComponentApi() {
     if (['VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
       selfUseDefault = true;
     }
+    console.log('selfUseDefault', selfUseDefault);
     // 生成 props 文件
     generateVueProps(baseData, framework, selfUseDefault);
     // 生成 React defaultProps 文件

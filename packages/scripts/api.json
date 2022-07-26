@@ -7144,6 +7144,47 @@
       ]
     },
     {
+      "id": 2855,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "rowspanAndColspanInFooter",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义表尾的合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`",
+      "field_desc_en": "rowspan and colspan for footer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-26 13:15:23",
+      "update_time": "2022-07-26 13:15:23",
+      "event_output": null,
+      "custom_field_type": "TableRowspanAndColspanFunc<T>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2188,
       "platform_framework": [
         "1",
@@ -94321,5 +94362,5 @@
       ]
     }
   ],
-  "total": 2230
+  "total": 2231
 }
