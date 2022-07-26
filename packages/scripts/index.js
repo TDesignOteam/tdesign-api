@@ -11,6 +11,7 @@
  * 命令行示例：npm run api:docs ALL 'VueNext(PC)' onlyDocs
  *
  * ======== 输出单个组件的 API 文件 ========
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' finalProject
  * 命名行示例：npm run api:docs Button 'Vue(PC)'
  * 命名行示例：npm run api:docs Button 'VueNext(PC)'
  * 命名行示例：npm run api:docs Button 'Vue(Mobile)'

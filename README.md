@@ -31,3 +31,7 @@ github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，
 你可以自行发起 PR，也可以让开发者在对应分支上继续实现。
 
 例：https://github.com/TDesignOteam/tdesign-react-test/pull/6
+
+### 命令行操作
+
+[命令行操作](./packages/scripts/README.md)

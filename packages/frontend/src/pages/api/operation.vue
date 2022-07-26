@@ -136,18 +136,13 @@ export default {
       this.generateFilesVisible = true
     },
     onGenerateConfirm () {
-      const frameworkNames = this.map.platform_framework
-        .filter(item => this.formData.platform.includes(item.value))
-        .map(item => item.label)
-      const params = {
-        component: this.formData.component ? this.formData.component : 'All',
-        platforms: frameworkNames
-      }
       cmpApiInstance({
         method: 'post',
         url: '/cmp/generate-api',
-        data: params
-      }).then((res) => {
+        data: {
+          commandLines: this.commandLine.map(command => command.replace('npm run api:docs', ''))
+        }
+      }).then(() => {
         this.generateFilesVisible = false
       })
     }

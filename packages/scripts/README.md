@@ -8,6 +8,8 @@
 
 **自动生成 API 文档、Types 定义、Props 定义**
 
+如果需要直接输出到项目中，可使用参数 `finalProject`，即 `npm run api:docs Button 'React(PC)' finalProject`
+
 ```bash
 # Vue2, 使用 map-props 实现的受控和非受控，使用这个生成 API
 npm run api:docs Button 'Vue(PC)'
