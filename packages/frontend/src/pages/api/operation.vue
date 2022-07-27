@@ -109,6 +109,7 @@ export default {
       return [{ label: '全部', value: 'ALL' }].concat(this.map.components).filter(v => v)
     },
     commandLine () {
+      if (!this.map || !this.map.platform_framework) return
       const component = this.formData.component
       const params = {
         finalProject: this.formData.finalProject,
