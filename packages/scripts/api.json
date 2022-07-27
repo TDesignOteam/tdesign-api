@@ -8505,6 +8505,55 @@
       ]
     },
     {
+      "id": 2857,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "BaseTableCol",
+      "field_category": 1,
+      "field_name": "minWidth",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 CSS 属性 `min-width` 到 `<col>` 元素。⚠️ 仅少部分浏览器支持，如使用 [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview)  渲染的 Chrome 浏览器支持 `minWidth`",
+      "field_desc_en": "add CSS property `min-width` to HTML Element `<col>`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-27 02:36:25",
+      "update_time": "2022-07-27 02:36:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 986,
       "platform_framework": [
         "1",
@@ -8693,7 +8742,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "列宽，可以作为最小宽度使用。当列宽总和小于 `table` 元素时，浏览器根据宽度设置情况自动分配宽度；当列宽总和大于 `table` 元素，表现为定宽。可以同时调整 `table` 元素的宽度来达到自己想要的效果",
+      "field_desc_zh": "列宽，可以作为最小宽度使用。当列宽总和小于 `table` 元素时，浏览器根据宽度设置情况等比例分配宽度；当列宽总和大于 `table` 元素，表现为定宽。可以同时调整 `table` 元素的宽度来达到自己想要的效果",
       "field_desc_en": "column width",
       "field_required": 0,
       "event_input": "",
@@ -31787,6 +31836,43 @@
       "event_input": "(key: TableRowValue)",
       "create_time": "2021-12-04 15:06:07",
       "update_time": "2021-12-05 09:07:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2856,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "EnhancedTable",
+      "field_category": 4,
+      "field_name": "resetData",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "重置或更新整个表格数据",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "(newData: T[])",
+      "create_time": "2022-07-27 02:29:47",
+      "update_time": "2022-07-27 02:29:47",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -94362,5 +94448,5 @@
       ]
     }
   ],
-  "total": 2231
+  "total": 2233
 }
