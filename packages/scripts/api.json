@@ -6466,6 +6466,49 @@
       ]
     },
     {
+      "id": 2858,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "footerSummary",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表尾总结行",
+      "field_desc_en": "footer summary content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-27 03:15:46",
+      "update_time": "2022-07-27 03:15:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 2382,
       "platform_framework": [
         "1",
@@ -8509,10 +8552,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -8523,7 +8563,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 CSS 属性 `min-width` 到 `<col>` 元素。⚠️ 仅少部分浏览器支持，如使用 [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview)  渲染的 Chrome 浏览器支持 `minWidth`",
+      "field_desc_zh": "透传 CSS 属性 `min-width` 到 `<col>` 元素。⚠️ 仅少部分浏览器支持，如：使用 [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview)  渲染的 Chrome 浏览器支持 `minWidth`",
       "field_desc_en": "add CSS property `min-width` to HTML Element `<col>`",
       "field_required": 0,
       "event_input": "",
@@ -8543,10 +8583,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -8728,10 +8765,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -8762,10 +8796,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -94448,5 +94479,5 @@
       ]
     }
   ],
-  "total": 2233
+  "total": 2234
 }
