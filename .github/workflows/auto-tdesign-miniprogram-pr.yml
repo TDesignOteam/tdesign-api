@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
       - run: |
-          cp -rf packages/products/tdesign-miniprogram/ target-repo/
+          cp -rf packages/products/tdesign-miniprogram/* target-repo/
           cd target-repo/
           git status
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
