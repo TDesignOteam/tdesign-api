@@ -26,11 +26,18 @@ class TAPI {
     };
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
-      let { field_name: fieldName } = params;
+      const { field_name: fieldName } = params;
+      let { platform_framework: framework } = params;
       // 处理 API名称以支持模糊查询，LIKE %xxx%
       if (fieldName) {
         expr.and(`field_name like "%${fieldName}%"`);
         delete params.field_name;
+      }
+      // 一个 API 可能属于多个平台，需要使用 sql 的位运算，如： 2 & platform_framework = 2
+      if (framework) {
+        delete params.platform_framework;
+        framework = String(framework);
+        expr.and(`platform_framework & ${framework} = ${framework}`);
       }
       // 处理其他参数
       Object.keys(params).map(paramName => {
