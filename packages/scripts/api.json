@@ -43884,7 +43884,7 @@
       "field_desc_zh": "值变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputNumberValue, context: ChangeContext)【interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent }】【type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | ''】",
+      "event_input": "(value: InputNumberValue, context: ChangeContext)【interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent }】【type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | ''】",
       "create_time": "2021-01-31 10:32:28",
       "update_time": "2021-11-27 15:47:45",
       "event_output": null,
