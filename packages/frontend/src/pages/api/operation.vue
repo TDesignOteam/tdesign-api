@@ -37,7 +37,7 @@
           <div class="t-form-item">
             <label style='vertical-align: top;'>框架平台：</label>
             <div class="t-form-content platform">
-              <site-checkbox v-model="formData.platform" :options="map.platform_framework" ></site-checkbox>
+              <site-checkbox v-model="formData.platform" :options="frameworkOptions" ></site-checkbox>
             </div>
           </div>
           <div class="t-form-item">
@@ -105,8 +105,12 @@ export default {
   },
 
   computed: {
+    frameworkOptions () {
+      if (!this.map.platform_framework) return []
+      return [{ label: 'VueNext(PC)', value: 1000 }].concat(this.map.platform_framework)
+    },
     componentList () {
-      return [{ label: '全部', value: 'ALL' }].concat(this.map.components).filter(v => v)
+      return [{ label: '全部', value: 'ALL' }].concat(this.map.components).filter(v => v && !v.type)
     },
     commandLine () {
       if (!this.map || !this.map.platform_framework) return
@@ -122,12 +126,10 @@ export default {
         params.onlyDocs = true
       }
       const commandParams = Object.keys(params).filter(key => params[key]).join()
-      const frameworks = this.map.platform_framework.filter(t => this.formData.platform.includes(t.value))
+      const frameworks = this.frameworkOptions.filter(t => this.formData.platform.includes(t.value))
       return frameworks.map(framework => `npm run api:docs ${component} '${framework.label}' ${commandParams}`)
     }
   },
-
-  watch: {},
 
   methods: {
     onCreateApi () {

@@ -589,7 +589,7 @@
       "field_type_text": []
     },
     {
-      "id": 2641,
+      "id": 2883,
       "platform_framework": [
         "1",
         "2",
@@ -597,63 +597,20 @@
       ],
       "component": "$Message.config",
       "field_category": 1,
-      "field_name": "attach",
+      "field_name": "message",
       "field_type": [
-        "1",
-        "32"
-      ],
-      "field_default_value": "'body'",
-      "field_enum": "",
-      "field_desc_zh": "指定弹框挂载的父节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-27 10:38:14",
-      "update_time": "2022-04-27 10:38:14",
-      "event_output": null,
-      "custom_field_type": "AttachNode",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Function"
-      ]
-    },
-    {
-      "id": 2642,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "$Message.config",
-      "field_category": 1,
-      "field_name": "offset",
-      "field_type": [
-        "16"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']",
+      "field_desc_zh": "消息内容",
       "field_desc_en": null,
-      "field_required": 0,
+      "field_required": 1,
       "event_input": "",
-      "create_time": "2022-04-27 10:38:47",
-      "update_time": "2022-04-27 10:38:47",
+      "create_time": "2022-08-02 06:51:29",
+      "update_time": "2022-08-02 06:51:29",
       "event_output": null,
-      "custom_field_type": "Array<string | number>",
+      "custom_field_type": "MessageOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -669,89 +626,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 2640,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "$Message.config",
-      "field_category": 1,
-      "field_name": "placement",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "top",
-      "field_enum": "center/top/left/right/bottom/top-left/top-right/bottom-left/bottom-right",
-      "field_desc_zh": "弹出消息位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-27 10:35:34",
-      "update_time": "2022-04-27 10:37:24",
-      "event_output": null,
-      "custom_field_type": "MessagePlacementList【type MessagePlacementList = 'center' | 'top' | 'left' | 'right' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2643,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "$Message.config",
-      "field_category": 1,
-      "field_name": "zIndex",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "5000",
-      "field_enum": "",
-      "field_desc_zh": "消息层级",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-27 10:39:30",
-      "update_time": "2022-04-27 10:39:30",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Number"
+        "Object"
       ]
     },
     {
@@ -95361,5 +95236,5 @@
       ]
     }
   ],
-  "total": 2254
+  "total": 2251
 }
