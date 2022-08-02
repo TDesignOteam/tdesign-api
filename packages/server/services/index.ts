@@ -70,7 +70,7 @@ class TAPI {
     const queryMaxID = squel.select().field('MAX(id)').from(tableName).toString();
     const maxID = await executeSQL(queryMaxID);
     
-    const insertSQL = squel.insert().into(tableName).set('id', Number(maxID[0]['MAX(id)']) + 1);
+    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', Number(maxID[0]['MAX(id)']) + 1);
     
     Object.keys(params).map(param => insertSQL.set(param, params[param]));
     const res = await executeSQL(insertSQL.toString(), true);
