@@ -48,8 +48,6 @@ jobs:
           labels: |
             API
             automated pr
-          run: |
-            echo "Pull Request URL - ${{ steps.pr.outputs.pull-request-url }}"
       - name: comment 
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
