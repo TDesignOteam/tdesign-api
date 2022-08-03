@@ -13,14 +13,13 @@ jobs:
       github.event_name == 'pull_request' &&
       github.event.pull_request.merged == false
     steps:
-      - run: echo "Clone tdesign-vue"
-      - uses: actions/checkout@v3
-        with:
-          repository: Tencent/tdesign-vue
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          path: target-repo
-      - name: Get current time
-        run: |
+      - name: Clone tdesign-vue
+        - uses: actions/checkout@v3
+          with:
+            repository: Tencent/tdesign-vue
+            token: ${{ secrets.PERSONAL_TOKEN }}
+            path: target-repo
+      - run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
       - name: Commit & Push
         id: commit
