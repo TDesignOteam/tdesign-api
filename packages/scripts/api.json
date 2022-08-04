@@ -30061,6 +30061,47 @@
       ]
     },
     {
+      "id": 2890,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Dropdown",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/success/warning/error",
+      "field_desc_zh": "下拉菜单风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 08:22:52",
+      "update_time": "2022-08-04 08:22:52",
+      "event_output": null,
+      "custom_field_type": "DropdownThemeList【type DropdownThemeList = 'default' | 'success' | 'warning' | 'error'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 115,
       "platform_framework": [
         "1",
@@ -48287,6 +48328,47 @@
       ]
     },
     {
+      "id": 2889,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "MessageOptions",
+      "field_category": 1,
+      "field_name": "className",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "类名",
+      "field_desc_en": "HTMLElement class",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 02:50:00",
+      "update_time": "2022-08-04 02:50:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 123,
       "platform_framework": [
         "1",
@@ -48366,6 +48448,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 2888,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "MessageOptions",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内敛样式",
+      "field_desc_en": "CSS style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 02:48:28",
+      "update_time": "2022-08-04 02:48:28",
+      "event_output": null,
+      "custom_field_type": "CSSProperties",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -95406,5 +95529,5 @@
       ]
     }
   ],
-  "total": 2255
+  "total": 2258
 }
