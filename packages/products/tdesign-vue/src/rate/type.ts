@@ -29,7 +29,7 @@ export interface TdRateProps {
   disabled?: boolean;
   /**
    * 评分图标的间距
-   * @default 8
+   * @default 4
    */
   gap?: number;
   /**
@@ -42,8 +42,8 @@ export interface TdRateProps {
    */
   showText?: boolean;
   /**
-   * 评分图标的大小，示例：`20`
-   * @default ''
+   * 评分图标的大小，示例：`20px`
+   * @default 24px
    */
   size?: string;
   /**
