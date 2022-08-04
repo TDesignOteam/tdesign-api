@@ -13,47 +13,46 @@ jobs:
       github.event_name == 'pull_request' &&
       github.event.pull_request.merged == false
     steps:
-      - run: echo "Clone tdesign-vue"
+      # checkout tdesign-api repo
       - uses: actions/checkout@v3
       - uses: actions/checkout@v3
         with:
           repository: Tencent/tdesign-vue
           token: ${{ secrets.PERSONAL_TOKEN }}
           path: target-repo
-      - name: Get current time
-        run: |
+      - run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
       - name: Commit & Push
         id: commit
-        - run: |
-            export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
-            cp -rf packages/products/tdesign-vue/* target-repo/
-            cd target-repo/
-            git status
-            git config --local user.email "github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "github-actions[bot]"
-            git checkout -b $NEW_BRANCH_NAME
-            git add .
-            git commit -m "feat: modify API"
-            git push --set-upstream origin $NEW_BRANCH_NAME
-            echo "::set-output name=branchName::$NEW_BRANCH_NAME"
+        run: |
+          export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
+          cp -rf packages/products/tdesign-vue/* target-repo/
+          cd target-repo/
+          git status
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -b $NEW_BRANCH_NAME
+          git add .
+          git commit -m "feat: modify API"
+          git push --set-upstream origin $NEW_BRANCH_NAME
+          echo "::set-output name=branchName::$NEW_BRANCH_NAME"
       - name: Create Pull Request
         id: pr
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: ${{ steps.commit.outputs.branchName }}
+          base: develop
+          path: target-repo
           title: '[API] Component API generated'
           body: |
             Update TDesign API & Docs
           labels: |
             API
             automated pr
-          run: |
-            echo "Pull Request URL - ${{ steps.pr.outputs.pull-request-url }}"
       - name: comment 
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             发起 tdesign-vue PR: <a href="${{ steps.pr.outputs.pull-request-url }}"></a>
