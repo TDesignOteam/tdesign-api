@@ -560,10 +560,6 @@
         "label": "数字输入框"
       },
       {
-        "value": "Jumper",
-        "label": "跳转"
-      },
-      {
         "value": "Layout",
         "label": "布局"
       },
@@ -972,6 +968,10 @@
       {
         "value": "Textarea",
         "label": "文本输入框"
+      },
+      {
+        "value": "PaginationMini",
+        "label": "迷你分页"
       },
       {
         "value": "Toast",

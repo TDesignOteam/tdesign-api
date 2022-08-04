@@ -48,6 +48,7 @@ const COMPONENT_API_MD_MAP = {
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
   Tabs: ['Tabs', 'TabPanel'],
   TabBar: ['TabBar', 'TabBarItem'],
+  Pagination: ['Pagination', 'PaginationMini'],
   Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Message: MESSAGE_LIST,
@@ -121,6 +122,9 @@ const TYPES_COMBINE_MAP = {
   },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
+  },
+  Pagination: {
+    list: ['Pagination', 'PaginationMini'],
   },
   Tag: {
     list: ['Tag', 'CheckTag'],
