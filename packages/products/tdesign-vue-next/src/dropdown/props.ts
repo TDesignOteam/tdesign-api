@@ -57,15 +57,6 @@ export default {
   popupProps: {
     type: Object as PropType<TdDropdownProps['popupProps']>,
   },
-  /** 下拉菜单风格 */
-  theme: {
-    type: String as PropType<TdDropdownProps['theme']>,
-    default: 'default' as TdDropdownProps['theme'],
-    validator(val: TdDropdownProps['theme']): boolean {
-      if (!val) return true;
-      return ['default', 'success', 'warning', 'error'].includes(val);
-    },
-  },
   /** 触发下拉显示的方式 */
   trigger: {
     type: String as PropType<TdDropdownProps['trigger']>,
