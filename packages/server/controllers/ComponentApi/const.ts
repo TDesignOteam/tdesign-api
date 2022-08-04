@@ -82,6 +82,7 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
  */
 export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Button', label: '按钮' },
+  { value: 'Link', label: '链接' },
   { value: 'Input', label: '输入框' },
   { value: 'RangeInput', label: '范围输入框' },
   { value: 'RangeInputPopup', label: '范围输入框触发器' },
