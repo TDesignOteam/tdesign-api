@@ -5,22 +5,22 @@
  * 4. 自动生成英文 API 文档（api_en.md）
  * 5. 自动生成组件单元测试用例（TODO）
  *
- * 命令行示例：npm run api:docs ALL 'Vue(PC)'（全量组件）
- * 命令行示例：npm run api:docs ALL 'Vue(PC)' zh（全量组件 API 中文文档）
- * 命令行示例：npm run api:docs ALL 'React(PC)' zh（全量组件 API 中文文档）
- * 命令行示例：npm run api:docs ALL 'VueNext(PC)' zh（全量组件 API 中文文档）
+ * ======== 输出全部组件的 API 中文文档和英文文档 ========
+ * 命令行示例：npm run api:docs ALL 'Vue(PC)' onlyDocs
+ * 命令行示例：npm run api:docs ALL 'React(PC)' onlyDocs
+ * 命令行示例：npm run api:docs ALL 'VueNext(PC)' onlyDocs
  *
+ * ======== 输出单个组件的 API 文件 ========
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' finalProject
  * 命名行示例：npm run api:docs Button 'Vue(PC)'
  * 命名行示例：npm run api:docs Button 'VueNext(PC)'
  * 命名行示例：npm run api:docs Button 'Vue(Mobile)'
  * 命名行示例：npm run api:docs Button 'React(PC)'
  * 命名行示例：npm run api:docs Button 'React(Mobile)'
- * 命名行示例：npm run api:docs Button 'Angular(PC)'
- * 命名行示例：npm run api:docs Button 'Angular(Mobile)'
  * 命名行示例：npm run api:docs Button 'Miniprogram'
- *
- * 多语种
- * npm run api:docs Button 'Vue(PC)' en
+ * 
+ * ======= 参数之间使用逗号分隔 =======
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
  *
  */
 const { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } = require('./common');
@@ -38,56 +38,97 @@ const pick = require('lodash/pick');
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
  * component 参数为大驼峰
- * language 可选值：空/en（空表示中文，en 表示英文）
- * isUseDefault 指定是否支持useDefault的受控和非受控逻辑（空表示不支持）
- * isLocal 是否在本地统计目录下对应生成相关文件
+ * allParams 全部指令参数，具体内容见 parseParams
  */
-const [component, framework, language, isUseDefault, isUseUnitTest, isLocal] = process.argv.slice(2);
-let selfUseDefault = isUseDefault;
+// const [component, framework, language, isUseDefault, isUseUnitTest, finalProject] = process.argv.slice(2);
+const [component, framework, allParams] = process.argv.slice(2);
 
-start();
+const { useDefault, onlyDocs, isUseUnitTest } = parseParams(allParams);
 
-function isAll(r) {
-  return typeof r === 'string' && r.toLocaleLowerCase() === 'all';
+let selfUseDefault = useDefault;
+
+// 全量组件，改动较大，限制为暂时只能生成文档，不能生成 TS 文件
+if (isAll(component) && onlyDocs) {
+  generateDocuments();
 }
 
-function start() {
+if (component && !isAll(component)) {
+  generateComponentApi();
+}
+
+/**
+ * 解析参数字符串
+ * onlyDocs 输出纯文档，不包含任何 API 定义
+ * useDefault 是否使用 hook useDefault/useVModel 处理受控和非受控（部分 Vue2 组件使用的是 mapProps）
+ * finalProject 是否在当前项目目录下生成对应生成相关文件，默认输出到各框架项目目录中
+ * isUseUnitTest 是否输出单测用例
+ * 
+ * @param {String} str 参数字符串
+ */
+function parseParams(str) {
+  if (!str) return {};
+  return {
+    onlyDocs: str.includes('onlyDocs'),
+    useDefault: str.includes('useDefault'),
+    finalProject: str.includes('finalProject'),
+    isUseUnitTest: str.includes('isUseUnitTest'),
+  };
+}
+
+/**
+ * 输出单个组件的全部文件：TS 定义、Props 定义、API 文档（英文 + 中文）
+ * 一般用于单个组件开发（由于全量组件一次性生成风险过高，不再支持全量输出所有组件。如果真的到必要的时候再打开）
+ */
+function generateComponentApi() {
   const components = map.data.components.map(item => item.value);
   const r = validateParams(components);
-  if (!r) return;
-  console.log(chalk.blue(`\n ----- API 相关文件自动生成开始（框架：${framework}） ------ \n`));
-  // [ labe, value ] => { label: value }
+  if (!r || isAll(component)) return;
+  console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate Component API ------ \n`));
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
-  const baseData = isAll(r)
-    ? frameworkData
-    : pick(frameworkData, cmpMap[component] || [component]);
+  const baseData = pick(frameworkData, cmpMap[component] || [component]);
 
-  // 生成 API 类型定义文件
-  generateTypes(baseData, framework);
-  if (language) {
-    // 根据不同的语言生成 API 文档
-    generateDocs(baseData, framework, { language });
-  } else {
-    // 生成 API 文档
-    generateDocs(baseData, framework);
+  if (!onlyDocs) {
+    // 生成 API 类型定义文件
+    generateTypes(baseData, framework);
+    if (['VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
+      selfUseDefault = true;
+    }
+    console.log('selfUseDefault', selfUseDefault);
+    // 生成 props 文件
+    generateVueProps(baseData, framework, selfUseDefault);
+    // 生成 React defaultProps 文件
+    if (framework.indexOf('React') !== -1) {
+      generateReactDefaultProps(baseData, framework);
+    }
+    // 生成 props 单元测试文件
+    if (isUseUnitTest) {
+      generateUnitTest(baseData, framework, { language });
+    }
   }
-  if (framework === 'VueNext(PC)') {
-    selfUseDefault = true;
-  }
+  // 生成 API 中文文档
+  generateDocs(baseData, framework);
+  // generate API English documents
+  generateDocs(baseData, framework, { language: 'en' });
+}
 
-  // 生成 props 文件
-  generateVueProps(baseData, framework, selfUseDefault);
-  // 生成 React defaultProps 文件
-  if (framework.indexOf('React') !== -1) {
-    generateReactDefaultProps(baseData, framework);
-  }
-  // 生成 props 单元测试文件
-  if (isUseUnitTest) {
-    // TODO: 有需要就手工挂载
-    generateUnitTest(baseData, framework, { language });
-  }
+/**
+ * 仅输出全部组件的 API 文档（英文 + 中文）
+ * 一般用于统一更新文档描述，集体输出
+ */
+function generateDocuments() {
+  const components = map.data.components.map(item => item.value);
+  const r = validateParams(components);
+  if (!r || !isAll(component)) return;
+  console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate All Components API Documents ------ \n`));
+  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  const baseData = frameworkData;
+  // 生成 API 中文文档
+  generateDocs(baseData, framework);
+  // generate API English documents
+  generateDocs(baseData, framework, { language: 'en' });
 }
 
 function validateParams(components) {
@@ -96,7 +137,7 @@ function validateParams(components) {
     return false;
   }
   if (isAll(component)) {
-    return component;
+    return true;
   }
   if (!(components.includes(component))) {
     console.error(chalk.red(`\nError: 组件 ${component} 不存在。如果在上述组件中没有找到想要的组件，需要新增组件，请联系 PMC\n`));
@@ -109,4 +150,9 @@ function validateParams(components) {
     return false;
   }
   return true;
+}
+
+// 是否输出全量组件
+function isAll(r) {
+  return typeof r === 'string' && r.toLocaleLowerCase() === 'all';
 }

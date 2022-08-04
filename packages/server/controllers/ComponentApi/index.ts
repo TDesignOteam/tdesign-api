@@ -168,13 +168,11 @@ async function queryRecords(params?: BaseObject) {
   };
 }
 
-async function generateAPI(params?: any) {
-  const component = params.component;
-  const platforms = params.platforms;
-  const isLocal = params.isLocal;
-  
-  if (platforms) {
-    platforms.map((platform: string) => execScript({ component, platform, isLocal }));
+async function generateAPI(params?: { commandLines: string[] }) {
+  const commandLines = params.commandLines;
+  console.log('commandLines:', commandLines);
+  if (commandLines) {
+    commandLines.map((commandLine: string) => execScript({ commandLine }));
   }
   return {
     code: 0,

@@ -21,7 +21,7 @@
  cd packages/frontend
  npm i
  ## 启动前端资源 watch 进程
- npm run watch-front
+ npm run watch
  ```
 
  访问 http://127.0.0.1:16001/api_design 查看修改效果

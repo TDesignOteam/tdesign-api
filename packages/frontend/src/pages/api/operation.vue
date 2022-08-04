@@ -1,7 +1,7 @@
 <template>
   <div class="t-api-tool__multi-operations">
     <t-button theme="primary" @click.native="onCreateApi">新增 API</t-button>
-    <t-button theme="base" @click.native="onGenerateDialogShow">生成文件</t-button>
+    <t-button theme="primary" @click.native="onGenerateDialogShow">生成文件</t-button>
     <a href="https://github.com/Tencent/tdesign/wiki/Component-API-Guide" target="_blank" class="link">
       <t-button variant="text" style="color: #99999;">
         组件 API 设计规范
@@ -14,7 +14,7 @@
       @confirm="onGenerateConfirm"
     >
       <div slot="body">
-        <import ref="api-form" :map="map" :info="apiInfo"></import>
+        <!-- <import ref="api-form" :map="map" :info="apiInfo"></import> -->
         <form class="t-form api-edit-form" onsubmit="return false">
           <div class="t-form-item">
             <label>组件：</label>
@@ -26,7 +26,7 @@
                 filterable
               >
                 <t-option
-                  v-for="(item, index) in map.components"
+                  v-for="(item, index) in componentList"
                   :key="index"
                   :label="`${item.value} ${item.label}`"
                   :value="item.value"
@@ -37,16 +37,29 @@
           <div class="t-form-item">
             <label style='vertical-align: top;'>框架平台：</label>
             <div class="t-form-content platform">
-              <site-checkbox v-model="formData.platform" :options="map.platform_framework" ></site-checkbox>
+              <site-checkbox v-model="formData.platform" :options="frameworkOptions" ></site-checkbox>
             </div>
           </div>
           <div class="t-form-item">
+            <label style='vertical-align: top;'>参数：</label>
+            <div class="t-form-content">
+              <t-checkbox v-model="formData.finalProject">输出文件到各框架仓库</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.onlyDocs">仅输出 API 文档</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.useDefault">输出 useDefault/useVModel 文件(Vue2)</t-checkbox>&nbsp;&nbsp;
+              <t-checkbox v-model="formData.isUseUnitTest">输出单测用例（实验功能）</t-checkbox>
+            </div>
+          </div>
+          <!-- 暂时没有用上，需要的时候再恢复 -->
+          <!-- <div class="t-form-item">
             <label>Live demo：</label>
             <div class="t-form-content">
-              <t-checkbox
-                :checked="checkedAll"
-                @change="onCheckedAllChange"
-              >全部</t-checkbox>
+              <t-checkbox v-model="checkedAll">全部</t-checkbox>
+            </div>
+          </div> -->
+          <div class="t-form-item" v-if="commandLine && commandLine.length">
+            <label>最终命令行：</label>
+            <div class="t-form-content" style="vertical-align: top;">
+              <code v-for="item in commandLine" :key="item">{{ item }}<br/></code>
             </div>
           </div>
         </form>
@@ -82,16 +95,41 @@ export default {
     return {
       codeType: '',
       generateFilesVisible: false,
+      checkedAll: false,
       formData: {
         platform: [],
-        component: ''
+        component: '',
+        finalProject: false,
       }
     }
   },
 
-  computed: {},
-
-  watch: {},
+  computed: {
+    frameworkOptions () {
+      if (!this.map.platform_framework) return []
+      return [{ label: 'VueNext(PC)', value: 1000 }].concat(this.map.platform_framework)
+    },
+    componentList () {
+      return [{ label: '全部', value: 'ALL' }].concat(this.map.components).filter(v => v && !v.type)
+    },
+    commandLine () {
+      if (!this.map || !this.map.platform_framework) return
+      const component = this.formData.component
+      const params = {
+        finalProject: this.formData.finalProject,
+        onlyDocs: this.formData.onlyDocs,
+        useDefault: this.formData.useDefault,
+        isUseUnitTest: this.formData.isUseUnitTest
+      }
+      // 组件全选的情况下，只能输出全部 API 文档
+      if (component.toLocaleLowerCase() === 'all') {
+        params.onlyDocs = true
+      }
+      const commandParams = Object.keys(params).filter(key => params[key]).join()
+      const frameworks = this.frameworkOptions.filter(t => this.formData.platform.includes(t.value))
+      return frameworks.map(framework => `npm run api:docs ${component} '${framework.label}' ${commandParams}`)
+    }
+  },
 
   methods: {
     onCreateApi () {
@@ -101,18 +139,13 @@ export default {
       this.generateFilesVisible = true
     },
     onGenerateConfirm () {
-      const frameworkNames = this.map.platform_framework
-        .filter(item => this.formData.platform.includes(item.value))
-        .map(item => item.label)
-      const params = {
-        component: this.formData.component ? this.formData.component : 'All',
-        platforms: frameworkNames
-      }
       cmpApiInstance({
         method: 'post',
         url: '/cmp/generate-api',
-        data: params
-      }).then((res) => {
+        data: {
+          commandLines: this.commandLine.map(command => command.replace('npm run api:docs', ''))
+        }
+      }).then(() => {
         this.generateFilesVisible = false
       })
     }
