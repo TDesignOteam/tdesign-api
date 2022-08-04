@@ -49,9 +49,6 @@ jobs:
           labels: |
             API
             automated pr
-        run: |
-          pwd
-          ls
       - name: comment 
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
