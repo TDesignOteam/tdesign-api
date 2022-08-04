@@ -61198,7 +61198,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "4",
+      "field_default_value": "8",
       "field_enum": "",
       "field_desc_zh": "评分图标的间距",
       "field_desc_en": null,
@@ -61380,9 +61380,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "24px",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "评分图标的大小，示例：`20px`",
+      "field_desc_zh": "评分图标的大小，示例：`20`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
