@@ -42,6 +42,7 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: ${{ steps.commit.outputs.branchName }}
+          base: develop
           path: target-repo
           title: '[API] Component API generated'
           body: |
