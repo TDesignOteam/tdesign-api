@@ -568,6 +568,10 @@
         "label": "布局"
       },
       {
+        "value": "Link",
+        "label": "链接"
+      },
+      {
         "value": "List",
         "label": "列表"
       },
