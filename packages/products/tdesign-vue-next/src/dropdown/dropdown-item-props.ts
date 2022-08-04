@@ -19,6 +19,15 @@ export default {
   disabled: Boolean,
   /** 是否显示操作项之间的分隔线（分隔线默认在下方） */
   divider: Boolean,
+  /** 下拉菜单选项主题 */
+  theme: {
+    type: String as PropType<TdDropdownItemProps['theme']>,
+    default: 'default' as TdDropdownItemProps['theme'],
+    validator(val: TdDropdownItemProps['theme']): boolean {
+      if (!val) return true;
+      return ['default', 'success', 'warning', 'error'].includes(val);
+    },
+  },
   /** 下拉操作项唯一标识 */
   value: {
     type: [String, Number, Object] as PropType<TdDropdownItemProps['value']>,

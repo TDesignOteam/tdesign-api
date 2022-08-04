@@ -13,8 +13,12 @@ export const dropdownDefaultProps: TdDropdownProps = {
   minColumnWidth: 10,
   options: [],
   placement: 'bottom-left',
-  theme: 'default',
   trigger: 'hover',
 };
 
-export const dropdownItemDefaultProps: TdDropdownItemProps = { active: false, disabled: false, divider: false };
+export const dropdownItemDefaultProps: TdDropdownItemProps = {
+  active: false,
+  disabled: false,
+  divider: false,
+  theme: 'default',
+};
