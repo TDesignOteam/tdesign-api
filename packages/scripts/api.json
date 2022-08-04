@@ -44503,6 +44503,420 @@
       ]
     },
     {
+      "id": 2892,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "链接内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:41:06",
+      "update_time": "2022-08-04 11:41:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2891,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "链接内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:40:53",
+      "update_time": "2022-08-04 11:40:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2895,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "禁用链接",
+      "field_desc_en": "make link to be disabled",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:42:33",
+      "update_time": "2022-08-04 11:42:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2900,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "hover",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "underline",
+      "field_enum": "color/background/underline",
+      "field_desc_zh": "链接悬浮态样式，有 文本颜色变化、添加背景色、添加下划线等 3 种方法",
+      "field_desc_en": "hover link style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:49:33",
+      "update_time": "2022-08-04 11:49:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2894,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "href",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "跳转链接",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:42:04",
+      "update_time": "2022-08-04 11:42:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2897,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:43:48",
+      "update_time": "2022-08-04 11:43:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 2898,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:44:01",
+      "update_time": "2022-08-04 11:44:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 2899,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "target",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+      "field_desc_en": "target is an attribute of `<a>`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:45:49",
+      "update_time": "2022-08-04 11:45:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2896,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "default/primary/danger/warning/success",
+      "field_desc_zh": "组件风格，依次为默认色、品牌色、危险色、警告色、成功色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:43:25",
+      "update_time": "2022-08-04 11:43:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2893,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "underline",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "普通状态是否显示链接下划线",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-04 11:41:43",
+      "update_time": "2022-08-04 11:41:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 904,
       "platform_framework": [
         "1",
@@ -61198,7 +61612,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "8",
+      "field_default_value": "4",
       "field_enum": "",
       "field_desc_zh": "评分图标的间距",
       "field_desc_en": null,
@@ -61380,9 +61794,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "24px",
       "field_enum": "",
-      "field_desc_zh": "评分图标的大小，示例：`20`",
+      "field_desc_zh": "评分图标的大小，示例：`20px`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -95529,5 +95943,5 @@
       ]
     }
   ],
-  "total": 2258
+  "total": 2268
 }
