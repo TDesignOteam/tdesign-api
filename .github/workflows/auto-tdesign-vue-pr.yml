@@ -42,12 +42,16 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           branch: ${{ steps.commit.outputs.branchName }}
+          path: target-repo
           title: '[API] Component API generated'
           body: |
             Update TDesign API & Docs
           labels: |
             API
             automated pr
+        run: |
+          pwd
+          ls
       - name: comment 
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
