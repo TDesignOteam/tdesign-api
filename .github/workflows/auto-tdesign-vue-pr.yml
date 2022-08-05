@@ -41,6 +41,7 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           path: target-repo
+          branch: develop
           title: '[API] Component API generated'
           body: |
             Update TDesign API & Docs
