@@ -25,7 +25,7 @@ jobs:
           export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
       - name: Commit & Push
         id: commit
-        - run: |
+        run: |
           cp -rf packages/products/tdesign-vue/* target-repo/
           cd target-repo/
           git status
