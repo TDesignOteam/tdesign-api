@@ -22,10 +22,10 @@ jobs:
           path: target-repo
       - run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
+          export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
       - name: Commit & Push
         id: commit
         run: |
-          export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
           cp -rf packages/products/tdesign-vue/* target-repo/
           cd target-repo/
           git status
@@ -35,7 +35,6 @@ jobs:
           git add .
           git commit -m "feat: modify API"
           git push --set-upstream origin $NEW_BRANCH_NAME
-          echo "::set-output name=branchName::$NEW_BRANCH_NAME"
       - name: Create Pull Request
         id: pr
         uses: peter-evans/create-pull-request@v4
