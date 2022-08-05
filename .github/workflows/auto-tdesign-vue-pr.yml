@@ -35,13 +35,12 @@ jobs:
           git add .
           git commit -m "feat: modify API"
           git push --set-upstream origin $NEW_BRANCH_NAME
-          echo "::set-output name=branchName::$NEW_BRANCH_NAME"
       - name: Create Pull Request
         id: pr
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: ${{ steps.commit.outputs.branchName }}
+          branch: feat/API-modify-2022-08-05-02_31_50
           base: develop
           path: target-repo
           title: '[API] Component API generated'
