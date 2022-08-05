@@ -35,13 +35,15 @@ jobs:
           git add .
           git commit -m "feat: modify API"
           git push --set-upstream origin $NEW_BRANCH_NAME
+          echo "::set-output name=branchName::$NEW_BRANCH_NAME"
       - name: Create Pull Request
         id: pr
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           path: target-repo
-          branch: develop
+          branch: ${{ steps.commit.outputs.branchName }}
+          base: develop
           title: '[API] Component API generated'
           body: |
             Update TDesign API & Docs
