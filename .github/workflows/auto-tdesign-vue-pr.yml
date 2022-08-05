@@ -26,9 +26,9 @@ jobs:
         id: commit
         run: |
           export NEW_BRANCH_NAME=feat/API-modify-${{ env.NOW }}
-          git checkout -b $NEW_BRANCH_NAME
           cp -rf packages/products/tdesign-vue/* target-repo/
           cd target-repo/
+          git checkout -b $NEW_BRANCH_NAME
           git status
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
