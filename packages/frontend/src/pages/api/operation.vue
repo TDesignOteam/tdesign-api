@@ -110,7 +110,8 @@ export default {
       return [{ label: 'VueNext(PC)', value: 1000 }].concat(this.map.platform_framework)
     },
     componentList () {
-      return [{ label: '全部', value: 'ALL' }].concat(this.map.components).filter(v => v && !v.type)
+      return [{ label: '全部', value: 'ALL' }].concat(this.map.components)
+        .filter(v => (v && !v.type) || ['Table'].includes(v?.value))
     },
     commandLine () {
       if (!this.map || !this.map.platform_framework) return
