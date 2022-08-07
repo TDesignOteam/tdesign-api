@@ -5968,6 +5968,49 @@
       ]
     },
     {
+      "id": 2911,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "cellEmptyContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单元格数据为空时呈现的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-07 13:11:54",
+      "update_time": "2022-08-07 13:11:54",
+      "event_output": null,
+      "custom_field_type": "string | TNode<BaseTableCellParams<T>>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 320,
       "platform_framework": [
         "1",
@@ -14278,7 +14321,7 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "success/warning/error/default",
+      "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
       "field_required": 0,
@@ -14507,7 +14550,7 @@
         "2",
         "16"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "[]",
       "field_enum": "",
       "field_desc_zh": "选中项的值",
       "field_desc_en": null,
@@ -20811,7 +20854,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "用于格式化日期，全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
@@ -21142,7 +21185,7 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "success/warning/error/default",
+      "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
       "field_required": 0,
@@ -23434,6 +23477,47 @@
       ]
     },
     {
+      "id": 2909,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "default/success/warning/error",
+      "field_desc_zh": "输入框状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-07 12:32:24",
+      "update_time": "2022-08-07 12:32:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1210,
       "platform_framework": [
         "1",
@@ -23519,6 +23603,49 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 2910,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "tips",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-07 12:32:38",
+      "update_time": "2022-08-07 12:32:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -60669,7 +60796,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "[]",
       "field_enum": "",
       "field_desc_zh": "范围输入框的值",
       "field_desc_en": null,
@@ -66714,7 +66841,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "【开发中】无边框模式",
+      "field_desc_zh": "无边框模式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -67912,7 +68039,7 @@
       "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发等",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputValue, context?: SelectInputValueChangeContext)【interface SelectInputValueChangeContext { e?: InputEvent | MouseEvent | FocusEvent | KeyboardEvent; trigger: 'input' | 'clear' }】",
+      "event_input": "(value: InputValue, context?: SelectInputValueChangeContext)【interface SelectInputValueChangeContext { e?: InputEvent | MouseEvent | FocusEvent | KeyboardEvent; trigger: 'input' | 'clear' | 'blur' }】",
       "create_time": "2022-02-25 11:15:30",
       "update_time": "2022-03-11 14:08:04",
       "event_output": null,
@@ -96241,5 +96368,5 @@
       ]
     }
   ],
-  "total": 2276
+  "total": 2279
 }
