@@ -19,6 +19,10 @@ export default {
   disabled: Boolean,
   /** 是否显示操作项之间的分隔线（分隔线默认在下方） */
   divider: Boolean,
+  /** 组件前置图标 */
+  prefixIcon: {
+    type: Function as PropType<TdDropdownItemProps['prefixIcon']>,
+  },
   /** 下拉菜单选项主题 */
   theme: {
     type: String as PropType<TdDropdownItemProps['theme']>,

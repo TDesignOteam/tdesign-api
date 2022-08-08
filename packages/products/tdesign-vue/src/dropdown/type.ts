@@ -97,6 +97,10 @@ export interface TdDropdownItemProps {
    */
   divider?: boolean;
   /**
+   * 组件前置图标
+   */
+  prefixIcon?: TNode;
+  /**
    * 下拉菜单选项主题
    * @default default
    */
