@@ -24,4 +24,3 @@ dot | TElement | - | 用于自定义时间轴节点元素。TS 类型：`TNode`�
 dotColor | String | default | 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.。可选项：primary/warning/error/default。TS 类型：`string` | N
 label | TNode | - | 标签文本内容，可完全自定义。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 labelAlign | String | - | 标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`。可选项：left/right/top/bottom | N
-status | String | - | 当前步骤状态：默认状态（未开始）、进行中状态、完成状态。可选项：default/process/finish | N

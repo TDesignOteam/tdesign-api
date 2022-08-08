@@ -60,8 +60,4 @@ export interface TdTimeLineItemProps {
    * 标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`
    */
   labelAlign?: 'left' | 'right' | 'top' | 'bottom';
-  /**
-   * 当前步骤状态：默认状态（未开始）、进行中状态、完成状态
-   */
-  status?: 'default' | 'process' | 'finish';
 }

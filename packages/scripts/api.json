@@ -82574,55 +82574,6 @@
       ]
     },
     {
-      "id": 2829,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "status",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "default/process/finish",
-      "field_desc_zh": "当前步骤状态：默认状态（未开始）、进行中状态、完成状态",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:56:21",
-      "update_time": "2022-07-14 02:56:21",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 630,
       "platform_framework": [
         "1",
@@ -96458,5 +96409,5 @@
       ]
     }
   ],
-  "total": 2281
+  "total": 2280
 }
