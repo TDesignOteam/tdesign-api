@@ -31,6 +31,7 @@ active | Boolean | false | \- | N
 content | String / Slot / Function | '' | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 divider | Boolean | false | \- | N
+prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | default | options：default/success/warning/error。Typescript：`DropdownItemTheme` `type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/dropdown/type.ts) | N
 value | String / Number / Object | - | Typescript：`string | number | { [key: string]: any }` | N
 onClick | Function |  | TS 类型：`(dropdownItem: DropdownOption, context: { e: MouseEvent }) => void`<br/> | N
