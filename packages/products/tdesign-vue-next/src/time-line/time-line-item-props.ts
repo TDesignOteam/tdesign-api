@@ -37,12 +37,4 @@ export default {
       return ['left', 'right', 'top', 'bottom'].includes(val);
     },
   },
-  /** 当前步骤状态：默认状态（未开始）、进行中状态、完成状态 */
-  status: {
-    type: String as PropType<TdTimeLineItemProps['status']>,
-    validator(val: TdTimeLineItemProps['status']): boolean {
-      if (!val) return true;
-      return ['default', 'process', 'finish'].includes(val);
-    },
-  },
 };

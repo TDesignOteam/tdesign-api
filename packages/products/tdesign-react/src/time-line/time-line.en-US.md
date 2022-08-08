@@ -24,4 +24,3 @@ dot | TElement | - | Typescript：`TNode`。[see more ts definition](https://git
 dotColor | String | default | options：primary/warning/error/default。Typescript：`string` | N
 label | TNode | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 labelAlign | String | - | options：left/right/top/bottom | N
-status | String | - | options：default/process/finish | N
