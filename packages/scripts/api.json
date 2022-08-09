@@ -43108,6 +43108,80 @@
       "field_type_text": []
     },
     {
+      "id": 2917,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Input",
+      "field_category": 4,
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "主动调用输入框失去焦点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-09 07:03:37",
+      "update_time": "2022-08-09 07:03:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2916,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Input",
+      "field_category": 4,
+      "field_name": "focus",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "主动调用输入框获得焦点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-09 07:03:18",
+      "update_time": "2022-08-09 07:03:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2735,
       "platform_framework": [
         "1",
@@ -82139,6 +82213,80 @@
       "field_type_text": []
     },
     {
+      "id": 2914,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Textarea",
+      "field_category": 4,
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "主动调用文本输入框失去焦点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-09 07:02:51",
+      "update_time": "2022-08-09 07:02:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2915,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Textarea",
+      "field_category": 4,
+      "field_name": "focus",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "主动调用文本输入框获得焦点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-09 07:03:04",
+      "update_time": "2022-08-09 07:03:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2823,
       "platform_framework": [
         "1",
@@ -96509,5 +96657,9 @@
       ]
     }
   ],
+<<<<<<< HEAD
   "total": 2282
+=======
+  "total": 2284
+>>>>>>> feat: input add blur & focus
 }
