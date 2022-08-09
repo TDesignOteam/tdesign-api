@@ -24,6 +24,7 @@ const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
 const IMPORT_COMPONENT_PATH = map.data.components.map(cmp => `@${cmp.value}`);
 
+// LANGUAGE 会发生变化
 let LANGUAGE = 'zh';
 let currentFramework = '';
 
@@ -261,7 +262,9 @@ function formatEventToProps(api) {
   const name = getEventName(api.field_name);
   let { baseName } = moveTsTypeToDesc(api.event_input);
   baseName = baseName.replace(/`/g, '');
-  const desc = [`TS 类型：\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
+  // tsTypeText 中文"TS 类型"
+  const language = languageConfig[LANGUAGE];
+  const desc = [`${language.tsTypeText}：\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
@@ -306,6 +309,8 @@ function getVueApiDocs(componentMap, current, framework, language) {
   if (language) {
     LANGUAGE = language;
   }
+  // tsTypeText 中文"TS 类型"
+  const languageInfo = languageConfig[LANGUAGE];
   Object.keys(componentMap).forEach((cmp) => {
     const md = {};
     // API 分类：Props / Events / Functions
@@ -341,7 +346,7 @@ function getVueApiDocs(componentMap, current, framework, language) {
       if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type) {
         md[category].apis = md[category].apis.concat([
           'className | String | - | 类名 | N',
-          'style | Object | - | 样式，TS 类型：`React.CSSProperties` | N',
+          `style | Object | - | 样式，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
         ]);
       }
       // 具体 API 内容
