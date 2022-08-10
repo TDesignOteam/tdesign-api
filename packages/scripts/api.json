@@ -66461,7 +66461,7 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<SVGElement, MouseEvent>/KeyboardEvent<HTMLInputElement>",
+      "trigger_elements": "MouseEvent<SVGElement | HTMLDivElement | HTMLLIElement>/KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": null,
       "test_description": null,
@@ -91084,7 +91084,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示下拉框",
       "field_desc_en": null,
