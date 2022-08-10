@@ -54858,6 +54858,51 @@
       ]
     },
     {
+      "id": 2921,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "overlayInnerStyle",
+      "field_type": [
+        "4",
+        "8",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "浮层内容部分样式，第一个参数 `triggerElement` 表示触发元素 DOM 节点，第二个参数 `popupElement` 表示浮层元素 DOM 节点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-10 10:03:33",
+      "update_time": "2022-08-10 10:03:33",
+      "event_output": null,
+      "custom_field_type": "Styles | ((triggerElement: HTMLElement, popupElement: HTMLElement) => Styles)",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object",
+        "Function"
+      ]
+    },
+    {
       "id": 2703,
       "platform_framework": [
         "8",
@@ -96724,5 +96769,5 @@
       ]
     }
   ],
-  "total": 2287
+  "total": 2288
 }
