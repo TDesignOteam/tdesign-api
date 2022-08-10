@@ -44858,7 +44858,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "medium",
       "field_enum": "small/medium/large",
       "field_desc_zh": "尺寸",
       "field_desc_en": null,
@@ -77354,7 +77354,7 @@
       "create_time": "2022-05-22 14:02:26",
       "update_time": "2022-05-22 14:02:26",
       "event_output": null,
-      "custom_field_type": "{ [key: string]: any }",
+      "custom_field_type": "TableEditableCellProps<T>【type TableEditableCellProps<T> = TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject)】【interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> { editedRow: T }】【interface TablePlainObject{ [key: string]: any }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
