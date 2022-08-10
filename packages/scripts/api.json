@@ -13380,7 +13380,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -13785,7 +13785,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "远程加载时显示的文字，支持自定义。如加上超链接",
       "field_desc_en": null,
@@ -16085,7 +16085,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态",
       "field_desc_en": null,
@@ -17309,7 +17309,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -19179,7 +19179,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -20731,7 +20731,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": "make DatePicker to be disabled",
@@ -22989,7 +22989,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用",
       "field_desc_en": null,
@@ -41358,7 +41358,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用输入框",
       "field_desc_en": null,
@@ -43489,7 +43489,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "禁用组件",
       "field_desc_en": null,
@@ -59116,7 +59116,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件内容（content）触发选中",
       "field_desc_en": null,
@@ -60294,7 +60294,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用范围输入框，值为数组表示可分别控制某一个输入框是否禁用",
       "field_desc_en": null,
@@ -61517,7 +61517,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用范围输入框，值为数组表示可分别控制某一个输入框是否禁用",
       "field_desc_en": null,
@@ -62176,7 +62176,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用评分",
       "field_desc_en": null,
@@ -63201,7 +63201,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "禁用状态",
       "field_desc_en": null,
@@ -65018,7 +65018,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -65060,7 +65060,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "当下拉列表为空时显示的内容",
       "field_desc_en": null,
@@ -65143,7 +65143,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否可搜索",
       "field_desc_en": null,
@@ -65351,7 +65351,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "远程加载时显示的文字，支持自定义。如加上超链接",
       "field_desc_en": null,
@@ -65516,7 +65516,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "[]",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "数据化配置选项内容",
       "field_desc_en": null,
@@ -65725,7 +65725,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示下拉框",
       "field_desc_en": null,
@@ -67234,7 +67234,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": null,
@@ -74454,7 +74454,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -90780,7 +90780,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "远程加载时显示的文字，支持自定义。如加上超链接",
       "field_desc_en": null,
