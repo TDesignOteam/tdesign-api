@@ -21834,7 +21834,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "星期文本描述，默认值：['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']",
+      "field_desc_zh": "星期文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -22227,6 +22227,47 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 2920,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePickerConfig",
+      "field_category": 1,
+      "field_name": "quarters",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "季度文本描述，默认值：['1 季度', '2 季度', '3 季度', '4 季度']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-10 06:35:11",
+      "update_time": "2022-08-10 06:35:11",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -96683,5 +96724,5 @@
       ]
     }
   ],
-  "total": 2286
+  "total": 2287
 }
