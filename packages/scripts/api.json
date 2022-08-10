@@ -58923,7 +58923,7 @@
       "deprecated": 0,
       "version": null,
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
@@ -59942,7 +59942,7 @@
         "2",
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "选中的值",
       "field_desc_en": null,
