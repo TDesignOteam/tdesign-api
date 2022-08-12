@@ -43341,11 +43341,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43375,11 +43371,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -43431,10 +43423,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43464,10 +43453,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Number"
@@ -43478,10 +43464,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43511,10 +43494,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -43525,9 +43505,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43544,7 +43522,7 @@
       "create_time": "2021-01-31 10:27:50",
       "update_time": "2021-04-16 13:59:01",
       "event_output": null,
-      "custom_field_type": "(value: InputNumberValue, context?: { fixedNumber?: InputNumberValue }) => InputNumberValue",
+      "custom_field_type": "(value: T, context?: { fixedNumber?: T }) => T",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43557,9 +43535,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Function"
@@ -43695,10 +43671,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43716,7 +43689,7 @@
       "create_time": "2021-01-31 10:25:13",
       "update_time": "2021-03-15 15:16:00",
       "event_output": null,
-      "custom_field_type": "InputNumberValue",
+      "custom_field_type": "T",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43729,10 +43702,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -43744,10 +43714,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43765,7 +43732,7 @@
       "create_time": "2021-01-31 10:25:23",
       "update_time": "2021-03-15 15:16:04",
       "event_output": null,
-      "custom_field_type": "InputNumberValue",
+      "custom_field_type": "T",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43778,10 +43745,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -43793,10 +43757,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43826,10 +43787,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -43840,10 +43798,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43873,10 +43828,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -43887,10 +43839,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43920,10 +43869,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -43975,10 +43921,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -43996,7 +43939,7 @@
       "create_time": "2021-01-31 10:26:08",
       "update_time": "2021-03-15 15:16:07",
       "event_output": null,
-      "custom_field_type": "InputNumberValue",
+      "custom_field_type": "T",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44009,10 +43952,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -44067,10 +44007,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -44100,10 +44037,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -44157,10 +44091,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 1,
@@ -44169,16 +44100,16 @@
         "1",
         "2"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "值",
+      "field_desc_zh": "数字输入框的值。当值为 '' 时，输入框显示为空",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-01-31 10:21:18",
       "update_time": "2022-01-21 04:14:42",
       "event_output": null,
-      "custom_field_type": "InputNumberValue【type InputNumberValue = number | string】",
+      "custom_field_type": "T【type InputNumberValue = number | string】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -44191,10 +44122,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -44206,10 +44134,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 2,
@@ -44237,10 +44162,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -44249,10 +44171,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 2,
@@ -44263,7 +44182,7 @@
       "field_desc_zh": "值变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputNumberValue, context: ChangeContext)【interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent }】【type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | ''】",
+      "event_input": "(value: T, context: ChangeContext)【interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent }】【type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | ''】",
       "create_time": "2021-01-31 10:32:28",
       "update_time": "2021-11-27 15:47:45",
       "event_output": null,
@@ -44280,10 +44199,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -44329,10 +44245,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 2,
@@ -44360,10 +44273,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -44483,10 +44393,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "InputNumber",
       "field_category": 2,
@@ -44514,10 +44421,44 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2925,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "InputNumber",
+      "field_category": 64,
+      "field_name": "<T = InputNumberValue>",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数字输入框的值。当值为 '' 时，输入框显示为空",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-11 06:06:40",
+      "update_time": "2022-08-11 06:06:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "<T>",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -59863,7 +59804,7 @@
       ],
       "component": "Radio",
       "field_category": 64,
-      "field_name": "<T extends RadioValue = RadioValue>【type RadioValue = string | number | boolean】",
+      "field_name": "<T = RadioValue>【type RadioValue = string | number | boolean】",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -60301,7 +60242,7 @@
       ],
       "component": "RadioGroup",
       "field_category": 64,
-      "field_name": "<T extends RadioValue = RadioValue>",
+      "field_name": "<T = RadioValue>",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -96878,5 +96819,5 @@
       ]
     }
   ],
-  "total": 2291
+  "total": 2292
 }
