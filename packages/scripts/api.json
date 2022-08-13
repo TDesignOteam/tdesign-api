@@ -43689,7 +43689,7 @@
       "create_time": "2021-01-31 10:25:13",
       "update_time": "2021-03-15 15:16:00",
       "event_output": null,
-      "custom_field_type": "T",
+      "custom_field_type": "InputNumberValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43732,7 +43732,7 @@
       "create_time": "2021-01-31 10:25:23",
       "update_time": "2021-03-15 15:16:04",
       "event_output": null,
-      "custom_field_type": "T",
+      "custom_field_type": "InputNumberValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43939,7 +43939,7 @@
       "create_time": "2021-01-31 10:26:08",
       "update_time": "2021-03-15 15:16:07",
       "event_output": null,
-      "custom_field_type": "T",
+      "custom_field_type": "InputNumberValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44791,7 +44791,9 @@
     {
       "id": 2923,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "Link",
       "field_category": 1,
@@ -44819,7 +44821,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
