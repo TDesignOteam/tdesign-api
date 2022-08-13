@@ -43522,7 +43522,7 @@
       "create_time": "2021-01-31 10:27:50",
       "update_time": "2021-04-16 13:59:01",
       "event_output": null,
-      "custom_field_type": "(value: T, context?: { fixedNumber?: T }) => T",
+      "custom_field_type": "(value: InputNumberValue, context?: { fixedNumber?: InputNumberValue }) => InputNumberValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
