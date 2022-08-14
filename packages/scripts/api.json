@@ -93567,6 +93567,53 @@
       ]
     },
     {
+      "id": 2930,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "progress",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "上传进度，优先级最高，会覆盖组件内部的上传进度",
+      "field_desc_en": "progress number",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-14 11:17:05",
+      "update_time": "2022-08-14 11:17:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1675,
       "platform_framework": [
         "64"
@@ -93655,7 +93702,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -93685,7 +93735,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -94658,6 +94711,49 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2929,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 2,
+      "field_name": "validate",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制时会触发等场景",
+      "field_desc_en": "trigger on length over limit, or trigger on file size over limit",
+      "field_required": 0,
+      "event_input": "(context: { type: 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' })",
+      "create_time": "2022-08-14 10:28:35",
+      "update_time": "2022-08-14 10:28:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -96956,5 +97052,5 @@
       ]
     }
   ],
-  "total": 2295
+  "total": 2297
 }
