@@ -92437,6 +92437,53 @@
       ]
     },
     {
+      "id": 2928,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "beforeAllFilesUpload",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全部文件上传之前的钩子，参数为上传的文件，返回值决定是否继续上传，若返回值为 `false` 则终止上传",
+      "field_desc_en": "before all files upload, return false can stop upload continue",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-14 09:10:55",
+      "update_time": "2022-08-14 09:10:55",
+      "event_output": null,
+      "custom_field_type": "(file: UploadFile[]) => boolean | Promise<boolean>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 876,
       "platform_framework": [
         "1",
@@ -92454,14 +92501,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "上传文件之前的钩子，参数为上传的文件，返回值决定是否上传",
+      "field_desc_zh": "单文件上传之前的钩子，参数为上传的文件，返回值决定是否继续上传，若返回值为 `false` 则终止上传",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-02-18 15:12:19",
       "update_time": "2021-12-28 01:57:17",
       "event_output": null,
-      "custom_field_type": "(file: File | UploadFile) => boolean | Promise<boolean>",
+      "custom_field_type": "(file: UploadFile) => boolean | Promise<boolean>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -96909,5 +96956,5 @@
       ]
     }
   ],
-  "total": 2294
+  "total": 2295
 }
