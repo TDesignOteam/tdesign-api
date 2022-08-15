@@ -35222,6 +35222,53 @@
       ]
     },
     {
+      "id": 2933,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "校验状态，当组件被校验时会被 `rules`  的 `message.type` 覆盖，可在需要完全自主控制校验状态时使用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-15 06:35:03",
+      "update_time": "2022-08-15 06:35:03",
+      "event_output": null,
+      "custom_field_type": "error | waring | success | validating",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 411,
       "platform_framework": [
         "1",
@@ -35311,6 +35358,55 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 2932,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "tips",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义提示内容，样式跟随 `status` 变动，当组件被校验时会被 `rules`  的 `message` 覆盖，可在需要完全自主控制校验规则时使用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-15 06:30:58",
+      "update_time": "2022-08-15 06:30:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -82990,6 +83086,47 @@
       ]
     },
     {
+      "id": 2931,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimeLineItem",
+      "field_category": 1,
+      "field_name": "loading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否处在加载状态",
+      "field_desc_en": "Whether it is in the loading state",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-15 01:33:48",
+      "update_time": "2022-08-15 01:33:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 630,
       "platform_framework": [
         "1",
@@ -97052,5 +97189,5 @@
       ]
     }
   ],
-  "total": 2297
+  "total": 2300
 }
