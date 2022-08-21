@@ -57517,7 +57517,7 @@
       "field_desc_zh": "行编辑时触发",
       "field_desc_en": "trigger on row data is editing",
       "field_required": 0,
-      "event_input": "(context: PrimaryTableRowEditContext<T>)【type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any }】",
+      "event_input": "(context: PrimaryTableRowEditContext<T>)【type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }】",
       "create_time": "2022-07-09 10:43:58",
       "update_time": "2022-07-09 11:36:46",
       "event_output": null,
