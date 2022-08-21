@@ -56437,6 +56437,47 @@
       ]
     },
     {
+      "id": 2937,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "editableCellState",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单元格是否允许编辑。返回值为 `true` 则表示可编辑；返回值为 `false` 则表示不可编辑，只读状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 08:33:52",
+      "update_time": "2022-08-21 08:33:52",
+      "event_output": null,
+      "custom_field_type": "EditableCellType<T>【type EditableCellType<T> = (params: PrimaryTableCellParams<T>) => boolean】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2817,
       "platform_framework": [
         "1",
@@ -97308,5 +97349,5 @@
       ]
     }
   ],
-  "total": 2303
+  "total": 2304
 }
