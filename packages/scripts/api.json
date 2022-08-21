@@ -77579,6 +77579,47 @@
       "field_type_text": []
     },
     {
+      "id": 2938,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableEditableCellConfig",
+      "field_category": 1,
+      "field_name": "defaultEditable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "单元格默认状态是否为编辑态",
+      "field_desc_en": "set default editable once",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 09:08:22",
+      "update_time": "2022-08-21 09:08:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2698,
       "platform_framework": [
         "1",
@@ -97349,5 +97390,5 @@
       ]
     }
   ],
-  "total": 2304
+  "total": 2305
 }
