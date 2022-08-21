@@ -38074,6 +38074,1181 @@
       ]
     },
     {
+      "id": 2951,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "counter",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义渲染计数部分",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 02:47:25",
+      "update_time": "2022-08-21 02:47:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 2942,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "current",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前步骤，即整个引导的进度。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:53:02",
+      "update_time": "2022-08-19 09:53:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 2945,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "finishButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{ content: '完成', theme: 'primary' }",
+      "field_enum": "",
+      "field_desc_zh": "透传 完成 的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 10:03:25",
+      "update_time": "2022-08-19 10:03:25",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2939,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "hideCounter",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否隐藏计数",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:32:01",
+      "update_time": "2022-08-19 09:32:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2940,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "hidePrev",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否隐藏上一步按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:32:29",
+      "update_time": "2022-08-19 09:32:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2938,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "hideSkip",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否隐藏跳过按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:31:32",
+      "update_time": "2022-08-19 09:31:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2941,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "initialNum",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "起始序号",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:33:47",
+      "update_time": "2022-08-19 09:33:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 2937,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "mask",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否出现遮罩层",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 09:28:58",
+      "update_time": "2022-08-19 09:28:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2955,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "mode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "popup",
+      "field_enum": "popup/dialog",
+      "field_desc_zh": "引导框的类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:05:50",
+      "update_time": "2022-08-21 03:05:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2944,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "nextButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{ content: '下一步', theme: 'primary' }",
+      "field_enum": "",
+      "field_desc_zh": "透传 下一步按钮 的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 10:02:58",
+      "update_time": "2022-08-19 10:02:58",
+      "event_output": null,
+      "custom_field_type": "ButtonProps【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2943,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "prevButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{ content: '上一步', theme: 'primary' }",
+      "field_enum": "",
+      "field_desc_zh": "透传 上一步按钮 的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-19 10:02:34",
+      "update_time": "2022-08-19 10:02:34",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2191,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "skipButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{ content: '跳过', theme: 'default' }",
+      "field_enum": "",
+      "field_desc_zh": "透传 跳过按钮 的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-01-18 06:11:59",
+      "update_time": "2022-02-21 13:13:10",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2963,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "steps",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:30:43",
+      "update_time": "2022-08-21 03:30:43",
+      "event_output": null,
+      "custom_field_type": "Array<TdGuideStepProps>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 2946,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前步骤发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(current: number, total: number, context?: { e?: MouseEvent })",
+      "create_time": "2022-08-21 02:26:41",
+      "update_time": "2022-08-21 02:26:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2948,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "clickNextStep",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击下一步时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "( next: number, current: number, total: number, context?: { e?: MouseEvent })",
+      "create_time": "2022-08-21 02:41:14",
+      "update_time": "2022-08-21 02:41:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2947,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "clickPrevStep",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击上一步时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "( prev: number, current: number, total: number, context?: { e?: MouseEvent })",
+      "create_time": "2022-08-21 02:38:30",
+      "update_time": "2022-08-21 02:38:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2950,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "finish",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击完成按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "( current: number, total: number, context?: { e?: MouseEvent })",
+      "create_time": "2022-08-21 02:43:23",
+      "update_time": "2022-08-21 02:43:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2949,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "skip",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击跳过按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(current: number, total: number, context?: { e?: MouseEvent })",
+      "create_time": "2022-08-21 02:42:25",
+      "update_time": "2022-08-21 02:42:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2958,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:14:15",
+      "update_time": "2022-08-21 03:14:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2956,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用户自定义引导弹框的内容，一旦存在，此时除 `placement`、`offset`和`element` 外，其它属性全部失效）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:07:57",
+      "update_time": "2022-08-21 03:07:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2954,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "description",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前步骤的描述内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:03:34",
+      "update_time": "2022-08-21 03:03:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2952,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "element",
+      "field_type": [
+        "1",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "高亮的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'#tdesign' 或 () => document.querySelector('#tdesign')",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2022-08-21 03:02:42",
+      "update_time": "2022-08-21 03:02:42",
+      "event_output": null,
+      "custom_field_type": "AttachNode",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Function"
+      ]
+    },
+    {
+      "id": 2962,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "nextButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义当前引导框的下一步按钮的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:26:43",
+      "update_time": "2022-08-21 03:26:43",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1449,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "offset",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-08-16 07:06:05",
+      "update_time": "2021-08-16 07:07:02",
+      "event_output": null,
+      "custom_field_type": "Array<string | number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 2959,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "top",
+      "field_enum": "",
+      "field_desc_zh": "引导框相对于高亮元素出现的位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:19:45",
+      "update_time": "2022-08-21 03:19:45",
+      "event_output": null,
+      "custom_field_type": "StepPopupPlacement | StepDialogPlacement【type StepPopupPlacement = 'top'|'left'|'right'|'bottom'|'top-left'|'top-right'|'bottom-left'|'bottom-right'|'left-top'|'left-bottom'|'right-top'|'right-bottom'】【type StepDialogPlacement = 'top'|'center' 】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2961,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "prevButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义当前引导框的上一步按钮的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:26:18",
+      "update_time": "2022-08-21 03:26:18",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2960,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "skipButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义当前步骤引导框的跳过按钮的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:23:34",
+      "update_time": "2022-08-21 03:23:34",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2957,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "stepOverlayClass",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "覆盖引导框的类名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:12:46",
+      "update_time": "2022-08-21 03:12:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2953,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前步骤的标题内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-21 03:03:12",
+      "update_time": "2022-08-21 03:03:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 862,
       "platform_framework": [
         "1",
@@ -48543,43 +49718,6 @@
       "field_type_text": [
         "Boolean",
         "Object"
-      ]
-    },
-    {
-      "id": 1449,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Message",
-      "field_category": 1,
-      "field_name": "offset",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-16 07:06:05",
-      "update_time": "2021-08-16 07:07:02",
-      "event_output": null,
-      "custom_field_type": "Array<string | number>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -65572,47 +66710,6 @@
       ]
     },
     {
-      "id": 2191,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Select",
-      "field_category": 1,
-      "field_name": "inputProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传 Input 输入框组件的全部属性",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-01-18 06:11:59",
-      "update_time": "2022-02-21 13:13:10",
-      "event_output": null,
-      "custom_field_type": "InputProps【import { InputProps } from '@Input'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
       "id": 2369,
       "platform_framework": [
         "1",
@@ -72062,39 +73159,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1587,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Steps",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前步骤发生变化时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "({current: string | number, previous: string | number})",
-      "create_time": "2021-09-02 03:16:55",
-      "update_time": "2021-11-30 02:40:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -97308,5 +98372,5 @@
       ]
     }
   ],
-  "total": 2303
+  "total": 2329
 }

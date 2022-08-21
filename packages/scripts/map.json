@@ -519,6 +519,14 @@
         "label": "栅格"
       },
       {
+        "value": "Guide",
+        "label": "引导"
+      },
+      {
+        "value": "GuideStep",
+        "label": "引导步骤的类型"
+      },
+      {
         "value": "Header",
         "label": "布局-头部"
       },

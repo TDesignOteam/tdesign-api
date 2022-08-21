@@ -229,6 +229,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Collapse', label: '折叠' },
   { value: 'CollapsePanel', label: '折叠面板' },
   { value: 'Card', label: '卡片' },
+  { value: 'Guide', label:'引导' },
+  { value: 'GuideStep', label: '引导步骤的类型' },
   { value: 'Descriptions', label: '描述列表' },
   { value: 'Empty', label: '空状态' },
   { value: 'Statistic', label: '统计数值' },
@@ -254,6 +256,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'DialogConfig', label: '对话框全局配置', type: 'TS' },
   { value: 'DrawerConfig', label: '抽屉全局配置', type: 'TS' },
   { value: 'PopconfirmConfig', label: '气泡确认框全局配置', type: 'TS' },
+
   { value: 'TableConfig', label: '表格全局配置', type: 'TS' },
   { value: 'SelectConfig', label: '选择器全局配置', type: 'TS' },
   { value: 'TreeConfig', label: '树全局配置', type: 'TS' },

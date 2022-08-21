@@ -94,6 +94,7 @@ const COMPONENT_API_MD_MAP = {
   RangeInput: ['RangeInput', 'RangeInputPopup'],
   Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
   TimeLine: ['TimeLine', 'TimeLineItem'],
+  Guide: ['Guide','GuideStep']
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -217,6 +218,9 @@ const TYPES_COMBINE_MAP = {
   TimeLine: {
     list: ['TimeLine', 'TimeLineItem'],
   },
+  Guide: {
+    list: ['Guide', 'GuideStep'],
+  }
 };
 
 // common 数据类型，用于引入具体的组件类型定义文件中
