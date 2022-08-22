@@ -342,8 +342,10 @@ function getVueApiDocs(componentMap, current, framework, language) {
       const titleFields = current.titleMap[LANGUAGE][docTitleType].titles;
       const mdTitles = getApiTitles(titleFields);
       md[category].apis.push(mdTitles);
+      // 部分组件无包裹元素不需要添加 className、style
+      const filterComponents = ['Popup', 'Tooltip'];
       // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
-      if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type) {
+      if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
         md[category].apis = md[category].apis.concat([
           'className | String | - | 类名 | N',
           `style | Object | - | 样式，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
