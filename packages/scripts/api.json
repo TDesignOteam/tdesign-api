@@ -33084,6 +33084,43 @@
       ]
     },
     {
+      "id": 2940,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Form",
+      "field_category": 1,
+      "field_name": "form",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "经 `Form.useForm()` 创建的 form 控制实例",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-23 06:16:23",
+      "update_time": "2022-08-23 06:16:23",
+      "event_output": null,
+      "custom_field_type": "FormInstanceFunctions",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2203,
       "platform_framework": [
         "1",
@@ -33830,6 +33867,43 @@
       "field_type_text": []
     },
     {
+      "id": 2941,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Form",
+      "field_category": 4,
+      "field_name": "currentElement",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取 form dom 元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-23 06:23:07",
+      "update_time": "2022-08-23 06:23:07",
+      "event_output": "HTMLFormElement",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 1068,
       "platform_framework": [
         "2"
@@ -33960,7 +34034,7 @@
       "create_time": "2021-08-26 02:43:14",
       "update_time": "2022-01-27 05:25:06",
       "event_output": null,
-      "custom_field_type": "(fields: FieldData[]) => void【interface FieldData { name: string; value: unknown, status: string }】",
+      "custom_field_type": "(fields: FieldData[]) => void【interface FieldData { name: string; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -54929,6 +55003,47 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 2939,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "delay",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'enter'",
+      "field_enum": "'enter' | 'leave' | 'enter-and-leave'",
+      "field_desc_zh": "延时显示或隐藏覆层",
+      "field_desc_en": "delay to show or hide popover",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-22 12:32:32",
+      "update_time": "2022-08-22 12:32:32",
+      "event_output": null,
+      "custom_field_type": "PopupDelayType【type PopupDelayType = 'enter' | 'leave' | 'enter-and-leave'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -77729,7 +77844,7 @@
       "create_time": "2022-05-22 14:06:06",
       "update_time": "2022-07-09 13:14:19",
       "event_output": null,
-      "custom_field_type": "FormRule[]【import { FormRule, AllValidateResult } from '@Form'】",
+      "custom_field_type": "TableEditableCellRules<T>【type TableEditableCellRules<T> = FormRule[] | ((params: TableEditableCellPropsParams<T>) => FormRule[])】【import { FormRule, AllValidateResult } from '@Form'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -97396,5 +97511,5 @@
       ]
     }
   ],
-  "total": 2305
+  "total": 2308
 }
