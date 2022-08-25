@@ -83818,6 +83818,47 @@
       ]
     },
     {
+      "id": 2942,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 1,
+      "field_name": "presets",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "预设快捷时间选择，示例：`{ '前一小时': '11:00:00' }`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-25 08:02:48",
+      "update_time": "2022-08-25 08:02:48",
+      "event_output": null,
+      "custom_field_type": "PresetTime【interface PresetTime { [presetName: string]: TimePickerValue | (() => TimePickerValue) }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1053,
       "platform_framework": [
         "1",
@@ -84681,6 +84722,47 @@
       "update_time": "2022-05-06 05:36:20",
       "event_output": null,
       "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2943,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimeRangePicker",
+      "field_category": 1,
+      "field_name": "presets",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-25 08:04:57",
+      "update_time": "2022-08-25 08:04:57",
+      "event_output": null,
+      "custom_field_type": "PresetTimeRange【interface PresetTimeRange { [presetRageName: string]: TimeRangeValue | (() => TimeRangeValue)}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -97511,5 +97593,5 @@
       ]
     }
   ],
-  "total": 2308
+  "total": 2310
 }
