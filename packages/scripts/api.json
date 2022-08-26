@@ -94925,7 +94925,7 @@
       "field_desc_zh": "上传失败后触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(options: { e: ProgressEvent; file: UploadFile; currentFiles: UploadFile[] })",
+      "event_input": "(options: { e: ProgressEvent; file: UploadFile; currentFiles: UploadFile[]; response?: any })",
       "create_time": "2021-02-18 15:27:40",
       "update_time": "2021-12-28 01:49:20",
       "event_output": null,
