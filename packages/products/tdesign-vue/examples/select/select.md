@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Select Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -78,7 +77,7 @@ visible-change | `(visible: boolean)` | 下拉框隐藏/显示时触发
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
-checkAll | Boolean | false | 当前选项是否为全选，全选可以在顶部，也可以在底部 | N
+checkAll | Boolean | false | 当前选项是否为全选，全选可以在顶部，也可以在底部。点击当前选项会选中禁用态除外的全部选项，即使是分组选择器也会选中全部选项 | N
 content | String / Slot / Function | - | 用于定义复杂的选项内容。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 用于定义复杂的选项内容。同 content。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | 是否禁用该选项 | N
