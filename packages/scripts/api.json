@@ -51317,6 +51317,47 @@
       "field_type_text": []
     },
     {
+      "id": 2944,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Option",
+      "field_category": 1,
+      "field_name": "checkAll",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "当前选项是否为全选，全选可以在顶部，也可以在底部",
+      "field_desc_en": "check all option, which can be both top of the panel and bottom of the panel",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-26 02:51:21",
+      "update_time": "2022-08-26 02:51:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1864,
       "platform_framework": [
         "2"
@@ -97593,5 +97634,5 @@
       ]
     }
   ],
-  "total": 2310
+  "total": 2311
 }
