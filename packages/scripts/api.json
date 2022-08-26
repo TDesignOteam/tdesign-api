@@ -75010,7 +75010,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "开关内容，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]",
+      "field_desc_zh": "用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
