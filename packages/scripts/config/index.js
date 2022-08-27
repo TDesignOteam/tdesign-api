@@ -23,9 +23,9 @@ const path = require('path');
  */
 const FRAMEWORK_MAP = {
   'Vue(PC)': {
-    apiBasePath: `${BASE_PATH_URL}/tdesign-vue/examples`,
-    apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue/examples`,
-    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue/examples/$compName/usage`,
+    apiBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
+    apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
+    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue/src/$compName/_usage`,
     tsBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
     propsBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
     tsBaseFileName: 'USE_TYPE_NAME',
