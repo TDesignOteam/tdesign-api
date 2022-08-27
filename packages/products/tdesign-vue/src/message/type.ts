@@ -47,6 +47,11 @@ export interface MessageOptions extends TdMessageProps {
    */
   attach?: AttachNode;
   /**
+   * 类名
+   * @default ''
+   */
+  className?: string;
+  /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']
    */
   offset?: Array<string | number>;
@@ -55,6 +60,10 @@ export interface MessageOptions extends TdMessageProps {
    * @default top
    */
   placement?: MessagePlacementList;
+  /**
+   * 内敛样式
+   */
+  style?: object;
   /**
    * 消息层级
    * @default 5000
