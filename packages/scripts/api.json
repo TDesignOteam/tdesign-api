@@ -94936,6 +94936,49 @@
       "field_type_text": []
     },
     {
+      "id": 2945,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 2,
+      "field_name": "oneFileSuccess",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: Pick<SuccessContext, 'e' | 'file' | 'response'>)",
+      "create_time": "2022-08-27 16:23:47",
+      "update_time": "2022-08-27 16:23:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 893,
       "platform_framework": [
         "1",
@@ -97587,5 +97630,5 @@
       ]
     }
   ],
-  "total": 2310
+  "total": 2311
 }
