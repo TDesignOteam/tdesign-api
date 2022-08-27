@@ -37,4 +37,6 @@ export default {
       return ['left', 'right', 'top', 'bottom'].includes(val);
     },
   },
+  /** 是否处在加载状态 */
+  loading: Boolean,
 };

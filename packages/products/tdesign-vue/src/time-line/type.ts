@@ -56,4 +56,8 @@ export interface TdTimeLineItemProps {
    * 标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`
    */
   labelAlign?: 'left' | 'right' | 'top' | 'bottom';
+  /**
+   * 是否处在加载状态
+   */
+  loading?: boolean;
 }

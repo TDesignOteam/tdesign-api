@@ -1,5 +1,7 @@
+:: BASE_DOC ::
 
 ## API
+
 ### TimeLine Props
 
 name | type | default | description | required
@@ -19,3 +21,4 @@ dot | Slot / Function | - | Typescript：`TNode`。[see more ts definition](http
 dotColor | String | default | options：primary/warning/error/default。Typescript：`string` | N
 label | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 labelAlign | String | - | options：left/right/top/bottom | N
+loading | Boolean | - | Whether it is in the loading state | N

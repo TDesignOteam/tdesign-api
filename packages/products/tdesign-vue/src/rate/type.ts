@@ -24,7 +24,6 @@ export interface TdRateProps {
   count?: number;
   /**
    * 是否禁用评分
-   * @default false
    */
   disabled?: boolean;
   /**
