@@ -93472,7 +93472,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "[]",
       "field_enum": "",
       "field_desc_zh": "已上传文件列表",
       "field_desc_en": null,
