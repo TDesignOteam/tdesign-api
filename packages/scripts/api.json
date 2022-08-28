@@ -95358,7 +95358,7 @@
       "field_desc_zh": "文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制时会触发等场景",
       "field_desc_en": "trigger on length over limit, or trigger on file size over limit",
       "field_required": 0,
-      "event_input": "(context: { type: 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILE_OVER_SIZE_LIMIT' })",
+      "event_input": "(context: { type: 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT', files: UploadFile[] })",
       "create_time": "2022-08-14 10:28:35",
       "update_time": "2022-08-14 10:28:35",
       "event_output": null,
