@@ -93558,7 +93558,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "文件上传前转换文件数据",
+      "field_desc_zh": "文件上传前转换文件的数据结构，可新增或修改文件对象的属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -93572,6 +93572,53 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 2946,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "formatRequest",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于新增或修改文件上传请求参数",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-28 02:46:58",
+      "update_time": "2022-08-28 02:46:58",
+      "event_output": null,
+      "custom_field_type": "(file: UploadFile) => { [key: string]: any }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -97630,5 +97677,5 @@
       ]
     }
   ],
-  "total": 2311
+  "total": 2312
 }
