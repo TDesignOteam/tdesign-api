@@ -17997,7 +17997,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "12",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "栅格占位格数，为 0 时相当于 display: none",
       "field_desc_en": null,
