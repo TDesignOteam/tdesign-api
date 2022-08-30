@@ -229,6 +229,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Collapse', label: '折叠' },
   { value: 'CollapsePanel', label: '折叠面板' },
   { value: 'Card', label: '卡片' },
+  { value: 'Guide', label:'引导' },
+  { value: 'GuideStep', label: '引导步骤' },
   { value: 'Descriptions', label: '描述列表' },
   { value: 'Empty', label: '空状态' },
   { value: 'Statistic', label: '统计数值' },
