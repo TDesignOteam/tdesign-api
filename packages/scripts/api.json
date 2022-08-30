@@ -38242,7 +38242,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "`{ content: '完成', theme: 'primary' }`",
+      "field_default_value": "{ content: '完成', theme: 'primary' }",
       "field_enum": "",
       "field_desc_zh": "透传 完成 的全部属性",
       "field_desc_en": null,
@@ -38406,7 +38406,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "4",
+      "field_default_value": "8",
       "field_enum": "",
       "field_desc_zh": "高亮框的内边距",
       "field_desc_en": null,
@@ -38488,7 +38488,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "`{ content: '下一步', theme: 'primary' }`",
+      "field_default_value": "{ content: '下一步', theme: 'primary' }",
       "field_enum": "",
       "field_desc_zh": "透传 下一步按钮 的全部属性",
       "field_desc_en": null,
@@ -38529,7 +38529,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "`{ content: '上一步', theme: 'primary' }`",
+      "field_default_value": "{ content: '上一步', theme: 'primary' }",
       "field_enum": "",
       "field_desc_zh": "透传 上一步按钮 的全部属性",
       "field_desc_en": null,
@@ -38611,7 +38611,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "`{ content: '跳过', theme: 'default' }`",
+      "field_default_value": "{ content: '跳过', theme: 'default' }",
       "field_enum": "",
       "field_desc_zh": "透传 跳过按钮 的全部属性",
       "field_desc_en": null,
@@ -38693,7 +38693,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "99999",
+      "field_default_value": "999999",
       "field_enum": "",
       "field_desc_zh": "提示框的层级",
       "field_desc_en": null,
@@ -38907,6 +38907,49 @@
       "field_type_text": []
     },
     {
+      "id": 2955,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "body",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前步骤提示框的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-30 08:39:07",
+      "update_time": "2022-08-30 08:39:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 2953,
       "platform_framework": [
         "1",
@@ -38960,7 +39003,6 @@
       "field_category": 1,
       "field_name": "content",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
@@ -38988,49 +39030,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 2955,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "GuideStep",
-      "field_category": 1,
-      "field_name": "description",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前步骤的描述内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-08-30 08:39:07",
-      "update_time": "2022-08-30 08:39:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -39087,7 +39087,6 @@
       "field_category": 1,
       "field_name": "highlightContent",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
@@ -39115,7 +39114,6 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
       ]
     },
@@ -39294,9 +39292,9 @@
       "field_category": 1,
       "field_name": "placement",
       "field_type": [
-        "16"
+        "1"
       ],
-      "field_default_value": "top",
+      "field_default_value": "'top'",
       "field_enum": "",
       "field_desc_zh": "引导框相对于高亮元素出现的位置",
       "field_desc_en": null,
@@ -39321,7 +39319,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Array"
+        "String"
       ]
     },
     {
@@ -39333,7 +39331,7 @@
       ],
       "component": "GuideStep",
       "field_category": 1,
-      "field_name": "prevButtonProps\t",
+      "field_name": "prevButtonProps",
       "field_type": [
         "8"
       ],
