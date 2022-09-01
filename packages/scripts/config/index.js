@@ -42,9 +42,9 @@ const FRAMEWORK_MAP = {
     TNode,
   },
   'VueNext(PC)': {
-    apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/examples`,
-    apiEnglishBasePath: '',
-    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue-next/examples/$compName/usage`,
+    apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
+    apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
+    usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src/$compName/_usage`,
     tsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
     propsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
     tsBaseFileName: 'USE_TYPE_NAME',
