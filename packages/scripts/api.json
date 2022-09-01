@@ -56437,18 +56437,19 @@
       "field_category": 1,
       "field_name": "delay",
       "field_type": [
-        "1"
+        "2",
+        "16"
       ],
-      "field_default_value": "'enter'",
-      "field_enum": "'enter' | 'leave' | 'enter-and-leave'",
-      "field_desc_zh": "延时显示或隐藏覆层",
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "延时显示或隐藏覆层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`",
       "field_desc_en": "delay to show or hide popover",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-22 12:32:32",
       "update_time": "2022-08-22 12:32:32",
       "event_output": null,
-      "custom_field_type": "PopupDelayType【type PopupDelayType = 'enter' | 'leave' | 'enter-and-leave'】",
+      "custom_field_type": "number | Array<number>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -56464,7 +56465,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Number",
+        "Array"
       ]
     },
     {
