@@ -103,6 +103,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   multiple?: boolean;
   /**
    * 数据化配置选项内容
+   * @default []
    */
   options?: Array<T>;
   /**
@@ -125,6 +126,10 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    * 是否显示下拉框
    */
   popupVisible?: boolean;
+  /**
+   * 是否显示下拉框，非受控属性
+   */
+  defaultPopupVisible?: boolean;
   /**
    * 组件前置图标
    */

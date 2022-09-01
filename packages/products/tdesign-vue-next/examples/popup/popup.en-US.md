@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Popup Props
 
 name | type | default | description | required

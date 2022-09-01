@@ -74,6 +74,7 @@ export default {
   /** 数据化配置选项内容 */
   options: {
     type: Array as PropType<TdSelectProps['options']>,
+    default: (): TdSelectProps['options'] => [],
   },
   /** 面板内的底部内容 */
   panelBottomContent: {
@@ -94,6 +95,8 @@ export default {
   },
   /** 是否显示下拉框 */
   popupVisible: Boolean,
+  /** 是否显示下拉框，非受控属性 */
+  defaultPopupVisible: Boolean,
   /** 组件前置图标 */
   prefixIcon: {
     type: Function as PropType<TdSelectProps['prefixIcon']>,
