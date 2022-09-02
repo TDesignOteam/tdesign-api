@@ -161,6 +161,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: '$Notification.success', label: '消息通知插件', type: 'plugin' },
   { value: '$Notification.warning', label: '消息通知插件', type: 'plugin' },
   { value: '$Notification.error', label: '消息通知插件', type: 'plugin' },
+  { value: '$Notification.config', label: '消息通知插件', type: 'plugin' },
   { value: 'Search', label: '搜索' },
   { value: 'Tabs', label: '选项卡' },
   { value: 'TabPanel', label: '选项卡面板' },

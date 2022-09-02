@@ -3,7 +3,7 @@ const path = require('path');
 const VUE_TITILE_MAP = require('./language/api-docs-title');
 
 const MESSAGE_LIST = ['Message', 'MessageOptions', '$Message', '$Message.info', '$Message.error', '$Message.warning', '$Message.success', '$Message.loading', '$Message.question', '$Message.close', '$Message.closeAll', '$Message.config'];
-const NOTIFICATION_LIST = ['Notification', 'NotificationOptions', '$Notification', '$Notification.info', '$Notification.warning', '$Notification.error', '$Notification.success', '$Notification.close', '$Notification.closeAll'];
+const NOTIFICATION_LIST = ['Notification', 'NotificationOptions', '$Notification', '$Notification.info', '$Notification.warning', '$Notification.error', '$Notification.success', '$Notification.close', '$Notification.closeAll', '$Notification.config'];
 const TABLE_LIST = ['Table', 'TableCol', 'BaseTable', 'BaseTableCol', 'PrimaryTable', 'PrimaryTableCol', 'EnhancedTable', 'EnhancedTableCol', 'TableRowState', 'TableColumnFilter', 'TableScroll', 'TableColumnController', 'TableEditableCellConfig', 'TableTreeConfig'];
 
 const GLOBAL_COMPONENTS_CONFIG = [
