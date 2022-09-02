@@ -206,6 +206,11 @@
         "type": "plugin"
       },
       {
+        "value": "$Notification.config",
+        "label": "消息通知插件",
+        "type": "plugin"
+      },
+      {
         "value": "$Notification.error",
         "label": "消息通知插件",
         "type": "plugin"

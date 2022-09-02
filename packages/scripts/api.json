@@ -603,7 +603,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "消息内容",
+      "field_desc_zh": "全局提醒插件全局配置",
       "field_desc_en": null,
       "field_required": 1,
       "event_input": "",
@@ -1586,6 +1586,47 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 2982,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Notification.config",
+      "field_category": 1,
+      "field_name": "notify",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "消息通知插件全局配置",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2022-09-02 11:22:25",
+      "update_time": "2022-09-02 11:22:25",
+      "event_output": null,
+      "custom_field_type": "NotificationOptions",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
     },
     {
       "id": 478,
@@ -38529,7 +38570,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{ content: '上一步', theme: 'primary' }",
+      "field_default_value": "{ content: '上一步', theme: 'default' }",
       "field_enum": "",
       "field_desc_zh": "透传 上一步按钮 的全部属性",
       "field_desc_en": null,
@@ -99102,5 +99143,5 @@
       ]
     }
   ],
-  "total": 2347
+  "total": 2348
 }
