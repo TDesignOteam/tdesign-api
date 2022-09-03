@@ -32152,6 +32152,43 @@
       "field_type_text": []
     },
     {
+      "id": 2983,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "EnhancedTable",
+      "field_category": 4,
+      "field_name": "getTreeExpandedRow",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取展开的树形节点。`type=unique` 标识获取展开节点的行唯一标识值，`type=data` 表示获取展开节点的数据，`type=all` 表示获取行节点包含展开状态的全部数据",
+      "field_desc_en": "get expanded row data",
+      "field_required": 1,
+      "event_input": "(type: 'unique' | 'data' | 'all')",
+      "create_time": "2022-09-03 06:18:31",
+      "update_time": "2022-09-03 06:18:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2708,
       "platform_framework": [
         "1",
@@ -99143,5 +99180,5 @@
       ]
     }
   ],
-  "total": 2348
+  "total": 2349
 }
