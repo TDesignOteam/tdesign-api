@@ -48933,9 +48933,9 @@
         "1"
       ],
       "field_default_value": "light",
-      "field_enum": "light/dark",
-      "field_desc_zh": "菜单风格",
-      "field_desc_en": null,
+      "field_enum": "light/dark/global/system",
+      "field_desc_zh": "菜单风格，有亮色模式和暗色模式两种。当 `theme = global` 时，模式随整个组件库；当 `theme = system` 时，模式跟随系统。⚠️ `global/system` 正在开发中，暂勿使用",
+      "field_desc_en": "Menu can be light mode or dark mode.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-02-18 08:37:09",
