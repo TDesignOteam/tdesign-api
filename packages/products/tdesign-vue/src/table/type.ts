@@ -1057,4 +1057,4 @@ export interface TablePlainObject {
   [key: string]: any;
 }
 
-export type TableEditableCellRules<T> = FormRule[] | ((params: TableEditableCellPropsParams<T>) => FormRule[]);
+export type TableEditableCellRules<T> = FormRule[] | ((params: PrimaryTableCellParams<T>) => FormRule[]);
