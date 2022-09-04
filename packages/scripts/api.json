@@ -96382,10 +96382,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构",
+      "field_desc_zh": "上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构",
       "field_desc_en": "`response.error` used for error tips, `formatResponse` can format `response`",
       "field_required": 0,
-      "event_input": "(options: { e: ProgressEvent; file: UploadFile; currentFiles: UploadFile[]; response?: any })",
+      "event_input": "(options: UploadFailContext)【interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }】",
       "create_time": "2021-02-18 15:27:40",
       "update_time": "2021-12-28 01:49:20",
       "event_output": null,
@@ -96439,6 +96439,49 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2984,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Upload",
+      "field_category": 2,
+      "field_name": "oneFileFail",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次",
+      "field_desc_en": "trigger on one file upload failed",
+      "field_required": 0,
+      "event_input": "(options: UploadFailContext)",
+      "create_time": "2022-09-04 01:31:40",
+      "update_time": "2022-09-04 01:31:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -96858,10 +96901,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "待上传文件列表发生变化时触发，事件参数为待上传文件",
-      "field_desc_en": "waiting upload files",
+      "field_desc_zh": "待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源",
+      "field_desc_en": "trigger on waiting upload files changed",
       "field_required": 0,
-      "event_input": "(files: Array<UploadFile>)",
+      "event_input": "(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })",
       "create_time": "2022-08-28 08:31:10",
       "update_time": "2022-08-28 08:31:10",
       "event_output": null,
@@ -99180,5 +99223,5 @@
       ]
     }
   ],
-  "total": 2349
+  "total": 2350
 }
