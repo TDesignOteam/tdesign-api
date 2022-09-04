@@ -319,11 +319,14 @@ function handleApiByFramework(api, framework) {
  */
 function formatAliasImportsPath(imports, framework) {
   const current = FRAMEWORK_MAP[framework];
-  return imports.filter(v => !!v).map((i) => {
-    const cmp = i.match(/'@(\w+)'/);
+  return imports.filter(v => !!v).map((item) => {
+    if (item.indexOf('@icon') !== -1) {
+      return item.replace('@icon', current.iconPath);
+    }
+    const cmp = item.match(/'@(\w+)'/);
     if (!cmp || !cmp[1]) return i;
     if (components.includes(cmp[1])) {
-      return i.replace(/'@(\w+)'/, (a, b) => {
+      return item.replace(/'@(\w+)'/, (a, b) => {
         const name = getFolderName(b);
         let relativePath = current.componentRelativiePath + name;
         if (framework === 'Miniprogram') {
@@ -332,7 +335,7 @@ function formatAliasImportsPath(imports, framework) {
         return `'${relativePath}'`;
       });
     }
-    return i;
+    return item;
   });
 }
 

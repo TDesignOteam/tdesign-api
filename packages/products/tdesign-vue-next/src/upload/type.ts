@@ -156,11 +156,6 @@ export interface TdUploadProps {
    */
   triggerButtonProps?: ButtonProps;
   /**
-   * `autoUpload=false` 时，是否在选择文件或移除文件之后触发 `change` 事件
-   * @default false
-   */
-  triggerChangeEventNonAutoUpload?: boolean;
-  /**
    * 是否在同一个请求中上传全部文件，默认一个请求上传一个文件
    * @default false
    */

@@ -23,6 +23,7 @@ const path = require('path');
  */
 const FRAMEWORK_MAP = {
   'Vue(PC)': {
+    iconPath: 'tdesign-icons-vue',
     apiBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
     apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue/src`,
     usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue/src/$compName/_usage`,
@@ -42,6 +43,7 @@ const FRAMEWORK_MAP = {
     TNode,
   },
   'VueNext(PC)': {
+    iconPath: 'tdesign-icons-vue-next',
     apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
     apiEnglishBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src`,
     usageDemoBasePath: `${BASE_PATH_URL}/tdesign-vue-next/src/$compName/_usage`,
@@ -61,6 +63,7 @@ const FRAMEWORK_MAP = {
     TNode,
   },
   'React(PC)': {
+    iconPath: 'tdesign-icons-react',
     apiBasePath: `${BASE_PATH_URL}/tdesign-react/src`,
     apiEnglishBasePath: '',
     usageDemoBasePath: `${BASE_PATH_URL}/tdesign-react/src/$compName/_usage`,
@@ -86,6 +89,7 @@ const FRAMEWORK_MAP = {
     unitBasePath: '',
   },
   'Vue(Mobile)': {
+    iconPath: 'tdesign-icons-vue-next',
     apiBasePath: `${BASE_PATH_URL}/tdesign-mobile-vue/src`,
     apiEnglishBasePath: '',
     tsBasePath: `${BASE_PATH_URL}/tdesign-mobile-vue/src`,
@@ -105,6 +109,7 @@ const FRAMEWORK_MAP = {
     TNode,
   },
   'React(Mobile)': {
+    iconPath: 'tdesign-icons-react',
     apiBasePath: `${BASE_PATH_URL}/tdesign-mobile-react/src`,
     apiEnglishBasePath: '',
     tsBasePath: `${BASE_PATH_URL}/tdesign-mobile-react/src`,
@@ -129,6 +134,7 @@ const FRAMEWORK_MAP = {
     unitBasePath: '',
   },
   Miniprogram: {
+    iconPath: 'tdesign-icons-miniprogram',
     apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
     apiEnglishBasePath: '',
     tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,

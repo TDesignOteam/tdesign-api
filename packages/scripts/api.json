@@ -37113,6 +37113,47 @@
       ]
     },
     {
+      "id": 2986,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标全局配置",
+      "field_desc_en": "icon config",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-04 12:22:16",
+      "update_time": "2022-09-04 12:22:16",
+      "event_output": null,
+      "custom_field_type": "IconConfig【type IconConfig = GlobalIconConfig】【import { GlobalIconConfig } from '@icon'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2078,
       "platform_framework": [
         "1",
@@ -97187,7 +97228,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "语言配置，上传功能触发文案。示例：{ image: '点击上传图片', normal: '点击上传',  fileInput: '选择文件',reupload: '重新上传',fileInput: '删除' }",
+      "field_desc_zh": "语言配置，上传功能触发文案。示例：{ image: '点击上传图片', normal: '点击上传',  fileInput: '选择文件', reupload: '重新上传', delete: '删除', continueUpload?: '继续选择' }",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -99262,5 +99303,5 @@
       ]
     }
   ],
-  "total": 2351
+  "total": 2352
 }
