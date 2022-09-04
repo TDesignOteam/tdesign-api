@@ -95969,6 +95969,47 @@
       ]
     },
     {
+      "id": 2985,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "triggerButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传选择按钮全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-04 02:27:00",
+      "update_time": "2022-09-04 02:27:00",
+      "event_output": null,
+      "custom_field_type": "triggerButtonProps【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2362,
       "platform_framework": [
         "1",
@@ -96641,7 +96682,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLElement | SVGElement>",
+      "trigger_elements": "MouseEvent<HTMLElement | HTMLDivElement | SVGSVGElement>",
       "deprecated": 0,
       "version": null,
       "test_description": null,
@@ -96858,10 +96899,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制时会触发等场景",
+      "field_desc_zh": "文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发",
       "field_desc_en": "trigger on length over limit, or trigger on file size over limit",
       "field_required": 0,
-      "event_input": "(context: { type: 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT', files: UploadFile[] })",
+      "event_input": "(context: { type: UploadValidateType, files: UploadFile[] })【type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'】",
       "create_time": "2022-08-14 10:28:35",
       "update_time": "2022-08-14 10:28:35",
       "event_output": null,
@@ -99223,5 +99264,5 @@
       ]
     }
   ],
-  "total": 2350
+  "total": 2351
 }
