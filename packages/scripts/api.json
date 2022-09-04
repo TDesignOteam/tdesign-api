@@ -96008,53 +96008,6 @@
       ]
     },
     {
-      "id": 2986,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "triggerChangeEventNonAutoUpload",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "`autoUpload=false` 时，是否在选择文件或移除文件之后触发 `change` 事件",
-      "field_desc_en": "trigger `onChange` on `autoupload=false`",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-04 05:25:01",
-      "update_time": "2022-09-04 05:25:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 2362,
       "platform_framework": [
         "1",
@@ -99309,5 +99262,5 @@
       ]
     }
   ],
-  "total": 2352
+  "total": 2351
 }
