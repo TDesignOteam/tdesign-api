@@ -45,10 +45,6 @@ export default {
   disabled: Boolean,
   /** 是否启用拖拽上传 */
   draggable: Boolean,
-  /** `theme=file | image` 且 `draggable=true` 时，`draggableFileContent` 用于自定义拖拽上传后的文件内容，默认有文件名、尺寸、时间等 */
-  draggableFileContent: {
-    type: Function as PropType<TdUploadProps['draggableFileContent']>,
-  },
   /** 用于完全自定义文件列表内容 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
@@ -142,9 +138,9 @@ export default {
     type: String,
     default: '',
   },
-  /** 触发上传的内容 */
+  /** 触发上传的内容，`displayFiles` 指本次显示的全部文件 */
   trigger: {
-    type: [String, Function] as PropType<TdUploadProps['trigger']>,
+    type: Function as PropType<TdUploadProps['trigger']>,
   },
   /** 透传选择按钮全部属性 */
   triggerButtonProps: {

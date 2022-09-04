@@ -56,10 +56,6 @@ export interface TdUploadProps {
    */
   draggable?: boolean;
   /**
-   * `theme=file | image` 且 `draggable=true` 时，`draggableFileContent` 用于自定义拖拽上传后的文件内容，默认有文件名、尺寸、时间等
-   */
-  draggableFileContent?: TNode;
-  /**
    * 用于完全自定义文件列表内容
    */
   fileListDisplay?: TNode<{ displayFiles: UploadFile[] }>;
@@ -152,9 +148,9 @@ export interface TdUploadProps {
    */
   tips?: string;
   /**
-   * 触发上传的内容
+   * 触发上传的内容，`displayFiles` 指本次显示的全部文件
    */
-  trigger?: string | TNode<TriggerContext>;
+  trigger?: TNode<TriggerContext>;
   /**
    * 透传选择按钮全部属性
    */
@@ -312,7 +308,7 @@ export type SizeUnit = SizeUnitArray[number];
 
 export interface TriggerContext {
   dragActive?: boolean;
-  uploadingFile?: UploadFile | Array<UploadFile>;
+  displayFiles: UploadFile[];
 }
 
 export interface UploadChangeContext {

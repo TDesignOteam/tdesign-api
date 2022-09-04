@@ -15,7 +15,6 @@ data | Object | - | Typescript：`Record<string, any> | ((file: File) => Record<
 default | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 draggable | Boolean | false | \- | N
-draggableFileContent | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 fileListDisplay | Slot / Function | - | Typescript：`TNode<{ displayFiles: UploadFile[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 files | Array | [] | `v-model` and `v-model:files` is supported。Typescript：`Array<UploadFile>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript：`Array<UploadFile>` | N
@@ -35,7 +34,7 @@ showUploadProgress | Boolean | true | \- | N
 sizeLimit | Number / Object | - | Typescript：`number | SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 theme | String | file | options：custom/file/file-input/file-flow/image/image-flow | N
 tips | String | - | \- | N
-trigger | String / Slot / Function | - | Typescript：`string | TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean; uploadingFile?: UploadFile | Array<UploadFile> }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
+trigger | Slot / Function | - | Typescript：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean;  displayFiles: UploadFile[] }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 triggerButtonProps | Object | - | Typescript：`ButtonProps`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 triggerChangeEventNonAutoUpload | Boolean | false | trigger `onChange` on `autoupload=false` | N
 uploadAllFilesInOneRequest | Boolean | false | \- | N
