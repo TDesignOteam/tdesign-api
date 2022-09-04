@@ -5,6 +5,7 @@
  * */
 
 import { UploadConfig } from '../config-provider/type';
+import { ButtonProps } from '../button';
 import { TNode } from '../common';
 
 export interface TdUploadProps {
@@ -54,6 +55,10 @@ export interface TdUploadProps {
    * @default false
    */
   draggable?: boolean;
+  /**
+   * `theme=file | image` 且 `draggable=true` 时，`draggableFileContent` 用于自定义拖拽上传后的文件内容，默认有文件名、尺寸、时间等
+   */
+  draggableFileContent?: TNode;
   /**
    * 用于完全自定义文件列表内容
    */
@@ -150,6 +155,15 @@ export interface TdUploadProps {
    * 触发上传的内容
    */
   trigger?: string | TNode<TriggerContext>;
+  /**
+   * 透传选择按钮全部属性
+   */
+  triggerButtonProps?: ButtonProps;
+  /**
+   * `autoUpload=false` 时，是否在选择文件或移除文件之后触发 `change` 事件
+   * @default false
+   */
+  triggerChangeEventNonAutoUpload?: boolean;
   /**
    * 是否在同一个请求中上传全部文件，默认一个请求上传一个文件
    * @default false

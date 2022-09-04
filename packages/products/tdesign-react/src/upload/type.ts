@@ -6,7 +6,7 @@
 
 import { UploadConfig } from '../config-provider/type';
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
 import { MouseEvent, DragEvent } from 'react';
 
 export interface TdUploadProps {
@@ -56,6 +56,10 @@ export interface TdUploadProps {
    * @default false
    */
   draggable?: boolean;
+  /**
+   * `theme=file | image` 且 `draggable=true` 时，`draggableFileContent` 用于自定义拖拽上传后的文件内容，默认有文件名、尺寸、时间等
+   */
+  draggableFileContent?: TElement;
   /**
    * 用于完全自定义文件列表内容
    */

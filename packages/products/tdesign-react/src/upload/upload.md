@@ -17,6 +17,7 @@ children | TNode | - | 触发上传的内容，同 trigger。TS 类型：`string
 data | Object | - | 上传文件时所需的额外数据。TS 类型：`Record<string, any> | ((file: File) => Record<string, any>)` | N
 disabled | Boolean | false | 是否禁用 | N
 draggable | Boolean | false | 是否启用拖拽上传 | N
+draggableFileContent | TElement | - | `theme=file | image` 且 `draggable=true` 时，`draggableFileContent` 用于自定义拖拽上传后的文件内容，默认有文件名、尺寸、时间等。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 fileListDisplay | TElement | - | 用于完全自定义文件列表内容。TS 类型：`TNode<{ displayFiles: UploadFile[] }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 files | Array | [] | 已上传文件列表。TS 类型：`Array<UploadFile>` | N
 defaultFiles | Array | [] | 已上传文件列表。非受控属性。TS 类型：`Array<UploadFile>` | N

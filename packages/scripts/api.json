@@ -95933,19 +95933,18 @@
       "field_category": 1,
       "field_name": "trigger",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发上传的内容",
+      "field_desc_zh": "触发上传的内容，`displayFiles` 指本次显示的全部文件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-02-18 15:22:50",
       "update_time": "2021-12-28 01:51:41",
       "event_output": null,
-      "custom_field_type": "string | TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean; uploadingFile?: UploadFile | Array<UploadFile> }】",
+      "custom_field_type": "TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean;  displayFiles: UploadFile[] }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95964,7 +95963,6 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
       ]
     },
