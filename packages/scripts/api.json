@@ -97235,7 +97235,7 @@
       "create_time": "2022-01-24 04:28:32",
       "update_time": "2022-03-15 15:04:09",
       "event_output": null,
-      "custom_field_type": "UploadTriggerUploadText【interface UploadTriggerUploadText { image?: string, normal?: string,  fileInput?: string,  reupload?: string, continueUpload: string, delete?: string }】",
+      "custom_field_type": "UploadTriggerUploadText【interface UploadTriggerUploadText { image?: string, normal?: string,  fileInput?: string,  reupload?: string, continueUpload?: string, delete?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
