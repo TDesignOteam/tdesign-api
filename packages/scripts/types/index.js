@@ -324,7 +324,7 @@ function formatAliasImportsPath(imports, framework) {
       return item.replace('@icon', current.iconPath);
     }
     const cmp = item.match(/'@(\w+)'/);
-    if (!cmp || !cmp[1]) return i;
+    if (!cmp || !cmp[1]) return item;
     if (components.includes(cmp[1])) {
       return item.replace(/'@(\w+)'/, (a, b) => {
         const name = getFolderName(b);
