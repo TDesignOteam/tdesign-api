@@ -50402,9 +50402,13 @@
     {
       "id": 1985,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Message",
       "field_category": 2,
@@ -50414,7 +50418,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "关闭Message时触发",
+      "field_desc_zh": "Message 关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -50432,9 +50436,13 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Function"

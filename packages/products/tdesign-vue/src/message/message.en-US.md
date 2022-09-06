@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Message Props
 
 name | type | default | description | required
@@ -11,6 +10,7 @@ content | String / Slot / Function | - | Typescript：`string | TNode`。[see mo
 duration | Number | 3000 | \- | N
 icon | Boolean / Slot / Function | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | info | options：info/success/warning/error/question/loading。Typescript：`MessageThemeList` `type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts) | N
+onClose | Function |  | Typescript：`() => void`<br/> | N
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 
@@ -18,6 +18,7 @@ onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 
 name | params | description
 -- | -- | --
+close | \- | \-
 close-btn-click | `(context: { e: MouseEvent })` | \-
 duration-end | \- | \-
 
