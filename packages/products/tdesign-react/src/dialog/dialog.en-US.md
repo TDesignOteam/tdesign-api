@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Dialog Props
 
 name | type | default | description | required
@@ -20,6 +19,7 @@ confirmOnEnter | Boolean | - | confirm on enter | N
 destroyOnClose | Boolean | false | \- | N
 draggable | Boolean | false | \- | N
 footer | TNode | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+fullScreen | Boolean | false | full screen dialog | N
 header | TNode | true | Typescript：`string | boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 mode | String | modal | options：modal/modeless/normal | N
 placement | String | top | options：top/center | N
