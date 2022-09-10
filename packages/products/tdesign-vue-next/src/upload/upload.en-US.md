@@ -75,6 +75,13 @@ success | `(context: SuccessContext)` | [see more ts definition](https://github.
 validate | `(context: { type: UploadValidateType, files: UploadFile[] })` | trigger on length over limit, or trigger on file size over limit。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/>
 waiting-upload-files-change | `(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })` | trigger on waiting upload files changed
 
+### UploadInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+triggerUpload | \- | \- | required。trigger system file select
+uploadFiles | `(files?: UploadFile[])` | \- | required。upload all files which status are not success
+
 ### UploadFile
 
 name | type | default | description | required

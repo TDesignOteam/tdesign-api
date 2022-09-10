@@ -177,15 +177,15 @@ export interface TdUploadProps {
   /**
    * 进入拖拽区域时触发
    */
-  onDragenter?: (context: { e: DragEvent<Element> }) => void;
+  onDragenter?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 离开拖拽区域时触发
    */
-  onDragleave?: (context: { e: DragEvent<Element> }) => void;
+  onDragleave?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 拖拽结束时触发
    */
-  onDrop?: (context: { e: DragEvent<Element> }) => void;
+  onDrop?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构
    */
@@ -229,6 +229,18 @@ export interface TdUploadProps {
     files: Array<UploadFile>;
     trigger: 'validate' | 'remove' | 'uploaded';
   }) => void;
+}
+
+/** 组件实例方法 */
+export interface UploadInstanceFunctions {
+  /**
+   * 组件实例方法，打开文件选择器
+   */
+  triggerUpload: () => void;
+  /**
+   * 组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件
+   */
+  uploadFiles: (files?: UploadFile[]) => void;
 }
 
 export interface UploadFile {

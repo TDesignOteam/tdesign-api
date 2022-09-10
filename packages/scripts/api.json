@@ -56602,7 +56602,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "延时显示或隐藏覆层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+      "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
       "field_desc_en": "delay to show or hide popover",
       "field_required": 0,
       "event_input": "",
@@ -57131,6 +57131,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 2988,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "popperOptions",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "popper 初始化配置，详情参考 https://popper.js.org/docs/",
+      "field_desc_en": "popper initial options，details refer to https://popper.js.org/docs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-07 03:00:13",
+      "update_time": "2022-09-07 03:00:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -97050,6 +97091,80 @@
       "field_type_text": []
     },
     {
+      "id": 2989,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 4,
+      "field_name": "triggerUpload",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件实例方法，打开文件选择器",
+      "field_desc_en": "trigger system file select",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2022-09-10 06:31:32",
+      "update_time": "2022-09-10 06:31:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2990,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 4,
+      "field_name": "uploadFiles",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件",
+      "field_desc_en": "upload all files which status are not success",
+      "field_required": 1,
+      "event_input": "(files?: UploadFile[])",
+      "create_time": "2022-09-10 06:33:01",
+      "update_time": "2022-09-10 06:33:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1958,
       "platform_framework": [
         "1",
@@ -99344,5 +99459,5 @@
       ]
     }
   ],
-  "total": 2353
+  "total": 2356
 }

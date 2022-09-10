@@ -230,6 +230,18 @@ export interface TdUploadProps {
   }) => void;
 }
 
+/** 组件实例方法 */
+export interface UploadInstanceFunctions {
+  /**
+   * 组件实例方法，打开文件选择器
+   */
+  triggerUpload: () => void;
+  /**
+   * 组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件
+   */
+  uploadFiles: (files?: UploadFile[]) => void;
+}
+
 export interface UploadFile {
   /**
    * 上一次变更的时间

@@ -57,6 +57,15 @@ onSuccess | Function |  | Typescript：`(context: SuccessContext) => void`<br/>[
 onValidate | Function |  | Typescript：`(context: { type: UploadValidateType, files: UploadFile[] }) => void`<br/>trigger on length over limit, or trigger on file size over limit。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/> | N
 onWaitingUploadFilesChange | Function |  | Typescript：`(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' }) => void`<br/>trigger on waiting upload files changed | N
 
+### UploadInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+className | String | - | 类名 | N
+style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+triggerUpload | \- | \- | required。trigger system file select
+uploadFiles | `(files?: UploadFile[])` | \- | required。upload all files which status are not success
+
 ### UploadFile
 
 name | type | default | description | required

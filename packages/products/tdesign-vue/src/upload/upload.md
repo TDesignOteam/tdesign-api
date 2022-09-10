@@ -75,6 +75,13 @@ success | `(context: SuccessContext)` | 上传成功后触发。<br/>`context.cu
 validate | `(context: { type: UploadValidateType, files: UploadFile[] })` | 文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/>
 waiting-upload-files-change | `(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })` | 待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
 
+### UploadInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+triggerUpload | \- | \- | 必需。组件实例方法，打开文件选择器
+uploadFiles | `(files?: UploadFile[])` | \- | 必需。组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件
+
 ### UploadFile
 
 名称 | 类型 | 默认值 | 说明 | 必传
