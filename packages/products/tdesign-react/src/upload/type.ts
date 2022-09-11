@@ -52,6 +52,10 @@ export interface TdUploadProps {
    */
   disabled?: boolean;
   /**
+   * 用于自定义拖拽区域
+   */
+  dragContent?: TNode<TriggerContext>;
+  /**
    * 是否启用拖拽上传
    * @default false
    */

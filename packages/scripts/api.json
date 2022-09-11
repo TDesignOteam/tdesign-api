@@ -94950,6 +94950,47 @@
       ]
     },
     {
+      "id": 2991,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "dragContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义拖拽区域",
+      "field_desc_en": "drag content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-11 03:26:51",
+      "update_time": "2022-09-11 03:26:51",
+      "event_output": null,
+      "custom_field_type": "TNode<TriggerContext>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 886,
       "platform_framework": [
         "1",
@@ -99459,5 +99500,5 @@
       ]
     }
   ],
-  "total": 2356
+  "total": 2357
 }
