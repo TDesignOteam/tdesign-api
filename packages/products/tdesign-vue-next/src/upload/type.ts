@@ -42,7 +42,7 @@ export interface TdUploadProps {
    */
   data?: Record<string, any> | ((file: File) => Record<string, any>);
   /**
-   * 触发上传的内容，同 trigger
+   * 非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域
    */
   default?: string | TNode;
   /**
@@ -148,7 +148,7 @@ export interface TdUploadProps {
    */
   tips?: string;
   /**
-   * 触发上传的内容，`displayFiles` 指本次显示的全部文件
+   * 触发上传的元素，`displayFiles` 指本次显示的全部文件
    */
   trigger?: TNode<TriggerContext>;
   /**
@@ -161,7 +161,7 @@ export interface TdUploadProps {
    */
   uploadAllFilesInOneRequest?: boolean;
   /**
-   * 是否显示为模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
+   * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。
    * @default true
    */
   useMockProgress?: boolean;
@@ -203,9 +203,9 @@ export interface TdUploadProps {
    */
   onOneFileSuccess?: (context: Pick<SuccessContext, 'e' | 'file' | 'response'>) => void;
   /**
-   * 点击预览时触发
+   * 点击图片预览时触发，文件没有预览
    */
-  onPreview?: (options: { file: UploadFile; e: MouseEvent }) => void;
+  onPreview?: (options: { file: UploadFile; index: number; e: MouseEvent }) => void;
   /**
    * 上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度
    */

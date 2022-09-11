@@ -37,7 +37,7 @@ export default {
   data: {
     type: Object as PropType<TdUploadProps['data']>,
   },
-  /** 触发上传的内容，同 trigger */
+  /** 非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域 */
   default: {
     type: [String, Function] as PropType<TdUploadProps['default']>,
   },
@@ -134,7 +134,7 @@ export default {
     type: String,
     default: '',
   },
-  /** 触发上传的内容，`displayFiles` 指本次显示的全部文件 */
+  /** 触发上传的元素，`displayFiles` 指本次显示的全部文件 */
   trigger: {
     type: Function as PropType<TdUploadProps['trigger']>,
   },
@@ -144,7 +144,7 @@ export default {
   },
   /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件 */
   uploadAllFilesInOneRequest: Boolean,
-  /** 是否显示为模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 */
+  /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 */
   useMockProgress: {
     type: Boolean,
     default: true,
@@ -167,7 +167,7 @@ export default {
   onOneFileFail: Function as PropType<TdUploadProps['onOneFileFail']>,
   /** 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据 */
   onOneFileSuccess: Function as PropType<TdUploadProps['onOneFileSuccess']>,
-  /** 点击预览时触发 */
+  /** 点击图片预览时触发，文件没有预览 */
   onPreview: Function as PropType<TdUploadProps['onPreview']>,
   /** 上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度 */
   onProgress: Function as PropType<TdUploadProps['onProgress']>,
