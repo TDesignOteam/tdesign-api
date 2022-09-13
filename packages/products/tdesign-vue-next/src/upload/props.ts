@@ -47,8 +47,11 @@ export default {
   dragContent: {
     type: [String, Function] as PropType<TdUploadProps['dragContent']>,
   },
-  /** 是否启用拖拽上传 */
-  draggable: Boolean,
+  /** 是否启用拖拽上传，不同的组件风格默认值不同 */
+  draggable: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 用于完全自定义文件列表内容 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,

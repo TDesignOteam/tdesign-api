@@ -15,7 +15,7 @@ data | Object | - | Typescript：`Record<string, any> | ((file: File) => Record<
 default | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 dragContent | String / Slot / Function | - | drag content。Typescript：`TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-draggable | Boolean | false | \- | N
+draggable | Boolean | undefined | \- | N
 fileListDisplay | Slot / Function | - | Typescript：`TNode<{ displayFiles: UploadFile[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 files | Array | [] | `v-model` and `v-model:files` is supported。Typescript：`Array<UploadFile>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript：`Array<UploadFile>` | N

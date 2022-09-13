@@ -95048,9 +95048,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否启用拖拽上传",
+      "field_desc_zh": "是否启用拖拽上传，不同的组件风格默认值不同",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
