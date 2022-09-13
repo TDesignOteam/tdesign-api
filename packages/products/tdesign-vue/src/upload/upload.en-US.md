@@ -14,6 +14,7 @@ beforeUpload | Function | - | Typescript：`(file: UploadFile) => boolean | Prom
 data | Object | - | Typescript：`Record<string, any> | ((file: File) => Record<string, any>)` | N
 default | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
+dragContent | String / Slot / Function | - | drag content。Typescript：`TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 draggable | Boolean | false | \- | N
 fileListDisplay | Slot / Function | - | Typescript：`TNode<{ displayFiles: UploadFile[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 files | Array | [] | `v-model` is supported。Typescript：`Array<UploadFile>` | N
@@ -94,4 +95,5 @@ response | Object | - | Typescript：`{ [key: string]: any }` | N
 size | Number | - | \- | N
 status | String | - | Typescript：` 'success' | 'fail' | 'progress' | 'waiting'` | N
 type | String | - | \- | N
+uploadTime | String | - | upload time | N
 url | String | - | \- | N

@@ -94995,8 +94995,9 @@
     {
       "id": 2991,
       "platform_framework": [
+        "1",
         "2",
-        "16"
+        "4"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -95025,8 +95026,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
         "React(PC)",
-        "React(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -97147,7 +97149,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源",
+      "field_desc_zh": "待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源",
       "field_desc_en": "trigger on waiting upload files changed",
       "field_required": 0,
       "event_input": "(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })",
@@ -98379,6 +98381,55 @@
       ]
     },
     {
+      "id": 2993,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "UploadFile",
+      "field_category": 1,
+      "field_name": "uploadTime",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "上传时间",
+      "field_desc_en": "upload time",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-13 03:08:13",
+      "update_time": "2022-09-13 03:08:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 981,
       "platform_framework": [
         "1",
@@ -99543,5 +99594,5 @@
       ]
     }
   ],
-  "total": 2358
+  "total": 2359
 }

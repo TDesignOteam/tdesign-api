@@ -43,6 +43,10 @@ export default {
   },
   /** 是否禁用 */
   disabled: Boolean,
+  /** 用于自定义拖拽区域 */
+  dragContent: {
+    type: [String, Function] as PropType<TdUploadProps['dragContent']>,
+  },
   /** 是否启用拖拽上传 */
   draggable: Boolean,
   /** 用于完全自定义文件列表内容 */
@@ -179,6 +183,6 @@ export default {
   onSuccess: Function as PropType<TdUploadProps['onSuccess']>,
   /** 文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发 */
   onValidate: Function as PropType<TdUploadProps['onValidate']>,
-  /** 待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源 */
+  /** 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源 */
   onWaitingUploadFilesChange: Function as PropType<TdUploadProps['onWaitingUploadFilesChange']>,
 };
