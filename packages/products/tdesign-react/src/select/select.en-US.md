@@ -49,7 +49,7 @@ defaultValue | String / Number / Object / Array | - | uncontrolled property。Ty
 valueDisplay | TNode | - | `MouseEvent<SVGElement>`。Typescript：`string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 valueType | String | value | options：value/object | N
 onBlur | Function |  | Typescript：`(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: SelectValue, context: { selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/> | N
+onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCreate | Function |  | Typescript：`(value: string | number) => void`<br/> | N
 onEnter | Function |  | Typescript：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/> | N
