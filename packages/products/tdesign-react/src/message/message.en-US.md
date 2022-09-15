@@ -12,7 +12,7 @@ content | TNode | - | Typescript：`string | TNode`。[see more ts definition](h
 duration | Number | 3000 | \- | N
 icon | TNode | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 theme | String | info | options：info/success/warning/error/question/loading。Typescript：`MessageThemeList` `type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/message/type.ts) | N
-onClose | Function |  | Typescript：`() => void`<br/> | N
+onClose | Function |  | Typescript：`(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent }) => void`<br/> | N
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 

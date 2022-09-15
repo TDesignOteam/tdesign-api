@@ -10,7 +10,7 @@ content | String / Slot / Function | - | Typescript：`string | TNode`。[see mo
 duration | Number | 3000 | \- | N
 icon | Boolean / Slot / Function | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 theme | String | info | options：info/success/warning/error/question/loading。Typescript：`MessageThemeList` `type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/message/type.ts) | N
-onClose | Function |  | Typescript：`() => void`<br/> | N
+onClose | Function |  | Typescript：`(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent }) => void`<br/> | N
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 
@@ -18,7 +18,7 @@ onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 
 name | params | description
 -- | -- | --
-close | \- | \-
+close | `(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })` | \-
 close-btn-click | `(context: { e: MouseEvent })` | \-
 duration-end | \- | \-
 
