@@ -21426,47 +21426,6 @@
       ]
     },
     {
-      "id": 2408,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "DatePicker",
-      "field_category": 1,
-      "field_name": "valueType",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于格式化日期，默认为：'YYYY-MM-DD'，可选值：'date/time-stamp/YYY-MM-DD' 等，[更多可选值见 Dayjs 详细文档](https://day.js.org/docs/en/display/format)。<br /> 其中 `valueType=date` 表示 `value` 数据类型为 `Date`；`valueType='time-stamp'` 表示 `value` 数据类型为时间戳",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-03-13 09:29:09",
-      "update_time": "2022-06-08 11:07:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1036,
       "platform_framework": [
         "1",
@@ -22862,7 +22821,7 @@
       ],
       "component": "DatePickerPanel",
       "field_category": 16,
-      "field_name": "Pick<TdDatePickerProps, 'value' | 'defaultValue' | 'valueType' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'>",
+      "field_name": "Pick<TdDatePickerProps, 'value' | 'defaultValue' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'>",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -23772,47 +23731,6 @@
       ]
     },
     {
-      "id": 2486,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "DateRangePicker",
-      "field_category": 1,
-      "field_name": "valueType",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于格式化日期，默认为：'YYYY-MM-DD'，可选值：'date/time-stamp/YYY-MM-DD' 等，[更多可选值见 Dayjs 详细文档](https://day.js.org/docs/en/display/format)。<br /> 其中 `valueType=date` 表示 `value` 数据类型为 `Date`；`valueType='time-stamp'` 表示 `value` 数据类型为时间戳",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-03-29 07:44:39",
-      "update_time": "2022-06-08 11:06:31",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1032,
       "platform_framework": [
         "1",
@@ -24302,7 +24220,7 @@
       ],
       "component": "DateRangePickerPanel",
       "field_category": 16,
-      "field_name": "Pick<TdDateRangePickerProps, 'value'| 'defaultValue' | 'valueType' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'panelPreselection' | 'timePickerProps'>",
+      "field_name": "Pick<TdDateRangePickerProps, 'value'| 'defaultValue' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'panelPreselection' | 'timePickerProps'>",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -99594,5 +99512,5 @@
       ]
     }
   ],
-  "total": 2359
+  "total": 2357
 }
