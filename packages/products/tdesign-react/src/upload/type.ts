@@ -39,7 +39,7 @@ export interface TdUploadProps {
    */
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
   /**
-   * 触发上传的内容，同 trigger
+   * 非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域
    */
   children?: TNode;
   /**
@@ -52,8 +52,11 @@ export interface TdUploadProps {
    */
   disabled?: boolean;
   /**
-   * 是否启用拖拽上传
-   * @default false
+   * 用于自定义拖拽区域
+   */
+  dragContent?: TNode<TriggerContext>;
+  /**
+   * 是否启用拖拽上传，不同的组件风格默认值不同
    */
   draggable?: boolean;
   /**
@@ -144,7 +147,7 @@ export interface TdUploadProps {
    */
   tips?: string;
   /**
-   * 触发上传的内容，`displayFiles` 指本次显示的全部文件
+   * 触发上传的元素，`displayFiles` 指本次显示的全部文件
    */
   trigger?: TNode<TriggerContext>;
   /**
@@ -157,7 +160,7 @@ export interface TdUploadProps {
    */
   uploadAllFilesInOneRequest?: boolean;
   /**
-   * 是否显示为模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
+   * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。
    * @default true
    */
   useMockProgress?: boolean;
@@ -177,15 +180,15 @@ export interface TdUploadProps {
   /**
    * 进入拖拽区域时触发
    */
-  onDragenter?: (context: { e: DragEvent<Element> }) => void;
+  onDragenter?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 离开拖拽区域时触发
    */
-  onDragleave?: (context: { e: DragEvent<Element> }) => void;
+  onDragleave?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 拖拽结束时触发
    */
-  onDrop?: (context: { e: DragEvent<Element> }) => void;
+  onDrop?: (context: { e: DragEvent<HTMLDivElement> }) => void;
   /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构
    */
@@ -199,9 +202,9 @@ export interface TdUploadProps {
    */
   onOneFileSuccess?: (context: Pick<SuccessContext, 'e' | 'file' | 'response'>) => void;
   /**
-   * 点击预览时触发
+   * 点击图片预览时触发，文件没有预览
    */
-  onPreview?: (options: { file: UploadFile; e: MouseEvent<HTMLDivElement> }) => void;
+  onPreview?: (options: { file: UploadFile; index: number; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度
    */
@@ -223,12 +226,24 @@ export interface TdUploadProps {
    */
   onValidate?: (context: { type: UploadValidateType; files: UploadFile[] }) => void;
   /**
-   * 待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
+   * 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
    */
   onWaitingUploadFilesChange?: (context: {
     files: Array<UploadFile>;
     trigger: 'validate' | 'remove' | 'uploaded';
   }) => void;
+}
+
+/** 组件实例方法 */
+export interface UploadInstanceFunctions {
+  /**
+   * 组件实例方法，打开文件选择器
+   */
+  triggerUpload: () => void;
+  /**
+   * 组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件
+   */
+  uploadFiles: (files?: UploadFile[]) => void;
 }
 
 export interface UploadFile {
@@ -267,6 +282,11 @@ export interface UploadFile {
    * @default ''
    */
   type?: string;
+  /**
+   * 上传时间
+   * @default ''
+   */
+  uploadTime?: string;
   /**
    * 文件上传成功后的下载/访问地址
    * @default ''

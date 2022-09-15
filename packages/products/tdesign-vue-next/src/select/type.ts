@@ -203,11 +203,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   onBlur?: (context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void;
   /**
-   * 选中值变化时触发，`context.trigger` 表示触发变化的来源，`context.selectedOptions` 表示选中值的完整对象
+   * 选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在
    */
   onChange?: (
     value: SelectValue,
-    context: { selectedOptions: T[]; trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent },
+    context: { option?: T; selectedOptions: T[]; trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent },
   ) => void;
   /**
    * 点击清除按钮时触发

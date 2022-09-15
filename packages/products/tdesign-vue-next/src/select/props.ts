@@ -179,7 +179,7 @@ export default {
   },
   /** 输入框失去焦点时触发 */
   onBlur: Function as PropType<TdSelectProps['onBlur']>,
-  /** 选中值变化时触发，`context.trigger` 表示触发变化的来源，`context.selectedOptions` 表示选中值的完整对象 */
+  /** 选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在 */
   onChange: Function as PropType<TdSelectProps['onChange']>,
   /** 点击清除按钮时触发 */
   onClear: Function as PropType<TdSelectProps['onClear']>,

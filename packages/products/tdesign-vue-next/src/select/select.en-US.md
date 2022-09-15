@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Select Props
 
 name | type | default | description | required
@@ -25,12 +24,13 @@ loadingText | String / Slot / Function | - | Typescript：`string | TNode`。[se
 max | Number | 0 | \- | N
 minCollapsedNum | Number | 0 | \- | N
 multiple | Boolean | false | \- | N
-options | Array | - | Typescript：`Array<T>` | N
+options | Array | [] | Typescript：`Array<T>` | N
 panelBottomContent | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 panelTopContent | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts) | N
-popupVisible | Boolean | - | \- | N
+popupVisible | Boolean | - | `v-model:popupVisible` is supported | N
+defaultPopupVisible | Boolean | - | uncontrolled property | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 readonly | Boolean | false | \- | N
 reserveKeyword | Boolean | false | \- | N
@@ -47,7 +47,7 @@ defaultValue | String / Number / Object / Array | - | uncontrolled property。Ty
 valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescript：`string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 valueType | String | value | options：value/object | N
 onBlur | Function |  | Typescript：`(context: { value: SelectValue; e: FocusEvent | KeyboardEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: SelectValue, context: { selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/> | N
+onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCreate | Function |  | Typescript：`(value: string | number) => void`<br/> | N
 onEnter | Function |  | Typescript：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/> | N
@@ -63,7 +63,7 @@ onVisibleChange | Function |  | Typescript：`(visible: boolean) => void`<br/> |
 name | params | description
 -- | -- | --
 blur | `(context: { value: SelectValue; e: FocusEvent | KeyboardEvent })` | \-
-change | `(value: SelectValue, context: { selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/>
+change | `(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'`<br/>
 clear | `(context: { e: MouseEvent })` | \-
 create | `(value: string | number)` | \-
 enter | `(context: { inputValue: string; e: KeyboardEvent; value: SelectValue })` | \-

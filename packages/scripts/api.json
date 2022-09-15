@@ -26491,6 +26491,47 @@
       ]
     },
     {
+      "id": 2987,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "fullScreen",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否全屏显示弹框",
+      "field_desc_en": "full screen dialog",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-07 02:55:09",
+      "update_time": "2022-09-07 02:55:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 52,
       "platform_framework": [
         "1",
@@ -26685,7 +26726,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "【开发中】仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative",
+      "field_desc_zh": "仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42268,6 +42309,49 @@
       ]
     },
     {
+      "id": 2992,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "预览标题",
+      "field_desc_en": "preview title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-12 12:07:24",
+      "update_time": "2022-09-12 12:07:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 2715,
       "platform_framework": [
         "1",
@@ -56569,7 +56653,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "延时显示或隐藏覆层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+      "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
       "field_desc_en": "delay to show or hide popover",
       "field_required": 0,
       "event_input": "",
@@ -57098,6 +57182,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 2988,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "popperOptions",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "popper 初始化配置，详情参考 https://popper.js.org/docs/",
+      "field_desc_en": "popper initial options，details refer to https://popper.js.org/docs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-07 03:00:13",
+      "update_time": "2022-09-07 03:00:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -68517,10 +68642,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "选中值变化时触发，`context.trigger` 表示触发变化的来源，`context.selectedOptions` 表示选中值的完整对象",
+      "field_desc_zh": "选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: SelectValue, context: { selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })【type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'】",
+      "event_input": "(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })【type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'】",
       "create_time": "2020-12-18 02:40:39",
       "update_time": "2022-03-11 04:02:19",
       "event_output": null,
@@ -94636,7 +94761,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发上传的内容，同 trigger",
+      "field_desc_zh": "非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -94760,7 +94885,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发上传的内容，同 trigger",
+      "field_desc_zh": "非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -94876,6 +95001,49 @@
       ]
     },
     {
+      "id": 2991,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "dragContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义拖拽区域",
+      "field_desc_en": "drag content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-11 03:26:51",
+      "update_time": "2022-09-11 03:26:51",
+      "event_output": null,
+      "custom_field_type": "TNode<TriggerContext>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 886,
       "platform_framework": [
         "1",
@@ -94888,9 +95056,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否启用拖拽上传",
+      "field_desc_zh": "是否启用拖拽上传，不同的组件风格默认值不同",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -95986,7 +96154,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发上传的内容，`displayFiles` 指本次显示的全部文件",
+      "field_desc_zh": "触发上传的元素，`displayFiles` 指本次显示的全部文件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -96115,7 +96283,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否显示为模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传",
+      "field_desc_zh": "是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -96632,10 +96800,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "点击预览时触发",
+      "field_desc_zh": "点击图片预览时触发，文件没有预览",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(options: { file: UploadFile; e: MouseEvent })",
+      "event_input": "(options: { file: UploadFile; index: number; e: MouseEvent })",
       "create_time": "2021-02-18 15:29:22",
       "update_time": "2021-12-28 01:49:14",
       "event_output": null,
@@ -96989,7 +97157,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源",
+      "field_desc_zh": "待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源",
       "field_desc_en": "trigger on waiting upload files changed",
       "field_required": 0,
       "event_input": "(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })",
@@ -97013,6 +97181,80 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2989,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 4,
+      "field_name": "triggerUpload",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件实例方法，打开文件选择器",
+      "field_desc_en": "trigger system file select",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2022-09-10 06:31:32",
+      "update_time": "2022-09-10 06:31:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2990,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 4,
+      "field_name": "uploadFiles",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件",
+      "field_desc_en": "upload all files which status are not success",
+      "field_required": 1,
+      "event_input": "(files?: UploadFile[])",
+      "create_time": "2022-09-10 06:33:01",
+      "update_time": "2022-09-10 06:33:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -98130,6 +98372,55 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2993,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "UploadFile",
+      "field_category": 1,
+      "field_name": "uploadTime",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "上传时间",
+      "field_desc_en": "upload time",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-13 03:08:13",
+      "update_time": "2022-09-13 03:08:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -99311,5 +99602,5 @@
       ]
     }
   ],
-  "total": 2352
+  "total": 2359
 }

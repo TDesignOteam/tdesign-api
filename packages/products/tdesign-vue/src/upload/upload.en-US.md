@@ -14,7 +14,8 @@ beforeUpload | Function | - | Typescript：`(file: UploadFile) => boolean | Prom
 data | Object | - | Typescript：`Record<string, any> | ((file: File) => Record<string, any>)` | N
 default | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
-draggable | Boolean | false | \- | N
+dragContent | String / Slot / Function | - | drag content。Typescript：`TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+draggable | Boolean | undefined | \- | N
 fileListDisplay | Slot / Function | - | Typescript：`TNode<{ displayFiles: UploadFile[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 files | Array | [] | `v-model` is supported。Typescript：`Array<UploadFile>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript：`Array<UploadFile>` | N
@@ -47,7 +48,7 @@ onDrop | Function |  | Typescript：`(context: { e: DragEvent }) => void`<br/> |
 onFail | Function |  | Typescript：`(options: UploadFailContext) => void`<br/>`response.error` used for error tips, `formatResponse` can format `response`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }`<br/> | N
 onOneFileFail | Function |  | Typescript：`(options: UploadFailContext) => void`<br/>trigger on one file upload failed | N
 onOneFileSuccess | Function |  | Typescript：`(context: Pick<SuccessContext, 'e' | 'file' | 'response'>) => void`<br/> | N
-onPreview | Function |  | Typescript：`(options: { file: UploadFile; e: MouseEvent }) => void`<br/> | N
+onPreview | Function |  | Typescript：`(options: { file: UploadFile; index: number; e: MouseEvent }) => void`<br/> | N
 onProgress | Function |  | Typescript：`(options: ProgressContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType }`<br/><br/>`type UploadProgressType = 'real' | 'mock'`<br/> | N
 onRemove | Function |  | Typescript：`(context: UploadRemoveContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent }`<br/> | N
 onSelectChange | Function |  | Typescript：`(files: File[], context: UploadSelectChangeContext) => void`<br/>trigger after file choose and before upload。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadSelectChangeContext { currentSelectedFiles: UploadFile[] }`<br/> | N
@@ -67,13 +68,20 @@ drop | `(context: { e: DragEvent })` | \-
 fail | `(options: UploadFailContext)` | `response.error` used for error tips, `formatResponse` can format `response`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }`<br/>
 one-file-fail | `(options: UploadFailContext)` | trigger on one file upload failed
 one-file-success | `(context: Pick<SuccessContext, 'e' | 'file' | 'response'>)` | \-
-preview | `(options: { file: UploadFile; e: MouseEvent })` | \-
+preview | `(options: { file: UploadFile; index: number; e: MouseEvent })` | \-
 progress | `(options: ProgressContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType }`<br/><br/>`type UploadProgressType = 'real' | 'mock'`<br/>
 remove | `(context: UploadRemoveContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent }`<br/>
 select-change | `(files: File[], context: UploadSelectChangeContext)` | trigger after file choose and before upload。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadSelectChangeContext { currentSelectedFiles: UploadFile[] }`<br/>
 success | `(context: SuccessContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface SuccessContext { e?: ProgressEvent; file?: UploadFile; fileList?: UploadFile[]; currentFiles?: UploadFile[]; response?: any; results?: SuccessContext[] }`<br/>
 validate | `(context: { type: UploadValidateType, files: UploadFile[] })` | trigger on length over limit, or trigger on file size over limit。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/>
 waiting-upload-files-change | `(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })` | trigger on waiting upload files changed
+
+### UploadInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+triggerUpload | \- | \- | required。trigger system file select
+uploadFiles | `(files?: UploadFile[])` | \- | required。upload all files which status are not success
 
 ### UploadFile
 
@@ -87,4 +95,5 @@ response | Object | - | Typescript：`{ [key: string]: any }` | N
 size | Number | - | \- | N
 status | String | - | Typescript：` 'success' | 'fail' | 'progress' | 'waiting'` | N
 type | String | - | \- | N
+uploadTime | String | - | upload time | N
 url | String | - | \- | N

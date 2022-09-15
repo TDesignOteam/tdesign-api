@@ -12,9 +12,10 @@ autoUpload | Boolean | true | 是否选取文件后自动上传 | N
 beforeAllFilesUpload | Function | - | 全部文件上传之前的钩子，参数为上传的文件，返回值决定是否继续上传，若返回值为 `false` 则终止上传。TS 类型：`(file: UploadFile[]) => boolean | Promise<boolean>` | N
 beforeUpload | Function | - | 单文件上传之前的钩子，参数为上传的文件，返回值决定是否继续上传，若返回值为 `false` 则终止上传。TS 类型：`(file: UploadFile) => boolean | Promise<boolean>` | N
 data | Object | - | 上传文件时所需的额外数据。TS 类型：`Record<string, any> | ((file: File) => Record<string, any>)` | N
-default | String / Slot / Function | - | 触发上传的内容，同 trigger。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | 非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | 是否禁用 | N
-draggable | Boolean | false | 是否启用拖拽上传 | N
+dragContent | String / Slot / Function | - | 用于自定义拖拽区域。TS 类型：`TNode<TriggerContext>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+draggable | Boolean | undefined | 是否启用拖拽上传，不同的组件风格默认值不同 | N
 fileListDisplay | Slot / Function | - | 用于完全自定义文件列表内容。TS 类型：`TNode<{ displayFiles: UploadFile[] }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 files | Array | [] | 已上传文件列表。支持语法糖 `v-model`。TS 类型：`Array<UploadFile>` | N
 defaultFiles | Array | [] | 已上传文件列表。非受控属性。TS 类型：`Array<UploadFile>` | N
@@ -34,10 +35,10 @@ showUploadProgress | Boolean | true | 是否显示上传进度 | N
 sizeLimit | Number / Object | - | 图片文件大小限制，单位 KB。可选单位有：`'B' | 'KB' | 'MB' | 'GB'`。示例一：`1000`。示例二：`{ size: 2, unit: 'MB', message: '图片大小不超过 {sizeLimit} MB' }`。TS 类型：`number | SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts) | N
 theme | String | file | 组件风格。custom 表示完全自定义风格；file 表示默认文件上传风格；file-input 表示输入框形式的文件上传；file-flow 表示文件批量上传；image 表示默认图片上传风格；image-flow 表示图片批量上传。可选项：custom/file/file-input/file-flow/image/image-flow | N
 tips | String | - | 小文本提示 | N
-trigger | Slot / Function | - | 触发上传的内容，`displayFiles` 指本次显示的全部文件。TS 类型：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean;  displayFiles: UploadFile[] }`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts) | N
+trigger | Slot / Function | - | 触发上传的元素，`displayFiles` 指本次显示的全部文件。TS 类型：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean;  displayFiles: UploadFile[] }`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts) | N
 triggerButtonProps | Object | - | 透传选择按钮全部属性。TS 类型：`ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts) | N
 uploadAllFilesInOneRequest | Boolean | false | 是否在同一个请求中上传全部文件，默认一个请求上传一个文件 | N
-useMockProgress | Boolean | true | 是否显示为模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 | N
+useMockProgress | Boolean | true | 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 | N
 withCredentials | Boolean | false | 上传请求时是否携带 cookie | N
 onCancelUpload | Function |  | TS 类型：`() => void`<br/>点击「取消上传」时触发 | N
 onChange | Function |  | TS 类型：`(value: Array<UploadFile>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: string; index?: number; file?: UploadFile }`<br/> | N
@@ -47,13 +48,13 @@ onDrop | Function |  | TS 类型：`(context: { e: DragEvent }) => void`<br/>拖
 onFail | Function |  | TS 类型：`(options: UploadFailContext) => void`<br/>上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }`<br/> | N
 onOneFileFail | Function |  | TS 类型：`(options: UploadFailContext) => void`<br/>单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次 | N
 onOneFileSuccess | Function |  | TS 类型：`(context: Pick<SuccessContext, 'e' | 'file' | 'response'>) => void`<br/>单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据 | N
-onPreview | Function |  | TS 类型：`(options: { file: UploadFile; e: MouseEvent }) => void`<br/>点击预览时触发 | N
+onPreview | Function |  | TS 类型：`(options: { file: UploadFile; index: number; e: MouseEvent }) => void`<br/>点击图片预览时触发，文件没有预览 | N
 onProgress | Function |  | TS 类型：`(options: ProgressContext) => void`<br/>上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType }`<br/><br/>`type UploadProgressType = 'real' | 'mock'`<br/> | N
 onRemove | Function |  | TS 类型：`(context: UploadRemoveContext) => void`<br/>移除文件时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent }`<br/> | N
 onSelectChange | Function |  | TS 类型：`(files: File[], context: UploadSelectChangeContext) => void`<br/>选择文件或图片之后，上传之前，触发该事件。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadSelectChangeContext { currentSelectedFiles: UploadFile[] }`<br/> | N
 onSuccess | Function |  | TS 类型：`(context: SuccessContext) => void`<br/>上传成功后触发。<br/>`context.currentFiles` 表示当次请求上传的文件，`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br/>`context.results` 表示单次选择全部文件上传成功后的响应结果，可以在这个字段存在时提醒用户上传成功或失败。<br />⚠️ `context.file` 请勿使用。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface SuccessContext { e?: ProgressEvent; file?: UploadFile; fileList?: UploadFile[]; currentFiles?: UploadFile[]; response?: any; results?: SuccessContext[] }`<br/> | N
 onValidate | Function |  | TS 类型：`(context: { type: UploadValidateType, files: UploadFile[] }) => void`<br/>文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/> | N
-onWaitingUploadFilesChange | Function |  | TS 类型：`(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' }) => void`<br/>待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源 | N
+onWaitingUploadFilesChange | Function |  | TS 类型：`(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' }) => void`<br/>待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源 | N
 
 ### Upload Events
 
@@ -67,13 +68,20 @@ drop | `(context: { e: DragEvent })` | 拖拽结束时触发
 fail | `(options: UploadFailContext)` | 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }`<br/>
 one-file-fail | `(options: UploadFailContext)` | 单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次
 one-file-success | `(context: Pick<SuccessContext, 'e' | 'file' | 'response'>)` | 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据
-preview | `(options: { file: UploadFile; e: MouseEvent })` | 点击预览时触发
+preview | `(options: { file: UploadFile; index: number; e: MouseEvent })` | 点击图片预览时触发，文件没有预览
 progress | `(options: ProgressContext)` | 上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType }`<br/><br/>`type UploadProgressType = 'real' | 'mock'`<br/>
 remove | `(context: UploadRemoveContext)` | 移除文件时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent }`<br/>
 select-change | `(files: File[], context: UploadSelectChangeContext)` | 选择文件或图片之后，上传之前，触发该事件。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadSelectChangeContext { currentSelectedFiles: UploadFile[] }`<br/>
 success | `(context: SuccessContext)` | 上传成功后触发。<br/>`context.currentFiles` 表示当次请求上传的文件，`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br/>`context.results` 表示单次选择全部文件上传成功后的响应结果，可以在这个字段存在时提醒用户上传成功或失败。<br />⚠️ `context.file` 请勿使用。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`interface SuccessContext { e?: ProgressEvent; file?: UploadFile; fileList?: UploadFile[]; currentFiles?: UploadFile[]; response?: any; results?: SuccessContext[] }`<br/>
 validate | `(context: { type: UploadValidateType, files: UploadFile[] })` | 文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/upload/type.ts)。<br/>`type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME'`<br/>
-waiting-upload-files-change | `(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })` | 待上传文件列表发生变化时触发。`contex.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
+waiting-upload-files-change | `(context: { files: Array<UploadFile>, trigger: 'validate' | 'remove' | 'uploaded' })` | 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
+
+### UploadInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+triggerUpload | \- | \- | 必需。组件实例方法，打开文件选择器
+uploadFiles | `(files?: UploadFile[])` | \- | 必需。组件实例方法，执行后默认上传未成功上传过的所有文件，也可以上传指定文件
 
 ### UploadFile
 
@@ -87,4 +95,5 @@ response | Object | - | 上传接口返回的数据。`response.error` 存在时
 size | Number | - | 文件大小 | N
 status | String | - | 文件上传状态：上传成功，上传失败，上传中，等待上传。TS 类型：` 'success' | 'fail' | 'progress' | 'waiting'` | N
 type | String | - | 文件类型 | N
+uploadTime | String | - | 上传时间 | N
 url | String | - | 文件上传成功后的下载/访问地址 | N
