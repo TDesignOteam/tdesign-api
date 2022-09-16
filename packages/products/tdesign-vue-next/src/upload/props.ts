@@ -145,7 +145,7 @@ export default {
     type: String,
     default: '',
   },
-  /** 触发上传的元素，`displayFiles` 指本次显示的全部文件 */
+  /** 触发上传的元素，`files` 指本次显示的全部文件 */
   trigger: {
     type: Function as PropType<TdUploadProps['trigger']>,
   },

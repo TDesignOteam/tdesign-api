@@ -33048,7 +33048,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用整个表单",
       "field_desc_en": null,
@@ -33420,7 +33420,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），默认显示",
       "field_desc_en": null,
@@ -33552,7 +33552,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "''/smooth/auto",
       "field_desc_zh": "表单校验不通过时，是否自动滚动到第一个校验不通过的字段，平滑滚动或是瞬间直达。值为空则表示不滚动",
       "field_desc_en": null,
@@ -33640,7 +33640,7 @@
         "4",
         "64"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标",
       "field_desc_en": null,
@@ -35076,7 +35076,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "字段标签名称",
       "field_desc_en": null,
@@ -35290,7 +35290,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），优先级高于 Form.requiredMark",
       "field_desc_en": null,
@@ -35378,7 +35378,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`",
       "field_desc_en": null,
@@ -35469,7 +35469,7 @@
         "4",
         "64"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标。优先级高级 Form 的 statusIcon",
       "field_desc_en": null,
@@ -35642,7 +35642,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "[]",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "设置子元素默认值，如果与 FormItem 的 initialData 冲突则以 FormItem 为准",
       "field_desc_en": null,
@@ -95020,7 +95020,7 @@
       "create_time": "2022-03-07 02:48:44",
       "update_time": "2022-05-06 02:33:52",
       "event_output": null,
-      "custom_field_type": "TNode<{ displayFiles: UploadFile[] }>",
+      "custom_field_type": "TNode<{ files: UploadFile[] }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -96064,14 +96064,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发上传的元素，`displayFiles` 指本次显示的全部文件",
+      "field_desc_zh": "触发上传的元素，`files` 指本次显示的全部文件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-02-18 15:22:50",
       "update_time": "2021-12-28 01:51:41",
       "event_output": null,
-      "custom_field_type": "TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean;  displayFiles: UploadFile[] }】",
+      "custom_field_type": "TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean;  files: UploadFile[] }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
