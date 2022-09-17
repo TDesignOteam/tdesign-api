@@ -5,6 +5,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+abridgeName | Array | - | ellipsis text of medium file name。Typescript：`Array<number>` | N
 accept | String | - | \- | N
 action | String | - | upload action url | N
 allowUploadDuplicateFile | Boolean | false | \- | N

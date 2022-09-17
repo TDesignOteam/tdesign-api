@@ -7,6 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+abridgeName | Array | - | ellipsis text of medium file name。Typescript：`Array<number>` | N
 accept | String | - | \- | N
 action | String | - | upload action url | N
 allowUploadDuplicateFile | Boolean | false | \- | N

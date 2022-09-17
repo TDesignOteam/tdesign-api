@@ -94334,6 +94334,47 @@
       ]
     },
     {
+      "id": 2995,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "abridgeName",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文件名过长时，需要省略中间的文本，保留首尾文本。示例：[10, 7]，表示首尾分别保留的文本长度",
+      "field_desc_en": "ellipsis text of medium file name",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-17 06:37:48",
+      "update_time": "2022-09-17 06:37:48",
+      "event_output": null,
+      "custom_field_type": "Array<number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 872,
       "platform_framework": [
         "1",
@@ -99553,5 +99594,5 @@
       ]
     }
   ],
-  "total": 2358
+  "total": 2359
 }

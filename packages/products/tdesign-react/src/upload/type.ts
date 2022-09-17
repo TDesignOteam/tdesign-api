@@ -11,6 +11,10 @@ import { MouseEvent, DragEvent } from 'react';
 
 export interface TdUploadProps {
   /**
+   * 文件名过长时，需要省略中间的文本，保留首尾文本。示例：[10, 7]，表示首尾分别保留的文本长度
+   */
+  abridgeName?: Array<number>;
+  /**
    * 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file)
    * @default ''
    */
