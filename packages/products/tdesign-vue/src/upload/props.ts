@@ -168,7 +168,7 @@ export default {
   withCredentials: Boolean,
   /** 点击「取消上传」时触发 */
   onCancelUpload: Function as PropType<TdUploadProps['onCancelUpload']>,
-  /** 已上传文件列表发生变化时触发 */
+  /** 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源 */
   onChange: Function as PropType<TdUploadProps['onChange']>,
   /** 进入拖拽区域时触发 */
   onDragenter: Function as PropType<TdUploadProps['onDragenter']>,

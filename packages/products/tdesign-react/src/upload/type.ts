@@ -178,7 +178,7 @@ export interface TdUploadProps {
    */
   onCancelUpload?: () => void;
   /**
-   * 已上传文件列表发生变化时触发
+   * 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源
    */
   onChange?: (value: Array<UploadFile>, context: UploadChangeContext) => void;
   /**
@@ -329,10 +329,12 @@ export interface TriggerContext {
 export interface UploadChangeContext {
   e?: MouseEvent<HTMLDivElement> | ProgressEvent;
   response?: any;
-  trigger: string;
+  trigger: UploadChangeTrigger;
   index?: number;
   file?: UploadFile;
 }
+
+export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'status-change' | 'progress';
 
 export interface UploadFailContext {
   e: ProgressEvent;

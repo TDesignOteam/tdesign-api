@@ -42,7 +42,7 @@ uploadAllFilesInOneRequest | Boolean | false | \- | N
 useMockProgress | Boolean | true | \- | N
 withCredentials | Boolean | false | \- | N
 onCancelUpload | Function |  | Typescript：`() => void`<br/> | N
-onChange | Function |  | Typescript：`(value: Array<UploadFile>, context: UploadChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: string; index?: number; file?: UploadFile }`<br/> | N
+onChange | Function |  | Typescript：`(value: Array<UploadFile>, context: UploadChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile }`<br/><br/>`type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'status-change' | 'progress'`<br/> | N
 onDragenter | Function |  | Typescript：`(context: { e: DragEvent }) => void`<br/> | N
 onDragleave | Function |  | Typescript：`(context: { e: DragEvent }) => void`<br/> | N
 onDrop | Function |  | Typescript：`(context: { e: DragEvent }) => void`<br/> | N
@@ -62,7 +62,7 @@ onWaitingUploadFilesChange | Function |  | Typescript：`(context: { files: Arra
 name | params | description
 -- | -- | --
 cancel-upload | \- | \-
-change | `(value: Array<UploadFile>, context: UploadChangeContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: string; index?: number; file?: UploadFile }`<br/>
+change | `(value: Array<UploadFile>, context: UploadChangeContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile }`<br/><br/>`type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'status-change' | 'progress'`<br/>
 dragenter | `(context: { e: DragEvent })` | \-
 dragleave | `(context: { e: DragEvent })` | \-
 drop | `(context: { e: DragEvent })` | \-
