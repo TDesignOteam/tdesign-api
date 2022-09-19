@@ -79347,7 +79347,7 @@
       "create_time": "2022-05-22 14:04:18",
       "update_time": "2022-05-22 14:05:13",
       "event_output": null,
-      "custom_field_type": "(context: { trigger: string; newRowData: T; rowIndex: number }) => void",
+      "custom_field_type": "(context: PrimaryTableOnEditedContext) => void【type PrimaryTableOnEditedContext = PrimaryTableCellParams<T> & { trigger: string; newRowData: T; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95109,7 +95109,7 @@
       "create_time": "2021-02-18 15:21:40",
       "update_time": "2022-03-07 02:45:37",
       "event_output": null,
-      "custom_field_type": "Array<UploadFile>",
+      "custom_field_type": "Array<T>",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -96446,7 +96446,7 @@
       "field_desc_zh": "已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<UploadFile>, context: UploadChangeContext)【interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile }】【type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'status-change' | 'progress' | 'fail'】",
+      "event_input": "(value: Array<T>, context: UploadChangeContext)【interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile }】【type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'status-change' | 'progress' | 'fail'】",
       "create_time": "2021-02-18 15:22:12",
       "update_time": "2021-12-28 01:51:04",
       "event_output": null,
@@ -97243,6 +97243,43 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 2996,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 64,
+      "field_name": "<T extends UploadFile = UploadFile>",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-18 12:43:38",
+      "update_time": "2022-09-18 12:43:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "<T>",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
@@ -99594,5 +99631,5 @@
       ]
     }
   ],
-  "total": 2359
+  "total": 2360
 }
