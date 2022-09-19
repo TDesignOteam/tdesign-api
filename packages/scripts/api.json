@@ -79347,7 +79347,7 @@
       "create_time": "2022-05-22 14:04:18",
       "update_time": "2022-05-22 14:05:13",
       "event_output": null,
-      "custom_field_type": "(context: PrimaryTableOnEditedContext) => void【type PrimaryTableOnEditedContext = PrimaryTableCellParams<T> & { trigger: string; newRowData: T; }】",
+      "custom_field_type": "(context: PrimaryTableOnEditedContext<T>) => void【type PrimaryTableOnEditedContext<T> = PrimaryTableCellParams<T> & { trigger: string; newRowData: T; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
