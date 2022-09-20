@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### TooltipLite Props
 
 name | type | default | description | required
