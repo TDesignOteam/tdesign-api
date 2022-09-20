@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Message Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -11,6 +10,7 @@ content | String / Slot / Function | - | 用于自定义消息弹出内容。TS 
 duration | Number | 3000 | 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。 | N
 icon | Boolean / Slot / Function | true | 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标。TS 类型：`boolean | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 theme | String | info | 消息组件风格。可选项：info/success/warning/error/question/loading。TS 类型：`MessageThemeList` `type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/message/type.ts) | N
+onClose | Function |  | TS 类型：`(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent }) => void`<br/>关闭 Message 时触发 | N
 onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>当关闭按钮存在时，用户点击关闭按钮触发 | N
 onDurationEnd | Function |  | TS 类型：`() => void`<br/>计时结束后触发 | N
 
@@ -18,6 +18,7 @@ onDurationEnd | Function |  | TS 类型：`() => void`<br/>计时结束后触发
 
 名称 | 参数 | 描述
 -- | -- | --
+close | `(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })` | 关闭 Message 时触发
 close-btn-click | `(context: { e: MouseEvent })` | 当关闭按钮存在时，用户点击关闭按钮触发
 duration-end | \- | 计时结束后触发
 
@@ -119,4 +120,4 @@ options | Object | - | 必需。该插件参数为 $Message.info() 等插件执�
 
 参数名称 | 参数类型 | 参数默认值 | 参数说明
 -- | -- | -- | --
-message | Object | - | 必需。消息内容。TS 类型：`MessageOptions`
+message | Object | - | 必需。全局提醒插件全局配置。TS 类型：`MessageOptions`

@@ -5,7 +5,7 @@
  * */
 
 import { TNode, AttachNode } from '../common';
-import { MouseEvent } from 'react';
+import { CSSProperties, MouseEvent } from 'react';
 
 export interface TdMessageProps {
   /**
@@ -32,6 +32,10 @@ export interface TdMessageProps {
    */
   theme?: MessageThemeList;
   /**
+   * 关闭 Message 时触发
+   */
+  onClose?: (context: { trigger: 'close-click' | 'duration-end'; e?: MouseEvent<HTMLDivElement> }) => void;
+  /**
    * 当关闭按钮存在时，用户点击关闭按钮触发
    */
   onCloseBtnClick?: (context: { e: MouseEvent<SVGElement | HTMLElement> }) => void;
@@ -48,6 +52,11 @@ export interface MessageOptions extends TdMessageProps {
    */
   attach?: AttachNode;
   /**
+   * 类名
+   * @default ''
+   */
+  className?: string;
+  /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']
    */
   offset?: Array<string | number>;
@@ -56,6 +65,10 @@ export interface MessageOptions extends TdMessageProps {
    * @default top
    */
   placement?: MessagePlacementList;
+  /**
+   * 内敛样式
+   */
+  style?: CSSProperties;
   /**
    * 消息层级
    * @default 5000
