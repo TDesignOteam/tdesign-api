@@ -876,6 +876,10 @@
         "label": "文字提示"
       },
       {
+        "value": "TooltipLite",
+        "label": "文字提示简版"
+      },
+      {
         "value": "Transfer",
         "label": "穿梭框"
       },

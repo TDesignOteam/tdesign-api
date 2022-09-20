@@ -68877,47 +68877,6 @@
       ]
     },
     {
-      "id": 1495,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Select",
-      "field_category": 2,
-      "field_name": "visibleChange",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "下拉框隐藏/显示时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(visible: boolean)",
-      "create_time": "2021-08-26 04:21:02",
-      "update_time": "2021-08-26 04:21:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
-    },
-    {
       "id": 597,
       "platform_framework": [
         "1",
@@ -87431,6 +87390,420 @@
       "field_type_text": []
     },
     {
+      "id": 3001,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "触发元素，同 triggerElement",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:14:27",
+      "update_time": "2022-09-20 03:14:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2998,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "color",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "背景颜色，可传入 16 进制颜色码或 RGB 颜色值，优先级高于theme",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:01:30",
+      "update_time": "2022-09-20 03:01:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2999,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文字提示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:04:20",
+      "update_time": "2022-09-20 03:04:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3004,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "delay",
+      "field_type": [
+        "2",
+        "16"
+      ],
+      "field_default_value": "[250, 150]",
+      "field_enum": "",
+      "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:26:30",
+      "update_time": "2022-09-20 03:26:30",
+      "event_output": null,
+      "custom_field_type": "number | Array<number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number",
+        "Array"
+      ]
+    },
+    {
+      "id": 3002,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "top",
+      "field_enum": "top/bottom",
+      "field_desc_zh": "提示浮层出现的位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:22:17",
+      "update_time": "2022-09-20 03:22:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3005,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "showArrow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否显示箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:27:34",
+      "update_time": "2022-09-20 03:27:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2997,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "dark",
+      "field_enum": "light/dark",
+      "field_desc_zh": "组件风格，有亮色模式和暗色模式两种",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 02:59:26",
+      "update_time": "2022-09-20 02:59:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3003,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "trigger",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "hover",
+      "field_enum": "hover/click/focus",
+      "field_desc_zh": "出现提示浮层的触发方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:24:17",
+      "update_time": "2022-09-20 03:24:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3000,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 1,
+      "field_name": "triggerElement",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "触发元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-20 03:13:54",
+      "update_time": "2022-09-20 03:13:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3006,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TooltipLite",
+      "field_category": 2,
+      "field_name": "visibleChange",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "当浮层隐藏或显示时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(visible: boolean, context: TooltipVisibleChangeContext)【interface TooltipVisibleChangeContext { e?: TooltipTriggerEvent; trigger?: TooltipTriggerSource }】【type TooltipTriggerEvent = MouseEvent | FocusEvent】【type TooltipTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus'】",
+      "create_time": "2022-09-20 03:34:42",
+      "update_time": "2022-09-20 03:34:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 794,
       "platform_framework": [
         "1",
@@ -99631,5 +100004,5 @@
       ]
     }
   ],
-  "total": 2360
+  "total": 2369
 }
