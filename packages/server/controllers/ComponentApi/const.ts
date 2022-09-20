@@ -184,6 +184,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'TreeNodeState', label: '树节点', type: 'TS' },
   { value: 'TreeNodeModel', label: '树节点类', type: 'TS' },
   { value: 'Tooltip', label: '文字提示' },
+  { value: 'TooltipLite', label: '文字提示简版' },
   { value: 'Loading', label: '加载中' },
   { value: '$Loading', label: '加载中插件', type: 'plugin' },
   { value: 'Badge', label: '徽标数' },
