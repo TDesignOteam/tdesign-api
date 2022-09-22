@@ -26423,7 +26423,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否全屏显示弹框",
+      "field_desc_zh": "是否全屏显示弹框，请更为使用 `mode='full-screen'`",
       "field_desc_en": "full screen dialog",
       "field_required": 0,
       "event_input": "",

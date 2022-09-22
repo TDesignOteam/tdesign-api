@@ -66,7 +66,7 @@ export interface TdDialogProps {
    */
   footer?: TNode;
   /**
-   * 是否全屏显示弹框
+   * 是否全屏显示弹框，请更为使用 `mode='full-screen'`
    * @default false
    * @deprecated
    */

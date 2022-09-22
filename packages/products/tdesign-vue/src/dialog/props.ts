@@ -58,7 +58,7 @@ export default {
     type: [Boolean, Function] as PropType<TdDialogProps['footer']>,
     default: true,
   },
-  /** 已废弃。是否全屏显示弹框 */
+  /** 已废弃。是否全屏显示弹框，请更为使用 `mode='full-screen'` */
   fullScreen: Boolean,
   /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容 */
   header: {
