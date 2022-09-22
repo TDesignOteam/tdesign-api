@@ -45,6 +45,7 @@ export interface TdImageViewerProps {
   mode?: 'modal' | 'modeless';
   /**
    * 切换预览图片的左图标，可自定义
+   * @default true
    */
   navigationArrow?: TNode;
   /**

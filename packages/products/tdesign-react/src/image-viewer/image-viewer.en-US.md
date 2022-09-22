@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### ImageViewer Props
 
 name | type | default | description | required
@@ -16,7 +15,7 @@ images | Array | [] | Typescript：`Array<string | ImageInfo>` `interface ImageI
 index | Number | - | \- | N
 defaultIndex | Number | - | uncontrolled property | N
 mode | String | modal | options：modal/modeless | N
-navigationArrow | TNode | - | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+navigationArrow | TNode | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 showOverlay | Boolean | undefined | \- | N
 title | TNode | - | preview title。Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 trigger | TNode | - | trigger element。Typescript：`string | TNode<{ open: () => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

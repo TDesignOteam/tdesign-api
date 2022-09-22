@@ -9,6 +9,7 @@ export const imageViewerDefaultProps: TdImageViewerProps = {
   draggable: undefined,
   images: [],
   mode: 'modal',
+  navigationArrow: true,
   showOverlay: undefined,
   visible: false,
 };

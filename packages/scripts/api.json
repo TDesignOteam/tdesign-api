@@ -35325,6 +35325,45 @@
       ]
     },
     {
+      "id": 3008,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "shouldUpdate",
+      "field_type": [
+        "4",
+        "32"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-22 05:20:23",
+      "update_time": "2022-09-22 05:20:23",
+      "event_output": null,
+      "custom_field_type": "boolean | ((prevValue, curValue) => boolean)",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Function"
+      ]
+    },
+    {
       "id": 2385,
       "platform_framework": [
         "1",
@@ -42074,7 +42113,7 @@
         "4",
         "64"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "切换预览图片的左图标，可自定义",
       "field_desc_en": null,
@@ -99924,5 +99963,5 @@
       ]
     }
   ],
-  "total": 2367
+  "total": 2368
 }
