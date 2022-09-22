@@ -26409,47 +26409,6 @@
       ]
     },
     {
-      "id": 2987,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "fullScreen",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否全屏显示弹框，请更为使用 `mode='full-screen'`",
-      "field_desc_en": "full screen dialog",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-07 02:55:09",
-      "update_time": "2022-09-07 02:55:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 52,
       "platform_framework": [
         "1",
@@ -99965,5 +99924,5 @@
       ]
     }
   ],
-  "total": 2368
+  "total": 2367
 }
