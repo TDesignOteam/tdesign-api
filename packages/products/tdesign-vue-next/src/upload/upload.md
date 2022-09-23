@@ -18,7 +18,7 @@ disabled | Boolean | false | 是否禁用 | N
 dragContent | String / Slot / Function | - | 用于自定义拖拽区域。TS 类型：`TNode<TriggerContext>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 draggable | Boolean | undefined | 是否启用拖拽上传，不同的组件风格默认值不同 | N
 fileListDisplay | Slot / Function | - | 用于完全自定义文件列表内容。TS 类型：`TNode<{ files: UploadFile[] }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-files | Array | [] | 已上传文件列表，同 `value`。支持语法糖 `v-model` 或 `v-model:files`。TS 类型：`Array<T>` | N
+files | Array | [] | 已上传文件列表，同 `value`。支持语法糖 `v-model:files`。TS 类型：`Array<T>` | N
 defaultFiles | Array | [] | 已上传文件列表，同 `value`。非受控属性。TS 类型：`Array<T>` | N
 format | Function | - | 文件上传前转换文件的数据结构，可新增或修改文件对象的属性。TS 类型：`(file: File) => UploadFile` | N
 formatRequest | Function | - | 用于新增或修改文件上传请求参数。TS 类型：`(requestData: { [key: string]: any }) => { [key: string]: any }` | N

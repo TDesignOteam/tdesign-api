@@ -77,11 +77,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   defaultFiles?: Array<T>;
   /**
-   * 已上传文件列表，同 `value`
-   * @default []
-   */
-  modelValue?: Array<T>;
-  /**
    * 文件上传前转换文件的数据结构，可新增或修改文件对象的属性
    */
   format?: (file: File) => UploadFile;
