@@ -22991,7 +22991,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用",
+      "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -62443,7 +62443,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否禁用范围输入框，值为数组表示可分别控制某一个输入框是否禁用",
+      "field_desc_zh": "是否禁用范围输入框",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -87729,7 +87729,7 @@
         "4"
       ],
       "component": "TooltipLite",
-      "field_category": 1,
+      "field_category": 2,
       "field_name": "visibleChange",
       "field_type": [
         "4"
@@ -87752,7 +87752,7 @@
       "version": "",
       "test_description": null,
       "support_default_value": 0,
-      "field_category_text": "Props",
+      "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
