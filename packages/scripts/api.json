@@ -95434,7 +95434,7 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "已上传文件列表",
+      "field_desc_zh": "已上传文件列表，同 `value`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -96634,6 +96634,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3009,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "已上传文件列表，同 `files`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-23 12:38:37",
+      "update_time": "2022-09-23 12:38:37",
+      "event_output": null,
+      "custom_field_type": "Array<T>",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -99963,5 +100004,5 @@
       ]
     }
   ],
-  "total": 2368
+  "total": 2369
 }

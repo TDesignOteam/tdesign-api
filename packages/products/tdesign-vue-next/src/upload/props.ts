@@ -60,7 +60,7 @@ export default {
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
   },
-  /** 已上传文件列表 */
+  /** 已上传文件列表，同 `value` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
     default: undefined,
@@ -69,7 +69,7 @@ export default {
     type: Array as PropType<TdUploadProps['files']>,
     default: undefined,
   },
-  /** 已上传文件列表，非受控属性 */
+  /** 已上传文件列表，同 `value`，非受控属性 */
   defaultFiles: {
     type: Array as PropType<TdUploadProps['defaultFiles']>,
     default: (): TdUploadProps['defaultFiles'] => [],
@@ -171,6 +171,20 @@ export default {
   useMockProgress: {
     type: Boolean,
     default: true,
+  },
+  /** 已上传文件列表，同 `files` */
+  value: {
+    type: Array as PropType<TdUploadProps['value']>,
+    default: undefined,
+  },
+  modelValue: {
+    type: Array as PropType<TdUploadProps['value']>,
+    default: undefined,
+  },
+  /** 已上传文件列表，同 `files`，非受控属性 */
+  defaultValue: {
+    type: Array as PropType<TdUploadProps['defaultValue']>,
+    default: (): TdUploadProps['defaultValue'] => [],
   },
   /** 上传请求时是否携带 cookie */
   withCredentials: Boolean,

@@ -67,12 +67,12 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   fileListDisplay?: TNode<{ files: UploadFile[] }>;
   /**
-   * 已上传文件列表
+   * 已上传文件列表，同 `value`
    * @default []
    */
   files?: Array<T>;
   /**
-   * 已上传文件列表，非受控属性
+   * 已上传文件列表，同 `value`，非受控属性
    * @default []
    */
   defaultFiles?: Array<T>;
@@ -171,6 +171,16 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * @default true
    */
   useMockProgress?: boolean;
+  /**
+   * 已上传文件列表，同 `files`
+   * @default []
+   */
+  value?: Array<T>;
+  /**
+   * 已上传文件列表，同 `files`，非受控属性
+   * @default []
+   */
+  defaultValue?: Array<T>;
   /**
    * 上传请求时是否携带 cookie
    * @default false
