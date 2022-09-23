@@ -58,5 +58,5 @@ export default {
     type: [String, Function] as PropType<TdTooltipLiteProps['triggerElement']>,
   },
   /** 当浮层隐藏或显示时触发 */
-  visibleChange: Boolean,
+  onVisibleChange: Function as PropType<TdTooltipLiteProps['onVisibleChange']>,
 };

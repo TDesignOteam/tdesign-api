@@ -47,5 +47,19 @@ export interface TdTooltipLiteProps {
   /**
    * 当浮层隐藏或显示时触发
    */
-  visibleChange?: boolean;
+  onVisibleChange?: (visible: boolean, context: TooltipVisibleChangeContext) => void;
 }
+
+export interface TooltipVisibleChangeContext {
+  e?: TooltipTriggerEvent;
+  trigger?: TooltipTriggerSource;
+}
+
+export type TooltipTriggerEvent = MouseEvent | FocusEvent;
+
+export type TooltipTriggerSource =
+  | 'document'
+  | 'trigger-element-click'
+  | 'trigger-element-hover'
+  | 'trigger-element-blur'
+  | 'trigger-element-focus';

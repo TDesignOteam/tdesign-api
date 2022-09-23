@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### TooltipLite Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -14,4 +13,10 @@ showArrow | Boolean | true | 是否显示箭头 | N
 theme | String | dark | 组件风格，有亮色模式和暗色模式两种。可选项：light/dark | N
 trigger | String | hover | 出现提示浮层的触发方式。可选项：hover/click/focus | N
 triggerElement | String / Slot / Function | - | 触发元素。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-visibleChange | Boolean | - | 当浮层隐藏或显示时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tooltip-lite/type.ts)。<br/>`interface TooltipVisibleChangeContext { e?: TooltipTriggerEvent; trigger?: TooltipTriggerSource }`<br/><br/>`type TooltipTriggerEvent = MouseEvent | FocusEvent`<br/><br/>`type TooltipTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus'`<br/> | N
+onVisibleChange | Function |  | TS 类型：`(visible: boolean, context: TooltipVisibleChangeContext) => void`<br/>当浮层隐藏或显示时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tooltip-lite/type.ts)。<br/>`interface TooltipVisibleChangeContext { e?: TooltipTriggerEvent; trigger?: TooltipTriggerSource }`<br/><br/>`type TooltipTriggerEvent = MouseEvent | FocusEvent`<br/><br/>`type TooltipTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus'`<br/> | N
+
+### TooltipLite Events
+
+名称 | 参数 | 描述
+-- | -- | --
+visible-change | `(visible: boolean, context: TooltipVisibleChangeContext)` | 当浮层隐藏或显示时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tooltip-lite/type.ts)。<br/>`interface TooltipVisibleChangeContext { e?: TooltipTriggerEvent; trigger?: TooltipTriggerSource }`<br/><br/>`type TooltipTriggerEvent = MouseEvent | FocusEvent`<br/><br/>`type TooltipTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus'`<br/>
