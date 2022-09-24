@@ -204,7 +204,7 @@ export default {
   onRemove: Function as PropType<TdUploadProps['onRemove']>,
   /** 选择文件或图片之后，上传之前，触发该事件 */
   onSelectChange: Function as PropType<TdUploadProps['onSelectChange']>,
-  /** 上传成功后触发。<br/>`context.currentFiles` 表示当次请求上传的文件，`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br/>`context.results` 表示单次选择全部文件上传成功后的响应结果，可以在这个字段存在时提醒用户上传成功或失败。<br />⚠️ `context.file` 请勿使用 */
+  /** 上传成功后触发。<br/>`context.currentFiles` 表示当次请求上传的文件，`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br/>`context.results` 表示单次选择全部文件上传成功后的响应结果，可以在这个字段存在时提醒用户上传成功或失败。<br /> */
   onSuccess: Function as PropType<TdUploadProps['onSuccess']>,
   /** 文件上传校验结束事件，有文件数量超出时会触发，文件大小超出限制、文件同名时会触发等场景。注意如果设置允许上传同名文件，则此事件不会触发 */
   onValidate: Function as PropType<TdUploadProps['onValidate']>,
