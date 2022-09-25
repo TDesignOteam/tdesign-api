@@ -8248,7 +8248,7 @@
       "create_time": "2021-03-26 02:31:59",
       "update_time": "2021-12-05 11:03:10",
       "event_output": null,
-      "custom_field_type": "ClassName | ((context: CellData<T>) => ClassName)【interface CellData<T> extends BaseTableCellParams<T> { type: 'th' | 'td' }】",
+      "custom_field_type": "TableColumnClassName<T> | TableColumnClassName<T>[]【type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName)】【interface CellData<T> extends BaseTableCellParams<T> { type: 'th' | 'td' }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -8633,6 +8633,47 @@
       ],
       "field_type_text": [
         "Function"
+      ]
+    },
+    {
+      "id": 3012,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTableCol",
+      "field_category": 1,
+      "field_name": "resizable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否允许调整当前列列宽",
+      "field_desc_en": "resize current column width",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-25 12:37:19",
+      "update_time": "2022-09-25 12:37:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -58723,6 +58764,47 @@
       ]
     },
     {
+      "id": 3011,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "showSortColumnBgColor",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "当前排序列是否显示背景色",
+      "field_desc_en": "column shows sort bg color",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-09-25 12:21:40",
+      "update_time": "2022-09-25 12:21:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 834,
       "platform_framework": [
         "1",
@@ -100045,5 +100127,5 @@
       ]
     }
   ],
-  "total": 2370
+  "total": 2372
 }

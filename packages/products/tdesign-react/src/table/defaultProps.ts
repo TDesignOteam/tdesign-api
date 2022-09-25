@@ -32,6 +32,7 @@ export const primaryTableDefaultProps: Pick<
   | 'defaultExpandedRowKeys'
   | 'multipleSort'
   | 'defaultSelectedRowKeys'
+  | 'showSortColumnBgColor'
   | 'sortOnRowDraggable'
 > = {
   columnControllerVisible: undefined,
@@ -40,5 +41,6 @@ export const primaryTableDefaultProps: Pick<
   defaultExpandedRowKeys: [],
   multipleSort: false,
   defaultSelectedRowKeys: [],
+  showSortColumnBgColor: false,
   sortOnRowDraggable: false,
 };
