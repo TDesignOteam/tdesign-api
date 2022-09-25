@@ -159,6 +159,11 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   scroll?: TableScroll;
   /**
+   * 是否显示表头
+   * @default true
+   */
+  showHeader?: boolean;
+  /**
    * 表格尺寸
    * @default medium
    */
