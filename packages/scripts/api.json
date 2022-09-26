@@ -87511,47 +87511,6 @@
       ]
     },
     {
-      "id": 2999,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "TooltipLite",
-      "field_category": 1,
-      "field_name": "color",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "背景颜色，可传入 16 进制颜色码或 RGB 颜色值，优先级高于theme",
-      "field_desc_en": "background color",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-20 07:23:58",
-      "update_time": "2022-09-20 07:23:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 3000,
       "platform_framework": [
         "1",
@@ -87592,49 +87551,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3001,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "TooltipLite",
-      "field_category": 1,
-      "field_name": "delay",
-      "field_type": [
-        "2",
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
-      "field_desc_en": "[250, 150]",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-20 07:26:32",
-      "update_time": "2022-09-20 07:26:32",
-      "event_output": null,
-      "custom_field_type": "number | Array<number>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Number",
-        "Array"
       ]
     },
     {
@@ -87720,7 +87636,7 @@
       ]
     },
     {
-      "id": 3004,
+      "id": 3013,
       "platform_framework": [
         "1",
         "2",
@@ -87728,20 +87644,20 @@
       ],
       "component": "TooltipLite",
       "field_category": 1,
-      "field_name": "theme",
+      "field_name": "showShadow",
       "field_type": [
-        "1"
+        "4"
       ],
-      "field_default_value": "dark",
-      "field_enum": "light/dark",
-      "field_desc_zh": "组件风格，有亮色模式和暗色模式两种",
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "文字提示浮层是否需要阴影",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-09-20 07:28:42",
-      "update_time": "2022-09-20 07:28:42",
+      "create_time": "2022-09-26 08:54:06",
+      "update_time": "2022-09-26 08:54:06",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -87757,11 +87673,11 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Boolean"
       ]
     },
     {
-      "id": 3005,
+      "id": 3004,
       "platform_framework": [
         "1",
         "2",
@@ -87769,20 +87685,20 @@
       ],
       "component": "TooltipLite",
       "field_category": 1,
-      "field_name": "trigger",
+      "field_name": "theme",
       "field_type": [
         "1"
       ],
-      "field_default_value": "hover",
-      "field_enum": "hover/click/focus",
-      "field_desc_zh": "出现提示浮层的触发方式",
+      "field_default_value": "default",
+      "field_enum": "light/default",
+      "field_desc_zh": "组件风格，有亮色模式和暗色模式两种",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-09-20 07:29:17",
-      "update_time": "2022-09-20 07:29:17",
+      "create_time": "2022-09-20 07:28:42",
+      "update_time": "2022-09-20 07:28:42",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -87842,47 +87758,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3006,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "TooltipLite",
-      "field_category": 2,
-      "field_name": "visibleChange",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当浮层隐藏或显示时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(visible: boolean, context: TooltipVisibleChangeContext)【interface TooltipVisibleChangeContext { e?: TooltipTriggerEvent; trigger?: TooltipTriggerSource }】【type TooltipTriggerEvent = MouseEvent | FocusEvent】【type TooltipTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus'】",
-      "create_time": "2022-09-20 07:30:33",
-      "update_time": "2022-09-20 07:30:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {
@@ -100127,5 +100002,5 @@
       ]
     }
   ],
-  "total": 2372
+  "total": 2369
 }
