@@ -16,7 +16,7 @@ export default {
   disableDate: {
     type: [Object, Array, Function] as PropType<TdDateRangePickerProps['disableDate']>,
   },
-  /** 是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用 */
+  /** 是否禁用组件 */
   disabled: Boolean,
   /** 是否显示时间选择 */
   enableTimePicker: Boolean,
@@ -76,10 +76,18 @@ export default {
   rangeInputProps: {
     type: Object as PropType<TdDateRangePickerProps['rangeInputProps']>,
   },
-  /** 日期分隔符 */
+  /** 日期分隔符，支持全局配置，默认为 '-' */
   separator: {
     type: String,
-    default: '-',
+    default: '',
+  },
+  /** 输入框状态 */
+  status: {
+    type: String as PropType<TdDateRangePickerProps['status']>,
+    validator(val: TdDateRangePickerProps['status']): boolean {
+      if (!val) return true;
+      return ['default', 'success', 'warning', 'error'].includes(val);
+    },
   },
   /** 组件后置图标 */
   suffixIcon: {
@@ -88,6 +96,10 @@ export default {
   /** 透传 TimePicker 组件属性 */
   timePickerProps: {
     type: Object as PropType<TdDateRangePickerProps['timePickerProps']>,
+  },
+  /** 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式 */
+  tips: {
+    type: [String, Function] as PropType<TdDateRangePickerProps['tips']>,
   },
   /** 选中值 */
   value: {
@@ -102,11 +114,6 @@ export default {
   defaultValue: {
     type: Array as PropType<TdDateRangePickerProps['defaultValue']>,
     default: (): TdDateRangePickerProps['defaultValue'] => [],
-  },
-  /** 用于格式化日期，默认为：'YYYY-MM-DD'，可选值：'date/time-stamp/YYY-MM-DD' 等，[更多可选值见 Dayjs 详细文档](https://day.js.org/docs/en/display/format)。<br /> 其中 `valueType=date` 表示 `value` 数据类型为 `Date`；`valueType='time-stamp'` 表示 `value` 数据类型为时间戳 */
-  valueType: {
-    type: String,
-    default: '',
   },
   /** 当输入框失去焦点时触发 */
   onBlur: Function as PropType<TdDateRangePickerProps['onBlur']>,

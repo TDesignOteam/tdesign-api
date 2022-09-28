@@ -9,7 +9,8 @@ import { PopupProps } from '../popup';
 import { TimePickerProps } from '../time-picker';
 import { Dayjs } from 'dayjs';
 import { RangeInputProps } from '../range-input';
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
+import { MouseEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdDatePickerProps {
   /**
@@ -63,7 +64,7 @@ export interface TdDatePickerProps {
   /**
    * 用于自定义组件前置图标
    */
-  prefixIcon?: TNode;
+  prefixIcon?: TElement;
   /**
    * 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }`
    */
@@ -80,7 +81,7 @@ export interface TdDatePickerProps {
   /**
    * 用于自定义组件后置图标
    */
-  suffixIcon?: TNode;
+  suffixIcon?: TElement;
   /**
    * 透传 TimePicker 组件属性
    */
@@ -88,7 +89,7 @@ export interface TdDatePickerProps {
   /**
    * 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式
    */
-  tips?: string | TNode;
+  tips?: TNode;
   /**
    * 选中值
    * @default ''
@@ -99,11 +100,6 @@ export interface TdDatePickerProps {
    * @default ''
    */
   defaultValue?: DateValue;
-  /**
-   * 选中值
-   * @default ''
-   */
-  modelValue?: DateValue;
   /**
    * 用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ `YYYMMDD` 这种格式不支持，请勿使用，如果希望支持可以给 `dayjs` 提个 PR。注意和 `format` 的区别，`format` 仅用于处理日期在页面中呈现的格式
    * @default 'YYYY-MM-DD'
@@ -121,7 +117,7 @@ export interface TdDatePickerProps {
   /**
    * 当输入框失去焦点时触发
    */
-  onBlur?: (context: { value: DateValue; e: FocusEvent }) => void;
+  onBlur?: (context: { value: DateValue; e: FocusEvent<HTMLInputElement> }) => void;
   /**
    * 选中值发生变化时触发
    */
@@ -129,7 +125,7 @@ export interface TdDatePickerProps {
   /**
    * 输入框获得焦点时触发
    */
-  onFocus?: (context: { value: DateValue; e: FocusEvent }) => void;
+  onFocus?: (context: { value: DateValue; e: FocusEvent<HTMLInputElement> }) => void;
   /**
    * 面板选中值后触发
    */
@@ -190,7 +186,7 @@ export interface TdDateRangePickerProps {
   /**
    * 组件前置图标
    */
-  prefixIcon?: TNode;
+  prefixIcon?: TElement;
   /**
    * 预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }
    */
@@ -216,7 +212,7 @@ export interface TdDateRangePickerProps {
   /**
    * 组件后置图标
    */
-  suffixIcon?: TNode;
+  suffixIcon?: TElement;
   /**
    * 透传 TimePicker 组件属性
    */
@@ -224,7 +220,7 @@ export interface TdDateRangePickerProps {
   /**
    * 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式
    */
-  tips?: string | TNode;
+  tips?: TNode;
   /**
    * 选中值
    * @default []
@@ -236,14 +232,9 @@ export interface TdDateRangePickerProps {
    */
   defaultValue?: DateRangeValue;
   /**
-   * 选中值
-   * @default []
-   */
-  modelValue?: DateRangeValue;
-  /**
    * 当输入框失去焦点时触发
    */
-  onBlur?: (context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void;
+  onBlur?: (context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent<HTMLDivElement> }) => void;
   /**
    * 选中值发生变化时触发
    */
@@ -251,11 +242,20 @@ export interface TdDateRangePickerProps {
   /**
    * 输入框获得焦点时触发
    */
-  onFocus?: (context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void;
+  onFocus?: (context: {
+    value: DateRangeValue;
+    partial: DateRangePickerPartial;
+    e: FocusEvent<HTMLDivElement>;
+  }) => void;
   /**
    * 输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值
    */
-  onInput?: (context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void;
+  onInput?: (context: {
+    input: string;
+    value: DateRangeValue;
+    partial: DateRangePickerPartial;
+    e: FormEvent<HTMLDivElement>;
+  }) => void;
   /**
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
@@ -280,43 +280,53 @@ export interface TdDatePickerPanelProps
   /**
    * 点击日期单元格时触发
    */
-  onCellClick?: (context: { date: Date; e: MouseEvent }) => void;
+  onCellClick?: (context: { date: Date; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 选中值发生变化时触发。参数 `context.trigger` 表示触发当前事件的来源，不同的模式触发来源也会不同
    */
   onChange?: (
     value: DateValue,
-    context: { dayjsValue?: Dayjs; e?: MouseEvent; trigger?: DatePickerTriggerSource },
+    context: { dayjsValue?: Dayjs; e?: MouseEvent<HTMLDivElement>; trigger?: DatePickerTriggerSource },
   ) => void;
   /**
    * 如果存在“确认”按钮，则点击“确认”按钮时触发
    */
-  onConfirm?: (context: { date: Date; e: MouseEvent }) => void;
+  onConfirm?: (context: { date: Date; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 月份切换发生变化时触发
    */
   onMonthChange?: (context: {
     month: number;
     date: Date;
-    e?: MouseEvent;
+    e?: MouseEvent<HTMLDivElement>;
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
   /**
    * 点击面板时触发
    */
-  onPanelClick?: (context: { e: MouseEvent }) => void;
+  onPanelClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 如果存在“确认”按钮，则点击“确认”按钮时触发
    */
-  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 时间切换发生变化时触发
    */
-  onTimeChange?: (context: { time: string; date: Date; trigger: DatePickerTimeChangeTrigger; e?: MouseEvent }) => void;
+  onTimeChange?: (context: {
+    time: string;
+    date: Date;
+    trigger: DatePickerTimeChangeTrigger;
+    e?: MouseEvent<HTMLDivElement>;
+  }) => void;
   /**
    * 年份切换发生变化时触发
    */
-  onYearChange?: (context: { year: number; date: Date; trigger: DatePickerYearChangeTrigger; e?: MouseEvent }) => void;
+  onYearChange?: (context: {
+    year: number;
+    date: Date;
+    trigger: DatePickerYearChangeTrigger;
+    e?: MouseEvent<HTMLDivElement>;
+  }) => void;
 }
 
 export interface TdDateRangePickerPanelProps
@@ -338,7 +348,7 @@ export interface TdDateRangePickerPanelProps
   /**
    * 点击日期单元格时触发
    */
-  onCellClick?: (context: { date: Date[]; partial: DateRangePickerPartial; e: MouseEvent }) => void;
+  onCellClick?: (context: { date: Date[]; partial: DateRangePickerPartial; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 选中值发生变化时触发。参数 `context.trigger` 表示触发当前事件的来源，不同的模式触发来源也会不同
    */
@@ -347,14 +357,14 @@ export interface TdDateRangePickerPanelProps
     context: {
       dayjsValue?: Dayjs[];
       partial: DateRangePickerPartial;
-      e?: MouseEvent;
+      e?: MouseEvent<HTMLDivElement>;
       trigger?: DatePickerTriggerSource;
     },
   ) => void;
   /**
    * 如果存在“确认”按钮，则点击“确认”按钮时触发
    */
-  onConfirm?: (context: { date: Date[]; e: MouseEvent }) => void;
+  onConfirm?: (context: { date: Date[]; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 月份切换发生变化时触发
    */
@@ -362,17 +372,17 @@ export interface TdDateRangePickerPanelProps
     month: number;
     date: Date[];
     partial: DateRangePickerPartial;
-    e?: MouseEvent;
+    e?: MouseEvent<HTMLDivElement>;
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
   /**
    * 点击面板时触发
    */
-  onPanelClick?: (context: { e: MouseEvent }) => void;
+  onPanelClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 如果存在“确认”按钮，则点击“确认”按钮时触发
    */
-  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 时间切换发生变化时触发
    */
@@ -381,7 +391,7 @@ export interface TdDateRangePickerPanelProps
     date: Date[];
     partial: DateRangePickerPartial;
     trigger: DatePickerTimeChangeTrigger;
-    e?: MouseEvent;
+    e?: MouseEvent<HTMLDivElement>;
   }) => void;
   /**
    * 年份切换发生变化时触发
@@ -391,7 +401,7 @@ export interface TdDateRangePickerPanelProps
     date: Date[];
     partial: DateRangePickerPartial;
     trigger: DatePickerYearChangeTrigger;
-    e?: MouseEvent;
+    e?: MouseEvent<HTMLDivElement>;
   }) => void;
 }
 
@@ -428,7 +438,7 @@ export type DateRange = [DateValue, DateValue];
 export type DateRangeValue = Array<DateValue>;
 
 export interface PickContext {
-  e: MouseEvent;
+  e: MouseEvent<HTMLDivElement>;
   partial: DateRangePickerPartial;
 }
 

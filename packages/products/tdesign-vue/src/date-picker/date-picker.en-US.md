@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### DatePicker Props
 
 name | type | default | description | required
@@ -26,7 +25,7 @@ timePickerProps | Object | - | Typescript：`TimePickerProps`，[TimePicker API 
 tips | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String / Number / Array / Date | '' | `v-model` is supported。Typescript：`DateValue` `type DateValue = string | number | Date`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 defaultValue | String / Number / Array / Date | '' | uncontrolled property。Typescript：`DateValue` `type DateValue = string | number | Date`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
-valueType | String | - | \- | N
+valueType | String | 'YYYY-MM-DD' | options：'time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS' | N
 onBlur | Function |  | Typescript：`(context: { value: DateValue; e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear'`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: DateValue; e: FocusEvent }) => void`<br/> | N
@@ -67,7 +66,6 @@ timePickerProps | Object | - | Typescript：`TimePickerProps`，[TimePicker API 
 tips | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | Array | [] | `v-model` is supported。Typescript：`DateRangeValue` `type DateRangeValue = Array<DateValue>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`DateRangeValue` `type DateRangeValue = Array<DateValue>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
-valueType | String | - | \- | N
 onBlur | Function |  | Typescript：`(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateRangeValue, context: { dayjsValue?: Dayjs[], trigger?: DatePickerTriggerSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void`<br/> | N
@@ -101,7 +99,7 @@ year-change | `(context: { year: number, date: Date, trigger: DatePickerYearChan
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-`Pick<DatePickerProps, 'value' | 'defaultValue' | 'valueType' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'>` | \- | - | \- | N
+`Pick<DatePickerProps, 'value' | 'defaultValue' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps'>` | \- | - | \- | N
 
 
 ### DateRangePickerPanel Events
@@ -120,4 +118,4 @@ year-change | `(context: { year: number, date: Date[], partial: DateRangePickerP
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-`Pick<DateRangePickerProps, 'value'| 'defaultValue' | 'valueType' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'panelPreselection' | 'timePickerProps'>` | \- | - | \- | N
+`Pick<DateRangePickerProps, 'value'| 'defaultValue' | 'disabled' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'panelPreselection' | 'timePickerProps'>` | \- | - | \- | N
