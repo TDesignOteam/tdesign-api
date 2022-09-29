@@ -31,6 +31,10 @@ export interface TdMessageProps {
    */
   theme?: MessageThemeList;
   /**
+   * 关闭消息时触发
+   */
+  onClose?: (context?: { trigger: 'duration' | 'close-click' }) => void;
+  /**
    * 当关闭按钮存在时，用户点击关闭按钮触发
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;
