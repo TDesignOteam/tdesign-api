@@ -16,20 +16,20 @@ empty | String / Slot / Function | '' | empty text or empty element。Typescript
 firstFullRow | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 fixedRows | Array | - | Typescript：`Array<number>` | N
 footData | Array | [] | table foot data。Typescript：`Array<T>` | N
-footerAffixProps | Object | - | `deprecated`。affix props。Typescript：`AffixProps` | N
-footerAffixedBottom | Boolean / Object | false | affix foot to viewport bottom。Typescript：`boolean | AffixProps` | N
+footerAffixProps | Object | - | `deprecated`。affix props。Typescript：`Partial<AffixProps>` | N
+footerAffixedBottom | Boolean / Object | false | affix foot to viewport bottom。Typescript：`boolean | Partial<AffixProps>` | N
 footerSummary | String / Slot / Function | - | footer summary content。Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-headerAffixProps | Object | - | `deprecated`。affix props。Typescript：`AffixProps`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
-headerAffixedTop | Boolean / Object | false | affix header to viewport top。Typescript：`boolean | AffixProps` | N
+headerAffixProps | Object | - | `deprecated`。affix props。Typescript：`Partial<AffixProps>`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
+headerAffixedTop | Boolean / Object | false | affix header to viewport top。Typescript：`boolean | Partial<AffixProps>` | N
 height | String / Number | - | table height | N
-horizontalScrollAffixedBottom | Boolean / Object | - | affix props。Typescript：`boolean | AffixProps` | N
+horizontalScrollAffixedBottom | Boolean / Object | - | affix props。Typescript：`boolean | Partial<AffixProps>` | N
 hover | Boolean | false | show hover style | N
 lastFullRow | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 loading | Boolean / Slot / Function | undefined | loading state table。Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 loadingProps | Object | - | Typescript：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
 maxHeight | String / Number | - | table max height | N
 pagination | Object | - | you can use all props of pagination component with paginationProps。Typescript：`PaginationProps`，[Pagination API Documents](./pagination?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
-paginationAffixedBottom | Boolean / Object | - | affix props。Typescript：`boolean | AffixProps` | N
+paginationAffixedBottom | Boolean / Object | - | affix props。Typescript：`boolean | Partial<AffixProps>` | N
 resizable | Boolean | false | allow to resize column width | N
 rowAttributes | Object / Array / Function | - | `tr` attributes。Typescript：`TableRowAttributes<T>` `type TableRowAttributes<T> = HTMLElementAttributes | ((params: { row: T; rowIndex: number; type: 'body' | 'foot' }) => HTMLElementAttributes) | Array<TableRowAttributes<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
 rowClassName | String / Object / Array / Function | - | table `th` classname。Typescript：`ClassName | ((params: RowClassNameParams<T>) => ClassName)` `interface RowClassNameParams<T> { row: T; rowIndex: number; type?: 'body' | 'foot' }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
