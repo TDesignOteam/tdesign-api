@@ -34,6 +34,7 @@ const { generateReactDefaultProps } = require('./types/react-default-props');
 const { generateVueProps } = require('./types/vue-props');
 const chalk = require('chalk');
 const pick = require('lodash/pick');
+const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
@@ -88,6 +89,7 @@ function generateComponentApi() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
   const baseData = pick(frameworkData, cmpMap[component] || [component]);
+  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
 
   if (!onlyDocs) {
     // 生成 API 类型定义文件
@@ -108,9 +110,9 @@ function generateComponentApi() {
     }
   }
   // 生成 API 中文文档
-  generateDocs(baseData, framework);
+  generateDocs(baseData, framework, { globalConfigData });
   // generate API English documents
-  generateDocs(baseData, framework, { language: 'en' });
+  generateDocs(baseData, framework, { language: 'en', globalConfigData });
 }
 
 /**
@@ -125,10 +127,11 @@ function generateDocuments() {
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const baseData = frameworkData;
+  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
   // 生成 API 中文文档
-  generateDocs(baseData, framework);
+  generateDocs(baseData, framework, { globalConfigData });
   // generate API English documents
-  generateDocs(baseData, framework, { language: 'en' });
+  generateDocs(baseData, framework, { language: 'en', globalConfigData });
 }
 
 function validateParams(components) {

@@ -1,4 +1,5 @@
 const pick = require('lodash/pick');
+const find = require('lodash/find');
 const camelCase = require('lodash/camelCase');
 const lowerFirst = require('lodash/lowerFirst');
 const kebabCase = require('lodash/kebabCase');
@@ -17,6 +18,7 @@ const {
   getFolderName,
   getCmpTypeCombineMap,
   getComponentsMap,
+  getGlobalConfigName,
 } = require('../common');
 const languageConfig = require('../config/language/description');
 
@@ -302,7 +304,7 @@ function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
  * @param {Object} current 当前框架所有配置
  * @param {String} framework 当前框架
  */
-function getVueApiDocs(componentMap, current, framework, language) {
+function getVueApiDocs(componentMap, current, framework, globalConfigData, language) {
   currentFramework = framework;
   const result = {};
   const isMiniprogram = framework === 'Miniprogram';
@@ -313,6 +315,10 @@ function getVueApiDocs(componentMap, current, framework, language) {
   const languageInfo = languageConfig[LANGUAGE];
   Object.keys(componentMap).forEach((cmp) => {
     const md = {};
+    let componentConfig = {};
+    if (globalConfigData) {
+      componentConfig = globalConfigData[getGlobalConfigName(cmp)];
+    }
     // API 分类：Props / Events / Functions
     const fieldCategoryMap = groupByFieldCategory(componentMap[cmp]);
     Object.keys(fieldCategoryMap).forEach((category) => {
@@ -363,6 +369,15 @@ function getVueApiDocs(componentMap, current, framework, language) {
           }
         });
         if (MP_PROPS.includes(api.field_name)) return;
+        
+        // 存在对应的组件全局配置，则使用对应 xxxConfig 中对应 API 的默认值，代替原有默认值
+        if (componentConfig) {
+          const configAPI = find(componentConfig, item => item.field_name === api.field_name);
+          if (configAPI && configAPI.field_default_value) {
+            api.field_default_value = configAPI.field_default_value;
+          }
+        }
+
         // start
         const newApi = formatToVueApi(api, { current, framework });
         const oneApi = getOneApi(newApi, current, docTitleType);

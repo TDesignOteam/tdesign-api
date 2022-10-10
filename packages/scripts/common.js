@@ -2,6 +2,7 @@ const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
 const kebabCase = require('lodash/kebabCase');
 const { data } = require('./map.json');
+const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 
 const componentsMap = getMap(data.components);
 
@@ -157,6 +158,14 @@ function getComponentsMap(components) {
   return map;
 }
 
+function getGlobalConfigName(cmp) {
+  const configName =  `${upperFirst(cmp)}Config`;
+  if (GLOBAL_COMPONENTS_CONFIG.includes(configName)) {
+    return configName;
+  }
+  return '';
+}
+
 module.exports = {
   getLabelByKey,
   getApiTitles,
@@ -176,4 +185,5 @@ module.exports = {
   getApiComponentMapByFrameWork,
   getCmpTypeCombineMap,
   getComponentsMap,
+  getGlobalConfigName,
 };
