@@ -2622,7 +2622,7 @@
       ],
       "component": "Affix",
       "field_category": 1,
-      "field_name": "content",
+      "field_name": "content（暂未实现）",
       "field_type": [
         "1",
         "64"
@@ -10251,7 +10251,7 @@
       ],
       "component": "Button",
       "field_category": 1,
-      "field_name": "suffix",
+      "field_name": "suffix（暂未实现）",
       "field_type": [
         "64"
       ],
@@ -30229,7 +30229,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "small",
+      "field_default_value": "'small'",
       "field_enum": "",
       "field_desc_zh": "尺寸配置，配置Drawer尺寸",
       "field_desc_en": null,

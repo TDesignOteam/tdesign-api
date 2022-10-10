@@ -80,14 +80,14 @@ function getDocsByComponent(baseData, framework, component) {
 // 输出内容到文件 extra.isVscode, extra.language
 function generateDocs(baseData, framework, extra) {
   currentFramework = framework;
-  const { isVscode } = extra || {};
+  const { isVscode, globalConfigData } = extra || {};
   const current = FRAMEWORK_MAP[framework];
   const options = Object.keys(FRAMEWORK_MAP);
   if (!options.includes(framework)) {
     console.error(`framework must be follow values: ${options}`);
     return;
   }
-  let api = current.getDocs(baseData, current, framework, extra && extra.language);
+  let api = current.getDocs(baseData, current, framework, globalConfigData, extra && extra.language);
   api = combineApi(api);
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
