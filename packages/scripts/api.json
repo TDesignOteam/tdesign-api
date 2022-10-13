@@ -13347,10 +13347,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13380,10 +13377,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -13394,10 +13388,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13427,10 +13418,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -13441,10 +13429,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13474,13 +13459,55 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3019,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-12 05:08:18",
+      "update_time": "2022-10-12 05:08:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "TNode"
       ]
     },
     {
@@ -13529,10 +13556,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13540,7 +13564,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -13562,10 +13586,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -13576,10 +13597,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13610,10 +13628,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -13666,10 +13681,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13699,10 +13711,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -13754,10 +13763,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13787,10 +13793,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -13801,10 +13804,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13834,10 +13834,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -13848,10 +13845,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -13881,10 +13875,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Function"
@@ -13979,10 +13970,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14012,10 +14000,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Number"
@@ -14067,10 +14052,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14100,10 +14082,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -14115,6 +14094,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -14148,6 +14128,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -14161,10 +14142,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14194,10 +14172,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -14208,10 +14183,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14241,10 +14213,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -14378,10 +14347,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14411,10 +14377,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -14425,10 +14388,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14458,10 +14418,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -14513,10 +14470,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14546,10 +14500,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -14560,10 +14511,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14593,10 +14541,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -14646,14 +14591,56 @@
       ]
     },
     {
+      "id": 3018,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "titile",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-12 05:07:43",
+      "update_time": "2022-10-12 05:07:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 389,
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14683,10 +14670,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -14697,10 +14681,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14732,10 +14713,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -14744,14 +14722,56 @@
       ]
     },
     {
+      "id": 3020,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选项值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-12 05:08:54",
+      "update_time": "2022-10-12 05:08:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 396,
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -14781,10 +14801,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -14836,10 +14853,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 2,
@@ -14867,10 +14881,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -14879,10 +14890,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 2,
@@ -14910,10 +14918,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -14922,10 +14927,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 2,
@@ -14953,10 +14955,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -15002,10 +15001,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Cascader",
       "field_category": 2,
@@ -15033,10 +15029,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -15046,6 +15039,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -15077,6 +15071,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -97124,7 +97119,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构",
+      "field_desc_zh": "上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`",
       "field_desc_en": "`response.error` used for error tips, `formatResponse` can format `response`",
       "field_required": 0,
       "event_input": "(options: UploadFailContext)【interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile }】",
@@ -97200,7 +97195,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次",
+      "field_desc_zh": "多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发",
       "field_desc_en": "trigger on one file upload failed",
       "field_required": 0,
       "event_input": "(options: UploadFailContext)",
@@ -100125,5 +100120,5 @@
       ]
     }
   ],
-  "total": 2372
+  "total": 2375
 }

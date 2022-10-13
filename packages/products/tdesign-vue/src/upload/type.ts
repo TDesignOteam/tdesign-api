@@ -207,11 +207,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   onDrop?: (context: { e: DragEvent }) => void;
   /**
-   * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构
+   * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
   onFail?: (options: UploadFailContext) => void;
   /**
-   * 单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次
+   * 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发
    */
   onOneFileFail?: (options: UploadFailContext) => void;
   /**
