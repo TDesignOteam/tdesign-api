@@ -106,6 +106,7 @@ const TYPES_COMBINE_MAP = {
   },
   Radio: {
     list: ['Radio', 'RadioGroup'],
+    excludes: ['Miniprogram'],
   },
   Message: {
     list: MESSAGE_LIST,
