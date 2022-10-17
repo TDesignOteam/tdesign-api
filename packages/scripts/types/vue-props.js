@@ -152,14 +152,15 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     const content = [];
     // 小程序多个属性类型，使用 type 和 optionalTypes 共同描述属性类型
     if (isMiniprogram && types.split(',').length > 1) {
-      types = types.slice(1, types.length - 1).split(',');
-      // 小程序没有 Function Props 定义，使用 null 代替
-      const optionalTypes = types
-        .slice(1)
-        .map(v => (v.trim() === 'Function' ? ' null' : v.trim()));
-      content.push(`${indent}type: ${types[0].trim()}`);
-      optionalTypes.length
-        && content.push(`optionalTypes: [${optionalTypes.join()}]`);
+      // types = types.slice(1, types.length - 1).split(',');
+      // // 小程序没有 Function Props 定义，使用 null 代替
+      // const optionalTypes = types
+      //   .slice(1)
+      //   .map(v => (v.trim() === 'Function' ? ' null' : v.trim()));
+      // content.push(`${indent}type: ${types[0].trim()}`);
+      // optionalTypes.length
+      //   && content.push(`optionalTypes: [${optionalTypes.join()}]`);
+      content.push(`${indent}type: null`);
     } else {
       const tType = isMiniprogram && 'Function' === types ? 'null' : types;
       content.push(`${indent}type: ${tType}`);

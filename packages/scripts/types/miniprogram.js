@@ -17,12 +17,9 @@ function getMiniprogramType(type, tsType) {
       types.push(MP_PROP_TYPES[val]);
     }
   });
-  const typeStr = types.length > 1
-    ? `\n    optionalTypes: Array<${types.slice(1).join(' | ')}>;`
-    : '';
   const valueStr = ['function', 'Function'].includes(tsType) ? 'null' : tsType;
   return `{
-    ${`type: ${types[0] || 'null'};`}${typeStr ? typeStr : ''}
+    ${`type: ${types.length > 1 ? 'null' : types[0]};`}
     value?: ${valueStr};
   }`;
 }
