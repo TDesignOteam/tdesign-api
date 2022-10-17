@@ -4081,6 +4081,55 @@
       ]
     },
     {
+      "id": 3021,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "ImageProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传至 Image 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-17 07:25:04",
+      "update_time": "2022-10-17 07:25:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1466,
       "platform_framework": [
         "1",
@@ -10715,53 +10764,6 @@
       ]
     },
     {
-      "id": 2999,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "confirmBtn",
-      "field_type": [
-        "1",
-        "8",
-        "64"
-      ],
-      "field_default_value": "''",
-      "field_enum": "",
-      "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:25:03",
-      "update_time": "2022-09-24 11:25:03",
-      "event_output": null,
-      "custom_field_type": "string | TNode | ButtonProps | null【import { ButtonProps } from '@Button'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Object",
-        "TNode"
-      ]
-    },
-    {
       "id": 658,
       "platform_framework": [
         "1",
@@ -10887,49 +10889,6 @@
       ]
     },
     {
-      "id": 3000,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "firstDayOfWeek",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "0",
-      "field_enum": "",
-      "field_desc_zh": "第一天从星期几开始，默认 0 = 周日",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:26:21",
-      "update_time": "2022-09-24 11:26:21",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
       "id": 667,
       "platform_framework": [
         "1",
@@ -10968,49 +10927,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 3006,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "format",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于格式化日期的函数",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:36:07",
-      "update_time": "2022-09-24 11:36:07",
-      "event_output": null,
-      "custom_field_type": "(day: TDate) => TDate【type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | ''; 】【interface TDate { date: Date; day: number; type: TDateType; className?: string; prefix?: string; suffix?: string; }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Function"
       ]
     },
     {
@@ -11095,96 +11011,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3004,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "maxDate",
-      "field_type": [
-        "2",
-        "128"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "最大可选的日期，不传则默认半年后",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:30:57",
-      "update_time": "2022-09-24 11:30:57",
-      "event_output": null,
-      "custom_field_type": "number | Date",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Number",
-        "Date"
-      ]
-    },
-    {
-      "id": 3003,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "minDate",
-      "field_type": [
-        "2",
-        "128"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "最小可选的日期，不传则默认今天",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:30:23",
-      "update_time": "2022-09-24 11:30:23",
-      "event_output": null,
-      "custom_field_type": "number | Date",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Number",
-        "Date"
       ]
     },
     {
@@ -11395,94 +11221,6 @@
       ]
     },
     {
-      "id": 3001,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "title",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标题，不传默认为“请选择日期”",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:27:34",
-      "update_time": "2022-09-24 11:27:34",
-      "event_output": null,
-      "custom_field_type": "string | TNode",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 3008,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "type",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "'single'",
-      "field_enum": "single/multiple/range",
-      "field_desc_zh": "日历的选择类型，single = 单选；multiple = 多选; range = 区间选择",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:38:23",
-      "update_time": "2022-09-24 11:38:23",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 643,
       "platform_framework": [
         "1",
@@ -11523,96 +11261,6 @@
       "field_type_text": [
         "String",
         "Date"
-      ]
-    },
-    {
-      "id": 3002,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "2",
-        "16",
-        "128"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:29:51",
-      "update_time": "2022-09-24 11:29:51",
-      "event_output": null,
-      "custom_field_type": "number | Date | TCalendarValue[] 【type TCalendarValue = number | Date】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Number",
-        "Array",
-        "Date"
-      ]
-    },
-    {
-      "id": 2998,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "visible",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否显示日历",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-24 11:09:50",
-      "update_time": "2022-09-24 11:09:50",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {
@@ -11813,45 +11461,6 @@
       "field_type_text": []
     },
     {
-      "id": 3009,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 2,
-      "field_name": "confirm",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "点击确认按钮时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: Date)",
-      "create_time": "2022-09-24 13:35:37",
-      "update_time": "2022-09-24 13:35:37",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
       "id": 654,
       "platform_framework": [
         "1",
@@ -11922,45 +11531,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 3005,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 2,
-      "field_name": "select",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "选择日期时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: Date)",
-      "create_time": "2022-09-24 11:31:55",
-      "update_time": "2022-09-24 11:31:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -61708,7 +61278,7 @@
       "field_type_text": []
     },
     {
-      "id": 3011,
+      "id": 1419,
       "platform_framework": [
         "8",
         "16",
@@ -61727,8 +61297,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-13 08:48:56",
-      "update_time": "2022-10-13 08:48:56",
+      "create_time": "2021-08-10 05:21:42",
+      "update_time": "2021-08-10 06:29:39",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -61736,7 +61306,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": null,
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -62609,49 +62179,6 @@
       "field_type_text": []
     },
     {
-      "id": 1419,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right",
-      "field_desc_zh": "复选框和内容相对位置；仅在使用 options 时生效",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-10 05:21:42",
-      "update_time": "2021-08-10 06:29:39",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 498,
       "platform_framework": [
         "1",
@@ -62698,45 +62225,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3010,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1",
-        "16"
-      ],
-      "field_default_value": "'fill-circle'",
-      "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标；仅在使用 options 时生效",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-13 08:43:21",
-      "update_time": "2022-10-13 08:43:21",
-      "event_output": null,
-      "custom_field_type": "'fill-circle' | 'stroke-line' | Array<string>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Array"
       ]
     },
     {
@@ -96341,7 +95829,7 @@
       "create_time": "2021-10-01 11:02:46",
       "update_time": "2021-10-01 11:03:22",
       "event_output": null,
-      "custom_field_type": "{ column?: number; width?: number; height?: number; }",
+      "custom_field_type": "{\\n  column?: number;\\n  width?: number;\\n  height?: number;\\n}",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -97012,43 +96500,6 @@
       "field_type_text": [
         "Number",
         "Object"
-      ]
-    },
-    {
-      "id": 2997,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "source",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "media",
-      "field_enum": "media/messageFile",
-      "field_desc_zh": "来源",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-09-19 08:47:20",
-      "update_time": "2022-09-19 08:47:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -100718,9 +100169,5 @@
       ]
     }
   ],
-<<<<<<< Updated upstream
-  "total": 2375
-=======
-  "total": 2374
->>>>>>> Stashed changes
+  "total": 2376
 }
