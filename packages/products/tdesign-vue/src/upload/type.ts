@@ -51,13 +51,12 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   default?: string | TNode;
   /**
    * 是否禁用
-   * @default false
    */
   disabled?: boolean;
   /**
    * 用于自定义拖拽区域
    */
-  dragContent?: TNode<TriggerContext>;
+  dragContent?: TNode | TNode<TriggerContext>;
   /**
    * 是否启用拖拽上传，不同的组件风格默认值不同
    */
