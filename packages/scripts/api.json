@@ -5243,9 +5243,9 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "[24px, 80px]",
+      "field_default_value": "[\"24px\", \"80px\"]",
       "field_enum": "",
-      "field_desc_zh": "回到顶部相对右下角的位置偏移，示例：[10px, 20px] 或 ['10em', '8rem']",
+      "field_desc_zh": "回到顶部相对右下角的位置偏移，示例：[10, 20] 或 ['10em', '8rem']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -5496,7 +5496,7 @@
         "1",
         "2"
       ],
-      "field_default_value": "200px",
+      "field_default_value": "'200px'",
       "field_enum": "",
       "field_desc_zh": "滚动高度达到此参数值才出现",
       "field_desc_en": null,
