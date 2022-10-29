@@ -44363,7 +44363,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否在右侧显示字数限制文本",
+      "field_desc_zh": "是否在输入框右侧显示字数统计",
       "field_desc_en": "show limit number text on the right",
       "field_required": 0,
       "event_input": "",
