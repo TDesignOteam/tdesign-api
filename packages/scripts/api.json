@@ -44334,7 +44334,7 @@
       "create_time": "2022-01-21 08:42:58",
       "update_time": "2022-03-24 05:33:11",
       "event_output": null,
-      "custom_field_type": "InputFormatType【type InputFormatType = (value: InputValue) => number | string】",
+      "custom_field_type": "InputFormatType【type InputFormatType = (value: InputValue) => string】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
