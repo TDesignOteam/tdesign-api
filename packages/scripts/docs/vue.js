@@ -334,10 +334,10 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         const names = apiName.split('.');
         extraInfoForPlugin.push(`同时也支持 \`this.$${[camelCase(names[0]), names[1]].filter(v => v).join('.')}\`。`.replace('Plugin', ''));
       }
-      if (['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Vue(Mobile)', 'React(Mobile)'].includes(framework) && apiName.indexOf('Plugin') !== -1) {
-        extraInfoForPlugin.push('这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，');
-        // md[category].apis.push(`${str}。参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，`);
-      }
+      // if (['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Vue(Mobile)', 'React(Mobile)'].includes(framework) && apiName.indexOf('Plugin') !== -1) {
+      //   extraInfoForPlugin.push('这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，');
+      //   // md[category].apis.push(`${str}。参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，`);
+      // }
       extraInfoForPlugin.length && md[category].apis.push(`${extraInfoForPlugin.join('')}\n`);
       let docTitleType = category;
       const isCmpPlugin = isPlugin(cmp);

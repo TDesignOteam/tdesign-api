@@ -136,6 +136,11 @@
         "type": "plugin"
       },
       {
+        "value": "$Drawer",
+        "label": "对话框插件",
+        "type": "plugin"
+      },
+      {
         "value": "$Loading",
         "label": "加载中插件",
         "type": "plugin"
@@ -451,6 +456,16 @@
       {
         "value": "DrawerConfig",
         "label": "抽屉全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "DrawerInstance",
+        "label": "对话框插件实例",
+        "type": "TS"
+      },
+      {
+        "value": "DrawerOptions",
+        "label": "模态抽屉插件参数",
         "type": "TS"
       },
       {

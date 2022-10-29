@@ -72,6 +72,7 @@ const COMPONENT_API_MD_MAP = {
   },
   DropdownMenu: ['DropdownMenu', 'DropdownItem'],
   Dialog: ['Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+  Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
   Table: TABLE_LIST,
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
@@ -155,6 +156,9 @@ const TYPES_COMBINE_MAP = {
   },
   Dialog: {
     list: ['Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+  },
+  Drawer: {
+    list: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   },
   Tree: {
     list: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
