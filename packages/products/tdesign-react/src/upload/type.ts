@@ -65,7 +65,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 用于完全自定义文件列表内容
    */
-  fileListDisplay?: TNode<{ files: UploadFile[] }>;
+  fileListDisplay?: TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>;
   /**
    * 已上传文件列表，同 `value`
    * @default []
@@ -309,6 +309,13 @@ export interface UploadFile {
    * @default ''
    */
   url?: string;
+}
+
+export interface UploadDisplayDragEvents {
+  drop?: (event: DragEvent) => void;
+  dragenter?: (event: DragEvent) => void;
+  dragover?: (event: DragEvent) => void;
+  dragleave?: (event: DragEvent) => void;
 }
 
 export type ResponseType = { error?: string; url?: string } & Record<string, any>;

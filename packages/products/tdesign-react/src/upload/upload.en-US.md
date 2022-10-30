@@ -19,7 +19,7 @@ data | Object | - | Typescript：`Record<string, any> \| ((file: File) => Record
 disabled | Boolean | - | \- | N
 dragContent | TNode | - | drag content。Typescript：`TNode \| TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 draggable | Boolean | undefined | \- | N
-fileListDisplay | TElement | - | Typescript：`TNode<{ files: UploadFile[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+fileListDisplay | TElement | - | Typescript：`TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>` `interface UploadDisplayDragEvents { drop?: (event: DragEvent) => void; dragenter?: (event: DragEvent) => void; dragover?: (event: DragEvent) => void; dragleave?: (event: DragEvent) => void; }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/upload/type.ts) | N
 files | Array | [] | Typescript：`Array<T>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript：`Array<T>` | N
 format | Function | - | Typescript：`(file: File) => UploadFile` | N
