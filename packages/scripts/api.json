@@ -44327,7 +44327,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】指定输入框展示值的格式",
+      "field_desc_zh": "指定输入框展示值的格式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -54567,7 +54567,7 @@
       "deprecated": 0,
       "version": null,
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
@@ -54594,7 +54594,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用分页组件",
       "field_desc_en": null,
@@ -54791,7 +54791,7 @@
       "deprecated": 0,
       "version": null,
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
@@ -54821,7 +54821,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "() => [5, 10, 20, 50]",
+      "field_default_value": "[5, 10, 20, 50]",
       "field_enum": "",
       "field_desc_zh": "分页大小控制器，值为 [] 则不显示",
       "field_desc_en": null,
@@ -54850,6 +54850,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3042,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Pagination",
+      "field_category": 1,
+      "field_name": "selectProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传全部属性到 Select 组件，也可使用 `selectProps.popupProps` 透传全部 Popup 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-30 08:13:10",
+      "update_time": "2022-10-30 08:13:10",
+      "event_output": null,
+      "custom_field_type": "SelectProps【import { SelectProps } from '@Select'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -101017,5 +101058,5 @@
       ]
     }
   ],
-  "total": 2396
+  "total": 2397
 }
