@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Pagination Props
 
 name | type | default | description | required
