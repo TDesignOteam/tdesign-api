@@ -6,28 +6,56 @@
 
 import { TdCalendarProps } from './type';
 const props: TdCalendarProps = {
-  /** 日期单元 */
-  cell: {
-    type: Array,
-    optionalTypes: [ null],
-  },
-  /** 确认按钮 */
+  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。 */
   confirmBtn: {
-    type: String,
-    optionalTypes: [ null],
+    type: null,
+    value: '',
   },
-  /** 第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1 */
+  /** 第一天从星期几开始，默认 0 = 周日 */
   firstDayOfWeek: {
     type: Number,
+    value: 0,
   },
-  /** 头部插槽（左上角处，默认不显示任何内容） */
-  head: {
+  /** 用于格式化日期的函数 */
+  format: {
+    type: null,
+  },
+  /** 最大可选的日期，不传则默认半年后 */
+  maxDate: {
+    type: null,
+  },
+  /** 最小可选的日期，不传则默认今天 */
+  minDate: {
+    type: null,
+  },
+  /** 自定义组件样式 */
+  style: {
     type: String,
+    value: '',
   },
-  /** 当前高亮的日期 */
+  /** 标题，不传默认为“请选择日期” */
+  title: {
+    type: String,
+    value: '',
+  },
+  /** 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择 */
+  type: {
+    type: String,
+    value: 'single',
+  },
+  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
-    type: String,
-    optionalTypes: [Date],
+    type: null,
+    value: null,
+  },
+  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性 */
+  defaultValue: {
+    type: null,
+  },
+  /** 是否显示日历 */
+  visible: {
+    type: Boolean,
+    value: false,
   },
 };
 

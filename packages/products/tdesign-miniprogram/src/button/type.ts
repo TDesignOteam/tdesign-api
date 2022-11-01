@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { LoadingProps } from '../loading/index';
 import { SizeEnum } from '../common/common';
 
 export interface TdButtonProps {
@@ -31,6 +32,7 @@ export interface TdButtonProps {
   };
   /**
    * 禁用状态
+   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
@@ -76,6 +78,13 @@ export interface TdButtonProps {
     value?: boolean;
   };
   /**
+   * 加载loading样式
+   */
+  loadingProps?: {
+    type: ObjectConstructor;
+    value?: LoadingProps;
+  };
+  /**
    * 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形
    * @default rectangle
    */
@@ -90,6 +99,14 @@ export interface TdButtonProps {
   size?: {
     type: StringConstructor;
     value?: SizeEnum;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  style?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 组件风格，依次为品牌色、危险色
