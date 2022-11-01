@@ -68,7 +68,7 @@ export interface TdCalendarProps {
    */
   theme?: 'full' | 'card';
   /**
-   * 当前高亮的日期，如果是数组则表示多个日期高亮
+   * 当前高亮的日期
    */
   value?: CalendarValue;
   /**

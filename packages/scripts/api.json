@@ -12327,7 +12327,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "当前高亮的日期，如果是数组则表示多个日期高亮",
+      "field_desc_zh": "当前高亮的日期",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

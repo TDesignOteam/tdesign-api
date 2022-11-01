@@ -72,7 +72,7 @@ export default {
       return ['full', 'card'].includes(val);
     },
   },
-  /** 当前高亮的日期，如果是数组则表示多个日期高亮 */
+  /** 当前高亮的日期 */
   value: {
     type: [String, Date] as PropType<TdCalendarProps['value']>,
   },
