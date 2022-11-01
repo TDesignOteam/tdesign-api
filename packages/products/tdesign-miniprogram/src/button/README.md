@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Button Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -9,14 +8,16 @@
 block | Boolean | false | 是否为块级元素 | N
 content | String / Slot | - | 按钮内容 | N
 custom-dataset | Object | - | 自定义 dataset，可通过 event.currentTarget.dataset.custom 获取。TS 类型：`any` | N
-disabled | Boolean | - | 禁用状态 | N
+disabled | Boolean | false | 禁用状态 | N
 external-classes | Array | - | 组件类名。`['t-class', 't-class-icon', 't-class-loading']` | N
 ghost | Boolean | false | 是否为幽灵按钮（镂空按钮） | N
 icon | String | - | 图标名称 | N
 icon-props | Object | {} | 图标属性，透传至 icon | N
 loading | Boolean | false | 是否显示为加载状态 | N
+loading-props | Object | - | 加载loading样式。TS 类型：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/button/type.ts) | N
 shape | String | rectangle | 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形。可选项：rectangle/square/round/circle | N
 size | String | medium | 组件尺寸。可选项：small/medium/large。TS 类型：`SizeEnum` | N
+style | String | - | 自定义组件样式 | N
 theme | String | default | 组件风格，依次为品牌色、危险色。可选项：default/primary/danger | N
 type | String | - | 同小程序的 formType。可选项：submit/reset | N
 variant | String | base | 按钮形式，基础、线框、文字。可选项：base/outline/text | N
