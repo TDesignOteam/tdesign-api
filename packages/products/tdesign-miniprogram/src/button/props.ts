@@ -22,6 +22,7 @@ const props: TdButtonProps = {
   /** 禁用状态 */
   disabled: {
     type: Boolean,
+    value: false,
   },
   /** 组件类名 */
   externalClasses: {
@@ -47,6 +48,10 @@ const props: TdButtonProps = {
     type: Boolean,
     value: false,
   },
+  /** 加载loading样式 */
+  loadingProps: {
+    type: Object,
+  },
   /** 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形 */
   shape: {
     type: String,
@@ -56,6 +61,11 @@ const props: TdButtonProps = {
   size: {
     type: String,
     value: 'medium',
+  },
+  /** 自定义组件样式 */
+  style: {
+    type: String,
+    value: '',
   },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
