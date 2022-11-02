@@ -3,39 +3,6 @@
   "msg": "success",
   "data": [
     {
-      "id": 3045,
-      "platform_framework": [],
-      "component": "",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:21:26",
-      "update_time": "2022-10-31 11:21:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 364,
       "platform_framework": [
         "1",
@@ -46433,7 +46400,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。值小于等于 0 的时候，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -105015,5 +104982,5 @@
       ]
     }
   ],
-  "total": 2502
+  "total": 2501
 }

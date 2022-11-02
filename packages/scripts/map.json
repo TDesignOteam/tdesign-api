@@ -845,14 +845,6 @@
         "label": "选项卡"
       },
       {
-        "value": "SideBar",
-        "label": "侧边导航"
-      },
-      {
-        "value": "SideBarItem",
-        "label": "侧边导航项"
-      },
-      {
         "value": "Tag",
         "label": "标签"
       },
@@ -1133,6 +1125,14 @@
       {
         "value": "Transition",
         "label": "动画"
+      },
+      {
+        "value": "SideBar",
+        "label": "侧边导航"
+      },
+      {
+        "value": "SideBarItem",
+        "label": "侧边导航项"
       }
     ]
   }
