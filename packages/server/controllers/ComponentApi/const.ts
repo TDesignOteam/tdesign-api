@@ -347,6 +347,8 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Calendar', label: '日历' },
   { value: 'Overlay', label: '遮罩层' },
   { value: 'Transition', label: '动画' },
+  { value: 'SideBar', label: '侧边导航' },
+  { value: 'SideBarItem', label: '侧边导航项' },
 ];
 
 export default {
