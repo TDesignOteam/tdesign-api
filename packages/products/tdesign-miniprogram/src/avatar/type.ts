@@ -8,13 +8,6 @@ import { BadgeProps } from '../badge/index';
 
 export interface TdAvatarProps {
   /**
-   * 透传至 Image 组件
-   */
-  ImageProps?: {
-    type: ObjectConstructor;
-    value?: object;
-  };
-  /**
    * 头像替换文本，仅当图片加载失败时有效
    * @default ''
    */
@@ -58,6 +51,13 @@ export interface TdAvatarProps {
   image?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 透传至 Image 组件
+   */
+  imageProps?: {
+    type: ObjectConstructor;
+    value?: object;
   };
   /**
    * 形状

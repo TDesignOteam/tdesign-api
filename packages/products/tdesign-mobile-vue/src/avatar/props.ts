@@ -5,53 +5,47 @@
  * */
 
 import { TdAvatarProps } from './type';
-const props: TdAvatarProps = {
+import { PropType } from 'vue';
+
+export default {
   /** 头像替换文本，仅当图片加载失败时有效 */
   alt: {
     type: String,
-    value: '',
+    default: '',
   },
   /** 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字 */
   badgeProps: {
-    type: Object,
-  },
-  /** 组件类名，用于设置组件外层元素类名 */
-  externalClasses: {
-    type: Array,
+    type: Object as PropType<TdAvatarProps['badgeProps']>,
   },
   /** 加载失败时隐藏图片 */
-  hideOnLoadFailed: {
-    type: Boolean,
-    value: false,
-  },
+  hideOnLoadFailed: Boolean,
   /** 图标 */
   icon: {
-    type: String,
+    type: Function as PropType<TdAvatarProps['icon']>,
   },
   /** 图片地址 */
   image: {
     type: String,
-    value: '',
+    default: '',
   },
   /** 透传至 Image 组件 */
   imageProps: {
-    type: Object,
+    type: Object as PropType<TdAvatarProps['imageProps']>,
   },
   /** 形状 */
   shape: {
-    type: String,
-    value: 'circle',
+    type: String as PropType<TdAvatarProps['shape']>,
+    default: 'circle' as TdAvatarProps['shape'],
+    validator(val: TdAvatarProps['shape']): boolean {
+      if (!val) return true;
+      return ['circle', 'round'].includes(val);
+    },
   },
   /** 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large */
   size: {
     type: String,
-    value: '',
+    default: '',
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
+  /** 图片加载失败时触发 */
+  onError: Function as PropType<TdAvatarProps['onError']>,
 };
-
-export default props;
