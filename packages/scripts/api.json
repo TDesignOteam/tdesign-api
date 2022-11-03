@@ -54291,7 +54291,7 @@
       ]
     },
     {
-      "id": 1631,
+      "id": 1630,
       "platform_framework": [
         "8",
         "16",
@@ -54299,19 +54299,19 @@
       ],
       "component": "Navbar",
       "field_category": 1,
-      "field_name": "homeIcon",
+      "field_name": "left",
       "field_type": [
-        "4",
+        "1",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "首页图标。值为 true 表示显示默认返回图标，值为 false 表示不显示首页图标，值为其他表示自定义图标",
-      "field_desc_en": "homeIcon",
+      "field_desc_zh": "左侧区域。值为 `string` 表示文本，为其他表示自定义内容",
+      "field_desc_en": "",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-09-03 07:44:41",
-      "update_time": "2021-09-03 07:45:39",
+      "create_time": "2021-09-03 07:43:48",
+      "update_time": "2021-09-03 07:43:48",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -54329,8 +54329,49 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
-        "Boolean",
+        "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3150,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "leftArrow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示左侧箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-03 09:30:01",
+      "update_time": "2022-11-03 09:30:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -54371,49 +54412,6 @@
       ]
     },
     {
-      "id": 1630,
-      "platform_framework": [
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Navbar",
-      "field_category": 1,
-      "field_name": "leftIcon",
-      "field_type": [
-        "4",
-        "64"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "左侧图标。值为 true 表示显示默认返回图标，值为 false 表示不显示左侧图标，值为其他表示自定义图标",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-03 07:43:48",
-      "update_time": "2021-09-03 07:43:48",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
       "id": 1629,
       "platform_framework": [
         "8",
@@ -54422,13 +54420,14 @@
       ],
       "component": "Navbar",
       "field_category": 1,
-      "field_name": "rightIcon",
+      "field_name": "right",
       "field_type": [
+        "1",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "右侧图标，可自定义",
+      "field_desc_zh": "右侧区域。值为 `string` 表示文本，为其他表示自定义内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -54451,6 +54450,7 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "TNode"
       ]
     },
@@ -54767,10 +54767,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "点击左侧按钮时触发",
+      "field_desc_zh": "点击左侧区域时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: NavBarTrigger)【type NavBarTrigger = 'home-icon' | 'left-icon';】",
+      "event_input": "",
       "create_time": "2022-04-28 02:15:56",
       "update_time": "2022-04-28 02:31:37",
       "event_output": null,
@@ -54804,7 +54804,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "点击右侧图标时触发",
+      "field_desc_zh": "点击右侧区域时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -74681,303 +74681,6 @@
         "Angular(PC)"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 3150,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "选项值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-02 09:09:20",
-      "update_time": "2022-11-02 09:09:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 3151,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "选项值发生变化时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: number | string, label: string)",
-      "create_time": "2022-11-02 09:12:05",
-      "update_time": "2022-11-02 09:12:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 3156,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 2,
-      "field_name": "click",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "点击选项时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: number | string, label: string)",
-      "create_time": "2022-11-02 09:18:13",
-      "update_time": "2022-11-02 09:18:13",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 3154,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBarItem",
-      "field_category": 1,
-      "field_name": "badgeProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传至 Badge 组件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-02 09:14:06",
-      "update_time": "2022-11-02 09:14:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 3153,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBarItem",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-02 09:13:39",
-      "update_time": "2022-11-02 09:13:39",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3155,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBarItem",
-      "field_category": 1,
-      "field_name": "label",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "展示的标签",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-02 09:16:36",
-      "update_time": "2022-11-02 09:16:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3152,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SideBarItem",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前选项的值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-02 09:13:12",
-      "update_time": "2022-11-02 09:13:12",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
     },
     {
       "id": 1774,
@@ -105279,9 +104982,5 @@
       ]
     }
   ],
-<<<<<<< Updated upstream
   "total": 2501
-=======
-  "total": 2509
->>>>>>> Stashed changes
 }
