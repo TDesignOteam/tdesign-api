@@ -97,6 +97,7 @@ const COMPONENT_API_MD_MAP = {
   TimeLine: ['TimeLine', 'TimeLineItem'],
   Guide:['Guide', 'GuideStep'],
   Tooltip:['Tooltip', 'TooltipLite'],
+  SideBar: ['SideBar', 'SideBarItem'],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
