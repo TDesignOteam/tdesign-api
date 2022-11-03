@@ -5,13 +5,13 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-image-props | Object | - | \- | N
 alt | String | - | show it when url is not valid | N
 badge-props | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
 external-classes | Array | - | `['t-class']` | N
 hide-on-load-failed | Boolean | false | hide image when loading image failed | N
 icon | String / Slot | - | \- | N
 image | String | - | images url | N
+image-props | Object | - | \- | N
 shape | String | circle | shape。options：circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
 size | String | - | size | N
 style | String | - | \- | N
