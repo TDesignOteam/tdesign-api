@@ -6,7 +6,6 @@ import { TdSelectProps, TdOptionProps, TdOptionGroupProps } from './type';
 
 export const selectDefaultProps: TdSelectProps = {
   autoWidth: false,
-  bordered: true,
   borderless: false,
   clearable: false,
   creatable: false,
@@ -14,7 +13,6 @@ export const selectDefaultProps: TdSelectProps = {
   max: 0,
   minCollapsedNum: 0,
   multiple: false,
-  options: [],
   placeholder: undefined,
   readonly: false,
   reserveKeyword: false,

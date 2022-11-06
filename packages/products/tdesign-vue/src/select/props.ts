@@ -10,11 +10,6 @@ import { PropType } from 'vue';
 export default {
   /** 宽度随内容自适应 */
   autoWidth: Boolean,
-  /** 是否有边框 */
-  bordered: {
-    type: Boolean,
-    default: true,
-  },
   /** 无边框模式 */
   borderless: Boolean,
   /** 是否可以清空选项 */
@@ -31,11 +26,11 @@ export default {
   empty: {
     type: [String, Function] as PropType<TdSelectProps['empty']>,
   },
-  /** 自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据 */
+  /** 自定义搜索规则，用于对现有数据进行搜索，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable` */
   filter: {
     type: Function as PropType<TdSelectProps['filter']>,
   },
-  /** 是否可搜索 */
+  /** 是否可搜索，默认搜索规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则 */
   filterable: Boolean,
   /** 透传 Input 输入框组件的全部属性 */
   inputProps: {
@@ -74,7 +69,6 @@ export default {
   /** 数据化配置选项内容 */
   options: {
     type: Array as PropType<TdSelectProps['options']>,
-    default: (): TdSelectProps['options'] => [],
   },
   /** 面板内的底部内容 */
   panelBottomContent: {
@@ -188,6 +182,4 @@ export default {
   onRemove: Function as PropType<TdSelectProps['onRemove']>,
   /** 输入值变化时，触发搜索事件。主要用于远程搜索新数据 */
   onSearch: Function as PropType<TdSelectProps['onSearch']>,
-  /** 下拉框隐藏/显示时触发 */
-  onVisibleChange: Function as PropType<TdSelectProps['onVisibleChange']>,
 };

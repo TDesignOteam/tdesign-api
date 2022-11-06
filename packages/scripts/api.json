@@ -4204,6 +4204,878 @@
       ]
     },
     {
+      "id": 3152,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "autoFocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自动获取焦点",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:31:21",
+      "update_time": "2022-11-06 16:31:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3151,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "clearable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否允许清空",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:31:04",
+      "update_time": "2022-11-06 16:31:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3153,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:34:23",
+      "update_time": "2022-11-06 16:34:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3158,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "filter",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:47:30",
+      "update_time": "2022-11-06 16:47:30",
+      "event_output": null,
+      "custom_field_type": "(filterWords: string, option: T) => boolean | Promise<boolean>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 3157,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "filterable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否根据输入内容过滤联想词。默认过滤规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则。部分场景下输入关键词和下拉联想词完全不同，此时可以设置为 `false`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:38:44",
+      "update_time": "2022-11-06 16:38:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3165,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "highlightKeyword",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否高亮联想词中和输入值的相同部分",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 17:02:11",
+      "update_time": "2022-11-06 17:02:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3155,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "inputProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Input 组件全部特性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:35:42",
+      "update_time": "2022-11-06 16:35:42",
+      "event_output": null,
+      "custom_field_type": "InputProps【import { InputProps } from '@Input'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3163,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "options",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下拉联想词列表。示例一：`['联想词一', '联想词二']`。示例二：`{ label: () => <div>联想词元素</div>, text: '用于搜索的纯联想词' }`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:56:48",
+      "update_time": "2022-11-06 16:56:48",
+      "event_output": null,
+      "custom_field_type": "Array<T>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3160,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框为空时的占位提示",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:53:58",
+      "update_time": "2022-11-06 16:53:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3154,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Popup 组件全部特性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:35:17",
+      "update_time": "2022-11-06 16:35:17",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3161,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "default/success/warning/error",
+      "field_desc_zh": "输入框状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:54:36",
+      "update_time": "2022-11-06 16:54:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3156,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "textareaProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Textarea 组件全部特性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:36:26",
+      "update_time": "2022-11-06 16:36:26",
+      "event_output": null,
+      "custom_field_type": "TextareaProps【import { TextareaProps } from '@Textarea'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3162,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "tips",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:55:13",
+      "update_time": "2022-11-06 16:55:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3164,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框的值，即当前指定的联想词",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:59:35",
+      "update_time": "2022-11-06 16:59:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3166,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "失去焦点时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: FocusEvent; value: InputValue })",
+      "create_time": "2022-11-06 17:02:59",
+      "update_time": "2022-11-06 17:02:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "FocusEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3167,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框值发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent })",
+      "create_time": "2022-11-06 17:03:16",
+      "update_time": "2022-11-06 17:03:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<HTMLElement | SVGElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3169,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2022-11-06 17:05:36",
+      "update_time": "2022-11-06 17:05:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<SVGElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3172,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "compositionend",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中文输入结束时触发",
+      "field_desc_en": "trigger on compositionend",
+      "field_required": 0,
+      "event_input": "(context: { e: CompositionEvent; value: InputValue })",
+      "create_time": "2022-11-06 17:08:43",
+      "update_time": "2022-11-06 17:08:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "CompositionEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3171,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "compositionstart",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中文输入开始时触发",
+      "field_desc_en": "trigger on compositionstart",
+      "field_required": 0,
+      "event_input": "(context: { e: CompositionEvent; value: InputValue })",
+      "create_time": "2022-11-06 17:08:24",
+      "update_time": "2022-11-06 17:08:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "CompositionEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3168,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "enter",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "回车键按下时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: KeyboardEvent; value: InputValue })",
+      "create_time": "2022-11-06 17:04:28",
+      "update_time": "2022-11-06 17:04:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "KeyboardEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3170,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 2,
+      "field_name": "focus",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获得焦点时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: FocusEvent; value: InputValue })",
+      "create_time": "2022-11-06 17:07:14",
+      "update_time": "2022-11-06 17:07:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "FocusEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3159,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 64,
+      "field_name": "<T extends AutoCompleteOption = AutoCompleteOption>【type AutoCompleteOption = string | { label: string | TNode; text?: string }】",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 16:52:06",
+      "update_time": "2022-11-06 16:52:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "<T>",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1466,
       "platform_framework": [
         "1",
@@ -71310,7 +72182,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据",
+      "field_desc_zh": "自定义搜索规则，用于对现有数据进行搜索，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -71351,7 +72223,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否可搜索",
+      "field_desc_zh": "是否可搜索，默认搜索规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -104982,5 +105854,5 @@
       ]
     }
   ],
-  "total": 2501
+  "total": 2523
 }

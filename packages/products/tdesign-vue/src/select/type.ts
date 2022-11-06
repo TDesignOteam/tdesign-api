@@ -21,11 +21,6 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   autoWidth?: boolean;
   /**
-   * 是否有边框
-   * @default true
-   */
-  bordered?: boolean;
-  /**
    * 无边框模式
    * @default false
    */
@@ -53,11 +48,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   empty?: string | TNode;
   /**
-   * 自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据
+   * 自定义搜索规则，用于对现有数据进行搜索，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`
    */
   filter?: (filterWords: string, option: T) => boolean | Promise<boolean>;
   /**
-   * 是否可搜索
+   * 是否可搜索，默认搜索规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则
    */
   filterable?: boolean;
   /**
@@ -102,7 +97,6 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   multiple?: boolean;
   /**
    * 数据化配置选项内容
-   * @default []
    */
   options?: Array<T>;
   /**
@@ -237,10 +231,6 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    * 输入值变化时，触发搜索事件。主要用于远程搜索新数据
    */
   onSearch?: (filterWords: string) => void;
-  /**
-   * 下拉框隐藏/显示时触发
-   */
-  onVisibleChange?: (visible: boolean) => void;
 }
 
 export interface TdOptionProps {

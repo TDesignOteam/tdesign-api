@@ -227,7 +227,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'StickyItem', label: '侧边固钉项' },
   { value: 'Affix', label: '固钉' },
   { value: 'PageHeader', label: '页头' },
-  { value: 'AutoComplete', label: '自动完成' },
+  { value: 'AutoComplete', label: '自动填充' },
   { value: 'Mentions', label: '提及' },
   { value: 'Rate', label: '评分' },
   { value: 'Comment', label: '评论' },
