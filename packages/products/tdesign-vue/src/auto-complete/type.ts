@@ -122,4 +122,4 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   onSelect?: (value: string, context: { e: MouseEvent }) => void;
 }
 
-export type AutoCompleteOption = string | { label?: string | TNode; text?: string };
+export type AutoCompleteOption = string | { label?: string | TNode; text?: string; [key: string]: any };
