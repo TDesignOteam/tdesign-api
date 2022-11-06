@@ -25,7 +25,7 @@ trigger | TNode | - | Typescript：`string \| TNode`。[see more ts definition](
 value | String | - | \- | N
 defaultValue | String | - | uncontrolled property | N
 onBlur | Function |  | Typescript：`(context: { e: FocusEvent; value: string }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: string, context?: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCompositionend | Function |  | Typescript：`(context: { e: CompositionEvent; value: string }) => void`<br/>trigger on compositionend | N
 onCompositionstart | Function |  | Typescript：`(context: { e: CompositionEvent; value: string }) => void`<br/>trigger on compositionstart | N

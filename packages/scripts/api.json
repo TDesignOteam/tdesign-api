@@ -4953,7 +4953,7 @@
       "field_desc_zh": "输入框值发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent })",
+      "event_input": "(value: string, context?: { e?: InputEvent | MouseEvent })",
       "create_time": "2022-11-06 17:03:16",
       "update_time": "2022-11-06 17:03:16",
       "event_output": null,

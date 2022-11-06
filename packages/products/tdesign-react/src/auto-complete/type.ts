@@ -92,7 +92,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    * 输入框值发生变化时触发
    */
   onChange?: (
-    value: InputValue,
+    value: string,
     context?: { e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLElement | SVGElement> },
   ) => void;
   /**

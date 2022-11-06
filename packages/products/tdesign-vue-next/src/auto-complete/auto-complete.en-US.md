@@ -23,7 +23,7 @@ trigger | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onBlur | Function |  | Typescript：`(context: { e: FocusEvent; value: string }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: string, context?: { e?: InputEvent \| MouseEvent }) => void`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCompositionend | Function |  | Typescript：`(context: { e: CompositionEvent; value: string }) => void`<br/>trigger on compositionend | N
 onCompositionstart | Function |  | Typescript：`(context: { e: CompositionEvent; value: string }) => void`<br/>trigger on compositionstart | N
@@ -36,7 +36,7 @@ onSelect | Function |  | Typescript：`(value: string, context: { e: MouseEvent 
 name | params | description
 -- | -- | --
 blur | `(context: { e: FocusEvent; value: string })` | \-
-change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent })` | \-
+change | `(value: string, context?: { e?: InputEvent \| MouseEvent })` | \-
 clear | `(context: { e: MouseEvent })` | \-
 compositionend | `(context: { e: CompositionEvent; value: string })` | trigger on compositionend
 compositionstart | `(context: { e: CompositionEvent; value: string })` | trigger on compositionstart

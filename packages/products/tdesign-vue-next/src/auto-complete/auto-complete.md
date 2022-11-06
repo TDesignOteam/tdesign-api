@@ -23,7 +23,7 @@ trigger | String / Slot / Function | - | 触发显示联想词下拉框的元素
 value | String | - | 输入框的值，即当前指定的联想词。支持语法糖 `v-model` 或 `v-model:value` | N
 defaultValue | String | - | 输入框的值，即当前指定的联想词。非受控属性 | N
 onBlur | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>失去焦点时触发 | N
-onChange | Function |  | TS 类型：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent }) => void`<br/>输入框值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent \| MouseEvent }) => void`<br/>输入框值发生变化时触发 | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
 onCompositionend | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入结束时触发 | N
 onCompositionstart | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入开始时触发 | N
@@ -36,7 +36,7 @@ onSelect | Function |  | TS 类型：`(value: string, context: { e: MouseEvent }
 名称 | 参数 | 描述
 -- | -- | --
 blur | `(context: { e: FocusEvent; value: string })` | 失去焦点时触发
-change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent })` | 输入框值发生变化时触发
+change | `(value: string, context?: { e?: InputEvent \| MouseEvent })` | 输入框值发生变化时触发
 clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
 compositionend | `(context: { e: CompositionEvent; value: string })` | 中文输入结束时触发
 compositionstart | `(context: { e: CompositionEvent; value: string })` | 中文输入开始时触发
