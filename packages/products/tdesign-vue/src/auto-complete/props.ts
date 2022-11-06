@@ -66,6 +66,11 @@ export default {
     type: String,
     default: '',
   },
+  /** 输入框的值，即当前指定的联想词，非受控属性 */
+  defaultValue: {
+    type: String,
+    default: '',
+  },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdAutoCompleteProps['onBlur']>,
   /** 输入框值发生变化时触发 */
@@ -80,4 +85,6 @@ export default {
   onEnter: Function as PropType<TdAutoCompleteProps['onEnter']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdAutoCompleteProps['onFocus']>,
+  /** 选中联想词时触发 */
+  onSelect: Function as PropType<TdAutoCompleteProps['onSelect']>,
 };

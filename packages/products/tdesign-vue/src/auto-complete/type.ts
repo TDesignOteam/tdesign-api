@@ -71,9 +71,14 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   value?: string;
   /**
+   * 输入框的值，即当前指定的联想词，非受控属性
+   * @default ''
+   */
+  defaultValue?: string;
+  /**
    * 失去焦点时触发
    */
-  onBlur?: (context: { e: FocusEvent; value: InputValue }) => void;
+  onBlur?: (context: { e: FocusEvent; value: string }) => void;
   /**
    * 输入框值发生变化时触发
    */
@@ -85,19 +90,23 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   /**
    * 中文输入结束时触发
    */
-  onCompositionend?: (context: { e: CompositionEvent; value: InputValue }) => void;
+  onCompositionend?: (context: { e: CompositionEvent; value: string }) => void;
   /**
    * 中文输入开始时触发
    */
-  onCompositionstart?: (context: { e: CompositionEvent; value: InputValue }) => void;
+  onCompositionstart?: (context: { e: CompositionEvent; value: string }) => void;
   /**
    * 回车键按下时触发
    */
-  onEnter?: (context: { e: KeyboardEvent; value: InputValue }) => void;
+  onEnter?: (context: { e: KeyboardEvent; value: string }) => void;
   /**
    * 获得焦点时触发
    */
-  onFocus?: (context: { e: FocusEvent; value: InputValue }) => void;
+  onFocus?: (context: { e: FocusEvent; value: string }) => void;
+  /**
+   * 选中联想词时触发
+   */
+  onSelect?: (value: string, context: { e: MouseEvent }) => void;
 }
 
 export type AutoCompleteOption = string | { label: string | TNode; text?: string };
