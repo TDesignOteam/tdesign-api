@@ -7,7 +7,7 @@
 import { InputProps } from '../input';
 import { PopupProps } from '../popup';
 import { TextareaProps } from '../textarea';
-import { TNode } from '../common';
+import { TNode, SizeEnum } from '../common';
 import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
 
 export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoCompleteOption> {
@@ -58,6 +58,11 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    * 透传 Popup 组件全部特性
    */
   popupProps?: PopupProps;
+  /**
+   * 组件尺寸
+   * @default medium
+   */
+  size?: SizeEnum;
   /**
    * 输入框状态
    */
@@ -121,4 +126,4 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   onSelect?: (value: string, context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
 
-export type AutoCompleteOption = string | { label: string | TNode; text?: string };
+export type AutoCompleteOption = string | { label?: string | TNode; text?: string };

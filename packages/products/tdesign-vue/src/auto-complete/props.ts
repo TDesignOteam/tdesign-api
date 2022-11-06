@@ -49,6 +49,15 @@ export default {
   popupProps: {
     type: Object as PropType<TdAutoCompleteProps['popupProps']>,
   },
+  /** 组件尺寸 */
+  size: {
+    type: String as PropType<TdAutoCompleteProps['size']>,
+    default: 'medium' as TdAutoCompleteProps['size'],
+    validator(val: TdAutoCompleteProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
   /** 输入框状态 */
   status: {
     type: String as PropType<TdAutoCompleteProps['status']>,

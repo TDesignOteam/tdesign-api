@@ -4692,6 +4692,47 @@
       ]
     },
     {
+      "id": 3177,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-06 18:32:40",
+      "update_time": "2022-11-06 18:32:40",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3161,
       "platform_framework": [
         "1",
@@ -5205,7 +5246,7 @@
       ],
       "component": "AutoComplete",
       "field_category": 64,
-      "field_name": "<T extends AutoCompleteOption = AutoCompleteOption>【type AutoCompleteOption = string | { label: string | TNode; text?: string }】",
+      "field_name": "<T extends AutoCompleteOption = AutoCompleteOption>【type AutoCompleteOption = string | { label?: string | TNode; text?: string }】",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -106012,5 +106053,5 @@
       ]
     }
   ],
-  "total": 2527
+  "total": 2528
 }

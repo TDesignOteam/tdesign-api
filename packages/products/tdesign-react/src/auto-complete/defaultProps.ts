@@ -4,4 +4,8 @@
 
 import { TdAutoCompleteProps } from './type';
 
-export const autoCompleteDefaultProps: TdAutoCompleteProps = { filterable: true, highlightKeyword: true };
+export const autoCompleteDefaultProps: TdAutoCompleteProps = {
+  filterable: true,
+  highlightKeyword: true,
+  size: 'medium',
+};
