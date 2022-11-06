@@ -19,7 +19,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   clearable?: boolean;
   /**
-   * 触发显示联想词下拉框的元素，同 `trigger`
+   * 触发显示联想词下拉框的元素，同 `triggerElement`
    */
   default?: string | TNode;
   /**
@@ -72,7 +72,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   /**
    * 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件
    */
-  trigger?: string | TNode;
+  triggerElement?: string | TNode;
   /**
    * 输入框的值，即当前指定的联想词
    * @default ''
