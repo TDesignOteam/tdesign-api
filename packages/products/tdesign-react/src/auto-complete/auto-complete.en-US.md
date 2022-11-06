@@ -8,7 +8,7 @@ name | type | default | description | required
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 autoFocus | Boolean | - | \- | N
-children | \- | - | \- | N
+children | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 clearable | Boolean | - | \- | N
 disabled | Boolean | - | \- | N
 filter | Function | - | Typescript：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
@@ -21,7 +21,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 status | String | - | options：default/success/warning/error | N
 textareaProps | Object | - | Typescript：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/auto-complete/type.ts) | N
 tips | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-trigger | \- | - | \- | N
+trigger | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 value | String | - | \- | N
 defaultValue | String | - | uncontrolled property | N
 onBlur | Function |  | Typescript：`(context: { e: FocusEvent; value: string }) => void`<br/> | N

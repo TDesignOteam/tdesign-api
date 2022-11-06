@@ -12,6 +12,10 @@ export default {
   autoFocus: Boolean,
   /** 是否允许清空 */
   clearable: Boolean,
+  /** 触发显示联想词下拉框的元素，同 `trigger` */
+  default: {
+    type: [String, Function] as PropType<TdAutoCompleteProps['default']>,
+  },
   /** 是否禁用 */
   disabled: Boolean,
   /** 自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable` */
@@ -60,6 +64,10 @@ export default {
   /** 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式 */
   tips: {
     type: [String, Function] as PropType<TdAutoCompleteProps['tips']>,
+  },
+  /** 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件 */
+  trigger: {
+    type: [String, Function] as PropType<TdAutoCompleteProps['trigger']>,
   },
   /** 输入框的值，即当前指定的联想词 */
   value: {

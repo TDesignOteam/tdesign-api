@@ -7,7 +7,7 @@
 -- | -- | -- | -- | --
 autoFocus | Boolean | - | 自动获取焦点 | N
 clearable | Boolean | - | 是否允许清空 | N
-default | \- | - | 触发显示联想词下拉框的元素，同 `trigger` | N
+default | String / Slot / Function | - | 触发显示联想词下拉框的元素，同 `trigger`。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | - | 是否禁用 | N
 filter | Function | - | 自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`。TS 类型：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
 filterable | Boolean | true | 是否根据输入内容过滤联想词。默认过滤规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则。部分场景下输入关键词和下拉联想词完全不同，此时可以设置为 `false` | N
@@ -19,7 +19,7 @@ popupProps | Object | - | 透传 Popup 组件全部特性。TS 类型：`PopupPr
 status | String | - | 输入框状态。可选项：default/success/warning/error | N
 textareaProps | Object | - | 透传 Textarea 组件全部特性。TS 类型：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/auto-complete/type.ts) | N
 tips | String / Slot / Function | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-trigger | \- | - | 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件 | N
+trigger | String / Slot / Function | - | 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String | - | 输入框的值，即当前指定的联想词。支持语法糖 `v-model` | N
 defaultValue | String | - | 输入框的值，即当前指定的联想词。非受控属性 | N
 onBlur | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>失去焦点时触发 | N

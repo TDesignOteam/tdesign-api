@@ -16,6 +16,10 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   autoFocus?: boolean;
   /**
+   * 触发显示联想词下拉框的元素，同 `trigger`
+   */
+  children?: TNode;
+  /**
    * 是否允许清空
    */
   clearable?: boolean;
@@ -66,6 +70,10 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    * 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式
    */
   tips?: TNode;
+  /**
+   * 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件
+   */
+  trigger?: TNode;
   /**
    * 输入框的值，即当前指定的联想词
    * @default ''
