@@ -11,11 +11,11 @@ cancel-btn | String / Object / Slot | '' | [see more ts definition](https://gith
 close-on-overlay-click | Boolean | undefined | \- | N
 confirm-btn | String / Object / Slot | '' | \- | N
 content | String / Slot | - | \- | N
+custom-style | String | - | \- | N
 external-classes | Array | - | `['t-class', 't-class-content', 't-class-confirm', 't-class-cancel']` | N
 overlay-props | Object | {} | \- | N
 prevent-scroll-through | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
-style | String | - | \- | N
 title | String / Slot | - | \- | N
 visible | Boolean | false | \- | N
 z-index | Number | 11500 | \- | N

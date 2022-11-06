@@ -15,6 +15,14 @@ export interface TdTabsProps {
     value?: TabAnimation;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名，分别用于设置 组件外层元素、选项卡单项、选项卡激活态、滚动条样式类名 等类名
    */
   externalClasses?: {
@@ -53,14 +61,6 @@ export interface TdTabsProps {
     value?: StickyProps;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 是否可以滑动切换
    * @default true
    */
@@ -85,6 +85,14 @@ export interface TdTabsProps {
 }
 
 export interface TdTabPanelProps {
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
   /**
    * 选项卡内容隐藏时是否销毁
    * @default true
@@ -113,14 +121,6 @@ export interface TdTabPanelProps {
    * 用于自定义选项卡面板内容
    */
   panel?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

@@ -11,15 +11,15 @@ const props: TdCascaderProps = {
     type: Boolean,
     value: true,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 可选项数据源 */
   options: {
     type: Array,
     value: [],
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 标题 */
   title: {

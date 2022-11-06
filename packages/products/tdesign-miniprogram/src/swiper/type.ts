@@ -38,6 +38,14 @@ export interface TdSwiperProps {
     value?: number;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 轮播滑动方向，包括横向滑动和纵向滑动两个方向
    * @default horizontal
    */
@@ -91,14 +99,6 @@ export interface TdSwiperProps {
     type: StringConstructor;
     value?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
   };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
 }
 
 export interface TdSwiperItemProps {
@@ -106,13 +106,18 @@ export interface TdSwiperItemProps {
    * 自定义组件样式
    * @default ''
    */
-  style?: {
+  customStyle?: {
     type: StringConstructor;
     value?: string;
   };
 }
 
 export interface SwiperNavigation {
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: string;
   /**
    * 小于这个数字不会显示导航器
    */
@@ -121,11 +126,6 @@ export interface SwiperNavigation {
    * 表示是否显示两侧的滑动控制按钮
    */
   showSlideBtn?: boolean;
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: string;
   /**
    * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
    * @default ''

@@ -6,6 +6,14 @@
 
 export interface TdSwipeCellProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用滑动
    */
   disabled?: {
@@ -32,14 +40,6 @@ export interface TdSwipeCellProps {
   right?: {
     type: ArrayConstructor;
     value?: Array<SwipeActionItem>;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
 }
 

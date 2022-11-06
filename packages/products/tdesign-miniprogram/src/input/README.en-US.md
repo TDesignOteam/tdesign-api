@@ -8,6 +8,7 @@ name | type | default | description | required
 align | String | left | options：left/center/right | N
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | - | \- | N
 error-message | String | - | `deprecated` | N
 external-classes | Array | - | `['t-class', 't-class-input', 't-class-placeholder', 't-class-error-msg']` | N
@@ -20,7 +21,6 @@ prefix-icon | String / Slot | - | \- | N
 readonly | Boolean | false | \- | N
 size | String | small | options：small/medium。Typescript：`'medium' \| 'small'` | N
 status | String | default | options：default/success/warning/error | N
-style | String | - | \- | N
 suffix | String / Slot | - | \- | N
 suffix-icon | String / Slot | - | \- | N
 tips | String / Slot | - | \- | N

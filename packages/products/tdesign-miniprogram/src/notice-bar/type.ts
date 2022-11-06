@@ -13,6 +13,14 @@ export interface TdNoticeBarProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 右侧额外信息
    */
   extra?: {
@@ -32,14 +40,6 @@ export interface TdNoticeBarProps {
    * @default ''
    */
   prefixIcon?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

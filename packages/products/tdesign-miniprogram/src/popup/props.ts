@@ -24,6 +24,11 @@ const props: TdPopupProps = {
     type: String,
     value: '',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 组件类名，分别用于设置 组件外层元素、遮罩层、浮层内容 等元素类名 */
   externalClasses: {
     type: Array,
@@ -47,11 +52,6 @@ const props: TdPopupProps = {
   showOverlay: {
     type: Boolean,
     value: true,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 动画效果定义 */
   transitionProps: {

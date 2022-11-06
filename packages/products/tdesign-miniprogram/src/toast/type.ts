@@ -6,6 +6,14 @@
 
 export interface TdToastProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 图标排列方式
    * @default row
    */
@@ -74,14 +82,6 @@ export interface TdToastProps {
   showOverlay?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 提示类型

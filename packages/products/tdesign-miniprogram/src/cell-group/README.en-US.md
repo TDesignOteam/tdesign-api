@@ -6,6 +6,6 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 bordered | Boolean | - | \- | N
+custom-style | String | - | \- | N
 external-classes | Array | - | `['t-class']` | N
-style | String | - | \- | N
 title | String | - | \- | N

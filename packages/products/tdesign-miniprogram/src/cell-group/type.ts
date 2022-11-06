@@ -13,19 +13,19 @@ export interface TdCellGroupProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名
    */
   externalClasses?: {
     type: ArrayConstructor;
     value?: ['t-class'];
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 单元格组标题

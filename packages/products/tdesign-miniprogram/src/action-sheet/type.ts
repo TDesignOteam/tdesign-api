@@ -22,6 +22,14 @@ export interface TdActionSheetProps {
     value?: number;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 菜单项
    */
   items: {
@@ -35,14 +43,6 @@ export interface TdActionSheetProps {
   showCancel?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 展示类型，列表和表格形式展示

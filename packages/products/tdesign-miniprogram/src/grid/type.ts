@@ -6,8 +6,15 @@
 
 import { BadgeProps } from '../badge/index';
 
-export interface TdGridProps {
+export interface TdGridItemProps {
   /**
+   * 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字
+   */
+  badgeProps?: {
+    type: ObjectConstructor;
+    value?: BadgeProps;
+  };
+      /**
    * 内容对齐方式
    * @default center
    */
@@ -63,19 +70,9 @@ export interface TdGridProps {
    * 自定义组件样式
    * @default ''
    */
-  style?: {
+  customStyle?: {
     type: StringConstructor;
     value?: string;
-  };
-}
-
-export interface TdGridItemProps {
-  /**
-   * 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字
-   */
-  badgeProps?: {
-    type: ObjectConstructor;
-    value?: BadgeProps;
   };
   /**
    * 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点
@@ -113,14 +110,6 @@ export interface TdGridItemProps {
   layout?: {
     type: StringConstructor;
     value?: 'vertical' | 'horizontal';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 文本，可以通过 Props 传入文本，也可以自定义标题节点

@@ -30,6 +30,14 @@ export interface TdBadgeProps {
     value?: string | number;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否为红点
    * @default false
    */
@@ -82,13 +90,5 @@ export interface TdBadgeProps {
   size?: {
     type: StringConstructor;
     value?: 'small' | 'medium';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
 }

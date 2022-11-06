@@ -8,13 +8,6 @@ import { BadgeProps } from '../badge/index';
 
 export interface TdAvatarProps {
   /**
-   * 透传至 Image 组件
-   */
-  ImageProps?: {
-    type: ObjectConstructor;
-    value?: object;
-  };
-  /**
    * 头像替换文本，仅当图片加载失败时有效
    * @default ''
    */
@@ -30,11 +23,19 @@ export interface TdAvatarProps {
     value?: BadgeProps;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名，用于设置组件外层元素类名
    */
   externalClasses?: {
     type: ArrayConstructor;
-    value?: ['t-class'];
+    value?: ['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content'];
   };
   /**
    * 加载失败时隐藏图片
@@ -60,6 +61,13 @@ export interface TdAvatarProps {
     value?: string;
   };
   /**
+   * 透传至 Image 组件
+   */
+  imageProps?: {
+    type: ObjectConstructor;
+    value?: object;
+  };
+  /**
    * 形状
    * @default circle
    */
@@ -72,14 +80,6 @@ export interface TdAvatarProps {
    * @default ''
    */
   size?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };
@@ -102,6 +102,14 @@ export interface TdAvatarGroupProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名，用于设置组件外层元素类名
    */
   externalClasses?: {
@@ -120,14 +128,6 @@ export interface TdAvatarGroupProps {
    * @default medium
    */
   size?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

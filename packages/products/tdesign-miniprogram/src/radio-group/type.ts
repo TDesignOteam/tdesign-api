@@ -14,6 +14,14 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用全部子单选框
    */
   disabled?: {
@@ -42,14 +50,6 @@ export interface TdRadioGroupProps<T = RadioValue> {
   options?: {
     type: ArrayConstructor;
     value?: Array<RadioOption>;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 选中的值

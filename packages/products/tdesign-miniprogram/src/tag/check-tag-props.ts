@@ -25,6 +25,11 @@ const props: TdCheckTagProps = {
   content: {
     type: null,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态 */
   disabled: {
     type: Boolean,
@@ -44,11 +49,6 @@ const props: TdCheckTagProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
 };
 

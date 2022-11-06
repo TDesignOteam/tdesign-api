@@ -41,6 +41,14 @@ export interface TdPickerProps {
     value?: boolean | string | ButtonProps;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
    * @default true
    */
@@ -54,14 +62,6 @@ export interface TdPickerProps {
   renderLabel?: {
     type: StringConstructor;
     value?: (item: PickerColumnItem) => string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 标题

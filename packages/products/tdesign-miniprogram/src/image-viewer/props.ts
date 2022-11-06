@@ -16,6 +16,11 @@ const props: TdImageViewerProps = {
     type: Boolean,
     value: true,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否显示删除操作 */
   deleteBtn: {
     type: Boolean,
@@ -40,11 +45,6 @@ const props: TdImageViewerProps = {
   showIndex: {
     type: Boolean,
     value: false,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 隐藏/显示预览 */
   visible: {

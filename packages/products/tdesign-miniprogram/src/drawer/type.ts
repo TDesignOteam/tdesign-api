@@ -16,6 +16,14 @@ export interface TdDrawerProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 抽屉关闭时是否销毁节点
    * @default false
    */
@@ -45,14 +53,6 @@ export interface TdDrawerProps {
   showOverlay?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件是否可见

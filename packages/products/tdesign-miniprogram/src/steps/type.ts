@@ -28,6 +28,14 @@ export interface TdStepsProps {
     value?: 'default' | 'process' | 'finish' | 'error';
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名，用于设置组件外层元素元素类名
    */
   externalClasses?: {
@@ -59,14 +67,6 @@ export interface TdStepsProps {
     value?: 'line' | 'dashed' | 'arrow';
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 步骤条风格
    * @default default
    */
@@ -82,6 +82,14 @@ export interface TdStepItemProps {
    * @default ''
    */
   content?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
     type: StringConstructor;
     value?: string;
   };
@@ -106,14 +114,6 @@ export interface TdStepItemProps {
   status?: {
     type: StringConstructor;
     value?: StepStatus;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 子步骤条，仅支持 layout  = 'vertical' 时

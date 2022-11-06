@@ -19,6 +19,11 @@ const props: TdButtonProps = {
   customDataset: {
     type: Object,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 禁用状态 */
   disabled: {
     type: Boolean,
@@ -61,11 +66,6 @@ const props: TdButtonProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {

@@ -6,6 +6,11 @@
 
 import { TdDropdownItemProps } from './type';
 const props: TdDropdownItemProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用 */
   disabled: {
     type: Boolean,
@@ -39,11 +44,6 @@ const props: TdDropdownItemProps = {
   optionsLayout: {
     type: String,
     value: 'columns',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 选中值 */
   value: {

@@ -14,6 +14,14 @@ export interface TdSkeletonProps {
     value?: 'gradient' | 'flashed' | 'none';
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 【开发中】延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0
    */
@@ -43,14 +51,6 @@ export interface TdSkeletonProps {
   rowCol?: {
     type: ArrayConstructor;
     value?: SkeletonRowCol;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 骨架图风格，有基础、头像组合等两大类

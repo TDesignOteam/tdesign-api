@@ -16,6 +16,14 @@ export interface TdTagProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
    * @default false
    */
@@ -60,14 +68,6 @@ export interface TdTagProps {
   size?: {
     type: StringConstructor;
     value?: SizeEnum;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件风格，用于描述组件不同的应用场景
@@ -118,6 +118,14 @@ export interface TdCheckTagProps {
     value?: string | number;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
    * @default false
    */
@@ -148,13 +156,5 @@ export interface TdCheckTagProps {
   size?: {
     type: StringConstructor;
     value?: SizeEnum;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
 }

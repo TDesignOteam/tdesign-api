@@ -13,6 +13,14 @@ export interface TdSwitchProps {
     value?: string[];
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']
    * @default [true, false]
    */
@@ -51,14 +59,6 @@ export interface TdSwitchProps {
   size?: {
     type: StringConstructor;
     value?: 'small' | 'medium' | 'large';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 开关值

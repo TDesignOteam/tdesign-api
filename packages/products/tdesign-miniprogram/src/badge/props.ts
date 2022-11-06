@@ -21,6 +21,11 @@ const props: TdBadgeProps = {
     type: null,
     value: 0,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否为红点 */
   dot: {
     type: Boolean,
@@ -53,11 +58,6 @@ const props: TdBadgeProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
 };
 

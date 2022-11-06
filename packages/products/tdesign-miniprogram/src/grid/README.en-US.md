@@ -11,18 +11,18 @@ column | Number | 4 | \- | N
 external-classes | Array | - | `['t-class']` | N
 gutter | Number | - | \- | N
 hover | Boolean | false | \- | N
-style | String | - | \- | N
+custom-style | String | - | \- | N
 
 ### GridItem Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 badge-props | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/grid/type.ts) | N
+custom-style | String | - | \- | N
 description | String / Slot | - | \- | N
 external-classes | Array | - | `['t-class', 't-class-image', 't-class-text', 't-class-description']` | N
 image | String / Slot | - | \- | N
 jump-type | String | navigate-to | options：redirect-to/switch-tab/relaunch/navigate-to | N
 layout | String | vertical | options：vertical/horizontal | N
-style | String | - | \- | N
 text | String / Slot | - | \- | N
 url | String | - | \- | N

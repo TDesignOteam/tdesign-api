@@ -6,6 +6,11 @@
 
 import { TdToastProps } from './type';
 const props: TdToastProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 图标排列方式 */
   direction: {
     type: String,
@@ -48,11 +53,6 @@ const props: TdToastProps = {
   showOverlay: {
     type: Boolean,
     value: false,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 提示类型 */
   theme: {

@@ -8,7 +8,6 @@ name | type | default | description | required
 custom-style | String | - | \- | N
 duration | Number | 300 | \- | N
 prevent-scroll-through | Boolean | true | \- | N
-style | String | - | \- | N
 transparent | Boolean | false | \- | N
 visible | Boolean | true | required | Y
 default-visible | Boolean | undefined | required。uncontrolled property | Y

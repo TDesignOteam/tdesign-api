@@ -21,6 +21,11 @@ const props: TdCellProps = {
     type: Boolean,
     value: true,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 下方内容描述 */
   description: {
     type: String,
@@ -58,11 +63,6 @@ const props: TdCellProps = {
   /** 最右侧图标 */
   rightIcon: {
     type: String,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 标题 */
   title: {

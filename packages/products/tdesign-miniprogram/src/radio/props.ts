@@ -39,6 +39,11 @@ const props: TdRadioProps = {
   contentDisabled: {
     type: Boolean,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否为禁用态 */
   disabled: {
     type: Boolean,
@@ -69,11 +74,6 @@ const props: TdRadioProps = {
   },
   /** HTML 元素原生属性 */
   name: {
-    type: String,
-    value: '',
-  },
-  /** 自定义组件样式 */
-  style: {
     type: String,
     value: '',
   },

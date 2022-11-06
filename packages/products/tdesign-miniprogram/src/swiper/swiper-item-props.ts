@@ -7,7 +7,7 @@
 import { TdSwiperItemProps } from './type';
 const props: TdSwiperItemProps = {
   /** 自定义组件样式 */
-  style: {
+  customStyle: {
     type: String,
     value: '',
   },

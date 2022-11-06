@@ -10,6 +10,11 @@ const props: TdGridItemProps = {
   badgeProps: {
     type: Object,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点 */
   description: {
     type: String,
@@ -31,11 +36,6 @@ const props: TdGridItemProps = {
   layout: {
     type: String,
     value: 'vertical',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 文本，可以通过 Props 传入文本，也可以自定义标题节点 */
   text: {

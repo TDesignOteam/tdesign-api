@@ -21,6 +21,11 @@ const props: TdRateProps = {
     type: Number,
     value: 5,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用评分 */
   disabled: {
     type: Boolean,
@@ -39,11 +44,6 @@ const props: TdRateProps = {
   size: {
     type: String,
     value: '24px',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分'] */
   texts: {

@@ -31,6 +31,14 @@ export interface TdButtonProps {
     value?: any;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 禁用状态
    * @default false
    */
@@ -99,14 +107,6 @@ export interface TdButtonProps {
   size?: {
     type: StringConstructor;
     value?: SizeEnum;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件风格，依次为品牌色、危险色

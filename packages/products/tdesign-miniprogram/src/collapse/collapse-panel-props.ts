@@ -10,6 +10,11 @@ const props: TdCollapsePanelProps = {
   content: {
     type: String,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 禁止当前面板展开，优先级大于 Collapse 的同名属性 */
   disabled: {
     type: Boolean,
@@ -31,11 +36,6 @@ const props: TdCollapsePanelProps = {
   /** 面板头的右侧区域，一般用于呈现面板操作 */
   headerRightContent: {
     type: String,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识 */
   value: {

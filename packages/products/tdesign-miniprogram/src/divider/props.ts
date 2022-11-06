@@ -15,6 +15,11 @@ const props: TdDividerProps = {
   content: {
     type: String,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否虚线（仅在水平分割线有效） */
   dashed: {
     type: Boolean,
@@ -31,11 +36,6 @@ const props: TdDividerProps = {
   },
   /** 分隔线颜色 */
   lineColor: {
-    type: String,
-    value: '',
-  },
-  /** 自定义组件样式 */
-  style: {
     type: String,
     value: '',
   },

@@ -6,6 +6,11 @@
 
 import { TdTabPanelProps } from './type';
 const props: TdTabPanelProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 选项卡内容隐藏时是否销毁 */
   destroyOnHide: {
     type: Boolean,
@@ -24,11 +29,6 @@ const props: TdTabPanelProps = {
   /** 用于自定义选项卡面板内容 */
   panel: {
     type: String,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 选项卡的值，唯一标识 */
   value: {

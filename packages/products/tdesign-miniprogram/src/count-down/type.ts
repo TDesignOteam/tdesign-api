@@ -22,6 +22,14 @@ export interface TdCountDownProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒
    * @default HH:mm:ss
    */
@@ -52,14 +60,6 @@ export interface TdCountDownProps {
   splitWithUnit?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 倒计时风格

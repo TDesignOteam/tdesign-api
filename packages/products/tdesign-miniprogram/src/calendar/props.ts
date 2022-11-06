@@ -11,6 +11,11 @@ const props: TdCalendarProps = {
     type: null,
     value: '',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 第一天从星期几开始，默认 0 = 周日 */
   firstDayOfWeek: {
     type: Number,
@@ -27,11 +32,6 @@ const props: TdCalendarProps = {
   /** 最小可选的日期，不传则默认今天 */
   minDate: {
     type: null,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 标题，不传默认为“请选择日期” */
   title: {

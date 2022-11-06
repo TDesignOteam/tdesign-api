@@ -9,12 +9,12 @@ action | String / Slot | - | operation | N
 align | String | left | options：left/center。Typescript：`MessageAlignType` `type MessageAlignType = 'left' \| 'center'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/message/type.ts) | N
 close-btn | String / Boolean / Slot | undefined | \- | N
 content | String / Slot | - | \- | N
+custom-style | String | - | \- | N
 duration | Number | 3000 | \- | N
 external-classes | Array | - | `['t-class', 't-class-content', 't-class-icon', 't-class-action', 't-class-close-btn']` | N
 icon | String / Boolean / Slot | true | Typescript：`boolean \| 'info' \| 'bell'` | N
 marquee | Boolean / Object | false | Typescript：`boolean \| DrawMarquee` `interface DrawMarquee { speed?: number; loop?: number; delay?: number }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/message/type.ts) | N
 offset | Array | - | Typescript：`Array<string \| number>` | N
-style | String | - | \- | N
 theme | String | info | options：info/success/warning/error。Typescript：`MessageThemeList` `type MessageThemeList = 'info' \| 'success' \| 'warning' \| 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/message/type.ts) | N
 visible | Boolean | false | \- | N
 default-visible | Boolean | undefined | uncontrolled property | N

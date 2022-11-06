@@ -11,6 +11,11 @@ const props: TdRadioGroupProps = {
     type: String,
     value: 'left',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用全部子单选框 */
   disabled: {
     type: Boolean,
@@ -29,11 +34,6 @@ const props: TdRadioGroupProps = {
   /** 单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同 */
   options: {
     type: Array,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 选中的值 */
   value: {

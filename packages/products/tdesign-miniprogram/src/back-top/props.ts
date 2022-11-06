@@ -6,6 +6,11 @@
 
 import { TdBackTopProps } from './type';
 const props: TdBackTopProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 组件类名，分别用于设置外层元素、图标、文本内容等元素类名 */
   externalClasses: {
     type: Array,
@@ -19,11 +24,6 @@ const props: TdBackTopProps = {
   icon: {
     type: String,
     value: 'backtop',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 文案 */
   text: {

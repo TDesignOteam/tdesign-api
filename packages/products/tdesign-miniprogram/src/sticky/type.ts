@@ -13,6 +13,14 @@ export interface TdStickyProps {
     value?: null;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用组件
    * @default false
    */
@@ -34,14 +42,6 @@ export interface TdStickyProps {
   offsetTop?: {
     type: null;
     value?: string | number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 吸顶时的 z-index

@@ -5,6 +5,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+custom-style | String | - | \- | N
 direction | String | row | options：row/column | N
 duration | Number | 2000 | \- | N
 external-classes | Array | - | `['t-class']` | N
@@ -14,5 +15,4 @@ overlay-props | Object | {} | \- | N
 placement | String | middle | options： top/middle/bottom | N
 prevent-scroll-through | Boolean | false | \- | N
 show-overlay | Boolean | false | \- | N
-style | String | - | \- | N
 theme | String | - | options：loading/success/fail | N

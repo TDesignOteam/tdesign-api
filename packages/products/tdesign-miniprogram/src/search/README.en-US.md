@@ -10,6 +10,7 @@ autocomplete-options | Array | - | autocomplete words list。Typescript：`Array
 autofocus | Boolean | false | auto focus as default | N
 center | Boolean | false | \- | N
 clearable | Boolean | true | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | - | \- | N
 external-classes | Array | - | `['t-class', 't-class-input', 't-class-input-container', 't-class-cancel','t-class-left','t-class-right']` | N
 filter | Function | - | Typescript：`(keyword: string, option: any) => boolean \| Promise<boolean>` | N
@@ -19,7 +20,6 @@ placeholder | String | '' | \- | N
 prefix-icon | String / Slot | 'search' | \- | N
 readonly | Boolean | false | \- | N
 shape | String | 'square' | options：square/round | N
-style | String | - | \- | N
 suffix | String / Slot | '' | \- | N
 suffix-icon | String / Slot | - | \- | N
 value | String | - | \- | N

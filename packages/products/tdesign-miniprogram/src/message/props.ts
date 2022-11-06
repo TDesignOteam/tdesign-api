@@ -24,6 +24,11 @@ const props: TdMessageProps = {
   content: {
     type: String,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。 */
   duration: {
     type: Number,
@@ -46,11 +51,6 @@ const props: TdMessageProps = {
   /** 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx'] */
   offset: {
     type: Array,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 消息组件风格 */
   theme: {

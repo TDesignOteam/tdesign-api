@@ -30,6 +30,11 @@ const props: TdSearchProps = {
     type: Boolean,
     value: true,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 禁用状态 */
   disabled: {
     type: Boolean,
@@ -71,11 +76,6 @@ const props: TdSearchProps = {
   shape: {
     type: String,
     value: 'square',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 搜索框内部右侧内容，位于 `suffixIcon` 右侧 */
   suffix: {

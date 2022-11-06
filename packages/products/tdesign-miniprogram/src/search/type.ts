@@ -45,6 +45,14 @@ export interface TdSearchProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 禁用状态
    */
   disabled?: {
@@ -112,14 +120,6 @@ export interface TdSearchProps {
   shape?: {
     type: StringConstructor;
     value?: 'square' | 'round';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 搜索框内部右侧内容，位于 `suffixIcon` 右侧

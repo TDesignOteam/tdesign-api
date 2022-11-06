@@ -6,6 +6,11 @@
 
 import { TdResultProps } from './type';
 const props: TdResultProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 描述文字 */
   description: {
     type: String,
@@ -22,11 +27,6 @@ const props: TdResultProps = {
   /** 图片地址 */
   image: {
     type: String,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 内置主题。可选项：default/success/warning/error */
   theme: {

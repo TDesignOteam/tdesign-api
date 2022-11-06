@@ -27,6 +27,11 @@ const props: TdPickerProps = {
     type: null,
     value: true,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 底部内容 */
   footer: {
     type: Boolean,
@@ -40,11 +45,6 @@ const props: TdPickerProps = {
   /** 自定义label */
   renderLabel: {
     type: null,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 标题 */
   title: {

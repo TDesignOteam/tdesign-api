@@ -5,6 +5,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+custom-style | String | - | \- | N
 delay | Number | 0 | \- | N
 duration | Number | 800 | \- | N
 external-classes | Array | - | `['t-class', 't-class-text', 't-class-indicator']` | N
@@ -16,6 +17,5 @@ pause | Boolean | false | \- | N
 progress | Number | - | \- | N
 reverse | Boolean | - | \- | N
 size | String | '40rpx' | \- | N
-style | String | - | \- | N
 text | String / Slot | - | \- | N
 theme | String | circular | options：circular/spinner/bar/error/dots | N

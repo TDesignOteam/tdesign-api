@@ -6,6 +6,14 @@
 
 export interface TdResultProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 描述文字
    */
   description?: {
@@ -31,14 +39,6 @@ export interface TdResultProps {
    * 图片地址
    */
   image?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

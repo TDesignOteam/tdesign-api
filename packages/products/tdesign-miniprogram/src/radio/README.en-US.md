@@ -12,6 +12,7 @@ default-checked | Boolean | undefined | uncontrolled property | N
 color | String | #0052d9 | \- | N
 content | String / Slot | - | \- | N
 content-disabled | Boolean | - | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | undefined | \- | N
 external-classes | Array | - | `['t-class', 't-class-icon', 't-class-label', 't-class-content', 't-class-border']` | N
 icon | String / Array | 'fill-circle' | Typescript：`'fill-circle' \| 'stroke-line' \| Array<string>` | N
@@ -19,7 +20,6 @@ label | String / Slot | - | \- | N
 max-content-row | Number | 5 | \- | N
 max-label-row | Number | 3 | \- | N
 name | String | - | \- | N
-style | String | - | \- | N
 value | String / Number / Boolean | false | Typescript：`T` | N
 
 ### Radio Events
@@ -33,11 +33,11 @@ change | `(checked: boolean)` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 align | String | left | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | undefined | \- | N
 icon | String / Array | 'fill-circle' | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string; value?: string \| number; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/radio-group/type.ts) | N
-style | String | - | \- | N
 value | String / Number / Boolean | - | Typescript：`T` | N
 default-value | String / Number / Boolean | undefined | uncontrolled property。Typescript：`T` | N
 

@@ -6,10 +6,6 @@
 
 import { TdAvatarProps } from './type';
 const props: TdAvatarProps = {
-  /** 透传至 Image 组件 */
-  ImageProps: {
-    type: Object,
-  },
   /** 头像替换文本，仅当图片加载失败时有效 */
   alt: {
     type: String,
@@ -18,6 +14,11 @@ const props: TdAvatarProps = {
   /** 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字 */
   badgeProps: {
     type: Object,
+  },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
   },
   /** 组件类名，用于设置组件外层元素类名 */
   externalClasses: {
@@ -37,6 +38,10 @@ const props: TdAvatarProps = {
     type: String,
     value: '',
   },
+  /** 透传至 Image 组件 */
+  imageProps: {
+    type: Object,
+  },
   /** 形状 */
   shape: {
     type: String,
@@ -44,11 +49,6 @@ const props: TdAvatarProps = {
   },
   /** 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large */
   size: {
-    type: String,
-    value: '',
-  },
-  /** 自定义组件样式 */
-  style: {
     type: String,
     value: '',
   },

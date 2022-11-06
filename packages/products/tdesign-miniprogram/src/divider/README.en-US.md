@@ -7,8 +7,8 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 align | String | center | options：left/right/center | N
 content | String / Slot | - | \- | N
+custom-style | String | - | \- | N
 dashed | Boolean | false | \- | N
 external-classes | Array | - | `['t-class', 't-class-line', 't-class-content']` | N
 layout | String | horizontal | options：horizontal/vertical | N
 line-color | String | - | \- | N
-style | String | - | \- | N

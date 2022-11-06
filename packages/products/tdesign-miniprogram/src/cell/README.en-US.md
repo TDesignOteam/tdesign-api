@@ -8,6 +8,7 @@ name | type | default | description | required
 align | String | middle | options：top/middle/bottom | N
 arrow | Boolean | false | \- | N
 bordered | Boolean | true | \- | N
+custom-style | String | - | \- | N
 description | String / Slot | - | \- | N
 external-classes | Array | - | `['t-class', 't-class-title', 't-class-note', 't-class-description', 't-class-thumb', 't-class-hover', 't-class-left', 't-class-right']` | N
 hover | Boolean | - | \- | N
@@ -17,7 +18,6 @@ left-icon | String / Slot | - | \- | N
 note | String / Slot | - | \- | N
 required | Boolean | false | \- | N
 right-icon | String / Slot | - | \- | N
-style | String | - | \- | N
 title | String / Slot | - | \- | N
 url | String | - | \- | N
 

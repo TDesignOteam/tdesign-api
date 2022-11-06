@@ -2113,6 +2113,80 @@
       ]
     },
     {
+      "id": 3095,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:43:56",
+      "update_time": "2022-10-31 11:43:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3156,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，用于设置组件外层元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 11:18:07",
+      "update_time": "2022-11-04 11:18:07",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-image', 't-class-content']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 1608,
       "platform_framework": [
         "8",
@@ -2196,43 +2270,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3095,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "ActionSheet",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:43:56",
-      "update_time": "2022-10-31 11:43:56",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -4204,55 +4241,6 @@
       ]
     },
     {
-      "id": 3021,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "ImageProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传至 Image 组件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-17 07:25:04",
-      "update_time": "2022-10-17 07:25:04",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
       "id": 1466,
       "platform_framework": [
         "1",
@@ -4345,6 +4333,43 @@
       ]
     },
     {
+      "id": 3078,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:09",
+      "update_time": "2022-10-31 11:39:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1657,
       "platform_framework": [
         "64"
@@ -4364,7 +4389,7 @@
       "create_time": "2021-09-09 13:47:56",
       "update_time": "2021-11-10 05:14:17",
       "event_output": null,
-      "custom_field_type": "['t-class']",
+      "custom_field_type": "['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -4566,6 +4591,55 @@
       ]
     },
     {
+      "id": 3021,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "imageProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传至 Image 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-17 07:25:04",
+      "update_time": "2022-10-17 07:25:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1465,
       "platform_framework": [
         "1",
@@ -4657,43 +4731,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3078,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:09",
-      "update_time": "2022-10-31 11:39:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -4843,6 +4880,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3079,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AvatarGroup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:16",
+      "update_time": "2022-10-31 11:39:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -5063,43 +5137,6 @@
       ]
     },
     {
-      "id": 3079,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "AvatarGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:16",
-      "update_time": "2022-10-31 11:39:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 3023,
       "platform_framework": [
         "2",
@@ -5224,6 +5261,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3096,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "BackTop",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:44:26",
+      "update_time": "2022-10-31 11:44:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -5504,43 +5578,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3096,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "BackTop",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:44:26",
-      "update_time": "2022-10-31 11:44:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -6104,6 +6141,43 @@
       ]
     },
     {
+      "id": 3080,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Badge",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:35",
+      "update_time": "2022-10-31 11:39:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1081,
       "platform_framework": [
         "1"
@@ -6537,43 +6611,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3080,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Badge",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:35",
-      "update_time": "2022-10-31 11:39:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -10444,6 +10481,43 @@
       ]
     },
     {
+      "id": 3043,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:07:49",
+      "update_time": "2022-10-31 11:07:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 731,
       "platform_framework": [
         "1"
@@ -10963,43 +11037,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3043,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:07:49",
-      "update_time": "2022-10-31 11:07:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -11572,6 +11609,43 @@
       ]
     },
     {
+      "id": 3062,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:33:55",
+      "update_time": "2022-10-31 11:33:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1840,
       "platform_framework": [
         "1",
@@ -12112,43 +12186,6 @@
       ],
       "field_type_text": [
         "Array"
-      ]
-    },
-    {
-      "id": 3062,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:55",
-      "update_time": "2022-10-31 11:33:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -14747,6 +14784,43 @@
       ]
     },
     {
+      "id": 3063,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:34:11",
+      "update_time": "2022-10-31 11:34:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1135,
       "platform_framework": [
         "1",
@@ -15655,43 +15729,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3063,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Cascader",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:34:11",
-      "update_time": "2022-10-31 11:34:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -16643,6 +16680,43 @@
       ]
     },
     {
+      "id": 3046,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Cell",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:22:43",
+      "update_time": "2022-10-31 11:22:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1367,
       "platform_framework": [
         "8",
@@ -17098,43 +17172,6 @@
       ]
     },
     {
-      "id": 3046,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Cell",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:22:43",
-      "update_time": "2022-10-31 11:22:43",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1070,
       "platform_framework": [
         "8",
@@ -17309,6 +17346,43 @@
       ]
     },
     {
+      "id": 3047,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CellGroup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:24:16",
+      "update_time": "2022-10-31 11:24:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1370,
       "platform_framework": [
         "64"
@@ -17343,43 +17417,6 @@
       ],
       "field_type_text": [
         "Array"
-      ]
-    },
-    {
-      "id": 3047,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CellGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:24:16",
-      "update_time": "2022-10-31 11:24:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -17442,7 +17479,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
       "field_desc_en": null,
@@ -17569,6 +17606,43 @@
       ]
     },
     {
+      "id": 3094,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:43:14",
+      "update_time": "2022-10-31 11:43:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 959,
       "platform_framework": [
         "1"
@@ -17659,6 +17733,43 @@
       ]
     },
     {
+      "id": 3155,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，用于设置 组件外层元素元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 10:48:54",
+      "update_time": "2022-11-04 10:48:54",
+      "event_output": null,
+      "custom_field_type": "['t-class']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 1122,
       "platform_framework": [
         "8",
@@ -17697,43 +17808,6 @@
       ],
       "field_type_text": [
         "TNode"
-      ]
-    },
-    {
-      "id": 3132,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标签图标",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 17:57:03",
-      "update_time": "2022-10-31 17:57:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -17820,43 +17894,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3094,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:43:14",
-      "update_time": "2022-10-31 11:43:14",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -18258,6 +18295,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3064,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:34:33",
+      "update_time": "2022-10-31 11:34:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -18750,43 +18824,6 @@
       ]
     },
     {
-      "id": 3064,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Checkbox",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:34:33",
-      "update_time": "2022-10-31 11:34:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 490,
       "platform_framework": [
         "1",
@@ -18943,6 +18980,43 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3065,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:34:40",
+      "update_time": "2022-10-31 11:34:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 149,
@@ -19173,43 +19247,6 @@
       ],
       "field_type_text": [
         "Array"
-      ]
-    },
-    {
-      "id": 3065,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CheckboxGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:34:40",
-      "update_time": "2022-10-31 11:34:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -19926,6 +19963,43 @@
       ]
     },
     {
+      "id": 3081,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Collapse",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:49",
+      "update_time": "2022-10-31 11:39:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1680,
       "platform_framework": [
         "1",
@@ -20206,43 +20280,6 @@
       ]
     },
     {
-      "id": 3081,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Collapse",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:49",
-      "update_time": "2022-10-31 11:39:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1678,
       "platform_framework": [
         "1",
@@ -20426,6 +20463,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3082,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CollapsePanel",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:40:01",
+      "update_time": "2022-10-31 11:40:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -20753,43 +20827,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3082,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CollapsePanel",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:40:01",
-      "update_time": "2022-10-31 11:40:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -22019,6 +22056,43 @@
       ]
     },
     {
+      "id": 3083,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CountDown",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:40:14",
+      "update_time": "2022-10-31 11:40:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1510,
       "platform_framework": [
         "8",
@@ -22188,43 +22262,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3083,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CountDown",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:40:14",
-      "update_time": "2022-10-31 11:40:14",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -26176,6 +26213,43 @@
       ]
     },
     {
+      "id": 3066,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:35:05",
+      "update_time": "2022-10-31 11:35:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2678,
       "platform_framework": [
         "8",
@@ -26558,43 +26632,6 @@
       "field_type_text": [
         "String",
         "Number"
-      ]
-    },
-    {
-      "id": 3066,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DateTimePicker",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:35:05",
-      "update_time": "2022-10-31 11:35:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -27906,7 +27943,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "点击蒙层时是否触发关闭事件",
       "field_desc_en": null,
@@ -28075,6 +28112,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3097,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:44:38",
+      "update_time": "2022-10-31 11:44:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -28603,43 +28677,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3097,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:44:38",
-      "update_time": "2022-10-31 11:44:38",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -30172,6 +30209,43 @@
       ]
     },
     {
+      "id": 3048,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Divider",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:24:56",
+      "update_time": "2022-10-31 11:24:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 233,
       "platform_framework": [
         "1",
@@ -30384,43 +30458,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3048,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Divider",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:24:56",
-      "update_time": "2022-10-31 11:24:56",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -30836,6 +30873,43 @@
         "String",
         "Object",
         "TNode"
+      ]
+    },
+    {
+      "id": 3098,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:44:55",
+      "update_time": "2022-10-31 11:44:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -31408,43 +31482,6 @@
       ]
     },
     {
-      "id": 3098,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Drawer",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:44:55",
-      "update_time": "2022-10-31 11:44:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 679,
       "platform_framework": [
         "1",
@@ -31551,7 +31588,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "11500",
       "field_enum": "",
       "field_desc_zh": "抽屉层级，样式默认为 11500",
       "field_desc_en": null,
@@ -33085,6 +33122,43 @@
       ]
     },
     {
+      "id": 3052,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownItem",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:26:23",
+      "update_time": "2022-10-31 11:26:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 429,
       "platform_framework": [
         "1",
@@ -33511,43 +33585,6 @@
       ]
     },
     {
-      "id": 3052,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DropdownItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:26:23",
-      "update_time": "2022-10-31 11:26:23",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2890,
       "platform_framework": [
         "1",
@@ -33882,6 +33919,43 @@
       ]
     },
     {
+      "id": 3051,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:26:13",
+      "update_time": "2022-10-31 11:26:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1696,
       "platform_framework": [
         "8",
@@ -33967,43 +34041,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3051,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DropdownMenu",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:26:13",
-      "update_time": "2022-10-31 11:26:13",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -34125,6 +34162,43 @@
       ],
       "field_type_text": [
         "TNode"
+      ]
+    },
+    {
+      "id": 3084,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Empty",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:40:40",
+      "update_time": "2022-10-31 11:40:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -34289,43 +34363,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3084,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Empty",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:40:40",
-      "update_time": "2022-10-31 11:40:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -35122,6 +35159,43 @@
       ]
     },
     {
+      "id": 3152,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "right: 16px; bottom: 32px;",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-03 11:36:38",
+      "update_time": "2022-11-03 11:36:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2500,
       "platform_framework": [
         "8",
@@ -35203,8 +35277,7 @@
       "id": 2503,
       "platform_framework": [
         "8",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Fab",
       "field_category": 1,
@@ -35233,7 +35306,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3153,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "right: 16px; bottom: 32px;",
+      "field_enum": "",
+      "field_desc_zh": "悬浮按钮的样式，常用于调整位置（即将废弃，建议使用 `customStyle`）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-03 11:37:37",
+      "update_time": "2022-11-03 11:37:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -35360,6 +35469,43 @@
       ]
     },
     {
+      "id": 3085,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:41:11",
+      "update_time": "2022-10-31 11:41:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 218,
       "platform_framework": [
         "1",
@@ -35435,43 +35581,6 @@
       ],
       "field_type_text": [
         "Object"
-      ]
-    },
-    {
-      "id": 3085,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Footer",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:41:11",
-      "update_time": "2022-10-31 11:41:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -40418,6 +40527,43 @@
       ]
     },
     {
+      "id": 3049,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Grid",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:25:14",
+      "update_time": "2022-10-31 11:25:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1772,
       "platform_framework": [
         "64"
@@ -40535,43 +40681,6 @@
       ]
     },
     {
-      "id": 3049,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Grid",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:25:14",
-      "update_time": "2022-10-31 11:25:14",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2309,
       "platform_framework": [
         "8",
@@ -40612,6 +40721,43 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3050,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "GridItem",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:25:26",
+      "update_time": "2022-10-31 11:25:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -40815,43 +40961,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3050,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "GridItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:25:26",
-      "update_time": "2022-10-31 11:25:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -42758,7 +42867,7 @@
       ]
     },
     {
-      "id": 1706,
+      "id": 3151,
       "platform_framework": [
         "64"
       ],
@@ -42770,12 +42879,12 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义样式（即将废弃，推荐使用 `style` ）",
+      "field_desc_zh": "自定义组件样式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-09-21 08:22:33",
-      "update_time": "2021-09-21 08:22:33",
+      "create_time": "2022-11-03 11:36:25",
+      "update_time": "2022-11-03 11:36:25",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -42868,43 +42977,6 @@
       "field_type_text": [
         "String",
         "Number"
-      ]
-    },
-    {
-      "id": 3044,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Icon",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:19:10",
-      "update_time": "2022-10-31 11:19:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -43636,6 +43708,43 @@
       ]
     },
     {
+      "id": 3086,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:41:36",
+      "update_time": "2022-10-31 11:41:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2871,
       "platform_framework": [
         "1",
@@ -44334,43 +44443,6 @@
       ]
     },
     {
-      "id": 3086,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Image",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:41:36",
-      "update_time": "2022-10-31 11:41:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2214,
       "platform_framework": [
         "1",
@@ -44589,6 +44661,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3087,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:41:43",
+      "update_time": "2022-10-31 11:41:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -45090,43 +45199,6 @@
       ]
     },
     {
-      "id": 3087,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "ImageViewer",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:41:43",
-      "update_time": "2022-10-31 11:41:43",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2992,
       "platform_framework": [
         "1",
@@ -45434,6 +45506,43 @@
       "field_type_text": []
     },
     {
+      "id": 3053,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Indexes",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:28:56",
+      "update_time": "2022-10-31 11:28:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1459,
       "platform_framework": [
         "8",
@@ -45556,43 +45665,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3053,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Indexes",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:28:56",
-      "update_time": "2022-10-31 11:28:56",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -46021,6 +46093,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3067,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:35:29",
+      "update_time": "2022-10-31 11:35:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -46870,43 +46979,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3067,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:35:29",
-      "update_time": "2022-10-31 11:35:29",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -50893,6 +50965,43 @@
       ]
     },
     {
+      "id": 3099,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Loading",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:45:07",
+      "update_time": "2022-10-31 11:45:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1114,
       "platform_framework": [
         "1",
@@ -51624,43 +51733,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3099,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Loading",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:45:07",
-      "update_time": "2022-10-31 11:45:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -52866,7 +52938,7 @@
         "4",
         "64"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮",
       "field_desc_en": null,
@@ -52949,6 +53021,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3100,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:45:30",
+      "update_time": "2022-10-31 11:45:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -53204,43 +53313,6 @@
       ]
     },
     {
-      "id": 3100,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Message",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:45:30",
-      "update_time": "2022-10-31 11:45:30",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 98,
       "platform_framework": [
         "1",
@@ -53421,7 +53493,7 @@
       ],
       "field_default_value": "15000",
       "field_enum": "",
-      "field_desc_zh": "元素层级，样式默认为 15000",
+      "field_desc_zh": "组件层级，样式默认为 15000",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -54137,6 +54209,43 @@
       ]
     },
     {
+      "id": 3054,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:01",
+      "update_time": "2022-10-31 11:30:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1627,
       "platform_framework": [
         "64"
@@ -54452,43 +54561,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3054,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Navbar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:01",
-      "update_time": "2022-10-31 11:30:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -54907,6 +54979,80 @@
       ]
     },
     {
+      "id": 3101,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:45:38",
+      "update_time": "2022-10-31 11:45:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3158,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 14:41:32",
+      "update_time": "2022-11-04 14:41:32",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-content', 't-class-prefix-icon', 't-class-extra', 't-class-suffix-icon']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 1104,
       "platform_framework": [
         "8",
@@ -55058,43 +55204,6 @@
       "event_input": "",
       "create_time": "2022-04-19 07:05:28",
       "update_time": "2022-04-25 09:47:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3101,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "NoticeBar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:45:38",
-      "update_time": "2022-10-31 11:45:38",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -56383,6 +56492,43 @@
       ]
     },
     {
+      "id": 3102,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Overlay",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:46:18",
+      "update_time": "2022-10-31 11:46:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3103,
       "platform_framework": [],
       "component": "Overlay",
@@ -56411,43 +56557,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3104,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义样式（即将废弃，推荐使用 `style` ）",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:49:04",
-      "update_time": "2022-10-31 11:49:04",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
       "field_type_text": [
         "String"
       ]
@@ -56536,43 +56645,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3102,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:46:18",
-      "update_time": "2022-10-31 11:46:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -58291,6 +58363,43 @@
       ]
     },
     {
+      "id": 3068,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:36:44",
+      "update_time": "2022-10-31 11:36:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2508,
       "platform_framework": [
         "8",
@@ -58419,43 +58528,6 @@
       "field_type_text": [
         "String",
         "Function"
-      ]
-    },
-    {
-      "id": 3068,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Picker",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:36:44",
-      "update_time": "2022-10-31 11:36:44",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -59848,9 +59920,7 @@
     },
     {
       "id": 2822,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Popup",
       "field_category": 1,
       "field_name": "customStyle",
@@ -59865,6 +59935,41 @@
       "event_input": "",
       "create_time": "2022-07-11 07:55:12",
       "update_time": "2022-07-11 07:55:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3105,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 14:41:20",
+      "update_time": "2022-10-31 14:41:20",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -60082,6 +60187,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3157,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "duration",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "240",
+      "field_enum": "",
+      "field_desc_zh": "动画过渡时间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 11:39:11",
+      "update_time": "2022-11-04 11:39:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -60666,43 +60808,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3105,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:41:20",
-      "update_time": "2022-10-31 14:41:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -63754,6 +63859,80 @@
       ]
     },
     {
+      "id": 3107,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Progress",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 14:46:19",
+      "update_time": "2022-10-31 14:46:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3160,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Progress",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层、进度文字等元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 15:04:38",
+      "update_time": "2022-11-04 15:04:38",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-bar', 't-class-label']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 923,
       "platform_framework": [
         "1",
@@ -63999,43 +64178,6 @@
       ]
     },
     {
-      "id": 3107,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Progress",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:46:19",
-      "update_time": "2022-10-31 14:46:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 920,
       "platform_framework": [
         "1",
@@ -64127,6 +64269,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3108,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 14:52:27",
+      "update_time": "2022-10-31 14:52:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -64390,43 +64569,6 @@
       ]
     },
     {
-      "id": 3108,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "PullDownRefresh",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:52:27",
-      "update_time": "2022-10-31 14:52:27",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2497,
       "platform_framework": [
         "8",
@@ -64528,6 +64670,45 @@
       "event_input": "",
       "create_time": "2021-09-24 03:56:02",
       "update_time": "2022-02-23 08:12:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3161,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 2,
+      "field_name": "scrolltolower",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动到页面底部时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 15:12:37",
+      "update_time": "2022-11-04 15:12:37",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -64889,6 +65070,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3069,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:00",
+      "update_time": "2022-10-31 11:37:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -65283,43 +65501,6 @@
       ]
     },
     {
-      "id": 3069,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:00",
-      "update_time": "2022-10-31 11:37:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 504,
       "platform_framework": [
         "1",
@@ -65543,6 +65724,43 @@
       "event_input": "",
       "create_time": "2022-10-31 17:18:41",
       "update_time": "2022-10-31 17:18:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3070,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:16",
+      "update_time": "2022-10-31 11:37:16",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -65818,43 +66036,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3070,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:16",
-      "update_time": "2022-10-31 11:37:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -68056,6 +68237,43 @@
       ]
     },
     {
+      "id": 3071,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Rate",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:28",
+      "update_time": "2022-10-31 11:37:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1357,
       "platform_framework": [
         "1",
@@ -68336,43 +68554,6 @@
       ]
     },
     {
-      "id": 3071,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Rate",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:28",
-      "update_time": "2022-10-31 11:37:28",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1091,
       "platform_framework": [
         "1",
@@ -68563,6 +68744,43 @@
       ]
     },
     {
+      "id": 3088,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Result",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:01",
+      "update_time": "2022-10-31 11:42:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3126,
       "platform_framework": [
         "8",
@@ -68718,43 +68936,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3088,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Result",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:01",
-      "update_time": "2022-10-31 11:42:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -69392,6 +69573,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3072,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:50",
+      "update_time": "2022-10-31 11:37:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -70037,43 +70255,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3072,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:50",
-      "update_time": "2022-10-31 11:37:50",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -74814,6 +74995,43 @@
       ]
     },
     {
+      "id": 3089,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Skeleton",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:18",
+      "update_time": "2022-10-31 11:42:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1787,
       "platform_framework": [
         "8"
@@ -75007,7 +75225,7 @@
       "create_time": "2021-11-15 12:19:26",
       "update_time": "2022-02-14 01:55:42",
       "event_output": null,
-      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; height?: string; marginRight?: string; marginLeft?: string; margin?: string; }】",
+      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; size?: string;height?: string; marginRight?: string; marginLeft?: string; margin?: string; type?: 'rect' | 'circle' | 'text';}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -75072,43 +75290,6 @@
       ]
     },
     {
-      "id": 3089,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Skeleton",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:18",
-      "update_time": "2022-10-31 11:42:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1775,
       "platform_framework": [
         "8",
@@ -75123,7 +75304,7 @@
         "1"
       ],
       "field_default_value": "text",
-      "field_enum": "text/avatar-text",
+      "field_enum": "avatar/image/text/paragraph",
       "field_desc_zh": "骨架图风格，有基础、头像组合等两大类",
       "field_desc_en": null,
       "field_required": 0,
@@ -75227,6 +75408,43 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3073,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Slider",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:58",
+      "update_time": "2022-10-31 11:37:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -75897,43 +76115,6 @@
       ]
     },
     {
-      "id": 3073,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Slider",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:58",
-      "update_time": "2022-10-31 11:37:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1200,
       "platform_framework": [
         "1",
@@ -76480,6 +76661,43 @@
       ]
     },
     {
+      "id": 3056,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:46",
+      "update_time": "2022-10-31 11:30:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1253,
       "platform_framework": [
         "1"
@@ -76736,43 +76954,6 @@
       ]
     },
     {
-      "id": 3056,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "StepItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:46",
-      "update_time": "2022-10-31 11:30:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2475,
       "platform_framework": [
         "64"
@@ -76901,6 +77082,43 @@
       "field_type_text": [
         "String",
         "Number"
+      ]
+    },
+    {
+      "id": 3074,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Stepper",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:38:07",
+      "update_time": "2022-10-31 11:38:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -77192,43 +77410,6 @@
       ],
       "field_type_text": [
         "Number"
-      ]
-    },
-    {
-      "id": 3074,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Stepper",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:07",
-      "update_time": "2022-10-31 11:38:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -77583,9 +77764,9 @@
         "1",
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "0",
       "field_enum": "",
-      "field_desc_zh": "当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成",
+      "field_desc_zh": "当前步骤，即整个步骤条进度，格式为`1`、`1-0`或`1-1`。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。若当前步骤条存在子步骤条，则会根据子步骤条重新判断当前步骤状态（子步骤条中存在error，则当前步骤error，子步骤条中存在process，当前步骤process，若最后一个子步骤条finish，当前步骤finish，优先级为`finish>error>process`）。注意：如果每个步骤条单独设置了status，则步骤条为设定的status，若传入`status:''`,将默认为未开始状态,传入的status优先级最高。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -77635,6 +77816,43 @@
       "event_input": "",
       "create_time": "2022-03-28 08:38:59",
       "update_time": "2022-03-28 08:39:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3055,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Steps",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:36",
+      "update_time": "2022-10-31 11:30:36",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -77926,43 +78144,6 @@
       ]
     },
     {
-      "id": 3055,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Steps",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:36",
-      "update_time": "2022-10-31 11:30:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 624,
       "platform_framework": [
         "1",
@@ -78209,6 +78390,43 @@
       ]
     },
     {
+      "id": 3057,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Sticky",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:31:35",
+      "update_time": "2022-10-31 11:31:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1729,
       "platform_framework": [
         "8",
@@ -78331,43 +78549,6 @@
       "field_type_text": [
         "String",
         "Number"
-      ]
-    },
-    {
-      "id": 3057,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Sticky",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:31:35",
-      "update_time": "2022-10-31 11:31:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -79363,6 +79544,43 @@
       ]
     },
     {
+      "id": 3109,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 14:53:18",
+      "update_time": "2022-10-31 14:53:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1815,
       "platform_framework": [
         "8"
@@ -79575,43 +79793,6 @@
       "field_type_text": [
         "Array",
         "TNode"
-      ]
-    },
-    {
-      "id": 3109,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SwipeCell",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:53:18",
-      "update_time": "2022-10-31 14:53:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -79901,6 +80082,43 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 3090,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:31",
+      "update_time": "2022-10-31 11:42:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -80284,43 +80502,6 @@
       ]
     },
     {
-      "id": 3090,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Swiper",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:31",
-      "update_time": "2022-10-31 11:42:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2049,
       "platform_framework": [
         "1",
@@ -80557,7 +80738,7 @@
       ],
       "component": "SwiperItem",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "customStyle",
       "field_type": [
         "1"
       ],
@@ -80569,6 +80750,43 @@
       "event_input": "",
       "create_time": "2022-10-31 11:42:49",
       "update_time": "2022-10-31 11:42:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3092,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:57",
+      "update_time": "2022-10-31 11:42:57",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -80797,43 +81015,6 @@
       ]
     },
     {
-      "id": 3092,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SwiperNavigation",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:57",
-      "update_time": "2022-10-31 11:42:57",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2037,
       "platform_framework": [
         "1",
@@ -80958,6 +81139,43 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3075,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:38:19",
+      "update_time": "2022-10-31 11:38:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -81243,43 +81461,6 @@
       ]
     },
     {
-      "id": 3075,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Switch",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:19",
-      "update_time": "2022-10-31 11:38:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 134,
       "platform_framework": [
         "1",
@@ -81464,6 +81645,43 @@
       ]
     },
     {
+      "id": 3058,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:32:09",
+      "update_time": "2022-10-31 11:32:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1434,
       "platform_framework": [
         "64"
@@ -81615,43 +81833,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3058,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:32:09",
-      "update_time": "2022-10-31 11:32:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -81823,6 +82004,43 @@
       ]
     },
     {
+      "id": 3059,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBarItem",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:32:16",
+      "update_time": "2022-10-31 11:32:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1437,
       "platform_framework": [
         "16",
@@ -81900,43 +82118,6 @@
       ],
       "field_type_text": [
         "TNode"
-      ]
-    },
-    {
-      "id": 3059,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabBarItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:32:16",
-      "update_time": "2022-10-31 11:32:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -82025,6 +82206,43 @@
       "field_type_text": [
         "String",
         "Number"
+      ]
+    },
+    {
+      "id": 3061,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:33:31",
+      "update_time": "2022-10-31 11:33:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -82338,43 +82556,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3061,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabPanel",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:31",
-      "update_time": "2022-10-31 11:33:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -85115,6 +85296,43 @@
       ]
     },
     {
+      "id": 3060,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:33:05",
+      "update_time": "2022-10-31 11:33:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 156,
       "platform_framework": [
         "1",
@@ -85535,43 +85753,6 @@
       ]
     },
     {
-      "id": 3060,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:05",
-      "update_time": "2022-10-31 11:33:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2849,
       "platform_framework": [
         "8",
@@ -85963,6 +86144,43 @@
       ]
     },
     {
+      "id": 3093,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:43:07",
+      "update_time": "2022-10-31 11:43:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 29,
       "platform_framework": [
         "1"
@@ -86316,43 +86534,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3093,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:43:07",
-      "update_time": "2022-10-31 11:43:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -88236,6 +88417,43 @@
       ]
     },
     {
+      "id": 3076,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:38:33",
+      "update_time": "2022-10-31 11:38:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 963,
       "platform_framework": [
         "1",
@@ -88680,43 +88898,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3076,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:33",
-      "update_time": "2022-10-31 11:38:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -91558,6 +91739,43 @@
       "field_type_text": []
     },
     {
+      "id": 3110,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 14:54:10",
+      "update_time": "2022-10-31 14:54:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1352,
       "platform_framework": [
         "8",
@@ -91978,43 +92196,6 @@
       ]
     },
     {
-      "id": 3110,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Toast",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:54:10",
-      "update_time": "2022-10-31 14:54:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1348,
       "platform_framework": [
         "8",
@@ -92056,6 +92237,72 @@
       "field_type_text": [
         "String"
       ]
+    },
+    {
+      "id": 3162,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "轻提示隐藏的时候触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 15:13:58",
+      "update_time": "2022-11-04 15:13:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3163,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 2,
+      "field_name": "destory",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "轻提示销毁的时候触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-04 15:14:28",
+      "update_time": "2022-11-04 15:14:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2249,
@@ -93906,6 +94153,43 @@
       ]
     },
     {
+      "id": 3147,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Transition",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-01 03:50:40",
+      "update_time": "2022-11-01 03:50:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1317,
       "platform_framework": [
         "64"
@@ -94008,43 +94292,6 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3147,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Transition",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-01 03:50:40",
-      "update_time": "2022-11-01 03:50:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -100012,6 +100259,43 @@
       ]
     },
     {
+      "id": 3154,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-03 14:48:45",
+      "update_time": "2022-11-03 14:48:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 877,
       "platform_framework": [
         "1",
@@ -101314,43 +101598,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3077,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:51",
-      "update_time": "2022-10-31 11:38:51",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -104982,5 +105229,5 @@
       ]
     }
   ],
-  "total": 2501
+  "total": 2508
 }

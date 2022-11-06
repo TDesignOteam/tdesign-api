@@ -16,6 +16,14 @@ export interface TdSliderProps {
     value?: Array<string>;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用组件
    * @default false
    */
@@ -93,14 +101,6 @@ export interface TdSliderProps {
   step?: {
     type: NumberConstructor;
     value?: number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 滑块值

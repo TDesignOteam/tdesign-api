@@ -10,6 +10,11 @@ const props: TdNoticeBarProps = {
   content: {
     type: String,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 右侧额外信息 */
   extra: {
     type: String,
@@ -21,11 +26,6 @@ const props: TdNoticeBarProps = {
   },
   /** 前缀图标 */
   prefixIcon: {
-    type: String,
-    value: '',
-  },
-  /** 自定义组件样式 */
-  style: {
     type: String,
     value: '',
   },

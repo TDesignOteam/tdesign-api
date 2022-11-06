@@ -6,6 +6,14 @@
 
 export interface TdLoadingProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0
    */
@@ -87,14 +95,6 @@ export interface TdLoadingProps {
    * @default '40rpx'
    */
   size?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

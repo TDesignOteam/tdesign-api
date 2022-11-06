@@ -20,6 +20,11 @@ const props: TdStepsProps = {
     type: String,
     value: 'process',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 组件类名，用于设置组件外层元素元素类名 */
   externalClasses: {
     type: Array,
@@ -38,11 +43,6 @@ const props: TdStepsProps = {
   separator: {
     type: String,
     value: 'line',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 步骤条风格 */
   theme: {

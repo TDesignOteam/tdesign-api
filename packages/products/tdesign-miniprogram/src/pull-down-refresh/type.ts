@@ -8,6 +8,14 @@ import { LoadingProps } from '../loading/index';
 
 export interface TdPullDownRefreshProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 加载loading样式
    */
   externalClasses?: {
@@ -52,14 +60,6 @@ export interface TdPullDownRefreshProps {
   refreshTimeout?: {
     type: NumberConstructor;
     value?: number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态

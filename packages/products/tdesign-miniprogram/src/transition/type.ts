@@ -22,6 +22,14 @@ export interface TdTransitionProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 隐藏时是否销毁内容
    * @default false
    */
@@ -41,14 +49,6 @@ export interface TdTransitionProps {
    * @default 't-transition'
    */
   name?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

@@ -6,7 +6,7 @@
 
 import { TdOverlayProps } from './type';
 const props: TdOverlayProps = {
-  /** 自定义样式（即将废弃，推荐使用 `style` ） */
+  /** 自定义组件样式 */
   customStyle: {
     type: String,
     value: '',
@@ -20,11 +20,6 @@ const props: TdOverlayProps = {
   preventScrollThrough: {
     type: Boolean,
     value: true,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 遮罩层是否透明 */
   transparent: {

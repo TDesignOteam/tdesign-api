@@ -24,6 +24,14 @@ export interface TdDateTimePickerProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 选择器的最大可选时间，默认为当前时间+10年
    */
   end?: {
@@ -83,14 +91,6 @@ export interface TdDateTimePickerProps {
   start?: {
     type: null;
     value?: string | number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 标题

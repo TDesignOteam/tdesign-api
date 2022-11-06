@@ -21,6 +21,11 @@ const props: TdInputProps = {
     type: Boolean,
     value: false,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用输入框 */
   disabled: {
     type: Boolean,
@@ -46,7 +51,7 @@ const props: TdInputProps = {
   maxcharacter: {
     type: Number,
   },
-  /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。值小于等于 0 的时候，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
+  /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxlength: {
     type: Number,
   },
@@ -73,11 +78,6 @@ const props: TdInputProps = {
   status: {
     type: String,
     value: 'default',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 后置图标前的后置内容 */
   suffix: {
@@ -204,20 +204,20 @@ const props: TdInputProps = {
     type: String,
     value: '',
   },
-  /**  */
+  /** input 的类型。<br />具体释义：<br />`text` 文本输入键盘；<br />`number` 数字输入键盘；<br />`idcard` 身份证输入键盘；<br />`digit` 带小数点的数字键盘；<br />`safe-password` 密码安全输入键盘 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/safe-password.html">指引</a>；<br />`nickname` 昵称输入键盘。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html) */
   type: {
-    type: 除 safe-password、nickname 外都支持,
-    required: true,
+    type: String,
+    value: 'text',
   },
-  /**  */
+  /** 指定 placeholder 的样式 */
   placeholderStyle: {
-    type: null,
-    required: true,
+    type: String,
+    value: '',
   },
-  /**  */
+  /** 指定 placeholder 的样式类 */
   placeholderClass: {
-    type: 不支持,
-    required: true,
+    type: String,
+    value: 'input-placeholder',
   },
 };
 

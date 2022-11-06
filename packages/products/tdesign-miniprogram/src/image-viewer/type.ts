@@ -22,6 +22,14 @@ export interface TdImageViewerProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否显示删除操作
    * @default false
    */
@@ -60,14 +68,6 @@ export interface TdImageViewerProps {
   showIndex?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 隐藏/显示预览

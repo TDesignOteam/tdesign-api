@@ -6,6 +6,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 button-props | Object | - | \- | N
+custom-style | String | right: 16px; bottom: 32px; | \- | N
 icon | String | - | \- | N
 style | String | right: 16px; bottom: 32px; | \- | N
 text | String | - | \- | N

@@ -35,6 +35,14 @@ export interface TdMessageProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。
    * @default 3000
    */
@@ -71,14 +79,6 @@ export interface TdMessageProps {
   offset?: {
     type: ArrayConstructor;
     value?: Array<string | number>;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 消息组件风格

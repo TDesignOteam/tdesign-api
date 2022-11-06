@@ -38,6 +38,14 @@ export interface TdPopupProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 组件类名，分别用于设置 组件外层元素、遮罩层、浮层内容 等元素类名
    */
   externalClasses?: {
@@ -75,14 +83,6 @@ export interface TdPopupProps {
   showOverlay?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 动画效果定义

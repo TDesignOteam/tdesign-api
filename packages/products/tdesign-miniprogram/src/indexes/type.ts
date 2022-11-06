@@ -6,6 +6,14 @@
 
 export interface TdIndexesProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 列表高度，未设置默认占满设备高度
    */
   height?: {
@@ -27,14 +35,6 @@ export interface TdIndexesProps {
   sticky?: {
     type: BooleanConstructor;
     value?: Boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
 }
 

@@ -6,10 +6,10 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 container | Function | - | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | false | \- | N
 external-classes | Array | - | `['t-class']` | N
 offset-top | String / Number | 0 | \- | N
-style | String | - | \- | N
 z-index | Number | 99 | \- | N
 
 ### Sticky Events

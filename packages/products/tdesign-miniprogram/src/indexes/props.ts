@@ -6,6 +6,11 @@
 
 import { TdIndexesProps } from './type';
 const props: TdIndexesProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 列表高度，未设置默认占满设备高度 */
   height: {
     type: Number,
@@ -20,11 +25,6 @@ const props: TdIndexesProps = {
   sticky: {
     type: Boolean,
     value: true,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
 };
 

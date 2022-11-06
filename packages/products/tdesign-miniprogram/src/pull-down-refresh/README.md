@@ -5,13 +5,13 @@
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
+custom-style | String | - | 自定义组件样式 | N
 external-classes | Array | - | 加载loading样式。`['t-class', 't-class-loading','t-class-text', 't-class-indicator']` | N
 loading-bar-height | String / Number | 50 | 加载中下拉高度，如果值为数字则单位是：'px' | N
 loading-props | Object | - | 加载loading样式。TS 类型：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/pull-down-refresh/type.ts) | N
 loading-texts | Array | [] | 提示语，组件内部默认值为 ['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。TS 类型：`string[]` | N
 max-bar-height | String / Number | 80 | 最大下拉高度，如果值为数字则单位是：'px' | N
 refresh-timeout | Number | 3000 | 刷新超时时间 | N
-style | String | - | 自定义组件样式 | N
 value | Boolean | false | 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 | N
 default-value | Boolean | undefined | 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态。非受控属性 | N
 

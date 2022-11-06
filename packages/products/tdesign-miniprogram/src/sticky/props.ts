@@ -10,6 +10,11 @@ const props: TdStickyProps = {
   container: {
     type: null,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用组件 */
   disabled: {
     type: Boolean,
@@ -23,11 +28,6 @@ const props: TdStickyProps = {
   offsetTop: {
     type: null,
     value: 0,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 吸顶时的 z-index */
   zIndex: {

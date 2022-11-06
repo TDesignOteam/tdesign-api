@@ -46,6 +46,14 @@ export interface TdTextareaProps {
     value?: 'send' | 'search' | 'next' | 'go' | 'done';
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用文本框
    * @default false
    */
@@ -93,14 +101,6 @@ export interface TdTextareaProps {
    * 占位符
    */
   placeholder?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

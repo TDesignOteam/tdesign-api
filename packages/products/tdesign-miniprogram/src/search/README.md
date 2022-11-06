@@ -10,6 +10,7 @@ autocomplete-options | Array | - | 【开发中】联想词列表，如果不存
 autofocus | Boolean | false | 是否默认聚焦 | N
 center | Boolean | false | 是否居中 | N
 clearable | Boolean | true | 是否可清空 | N
+custom-style | String | - | 自定义组件样式 | N
 disabled | Boolean | - | 禁用状态 | N
 external-classes | Array | - | 组件外部样式类名，分别用于设置组件外层类名、输入框类名、输入框容器类名、右侧 cancel 文本类名、左侧图标类名、右侧图标类型。`['t-class', 't-class-input', 't-class-input-container', 't-class-cancel','t-class-left','t-class-right']` | N
 filter | Function | - | 自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。其中参数 `keyword` 指当前的搜索词，参数 `option` 指每一项联想词，函数返回 true 则显示当前联想词，函数返回 `false` 则隐藏当前联想词。TS 类型：`(keyword: string, option: any) => boolean \| Promise<boolean>` | N
@@ -19,7 +20,6 @@ placeholder | String | '' | 占位符 | N
 prefix-icon | String / Slot | 'search' | 前置图标，默认为搜索图标。值为 `null` 时则不显示 | N
 readonly | Boolean | false | 只读状态 | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
-style | String | - | 自定义组件样式 | N
 suffix | String / Slot | '' | 搜索框内部右侧内容，位于 `suffixIcon` 右侧 | N
 suffix-icon | String / Slot | - | 后置图标 | N
 value | String | - | 值，搜索关键词 | N

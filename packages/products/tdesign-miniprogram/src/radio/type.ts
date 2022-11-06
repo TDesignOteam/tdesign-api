@@ -60,6 +60,14 @@ export interface TdRadioProps<T = RadioValue> {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否为禁用态
    */
   disabled?: {
@@ -109,14 +117,6 @@ export interface TdRadioProps<T = RadioValue> {
    * @default ''
    */
   name?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

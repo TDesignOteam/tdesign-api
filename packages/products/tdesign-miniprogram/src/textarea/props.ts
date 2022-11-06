@@ -31,6 +31,11 @@ const props: TdTextareaProps = {
     type: String,
     value: 'done',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用文本框 */
   disabled: {
     type: Boolean,
@@ -61,11 +66,6 @@ const props: TdTextareaProps = {
   placeholder: {
     type: String,
     value: undefined,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 文本框值 */
   value: {

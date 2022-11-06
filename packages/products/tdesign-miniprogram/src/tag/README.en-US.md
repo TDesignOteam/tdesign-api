@@ -6,13 +6,13 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 closable | Boolean | false | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | false | \- | N
 external-classes | Array | - | `['t-class']` | N
 icon | String | - | \- | N
 max-width | String / Number | - | Typescript：`CSSProperties['maxWidth'] \| number` | N
 shape | String | square | options：square/round/mark | N
 size | String | medium | options：small/medium/large。Typescript：`SizeEnum` | N
-style | String | - | \- | N
 theme | String | default | options：default/primary/warning/danger/success | N
 variant | String | dark | options：dark/light/outline/light-outline | N
 
@@ -31,12 +31,12 @@ checked | Boolean | undefined | \- | N
 default-checked | Boolean | undefined | uncontrolled property | N
 closable | Boolean | false | \- | N
 content | String / Number / Slot | - | \- | N
+custom-style | String | - | \- | N
 disabled | Boolean | false | \- | N
 icon | Slot | - | \- | N
 icon | String | - | \- | N
 shape | String | square | options：square/round/mark | N
 size | String | medium | options：small/medium/large。Typescript：`SizeEnum` | N
-style | String | - | \- | N
 
 ### CheckTag Events
 

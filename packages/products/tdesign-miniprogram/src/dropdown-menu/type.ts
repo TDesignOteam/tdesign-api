@@ -24,6 +24,14 @@ export interface TdDropdownMenuProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 动画时长
    * @default 200
    */
@@ -40,14 +48,6 @@ export interface TdDropdownMenuProps {
     value?: boolean;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 菜单栏 z-index 层级
    * @default 11600
    */
@@ -58,6 +58,14 @@ export interface TdDropdownMenuProps {
 }
 
 export interface TdDropdownItemProps {
+  /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
   /**
    * 是否禁用
    * @default false
@@ -112,14 +120,6 @@ export interface TdDropdownItemProps {
   optionsLayout?: {
     type: StringConstructor;
     value?: 'columns' | 'tree';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 选中值

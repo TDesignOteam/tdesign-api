@@ -6,6 +6,14 @@
 
 export interface TdStepperProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 禁用输入框
    * @default false
    */
@@ -58,14 +66,6 @@ export interface TdStepperProps {
   step?: {
     type: NumberConstructor;
     value?: number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件风格

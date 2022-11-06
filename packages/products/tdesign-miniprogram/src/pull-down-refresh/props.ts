@@ -6,6 +6,11 @@
 
 import { TdPullDownRefreshProps } from './type';
 const props: TdPullDownRefreshProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 加载loading样式 */
   externalClasses: {
     type: Array,
@@ -33,11 +38,6 @@ const props: TdPullDownRefreshProps = {
   refreshTimeout: {
     type: Number,
     value: 3000,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {

@@ -16,6 +16,11 @@ const props: TdCountDownProps = {
     type: String,
     value: 'default',
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒 */
   format: {
     type: String,
@@ -35,11 +40,6 @@ const props: TdCountDownProps = {
   splitWithUnit: {
     type: Boolean,
     value: false,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 倒计时风格 */
   theme: {

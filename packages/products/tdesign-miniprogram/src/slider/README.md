@@ -6,6 +6,7 @@
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 colors | Array | ['#0052D9', 'rgba(220, 220, 220, 1)'] | 颜色，[已选择, 未选择]。TS 类型：`Array<string>` | N
+custom-style | String | - | 自定义组件样式 | N
 disabled | Boolean | false | 是否禁用组件 | N
 disabled-color | Array | ['#bbd3fb', '#dcdcdc'] | 禁用状态滑动条的颜色，[已选, 未选]。TS 类型：`Array<string>` | N
 external-classes | Array | - | 组件类名，分别用于设置 组件外层元素、滑道底部、滑道激活态、滑道禁用态、游标 等元素类名。`['t-class', 't-class-bar', 't-class-bar-active', 't-class-bar-disabled', 't-class-cursor']` | N
@@ -16,7 +17,6 @@ min | Number | 0 | 滑块范围最小值 | N
 range | Boolean | false | 双游标滑块 | N
 show-extreme-value | Boolean | false | 是否边界值 | N
 step | Number | 1 | 步长 | N
-style | String | - | 自定义组件样式 | N
 value | Number / Array | 0 | 滑块值。TS 类型：`SliderValue` `type SliderValue = number \| Array<number>`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/slider/type.ts) | N
 default-value | Number / Array | undefined | 滑块值。非受控属性。TS 类型：`SliderValue` `type SliderValue = number \| Array<number>`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/slider/type.ts) | N
 

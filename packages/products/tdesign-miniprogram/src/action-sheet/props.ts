@@ -16,6 +16,11 @@ const props: TdActionSheetProps = {
     type: Number,
     value: 8,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 菜单项 */
   items: {
     type: Array,
@@ -25,11 +30,6 @@ const props: TdActionSheetProps = {
   showCancel: {
     type: Boolean,
     value: true,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 展示类型，列表和表格形式展示 */
   theme: {

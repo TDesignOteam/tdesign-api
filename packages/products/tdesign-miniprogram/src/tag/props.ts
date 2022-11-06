@@ -11,6 +11,11 @@ const props: TdTagProps = {
     type: Boolean,
     value: false,
   },
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态 */
   disabled: {
     type: Boolean,
@@ -38,11 +43,6 @@ const props: TdTagProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 组件风格，用于描述组件不同的应用场景 */
   theme: {

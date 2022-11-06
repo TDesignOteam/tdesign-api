@@ -7,11 +7,11 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 auto-start | Boolean | true | \- | N
 content | String / Slot | 'default' | \- | N
+custom-style | String | - | \- | N
 format | String | HH:mm:ss | \- | N
 millisecond | Boolean | false | \- | N
 size | String | 'small' | options：small/medium/large | N
 split-with-unit | Boolean | false | \- | N
-style | String | - | \- | N
 theme | String | 'default' | options：default/round/square | N
 time | Number | - | required | Y
 
