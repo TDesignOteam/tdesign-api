@@ -7,6 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 autoFocus | Boolean | - | \- | N
 clearable | Boolean | - | \- | N
+default | \- | - | \- | N
 disabled | Boolean | - | \- | N
 filter | Function | - | Typescript：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
 filterable | Boolean | true | \- | N
@@ -18,6 +19,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 status | String | - | options：default/success/warning/error | N
 textareaProps | Object | - | Typescript：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/auto-complete/type.ts) | N
 tips | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+trigger | \- | - | \- | N
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onBlur | Function |  | Typescript：`(context: { e: FocusEvent; value: string }) => void`<br/> | N

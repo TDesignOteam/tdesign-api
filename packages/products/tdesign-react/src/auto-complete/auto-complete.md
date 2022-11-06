@@ -8,6 +8,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 autoFocus | Boolean | - | 自动获取焦点 | N
+children | \- | - | 触发显示联想词下拉框的元素，同 `trigger` | N
 clearable | Boolean | - | 是否允许清空 | N
 disabled | Boolean | - | 是否禁用 | N
 filter | Function | - | 自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`。TS 类型：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
@@ -20,6 +21,7 @@ popupProps | Object | - | 透传 Popup 组件全部特性。TS 类型：`PopupPr
 status | String | - | 输入框状态。可选项：default/success/warning/error | N
 textareaProps | Object | - | 透传 Textarea 组件全部特性。TS 类型：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/auto-complete/type.ts) | N
 tips | TNode | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+trigger | \- | - | 触发显示联想词下拉框的元素，默认为 Input 组件，可以使用 `trigger` 自定义为 Textarea 组件或其他组件 | N
 value | String | - | 输入框的值，即当前指定的联想词 | N
 defaultValue | String | - | 输入框的值，即当前指定的联想词。非受控属性 | N
 onBlur | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>失去焦点时触发 | N
