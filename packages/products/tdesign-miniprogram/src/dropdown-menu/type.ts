@@ -24,6 +24,14 @@ export interface TdDropdownMenuProps {
     value?: boolean;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 动画时长
    * @default 200
    */
@@ -32,20 +40,19 @@ export interface TdDropdownMenuProps {
     value?: string | number;
   };
   /**
+   * 组件类名，分别用于设置 组件外层类名、菜单标签、菜单图标类名 等
+   */
+  externalClasses?: {
+    type: ArrayConstructor;
+    value?: ['t-class', 't-class-menu', 't-class-menu-item', 't-class-menu-label', 't-class-menu-icon'];
+  };
+  /**
    * 是否显示遮罩层
    * @default true
    */
   showOverlay?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 菜单栏 z-index 层级
@@ -59,12 +66,39 @@ export interface TdDropdownMenuProps {
 
 export interface TdDropdownItemProps {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否禁用
    * @default false
    */
   disabled?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 组件类名，分别用于设置 组件外层类名、菜单列、菜单列选项、菜单列选项标签、树形菜单、树形菜单列等类名
+   */
+  externalClasses?: {
+    type: ArrayConstructor;
+    value?: [
+      't-class',
+      't-class-content',
+      't-class-column',
+      't-class-column-item',
+      't-class-column-item-label',
+      't-class-tree',
+      't-class-tree-item',
+      't-class-tree-columns',
+      't-class-tree-columns-item',
+      't-class-tree-columns-item-label',
+      't-class-footer',
+    ];
   };
   /**
    * 用来定义 value / label 在 `options` 中对应的字段别名
@@ -112,14 +146,6 @@ export interface TdDropdownItemProps {
   optionsLayout?: {
     type: StringConstructor;
     value?: 'columns' | 'tree';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 选中值
