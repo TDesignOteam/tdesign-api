@@ -6,10 +6,19 @@
 
 import { TdDropdownItemProps } from './type';
 const props: TdDropdownItemProps = {
+  /** 自定义组件样式 */
+  customStyle: {
+    type: String,
+    value: '',
+  },
   /** 是否禁用 */
   disabled: {
     type: Boolean,
     value: false,
+  },
+  /** 组件类名，分别用于设置 组件外层类名、菜单列、菜单列选项、菜单列选项标签、树形菜单、树形菜单列等类名 */
+  externalClasses: {
+    type: Array,
   },
   /** 用来定义 value / label 在 `options` 中对应的字段别名 */
   keys: {
@@ -39,11 +48,6 @@ const props: TdDropdownItemProps = {
   optionsLayout: {
     type: String,
     value: 'columns',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 选中值 */
   value: {
