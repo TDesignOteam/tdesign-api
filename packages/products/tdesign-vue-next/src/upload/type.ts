@@ -316,10 +316,10 @@ export interface UploadFile {
 }
 
 export interface UploadDisplayDragEvents {
-  drop?: (event: DragEvent) => void;
-  dragenter?: (event: DragEvent) => void;
-  dragover?: (event: DragEvent) => void;
-  dragleave?: (event: DragEvent) => void;
+  onDrop?: (event: DragEvent) => void;
+  onDragenter?: (event: DragEvent) => void;
+  onDragover?: (event: DragEvent) => void;
+  onDragleave?: (event: DragEvent) => void;
 }
 
 export type ResponseType = { error?: string; url?: string } & Record<string, any>;

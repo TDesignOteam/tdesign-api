@@ -17,7 +17,7 @@ default | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 disabled | Boolean | - | \- | N
 dragContent | String / Slot / Function | - | drag content。Typescript：`TNode \| TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 draggable | Boolean | undefined | \- | N
-fileListDisplay | Slot / Function | - | Typescript：`TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>` `interface UploadDisplayDragEvents { drop?: (event: DragEvent) => void; dragenter?: (event: DragEvent) => void; dragover?: (event: DragEvent) => void; dragleave?: (event: DragEvent) => void; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
+fileListDisplay | Slot / Function | - | Typescript：`TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>` `interface UploadDisplayDragEvents { onDrop?: (event: DragEvent) => void; onDragenter?: (event: DragEvent) => void; onDragover?: (event: DragEvent) => void; onDragleave?: (event: DragEvent) => void; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 files | Array | [] | `v-model:files` is supported。Typescript：`Array<T>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript：`Array<T>` | N
 format | Function | - | Typescript：`(file: File) => UploadFile` | N

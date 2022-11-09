@@ -101627,7 +101627,7 @@
       "create_time": "2022-03-07 02:48:44",
       "update_time": "2022-05-06 02:33:52",
       "event_output": null,
-      "custom_field_type": "TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>【interface UploadDisplayDragEvents { drop?: (event: DragEvent) => void; dragenter?: (event: DragEvent) => void; dragover?: (event: DragEvent) => void; dragleave?: (event: DragEvent) => void; }】",
+      "custom_field_type": "TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>【interface UploadDisplayDragEvents { onDrop?: (event: DragEvent) => void; onDragenter?: (event: DragEvent) => void; onDragover?: (event: DragEvent) => void; onDragleave?: (event: DragEvent) => void; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
