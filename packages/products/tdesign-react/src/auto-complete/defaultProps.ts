@@ -7,5 +7,6 @@ import { TdAutoCompleteProps } from './type';
 export const autoCompleteDefaultProps: TdAutoCompleteProps = {
   filterable: true,
   highlightKeyword: true,
+  placeholder: undefined,
   size: 'medium',
 };
