@@ -27,6 +27,10 @@ function isTypeApi(cmp) {
   return componentsMap[cmp] && componentsMap[cmp].type === 'TS';
 }
 
+function isComponent(cmp) {
+  return !componentsMap[cmp].type;
+}
+
 function getCmpName(cmp) {
   if (isPlugin(cmp)) return renameToCase(cmp);
   if (isTypeApi(cmp)) {
@@ -175,6 +179,8 @@ module.exports = {
   renameToCase,
   isPlugin,
   isTypeApi,
+  isComponent,
+  componentsMap,
   getTdCmpName,
   getEventName,
   getFolderName,

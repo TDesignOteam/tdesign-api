@@ -40,6 +40,9 @@ const FRAMEWORK_MAP = {
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue2`,
+    helperPath: `${BASE_PATH_URL}/tdesign-vue/helper`,
+    docsPath: 'https://tdesign.tencent.com/vue/components/',
+    name: 'tdesign-vue',
     TNode,
   },
   'VueNext(PC)': {
@@ -60,6 +63,9 @@ const FRAMEWORK_MAP = {
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue3`,
+    helperPath: `${BASE_PATH_URL}/tdesign-vue-next/helper`,
+    docsPath: 'https://tdesign.tencent.com/vue-next/components/',
+    name: 'tdesign-vue-next',
     TNode,
   },
   'React(PC)': {
@@ -106,6 +112,9 @@ const FRAMEWORK_MAP = {
     getDocs: getVueApiDocs,
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue_mobile`,
+    helperPath: `${BASE_PATH_URL}/tdesign-mobile-vue/helper`,
+    docsPath: 'https://tdesign.tencent.com/mobile-vue/components/',
+    name: 'tdesign-mobile-vue',
     TNode,
   },
   'React(Mobile)': {
