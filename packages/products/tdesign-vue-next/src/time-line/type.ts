@@ -9,7 +9,7 @@ import { TNode } from '../common';
 export interface TdTimeLineProps {
   /**
    * 标签信息放在时间轴的位置，`mode='alternate'` 时生效。纵向时间轴信息位置：左侧、右侧或两侧，默认信息在时间轴右侧。横向时间轴信息位置：上方、下方、两侧
-   * @default right
+   * @default left
    */
   labelAlign?: 'left' | 'right' | 'alternate' | 'top' | 'bottom';
   /**
@@ -45,7 +45,7 @@ export interface TdTimeLineItemProps {
   dot?: TNode;
   /**
    * 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.
-   * @default default
+   * @default primary
    */
   dotColor?: string;
   /**
@@ -56,4 +56,8 @@ export interface TdTimeLineItemProps {
    * 标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`
    */
   labelAlign?: 'left' | 'right' | 'top' | 'bottom';
+  /**
+   * 是否处在加载状态
+   */
+  loading?: boolean;
 }

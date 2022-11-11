@@ -5,11 +5,11 @@
 import { TdTimeLineProps, TdTimeLineItemProps } from './type';
 
 export const timeLineDefaultProps: TdTimeLineProps = {
-  labelAlign: 'right',
+  labelAlign: 'left',
   layout: 'vertical',
   mode: 'alternate',
   reverse: false,
   theme: 'default',
 };
 
-export const timeLineItemDefaultProps: TdTimeLineItemProps = { dotColor: 'default' };
+export const timeLineItemDefaultProps: TdTimeLineItemProps = { dotColor: 'primary' };

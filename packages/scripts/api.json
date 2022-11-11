@@ -90418,7 +90418,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "right",
+      "field_default_value": "left",
       "field_enum": "left/right/alternate/top/bottom",
       "field_desc_zh": "标签信息放在时间轴的位置，`mode='alternate'` 时生效。纵向时间轴信息位置：左侧、右侧或两侧，默认信息在时间轴右侧。横向时间轴信息位置：上方、下方、两侧",
       "field_desc_en": "label info placement",
@@ -90804,7 +90804,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "default",
+      "field_default_value": "primary",
       "field_enum": "primary/warning/error/default",
       "field_desc_zh": "时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.",
       "field_desc_en": null,
