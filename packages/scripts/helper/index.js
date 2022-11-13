@@ -29,7 +29,8 @@ function start() {
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
-  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework]);
+  // Vue2 和 Vue3 同为 Vue，API 相同
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
