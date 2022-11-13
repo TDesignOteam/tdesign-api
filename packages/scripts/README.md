@@ -70,3 +70,11 @@ npm run api:helper 'Vue(PC)'
 npm run api:helper 'VueNext(PC)'
 npm run api:helper 'Vue(Mobile)'
 ```
+
+直接输出到项目仓库中
+
+```bash
+npm run api:helper 'Vue(PC)' 1 finalProject
+npm run api:helper 'VueNext(PC)' 1 finalProject
+npm run api:helper 'Vue(Mobile)' 1 finalProject
+```

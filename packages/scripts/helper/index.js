@@ -6,7 +6,6 @@
  * 命名行示例：npm run api:helper 'Vue(Mobile)'
  *
  */
-
 const fs = require('fs');
 const path = require('path');
 const { groupByComponent, formatArrayToMap, isComponent, componentsMap } = require('../common');
@@ -19,7 +18,7 @@ const chalk = require('chalk');
   * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
   */
 const [framework] = process.argv.slice(2);
- 
+
 start();
  
 function start() {
