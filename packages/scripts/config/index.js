@@ -18,7 +18,8 @@ const path = require('path');
  * componentPath 用于 API 文档，组件路径地址，不同的框架组件类型定义路径不同
  * commonRelativePath 用于 API 类型定义文件中。type 文件位置相对于 通用类型文件位置(common/global) 的路径
  * componentRelativiePath 用于 API 类型定义文件中。types 文件位置相对于组件文件位置的路径（某些组件的 API 类型包含另一个组件的 TS 类型）
- *
+ * helperPath 代码提示文件地址
+ * docsPath 文档地址
  * vscodePath 输出 API 文档，用于 vscode 提示插件（项目：vscode-tdesign）
  */
 const FRAMEWORK_MAP = {

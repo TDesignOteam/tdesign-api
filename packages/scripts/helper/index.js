@@ -29,9 +29,9 @@ function start() {
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
-  const framworkData = groupByComponent(ALL_API, frameworkMap[framework]);
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework]);
   // 生成代码提示文件
-  generateHelper(framworkData, framework);
+  generateHelper(frameworkData, framework);
 }
 
 function generateHelper(baseData, framework) {
@@ -152,5 +152,6 @@ function writeFileRecursive(name, buffer) {
 
   fs.mkdir(lastPath, { recursive: true }, () => {
     fs.writeFileSync(name, buffer);
+    console.log(chalk.green(`vue props: ${name} has been created.`));
   });
 }
