@@ -9,7 +9,8 @@
   "scripts": {
     "api:download": "node ./download.js",
     "api:docs": "npm run api:download && node ./index.js",
-    "api:vscode": "npm run api:download && node ./vscode"
+    "api:vscode": "npm run api:download && node ./vscode",
+    "api:helper": "npm run api:download && node ./helper"
   },
   "license": "MIT",
   "dependencies": {

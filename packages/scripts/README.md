@@ -60,3 +60,13 @@ npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
 npm run api:vscode 'Vue(PC)'
 npm run api:vscode 'React(PC)'
 ```
+
+## npm run api:helper
+
+自动生成代码提示文件
+
+```bash
+npm run api:helper 'Vue(PC)'
+npm run api:helper 'VueNext(PC)'
+npm run api:helper 'Vue(Mobile)'
+```
