@@ -50,6 +50,14 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   options?: Array<T>;
   /**
+   * 面板内的底部内容
+   */
+  panelBottomContent?: TNode;
+  /**
+   * 面板内的顶部内容
+   */
+  panelTopContent?: TNode;
+  /**
    * 输入框为空时的占位提示。组件本身默认值为 `undefined`，但全局配置存在默认值，不同语言全局默认值不同
    */
   placeholder?: string;
