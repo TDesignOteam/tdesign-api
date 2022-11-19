@@ -49623,9 +49623,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否允许输入超过 `max` `min` 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正",
+      "field_desc_zh": "是否允许输入超过 `max` `min` 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正。默认允许超出，数字超出范围时，输入框变红提醒",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
