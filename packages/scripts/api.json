@@ -22594,7 +22594,7 @@
       "field_desc_zh": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input'】",
+      "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' 】",
       "create_time": "2022-01-11 11:37:57",
       "update_time": "2022-03-20 14:49:19",
       "event_output": null,
@@ -41885,43 +41885,6 @@
       ]
     },
     {
-      "id": 3190,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Grid",
-      "field_category": 1,
-      "field_name": "theme",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "default",
-      "field_enum": "default/card",
-      "field_desc_zh": "宫格的风格",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-13 08:32:19",
-      "update_time": "2022-11-13 08:32:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2309,
       "platform_framework": [
         "8",
@@ -55524,7 +55487,7 @@
       ]
     },
     {
-      "id": 3191,
+      "id": 1624,
       "platform_framework": [
         "8",
         "16",
@@ -55533,18 +55496,18 @@
       ],
       "component": "Navbar",
       "field_category": 1,
-      "field_name": "capsule",
+      "field_name": "background",
       "field_type": [
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "左侧胶囊区域",
-      "field_desc_en": "",
+      "field_desc_zh": "背景",
+      "field_desc_en": "background",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-11-14 07:23:57",
-      "update_time": "2022-11-14 07:23:57",
+      "create_time": "2021-09-03 04:33:23",
+      "update_time": "2022-04-28 02:38:55",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -55552,7 +55515,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": null,
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -55560,43 +55523,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
-      "id": 3054,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Navbar",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:01",
-      "update_time": "2022-10-31 11:30:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -55727,14 +55653,14 @@
       ],
       "component": "Navbar",
       "field_category": 1,
-      "field_name": "left",
+      "field_name": "homeIcon",
       "field_type": [
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "左侧内容区域",
-      "field_desc_en": "left area of navbar",
+      "field_desc_zh": "首页图标地址。值为 '' 或者 undefiend 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_en": "homeIcon",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-03 07:31:35",
@@ -55754,7 +55680,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "TNode"
+        "String"
       ]
     },
     {
@@ -55801,49 +55727,6 @@
       ]
     },
     {
-      "id": 1625,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Navbar",
-      "field_category": 1,
-      "field_name": "leftArrow",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否展示左侧箭头",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-03 07:31:02",
-      "update_time": "2022-04-28 02:38:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 3150,
       "platform_framework": [
         "8",
@@ -55882,6 +55765,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1625,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "leftIcon",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧图标地址，值为 '' 或者 undefiend 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-03 07:31:02",
+      "update_time": "2022-04-28 02:38:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -55925,6 +55845,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3054,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:01",
+      "update_time": "2022-10-31 11:30:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -56141,6 +56098,39 @@
       "event_input": "",
       "create_time": "2021-09-07 02:50:29",
       "update_time": "2021-09-07 02:50:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1650,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 2,
+      "field_name": "goHome",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击 Home 触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-07 06:22:44",
+      "update_time": "2021-09-07 06:22:44",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
