@@ -49611,6 +49611,47 @@
       ]
     },
     {
+      "id": 3192,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "InputNumber",
+      "field_category": 1,
+      "field_name": "allowInputOverLimit",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否允许输入超过 `max` `min` 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-11-19 10:15:08",
+      "update_time": "2022-11-19 10:15:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2325,
       "platform_framework": [
         "1",
@@ -106603,5 +106644,5 @@
       ]
     }
   ],
-  "total": 2542
+  "total": 2543
 }
