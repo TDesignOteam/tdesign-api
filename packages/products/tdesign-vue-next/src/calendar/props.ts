@@ -57,6 +57,8 @@ export default {
   month: {
     type: [String, Number] as PropType<TdCalendarProps['month']>,
   },
+  /** 是否高亮多个日期单元格 */
+  multiple: Boolean,
   /** 是否禁用单元格右键默认系统菜单 */
   preventCellContextmenu: Boolean,
   /** 用于设置日历的年月份显示范围，[范围开始，范围结束] */

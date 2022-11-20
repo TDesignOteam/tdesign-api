@@ -55,6 +55,10 @@ export interface TdCalendarProps {
    */
   month?: string | number;
   /**
+   * 是否高亮多个日期单元格
+   */
+  multiple?: boolean;
+  /**
    * 是否禁用单元格右键默认系统菜单
    * @default false
    */

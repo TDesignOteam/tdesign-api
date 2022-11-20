@@ -17,6 +17,7 @@ head | TNode | - | Typescript：`string \| TNode<ControllerOptions>`。[see more
 isShowWeekendDefault | Boolean | true | \- | N
 mode | String | month | options：month/year | N
 month | String / Number | - | \- | N
+multiple | Boolean | - | \- | N
 preventCellContextmenu | Boolean | false | \- | N
 range | Array | - | Typescript：`Array<CalendarValue>` | N
 theme | String | full | options：full/card | N

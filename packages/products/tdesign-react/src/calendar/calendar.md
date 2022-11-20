@@ -17,6 +17,7 @@ head | TNode | - | 头部插槽（左上角处，默认不显示任何内容）�
 isShowWeekendDefault | Boolean | true | 默认是否显示周末 | N
 mode | String | month | 日历展示维度。可选项：month/year | N
 month | String / Number | - | 控制当前面板展示月份，优先级高于 `controllerConfig.month` | N
+multiple | Boolean | - | 是否高亮多个日期单元格 | N
 preventCellContextmenu | Boolean | false | 是否禁用单元格右键默认系统菜单 | N
 range | Array | - | 用于设置日历的年月份显示范围，[范围开始，范围结束]。TS 类型：`Array<CalendarValue>` | N
 theme | String | full | 日历风格。可选项：full/card | N
