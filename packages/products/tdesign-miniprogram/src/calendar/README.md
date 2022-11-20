@@ -13,6 +13,6 @@ min-date | Number / Date | - | 最小可选的日期，不传则默认今天 | N
 style | String | - | 自定义组件样式 | N
 title | String | - | 标题，不传默认为“请选择日期” | N
 type | String | single | 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择。可选项：single/multiple/range | N
-value | Number / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。可选项：number/Date/TCalendarValue[]。TS 类型：`TCalendarValue` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
-default-value | Number / Date | undefined | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。非受控属性。可选项：number/Date/TCalendarValue[]。TS 类型：`TCalendarValue` `type TCalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
+value | Number / Date | - | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。TS 类型：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
+default-value | Number / Date | undefined | 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组。非受控属性。TS 类型：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
 visible | Boolean | false | 是否显示日历 | N

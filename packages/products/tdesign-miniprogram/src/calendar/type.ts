@@ -73,14 +73,14 @@ export interface TdCalendarProps {
    */
   value?: {
     type: NumberConstructor;
-    value?: TCalendarValue;
+    value?: CalendarValue | CalendarValue[];
   };
   /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
    */
   defaultValue?: {
     type: NumberConstructor;
-    value?: TCalendarValue;
+    value?: CalendarValue | CalendarValue[];
   };
   /**
    * 是否显示日历
@@ -105,4 +105,4 @@ export interface TDate {
   suffix?: string;
 }
 
-export type TCalendarValue = number | Date;
+export type CalendarValue = number | Date;

@@ -71,7 +71,7 @@ export interface TdCalendarProps {
   /**
    * 当前高亮的日期
    */
-  value?: CalendarValue;
+  value?: CalendarValue | CalendarValue[];
   /**
    * 用于自定义日历星期呈现方式。CalendarWeek.day 表示当前是星期几。示例一：['周一', '周二', '周三', '周四', '周五', '星期六', '星期天']。示例二：`({ day }) => '周' + day`
    */
@@ -158,7 +158,7 @@ export interface CalendarCell extends ControllerOptions {
   weekOrder?: number;
 }
 
-export type CalendarValue = string | Date | Array<string | Date>;
+export type CalendarValue = string | Date;
 
 export interface CalendarWeek {
   day: WeekDay;
