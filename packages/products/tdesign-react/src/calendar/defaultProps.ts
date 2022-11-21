@@ -5,6 +5,7 @@
 import { TdCalendarProps } from './type';
 
 export const calendarDefaultProps: TdCalendarProps = {
+  fillWithZero: undefined,
   format: 'YYYY-MM-DD',
   isShowWeekendDefault: true,
   mode: 'month',

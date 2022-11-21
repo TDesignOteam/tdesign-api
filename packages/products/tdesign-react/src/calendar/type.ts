@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { ButtonProps } from '../button';
 import { RadioGroupProps } from '../radio';
 import { CheckTagProps } from '../tag';
 import { SelectProps } from '../select';
@@ -24,7 +25,7 @@ export interface TdCalendarProps {
    */
   controllerConfig?: boolean | CalendarController;
   /**
-   * 小于 10 的日期，是否使用 '0' 填充。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9`
+   * 小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9`
    */
   fillWithZero?: boolean;
   /**

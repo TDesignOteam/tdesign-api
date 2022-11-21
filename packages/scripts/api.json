@@ -8675,7 +8675,7 @@
       "create_time": "2022-01-31 06:30:24",
       "update_time": "2022-01-31 06:30:24",
       "event_output": null,
-      "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】",
+      "custom_field_type": "Partial<LoadingProps>【import { LoadingProps } from '@Loading'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -12823,9 +12823,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "小于 10 的日期，是否使用 '0' 填充。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9`",
+      "field_desc_zh": "小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -13570,6 +13570,7 @@
       "field_name": "value",
       "field_type": [
         "1",
+        "16",
         "128"
       ],
       "field_default_value": "",
@@ -13598,6 +13599,7 @@
       ],
       "field_type_text": [
         "String",
+        "Array",
         "Date"
       ]
     },
@@ -13614,6 +13616,7 @@
       "field_name": "value",
       "field_type": [
         "2",
+        "16",
         "128"
       ],
       "field_default_value": "",
@@ -13643,6 +13646,7 @@
       ],
       "field_type_text": [
         "Number",
+        "Array",
         "Date"
       ]
     },
@@ -14798,7 +14802,7 @@
       "create_time": "2021-01-16 10:01:06",
       "update_time": "2021-07-28 02:24:33",
       "event_output": null,
-      "custom_field_type": "{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }",
+      "custom_field_type": "{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }【import { ButtonProps } from '@Button'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

@@ -13,6 +13,6 @@ min-date | Number / Date | - | \- | N
 style | String | - | \- | N
 title | String | - | \- | N
 type | String | single | options：single/multiple/range | N
-value | Number / Date | - | Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
-default-value | Number / Date | undefined | uncontrolled property。Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
+value | Number / Array / Date | - | Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
+default-value | Number / Array / Date | undefined | uncontrolled property。Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = number \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
 visible | Boolean | false | \- | N

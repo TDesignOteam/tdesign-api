@@ -19,7 +19,7 @@ multiple | Boolean | - | \- | N
 preventCellContextmenu | Boolean | false | \- | N
 range | Array | - | Typescript：`Array<CalendarValue>` | N
 theme | String | full | options：full/card | N
-value | String / Date | - | Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = string \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/calendar/type.ts) | N
+value | String / Array / Date | - | Typescript：`CalendarValue \| CalendarValue[]` `type CalendarValue = string \| Date`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/calendar/type.ts) | N
 week | Array / Slot / Function | - | Typescript：`Array<string> \| TNode<CalendarWeek>` `interface CalendarWeek { day: WeekDay }` `type WeekDay = 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/calendar/type.ts) | N
 year | String / Number | - | \- | N
 onCellClick | Function |  | Typescript：`(options: { cell: CalendarCell; e: MouseEvent }) => void`<br/> | N
@@ -42,7 +42,7 @@ month-change | `(options: { month: string; year: string })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-current | Object | - | Typescript：`{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }` | N
+current | Object | - | Typescript：`{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/calendar/type.ts) | N
 disabled | Boolean | false | \- | N
 mode | Object | - | Typescript：`{ visible?: boolean; radioGroupProps?: RadioGroupProps }`，[Radio API Documents](./radio?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/calendar/type.ts) | N
 month | Object | - | Typescript：`{ visible?: boolean; selectProps?: SelectProps }` | N

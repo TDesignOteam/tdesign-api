@@ -42,16 +42,16 @@ export default {
   },
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
-    type: [Number, Date] as PropType<TdCalendarProps['value']>,
+    type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
     default: undefined,
   },
   modelValue: {
-    type: [Number, Date] as PropType<TdCalendarProps['value']>,
+    type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
     default: undefined,
   },
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性 */
   defaultValue: {
-    type: [Number, Date] as PropType<TdCalendarProps['defaultValue']>,
+    type: [Number, Array, Date] as PropType<TdCalendarProps['defaultValue']>,
   },
   /** 是否显示日历 */
   visible: Boolean,
