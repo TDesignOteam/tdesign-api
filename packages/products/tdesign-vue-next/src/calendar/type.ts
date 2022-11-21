@@ -20,7 +20,7 @@ export interface TdCalendarProps {
    */
   cellAppend?: string | TNode<CalendarCell>;
   /**
-   * 右上角控制器配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置
+   * 右上角控制器配置。支持全局配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置
    */
   controllerConfig?: boolean | CalendarController;
   /**

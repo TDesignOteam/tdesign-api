@@ -7,7 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 cell | String / Slot / Function | - | Typescript：`string \| TNode<CalendarCell>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 cellAppend | String / Slot / Function | - | Typescript：`string \| TNode<CalendarCell>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-controllerConfig | Boolean / Object | - | Typescript：`boolean \| CalendarController` | N
+controllerConfig | Boolean / Object | undefined | Typescript：`boolean \| CalendarController` | N
 fillWithZero | Boolean | true | \- | N
 firstDayOfWeek | Number | 1 | options：1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | \- | N

@@ -9,7 +9,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 cell | TNode | - | Typescript：`string \| TNode<CalendarCell>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 cellAppend | TNode | - | Typescript：`string \| TNode<CalendarCell>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-controllerConfig | Boolean / Object | - | Typescript：`boolean \| CalendarController` | N
+controllerConfig | Boolean / Object | undefined | Typescript：`boolean \| CalendarController` | N
 fillWithZero | Boolean | true | \- | N
 firstDayOfWeek | Number | 1 | options：1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | \- | N
