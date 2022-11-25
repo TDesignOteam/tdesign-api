@@ -27,23 +27,23 @@ triggerElement | String / Slot / Function | - | 触发显示联想词下拉框�
 value | String | - | 输入框的值，即当前指定的联想词。支持语法糖 `v-model` | N
 defaultValue | String | - | 输入框的值，即当前指定的联想词。非受控属性 | N
 onBlur | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>失去焦点时触发 | N
-onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent \| any }) => void`<br/>输入框值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
 onCompositionend | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入结束时触发 | N
 onCompositionstart | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入开始时触发 | N
 onEnter | Function |  | TS 类型：`(context: { e: KeyboardEvent; value: string }) => void`<br/>回车键按下时触发 | N
 onFocus | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>获得焦点时触发 | N
-onSelect | Function |  | TS 类型：`(value: string, context: { e: MouseEvent \| KeyboardEvent \| any }) => void`<br/>选中联想词时触发 | N
+onSelect | Function |  | TS 类型：`(value: string, context: { e: MouseEvent \| KeyboardEvent }) => void`<br/>选中联想词时触发 | N
 
 ### AutoComplete Events
 
 名称 | 参数 | 描述
 -- | -- | --
 blur | `(context: { e: FocusEvent; value: string })` | 失去焦点时触发
-change | `(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent \| any })` | 输入框值发生变化时触发
+change | `(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent })` | 输入框值发生变化时触发
 clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
 compositionend | `(context: { e: CompositionEvent; value: string })` | 中文输入结束时触发
 compositionstart | `(context: { e: CompositionEvent; value: string })` | 中文输入开始时触发
 enter | `(context: { e: KeyboardEvent; value: string })` | 回车键按下时触发
 focus | `(context: { e: FocusEvent; value: string })` | 获得焦点时触发
-select | `(value: string, context: { e: MouseEvent \| KeyboardEvent \| any })` | 选中联想词时触发
+select | `(value: string, context: { e: MouseEvent \| KeyboardEvent })` | 选中联想词时触发

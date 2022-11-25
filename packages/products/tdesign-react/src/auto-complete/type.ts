@@ -109,7 +109,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   onChange?: (
     value: string,
-    context?: { e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLLIElement> | KeyboardEvent | any },
+    context?: { e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLLIElement> | KeyboardEvent },
   ) => void;
   /**
    * 清空按钮点击时触发
@@ -134,7 +134,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   /**
    * 选中联想词时触发
    */
-  onSelect?: (value: string, context: { e: MouseEvent<HTMLLIElement> | KeyboardEvent | any }) => void;
+  onSelect?: (value: string, context: { e: MouseEvent<HTMLLIElement> | KeyboardEvent }) => void;
 }
 
 export type AutoCompleteOption = string | AutoCompleteOptionObj;
