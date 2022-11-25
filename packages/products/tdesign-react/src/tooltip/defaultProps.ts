@@ -14,6 +14,6 @@ export const tooltipDefaultProps: TdTooltipProps = {
 export const tooltipLiteDefaultProps: TdTooltipLiteProps = {
   placement: 'top',
   showArrow: true,
-  theme: 'dark',
-  trigger: 'hover',
+  showShadow: true,
+  theme: 'default',
 };
