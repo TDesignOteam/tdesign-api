@@ -93817,7 +93817,7 @@
       ],
       "component": "Tooltip",
       "field_category": 16,
-      "field_name": "PopupProps",
+      "field_name": "TdPopupProps",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
