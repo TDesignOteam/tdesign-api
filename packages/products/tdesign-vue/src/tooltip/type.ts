@@ -5,9 +5,10 @@
  * */
 
 import { PopupPlacement } from '../popup';
+import { TdPopupProps } from '../popup';
 import { TNode } from '../common';
 
-export interface TdTooltipProps {
+export interface TdTooltipProps extends TdPopupProps {
   /**
    * 【议案讨论中】延迟出现提示，用于异步加载提示信息需要延迟显示的业务场景下
    */
