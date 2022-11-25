@@ -93706,7 +93706,7 @@
       "create_time": "2022-04-21 08:39:07",
       "update_time": "2022-05-06 07:41:27",
       "event_output": null,
-      "custom_field_type": "'mouse' | PopupPlacement【import { PopupPlacement } from '@Popup'】",
+      "custom_field_type": "PopupPlacement【import { PopupPlacement } from '@Popup'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -93808,15 +93808,16 @@
       ]
     },
     {
-      "id": 2619,
+      "id": 3195,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Tooltip",
       "field_category": 16,
-      "field_name": "Omit<PopupProps, 'placement'>【import { PopupProps } from '@Popup'】",
+      "field_name": "PopupProps",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -93824,8 +93825,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-04-21 08:36:40",
-      "update_time": "2022-05-06 07:41:45",
+      "create_time": "2022-11-25 09:41:35",
+      "update_time": "2022-11-25 09:41:35",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -93840,7 +93841,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -93940,7 +93942,7 @@
         "1"
       ],
       "field_default_value": "top",
-      "field_enum": "top/bottom",
+      "field_enum": "top/bottom/mouse",
       "field_desc_zh": "提示浮层出现的位置",
       "field_desc_en": null,
       "field_required": 0,
