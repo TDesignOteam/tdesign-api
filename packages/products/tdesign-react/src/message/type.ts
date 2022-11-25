@@ -34,7 +34,7 @@ export interface TdMessageProps {
   /**
    * 关闭消息时触发
    */
-  onClose?: (context?: { trigger: 'duration' | 'close-click' }) => void;
+  onClose?: (context: { trigger: 'close-click' | 'duration-end'; e?: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 当关闭按钮存在时，用户点击关闭按钮触发
    */

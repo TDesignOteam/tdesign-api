@@ -1,19 +1,18 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Notification Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-closeBtn | String / Boolean / Slot / Function | undefined | Typescript：`string | boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-content | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-default | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+closeBtn | String / Boolean / Slot / Function | undefined | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 duration | Number | 3000 | \- | N
-footer | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-icon | Boolean / Slot / Function | true | Typescript：`boolean | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-theme | String | info | options：info/success/warning/error。Typescript：`NotificationThemeList` `type NotificationThemeList = 'info' | 'success' | 'warning' | 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/notification/type.ts) | N
-title | String / Slot / Function | - | Typescript：`string | TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+footer | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+icon | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+theme | String | info | options：info/success/warning/error。Typescript：`NotificationThemeList` `type NotificationThemeList = 'info' \| 'success' \| 'warning' \| 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/notification/type.ts) | N
+title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
 
@@ -29,14 +28,14 @@ duration-end | \- | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 attach | String / Function | 'body' | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-offset | Array | - | Typescript：`Array<string | number>` | N
-placement | String | top-right | options：top-left/top-right/bottom-left/bottom-right。Typescript：`NotificationPlacementList` `type NotificationPlacementList = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/notification/type.ts) | N
+offset | Array | - | Typescript：`Array<string \| number>` | N
+placement | String | top-right | options：top-left/top-right/bottom-left/bottom-right。Typescript：`NotificationPlacementList` `type NotificationPlacementList = 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/notification/type.ts) | N
 zIndex | Number | 6000 | \- | N
 `NotificationProps` | \- | - | \- | N
 
 ### NotificationPlugin
 
-同时也支持 `this.$notification`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -45,7 +44,7 @@ options | Object | - | required。Typescript：`NotificationOptions`
 
 ### NotificationPlugin.info
 
-同时也支持 `this.$notification.info`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.info`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -55,7 +54,7 @@ options | Object | - | required。Typescript：`NotificationInfoOptions` `type N
 
 ### NotificationPlugin.warning
 
-同时也支持 `this.$notification.warning`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.warning`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -65,7 +64,7 @@ options | Object | - | required。Typescript：`NotificationInfoOptions`
 
 ### NotificationPlugin.error
 
-同时也支持 `this.$notification.error`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.error`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -75,7 +74,7 @@ options | Object | - | required。Typescript：`NotificationInfoOptions`
 
 ### NotificationPlugin.success
 
-同时也支持 `this.$notification.success`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.success`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -85,7 +84,7 @@ options | Object | - | required。Typescript：`NotificationInfoOptions`
 
 ### NotificationPlugin.close
 
-同时也支持 `this.$notification.close`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.close`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -93,7 +92,7 @@ options | Object | - | required。Typescript：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.closeAll
 
-同时也支持 `this.$notification.closeAll`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.closeAll`。
 
 name | params | default | description
 -- | -- | -- | --
@@ -101,7 +100,7 @@ name | params | default | description
 
 ### NotificationPlugin.config
 
-同时也支持 `this.$notification.config`。这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，
+同时也支持 `this.$notification.config`。
 
 name | params | default | description
 -- | -- | -- | --
