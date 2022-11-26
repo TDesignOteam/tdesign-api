@@ -5,7 +5,21 @@
         <div>
           <div>
             <span style="padding-right: 8px;">{{ row.component }}</span>
-            <t-tag size="small">{{ row.field_category_text }}</t-tag>
+            <t-tag
+              v-if="row.field_category_text"
+              size="small"
+              :theme="{
+                Props: 'primary',
+                Events: 'success',
+                Functions: 'warning',
+                Return: 'default',
+                Extends: 'default',
+                '<T>': 'default',
+              }[row.field_category_text] || 'primary'"
+              variant="light"
+            >
+              {{ row.field_category_text }}
+            </t-tag>
           </div>
         </div>
       </template>
