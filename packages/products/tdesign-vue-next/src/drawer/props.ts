@@ -11,7 +11,6 @@ export default {
   /** 抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdDrawerProps['attach']>,
-    default: '',
   },
   /** 抽屉内容 */
   body: {
@@ -20,7 +19,6 @@ export default {
   /** 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件 */
   cancelBtn: {
     type: [String, Object, Function] as PropType<TdDrawerProps['cancelBtn']>,
-    default: '',
   },
   /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例 */
   closeBtn: {
@@ -39,7 +37,6 @@ export default {
   /** 确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDrawerProps['confirmBtn']>,
-    default: '',
   },
   /** 抽屉内容，同 body */
   default: {

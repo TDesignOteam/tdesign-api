@@ -9,18 +9,15 @@ import { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDialogProps {
   /**
-   * 对话框挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
-   * @default ''
+   * 对话框挂载的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
    */
   attach?: AttachNode;
   /**
    * 对话框内容
-   * @default ''
    */
   body?: string | TNode;
   /**
    * 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件
-   * @default ''
    */
   cancelBtn?: string | ButtonProps | TNode | null;
   /**
@@ -38,7 +35,6 @@ export interface TdDialogProps {
   closeOnOverlayClick?: boolean;
   /**
    * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
-   * @default ''
    */
   confirmBtn?: string | ButtonProps | TNode | null;
   /**
