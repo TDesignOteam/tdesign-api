@@ -28867,49 +28867,6 @@
       ]
     },
     {
-      "id": 53,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "body",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "对话框内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-27 09:25:50",
-      "update_time": "2021-07-28 02:59:45",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
       "id": 1286,
       "platform_framework": [
         "8",
@@ -28953,11 +28910,8 @@
       ]
     },
     {
-      "id": 56,
+      "id": 3197,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32",
@@ -28977,8 +28931,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-10-27 09:32:42",
-      "update_time": "2022-06-06 09:51:08",
+      "create_time": "2022-11-26 05:46:16",
+      "update_time": "2022-11-26 05:46:16",
       "event_output": null,
       "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
       "syntactic_sugar": null,
@@ -28986,14 +28940,11 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -29041,51 +28992,6 @@
       ],
       "field_type_text": [
         "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 55,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "closeBtn",
-      "field_type": [
-        "1",
-        "4",
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-27 09:30:23",
-      "update_time": "2021-04-15 08:53:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Boolean",
         "TNode"
       ]
     },
@@ -29180,11 +29086,8 @@
       ]
     },
     {
-      "id": 57,
+      "id": 3198,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32",
@@ -29204,8 +29107,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-10-27 09:33:06",
-      "update_time": "2022-04-09 10:52:37",
+      "create_time": "2022-11-26 05:46:44",
+      "update_time": "2022-11-26 05:46:44",
       "event_output": null,
       "custom_field_type": "string | ButtonProps | TNode | null",
       "syntactic_sugar": null,
@@ -29213,14 +29116,11 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -29312,45 +29212,6 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1158,
-      "platform_framework": [
-        "1"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "default",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "对话框内容，同 body",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-04-14 12:47:48",
-      "update_time": "2022-01-12 02:42:13",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)"
       ],
       "field_type_text": [
         "String",
@@ -29483,94 +29344,6 @@
       ]
     },
     {
-      "id": 54,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "footer",
-      "field_type": [
-        "4",
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-27 09:26:13",
-      "update_time": "2021-07-28 03:01:15",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
-      "id": 52,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "header",
-      "field_type": [
-        "1",
-        "4",
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-27 09:25:31",
-      "update_time": "2021-07-28 03:01:24",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
       "id": 46,
       "platform_framework": [
         "1",
@@ -29584,8 +29357,8 @@
         "1"
       ],
       "field_default_value": "modal",
-      "field_enum": "modal/modeless/normal/full-screen",
-      "field_desc_zh": "对话框类型，有 4 种：模态对话框、非模态对话框、普通对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件",
+      "field_enum": "modal/modeless/full-screen",
+      "field_desc_zh": "对话框类型，有 3 种：模态对话框、非模态对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -29872,47 +29645,6 @@
       ]
     },
     {
-      "id": 715,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "theme",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "default",
-      "field_enum": "default/info/warning/danger/success",
-      "field_desc_zh": "对话框风格",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-01-18 08:03:44",
-      "update_time": "2021-04-15 06:31:27",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1372,
       "platform_framework": [
         "8",
@@ -30179,51 +29911,11 @@
       ]
     },
     {
-      "id": 66,
+      "id": 3196,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
-        "32"
-      ],
-      "component": "Dialog",
-      "field_category": 2,
-      "field_name": "cancel",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2020-10-27 10:43:43",
-      "update_time": "2022-04-06 08:54:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLButtonElement>",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 2547,
-      "platform_framework": [
+        "32",
         "64"
       ],
       "component": "Dialog",
@@ -30235,9 +29927,9 @@
       "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-06 08:52:12",
-      "update_time": "2022-04-07 08:00:30",
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2022-11-26 05:39:25",
+      "update_time": "2022-11-26 05:39:25",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -30250,6 +29942,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -30362,43 +30057,6 @@
       "field_type_text": []
     },
     {
-      "id": 65,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 2,
-      "field_name": "closeBtnClick",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "点击右上角关闭按钮时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2020-10-27 10:42:30",
-      "update_time": "2021-04-29 02:57:34",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": []
-    },
-    {
       "id": 71,
       "platform_framework": [
         "1",
@@ -30436,43 +30094,6 @@
         "Angular(PC)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 68,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Dialog",
-      "field_category": 2,
-      "field_name": "confirm",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(context: { e: MouseEvent | KeyboardEvent })",
-      "create_time": "2020-10-27 10:44:31",
-      "update_time": "2022-03-13 09:39:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLButtonElement>",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -30597,7 +30218,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Dialog",
       "field_category": 2,
@@ -30628,27 +30250,30 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
     {
-      "id": 2549,
+      "id": 3199,
       "platform_framework": [
-        "64"
+        "1",
+        "2",
+        "4"
       ],
       "component": "Dialog",
-      "field_category": 2,
-      "field_name": "overlayClick",
+      "field_category": 16,
+      "field_name": "TdDialogCardProps",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "如果蒙层存在，点击蒙层时触发",
+      "field_desc_zh": null,
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-04-06 08:54:13",
-      "update_time": "2022-04-07 08:00:35",
+      "create_time": "2022-11-26 05:50:36",
+      "update_time": "2022-11-26 05:50:36",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -30659,9 +30284,468 @@
       "version": "",
       "test_description": null,
       "support_default_value": 0,
+      "field_category_text": "Extends",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 53,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "body",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话框内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:25:50",
+      "update_time": "2021-07-28 02:59:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 56,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "cancelBtn",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:32:42",
+      "update_time": "2022-06-06 09:51:08",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 55,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:30:23",
+      "update_time": "2021-04-15 08:53:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 57,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "confirmBtn",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:33:06",
+      "update_time": "2022-04-09 10:52:37",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1158,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话框内容，同 body",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-04-14 12:47:48",
+      "update_time": "2022-01-12 02:42:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 54,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:26:13",
+      "update_time": "2021-07-28 03:01:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 52,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "1",
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-10-27 09:25:31",
+      "update_time": "2021-07-28 03:01:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 715,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/info/warning/danger/success",
+      "field_desc_zh": "对话框风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-01-18 08:03:44",
+      "update_time": "2021-04-15 06:31:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 66,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "cancel",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2020-10-27 10:43:43",
+      "update_time": "2022-04-06 08:54:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLButtonElement>",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Miniprogram"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 65,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "closeBtnClick",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击右上角关闭按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2020-10-27 10:42:30",
+      "update_time": "2021-04-29 02:57:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 68,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "confirm",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent | KeyboardEvent })",
+      "create_time": "2020-10-27 10:44:31",
+      "update_time": "2022-03-13 09:39:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLButtonElement>",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -106667,5 +106751,5 @@
       ]
     }
   ],
-  "total": 2544
+  "total": 2546
 }

@@ -1006,6 +1006,10 @@
         "label": "迷你分页"
       },
       {
+        "value": "DialogCard",
+        "label": "对话框卡片"
+      },
+      {
         "value": "Toast",
         "label": "轻提示"
       },

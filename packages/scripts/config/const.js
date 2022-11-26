@@ -71,7 +71,7 @@ const COMPONENT_API_MD_MAP = {
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
   DropdownMenu: ['DropdownMenu', 'DropdownItem'],
-  Dialog: ['Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+  Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
   Table: TABLE_LIST,
@@ -156,7 +156,7 @@ const TYPES_COMBINE_MAP = {
     includes: mobileFrames,
   },
   Dialog: {
-    list: ['Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+    list: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   },
   Drawer: {
     list: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
