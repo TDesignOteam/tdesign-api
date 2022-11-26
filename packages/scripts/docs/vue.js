@@ -57,6 +57,14 @@ function groupByFieldCategory(componentApi) {
   return result;
 }
 
+function parseJSON(json) {
+  try {
+    return JSON.parse(json);
+  } catch(e) {
+    return {};
+  }
+}
+
 function formatDesc(
   api,
   { isUncontrol, current: config, framework },
@@ -67,6 +75,11 @@ function formatDesc(
   // 是否已废弃
   if (api.deprecated) {
     desc.push(curLanguage.deprecated);
+  }
+  // 版本号
+  if (api.version) {
+    const version = parseJSON(api.version);
+    version[framework] && desc.push(`\`${version[framework]}\``);
   }
   // html原生属性
   if (api.html_attribute) {

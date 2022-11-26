@@ -21,6 +21,14 @@ export interface TdDividerProps {
     value?: string;
   };
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 是否虚线（仅在水平分割线有效）
    * @default false
    */
