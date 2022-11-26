@@ -266,6 +266,12 @@ export default {
     },
     onApiConfirm () {
       const data = this.$refs['api-form'].formData
+      try {
+        JSON.parse(data.version);
+      } catch(e) {
+        this.$message.error('版本号格式必须为合法 JSON');
+        return;
+      }
       const params = {
         id: this.apiInfo ? this.apiInfo.id : undefined,
         platform_framework: data.platform,
