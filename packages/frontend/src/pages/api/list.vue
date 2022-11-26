@@ -1,9 +1,17 @@
 <template>
   <div class="API-Preview tdesign-document">
-    <t-table :data="list" :columns="columns" rowKey='id' hover>
+    <t-table :data="list" :columns="columns" rowKey='id' tableLayout="auto" hover>
+      <template #component="{ row = {} }">
+        <div>
+          <div>
+            <span style="padding-right: 8px;">{{ row.component }}</span>
+            <t-tag size="small">{{ row.field_category_text }}</t-tag>
+          </div>
+        </div>
+      </template>
       <!-- 字段描述 -->
       <template #field_desc_zh="{ row = {} }">
-        <span>
+        <div>
           <p>
             <template v-if="row.deprecated">已废弃。</template>
             <template v-if="row.html_attribute">HTML 原生属性。</template>
@@ -24,16 +32,23 @@
             </template>
             <template v-if="row.support_default_value">支持非受控属性。</template>
           </p>
-        </span>
+
+          <p style="font-size: 12px; color: #a6a6a6;">
+            {{ row.platform_framework_text.join(', ') }}
+          </p>
+          <p v-if="row.version" style="font-size: 12px; color: #a6a6a6;">
+            版本号：{{ row.version }}
+          </p>
+        </div>
       </template>
       <template #field_type_text="{ row }">
         {{ row.field_type_text && row.field_type_text.join('/') }}
       </template>
 
       <!-- 平台 -->
-      <template #platform_framework="{ row = {} }">
-        <div class="t-demo-platforms" v-if="row">
-          <!-- 总共 7 个平台框架 -->
+      <!-- 总共 7 个平台框架 -->
+      <!-- <template #platform_framework="{ row = {} }">
+        <div class="t-demo-platforms" v-if="row" style="font-size: 12px">
           <span v-if="row.platform_framework_text.length === 7">全部</span>
           <template v-else>
             <span v-for="(item, index) in row.platform_framework_text" :key="index">
@@ -41,7 +56,7 @@
             </span>
           </template>
         </div>
-      </template>
+      </template> -->
       <!-- 操作列 -->
       <template #operation="data">
         <div class="t-demo-table-btns">
@@ -56,7 +71,7 @@
           </t-popup> -->
           <t-button variant="text" @click="() => onEditClick(data)">编辑</t-button>
           <t-popconfirm theme="default" content="确定删除吗？" trigger="click" @confirm="() => onDeleteConfirm(data)">
-            <t-button variant="text">删除</t-button>
+            <t-button variant="text" style="margin-left: 16px">删除</t-button>
           </t-popconfirm>
         </div>
       </template>
@@ -102,43 +117,38 @@ export default {
         {
           title: '组件/插件',
           colKey: 'component',
-          width: 180,
-          fixed: 'left'
+          fixed: 'left',
+          width: 200,
         },
-        {
-          title: '分类',
-          colKey: 'field_category_text',
-          width: 120
-        },
+        // {
+        //   title: '分类',
+        //   colKey: 'field_category_text',
+        // },
+        // {
+        //   title: '平台框架',
+        //   colKey: 'platform_framework',
+        // },
         {
           title: '名称',
           colKey: 'field_name',
-          width: 200
         },
         {
           title: '描述',
           colKey: 'field_desc_zh',
-          width: 450
         },
         {
           title: '类型',
           colKey: 'field_type_text',
-          width: 180
         },
         {
           title: '默认值',
           colKey: 'field_default_value',
-          width: 100
-        },
-        {
-          title: '平台框架',
-          colKey: 'platform_framework',
-          width: 400
+          width: 90,
         },
         {
           title: '更新时间',
           colKey: 'update_time',
-          width: 150
+          width: 136,
         }
       ]
       if (!this.preview) {
@@ -146,7 +156,6 @@ export default {
           title: '操作',
           align: 'center',
           colKey: 'operation',
-          width: 150,
           fixed: 'right'
         })
       }
@@ -190,6 +199,7 @@ div.tdesign-document.API-Preview  {
   .t-demo-table-btns {
     display: flex;
     justify-content: space-between;
+    width: 80px;
     .t-button {
       padding: 0;
     }
@@ -200,6 +210,10 @@ div.tdesign-document.API-Preview  {
     display: block;
     font-weight: normal;
     text-align: center;
+  }
+
+  p {
+    margin: 8px 0;
   }
 }
 .t-demo-platforms {

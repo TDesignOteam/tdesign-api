@@ -200,9 +200,31 @@
     </template>
 
     <div class="t-form-item">
+      <label>
+        版本号
+        <t-popup
+          class="placement-top"
+          :content="versionDescription"
+          placement="top-left"
+          visibleArrow
+        >
+          <t-icon name="help-circle" size="middle"/>
+        </t-popup>
+        ：
+      </label>
+      <div class="t-form-content">
+        <t-textarea
+          v-model="formData.version"
+          :autosize="{ minRows: 3 }"
+          placeholder="从哪个版本号开始支持的这个 API（JSON）"
+        ></t-textarea>
+      </div>
+    </div>
+
+    <div class="t-form-item">
       <label>测试用例描述：</label>
       <div class="t-form-content">
-        <t-textarea v-model="formData.testDescription" :autosize="{ minRows: 5 }" placeholder="请输入单测用例描述语言"></t-textarea>
+        <t-textarea v-model="formData.testDescription" :autosize="{ minRows: 3 }" placeholder="请输入单测用例描述语言"></t-textarea>
       </div>
     </div>
 
@@ -244,6 +266,17 @@ import {
   API_CATEGORY_T
 } from './const'
 
+const versionDescription = [
+  '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
+  `示例：${JSON.stringify({
+    'Vue(PC)': '0.50.1',
+    'VueNext(PC)': '0.24.9',
+    'React(PC)': '0.43.1',
+    'Miniprogram': '0.27.0',
+    'Vue(Mobile)': '0.14.1',
+  }, undefined, 2)}`,
+].join('\n');
+
 export default {
   name: 'APIDesignImport',
 
@@ -262,6 +295,7 @@ export default {
       API_CATEGORY_PLUGINS,
       STRING,
       list: [],
+      versionDescription,
       formData: {
         platform: [],
         component: '',
@@ -275,6 +309,7 @@ export default {
         descZh: '',
         descEn: '',
         testDescription: '',
+        version: '',
         supportDefaultValue: false,
         name: '',
         eventInput: '',
@@ -344,6 +379,7 @@ export default {
         descZh: val.field_desc_zh,
         descEn: val.field_desc_en,
         testDescription: val.test_description,
+        version: val.version,
         supportDefaultValue: Boolean(val.support_default_value),
         htmlAttribute: Boolean(val.html_attribute),
         name: val.field_name,
@@ -390,6 +426,7 @@ export default {
   .t-form-content,
   .t-form-item > label {
     display: inline-block;
+    vertical-align: top;
   }
 
   .t-form-content.platform,

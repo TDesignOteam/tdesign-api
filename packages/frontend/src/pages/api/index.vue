@@ -279,6 +279,7 @@ export default {
         field_desc_zh: data.descZh,
         field_desc_en: data.descEn,
         test_description: data.testDescription,
+        version: data.version,
         support_default_value: Number(data.supportDefaultValue),
         field_required: data.required,
         deprecated: Number(data.deprecated),
