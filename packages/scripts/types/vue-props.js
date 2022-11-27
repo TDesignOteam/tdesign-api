@@ -290,10 +290,10 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     });
 
     // 如果存在小程序原生属性，则需要放进 props
-    if (miniprogram.MP_PROPS) {
-      const mp = getMiniprogramOriginalApi(miniprogram, cmp);
-      propStrs = propStrs.concat(mp);
-    }
+    // if (miniprogram.MP_PROPS) {
+    //   const mp = getMiniprogramOriginalApi(miniprogram, cmp);
+    //   propStrs = propStrs.concat(mp);
+    // }
 
     propStrs.push('};\n');
     let body = '';

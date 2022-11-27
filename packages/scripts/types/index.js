@@ -473,10 +473,10 @@ function getTypeScriptDesc(componentMap, framework) {
     });
 
     // 添加小程序组件原生属性
-    if (miniprogram.MP_PROPS) {
-      const mp = getMiniprogramOriginalApi(miniprogram);
-      body = body.concat(mp);
-    }
+    // if (miniprogram.MP_PROPS) {
+    //   const mp = getMiniprogramOriginalApi(miniprogram);
+    //   body = body.concat(mp);
+    // }
 
     const TdName = getTdCmpName(cmp);
 

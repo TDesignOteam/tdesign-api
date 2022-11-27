@@ -412,10 +412,10 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         }
       });
       // 添加小程序组件原生属性
-      if (miniprogram.MP_PROPS) {
-        const mp = getMiniprogramOriginalApi(miniprogram, current, docTitleType);
-        md[category].apis = md[category].apis.concat(mp);
-      }
+      // if (miniprogram.MP_PROPS) {
+      //   const mp = getMiniprogramOriginalApi(miniprogram, current, docTitleType);
+      //   md[category].apis = md[category].apis.concat(mp);
+      // }
     });
 
     // 整理数据到一个数组
