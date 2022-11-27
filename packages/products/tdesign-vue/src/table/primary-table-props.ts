@@ -104,7 +104,7 @@ export default {
   },
   /** 是否支持多列排序 */
   multipleSort: Boolean,
-  /** 行选中功能，是否在分页时保留上一页选中结果不清空。值为 `false` 则表示全部选中操作停留在当前页，不跨分页 */
+  /** 行选中功能，是否在分页时保留上一页选中结果不清空，本地数据分页场景下，会全选所有页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页；本地数据分页场景下，全选仅选中当前页 */
   reserveSelectedRowOnPaginate: {
     type: Boolean,
     default: true,
