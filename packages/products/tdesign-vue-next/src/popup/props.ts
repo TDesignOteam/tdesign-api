@@ -21,7 +21,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdPopupProps['default']>,
   },
-  /** 延时显示或隐藏覆层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150] */
+  /** 延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150] */
   delay: {
     type: [Number, Array] as PropType<TdPopupProps['delay']>,
   },
@@ -52,6 +52,14 @@ export default {
     type: String,
     default: 'top',
   },
+  /** popper 初始化配置，详情参考 https://popper.js.org/docs/ */
+  popperOptions: {
+    type: Object as PropType<TdPopupProps['popperOptions']>,
+  },
+  /** 点击触发元素后，浮层将显示在 `reference` 附近，通过 `placement` 定义方向。浮层显示的位置不一定是触发浮层显示的元素。一般应用在列表中，大量单元格都需要使用到浮层能力，此时可以通过动态调整 `reference` 来实现只需渲染一个浮层元素 */
+  reference: {
+    type: [String, Function] as PropType<TdPopupProps['reference']>,
+  },
   /** 是否显示浮层箭头 */
   showArrow: Boolean,
   /** 触发浮层出现的方式 */
@@ -63,7 +71,7 @@ export default {
       return ['hover', 'click', 'focus', 'context-menu'].includes(val);
     },
   },
-  /** 触发元素 */
+  /** 触发元素，点击这个元素会触发显示浮层。值类型为字符串表示元素选择器。示例一：`'#trigger-element'`，示例二：`() => document.body` */
   triggerElement: {
     type: [String, Function] as PropType<TdPopupProps['triggerElement']>,
   },

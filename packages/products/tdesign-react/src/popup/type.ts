@@ -5,6 +5,7 @@
  * */
 
 import { TNode, ClassName, Styles, AttachNode } from '../common';
+import { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
 
 export interface TdPopupProps {
   /**
@@ -13,13 +14,13 @@ export interface TdPopupProps {
    */
   attach?: AttachNode;
   /**
-   * 浮层里面的内容
-   */
-  content?: string | TNode;
-  /**
    * 触发元素，同 triggerElement
    */
-  default?: string | TNode;
+  children?: TNode;
+  /**
+   * 浮层里面的内容
+   */
+  content?: TNode;
   /**
    * 延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]
    */
@@ -67,7 +68,7 @@ export interface TdPopupProps {
   /**
    * 点击触发元素后，浮层将显示在 `reference` 附近，通过 `placement` 定义方向。浮层显示的位置不一定是触发浮层显示的元素。一般应用在列表中，大量单元格都需要使用到浮层能力，此时可以通过动态调整 `reference` 来实现只需渲染一个浮层元素
    */
-  reference?: string | TNode;
+  reference?: TNode;
   /**
    * 是否显示浮层箭头
    * @default false
@@ -81,7 +82,7 @@ export interface TdPopupProps {
   /**
    * 触发元素，点击这个元素会触发显示浮层。值类型为字符串表示元素选择器。示例一：`'#trigger-element'`，示例二：`() => document.body`
    */
-  triggerElement?: string | TNode;
+  triggerElement?: TNode;
   /**
    * 是否显示浮层
    * @default false
@@ -93,18 +94,13 @@ export interface TdPopupProps {
    */
   defaultVisible?: boolean;
   /**
-   * 是否显示浮层
-   * @default false
-   */
-  modelValue?: boolean;
-  /**
    * 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500
    */
   zIndex?: number;
   /**
    * 下拉选项滚动事件
    */
-  onScroll?: (context: { e: WheelEvent }) => void;
+  onScroll?: (context: { e: WheelEvent<HTMLDivElement> }) => void;
   /**
    * 当浮层隐藏或显示时触发，`trigger=document` 表示点击非浮层元素触发；`trigger=context-menu` 表示右击触发
    */
@@ -130,7 +126,7 @@ export interface PopupVisibleChangeContext {
   trigger?: PopupTriggerSource;
 }
 
-export type PopupTriggerEvent = MouseEvent | FocusEvent | KeyboardEvent;
+export type PopupTriggerEvent = MouseEvent<HTMLDivElement> | FocusEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;
 
 export type PopupTriggerSource =
   | 'document'
