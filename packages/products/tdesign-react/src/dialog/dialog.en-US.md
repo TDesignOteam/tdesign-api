@@ -37,7 +37,7 @@ preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
 showOverlay | Boolean | true | \- | N
 top | String / Number | - | \- | N
-visible | Boolean | false | \- | N
+visible | Boolean | - | \- | N
 width | String / Number | - | \- | N
 zIndex | Number | - | \- | N
 `DialogCardProps` | \- | - | \- | N

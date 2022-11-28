@@ -29749,7 +29749,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "控制对话框是否显示",
       "field_desc_en": null,

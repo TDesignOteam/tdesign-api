@@ -37,7 +37,7 @@ preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级大于 placement | N
-visible | Boolean | false | 控制对话框是否显示 | N
+visible | Boolean | - | 控制对话框是否显示 | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
 zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
 `DialogCardProps` | \- | - | 继承 `DialogCardProps` 中的全部 API | N

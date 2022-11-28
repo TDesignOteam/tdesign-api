@@ -65,7 +65,6 @@ export interface TdDialogProps extends TdDialogCardProps {
   top?: string | number;
   /**
    * 控制对话框是否显示
-   * @default false
    */
   visible?: boolean;
   /**
