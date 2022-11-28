@@ -65,10 +65,6 @@ export interface TdPopupProps {
    */
   popperOptions?: object;
   /**
-   * 点击触发元素后，浮层将显示在 `reference` 附近，通过 `placement` 定义方向。浮层显示的位置不一定是触发浮层显示的元素。一般应用在列表中，大量单元格都需要使用到浮层能力，此时可以通过动态调整 `reference` 来实现只需渲染一个浮层元素
-   */
-  reference?: string | TNode;
-  /**
    * 是否显示浮层箭头
    * @default false
    */
@@ -79,7 +75,7 @@ export interface TdPopupProps {
    */
   trigger?: 'hover' | 'click' | 'focus' | 'context-menu';
   /**
-   * 触发元素，点击这个元素会触发显示浮层。值类型为字符串表示元素选择器。示例一：`'#trigger-element'`，示例二：`() => document.body`
+   * 触发元素。值类型为字符串表示元素选择器
    */
   triggerElement?: string | TNode;
   /**

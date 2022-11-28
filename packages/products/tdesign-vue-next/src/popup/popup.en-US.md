@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Popup Props
 
 name | type | default | description | required
@@ -19,7 +18,6 @@ overlayInnerStyle | Boolean / Object / Function | - | Typescript：`Styles \| ((
 overlayStyle | Boolean / Object / Function | - | Typescript：`Styles \| ((triggerElement: HTMLElement, popupElement: HTMLElement) => Styles)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 placement | String | top | Typescript：`PopupPlacement` `type PopupPlacement = 'top'\|'left'\|'right'\|'bottom'\|'top-left'\|'top-right'\|'bottom-left'\|'bottom-right'\|'left-top'\|'left-bottom'\|'right-top'\|'right-bottom'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/popup/type.ts) | N
 popperOptions | Object | - | popper initial options，details refer to https://popper.js.org/docs | N
-reference | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 showArrow | Boolean | false | \- | N
 trigger | String | hover | options：hover/click/focus/context-menu | N
 triggerElement | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
