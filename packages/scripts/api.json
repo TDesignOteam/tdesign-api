@@ -22499,6 +22499,47 @@
       ]
     },
     {
+      "id": 3206,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "showPrimaryColorPreview",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否展示颜色选择条右侧的颜色预览区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-01 07:11:09",
+      "update_time": "2022-12-01 07:11:09",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2124,
       "platform_framework": [
         "1",
@@ -106997,5 +107038,5 @@
       ]
     }
   ],
-  "total": 2552
+  "total": 2553
 }
