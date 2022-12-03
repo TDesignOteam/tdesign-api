@@ -63832,6 +63832,47 @@
       ]
     },
     {
+      "id": 3209,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "selectOnRowClick",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否在点击整行时选中",
+      "field_desc_en": "select row data on row click",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-03 12:51:43",
+      "update_time": "2022-12-03 12:51:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 337,
       "platform_framework": [
         "1",
@@ -84580,6 +84621,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3208,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Popup 组件全部属性到筛选器浮层",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-03 12:45:22",
+      "update_time": "2022-12-03 12:45:22",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -107087,5 +107169,5 @@
       ]
     }
   ],
-  "total": 2554
+  "total": 2556
 }
