@@ -104376,7 +104376,7 @@
       "field_desc_zh": "上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(options: ProgressContext)【interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType }】【type UploadProgressType = 'real' | 'mock'】",
+      "event_input": "(options: ProgressContext)【interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType; XMLHttpRequest?: XMLHttpRequest }】【type UploadProgressType = 'real' | 'mock'】",
       "create_time": "2021-02-18 15:26:33",
       "update_time": "2021-12-28 01:49:09",
       "event_output": null,

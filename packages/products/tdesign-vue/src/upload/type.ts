@@ -369,6 +369,7 @@ export interface ProgressContext {
   currentFiles: UploadFile[];
   percent: number;
   type: UploadProgressType;
+  XMLHttpRequest?: XMLHttpRequest;
 }
 
 export type UploadProgressType = 'real' | 'mock';
