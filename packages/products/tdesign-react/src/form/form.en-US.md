@@ -34,17 +34,17 @@ name | params | return | description
 -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
-clearValidate | `(fields?: Array<keyof FormData>)` | \- | \-
-currentElement | \- | `HTMLFormElement` | \-
-getFieldValue | `(field: NamePath) ` | `unknown` | \-
-getFieldsValue | \- | `getFieldsValue<FormData>` | [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}`<br/>
-reset | `(params?: FormResetParams<FormData>)` | \- | [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface FormResetParams<FormData> { type?: 'initial' \| 'empty'; fields?: Array<keyof FormData> }`<br/>
-setFields | `(fields: FieldData[])` | \- | Typescript：`(fields: FieldData[]) => void` `interface FieldData { name: NamePath; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)
-setFieldsValue | `(field: Data)` | \- | \-
-setValidateMessage | `(message: FormValidateMessage<FormData>)` | \- | [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] }`<br/><br/>`interface FormItemValidateMessage { type: 'warning' \| 'error'; message: string }`<br/>
-submit | `(params?: { showErrorMessage?: boolean })` | \- | \-
-validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>>` | [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'all'`<br/>
-validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `Promise<FormValidateResult<FormData>>` | \-
+clearValidate | `(fields?: Array<keyof FormData>)` | \- | required
+currentElement | \- | `HTMLFormElement` | required
+getFieldValue | `(field: NamePath) ` | `unknown` | required
+getFieldsValue | \- | `getFieldsValue<FormData>` | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}`<br/>
+reset | `(params?: FormResetParams<FormData>)` | \- | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface FormResetParams<FormData> { type?: 'initial' \| 'empty'; fields?: Array<keyof FormData> }`<br/>
+setFields | `(fields: FieldData[])` | \- | required。Typescript：`(fields: FieldData[]) => void` `interface FieldData { name: NamePath; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)
+setFieldsValue | `(field: Data)` | \- | required
+setValidateMessage | `(message: FormValidateMessage<FormData>)` | \- | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] }`<br/><br/>`interface FormItemValidateMessage { type: 'warning' \| 'error'; message: string }`<br/>
+submit | `(params?: { showErrorMessage?: boolean })` | \- | required
+validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>>` | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'all'`<br/>
+validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `Promise<FormValidateResult<FormData>>` | required
 
 ### FormItem Props
 
