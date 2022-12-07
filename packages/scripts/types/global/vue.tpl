@@ -24,3 +24,10 @@ export type FormSubmitEvent = Event;
 export interface Styles {
   [css: string]: string | number;
 }
+
+export interface UploadDisplayDragEvents {
+  drop?: (event: DragEvent) => void;
+  dragenter?: (event: DragEvent) => void;
+  dragover?: (event: DragEvent) => void;
+  dragleave?: (event: DragEvent) => void;
+}

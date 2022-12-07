@@ -255,6 +255,7 @@ const GLOBAL_TYPES = [
   'HTMLElementAttributes',
   'ComponentType',
   'TScroll',
+  'UploadDisplayDragEvents',
 ];
 
 // InputEvent is not included in SyntheticEvent, but SyntheticEvent includes FormEvent

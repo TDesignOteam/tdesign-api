@@ -26,3 +26,10 @@ export interface StyledProps {
   className?: string;
   style?: CSSProperties;
 }
+
+export interface UploadDisplayDragEvents {
+  onDrop?: (event: DragEvent) => void;
+  onDragEnter?: (event: DragEvent) => void;
+  onDragOver?: (event: DragEvent) => void;
+  onDragLeave?: (event: DragEvent) => void;
+}
