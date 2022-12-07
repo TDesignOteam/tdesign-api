@@ -110,7 +110,7 @@ export default {
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputNumberProps['onBlur']>,
-  /** 值变化时触发 */
+  /** 值变化时触发，`type` 表示触发本次变化的来源 */
   onChange: Function as PropType<TdInputNumberProps['onChange']>,
   /** 回车键按下时触发 */
   onEnter: Function as PropType<TdInputNumberProps['onEnter']>,
