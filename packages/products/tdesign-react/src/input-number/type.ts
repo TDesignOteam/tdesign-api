@@ -142,7 +142,7 @@ export interface ChangeContext {
   type: ChangeSource;
   e:
     | FormEvent<HTMLDivElement>
-    | MouseEvent<HTMLDivElement>
+    | MouseEvent<HTMLDivElement | SVGElement>
     | FocusEvent<HTMLDivElement>
     | KeyboardEvent<HTMLDivElement>;
 }
