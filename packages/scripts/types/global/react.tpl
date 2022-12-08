@@ -28,8 +28,8 @@ export interface StyledProps {
 }
 
 export interface UploadDisplayDragEvents {
-  onDrop?: (event: DragEvent) => void;
-  onDragEnter?: (event: DragEvent) => void;
-  onDragOver?: (event: DragEvent) => void;
-  onDragLeave?: (event: DragEvent) => void;
+  onDrop?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragEnter?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragOver?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragLeave?: (event: DragEvent<HTMLDivElement>) => void;
 }
