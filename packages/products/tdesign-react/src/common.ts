@@ -26,6 +26,13 @@ export interface StyledProps {
   className?: string;
   style?: CSSProperties;
 }
+
+export interface UploadDisplayDragEvents {
+  onDrop?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragEnter?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragOver?: (event: DragEvent<HTMLDivElement>) => void;
+  onDragLeave?: (event: DragEvent<HTMLDivElement>) => void;
+}
 /** 通用全局类型 */
 
 export type OptionData = {

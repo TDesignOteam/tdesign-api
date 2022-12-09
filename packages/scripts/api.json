@@ -4829,7 +4829,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -16873,7 +16873,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -24315,7 +24315,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -26661,7 +26661,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -50363,7 +50363,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "文本框状态",
       "field_desc_en": null,
@@ -68414,7 +68414,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -69452,7 +69452,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -74013,7 +74013,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -90489,7 +90489,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "文本框状态",
       "field_desc_en": null,
@@ -92128,7 +92128,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -93213,7 +93213,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
@@ -94058,7 +94058,7 @@
       ]
     },
     {
-      "id": 2249,
+      "id": 3210,
       "platform_framework": [
         "1",
         "2",
@@ -94068,18 +94068,19 @@
       "field_category": 1,
       "field_name": "delay",
       "field_type": [
-        "2"
+        "2",
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【议案讨论中】延迟出现提示，用于异步加载提示信息需要延迟显示的业务场景下",
-      "field_desc_en": null,
+      "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。直接透传到 Popup 组件。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+      "field_desc_en": "delay to show or hide popover",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-01-24 06:15:18",
-      "update_time": "2022-01-24 06:15:18",
+      "create_time": "2022-12-09 03:46:48",
+      "update_time": "2022-12-09 03:46:48",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "number | Array<number>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -94095,7 +94096,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Number"
+        "Number",
+        "Array"
       ]
     },
     {
@@ -100990,7 +100992,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "default",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,

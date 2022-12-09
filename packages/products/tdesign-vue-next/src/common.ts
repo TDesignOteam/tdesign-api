@@ -30,6 +30,13 @@ export type FormSubmitEvent = Event;
 export interface Styles {
   [css: string]: string | number;
 }
+
+export interface UploadDisplayDragEvents {
+  onDrop?: (event: DragEvent) => void;
+  onDragenter?: (event: DragEvent) => void;
+  onDragover?: (event: DragEvent) => void;
+  onDragleave?: (event: DragEvent) => void;
+}
 /** 通用全局类型 */
 
 export type OptionData = {
