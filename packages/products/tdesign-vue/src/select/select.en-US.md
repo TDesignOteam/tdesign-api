@@ -33,11 +33,11 @@ defaultPopupVisible | Boolean | - | uncontrolled property | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 readonly | Boolean | false | \- | N
 reserveKeyword | Boolean | false | \- | N
-scroll | Object | - | lazy load and virtual scroll。Typescript：`TScroll`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+scroll | Object | - | lazy load and virtual scroll。Typescript：`InfinityScroll`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
 showArrow | Boolean | true | \- | N
 size | String | medium | options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-status | String | - | options：default/success/warning/error | N
+status | String | default | options：default/success/warning/error | N
 tagInputProps | Object | - | Typescript：`TagInputProps`，[TagInput API Documents](./tag-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
 tagProps | Object | - | Typescript：`TagProps`，[Tag API Documents](./tag?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
 tips | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
@@ -88,3 +88,13 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 divider | Boolean | true | \- | N
 label | String | - | \- | N
+
+### InfinityScroll
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+bufferSize | Number | 20 | \- | N
+isFixedRowHeight | Boolean | false | \- | N
+rowHeight | Number | - | \- | N
+threshold | Number | 100 | \- | N
+type | String | - | required。options：lazy/virtual | Y

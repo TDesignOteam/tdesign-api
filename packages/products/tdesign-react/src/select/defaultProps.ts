@@ -18,6 +18,7 @@ export const selectDefaultProps: TdSelectProps = {
   reserveKeyword: false,
   showArrow: true,
   size: 'medium',
+  status: 'default',
   valueType: 'value',
 };
 

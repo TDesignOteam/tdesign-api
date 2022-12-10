@@ -531,9 +531,16 @@ function combineTsFile(componentMap, framework) {
       });
     });
     ts[cmp] = current;
+    // 合并后只有组件需要输出文件
     list.forEach((item) => {
       if (item === cmp) return;
       delete ts[item];
+    });
+    // 不在列表中的配置也不输出，如通用配置：InfinityScroll/TScroll 等
+    Object.keys(ts).forEach((key) => {
+      if (!list.find(item => item === key)) {
+        delete ts[key];
+      }
     });
   });
   // 合并 imports / boyd / exports

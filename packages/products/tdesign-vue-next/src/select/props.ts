@@ -128,6 +128,7 @@ export default {
   /** 输入框状态 */
   status: {
     type: String as PropType<TdSelectProps['status']>,
+    default: 'default' as TdSelectProps['status'],
     validator(val: TdSelectProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);

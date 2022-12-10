@@ -1,32 +1,10 @@
-/** 通用全局类型 */
+/* eslint-disable */
 
-export type OptionData = {
-  label?: string;
-  value?: string | number;
-} & { [key: string]: any };
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
 
-export type TreeOptionData = {
-  children?: Array<TreeOptionData>;
-} & OptionData;
-
-export type SizeEnum = 'small' | 'medium' | 'large';
-
-export type HorizontalAlignEnum = 'left' | 'center' | 'right';
-
-export type VerticalAlignEnum = 'top' | 'middle' | 'bottom';
-
-export type ClassName = { [className: string]: any } | ClassName[] | string;
-
-export type CSSSelector = string;
-
-export interface KeysType {
-  value?: string;
-  label?: string;
-}
-
-export interface HTMLElementAttributes {
-  [css: string]: string;
-}
+import { InfinityScroll } from '../common';
 
 export interface InfinityScroll {
   /**
@@ -40,7 +18,7 @@ export interface InfinityScroll {
    */
   isFixedRowHeight?: boolean;
   /**
-   * 行高，不会给元素添加样式高度，仅作为滚动时的行高参考。一般情况不需要设置该属性。如果设置，可尽量将该属性设置为每行平均高度，从而使得滚动过程更加平滑
+   * 行高，不会给`<tr>`元素添加样式高度，仅作为滚动时的行高参考。一般情况不需要设置该属性。如果设置，可尽量将该属性设置为每行平均高度，从而使得滚动过程更加平滑
    */
   rowHeight?: number;
   /**
@@ -53,5 +31,3 @@ export interface InfinityScroll {
    */
   type: 'lazy' | 'virtual';
 }
-
-export type TScroll = InfinityScroll;

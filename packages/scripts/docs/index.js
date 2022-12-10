@@ -9,7 +9,7 @@ const { getApiComponentMapByFrameWork } = require('../common');
 let currentFramework = '';
 
 // 组件 Form 的 API 为 Form 和 FormItem 的组合
-function combineApi(allApi) {
+function combineApi(allApi, component) {
   const r = { ...allApi };
   const map = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, currentFramework);
   Object.keys(map).forEach((cmp) => {
@@ -18,10 +18,12 @@ function combineApi(allApi) {
       .map(item => r[item])
       .filter(v => !!v)
       .join('\n\n');
-    map[cmp].forEach((item) => {
-      delete r[item];
-    });
-    r[cmp] = cmpApi;
+    if (cmpApi && (!component || component && cmp === component)) {
+      map[cmp].forEach((item) => {
+        delete r[item];
+      });
+      r[cmp] = cmpApi;
+    }
   });
   Object.keys(r).forEach((cmp) => {
     // $ 表示插件，Ts 表示类型文件
@@ -73,7 +75,7 @@ function getDocFileName(cmp, framework) {
 function getDocsByComponent(baseData, framework, component) {
   const current = FRAMEWORK_MAP[framework];
   let api = current.getDocs(baseData, current, framework);
-  api = combineApi(api);
+  api = combineApi(api, component);
   return api[component];
 }
 
@@ -88,7 +90,7 @@ function generateDocs(baseData, framework, extra) {
     return;
   }
   let api = current.getDocs(baseData, current, framework, globalConfigData, extra && extra.language);
-  api = combineApi(api);
+  api = combineApi(api, extra.component);
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath

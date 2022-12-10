@@ -109,10 +109,11 @@ function generateComponentApi() {
       generateUnitTest(baseData, framework, { language });
     }
   }
+  const currentComponent = isAll(component) ? undefined : component;
   // 生成 API 中文文档
-  generateDocs(baseData, framework, { globalConfigData });
+  generateDocs(baseData, framework, { globalConfigData, component: currentComponent });
   // generate API English documents
-  generateDocs(baseData, framework, { language: 'en', globalConfigData });
+  generateDocs(baseData, framework, { language: 'en', globalConfigData, component: currentComponent });
 }
 
 /**
@@ -128,10 +129,11 @@ function generateDocuments() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const baseData = frameworkData;
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
+  const currentComponent = isAll(component) ? undefined : component;
   // 生成 API 中文文档
-  generateDocs(baseData, framework, { globalConfigData });
+  generateDocs(baseData, framework, { globalConfigData, component: currentComponent });
   // generate API English documents
-  generateDocs(baseData, framework, { language: 'en', globalConfigData });
+  generateDocs(baseData, framework, { language: 'en', globalConfigData, component: currentComponent });
 }
 
 function validateParams(components) {

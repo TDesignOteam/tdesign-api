@@ -567,8 +567,9 @@
         "label": "图标（IconSVG）"
       },
       {
-        "value": "InfiniteScroll",
-        "label": "无限滚动"
+        "value": "InfinityScroll",
+        "label": "无限滚动配置",
+        "type": "TS"
       },
       {
         "value": "Input",
@@ -807,6 +808,11 @@
         "type": "TS"
       },
       {
+        "value": "TableColumnController",
+        "label": "表格自定义显示列配置",
+        "type": "TS"
+      },
+      {
         "value": "TableColumnFilter",
         "label": "表格列过滤条件配置",
         "type": "TS"
@@ -824,11 +830,6 @@
       {
         "value": "TableRowState",
         "label": "表格行数据状态",
-        "type": "TS"
-      },
-      {
-        "value": "TableScroll",
-        "label": "表格滚动配置",
         "type": "TS"
       },
       {
@@ -1116,11 +1117,6 @@
       {
         "value": "ActionSheet",
         "label": "动作面板"
-      },
-      {
-        "value": "TableColumnController",
-        "label": "表格自定义显示列配置",
-        "type": "TS"
       },
       {
         "value": "Overlay",

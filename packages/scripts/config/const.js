@@ -4,7 +4,7 @@ const VUE_TITILE_MAP = require('./language/api-docs-title');
 
 const MESSAGE_LIST = ['Message', 'MessageOptions', '$Message', '$Message.info', '$Message.error', '$Message.warning', '$Message.success', '$Message.loading', '$Message.question', '$Message.close', '$Message.closeAll', '$Message.config'];
 const NOTIFICATION_LIST = ['Notification', 'NotificationOptions', '$Notification', '$Notification.info', '$Notification.warning', '$Notification.error', '$Notification.success', '$Notification.close', '$Notification.closeAll', '$Notification.config'];
-const TABLE_LIST = ['Table', 'TableCol', 'BaseTable', 'BaseTableCol', 'PrimaryTable', 'PrimaryTableCol', 'EnhancedTable', 'EnhancedTableCol', 'TableRowState', 'TableColumnFilter', 'TableScroll', 'TableColumnController', 'TableEditableCellConfig', 'TableTreeConfig'];
+const TABLE_LIST = ['Table', 'TableCol', 'BaseTable', 'BaseTableCol', 'PrimaryTable', 'PrimaryTableCol', 'EnhancedTable', 'EnhancedTableCol', 'TableRowState', 'TableColumnFilter', 'TableColumnController', 'TableEditableCellConfig', 'TableTreeConfig'];
 
 const GLOBAL_COMPONENTS_CONFIG = [
   'InputConfig',
@@ -63,7 +63,7 @@ const COMPONENT_API_MD_MAP = {
   // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
   Grid: ['Grid', 'Row', 'Col', 'GridItem'],
   Icon: ['IconSVG', 'Iconfont'],
-  Select: ['Select', 'Option', 'OptionGroup'],
+  Select: ['Select', 'Option', 'OptionGroup', 'InfinityScroll'],
   Tag: ['Tag', 'CheckTag'],
   Collapse: ['Collapse', 'CollapsePanel'],
   Dropdown: {
@@ -74,7 +74,8 @@ const COMPONENT_API_MD_MAP = {
   Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
-  Table: TABLE_LIST,
+  // 只有文档需要 InfinityScroll，类型定义不需要
+  Table: TABLE_LIST.concat('InfinityScroll'),
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Steps: ['Steps', 'StepItem'],
   Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
@@ -254,7 +255,7 @@ const GLOBAL_TYPES = [
   'KeysType',
   'HTMLElementAttributes',
   'ComponentType',
-  'TScroll',
+  'InfinityScroll',
   'UploadDisplayDragEvents',
 ];
 
@@ -277,7 +278,7 @@ module.exports = {
     '*/'].join('\n * '),
   TNode: 'TNode',
   // 这里配置好之后，可以在 API 文档中显示「查看通用类型定义」
-  TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'TScroll'],
+  TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'InfinityScroll'],
   // 真实路径，默认为当前项目，finalProject 值为 true，则表示直接输出到项目中，方便快速测试类型定义
   BASE_PATH_URL: finalProject
     ? path.resolve(process.cwd(), '../')
