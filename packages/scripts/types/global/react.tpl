@@ -1,6 +1,6 @@
 /** React 特有全局类型 */
 
-import { ReactElement, ReactNode, CSSProperties, FormEvent } from 'react';
+import { ReactElement, ReactNode, CSSProperties, FormEvent, DragEvent } from 'react';
 
 // TElement 表示 API 只接受传入组件
 export type TElement = ReactElement | (() => ReactElement);
