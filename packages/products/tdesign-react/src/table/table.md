@@ -253,6 +253,7 @@ showEditIcon | Boolean | true | 是否显示编辑图标 | N
 checkStrictly | Boolean | true | 表示树形结构的行选中（多选），父子行选中是否独立 | N
 childrenKey | String | children | 树形结构子节点字段，示例：`childrenKey='list'`。一般应用在数据 `data` 的子节点字段不是 `children` 的场景 | N
 defaultExpandAll | Boolean | false | 是否默认展开全部，仅默认情况有效。如果希望自由控制树形结构的展开或收起，可使用实例方法 `expandAll` 和 `foldAll` | N
+expandTreeNodeOnClick | Boolean | false | 是否在点击行时展开树形结构节点 | N
 indent | Number | 24 | 树结点缩进距离，单位：px | N
 treeNodeColumnIndex | Number | 0 | 树结点在第几列渲染，默认为第一列 | N
 

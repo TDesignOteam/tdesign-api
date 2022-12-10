@@ -288,6 +288,7 @@ name | type | default | description | required
 checkStrictly | Boolean | true | \- | N
 childrenKey | String | children | \- | N
 defaultExpandAll | Boolean | false | \- | N
+expandTreeNodeOnClick | Boolean | false | \- | N
 indent | Number | 24 | \- | N
 treeNodeColumnIndex | Number | 0 | \- | N
 

@@ -853,6 +853,11 @@ export interface TableTreeConfig {
    */
   defaultExpandAll?: boolean;
   /**
+   * 是否在点击行时展开树形结构节点
+   * @default false
+   */
+  expandTreeNodeOnClick?: boolean;
+  /**
    * 树结点缩进距离，单位：px
    * @default 24
    */
