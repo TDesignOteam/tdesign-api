@@ -1062,7 +1062,7 @@ export interface TableTreeExpandChangeContext<T> {
   row: T;
   rowIndex: number;
   rowState: TableRowState<T>;
-  trigger?: 'expand-fold-icon';
+  trigger?: 'expand-fold-icon' | 'row-click';
 }
 
 export type TableRowValue = string | number;

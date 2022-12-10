@@ -36018,7 +36018,7 @@
       "field_desc_zh": "树形结构，用户操作引起节点展开或收起时触发，代码操作不会触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: TableTreeExpandChangeContext<T>)【interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' }】",
+      "event_input": "(context: TableTreeExpandChangeContext<T>)【interface TableTreeExpandChangeContext<T> { row: T; rowIndex: number; rowState: TableRowState<T>; trigger?: 'expand-fold-icon' | 'row-click' }】",
       "create_time": "2022-04-16 12:05:43",
       "update_time": "2022-05-21 07:59:47",
       "event_output": null,
