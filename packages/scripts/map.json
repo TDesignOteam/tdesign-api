@@ -543,6 +543,11 @@
         "label": "引导"
       },
       {
+        "value": "GuideConfig",
+        "label": "引导全局配置",
+        "type": "TS"
+      },
+      {
         "value": "GuideStep",
         "label": "引导步骤"
       },

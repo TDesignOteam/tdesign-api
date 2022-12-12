@@ -42588,9 +42588,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42629,9 +42629,9 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{ content: '完成', theme: 'primary' }",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 完成 的全部属性",
+      "field_desc_zh": "透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42875,9 +42875,9 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{ content: '下一步', theme: 'primary' }",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 下一步按钮 的全部属性",
+      "field_desc_zh": "透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42916,9 +42916,9 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{ content: '上一步', theme: 'default' }",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 上一步按钮 的全部属性",
+      "field_desc_zh": "透传 上一步按钮 的全部属性，示例：{ content: '上一步', theme: 'default' }",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42998,9 +42998,9 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{ content: '跳过', theme: 'default' }",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 跳过按钮 的全部属性",
+      "field_desc_zh": "透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -43292,6 +43292,170 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3212,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "finishButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "最后一步中的完成按钮，示例：`{ content: '完成', theme: 'primary' }`",
+      "field_desc_en": "finish button in last step. `{ content: 'Finish', theme: 'primary' }`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-12 13:06:33",
+      "update_time": "2022-12-12 13:06:33",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3213,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "nextButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下一步按钮，示例：`{ content: '下一步', theme: 'primary' }`",
+      "field_desc_en": "next step button. `{ content: 'Next Button', theme: 'primary' }`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-12 13:07:56",
+      "update_time": "2022-12-12 13:07:56",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3215,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "nextButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "跳过按钮，示例：`{ content: '跳过', theme: 'default' }`",
+      "field_desc_en": "skip button. `{ content: 'Skip', theme: 'default' }`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-12 13:10:22",
+      "update_time": "2022-12-12 13:10:22",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3214,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "prevButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "上一步按钮，示例：`{ content: '上一步', theme: 'default' }`",
+      "field_desc_en": "previous step button. `{ content: 'Previous Step', theme: 'default' }`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-12 13:08:59",
+      "update_time": "2022-12-12 13:08:59",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
     },
     {
       "id": 2955,
@@ -107212,5 +107376,5 @@
       ]
     }
   ],
-  "total": 2557
+  "total": 2561
 }

@@ -35,6 +35,7 @@ const GLOBAL_COMPONENTS_CONFIG = [
   'AlertConfig',
   'AnchorConfig',
   'MessageConfig',
+  'GuideConfig',
 ].sort((a, b) => a.localeCompare(b) > 0);
 
 const GLOBAL_CONFIG_PROVIDER = ['GlobalConfigProvider'].concat(GLOBAL_COMPONENTS_CONFIG);

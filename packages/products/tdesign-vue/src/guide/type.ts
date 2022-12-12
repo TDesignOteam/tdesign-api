@@ -21,10 +21,6 @@ export interface TdGuideProps {
    */
   defaultCurrent?: number;
   /**
-   * 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景
-   */
-  modelValue?: number;
-  /**
    * 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`
    */
   finishButtonProps?: ButtonProps;
