@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Guide Props
 
 name | type | default | description | required

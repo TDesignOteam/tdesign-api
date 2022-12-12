@@ -43376,7 +43376,7 @@
       ]
     },
     {
-      "id": 3215,
+      "id": 3214,
       "platform_framework": [
         "1",
         "2",
@@ -43384,18 +43384,18 @@
       ],
       "component": "GuideConfig",
       "field_category": 1,
-      "field_name": "nextButtonProps",
+      "field_name": "prevButtonProps",
       "field_type": [
         "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "跳过按钮，示例：`{ content: '跳过', theme: 'default' }`",
-      "field_desc_en": "skip button. `{ content: 'Skip', theme: 'default' }`",
+      "field_desc_zh": "上一步按钮，示例：`{ content: '上一步', theme: 'default' }`",
+      "field_desc_en": "previous step button. `{ content: 'Previous Step', theme: 'default' }`",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-12-12 13:10:22",
-      "update_time": "2022-12-12 13:10:22",
+      "create_time": "2022-12-12 13:08:59",
+      "update_time": "2022-12-12 13:08:59",
       "event_output": null,
       "custom_field_type": "ButtonProps",
       "syntactic_sugar": null,
@@ -43417,7 +43417,7 @@
       ]
     },
     {
-      "id": 3214,
+      "id": 3215,
       "platform_framework": [
         "1",
         "2",
@@ -43425,18 +43425,18 @@
       ],
       "component": "GuideConfig",
       "field_category": 1,
-      "field_name": "prevButtonProps",
+      "field_name": "skipButtonProps",
       "field_type": [
         "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "上一步按钮，示例：`{ content: '上一步', theme: 'default' }`",
-      "field_desc_en": "previous step button. `{ content: 'Previous Step', theme: 'default' }`",
+      "field_desc_zh": "跳过按钮，示例：`{ content: '跳过', theme: 'default' }`",
+      "field_desc_en": "skip button. `{ content: 'Skip', theme: 'default' }`",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-12-12 13:08:59",
-      "update_time": "2022-12-12 13:08:59",
+      "create_time": "2022-12-12 13:10:22",
+      "update_time": "2022-12-12 13:10:22",
       "event_output": null,
       "custom_field_type": "ButtonProps",
       "syntactic_sugar": null,
