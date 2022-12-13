@@ -6,7 +6,7 @@
 
 import { UploadConfig } from '../config-provider/type';
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import { TNode, UploadDisplayDragEvents } from '../common';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
@@ -308,13 +308,6 @@ export interface UploadFile {
    * @default ''
    */
   url?: string;
-}
-
-export interface UploadDisplayDragEvents {
-  onDrop?: (event: DragEvent) => void;
-  onDragenter?: (event: DragEvent) => void;
-  onDragover?: (event: DragEvent) => void;
-  onDragleave?: (event: DragEvent) => void;
 }
 
 export type ResponseType = { error?: string; url?: string } & Record<string, any>;
