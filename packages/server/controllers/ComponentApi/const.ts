@@ -276,6 +276,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'TagConfig', label: '标签全局配置', type: 'TS' },
   { value: 'StepsConfig', label: '步骤条全局配置', type: 'TS' },
   { value: 'AlertConfig', label: '警告提醒全局配置', type: 'TS' },
+  { value: 'MessageConfig', label: '消息全局配置', type: 'TS' },
   { value: 'GuideConfig', label: '引导全局配置', type: 'TS' },
   { value: 'AnchorConfig', label: '锚点全局配置', type: 'TS' },
   { value: 'ActionSheetItem', label: '动作面板项的配置', type: 'TS' },

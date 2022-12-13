@@ -536,7 +536,6 @@ function combineTsFile(componentMap, framework) {
       if (item === cmp) return;
       delete ts[item];
     });
-    console.log('&^&**&*', Object.keys(ts))
     // 不在列表中的配置也不输出，如通用配置：InfinityScroll/TScroll 等
     Object.keys(ts).forEach((key) => {
       if (!list.find(item => item === key) && !['ConfigProvider'].includes(key)) {

@@ -635,6 +635,11 @@
         "label": "全局提醒"
       },
       {
+        "value": "MessageConfig",
+        "label": "消息全局配置",
+        "type": "TS"
+      },
+      {
         "value": "MessageOptions",
         "label": "全局提醒数据类型",
         "type": "TS"
