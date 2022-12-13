@@ -101698,7 +101698,7 @@
       "field_desc_zh": "下拉框显示或隐藏时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【import { PopupVisibleChangeContext } from '@Popup'】",
+      "event_input": "(visible: boolean, context: PopupVisibleChangeContext & { node?: TreeNodeModel<DataOption>; e?: MouseEvent | KeyboardEvent })【import { PopupVisibleChangeContext } from '@Popup'】",
       "create_time": "2022-03-08 11:01:06",
       "update_time": "2022-03-08 11:01:06",
       "event_output": null,
