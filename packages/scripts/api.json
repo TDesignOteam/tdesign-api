@@ -37923,7 +37923,7 @@
       "field_desc_zh": "校验结束后触发，result 值为 true 表示校验通过；如果校验不通过，result 值为校验结果列表",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(result: ValidateResultContext<FormData>)【type ValidateResultContext<T> = Omit<SubmitContext<T>, 'e'>】",
+      "event_input": "(result: ValidateResultContext<FormData>)【type ValidateResultContext<T extends Data> = Omit<SubmitContext<T>, 'e'>】",
       "create_time": "2021-08-11 07:08:36",
       "update_time": "2022-01-12 05:06:18",
       "event_output": null,
