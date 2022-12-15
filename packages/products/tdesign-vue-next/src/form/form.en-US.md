@@ -16,7 +16,7 @@ layout | String | vertical | options：vertical/inline | N
 preventSubmitDefault | Boolean | true | \- | N
 requiredMark | Boolean | true | \- | N
 resetType | String | empty | options：empty/initial | N
-rules | Object | - | Typescript：`{ [field in keyof FormData]: Array<FormRule> }` | N
+rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/form/type.ts) | N
 scrollToFirstError | String | - | options：''/smooth/auto | N
 showErrorMessage | Boolean | true | \- | N
 statusIcon | Boolean / Slot / Function | undefined | Typescript：`boolean \| TNode<TdFormItemProps>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
