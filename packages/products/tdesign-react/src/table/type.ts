@@ -329,6 +329,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   resize?: TableColumnResizeConfig;
   /**
+   * 是否阻止当列单元格点击事件冒泡
+   */
+  stopPropagation?: boolean;
+  /**
    * 自定义表头渲染，优先级高于 render
    */
   title?: string | TNode | TNode<{ col: BaseTableCol; colIndex: number }>;
