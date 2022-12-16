@@ -51514,7 +51514,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -51545,7 +51546,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -51715,6 +51717,49 @@
       ]
     },
     {
+      "id": 3223,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "navigatorProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "与 navigator 原生组件属性保持一致，具体使用参考：https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:39:04",
+      "update_time": "2022-12-16 09:39:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2897,
       "platform_framework": [
         "1",
@@ -51756,11 +51801,53 @@
       ]
     },
     {
+      "id": 3220,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:36:47",
+      "update_time": "2022-12-16 09:36:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
       "id": 2923,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -51790,7 +51877,45 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3222,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "normal",
+      "field_enum": "normal/active/disabled",
+      "field_desc_zh": "组件状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:37:37",
+      "update_time": "2022-12-16 09:37:37",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -51834,6 +51959,47 @@
         "Angular(PC)"
       ],
       "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 3221,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:36:58",
+      "update_time": "2022-12-16 09:36:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
         "TNode"
       ]
     },
@@ -51883,7 +52049,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -51913,7 +52080,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -51924,7 +52092,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -51954,7 +52123,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -51994,6 +52164,105 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3226,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "complete",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接执行完成后触发（失败或成功均会触发）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:45:36",
+      "update_time": "2022-12-16 09:45:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3225,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "fail",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接跳转失败后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:44:24",
+      "update_time": "2022-12-16 09:44:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3224,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "success",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接跳转成功后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-16 09:41:56",
+      "update_time": "2022-12-16 09:41:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -107536,5 +107805,5 @@
       ]
     }
   ],
-  "total": 2565
+  "total": 2572
 }
