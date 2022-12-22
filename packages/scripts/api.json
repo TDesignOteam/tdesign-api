@@ -34747,7 +34747,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -34903,7 +34903,7 @@
       "create_time": "2022-11-07 14:51:02",
       "update_time": "2022-11-07 14:51:02",
       "event_output": null,
-      "custom_field_type": "['t-class','t-class-content', 't-class-column', 't-class-column-item', 't-class-column-item-label', 't-class-tree', 't-class-tree-item', 't-class-tree-columns', 't-class-tree-columns-item', 't-class-tree-columns-item-label', 't-class-footer']",
+      "custom_field_type": "['t-class','t-class-content', 't-class-column', 't-class-column-item', 't-class-column-item-label',  't-class-footer']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -35072,7 +35072,7 @@
       "create_time": "2021-09-21 07:23:31",
       "update_time": "2022-04-14 04:47:27",
       "event_output": null,
-      "custom_field_type": "Array<TdDropdownItemOption>【interface TdDropdownItemOption { label: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any }】",
+      "custom_field_type": "Array<DropdownOption>【interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -35152,8 +35152,8 @@
         "1"
       ],
       "field_default_value": "columns",
-      "field_enum": "columns/tree",
-      "field_desc_zh": "选项排列",
+      "field_enum": "",
+      "field_desc_zh": "选项排列；不再支持 tree 布局，可与 treeSelect 配合使用",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -35165,7 +35165,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -35332,7 +35332,7 @@
       "create_time": "2021-09-21 07:23:08",
       "update_time": "2022-04-11 09:31:41",
       "event_output": null,
-      "custom_field_type": "TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> 【type TdDropdownItemOptionValueType = string | number;】",
+      "custom_field_type": "DropdownValue 【type DropdownValue = string | number | Array<DropdownValue>;】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -35371,7 +35371,7 @@
       "field_desc_zh": "值改变时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>)",
+      "event_input": "(value: DropdownValue)",
       "create_time": "2022-02-14 02:36:20",
       "update_time": "2022-04-11 09:31:33",
       "event_output": null,
@@ -35447,7 +35447,7 @@
       "field_desc_zh": "点击确认时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>)",
+      "event_input": "(value: DropdownValue)",
       "create_time": "2022-07-08 08:40:57",
       "update_time": "2022-07-08 08:40:57",
       "event_output": null,
@@ -35468,49 +35468,6 @@
         "Miniprogram"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 1694,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "DropdownMenu",
-      "field_category": 1,
-      "field_name": "activeColor",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【讨论中】菜单标题和选项的选中态颜色",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-21 07:09:45",
-      "update_time": "2022-04-14 03:13:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
     },
     {
       "id": 1698,
@@ -35581,7 +35538,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -35657,7 +35614,7 @@
       "create_time": "2022-11-07 14:50:29",
       "update_time": "2022-11-07 14:50:29",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-menu', 't-class-menu-item', 't-class-menu-label', 't-class-menu-icon']",
+      "custom_field_type": "['t-class', 't-class-item', 't-class-label', 't-class-icon']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -107930,5 +107887,5 @@
       ]
     }
   ],
-  "total": 2575
+  "total": 2574
 }
