@@ -12141,7 +12141,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"\", \"t-button--shape-square\", \"t-button--shape-round\", \"t-button--shape-circle\" ]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12452,7 +12452,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"attribute\": { \"type\": [\"submit\", \"reset\", \"button\"] }}",
+      "test_description": "{\"PC\":{\"attribute\": { \"type\": [\"submit\", \"reset\", \"button\"] }}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12532,7 +12532,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-button--variant--base\", \"t-button--variant-outline\", \"t-button--variant-dashed\", \"t-button--variant-text\"]}}",
+      "test_description": "{\"PC\":{\"className\": [\"t-button--variant-base\", \"t-button--variant-outline\", \"t-button--variant-dashed\", \"t-button--variant-text\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

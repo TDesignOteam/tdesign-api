@@ -119,7 +119,7 @@ function generateComponentApi() {
 
   // 统一输出 vitest 通用测试用例
   if (vitest) {
-    generateVitestUnitCase(baseData, framework);
+    generateVitestUnitCase(baseData, framework, { component: currentComponent });
   }
 }
 
