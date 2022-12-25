@@ -32,6 +32,7 @@ const { data: ALL_API } = require('./api.json');
 const { generateTypes } = require('./types');
 const { generateReactDefaultProps } = require('./types/react-default-props');
 const { generateVueProps } = require('./types/vue-props');
+const { generateVitestUnitCase } = require('./vitest/generateVitestUnitCase');
 const chalk = require('chalk');
 const pick = require('lodash/pick');
 const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
@@ -44,7 +45,7 @@ const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 // const [component, framework, language, isUseDefault, isUseUnitTest, finalProject] = process.argv.slice(2);
 const [component, framework, allParams] = process.argv.slice(2);
 
-const { useDefault, onlyDocs, isUseUnitTest } = parseParams(allParams);
+const { useDefault, onlyDocs, isUseUnitTest, vitest } = parseParams(allParams);
 
 let selfUseDefault = useDefault;
 
@@ -73,6 +74,7 @@ function parseParams(str) {
     useDefault: str.includes('useDefault'),
     finalProject: str.includes('finalProject'),
     isUseUnitTest: str.includes('isUseUnitTest'),
+    vitest: str.includes('vitest'),
   };
 }
 
@@ -114,6 +116,11 @@ function generateComponentApi() {
   generateDocs(baseData, framework, { globalConfigData, component: currentComponent });
   // generate API English documents
   generateDocs(baseData, framework, { language: 'en', globalConfigData, component: currentComponent });
+
+  // 统一输出 vitest 通用测试用例
+  if (vitest) {
+    generateVitestUnitCase(baseData, framework);
+  }
 }
 
 /**

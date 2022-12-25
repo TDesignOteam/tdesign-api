@@ -11535,7 +11535,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-size-full-width\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11626,7 +11626,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "preDepend: { 'content': '我是按钮' }",
+      "test_description": "",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11752,7 +11752,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "Vue(Mobile):\\n skip: false\\n depend: { 'content': '按钮1' }\\n raw: \\\"\\\"",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11838,7 +11838,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-button--ghost\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12190,7 +12190,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", \"t-size-m\", \"t-size-l\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12366,7 +12366,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"t-button--theme-default\", \"t-button--theme-primary\", \"t-button--theme-danger\", \"t-button--theme-warning\", \"t-button--theme-success\" ]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12452,7 +12452,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\": { \"type\": [\"submit\", \"reset\", \"button\"] }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12532,7 +12532,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"t-button--variant--base\", \"t-button--variant-outline\", \"t-button--variant-dashed\", \"t-button--variant-text\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
