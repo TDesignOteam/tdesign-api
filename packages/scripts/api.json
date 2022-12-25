@@ -12255,7 +12255,7 @@
       ],
       "component": "Button",
       "field_category": 1,
-      "field_name": "suffix（暂未实现）",
+      "field_name": "suffix",
       "field_type": [
         "64"
       ],
