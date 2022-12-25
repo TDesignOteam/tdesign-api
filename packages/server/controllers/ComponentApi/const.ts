@@ -331,6 +331,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Carousel', label: '走马灯' },
   { value: 'Drawer', label: '抽屉' },
   { value: 'Indexes', label: '索引' },
+  { value: 'IndexesAnchor', label: '索引锚点' },
   { value: 'Navbar', label: '导航条' },
   { value: 'SegmentedControl', label: '分段器' },
   { value: 'Steps', label: '步骤条' },

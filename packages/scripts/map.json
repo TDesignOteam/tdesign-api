@@ -1093,6 +1093,10 @@
         "label": "索引"
       },
       {
+        "value": "IndexesAnchor",
+        "label": "索引锚点"
+      },
+      {
         "value": "Navbar",
         "label": "导航条"
       },
