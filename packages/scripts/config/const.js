@@ -91,7 +91,14 @@ const COMPONENT_API_MD_MAP = {
   TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
   DateTimePicker: ['DateTimePicker'],
   DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],
-  Swiper: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
+  Swiper: {
+    list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
+    excludes: ['Miniprogram']
+  },
+  Swiper: {
+    list: ['Swiper', 'SwiperNavigation'],
+    includes: ['Miniprogram']
+  },
   StickyTool: ['StickyTool', 'StickyItem'],
   ConfigProvider: GLOBAL_CONFIG_PROVIDER,
   RangeInput: ['RangeInput', 'RangeInputPopup'],
