@@ -12366,7 +12366,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-button--theme-default\", \"t-button--theme-primary\", \"t-button--theme-danger\", \"t-button--theme-warning\", \"t-button--theme-success\" ]}}",
+      "test_description": "{\"PC\":{\"className\": \"t-button--theme-${item}\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12532,7 +12532,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-button--variant-base\", \"t-button--variant-outline\", \"t-button--variant-dashed\", \"t-button--variant-text\"]}}",
+      "test_description": "{\"PC\":{\"className\": \"t-button--variant-${item}\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
