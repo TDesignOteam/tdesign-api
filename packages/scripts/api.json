@@ -11535,7 +11535,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-size-full-width\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-size-full-width\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11752,7 +11752,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11838,7 +11838,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-button--ghost\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-button--ghost\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12141,7 +12141,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"\", \"t-button--shape-square\", \"t-button--shape-round\", \"t-button--shape-circle\" ]}}",
+      "test_description": "{\"PC\":{\"className\": [\"\", \"t-button--shape-square\", \"t-button--shape-round\", \"t-button--shape-circle\" ], \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12190,7 +12190,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", \"t-size-m\", \"t-size-l\"]}}",
+      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", \"t-size-m\", \"t-size-l\"], \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
