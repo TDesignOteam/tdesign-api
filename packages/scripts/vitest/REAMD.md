@@ -38,6 +38,14 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 {"PC":{"attribute": { "href": "https://tdesign.tencent.com/" }, "snapshot": true }}
 ```
 
+## 检测某个元素是否存在
+
+```json
+{"PC":{"className":"t-is-loading", "snapshot": true, "dom": ".t-loading"}}
+```
+- 期望类名 `t-is-loading` 存在
+- 期望 DOM 元素 `.t-loading` 存在
+
 ## 测试自定义元素 TNode
 
 ```json

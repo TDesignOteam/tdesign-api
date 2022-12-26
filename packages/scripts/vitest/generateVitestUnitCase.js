@@ -1,7 +1,3 @@
-const { getImportsConfig, getImportsCode } = require('./generate-import');
-const { generateClassNameUnitCase } = require('./generate-class-name');
-const { generateTNodeElement } = require('./generate-tnode');
-const { generateAttributeUnitCase } = require('./generate-attribute');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
 const chalk = require('chalk');
@@ -9,6 +5,11 @@ const fs = require('fs');
 const path = require('path');
 const kebabCase = require('lodash/kebabCase');
 const { FRAMEWORK_MAP } = require('../config');
+const { getImportsConfig, getImportsCode } = require('./generate-import');
+const { generateClassNameUnitCase } = require('./generate-class-name');
+const { generateTNodeElement } = require('./generate-tnode');
+const { generateAttributeUnitCase } = require('./generate-attribute');
+const { generateDomUnitCase } = require('./generate-dom');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   const importConfig = getImportsConfig(component);
@@ -26,18 +27,19 @@ function generateVitestUnitCase(baseData, framework, { component }) {
       className: generateClassNameUnitCase,
       // 元素属性测试
       attribute: generateAttributeUnitCase,
+      // 检测 DOM 元素是否存在
+      dom: generateDomUnitCase,
       // TNode 测试
       tnode: generateTNodeElement,
     };
-    // 一般情况：一个 API，只会执行一种测试
     Object.keys(testDescription.PC).forEach((key) => {
       if (generateFunctionsMap[key]) {
         oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
+        if (oneApiTestCase && oneApiTestCase.length) {
+          tests = tests.concat([oneApiTestCase.join('\n'), `\n`]);
+        }
       }
     })
-    if (oneApiTestCase && oneApiTestCase.length) {
-      tests = tests.concat([oneApiTestCase.join('\n'), `\n`]);
-    }
   });
 
   const importCodes = getImportsCode(importConfig, framework);

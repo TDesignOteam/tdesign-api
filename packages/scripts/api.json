@@ -12055,7 +12055,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-loading\", \"snapshot\": true, \"dom\": \".t-loading\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12084,7 +12084,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "加载loading样式",
+      "field_desc_zh": "透传加载组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
