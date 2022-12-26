@@ -106,7 +106,11 @@ function generateReactClassName(test, oneApiData, component) {
       `${getArrayCode(enums)}.forEach((item, index) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
       `const { container } = render(${componentCode});`,
-      `expect(container.firstChild).toHaveClass(${classNameVariable}[index]);`,
+      `if (${classNameVariable}[index]) {
+        expect(container.firstChild).toHaveClass(${classNameVariable}[index]);
+      } else {
+        expect(container.querySelector(\`.\${${classNameVariable}[index]}\`)).toBeFalsy();
+      }`,
       snapshot ? `expect(container).toMatchSnapshot();` : '',
       `});`,
       `});`,
