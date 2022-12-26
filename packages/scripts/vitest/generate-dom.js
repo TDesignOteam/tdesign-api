@@ -15,7 +15,7 @@ function generateVueDomCase(test, oneApiData, framework, component) {
   const arr = [
     `it('props.${oneApiData.field_name}: ${component} contains element \`${dom}\`', () => {
       const wrapper = ${getMountCode(framework, componentCode)};
-      expect(wrapper.find('${dom}')).toBeTruthy()`,
+      expect(wrapper.find('${dom}').exists()).toBeTruthy()`,
       snapshot ? 'expect(wrapper.element).toMatchSnapshot();' : '',
     `})`,
   ];
