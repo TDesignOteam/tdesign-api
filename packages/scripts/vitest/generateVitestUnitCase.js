@@ -3,6 +3,10 @@ const { generateClassNameUnitCase } = require('./generate-class-name');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
 const chalk = require('chalk');
+const fs = require('fs');
+const path = require('path');
+const kebabCase = require('lodash/kebabCase');
+const { FRAMEWORK_MAP } = require('../config');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   console.log(baseData);
@@ -32,6 +36,15 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     const cases = [importCodes].concat(tests).join('\n\n');
     const str = prettier.format(cases, prettierConfig);
     console.log('>>>>>>>>', str, '>>>>>>');
+    const basePath = FRAMEWORK_MAP[framework].apiBasePath;
+    const fileName = kebabCase(component);
+    const outputPath = path.resolve(basePath, `${fileName}/__tests__/vitest-${fileName}.test.jsx`);
+    fs.writeFile(outputPath, str, (err) => {
+      if (err) {
+        return console.error(err);
+      }
+      console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
+    });
   } catch (e) {
     console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
     console.warn(e);

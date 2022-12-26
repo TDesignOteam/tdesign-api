@@ -12190,7 +12190,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", \"t-size-m\", \"t-size-l\"], \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", \"\", \"t-size-l\"], \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

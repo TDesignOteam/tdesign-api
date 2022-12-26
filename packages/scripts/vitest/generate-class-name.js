@@ -120,7 +120,7 @@ function generateReactClassName(test, oneApiData, component) {
       `it(${getItDescription(oneApiData)}, () => {
         const { container: container1 } = render(<${component}>Text</${component}>);
         expect(container1.querySelector('.${className}')).toBeFalsy();
-        const { container: container2 } = render(<${component}>Text</${component}>);
+        const { container: container2 } = render(<${component} ${oneApiData.field_name}>Text</${component}>);
         expect(container2.firstChild).toHaveClass('${className}');`,
       snapshot ? `expect(container2).toMatchSnapshot();` : '',
       `});`,
