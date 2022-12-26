@@ -74,10 +74,10 @@ style | String / Object | - | Typescript：`string \| Styles`。[see more ts def
 
 name | params | return | description
 -- | -- | -- | --
-destroy | \- | \- | \-
-hide | \- | \- | \-
-show | \- | \- | \-
-update | `(props: DialogOptions)` | \- | \-
+destroy | \- | \- | required
+hide | \- | \- | required
+show | \- | \- | required
+update | `(props: DialogOptions)` | \- | required
 
 ### DialogPlugin
 
