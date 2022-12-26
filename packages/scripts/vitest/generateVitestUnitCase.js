@@ -1,6 +1,7 @@
 const { getImportsConfig, getImportsCode } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
+const { generateAttributeUnitCase } = require('./generate-attribute');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
 const chalk = require('chalk');
@@ -20,17 +21,22 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     // 存在 Web 框架的单测用例，再输出
     // console.log(testDescription.PC);
     let oneApiTestCase = [];
-    if (testDescription.PC.className) {
-      // 元素类名检测
-      oneApiTestCase = generateClassNameUnitCase(testDescription.PC, oneApiData, framework, component);
-    } else if (testDescription.PC.attribute) {
-      // 元素属性监测
-    } else if (testDescription.PC.tnode) {
+    const generateFunctionsMap = {
+      // 元素类名测试
+      className: generateClassNameUnitCase,
+      // 元素属性测试
+      attribute: generateAttributeUnitCase,
       // TNode 测试
-      oneApiTestCase = generateTNodeElement(testDescription.PC, oneApiData, framework, component);
-    }
+      tnode: generateTNodeElement,
+    };
+    // 一般情况：一个 API，只会执行一种测试
+    Object.keys(testDescription.PC).forEach((key) => {
+      if (generateFunctionsMap[key]) {
+        oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
+      }
+    })
     if (oneApiTestCase && oneApiTestCase.length) {
-      tests = tests.concat([oneApiTestCase, `\n`]);
+      tests = tests.concat([oneApiTestCase.join('\n'), `\n`]);
     }
   });
 

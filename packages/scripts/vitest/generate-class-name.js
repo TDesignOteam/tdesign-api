@@ -31,7 +31,7 @@ function generateVueClassName(test, oneApiData, framework, component) {
       `});`,
       `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 
   // 不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
@@ -52,7 +52,7 @@ function generateVueClassName(test, oneApiData, framework, component) {
       `});`,
       `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
@@ -66,7 +66,7 @@ function generateVueClassName(test, oneApiData, framework, component) {
       snapshot ? `expect(wrapper2.element).toMatchSnapshot();` : '',
       '});',
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 }
 
@@ -85,7 +85,7 @@ function generateReactClassName(test, oneApiData, component) {
       `});`,
       `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 
   // 不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
@@ -106,7 +106,7 @@ function generateReactClassName(test, oneApiData, component) {
       `});`,
       `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
@@ -120,7 +120,7 @@ function generateReactClassName(test, oneApiData, component) {
       snapshot ? `expect(container2).toMatchSnapshot();` : '',
       `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter(v => v);
   }
 }
 

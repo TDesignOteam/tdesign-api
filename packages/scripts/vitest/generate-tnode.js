@@ -32,7 +32,7 @@ function generateVueTNode(test, oneApiData, framework, component) {
     arr.push(`\n`);
     const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
     const secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode);
-    return arr.concat(secondArr).join('\n');
+    return arr.concat(secondArr);
   }
 }
 
