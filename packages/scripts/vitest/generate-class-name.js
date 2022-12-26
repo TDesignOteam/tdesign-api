@@ -36,7 +36,12 @@ function generateVueClassName(test, oneApiData, framework, component) {
       `${getArrayCode(enums)}.forEach((item, index) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
       `const wrapper = ${getMountCode(framework, componentCode)};`,
-      `expect(wrapper.classes(${classNameVariable}[index])).toBeTruthy();`,
+      `if (typeof ${classNameVariable}[index] === 'string') {
+        expect(wrapper.classes(${classNameVariable}[index])).toBeTruthy();
+      } else if (typeof ${classNameVariable}[index] === 'object') {
+        const classNameKey = Object.keys(${classNameVariable}[index])[0];
+        expect(wrapper.classes(classNameKey)).toBeFalsy();
+      }`,
       snapshot ? `expect(wrapper.element).toMatchSnapshot();` : '',
       `});`,
       `});`,
@@ -48,9 +53,9 @@ function generateVueClassName(test, oneApiData, framework, component) {
   if (typeof className === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
     const arr = [
       `it('props.${oneApiData.field_name} works fine', () => {`,
-      `const wrapper1 = mount(<${component}>Text</${component}>);`,
+      `const wrapper1 = ${getMountCode(framework, `<${component}>Text</${component}>`)};`,
       `expect(wrapper1.classes('${className}')).toBeFalsy();`,
-      `const wrapper2 = mount(<${component} ${oneApiData.field_name}>Text</${component}>);`,
+      `const wrapper2 = ${getMountCode(framework, `<${component} ${oneApiData.field_name}={true}>Text</${component}>`)};`,
       `expect(wrapper2.classes('${className}')).toBeTruthy();`,
       snapshot ? `expect(wrapper2.element).toMatchSnapshot();` : '',
       '});',
@@ -77,7 +82,7 @@ function getMountCode(framework, componentCode) {
 }
 
 function getArrayCode(arr) {
-  return `[${arr.map(val => `'${val}'`).join(', ')}]`;
+  return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
 
 function generateReactClassName(test, oneApiData, component) {
@@ -106,10 +111,11 @@ function generateReactClassName(test, oneApiData, component) {
       `${getArrayCode(enums)}.forEach((item, index) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
       `const { container } = render(${componentCode});`,
-      `if (${classNameVariable}[index]) {
+      `if (typeof ${classNameVariable}[index] === 'string') {
         expect(container.firstChild).toHaveClass(${classNameVariable}[index]);
-      } else {
-        expect(container.querySelector(\`.\${${classNameVariable}[index]}\`)).toBeFalsy();
+      } else if (typeof ${classNameVariable}[index] === 'object') {
+        const classNameKey = Object.keys(${classNameVariable}[index])[0];
+        expect(container.querySelector(\`.\${classNameKey}\`)).toBeFalsy();
       }`,
       snapshot ? `expect(container).toMatchSnapshot();` : '',
       `});`,
@@ -124,7 +130,7 @@ function generateReactClassName(test, oneApiData, component) {
       `it(${getItDescription(oneApiData)}, () => {
         const { container: container1 } = render(<${component}>Text</${component}>);
         expect(container1.querySelector('.${className}')).toBeFalsy();
-        const { container: container2 } = render(<${component} ${oneApiData.field_name}>Text</${component}>);
+        const { container: container2 } = render(<${component} ${oneApiData.field_name}={true}>Text</${component}>);
         expect(container2.firstChild).toHaveClass('${className}');`,
       snapshot ? `expect(container2).toMatchSnapshot();` : '',
       `});`,
