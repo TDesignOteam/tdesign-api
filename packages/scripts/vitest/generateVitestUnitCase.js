@@ -1,5 +1,6 @@
 const { getImportsConfig, getImportsCode } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
+const { generateTNodeElement } = require('./generate-tnode');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
 const chalk = require('chalk');
@@ -18,12 +19,18 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     if (!testDescription.PC || framework.indexOf('PC') === -1) return;
     // 存在 Web 框架的单测用例，再输出
     // console.log(testDescription.PC);
+    let oneApiTestCase = [];
     if (testDescription.PC.className) {
-      const r = generateClassNameUnitCase(testDescription.PC, oneApiData, framework, component);
-      if (r) {
-        tests.push(r);
-        tests.push('\n');
-      }
+      // 元素类名检测
+      oneApiTestCase = generateClassNameUnitCase(testDescription.PC, oneApiData, framework, component);
+    } else if (testDescription.PC.attribute) {
+      // 元素属性监测
+    } else if (testDescription.PC.tnode) {
+      // TNode 测试
+      oneApiTestCase = generateTNodeElement(testDescription.PC, oneApiData, framework, component);
+    }
+    if (oneApiTestCase && oneApiTestCase.length) {
+      tests = tests.concat([oneApiTestCase, `\n`]);
     }
   });
 

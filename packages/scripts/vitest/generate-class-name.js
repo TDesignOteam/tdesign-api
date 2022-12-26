@@ -1,3 +1,9 @@
+const {
+  getItDescription,
+  getMountCode,
+  getArrayCode,
+} = require('./utils');
+
 /**
  * 输出类名检测单测用例
  */
@@ -52,7 +58,7 @@ function generateVueClassName(test, oneApiData, framework, component) {
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
   if (typeof className === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
     const arr = [
-      `it('props.${oneApiData.field_name} works fine', () => {`,
+      `it(${getItDescription(oneApiData)}, () => {`,
       `const wrapper1 = ${getMountCode(framework, `<${component}>Text</${component}>`)};`,
       `expect(wrapper1.classes('${className}')).toBeFalsy();`,
       `const wrapper2 = ${getMountCode(framework, `<${component} ${oneApiData.field_name}={true}>Text</${component}>`)};`,
@@ -62,27 +68,6 @@ function generateVueClassName(test, oneApiData, framework, component) {
     ];
     return arr.filter(v => v).join('\n');
   }
-}
-
-function getMountCode(framework, componentCode) {
-  if (framework === 'Vue(PC)') {
-    return [
-      `mount({
-        render() {
-          return (
-            ${componentCode}
-          );
-        }
-      })`
-    ];
-  }
-  if (framework === 'VueNext(PC)') {
-    return `mount(${componentCode})`;
-  }
-}
-
-function getArrayCode(arr) {
-  return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
 
 function generateReactClassName(test, oneApiData, component) {
@@ -137,10 +122,6 @@ function generateReactClassName(test, oneApiData, component) {
     ];
     return arr.filter(v => v).join('\n');
   }
-}
-
-function getItDescription(oneApiData) {
-  return `'props.${oneApiData.field_name} works fine'`;
 }
 
 module.exports = {
