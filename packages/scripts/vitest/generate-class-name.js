@@ -18,10 +18,11 @@ function generateClassNameUnitCase(test, oneApiData, framework, component) {
 
 function generateVueClassName(test, oneApiData, framework, component) {
   const { className, snapshot } = test;
+  
   const componentCode = `<${component} ${oneApiData.field_name}={item}>Text</${component}>`;
   const enums = oneApiData.field_enum.split('/');
-  // 不同的值控制不同的类名（一个值必定对应着一个类名）
-  if (typeof className === 'string' && className.indexOf('${item}') != -1 && oneApiData.field_type_text[0] === 'String') {
+  // 不同的值控制不同的类名，类名的一部分是 API，如：button.variant
+  if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
     const arr = [
       `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
@@ -35,7 +36,7 @@ function generateVueClassName(test, oneApiData, framework, component) {
   }
 
   // 不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
-  if (Array.isArray(className) && oneApiData.field_type_text[0] === 'String') {
+  if (Array.isArray(className) && oneApiData.field_type_text[0] === 'String' && enums.length) {
     const classNameVariable = `${oneApiData.field_name}ClassNameList`;
     const arr = [
       `const ${classNameVariable} = ${getArrayCode(className)};`,
@@ -65,6 +66,24 @@ function generateVueClassName(test, oneApiData, framework, component) {
       `expect(wrapper2.classes('${className}')).toBeTruthy();`,
       snapshot ? `expect(wrapper2.element).toMatchSnapshot();` : '',
       '});',
+    ];
+    return arr.filter(v => v);
+  }
+
+  // 如果是「枚举值：类名」映射关系
+  if (typeof className === 'object' && !Array.isArray(className)) {
+    const mapVariable = `${oneApiData.field_name}ClassNameMap`;
+    const componentCode = `<${component} ${oneApiData.field_name}={propValue}>Text</${component}>`;
+    const arr = [
+      `const ${mapVariable} = ${JSON.stringify(className)};`,
+      `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {
+        it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`, () => {
+          let propValue = { true: true, false: false }[enumValue];
+          propValue = propValue === undefined ? enumValue : propValue;
+          const wrapper = ${getMountCode(framework, componentCode)};
+          expect(wrapper.classes(expectedClassName)).toBeTruthy();
+        });
+      });`,
     ];
     return arr.filter(v => v);
   }
@@ -119,6 +138,24 @@ function generateReactClassName(test, oneApiData, component) {
         expect(container2.firstChild).toHaveClass('${className}');`,
       snapshot ? `expect(container2).toMatchSnapshot();` : '',
       `});`,
+    ];
+    return arr.filter(v => v);
+  }
+
+  // 如果是「枚举值：类名」映射关系
+  if (typeof className === 'object' && !Array.isArray(className)) {
+    const mapVariable = `${oneApiData.field_name}ClassNameMap`;
+    const componentCode = `<${component} ${oneApiData.field_name}={propValue}>Text</${component}>`;
+    const arr = [
+      `const ${mapVariable} = ${JSON.stringify(className)};`,
+      `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {
+        it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`, () => {
+          let propValue = { true: true, false: false }[enumValue];
+          propValue = propValue === undefined ? enumValue : propValue;
+          const { container } = render(${componentCode});
+          expect(container.querySelector(\`.\${expectedClassName}\`)).toBeTruthy();
+        });
+      });`,
     ];
     return arr.filter(v => v);
   }

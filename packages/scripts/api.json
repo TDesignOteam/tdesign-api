@@ -51895,7 +51895,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": \"t-link--hover-${item}\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52182,7 +52182,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\": { \"true\": \"t-link--hover-underline\", \"false\": \"t-link--hover-color\" }, \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-underline\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

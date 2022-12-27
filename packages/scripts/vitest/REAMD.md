@@ -14,21 +14,24 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 {"PC":{"className":"t-size-full-width"}}
 ```
 
-2. 检测某个 API 类名和属性值是否相同，且存在，比如 button.variant
+2. API 为字符串或布尔类型，不同的值对应着完全不同的类名，无序。"枚举值": "类名"
+
+```json
+{"PC":{"className": { "underline": "t-link--hover-underline", "color": "t-link--hover-color" }, "snapshot": true}}
+```
+
+3.  API 为字符串，存在枚举值，类名是枚举值的一部分，且存在，比如 button.variant
 ```json
 {"PC":{"className": "t-button--variant-${item}", "snapshot": true }}
 ```
 
-3. 检测某个 API 不同的值对应完全不同的类名，比如：button.size 和 button.shape
+值为 `true` 时，存在类名 `.t-link--hover-underline`；值为 `false` 时，类名为 `.t-link--hover-color`
+
+
+4. API 为字符串，存在枚举值，类名和枚举值没有相同字符串。按枚举值顺序列举类名。比如：button.size 和 button.shape
 
 ```json
 {"PC":{"className": [{ "t-button--shape-square": false }, "t-button--shape-square", "t-button--shape-round", "t-button--shape-circle" ]}}
-```
-
-4. API 不同的值对应着不同的类名，无序
-
-```json
-{"PC":{"className": { "true": "t-link--hover-underline", "false": "t-link--hover-color" }, "snapshot": true}}
 ```
 
 ## 测试属性
