@@ -14,9 +14,8 @@ const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
-  const importConfig = getImportsConfig(component);
-
   let tests = [];
+  const configFlag = { hasEvent: false };
   baseData[component].forEach((oneApiData) => {
     if (!oneApiData.test_description) return;
     const testDescription = parseJSON(oneApiData.test_description);
@@ -41,11 +40,15 @@ function generateVitestUnitCase(baseData, framework, { component }) {
         oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
         if (oneApiTestCase && oneApiTestCase.length) {
           tests = tests.concat([oneApiTestCase.join('\n'), `\n`]);
+          if (key === 'event') {
+            configFlag.hasEvent = true;
+          }
         }
       }
     })
   });
 
+  const importConfig = getImportsConfig(component, { hasEvent: configFlag.hasEvent });
   const importCodes = getImportsCode(importConfig, framework);
 
   tests = [`describe('${component} Component', () => {`].concat(tests).concat('});');
