@@ -20,8 +20,15 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
 3. 检测某个 API 不同的值对应完全不同的类名，比如：button.size 和 button.shape
+
 ```json
 {"PC":{"className": [{ "t-button--shape-square": false }, "t-button--shape-square", "t-button--shape-round", "t-button--shape-circle" ]}}
+```
+
+4. API 不同的值对应着不同的类名，无序
+
+```json
+{"PC":{"className": { "true": "t-link--hover-underline", "false": "t-link--hover-color" }, "snapshot": true}}
 ```
 
 ## 测试属性

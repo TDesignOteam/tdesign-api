@@ -38,7 +38,7 @@ function generateVueAttribute(test, oneApiData, framework, component) {
         const wrapper = ${getMountCode(framework, componentCode)};
         expect(wrapper.attributes('${attributeName}')).toBe('${attributeValue}');`,
         snapshot ? 'expect(wrapper.element).toMatchSnapshot();' : '',
-      `})`,
+      `});`,
     ];
     return arr.filter(v => v);
   }
@@ -72,7 +72,7 @@ function generateReactAttribute(test, oneApiData, component) {
         const { container } = render(${componentCode});
         expect(container.firstChild.getAttribute('${attributeName}')).toBe('${attributeValue}');`,
         snapshot ? 'expect(container).toMatchSnapshot();' : '',
-      `})`,
+      `});`,
     ];
     return arr.filter(v => v);
   }
