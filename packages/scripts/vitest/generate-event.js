@@ -43,7 +43,6 @@ function generateVueEventCase(test, oneApiData, framework, component) {
 }
 
 function getEventArguments(arguments) {
-  console.log('~~~~~', arguments);
   return arguments.map((oneArgument, index) => {
     if (typeof oneArgument === 'string') {
       return `expect(fn.mock.calls[0][${index}]).toBe('${oneArgument}');\n`;

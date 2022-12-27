@@ -40,11 +40,20 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ## 检测某个元素是否存在
 
+1. API 值类型 Boolean 时检测某个元素是否存在，如：button.loading
+
 ```json
-{"PC":{"className":"t-is-loading", "snapshot": true, "dom": ".t-loading"}}
+{"PC":{"dom": ".t-loading", "className":"t-is-loading"}}
 ```
 - 期望类名 `t-is-loading` 存在
 - 期望 DOM 元素 `.t-loading` 存在
+
+2. API 值类型是一个枚举值时，则依次设置对应的元素，如：button.tag
+
+```json
+{"PC":{ "dom": ["button", "a", "div"], "snapshot": true }}
+```
+当 `type=button/a/div`时，期望依次呈现的 DOM 元素分别是 `["button", "a", "div"]`。
 
 ## 测试自定义元素 TNode
 

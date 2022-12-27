@@ -23,8 +23,17 @@ function getArrayCode(arr) {
   return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
 
+function parseJSON(json) {
+  try {
+    return JSON.parse(json);
+  } catch (e) {
+    return {};
+  }
+}
+
 module.exports = {
   getItDescription,
   getMountCode,
   getArrayCode,
+  parseJSON,
 };
