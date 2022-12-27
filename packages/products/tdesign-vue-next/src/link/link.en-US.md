@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Link Props
 
 name | type | default | description | required

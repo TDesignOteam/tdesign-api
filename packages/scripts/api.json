@@ -52018,7 +52018,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52141,7 +52141,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": \"t-link--theme-${item}\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52182,7 +52182,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": \"t-link--hover-underline\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
