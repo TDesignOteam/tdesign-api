@@ -1,5 +1,9 @@
 const { getMountCode } = require("./utils");
 
+/**
+ * 检测某个元素是否存在
+ * @returns 
+ */
 function generateDomUnitCase(test, oneApiData, framework, component) {
   if (['VueNext(PC)', 'Vue(PC)'].includes(framework)) {
     return generateVueDomCase(test, oneApiData, framework, component);

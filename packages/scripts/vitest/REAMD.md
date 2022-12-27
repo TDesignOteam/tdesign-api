@@ -53,3 +53,20 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
 其中，snapshot: true 表示是否生成当前测试用例快照
+
+## 测试事件
+
+1. 点击事件
+
+```json
+{"PC":{ "event": { "click": { "arguments": [{ "stopPropagation": true, "type": "click" }] } } }}
+```
+
+点击自身，触发点击事件，第一个事件参数的属性 `stopPropagation` 必须存在，且属性 `type` 值为 `click`
+expect(fn.mock.calls[0][0].stopPropagation).toBeTruthy();
+
+```json
+{"PC":{ "event": { "click": { "arguments": [[100, 101]] } } }}
+```
+点击自身，触发点击事件，第一个参数值为 [100, 101]
+expect(fn.mock.calls[0][0]).toBe([100, 101]);

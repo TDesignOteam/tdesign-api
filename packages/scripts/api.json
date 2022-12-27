@@ -12618,7 +12618,7 @@
       "trigger_elements": "MouseEvent<HTMLElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{ \"event\": { \"click\": { \"arguments\": [{ \"stopPropagation\": true, \"type\": \"click\" }] } } }}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

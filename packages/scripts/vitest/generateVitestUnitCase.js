@@ -10,6 +10,7 @@ const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
 const { generateAttributeUnitCase } = require('./generate-attribute');
 const { generateDomUnitCase } = require('./generate-dom');
+const { generateEventUnitCase } = require('./generate-event');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   const importConfig = getImportsConfig(component);
@@ -31,6 +32,8 @@ function generateVitestUnitCase(baseData, framework, { component }) {
       dom: generateDomUnitCase,
       // TNode 测试
       tnode: generateTNodeElement,
+      // 事件
+      event: generateEventUnitCase,
     };
     Object.keys(testDescription.PC).forEach((key) => {
       if (generateFunctionsMap[key]) {
