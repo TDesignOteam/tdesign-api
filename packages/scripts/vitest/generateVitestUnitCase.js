@@ -15,43 +15,61 @@ const { generateEventUnitCase } = require('./generate-event');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   let tests = [];
-  const configFlag = { hasEvent: false };
-  baseData[component].forEach((oneApiData) => {
-    if (!oneApiData.test_description) return;
-    const testDescription = parseJSON(oneApiData.test_description);
-    if (!testDescription.PC || framework.indexOf('PC') === -1) return;
-    // 存在 Web 框架的单测用例，再输出
-    // console.log(testDescription.PC);
-    let oneApiTestCase = [];
-    const generateFunctionsMap = {
-      // 元素类名测试
-      className: generateClassNameUnitCase,
-      // 元素属性测试
-      attribute: generateAttributeUnitCase,
-      // 检测 DOM 元素是否存在
-      dom: generateDomUnitCase,
-      // TNode 测试
-      tnode: generateTNodeElement,
-      // 事件
-      event: generateEventUnitCase,
-    };
-    Object.keys(testDescription.PC).forEach((key) => {
-      if (generateFunctionsMap[key]) {
-        oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
-        if (oneApiTestCase && oneApiTestCase.length) {
-          tests = tests.concat([oneApiTestCase.join('\n'), `\n`]);
-          if (key === 'event') {
-            configFlag.hasEvent = true;
+  const configFlag = { hasEvent: false, importedComponents: [], importedMounts: new Set() };
+  Object.entries(baseData).forEach(([component, oneComponentApi]) => {
+    if (!oneComponentApi) return;
+    let oneComponentTests = [];
+    oneComponentApi.forEach((oneApiData) => {
+      if (!oneApiData.test_description) return;
+      const testDescription = parseJSON(oneApiData.test_description, 'test_description must be a JSON.');
+      if (!testDescription.PC || framework.indexOf('PC') === -1) return;
+      
+      // 存在 Web 框架的单测用例，再输出
+      // console.log(testDescription.PC);
+      let oneApiTestCase = [];
+      const generateFunctionsMap = {
+        // 元素类名测试
+        className: generateClassNameUnitCase,
+        // 元素属性测试
+        attribute: generateAttributeUnitCase,
+        // 检测 DOM 元素是否存在
+        dom: generateDomUnitCase,
+        // TNode 测试
+        tnode: generateTNodeElement,
+        // 事件
+        event: generateEventUnitCase,
+      };
+      Object.keys(testDescription.PC).forEach((key) => {
+        if (generateFunctionsMap[key]) {
+          oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
+          if (oneApiTestCase && oneApiTestCase.length) {
+            oneComponentTests = oneComponentTests.concat([oneApiTestCase.join('\n'), `\n`]);
+            if (key === 'event') {
+              configFlag.hasEvent = true;
+            }
           }
         }
+      });
+
+      console.log(testDescription.PC)
+      if (testDescription.PC.wrapper) {
+        configFlag.importedMounts.add(testDescription.PC.wrapper);
       }
-    })
+      if (testDescription.Mobile && testDescription.Mobile.wrapper) {
+        configFlag.importedMounts.add(testDescription.Mobile.wrapper);
+      }
+    });
+
+    if (oneComponentTests.length) {
+      oneComponentTests.unshift(`describe('${component} Component', () => {`);
+      oneComponentTests.push('});\n');
+      tests = tests.concat(oneComponentTests);
+      configFlag.importedComponents.push(component);
+    }
   });
 
-  const importConfig = getImportsConfig(component, { hasEvent: configFlag.hasEvent });
+  const importConfig = getImportsConfig(configFlag);
   const importCodes = getImportsCode(importConfig, framework);
-
-  tests = [`describe('${component} Component', () => {`].concat(tests).concat('});');
 
   try {
     const cases = [importCodes].concat(tests).join('\n\n');

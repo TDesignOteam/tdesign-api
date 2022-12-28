@@ -58,7 +58,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 - 期望类名 `t-is-loading` 存在
 - 期望 DOM 元素 `.t-loading` 存在
 
-2. API 值类型是一个枚举值时，则依次设置对应的元素，如：button.tag
+2. API 值类型是一个枚举值时，则依次设置对应的元素（有顺序），如：button.tag
 
 ```json
 {"PC":{ "dom": ["button", "a", "div"], "snapshot": true }}
