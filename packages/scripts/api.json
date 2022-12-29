@@ -8095,7 +8095,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__first-full-row\", \"td[colspan=\\\"2\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
+      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__first-full-row\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -8302,7 +8302,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__footer\", \".t-table__row-full-element\", \"td[colspan=\\\"2\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
+      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__footer\", \".t-table__row-full-element\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -8554,7 +8554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__last-full-row\", \"td[colspan=\\\"2\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
+      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__last-full-row\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

@@ -23,9 +23,14 @@ function generateVueTNode(test, oneApiData, framework, component) {
     }, extraCode);
   } else if (framework.indexOf('React') !== -1) {
     if (oneApiData.field_name === 'children') {
-      componentCode = `<${component}><span className='custom-node'>TNode</span></${component}>`;
+      componentCode = getMountComponent(framework, component, {}, {
+        ...extraCode,
+        content: `<span className='custom-node'>TNode</span>`,
+      });
     } else {
-      componentCode = `<${component} ${oneApiData.field_name}={<span className='custom-node'>TNode</span>}></${component}>`;
+      componentCode = getMountComponent(framework, component, {
+        [oneApiData.field_name]: `<span className='custom-node'>TNode</span>`,
+      }, extraCode);
     }
   }
   const itDesc = getItDescription(oneApiData);

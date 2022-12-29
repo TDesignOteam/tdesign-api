@@ -29,13 +29,13 @@ function getImportsConfig(params = {}) {
       './mount': [],
     },
     'React(PC)': {
-      'react': [],
+      'react': 'React',
       '@test/utils': [],
       '..': [],
       './mount': [],
     },
     'React(Mobile)': {
-      'react': [],
+      'react': 'React',
       '@test/utils': [],
       '..': [],
       './mount': [],
@@ -57,8 +57,6 @@ function getImportsConfig(params = {}) {
       obj[framework]['./mount'] = list;
     });
   } else {
-    obj['React(PC)']['react'] = 'React';
-    obj['React(Mobile)']['react'] = 'React';
     obj['React(PC)']['@test/utils'].push('render');
     obj['React(Mobile)']['@test/utils'].push('render');
     obj['Vue(PC)']['@vue/test-utils'].push('mount');
