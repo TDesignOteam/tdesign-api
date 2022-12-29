@@ -5,6 +5,7 @@ const {
   getWrapper,
   getDomExpectTruthy,
   getDomExpectFalsy,
+  getDomCountExpectCode,
 } = require("./utils");
 
 /**
@@ -54,6 +55,30 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
         `});`,
       `});`,
     ];
+    return arr;
+  }
+  // 不同的值对应不同的 DOM 元素
+  if (!Array.isArray(dom) && typeof dom === 'object') {
+    let arr = [];
+    // value: [3, 1]； domInfo: { ".t-table__row--fixed-top": 3 }
+    Object.entries(dom).forEach(([value, domInfo]) => {
+      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+      const oneValueArr = [
+        `it('props.${oneApiData.field_name} is equal ${value}', () => {`,
+        getWrapper(framework, mountCode),
+        (() => {
+          if (typeof domInfo === 'string') {
+            return getDomExpectTruthy(framework, `'${domInfo}'`);
+          }
+          if (typeof domInfo === 'object' && !Array.isArray(domInfo)) {
+            return getDomCountExpectCode(framework, domInfo);
+          }
+        })(),
+        getSnapshotCase(snapshot, framework),
+        `});\n`,
+      ];
+      arr = arr.concat(oneValueArr);
+    })
     return arr;
   }
 }

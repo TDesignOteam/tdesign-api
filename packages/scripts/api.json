@@ -8137,7 +8137,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{ \"dom\": { \"[3, 1]\": { \".t-table__row--fixed-top\": 3, \".t-table__row--fixed-bottom\": 1 } }, \"wrapper\":\"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

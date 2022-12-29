@@ -139,6 +139,30 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   }
 }
 
+/**
+ * 验证某个 DOM 存在的数量
+ * @param {String} framework 框架名称
+ * @param {Array<Object>} domAndCount { domSelector: number }，示例：{ ".t-table__row--fixed-top": 3}
+ * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
+ * @returns 
+ */
+ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
+  if (framework.indexOf('Vue') !== -1) {
+    return Object.entries(domAndCount).map(([className, countOrIndex]) => {
+      if (!isNaN(countOrIndex)) {
+        return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
+      }
+    }).join('\n');
+  }
+  if (framework.indexOf('React') !== -1) {
+    return Object.entries(domAndCount).map(([className, countOrIndex]) => {
+      if (!isNaN(countOrIndex)) {
+        return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
+      }
+    }).join('\n');
+  }
+}
+
 function getClassNameExpectTruthy(framework, className, wrapperIndex = '') {
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.classes(${className})).toBeTruthy();`;
@@ -181,4 +205,5 @@ module.exports = {
   getDomExpectFalsy,
   getClassNameExpectTruthy,
   getClassNameExpectFalsy,
+  getDomCountExpectCode,
 };

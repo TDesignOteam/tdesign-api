@@ -6,7 +6,7 @@ npm run api:docs Button 'Vue(PC)'  vitest,finalProject
 npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
-## 测试类名
+## 类名
 
 1. 检测是否存在某个类名，比如：button.block
 
@@ -34,7 +34,10 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 {"PC":{"className": [{ "t-button--shape-square": false }, "t-button--shape-square", "t-button--shape-round", "t-button--shape-circle" ]}}
 ```
 
-## 测试属性
+---
+
+
+## 属性
 
 1. 检测某个属性的枚举值值是否正确，比如：button.type
 
@@ -48,15 +51,18 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 {"PC":{"attribute": { "href": "https://tdesign.tencent.com/" }, "snapshot": true }}
 ```
 
-## 检测某个元素是否存在
+---
+
+## DOM 检测
 
 1. API 值类型 Boolean 时检测某个元素是否存在，如：button.loading
 
 ```json
-{"PC":{"dom": ".t-loading", "className":"t-is-loading"}}
+{"PC":{ "dom": ".t-loading" }}
 ```
-- 期望类名 `t-is-loading` 存在
-- 期望 DOM 元素 `.t-loading` 存在
+
+期望 DOM 元素 `.t-loading` 存在
+
 
 2. API 值类型是一个枚举值时，则依次设置对应的元素（有顺序），如：button.tag
 
@@ -65,15 +71,40 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 当 `type=button/a/div`时，期望依次呈现的 DOM 元素分别是 `["button", "a", "div"]`。
 
-## 测试自定义元素 TNode
+3. 不同的 API 值，对应着不同的 DOM 元素，如：table.fixedRows
 
+```json
+{"PC":{ "dom": { "[3, 1]": ".t-table__row--fixed-top" } }}
+```
+表示当 `table.fixedRows` 值为 `[3, 1]`时，对应 DOM `.t-table__row--fixed-top` 应当存在
+
+
+```json
+{"PC":{ "dom": { "[3, 1]": { ".t-table__row--fixed-top": 3, ".t-table__row--fixed-bottom": 1 } } }}
+```
+表示当 `table.fixedRows` 值为 `[3, 1]`时，对应 DOM 应当存在，且数量为指定数量
+
+
+---
+
+## TNode
+
+1. `"tnode": true` 表示测试自定义节点
 ```json
 {"PC": { "tnode": true, "snapshot": true }}
 ```
 
-其中，snapshot: true 表示是否生成当前测试用例快照
+2. TNode 本身之外的更多断言
 
-## 测试事件
+```json
+{"PC":{"tnode":{ "dom":[".t-table__first-full-row", "td[colspan=\"2\"]"] }, "wrapper":"getNormalTableMount"}}
+```
+除了测试自定义节点，还希望新增这些 dom 元素是否存在的断言。
+
+---
+
+
+## Events
 
 1. 点击事件
 
@@ -82,10 +113,12 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
 点击自身，触发点击事件，第一个事件参数的属性 `stopPropagation` 必须存在，且属性 `type` 值为 `click`
-expect(fn.mock.calls[0][0].stopPropagation).toBeTruthy();
+
+`expect(fn.mock.calls[0][0].stopPropagation).toBeTruthy();`
 
 ```json
 {"PC":{ "event": { "click": { "arguments": [[100, 101]] } } }}
 ```
 点击自身，触发点击事件，第一个参数值为 [100, 101]
-expect(fn.mock.calls[0][0]).toBe([100, 101]);
+
+`expect(fn.mock.calls[0][0]).toBe([100, 101]);`
