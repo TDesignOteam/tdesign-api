@@ -1,4 +1,4 @@
-##
+## 命令行
 
 ```bash
 npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
@@ -6,7 +6,7 @@ npm run api:docs Button 'Vue(PC)'  vitest,finalProject
 npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
-## 类名
+## 类名 `{ "className": {} }`
 
 1. 检测是否存在某个类名，比如：button.block
 
@@ -37,7 +37,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ---
 
 
-## 属性
+## 属性 `{ "attribute": {} }`
 
 1. 检测某个属性的枚举值值是否正确，比如：button.type
 
@@ -53,9 +53,9 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ---
 
-## DOM 检测
+## DOM 检测 `{ "dom": {} }`
 
-1. API 值类型 Boolean 时检测某个元素是否存在，如：button.loading
+1. 检测某一个元素是否存在，如：button.loading
 
 ```json
 {"PC":{ "dom": ".t-loading" }}
@@ -64,12 +64,22 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 期望 DOM 元素 `.t-loading` 存在
 
 
-2. API 值类型是一个枚举值时，则依次设置对应的元素（有顺序），如：button.tag
+2. 检测某一批 DOM 是否存在， 如：button.tag
+
+**2.1 检测 API 不同的枚举值对应不同的元素，元素顺序必须和枚举值顺序保持相同**
 
 ```json
 {"PC":{ "dom": ["button", "a", "div"], "snapshot": true }}
 ```
 当 `type=button/a/div`时，期望依次呈现的 DOM 元素分别是 `["button", "a", "div"]`。
+
+**2.2 API 不存在枚举值，则直接检测检测 "dom" 数组中的元素是否存在**
+
+```json
+{"PC":{ "dom": ["tfoot.t-table__footer", { "tfoot > tr": 2 }]}}
+```
+用例将会依次检测是否存在元素 `tfoot.t-table__footer`，以及 `tfoot > tr` 元素数量是否为 2
+
 
 3. 不同的 API 值，对应着不同的 DOM 元素，如：table.fixedRows
 
@@ -87,7 +97,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ---
 
-## TNode
+## TNode `{ "tnode": {} }`
 
 1. `"tnode": true` 表示测试自定义节点
 ```json
@@ -103,8 +113,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ---
 
-
-## Events
+## Events `{ "event": {} }`
 
 1. 点击事件
 

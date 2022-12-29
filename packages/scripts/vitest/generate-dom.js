@@ -6,6 +6,7 @@ const {
   getDomExpectTruthy,
   getDomExpectFalsy,
   getDomCountExpectCode,
+  getItDescription,
 } = require("./utils");
 
 /**
@@ -19,6 +20,7 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
 function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   const { dom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
+  // API 为 Boolean 类型，检测 DOM
   if (typeof dom === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
     const mountCode = getMountComponent(framework, component, {}, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false }, extraCode);
@@ -41,45 +43,65 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     ];
     return arr;
   }
-  if (Array.isArray(dom) && oneApiData.field_enum) {
-    const enums = oneApiData.field_enum.split('/');
-    const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
-    const arr = [
-      `const ${expectedVariable} = ${getArrayCode(dom)};`,
-      `${getArrayCode(enums)}.forEach((item, index) => {
-        it(\`props.${oneApiData.field_name} is equal to \${item}\`, () => {`,
-          getWrapper(framework, mountCode),
-          getDomExpectTruthy(framework, `${expectedVariable}[index]`),
-          getSnapshotCase(snapshot, framework),
+  // API 为数组类型，检测 DOM
+  if (Array.isArray(dom)) {
+    // API 存在枚举值，DOM 检测依赖枚举值
+    if (oneApiData.field_enum) {
+      const enums = oneApiData.field_enum.split('/');
+      const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
+      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
+      const arr = [
+        `const ${expectedVariable} = ${getArrayCode(dom)};`,
+        `${getArrayCode(enums)}.forEach((item, index) => {
+          it(\`props.${oneApiData.field_name} is equal to \${item}\`, () => {`,
+            getWrapper(framework, mountCode),
+            getDomExpectTruthy(framework, `${expectedVariable}[index]`),
+            getSnapshotCase(snapshot, framework),
+          `});`,
         `});`,
-      `});`,
-    ];
-    return arr;
+      ];
+      return arr;
+    } else {
+      // API 不存在枚举值，直接检测数组中的元素是否存在，以及元素的数量
+      let arr = [];
+      dom.forEach((domInfo) => {
+        const mountCode = getMountComponent(framework, component, {}, extraCode);
+        const oneValueArr = [
+          `it('props.${oneApiData.field_name} works fine. ${JSON.stringify(domInfo)} should exist', () => {`,
+          getWrapper(framework, mountCode),
+          getDomExpect(framework, domInfo),
+          getSnapshotCase(snapshot, framework),
+          `});\n`,
+        ];
+        arr = arr.concat(oneValueArr);
+      })
+      return arr;
+    }
   }
-  // 不同的值对应不同的 DOM 元素
+  // 不同的值对应不同的 DOM 元素，示例：{"PC":{ "dom": { "[3, 1]": ".t-table__row--fixed-top" } }}
   if (!Array.isArray(dom) && typeof dom === 'object') {
     let arr = [];
-    // value: [3, 1]； domInfo: { ".t-table__row--fixed-top": 3 }
     Object.entries(dom).forEach(([value, domInfo]) => {
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
       const oneValueArr = [
         `it('props.${oneApiData.field_name} is equal ${value}', () => {`,
         getWrapper(framework, mountCode),
-        (() => {
-          if (typeof domInfo === 'string') {
-            return getDomExpectTruthy(framework, `'${domInfo}'`);
-          }
-          if (typeof domInfo === 'object' && !Array.isArray(domInfo)) {
-            return getDomCountExpectCode(framework, domInfo);
-          }
-        })(),
+        getDomExpect(framework, domInfo),
         getSnapshotCase(snapshot, framework),
         `});\n`,
       ];
       arr = arr.concat(oneValueArr);
     })
     return arr;
+  }
+}
+
+function getDomExpect(framework, domInfo) {
+  if (typeof domInfo === 'string') {
+    return getDomExpectTruthy(framework, `'${domInfo}'`);
+  }
+  if (typeof domInfo === 'object' && !Array.isArray(domInfo)) {
+    return getDomCountExpectCode(framework, domInfo);
   }
 }
 
