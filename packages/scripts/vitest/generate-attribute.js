@@ -1,30 +1,33 @@
-const { getArrayCode, getItDescription, getMountComponent, getWrapper, getSnapshotCase } = require("./utils");
+const {
+  getArrayCode,
+  getItDescription,
+  getMountComponent,
+  getWrapper,
+  getSnapshotCase,
+  getAttributeExpect,
+  getDomAttributeExpect,
+} = require("./utils");
 
 function generateAttributeUnitCase(test, oneApiData, framework, component) {
-  return generateVueAndReactAttribute(test, oneApiData, framework, component);
-}
-
-function getAttributeExpect(framework, attributes, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    return Object.entries(attributes).map(([attribute, value]) => {
-      return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
-    }).join('\n');
-  }
-  if (framework.indexOf('React') !== -1) {
-    return Object.entries(attributes).map(([attribute, value]) => {
-      return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
-    }).join('\n');
-  }
+  const arr = generateVueAndReactAttribute(test, oneApiData, framework, component);
+  return arr?.filter(v => v);
 }
 
 function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   const { attribute, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
+  if (typeof attribute !== 'object') return;
+  // 1. 处理数组
+  if (Array.isArray(attribute)) {
+    return generateMapAttribute(test, oneApiData, framework, component);
+  }
+  // 2. 处理 {} Object
   const attributeName = Object.keys(attribute)[0];
   // 期望的属性值
   const attributeValue = attribute[attributeName];
   // 属性全部枚举值
   const propsValues = oneApiData.field_enum?.split('/');
+  // 按顺序处理枚举值对应的属性
   if (Array.isArray(attributeValue) && propsValues.length) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
     const arr = [
@@ -40,7 +43,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
     return arr.filter(v => v);
   }
   // 测试属性赋值，如：<Button href="https://tdesign.tencent.com/" />
-  if (typeof attributeValue === 'string') {
+  if (typeof attributeValue === 'string' && attributeName === oneApiData.field_name) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${attributeValue}'` }, extraCode);
     const arr = [
       `it(${getItDescription(oneApiData)}, () => {`,
@@ -51,6 +54,23 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
     ];
     return arr.filter(v => v);
   }
+}
+
+function generateMapAttribute(test, oneApiData, framework, component) {
+  // 此时的 attribute 一定是数组
+  const { attribute, snapshot, content, wrapper } = test;
+  const extraCode = { content, wrapper };
+  return attribute.map(({ value, expect }) => {
+    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+    const arr = [
+      `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
+        getWrapper(framework, mountCode),
+        getDomAttributeExpect(framework, expect),
+        getSnapshotCase(snapshot, framework),
+      `});`
+    ];
+    return arr.filter(v => v).join('\n');
+  });
 }
 
 module.exports = {

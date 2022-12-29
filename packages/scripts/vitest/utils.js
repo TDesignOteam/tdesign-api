@@ -181,6 +181,58 @@ function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
   }
 }
 
+/**
+ * 获取属性测试代码（不包含 DOM 查询）
+ * @param {*} framework 框架名称
+ * @param {*} attributes { attributeName: attributeValue }
+ * @param {*} wrapperIndex 
+ * @returns 
+ */
+function getAttributeExpect(framework, attributes, wrapperIndex = '') {
+  if (framework.indexOf('Vue') !== -1) {
+    return Object.entries(attributes).map(([attribute, value]) => {
+      return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
+    }).join('\n');
+  }
+  if (framework.indexOf('React') !== -1) {
+    return Object.entries(attributes).map(([attribute, value]) => {
+      return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
+    }).join('\n');
+  }
+}
+
+/**
+ * 获取属性测试代码（包含 DOM 查询）
+ * @param {String} framework 框架名称
+ * @param {Array} expectAttributes [{"dom":"tbody > tr","attribute":{"data-level":"level-1"}}]
+ */
+function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
+  let arr = [];
+  if (framework.indexOf('Vue') !== -1) {
+    expectAttributes.forEach(({ dom, attribute }, index) => {
+      const oneExpect = [
+        `const domWrapper${index} = wrapper${wrapperIndex}.find('${dom}');`,
+        Object.entries(attribute).map(([attributeName, attributeValue]) => {
+          return `expect(domWrapper${index}.attributes('${attributeName}')).toBe('${attributeValue}');`;
+        }).join('\n'),
+      ];
+      arr = arr.concat(oneExpect);
+    });
+  }
+  if (framework.indexOf('React') !== -1) {
+    expectAttributes.forEach(({ dom, attribute }, index) => {
+      const oneExpect = [
+        `const domWrapper${index} = container${wrapperIndex}.querySelector('${dom}');`,
+        Object.entries(attribute).map(([attributeName, attributeValue]) => {
+          return `expect(domWrapper${index}.getAttribute('${attributeName}')).toBe('${attributeValue}');`;
+        }).join('\n'),
+      ];
+      arr = arr.concat(oneExpect);
+    });
+  }
+  return arr.join('\n');
+}
+
 function getArrayCode(arr) {
   return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
@@ -206,4 +258,6 @@ module.exports = {
   getClassNameExpectTruthy,
   getClassNameExpectFalsy,
   getDomCountExpectCode,
+  getAttributeExpect,
+  getDomAttributeExpect,
 };

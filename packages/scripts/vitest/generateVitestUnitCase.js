@@ -73,7 +73,6 @@ function generateVitestUnitCase(baseData, framework, { component }) {
 
   try {
     const cases = [importCodes].concat(tests).join('\n\n');
-    // console.log('>>>>>>>>', cases, '>>>>>>');
     const codeData = prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;
     const fileName = kebabCase(component);
