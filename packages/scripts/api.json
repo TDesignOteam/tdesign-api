@@ -7886,7 +7886,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "",
+      "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
