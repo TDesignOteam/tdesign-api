@@ -139,6 +139,24 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   }
 }
 
+function getClassNameExpectTruthy(framework, className, wrapperIndex = '') {
+  if (framework.indexOf('Vue') !== -1) {
+    return `expect(wrapper${wrapperIndex}.classes(${className})).toBeTruthy();`;
+  }
+  if (framework.indexOf('React') !== -1) {
+    return `expect(container${wrapperIndex}.firstChild).toHaveClass(${className});`;
+  }
+}
+
+function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
+  if (framework.indexOf('Vue') !== -1) {
+    return `expect(wrapper${wrapperIndex}.classes(${className})).toBeFalsy();`;
+  }
+  if (framework.indexOf('React') !== -1) {
+    return `expect(container${wrapperIndex}.querySelector(\`.\${${className}}\`)).toBeFalsy();`;
+  }
+}
+
 function getArrayCode(arr) {
   return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
@@ -161,4 +179,6 @@ module.exports = {
   parseJSON,
   getDomExpectTruthy,
   getDomExpectFalsy,
+  getClassNameExpectTruthy,
+  getClassNameExpectFalsy,
 };

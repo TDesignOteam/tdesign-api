@@ -9,7 +9,6 @@ const {
 
 /**
  * 检测某个元素是否存在
- * @returns 
  */
 function generateDomUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactDomCase(test, oneApiData, framework, component);

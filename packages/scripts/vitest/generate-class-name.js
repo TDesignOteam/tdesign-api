@@ -4,6 +4,8 @@ const {
   getMountComponent,
   getSnapshotCase,
   getArrayCode,
+  getClassNameExpectTruthy,
+  getClassNameExpectFalsy,
 } = require('./utils');
 
 /**
@@ -11,25 +13,7 @@ const {
  */
 function generateClassNameUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactClassName(test, oneApiData, framework, component);
-  return arr.filter(v => v);
-}
-
-function getClassNameExpectTruthy(framework, className, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.classes(${className})).toBeTruthy();`;
-  }
-  if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.firstChild).toHaveClass(${className});`;
-  }
-}
-
-function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.classes(${className})).toBeFalsy();`;
-  }
-  if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.querySelector(\`.\${${className}}\`)).toBeFalsy();`;
-  }
+  return arr?.filter(v => v);
 }
 
 function generateVueAndReactClassName(test, oneApiData, framework, component) {

@@ -14,33 +14,31 @@ function generateTNodeElement(test, oneApiData, framework, component) {
 function generateVueTNode(test, oneApiData, framework, component) {
   const { tnode, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
-  if (tnode === true) {
-    let componentCode = '';
-    if (framework.indexOf('Vue') !== -1) {
-      const h = framework === 'Vue(PC)' ? 'h' : '';
-      // componentCode = `<${component} ${oneApiData.field_name}={(${h}) => <span class='custom-node'>TNode</span>}></${component}>`;
-      componentCode = getMountComponent(framework, component, {
-        [oneApiData.field_name]: `(${h}) => <span class='custom-node'>TNode</span>`,
-      }, extraCode);
-    } else if (framework.indexOf('React') !== -1) {
-      if (oneApiData.field_name === 'children') {
-        componentCode = `<${component}><span className='custom-node'>TNode</span></${component}>`;
-      } else {
-        componentCode = `<${component} ${oneApiData.field_name}={<span className='custom-node'>TNode</span>}></${component}>`;
-      }
+  let componentCode = '';
+  if (framework.indexOf('Vue') !== -1) {
+    const h = framework === 'Vue(PC)' ? 'h' : '';
+    // componentCode = `<${component} ${oneApiData.field_name}={(${h}) => <span class='custom-node'>TNode</span>}></${component}>`;
+    componentCode = getMountComponent(framework, component, {
+      [oneApiData.field_name]: `(${h}) => <span class='custom-node'>TNode</span>`,
+    }, extraCode);
+  } else if (framework.indexOf('React') !== -1) {
+    if (oneApiData.field_name === 'children') {
+      componentCode = `<${component}><span className='custom-node'>TNode</span></${component}>`;
+    } else {
+      componentCode = `<${component} ${oneApiData.field_name}={<span className='custom-node'>TNode</span>}></${component}>`;
     }
-    const itDesc = getItDescription(oneApiData);
-    let arr = getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode);
-
-    const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot);
-    if (vueSlotsArr.length) {
-      arr = arr.concat(vueSlotsArr);
-    }
-    return arr;
   }
+  const itDesc = getItDescription(oneApiData);
+  let arr = getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode, tnode);
+
+  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode);
+  if (vueSlotsArr.length) {
+    arr = arr.concat(vueSlotsArr);
+  }
+  return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot) {
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];
@@ -52,7 +50,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot) 
     }, extraCode);
     arr.push(`\n`);
     const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
-    secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode);
+    secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode, tnode);
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
       const slotCode2 = getMountComponent(framework, component, {
@@ -60,7 +58,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot) 
       }, extraCode);
       arr.push(`\n`);
       const slotTtDesc2 = `'slots.${kebabCase(oneApiData.field_name)} works fine'`;
-      thirdArr = getTestCaseByComponentCode(slotTtDesc2, framework, snapshot, slotCode2);
+      thirdArr = getTestCaseByComponentCode(slotTtDesc2, framework, snapshot, slotCode2, tnode);
     }
   }
   // 测试驼峰命名的插槽
@@ -74,15 +72,23 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot) 
   return arr;
 }
 
-function getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode) {
+function getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode, tnode) {
   const arr = [
     `it(${itDesc}, () => {`,
     getWrapper(framework, componentCode),
     getDomExpectTruthy(framework, `'.custom-node'`),
+    tnode.dom && getDomExpect(framework, tnode.dom),
     getSnapshotCase(snapshot, framework),
     `});`
   ];
   return arr;
+}
+
+function getDomExpect(framework, tnodeDom) {
+  const doms = Array.isArray(tnodeDom) ? tnodeDom : [tnodeDom];
+  return doms.map((dom) => {
+    return getDomExpectTruthy(framework, `'${dom}'`);
+  }).join('\n');
 }
 
 module.exports = {

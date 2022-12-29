@@ -65,7 +65,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   empty?: TNode;
   /**
-   * 首行内容
+   * 首行内容，横跨所有列
    */
   firstFullRow?: TNode;
   /**
@@ -115,7 +115,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   hover?: boolean;
   /**
-   * 尾行内容
+   * 尾行内容，横跨所有列
    */
   lastFullRow?: TNode;
   /**

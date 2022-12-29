@@ -44,7 +44,7 @@ function generateVitestUnitCase(baseData, framework, { component }) {
         if (generateFunctionsMap[key]) {
           oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
           if (oneApiTestCase && oneApiTestCase.length) {
-            oneComponentTests = oneComponentTests.concat([oneApiTestCase.join('\n'), `\n`]);
+            oneComponentTests = oneComponentTests.concat([oneApiTestCase.join('\n')]);
             if (key === 'event') {
               configFlag.hasEvent = true;
             }
