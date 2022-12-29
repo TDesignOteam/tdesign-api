@@ -211,9 +211,9 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
   if (framework.indexOf('Vue') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
       const oneExpect = [
-        `const domWrapper${index} = wrapper${wrapperIndex}.find('${dom}');`,
+        `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          return `expect(domWrapper${index}.attributes('${attributeName}')).toBe('${attributeValue}');`;
+          return `expect(domWrapper${index || ''}.attributes('${attributeName}')).toBe('${attributeValue}');`;
         }).join('\n'),
       ];
       arr = arr.concat(oneExpect);
@@ -222,9 +222,48 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
   if (framework.indexOf('React') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
       const oneExpect = [
-        `const domWrapper${index} = container${wrapperIndex}.querySelector('${dom}');`,
+        `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          return `expect(domWrapper${index}.getAttribute('${attributeName}')).toBe('${attributeValue}');`;
+          return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).toBe('${attributeValue}');`;
+        }).join('\n'),
+      ];
+      arr = arr.concat(oneExpect);
+    });
+  }
+  return arr.join('\n');
+}
+
+/**
+ * 校验类名（支持子元素类名查询和验证）
+ * @param {*} framework 框架名称
+ * @param {*} expect "expect": [{ "dom": "tbody > tr", "className": { "tdesign-class": true } }]
+ * @param {*} wrapperIndex 
+ */
+function getDomClassNameExpect(framework, expect, wrapperIndex = '') {
+  let arr = [];
+  if (framework.indexOf('Vue') !== -1) {
+    expect.forEach(({ dom, className }, index) => {
+      const oneExpect = [
+        `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
+        Object.entries(className).map(([className, exist]) => {
+          const truthyOrFalsy = exist ? 'toBeTruthy' : 'toBeFalsy';
+          return `expect(domWrapper${index || ''}.classes('${className}')).${truthyOrFalsy}();`;
+        }).join('\n'),
+      ];
+      arr = arr.concat(oneExpect);
+    });
+  }
+  if (framework.indexOf('React') !== -1) {
+    expect.forEach(({ dom, className }, index) => {
+      const kidDomVariable = `domWrapper${index || ''}`;
+      const oneExpect = [
+        `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`,
+        Object.entries(className).map(([className, exist]) => {
+          if (exist) {
+            return `expect(${kidDomVariable}).toHaveClass('${className}');`;
+          } else {
+            return `expect(${kidDomVariable}.classList.contains('${className}')).toBeFalsy();`;
+          }
         }).join('\n'),
       ];
       arr = arr.concat(oneExpect);
@@ -260,4 +299,5 @@ module.exports = {
   getDomCountExpectCode,
   getAttributeExpect,
   getDomAttributeExpect,
+  getDomClassNameExpect,
 };

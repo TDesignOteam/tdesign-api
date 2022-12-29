@@ -8,13 +8,13 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ## 类名 `{ "className": {} }`
 
-1. 类名检测：API 值为 true 时，检测是否存在某个类名，，比如：button.block
+1. 类名检测，校验组件自身：API 值为 true 时，检测是否存在某个类名，，比如：button.block
 
 ```json
 {"PC":{"className":"t-size-full-width"}}
 ```
 
-2. 类名检测：API 为字符串或布尔类型，不同的值对应着完全不同的类名，无序。"枚举值": "类名"
+2. 类名检测，校验组件自身：API 为字符串或布尔类型，不同的值对应着完全不同的类名，无序。"枚举值": "类名"
 
 ```json
 {
@@ -31,7 +31,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 值为 `color`，则期望存在类名 `t-link--hover-hover`；
 
 
-3. 类名检测： API 为字符串，存在枚举值，类名是枚举值的一部分，且存在，比如 button.variant
+3. 类名检测，校验组件自身： API 为字符串，存在枚举值，类名是枚举值的一部分，且存在，比如 button.variant
 ```json
 {"PC":{"className": "t-button--variant-${item}", "snapshot": true }}
 ```
@@ -39,7 +39,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 值为 `true` 时，存在类名 `.t-link--hover-underline`；值为 `false` 时，类名为 `.t-link--hover-color`
 
 
-4. 类名检测：API 为字符串，存在枚举值，类名和枚举值没有相同字符串。按枚举值顺序列举类名。比如：button.size 和 button.shape
+4. 类名检测，校验组件自身：API 为字符串，存在枚举值，类名和枚举值没有相同字符串。按枚举值顺序列举类名。比如：button.size 和 button.shape
 
 ```json
 {"PC":{
@@ -53,8 +53,37 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape-square` 不允许出现。
 
----
+5. 类名检测，校验组件子元素：任意属性值和任意子元素类名校验
 
+```json
+{
+  "PC": {
+    "wrapper": "getNormalTableMount",
+    "className": [
+      {
+        "value": "'tdesign-class'",
+        "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}]
+      },
+      {
+        "value": "{ 'tdesign-class': true, 'tdesign-class-next': false }",
+        "expect": [{ "dom": "tbody > tr", "className": { "tdesign-class": true, "tdesign-class-next": false}}]
+      },
+      {
+        "value": "() => ({ 'tdesign-class': true, 'tdesign-class-next': false })",
+        "expect": [
+          {"dom": "tbody > tr", "className": { "tdesign-class": true, "tdesign-class-next": false }}
+        ]
+      }
+    ]
+  }
+}
+```
+
+- 值为 `'tdesign-class'` 时，期望子元素 `tbody > tr` 存在类名 `tdesign-class`；
+- 值为 `{ 'tdesign-class': true, 'tdesign-class-next': false }` 时，期望子元素 `tbody > tr` 包含类名 `.tdesign-class`，不包含类名 `.tdesign-class-next`；
+
+
+---
 
 ## 属性 `{ "attribute": {} }`
 
@@ -87,7 +116,7 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
       {
         "value": "[() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]]",
         "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1", "data-name": "tdesign" }}]
-      },
+      }
     ]
   }
 }

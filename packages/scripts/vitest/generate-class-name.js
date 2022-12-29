@@ -6,6 +6,7 @@ const {
   getArrayCode,
   getClassNameExpectTruthy,
   getClassNameExpectFalsy,
+  getDomClassNameExpect,
 } = require('./utils');
 
 /**
@@ -20,7 +21,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   const { className, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
-  const enums = oneApiData.field_enum.split('/');
+  const enums = oneApiData.field_enum.split('/').filter(v => v);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
   if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
     const arr = [
@@ -35,25 +36,40 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     return arr;
   }
 
-  // 不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
-  if (Array.isArray(className) && oneApiData.field_type_text[0] === 'String' && enums.length) {
-    const classNameVariable = `${oneApiData.field_name}ClassNameList`;
-    const arr = [
-      `const ${classNameVariable} = ${getArrayCode(className)};`,
-      `${getArrayCode(enums)}.forEach((item, index) => {`,
-      `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
-      getWrapper(framework, mountCode),
-      `if (typeof ${classNameVariable}[index] === 'string') {`,
-        getClassNameExpectTruthy(framework, `${classNameVariable}[index]`),
-      `} else if (typeof ${classNameVariable}[index] === 'object') {
-        const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
-        getClassNameExpectFalsy(framework, 'classNameKey'),
-      `}`,
-        getSnapshotCase(snapshot, framework),
-      `});`,
-      `});`,
-    ];
-    return arr;
+  // 处理数组：不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
+  if (Array.isArray(className)) {
+    // API 存在枚举值，和类名一一对应
+    if (oneApiData.field_type_text[0] === 'String' && enums.length) {
+      const classNameVariable = `${oneApiData.field_name}ClassNameList`;
+      const arr = [
+        `const ${classNameVariable} = ${getArrayCode(className)};`,
+        `${getArrayCode(enums)}.forEach((item, index) => {`,
+        `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
+        getWrapper(framework, mountCode),
+        `if (typeof ${classNameVariable}[index] === 'string') {`,
+          getClassNameExpectTruthy(framework, `${classNameVariable}[index]`),
+        `} else if (typeof ${classNameVariable}[index] === 'object') {
+          const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
+          getClassNameExpectFalsy(framework, 'classNameKey'),
+        `}`,
+          getSnapshotCase(snapshot, framework),
+        `});`,
+        `});`,
+      ];
+      return arr;
+    } else {
+      return className.map(({ value, expect }) => {
+        const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+        const arr = [
+          `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
+            getWrapper(framework, mountCode),
+            getDomClassNameExpect(framework, expect),
+            getSnapshotCase(snapshot, framework),
+          `});`
+        ];
+        return arr.filter(v => v).join('\n');
+      });
+    }
   }
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
