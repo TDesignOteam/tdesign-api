@@ -6,7 +6,6 @@ const {
   getDomExpectTruthy,
   getDomExpectFalsy,
   getDomCountExpectCode,
-  getItDescription,
 } = require("./utils");
 
 /**
@@ -21,7 +20,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   const { dom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   // API 为 Boolean 类型，检测 DOM
-  if (typeof dom === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
+  if (typeof dom === 'string' && oneApiData.field_type_text.includes('Boolean')) {
     const mountCode = getMountComponent(framework, component, {}, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true }, extraCode);

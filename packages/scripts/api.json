@@ -8302,7 +8302,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__footer\", \".t-table__row-full-element\", \"td[colspan=\\\"2\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -8597,7 +8597,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": { \"dom\": [\".t-loading\"] }, \"dom\": \".t-loading\", \"wrapper\":\"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

@@ -8,7 +8,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 
 ## 类名 `{ "className": {} }`
 
-1. 检测是否存在某个类名，比如：button.block
+1. API 值为 true 时，检测是否存在某个类名，，比如：button.block
 
 ```json
 {"PC":{"className":"t-size-full-width"}}
@@ -109,7 +109,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```json
 {"PC":{"tnode":{ "dom":[".t-table__first-full-row", "td[colspan=\"2\"]"] }, "wrapper":"getNormalTableMount"}}
 ```
-除了测试自定义节点，还希望新增这些 dom 元素是否存在的断言。
+除了测试自定义节点，还希望新增这些 dom 元素是否存在的断言。其中 `getNormalTableMount` 表示获取组件实例的方法，在 `mount.js` 中定义。
 
 ---
 
@@ -131,3 +131,13 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 点击自身，触发点击事件，第一个参数值为 [100, 101]
 
 `expect(fn.mock.calls[0][0]).toBe([100, 101]);`
+
+## 综合示例
+
+1. 同时分别输出 TNode 和 DOM 检测测试用例。`PC."tnode"` 表示一个 `it` 测试用例。`PC."dom"` 表示另一个 `it` 测试用例。
+
+```json
+{"PC": { "tnode": { "dom": [".t-loading"] }, "dom": ".t-loading", "wrapper":"getNormalTableMount" }}
+```
+- `PC."tnode"` 表示检测 TNode 时，新增一个 `expect`，检测 DOM 元素 `.t-loading` 是否存在。
+- `PC."dom"` 检测值为 true 时，是否存在 DOM 元素 `.t-loading`。

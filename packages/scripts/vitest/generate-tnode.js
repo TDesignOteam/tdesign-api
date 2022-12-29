@@ -44,18 +44,27 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
   let secondArr = [];
   let thirdArr = [];
   if (framework.indexOf('Vue') !== -1) {
+    const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean,TNode';
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : `'v-slots'`;
-    const slotCode = getMountComponent(framework, component, {
+    const slotCodeProps = {
       [slotsText]: `{ ${oneApiData.field_name}: () => <span class='custom-node'>TNode</span> }`,
-    }, extraCode);
+    };
+    if (isBothBooleanAndTNode) {
+      slotCodeProps[oneApiData.field_name] = true;
+    }
+    const slotCode = getMountComponent(framework, component, slotCodeProps, extraCode);
     arr.push(`\n`);
     const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
     secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode, tnode);
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
-      const slotCode2 = getMountComponent(framework, component, {
+      const slotCodeProps2 = {
         [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='custom-node'>TNode</span> }`,
-      }, extraCode);
+      };
+      if (isBothBooleanAndTNode) {
+        slotCodeProps2[oneApiData.field_name] = true;
+      }
+      const slotCode2 = getMountComponent(framework, component, slotCodeProps2, extraCode);
       arr.push(`\n`);
       const slotTtDesc2 = `'slots.${kebabCase(oneApiData.field_name)} works fine'`;
       thirdArr = getTestCaseByComponentCode(slotTtDesc2, framework, snapshot, slotCode2, tnode);
