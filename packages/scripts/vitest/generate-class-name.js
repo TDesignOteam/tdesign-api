@@ -107,7 +107,6 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`, () => {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
-          // const wrapper = ${getMountCode(framework, componentCode)};
           getWrapper(framework, mountCode),
           getClassNameExpectTruthy(framework, 'expectedClassName'),
         `});

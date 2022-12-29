@@ -1,33 +1,22 @@
-const { getMountCode, getArrayCode, getMountComponent, getSnapshotCase, getWrapper } = require("./utils");
+const {
+  getArrayCode,
+  getMountComponent,
+  getSnapshotCase,
+  getWrapper,
+  getDomExpectTruthy,
+  getDomExpectFalsy,
+} = require("./utils");
 
 /**
  * 检测某个元素是否存在
  * @returns 
  */
 function generateDomUnitCase(test, oneApiData, framework, component) {
-  const arr = generateVueDomCase(test, oneApiData, framework, component);
+  const arr = generateVueAndReactDomCase(test, oneApiData, framework, component);
   return arr && arr.filter(v => v);
 }
 
-function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
-  }
-  if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.querySelector(${domSelector})).toBeTruthy()`;
-  }
-}
-
-function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeFalsy();`;
-  }
-  if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.querySelector(${domSelector})).toBeFalsy()`;
-  }
-}
-
-function generateVueDomCase(test, oneApiData, framework, component) {
+function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   const { dom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   if (typeof dom === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
