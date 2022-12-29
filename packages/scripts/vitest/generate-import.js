@@ -58,9 +58,9 @@ function getImportsConfig(params = {}) {
     });
   } else {
     obj['React(PC)']['react'] = 'React';
-    obj['Mobile(PC)']['react'] = 'React';
+    obj['React(Mobile)']['react'] = 'React';
     obj['React(PC)']['@test/utils'].push('render');
-    obj['Mobile(PC)']['@test/utils'].push('render');
+    obj['React(Mobile)']['@test/utils'].push('render');
     obj['Vue(PC)']['@vue/test-utils'].push('mount');
     obj['VueNext(PC)']['@vue/test-utils'].push('mount');
     obj['Vue(Mobile)']['@vue/test-utils'].push('mount');

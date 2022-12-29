@@ -11535,7 +11535,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-size-full-width\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-size-full-width\", \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11752,7 +11752,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\", \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11838,7 +11838,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-button--ghost\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-button--ghost\", \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11886,7 +11886,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\": { \"href\": \"https://tdesign.tencent.com/\" }, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"attribute\": { \"href\": \"https://tdesign.tencent.com/\" }, \"content\": \"Text\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -11933,7 +11933,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\": { \"tnode\": true, \"content\": \"Text\"  }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12055,7 +12055,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-is-loading\", \"snapshot\": true, \"dom\": \".t-loading\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-loading\", \"dom\": \".t-loading\", \"content\": \"Text\", \"snapshot\": true}} ",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12141,7 +12141,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [{ \"t-button--shape-rectangle\": false }, \"t-button--shape-square\", \"t-button--shape-round\", \"t-button--shape-circle\" ], \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\": [{ \"t-button--shape-rectangle\": false }, \"t-button--shape-square\", \"t-button--shape-round\", \"t-button--shape-circle\" ], \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12190,7 +12190,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12275,7 +12275,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\": { \"tnode\": true, \"content\": \"Text\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12322,7 +12322,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{ \"dom\": [\"button\", \"a\", \"div\"], \"snapshot\": true }}",
+      "test_description": "{\"PC\":{ \"dom\": [\"button\", \"a\", \"div\"], \"content\": \"Text\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12366,7 +12366,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": \"t-button--theme-${item}\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\": \"t-button--theme-${item}\", \"content\": \"Text\", \"snapshot\": true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12452,7 +12452,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"attribute\": { \"type\": [\"submit\", \"reset\", \"button\"], \"snapshot\": true }}}",
+      "test_description": "{\"PC\":{\"attribute\": { \"type\": [\"submit\", \"reset\", \"button\"], \"content\": \"Text\", \"snapshot\": true }}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -12532,7 +12532,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": \"t-button--variant-${item}\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"className\": \"t-button--variant-${item}\", \"content\": \"Text\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

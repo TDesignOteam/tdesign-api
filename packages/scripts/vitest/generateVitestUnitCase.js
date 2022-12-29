@@ -51,7 +51,6 @@ function generateVitestUnitCase(baseData, framework, { component }) {
         }
       });
 
-      console.log(testDescription.PC)
       if (testDescription.PC.wrapper) {
         configFlag.importedMounts.add(testDescription.PC.wrapper);
       }
