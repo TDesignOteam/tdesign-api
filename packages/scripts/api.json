@@ -8807,7 +8807,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-table--column-resizable\", \"wrapper\":\"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
