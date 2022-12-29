@@ -1,3 +1,4 @@
+const { kebabCase } = require('lodash');
 const {
   getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent,
 } = require('./utils');
@@ -31,22 +32,46 @@ function generateVueTNode(test, oneApiData, framework, component) {
     const itDesc = getItDescription(oneApiData);
     let arr = getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode);
 
-    // Only Vue need this code block
-    let secondArr = [];
-    if (framework.indexOf('Vue') !== -1) {
-      const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
-      const slotCode = getMountComponent(framework, component, {
-        [slotsText]: `{ ${oneApiData.field_name}: () => <span class='custom-node'>TNode</span> }`,
-      }, extraCode);
-      arr.push(`\n`);
-      const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
-      secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode);
-    }
-    if (secondArr.length) {
-      arr = arr.concat(secondArr);
+    const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot);
+    if (vueSlotsArr.length) {
+      arr = arr.concat(vueSlotsArr);
     }
     return arr;
   }
+}
+
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot) {
+  let arr = [];
+  // Only Vue need this code block
+  let secondArr = [];
+  let thirdArr = [];
+  if (framework.indexOf('Vue') !== -1) {
+    const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : `'v-slots'`;
+    const slotCode = getMountComponent(framework, component, {
+      [slotsText]: `{ ${oneApiData.field_name}: () => <span class='custom-node'>TNode</span> }`,
+    }, extraCode);
+    arr.push(`\n`);
+    const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
+    secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode);
+
+    if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
+      const slotCode2 = getMountComponent(framework, component, {
+        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='custom-node'>TNode</span> }`,
+      }, extraCode);
+      arr.push(`\n`);
+      const slotTtDesc2 = `'slots.${kebabCase(oneApiData.field_name)} works fine'`;
+      thirdArr = getTestCaseByComponentCode(slotTtDesc2, framework, snapshot, slotCode2);
+    }
+  }
+  // 测试驼峰命名的插槽
+  if (secondArr.length) {
+    arr = arr.concat(secondArr);
+  }
+  // 测试中华线命名的插槽
+  if (thirdArr.length) {
+    arr = arr.concat(thirdArr);
+  }
+  return arr;
 }
 
 function getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode) {

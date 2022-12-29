@@ -45,10 +45,9 @@ function getMountComponent(framework, component, props, extra = {}) {
   const { content, wrapper } = extra;
   filterObject(props);
   let mountComponent = '';
-  // item 是代码关键词，不能作为字符串存在
   if (wrapper) {
     mountComponent = props && Object.keys(props).length
-      ? `${wrapper}(${component}, ${JSON.stringify(props).replace(/"item"/g, 'item')})`
+      ? `${wrapper}(${component}, ${getPropsObjectString(props)})`
       : `${wrapper}(${component})`;
     return mountComponent;
   } else {
@@ -63,6 +62,13 @@ function getMountComponent(framework, component, props, extra = {}) {
     mountComponent = `<${component} ${properties} ${events || ''}>${content || ''}</${component}>`;
   }
   return getFullMountCode(framework, mountComponent);
+}
+
+function getPropsObjectString(props) {
+  const entries = Object.entries(props);
+  if (!entries.length) return {};
+  const list = entries.map(([name, value]) => `${name}: ${value}`);
+  return `{ ${list.join(', ')} }`;
 }
 
 /**

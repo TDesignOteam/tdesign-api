@@ -7843,7 +7843,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -9310,7 +9310,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -9352,7 +9352,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\": [\"t-vertical-align-top\", { \"t-vertical-align-middle\": false }, \"t-vertical-align-bottom\"],\"wrapper\": \"getNormalTableMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
