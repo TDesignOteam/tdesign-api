@@ -67,7 +67,7 @@ function getMountComponent(framework, component, props, extra = {}) {
 function getPropsObjectString(props) {
   const entries = Object.entries(props);
   if (!entries.length) return {};
-  const list = entries.map(([name, value]) => `${name}: ${value}`);
+  const list = entries.map(([name, value]) => `'${name}': ${value}`);
   return `{ ${list.join(', ')} }`;
 }
 
