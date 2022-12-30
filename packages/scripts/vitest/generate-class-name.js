@@ -18,7 +18,7 @@ function generateClassNameUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactClassName(test, oneApiData, framework, component) {
-  const { className, snapshot, content, wrapper } = test;
+  const { className, classNameDom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
   const enums = oneApiData.field_enum.split('/').filter(v => v);
@@ -36,8 +36,8 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     return arr;
   }
 
-  // 处理数组：不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
   if (Array.isArray(className)) {
+    // 处理数组：不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
     // API 存在枚举值，和类名一一对应
     if (oneApiData.field_type_text[0] === 'String' && enums.length) {
       const classNameVariable = `${oneApiData.field_name}ClassNameList`;
@@ -45,7 +45,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         `const ${classNameVariable} = ${getArrayCode(className)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {`,
         `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
-        getWrapper(framework, mountCode),
+        getWrapper(framework, mountCode, '', classNameDom),
         `if (typeof ${classNameVariable}[index] === 'string') {`,
           getClassNameExpectTruthy(framework, `${classNameVariable}[index]`),
         `} else if (typeof ${classNameVariable}[index] === 'object') {
@@ -80,16 +80,16 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     const arr = [
       `it(${getItDescription(oneApiData)}, () => {`,
       `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
-      getWrapper(framework, mountCode1, '1'),
+      getWrapper(framework, mountCode1, '1', classNameDom),
       oneApiData.field_default_value === 'true'
         ? getClassNameExpectTruthy(framework, `'${className}'`, '1')
         : getClassNameExpectFalsy(framework, `'${className}'`, '1'),
       `// ${oneApiData.field_name} = true`,
-      getWrapper(framework, mountCode2, '2'),
+      getWrapper(framework, mountCode2, '2', classNameDom),
       getClassNameExpectTruthy(framework, `'${className}'`, '2'),
       getSnapshotCase(snapshot, framework, '2'),
       `// ${oneApiData.field_name} = false`,
-      getWrapper(framework, mountCode3, '3'),
+      getWrapper(framework, mountCode3, '3', classNameDom),
       getClassNameExpectFalsy(framework, `'${className}'`, '3'),
       getSnapshotCase(snapshot, framework, '3'),
       '});',

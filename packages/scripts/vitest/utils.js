@@ -48,7 +48,7 @@ function getMountComponent(framework, component, props, extra = {}) {
   delete props.events;
   let mountComponent = '';
   if (wrapper) {
-    const params = [component, getPropsObjectString(props, events), events].join(', ');
+    const params = [component, getPropsObjectString(props, events), events].filter(v => v).join(', ');
     return `${wrapper}(${params})`;
   } else {
     const properties = props
@@ -93,19 +93,31 @@ function getSnapshotCase(snapshot, framework, wrapperIndex = '') {
  * 或者测试实例定义
  * @param {String} framework 框架名称
  * @param {String} mountCode 测试代码实例，如：<Button disabled={true} /> 或者 getNormalTableMount(BaseTable, { bordered: false })
- * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
+ * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
+ * @param {String} goalDom 寻找目标元素的选择器
  * @returns 
  */
-function getWrapper(framework, mountCode, wrapperIndex = '') {
+function getWrapper(framework, mountCode, wrapperIndex = '', goalDom = '') {
   if (framework.indexOf('Vue') !== -1) {
-    return `const wrapper${wrapperIndex} = ${mountCode};`;
+    const findDomCode = goalDom ? `.find('${goalDom}')` : '';
+    return `const wrapper${wrapperIndex} = ${mountCode}${findDomCode};`;
   }
   if (framework.indexOf('React') !== -1) {
-    if (wrapperIndex) {
-      return `const { container: container${wrapperIndex} } = ${mountCode};`;
-    }
-    return `const { container } = ${mountCode};`;
+    getReactWrapper(mountCode, wrapperIndex = '', goalDom = '');
   }
+}
+
+function getReactWrapper(mountCode, wrapperIndex = '', goalDom = '') {
+  const i = wrapperIndex;
+  if (goalDom) {
+    return [
+      `const wrapper${i} = ${mountCode};`,
+      `const container${i} = wrapper${i}.container.querySelector('${goalDom}');`
+    ].join('\n');
+  }
+  return wrapperIndex
+    ? `const { container: container${wrapperIndex} } = ${mountCode};`
+    : `const { container } = ${mountCode};`;
 }
 
 /**
