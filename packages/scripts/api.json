@@ -4229,7 +4229,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4309,7 +4309,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4971,7 +4971,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

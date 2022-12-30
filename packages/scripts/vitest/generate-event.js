@@ -1,3 +1,8 @@
+/**
+ * 人机交互测试
+ * React fireEvent: // fireEvent https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+ */
+
 const { getWrapper, getMountComponent } = require("./utils");
 const camelCase = require('lodash/camelCase');
 const upperFirst = require('lodash/upperFirst');
