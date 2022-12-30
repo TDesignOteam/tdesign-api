@@ -201,6 +201,17 @@ function getAttributeExpect(framework, attributes, wrapperIndex = '') {
   }
 }
 
+function getAttributeValue(attributeValue) {
+  const isNotToBe = attributeValue.includes('not.');
+  const value = isNotToBe ? attributeValue.slice(4) : attributeValue;
+  const toBeOrNotToBe = isNotToBe ? 'not.' : '';
+  // 如果是关键词，直接返回
+  if (['toBeUndefined'].includes(value)) {
+    return `${toBeOrNotToBe}${attributeValue}()`;
+  }
+  return `${toBeOrNotToBe}toBe('${attributeValue}')`;
+}
+
 /**
  * 获取属性测试代码（包含 DOM 查询）
  * @param {String} framework 框架名称
@@ -213,7 +224,7 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          return `expect(domWrapper${index || ''}.attributes('${attributeName}')).toBe('${attributeValue}');`;
+          return `expect(domWrapper${index || ''}.attributes('${attributeName}')).${getAttributeValue(attributeValue)};`;
         }).join('\n'),
       ];
       arr = arr.concat(oneExpect);
@@ -224,7 +235,7 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).toBe('${attributeValue}');`;
+          return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).${getAttributeValue(attributeValue)};`;
         }).join('\n'),
       ];
       arr = arr.concat(oneExpect);
