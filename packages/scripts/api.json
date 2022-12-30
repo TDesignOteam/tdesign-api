@@ -70499,7 +70499,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"0.30.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -70567,6 +70567,43 @@
       ]
     },
     {
+      "id": 3071,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Rate",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:37:28",
+      "update_time": "2022-10-31 11:37:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1357,
       "platform_framework": [
         "1",
@@ -70620,11 +70657,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Rate",
       "field_category": 1,
@@ -70654,13 +70687,54 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3237,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Rate",
+      "field_category": 1,
+      "field_name": "gap",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "8",
+      "field_enum": "",
+      "field_desc_zh": "评分图标的间距；默认单位为 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-12-29 12:51:29",
+      "update_time": "2022-12-29 12:51:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -70720,18 +70794,19 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "64"
+        "1",
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义评分图标，插槽参数：{ type: 'grey' | 'highlight' | 'half' }，分别表示 灰色图标、高亮图标 和 半分图标",
+      "field_desc_zh": "自定义评分图标，[选中图标，未选中图标]；此时不受 variant 影响",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-02 12:06:08",
       "update_time": "2022-08-02 12:06:08",
       "event_output": null,
-      "custom_field_type": "TNode<{ type: 'grey' | 'highlight' | 'half' }>",
+      "custom_field_type": "string | string[]",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -70745,7 +70820,8 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "TNode"
+        "String",
+        "Array"
       ]
     },
     {
@@ -70840,43 +70916,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3071,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Rate",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:28",
-      "update_time": "2022-10-31 11:37:28",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -108008,5 +108047,5 @@
       ]
     }
   ],
-  "total": 2577
+  "total": 2578
 }
