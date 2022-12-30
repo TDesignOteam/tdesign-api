@@ -8,6 +8,7 @@ function getImportsConfig(params = {}) {
     hasEvent = false,
     importedComponents = [],
     importedMounts = new Set(),
+    needDefaultRender = false,
   } = params;
   const obj = {
     'Vue(PC)': {
@@ -56,7 +57,8 @@ function getImportsConfig(params = {}) {
     Object.keys(obj).forEach(framework => {
       obj[framework]['./mount'] = list;
     });
-  } else {
+  }
+  if (needDefaultRender) {
     obj['React(PC)']['@test/utils'].push('render');
     obj['React(Mobile)']['@test/utils'].push('render');
     obj['Vue(PC)']['@vue/test-utils'].push('mount');

@@ -4269,7 +4269,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"description\": \"show clear icon on mouse enter\",\n      \"expect\": [{ \"trigger\": \"mouseEnter\", \"triggerDom\": \".t-input\", \"exist\": [\".t-input__suffix-clear\"] }],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    },\n    {\n      \"description\": \"expect trigger clear and change events after clear icon has been clicked\",\n      \"expect\": [\n        { \"trigger\": \"mouseEnter\", \"triggerDom\": \".t-input\", \"exist\": [\".t-input__suffix-clear\"] },\n        {\n          \"trigger\": \"click\",\n          \"triggerDom\": \".t-input__suffix-clear\",\n          \"event\": {\n            \"clear\": [{ \"e.stopPropagation\": true }],\n            \"change\": [\"\", { \"e.stopPropagation\": true }]\n          }\n        }\n      ],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

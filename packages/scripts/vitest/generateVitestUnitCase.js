@@ -16,7 +16,12 @@ const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   let tests = [];
-  const configFlag = { hasEvent: false, importedComponents: [], importedMounts: new Set() };
+  const configFlag = {
+    hasEvent: false,
+    importedComponents: [],
+    importedMounts: new Set(),
+    needDefaultRender: false,
+  };
   Object.entries(baseData).forEach(([component, oneComponentApi]) => {
     if (!oneComponentApi) return;
     let oneComponentTests = [];
@@ -54,7 +59,10 @@ function generateVitestUnitCase(baseData, framework, { component }) {
 
       if (testDescription.PC.wrapper) {
         configFlag.importedMounts.add(testDescription.PC.wrapper);
+      } else {
+        configFlag.needDefaultRender = true;
       }
+
       if (testDescription.Mobile && testDescription.Mobile.wrapper) {
         configFlag.importedMounts.add(testDescription.Mobile.wrapper);
       }
@@ -73,6 +81,7 @@ function generateVitestUnitCase(baseData, framework, { component }) {
 
   try {
     const cases = [importCodes].concat(tests).join('\n\n');
+    // console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
     const codeData = prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;
     const fileName = kebabCase(component);

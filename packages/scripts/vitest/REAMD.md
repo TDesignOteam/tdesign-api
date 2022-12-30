@@ -6,15 +6,19 @@ npm run api:docs Button 'Vue(PC)'  vitest,finalProject
 npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
-## 类名 `{ "className": {} }`
+## 1. 类名 `{ "className": {} }`
 
-1. 类名检测，校验组件自身：API 值为 true 时，检测是否存在某个类名，，比如：button.block
+### 1.2 属性值为 Boolean 类型，校验类名是否存在
+
+类名检测，校验组件自身：API 值为 true 时，检测是否存在某个类名，比如：button.block
 
 ```json
 {"className":"t-size-full-width"}
 ```
 
-2. 类名检测，校验组件自身：API 为字符串或布尔类型，不同的值对应着完全不同的类名，无序。"枚举值": "类名"
+### 1.2 不同的属性值对应不同的类名
+
+类名检测，校验组件自身：API 为字符串或布尔类型，不同的值对应着完全不同的类名，无序。"枚举值": "类名"
 
 ```json
 {
@@ -28,8 +32,10 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 值为 `underline`，则期望存在类名 `t-link--hover-underline`；
 值为 `color`，则期望存在类名 `t-link--hover-hover`；
 
+### 1.3 属性值存在枚举值，属性值是类名名称的一部分
 
-3. 类名检测，校验组件自身： API 为字符串，存在枚举值，类名是枚举值的一部分，且存在，比如 button.variant
+类名检测，校验组件自身： API 为字符串，存在枚举值，类名是枚举值的一部分，且存在，比如 button.variant
+
 ```json
 {"className": "t-button--variant-${item}", "snapshot": true }
 ```
@@ -37,7 +43,9 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 值为 `true` 时，存在类名 `.t-link--hover-underline`；值为 `false` 时，类名为 `.t-link--hover-color`
 
 
-4. 类名检测，校验组件自身：API 为字符串，存在枚举值，类名和枚举值没有相同字符串。按枚举值顺序列举类名。比如：button.size 和 button.shape
+### 1.4 属性值存在枚举值，类名顺序和属性值依次对应
+
+类名检测，校验组件自身：API 为字符串，存在枚举值，类名和枚举值没有相同字符串。按枚举值顺序列举类名。比如：button.size 和 button.shape
 
 ```json
 {
@@ -51,7 +59,9 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape-square` 不允许出现。
 
-5. 类名检测，校验组件子元素：任意属性值和任意子元素类名校验
+### 1.5 复杂校验：检测子元素是否存在某些类名
+
+#### 1.5.1 校验某个子元素是否“存在”某些类名
 
 ```json
 {
@@ -61,10 +71,37 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
       "value": "'tdesign-class'",
       "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}]
     },
+  ]
+}
+```
+
+当属性值为 `'tdesign-class'` 时，期望子元素 `tbody > tr` 存在类名 `tdesign-class`；
+
+其中 `getNormalTableMount` 表示获取组件测试实例的方法，由不同框架在 `mount.js` 文件中支持实现。校验规则基于这个实例执行。
+
+
+#### 1.5.2 校验某个子元素是否“不存在”某些类名
+
+```json
+{
+  "wrapper": "getNormalTableMount",
+  "className": [
     {
       "value": "{ 'tdesign-class': true, 'tdesign-class-next': false }",
       "expect": [{ "dom": "tbody > tr", "className": { "tdesign-class": true, "tdesign-class-next": false}}]
     },
+  ]
+}
+```
+
+值为 `{ 'tdesign-class': true, 'tdesign-class-next': false }` 时，期望子元素 `tbody > tr` 包含类名 `.tdesign-class`，且不包含类名 `.tdesign-class-next`；
+
+#### 1.5.3 属性值是一个函数时，校验某个子元素的类名存在与否
+
+```json
+{
+  "wrapper": "getNormalTableMount",
+  "className": [
     {
       "value": "() => ({ 'tdesign-class': true, 'tdesign-class-next': false })",
       "expect": [
@@ -75,27 +112,33 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 }
 ```
 
-- 值为 `'tdesign-class'` 时，期望子元素 `tbody > tr` 存在类名 `tdesign-class`；
-- 值为 `{ 'tdesign-class': true, 'tdesign-class-next': false }` 时，期望子元素 `tbody > tr` 包含类名 `.tdesign-class`，不包含类名 `.tdesign-class-next`；
-
+值为一个函数时，期望子元素 `tbody > tr` 包含类名 `.tdesign-class`，且不包含类名 `.tdesign-class-next`；
 
 ---
 
-## 属性 `{ "attribute": {} }`
+## 2. 属性 `{ "attribute": {} }`
 
-1. 属性检测：检测某个属性的枚举值值是否正确，比如：button.type
+### 2.1 API 的名称&值 与 DOM 属性名称&值相同
+
+检测某个属性的枚举值值是否正确，比如：button.type
 
 ```json
 {"attribute": { "type": ["submit", "reset", "button"] }}
 ```
 
-2. 属性检测：检测某个 API 的属性是否允许直接透传，比如：button.href
+### 2.2 API 名称和 DOM 属性相同，且值直接透传
+
+检测某个 API 的属性是否允许直接透传，比如：button.href
 
 ```json
 {"attribute": { "href": "https://tdesign.tencent.com/" }}
 ```
 
-3. 属性检测：不同的值对应不同元素的不同属性，如：table.rowAttributes
+### 2.3 不同的值对应不同元素的不同属性
+
+如：table.rowAttributes
+
+#### 2.3.1 校验某一个属性是否存在
 
 ```json
 {
@@ -104,10 +147,33 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
       "value": "{ 'data-level': 'level-1' }",
       "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}]
     },
+  ]
+}
+```
+
+当值为 `{ 'data-level': 'level-1' }` 一个对象时，校验元素 `tbody > tr` 是否存在属性 `"data-level": "level-1"`。
+
+
+#### 2.3.1 校验某一批属性是否存在
+
+```json
+{
+  "attribute": [
     {
       "value": "[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]",
       "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1", "data-name": "tdesign" }}]
     },
+  ]
+}
+```
+
+设置值为 `[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]`，期望 DOM `tbody > tr` 包含属性 `{ "data-level": "level-1", "data-name": "tdesign" }`
+
+#### 2.3.3 属性值为函数，校验某些属性是否存在
+
+```json
+{
+  "attribute": [
     {
       "value": "[() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]]",
       "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1", "data-name": "tdesign" }}]
@@ -116,15 +182,13 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 }
 ```
 
-因存在多个值的情况，故而会生成多个 `it` 测试用例。说明：
-- 设置值为 `{ 'data-level': 'level-1' }`，期望 DOM `tbody > tr` 包含属性 `"data-level": "level-1"`
-- 设置值为 `[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]`，期望 DOM `tbody > tr` 包含属性 `{ "data-level": "level-1", "data-name": "tdesign" }`
+设置值一个函数，期望 DOM `tbody > tr` 包含属性 `{ "data-level": "level-1", "data-name": "tdesign" }`
 
 ---
 
-## DOM 检测 `{ "dom": {} }`
+## 3. DOM 检测 `{ "dom": {} }`
 
-1. DOM 检测：检测某一个元素是否存在，如：button.loading
+### 3.1 检测某一个元素是否存在，如：button.loading
 
 ```json
 { "dom": ".t-loading" }
@@ -133,30 +197,29 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 期望 DOM 元素 `.t-loading` 存在
 
 
-2. DOM 检测：检测某一批 DOM 是否存在， 如：button.tag
+### 3.2  检测某一批 DOM 是否存在，如：button.tag
 
-**2.1 检测 API 不同的枚举值对应不同的元素，元素顺序必须和枚举值顺序保持相同**
+#### 3.2.1 检测 API 不同的枚举值对应不同的元素，元素顺序必须和枚举值顺序保持相同
 
 ```json
 { "dom": ["button", "a", "div"], "snapshot": true }
 ```
 当 `type=button/a/div`时，期望依次呈现的 DOM 元素分别是 `["button", "a", "div"]`。
 
-**2.2 DOM 检测：API 不存在枚举值，则直接检测检测 "dom" 数组中的元素是否存在**
+#### 3.2.2 API 不存在枚举值，则直接检测检测 "dom" 数组中的元素是否存在
 
 ```json
 { "dom": ["tfoot.t-table__footer", { "tfoot > tr": 2 }]}
 ```
 用例将会依次检测是否存在元素 `tfoot.t-table__footer`，以及 `tfoot > tr` 元素数量是否为 2
 
-
-3. DOM 检测：不同的 API 值，对应着不同的 DOM 元素，如：table.fixedRows
+#### 3.2.3 不同的 API 值，对应着不同的 DOM 元素，如：table.fixedRows
 
 ```json
 { "dom": { "[3, 1]": ".t-table__row--fixed-top" } }
 ```
-表示当 `table.fixedRows` 值为 `[3, 1]`时，对应 DOM `.t-table__row--fixed-top` 应当存在
 
+表示当 `table.fixedRows` 值为 `[3, 1]`时，对应 DOM `.t-table__row--fixed-top` 应当存在
 
 ```json
 { "dom": { "[3, 1]": { ".t-table__row--fixed-top": 3, ".t-table__row--fixed-bottom": 1 } } }
@@ -166,15 +229,15 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 
 ---
 
-## TNode `{ "tnode": {} }`
+## 4. TNode `{ "tnode": {} }`
 
-1. `"tnode": true` 表示测试自定义节点
+### 4.1 `"tnode": true` 表示测试自定义节点
 
 ```json
 { "tnode": true, "snapshot": true }
 ```
 
-2. TNode 本身之外的更多断言
+### 4.2 TNode 本身之外的更多断言
 
 ```json
 {"tnode":{ "dom":[".t-table__first-full-row", "td[colspan=\"2\"]"] }, "wrapper":"getNormalTableMount"}
@@ -183,9 +246,9 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 
 ---
 
-## Events `{ "event": {} }`
+## 5. 人机交互 `{ "event": {} }`
 
-1. 点击事件
+### 5.1 点击事件
 
 ```json
 { "event": { "click": { "arguments": [{ "stopPropagation": true, "type": "click" }] } } }
@@ -202,27 +265,63 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 
 `expect(fn.mock.calls[0][0]).toBe([100, 101]);`
 
-2. 其他人机交互
+
+### 5.2 其他人机交互事件
+
+事件枚举值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+Vue 的测试用例会根据这里面的枚举值自动转化
+
+#### 5.2.1 一次交互触发一次事件
 
 ```json
 {
+  "wrapper": "getNormalAutoCompleteMount",
   "event": [
-    { "mouseEnter": { "exist": [".t-input__suffix-clear"] } },
-    { "click": {
-      "dom": ".t-input__suffix-clear",
-      "trigger": {
-        "clear": [{ "stopPropagation": true }],
-        "change": ["''"]
-      }
-    }}
+    {
+      "expect": [{ "trigger": "mouseEnter", "exist": [".t-input__suffix-icon"] }],
+      "props": { "value": "Default Keyword" }
+    },
   ]
 }
 ```
 
-- 鼠标移入元素（没有指定子元素则表示组件自身），校验 `"exist"` 中的元素是否全部都存在
-- 点击元素 `.t-input__suffix-clear`；校验是否触发 `clear` 事件，且第一个参数属性包含 `stopPropagation`；同时校验是否触发 `change` 事件，且第一个参数值为 `''`
+校验鼠标移入组件后，元素 `.t-input__suffix-icon` 是否存在。
+
+其中，`props` 表示传递给组件的额外属性参数。
+
+
+#### 5.2.2 一次交互触发多个事件，同时校验元素是否存在**
+
+```json
+{
+  "wrapper": "getNormalAutoCompleteMount",
+  "event": [
+    {
+      "expect": [
+        { "trigger": "mouseEnter", "exist": [".t-input__suffix-clear"] },
+        {
+          "trigger": "click",
+          "triggerDom": ".t-input__suffix-clear",
+          "event": {
+            "clear": [{ "stopPropagation": true }],
+            "change": ["''", { "stopPropagation": true }]
+          }
+        }
+      ],
+      "props": { "value": "'Default Keyword'" }
+    }
+  ]
+}
+```
+
+第一步，鼠标移入元素（没有指定子元素则表示组件自身），校验 `"exist"` 中的元素是否全部都存在。
+
+第二步，鼠标点击元素 `.t-input__suffix-clear`；校验是否触发 `clear` 事件，且第一个参数属性包含 `stopPropagation`；同时校验是否触发 `change` 事件，且第一个参数值为 `''`
+
+其中，`props` 表示传递给组件的额外属性参数。
 
 ---
+
 
 ## 综合示例
 

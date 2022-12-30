@@ -44,15 +44,13 @@ function filterObject(obj) {
 function getMountComponent(framework, component, props, extra = {}) {
   const { content, wrapper } = extra;
   filterObject(props);
+  const events = props.events;
+  delete props.events;
   let mountComponent = '';
   if (wrapper) {
-    mountComponent = props && Object.keys(props).length
-      ? `${wrapper}(${component}, ${getPropsObjectString(props)})`
-      : `${wrapper}(${component})`;
-    return mountComponent;
+    const params = [component, getPropsObjectString(props, events), events].join(', ');
+    return `${wrapper}(${params})`;
   } else {
-    const events = props.events;
-    delete props.events;
     const properties = props
       ? Object.keys(props).map((key) => {
         const value = typeof props[key] === 'object' ? JSON.stringify(props[key]) : props[key];
@@ -64,7 +62,10 @@ function getMountComponent(framework, component, props, extra = {}) {
   return getFullMountCode(framework, mountComponent);
 }
 
-function getPropsObjectString(props) {
+function getPropsObjectString(props, events) {
+  if (!props || !Object.keys(props).length) {
+    return events ? '{}' : '';
+  }
   const entries = Object.entries(props);
   if (!entries.length) return {};
   const list = entries.map(([name, value]) => `'${name}': ${value}`);
@@ -119,7 +120,7 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
   }
   if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.querySelector(${domSelector})).toBeTruthy()`;
+    return `expect(container${wrapperIndex}.querySelector(${domSelector})).toBeTruthy();`;
   }
 }
 
