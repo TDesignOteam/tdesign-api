@@ -174,19 +174,22 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
  * @returns 
  */
 function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
+  return Object.entries(domAndCount).map(([className, countOrIndex]) => {
+    return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
+  }).join('\n');
+}
+
+function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex) {
+  if (isNaN(countOrIndex)) return;
+  if (className.indexOf('document') !== -1) {
+    const selector = className.replace('document', '');
+    return `expect(document.querySelectorAll('${selector}').length).toBe(${countOrIndex});`;  
+  }
   if (framework.indexOf('Vue') !== -1) {
-    return Object.entries(domAndCount).map(([className, countOrIndex]) => {
-      if (!isNaN(countOrIndex)) {
-        return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
-      }
-    }).join('\n');
+    return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
   }
   if (framework.indexOf('React') !== -1) {
-    return Object.entries(domAndCount).map(([className, countOrIndex]) => {
-      if (!isNaN(countOrIndex)) {
-        return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
-      }
-    }).join('\n');
+    return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
   }
 }
 

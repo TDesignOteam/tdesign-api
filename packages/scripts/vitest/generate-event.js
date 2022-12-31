@@ -9,6 +9,7 @@ const {
   formatToTriggerAndDom,
   getFireEventCode,
   isRegExp,
+  getDomCountExpectCode,
 } = require("./utils");
 
 /**
@@ -102,7 +103,12 @@ function getEventExpectCode(p, index, framework, component) {
   const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
   return [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component }),
-    tmpExist.map((domSelector) => getDomExpectTruthy(framework, `'${domSelector}'`)).join('\n'),
+    tmpExist.map((domSelector) => {
+      if (typeof domSelector === 'object') {
+        return getDomCountExpectCode(framework, domSelector);
+      }
+      return getDomExpectTruthy(framework, `'${domSelector}'`);
+    }).join('\n'),
     event && Object.entries(event).map(([eventName, arguments]) => {
       const fnName = getEventFnName(eventName, index);
       return [
