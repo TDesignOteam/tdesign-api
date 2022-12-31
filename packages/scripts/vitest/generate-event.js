@@ -7,6 +7,7 @@ const {
   getDomExpectTruthy,
   getItDescription,
   formatToTriggerAndDom,
+  getFireEventCode,
 } = require("./utils");
 
 /**
@@ -16,7 +17,7 @@ const {
  */
 function generateEventUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactEventCase(test, oneApiData, framework, component);
-  return arr?.filter(v => v);
+  return arr && arr.filter(v => v);
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
@@ -87,18 +88,19 @@ function getEventFunctions(expect, framework) {
 function getEventsDefinition(expect) {
   return expect.map(({ event }, index) => {
     if (!event) return '';
-    return Object.keys(event).map((eventName) => {
+    const arr = Object.keys(event).map((eventName) => {
       return `const ${getEventFnName(eventName, index)} = vi.fn();`;
-    })?.join('\n');
+    })
+    return arr && arr.join('\n');
   }).filter(v => v).join('\n');
 }
 
 function getEventExpectCode(p, index, framework, component) {
   const { exist, event } = p;
-  const { triggerDom, trigger } = formatToTriggerAndDom(p);
+  const { triggerDom = 'self', trigger } = formatToTriggerAndDom(p);
   const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
   return [
-    getFireEventCode(framework, { dom: triggerDom ? triggerDom : 'self', event: trigger, component }),
+    getFireEventCode(framework, { dom: triggerDom, event: trigger, component }),
     tmpExist.map((domSelector) => getDomExpectTruthy(framework, `'${domSelector}'`)).join('\n'),
     event && Object.entries(event).map(([eventName, arguments]) => {
       const fnName = getEventFnName(eventName, index);
@@ -143,33 +145,6 @@ function getEventsCode(framework, events) {
     tmpEventsCode.push(`${getEventName(event)}={${fn}}`);
   });
   return tmpEventsCode.join('\n');
-}
-
-/**
- * 获取事件触发代码，如：trigger('click')
- * @param {*} framework 框架名
- * @param {*} param1
- *  params1.dom 触发事件的元素，dom = self 表示组件自身触发。event 触发事件名。component 仅 Vue 需要
- *  params1.event 事件名称，可选值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
- * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
- */
-function getFireEventCode(framework, { dom, event, component }, wrapperIndex = '') {
-  if (framework.indexOf('Vue') !== -1) {
-    const eventName = event.toLocaleLowerCase();
-    let eventFireCode = '';
-    if (dom === 'self') {
-      eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
-    } else {
-      eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
-    }
-    return [eventFireCode, `await wrapper${wrapperIndex}.vm.$nextTick();`].join('\n');
-  }
-  if (framework.indexOf('React') !== -1) {
-    const tmpDom = dom === 'self'
-      ? `container${wrapperIndex}.firstChild`
-      : `container.querySelector('${dom}')`;
-    return `fireEvent.${event}(${tmpDom});`;
-  }
 }
 
 function getEventName(eventName) {

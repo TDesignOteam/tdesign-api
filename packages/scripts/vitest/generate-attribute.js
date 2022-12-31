@@ -10,7 +10,7 @@ const {
 
 function generateAttributeUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactAttribute(test, oneApiData, framework, component);
-  return arr?.filter(v => v);
+  return arr && arr.filter(v => v);
 }
 
 function generateVueAndReactAttribute(test, oneApiData, framework, component) {
@@ -26,7 +26,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   // 期望的属性值
   const attributeValue = attribute[attributeName];
   // 属性全部枚举值
-  const propsValues = oneApiData.field_enum?.split('/');
+  const propsValues = oneApiData.field_enum && oneApiData.field_enum.split('/');
   // 按顺序处理枚举值对应的属性
   if (Array.isArray(attributeValue) && propsValues.length) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);

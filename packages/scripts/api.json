@@ -4596,7 +4596,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\": { \"tnode\": {\n  \"trigger\": \"focus(.t-input__wrap)\",\n  \"dom\": [\"document.custom-node\", \"document.t-popup\"],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n} }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4639,7 +4639,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\": { \"tnode\": {\n  \"trigger\": \"focus(.t-input__wrap)\",\n  \"dom\": [\"document.custom-node\", \"document.t-popup\"],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n} }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

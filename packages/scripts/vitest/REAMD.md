@@ -13,8 +13,10 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 类名检测，校验组件自身：API 值为 true 时，检测是否存在某个类名，比如：button.block
 
 ```json
-{"className":"t-size-full-width"}
+{"className":"t-size-full-width", "classNameDom": ".t-input"}
 ```
+
+`classNameDom` 表示校验哪个子元素包含类名 `t-size-full-width`，如果不存在，则表示校验组件自身。
 
 ### 1.2 不同的属性值对应不同的类名
 
@@ -240,25 +242,30 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ### 4.2 TNode 本身之外的更多断言
 
 ```json
-{"tnode":{ "dom":[".t-table__first-full-row", "td[colspan=\"2\"]"] }, "wrapper":"getNormalTableMount"}
+{"tnode":{
+  "dom": [".t-table__first-full-row", "td[colspan=\"3\"]"] },
+  "wrapper":"getNormalTableMount"
+}
 ```
 
 除了 TNode 本身的校验，还会校验 `"dom"` 中的全部元素是否存在。其中 `getNormalTableMount` 表示获取组件实例的方法，在 `mount.js` 中定义。
 
 ### 4.3 触发某个事件，才会显示 TNode 元素
 
+在某些场景下，自定义元素并非默认就显示，而是触发某个条件才会存在。如：Popup/AutoComplete/Select 等组件的面板，在点击后才会显示。
+
 ```json
-{"tnode": [
-  {
-    "trigger": "focus(.t-input__wrap)",
-    "dom": [".custom-node1"],
-    "documentDom": [".custom-node2"],
-  }
-]}
+{"tnode": {
+  "trigger": "focus(.t-input__wrap)",
+  "dom": [".t-is-focused", "document.t-popup"],
+  "wrapper": "getNormalAutoCompleteMount"
+}}
 ```
 
-元素 `.t-input__wrap` 聚焦后，组件才会出现子元素 `.custom-node1`，文档（document.querySelector）中才会出现元素 `custom-node2`。
+元素 `.t-input__wrap` 聚焦后，组件才会出现子元素 `.t-is-focused`，且文档（document.querySelector）中才会出现元素 `t-popup`。
 
+注意：TNode 一类用例，默认会全部校验自定义元素 `.custom-node` 是否存在，为固定类名。属于 TNode 校验中的关键词。
+如果这个元素不属于组件的子元素，而是存在于 document 中，请给 `"dom"` 添加一个元素 `"dom": ["document.custom-node"]`。
 
 ---
 

@@ -14,7 +14,7 @@ const {
  */
 function generateClassNameUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactClassName(test, oneApiData, framework, component);
-  return arr?.filter(v => v);
+  return arr && arr.filter(v => v);
 }
 
 function generateVueAndReactClassName(test, oneApiData, framework, component) {

@@ -1,7 +1,10 @@
 const { kebabCase } = require('lodash');
 const {
-  getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent,
+  getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent, formatToTriggerAndDom, getFireEventCode,
 } = require('./utils');
+
+const CUSTOM_NODE_CLASS = 'custom-node';
+const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
 
 /**
  * TNode 自定义元素（插槽）测试
@@ -17,24 +20,27 @@ function generateVueTNode(test, oneApiData, framework, component) {
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
     const h = framework === 'Vue(PC)' ? 'h' : '';
-    // componentCode = `<${component} ${oneApiData.field_name}={(${h}) => <span class='custom-node'>TNode</span>}></${component}>`;
     componentCode = getMountComponent(framework, component, {
-      [oneApiData.field_name]: `(${h}) => <span class='custom-node'>TNode</span>`,
+      [oneApiData.field_name]: `(${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span>`,
     }, extraCode);
   } else if (framework.indexOf('React') !== -1) {
     if (oneApiData.field_name === 'children') {
       componentCode = getMountComponent(framework, component, {}, {
         ...extraCode,
-        content: `<span className='custom-node'>TNode</span>`,
+        content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
       });
     } else {
       componentCode = getMountComponent(framework, component, {
-        [oneApiData.field_name]: `<span className='custom-node'>TNode</span>`,
+        [oneApiData.field_name]: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
       }, extraCode);
     }
   }
   const itDesc = getItDescription(oneApiData);
-  let arr = getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode, tnode);
+  let arr = getTestCaseByComponentCode({
+    itDesc,
+    componentCode,
+    framework, component, snapshot, tnode,
+  });
 
   const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode);
   if (vueSlotsArr.length) {
@@ -52,7 +58,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean,TNode';
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
     const slotCodeProps = {
-      [slotsText]: `{ ${oneApiData.field_name}: () => <span class='custom-node'>TNode</span> }`,
+      [slotsText]: `{ ${oneApiData.field_name}: () => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
     };
     if (isBothBooleanAndTNode) {
       slotCodeProps[oneApiData.field_name] = true;
@@ -60,11 +66,15 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     const slotCode = getMountComponent(framework, component, slotCodeProps, extraCode);
     arr.push(`\n`);
     const slotTtDesc = `'slots.${oneApiData.field_name} works fine'`;
-    secondArr = getTestCaseByComponentCode(slotTtDesc, framework, snapshot, slotCode, tnode);
+    secondArr = getTestCaseByComponentCode({
+      itDesc: slotTtDesc,
+      componentCode: slotCode,
+      framework, component, snapshot, tnode,
+    });
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
       const slotCodeProps2 = {
-        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='custom-node'>TNode</span> }`,
+        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
       };
       if (isBothBooleanAndTNode) {
         slotCodeProps2[oneApiData.field_name] = true;
@@ -72,7 +82,11 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       const slotCode2 = getMountComponent(framework, component, slotCodeProps2, extraCode);
       arr.push(`\n`);
       const slotTtDesc2 = `'slots.${kebabCase(oneApiData.field_name)} works fine'`;
-      thirdArr = getTestCaseByComponentCode(slotTtDesc2, framework, snapshot, slotCode2, tnode);
+      thirdArr = getTestCaseByComponentCode({
+        itDesc: slotTtDesc2,
+        componentCode: slotCode2,
+        framework, component, snapshot, tnode,
+      });
     }
   }
   // 测试驼峰命名的插槽
@@ -86,16 +100,38 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
   return arr;
 }
 
-function getTestCaseByComponentCode(itDesc, framework, snapshot, componentCode, tnode) {
+function getTestCaseByComponentCode(params) {
+  const {
+    itDesc, componentCode,
+    framework, component, snapshot, tnode
+  } = params;
+  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger ? 'async' : '';
+  const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
   const arr = [
-    `it(${itDesc}, () => {`,
+    `it(${tnode.description || itDesc}, ${needAsync} () => {`,
     getWrapper(framework, componentCode),
-    getDomExpectTruthy(framework, `'.custom-node'`),
+    tnode.trigger && getTriggerExpect(tnode.trigger, framework, component),
+    // 校验自定义元素是否存在
+    !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
+    // 校验额外的元素是否存在
     tnode.dom && getDomExpect(framework, tnode.dom),
     getSnapshotCase(snapshot, framework),
     `});`
   ];
   return arr;
+}
+
+function getTriggerExpect(triggerList, framework, component) {
+  if (!triggerList) return;
+  const tmpTrigger = Array.isArray(triggerList) ? triggerList : [triggerList];
+  return tmpTrigger.map((oneTrigger) => {
+    const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });
+    return getFireEventCode(framework, {
+      dom: triggerDom,
+      event: trigger,
+      component,
+    });
+  }).join('\n');
 }
 
 function getDomExpect(framework, tnodeDom) {

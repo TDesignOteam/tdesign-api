@@ -128,6 +128,12 @@ function getReactWrapper(mountCode, wrapperIndex = '', goalDom = '') {
  * @returns 
  */
 function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
+  if (!domSelector) return;
+  // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
+  if (domSelector.indexOf('document') !== -1) {
+    const selector = domSelector.replace('document', '');
+    return `expect(document.querySelector(${selector})).toBeDefined();`;
+  }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
   }
@@ -144,6 +150,12 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
  * @returns 
  */
 function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
+  if (!domSelector) return;
+  // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异
+  if (domSelector.indexOf('document') !== -1) {
+    const selector = domSelector.replace('document', '');
+    return `expect(document.querySelector(${selector})).toBeNull();`;
+  }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeFalsy();`;
   }
@@ -159,7 +171,7 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  * @returns 
  */
- function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
+function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
   if (framework.indexOf('Vue') !== -1) {
     return Object.entries(domAndCount).map(([className, countOrIndex]) => {
       if (!isNaN(countOrIndex)) {
@@ -313,10 +325,37 @@ function parseJSON(json, error = '') {
  * 分离事件和对应的 DOM
  * 如分离 trigger: 'click(.t-input__suffix-clear)' 为 trigger: 'click' 和 triggerDom: '.t-input__suffix-clear'
  */
- function formatToTriggerAndDom(oneExpect) {
+function formatToTriggerAndDom(oneExpect) {
   const [trigger, tmpTriggerDom] = oneExpect.trigger.split('(');
   const triggerDom = oneExpect.triggerDom || tmpTriggerDom.slice(0, -1);
   return { trigger, triggerDom };
+}
+
+/**
+ * 获取事件触发代码，如：trigger('click')
+ * @param {*} framework 框架名
+ * @param {*} param1
+ *  params1.dom 触发事件的元素，dom = self 表示组件自身触发。event 触发事件名。component 仅 Vue 需要
+ *  params1.event 事件名称，可选值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+ * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
+ */
+ function getFireEventCode(framework, { dom, event, component }, wrapperIndex = '') {
+  if (framework.indexOf('Vue') !== -1) {
+    const eventName = event.toLocaleLowerCase();
+    let eventFireCode = '';
+    if (dom === 'self') {
+      eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
+    } else {
+      eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
+    }
+    return [eventFireCode, `await wrapper${wrapperIndex}.vm.$nextTick();`].join('\n');
+  }
+  if (framework.indexOf('React') !== -1) {
+    const tmpDom = dom === 'self'
+      ? `container${wrapperIndex}.firstChild`
+      : `container.querySelector('${dom}')`;
+    return `fireEvent.${event}(${tmpDom});`;
+  }
 }
 
 module.exports = {
@@ -335,4 +374,5 @@ module.exports = {
   getAttributeExpect,
   getDomAttributeExpect,
   getDomClassNameExpect,
+  getFireEventCode,
 };
