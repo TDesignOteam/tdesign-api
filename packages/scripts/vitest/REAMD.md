@@ -31,7 +31,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 | className | String | 字符串中带有 `${item}` 字样，如：`t-button--variant-${item}`。此时 API 必须字符串、存在枚举值，且枚举值是类名名称的一部分。 |
 | className | Object | 不同的 API 值，一一映射不同的类名，此时的 API 值和类名没有直接关系。如：`"className": { "underline": "t-link--hover-xxx" }` 表示 API 值为 `underline` 时，元素对应的类名为 `t-link--hover-underline`。 |
 | className | Array | `Array<string \| { [key: string]: boolean }>` API 是字符串，存在枚举值，枚举值和类名名称无法通过前面的 `t-xxx-${item}` 来表达。此时，便可使用数组，和枚举值保持顺序。依次列举枚举值对应的类名，示例：API 枚举值为 `small/medium/large`，则 `"className": ["t-size-s", { "t-size-m": false }, "t-size-l"]`，其中 `t-size-m` 不允许存在 |
-| className | Array | `Array<{ value: string, expect: { dom: string, className: { [name: string]: boolean } } }>` 表示当 API 值为 `value` 时，期望 `dom` 元素存在或不存在类名 `className`，数组则表示 API 的值可能为多个，为每一个可能的值输出一个 `it` 测试用例。 |
+| className | Array | `Array<{ value: string, expect: { dom: string, className: { [name: string]: boolean } } }>` 表示当 API 值为 `value` 时，期望 `dom` 元素存在或不存在类名 `className`。数组则表示 API 的值可能为多个，为每一个可能的值输出一个 `it` 测试用例。 |
 | wrapper | String | 表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
 | snapshot | Boolean | 是否输出快照 |
 | content | String | 组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
@@ -261,6 +261,10 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ```
 表示当 `table.fixedRows` 值为 `[3, 1]`时，对应 DOM 应当存在，且数量为指定数量
 
+```json
+{"PC": { "dom": { "'this is a tip'": ".t-input__tips" } }}
+```
+当 API 值为 `'this is a tip'` 时，期望元素 `.t-input__tips` 存在，如 AutoComplete.tips。注意字符串需要加上单引号。
 
 ---
 

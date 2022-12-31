@@ -66,7 +66,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       dom.forEach((domInfo) => {
         const mountCode = getMountComponent(framework, component, {}, extraCode);
         const oneValueArr = [
-          `it('props.${oneApiData.field_name} works fine. ${JSON.stringify(domInfo)} should exist', () => {`,
+          `it('props.${oneApiData.field_name} works fine. \`${JSON.stringify(domInfo)}\` should exist', () => {`,
           getWrapper(framework, mountCode),
           getDomExpect(framework, domInfo),
           getSnapshotCase(snapshot, framework),
@@ -83,7 +83,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     Object.entries(dom).forEach(([value, domInfo]) => {
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
       const oneValueArr = [
-        `it('props.${oneApiData.field_name} is equal ${value}', () => {`,
+        `it('props.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}', () => {`,
         getWrapper(framework, mountCode),
         getDomExpect(framework, domInfo),
         getSnapshotCase(snapshot, framework),
