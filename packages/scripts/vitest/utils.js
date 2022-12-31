@@ -309,6 +309,16 @@ function parseJSON(json, error = '') {
   }
 }
 
+/**
+ * 分离事件和对应的 DOM
+ * 如分离 trigger: 'click(.t-input__suffix-clear)' 为 trigger: 'click' 和 triggerDom: '.t-input__suffix-clear'
+ */
+ function formatToTriggerAndDom(oneExpect) {
+  const [trigger, tmpTriggerDom] = oneExpect.trigger.split('(');
+  const triggerDom = oneExpect.triggerDom || tmpTriggerDom.slice(0, -1);
+  return { trigger, triggerDom };
+}
+
 module.exports = {
   getItDescription,
   getWrapper,
@@ -316,6 +326,7 @@ module.exports = {
   getSnapshotCase,
   getArrayCode,
   parseJSON,
+  formatToTriggerAndDom,
   getDomExpectTruthy,
   getDomExpectFalsy,
   getClassNameExpectTruthy,

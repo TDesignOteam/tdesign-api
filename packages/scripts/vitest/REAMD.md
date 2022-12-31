@@ -242,7 +242,23 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ```json
 {"tnode":{ "dom":[".t-table__first-full-row", "td[colspan=\"2\"]"] }, "wrapper":"getNormalTableMount"}
 ```
-除了测试自定义节点，还希望新增这些 dom 元素是否存在的断言。其中 `getNormalTableMount` 表示获取组件实例的方法，在 `mount.js` 中定义。
+
+除了 TNode 本身的校验，还会校验 `"dom"` 中的全部元素是否存在。其中 `getNormalTableMount` 表示获取组件实例的方法，在 `mount.js` 中定义。
+
+### 4.3 触发某个事件，才会显示 TNode 元素
+
+```json
+{"tnode": [
+  {
+    "trigger": "focus(.t-input__wrap)",
+    "dom": [".custom-node1"],
+    "documentDom": [".custom-node2"],
+  }
+]}
+```
+
+元素 `.t-input__wrap` 聚焦后，组件才会出现子元素 `.custom-node1`，文档（document.querySelector）中才会出现元素 `custom-node2`。
+
 
 ---
 
@@ -292,6 +308,8 @@ Vue 的测试用例会根据这里面的枚举值自动转化
 
 #### 5.2.2 一次交互触发多个事件，同时校验元素是否存在**
 
+事件枚举值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+
 ```json
 {
   "wrapper": "getNormalAutoCompleteMount",
@@ -300,8 +318,7 @@ Vue 的测试用例会根据这里面的枚举值自动转化
       "expect": [
         { "trigger": "mouseEnter", "exist": [".t-input__suffix-clear"] },
         {
-          "trigger": "click",
-          "triggerDom": ".t-input__suffix-clear",
+          "trigger": "click(.t-input__suffix-clear)",
           "event": {
             "clear": [{ "stopPropagation": true }],
             "change": ["''", { "stopPropagation": true }]
@@ -316,7 +333,9 @@ Vue 的测试用例会根据这里面的枚举值自动转化
 
 第一步，鼠标移入元素（没有指定子元素则表示组件自身），校验 `"exist"` 中的元素是否全部都存在。
 
-第二步，鼠标点击元素 `.t-input__suffix-clear`；校验是否触发 `clear` 事件，且第一个参数属性包含 `stopPropagation`；同时校验是否触发 `change` 事件，且第一个参数值为 `''`
+第二步，鼠标点击（`click`）元素 `.t-input__suffix-clear`；
+校验是否触发 `clear` 事件，且第一个参数属性包含 `stopPropagation`；
+同时校验是否触发 `change` 事件，且第一个参数值为 `''`。
 
 其中，`props` 表示传递给组件的额外属性参数。
 

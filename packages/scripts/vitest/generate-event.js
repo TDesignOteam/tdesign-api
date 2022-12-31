@@ -1,26 +1,18 @@
-/**
- * 人机交互测试
- * React fireEvent: // fireEvent https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
- */
-
-const { getWrapper, getMountComponent, getDomExpectTruthy, getItDescription } = require("./utils");
 const camelCase = require('lodash/camelCase');
 const upperFirst = require('lodash/upperFirst');
 const kebabCase = require('lodash/kebabCase');
-
-function getEventName(eventName) {
-  return `on${upperFirst(camelCase(eventName))}`;
-}
-
-function getEventNameByFramework(eventName, framework) {
-  if (framework === 'Vue(PC)') {
-    return `'${kebabCase(eventName)}'`;
-  }
-  return getEventName(eventName);
-}
+const {
+  getWrapper,
+  getMountComponent,
+  getDomExpectTruthy,
+  getItDescription,
+  formatToTriggerAndDom,
+} = require("./utils");
 
 /**
- * "event": "click"
+ * 人机交互测试
+ * React fireEvent: // fireEvent https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+ * Vue 会根据 React 命名自动转换
  */
 function generateEventUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactEventCase(test, oneApiData, framework, component);
@@ -102,7 +94,8 @@ function getEventsDefinition(expect) {
 }
 
 function getEventExpectCode(p, index, framework, component) {
-  const { triggerDom, trigger, exist, event } = p;
+  const { exist, event } = p;
+  const { triggerDom, trigger } = formatToTriggerAndDom(p);
   const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
   return [
     getFireEventCode(framework, { dom: triggerDom ? triggerDom : 'self', event: trigger, component }),
@@ -177,6 +170,17 @@ function getFireEventCode(framework, { dom, event, component }, wrapperIndex = '
       : `container.querySelector('${dom}')`;
     return `fireEvent.${event}(${tmpDom});`;
   }
+}
+
+function getEventName(eventName) {
+  return `on${upperFirst(camelCase(eventName))}`;
+}
+
+function getEventNameByFramework(eventName, framework) {
+  if (framework === 'Vue(PC)') {
+    return `'${kebabCase(eventName)}'`;
+  }
+  return getEventName(eventName);
 }
 
 module.exports = {

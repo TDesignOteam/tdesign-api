@@ -27,7 +27,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     const arr = [
       `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
-      getWrapper(framework, mountCode),
+      getWrapper(framework, mountCode, '', classNameDom),
       getClassNameExpectTruthy(framework, `\`${className}\``),
       getSnapshotCase(snapshot, framework),
       `});`,
@@ -107,7 +107,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`, () => {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
-          getWrapper(framework, mountCode),
+          getWrapper(framework, mountCode, '', classNameDom),
           getClassNameExpectTruthy(framework, 'expectedClassName'),
         `});
       });`,
