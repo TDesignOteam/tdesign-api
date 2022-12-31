@@ -8,6 +8,7 @@ const {
   getItDescription,
   formatToTriggerAndDom,
   getFireEventCode,
+  isRegExp,
 } = require("./utils");
 
 /**
@@ -114,21 +115,36 @@ function getEventExpectCode(p, index, framework, component) {
 
 function getEventArguments(arguments, fnName = 'fn') {
   return arguments.map((oneArgument, index) => {
-    if (typeof oneArgument === 'string') {
-      return `expect(${fnName}.mock.calls[0][${index}]).toBe('${oneArgument}');\n`;
+    if (!oneArgument) return;
+    if (typeof oneArgument === 'string' && !isRegExp(oneArgument)) {
+      return getOneArgEqual(fnName, index, `'${oneArgument}'`);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
       return Object.keys(oneArgument).map(oneProperty => {
         const value = oneArgument[oneProperty];
         if (value === true) {
-          return `expect(${fnName}.mock.calls[0][${index}].${oneProperty}).toBeTruthy();`;
+          const expectInfo = `${fnName}.mock.calls[0][${index}].${oneProperty}`;
+          return isRegExp(oneArgument)
+            ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
+            : `expect(${expectInfo}).toBeTruthy();`;
         }
-        const expectVal = typeof value === 'string' ? `'${value}'` : value;
-        return `expect(${fnName}.mock.calls[0][${index}].${oneProperty}).toBe(${expectVal});`;
+        const expectVal = typeof value === 'string' && !isRegExp(value) ? `'${value}'` : value;
+        return getOneArgEqual(fnName, index, expectVal, oneProperty);
       }).join('\n');
     }
-    return `expect(${fnName}.mock.calls[0][${index}]).toBe(${oneArgument});\n`;
+    return getOneArgEqual(fnName, index, oneArgument);
   })
+}
+
+// 处理正则表达式的校验
+function getOneArgEqual(fnName, index, oneArgument, oneProperty = '') {
+  const property = oneProperty ? `.${oneProperty}` : '';
+  if (isRegExp(oneArgument)) {
+    return `expect(${oneArgument}.test(${fnName}.mock.calls[0][${index}]${property})).toBeTruthy();`;
+  } else {
+    const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
+    return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${oneArgument});`;
+  }
 }
 
 // 获取事件监听代码

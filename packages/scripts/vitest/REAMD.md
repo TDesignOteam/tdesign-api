@@ -328,8 +328,8 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 
 ### 5.2 其他人机交互事件
 
-事件枚举值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
-Vue 的测试用例会根据这里面的枚举值自动转化
+`trigger` 事件枚举值：https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109
+React 的测试用例会根据这里面的枚举值自动转化
 
 #### 5.2.1 一次交互触发一次事件
 
@@ -338,7 +338,7 @@ Vue 的测试用例会根据这里面的枚举值自动转化
   "wrapper": "getNormalAutoCompleteMount",
   "event": [
     {
-      "expect": [{ "trigger": "mouseEnter", "exist": [".t-input__suffix-icon"] }],
+      "expect": [{ "trigger": "mouseenter", "exist": [".t-input__suffix-icon"] }],
       "props": { "value": "Default Keyword" }
     },
   ]
@@ -352,7 +352,7 @@ Vue 的测试用例会根据这里面的枚举值自动转化
 
 #### 5.2.2 一次交互触发多个事件，同时校验元素是否存在**
 
-事件枚举值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+事件枚举值：https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109
 
 ```json
 {
@@ -360,7 +360,7 @@ Vue 的测试用例会根据这里面的枚举值自动转化
   "event": [
     {
       "expect": [
-        { "trigger": "mouseEnter", "exist": [".t-input__suffix-clear"] },
+        { "trigger": "mouseenter", "exist": [".t-input__suffix-clear"] },
         {
           "trigger": "click(.t-input__suffix-clear)",
           "event": {

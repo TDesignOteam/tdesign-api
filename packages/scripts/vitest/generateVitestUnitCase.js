@@ -12,7 +12,7 @@ const { generateTNodeElement } = require('./generate-tnode');
 const { generateAttributeUnitCase } = require('./generate-attribute');
 const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
-const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const');
+const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   let tests = [];

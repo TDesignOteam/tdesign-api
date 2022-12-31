@@ -1,7 +1,9 @@
 const chalk = require('chalk');
+const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 
 function getItDescription(oneApiData) {
-  return `'props.${oneApiData.field_name} works fine'`;
+  const type = oneApiData.field_category_text.toLocaleLowerCase();
+  return `'${type}.${oneApiData.field_name} works fine'`;
 }
 
 function getFullMountCode(framework, componentCode) {
@@ -312,6 +314,16 @@ function getArrayCode(arr) {
   return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
 }
 
+function getObjectCode(obj) {
+  const arr = [];
+  Object.entries(obj).forEach(([key, value]) => {
+    const finalKey = key.indexOf('-') !== -1 ? `'${key}'` : key;
+    const finalValue = typeof value === 'string' ? `'${value}'` : value;
+    arr.push(`${finalKey}: ${finalValue}`);
+  });
+  return `{ ${arr.join(', ')} }`;
+}
+
 function parseJSON(json, error = '') {
   try {
     return JSON.parse(json);
@@ -327,8 +339,23 @@ function parseJSON(json, error = '') {
  */
 function formatToTriggerAndDom(oneExpect) {
   const [trigger, tmpTriggerDom] = oneExpect.trigger.split('(');
-  const triggerDom = oneExpect.triggerDom || tmpTriggerDom.slice(0, -1);
+  const triggerDom = oneExpect.triggerDom || tmpTriggerDom?.slice(0, -1);
   return { trigger, triggerDom };
+}
+
+function getFireEventName(event, framework) {
+  const eventInfo = framework.indexOf('Vue') !== -1 ? event : UNIT_TEST_EVENTS_MAP[event];
+  if (!eventInfo) {
+    console.log(chalk.error(`can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`));
+    return;
+  }
+  if (typeof eventInfo === 'object') {
+    return {
+      eventName: eventInfo.event,
+      eventModifier: getObjectCode(event.modifier),
+    };
+  }
+  return { eventName: eventInfo };
 }
 
 /**
@@ -336,12 +363,13 @@ function formatToTriggerAndDom(oneExpect) {
  * @param {*} framework 框架名
  * @param {*} param1
  *  params1.dom 触发事件的元素，dom = self 表示组件自身触发。event 触发事件名。component 仅 Vue 需要
- *  params1.event 事件名称，可选值：https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js
+ *  params1.event 事件名称，可选值：@vue/test-utils 的 trigger 函数的参数
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
  function getFireEventCode(framework, { dom, event, component }, wrapperIndex = '') {
+  if (!event) return;
+  const { eventName, eventModifier } = getFireEventName(event, framework);
   if (framework.indexOf('Vue') !== -1) {
-    const eventName = event.toLocaleLowerCase();
     let eventFireCode = '';
     if (dom === 'self') {
       eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
@@ -354,16 +382,24 @@ function formatToTriggerAndDom(oneExpect) {
     const tmpDom = dom === 'self'
       ? `container${wrapperIndex}.firstChild`
       : `container.querySelector('${dom}')`;
-    return `fireEvent.${event}(${tmpDom});`;
+    const params = [tmpDom, eventModifier].filter(v => v).join(', ');
+    return `fireEvent.${eventName}(${params});`;
   }
 }
 
+// 判断一个字符串是否为正则表达式
+function isRegExp(str) {
+  return /\/(.+)\//.test(str);
+}
+
 module.exports = {
+  isRegExp,
   getItDescription,
   getWrapper,
   getMountComponent,
   getSnapshotCase,
   getArrayCode,
+  getObjectCode,
   parseJSON,
   formatToTriggerAndDom,
   getDomExpectTruthy,
