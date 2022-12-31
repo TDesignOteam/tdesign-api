@@ -6,6 +6,36 @@ npm run api:docs Button 'Vue(PC)'  vitest,finalProject
 npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
+## API
+
+总述：将测试用例分为 5 大类：类名检测、属性检测、元素检测、TNode 检测以及人机交互检测。
+
+以一个 API 为单位，输出测试用例。如 button.disabled 表示一个 API，会一次性输出一个或多个测试用例。
+
+### 概览
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| className | Object/Array | 【类名校验】校验某个元素是否包含某个或某些类名。元素可能是自身，也可能是子元素。不同的 API 值对应着不同的类名 |
+| attribute | Object/Array | 【属性校验】校验某个元素是否包含某个或某些属性。元素可能是自身，也可能是子元素。不同的 API 值对应着不同的 DOM 属性值 |
+| dom | String/Object/Array | 【元素校验】校验某个子元素是否存在。不同的 API 值对应着不同的 DOM 子元素 |
+| tnode | Boolean/Object | 校验自定义元素（因框架实现差异大，故而单独定义），方便以最少的定义输出更多的单测用例 |
+| event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |
+
+### 类名 className
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| classNameDom | String | 子元素 DOM 选择器，当 `className` 存在时有意义。表示 `className` 所有规则应用到组件的子元素 `classNameDom` 上。若 `classNameDom` 不存在，则表示 `className` 规则应用到组件本身。 示例：`"classNameDom": ".t-input"`|
+| className | String | 检测某个元素是否存在此类名，此时 API 类型须为 Boolean，会一次性输出 3 个 `expect`，分别校验默认值、值为 true、值为 false 等 3 种情况|
+| className | String | 字符串中带有 `${item}` 字样，如：`t-button--variant-${item}`。此时 API 必须字符串、存在枚举值，且枚举值是类名名称的一部分。 |
+| className | Object | 不同的 API 值，一一映射不同的类名，此时的 API 值和类名没有直接关系。如：`"className": { "underline": "t-link--hover-xxx" }` 表示 API 值为 `underline` 时，元素对应的类名为 `t-link--hover-underline`。 |
+| className | Array | `Array<string \| { [key: string]: boolean }>` API 是字符串，存在枚举值，枚举值和类名名称无法通过前面的 `t-xxx-${item}` 来表达。此时，便可使用数组，和枚举值保持顺序。依次列举枚举值对应的类名，示例：API 枚举值为 `small/medium/large`，则 `"className": ["t-size-s", { "t-size-m": false }, "t-size-l"]`，其中 `t-size-m` 不允许存在 |
+| className | Array | `Array<{ value: string, expect: { dom: string, className: { [name: string]: boolean } } }>` 表示当 API 值为 `value` 时，期望 `dom` 元素存在或不存在类名 `className`，数组则表示 API 的值可能为多个，为每一个可能的值输出一个 `it` 测试用例。 |
+| wrapper | String | 表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
+| snapshot | Boolean | 是否输出快照 |
+| content | String | 组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
+
 ## 1. 类名 `{ "className": {} }`
 
 ### 1.2 属性值为 Boolean 类型，校验类名是否存在
@@ -17,6 +47,9 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
 `classNameDom` 表示校验哪个子元素包含类名 `t-size-full-width`，如果不存在，则表示校验组件自身。
+
+更复杂的 API 值和子元素校验，可参考 `1.5`。
+
 
 ### 1.2 不同的属性值对应不同的类名
 
@@ -61,7 +94,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape-square` 不允许出现。
 
-### 1.5 复杂校验：检测子元素是否存在某些类名
+### 1.5 不同的属性值，检测子元素是否存在某些类名
 
 #### 1.5.1 校验某个子元素是否“存在”某些类名
 
