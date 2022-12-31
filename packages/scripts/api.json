@@ -5013,7 +5013,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'DefaultKeyword'\",\n      \"expect\": [{ \"dom\": \"input\", \"attribute\": { \"value\": \"DefaultKeyword\" }}]\n    }\n  ]\n}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [

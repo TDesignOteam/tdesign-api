@@ -17,7 +17,7 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 | 名称 | 类型 | 说明 |
 | - | - | - |
 | className | Object/Array | 【类名校验】校验某个元素是否包含某个或某些类名。元素可能是自身，也可能是子元素。不同的 API 值对应着不同的类名 |
-| attribute | Object/Array | 【属性校验】校验某个元素是否包含某个或某些属性。元素可能是自身，也可能是子元素。不同的 API 值对应着不同的 DOM 属性值 |
+| attribute | Object/Array | 【属性校验】校验某个元素是否包含某个或某些属性。元素可能是自身，也可能是子元素。不同的 API 值对应着不同的 DOM 属性值。包含 DOM 属性 `value` |
 | dom | String/Object/Array | 【元素校验】校验某个子元素是否存在。不同的 API 值对应着不同的 DOM 子元素 |
 | tnode | Boolean/Object | 校验自定义元素（因框架实现差异大，故而单独定义），方便以最少的定义输出更多的单测用例 |
 | event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |

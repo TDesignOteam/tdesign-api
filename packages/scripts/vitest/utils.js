@@ -219,15 +219,23 @@ function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
  * @returns 
  */
 function getAttributeExpect(framework, attributes, wrapperIndex = '') {
+  return Object.entries(attributes).map(([attribute, value]) => {
+    return getOneAttributeExpect(framework, attribute, value, wrapperIndex);
+  }).join('\n');
+}
+
+function getOneAttributeExpect(framework, attribute, value, wrapperIndex) {
   if (framework.indexOf('Vue') !== -1) {
-    return Object.entries(attributes).map(([attribute, value]) => {
-      return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
-    }).join('\n');
+    if (attribute === `'value'`) {
+      return `expect(wrapper${wrapperIndex}.element.value).toBe(${value});`;
+    }
+    return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
   }
   if (framework.indexOf('React') !== -1) {
-    return Object.entries(attributes).map(([attribute, value]) => {
-      return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
-    }).join('\n');
+    if (attribute === `'value'`) {
+      return `expect(container${wrapperIndex}.firstChild.value).toBe(${value});`;
+    }
+    return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
   }
 }
 
@@ -254,6 +262,9 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
+          if (attributeName === 'value') {
+            return `expect(domWrapper${index || ''}.element.value).${getAttributeValue(attributeValue)};`;  
+          }
           return `expect(domWrapper${index || ''}.attributes('${attributeName}')).${getAttributeValue(attributeValue)};`;
         }).join('\n'),
       ];
@@ -265,6 +276,9 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
+          if (attributeName === 'value') {
+            return `expect(domWrapper${index || ''}.value)).${getAttributeValue(attributeValue)};`;
+          }
           return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).${getAttributeValue(attributeValue)};`;
         }).join('\n'),
       ];
