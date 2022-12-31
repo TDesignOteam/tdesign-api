@@ -4390,7 +4390,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"filter\": \"(filterWords, option) => option.text.includes('Second')\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4431,7 +4431,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"value\": \"'First'\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4472,7 +4472,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"value\": \"'Second'\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4554,7 +4554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 3 }]}]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 3 }, \"clearElementAtEnd\": \".t-popup\"]}]\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

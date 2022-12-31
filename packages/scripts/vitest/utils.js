@@ -1,4 +1,5 @@
 const chalk = require('chalk');
+const camelCase = require('lodash/camelCase');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 
 function getItDescription(oneApiData) {
@@ -122,6 +123,21 @@ function getReactWrapper(mountCode, wrapperIndex = '', goalDom = '') {
     : `const { container } = ${mountCode};`;
 }
 
+function getVariableBySelector(selector) {
+  return camelCase(selector.replace(/(\.|#|)/g, ''));
+}
+
+function getDocumentDomExpectTruthy(domSelector) {
+  const selector = domSelector.replace('document', '');
+  const domVariable = `${getVariableBySelector(selector)}Dom`;
+  return [
+    `const ${domVariable} = document.querySelector(${selector});`,
+    `expect(${domVariable}).toBeDefined();`,
+    '// remove node in document to avoid influencing following test cases',
+    `${domVariable}.remove();`,
+  ].join('\n');
+}
+
 /**
  * 验证某个 DOM 是否存在
  * @param {String} framework 框架名称
@@ -133,8 +149,7 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
   // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
   if (domSelector.indexOf('document') !== -1) {
-    const selector = domSelector.replace('document', '');
-    return `expect(document.querySelector(${selector})).toBeDefined();`;
+    return getDocumentDomExpectTruthy(domSelector);
   }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
@@ -166,6 +181,17 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   }
 }
 
+function getDocumentDomExpectCount(domSelector, countOrIndex) {
+  const selector = domSelector.replace('document', '');
+  const domVariable = `${getVariableBySelector(selector)}Dom`;
+  return [
+    `const ${domVariable} = document.querySelectorAll('${selector}')`,
+    `expect(${domVariable}.length).toBe(${countOrIndex});`,
+    '// remove nodes in document to avoid influencing following test cases',
+    `${domVariable}.forEach(node => node.remove());`,
+  ].join('\n');  
+}
+
 /**
  * 验证某个 DOM 存在的数量
  * @param {String} framework 框架名称
@@ -174,16 +200,25 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
  * @returns 
  */
 function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
-  return Object.entries(domAndCount).map(([className, countOrIndex]) => {
+  let clearElement = '';
+  const arr = Object.entries(domAndCount).map(([className, countOrIndex]) => {
+    // 如果是清空
+    if (className === 'clearElementAtEnd') {
+      clearElement = countOrIndex;
+      return;
+    }
     return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
-  }).join('\n');
+  });
+  if (clearElement) {
+    arr.push(`document.querySelectorAll('${clearElement}').forEach(node => node.remove());`);
+  }
+  return arr.filter(v => v).join('\n');
 }
 
 function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex) {
   if (isNaN(countOrIndex)) return;
   if (className.indexOf('document') !== -1) {
-    const selector = className.replace('document', '');
-    return `expect(document.querySelectorAll('${selector}').length).toBe(${countOrIndex});`;  
+    return getDocumentDomExpectCount(className, countOrIndex);
   }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
