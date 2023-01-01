@@ -322,7 +322,7 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
         `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
           if (attributeName === 'value') {
-            return `expect(domWrapper${index || ''}.value)).${getAttributeValue(attributeValue)};`;
+            return `expect(domWrapper${index || ''}.value).${getAttributeValue(attributeValue)};`;
           }
           return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).${getAttributeValue(attributeValue)};`;
         }).join('\n'),
@@ -377,6 +377,7 @@ function getArrayCode(arr) {
 }
 
 function getObjectCode(obj) {
+  if (!obj) return;
   const arr = [];
   Object.entries(obj).forEach(([key, value]) => {
     const finalKey = key.indexOf('-') !== -1 ? `'${key}'` : key;
@@ -430,7 +431,7 @@ function getFireEventName(event, framework) {
  */
  function getFireEventCode(framework, { dom, event, component }, wrapperIndex = '') {
   if (!event) return;
-  const { eventName, eventModifier } = getFireEventName(event, framework);
+  const { eventName, eventModifier } = getFireEventName(event, framework) || {};
   if (framework.indexOf('Vue') !== -1) {
     let eventFireCode = '';
     if (dom === 'self') {
