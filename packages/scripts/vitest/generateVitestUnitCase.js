@@ -27,7 +27,8 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     let oneComponentTests = [];
     oneComponentApi.forEach((oneApiData) => {
       if (!oneApiData.test_description) return;
-      const testDescription = parseJSON(oneApiData.test_description, 'test_description must be a JSON.');
+      const jsonError = `${oneApiData.field_name}: ${oneApiData.test_description} is not a valid JSON.`;
+      const testDescription = parseJSON(oneApiData.test_description, jsonError);
       if (!testDescription.PC || framework.indexOf('PC') === -1) return;
       
       // 存在 Web 框架的单测用例，再输出
