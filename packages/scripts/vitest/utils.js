@@ -127,14 +127,16 @@ function getVariableBySelector(selector) {
   return camelCase(selector.replace(/(\.|#|)/g, ''));
 }
 
-function getDocumentDomExpectTruthy(domSelector) {
+function getDocumentDomExpectTruthy(domSelector, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
+  // Vue2 元素可能不存在，需要判空
+  const emptyJudgement = framework === 'Vue(PC)' ? '?' : '';
   return [
     `const ${domVariable} = document.querySelector(${selector});`,
     `expect(${domVariable}).toBeDefined();`,
     '// remove node in document to avoid influencing following test cases',
-    `${domVariable}.remove();`,
+    `${domVariable}${emptyJudgement}.remove();`,
   ].join('\n');
 }
 
@@ -149,7 +151,7 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
   // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
   if (domSelector.indexOf('document') !== -1) {
-    return getDocumentDomExpectTruthy(domSelector);
+    return getDocumentDomExpectTruthy(domSelector, framework);
   }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;

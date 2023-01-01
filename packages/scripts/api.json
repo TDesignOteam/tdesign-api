@@ -5274,7 +5274,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"exist\": [\".t-is-focused\"],\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
