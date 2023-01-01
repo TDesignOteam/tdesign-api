@@ -288,7 +288,7 @@ function getAttributeValue(attributeValue) {
   const toBeOrNotToBe = isNotToBe ? 'not.' : '';
   // 如果是关键词，直接返回
   if (['toBeUndefined'].includes(value)) {
-    return `${toBeOrNotToBe}${attributeValue}()`;
+    return `${attributeValue}()`;
   }
   return `${toBeOrNotToBe}toBe('${attributeValue}')`;
 }
