@@ -10,6 +10,7 @@ const {
   getFireEventCode,
   isRegExp,
   getDomCountExpectCode,
+  getClearDomInDocumentCode,
 } = require("./utils");
 
 /**
@@ -98,17 +99,11 @@ function getEventsDefinition(expect) {
 }
 
 function getEventExpectCode(p, index, framework, component) {
-  const { exist, event } = p;
+  const { exist, event, clearElementAtEnd } = p;
   const { triggerDom = 'self', trigger } = formatToTriggerAndDom(p);
-  const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
-  return [
+  const arr = [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component }),
-    tmpExist.map((domSelector) => {
-      if (typeof domSelector === 'object') {
-        return getDomCountExpectCode(framework, domSelector);
-      }
-      return getDomExpectTruthy(framework, `'${domSelector}'`);
-    }).join('\n'),
+    getExistDomExpect(framework, exist),
     event && Object.entries(event).map(([eventName, arguments]) => {
       const fnName = getEventFnName(eventName, index);
       return [
@@ -116,7 +111,19 @@ function getEventExpectCode(p, index, framework, component) {
         getEventArguments(arguments, fnName).join(''),
       ].join('\n');
     }).join('\n'),
-  ].join('');
+    clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd),
+  ]
+  return arr.filter(v => v).join('');
+}
+
+function getExistDomExpect(framework, exist) {
+  const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
+  return tmpExist.map((domSelector) => {
+    if (typeof domSelector === 'object') {
+      return getDomCountExpectCode(framework, domSelector);
+    }
+    return getDomExpectTruthy(framework, `'${domSelector}'`);
+  }).join('\n');
 }
 
 function getEventArguments(arguments, fnName = 'fn') {

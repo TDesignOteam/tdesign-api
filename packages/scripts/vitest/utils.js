@@ -187,7 +187,7 @@ function getDocumentDomExpectCount(domSelector, countOrIndex) {
   return [
     `const ${domVariable} = document.querySelectorAll('${selector}')`,
     `expect(${domVariable}.length).toBe(${countOrIndex});`,
-    '// remove nodes in document to avoid influencing following test cases',
+    '// remove nodes from document to avoid influencing following test cases',
     `${domVariable}.forEach(node => node.remove());`,
   ].join('\n');  
 }
@@ -210,9 +210,17 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
     return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
   });
   if (clearElement) {
-    arr.push(`document.querySelectorAll('${clearElement}').forEach(node => node.remove());`);
+    arr.push(getClearDomInDocumentCode(clearElement));
   }
   return arr.filter(v => v).join('\n');
+}
+
+// 支持用例结束时清空多个元素
+function getClearDomInDocumentCode(clearElement) {
+  const tmpElement = Array.isArray(clearElement) ? clearElement : [clearElement];
+  return tmpElement.map((element) => {
+    return `document.querySelectorAll('${element}').forEach(node => node.remove());`;
+  }).join('\n');
 }
 
 function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex) {
@@ -456,11 +464,12 @@ module.exports = {
   formatToTriggerAndDom,
   getDomExpectTruthy,
   getDomExpectFalsy,
+  getDomCountExpectCode,
   getClassNameExpectTruthy,
   getClassNameExpectFalsy,
-  getDomCountExpectCode,
   getAttributeExpect,
   getDomAttributeExpect,
   getDomClassNameExpect,
   getFireEventCode,
+  getClearDomInDocumentCode,
 };
