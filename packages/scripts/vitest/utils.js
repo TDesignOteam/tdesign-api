@@ -106,7 +106,7 @@ function getWrapper(framework, mountCode, wrapperIndex = '', goalDom = '') {
     return `const wrapper${wrapperIndex} = ${mountCode}${findDomCode};`;
   }
   if (framework.indexOf('React') !== -1) {
-    getReactWrapper(mountCode, wrapperIndex = '', goalDom = '');
+    return getReactWrapper(mountCode, wrapperIndex, goalDom);
   }
 }
 
@@ -408,7 +408,7 @@ function formatToTriggerAndDom(oneExpect) {
 function getFireEventName(event, framework) {
   const eventInfo = framework.indexOf('Vue') !== -1 ? event : UNIT_TEST_EVENTS_MAP[event];
   if (!eventInfo) {
-    console.log(chalk.error(`can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`));
+    console.log(chalk.red(`can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`));
     return;
   }
   if (typeof eventInfo === 'object') {

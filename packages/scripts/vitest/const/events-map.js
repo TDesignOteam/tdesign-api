@@ -12,6 +12,7 @@
  * 获取 keyCode 信息：https://keycode.info/
  */
 const UNIT_TEST_EVENTS_MAP = {
+  'click': 'click',
   'mousedown': 'mouseDown',
   'mouseenter': 'mouseEnter',
   'mouseleave': 'mouseLeave',
