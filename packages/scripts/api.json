@@ -31749,7 +31749,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": \"t-divider--with-text-${item}\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"className\": \"t-divider--with-text-${item}\", \"content\": \"Text\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -32161,7 +32161,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "horizontal",
+      "field_default_value": "",
       "field_enum": "horizontal/vertical",
       "field_desc_zh": "请更为使用 `layout`。分隔线类型有两种：水平和垂直",
       "field_desc_en": null,
