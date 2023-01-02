@@ -133,12 +133,13 @@ function getDocumentDomExpectTruthy(domSelector, framework) {
   const domVariable = `${getVariableBySelector(selector)}Dom`;
   // Vue2 元素可能不存在，需要判空
   const emptyJudgement = framework === 'Vue(PC)' ? '?' : '';
+  const isVue = framework.indexOf('Vue') !== -1;
   return [
     `const ${domVariable} = document.querySelector(${selector});`,
     `expect(${domVariable}).toBeDefined();`,
-    '// remove node in document to avoid influencing following test cases',
-    `${domVariable}${emptyJudgement}.remove();`,
-  ].join('\n');
+    isVue ? '// remove node in document to avoid influencing following test cases' : '',
+    isVue ? `${domVariable}${emptyJudgement}.remove();` : '',
+  ].filter(v => v).join('\n');
 }
 
 /**
@@ -150,11 +151,11 @@ function getDocumentDomExpectTruthy(domSelector, framework) {
  */
 function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
+  // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
+  if (domSelector.indexOf('document') !== -1) {
+    return getDocumentDomExpectTruthy(domSelector, framework);
+  }
   if (framework.indexOf('Vue') !== -1) {
-    // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
-    if (domSelector.indexOf('document') !== -1) {
-      return getDocumentDomExpectTruthy(domSelector, framework);
-    }
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
   }
   if (framework.indexOf('React') !== -1) {
@@ -171,12 +172,12 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
  */
 function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
+  // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异
+  if (domSelector.indexOf('document') !== -1) {
+    const selector = domSelector.replace('document', '');
+    return `expect(document.querySelector(${selector})).toBeNull();`;
+  }
   if (framework.indexOf('Vue') !== -1) {
-    // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异
-    if (domSelector.indexOf('document') !== -1) {
-      const selector = domSelector.replace('document', '');
-      return `expect(document.querySelector(${selector})).toBeNull();`;
-    }
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeFalsy();`;
   }
   if (framework.indexOf('React') !== -1) {
@@ -184,15 +185,16 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   }
 }
 
-function getDocumentDomExpectCount(domSelector, countOrIndex) {
+function getDocumentDomExpectCount(domSelector, countOrIndex, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
+  const isVue = framework.indexOf('Vue') !== -1;
   return [
     `const ${domVariable} = document.querySelectorAll('${selector}')`,
     `expect(${domVariable}.length).toBe(${countOrIndex});`,
-    '// remove nodes from document to avoid influencing following test cases',
-    `${domVariable}.forEach(node => node.remove());`,
-  ].join('\n');  
+    isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
+    isVue ? `${domVariable}.forEach(node => node.remove());` : '',
+  ].filter(v => v).join('\n');
 }
 
 /**
@@ -213,13 +215,14 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
     return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
   });
   if (clearElement) {
-    arr.push(getClearDomInDocumentCode(clearElement));
+    arr.push(getClearDomInDocumentCode(clearElement, framework));
   }
   return arr.filter(v => v).join('\n');
 }
 
 // 支持用例结束时清空多个元素
-function getClearDomInDocumentCode(clearElement) {
+function getClearDomInDocumentCode(clearElement, framework) {
+  if (framework.indexOf('React') !== -1) return;
   const tmpElement = Array.isArray(clearElement) ? clearElement : [clearElement];
   return tmpElement.map((element) => {
     return `document.querySelectorAll('${element}').forEach(node => node.remove());`;
@@ -228,10 +231,11 @@ function getClearDomInDocumentCode(clearElement) {
 
 function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex) {
   if (isNaN(countOrIndex)) return;
+  // 在整个文档范围内查询节点（此时的元素不在组件内部）
+  if (className.indexOf('document') !== -1) {
+    return getDocumentDomExpectCount(className, countOrIndex, framework);
+  }
   if (framework.indexOf('Vue') !== -1) {
-    if (className.indexOf('document') !== -1) {
-      return getDocumentDomExpectCount(className, countOrIndex);
-    }
     return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
   }
   if (framework.indexOf('React') !== -1) {
@@ -485,7 +489,7 @@ function getReactFireEventCodeTail(expect, framework) {
     const { delay } = p;
     const { trigger } = formatToTriggerAndDom(p);
     if (getReactNeedMockDelay(trigger, delay)) {
-      const delayCode = `, ${delay || 20}`;
+      const delayCode = `, ${delay || 100}`;
       tailList.push(`}${delayCode});`);
     }
   });

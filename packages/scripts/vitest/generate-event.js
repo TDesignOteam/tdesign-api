@@ -114,7 +114,7 @@ function getEventExpectCode(p, index, framework, component) {
         getEventArguments(arguments, fnName).join(''),
       ].join('\n');
     }).join('\n'),
-    clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd),
+    clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),
   ]
   return arr.filter(v => v).join('');
 }
