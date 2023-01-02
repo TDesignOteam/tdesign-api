@@ -1,6 +1,13 @@
 const { kebabCase } = require('lodash');
 const {
-  getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent, formatToTriggerAndDom, getFireEventCode, getReactFireEventCodeTail,
+  getItDescription,
+  getWrapper,
+  getSnapshotCase,
+  getDomExpectTruthy,
+  getMountComponent,
+  formatToTriggerAndDom,
+  getFireEventCode,
+  getReactFireEventAsync,
 } = require('./utils');
 
 const CUSTOM_NODE_CLASS = 'custom-node';
@@ -105,7 +112,8 @@ function getTestCaseByComponentCode(params) {
     itDesc, componentCode,
     framework, component, snapshot, tnode
   } = params;
-  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger ? 'async' : '';
+  const { reactAsync } = getReactFireEventAsync(getTriggerList(tnode.trigger), framework);
+  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger || reactAsync ? 'async' : '';
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
   const arr = [
     `it(${tnode.description || itDesc}, ${needAsync} () => {`,
@@ -116,7 +124,6 @@ function getTestCaseByComponentCode(params) {
     // 校验额外的元素是否存在
     tnode.dom && getDomExpect(framework, tnode.dom),
     getSnapshotCase(snapshot, framework),
-    tnode.trigger && getReactFireEventCodeTail(getTriggerList(tnode.trigger), framework),
     `});`
   ];
   return arr.filter(v => v);

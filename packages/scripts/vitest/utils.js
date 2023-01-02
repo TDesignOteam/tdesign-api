@@ -465,35 +465,42 @@ function getFireEventName(event, framework) {
       ? `container${wrapperIndex}.firstChild`
       : `container.querySelector('${dom}')`;
     const params = [tmpDom, eventModifier].filter(v => v).join(', ');
-    fireEventCode = `fireEvent.${eventName}(${params});`;
+    const eventCode = `fireEvent.${eventName}(${params});`;
 
     if (getReactNeedMockDelay(event, delay)) {
-      fireEventCode += `\n mockTimeout(() => {\n`;
+      const delayTime = delay && delay !== true ? delay : '';
+      fireEventCode = [eventCode, `await mockDelay(${delayTime});`].join('\n');
+    } else {
+      fireEventCode = eventCode;
     }
   }
   return fireEventCode;
 }
 
-// 判断是否需要 mockTimeout
+// 判断是否需要 mockDelay
 function getReactNeedMockDelay(event, delay) {
   if (delay) return true;
   return reactNeedMockDelayEvents.includes(event);
 }
 
-function getReactFireEventCodeTail(expect, framework) {
-  if (!expect || framework.indexOf('React') === -1) return;
+// React 是否需要 async（有 mockDelay 的地方就需要 async）
+function getReactFireEventAsync(expect, framework) {
+  if (!expect || framework.indexOf('React') === -1) return {};
   const tmpExpect = Array.isArray(expect) ? expect : [expect];
-  const tailList = [];
+  // const tailList = [];
+  let async = false;
   tmpExpect.forEach((p) => {
     // const { exist, event, delay, clearElementAtEnd } = p;
     const { delay } = p;
     const { trigger } = formatToTriggerAndDom(p);
     if (getReactNeedMockDelay(trigger, delay)) {
-      const delayCode = delay && delay !== true ? `, ${delay}` : '';
-      tailList.push(`}${delayCode});`);
+      // const delayCode = delay && delay !== true ? `, ${delay}` : '';
+      // tailList.push(`}${delayCode});`);
+      async = true;
     }
   });
-  return tailList.join('\n');
+  // return tailList.join('\n');
+  return { reactAsync: async };
 }
 
 // 判断一个字符串是否为正则表达式
@@ -521,5 +528,5 @@ module.exports = {
   getDomClassNameExpect,
   getFireEventCode,
   getClearDomInDocumentCode,
-  getReactFireEventCodeTail,
+  getReactFireEventAsync,
 };

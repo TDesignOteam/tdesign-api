@@ -5,7 +5,7 @@
  */
 
 // fireEvent, vi, render 等已经单独处理
-const REACT_KEYWORDS = ['mockTimeout'];
+const REACT_KEYWORDS = ['mockDelay', 'mockTimeout'];
 
 function getReactImports(str) {
   return REACT_KEYWORDS.filter((keyword) => {

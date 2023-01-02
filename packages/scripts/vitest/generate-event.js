@@ -11,7 +11,7 @@ const {
   isRegExp,
   getDomCountExpectCode,
   getClearDomInDocumentCode,
-  getReactFireEventCodeTail,
+  getReactFireEventAsync,
 } = require("./utils");
 
 /**
@@ -34,15 +34,15 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     // Vue2 和 Vue3/React 事件绑定方式不同
     const attachEventToDom = getEventsCode(framework, { [firstEvent]: 'fn' });
     const mountCode = getMountComponent(framework, component, { events: attachEventToDom }, extraCode);
+    const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
     const arr = [
-      `it('${component} Event: ${firstEvent}', ${isVue ? 'async' : ''} () => {
+      `it('${component} Event: ${firstEvent}', ${isVue || reactAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
         `expect(fn).toHaveBeenCalled();`,
         `${getEventArguments(event[firstEvent].arguments)}`,
-        getReactFireEventCodeTail([{ trigger: firstEvent, delay }], framework),
       `});`,
     ];
     return arr;
@@ -58,14 +58,14 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         codeProps[oneApiData.field_name] = true;
       }
       const mountCode = getMountComponent(framework, component, codeProps, extraCode);
-      const async = framework.indexOf('Vue') !== -1 ? 'async' : '';
+      const { reactAsync } = getReactFireEventAsync(expect, framework);
+      const async = framework.indexOf('Vue') !== -1 || reactAsync ? 'async' : '';
       const itDescription = description ? `'props.${oneApiData.field_name}: ${description}'` : getItDescription(oneApiData);
       const oneEventArr = [
         `it(${itDescription}, ${async} () => {`,
         getEventsDefinition(expect),
         getWrapper(framework, mountCode),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
-        getReactFireEventCodeTail(expect, framework),
         `});`
       ];
       arr = arr.concat(oneEventArr);
