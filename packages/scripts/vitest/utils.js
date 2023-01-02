@@ -489,7 +489,7 @@ function getReactFireEventCodeTail(expect, framework) {
     const { delay } = p;
     const { trigger } = formatToTriggerAndDom(p);
     if (getReactNeedMockDelay(trigger, delay)) {
-      const delayCode = `, ${delay || 100}`;
+      const delayCode = delay && delay !== true ? `, ${delay}` : '';
       tailList.push(`}${delayCode});`);
     }
   });
