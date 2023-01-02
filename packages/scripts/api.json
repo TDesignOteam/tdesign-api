@@ -4189,7 +4189,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"toBeUndefined\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"not.toBeUndefined\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"toBeDefined\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4269,7 +4269,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"description\": \"show clear icon on mouse enter\",\n      \"expect\": [{ \"trigger\": \"mouseenter(.t-input)\", \"exist\": [\".t-input__suffix-clear\"] }],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    },\n    {\n      \"description\": \"expect trigger clear and change events after clear icon has been clicked\",\n      \"expect\": [\n        { \"trigger\": \"mouseenter(.t-input)\", \"exist\": [\".t-input__suffix-clear\"] },\n        {\n          \"trigger\": \"click(.t-input__suffix-clear)\",\n          \"event\": {\n            \"clear\": [{ \"e.stopPropagation\": true, \"e.type\": \"click\" }],\n            \"change\": [\"\", { \"e.stopPropagation\": true, \"e.type\": \"click\" }]\n          }\n        }\n      ],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    }\n  ]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"description\": \"show clear icon on mouse enter\",\n      \"expect\": [{ \"trigger\": \"mouseenter(.t-input)\", \"exist\": [\".t-input__suffix-clear\"] }],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    },\n    {\n      \"description\": \"expect trigger clear and change events after clear icon has been clicked\",\n      \"expect\": [\n        { \"trigger\": \"mouseenter(.t-input)\", \"delay\": 60, \"exist\": [\".t-input__suffix-clear\"] },\n        {\n          \"trigger\": \"click(.t-input__suffix-clear)\",\n          \"event\": {\n            \"clear\": [{ \"e.stopPropagation\": true, \"e.type\": \"click\" }],\n            \"change\": [\"\", { \"e.stopPropagation\": true, \"e.type\": \"click\" }]\n          }\n        }\n      ],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5052,7 +5052,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        },\n        {\n          \"trigger\": \"blur(input)\",\n          \"event\": {\n            \"blur\": [{ \"e.type\": \"blur\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        },\n        {\n          \"trigger\": \"blur(input)\",\n          \"delay\": 20,\n          \"event\": {\n            \"blur\": [{ \"e.type\": \"blur\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

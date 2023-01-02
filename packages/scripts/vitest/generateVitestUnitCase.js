@@ -63,7 +63,6 @@ function generateVitestUnitCase(baseData, framework, { component }) {
       } else {
         configFlag.needDefaultRender = true;
       }
-
       if (testDescription.Mobile && testDescription.Mobile.wrapper) {
         configFlag.importedMounts.add(testDescription.Mobile.wrapper);
       }
@@ -77,7 +76,7 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     }
   });
 
-  const importConfig = getImportsConfig(configFlag);
+  const importConfig = getImportsConfig(configFlag, tests);
   const importCodes = getImportsCode(importConfig, framework);
 
   try {

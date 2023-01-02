@@ -1,6 +1,6 @@
 const { kebabCase } = require('lodash');
 const {
-  getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent, formatToTriggerAndDom, getFireEventCode,
+  getItDescription, getWrapper, getSnapshotCase, getDomExpectTruthy, getMountComponent, formatToTriggerAndDom, getFireEventCode, getReactFireEventCodeTail,
 } = require('./utils');
 
 const CUSTOM_NODE_CLASS = 'custom-node';
@@ -116,9 +116,17 @@ function getTestCaseByComponentCode(params) {
     // 校验额外的元素是否存在
     tnode.dom && getDomExpect(framework, tnode.dom),
     getSnapshotCase(snapshot, framework),
+    tnode.trigger && getReactFireEventCodeTail(getTriggerList(tnode.trigger), framework),
     `});`
   ];
-  return arr;
+  return arr.filter(v => v);
+}
+
+function getTriggerList(trigger) {
+  if (typeof trigger === 'string') return [{ trigger }];
+  if (Array.isArray(trigger)) {
+    return trigger.map(t => ({ trigger: t }));
+  }
 }
 
 function getTriggerExpect(triggerList, framework, component) {

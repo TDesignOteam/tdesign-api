@@ -3,13 +3,28 @@
  * hasEvent 是否引入事件 vi
  * importedComponents 引入了哪些组件依赖
  */
-function getImportsConfig(params = {}) {
+
+// fireEvent, vi, render 等已经单独处理
+const REACT_KEYWORDS = ['mockTimeout'];
+
+function getReactImports(str) {
+  return REACT_KEYWORDS.filter((keyword) => {
+    const regExp = new RegExp(keyword);
+    return regExp.test(str);
+  });
+}
+
+function getImportsConfig(params = {}, tests) {
   const {
     hasEvent = false,
     importedComponents = [],
     importedMounts = new Set(),
     needDefaultRender = false,
   } = params;
+
+  const str = tests.join('');
+  const reactTestUtils = getReactImports(str);
+
   const obj = {
     'Vue(PC)': {
       '@vue/test-utils': [],
@@ -64,6 +79,10 @@ function getImportsConfig(params = {}) {
     obj['Vue(PC)']['@vue/test-utils'].push('mount');
     obj['VueNext(PC)']['@vue/test-utils'].push('mount');
     obj['Vue(Mobile)']['@vue/test-utils'].push('mount');
+  }
+  if (reactTestUtils) {
+    obj['React(PC)']['@test/utils'].push([...reactTestUtils]);
+    obj['React(Mobile)']['@test/utils'].push([...reactTestUtils]);
   }
   return obj;
 }

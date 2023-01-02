@@ -28,7 +28,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
       `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
       getWrapper(framework, mountCode, '', classNameDom),
-      getClassNameExpectTruthy(framework, `\`${className}\``),
+      getClassNameExpectTruthy(framework, `\`${className}\``, '', classNameDom),
       getSnapshotCase(snapshot, framework),
       `});`,
       `});`,
@@ -47,7 +47,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         `it(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
         getWrapper(framework, mountCode, '', classNameDom),
         `if (typeof ${classNameVariable}[index] === 'string') {`,
-          getClassNameExpectTruthy(framework, `${classNameVariable}[index]`),
+          getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
         `} else if (typeof ${classNameVariable}[index] === 'object') {
           const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
           getClassNameExpectFalsy(framework, 'classNameKey'),
@@ -82,15 +82,15 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
       getWrapper(framework, mountCode1, '1', classNameDom),
       oneApiData.field_default_value === 'true'
-        ? getClassNameExpectTruthy(framework, `'${className}'`, '1')
-        : getClassNameExpectFalsy(framework, `'${className}'`, '1'),
+        ? getClassNameExpectTruthy(framework, `'${className}'`, '1', classNameDom)
+        : getClassNameExpectFalsy(framework, `'${className}'`, '1', classNameDom),
       `// ${oneApiData.field_name} = true`,
       getWrapper(framework, mountCode2, '2', classNameDom),
-      getClassNameExpectTruthy(framework, `'${className}'`, '2'),
+      getClassNameExpectTruthy(framework, `'${className}'`, '2', classNameDom),
       getSnapshotCase(snapshot, framework, '2'),
       `// ${oneApiData.field_name} = false`,
       getWrapper(framework, mountCode3, '3', classNameDom),
-      getClassNameExpectFalsy(framework, `'${className}'`, '3'),
+      getClassNameExpectFalsy(framework, `'${className}'`, '3', classNameDom),
       getSnapshotCase(snapshot, framework, '3'),
       '});',
     ];

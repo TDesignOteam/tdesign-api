@@ -11,6 +11,7 @@ const {
   isRegExp,
   getDomCountExpectCode,
   getClearDomInDocumentCode,
+  getReactFireEventCodeTail,
 } = require("./utils");
 
 /**
@@ -24,7 +25,7 @@ function generateEventUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
-  const { event, content, wrapper } = test;
+  const { event, content, wrapper, delay } = test;
   const extraCode = { content, wrapper };
   // click/blur/mouseEnter/...
   if (typeof event === 'object' && !Array.isArray(event)) {
@@ -38,10 +39,11 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       `it('${component} Event: ${firstEvent}', ${isVue ? 'async' : ''} () => {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
-        getFireEventCode(framework, { dom: 'self', event: firstEvent, component }),
+        getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
         `expect(fn).toHaveBeenCalled();`,
-        `${getEventArguments(event[firstEvent].arguments)}
-      });`,
+        `${getEventArguments(event[firstEvent].arguments)}`,
+        getReactFireEventCodeTail([{ trigger: firstEvent, delay }], framework),
+      `});`,
     ];
     return arr;
   } else if (Array.isArray(event)) {
@@ -63,6 +65,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         getEventsDefinition(expect),
         getWrapper(framework, mountCode),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
+        getReactFireEventCodeTail(expect, framework),
         `});`
       ];
       arr = arr.concat(oneEventArr);
@@ -99,10 +102,10 @@ function getEventsDefinition(expect) {
 }
 
 function getEventExpectCode(p, index, framework, component) {
-  const { exist, event, clearElementAtEnd } = p;
+  const { exist, event, delay, clearElementAtEnd } = p;
   const { triggerDom = 'self', trigger } = formatToTriggerAndDom(p);
   const arr = [
-    getFireEventCode(framework, { dom: triggerDom, event: trigger, component }),
+    getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }),
     getExistDomExpect(framework, exist),
     event && Object.entries(event).map(([eventName, arguments]) => {
       const fnName = getEventFnName(eventName, index);
