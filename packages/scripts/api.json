@@ -82323,8 +82323,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Swiper",
       "field_category": 1,
@@ -82354,8 +82353,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -82459,8 +82457,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Swiper",
       "field_category": 1,
@@ -82493,11 +82490,84 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3248,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "current",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "当前轮播在哪一项（下标）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:20:23",
+      "update_time": "2023-01-03 09:20:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 3090,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:31",
+      "update_time": "2022-10-31 11:42:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -82550,6 +82620,43 @@
       ]
     },
     {
+      "id": 3241,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "displayMultipleItems",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "同时显示的滑块数量",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:13:19",
+      "update_time": "2023-01-03 09:13:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1272,
       "platform_framework": [
         "1",
@@ -82599,15 +82706,48 @@
       ]
     },
     {
+      "id": 3242,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "easingFunction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/linear/easeInCubic/easeOutCubic/easeInOutCubic",
+      "field_desc_zh": "指定 swiper 切换缓动动画类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:14:33",
+      "update_time": "2023-01-03 09:14:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1662,
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Swiper",
       "field_category": 1,
@@ -82637,13 +82777,54 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3243,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "height",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "192",
+      "field_enum": "",
+      "field_desc_zh": "轮播的高度；默认单位 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:15:55",
+      "update_time": "2023-01-03 09:15:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -82694,6 +82875,43 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 3244,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "list",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图片列表",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:16:45",
+      "update_time": "2023-01-03 09:16:45",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -82797,6 +83015,45 @@
       ]
     },
     {
+      "id": 3245,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "nextMargin",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "后边距，可用于露出后一项的一小部分。默认单位 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:17:15",
+      "update_time": "2023-01-03 09:17:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 2804,
       "platform_framework": [
         "8",
@@ -82840,6 +83097,82 @@
       ]
     },
     {
+      "id": 3246,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "previousMargin",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "前边距，可用于露出前一项的一小部分。默认单位 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:17:31",
+      "update_time": "2023-01-03 09:17:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 3247,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "snapToEdge",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:17:56",
+      "update_time": "2023-01-03 09:17:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2047,
       "platform_framework": [
         "1",
@@ -82878,43 +83211,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3090,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Swiper",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:31",
-      "update_time": "2022-10-31 11:42:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -83128,7 +83424,7 @@
       "field_desc_zh": "轮播切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(current: number, source: SwiperChangeSource)【type SwiperChangeSource = 'autoplay' | 'touch' | ''】",
+      "event_input": "(current: number, source: SwiperChangeSource)【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】",
       "create_time": "2022-04-06 08:44:27",
       "update_time": "2022-04-06 08:44:27",
       "event_output": null,
@@ -83185,6 +83481,117 @@
       ]
     },
     {
+      "id": 3249,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "current",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "当前轮播在哪一项（下标）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:24:31",
+      "update_time": "2023-01-03 09:24:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3092,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:42:57",
+      "update_time": "2022-10-31 11:42:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3251,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "direction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "轮播滑动方向，包括横向滑动和纵向滑动两个方向",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:26:49",
+      "update_time": "2023-01-03 09:26:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2042,
       "platform_framework": [
         "8",
@@ -83225,6 +83632,49 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 3252,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "paginationPosition",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "bottom",
+      "field_enum": "top-left/top/top-right/bottom-left/bottom/bottom-right",
+      "field_desc_zh": "页码信息展示位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-03 09:27:04",
+      "update_time": "2023-01-03 09:27:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -83269,6 +83719,49 @@
       ]
     },
     {
+      "id": 2195,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "showControls",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示两侧的控制按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-01-21 05:26:26",
+      "update_time": "2022-01-21 05:26:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.32.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2040,
       "platform_framework": [
         "1",
@@ -83307,49 +83800,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 2195,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "SwiperNavigation",
-      "field_category": 1,
-      "field_name": "showSlideBtn",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "表示是否显示两侧的滑动控制按钮",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-01-21 05:26:26",
-      "update_time": "2022-01-21 05:26:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {
@@ -83394,24 +83844,24 @@
       ]
     },
     {
-      "id": 3092,
+      "id": 3250,
       "platform_framework": [
         "64"
       ],
       "component": "SwiperNavigation",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "total",
       "field_type": [
-        "1"
+        "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "0",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "总共的项数",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:42:57",
-      "update_time": "2022-10-31 11:42:57",
+      "create_time": "2023-01-03 09:25:10",
+      "update_time": "2023-01-03 09:25:10",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -83419,7 +83869,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -83427,7 +83877,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "Number"
       ]
     },
     {
@@ -108133,5 +108583,5 @@
       ]
     }
   ],
-  "total": 2580
+  "total": 2592
 }
