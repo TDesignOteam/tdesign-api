@@ -32,9 +32,20 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 | className | Object | 不同的 API 值，一一映射不同的类名，此时的 API 值和类名没有直接关系。如：`"className": { "underline": "t-link--hover-xxx" }` 表示 API 值为 `underline` 时，元素对应的类名为 `t-link--hover-underline`。 |
 | className | Array | `Array<string \| { [key: string]: boolean }>` API 是字符串，存在枚举值，枚举值和类名名称无法通过前面的 `t-xxx-${item}` 来表达。此时，便可使用数组，和枚举值保持顺序。依次列举枚举值对应的类名，示例：API 枚举值为 `small/medium/large`，则 `"className": ["t-size-s", { "t-size-m": false }, "t-size-l"]`，其中 `t-size-m` 不允许存在 |
 | className | Array | `Array<{ value: string, expect: { dom: string, className: { [name: string]: boolean } } }>` 表示当 API 值为 `value` 时，期望 `dom` 元素存在或不存在类名 `className`。数组则表示 API 的值可能为多个，为每一个可能的值输出一个 `it` 测试用例。 |
-| wrapper | String | 表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
-| snapshot | Boolean | 是否输出快照 |
-| content | String | 组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
+| wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
+| snapshot | Boolean | 通用属性。是否输出快照 |
+| content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
+
+### 属性 attribute
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| attribute | Object | API 存在枚举值，校验不同的枚举值对应的不同属性。示例：`{"attribute": { "type": ["submit", "reset", "button"] }}`|
+| attribute | Object | API 的值是多少，期望的属性值就是多少。示例：`{"attribute": { "href": "https://tdesign.tencent.com/" }}` |
+| attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }> }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"` |
+| wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
+| snapshot | Boolean | 通用属性。是否输出快照 |
+| content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
 
 ## 1. 类名 `{ "className": {} }`
 
