@@ -62571,7 +62571,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -63345,7 +63345,7 @@
         "1"
       ],
       "field_default_value": "hover",
-      "field_enum": "hover/click/focus/context-menu",
+      "field_enum": "hover/click/focus/mousedown/context-menu",
       "field_desc_zh": "触发浮层出现的方式",
       "field_desc_en": null,
       "field_required": 0,
@@ -63431,7 +63431,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示浮层",
       "field_desc_en": null,
