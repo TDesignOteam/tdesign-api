@@ -41,7 +41,6 @@ export interface TdRadioProps<T = RadioValue> {
   name?: string;
   /**
    * 单选按钮的值
-   * @default false
    */
   value?: T;
   /**

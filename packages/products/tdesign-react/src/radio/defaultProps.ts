@@ -4,12 +4,7 @@
 
 import { TdRadioProps, TdRadioGroupProps } from './type';
 
-export const radioDefaultProps: TdRadioProps = {
-  allowUncheck: false,
-  defaultChecked: false,
-  disabled: undefined,
-  value: false,
-};
+export const radioDefaultProps: TdRadioProps = { allowUncheck: false, defaultChecked: false, disabled: undefined };
 
 export const radioGroupDefaultProps: TdRadioGroupProps = {
   allowUncheck: false,

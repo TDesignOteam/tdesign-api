@@ -67935,7 +67935,7 @@
         "2",
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "单选按钮的值",
       "field_desc_en": null,

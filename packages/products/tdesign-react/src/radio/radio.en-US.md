@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Radio Props
 
 name | type | default | description | required
@@ -15,7 +14,7 @@ children | TNode | - | Typescript：`string \| TNode`。[see more ts definition]
 disabled | Boolean | undefined | \- | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 name | String | - | \- | N
-value | String / Number / Boolean | false | Typescript：`T` | N
+value | String / Number / Boolean | - | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/> | N
 
 ### RadioGroup Props
