@@ -61,7 +61,8 @@ function getMountComponent(framework, component, props, extra = {}) {
         return `${key}={${value}}`;
       }).join(' ')
       : '';
-    mountComponent = `<${component} ${properties} ${events || ''}>${content || ''}</${component}>`;
+    const eventsCode = events ? `on={${events}}` : '';
+    mountComponent = `<${component} ${properties} ${eventsCode || ''}>${content || ''}</${component}>`;
   }
   return getFullMountCode(framework, mountComponent);
 }
