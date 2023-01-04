@@ -55,10 +55,6 @@ export interface TdTextareaProps {
    */
   readonly?: boolean;
   /**
-   * 透传原生属性
-   */
-  rows?: number;
-  /**
    * 文本框状态
    * @default default
    */

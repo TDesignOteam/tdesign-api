@@ -43,10 +43,6 @@ export default {
   },
   /** 只读状态 */
   readonly: Boolean,
-  /** 透传原生属性 */
-  rows: {
-    type: Number,
-  },
   /** 文本框状态 */
   status: {
     type: String as PropType<TdTextareaProps['status']>,

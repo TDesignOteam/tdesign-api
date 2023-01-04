@@ -17,7 +17,6 @@ maxlength | Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | false | \- | N
-rows | Number | - | \- | N
 status | String | default | options：default/success/warning/error | N
 tips | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 value | String / Number | - | Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/textarea/type.ts) | N
