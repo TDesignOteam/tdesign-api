@@ -63345,7 +63345,7 @@
         "1"
       ],
       "field_default_value": "hover",
-      "field_enum": "hover/click/focus/context-menu",
+      "field_enum": "hover/click/focus/mousedown/context-menu",
       "field_desc_zh": "触发浮层出现的方式",
       "field_desc_en": null,
       "field_required": 0,
