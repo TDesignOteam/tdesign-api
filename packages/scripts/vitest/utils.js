@@ -3,6 +3,8 @@ const camelCase = require('lodash/camelCase');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 
+const DIRECT_ATTRIBUTES = ['value', 'checked'];
+
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
   return `'${type}.${oneApiData.field_name} works fine'`;
@@ -277,14 +279,14 @@ function getAttributeExpect(framework, attributes, wrapperIndex = '') {
 
 function getOneAttributeExpect(framework, attribute, value, wrapperIndex) {
   if (framework.indexOf('Vue') !== -1) {
-    if (attribute === `'value'`) {
-      return `expect(wrapper${wrapperIndex}.element.value).toBe(${value});`;
+    if (DIRECT_ATTRIBUTES.includes[attribute]) {
+      return `expect(wrapper${wrapperIndex}.element.${attribute}).toBe(${value});`;
     }
     return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
   }
   if (framework.indexOf('React') !== -1) {
-    if (attribute === `'value'`) {
-      return `expect(container${wrapperIndex}.firstChild.value).toBe(${value});`;
+    if (DIRECT_ATTRIBUTES.includes[attribute]) {
+      return `expect(container${wrapperIndex}.firstChild.${attribute}).toBe(${value});`;
     }
     return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
   }
@@ -294,6 +296,9 @@ function getAttributeValue(attributeValue, framework = '') {
   // 属性不存在时，各框架检测有差异
   if (attributeValue === false) {
     return getAttributeNotExit(framework);
+  }
+  if (attributeValue === true) {
+    return 'toBeTruthy()';
   }
   const isNotToBe = attributeValue.includes('not.');
   const value = isNotToBe ? attributeValue.slice(4) : attributeValue;
@@ -327,8 +332,8 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          if (attributeName === 'value') {
-            return `expect(domWrapper${index || ''}.element.value).${getAttributeValue(attributeValue, framework)};`;  
+          if (DIRECT_ATTRIBUTES.includes(attributeName)) {
+            return `expect(domWrapper${index || ''}.element.${attributeName}).${getAttributeValue(attributeValue, framework)};`;  
           }
           return `expect(domWrapper${index || ''}.attributes('${attributeName}')).${getAttributeValue(attributeValue, framework)};`;
         }).join('\n'),
@@ -341,8 +346,8 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
       const oneExpect = [
         `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          if (attributeName === 'value') {
-            return `expect(domWrapper${index || ''}.value).${getAttributeValue(attributeValue, framework)};`;
+          if (DIRECT_ATTRIBUTES.includes(attributeName)) {
+            return `expect(domWrapper${index || ''}.${attributeName}).${getAttributeValue(attributeValue, framework)};`;
           }
           return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).${getAttributeValue(attributeValue, framework)};`;
         }).join('\n'),
