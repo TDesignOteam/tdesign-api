@@ -133,7 +133,7 @@ function getExistDomExpect(framework, exist) {
 function getEventArguments(arguments, fnName = 'fn') {
   return arguments.map((oneArgument, index) => {
     if (oneArgument === undefined) return;
-    if (typeof oneArgument === 'string' && !isRegExp(oneArgument)) {
+    if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
       return getOneArgEqual(fnName, index, `'${oneArgument}'`);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
