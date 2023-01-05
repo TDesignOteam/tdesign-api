@@ -1,5 +1,3 @@
-const camelCase = require('lodash/camelCase');
-const upperFirst = require('lodash/upperFirst');
 const kebabCase = require('lodash/kebabCase');
 const {
   getWrapper,
@@ -12,6 +10,9 @@ const {
   getDomCountExpectCode,
   getClearDomInDocumentCode,
   getReactFireEventAsync,
+  getEventFunctions,
+  getEventName,
+  getEventFnName,
 } = require("./utils");
 
 /**
@@ -51,7 +52,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const { props, expect, description } = oneEventUnitCase;
       const codeProps = {
         ...(props || {}),
-        events: getEventFunctions(expect, framework),
+        events: getEventFunctions(expect, framework, extraCode),
       };
       if (oneApiData.field_type_text[0] === 'Boolean' && !codeProps[oneApiData.field_name]) {
         codeProps[oneApiData.field_name] = true;
@@ -72,23 +73,6 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     });
     return arr;
   }
-}
-
-function getEventFnName(eventName, index) {
-  return `${getEventName(eventName)}Fn${index || ''}`;
-}
-
-// 事件对应的函数依次为：fn,fn1,fn2,fn3...
-function getEventFunctions(expect, framework) {
-  const fns = [];
-  expect.forEach((item, index) => {
-    if (!item.event) return;
-    Object.keys(item.event).forEach((eventName) => {
-      const formattedEventname = getEventNameByFramework(eventName, framework);
-      fns.push(`${formattedEventname}: ${getEventFnName(eventName, index)}`);
-    })
-  });
-  return fns.length ? `{ ${fns.join(', ')} }` : undefined;
 }
 
 function getEventsDefinition(expect) {
@@ -182,17 +166,6 @@ function getEventsCode(framework, events) {
     tmpEventsCode.push(`${getEventName(event)}={${fn}}`);
   });
   return tmpEventsCode.join('\n');
-}
-
-function getEventName(eventName) {
-  return `on${upperFirst(camelCase(eventName))}`;
-}
-
-function getEventNameByFramework(eventName, framework) {
-  if (framework === 'Vue(PC)') {
-    return `'${kebabCase(eventName)}'`;
-  }
-  return getEventName(eventName);
 }
 
 module.exports = {

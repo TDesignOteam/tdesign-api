@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const camelCase = require('lodash/camelCase');
+const upperFirst = require('lodash/upperFirst');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 
@@ -63,10 +64,48 @@ function getMountComponent(framework, component, props, extra = {}) {
         return `${key}={${value}}`;
       }).join(' ')
       : '';
-    const eventsCode = events ? `on={${events}}` : '';
+    const eventsCode = events && framework === 'Vue(PC)' ? `on={${events}}` : events;
     mountComponent = `<${component} ${properties} ${eventsCode || ''}>${content || ''}</${component}>`;
   }
   return getFullMountCode(framework, mountComponent);
+}
+
+// 事件对应的函数依次为：fn,fn1,fn2,fn3...
+function getEventFunctions(expect, framework, extraCode) {
+  const { wrapper } = extraCode;
+  const needPropsEvent = !wrapper && framework !== 'Vue(PC)';
+  const fns = [];
+  expect.forEach((item, index) => {
+    if (!item.event) return;
+    Object.keys(item.event).forEach((eventName) => {
+      const formattedEventname = getEventNameByFramework(eventName, framework);
+      if (needPropsEvent) {
+        fns.push(`${formattedEventname}={${getEventFnName(eventName, index)}}`);
+      } else {
+        fns.push(`${formattedEventname}: ${getEventFnName(eventName, index)}`);
+      }
+    })
+  });
+
+  if (needPropsEvent) {
+    return fns.join(' ');
+  }
+  return fns.length ? `{ ${fns.join(', ')} }` : undefined;
+}
+
+function getEventNameByFramework(eventName, framework) {
+  if (framework === 'Vue(PC)') {
+    return `'${kebabCase(eventName)}'`;
+  }
+  return getEventName(eventName);
+}
+
+function getEventFnName(eventName, index) {
+  return `${getEventName(eventName)}Fn${index || ''}`;
+}
+
+function getEventName(eventName) {
+  return `on${upperFirst(camelCase(eventName))}`;
 }
 
 function getPropsObjectString(props, events) {
@@ -515,6 +554,8 @@ function isRegExp(str) {
 }
 
 module.exports = {
+  getEventName,
+  getEventFnName,
   isRegExp,
   getItDescription,
   getWrapper,
@@ -535,4 +576,5 @@ module.exports = {
   getFireEventCode,
   getClearDomInDocumentCode,
   getReactFireEventAsync,
+  getEventFunctions,
 };
