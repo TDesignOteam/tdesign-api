@@ -60,7 +60,8 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, codeProps, extraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
       const async = framework.indexOf('Vue') !== -1 || reactAsync ? 'async' : '';
-      const itDescription = description ? `'props.${oneApiData.field_name}: ${description}'` : getItDescription(oneApiData);
+      const apiPrefix = oneApiData.field_category_text ? `${oneApiData.field_category_text}.${oneApiData.field_name}: ` : '';
+      const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
       const oneEventArr = [
         `it(${itDescription}, ${async} () => {`,
         getEventsDefinition(expect),
