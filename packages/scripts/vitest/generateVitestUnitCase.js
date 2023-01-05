@@ -13,6 +13,20 @@ const { generateAttributeUnitCase } = require('./generate-attribute');
 const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
+const { copyUnitTestsToOtherWrapper } = require('./copy');
+
+const generateFunctionsMap = {
+  // 元素类名测试
+  className: generateClassNameUnitCase,
+  // 元素属性测试
+  attribute: generateAttributeUnitCase,
+  // 检测 DOM 元素是否存在
+  dom: generateDomUnitCase,
+  // TNode 测试
+  tnode: generateTNodeElement,
+  // 事件
+  event: generateEventUnitCase,
+};
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   let tests = [];
@@ -34,18 +48,6 @@ function generateVitestUnitCase(baseData, framework, { component }) {
       // 存在 Web 框架的单测用例，再输出
       // console.log(testDescription.PC);
       let oneApiTestCase = [];
-      const generateFunctionsMap = {
-        // 元素类名测试
-        className: generateClassNameUnitCase,
-        // 元素属性测试
-        attribute: generateAttributeUnitCase,
-        // 检测 DOM 元素是否存在
-        dom: generateDomUnitCase,
-        // TNode 测试
-        tnode: generateTNodeElement,
-        // 事件
-        event: generateEventUnitCase,
-      };
       Object.keys(testDescription.PC).forEach((key) => {
         if (generateFunctionsMap[key]) {
           oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
@@ -53,6 +55,16 @@ function generateVitestUnitCase(baseData, framework, { component }) {
             oneComponentTests = oneComponentTests.concat([oneApiTestCase.join('\n')]);
             if (key === 'event') {
               configFlag.hasEvent = true;
+            }
+            // 同样的测试用例复用到其他实例
+            if (testDescription.PC.copyTestToWrapper) {
+              const { copyCode, wrappers } = copyUnitTestsToOtherWrapper(oneApiTestCase, testDescription.PC, framework);
+              if (copyCode) {
+                oneComponentTests = oneComponentTests.concat(copyCode);
+                wrappers.forEach((wrapper) => {
+                  configFlag.importedMounts.add(wrapper);
+                });
+              }
             }
           }
         }
