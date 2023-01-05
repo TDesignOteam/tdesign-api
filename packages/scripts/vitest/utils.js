@@ -300,7 +300,7 @@ function getAttributeValue(attributeValue, framework = '') {
   if (attributeValue === true) {
     return 'toBeTruthy()';
   }
-  const isNotToBe = attributeValue.includes('not.');
+  const isNotToBe = typeof attributeValue === 'string' && attributeValue.includes('not.');
   const value = isNotToBe ? attributeValue.slice(4) : attributeValue;
   const toBeOrNotToBe = isNotToBe ? 'not.' : '';
   // 如果是关键词，直接返回

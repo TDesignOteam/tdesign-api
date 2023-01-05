@@ -132,7 +132,7 @@ function getEventArguments(arguments, fnName = 'fn') {
   if (typeof arguments === 'string' && arguments === 'not') {
     return [`expect(${fnName}).not.toHaveBeenCalled();`];
   }
-  if (Array.isArray(arguments)) return [];
+  if (!Array.isArray(arguments)) return [];
   const arr = arguments.map((oneArgument, index) => {
     if (oneArgument === undefined) return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {

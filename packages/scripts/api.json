@@ -68443,7 +68443,7 @@
       ],
       "field_default_value": "medium",
       "field_enum": "small/medium/large",
-      "field_desc_zh": "组件尺寸",
+      "field_desc_zh": "组件尺寸【讨论中】",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -68541,7 +68541,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\": { \"attribute\": [\n    {\n      \"value\": \"2\",\n      \"expect\": [{ \"dom\": \".t-radio.t-is-checked input\", \"attribute\": { \"value\": 2 }}]\n    }\n  ], \"wrapper\": \"getRadioGroupDefaultMount\" }}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68629,7 +68629,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n        \"event\": [\n            {\n                \"props\": {\n                    \"value\": 2\n                },\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            },\n            {\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
