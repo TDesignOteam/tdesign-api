@@ -67863,7 +67863,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\"attribute\": { \"name\": \"radio-gender-name\" }, \"attributeDom\": 'input' }}",
+      "test_description": "{\"PC\": {\"attribute\": { \"name\": \"radio-gender-name\" }, \"attributeDom\": \"input\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

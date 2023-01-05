@@ -14,12 +14,12 @@ function generateAttributeUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactAttribute(test, oneApiData, framework, component) {
-  const { attribute, snapshot, content, wrapper } = test;
+  const { attribute, attributeDom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   if (typeof attribute !== 'object') return;
   // 1. 处理数组
   if (Array.isArray(attribute)) {
-    return generateMapAttribute(test, oneApiData, framework, component);
+    return generateMapAttribute(test, oneApiData, framework, component, attributeDom);
   }
   // 2. 处理 {} Object
   const attributeName = Object.keys(attribute)[0];
@@ -34,7 +34,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
       `const attributeValues = ${getArrayCode(attributeValue)};`,
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
         `it(\`props.${oneApiData.field_name} is equal to \${item}\`, () => {`,
-          getWrapper(framework, componentCode),
+          getWrapper(framework, componentCode, '', attributeDom),
           getAttributeExpect(framework, { [`'${attributeName}'`]: 'attributeValues[index]' }),
           getSnapshotCase(snapshot, framework),
         `});`,
@@ -47,7 +47,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${attributeValue}'` }, extraCode);
     const arr = [
       `it(${getItDescription(oneApiData)}, () => {`,
-        getWrapper(framework, componentCode),
+        getWrapper(framework, componentCode, '', attributeDom),
         getAttributeExpect(framework, { [`'${attributeName}'`]: `'${attributeValue}'` }),
         getSnapshotCase(snapshot, framework),
       `});`,
@@ -56,7 +56,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   }
 }
 
-function generateMapAttribute(test, oneApiData, framework, component) {
+function generateMapAttribute(test, oneApiData, framework, component, attributeDom) {
   // 此时的 attribute 一定是数组
   const { attribute, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
@@ -64,7 +64,7 @@ function generateMapAttribute(test, oneApiData, framework, component) {
     const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
     const arr = [
       `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
-        getWrapper(framework, mountCode),
+        getWrapper(framework, mountCode, '', attributeDom),
         getDomAttributeExpect(framework, expect),
         getSnapshotCase(snapshot, framework),
       `});`
