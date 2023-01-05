@@ -12,7 +12,7 @@ default | String / Slot / Function | - | 单选按钮内容，同 label。TS 类
 disabled | Boolean | undefined | 是否为禁用态 | N
 label | String / Slot / Function | - | 主文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 name | String | - | HTML 元素原生属性 | N
-value | String / Number / Boolean | - | 单选按钮的值。TS 类型：`T` | N
+value | String / Number / Boolean | undefined | 单选按钮的值。TS 类型：`T` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>选中状态变化时触发 | N
 
 ### Radio Events

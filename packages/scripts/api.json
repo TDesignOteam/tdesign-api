@@ -67306,7 +67306,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n    \"className\": \"t-is-checked\",\n    \"attribute\": [\n        {\n            \"value\": true,\n            \"expect\": [\n                {\n                    \"dom\": \"input\",\n                    \"attribute\": {\n                        \"checked\": true\n                    }\n                }\n            ]\n        }\n    ]\n}}",
+      "test_description": "{\"PC\": {\n    \"snapshot\": true,\n    \"className\": \"t-is-checked\",\n    \"attribute\": [\n        {\n            \"value\": true,\n            \"expect\": [\n                {\n                    \"dom\": \"input\",\n                    \"attribute\": {\n                        \"checked\": true\n                    }\n                }\n            ]\n        }\n    ]\n}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -67351,7 +67351,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -67431,7 +67431,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -67517,7 +67517,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
