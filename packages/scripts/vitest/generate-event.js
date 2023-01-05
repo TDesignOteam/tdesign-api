@@ -41,7 +41,6 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
-        `expect(fn).toHaveBeenCalled();`,
         `${getEventArguments(event[firstEvent].arguments)}`,
       `});`,
     ];
@@ -111,7 +110,6 @@ function getEventExpectCode(p, index, framework, component) {
     event && Object.entries(event).map(([eventName, arguments]) => {
       const fnName = getEventFnName(eventName, index);
       return [
-        `expect(${fnName}).toHaveBeenCalled();`,
         getEventArguments(arguments, fnName).join(''),
       ].join('\n');
     }).join('\n'),
@@ -131,7 +129,11 @@ function getExistDomExpect(framework, exist) {
 }
 
 function getEventArguments(arguments, fnName = 'fn') {
-  return arguments.map((oneArgument, index) => {
+  if (typeof arguments === 'string' && arguments === 'not') {
+    return [`expect(${fnName}).not.toHaveBeenCalled();`];
+  }
+  if (Array.isArray(arguments)) return [];
+  const arr = arguments.map((oneArgument, index) => {
     if (oneArgument === undefined) return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
       return getOneArgEqual(fnName, index, `'${oneArgument}'`);
@@ -150,7 +152,9 @@ function getEventArguments(arguments, fnName = 'fn') {
       }).join('\n');
     }
     return getOneArgEqual(fnName, index, oneArgument);
-  })
+  });
+  arr.unshift(`expect(${fnName}).toHaveBeenCalled();`);
+  return arr;
 }
 
 // 处理正则表达式的校验
