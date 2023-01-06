@@ -7,7 +7,7 @@ const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 
 // 直接从 DOM 获取的属性，不需要通过 getAttribute
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
-const ATTRIBUTES_INCLUDES = ['style'];
+const ATTRIBUTES_STYLE = 'style';
 
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
@@ -330,12 +330,8 @@ function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attrib
 
 function getVueOneAttributeCode(framework, wrapper, attribute, value) {
   const expectValueCode = getAttributeValue(value, framework);
-  if (ATTRIBUTES_INCLUDES.includes(attribute)) {
-    const expectToBeCode = getAttributeValue(true, framework);
-    return `expect(${wrapper}.attributes('${attribute}').includes('${value}')).${expectToBeCode};`;
-  }
-  if (ATTRIBUTES_DIRECT.includes(attribute)) {
-    return `expect(${wrapper}.element.${attribute}).${expectValueCode};`;
+  if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
+    return `expect(${wrapper}.element.${getAttributeStr(attribute)}).${expectValueCode};`;
   }
   return `expect(${wrapper}.attributes('${attribute}')).${expectValueCode};`;
 }
@@ -343,14 +339,17 @@ function getVueOneAttributeCode(framework, wrapper, attribute, value) {
 function getReactOneAttributeCode(framework, wrapper, attribute, value, attributeDom) {
   const expectValueCode = getAttributeValue(value, framework);
   const firstChildCode = attributeDom ? '' : '.firstChild';
-  if (ATTRIBUTES_INCLUDES.includes(attribute)) {
-    const expectToBeCode = getAttributeValue(true, framework);
-    return `expect(${wrapper}${firstChildCode}.getAttribute('${attribute}').includes('${value}')).${expectToBeCode};`;
-  }
-  if (ATTRIBUTES_DIRECT.includes(attribute)) {
-    return `expect(${wrapper}${firstChildCode}.${attribute}).${expectValueCode};`;
+  if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
+    return `expect(${wrapper}${firstChildCode}.${getAttributeStr(attribute)}).${expectValueCode};`;
   }
   return `expect(${wrapper}${firstChildCode}.getAttribute('${attribute}')).${expectValueCode};`;
+}
+
+// style.flex-wrap ===> style['flex-wrap']
+function getAttributeStr(attribute) {
+  return attribute.split('.')
+    .map((item) => item.includes('-') ? camelCase(item) : item)
+    .join('.');
 }
 
 function getAttributeValue(attributeValue, framework = '') {

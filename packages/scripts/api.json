@@ -78947,7 +78947,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": true,\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"flex-wrap: wrap;\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": true,\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.flex-wrap\": \"wrap\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -79092,7 +79092,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'small'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 8px;\" }}]\n    },\n    {\n      \"value\": \"'large'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 24px;\" }}]\n    },\n        {\n      \"value\": \"'38px'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 38px;\" }}]\n    },\n    {\n      \"value\": \"['20px', '80px']\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 20px 80px;\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'small'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"8px\" }}]\n    },\n    {\n      \"value\": \"'large'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"24px\" }}]\n    },\n        {\n      \"value\": \"'38px'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"38px\" }}]\n    },\n    {\n      \"value\": \"['20px', '80px']\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"20px 80px\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
