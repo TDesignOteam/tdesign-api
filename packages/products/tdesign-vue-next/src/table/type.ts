@@ -822,6 +822,10 @@ export interface TableEditableCellConfig<T extends TableRowData = TableRowData> 
    */
   defaultEditable?: boolean;
   /**
+   * 透传给编辑组件的事件
+   */
+  on?: { [key: string]: any };
+  /**
    * 编辑完成后，退出编辑模式时触发
    */
   onEdited?: (context: PrimaryTableOnEditedContext<T>) => void;
