@@ -5,7 +5,9 @@ const upperFirst = require('lodash/upperFirst');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 
-const DIRECT_ATTRIBUTES = ['value', 'checked'];
+// 直接从 DOM 获取的属性，不需要通过 getAttribute
+const ATTRIBUTES_DIRECT = ['value', 'checked'];
+const ATTRIBUTES_INCLUDES = ['style'];
 
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
@@ -319,18 +321,36 @@ function getAttributeExpect(framework, attributes, wrapperIndex = '', attributeD
 
 function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom) {
   if (framework.indexOf('Vue') !== -1) {
-    if (DIRECT_ATTRIBUTES.includes[attribute]) {
-      return `expect(wrapper${wrapperIndex}.element.${attribute}).toBe(${value});`;
-    }
-    return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
+   return getVueOneAttributeCode(framework, `wrapper${wrapperIndex}`, attribute, value);
   }
   if (framework.indexOf('React') !== -1) {
-    const firstChildCode = attributeDom ? '' : '.firstChild';
-    if (DIRECT_ATTRIBUTES.includes[attribute]) {
-      return `expect(container${wrapperIndex}${firstChildCode}.${attribute}).toBe(${value});`;
-    }
-    return `expect(container${wrapperIndex}${firstChildCode}.getAttribute(${attribute})).toBe(${value});`;
+    return getReactOneAttributeCode(framework, `container${wrapperIndex}`, attribute, value, attributeDom)
   }
+}
+
+function getVueOneAttributeCode(framework, wrapper, attribute, value) {
+  const expectValueCode = getAttributeValue(value, framework);
+  if (ATTRIBUTES_INCLUDES.includes(attribute)) {
+    const expectToBeCode = getAttributeValue(true, framework);
+    return `expect(${wrapper}.attributes('${attribute}').includes(${value})).${expectToBeCode};`;
+  }
+  if (ATTRIBUTES_DIRECT.includes(attribute)) {
+    return `expect(${wrapper}.element.${attribute}).${expectValueCode};`;
+  }
+  return `expect(${wrapper}.attributes('${attribute}')).${expectValueCode};`;
+}
+
+function getReactOneAttributeCode(framework, wrapper, attribute, value, attributeDom) {
+  const expectValueCode = getAttributeValue(value, framework);
+  const firstChildCode = attributeDom ? '' : '.firstChild';
+  if (ATTRIBUTES_INCLUDES.includes(attribute)) {
+    const expectToBeCode = getAttributeValue(true, framework);
+    return `expect(${wrapper}${firstChildCode}.attributes('${attribute}').includes(${value})).${expectToBeCode};`;
+  }
+  if (ATTRIBUTES_DIRECT.includes(attribute)) {
+    return `expect(${wrapper}${firstChildCode}.${attribute}).${expectValueCode};`;
+  }
+  return `expect(${wrapper}${firstChildCode}.getAttribute('${attribute}')).${expectValueCode};`;
 }
 
 function getAttributeValue(attributeValue, framework = '') {
@@ -348,7 +368,8 @@ function getAttributeValue(attributeValue, framework = '') {
   if (['toBeUndefined', 'toBeDefined'].includes(value)) {
     return `${attributeValue}()`;
   }
-  return `${toBeOrNotToBe}toBe('${attributeValue}')`;
+  const valueCode = /^\/.+\/$/.test(attributeValue) ? attributeValue.slice(1, -1) : attributeValue;
+  return `${toBeOrNotToBe}toBe('${valueCode}')`;
 }
 
 // React 属性不存在时使用 toBeNull 检测；Vue 则使用 toBeUndefined 检测
@@ -370,35 +391,50 @@ function getDomAttributeExpect(framework, expectAttributes, component, wrapperIn
   let arr = [];
   if (framework.indexOf('Vue') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
-      const domFindCode = dom === 'self' || !dom ? `findComponent(${component})` : `find('${dom}')`;
-      const oneExpect = [
-        `const domWrapper${index || ''} = wrapper${wrapperIndex}.${domFindCode};`,
-        Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          if (DIRECT_ATTRIBUTES.includes(attributeName)) {
-            return `expect(domWrapper${index || ''}.element.${attributeName}).${getAttributeValue(attributeValue, framework)};`;  
-          }
-          return `expect(domWrapper${index || ''}.attributes('${attributeName}')).${getAttributeValue(attributeValue, framework)};`;
-        }).join('\n'),
-      ];
+      const oneExpect = getVueDomAttributeExpect(framework, dom, component, index, attribute, wrapperIndex);
       arr = arr.concat(oneExpect);
     });
   }
   if (framework.indexOf('React') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
-      const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
-      const oneExpect = [
-        `const domWrapper${index || ''} = container${wrapperIndex}.${domFindCode};`,
-        Object.entries(attribute).map(([attributeName, attributeValue]) => {
-          if (DIRECT_ATTRIBUTES.includes(attributeName)) {
-            return `expect(domWrapper${index || ''}.${attributeName}).${getAttributeValue(attributeValue, framework)};`;
-          }
-          return `expect(domWrapper${index || ''}.getAttribute('${attributeName}')).${getAttributeValue(attributeValue, framework)};`;
-        }).join('\n'),
-      ];
+      const oneExpect = getReactDomAttributeExpect(framework, dom, index, attribute, wrapperIndex);
       arr = arr.concat(oneExpect);
     });
   }
   return arr.join('\n');
+}
+
+function getVueDomAttributeExpect(framework, dom, component, index, attribute, wrapperIndex) {
+  const domFindCode = dom === 'self' || !dom ? `findComponent(${component})` : `find('${dom}')`;
+  const oneExpect = [
+    `const domWrapper${index || ''} = wrapper${wrapperIndex}.${domFindCode};`,
+    Object.entries(attribute).map(([attributeName, attributeValue]) => {
+      return getVueOneAttributeCode(
+        framework,
+        `domWrapper${index || ''}`,
+        attributeName,
+        attributeValue
+      );
+    }).join('\n'),
+  ];
+  return oneExpect;
+}
+
+function getReactDomAttributeExpect(framework, dom, index, attribute) {
+  const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
+  const oneExpect = [
+    `const domWrapper${index || ''} = container${wrapperIndex}.${domFindCode};`,
+    Object.entries(attribute).map(([attributeName, attributeValue]) => {
+      return getReactOneAttributeCode(
+        framework,
+        `domWrapper${index || ''}`,
+        attributeName,
+        attributeValue,
+        dom
+      );
+    }).join('\n'),
+  ];
+  return oneExpect;
 }
 
 /**

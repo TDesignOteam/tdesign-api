@@ -42,7 +42,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(event[firstEvent].arguments)}`,
+        `${getEventArguments(event[firstEvent].arguments).join('\n')}`,
       `});`,
     ];
     return arr;
@@ -60,7 +60,8 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, codeProps, extraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
       const async = framework.indexOf('Vue') !== -1 || reactAsync ? 'async' : '';
-      const apiPrefix = oneApiData.field_category_text ? `${oneApiData.field_category_text}.${oneApiData.field_name}: ` : '';
+      const category = oneApiData.field_category_text?.toLocaleLowerCase();
+      const apiPrefix = category? `${category}.${oneApiData.field_name}: ` : '';
       const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
       const oneEventArr = [
         `it(${itDescription}, ${async} () => {`,
