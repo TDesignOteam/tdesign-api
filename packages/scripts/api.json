@@ -78900,7 +78900,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"className\": \"t-space-align-${item}\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78947,7 +78947,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": true,\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"flex-wrap: wrap;\" }}]\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78994,7 +78994,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"className\": \"t-space-${item}\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -79042,7 +79042,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"tnode\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -79091,7 +79091,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"small\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 8px;\" }}]\n    },\n    {\n      \"value\": \"large\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 24px;\" }}]\n    },\n        {\n      \"value\": \"38\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 38px;\" }}]\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
