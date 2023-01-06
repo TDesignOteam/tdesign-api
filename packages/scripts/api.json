@@ -68413,7 +68413,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n  \"dom\": [{ \".t-radio\": 4 }, \".custom-node\", { \".t-radio.t-is-disabled\": 1 }],\n  \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n  \"dom\": [{ \".t-radio\": 4 }, \".custom-node\", { \".t-radio.t-is-disabled\": 1 }]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
