@@ -332,7 +332,7 @@ function getVueOneAttributeCode(framework, wrapper, attribute, value) {
   const expectValueCode = getAttributeValue(value, framework);
   if (ATTRIBUTES_INCLUDES.includes(attribute)) {
     const expectToBeCode = getAttributeValue(true, framework);
-    return `expect(${wrapper}.attributes('${attribute}').includes(${value})).${expectToBeCode};`;
+    return `expect(${wrapper}.attributes('${attribute}').includes('${value}')).${expectToBeCode};`;
   }
   if (ATTRIBUTES_DIRECT.includes(attribute)) {
     return `expect(${wrapper}.element.${attribute}).${expectValueCode};`;
@@ -345,7 +345,7 @@ function getReactOneAttributeCode(framework, wrapper, attribute, value, attribut
   const firstChildCode = attributeDom ? '' : '.firstChild';
   if (ATTRIBUTES_INCLUDES.includes(attribute)) {
     const expectToBeCode = getAttributeValue(true, framework);
-    return `expect(${wrapper}${firstChildCode}.attributes('${attribute}').includes(${value})).${expectToBeCode};`;
+    return `expect(${wrapper}${firstChildCode}.attributes('${attribute}').includes('${value}')).${expectToBeCode};`;
   }
   if (ATTRIBUTES_DIRECT.includes(attribute)) {
     return `expect(${wrapper}${firstChildCode}.${attribute}).${expectValueCode};`;
@@ -368,8 +368,8 @@ function getAttributeValue(attributeValue, framework = '') {
   if (['toBeUndefined', 'toBeDefined'].includes(value)) {
     return `${attributeValue}()`;
   }
-  const valueCode = /^\/.+\/$/.test(attributeValue) ? attributeValue.slice(1, -1) : attributeValue;
-  return `${toBeOrNotToBe}toBe('${valueCode}')`;
+  const valueCode = /^\/.+\/$/.test(attributeValue) ? attributeValue.slice(1, -1) : `'${attributeValue}'`;
+  return `${toBeOrNotToBe}toBe(${valueCode})`;
 }
 
 // React 属性不存在时使用 toBeNull 检测；Vue 则使用 toBeUndefined 检测
