@@ -16,6 +16,7 @@ label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](ht
 name | String | - | \- | N
 value | String / Number / Boolean | undefined | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/> | N
+onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>trigger on click | N
 
 ### RadioGroup Props
 

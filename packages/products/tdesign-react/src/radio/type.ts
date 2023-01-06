@@ -5,7 +5,7 @@
  * */
 
 import { TNode, SizeEnum } from '../common';
-import { ChangeEvent } from 'react';
+import { MouseEvent, ChangeEvent } from 'react';
 
 export interface TdRadioProps<T = RadioValue> {
   /**
@@ -48,6 +48,10 @@ export interface TdRadioProps<T = RadioValue> {
    * 选中状态变化时触发
    */
   onChange?: (checked: boolean, context: { e: ChangeEvent<HTMLDivElement> }) => void;
+  /**
+   * 点击时出发，一般用于外层阻止冒泡场景
+   */
+  onClick?: (context: { e: MouseEvent<HTMLLabelElement> }) => void;
 }
 
 export interface TdRadioGroupProps<T = RadioValue> {
