@@ -35,7 +35,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
         `it(\`props.${oneApiData.field_name} is equal to \${item}\`, () => {`,
           getWrapper(framework, componentCode, '', attributeDom),
-          getAttributeExpect(framework, { [`'${attributeName}'`]: 'attributeValues[index]' }),
+          getAttributeExpect(framework, { [`'${attributeName}'`]: 'attributeValues[index]' }, '', attributeDom),
           getSnapshotCase(snapshot, framework),
         `});`,
       `});`,
@@ -48,7 +48,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
     const arr = [
       `it(${getItDescription(oneApiData)}, () => {`,
         getWrapper(framework, componentCode, '', attributeDom),
-        getAttributeExpect(framework, { [`'${attributeName}'`]: `'${attributeValue}'` }),
+        getAttributeExpect(framework, { [`'${attributeName}'`]: `'${attributeValue}'` }, '', attributeDom),
         getSnapshotCase(snapshot, framework),
       `});`,
     ];

@@ -311,13 +311,13 @@ function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
  * @param {*} wrapperIndex 
  * @returns 
  */
-function getAttributeExpect(framework, attributes, wrapperIndex = '') {
+function getAttributeExpect(framework, attributes, wrapperIndex = '', attributeDom) {
   return Object.entries(attributes).map(([attribute, value]) => {
-    return getOneAttributeExpect(framework, attribute, value, wrapperIndex);
+    return getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom);
   }).join('\n');
 }
 
-function getOneAttributeExpect(framework, attribute, value, wrapperIndex) {
+function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom) {
   if (framework.indexOf('Vue') !== -1) {
     if (DIRECT_ATTRIBUTES.includes[attribute]) {
       return `expect(wrapper${wrapperIndex}.element.${attribute}).toBe(${value});`;
@@ -325,10 +325,11 @@ function getOneAttributeExpect(framework, attribute, value, wrapperIndex) {
     return `expect(wrapper${wrapperIndex}.attributes(${attribute})).toBe(${value});`;
   }
   if (framework.indexOf('React') !== -1) {
+    const firstChildCode = attributeDom ? '' : '.firstChild';
     if (DIRECT_ATTRIBUTES.includes[attribute]) {
-      return `expect(container${wrapperIndex}.firstChild.${attribute}).toBe(${value});`;
+      return `expect(container${wrapperIndex}${firstChildCode}.${attribute}).toBe(${value});`;
     }
-    return `expect(container${wrapperIndex}.firstChild.getAttribute(${attribute})).toBe(${value});`;
+    return `expect(container${wrapperIndex}${firstChildCode}.getAttribute(${attribute})).toBe(${value});`;
   }
 }
 
