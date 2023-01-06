@@ -48186,7 +48186,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": { \"className\": [{ \"t-align-left\": false }, \"t-align-center\", \"t-align-right\"], \"classNameDom\": \".t-input\", \"snapshot\": true }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -48365,7 +48365,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"className\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \".t-input\",\n                        \"className\": {\n                            \"t-is-focused\": false,\n                            \"t-input--focused\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \".t-input\",\n                        \"className\": {\n                            \"t-is-focused\": true,\n                            \"t-input--focused\": true\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"toBeDefined\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
