@@ -79073,10 +79073,11 @@
       "field_name": "size",
       "field_type": [
         "1",
-        "2"
+        "2",
+        "16"
       ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large",
+      "field_default_value": "'medium'",
+      "field_enum": "",
       "field_desc_zh": "间距大小",
       "field_desc_en": "Spacing",
       "field_required": 0,
@@ -79091,7 +79092,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"small\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 8px;\" }}]\n    },\n    {\n      \"value\": \"large\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 24px;\" }}]\n    },\n        {\n      \"value\": \"38\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 38px;\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
+      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'small'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 8px;\" }}]\n    },\n    {\n      \"value\": \"'large'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 24px;\" }}]\n    },\n        {\n      \"value\": \"'38px'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style\": \"gap: 38px;\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -79104,7 +79105,8 @@
       ],
       "field_type_text": [
         "String",
-        "Number"
+        "Number",
+        "Array"
       ]
     },
     {

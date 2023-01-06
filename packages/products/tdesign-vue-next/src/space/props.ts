@@ -33,11 +33,7 @@ export default {
   },
   /** 间距大小 */
   size: {
-    type: [String, Number] as PropType<TdSpaceProps['size']>,
-    default: medium as TdSpaceProps['size'],
-    validator(val: TdSpaceProps['size']): boolean {
-      if (!val) return true;
-      return ['small', 'medium', 'large'].includes(val);
-    },
+    type: [String, Number, Array] as PropType<TdSpaceProps['size']>,
+    default: 'medium',
   },
 };
