@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const camelCase = require('lodash/camelCase');
+const kebabCase = require('lodash/kebabCase');
 const upperFirst = require('lodash/upperFirst');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
