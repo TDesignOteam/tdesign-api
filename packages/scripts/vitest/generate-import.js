@@ -92,7 +92,6 @@ function getImportsCode(importsConfig, framework) {
   const arr = [];
   Object.entries(config).forEach(([key, item]) => {
     if (!item || !item.length) return;
-    console.log(key, item);
     if (Array.isArray(item) && item.length > 0) {
       arr.push(`import { ${item.join(', ')} } from '${key}'`);
     } else {

@@ -345,7 +345,7 @@ function getReactOneAttributeCode(framework, wrapper, attribute, value, attribut
   const firstChildCode = attributeDom ? '' : '.firstChild';
   if (ATTRIBUTES_INCLUDES.includes(attribute)) {
     const expectToBeCode = getAttributeValue(true, framework);
-    return `expect(${wrapper}${firstChildCode}.attributes('${attribute}').includes('${value}')).${expectToBeCode};`;
+    return `expect(${wrapper}${firstChildCode}.getAttribute('${attribute}').includes('${value}')).${expectToBeCode};`;
   }
   if (ATTRIBUTES_DIRECT.includes(attribute)) {
     return `expect(${wrapper}${firstChildCode}.${attribute}).${expectValueCode};`;
