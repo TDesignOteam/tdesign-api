@@ -64,8 +64,9 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
   if (framework.indexOf('Vue') !== -1) {
     const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean,TNode';
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
+    const h = slotsText === 'scopedSlots' ? 'h' : '';
     const slotCodeProps = {
-      [slotsText]: `{ ${oneApiData.field_name}: () => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
+      [slotsText]: `{ ${oneApiData.field_name}: (${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
     };
     if (isBothBooleanAndTNode) {
       slotCodeProps[oneApiData.field_name] = true;
