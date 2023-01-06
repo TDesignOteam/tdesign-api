@@ -3,15 +3,15 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
   const { wrapper, copyTestToWrapper } = test;
   const oneTestCode = code.join('\n');
   const tmpWrappers = [];
+  let arr = [];
   const regExp = new RegExp(wrapper, 'g');
   if (Array.isArray(copyTestToWrapper)) {
     tmpWrappers.push(...copyTestToWrapper);
-    return copyTestToWrapper.map((oneWrapper) => {
+     arr = copyTestToWrapper.map((oneWrapper) => {
       return oneTestCode.replace(regExp, oneWrapper);
-    }).join('\n');
+    });
   }
   if (typeof copyTestToWrapper === 'object' && !Array.isArray(copyTestToWrapper)) {
-    const arr = [];
     Object.keys(copyTestToWrapper).forEach((supportFramework) => {
       if (framework.indexOf(supportFramework) !== -1) {
         const wrappers = copyTestToWrapper[supportFramework];
@@ -22,11 +22,11 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
         arr.push(copyAnotherCode);
       }
     });
-    return {
-      copyCode: arr.join('\n'),
-      wrappers: tmpWrappers,
-    };
   }
+  return {
+    copyCode: arr.join('\n'),
+    wrappers: tmpWrappers,
+  };
 }
 
 module.exports = {

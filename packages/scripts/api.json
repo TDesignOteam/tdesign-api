@@ -68228,7 +68228,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n    \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"copyTestToWrapper\": { \"Vue\": [\"getRadioGroupSlotsMount\"] },\n    \"event\": [\n        {\n            \"props\": { \"value\": 1 },\n            \"expect\": [\n                {\n                    \"trigger\": \"click(.t-radio)\",\n                    \"event\": {\n                        \"change\": [\n                          \"undefined\",\n                            {\n                                \"e.type\": \"click\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        }\n    ]\n}}",
+      "test_description": "{\"PC\": {\n    \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"],\n    \"event\": [\n        {\n            \"props\": { \"value\": 1 },\n            \"expect\": [\n                {\n                    \"trigger\": \"click(.t-radio)\",\n                    \"event\": {\n                        \"change\": [\n                          \"undefined\",\n                            {\n                                \"e.type\": \"click\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        }\n    ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68277,7 +68277,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"dom\": {\n            \"true\": {\n                \".t-radio.t-is-disabled\": 4\n            }\n        },\n        \"event\": [\n            {\n                \"description\": \"disabled radio can not trigger change\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": \"not\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"snapshot\": true,\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n        \"copyTestToWrapper\": {\n            \"Vue\": [\n                \"getRadioGroupSlotsMount\"\n            ]\n        }\n    }\n}",
+      "test_description": "{\n    \"PC\": {\n        \"dom\": {\n            \"true\": {\n                \".t-radio.t-is-disabled\": 4\n            }\n        },\n        \"event\": [\n            {\n                \"description\": \"disabled radio can not trigger change\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": \"not\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"snapshot\": true,\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n        \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68365,7 +68365,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n  \"snapshot\": true,\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"attribute\": [\n    {\n      \"value\": \"'custom-radio-name'\",\n      \"expect\": [{ \"dom\": \"input\", \"attribute\": { \"name\": \"custom-radio-name\" }}]\n    }\n  ],\n\"copyTestToWrapper\": { \"Vue\": [\"getRadioGroupSlotsMount\"] }\n}}",
+      "test_description": "{\"PC\": {\n  \"snapshot\": true,\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"attribute\": [\n    {\n      \"value\": \"'custom-radio-name'\",\n      \"expect\": [{ \"dom\": \"input\", \"attribute\": { \"name\": \"custom-radio-name\" }}]\n    }\n  ],\n\"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68413,7 +68413,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n  \"dom\": [{ \".t-radio\": 4 }, \".custom-node\", { \".t-radio.t-is-disabled\": 1 }]\n}}",
+      "test_description": "{\"PC\": {\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n  \"dom\": [{ \".t-radio\": 4 }, \".custom-node\", { \".t-radio.t-is-disabled\": 1 }],\n  \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68578,7 +68578,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"attribute\": [\n    {\n      \"value\": \"'2'\",\n      \"expect\": [{ \"dom\": \".t-radio.t-is-checked input\", \"attribute\": { \"value\": \"2\" }}]\n    }\n  ], \"wrapper\": \"getRadioGroupDefaultMount\", \"copyTestToWrapper\": { \"Vue\": [\"getRadioGroupSlotsMount\"] } }}",
+      "test_description": "{\"PC\": { \"attribute\": [\n    {\n      \"value\": \"'2'\",\n      \"expect\": [{ \"dom\": \".t-radio.t-is-checked input\", \"attribute\": { \"value\": \"2\" }}]\n    }\n  ], \"wrapper\": \"getRadioGroupDefaultMount\", \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"] }}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68666,7 +68666,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n         \"copyTestToWrapper\": { \"Vue\": [\"getRadioGroupSlotsMount\"] },\n        \"event\": [\n            {\n                \"props\": {\n                    \"value\": 2\n                },\n                \"description\": \"default value is 2, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            },\n            {\n                \"description\": \"default value is empty, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n         \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"],\n        \"event\": [\n            {\n                \"props\": {\n                    \"value\": 2\n                },\n                \"description\": \"default value is 2, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            },\n            {\n                \"description\": \"default value is empty, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
