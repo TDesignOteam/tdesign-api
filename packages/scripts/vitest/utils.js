@@ -420,7 +420,7 @@ function getVueDomAttributeExpect(framework, dom, component, index, attribute, w
   return oneExpect;
 }
 
-function getReactDomAttributeExpect(framework, dom, index, attribute) {
+function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperIndex) {
   const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
   const oneExpect = [
     `const domWrapper${index || ''} = container${wrapperIndex}.${domFindCode};`,
