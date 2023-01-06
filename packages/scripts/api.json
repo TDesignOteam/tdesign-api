@@ -75220,7 +75220,7 @@
       "create_time": "2021-09-28 06:25:31",
       "update_time": "2022-05-25 06:38:48",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void }>",
+      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void; displayValue?: SelectValue }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
