@@ -366,12 +366,13 @@ function getAttributeNotExit(framework) {
  * @param {String} framework 框架名称
  * @param {Array} expectAttributes [{"dom":"tbody > tr","attribute":{"data-level":"level-1"}}]
  */
-function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
+function getDomAttributeExpect(framework, expectAttributes, component, wrapperIndex = '') {
   let arr = [];
   if (framework.indexOf('Vue') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
+      const domFindCode = dom === 'self' || !dom ? `findComponent(${component})` : `find('${dom}')`;
       const oneExpect = [
-        `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
+        `const domWrapper${index || ''} = wrapper${wrapperIndex}.${domFindCode};`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
           if (DIRECT_ATTRIBUTES.includes(attributeName)) {
             return `expect(domWrapper${index || ''}.element.${attributeName}).${getAttributeValue(attributeValue, framework)};`;  
@@ -384,8 +385,9 @@ function getDomAttributeExpect(framework, expectAttributes, wrapperIndex = '') {
   }
   if (framework.indexOf('React') !== -1) {
     expectAttributes.forEach(({ dom, attribute }, index) => {
+      const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
       const oneExpect = [
-        `const domWrapper${index || ''} = container${wrapperIndex}.querySelector('${dom}');`,
+        `const domWrapper${index || ''} = container${wrapperIndex}.${domFindCode};`,
         Object.entries(attribute).map(([attributeName, attributeValue]) => {
           if (DIRECT_ATTRIBUTES.includes(attributeName)) {
             return `expect(domWrapper${index || ''}.${attributeName}).${getAttributeValue(attributeValue, framework)};`;

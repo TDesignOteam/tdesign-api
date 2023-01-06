@@ -65,7 +65,7 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
     const arr = [
       `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
         getWrapper(framework, mountCode, '', attributeDom),
-        getDomAttributeExpect(framework, expect),
+        getDomAttributeExpect(framework, expect, component),
         getSnapshotCase(snapshot, framework),
       `});`
     ];
