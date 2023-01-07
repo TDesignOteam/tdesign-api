@@ -24,6 +24,7 @@ import {
   OptionData,
   SizeEnum,
   ClassName,
+  AttachNode,
   HTMLElementAttributes,
   ComponentType,
   InfinityScroll,
@@ -31,6 +32,10 @@ import {
 import { MouseEvent, WheelEvent, ChangeEvent } from 'react';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
+  /**
+   * 超出省略等所有浮层元素统一绑定到 `attach`，可根据实际情况调整挂载元素
+   */
+  attach?: AttachNode;
   /**
    * 是否显示表格边框
    * @default false
@@ -821,7 +826,7 @@ export interface TableEditableCellConfig<T extends TableRowData = TableRowData> 
   /**
    * 透传给编辑组件的事件
    */
-  on?: (context: TableEditableCellPropsParams<T>) => { [key: string]: any };
+  on?: (context: TableEditableCellPropsParams<T>) => { [eventName: string]: Function };
   /**
    * 编辑完成后，退出编辑模式时触发
    */
