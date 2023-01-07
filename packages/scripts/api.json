@@ -7773,6 +7773,43 @@
       ]
     },
     {
+      "id": 3260,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "attach",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "超出省略等所有浮层元素统一绑定到 `attach`，这些元素默认会被绑定在 `document.body`",
+      "field_desc_en": "elements with popup would be attached to `attach`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-07 02:40:57",
+      "update_time": "2023-01-07 02:40:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 325,
       "platform_framework": [
         "1",
@@ -48234,7 +48271,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"keydown\", \"event\": { \"validate\": [{ \"error\": \"exceed-maximum\" }] } }],\n      \"props\": { \"value\": \"'Hello'\", \"maxlength\": 5 }\n    }\n  ]\n}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -87175,7 +87212,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "exit editing on trigger the events in `abortEditOnEvent`",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -87268,13 +87305,15 @@
     {
       "id": 3259,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "TableEditableCellConfig",
       "field_category": 1,
       "field_name": "on",
       "field_type": [
-        "8"
+        "32"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -87285,7 +87324,7 @@
       "create_time": "2023-01-06 13:28:37",
       "update_time": "2023-01-06 13:28:37",
       "event_output": null,
-      "custom_field_type": "{ [key: string]: any }",
+      "custom_field_type": "(context: TableEditableCellPropsParams<T>) => { [eventName: string]: Function }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -87296,10 +87335,12 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Function"
       ]
     },
     {
@@ -108862,5 +108903,5 @@
       ]
     }
   ],
-  "total": 2599
+  "total": 2600
 }
