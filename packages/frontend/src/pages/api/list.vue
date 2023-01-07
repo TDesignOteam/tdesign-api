@@ -73,20 +73,27 @@
       </template> -->
       <!-- 操作列 -->
       <template #operation="data">
-        <div class="t-demo-table-btns">
-          <!-- <t-popup showArrow placement='top'>
-            <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">代码</t-button>
-            <div slot="content">
-              <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">Vue(PC)</t-button>
-              <t-button variant="text" @click="() => onCodePreivew(data, 'React(PC)')">React(PC)</t-button>
-              <t-button variant="text" @click="() => onCodePreivew(data, 'Miniprogram')">Miniprogram</t-button>
-              <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(Mobile)')">Vue(Mobile)</t-button>
-            </div>
-          </t-popup> -->
-          <t-button variant="text" @click="() => onEditClick(data)">编辑</t-button>
-          <t-popconfirm theme="default" content="确定删除吗？" trigger="click" @confirm="() => onDeleteConfirm(data)">
-            <t-button variant="text" style="margin-left: 16px">删除</t-button>
-          </t-popconfirm>
+        <div>
+          <div class="t-demo-table-btns">
+            <!-- <t-popup showArrow placement='top'>
+              <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">代码</t-button>
+              <div slot="content">
+                <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">Vue(PC)</t-button>
+                <t-button variant="text" @click="() => onCodePreivew(data, 'React(PC)')">React(PC)</t-button>
+                <t-button variant="text" @click="() => onCodePreivew(data, 'Miniprogram')">Miniprogram</t-button>
+                <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(Mobile)')">Vue(Mobile)</t-button>
+              </div>
+            </t-popup> -->
+            <t-button variant="text" theme="primary" @click="() => onEditClick(data)">Edit</t-button>
+            <t-button variant="text" theme="primary" @click="() => onTestsEditClick(data)">Tests</t-button>
+            <t-popconfirm theme="danger" content="确定删除吗？" trigger="click" @confirm="() => onDeleteConfirm(data)">
+              <t-button variant="text" theme="danger" style="margin-left: 8px">Delete</t-button>
+            </t-popconfirm>
+          </div>
+
+          <div style="font-size: 12px; color: #a6a6a6;">
+            {{ data.row.update_time }}
+          </div>
         </div>
       </template>
     </t-table>
@@ -159,18 +166,17 @@ export default {
           colKey: 'field_default_value',
           width: 90,
         },
-        {
-          title: '更新时间',
-          colKey: 'update_time',
-          width: 136,
-        }
+        // {
+        //   title: '更新时间',
+        //   colKey: 'update_time',
+        //   width: 136,
+        // }
       ]
       if (!this.preview) {
         columns.push({
           title: '操作',
-          align: 'center',
           colKey: 'operation',
-          fixed: 'right'
+          fixed: 'right',
         })
       }
       return columns
@@ -194,6 +200,9 @@ export default {
     onEditClick (data) {
       this.$emit('click-edit-btn', data)
     },
+    onTestsEditClick (data) {
+      this.$emit('click-test-edit-btn', data)
+    },
     onCodePreivew (data, framework) {
       this.$emit('code-preview', data, framework)
     }
@@ -213,7 +222,7 @@ div.tdesign-document.API-Preview  {
   .t-demo-table-btns {
     display: flex;
     justify-content: space-between;
-    width: 80px;
+    width: 138px;
     .t-button {
       padding: 0;
     }

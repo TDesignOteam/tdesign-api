@@ -53,7 +53,8 @@
             :preview="preview"
             @delete-api-success="onDeleteSuccess"
             @click-edit-btn="onEditClick"
-            @code-preview="onCodePreivew"
+            @click-test-edit-btn="onTestEditClick"
+            @code-preview="onCodePreview"
           ></api-list>
 
           <t-pagination
@@ -73,7 +74,7 @@
         @confirm="onApiConfirm"
       >
         <div slot="body">
-          <import ref="api-form" :map="map" :info="apiInfo"></import>
+          <import ref="api-form" :map="map" :info="apiInfo" :mode="mode"></import>
         </div>
       </t-dialog>
       <t-dialog
@@ -90,6 +91,15 @@
         </div>
         <codemirror slot="body" :value="code" :options="cmOptions"/>
       </t-dialog>
+
+      <t-drawer
+        header="测试用例设计"
+        :visible.sync="unitTestVisible"
+        size="80%"
+        @confirm="onUnitTestEditConfirm"
+      >
+        <unit-test-design ref="unit-test" :map="map" :apiInfo="apiInfo" :visible="unitTestVisible" />
+      </t-drawer>
     </div>
   </div>
 </template>
@@ -102,6 +112,7 @@ import 'codemirror/theme/base16-dark.css'
 import ApiList from './list.vue'
 import ApiOperation from './operation'
 import Import from './import'
+import UnitTestDesign from './unit-test-design'
 import { cmpApiInstance } from '../../services/api-server'
 import {
   Select as TSelect,
@@ -135,7 +146,8 @@ export default {
     TOption,
     TInput,
     TPagination,
-    TDialog
+    TDialog,
+    UnitTestDesign,
   },
 
   props: {
@@ -148,6 +160,7 @@ export default {
       loading: false,
       dataBase: null,
       createApiVisible: false,
+      unitTestVisible: false,
       list: [],
       map: {},
       platformOptions: [],
@@ -259,6 +272,12 @@ export default {
       this.mode = 'edit'
       this.showDialog()
     },
+
+    onTestEditClick(data) {
+      this.apiInfo = data.row
+      this.unitTestVisible = true
+    },
+    
     onCreateDialogShow () {
       this.apiInfo = null
       this.mode = 'create'
@@ -307,7 +326,24 @@ export default {
         this.createApiVisible = false
       })
     },
-    onCodePreivew (data, framework) {
+
+    onUnitTestEditConfirm() {
+      const testDescription = this.$refs['unit-test'].testDescription
+      // 保存成功后关闭弹窗
+      cmpApiInstance({
+        method: 'put',
+        url: '/cmp/api',
+        data: {
+          id: this.apiInfo ? this.apiInfo.id : undefined,
+          test_description: testDescription
+        },
+      }).then(() => {
+        this.getApiList()
+        this.unitTestVisible = false
+      })
+    },
+
+    onCodePreview (data, framework) {
       this.codeData = { data, framework }
       this.codePreviewVisible = true
       this.code = JSON.stringify(data, undefined, 2)

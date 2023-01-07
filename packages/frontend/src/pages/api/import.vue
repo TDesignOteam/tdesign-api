@@ -190,14 +190,14 @@
       </div>
     </div>
 
-    <template v-if="[API_CATEGORY_PROPS, API_CATEGORY_PLUGINS].includes(Number(formData.apiCategory))">
+    <!-- <template v-if="[API_CATEGORY_PROPS, API_CATEGORY_PLUGINS].includes(Number(formData.apiCategory))">
       <div class="t-form-item">
         <label></label>
         <div class="t-form-content">
           <t-checkbox v-model="formData.htmlAttribute">是否为 HTML 原生属性</t-checkbox>
         </div>
       </div>
-    </template>
+    </template> -->
 
     <div class="t-form-item">
       <label>
@@ -221,12 +221,12 @@
       </div>
     </div>
 
-    <div class="t-form-item">
+    <!-- <div class="t-form-item">
       <label>测试用例描述：</label>
       <div class="t-form-content">
         <t-textarea v-model="formData.testDescription" :autosize="{ minRows: 3 }" placeholder="请输入单测用例描述语言"></t-textarea>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="t-form-item">
       <label></label>
@@ -270,11 +270,8 @@ import { cmpApiInstance } from '../../services/api-server'
 import { getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
 import prettierConfig from '../../../../scripts/config/prettier'
-// import prettier from 'prettier'
 import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
-import parserGraphql from "https://unpkg.com/prettier@2.8.1/esm/parser-graphql.mjs";
-
-console.log(prettierConfig, prettier)
+import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
 
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
@@ -295,7 +292,8 @@ export default {
   props: {
     dataBase: {},
     map: Object,
-    info: Object
+    info: Object,
+    mode: String,
   },
 
   data () {
@@ -376,6 +374,10 @@ export default {
       this.formData.platform = []
     },
     info (val) {
+      this.formData = {
+        ...this.formData,
+        testDescription: '',
+      };
       if (!val) return
       this.formData = {
         platform: val.platform_framework,
@@ -398,6 +400,10 @@ export default {
         eventOutput: val.event_output,
         syntacticSugar: val.syntactic_sugar,
         triggerElements: val.trigger_elements
+      }
+
+      if (this.mode === 'create') {
+        this.formData.testDescription = '';
       }
 
       this.getCurrentComponentData()
@@ -431,15 +437,15 @@ export default {
         },
       }).then((res) => {
         this.componentApiData = res.data.data
-        const rootComponentMap = getCmpTypeCombineMap('Vue(PC)');
-        const finalComponent = rootComponentMap[this.info.component] || component;
-        const codeData = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
-        const code = prettier.format(codeData, {
-          ...prettierConfig,
-          parser: "graphql",
-          plugins: [parserGraphql],
-        });
-        console.log(code)
+        // const rootComponentMap = getCmpTypeCombineMap('Vue(PC)');
+        // const finalComponent = rootComponentMap[this.info.component] || component;
+        // const codeData = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
+        // // 格式化代码
+        // const code = prettier.format(codeData, {
+        //   ...prettierConfig,
+        //   parser: "babel",
+        //   plugins: [parserBabel],
+        // });
         this.loading = false
       }, () => {
         this.loading = false
