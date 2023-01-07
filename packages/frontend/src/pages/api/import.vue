@@ -266,6 +266,18 @@ import {
   API_CATEGORY_T
 } from './const'
 
+import { getUnitTestCode } from '../../../../scripts/vitest'
+// import { print } from './test'
+
+console.log(getUnitTestCode)
+
+// main.js
+// import barDefault from '../../../bar'
+// const barDefault = require('../../bar/bar');
+
+// bar('bar')
+// barDefault('barDefault')
+
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
   `示例：${JSON.stringify({

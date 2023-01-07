@@ -90,9 +90,9 @@ function generateVitestUnitCase(baseData, framework, { component }) {
 
   const importConfig = getImportsConfig(configFlag, tests);
   const importCodes = getImportsCode(importConfig, framework);
+  const cases = [importCodes].concat(tests).join('\n\n');
 
   try {
-    const cases = [importCodes].concat(tests).join('\n\n');
     // console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
     const codeData = prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;

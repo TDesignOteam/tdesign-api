@@ -1,7 +1,7 @@
 <template>
   <div class="t-api-tool__multi-operations">
     <t-button theme="primary" @click.native="onCreateApi">新增 API</t-button>
-    <t-button theme="primary" @click.native="onGenerateDialogShow">生成文件</t-button>
+    <t-button theme="primary" @click.native="onGenerateDialogShow">输出文件</t-button>
     <a href="https://github.com/Tencent/tdesign/wiki/Component-API-Guide" target="_blank" class="link">
       <t-button variant="text" style="color: #99999;">
         组件 API 设计规范
