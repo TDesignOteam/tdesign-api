@@ -26,7 +26,7 @@ class TAPI {
     };
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
-      const { field_name: fieldName } = params;
+      const { field_name: fieldName, component } = params;
       let { platform_framework: framework } = params;
       // 处理 API名称以支持模糊查询，LIKE %xxx%
       if (fieldName) {
@@ -38,6 +38,15 @@ class TAPI {
         delete params.platform_framework;
         framework = String(framework);
         expr.and(`platform_framework & ${framework} = ${framework}`);
+      }
+      if (component) {
+        delete params.component;
+        const list = (component as string).split(',');
+        const componentsExpr = squel.expr()
+        list.forEach((oneComponent) => {
+          componentsExpr.or(`component = '${oneComponent}'`);
+        });
+        expr.and(componentsExpr);
       }
       // 处理其他参数
       Object.keys(params).map(paramName => {

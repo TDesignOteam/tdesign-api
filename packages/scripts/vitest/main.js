@@ -1,4 +1,5 @@
-const { parseJSON } = require('./utils');
+const pick = require('lodash/pick');
+const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } = require('./utils');
 const { getImportsConfig, getImportsCode } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
@@ -6,6 +7,7 @@ const { generateAttributeUnitCase } = require('./generate-attribute');
 const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 const { copyUnitTestsToOtherWrapper } = require('./copy');
+const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
 
 const generateFunctionsMap = {
   // 元素类名测试
@@ -21,7 +23,7 @@ const generateFunctionsMap = {
 };
 
 function getBaseData(framework, component, apiData, map) {
-  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
+  const frameworkMap = formatArrayToMap(map, 'platform_framework');
   const frameworkData = groupByComponent(apiData, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
   const baseData = pick(frameworkData, cmpMap[component] || [component]);

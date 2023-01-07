@@ -266,17 +266,11 @@ import {
   API_CATEGORY_T
 } from './const'
 
+import { cmpApiInstance } from '../../services/api-server'
 import { getComponentUnitTests } from '../../../../scripts/vitest'
-// import { print } from './test'
+import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util';
 
 console.log(getComponentUnitTests)
-
-// main.js
-// import barDefault from '../../../bar'
-// const barDefault = require('../../bar/bar');
-
-// bar('bar')
-// barDefault('barDefault')
 
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
@@ -308,6 +302,7 @@ export default {
       STRING,
       list: [],
       versionDescription,
+      componentApiData: [],
       formData: {
         platform: [],
         component: '',
@@ -400,6 +395,8 @@ export default {
         syntacticSugar: val.syntactic_sugar,
         triggerElements: val.trigger_elements
       }
+
+      this.getCurrentComponentData()
     }
   },
 
@@ -409,7 +406,36 @@ export default {
       if (!val.includes(String(STRING))) {
         this.formData.fieldEnums = ''
       }
-    }
+    },
+
+    // 获取当前组件全部信息
+    getCurrentComponentData() {
+      // 如果不存在根组件，则直接返回
+      if (!this.info.component) return;
+      const siblingsMap = getCombinedComponentsByCurrentName();
+      const component = siblingsMap[this.info.component]
+        ? siblingsMap[this.info.component].join()
+        : this.info.component;
+      cmpApiInstance({
+        method: 'get',
+        url: '/cmp/api',
+        params: {
+          component,
+          page: 1,
+          // 单个组件 API 数量暂时不会超过 300 个
+          page_size: 300,
+        },
+      }).then((res) => {
+        this.componentApiData = res.data.data
+        const rootComponentMap = getCmpTypeCombineMap('Vue(PC)');
+        const finalComponent = rootComponentMap[this.info.component] || component;
+        const code = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
+        console.log(code)
+        this.loading = false
+      }, () => {
+        this.loading = false
+      })
+    },
   }
 }
 </script>
