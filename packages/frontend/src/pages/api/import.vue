@@ -268,9 +268,13 @@ import {
 
 import { cmpApiInstance } from '../../services/api-server'
 import { getComponentUnitTests } from '../../../../scripts/vitest'
-import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util';
+import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
+import prettierConfig from '../../../../scripts/config/prettier'
+// import prettier from 'prettier'
+import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
+import parserGraphql from "https://unpkg.com/prettier@2.8.1/esm/parser-graphql.mjs";
 
-console.log(getComponentUnitTests)
+console.log(prettierConfig, prettier)
 
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
@@ -429,7 +433,12 @@ export default {
         this.componentApiData = res.data.data
         const rootComponentMap = getCmpTypeCombineMap('Vue(PC)');
         const finalComponent = rootComponentMap[this.info.component] || component;
-        const code = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
+        const codeData = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
+        const code = prettier.format(codeData, {
+          ...prettierConfig,
+          parser: "graphql",
+          plugins: [parserGraphql],
+        });
         console.log(code)
         this.loading = false
       }, () => {

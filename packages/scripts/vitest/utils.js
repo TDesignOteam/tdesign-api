@@ -43,7 +43,6 @@ function groupByComponent(allApi, framework) {
 // 根据框架获取 API 文档输出路径关系（不同的框架，父子组件关系不一样）
 function getApiComponentMapByFrameWork(map, framework) {
   const rMap = {};
-  console.log(map);
   Object.keys(map).forEach((parentComponent) => {
     if (!parentComponent) return;
     const item = map[parentComponent];
@@ -60,7 +59,6 @@ function getApiComponentMapByFrameWork(map, framework) {
         rMap[parentComponent] = item.list;
       }
     } else {
-      console.log(parentComponent, item);
       console.warn('COMPONENT_API_MD_MAP 数据结构不对，只能是 Array 或者 Object 类型');
     }
   });

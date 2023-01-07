@@ -66,7 +66,7 @@ function getMountComponent(framework, component, props, extra = {}) {
         return `${key}={${value}}`;
       }).join(' ')
       : '';
-    const eventsCode = events && framework === 'Vue(PC)' ? `on={${events}}` : events;
+    const eventsCode = events;
     mountComponent = `<${component} ${properties} ${eventsCode || ''}>${content || ''}</${component}>`;
   }
   return getFullMountCode(framework, mountComponent);

@@ -42,7 +42,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(event[firstEvent].args).join('\n')}`,
+        `${getEventArguments(event[firstEvent].arguments).join('\n')}`,
       `});`,
     ];
     return arr;
