@@ -7,7 +7,7 @@ const {
   getClassNameExpectTruthy,
   getClassNameExpectFalsy,
   getDomClassNameExpect,
-} = require('./utils');
+} = require('./core');
 
 /**
  * 输出类名检测单测用例

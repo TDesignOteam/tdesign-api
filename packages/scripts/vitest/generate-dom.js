@@ -6,7 +6,7 @@ const {
   getDomExpectTruthy,
   getDomExpectFalsy,
   getDomCountExpectCode,
-} = require("./utils");
+} = require("./core");
 
 /**
  * 检测某个元素是否存在

@@ -23,7 +23,7 @@ export default ({ mode }) => {
       },
     },
     optimizeDeps: {
-      include: [path.resolve(__dirname, '../scripts/vitest/main.js')],
+      include: [path.resolve(__dirname, '../scripts/vitest')],
     },
     server: {
       host: '0.0.0.0',

@@ -1,10 +1,8 @@
-function getUnitTestCode() {
-  console.log(123);
-}
+const { getComponentUnitTests } = require('./main');
 
-module.exports = { getUnitTestCode };
+module.exports = { getComponentUnitTests };
 
-exports.getUnitTestCode = getUnitTestCode;
-exports.default = getUnitTestCode;
+exports.getComponentUnitTests = getComponentUnitTests;
+exports.default = getComponentUnitTests;
 
 Object.defineProperty(exports, '__esModule', { value: true })

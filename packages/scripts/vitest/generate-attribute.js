@@ -6,7 +6,7 @@ const {
   getSnapshotCase,
   getAttributeExpect,
   getDomAttributeExpect,
-} = require("./utils");
+} = require("./core");
 
 function generateAttributeUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactAttribute(test, oneApiData, framework, component);

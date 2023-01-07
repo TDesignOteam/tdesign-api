@@ -8,7 +8,7 @@ const {
   formatToTriggerAndDom,
   getFireEventCode,
   getReactFireEventAsync,
-} = require('./utils');
+} = require('./core');
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';

@@ -13,7 +13,7 @@ const {
   getEventFunctions,
   getEventName,
   getEventFnName,
-} = require("./utils");
+} = require("./core");
 
 /**
  * 人机交互测试
@@ -42,7 +42,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(event[firstEvent].arguments).join('\n')}`,
+        `${getEventArguments(event[firstEvent].args).join('\n')}`,
       `});`,
     ];
     return arr;
@@ -92,10 +92,10 @@ function getEventExpectCode(p, index, framework, component) {
   const arr = [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }),
     getExistDomExpect(framework, exist),
-    event && Object.entries(event).map(([eventName, arguments]) => {
+    event && Object.entries(event).map(([eventName, args]) => {
       const fnName = getEventFnName(eventName, index);
       return [
-        getEventArguments(arguments, fnName).join(''),
+        getEventArguments(args, fnName).join(''),
       ].join('\n');
     }).join('\n'),
     clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),
@@ -113,12 +113,12 @@ function getExistDomExpect(framework, exist) {
   }).join('\n');
 }
 
-function getEventArguments(arguments, fnName = 'fn') {
-  if (typeof arguments === 'string' && arguments === 'not') {
+function getEventArguments(args, fnName = 'fn') {
+  if (typeof args === 'string' && args === 'not') {
     return [`expect(${fnName}).not.toHaveBeenCalled();`];
   }
-  if (!Array.isArray(arguments)) return [];
-  const arr = arguments.map((oneArgument, index) => {
+  if (!Array.isArray(args)) return [];
+  const arr = args.map((oneArgument, index) => {
     if (oneArgument === undefined) return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
       return getOneArgEqual(fnName, index, `'${oneArgument}'`);

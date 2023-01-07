@@ -266,10 +266,10 @@ import {
   API_CATEGORY_T
 } from './const'
 
-import { getUnitTestCode } from '../../../../scripts/vitest'
+import { getComponentUnitTests } from '../../../../scripts/vitest'
 // import { print } from './test'
 
-console.log(getUnitTestCode)
+console.log(getComponentUnitTests)
 
 // main.js
 // import barDefault from '../../../bar'
