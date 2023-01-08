@@ -17,11 +17,11 @@ const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
  * TNode 自定义元素（插槽）测试
  */
 function generateTNodeElement(test, oneApiData, framework, component) {
-  const arr = generateVueTNode(test, oneApiData, framework, component);
+  const arr = generateVueAndReactTNode(test, oneApiData, framework, component);
   return arr.filter(v => v);
 }
 
-function generateVueTNode(test, oneApiData, framework, component) {
+function generateVueAndReactTNode(test, oneApiData, framework, component) {
   const { tnode, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   let componentCode = '';
