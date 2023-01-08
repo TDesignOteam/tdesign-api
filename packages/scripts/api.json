@@ -5451,6 +5451,80 @@
       ]
     },
     {
+      "id": 3261,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "bordered",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示外边框",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-07 09:59:34",
+      "update_time": "2023-01-07 09:59:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3078,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:09",
+      "update_time": "2022-10-31 11:39:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1657,
       "platform_framework": [
         "64"
@@ -5470,7 +5544,7 @@
       "create_time": "2021-09-09 13:47:56",
       "update_time": "2021-11-10 05:14:17",
       "event_output": null,
-      "custom_field_type": "['t-class']",
+      "custom_field_type": "['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -5593,11 +5667,11 @@
       "field_name": "icon",
       "field_type": [
         "1",
-        "64"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标",
+      "field_desc_zh": "图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -5619,7 +5693,7 @@
       ],
       "field_type_text": [
         "String",
-        "TNode"
+        "Object"
       ]
     },
     {
@@ -5786,9 +5860,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "medium",
       "field_enum": "",
-      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等，默认为 large",
+      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等",
       "field_desc_en": "size",
       "field_required": 0,
       "event_input": "",
@@ -5812,43 +5886,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3078,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:09",
-      "update_time": "2022-10-31 11:39:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -5998,6 +6035,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3079,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AvatarGroup",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:16",
+      "update_time": "2022-10-31 11:39:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -6211,43 +6285,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3079,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "AvatarGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:16",
-      "update_time": "2022-10-31 11:39:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -108909,5 +108946,5 @@
       ]
     }
   ],
-  "total": 2600
+  "total": 2601
 }
