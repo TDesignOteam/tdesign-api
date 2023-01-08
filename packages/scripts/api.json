@@ -21530,6 +21530,43 @@
       ]
     },
     {
+      "id": 3081,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Collapse",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:39:49",
+      "update_time": "2022-10-31 11:39:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1680,
       "platform_framework": [
         "1",
@@ -21810,24 +21847,27 @@
       ]
     },
     {
-      "id": 3081,
+      "id": 3262,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Collapse",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "theme",
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_default_value": "default",
+      "field_enum": "default/card",
+      "field_desc_zh": "折叠面板风格",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:39:49",
-      "update_time": "2022-10-31 11:39:49",
+      "create_time": "2023-01-08 08:01:34",
+      "update_time": "2023-01-08 08:01:34",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -21840,6 +21880,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -22030,6 +22073,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 3082,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CollapsePanel",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:40:01",
+      "update_time": "2022-10-31 11:40:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -22360,24 +22440,27 @@
       ]
     },
     {
-      "id": 3082,
+      "id": 3261,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "CollapsePanel",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "placement",
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_default_value": "bottom",
+      "field_enum": "bottom/top",
+      "field_desc_zh": "选项卡内容的位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:40:01",
-      "update_time": "2022-10-31 11:40:01",
+      "create_time": "2023-01-08 08:00:34",
+      "update_time": "2023-01-08 08:00:34",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -22385,11 +22468,14 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -108909,5 +108995,5 @@
       ]
     }
   ],
-  "total": 2600
+  "total": 2602
 }
