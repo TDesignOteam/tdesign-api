@@ -33,7 +33,7 @@
 
 <script>
 import { cmpApiInstance } from '../../services/api-server'
-import { getComponentUnitTests } from '../../../../scripts/vitest'
+import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
 import prettierConfig from '../../../../scripts/config/prettier'
 import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
@@ -75,26 +75,7 @@ export default {
 
   computed: {
     unitTestCode() {
-      if (!this.apiInfo || !this.componentApiData.length) return
-      if (this.tab === 'JSON') {
-        if (!this.testDescription) return;
-        const testJSON = JSON.stringify(JSON.parse(this.testDescription), '', 2);
-        return Prism.highlight(testJSON, Prism.languages.json, 'json')
-      }
-      if (this.unitTestType === 'current') {
-        return Prism.highlight(`console.log('开发中')`, Prism.languages.javascript, 'javascript')
-      } else {
-        const rootComponentMap = getCmpTypeCombineMap(this.tab)
-        const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
-        const codeData = getComponentUnitTests(this.tab, finalComponent, this.componentApiData, this.map)
-        // 格式化代码
-        const code = prettier.format(codeData, {
-          ...prettierConfig,
-          parser: "babel",
-          plugins: [parserBabel],
-        })
-        return Prism.highlight(code, Prism.languages.javascript, 'javascript')
-      }
+      return this.getInnerUnitTestCode()
     },
   },
 
@@ -117,6 +98,55 @@ export default {
   },
 
   methods: {
+    getInnerUnitTestCode() {
+      if (!this.apiInfo || !this.componentApiData.length || !this.testDescription) return
+      let testJSON = {};
+      try {
+        testJSON = JSON.parse(this.testDescription);
+      } catch(e) {
+        console.warn(e);
+        return;
+      }
+      if (this.tab === 'JSON') {
+        const testJSONString = JSON.stringify(testJSON, '', 2)
+        return Prism.highlight(testJSONString, Prism.languages.json, 'json')
+      }
+
+      let codeData = ''
+      try {
+        const rootComponentMap = getCmpTypeCombineMap(this.tab)
+        const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
+        if (this.unitTestType === 'current') {
+          const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, testJSON);
+          codeData = oneUnitTests.join('')
+        } else if (this.unitTestType === 'all') {
+          codeData = getComponentUnitTests(this.tab, finalComponent, this.componentApiData, this.map)
+        } else {
+          return
+        }
+      } catch(e) {
+        const error = '测试用例失败，请检查核心逻辑'
+        codeData = `console.log('${error}')`
+        this.$message(error);
+        return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
+      }
+
+      try {
+        // 格式化代码
+        const code = prettier.format(codeData, {
+          ...prettierConfig,
+          parser: "babel",
+          plugins: [parserBabel],
+        })
+        return Prism.highlight(code, Prism.languages.javascript, 'javascript')
+      } catch(e) {
+        const error = '测试用例存在语法错误，请检查核心逻辑'
+        this.$message.error(error)
+        const code = `console.log('${error}')`
+        return Prism.highlight(code, Prism.languages.javascript, 'javascript')
+      }
+    },
+    
     validateJSON(json) {
       try {
         json && JSON.parse(json)

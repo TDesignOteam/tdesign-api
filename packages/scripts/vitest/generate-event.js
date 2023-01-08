@@ -54,7 +54,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         ...(props || {}),
         events: getEventFunctions(expect, framework, extraCode),
       };
-      if (oneApiData.field_type_text[0] === 'Boolean' && !codeProps[oneApiData.field_name]) {
+      if (oneApiData.field_type_text && oneApiData.field_type_text[0] === 'Boolean' && !codeProps[oneApiData.field_name]) {
         codeProps[oneApiData.field_name] = true;
       }
       const mountCode = getMountComponent(framework, component, codeProps, extraCode);

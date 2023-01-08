@@ -30,6 +30,42 @@ function getBaseData(framework, component, apiData, map) {
   return baseData;
 }
 
+/**
+ * 获取一个 it 单位测试用例
+ * @param {Object} testDescription 测试用例描述 JSON
+ * @param {Object} oneApiData 一个 API 的全部数据
+ * @param {String} framework 框架名称
+ * @param {String} component 组件名称
+ * @returns 
+ */
+function getOneUnitTest(framework, component, oneApiData, testDescription) {
+  let oneUnitTests = [];
+  let hasEvent = false;
+  const importedMounts = [];
+  Object.keys(testDescription.PC).forEach((key) => {
+    if (generateFunctionsMap[key]) {
+      const oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
+      if (oneApiTestCase && oneApiTestCase.length) {
+        oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
+        if (key === 'event') {
+          hasEvent = true;
+        }
+        // 同样的测试用例复用到其他实例
+        if (testDescription.PC.copyTestToWrapper) {
+          const { copyCode, wrappers } = copyUnitTestsToOtherWrapper(oneApiTestCase, testDescription.PC, framework);
+          if (copyCode) {
+            oneUnitTests = oneUnitTests.concat(copyCode);
+            wrappers.forEach((wrapper) => {
+              importedMounts.push(wrapper);
+            });
+          }
+        }
+      }
+    }
+  });
+  return { oneUnitTests, hasEvent, importedMounts };
+}
+
 function getUnitTestCode(baseData, framework) {
   let tests = [];
   const configFlag = {
@@ -38,6 +74,7 @@ function getUnitTestCode(baseData, framework) {
     importedMounts: new Set(),
     needDefaultRender: false,
   };
+  // 一个组件可能由多个子组件拼凑而成
   Object.entries(baseData).forEach(([component, oneComponentApi]) => {
     if (!oneComponentApi) return;
     let oneComponentTests = [];
@@ -46,31 +83,17 @@ function getUnitTestCode(baseData, framework) {
       const jsonError = `${oneApiData.field_name}: ${oneApiData.test_description} is not a valid JSON.`;
       const testDescription = parseJSON(oneApiData.test_description, jsonError);
       if (!testDescription.PC || framework.indexOf('PC') === -1) return;
-      
+
       // 存在 Web 框架的单测用例，再输出
       // console.log(testDescription.PC);
-      let oneApiTestCase = [];
-      Object.keys(testDescription.PC).forEach((key) => {
-        if (generateFunctionsMap[key]) {
-          oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
-          if (oneApiTestCase && oneApiTestCase.length) {
-            oneComponentTests = oneComponentTests.concat([oneApiTestCase.join('\n')]);
-            if (key === 'event') {
-              configFlag.hasEvent = true;
-            }
-            // 同样的测试用例复用到其他实例
-            if (testDescription.PC.copyTestToWrapper) {
-              const { copyCode, wrappers } = copyUnitTestsToOtherWrapper(oneApiTestCase, testDescription.PC, framework);
-              if (copyCode) {
-                oneComponentTests = oneComponentTests.concat(copyCode);
-                wrappers.forEach((wrapper) => {
-                  configFlag.importedMounts.add(wrapper);
-                });
-              }
-            }
-          }
-        }
-      });
+      const { oneUnitTests, hasEvent, importedMounts } = getOneUnitTest(framework, component, oneApiData, testDescription);
+      if (oneUnitTests && oneUnitTests.length) {
+        oneComponentTests = oneComponentTests.concat(oneUnitTests);
+        configFlag.hasEvent = hasEvent;
+        importedMounts.forEach((oneMount) => {
+          configFlag.importedMounts.add(oneMount);
+        });
+      }
 
       if (testDescription.PC.wrapper) {
         configFlag.importedMounts.add(testDescription.PC.wrapper);
@@ -103,5 +126,6 @@ function getComponentUnitTests(framework, component, apiData, map) {
 
 module.exports = {
   getUnitTestCode,
+  getOneUnitTest,
   getComponentUnitTests,
 };

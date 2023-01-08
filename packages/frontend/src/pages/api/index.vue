@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-page-doc">
     <div class="page-api">
-      <h2 class="page-api__title">API and Tests</h2>
+      <h2 class="page-api__title">API & Tests Design</h2>
 
       <div class="page-api__search">
         <div class="query-item">
