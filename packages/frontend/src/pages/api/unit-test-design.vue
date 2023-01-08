@@ -68,7 +68,10 @@ export default {
       ],
       loading: false,
       componentApiData: [],
+      // 测试用例 JSON 字符串
       testDescription: '',
+      // 测试用例 JSON，用于最终输出测试用例
+      currentTestJSON: {},
       jsonError: '',
       unitTestType: 'current',
     }
@@ -87,11 +90,14 @@ export default {
       }
     },
     apiInfo(apiInfo) {
-      this.testDescription = apiInfo.test_description
+      const tmp = apiInfo.test_description
+      this.testDescription = tmp;
+      this.currentTestJSON = tmp ? JSON.parse(tmp) : {}
     },
     testDescription(val) {
       const r = this.validateJSON(val)
       if (!r || !this.apiInfo || !this.componentApiData.length) return
+      this.currentTestJSON = val ? JSON.parse(val) : {}
       const index = this.componentApiData.findIndex(t => t.id === this.apiInfo.id)
       if (index < 0) return
       this.$set(this.componentApiData[index], 'test_description', val || undefined)
@@ -101,17 +107,17 @@ export default {
   methods: {
     getInnerUnitTestCode() {
       if (!this.apiInfo || !this.componentApiData.length) return
-      let testJSON = {};
-      try {
-        if (this.testDescription) {
-          testJSON = JSON.parse(this.testDescription);
-        }
-      } catch(e) {
-        console.warn(e);
-        return;
-      }
+      // let testJSON = {};
+      // try {
+      //   if (this.testDescription) {
+      //     testJSON = JSON.parse(this.testDescription);
+      //   }
+      // } catch(e) {
+      //   console.warn(e);
+      //   return;
+      // }
       if (this.tab === 'JSON') {
-        const testJSONString = JSON.stringify(testJSON, '', 2)
+        const testJSONString = JSON.stringify(this.currentTestJSON, '', 2)
         return Prism.highlight(testJSONString, Prism.languages.json, 'json')
       }
 
@@ -120,9 +126,11 @@ export default {
         const rootComponentMap = getCmpTypeCombineMap(this.tab)
         const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
         if (this.unitTestType === 'current') {
-          if (Object.keys(testJSON).length !== 0) {
-            const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, testJSON);
+          if (Object.keys(this.currentTestJSON).length !== 0) {
+            const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, this.currentTestJSON);
             codeData = oneUnitTests.join('')
+          } else {
+            codeData = 'console.log(\'current unit test is empty\')'
           }
         } else if (this.unitTestType === 'all') {
           codeData = getComponentUnitTests(this.tab, finalComponent, this.componentApiData, this.map)
@@ -130,9 +138,9 @@ export default {
           return
         }
       } catch(e) {
-        const error = '测试用例失败，请检查核心逻辑'
+        const error = 'Unit test generated fail, check the core code first.'
         codeData = `console.log('${error}')`
-        this.$message(error);
+        this.$message.error(error);
         return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
       }
 
@@ -145,13 +153,13 @@ export default {
         })
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       } catch(e) {
-        const error = '测试用例存在语法错误，请检查核心逻辑'
+        const error = 'unit test code has syntax error. check test code please.'
         this.$message.error(error)
         const code = `console.log('${error}')`
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       }
     },
-    
+
     validateJSON(json) {
       try {
         json && JSON.parse(json)

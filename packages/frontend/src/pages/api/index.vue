@@ -329,6 +329,12 @@ export default {
 
     onUnitTestEditConfirm() {
       const testDescription = this.$refs['unit-test'].testDescription
+      try {
+        JSON.parse(testDescription)
+      } catch(e) {
+        this.$message.error('测试用例不是合法 JSON');
+        return;
+      }
       // 保存成功后关闭弹窗
       cmpApiInstance({
         method: 'put',
