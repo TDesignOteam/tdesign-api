@@ -10,9 +10,10 @@
       <t-textarea
         v-model="testDescription"
         style="height: 300px"
-        :tips="jsonError"
-        :status="jsonError ? 'error' : undefined"
       ></t-textarea>
+      <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
+        {{ jsonError }}
+      </div>
     </div>
     <t-divider layout="vertical" style="height: 100%"></t-divider>
     <div class="unit-test-design__out">
@@ -69,7 +70,7 @@ export default {
       componentApiData: [],
       testDescription: '',
       jsonError: '',
-      unitTestType: 'all',
+      unitTestType: 'current',
     }
   },
 
@@ -99,10 +100,12 @@ export default {
 
   methods: {
     getInnerUnitTestCode() {
-      if (!this.apiInfo || !this.componentApiData.length || !this.testDescription) return
+      if (!this.apiInfo || !this.componentApiData.length) return
       let testJSON = {};
       try {
-        testJSON = JSON.parse(this.testDescription);
+        if (this.testDescription) {
+          testJSON = JSON.parse(this.testDescription);
+        }
       } catch(e) {
         console.warn(e);
         return;
@@ -117,8 +120,10 @@ export default {
         const rootComponentMap = getCmpTypeCombineMap(this.tab)
         const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
         if (this.unitTestType === 'current') {
-          const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, testJSON);
-          codeData = oneUnitTests.join('')
+          if (Object.keys(testJSON).length !== 0) {
+            const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, testJSON);
+            codeData = oneUnitTests.join('')
+          }
         } else if (this.unitTestType === 'all') {
           codeData = getComponentUnitTests(this.tab, finalComponent, this.componentApiData, this.map)
         } else {
@@ -153,7 +158,7 @@ export default {
         this.jsonError = '';
         return true
       } catch(e) {
-        this.jsonError = 'JSON is not valid';
+        this.jsonError = 'Not a validate JSON';
       }
       return false
     },
