@@ -66,17 +66,19 @@
           />
         </t-loading>
       </div>
-      <t-dialog
+      <t-drawer
         :header="mode === 'create' ? '新增' : '编辑'"
         width="830"
-        class="edit"
         :visible.sync="createApiVisible"
+        size="60%"
+        class="api-edit"
         @confirm="onApiConfirm"
       >
         <div slot="body">
           <import ref="api-form" :map="map" :info="apiInfo" :mode="mode"></import>
         </div>
-      </t-dialog>
+      </t-drawer>
+
       <t-dialog
         width="830"
         top="calc(100% - 730px)"
@@ -93,7 +95,7 @@
       </t-dialog>
 
       <t-drawer
-        header="Unit Test Design"
+        header="测试用例设计"
         :visible.sync="unitTestVisible"
         size="80%"
         @confirm="onUnitTestEditConfirm"
@@ -361,10 +363,6 @@ export default {
 <style lang="less">
 .page-api {
   padding: 40px;
-  .edit .t-dialog {
-    top: 10%;
-    height: auto;
-  }
 }
 div.t-popup {
   z-index: 5500;
@@ -395,5 +393,9 @@ div.t-popup {
 
 .CodeMirror {
   height: 550px;
+}
+
+.api-edit .t-checkbox-group {
+  gap: 0;
 }
 </style>

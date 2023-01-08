@@ -8,10 +8,11 @@
     "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./packages --fix"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.4.1",
     "axios": "^0.20.0",
-    "tdesign-icons-vue": "^0.0.8",
-    "tdesign-vue": "^0.34.0",
-    "vue": "^2.6.14",
+    "tdesign-icons-vue": "^0.1.6",
+    "tdesign-vue": "^1.0.1",
+    "vue": "~2.6.14",
     "vue-codemirror": "^4.0.6",
     "vue-router": "^3.5.3"
   },
@@ -37,10 +38,10 @@
     "prismjs": "^1.29.0",
     "tdesign-site-components": "^0.11.17",
     "typescript": "^4.5.2",
-    "vite": "^4.0.4",
+    "vite": "^2.7.10",
     "vite-plugin-commonjs": "^0.6.1",
     "vite-plugin-vue2": "^2.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "~2.6.14"
   },
   "config": {
     "commitizen": {

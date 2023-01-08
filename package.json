@@ -23,7 +23,8 @@
     "node-fetch": "^2.6.1",
     "qs": "^6.9.4",
     "sql.js": "^1.6.2",
-    "squel": "^5.13.0"
+    "squel": "^5.13.0",
+    "tdesign-vue": "^1.0.3"
   },
   "devDependencies": {
     "@types/koa": "^2.11.6",

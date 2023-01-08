@@ -1,15 +1,27 @@
 <template>
   <div class="unit-test-design">
     <div class="unit-test-design__input">
-      <h3 class="unit-test-tdesign__h3">{{ apiInfo?.component }}.{{ apiInfo?.field_name }}</h3>
-      <p v-if="apiInfo?.field_type_text">
-        Type：{{ apiInfo.field_type_text.join('/') }}
-        <template v-if="apiInfo.field_enum">Enum：{{ apiInfo.field_enum  }}</template>
+      <h3 class="unit-test-tdesign__h3">
+        {{ apiInfo?.component }}.{{ apiInfo?.field_name }}
+        <template v-if="apiInfo && apiInfo.field_type_text && apiInfo.field_type_text.length">
+          {{ '<' + apiInfo.field_type_text.join('/') + '>' }}
+        </template>
+      </h3>
+
+      <p v-if="apiInfo?.field_enum">
+        <template v-if="apiInfo.field_enum">可选值：{{ apiInfo.field_enum }}</template>
       </p>
       <p>{{ apiInfo?.field_desc_zh  }}</p>
+
+      <!-- <t-divider /> -->
+
+      <UnitTestUI />
+
+      <t-divider />
+
       <t-textarea
         v-model="testDescription"
-        style="height: 300px"
+        style="height: 300px; margin-top: 16px"
       ></t-textarea>
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
@@ -17,7 +29,7 @@
     </div>
     <t-divider layout="vertical" style="height: 100%"></t-divider>
     <div class="unit-test-design__out">
-      <h3 class="unit-test-tdesign__h3">Unit Test Code Preview</h3>
+      <h3 class="unit-test-tdesign__h3">Unit Test Preview</h3>
       <p>
         <t-radio-group variant="default-filled" v-model="unitTestType">
           <t-radio-button value="current">Current API Unit Tests</t-radio-button>
@@ -33,6 +45,7 @@
 </template>
 
 <script>
+import UnitTestUI from './unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
@@ -45,6 +58,8 @@ import 'tdesign-site-components/lib/styles/prism-theme.less'
 
 export default {
   name: 'UnitTestDesign',
+
+  components: { UnitTestUI },
 
   props: {
     map: Object,

@@ -8,17 +8,17 @@ import App from './App.vue';
 // import tdesign style;
 import 'tdesign-vue/es/style/index.css';
 
-
-Vue.use(TDesign);
 Vue.use(VueRouter);
+Vue.use(TDesign);
 
 const router = new VueRouter({
   mode: 'history',
   routes,
 });
 
+Vue.config.productionTip = false;
+
 new Vue({
-  el: '#app',
-  render: (h) => h(App),
   router,
-});
+  render: (h) => h(App),
+}).$mount('#app');
