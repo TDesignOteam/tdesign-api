@@ -9,7 +9,7 @@
       </h3>
 
       <p v-if="apiInfo?.field_enum">
-        <template v-if="apiInfo.field_enum">可选值：{{ apiInfo.field_enum }}</template>
+        <template v-if="apiInfo.field_enum">枚举值：{{ apiInfo.field_enum }}</template>
       </p>
       <p>{{ apiInfo?.field_desc_zh  }}</p>
 
@@ -24,10 +24,10 @@
 
       <!-- <t-divider /> -->
 
-      <!-- <t-textarea
+      <t-textarea
         v-model="testDescription"
         style="height: 300px; margin-top: 16px"
-      ></t-textarea> -->
+      ></t-textarea>
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
       </div>

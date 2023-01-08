@@ -59,11 +59,11 @@
               </template>
             </p>
           </template>
-          <t-input
+          <t-textarea
             v-model="formData.className"
             placeholder="类名规则"
             @change="() => onFormDataChange('className')"
-          ></t-input>
+          ></t-textarea>
         </t-tooltip>
       </div>
 
