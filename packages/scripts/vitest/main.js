@@ -43,6 +43,8 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
   let hasEvent = false;
   const importedMounts = [];
   Object.keys(testDescription.PC).forEach((key) => {
+    // 空对象无效，返回
+    if (!testDescription.PC[key] || typeof testDescription.PC[key] === 'object' && !Object.keys(testDescription.PC[key]).length) return;
     if (generateFunctionsMap[key]) {
       const oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
       if (oneApiTestCase && oneApiTestCase.length) {

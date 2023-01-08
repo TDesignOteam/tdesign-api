@@ -15,14 +15,19 @@
 
       <!-- <t-divider /> -->
 
-      <UnitTestUI />
+      <UnitTestUI
+        ref="unit-test-ui"
+        :currentTestJSON="currentTestJSON"
+        :apiInfo="apiInfo"
+        @test-ui-form-data-change="onTestUIFormDataChange"
+      />
 
-      <t-divider />
+      <!-- <t-divider /> -->
 
-      <t-textarea
+      <!-- <t-textarea
         v-model="testDescription"
         style="height: 300px; margin-top: 16px"
-      ></t-textarea>
+      ></t-textarea> -->
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
       </div>
@@ -45,7 +50,7 @@
 </template>
 
 <script>
-import UnitTestUI from './unit-test-ui'
+import UnitTestUI from './unit-test/unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
@@ -108,10 +113,12 @@ export default {
     visible(visible) {
       if (visible) {
         this.getCurrentComponentData()
+      } else {
+        this.$refs['unit-test-ui'].clearFormData();
       }
     },
     apiInfo(apiInfo) {
-      this.testDescription = apiInfo.test_description
+      this.testDescription = apiInfo ? apiInfo.test_description : undefined
     },
     testDescription(val) {
       const r = this.validateJSON(val)
@@ -155,7 +162,7 @@ export default {
         console.warn(e)
         const error = 'Unit test generated fail, check the core code first.'
         codeData = `console.log('${error}')`
-        this.$message.error(error)
+        // this.$message.error(error)
         return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
       }
 
@@ -169,7 +176,7 @@ export default {
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       } catch(e) {
         const error = 'unit test code has syntax error. check test code please.'
-        this.$message.error(error)
+        // this.$message.error(error)
         const code = `console.log('${error}')`
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       }
@@ -184,6 +191,42 @@ export default {
         this.jsonError = 'Not a validate JSON';
       }
       return false
+    },
+
+    onTestUIFormDataChange({ framework, formData, trigger }) {
+      const testJSON = this.testDescription ? JSON.parse(this.testDescription) : {}
+      if (framework === 'PC') {
+        testJSON.PC = this.updateTestDescription(testJSON.PC, formData, trigger)
+      } else if (framework === 'Mobile') {
+        testJSON.Mobile = this.updateTestDescription(testJSON.Mobile, formData, trigger)
+      }
+      this.testDescription = JSON.stringify(testJSON)
+    },
+
+    updateTestDescription(test = {}, formData, trigger) {
+      const tmpJSON = test;
+      ['wrapper', 'snapshot', 'copyTestToWrapper'].forEach((field) => {
+        if (trigger === field) {
+          tmpJSON[field] = formData[field]
+        }
+      })
+      if (trigger === 'copyTestToWrapper') {
+        if (formData.copyTestToWrapper.trim()) {
+          tmpJSON.copyTestToWrapper = formData.copyTestToWrapper.trim().split(',')
+        } else {
+          tmpJSON.copyTestToWrapper = []
+        }
+      }
+      if (trigger === 'category') {
+        tmpJSON[formData.category] = formData.category === 'tnode' ? true : {}
+      }
+      if (trigger === 'tnode') {
+        tmpJSON.tnode = formData.tnode
+      }
+      if (!tmpJSON.tnode) {
+        delete tmpJSON.tnode
+      }
+      return tmpJSON;
     },
 
     // 获取当前组件全部信息

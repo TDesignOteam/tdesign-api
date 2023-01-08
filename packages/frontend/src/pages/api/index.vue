@@ -99,6 +99,7 @@
         :visible.sync="unitTestVisible"
         size="80%"
         @confirm="onUnitTestEditConfirm"
+        @cancel="onUnitTestEditCancel"
       >
         <unit-test-design ref="unit-test" :map="map" :apiInfo="apiInfo" :visible="unitTestVisible" />
       </t-drawer>
@@ -278,6 +279,10 @@ export default {
     onTestEditClick(data) {
       this.apiInfo = data.row
       this.unitTestVisible = true
+    },
+
+    onUnitTestEditCancel() {
+      this.apiInfo = null
     },
     
     onCreateDialogShow () {
