@@ -6,7 +6,7 @@
         Type：{{ apiInfo.field_type_text.join('/') }}
         <template v-if="apiInfo.field_enum">Enum：{{ apiInfo.field_enum  }}</template>
       </p>
-      <p>Description: {{ apiInfo?.field_desc_zh  }}</p>
+      <p>{{ apiInfo?.field_desc_zh  }}</p>
       <t-textarea
         v-model="testDescription"
         style="height: 300px"
