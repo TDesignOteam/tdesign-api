@@ -93,7 +93,7 @@
       </t-dialog>
 
       <t-drawer
-        header="测试用例设计"
+        header="Unit Test Design"
         :visible.sync="unitTestVisible"
         size="80%"
         @confirm="onUnitTestEditConfirm"

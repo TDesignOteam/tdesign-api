@@ -3,10 +3,10 @@
     <div class="unit-test-design__input">
       <h3 class="unit-test-tdesign__h3">{{ apiInfo?.component }}.{{ apiInfo?.field_name }}</h3>
       <p v-if="apiInfo?.field_type_text">
-        数据类型：{{ apiInfo.field_type_text.join('/') }}
-        <template v-if="apiInfo.field_enum">可选值：{{ apiInfo.field_enum  }}</template>
+        Type：{{ apiInfo.field_type_text.join('/') }}
+        <template v-if="apiInfo.field_enum">Enum：{{ apiInfo.field_enum  }}</template>
       </p>
-      <p>{{ apiInfo?.field_desc_zh  }}</p>
+      <p>Description: {{ apiInfo?.field_desc_zh  }}</p>
       <t-textarea
         v-model="testDescription"
         style="height: 300px"
@@ -17,11 +17,11 @@
     </div>
     <t-divider layout="vertical" style="height: 100%"></t-divider>
     <div class="unit-test-design__out">
-      <h3 class="unit-test-tdesign__h3">测试用例预览</h3>
+      <h3 class="unit-test-tdesign__h3">Unit Test Code Preview</h3>
       <p>
         <t-radio-group variant="default-filled" v-model="unitTestType">
-          <t-radio-button value="current">显示当前测试用例片段</t-radio-button>
-          <t-radio-button value="all">显示整个组件测试用例</t-radio-button>
+          <t-radio-button value="current">Current API Unit Tests</t-radio-button>
+          <t-radio-button value="all">Whole Component Unit Tests</t-radio-button>
         </t-radio-group>
       </p>
       <t-tabs v-model="tab" :list="tabList" style="margin-top: -16px; width: 100%" />
@@ -63,15 +63,13 @@ export default {
         { label: 'Vue(PC)', value: 'Vue(PC)' },
         { label: 'VueNext(PC)', value: 'VueNext(PC)' },
         { label: 'React(PC)', value: 'React(PC)' },
-        // { label: 'Vue(Mobile)', value: 'Vue(Mobile)' },
-        // { label: 'React(Mobile)', value: 'React(Mobile)' },
+        { label: 'Vue(Mobile)', value: 'Vue(Mobile)' },
+        { label: 'React(Mobile)', value: 'React(Mobile)' },
       ],
       loading: false,
       componentApiData: [],
       // 测试用例 JSON 字符串
       testDescription: '',
-      // 测试用例 JSON，用于最终输出测试用例
-      currentTestJSON: {},
       jsonError: '',
       unitTestType: 'current',
     }
@@ -80,6 +78,14 @@ export default {
   computed: {
     unitTestCode() {
       return this.getInnerUnitTestCode()
+    },
+    // 测试用例 JSON，用于最终输出测试用例
+    currentTestJSON() {
+      try {
+        return this.testDescription ? JSON.parse(this.testDescription) : {}
+      } catch(e) {
+        return {}
+      }
     },
   },
 
@@ -90,14 +96,11 @@ export default {
       }
     },
     apiInfo(apiInfo) {
-      const tmp = apiInfo.test_description
-      this.testDescription = tmp;
-      this.currentTestJSON = tmp ? JSON.parse(tmp) : {}
+      this.testDescription = apiInfo.test_description
     },
     testDescription(val) {
       const r = this.validateJSON(val)
       if (!r || !this.apiInfo || !this.componentApiData.length) return
-      this.currentTestJSON = val ? JSON.parse(val) : {}
       const index = this.componentApiData.findIndex(t => t.id === this.apiInfo.id)
       if (index < 0) return
       this.$set(this.componentApiData[index], 'test_description', val || undefined)
@@ -105,17 +108,13 @@ export default {
   },
 
   methods: {
+    checkInFramework() {
+      const framework = this.tab === 'VueNext(PC)' ? 'Vue(PC)' : this.tab;
+      return this.apiInfo && this.apiInfo.platform_framework_text.includes(framework);
+    },
+
     getInnerUnitTestCode() {
       if (!this.apiInfo || !this.componentApiData.length) return
-      // let testJSON = {};
-      // try {
-      //   if (this.testDescription) {
-      //     testJSON = JSON.parse(this.testDescription);
-      //   }
-      // } catch(e) {
-      //   console.warn(e);
-      //   return;
-      // }
       if (this.tab === 'JSON') {
         const testJSONString = JSON.stringify(this.currentTestJSON, '', 2)
         return Prism.highlight(testJSONString, Prism.languages.json, 'json')
@@ -126,7 +125,7 @@ export default {
         const rootComponentMap = getCmpTypeCombineMap(this.tab)
         const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
         if (this.unitTestType === 'current') {
-          if (Object.keys(this.currentTestJSON).length !== 0) {
+          if (Object.keys(this.currentTestJSON).length !== 0 && this.checkInFramework()) {
             const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, this.currentTestJSON);
             codeData = oneUnitTests.join('')
           } else {
@@ -138,9 +137,10 @@ export default {
           return
         }
       } catch(e) {
+        console.warn(e)
         const error = 'Unit test generated fail, check the core code first.'
         codeData = `console.log('${error}')`
-        this.$message.error(error);
+        this.$message.error(error)
         return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
       }
 
