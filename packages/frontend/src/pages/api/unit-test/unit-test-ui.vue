@@ -11,21 +11,24 @@
             :key="item.category + index"
             :apiInfo="apiInfo"
             :data="item"
+            :categories="categories"
             @formDataChange="(trigger, params) => onOneCategoryTestChange(trigger, params, index)"
           >
-            <template #operation v-if="item.category">
-              <t-button
-                style="margin-top: 16px"
-                size="small"
-                @click="onAddMore"
-              >Add {{ CATEGORY_OPTIONS.find(t => t.value === item.category).label }}</t-button>
-              <t-button
-                theme="danger"
-                style="margin-top: 16px; margin-left: 16px"
-                size="small"
-                v-if="formData.list.length > 1"
-                @click="() => onDelete(index)"
-              >Delete</t-button>
+            <template #operation>
+              <div>
+                <t-button
+                  style="margin-top: 16px"
+                  size="small"
+                  @click="onAddMore"
+                >添加</t-button>
+                <t-button
+                  theme="danger"
+                  style="margin-top: 16px; margin-left: 16px"
+                  size="small"
+                  v-if="formData.list.length > 1"
+                  @click="() => onDelete(index)"
+                >移除</t-button>
+              </div>
             </template>
           </OneCategoryTest>
 
@@ -70,6 +73,7 @@
 <script>
 import OneCategoryTest from './one-category-test'
 import { INITIAL_CATEGORY, INITIAL_FROM_DATA, CATEGORY_OPTIONS } from './const'
+import { parseJSON } from '../util'
 
 export default {
   name: 'UnitTestUI',
@@ -104,6 +108,9 @@ export default {
         PC: this.formDataPC,
         Mobile: this.formDataMobile,
       }[this.framework]
+    },
+    categories() {
+      return this.formData.list.map(t => t.category)
     },
   },
 
@@ -149,8 +156,8 @@ export default {
           newFormData.list.push(obj)
         }
       })
-      if (!newFormData.list.length) {
-        newFormData.list = [{ category: this.formData.list[0].category }]
+      for (let i = newFormData.list.length; i < this.formData.list.length; i++) {
+        newFormData.list.push({ category: this.formData.list[i].category })
       }
       return newFormData;
     },
@@ -196,15 +203,20 @@ export default {
       if (eventData.objectEvent) {
         const obj = {}
         eventData.objectEvent.forEach((item) => {
-          obj[item.trigger] = JSON.parse(item.arguments)
+          obj[item.trigger] = {
+            arguments: item.arguments ? JSON.parse(item.arguments) : undefined
+          }
         })
         return obj
       }
       if (eventData.arrayEvent) {
         return eventData.arrayEvent.map((item) => ({
-          trigger: item.trigger,
-          event: item.event ? JSON.parse(item.event) : undefined,
-          exist: item.exist?.length ? item.exist : undefined,
+          props: item.props ? parseJSON(item.props) : undefined,
+          expect: item.expect.map((ep) => ({
+            trigger: ep.trigger,
+            event: item.event ? parseJSON(item.event) : undefined,
+            exist: item.exist,
+          }))
         }))
       }
     },

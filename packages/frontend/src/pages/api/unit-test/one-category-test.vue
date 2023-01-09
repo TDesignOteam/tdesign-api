@@ -1,38 +1,30 @@
 <template>
   <div class="unit-test-ui__one-unit-test">
-    <t-radio-group v-model="formData.category" @change="onCategoryChange">
+    <t-radio-group :value="formData.category" @change="onCategoryChange">
       <t-radio-button v-for="item in testCategoryOptions" :value="item.value" :key="item.value">
         <t-tooltip :content="item.tips">
-          <span>{{ item.label }}</span>
+          <span>{{ item?.label }}</span>
         </t-tooltip>
       </t-radio-button>
     </t-radio-group>
 
     <template v-if="formData.category === 'tnode' && formData.tnode">
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light" content="格式：DomSelector。如果元素都挂载在 document.body 上，请加上 document 前缀，示例：document.class-name。如果是自定义节点，则是 document.custom-node">
-          <t-tag-input
-            v-model="formData.tnode.dom"
-            placeholder="除自定义节点，还期望哪些元素同时存在，标签输入，示例：.t-radio__label"
-            @change="() => onFormDataChange('tnode')"
-          ></t-tag-input>
+        <t-tooltip theme="light"
+          content="格式：DomSelector。如果元素都挂载在 document.body 上，请加上 document 前缀，示例：document.class-name。如果是自定义节点，则是 document.custom-node">
+          <t-tag-input v-model="formData.tnode.dom" placeholder="除自定义节点，还期望哪些元素同时存在，标签输入，示例：.t-radio__label"
+            @change="() => onFormDataChange('tnode')"></t-tag-input>
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
-          <t-input
-            v-model="formData.tnode.trigger"
-            placeholder="触发自定义节点显示的事件，如：focus(.t-input__wrap)"
-            @change="() => onFormDataChange('tnode')"
-          ></t-input>
+          <t-input v-model="formData.tnode.trigger" placeholder="触发自定义节点显示的事件，如：focus(.t-input__wrap)"
+            @change="() => onFormDataChange('tnode')"></t-input>
           <template #content>
             <p>
               格式：EventName(DomSelector)。focus(.t-input__wrap) 表示当元素 .t-input__wrap 聚焦后才会出现前面期望的元素。
-              <t-link
-                underline
-                href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
-                target="_blank"
-              >所有事件列表</t-link>
+              <t-link underline href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
+                target="_blank">所有事件列表</t-link>
             </p>
           </template>
         </t-tooltip>
@@ -44,9 +36,10 @@
         <t-tooltip theme="light">
           <template #content>
             <p v-if="apiInfo.field_type_text.join() === 'Boolean'">
-              {{ formData.className
-                ? `类名规则：当前值类型为 Boolean，当值为 true 时，期望存在类名 ${formData.className}`
-                : '类名规则：当前值类型为 Boolean，推荐规则形如：“.t-size-full-width”。表示值为 true 时，期望类名 t-size-full-width 存在'
+              {{
+                formData.className
+                  ? `类名规则：当前值类型为 Boolean，当值为 true 时，期望存在类名 ${formData.className}`
+                  : '类名规则：当前值类型为 Boolean，推荐规则形如：“.t-size-full-width”。表示值为 true 时，期望类名 t-size-full-width 存在'
               }}
             </p>
             <p v-if="apiInfo.field_type_text.join() === 'String'">
@@ -59,21 +52,15 @@
               </template>
             </p>
           </template>
-          <t-textarea
-            v-model="formData.className"
-            placeholder="类名规则"
-            @change="() => onFormDataChange('className')"
-          ></t-textarea>
+          <t-textarea v-model="formData.className" placeholder="类名规则"
+            @change="() => onFormDataChange('className')"></t-textarea>
         </t-tooltip>
       </div>
 
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light" content="上述类名规则应用在哪个子节点，不填或者填写 'self' 表示组件根节点">
-          <t-input
-            v-model="formData.classNameDom"
-            placeholder="类名规则应用的 HTML 元素"
-            @change="() => onFormDataChange('className')"
-          ></t-input>
+          <t-input v-model="formData.classNameDom" placeholder="类名规则应用的 HTML 元素"
+            @change="() => onFormDataChange('className')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -88,20 +75,14 @@
               </template>
             </p>
           </template>
-          <t-textarea
-            v-model="formData.attribute"
-            placeholder="属性规则"
-            @change="() => onFormDataChange('attribute')"
-          ></t-textarea>
+          <t-textarea v-model="formData.attribute" placeholder="属性规则"
+            @change="() => onFormDataChange('attribute')"></t-textarea>
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light" content="上述属性规则应用在哪个子节点，不填或者填写 'self' 表示组件根节点">
-          <t-input
-            v-model="formData.attributeDom"
-            placeholder="属性规则应用的 HTML 元素"
-            @change="() => onFormDataChange('attribute')"
-          ></t-input>
+          <t-input v-model="formData.attributeDom" placeholder="属性规则应用的 HTML 元素"
+            @change="() => onFormDataChange('attribute')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -116,11 +97,8 @@
               </template>
             </p>
           </template>
-          <t-textarea
-            v-model="formData.dom"
-            placeholder="检测某个元素是否存在的规则"
-            @change="() => onFormDataChange('dom')"
-          ></t-textarea>
+          <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则"
+            @change="() => onFormDataChange('dom')"></t-textarea>
         </t-tooltip>
       </div>
     </template>
@@ -134,25 +112,18 @@
         <t-card v-if="eventType === 'object'" class="t-event-object-card">
           <div v-for="(item, index) in objectEvent" :key="index" class="unit-test-ui__one-object-event">
             <t-tooltip trigger="focus" theme="light" content="事件名，如：click">
-              <t-input
-                v-model="objectEvent[index].trigger"
-                placeholder="事件名"
-                style="min-width: 100px; width: 100px"
-                @change="onObjectEventChange"
-              ></t-input>
+              <t-input v-model="objectEvent[index].trigger" placeholder="事件名" style="min-width: 100px; width: 100px"
+                @change="onObjectEventChange"></t-input>
             </t-tooltip>
             <t-tooltip trigger="focus" theme="light">
               <template #content>
                 示例：[{ "e.type": "click" }, [100, 101]] 。表示第一个参数存在属性 'e.type' 值为 'click'，第二个参数值为 [100, 101]
               </template>
-              <t-input
-                v-model="objectEvent[index].arguments"
-                placeholder="事件参数"
-                style="margin-left: 16px;"
-                @change="onObjectEventChange"
-              ></t-input>
+              <t-input v-model="objectEvent[index].arguments" placeholder="事件参数" style="margin-left: 16px;"
+                @change="onObjectEventChange"></t-input>
             </t-tooltip>
-            <t-button  @click="() => onObjectEventAdd(index)" variant="text" theme="primary" size="small" style="margin-left: 8px">
+            <t-button @click="() => onObjectEventAdd(index)" variant="text" theme="primary" size="small"
+              style="margin-left: 8px">
               <AddCircleIcon />
             </t-button>
             <t-button @click="() => onObjectEventDelete(index)" variant="text" theme="danger" size="small">
@@ -163,42 +134,58 @@
 
         <div v-if="eventType === 'array'">
           <t-card v-for="(item, index) in arrayEvent" :key="index" class="test-card-array-event">
-            <t-input
-              v-model="arrayEvent[index].trigger"
-              placeholder="用户操作事件，示例：mouseenter(.t-input)"
-              @change="onArrayEventChange"
-            ></t-input>
+            <h4 style="margin-top: 0">第{{ ['一', '二', '三', '四', '五'][index] }}个交互测试用例</h4>
+            
+            <p class="t-input__tips t-input__tips--default" style="position: relative">
+              总述：一个测试用例可能只包含一个事件触发，也可能包含多个事件触发
+            </p>
 
-            <t-tooltip theme="light">
-              <template #content>JSON 数组。示例：{ "exist": [".t-input__suffix-icon"] }</template>
-              <t-tag-input
-                v-model="arrayEvent[index].exist"
-                placeholder="用户操作事件触发后，期望哪些元素存在，标签输入"
-                style="margin-top: 16px"
-                @change="onArrayEventChange"
-              ></t-tag-input>
-            </t-tooltip>
+            <div
+              v-for="(expect, expectIndex) in arrayEvent[index].expect"
+            >
+             <div style="display: flex; align-items: center">
+               第{{ ['一', '二', '三', '四', '五'][expectIndex] }}个事件：
+               <t-button
+                 theme="primary"
+                 variant="text"
+                 size="small"
+                 @click="() => onEventExpectEdit(expect, expectIndex, index, 'edit')"
+               ><EditIcon /></t-button>
+               <t-button
+                 theme="primary"
+                 variant="text"
+                 size="small"
+                 @click="() => onEventExpectAdd(expect, expectIndex, index, 'add')"
+               ><AddCircleIcon /></t-button>
+               <t-button
+                 theme="danger"
+                 variant="text"
+                 size="small"
+                 @click="() => onEventExpectDelete(expectIndex, index, 'delete')"
+               ><MinusCircleIcon /></t-button>
+             </div>
+             <p v-if="expect.trigger" class="t-input__tips t-input__tips--default" style="position: relative">
+                触发 <code>{{ expect.trigger }}</code>
+                <template v-if="expect.exist?.length"> ，期望 {{ expect.exist?.join('、') }} 等元素存在</template>
+                <template v-if="expect.event"> ，期望 {{ getEventName(expect.event) }} 等事件处理函数被执行，以及相关参数正确</template>
+              </p>
+            </div>
 
-            <t-tooltip theme="light">
-              <template #content>JSON 对象。示例：{
-                "clear": [{ "stopPropagation": true }],
-                "change": ["''", { "stopPropagation": true }]
-              }。表示会同时触发 clear 和 change 等 2 个事件。注意，如果事件参数是字符串，需要额外加上单引号包裹。</template>
-
-              <t-textarea
-                v-model="arrayEvent[index].event"
-                placeholder="用户操作事件触发后，校验组件触发的多个事件及其参数"
-                style="margin-top: 16px"
-                @change="() => onFormDataChange('event', { arrayEvent })"
-              ></t-textarea>
-            </t-tooltip>
-
-            <div style="margin-top: 16px">
-              <t-button @click="() => onArrayEventAdd(index)" shape="square" theme="primary" size="small">
-                <AddCircleIcon />
+            <!-- {{ arrayEvent[index] }} -->
+            <div style="margin-top: 16px; text-align: right;">
+              <t-button @click="() => onArrayEventAdd(index)" size="small">
+                完成
+                <!-- <AddCircleIcon /> -->
               </t-button>
-              <t-button @click="() => onArrayEventDelete(index)" shape="square" theme="danger" size="small" style="margin-left: 8px">
-                <MinusCircleIcon />
+              <t-button
+                @click="() => onArrayEventDelete(index)"
+                theme="danger"
+                size="small"
+                style="margin-left: 8px"
+                v-if="arrayEvent.length > 1"
+              >
+                移除
+                <!-- <MinusCircleIcon /> -->
               </t-button>
             </div>
           </t-card>
@@ -207,17 +194,37 @@
     </template>
 
     <slot name="operation"></slot>
+
+    <EventExpect
+      :visible.sync="eventExpectVisible"
+      :eventExpect="currentExpectData.expectData"
+      :eventExpectMode="eventExpectMode"
+      @confirm="onEventExpectChange"
+    ></EventExpect>
+
   </div>
 </template>
 
 <script>
 import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const'
-import { AddCircleIcon, MinusCircleIcon } from 'tdesign-icons-vue'
+import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue'
+import EventExpect from './event-expect'
+import { parseJSON, getEventName } from '../util'
 
+const INITIAL_OBJECT_EVENT = [
+  { trigger: '', arguments: '' },
+]
+
+const INITIAL_ARRAY_EVENT = [
+  {
+    expect: [{ trigger: '', event: '', exist: [] }],
+    props: {},
+  }
+]
 export default {
   name: 'OneCategoryTest',
 
-  components: { AddCircleIcon, MinusCircleIcon },
+  components: { AddCircleIcon, MinusCircleIcon, EventExpect, EditIcon },
 
   props: {
     data: {
@@ -228,6 +235,7 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    categories: Array,
   },
 
   data() {
@@ -241,12 +249,16 @@ export default {
       },
       testCategoryOptions: CATEGORY_OPTIONS,
       eventType: 'object',
-      objectEvent: [
-        { trigger: '', arguments: '' },
-      ],
-      arrayEvent: [
-        { trigger: '', event: '', exist: [] }
-      ],
+      objectEvent: [...INITIAL_OBJECT_EVENT],
+      arrayEvent: [...INITIAL_ARRAY_EVENT],
+      eventExpectVisible: false,
+      currentExpectData: {
+        expectData: {...INITIAL_ARRAY_EVENT[0].expect},
+        expectIndex: -1,
+        eventIndex: -1,
+      },
+      // edit/add
+      eventExpectMode: 'edit',
     }
   },
 
@@ -259,15 +271,18 @@ export default {
           if (this.eventType === 'object' && Object.keys(formData.event).length) {
             const objectEvents = []
             Object.entries(formData.event).forEach(([eventName, eventInfo]) => {
-              objectEvents.push({ trigger: eventName, arguments: JSON.stringify(eventInfo) })
+              objectEvents.push({ trigger: eventName, arguments: JSON.stringify(eventInfo.arguments) })
             })
             this.objectEvent = objectEvents
           }
           if (this.eventType === 'array' && this.arrayEvent.length) {
             this.arrayEvent = formData.event.map(item => ({
-              trigger: item.trigger,
-              event: JSON.stringify(item.event),
-              exist: Array.isArray(item.exist) ? item.exist : [item.exist],
+              props: JSON.stringify(item.props),
+              expect: item.expect.map((ep) => ({
+                trigger: ep.trigger,
+                event: JSON.stringify(ep.event),
+                exist: Array.isArray(ep.exist) ? ep.exist : (ep.exist ? [ep.exist] : []),
+              }))
             }))
           }
         }
@@ -285,12 +300,8 @@ export default {
       }
     },
     eventType() {
-      this.objectEvent = [
-        { trigger: '', arguments: '' },
-      ]
-      this.arrayEvent = [
-        { trigger: '', event: '', exist: [] }
-      ]
+      this.objectEvent = [...INITIAL_OBJECT_EVENT]
+      this.arrayEvent = [...INITIAL_ARRAY_EVENT]
     },
   },
 
@@ -300,6 +311,11 @@ export default {
     },
 
     onCategoryChange(val) {
+      if (this.categories.includes(val)) {
+        const current = CATEGORY_OPTIONS.find(t => t.value === val)
+        this.$message.warning(`${current.label} already exist`)
+        return
+      }
       CATEGORY_OPTIONS.map((item) => {
         delete this.formData[item.value]
       })
@@ -307,10 +323,11 @@ export default {
       if (Array.isArray(value)) {
         this.formData[val] = [...value]
       } else if (typeof value === 'object') {
-        this.formData[val] = {...value}
+        this.formData[val] = { ...value }
       } else {
         this.formData[val] = value
       }
+      this.formData.category = val
       this.onFormDataChange('category');
     },
 
@@ -391,7 +408,7 @@ export default {
         const item = this.arrayEvent[i]
         try {
           item.event && JSON.parse(item.event)
-        } catch(e) {
+        } catch (e) {
           return
         }
       }
@@ -403,11 +420,52 @@ export default {
         const item = this.objectEvent[i]
         try {
           item.arguments && JSON.parse(item.arguments)
-        } catch(e) {
+        } catch (e) {
           return
         }
       }
       this.onFormDataChange('event', { objectEvent: this.objectEvent })
+    },
+
+    onEventExpectAdd(expectData, expectIndex, eventIndex) {
+      this.eventExpectMode = 'add'
+      this.showEventExpectDialog({...INITIAL_ARRAY_EVENT[0].expect}, expectIndex, eventIndex)
+    },
+
+    onEventExpectEdit(expectData, expectIndex, eventIndex) {
+      this.eventExpectMode = 'edit'
+      this.showEventExpectDialog(expectData, expectIndex, eventIndex)
+    },
+
+    onEventExpectDelete(expectIndex, eventIndex) {
+      this.arrayEvent[eventIndex].expect.splice(expectIndex, 1)
+    },
+
+    showEventExpectDialog(expectData, expectIndex, eventIndex) {
+      this.currentExpectData = {
+        expectData: { ...expectData },
+        expectIndex,
+        eventIndex,
+      }
+      this.eventExpectVisible = true
+    },
+
+    onEventExpectChange(eventData) {
+      const { expectIndex, eventIndex } = this.currentExpectData
+      if (this.eventExpectMode === 'edit') {
+        this.$set(this.arrayEvent[eventIndex].expect, expectIndex, eventData)
+      } else if (this.eventExpectMode === 'add') {
+        // this.$set(this.arrayEvent[eventIndex].expect, expectIndex + 1, eventData)
+        this.arrayEvent[eventIndex].expect.push(eventData)
+      }
+    },
+
+    getEventName(event) {
+      if (typeof event === 'string') {
+        const eventJSON = parseJSON(event, {})
+        return Object.keys(eventJSON).map(name => getEventName(name)).join('、')
+      }
+      return event
     },
   },
 };
@@ -419,7 +477,7 @@ export default {
   padding: 16px;
 }
 
-.unit-test-ui__one-unit-test + .unit-test-ui__one-unit-test {
+.unit-test-ui__one-unit-test+.unit-test-ui__one-unit-test {
   margin-top: 16px;
 }
 
@@ -428,7 +486,7 @@ export default {
 }
 
 .unit-test-ui__one-unit-test .t-event-object-card .t-card__body {
- padding: 16px;
+  padding: 16px;
 }
 
 .unit-test-ui__one-object-event {
@@ -436,11 +494,11 @@ export default {
   align-items: center;
 }
 
-.unit-test-ui__one-object-event + .unit-test-ui__one-object-event {
+.unit-test-ui__one-object-event+.unit-test-ui__one-object-event {
   margin-top: 8px;
 }
 
-.test-card-array-event + .test-card-array-event {
+.test-card-array-event+.test-card-array-event {
   margin-top: 8px;
 }
 </style>
