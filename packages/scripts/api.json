@@ -42693,6 +42693,49 @@
       ]
     },
     {
+      "id": 3280,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Grid",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/card",
+      "field_desc_zh": "宫格的风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-09 08:13:29",
+      "update_time": "2023-01-09 08:13:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2309,
       "platform_framework": [
         "8",
@@ -42863,11 +42906,12 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1"
+        "1",
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -42888,7 +42932,8 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Object"
       ]
     },
     {
@@ -85528,6 +85573,43 @@
       ]
     },
     {
+      "id": 3058,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:32:09",
+      "update_time": "2022-10-31 11:32:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1434,
       "platform_framework": [
         "64"
@@ -85645,6 +85727,43 @@
       ]
     },
     {
+      "id": 3281,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "shape",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "normal",
+      "field_enum": "normal/round",
+      "field_desc_zh": "标签栏的形状",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-09 08:40:13",
+      "update_time": "2023-01-09 08:40:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2192,
       "platform_framework": [
         "64"
@@ -85682,24 +85801,24 @@
       ]
     },
     {
-      "id": 3058,
+      "id": 3282,
       "platform_framework": [
         "64"
       ],
       "component": "TabBar",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "theme",
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_default_value": "normal",
+      "field_enum": "normal/tag",
+      "field_desc_zh": "选项风格",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:32:09",
-      "update_time": "2022-10-31 11:32:09",
+      "create_time": "2023-01-09 08:40:45",
+      "update_time": "2023-01-09 08:40:45",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -85821,7 +85940,7 @@
       "field_desc_zh": "选中标签切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(value: string | number)",
       "create_time": "2021-08-12 07:43:08",
       "update_time": "2021-08-12 07:43:08",
       "event_output": null,
@@ -85884,6 +86003,43 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3059,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBarItem",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:32:16",
+      "update_time": "2022-10-31 11:32:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -85964,43 +86120,6 @@
       ],
       "field_type_text": [
         "TNode"
-      ]
-    },
-    {
-      "id": 3059,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabBarItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:32:16",
-      "update_time": "2022-10-31 11:32:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -109682,5 +109801,5 @@
       ]
     }
   ],
-  "total": 2619
+  "total": 2622
 }
