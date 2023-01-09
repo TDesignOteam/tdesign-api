@@ -353,6 +353,8 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Transition', label: '动画' },
   { value: 'SideBar', label: '侧边导航' },
   { value: 'SideBarItem', label: '侧边导航项' },
+  { value: 'Swiper', label: '轮播' },
+  { value: 'SwiperNav', label: '轮播导航' },
 ];
 
 export default {

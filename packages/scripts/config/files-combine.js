@@ -95,7 +95,7 @@ const COMPONENT_API_MD_MAP = {
     excludes: ['Miniprogram']
   },
   Swiper: {
-    list: ['Swiper', 'SwiperNavigation'],
+    list: ['Swiper', 'SwiperNav'],
     includes: ['Miniprogram']
   },
   StickyTool: ['StickyTool', 'StickyItem'],
@@ -183,6 +183,7 @@ const TYPES_COMBINE_MAP = {
   },
   Steps: {
     list: ['Steps', 'StepItem'],
+    excludes: ['Miniprogram']
   },
   Calendar: {
     list: ['Calendar', 'CalendarController', 'CalendarCell'],

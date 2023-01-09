@@ -1151,6 +1151,10 @@
       {
         "value": "SideBarItem",
         "label": "侧边导航项"
+      },
+      {
+        "value": "SwiperNav",
+        "label": "轮播导航"
       }
     ]
   }
