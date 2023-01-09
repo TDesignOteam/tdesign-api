@@ -14073,7 +14073,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
