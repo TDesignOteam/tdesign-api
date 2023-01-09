@@ -214,8 +214,8 @@ export default {
           props: item.props ? parseJSON(item.props) : undefined,
           expect: item.expect.map((ep) => ({
             trigger: ep.trigger,
-            event: item.event ? parseJSON(item.event) : undefined,
-            exist: item.exist,
+            event: ep.event ? parseJSON(ep.event) : undefined,
+            exist: ep.exist,
           }))
         }))
       }

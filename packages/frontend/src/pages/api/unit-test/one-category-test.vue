@@ -136,9 +136,11 @@
           <t-card v-for="(item, index) in arrayEvent" :key="index" class="test-card-array-event">
             <h4 style="margin-top: 0">第{{ ['一', '二', '三', '四', '五'][index] }}个交互测试用例</h4>
             
-            <p class="t-input__tips t-input__tips--default" style="position: relative">
+            <!-- <p class="t-input__tips t-input__tips--default" style="position: relative">
               总述：一个测试用例可能只包含一个事件触发，也可能包含多个事件触发
-            </p>
+            </p> -->
+
+            <!-- <t-input v-model="arrayEvent[index].props"></t-input> -->
 
             <div
               v-for="(expect, expectIndex) in arrayEvent[index].expect"
@@ -174,7 +176,7 @@
             <!-- {{ arrayEvent[index] }} -->
             <div style="margin-top: 16px; text-align: right;">
               <t-button @click="() => onArrayEventAdd(index)" size="small">
-                完成
+                继续
                 <!-- <AddCircleIcon /> -->
               </t-button>
               <t-button
@@ -307,7 +309,10 @@ export default {
 
   methods: {
     onFormDataChange(trigger, params) {
-      this.$emit('formDataChange', trigger, { ...params, formData: this.formData })
+      this.$emit('formDataChange', trigger, {
+        ...params,
+        formData: this.formData,
+      })
     },
 
     onCategoryChange(val) {
@@ -395,7 +400,7 @@ export default {
     },
 
     onArrayEventAdd(index) {
-      this.arrayEvent.splice(index + 1, 0, { trigger: '', event: '', exist: [] })
+      this.arrayEvent.splice(index + 1, 0, { props: '', expect: [{ trigger: '', event: '', exist: [] }] })
     },
 
     onArrayEventDelete(index) {
@@ -458,6 +463,7 @@ export default {
         // this.$set(this.arrayEvent[eventIndex].expect, expectIndex + 1, eventData)
         this.arrayEvent[eventIndex].expect.push(eventData)
       }
+      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
     },
 
     getEventName(event) {
