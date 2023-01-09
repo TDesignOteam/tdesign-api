@@ -49,3 +49,11 @@ export function getCombinedComponentsByCurrentName(framework, map = TYPES_COMBIN
   });
   return rMap;
 }
+
+export function parseJSON(json, defaultValue = undefined) {
+  try {
+    return JSON.parse(json)
+  } catch(e) {
+    return defaultValue
+  }
+}

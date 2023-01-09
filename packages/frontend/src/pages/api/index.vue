@@ -97,7 +97,7 @@
       <t-drawer
         header="测试用例设计"
         :visible.sync="unitTestVisible"
-        size="80%"
+        size="85%"
         @confirm="onUnitTestEditConfirm"
         @cancel="onUnitTestEditCancel"
       >

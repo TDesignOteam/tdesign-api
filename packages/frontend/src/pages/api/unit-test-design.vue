@@ -50,10 +50,11 @@
 </template>
 
 <script>
+import { CATEGORY_OPTIONS } from './unit-test/const'
 import UnitTestUI from './unit-test/unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
-import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
+import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON } from './util'
 import prettierConfig from '../../../../scripts/config/prettier'
 import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
 import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs"
@@ -193,38 +194,54 @@ export default {
       return false
     },
 
-    onTestUIFormDataChange({ framework, formData, trigger }) {
+    onTestUIFormDataChange({ framework, formData, trigger, params }) {
       const testJSON = this.testDescription ? JSON.parse(this.testDescription) : {}
       if (framework === 'PC') {
-        testJSON.PC = this.updateTestDescription(testJSON.PC, formData, trigger)
+        testJSON.PC = this.updateTestDescription(formData, trigger, params)
       } else if (framework === 'Mobile') {
-        testJSON.Mobile = this.updateTestDescription(testJSON.Mobile, formData, trigger)
+        testJSON.Mobile = this.updateTestDescription(formData, trigger, params)
       }
       this.testDescription = JSON.stringify(testJSON)
     },
 
-    updateTestDescription(test = {}, formData, trigger) {
-      const tmpJSON = test;
+    updateTestDescription(formData, trigger, params) {
+      console.log('ui change', formData, trigger, params)
+      const tmpJSON = {};
       ['wrapper', 'snapshot', 'copyTestToWrapper'].forEach((field) => {
-        if (trigger === field) {
+        if (trigger === field && formData[field]) {
           tmpJSON[field] = formData[field]
         }
       })
-      if (trigger === 'copyTestToWrapper') {
-        if (formData.copyTestToWrapper.trim()) {
-          tmpJSON.copyTestToWrapper = formData.copyTestToWrapper.trim().split(',')
-        } else {
-          tmpJSON.copyTestToWrapper = []
+      if (formData.copyTestToWrapper?.trim()) {
+        tmpJSON.copyTestToWrapper = formData.copyTestToWrapper.trim().split(',')
+      }
+
+      if (trigger === 'category' && formData.list.length) {
+        const tnodeInfo = formData.list.find(t => t.category === 'tnode')
+        if (tnodeInfo) {
+          const { tnode } = tnodeInfo
+          if ((!tnode.dom || !tnode.dom.length) && !tnode.trigger) {
+            tnodeInfo.tnode = true
+          }
         }
       }
-      if (trigger === 'category') {
-        tmpJSON[formData.category] = formData.category === 'tnode' ? true : {}
-      }
-      if (trigger === 'tnode') {
-        tmpJSON.tnode = formData.tnode
-      }
-      if (!tmpJSON.tnode) {
-        delete tmpJSON.tnode
+
+      //  && CATEGORY_OPTIONS.find(t => t.value === trigger)
+      if (formData.list?.length) {
+        formData.list.map((item) => {
+          tmpJSON[item.category] = item[item.category]
+          if (trigger === 'className' && item.category === 'className') {
+            tmpJSON.className = parseJSON(item.className)
+            tmpJSON.classNameDom = item.classNameDom
+          }
+          if (trigger === 'attribute' && item.category === 'attribute') {
+            tmpJSON.attribute = parseJSON(item.attribute)
+            tmpJSON.attributeDom = item.attributeDom
+          }
+          if (trigger === 'dom' && item.category === 'dom') {
+            tmpJSON.dom = parseJSON(item.dom)
+          }
+        })
       }
       return tmpJSON;
     },

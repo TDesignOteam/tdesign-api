@@ -1,5 +1,5 @@
 export const INITIAL_CATEGORY = {
-  category: 'tnode',
+  category: '',
   tnode: {
     dom: [],
     trigger: '',

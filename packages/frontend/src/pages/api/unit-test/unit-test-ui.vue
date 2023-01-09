@@ -10,22 +10,22 @@
             v-for="(item, index) in formData.list"
             :key="item.category + index"
             :apiInfo="apiInfo"
-            :formData="item"
-            :onFormDataChange="onFormDataChange"
+            :data="item"
+            @formDataChange="(trigger, params) => onOneCategoryTestChange(trigger, params, index)"
           >
             <template #operation v-if="item.category">
               <t-button
                 style="margin-top: 16px"
                 size="small"
                 @click="onAddMore"
-              >添加</t-button>
+              >Add {{ CATEGORY_OPTIONS.find(t => t.value === item.category).label }}</t-button>
               <t-button
                 theme="danger"
                 style="margin-top: 16px; margin-left: 16px"
                 size="small"
                 v-if="formData.list.length > 1"
                 @click="() => onDelete(index)"
-              >删除</t-button>
+              >Delete</t-button>
             </template>
           </OneCategoryTest>
 
@@ -42,7 +42,7 @@
         </t-form-item>
 
         <t-form-item style="margin: 16px 0 8px 0">
-          <t-checkbox v-model="formData.snapshot" @change="() => onFormDataChange('snapshot')">生成快照</t-checkbox>
+          <t-checkbox v-model="formData.snapshot" @change="() => onFormDataChange('snapshot')">生成快照（Snapshots）</t-checkbox>
         </t-form-item>
 
         <t-form-item>
@@ -94,6 +94,7 @@ export default {
         { label: 'PC', value: 'PC' },
         { label: 'Mobile', value: 'Mobile' },
       ],
+      CATEGORY_OPTIONS,
     }
   },
 
@@ -124,26 +125,33 @@ export default {
     updateFormData(formData, testJSON) {
       const newFormData = {
         ...formData,
+        classNameDom: testJSON.classNameDom,
+        attributeDom: testJSON.attributeDom,
         content: testJSON.content,
         wrapper: testJSON.wrapper,
         copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
         needCopy: Boolean(testJSON.copyTestToWrapper && testJSON.copyTestToWrapper.length),
         snapshot: testJSON.snapshot,
         list: [],
-        // tnode: {
-        //   trigger: testJSON.tnode?.trigger,
-        //   dom: testJSON.tnode?.dom || [],
-        // },
       };
       CATEGORY_OPTIONS.forEach((item) => {
         const key = item.value
         if (testJSON[key]) {
-          newFormData.list.push({
+          const obj = {
             category: key,
             [key]: this.formatCategoryData(key, testJSON[key]),
-          })
+          }
+          if (key === 'className') {
+            obj.classNameDom = testJSON.classNameDom
+          } else if (key === 'attribute') {
+            obj.attributeDom = testJSON.attributeDom
+          }
+          newFormData.list.push(obj)
         }
       })
+      if (!newFormData.list.length) {
+        newFormData.list = [{ category: this.formData.list[0].category }]
+      }
       return newFormData;
     },
 
@@ -152,17 +160,53 @@ export default {
         if (data === true) {
           return { dom: [], trigger: '' }
         }
-        return data
       }
       return data
     },
 
-    onFormDataChange(trigger) {
-      // this.$emit('test-ui-form-data-change', {
-      //   framework: this.framework,
-      //   formData: this.formData,
-      //   trigger,
-      // })
+    onFormDataChange(trigger, params) {
+      this.$emit('test-ui-form-data-change', {
+        framework: this.framework,
+        formData: this.formData,
+        trigger,
+        params,
+      })
+    },
+
+    onOneCategoryTestChange(trigger, params, index) {
+      let oneData = this[`formData${this.framework}`].list[index]
+      // 子组件内部有单独的变量维护 Event 事件
+      if (trigger === 'event') {
+        const newEventData = this.getEventJSONData(params)
+        oneData = {
+          ...params.formData,
+          event: newEventData,
+        }
+      } else {
+        oneData = params.formData
+      }
+      this.$set(this[`formData${this.framework}`].list, index, oneData)
+      this.onFormDataChange(trigger, {
+        ...params,
+        formData: this.formData
+      })
+    },
+
+    getEventJSONData(eventData) {
+      if (eventData.objectEvent) {
+        const obj = {}
+        eventData.objectEvent.forEach((item) => {
+          obj[item.trigger] = JSON.parse(item.arguments)
+        })
+        return obj
+      }
+      if (eventData.arrayEvent) {
+        return eventData.arrayEvent.map((item) => ({
+          trigger: item.trigger,
+          event: item.event ? JSON.parse(item.event) : undefined,
+          exist: item.exist?.length ? item.exist : undefined,
+        }))
+      }
     },
 
     clearFormData() {
