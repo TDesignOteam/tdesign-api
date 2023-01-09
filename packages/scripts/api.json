@@ -86211,6 +86211,80 @@
       ]
     },
     {
+      "id": 3286,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "badgeProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "null",
+      "field_enum": "",
+      "field_desc_zh": "透传至 Badge 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-09 08:56:00",
+      "update_time": "2023-01-09 08:56:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3061,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:33:31",
+      "update_time": "2022-10-31 11:33:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 735,
       "platform_framework": [
         "1"
@@ -86524,43 +86598,6 @@
       ]
     },
     {
-      "id": 3061,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabPanel",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:31",
-      "update_time": "2022-10-31 11:33:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 161,
       "platform_framework": [
         "1",
@@ -86587,7 +86624,7 @@
       "create_time": "2020-12-01 11:11:08",
       "update_time": "2021-07-16 06:05:30",
       "event_output": null,
-      "custom_field_type": "TabValue",
+      "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -89216,6 +89253,43 @@
       ]
     },
     {
+      "id": 3060,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "customStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:33:05",
+      "update_time": "2022-10-31 11:33:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 156,
       "platform_framework": [
         "1",
@@ -89565,7 +89639,7 @@
       ],
       "component": "Tabs",
       "field_category": 1,
-      "field_name": "space-evenly",
+      "field_name": "spaceEvenly",
       "field_type": [
         "4"
       ],
@@ -89679,43 +89753,6 @@
       ]
     },
     {
-      "id": 3060,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:05",
-      "update_time": "2022-10-31 11:33:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2849,
       "platform_framework": [
         "8",
@@ -89794,6 +89831,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3283,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "line",
+      "field_enum": "line/tag/card",
+      "field_desc_zh": "标签的样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-09 08:52:38",
+      "update_time": "2023-01-09 08:52:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89907,7 +89981,7 @@
       "field_desc_zh": "激活的选项卡发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TabValue)",
+      "event_input": "(value: TabValue, label: string)",
       "create_time": "2021-01-26 14:50:51",
       "update_time": "2021-11-27 15:49:17",
       "event_output": null,
@@ -89928,6 +90002,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3284,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 2,
+      "field_name": "click",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击选项卡时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: TabValue, label: string)",
+      "create_time": "2023-01-09 08:53:37",
+      "update_time": "2023-01-09 08:53:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -90003,6 +90110,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3285,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面滚动时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(scrollTop: number, isFixed: boolean)",
+      "create_time": "2023-01-09 08:53:55",
+      "update_time": "2023-01-09 08:53:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -109801,5 +109941,5 @@
       ]
     }
   ],
-  "total": 2622
+  "total": 2626
 }
