@@ -111,7 +111,10 @@ const COMPONENT_API_MD_MAP = {
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
 const TYPES_COMBINE_MAP = {
-  Avatar: ['Avatar', 'AvatarGroup'],
+  Avatar: {
+    list: ['Avatar', 'AvatarGroup'],
+    excludes: ['Miniprogram']
+  },
   Checkbox: {
     list: ['Checkbox', 'CheckboxGroup'],
   },
