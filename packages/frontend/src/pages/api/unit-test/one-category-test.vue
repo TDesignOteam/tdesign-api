@@ -39,7 +39,7 @@
               {{
                 formData.className
                   ? `类名规则：当前值类型为 Boolean，当值为 true 时，期望存在类名 ${formData.className}`
-                  : '类名规则：当前值类型为 Boolean，推荐规则形如：“.t-size-full-width”。表示值为 true 时，期望类名 t-size-full-width 存在'
+                  : '类名规则：当前值类型为 Boolean，推荐规则形如：.t-size-full-width。表示值为 true 时，期望类名 t-size-full-width 存在'
               }}
             </p>
             <p v-if="apiInfo.field_type_text.join() === 'String'">
