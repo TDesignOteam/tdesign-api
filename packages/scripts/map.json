@@ -1033,6 +1033,10 @@
         "label": "选择器"
       },
       {
+        "value": "PickerItem",
+        "label": "选择器选项"
+      },
+      {
         "value": "DateTimePicker",
         "label": "日期时间选择器"
       },

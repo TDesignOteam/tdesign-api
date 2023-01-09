@@ -117,6 +117,7 @@ const TYPES_COMBINE_MAP = {
   },
   Checkbox: {
     list: ['Checkbox', 'CheckboxGroup'],
+    excludes: ['Miniprogram']
   },
   Radio: {
     list: ['Radio', 'RadioGroup'],
@@ -136,22 +137,27 @@ const TYPES_COMBINE_MAP = {
   },
   Tabs: {
     list: ['Tabs', 'TabPanel'],
+    excludes: ['Miniprogram']
   },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
+    excludes: ['Miniprogram']
   },
   Pagination: {
     list: ['Pagination', 'PaginationMini'],
   },
   Tag: {
     list: ['Tag', 'CheckTag'],
+    excludes: ['Miniprogram']
   },
   Collapse: {
     list: ['Collapse', 'CollapsePanel'],
+    excludes: ['Miniprogram']
   },
   // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
   Grid: {
     list: ['Grid', 'Row', 'Col', 'GridItem'],
+    excludes: ['Miniprogram']
   },
   Layout: {
     list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
@@ -162,10 +168,6 @@ const TYPES_COMBINE_MAP = {
   Dropdown: {
     list: ['Dropdown', 'DropdownItem'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-  },
-  DropdownMenu: {
-    list: ['DropdownMenu', 'DropdownItem'],
-    includes: mobileFrames,
   },
   Dialog: {
     list: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
@@ -200,6 +202,7 @@ const TYPES_COMBINE_MAP = {
   },
   Picker: {
     list: ['Picker', 'PickerItem'],
+    excludes: ['Miniprogram']
   },
   TimePicker: {
     list: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
@@ -212,6 +215,7 @@ const TYPES_COMBINE_MAP = {
   },
   Swiper: {
     list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
+    excludes: ['Miniprogram']
   },
   Table: {
     list: TABLE_LIST,

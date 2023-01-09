@@ -306,6 +306,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'Radio', label: '单选框' },
   { value: 'RadioGroup', label: '单选框组' },
   { value: 'Picker', label: '选择器' },
+  { value: 'PickerItem', label: '选择器选项' },
   { value: 'DateTimePicker', label: '日期时间选择器' },
   { value: 'DateTimeRangePicker', label: '日期时间范围选择器' },
   { value: 'Tag', label: '标签' },
