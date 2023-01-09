@@ -19807,7 +19807,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-is-checked\",\"attribute\":[{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"checked\":true}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20662,10 +20662,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLLabelElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"click\", \"event\": { \"click\": [{ \"e.stopPropagation\": true }] }}]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"e.type\":\"click\",\"e.stopPropagation\":true}]}}}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
