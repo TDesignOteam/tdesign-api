@@ -140,7 +140,14 @@
               总述：一个测试用例可能只包含一个事件触发，也可能包含多个事件触发
             </p> -->
 
-            <!-- <t-input v-model="arrayEvent[index].props"></t-input> -->
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <label style="width: 100px">组件属性：</label>
+              <t-input
+                v-model="arrayEvent[index].props"
+                placeholder="选填，当前测试用例所需的必要属性，格式：JSON"
+                @blur="onEventPropsChange"
+              ></t-input>
+            </div>
 
             <div
               v-for="(expect, expectIndex) in arrayEvent[index].expect"
@@ -277,9 +284,9 @@ export default {
             })
             this.objectEvent = objectEvents
           }
-          if (this.eventType === 'array' && this.arrayEvent.length) {
+          if (this.eventType === 'array' && formData.event.length) {
             this.arrayEvent = formData.event.map(item => ({
-              props: JSON.stringify(item.props),
+              props: item.props ? JSON.stringify(item.props) : '',
               expect: item.expect.map((ep) => ({
                 trigger: ep.trigger,
                 event: JSON.stringify(ep.event),
@@ -463,6 +470,10 @@ export default {
         // this.$set(this.arrayEvent[eventIndex].expect, expectIndex + 1, eventData)
         this.arrayEvent[eventIndex].expect.push(eventData)
       }
+      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
+    },
+
+    onEventPropsChange() {
       this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
     },
 
