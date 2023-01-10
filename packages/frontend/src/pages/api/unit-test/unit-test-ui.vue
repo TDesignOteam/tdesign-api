@@ -132,6 +132,7 @@ export default {
     updateFormData(formData, testJSON) {
       const newFormData = {
         ...formData,
+        dom: testJSON.dom,
         classNameDom: testJSON.classNameDom,
         attributeDom: testJSON.attributeDom,
         content: testJSON.content,

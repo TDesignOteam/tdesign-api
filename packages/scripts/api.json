@@ -5391,7 +5391,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"attribute\":{\"alt\":\"Avatar\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5600,7 +5600,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "Vue(Mobile):\\n depend: { 'image': 'https://tdesign.gtimg.com/mobile/demos/none.png' }",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"dom\":{\"true\":{\".t-image\":0}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5648,7 +5648,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5735,7 +5735,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "preDepend: { \\\"image\\\": \\\"https://tdesign.gtimg.com/mobile/demos/avatar_1.png\\\" }",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"https://tdesign.tencent.com/\",\"expect\":[{\"dom\":\"img\",\"attribute\":{\"src\":\"https://tdesign.tencent.com/\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5833,7 +5833,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-avatar--${item}\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5882,7 +5882,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",\"t-size-m\",\"t-size-l\"],\"attribute\":[{\"value\":\"100px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.width\":\"100px\",\"style.height\":\"100px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

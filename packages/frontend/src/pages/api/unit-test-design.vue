@@ -195,7 +195,7 @@ export default {
     },
 
     onTestUIFormDataChange({ framework, formData, trigger, params }) {
-      const testJSON = this.testDescription ? JSON.parse(this.testDescription) : {}
+      const testJSON = {}
       if (framework === 'PC') {
         testJSON.PC = this.updateTestDescription(formData, trigger, params)
       } else if (framework === 'Mobile') {

@@ -62,7 +62,7 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
   const { attribute, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   return attribute.map(({ value, expect }) => {
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${value}'` }, extraCode);
     const arr = [
       `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
         getWrapper(framework, mountCode, '', attributeDom),

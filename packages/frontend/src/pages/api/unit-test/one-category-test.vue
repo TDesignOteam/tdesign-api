@@ -53,7 +53,7 @@
             </p>
           </template>
           <t-textarea v-model="formData.className" placeholder="类名规则"
-            @change="() => onFormDataChange('className')"></t-textarea>
+            @blur="() => onFormDataChange('className')"></t-textarea>
         </t-tooltip>
       </div>
 
@@ -76,7 +76,7 @@
             </p>
           </template>
           <t-textarea v-model="formData.attribute" placeholder="属性规则"
-            @change="() => onFormDataChange('attribute')"></t-textarea>
+            @blur="() => onFormDataChange('attribute')"></t-textarea>
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
@@ -98,7 +98,7 @@
             </p>
           </template>
           <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则"
-            @change="() => onFormDataChange('dom')"></t-textarea>
+            @blur="() => onFormDataChange('dom')"></t-textarea>
         </t-tooltip>
       </div>
     </template>
@@ -255,6 +255,7 @@ export default {
         attributeDom: '',
         className: '',
         classNameDom: '',
+        dom: '',
       },
       testCategoryOptions: CATEGORY_OPTIONS,
       eventType: 'object',
@@ -300,7 +301,7 @@ export default {
           newFormData.attribute = JSON.stringify(formData.attribute)
         }
         if (formData.dom) {
-          newFormData.dom = JSON.stringify(formData.dom)
+          newFormData.dom = typeof formData.dom === 'string' ? formData.dom : JSON.stringify(formData.dom)
         }
         if (formData.className && typeof formData.className === 'object') {
           newFormData.className = JSON.stringify(formData.className)
@@ -363,7 +364,7 @@ export default {
       return [
         `不同的值，期望不同的根元素（或子元素）存在不同的类名。`,
         `推荐规则一：t-button--variant-\${item}。存在枚举值，值为类名的一部分`,
-        `推荐规则二：["t-size-s", "t-size-m", "t-size-s"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
+        `推荐规则二：["t-size-s", "t-size-m", "t-size-l"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
         `推荐规则三：{ "underline": "t-link--hover-underline" }。不存在枚举值。`,
         // ，点击下方高级设置
         `推荐规则四：不同的值对应多个不同的元素和类名。[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]`,
@@ -375,8 +376,8 @@ export default {
       return [
         '属性规则：',
         '不同的值，期望不同的根元素（或子元素）存在不同的属性。元素的 style/value/checked 等也属于属性测试。',
-        '推荐规则一：{"attribute": { "type": ["submit", "reset", "button"] }}',
-        '推荐规则二：{"attribute": { "href": "https://tdesign.tencent.com/" }}',
+        '推荐规则一：{ "type": ["submit", "reset", "button"] }',
+        '推荐规则二：{ "href": "https://tdesign.tencent.com/" }',
         '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串',
         '如果是 style，直接使用 "style.flexWrap": "wrap" 即可'
       ]
