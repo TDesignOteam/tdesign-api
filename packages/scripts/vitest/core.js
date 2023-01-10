@@ -442,7 +442,6 @@ function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperInd
  * @param {*} wrapperIndex 
  */
 function getDomClassNameExpect(framework, expect, wrapperIndex = '') {
-  if (!expect) return ''
   let arr = [];
   if (framework.indexOf('Vue') !== -1) {
     expect.forEach(({ dom, className }, index) => {

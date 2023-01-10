@@ -35,14 +35,14 @@
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
           <template #content>
-            <p v-if="apiInfo.field_type_text.join() === 'Boolean'">
+            <p v-if="apiInfo && apiInfo.field_type_text.join() === 'Boolean'">
               {{
                 formData.className
                   ? `类名规则：当前值类型为 Boolean，当值为 true 时，期望存在类名 ${formData.className}`
                   : '类名规则：当前值类型为 Boolean，推荐规则形如：.t-size-full-width。表示值为 true 时，期望类名 t-size-full-width 存在'
               }}
             </p>
-            <p v-if="apiInfo.field_type_text.join() === 'String'">
+            <p v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
               类名规则：
               <template v-if="formData.className">
                 {{ getClassNameIntroduction() }}

@@ -39,7 +39,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   if (Array.isArray(className)) {
     // 处理数组：不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
     // API 存在枚举值，和类名一一对应
-    if (oneApiData.field_type_text[0] === 'String' && enums.length) {
+    if (oneApiData.field_type_text[0] === 'String') {
       const classNameVariable = `${oneApiData.field_name}ClassNameList`;
       const arr = [
         `const ${classNameVariable} = ${getArrayCode(className)};`,
