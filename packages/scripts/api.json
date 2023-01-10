@@ -5866,9 +5866,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等",
+      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。默认值由 AvatarGroup.size 控制",
       "field_desc_en": "size",
       "field_required": 0,
       "event_input": "",
@@ -19852,7 +19852,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20018,7 +20018,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20063,7 +20063,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-is-disabled\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20229,7 +20229,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-is-indeterminate\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20279,7 +20279,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20415,7 +20415,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":{\"name\":\"radio-gender-name\"},\"classNameDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20514,7 +20514,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'checkbox-value'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"checkbox-value\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -20594,7 +20594,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"click(.t-checkbox__label)\",\"event\":{\"change\":[true,{\"e.type\":\"click\"}]},\"exist\":[]}]},{\"expect\":[{\"trigger\":\"click(.t-checkbox__label)\",\"event\":{\"change\":[true,{\"e.type\":\"click\"}]},\"exist\":[]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
