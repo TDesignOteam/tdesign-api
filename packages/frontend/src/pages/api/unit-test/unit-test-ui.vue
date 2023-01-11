@@ -165,7 +165,9 @@ export default {
           } else if (key === 'attribute') {
             obj.attributeDom = testJSON.attributeDom
             obj.props = testJSON.props
-          }
+          } else if (key === 'dom') [
+            obj.props = testJSON.props
+          ]
           newFormData.list.push(obj)
         }
       })
@@ -228,7 +230,7 @@ export default {
           expect: item.expect.map((ep) => ({
             trigger: ep.trigger,
             event: ep.event ? parseJSON(ep.event) : undefined,
-            exist: ep.exist,
+            exist: ep.exist ? parseJSON(ep.exist, []) : undefined,
             delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined )
           }))
         }))

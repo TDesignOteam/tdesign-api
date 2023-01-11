@@ -15,6 +15,14 @@ export interface TdAvatarProps {
    */
   alt?: string;
   /**
+   * 子元素内容
+   */
+  content?: string | TNode;
+  /**
+   * 子元素内容，同 content
+   */
+  default?: string | TNode;
+  /**
    * 加载失败时隐藏图片
    * @default false
    */

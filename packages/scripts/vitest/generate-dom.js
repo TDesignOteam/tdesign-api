@@ -18,13 +18,13 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactDomCase(test, oneApiData, framework, component) {
-  const { dom, snapshot, content, wrapper, skip } = test;
+  const { props, dom, snapshot, content, wrapper, skip } = test;
   const extraCode = { content, wrapper };
   // API 为 Boolean 类型，检测 DOM
   if (typeof dom === 'string' && oneApiData.field_type_text.includes('Boolean')) {
-    const mountCode = getMountComponent(framework, component, {}, extraCode);
-    const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false }, extraCode);
-    const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true }, extraCode);
+    const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
+    const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false, ...props }, extraCode);
+    const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true, ...props }, extraCode);
     const arr = [
       `it${getSkipCode(skip)}('props.${oneApiData.field_name}: ${component} contains element \`${dom}\`', () => {`,
         `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
@@ -49,7 +49,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     if (oneApiData.field_enum) {
       const enums = oneApiData.field_enum.split('/');
       const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
-      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/' }, extraCode);
+      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/', ...props }, extraCode);
       const arr = [
         `const ${expectedVariable} = ${getArrayCode(dom)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {
@@ -65,7 +65,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       // API 不存在枚举值，直接检测数组中的元素是否存在，以及元素的数量
       let arr = [];
       dom.forEach((domInfo) => {
-        const mountCode = getMountComponent(framework, component, {}, extraCode);
+        const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
         const oneValueArr = [
           `it${getSkipCode(skip)}('props.${oneApiData.field_name} works fine. \`${JSON.stringify(domInfo)}\` should exist', () => {`,
           getWrapper(framework, mountCode),
@@ -82,7 +82,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   if (!Array.isArray(dom) && typeof dom === 'object') {
     let arr = [];
     Object.entries(dom).forEach(([value, domInfo]) => {
-      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
       const oneValueArr = [
         `it${getSkipCode(skip)}('props.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}', () => {`,
         getWrapper(framework, mountCode),

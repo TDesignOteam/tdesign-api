@@ -6,6 +6,8 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 alt | String | - | show it when url is not valid | N
+content | String / Slot / Function | - | content slot or props.content。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | default slot or props.default, same as `content`。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 hideOnLoadFailed | Boolean | false | hide image when loading image failed | N
 icon | Slot / Function | - | use icon to fill。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 image | String | - | images url | N

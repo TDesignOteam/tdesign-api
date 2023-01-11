@@ -49,7 +49,7 @@ export function getEventTestData(eventType, formData) {
       expect: item.expect.map((ep) => ({
         trigger: ep.trigger,
         event: JSON.stringify(ep.event),
-        exist: Array.isArray(ep.exist) ? ep.exist : (ep.exist ? [ep.exist] : []),
+        exist: Array.isArray(ep.exist) ? JSON.stringify(ep.exist) : ep.exist,
         delay: (() => {
           if (ep.delay === true) return 'true';
           if (typeof ep.delay === 'number') return String(ep.delay);

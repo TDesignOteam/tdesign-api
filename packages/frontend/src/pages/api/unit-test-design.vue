@@ -236,12 +236,16 @@ export default {
           }
           if (trigger === 'className' && item.category === 'className') {
             tmpJSON.classNameDom = item.classNameDom
+            tmpJSON.props = parseJSON(item.props)
           }
           if (item.attribute) {
             tmpJSON.attribute = parseJSON(item.attribute)
           }
           if (trigger === 'attribute' && item.category === 'attribute') {
             tmpJSON.attributeDom = item.attributeDom
+            tmpJSON.props = parseJSON(item.props)
+          }
+          if (trigger === 'dom' && item.category === 'dom') {
             tmpJSON.props = parseJSON(item.props)
           }
           if (item.dom) {

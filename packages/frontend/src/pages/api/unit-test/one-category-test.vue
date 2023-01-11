@@ -63,6 +63,13 @@
             @change="() => onFormDataChange('className')"></t-input>
         </t-tooltip>
       </div>
+
+      <div class="unit-test-ui__form-item-inner">
+        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+          <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
+            @change="() => onFormDataChange('className')"></t-input>
+        </t-tooltip>
+      </div>
     </template>
 
     <template v-if="formData.category === 'attribute'">
@@ -105,6 +112,12 @@
           </template>
           <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则"
             @blur="() => onFormDataChange('dom')"></t-textarea>
+        </t-tooltip>
+      </div>
+      <div class="unit-test-ui__form-item-inner">
+        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+          <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
+            @change="() => onFormDataChange('dom')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -231,7 +244,7 @@ const INITIAL_OBJECT_EVENT = [
 
 const INITIAL_ARRAY_EVENT = [
   {
-    expect: [{ trigger: '', event: '', exist: [] }],
+    expect: [{ trigger: '', event: '', exist: '' }],
     props: '',
   }
 ]
@@ -399,7 +412,7 @@ export default {
     },
 
     onArrayEventAdd(index) {
-      this.arrayEvent.splice(index + 1, 0, { props: '', expect: [{ trigger: '', event: '', exist: [] }] })
+      this.arrayEvent.splice(index + 1, 0, { props: '', expect: [{ trigger: '', event: '', exist: '' }] })
     },
 
     onArrayEventDelete(index) {
@@ -478,13 +491,38 @@ export default {
     },
 
     getEventDescription(expect) {
+      const { expectExist = [], expectNotExist = [] } = this.getExpectDesc(expect.exist)
       return [
         expect.trigger && `触发 ${expect.trigger}`,
         expect.delay && `延迟 ${expect.delay} 毫秒之后`,
-        expect.exist?.length && `期望 ${expect.exist?.join('、')} 等元素存在`,
+        expect.exist?.length && [
+          expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
+          expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
+        ].filter(v => v).join('，'),
         expect.event && `期望 ${this.getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
       ].filter(v => v).join('，') + '。';
     },
+
+    getExpectDesc(expectExistStr) {
+      const exist = parseJSON(expectExistStr, [])
+      const expectExist = []
+      const expectNotExist = []
+      exist?.forEach((item) => {
+        if (!item) return;
+        if (typeof item === 'string') {
+          expectExist.push(item)
+        } else if (typeof item === 'object') {
+          const keys = Object.keys(item)
+          if (item[keys[0]] === false) {
+            expectNotExist.push(keys[0])
+          } else [
+            expectExist.push(keys[0])
+          ]
+        }
+      })
+      return { expectExist, expectNotExist }
+    },
+
   },
 };
 </script>

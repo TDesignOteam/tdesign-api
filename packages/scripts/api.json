@@ -5494,6 +5494,98 @@
       ]
     },
     {
+      "id": 3295,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "子元素内容，同 content",
+      "field_desc_en": "children, same as `content`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 11:54:56",
+      "update_time": "2023-01-11 11:54:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3293,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "子元素内容",
+      "field_desc_en": "content slot or props.content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 11:53:21",
+      "update_time": "2023-01-11 11:53:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 3078,
       "platform_framework": [
         "64"
@@ -5528,6 +5620,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3294,
+      "platform_framework": [
+        "1",
+        "8"
+      ],
+      "component": "Avatar",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "子元素内容，同 content",
+      "field_desc_en": "default slot or props.default, same as `content`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 11:54:04",
+      "update_time": "2023-01-11 11:54:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -5600,7 +5733,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"snapshot\":true,\"dom\":{\"true\":{\".t-image\":0}}}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"image\":\"https://this.is.an.error.path.jpg\"},\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-image\":false}],\"delay\":300}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -110131,5 +110264,5 @@
       ]
     }
   ],
-  "total": 2630
+  "total": 2633
 }
