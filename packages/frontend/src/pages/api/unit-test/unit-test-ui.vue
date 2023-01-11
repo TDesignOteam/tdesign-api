@@ -114,21 +114,25 @@ export default {
     },
   },
 
-  watch: {
-    currentTestJSON: {
-      handler(currentTestJSON) {
-        if (currentTestJSON.PC) {
-          this.formDataPC = this.updateFormData(this.formDataPC, currentTestJSON.PC)
-        }
-        if (currentTestJSON.Mobile) {
-          this.formDataMobile = this.updateFormData(this.formDataMobile, currentTestJSON.Mobile)
-        }
-      },
-      immediate: true,
-    },
-  },
+  // watch: {
+  //   currentTestJSON: {
+  //     handler(currentTestJSON) {  
+  //     },
+  //     immediate: true,
+  //   },
+  // },
 
   methods: {
+    updateDataByJSON() {
+      const { currentTestJSON } = this
+      if (currentTestJSON.PC) {
+        this.formDataPC = this.updateFormData(this.formDataPC, currentTestJSON.PC)
+      }
+      if (currentTestJSON.Mobile) {
+        this.formDataMobile = this.updateFormData(this.formDataMobile, currentTestJSON.Mobile)
+      }
+    },
+    
     updateFormData(formData, testJSON) {
       const newFormData = {
         ...formData,

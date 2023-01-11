@@ -219,6 +219,7 @@ import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const'
 import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue'
 import EventExpect from './event-expect'
 import { parseJSON, getEventName } from '../util'
+import { formatToOneCategoryTest, getEventTestData } from './formatData'
 
 const INITIAL_OBJECT_EVENT = [
   { trigger: '', arguments: '' },
@@ -278,35 +279,15 @@ export default {
       handler(formData) {
         if (formData.event) {
           this.eventType = Array.isArray(formData.event) ? 'array' : 'object'
-          if (this.eventType === 'object' && Object.keys(formData.event).length) {
-            const objectEvents = []
-            Object.entries(formData.event).forEach(([eventName, eventInfo]) => {
-              objectEvents.push({ trigger: eventName, arguments: JSON.stringify(eventInfo.arguments) })
-            })
-            this.objectEvent = objectEvents
+          const { objectEvent, arrayEvent } = getEventTestData(this.eventType, formData)
+          if (objectEvent.length) {
+            this.objectEvent = objectEvent
           }
-          if (this.eventType === 'array' && formData.event.length) {
-            this.arrayEvent = formData.event.map(item => ({
-              props: item.props ? JSON.stringify(item.props) : '',
-              expect: item.expect.map((ep) => ({
-                trigger: ep.trigger,
-                event: JSON.stringify(ep.event),
-                exist: Array.isArray(ep.exist) ? ep.exist : (ep.exist ? [ep.exist] : []),
-              }))
-            }))
+          if (arrayEvent.length) {
+            this.arrayEvent = arrayEvent
           }
         }
-        const newFormData = { ...formData }
-        if (formData.attribute) {
-          newFormData.attribute = JSON.stringify(formData.attribute)
-        }
-        if (formData.dom) {
-          newFormData.dom = typeof formData.dom === 'string' ? formData.dom : JSON.stringify(formData.dom)
-        }
-        if (formData.className && typeof formData.className === 'object') {
-          newFormData.className = JSON.stringify(formData.className)
-        }
-        this.formData = newFormData
+        this.formData = formatToOneCategoryTest(formData)
       }
     },
     eventType() {

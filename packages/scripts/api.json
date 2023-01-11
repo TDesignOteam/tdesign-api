@@ -5882,7 +5882,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",\"t-size-m\",\"t-size-l\"],\"attribute\":[{\"value\":\"100px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.width\":\"100px\",\"style.height\":\"100px\"}}]}]}}",
+      "test_description": "{\"PC\":{\"className\":{\"small\":\"t-size-s\",\"medium\":\"t-size-m\",\"large\":\"t-size-l\"},\"attribute\":[{\"value\":\"120px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.width\":\"120px\",\"style.height\":\"120px\",\"style.fontSize\":\"60px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

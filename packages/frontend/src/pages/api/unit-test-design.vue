@@ -27,6 +27,7 @@
       <t-textarea
         v-model="testDescription"
         style="height: 300px; margin-top: 16px"
+        @blur="onTestDescriptionBlur"
       ></t-textarea>
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
@@ -230,15 +231,19 @@ export default {
       if (formData.list?.length) {
         formData.list.map((item) => {
           tmpJSON[item.category] = item[item.category]
-          if (trigger === 'className' && item.category === 'className') {
+          if (item.className) {
             tmpJSON.className = parseJSON(item.className)
+          }
+          if (trigger === 'className' && item.category === 'className') {
             tmpJSON.classNameDom = item.classNameDom
           }
-          if (trigger === 'attribute' && item.category === 'attribute') {
+          if (item.attribute) {
             tmpJSON.attribute = parseJSON(item.attribute)
+          }
+          if (trigger === 'attribute' && item.category === 'attribute') {
             tmpJSON.attributeDom = item.attributeDom
           }
-          if (trigger === 'dom' && item.category === 'dom') {
+          if (item.dom) {
             tmpJSON.dom = parseJSON(item.dom)
           }
         })
@@ -266,10 +271,16 @@ export default {
         },
       }).then((res) => {
         this.componentApiData = res.data.data
+        // 更新表单数据
+        this.$refs['unit-test-ui'].updateDataByJSON()
         this.loading = false
       }, () => {
         this.loading = false
       })
+    },
+
+    onTestDescriptionBlur() {
+      this.$refs['unit-test-ui'].updateDataByJSON()
     },
   }
 };
