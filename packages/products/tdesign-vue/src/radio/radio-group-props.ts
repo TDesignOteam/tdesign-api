@@ -10,11 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
-  /** 是否禁用全部子单选框 */
-  disabled: {
-    type: Boolean,
-    default: undefined,
-  },
+  /** 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled */
+  disabled: Boolean,
   /** HTML 元素原生属性 */
   name: {
     type: String,
