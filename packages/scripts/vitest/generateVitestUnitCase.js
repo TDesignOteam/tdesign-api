@@ -11,7 +11,7 @@ const { getUnitTestCode } = require('./main');
 function generateVitestUnitCase(baseData, framework, { component }) {
   const cases = getUnitTestCode(baseData, framework, { component });
   try {
-    // console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
+    console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
     const codeData = prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;
     const fileName = kebabCase(component);

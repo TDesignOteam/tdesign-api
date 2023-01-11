@@ -1,4 +1,5 @@
 function parseJSON(json, error = '') {
+  if (json.indexOf('preSkip') !== -1) return {}
   try {
     return JSON.parse(json);
   } catch (e) {

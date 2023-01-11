@@ -63,7 +63,8 @@ function getMountComponent(framework, component, props, extra = {}) {
     const properties = props
       ? Object.keys(props).map((key) => {
         const value = typeof props[key] === 'object' ? JSON.stringify(props[key]) : props[key];
-        return `${key}={${value}}`;
+        const valueCode = getPropsValue(value);
+        return `${key}=${/^'.+'$/.test(valueCode) ? valueCode : `{${valueCode}}`}`;
       }).join(' ')
       : '';
     const eventsCode = events && !events.includes('on=') && framework === 'Vue(PC)' ? `on={${events}}` : events;
@@ -116,8 +117,22 @@ function getPropsObjectString(props, events) {
   }
   const entries = Object.entries(props);
   if (!entries.length) return {};
-  const list = entries.map(([name, value]) => `'${name}': ${value}`);
+  const list = entries.map(([name, value]) => {
+    return `'${name}': ${getPropsValue(value)}`;
+  });
   return `{ ${list.join(', ')} }`;
+}
+
+function getPropsValue(value) {
+  if (/\/-.+-\//.test(value)) return value;
+  if (value.indexOf('=>') !== -1) return value;
+  try {
+    JSON.parse(value)
+    return value;
+  } catch(e) {
+    if (typeof value === 'string') return `'${value}'`;
+    return value;
+  }
 }
 
 /**
