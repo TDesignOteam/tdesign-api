@@ -20,7 +20,7 @@ function generateClassNameUnitCase(test, oneApiData, framework, component) {
 function generateVueAndReactClassName(test, oneApiData, framework, component) {
   const { className, classNameDom, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
-  const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
+  const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/' }, extraCode);
   const enums = oneApiData.field_enum.split('/').filter(v => v);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
   if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
@@ -100,7 +100,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   // 如果是「枚举值：类名」映射关系
   if (typeof className === 'object' && !Array.isArray(className)) {
     const mapVariable = `${oneApiData.field_name}ClassNameMap`;
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'propValue' }, extraCode);
+    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-propValue-/' }, extraCode);
     const arr = [
       `const ${mapVariable} = ${JSON.stringify(className)};`,
       `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {

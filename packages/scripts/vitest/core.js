@@ -124,7 +124,7 @@ function getPropsObjectString(props, events) {
 }
 
 function getPropsValue(value) {
-  if (/\/-.+-\//.test(value)) return value;
+  if (/\/-.+-\//.test(value)) return value.slice(2, -2);
   if (value.indexOf('=>') !== -1) return value;
   try {
     JSON.parse(value)

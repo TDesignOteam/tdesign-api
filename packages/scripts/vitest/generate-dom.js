@@ -48,7 +48,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     if (oneApiData.field_enum) {
       const enums = oneApiData.field_enum.split('/');
       const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
-      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
+      const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/' }, extraCode);
       const arr = [
         `const ${expectedVariable} = ${getArrayCode(dom)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {
