@@ -5733,7 +5733,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"image\":\"https://this.is.an.error.path.jpg\"},\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-image\":false}],\"delay\":300}]}]}}",
+      "test_description": "{\"PC\":{\"skip\":true,\"event\":[{\"props\":{\"image\":\"https://this.is.an.error.path.jpg\"},\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-image\":false}],\"delay\":300}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

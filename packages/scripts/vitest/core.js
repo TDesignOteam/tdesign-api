@@ -124,9 +124,17 @@ function getPropsObjectString(props, events) {
 }
 
 function getPropsValue(value) {
-  if (/^'.+'$/.test(value)) return value;
+  // 带多余引号的字符串
+  if (/^'.+'$/.test(value)) return value.slice(1, -1);
+  // 测试用例变量
   if (/\/-.+-\//.test(value)) return value.slice(2, -2);
-  if (typeof value === 'string' && value.indexOf('=>') !== -1) return value;
+  // 可能是一个函数，或者 TNode
+  if (typeof value === 'string' && (
+    value.indexOf('=>') !== -1
+    || value .indexOf('</') !== -1
+    || value .indexOf('/>') !== -1
+  )) return value;
+  // 可能是一个对象或数组字符串
   try {
     JSON.parse(value)
     return value;
