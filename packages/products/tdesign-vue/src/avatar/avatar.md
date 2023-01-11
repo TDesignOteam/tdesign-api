@@ -12,13 +12,13 @@ image | String | - | 图片地址 | N
 imageProps | Object | - | 透传至 Image 组件。TS 类型：`ImageProps`，[Image API Documents](./image?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 shape | String | circle | 形状。可选项：circle/round。TS 类型：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 size | String | - | 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定 | N
-onError | Function |  | TS 类型：`() => void`<br/>图片加载失败时触发 | N
+onError | Function |  | TS 类型：`(context: { e: Event }) => void`<br/>图片加载失败时触发 | N
 
 ### Avatar Events
 
 名称 | 参数 | 描述
 -- | -- | --
-error | \- | 图片加载失败时触发
+error | `(context: { e: Event })` | 图片加载失败时触发
 
 ### AvatarGroup Props
 

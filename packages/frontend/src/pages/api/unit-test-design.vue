@@ -208,7 +208,7 @@ export default {
     updateTestDescription(formData, trigger, params) {
       console.log('ui change', formData, trigger, params)
       const tmpJSON = {};
-      ['wrapper', 'snapshot', 'copyTestToWrapper'].forEach((field) => {
+      ['wrapper', 'snapshot', 'skip', 'copyTestToWrapper'].forEach((field) => {
         if (trigger === field && formData[field]) {
           tmpJSON[field] = formData[field]
         }

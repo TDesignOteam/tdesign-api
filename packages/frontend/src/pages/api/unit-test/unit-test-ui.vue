@@ -65,6 +65,10 @@
             @change="() => onFormDataChange('copyTestToWrapper')"
           ></t-input>
         </t-form-item>
+
+        <t-form-item style="margin: 16px 0 8px 0">
+          <t-checkbox v-model="formData.skip" @change="() => onFormDataChange('skip')">跳过全部测试用例</t-checkbox>
+        </t-form-item>
       </t-form>
     </t-card>
   </div>
@@ -145,6 +149,7 @@ export default {
         copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
         needCopy: Boolean(testJSON.copyTestToWrapper && testJSON.copyTestToWrapper.length),
         snapshot: testJSON.snapshot,
+        skip: testJSON.skip,
         list: [],
       };
       CATEGORY_OPTIONS.forEach((item) => {
@@ -224,6 +229,7 @@ export default {
             trigger: ep.trigger,
             event: ep.event ? parseJSON(ep.event) : undefined,
             exist: ep.exist,
+            delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined )
           }))
         }))
       }

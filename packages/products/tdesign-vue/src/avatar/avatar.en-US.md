@@ -12,13 +12,13 @@ image | String | - | images url | N
 imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 shape | String | circle | shape。options：circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 size | String | - | size | N
-onError | Function |  | Typescript：`() => void`<br/>trigger on image load failed | N
+onError | Function |  | Typescript：`(context: { e: Event }) => void`<br/>trigger on image load failed | N
 
 ### Avatar Events
 
 name | params | description
 -- | -- | --
-error | \- | trigger on image load failed
+error | `(context: { e: Event })` | trigger on image load failed
 
 ### AvatarGroup Props
 

@@ -179,10 +179,8 @@
                  @click="() => onEventExpectDelete(expectIndex, index, 'delete')"
                ><MinusCircleIcon /></t-button>
              </div>
-             <p v-if="expect.trigger" class="t-input__tips t-input__tips--default" style="position: relative">
-                触发 <code>{{ expect.trigger }}</code>
-                <template v-if="expect.exist?.length"> ，期望 {{ expect.exist?.join('、') }} 等元素存在</template>
-                <template v-if="expect.event"> ，期望 {{ getEventName(expect.event) }} 等事件处理函数被执行，以及相关参数正确</template>
+             <p v-if="expect.trigger || expect.event || expect.exist" class="t-input__tips t-input__tips--default" style="position: relative">
+                {{getEventDescription(expect)}}
               </p>
             </div>
 
@@ -234,7 +232,7 @@ const INITIAL_OBJECT_EVENT = [
 const INITIAL_ARRAY_EVENT = [
   {
     expect: [{ trigger: '', event: '', exist: [] }],
-    props: {},
+    props: '',
   }
 ]
 export default {
@@ -284,6 +282,7 @@ export default {
     data: {
       immediate: true,
       handler(formData) {
+        this.formData = formatToOneCategoryTest(formData)
         if (formData.event) {
           this.eventType = Array.isArray(formData.event) ? 'array' : 'object'
           const { objectEvent, arrayEvent } = getEventTestData(this.eventType, formData)
@@ -294,7 +293,6 @@ export default {
             this.arrayEvent = arrayEvent
           }
         }
-        this.formData = formatToOneCategoryTest(formData)
       }
     },
     eventType() {
@@ -329,6 +327,11 @@ export default {
         this.formData[val] = value
       }
       this.formData.category = val
+
+      if (val === 'event') {
+        this.objectEvent = [...INITIAL_OBJECT_EVENT];
+        this.arrayEvent = [...INITIAL_ARRAY_EVENT];
+      }
       this.onFormDataChange('category');
     },
 
@@ -472,6 +475,15 @@ export default {
         return Object.keys(eventJSON).map(name => getEventName(name)).join('、')
       }
       return event
+    },
+
+    getEventDescription(expect) {
+      return [
+        expect.trigger && `触发 ${expect.trigger}`,
+        expect.delay && `延迟 ${expect.delay} 毫秒之后`,
+        expect.exist?.length && `期望 ${expect.exist?.join('、')} 等元素存在`,
+        expect.event && `期望 ${this.getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
+      ].filter(v => v).join('，') + '。';
     },
   },
 };

@@ -126,7 +126,7 @@ function getPropsObjectString(props, events) {
 function getPropsValue(value) {
   if (/^'.+'$/.test(value)) return value;
   if (/\/-.+-\//.test(value)) return value.slice(2, -2);
-  if (value.indexOf('=>') !== -1) return value;
+  if (typeof value === 'string' && value.indexOf('=>') !== -1) return value;
   try {
     JSON.parse(value)
     return value;
@@ -516,6 +516,7 @@ function formatToTriggerAndDom(oneExpect) {
 }
 
 function getFireEventName(event, framework) {
+  if (!event) return {}
   const eventInfo = framework.indexOf('Vue') !== -1 ? event : UNIT_TEST_EVENTS_MAP[event];
   if (!eventInfo) {
     console.warn(`can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`);
@@ -539,27 +540,28 @@ function getFireEventName(event, framework) {
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
  function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '') {
-  if (!event) return {};
   let fireEventCode = '';
   const { eventName, eventModifier } = getFireEventName(event, framework) || {};
   if (framework.indexOf('Vue') !== -1) {
     let eventFireCode = '';
-    if (dom === 'self') {
-      eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
-    } else {
-      eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
+    if (eventName) {
+      if (dom === 'self') {
+        eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
+      } else {
+        eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
+      }
     }
-    fireEventCode = [eventFireCode, `await wrapper${wrapperIndex}.vm.$nextTick();`].join('\n');
+    fireEventCode = [eventFireCode, `await wrapper${wrapperIndex}.vm.$nextTick();`].filter(v => v).join('\n');
   } else if (framework.indexOf('React') !== -1) {
     const tmpDom = dom === 'self'
       ? `container${wrapperIndex}.firstChild`
       : `container.querySelector('${dom}')`;
     const params = [tmpDom, eventModifier].filter(v => v).join(', ');
-    const eventCode = `fireEvent.${eventName}(${params});`;
+    const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
 
     if (getReactNeedMockDelay(event, delay)) {
       const delayTime = delay && delay !== true ? delay : '';
-      fireEventCode = [eventCode, `await mockDelay(${delayTime});`].join('\n');
+      fireEventCode = [eventCode, `await mockDelay(${delayTime});`].filter(v => v).join('\n');
     } else {
       fireEventCode = eventCode;
     }

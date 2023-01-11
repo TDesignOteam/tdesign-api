@@ -89,6 +89,7 @@ function getEventsDefinition(expect) {
 function getEventExpectCode(p, index, framework, component) {
   const { exist, event, delay, clearElementAtEnd } = p;
   const { triggerDom = 'self', trigger } = formatToTriggerAndDom(p);
+
   const arr = [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }),
     getExistDomExpect(framework, exist),

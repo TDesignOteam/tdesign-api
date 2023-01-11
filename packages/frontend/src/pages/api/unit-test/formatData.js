@@ -50,6 +50,11 @@ export function getEventTestData(eventType, formData) {
         trigger: ep.trigger,
         event: JSON.stringify(ep.event),
         exist: Array.isArray(ep.exist) ? ep.exist : (ep.exist ? [ep.exist] : []),
+        delay: (() => {
+          if (ep.delay === true) return 'true';
+          if (typeof ep.delay === 'number') return String(ep.delay);
+          return ep.delay;
+        })(),
       }))
     }))
   }

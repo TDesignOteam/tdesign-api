@@ -11,6 +11,7 @@ export const INITIAL_FROM_DATA = {
   copyTestToWrapper: '',
   needCopy: false,
   snapshot: false,
+  skip: false,
   list: [{ ...INITIAL_CATEGORY }],
 }
 
