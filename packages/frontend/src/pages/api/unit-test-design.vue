@@ -24,11 +24,11 @@
 
       <!-- <t-divider /> -->
 
-      <t-textarea
+      <!-- <t-textarea
         v-model="testDescription"
         style="height: 300px; margin-top: 16px"
         @blur="onTestDescriptionBlur"
-      ></t-textarea>
+      ></t-textarea> -->
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
       </div>
@@ -150,7 +150,7 @@ export default {
         const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
         if (this.unitTestType === 'current') {
           if (Object.keys(this.currentTestJSON).length !== 0 && this.checkInFramework()) {
-            const { oneUnitTests } = getOneUnitTest(this.tab, finalComponent, this.apiInfo, this.currentTestJSON);
+            const { oneUnitTests } = getOneUnitTest(this.tab, this.apiInfo.component, this.apiInfo, this.currentTestJSON);
             codeData = oneUnitTests.join('')
           } else {
             codeData = 'console.log(\'current unit test is empty\')'
@@ -208,8 +208,8 @@ export default {
     updateTestDescription(formData, trigger, params) {
       console.log('ui change', formData, trigger, params)
       const tmpJSON = {};
-      ['wrapper', 'snapshot', 'skip', 'copyTestToWrapper'].forEach((field) => {
-        if (trigger === field && formData[field]) {
+      ['wrapper', 'snapshot', 'skip', 'copyTestToWrapper', 'props'].forEach((field) => {
+        if (formData[field]) {
           tmpJSON[field] = formData[field]
         }
       })
@@ -227,6 +227,7 @@ export default {
         }
       }
 
+      let listProps = undefined
       //  && CATEGORY_OPTIONS.find(t => t.value === trigger)
       if (formData.list?.length) {
         formData.list.map((item) => {
@@ -236,23 +237,25 @@ export default {
           }
           if (trigger === 'className' && item.category === 'className') {
             tmpJSON.classNameDom = item.classNameDom
-            tmpJSON.props = parseJSON(item.props)
+            listProps = parseJSON(item.props)
           }
           if (item.attribute) {
             tmpJSON.attribute = parseJSON(item.attribute)
           }
           if (trigger === 'attribute' && item.category === 'attribute') {
             tmpJSON.attributeDom = item.attributeDom
-            tmpJSON.props = parseJSON(item.props)
+            listProps = parseJSON(item.props)
           }
           if (trigger === 'dom' && item.category === 'dom') {
-            tmpJSON.props = parseJSON(item.props)
+            listProps = parseJSON(item.props)
           }
           if (item.dom) {
             tmpJSON.dom = parseJSON(item.dom)
           }
         })
       }
+
+      tmpJSON.props = listProps || tmpJSON.props;
       return tmpJSON;
     },
 

@@ -67,7 +67,7 @@
         </t-form-item>
 
         <t-form-item style="margin: 16px 0 8px 0">
-          <t-checkbox v-model="formData.skip" @change="() => onFormDataChange('skip')">跳过全部测试用例</t-checkbox>
+          <t-checkbox v-model="formData.skip" @change="() => onFormDataChange('skip')">跳过当前测试用例</t-checkbox>
         </t-form-item>
       </t-form>
     </t-card>
@@ -208,6 +208,7 @@ export default {
         oneData = params.formData
       }
       this.$set(this[`formData${this.framework}`].list, index, oneData)
+      this.$set(this[`formData${this.framework}`], 'props', oneData.props)
       this.onFormDataChange(trigger, {
         ...params,
         formData: this.formData

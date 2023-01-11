@@ -11,7 +11,7 @@
     <template v-if="formData.category === 'tnode' && formData.tnode">
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light"
-          content="格式：DomSelector。如果元素都挂载在 document.body 上，请加上 document 前缀，示例：document.class-name。如果是自定义节点，则是 document.custom-node">
+          content="格式：DomSelector。标签输入。如果元素都挂载在 document.body 上，请加上 document 前缀，示例：document.class-name。如果是自定义节点，则是 document.custom-node">
           <t-tag-input v-model="formData.tnode.dom" placeholder="除自定义节点，还期望哪些元素同时存在，标签输入，示例：.t-radio__label"
             @change="() => onFormDataChange('tnode')"></t-tag-input>
         </t-tooltip>
@@ -65,9 +65,9 @@
       </div>
 
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+        <t-tooltip theme="light" content="还需要添加哪些属性到组件，如果 API 数据类型为 boolean 可以不添加">
           <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
-            @change="() => onFormDataChange('className')"></t-input>
+            @blur="() => onFormDataChange('className')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -93,9 +93,9 @@
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+        <t-tooltip theme="light" content="还需要添加哪些属性到组件，如果 API 数据类型为 boolean 可以不添加">
           <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
-            @change="() => onFormDataChange('attribute')"></t-input>
+            @blur="() => onFormDataChange('attribute')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -115,9 +115,9 @@
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+        <t-tooltip theme="light" content="还需要添加哪些属性到组件，如果 API 数据类型为 boolean 可以不添加">
           <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
-            @change="() => onFormDataChange('dom')"></t-input>
+            @blur="() => onFormDataChange('dom')"></t-input>
         </t-tooltip>
       </div>
     </template>

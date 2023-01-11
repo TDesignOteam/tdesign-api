@@ -6283,7 +6283,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"props\":{\"max\":3},\"dom\":[{\".t-avatar\":4},{\".t-avatar__collapse\":1}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
