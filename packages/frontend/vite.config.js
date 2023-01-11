@@ -1,6 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
+// vite run dev need this plugin, vite run build doesn't
 import commonjs from 'vite-plugin-commonjs'
 
 // https://vitejs.dev/config/
@@ -20,6 +21,11 @@ export default ({ mode }) => {
         input: {
           index: path.resolve(__dirname, 'index.html')
         }
+      },
+      commonjsOptions: {
+        // include: [path.resolve(__dirname, '../scripts')]
+        exclude: [path.resolve(__dirname, '../scripts')],
+        include: []
       },
     },
     optimizeDeps: {

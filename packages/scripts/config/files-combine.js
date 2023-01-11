@@ -266,3 +266,5 @@ module.exports = {
   TYPES_COMBINE_MAP,
   GLOBAL_COMPONENTS_CONFIG,
 };
+
+Object.defineProperty(exports, '__esModule', { value: true })
