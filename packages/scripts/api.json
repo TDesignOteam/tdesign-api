@@ -6109,7 +6109,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"className\":[\"t-avatar--offset-left\",\"t-avatar--offset-right\"]}}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":[\"t-avatar--offset-left\",\"t-avatar--offset-right\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

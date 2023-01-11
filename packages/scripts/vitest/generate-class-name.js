@@ -42,18 +42,23 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     // API 存在枚举值，和类名一一对应
     if (oneApiData.field_type_text[0] === 'String' && enums.length) {
       const classNameVariable = `${oneApiData.field_name}ClassNameList`;
+      const hasObjectClassName = hasObjectInArray(className);
       const arr = [
         `const ${classNameVariable} = ${getArrayCode(className)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {`,
         `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
         getWrapper(framework, mountCode, '', classNameDom),
-        `if (typeof ${classNameVariable}[index] === 'string') {`,
-          getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
-        `} else if (typeof ${classNameVariable}[index] === 'object') {
-          const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
-          getClassNameExpectFalsy(framework, 'classNameKey'),
-        `}`,
-          getSnapshotCase(snapshot, framework),
+        hasObjectClassName
+        ? [
+            `if (typeof ${classNameVariable}[index] === 'string') {`,
+            getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
+          `} else if (typeof ${classNameVariable}[index] === 'object') {
+            const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
+            getClassNameExpectFalsy(framework, 'classNameKey'),
+          `}`,
+          ].join('\n')
+        : getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
+        getSnapshotCase(snapshot, framework),
         `});`,
         `});`,
       ];
@@ -115,6 +120,13 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     ];
     return arr;
   }
+}
+
+function hasObjectInArray(arr) {
+  for (let i = 0, len = arr.length; i < len; i++) {
+    if (typeof arr[i] !== 'string') return true
+  }
+  return false;
 }
 
 module.exports = {
