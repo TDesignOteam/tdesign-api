@@ -14,7 +14,7 @@ function generateAttributeUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactAttribute(test, oneApiData, framework, component) {
-  const { attribute, attributeDom, snapshot, content, wrapper } = test;
+  const { attribute, attributeDom, props, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   if (typeof attribute !== 'object') return;
   // 1. 处理数组
@@ -29,7 +29,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   const propsValues = oneApiData.field_enum && oneApiData.field_enum.split('/');
   // 按顺序处理枚举值对应的属性
   if (Array.isArray(attributeValue) && propsValues.length) {
-    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item' }, extraCode);
+    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: 'item', ...props }, extraCode);
     const arr = [
       `const attributeValues = ${getArrayCode(attributeValue)};`,
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
@@ -45,7 +45,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   }
   // 测试属性赋值，如：<Button href="https://tdesign.tencent.com/" />
   if (typeof attributeValue === 'string' && attributeName === oneApiData.field_name) {
-    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${attributeValue}'` }, extraCode);
+    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${attributeValue}'`, ...props }, extraCode);
     const arr = [
       `it(${getItDescription(oneApiData)}, () => {`,
         getWrapper(framework, componentCode, '', attributeDom),
@@ -59,10 +59,10 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
 
 function generateMapAttribute(test, oneApiData, framework, component, attributeDom) {
   // 此时的 attribute 一定是数组
-  const { attribute, snapshot, content, wrapper } = test;
+  const { attribute, props, snapshot, content, wrapper } = test;
   const extraCode = { content, wrapper };
   return attribute.map(({ value, expect }) => {
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${value}'` }, extraCode);
+    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: `'${value}'`, ...props }, extraCode);
     const arr = [
       `it(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
         getWrapper(framework, mountCode, '', attributeDom),

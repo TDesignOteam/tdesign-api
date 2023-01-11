@@ -44,12 +44,12 @@
             </p>
             <p v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
               类名规则：
-              <template v-if="formData.className">
-                {{ getClassNameIntroduction() }}
+              <!-- <template v-if="formData.className">
+                {{ getClassNameRecommend() }}
               </template>
-              <template v-else>
-                <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
-              </template>
+              <template v-else> -->
+              <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
+              <!-- </template> -->
             </p>
           </template>
           <t-textarea v-model="formData.className" placeholder="类名规则"
@@ -82,6 +82,12 @@
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light" content="上述属性规则应用在哪个子节点，不填或者填写 'self' 表示组件根节点">
           <t-input v-model="formData.attributeDom" placeholder="属性规则应用的 HTML 元素"
+            @change="() => onFormDataChange('attribute')"></t-input>
+        </t-tooltip>
+      </div>
+      <div class="unit-test-ui__form-item-inner">
+        <t-tooltip theme="light" content="除当前 API 之外，还需要添加哪些属性到组件">
+          <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
             @change="() => onFormDataChange('attribute')"></t-input>
         </t-tooltip>
       </div>
@@ -254,6 +260,7 @@ export default {
         category: '',
         attribute: '',
         attributeDom: '',
+        props: '',
         className: '',
         classNameDom: '',
         dom: '',
@@ -325,22 +332,22 @@ export default {
       this.onFormDataChange('category');
     },
 
-    // 类名说明
-    getClassNameIntroduction() {
-      const { apiInfo } = this
-      const { className } = this.formData
-      if (typeof className === 'string') {
-        return `${apiInfo.component}.${apiInfo.field_name} 的值是类名的一部分，其中 \${item} 表示替换类名的值`
-      } else if (Array.isArray(className)) {
-        if (typeof className[0] === 'object' && className[0].value) {
-          return `不同的值，期望不同的根元素（或子元素）对应不同的类名`
-        } else {
-          return `当值分别为 ${apiInfo.field_enum} 时，期望类名分别为 ${className.join('/')}`
-        }
-      }
-    },
+    // // 类名说明
+    // getClassNameIntroduction() {
+    //   const { apiInfo } = this
+    //   const { className } = this.formData
+    //   if (typeof className === 'string') {
+    //     return `${apiInfo.component}.${apiInfo.field_name} 的值是类名的一部分，其中 \${item} 表示替换类名的值`
+    //   } else if (Array.isArray(className)) {
+    //     if (typeof className[0] === 'object' && className[0].value) {
+    //       return `不同的值，期望不同的根元素（或子元素）对应不同的类名`
+    //     } else {
+    //       return `当值分别为 ${apiInfo.field_enum} 时，期望类名分别为 ${className.join('/')}`
+    //     }
+    //   }
+    // },
 
-    // 类名规则推荐（TODO: 带完善文档）
+    // 类名规则推荐（TODO: 待完善文档）
     getClassNameRecommend() {
       return [
         `不同的值，期望不同的根元素（或子元素）存在不同的类名。`,
@@ -348,7 +355,7 @@ export default {
         `推荐规则二：["t-size-s", "t-size-m", "t-size-l"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
         `推荐规则三：{ "underline": "t-link--hover-underline" }。不存在枚举值。`,
         // ，点击下方高级设置
-        `推荐规则四：不同的值对应多个不同的元素和类名。[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]`,
+        `推荐规则四：[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]。不同的值对应多个不同的元素和类名。这个规则，不需要填写下方的 「类名规则应用的 HTML 元素」`,
       ]
     },
 

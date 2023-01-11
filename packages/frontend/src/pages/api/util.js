@@ -53,6 +53,7 @@ export function getCombinedComponentsByCurrentName(framework, map = TYPES_COMBIN
 }
 
 export function parseJSON(json, defaultValue = undefined) {
+  if (typeof json === 'object') return json
   try {
     return JSON.parse(json)
   } catch(e) {

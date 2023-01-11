@@ -139,6 +139,7 @@ export default {
         dom: testJSON.dom,
         classNameDom: testJSON.classNameDom,
         attributeDom: testJSON.attributeDom,
+        props: testJSON.props,
         content: testJSON.content,
         wrapper: testJSON.wrapper,
         copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
@@ -155,8 +156,10 @@ export default {
           }
           if (key === 'className') {
             obj.classNameDom = testJSON.classNameDom
+            obj.props = testJSON.props
           } else if (key === 'attribute') {
             obj.attributeDom = testJSON.attributeDom
+            obj.props = testJSON.props
           }
           newFormData.list.push(obj)
         }

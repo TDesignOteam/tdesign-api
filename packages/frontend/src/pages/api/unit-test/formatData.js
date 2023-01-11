@@ -15,6 +15,21 @@ export function formatToOneCategoryTest(formData) {
       ? formData.className
       : JSON.stringify(formData.className)
   }
+  if (formData.tnode) {
+    if (formData.tnode === true) {
+      newFormData.tnode = { trigger: '', dom: [] }
+    } else {
+      newFormData.tnode.trigger = formData.tnode.trigger
+      newFormData.tnode.dom = formData.tnode.dom
+        ? (Array.isArray(formData.tnode.dom) ? formData.tnode.dom : JSON.parse(formData.tnode.dom))
+        : []
+    }
+  }
+  if (formData.props) {
+    newFormData.props = typeof formData.props === 'string'
+      ? formData.props
+      : JSON.stringify(formData.props)
+  }
   return newFormData
 }
 

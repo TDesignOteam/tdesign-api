@@ -242,6 +242,7 @@ export default {
           }
           if (trigger === 'attribute' && item.category === 'attribute') {
             tmpJSON.attributeDom = item.attributeDom
+            tmpJSON.props = parseJSON(item.props)
           }
           if (item.dom) {
             tmpJSON.dom = parseJSON(item.dom)
