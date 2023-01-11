@@ -48114,6 +48114,90 @@
       ]
     },
     {
+      "id": 3291,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Indexes",
+      "field_category": 1,
+      "field_name": "stickyOffset",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "锚点吸顶时与顶部的距离\t",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 07:37:47",
+      "update_time": "2023-01-11 07:37:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3292,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Indexes",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "索引发生变更时触发事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(index: string | number)",
+      "create_time": "2023-01-11 07:44:14",
+      "update_time": "2023-01-11 07:44:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1460,
       "platform_framework": [
         "8",
@@ -48128,10 +48212,10 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "点击行元素时触发事件",
+      "field_desc_zh": "点击侧边栏时触发事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(indexes: { groupIndex: string; childrenIndex: number })",
+      "event_input": "(index: string | number)",
       "create_time": "2021-08-20 07:25:49",
       "update_time": "2022-04-06 08:05:31",
       "event_output": null,
@@ -110047,5 +110131,5 @@
       ]
     }
   ],
-  "total": 2628
+  "total": 2630
 }
