@@ -31,6 +31,7 @@
   'AlertConfig',
   'AnchorConfig',
   'MessageConfig',
+  'ImageConfig',
   'GuideConfig',
 ].sort((a, b) => a.localeCompare(b) > 0);
 

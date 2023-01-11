@@ -46879,6 +46879,104 @@
       "field_type_text": []
     },
     {
+      "id": 3289,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "ImageConfig",
+      "field_category": 1,
+      "field_name": "errorText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图片加载失败显示的文本，中文默认为“图片无法显示”",
+      "field_desc_en": "loading text, default value is \"Error\"",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 06:06:55",
+      "update_time": "2023-01-11 06:06:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3288,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "ImageConfig",
+      "field_category": 1,
+      "field_name": "loadingText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图片加载中显示的文本，中文默认为“图片加载中”",
+      "field_desc_en": "loading text, default value is \"loading\"",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-11 06:05:38",
+      "update_time": "2023-01-11 06:05:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2605,
       "platform_framework": [
         "64"
@@ -109949,5 +110047,5 @@
       ]
     }
   ],
-  "total": 2626
+  "total": 2628
 }
