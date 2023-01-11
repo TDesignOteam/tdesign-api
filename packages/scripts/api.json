@@ -5781,7 +5781,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"tnode\":{\"dom\":[\".t-avatar__icon\"],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -6109,7 +6109,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "preSkip: true",
+      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"className\":[\"t-avatar--offset-left\",\"t-avatar--offset-right\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

@@ -337,7 +337,7 @@ export default {
     onUnitTestEditConfirm() {
       const testDescription = this.$refs['unit-test'].testDescription
       try {
-        JSON.parse(testDescription)
+        testDescription && JSON.parse(testDescription)
       } catch(e) {
         this.$message.error('测试用例不是合法 JSON');
         return;
