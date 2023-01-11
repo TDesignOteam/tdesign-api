@@ -9,6 +9,7 @@ const {
   getFireEventCode,
   getReactFireEventAsync,
 } = require('./core');
+const { getSkipCode } = require('./utils');
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
@@ -22,7 +23,7 @@ function generateTNodeElement(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactTNode(test, oneApiData, framework, component) {
-  const { tnode, snapshot, content, wrapper } = test;
+  const { tnode, snapshot, content, wrapper, skip } = test;
   const extraCode = { content, wrapper };
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
@@ -46,17 +47,17 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   let arr = getTestCaseByComponentCode({
     itDesc,
     componentCode,
-    framework, component, snapshot, tnode,
+    framework, component, snapshot, tnode, skip,
   });
 
-  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode);
+  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip);
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
   }
   return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode) {
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];
@@ -77,7 +78,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     secondArr = getTestCaseByComponentCode({
       itDesc: slotTtDesc,
       componentCode: slotCode,
-      framework, component, snapshot, tnode,
+      framework, component, snapshot, tnode, skip,
     });
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
@@ -93,7 +94,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       thirdArr = getTestCaseByComponentCode({
         itDesc: slotTtDesc2,
         componentCode: slotCode2,
-        framework, component, snapshot, tnode,
+        framework, component, snapshot, tnode, skip,
       });
     }
   }
@@ -111,13 +112,13 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
 function getTestCaseByComponentCode(params) {
   const {
     itDesc, componentCode,
-    framework, component, snapshot, tnode
+    framework, component, snapshot, tnode, skip
   } = params;
   const { reactAsync } = getReactFireEventAsync(getTriggerList(tnode.trigger), framework);
   const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger || reactAsync ? 'async' : '';
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
   const arr = [
-    `it(${tnode.description || itDesc}, ${needAsync} () => {`,
+    `it${getSkipCode(skip)}(${tnode.description || itDesc}, ${needAsync} () => {`,
     getWrapper(framework, componentCode),
     tnode.trigger && getTriggerExpect(tnode.trigger, framework, component),
     // 校验自定义元素是否存在

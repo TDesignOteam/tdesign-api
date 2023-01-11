@@ -16,6 +16,10 @@ function formatArrayToMap(map, field) {
   return r;
 }
 
+function getSkipCode(skip) {
+  return skip ? '.skip' : '';
+}
+
 function groupByComponent(allApi, framework) {
   const result = {};
   allApi.forEach((api) => {
@@ -71,4 +75,5 @@ module.exports = {
   formatArrayToMap,
   groupByComponent,
   getApiComponentMapByFrameWork,
+  getSkipCode,
 };

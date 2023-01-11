@@ -7,6 +7,7 @@ const {
   getDomExpectFalsy,
   getDomCountExpectCode,
 } = require("./core");
+const { getSkipCode } = require("./utils");
 
 /**
  * 检测某个元素是否存在
@@ -17,7 +18,7 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactDomCase(test, oneApiData, framework, component) {
-  const { dom, snapshot, content, wrapper } = test;
+  const { dom, snapshot, content, wrapper, skip } = test;
   const extraCode = { content, wrapper };
   // API 为 Boolean 类型，检测 DOM
   if (typeof dom === 'string' && oneApiData.field_type_text.includes('Boolean')) {
@@ -25,7 +26,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true }, extraCode);
     const arr = [
-      `it('props.${oneApiData.field_name}: ${component} contains element \`${dom}\`', () => {`,
+      `it${getSkipCode(skip)}('props.${oneApiData.field_name}: ${component} contains element \`${dom}\`', () => {`,
         `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
         getWrapper(framework, mountCode),
         oneApiData.field_default_value === 'true'
@@ -66,7 +67,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       dom.forEach((domInfo) => {
         const mountCode = getMountComponent(framework, component, {}, extraCode);
         const oneValueArr = [
-          `it('props.${oneApiData.field_name} works fine. \`${JSON.stringify(domInfo)}\` should exist', () => {`,
+          `it${getSkipCode(skip)}('props.${oneApiData.field_name} works fine. \`${JSON.stringify(domInfo)}\` should exist', () => {`,
           getWrapper(framework, mountCode),
           getDomExpect(framework, domInfo),
           getSnapshotCase(snapshot, framework),
@@ -83,7 +84,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     Object.entries(dom).forEach(([value, domInfo]) => {
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
       const oneValueArr = [
-        `it('props.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}', () => {`,
+        `it${getSkipCode(skip)}('props.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}', () => {`,
         getWrapper(framework, mountCode),
         getDomExpect(framework, domInfo),
         getSnapshotCase(snapshot, framework),

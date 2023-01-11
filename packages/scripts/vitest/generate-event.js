@@ -14,6 +14,7 @@ const {
   getEventName,
   getEventFnName,
 } = require("./core");
+const { getSkipCode } = require('./utils');
 
 /**
  * 人机交互测试
@@ -26,7 +27,7 @@ function generateEventUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
-  const { event, content, wrapper, delay } = test;
+  const { event, content, wrapper, delay, skip } = test;
   const extraCode = { content, wrapper };
   // click/blur/mouseEnter/...
   if (typeof event === 'object' && !Array.isArray(event)) {
@@ -38,7 +39,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
     const arr = [
-      `it('${component} Event: ${firstEvent}', ${isVue || reactAsync ? 'async' : ''} () => {
+      `it${getSkipCode(skip)}('${component} Event: ${firstEvent}', ${isVue || reactAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
@@ -64,7 +65,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const apiPrefix = category? `${category}.${oneApiData.field_name}: ` : '';
       const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
       const oneEventArr = [
-        `it(${itDescription}, ${async} () => {`,
+        `it${getSkipCode(skip)}(${itDescription}, ${async} () => {`,
         getEventsDefinition(expect),
         getWrapper(framework, mountCode),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
