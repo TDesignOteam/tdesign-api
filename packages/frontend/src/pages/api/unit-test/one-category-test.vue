@@ -429,7 +429,7 @@ export default {
         '不同的值，期望不同的根元素（或子元素）存在不同的属性。元素的 style/value/checked 等也属于属性测试。',
         '推荐规则一：{ "type": ["submit", "reset", "button"] }',
         '推荐规则二：{ "href": "https://tdesign.tencent.com/" }',
-        '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串',
+        '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串。【注意】这个规则不需要下方的「属性规则应用的 HTML 元素」',
         '如果是 style，直接使用 "style.flexWrap": "wrap" 即可'
       ]
     },

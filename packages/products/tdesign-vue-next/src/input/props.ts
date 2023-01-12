@@ -126,7 +126,7 @@ export default {
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputProps['onBlur']>,
-  /** 输入框值发生变化时触发 */
+  /** 输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制 */
   onChange: Function as PropType<TdInputProps['onChange']>,
   /** 清空按钮点击时触发 */
   onClear: Function as PropType<TdInputProps['onClear']>,

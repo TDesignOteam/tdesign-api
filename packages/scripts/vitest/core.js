@@ -131,8 +131,10 @@ function getPropsValue(value) {
   // 可能是一个函数，或者 TNode
   if (typeof value === 'string' && (
     value.indexOf('=>') !== -1
-    || value .indexOf('</') !== -1
-    || value .indexOf('/>') !== -1
+    || value.indexOf('</') !== -1
+    || value.indexOf('/>') !== -1
+    || /^\[.+\]$/.test(value)
+    || /^\{.+\}$/.test(value)
   )) return value;
   // 可能是一个对象或数组字符串
   try {

@@ -49250,7 +49250,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[{\"value\":\"name1 name2\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":true}}]},{\"value\":\"['name1', 'name2']\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":true}}]},{\"value\":\"{ name1: true, name2: false }\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":false}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49348,7 +49348,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"value\":\"你好 TDesign\"},\"attribute\":[{\"value\":\"4\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"你好\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49397,7 +49397,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"value\":\"Hello TDesign\"},\"attribute\":[{\"value\":\"5\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49673,7 +49673,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50067,7 +50067,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":{\"this is a tip\":{\".t-input__tips\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50274,10 +50274,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "输入框值发生变化时触发",
+      "field_desc_zh": "输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent })",
+      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent; trigger: 'input' | 'initial' | 'clear' })",
       "create_time": "2021-01-31 08:28:19",
       "update_time": "2022-03-28 06:10:41",
       "event_output": null,
