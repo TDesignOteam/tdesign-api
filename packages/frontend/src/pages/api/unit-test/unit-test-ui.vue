@@ -139,9 +139,13 @@ export default {
       const { currentTestJSON } = this
       if (currentTestJSON.PC) {
         this.formDataPC = this.updateFormData(this.formDataPC, currentTestJSON.PC)
+      } else {
+        this.formDataPC ={...INITIAL_FROM_DATA}
       }
       if (currentTestJSON.Mobile) {
         this.formDataMobile = this.updateFormData(this.formDataMobile, currentTestJSON.Mobile)
+      } else {
+        this.formDataMobile = {...INITIAL_FROM_DATA}
       }
     },
     
