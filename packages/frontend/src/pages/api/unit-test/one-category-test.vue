@@ -168,6 +168,15 @@
             </p> -->
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <label style="width: 100px">用例描述：</label>
+              <t-input
+                v-model="arrayEvent[index].description"
+                placeholder="选填，当前测试用例文本描述，默认为 xxx works fine"
+                @blur="onEventPropsChange"
+              ></t-input>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">组件属性：</label>
               <t-input
                 v-model="arrayEvent[index].props"
@@ -518,14 +527,11 @@ export default {
     },
 
     getEventDescription(expect) {
-      const { expectExist = [], expectNotExist = [] } = this.getExpectDesc(expect.exist)
+      const expectDesc = this.getExpectDesc(expect.exist)
       return [
         expect.trigger && `触发 ${expect.trigger}`,
         expect.delay && `延迟 ${expect.delay === 'true' ? 300 : expect.delay} 毫秒之后`,
-        expect.exist?.length && [
-          expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
-          expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
-        ].filter(v => v).join('，'),
+        expectDesc,
         expect.event && `期望 ${this.getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
       ].filter(v => v).join('，') + '。';
     },
@@ -534,20 +540,40 @@ export default {
       const exist = parseJSON(expectExistStr, [])
       const expectExist = []
       const expectNotExist = []
+      const attributeExist = []
       exist?.forEach((item) => {
         if (!item) return;
         if (typeof item === 'string') {
           expectExist.push(item)
         } else if (typeof item === 'object') {
           const keys = Object.keys(item)
+          console.log(keys);
           if (item[keys[0]] === false) {
             expectNotExist.push(keys[0])
+          } else if (item[keys[0]].attribute) {
+            const list = [];
+            keys.forEach((dom) => {
+              Object.keys(item[dom].attribute).forEach((attributeName) => {
+                list.push({
+                  dom,
+                  attributeName: attributeName,
+                  attributeValue: item[dom].attribute[attributeName],
+                });
+              })
+            })
+            attributeExist.push(...list);
           } else [
             expectExist.push(keys[0])
           ]
         }
       })
-      return { expectExist, expectNotExist }
+      return [
+        expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
+        expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
+        attributeExist.length && attributeExist.map((item) => (
+          `期望元素 ${item.dom} 的属性 ${item.attributeName} 值为 ${item.attributeValue}`
+        )).join('，'),
+      ].filter(v => v).join('，');
     },
 
   },

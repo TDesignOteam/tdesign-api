@@ -239,6 +239,7 @@ export default {
       if (eventData.arrayEvent) {
         return eventData.arrayEvent.map((item) => ({
           props: item.props ? parseJSON(item.props) : undefined,
+          description: item.description,
           expect: item.expect.map((ep) => ({
             trigger: ep.trigger,
             event: ep.event ? parseJSON(ep.event) : undefined,

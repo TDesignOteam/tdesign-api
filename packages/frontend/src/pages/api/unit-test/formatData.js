@@ -46,6 +46,7 @@ export function getEventTestData(eventType, formData) {
   if (eventType === 'array' && formData.event.length) {
     tmpArrayEvents = formData.event.map(item => ({
       props: item.props ? JSON.stringify(item.props) : '',
+      description: item.description,
       expect: item.expect.map((ep) => ({
         trigger: ep.trigger,
         event: JSON.stringify(ep.event),

@@ -5,11 +5,20 @@
     @confirm="onConfirm"
     @cancel="onCancel"
   >
-    <t-input v-model="eventData.trigger" placeholder="选填，用户操作事件，示例：mouseenter(.t-input)"></t-input>
+    <t-tooltip theme="light">
+      <template #content>
+        <t-link
+          href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
+          target="_blank"
+          theme="primary"
+        >所有交互操作(事件)</t-link>
+      </template>
+      <t-input v-model="eventData.trigger" placeholder="选填，交互操作，示例：mouseenter(.t-input)"></t-input>
+    </t-tooltip>
 
     <t-tooltip theme="light">
       <template #content>格式：JSON。用户操作事件触发后，期望哪些元素存在或不存在。示例：[{ ".t-image": false, ".t-radio__label": 3 }]</template>
-      <t-input v-model="eventData.exist" placeholder="选填，期望哪些元素存在或不存在" style="margin-top: 16px"></t-input>
+      <t-input v-model="eventData.exist" placeholder="选填，校验元素" style="margin-top: 16px"></t-input>
     </t-tooltip>
 
     <t-tooltip theme="light">
@@ -24,13 +33,13 @@
         </p>
       </template>
 
-      <t-textarea v-model="eventData.event" placeholder="选填，校验触发的多个事件及其参数" style="margin-top: 16px"></t-textarea>
+      <t-textarea v-model="eventData.event" placeholder="选填，组件触发事件及其参数" style="margin-top: 16px"></t-textarea>
     </t-tooltip>
 
-    <t-tooltip theme="light" content="时间延迟多少毫秒触发。示例值：300/400/500..." placement="top-left">
+    <t-tooltip theme="light" content="时间延迟多少毫秒触发。示例值：300/400/500...低于 300 毫秒可不填" placement="top-left">
       <t-input
         v-model="eventData.delay"
-        placeholder="选填，时间延迟多少毫秒触发，低于 300 毫秒可不填"
+        placeholder="选填，延迟时间"
         suffix="毫秒"
         style="margin-top: 16px"
       ></t-input>
