@@ -253,17 +253,34 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   }
 }
 
-function getDocumentDomExpectCount(domSelector, countOrIndex, framework) {
+function getDocumentDomExpect(domSelector, countOrText, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
   const isVue = framework.indexOf('Vue') !== -1;
+  const isObject = typeof countOrText === 'object';
+  const querySelector = isObject ? 'querySelector' : 'querySelectorAll';
   return [
-    `const ${domVariable} = document.querySelectorAll('${selector}')`,
-    `expect(${domVariable}.length).toBe(${countOrIndex});`,
+    `const ${domVariable} = document.${querySelector}('${selector}')`,
+    (() => {
+      if (typeof countOrText === 'number') {
+        return getDocumentDomExpectCount(domVariable, countOrText);
+      }
+      if (isObject) {
+        return getDocumentDomTextExpect(domVariable, countOrText);
+      }
+    })(),
     isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
     isVue ? `${domVariable}.forEach(node => node.remove());` : '',
   ].filter(v => v).join('\n');
 }
+
+function getDocumentDomExpectCount(domVariable, count) {
+  return `expect(${domVariable}.text()).toBe(${count});`
+}
+
+function getDocumentDomTextExpect(domVariable, textInfo) {
+  return `expect(${domVariable}.textContent()).toBe('${textInfo.text}');`
+} 
 
 /**
  * 验证某个 DOM 存在的数量
@@ -280,7 +297,12 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
       clearElement = countOrIndex;
       return;
     }
-    return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
+    if (typeof countOrIndex === 'number') {
+      return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
+    }
+    if (typeof countOrIndex === 'object') {
+      return getOneDomTextExpectCode(framework, className, countOrIndex, wrapperIndex);
+    }
   });
   if (clearElement) {
     arr.push(getClearDomInDocumentCode(clearElement, framework));
@@ -301,13 +323,26 @@ function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperInd
   if (isNaN(countOrIndex)) return;
   // 在整个文档范围内查询节点（此时的元素不在组件内部）
   if (className.indexOf('document') !== -1) {
-    return getDocumentDomExpectCount(className, countOrIndex, framework);
+    return getDocumentDomExpect(className, countOrIndex, framework);
   }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
   }
   if (framework.indexOf('React') !== -1) {
     return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
+  }
+}
+
+function getOneDomTextExpectCode(framework, className, textInfo, wrapperIndex) {
+  // 在整个文档范围内查询节点（此时的元素不在组件内部）
+  if (className.indexOf('document') !== -1) {
+    return getDocumentDomExpect(className, textInfo, framework);
+  }
+  if (framework.indexOf('Vue') !== -1) {
+    return `expect(wrapper${wrapperIndex}.find('${className}').text()).toBe('${textInfo.text}');`;
+  }
+  if (framework.indexOf('React') !== -1) {
+    return `expect(container${wrapperIndex}.querySelector('${className}').textContent).toBe('${textInfo.text}');`;
   }
 }
 
