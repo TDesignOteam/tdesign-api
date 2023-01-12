@@ -36,7 +36,7 @@
         </t-form-item>
 
         <t-form-item>
-          <t-tooltip theme="light" content="示例一：Text；示例二：<span>children</span>">
+          <t-tooltip theme="light" content="示例一：Text，输出 <Button>Text</Button>； 示例二：<span>children</span>， 输出：<Button><span>children</span></Button>">
             <t-input
               v-model="formData.content"
               placeholder="子组件"

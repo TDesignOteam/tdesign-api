@@ -49074,7 +49074,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49333,7 +49333,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"trigger\":\"\",\"dom\":[\".t-input__prefix\"]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49480,7 +49480,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":{\"name\":\"input-name\"},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49528,7 +49528,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"this is input placeholder\"},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49576,7 +49576,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":{\"trigger\":\"\",\"dom\":[\".t-input__prefix-icon\"]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49663,7 +49663,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

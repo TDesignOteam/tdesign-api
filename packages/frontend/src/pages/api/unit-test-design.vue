@@ -233,7 +233,7 @@ export default {
         formData.list.map((item) => {
           tmpJSON[item.category] = item[item.category]
           if (item.className) {
-            tmpJSON.className = parseJSON(item.className)
+            tmpJSON.className = parseJSON(item.className, item.className)
           }
           if (trigger === 'className' && item.category === 'className') {
             tmpJSON.classNameDom = item.classNameDom
