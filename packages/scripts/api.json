@@ -6159,7 +6159,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"snapshot\":true,\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"snapshot\":true,\"props\":{\"max\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

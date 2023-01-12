@@ -16,6 +16,7 @@
             @change="() => onFormDataChange('tnode')"></t-tag-input>
         </t-tooltip>
       </div>
+
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
           <t-input v-model="formData.tnode.trigger" placeholder="触发自定义节点显示的前置事件，如：focus(.t-input__wrap)"
@@ -27,6 +28,13 @@
                 target="_blank">所有事件列表</t-link>
             </p>
           </template>
+        </t-tooltip>
+      </div>
+
+      <div class="unit-test-ui__form-item-inner">
+        <t-tooltip theme="light" content="还需要添加哪些属性到组件">
+          <t-input v-model="formData.props" placeholder="添加额外的组件属性，格式：JSON"
+            @blur="() => onFormDataChange('tnode')"></t-input>
         </t-tooltip>
       </div>
     </template>
@@ -263,6 +271,11 @@ export default {
       default: () => ({}),
     },
     categories: Array,
+    // 被测试组件的额外属性
+    testProps: {
+      type: Object,
+      default: () => ({}),
+    },
   },
 
   data() {
@@ -292,6 +305,18 @@ export default {
   },
 
   watch: {
+    // TODO，不同的测试用例支持不同的 props
+    testProps: {
+      immediate: true,
+      handler(props) {
+        if (!this.formData) return;
+        this.$nextTick(() => {
+          const tmpProps = typeof props === 'string' ? parseJSON(props) : props;
+          const oldProps = this.formData.props ? JSON.parse (this.formData.props) : {};
+          this.$set(this.formData, 'props', JSON.stringify({ ...oldProps, ...tmpProps }));
+        });
+      }
+    },
     data: {
       immediate: true,
       handler(formData) {

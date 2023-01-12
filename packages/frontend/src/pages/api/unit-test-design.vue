@@ -237,16 +237,15 @@ export default {
           }
           if (trigger === 'className' && item.category === 'className') {
             tmpJSON.classNameDom = item.classNameDom
-            listProps = parseJSON(item.props)
           }
           if (item.attribute) {
             tmpJSON.attribute = parseJSON(item.attribute)
           }
           if (trigger === 'attribute' && item.category === 'attribute') {
             tmpJSON.attributeDom = item.attributeDom
-            listProps = parseJSON(item.props)
           }
-          if (trigger === 'dom' && item.category === 'dom') {
+          const tmpList = ['tnode', 'className', 'attribute', 'dom']
+          if (tmpList.includes(trigger) && tmpList.includes(item.category)) {
             listProps = parseJSON(item.props)
           }
           if (item.dom) {

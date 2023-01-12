@@ -12,6 +12,7 @@
             :apiInfo="apiInfo"
             :data="item"
             :categories="categories"
+            :testProps="formData.props"
             @formDataChange="(trigger, params) => onOneCategoryTestChange(trigger, params, index)"
           >
             <template #operation>
@@ -168,13 +169,12 @@ export default {
           }
           if (key === 'className') {
             obj.classNameDom = testJSON.classNameDom
-            obj.props = testJSON.props
           } else if (key === 'attribute') {
             obj.attributeDom = testJSON.attributeDom
+          }
+          if (['tnode', 'className', 'attribute', 'dom'].includes('key')) {
             obj.props = testJSON.props
-          } else if (key === 'dom') [
-            obj.props = testJSON.props
-          ]
+          }
           newFormData.list.push(obj)
         }
       })

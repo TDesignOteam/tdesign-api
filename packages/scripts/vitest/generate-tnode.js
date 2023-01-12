@@ -23,23 +23,26 @@ function generateTNodeElement(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactTNode(test, oneApiData, framework, component) {
-  const { tnode, snapshot, content, wrapper, skip } = test;
+  const { tnode, props, snapshot, content, wrapper, skip } = test;
   const extraCode = { content, wrapper };
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
     const h = framework === 'Vue(PC)' ? 'h' : '';
     componentCode = getMountComponent(framework, component, {
       [oneApiData.field_name]: `(${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+      ...props,
     }, extraCode);
   } else if (framework.indexOf('React') !== -1) {
     if (oneApiData.field_name === 'children') {
       componentCode = getMountComponent(framework, component, {}, {
         ...extraCode,
         content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+        ...props,
       });
     } else {
       componentCode = getMountComponent(framework, component, {
         [oneApiData.field_name]: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+        ...props,
       }, extraCode);
     }
   }
@@ -50,14 +53,14 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
     framework, component, snapshot, tnode, skip,
   });
 
-  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip);
+  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props);
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
   }
   return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip) {
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];
@@ -68,6 +71,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     const h = slotsText === 'scopedSlots' ? 'h' : '';
     const slotCodeProps = {
       [slotsText]: `{ ${oneApiData.field_name}: (${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
+      ...props,
     };
     if (isBothBooleanAndTNode) {
       slotCodeProps[oneApiData.field_name] = true;
@@ -84,6 +88,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
       const slotCodeProps2 = {
         [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
+        ...props,
       };
       if (isBothBooleanAndTNode) {
         slotCodeProps2[oneApiData.field_name] = true;
