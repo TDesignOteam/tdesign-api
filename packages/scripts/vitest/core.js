@@ -305,7 +305,13 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
       return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
     }
     if (typeof countOrIndex === 'object') {
-      return getOneDomTextExpectCode(framework, className, countOrIndex, wrapperIndex);
+      // textContent
+      if (countOrIndex.text) {
+        return getOneDomTextExpectCode(framework, className, countOrIndex, wrapperIndex);
+      }
+      if (countOrIndex.attribute) {
+        return getOneDomAttributeExpectCode(framework, className, countOrIndex, wrapperIndex);
+      }
     }
   });
   if (clearElement) {
@@ -348,6 +354,25 @@ function getOneDomTextExpectCode(framework, className, textInfo, wrapperIndex) {
   if (framework.indexOf('React') !== -1) {
     return `expect(container${wrapperIndex}.querySelector('${className}').textContent).toBe('${textInfo.text}');`;
   }
+}
+
+function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperIndex) {
+  const arr = [];
+  const isVue = framework.indexOf('Vue') !== -1;
+  const isReact = framework.indexOf('isReact') !== -1;
+  if (isVue) {
+    arr.push(`const attrDom${wrapperIndex} = wrapper${wrapperIndex}.find('${className}');`);
+  } else if (isReact) {
+    arr.push(`const attrDom${wrapperIndex} = container${wrapperIndex}.querySelector('${className}';`);
+  }
+  Object.entries(attrInfo.attribute).forEach(([attributeName, attributeValue]) => {
+    if (isVue) {
+      arr.push(getVueOneAttributeCode(framework, `attrDom${wrapperIndex}`, attributeName, attributeValue));
+    } else if (isReact) {
+      arr.push(getReactOneAttributeCode(framework, `attrDom${wrapperIndex}`, attributeName, attributeValue, 'attrDom'));
+    }
+  });
+  return arr.filter(v => v).join('\n');
 }
 
 function getClassNameExpectTruthy(framework, className, wrapperIndex = '', goalDom = '') {

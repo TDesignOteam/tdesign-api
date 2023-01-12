@@ -17,7 +17,16 @@
     </t-tooltip>
 
     <t-tooltip theme="light">
-      <template #content>格式：JSON。用户操作事件触发后，期望哪些元素存在或不存在。示例：[{ ".t-image": false, ".t-radio__label": 3 }]</template>
+      <template #content>
+        <p>
+          <p>格式：JSON。</p>
+          <p>[".t-image"] 期望元素 .t-image 存在</p>
+          <p>[{ ".t-image": false }] 期望元素 .t-image 不存在</p>
+          <p>[{ ".t-image": 3 }] 期望元素 .t-image 存在 3 个</p>
+          <p>[{ ".t-image": { "text": "+1" } }] 期望元素 .t-image 存在文本 +1</p>
+          <p>[{ ".t-input": { "attribute": { "value": "input value" } } }] 期望元素 .t-image 的属性 value 值为 "input value" </p>
+        </p>
+      </template>
       <t-input v-model="eventData.exist" placeholder="选填，校验元素" style="margin-top: 16px"></t-input>
     </t-tooltip>
 

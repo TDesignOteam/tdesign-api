@@ -575,7 +575,6 @@ export default {
         )).join('，'),
       ].filter(v => v).join('，');
     },
-
   },
 };
 </script>
