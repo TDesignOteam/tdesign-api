@@ -18,7 +18,7 @@
       </div>
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
-          <t-input v-model="formData.tnode.trigger" placeholder="触发自定义节点显示的事件，如：focus(.t-input__wrap)"
+          <t-input v-model="formData.tnode.trigger" placeholder="触发自定义节点显示的前置事件，如：focus(.t-input__wrap)"
             @change="() => onFormDataChange('tnode')"></t-input>
           <template #content>
             <p>

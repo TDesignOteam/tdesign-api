@@ -44,18 +44,25 @@
           </t-tooltip>
         </t-form-item>
 
+        <t-form-item>
+          <t-tooltip theme="light">
+            <template #content>
+              <p>{{ `const wrapper = mount(< RadioGroup ></ RadioGroup >)` }} 默认获取组件实例方法。</p>
+              <p>{{ `const wrapper = getRadioGroupDefaultMount(RadioGroup, {})` }} 填写后的获取实例方法，一般用于存在子组件的场景</p>
+            </template>
+            <t-input
+              v-model="formData.wrapper"
+              placeholder="获取组件实例的函数名称，类子组件场景，如：getRadioGroupDefaultMount"
+              @change="() => onFormDataChange('wrapper')"
+            ></t-input>
+          </t-tooltip>
+        </t-form-item>
+
         <t-form-item style="margin: 16px 0 8px 0">
           <t-checkbox v-model="formData.snapshot" @change="() => onFormDataChange('snapshot')">生成快照（Snapshots）</t-checkbox>
         </t-form-item>
 
-        <t-form-item>
-          <t-input
-            v-model="formData.wrapper"
-            placeholder="获取组件实例的函数名称，如：getRadioGroupDefaultMount"
-            @change="() => onFormDataChange('wrapper')"
-          ></t-input>
-        </t-form-item>
-        <t-form-item style="margin: -12px 0 8px 0">
+        <t-form-item style="margin: 0px 0 8px 0">
           <t-checkbox v-model="formData.needCopy">复用当前所有测试用例到其他「组件实例」</t-checkbox>
         </t-form-item>
         <t-form-item v-if="formData.needCopy">
@@ -66,7 +73,7 @@
           ></t-input>
         </t-form-item>
 
-        <t-form-item style="margin: 16px 0 8px 0">
+        <t-form-item>
           <t-checkbox v-model="formData.skip" @change="() => onFormDataChange('skip')">跳过当前测试用例</t-checkbox>
         </t-form-item>
       </t-form>
