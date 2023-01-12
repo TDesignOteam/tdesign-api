@@ -117,7 +117,7 @@ function getExistDomExpect(framework, exist) {
 
 function getEventArguments(args, fnName = 'fn') {
   if (typeof args === 'string' && args === 'not') {
-    return [`expect(${fnName}).not.toHaveBeenCalled();`];
+    return [`expect(${fnName}).not.toHaveBeenCalled(1);`];
   }
   if (!Array.isArray(args)) return [];
   const arr = args.map((oneArgument, index) => {
@@ -140,7 +140,7 @@ function getEventArguments(args, fnName = 'fn') {
     }
     return getOneArgEqual(fnName, index, oneArgument);
   });
-  arr.unshift(`expect(${fnName}).toHaveBeenCalled();`);
+  arr.unshift(`expect(${fnName}).toHaveBeenCalled(1);`);
   return arr;
 }
 
