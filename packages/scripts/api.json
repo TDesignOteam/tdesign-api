@@ -49790,7 +49790,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49878,7 +49878,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":[{\"t-is-default\":false},\"t-is-success\",\"t-is-warning\",\"t-is-error\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49965,7 +49965,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[\".t-input__suffix\"],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50014,7 +50014,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[\".t-input__suffix-icon\"],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50151,7 +50151,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":{\"type\":[\"text\",\"number\",\"url\",\"tel\",\"password\",\"search\",\"submit\",\"hidden\"]},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
