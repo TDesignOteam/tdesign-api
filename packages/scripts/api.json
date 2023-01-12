@@ -48809,7 +48809,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"keydown\", \"event\": { \"validate\": [{ \"error\": \"exceed-maximum\" }] } }],\n      \"props\": { \"value\": \"'Hello'\", \"maxlength\": 5 }\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"expect\":[{\"trigger\":\"keydown\",\"event\":{\"validate\":[{\"error\":\"exceed-maximum\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -48895,7 +48895,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":{\"autocomplete\":\"https://tdesign.tencent.com/\"},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49025,7 +49025,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

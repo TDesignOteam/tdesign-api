@@ -521,7 +521,7 @@ export default {
       const { expectExist = [], expectNotExist = [] } = this.getExpectDesc(expect.exist)
       return [
         expect.trigger && `触发 ${expect.trigger}`,
-        expect.delay && `延迟 ${expect.delay} 毫秒之后`,
+        expect.delay && `延迟 ${expect.delay === 'true' ? 300 : expect.delay} 毫秒之后`,
         expect.exist?.length && [
           expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
           expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
