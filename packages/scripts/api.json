@@ -49749,7 +49749,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"showLimitNumber\":true,\"maxlength\":5,\"value\":\"TD\"},\"dom\":[{\".t-input__limit-number\":{\"text\":\"2/5\"}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
