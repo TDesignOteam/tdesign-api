@@ -86,6 +86,7 @@
 import OneCategoryTest from './one-category-test'
 import { INITIAL_CATEGORY, INITIAL_FROM_DATA, CATEGORY_OPTIONS } from './const'
 import { parseJSON } from '../util'
+import cloneDeep from 'lodash/cloneDeep'
 
 export default {
   name: 'UnitTestUI',
@@ -104,8 +105,8 @@ export default {
     return {
       // PC/Mobile
       framework: 'PC',
-      formDataPC: {...INITIAL_FROM_DATA},
-      formDataMobile: {...INITIAL_FROM_DATA},
+      formDataPC: cloneDeep(INITIAL_FROM_DATA),
+      formDataMobile: cloneDeep(INITIAL_FROM_DATA),
       frameWorkOptions: [
         { label: 'PC', value: 'PC' },
         { label: 'Mobile', value: 'Mobile' },
@@ -126,26 +127,18 @@ export default {
     },
   },
 
-  // watch: {
-  //   currentTestJSON: {
-  //     handler(currentTestJSON) {  
-  //     },
-  //     immediate: true,
-  //   },
-  // },
-
   methods: {
     updateDataByJSON() {
       const { currentTestJSON } = this
       if (currentTestJSON.PC) {
         this.formDataPC = this.updateFormData(this.formDataPC, currentTestJSON.PC)
       } else {
-        this.formDataPC ={...INITIAL_FROM_DATA}
+        this.formDataPC = cloneDeep(INITIAL_FROM_DATA)
       }
       if (currentTestJSON.Mobile) {
         this.formDataMobile = this.updateFormData(this.formDataMobile, currentTestJSON.Mobile)
       } else {
-        this.formDataMobile = {...INITIAL_FROM_DATA}
+        this.formDataMobile = cloneDeep(INITIAL_FROM_DATA)
       }
     },
     
@@ -251,8 +244,8 @@ export default {
     },
 
     clearFormData() {
-      this.formDataPC = {...INITIAL_FROM_DATA}
-      this.formDataMobile = {...INITIAL_FROM_DATA}
+      this.formDataPC = cloneDeep(INITIAL_FROM_DATA)
+      this.formDataMobile = cloneDeep(INITIAL_FROM_DATA)
     },
 
     onAddMore() {
