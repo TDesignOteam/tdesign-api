@@ -91,7 +91,7 @@ function getUnitTestCode(baseData, framework) {
       const { oneUnitTests, hasEvent, importedMounts } = getOneUnitTest(framework, component, oneApiData, testDescription);
       if (oneUnitTests && oneUnitTests.length) {
         oneComponentTests = oneComponentTests.concat(oneUnitTests);
-        configFlag.hasEvent = hasEvent;
+        configFlag.hasEvent = hasEvent || configFlag.hasEvent;
         importedMounts.forEach((oneMount) => {
           configFlag.importedMounts.add(oneMount);
         });
