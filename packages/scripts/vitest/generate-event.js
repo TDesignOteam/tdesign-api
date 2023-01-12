@@ -93,7 +93,7 @@ function getEventExpectCode(p, index, framework, component) {
 
   const arr = [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }),
-    getExistDomExpect(framework, exist),
+    getExistDomExpect(framework, exist, index),
     event && Object.entries(event).map(([eventName, args]) => {
       const fnName = getEventFnName(eventName, index);
       return [
@@ -105,11 +105,11 @@ function getEventExpectCode(p, index, framework, component) {
   return arr.filter(v => v).join('');
 }
 
-function getExistDomExpect(framework, exist) {
+function getExistDomExpect(framework, exist, eventIndex) {
   const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
   return tmpExist.map((domSelector) => {
     if (typeof domSelector === 'object') {
-      return getDomCountExpectCode(framework, domSelector);
+      return getDomCountExpectCode(framework, domSelector, '', eventIndex);
     }
     return getDomExpectTruthy(framework, `'${domSelector}'`);
   }).join('\n');

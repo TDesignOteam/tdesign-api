@@ -293,7 +293,7 @@ function getDocumentDomTextExpect(domVariable, textInfo, framework) {
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  * @returns 
  */
-function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
+function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '', eventIndex = '') {
   let clearElement = '';
   const arr = Object.entries(domAndCount).map(([className, countOrIndex]) => {
     // 如果是清空
@@ -310,7 +310,7 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '') {
         return getOneDomTextExpectCode(framework, className, countOrIndex, wrapperIndex);
       }
       if (countOrIndex.attribute) {
-        return getOneDomAttributeExpectCode(framework, className, countOrIndex, wrapperIndex);
+        return getOneDomAttributeExpectCode(framework, className, countOrIndex, wrapperIndex, eventIndex);
       }
     }
   });
@@ -356,20 +356,21 @@ function getOneDomTextExpectCode(framework, className, textInfo, wrapperIndex) {
   }
 }
 
-function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperIndex) {
+function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperIndex, domIndex) {
   const arr = [];
   const isVue = framework.indexOf('Vue') !== -1;
-  const isReact = framework.indexOf('isReact') !== -1;
+  const isReact = framework.indexOf('React') !== -1;
+  const domVariable = `attrDom${wrapperIndex || ''}${domIndex || ''}`;
   if (isVue) {
-    arr.push(`const attrDom${wrapperIndex} = wrapper${wrapperIndex}.find('${className}');`);
+    arr.push(`const ${domVariable} = wrapper${wrapperIndex}.find('${className}');`);
   } else if (isReact) {
-    arr.push(`const attrDom${wrapperIndex} = container${wrapperIndex}.querySelector('${className}';`);
+    arr.push(`const ${domVariable} = container${wrapperIndex}.querySelector('${className}');`);
   }
   Object.entries(attrInfo.attribute).forEach(([attributeName, attributeValue]) => {
     if (isVue) {
-      arr.push(getVueOneAttributeCode(framework, `attrDom${wrapperIndex}`, attributeName, attributeValue));
+      arr.push(getVueOneAttributeCode(framework, domVariable, attributeName, attributeValue));
     } else if (isReact) {
-      arr.push(getReactOneAttributeCode(framework, `attrDom${wrapperIndex}`, attributeName, attributeValue, 'attrDom'));
+      arr.push(getReactOneAttributeCode(framework, domVariable, attributeName, attributeValue, 'attrDom'));
     }
   });
   return arr.filter(v => v).join('\n');

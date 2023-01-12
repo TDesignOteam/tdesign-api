@@ -49178,7 +49178,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -49202,7 +49203,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"format\":\"(val) => `${val} 元`\",\"value\":\"'100'\"},\"description\":\"focus and blur states have different value\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"100\"}}}]},{\"trigger\":\"blur(input)\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"100 元\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49211,43 +49212,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
-    },
-    {
-      "id": 3116,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "format",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】指定输入框展示值的格式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 17:11:19",
-      "update_time": "2022-10-31 17:11:19",
-      "event_output": null,
-      "custom_field_type": "InputFormatType【type InputFormatType = (value: InputValue) => string】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -62582,7 +62547,7 @@
       ],
       "field_default_value": "default",
       "field_enum": "default/warning/danger",
-      "field_desc_zh": "文字提示风格",
+      "field_desc_zh": "文字提示风格。如果期望不显示文本前方的主题图标，请更为设置 `icon` 为 `null`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -110223,5 +110188,5 @@
       ]
     }
   ],
-  "total": 2632
+  "total": 2631
 }

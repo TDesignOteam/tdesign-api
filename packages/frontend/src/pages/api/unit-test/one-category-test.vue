@@ -119,7 +119,19 @@
             </p>
           </template>
           <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则"
-            @blur="() => onFormDataChange('dom')"></t-textarea>
+            @blur="() => onFormDataChange('dom')">
+          </t-textarea>
+        </t-tooltip>
+
+        <t-tooltip theme="light" trigger="click" placement="bottom-left">
+          <t-button variant="text" theme="primary" size="small">点击查看规则细节</t-button>
+          <template #content>
+            <p>
+              <template v-for="item in getDomMoreTips()">
+                <p>{{ item }}</p>
+              </template>
+            </p>
+          </template>
         </t-tooltip>
       </div>
       <div class="unit-test-ui__form-item-inner">
@@ -406,7 +418,7 @@ export default {
         `推荐规则二：["t-size-s", "t-size-m", "t-size-l"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
         `推荐规则三：{ "underline": "t-link--hover-underline" }。不存在枚举值。`,
         // ，点击下方高级设置
-        `推荐规则四：[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]。不同的值对应多个不同的元素和类名。这个规则，不需要填写下方的 「类名规则应用的 HTML 元素」`,
+        `推荐规则四：[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]。不同的值对应多个不同的元素和类名。【注意】这个规则，不需要填写下方的 「类名规则应用的 HTML 元素」`,
       ]
     },
 
@@ -426,12 +438,21 @@ export default {
     getDomRecommend() {
       return [
         '元素校验规则：',
-        '不同的值，期望存在不同的 DOM 元素。',
         '推荐规则一：["button", "a", "div"]。存在枚举值，依次验证这几个元素是否存在。如：Button.tag',
         '推荐规则二：["tfoot.t-table__footer", { "tfoot > tr": 2 }]。直接校验组件实例是否存在这些元素，数字表示存在几个',
         '推荐规则三：{ "[3, 1]": { ".t-table__row--fixed-top": 3 } }。表示值为 [3, 1] 时，校验 .t-table__row--fixed-top 是否存在 3 个',
         '注意：如果元素不在组件内部，只能通过 document 查询，可以设置 "document.t-popup"',
       ]
+    },
+
+    getDomMoreTips() {
+      return [
+        '[".t-image"] 期望元素 .t-image 存在',
+        '[{ ".t-image": false }] 期望元素 .t-image 不存在',
+        '[{ ".t-image": 3 }] 期望元素 .t-image 存在 3 个',
+        '[{ ".t-image": { "text": "+1" } }] 期望元素 .t-image 存在文本 +1',
+        '[{ ".t-input": { "attribute": { "value": "input value" } } }] 期望元素 .t-image 的属性 value 值为 "input value"',
+      ];
     },
 
     onObjectEventAdd(index) {
