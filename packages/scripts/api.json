@@ -6159,7 +6159,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"snapshot\":true,\"props\":{\"max\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"snapshot\":true,\"props\":{\"max\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -6300,47 +6300,6 @@
       ]
     },
     {
-      "id": 1599,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "AvatarGroup",
-      "field_category": 1,
-      "field_name": "placement",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "left/top/bottom/right",
-      "field_desc_zh": "超出的头像呈现位置",
-      "field_desc_en": "popup placement",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-02 07:20:19",
-      "update_time": "2021-09-13 03:19:03",
-      "event_output": null,
-      "custom_field_type": "MaxOverPlacement【type MaxOverPlacement = 'left' | 'top' | 'bottom' | 'right'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1598,
       "platform_framework": [
         "1",
@@ -6414,7 +6373,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"className\":[{\"value\":\"small\",\"expect\":[{\"dom\":\".t-avatar\",\"className\":{\"t-size-s\":true}},{\"dom\":\".t-avatar:nth-child(5)\",\"className\":{\"t-size-l\":true}}]},{\"value\":\"large\",\"expect\":[{\"dom\":\".t-avatar\",\"className\":{\"t-size-l\":true}},{\"dom\":\".t-avatar:nth-child(4)\",\"className\":{\"t-size-s\":true}}]}],\"attribute\":[{\"value\":\"120px\",\"expect\":[{\"dom\":\".t-avatar\",\"attribute\":{\"style.width\":\"120px\",\"style.height\":\"120px\",\"style.fontSize\":\"60px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -110264,5 +110223,5 @@
       ]
     }
   ],
-  "total": 2633
+  "total": 2632
 }

@@ -273,7 +273,7 @@ export default {
     categories: Array,
     // 被测试组件的额外属性
     testProps: {
-      type: Object,
+      type: [Object, String],
       default: () => ({}),
     },
   },
@@ -313,7 +313,8 @@ export default {
         this.$nextTick(() => {
           const tmpProps = typeof props === 'string' ? parseJSON(props) : props;
           const oldProps = this.formData.props ? JSON.parse (this.formData.props) : {};
-          this.$set(this.formData, 'props', JSON.stringify({ ...oldProps, ...tmpProps }));
+          const finalProps = { ...oldProps, ...tmpProps };
+          this.$set(this.formData, 'props', Object.keys(finalProps).length ? JSON.stringify(finalProps) : '');
         });
       }
     },

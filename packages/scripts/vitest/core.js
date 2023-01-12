@@ -125,7 +125,7 @@ function getPropsObjectString(props, events) {
 
 function getPropsValue(value) {
   // 带多余引号的字符串
-  if (/^'.+'$/.test(value)) return value.slice(1, -1);
+  if (/^'.+'$/.test(value)) return value;
   // 测试用例变量
   if (/\/-.+-\//.test(value)) return value.slice(2, -2);
   // 可能是一个函数，或者 TNode
