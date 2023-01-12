@@ -266,7 +266,7 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
         return getDocumentDomExpectCount(domVariable, countOrText);
       }
       if (isObject) {
-        return getDocumentDomTextExpect(domVariable, countOrText);
+        return getDocumentDomTextExpect(domVariable, countOrText, framework);
       }
     })(),
     isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
@@ -275,11 +275,15 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
 }
 
 function getDocumentDomExpectCount(domVariable, count) {
-  return `expect(${domVariable}.text()).toBe(${count});`
+  return `expect(${domVariable}.length).toBe(${count});`
 }
 
-function getDocumentDomTextExpect(domVariable, textInfo) {
-  return `expect(${domVariable}.textContent()).toBe('${textInfo.text}');`
+function getDocumentDomTextExpect(domVariable, textInfo, framework) {
+  if (framework.indexOf('Vue') !== -1) {
+    return `expect(${domVariable}.text()).toBe('${textInfo.text}');`
+  } else if (framework.indexOf('React') !== -1) {
+    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`
+  }
 } 
 
 /**
