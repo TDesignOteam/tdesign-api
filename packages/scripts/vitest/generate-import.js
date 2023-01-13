@@ -92,7 +92,7 @@ function getImportsConfig(params = {}, tests) {
   if (importedTestUtils && importedTestUtils.length) {
     const list = [...new Set(importedTestUtils)];
     Object.keys(obj).forEach(framework => {
-      obj[framework]['@test/utils'] = list;
+      obj[framework]['@test/utils'] = obj[framework]['@test/utils'].concat(list);
     });
   }
   return obj;
