@@ -696,9 +696,9 @@ function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex 
       tmpDom = `document.querySelector(${tDom})`;
     }
     tmpDom = `const ${domVariable} = ` + tmpDom;
-    const params = [tmpDom, eventModifier].filter(v => v).join(', ');
-    const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
-    arr.push(eventCode);
+    // const params = [tmpDom, eventModifier].filter(v => v).join(', ');
+    // const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
+    arr.push(tmpDom);
   }
   arr.push(`${simulateEvent}(${[`${domVariable}`].concat(args.slice(1)).join(', ')});`);
   return arr.join('\n');
