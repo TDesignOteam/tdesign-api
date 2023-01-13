@@ -46,7 +46,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
         getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(event[currentEvent].arguments).join('\n')}`,
+        `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
       `});`,
     ];
     return arr;
@@ -100,7 +100,7 @@ function getEventExpectCode(p, index, framework, component) {
     event && Object.entries(event).map(([eventName, args]) => {
       const fnName = getEventFnName(eventName, index);
       return [
-        getEventArguments(args, fnName).join(''),
+        getEventArguments(framework, args, fnName).join(''),
       ].join('\n');
     }).join('\n'),
     clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),
@@ -118,7 +118,7 @@ function getExistDomExpect(framework, exist, eventIndex) {
   }).join('\n');
 }
 
-function getEventArguments(args, fnName = 'fn') {
+function getEventArguments(framework, args, fnName = 'fn') {
   if (typeof args === 'string' && args === 'not') {
     return [`expect(${fnName}).not.toHaveBeenCalled(1);`];
   }
@@ -126,7 +126,7 @@ function getEventArguments(args, fnName = 'fn') {
   const arr = args.map((oneArgument, index) => {
     if (oneArgument === undefined) return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
-      return getOneArgEqual(fnName, index, `'${oneArgument}'`);
+      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
       return Object.keys(oneArgument).map(oneProperty => {
@@ -138,23 +138,26 @@ function getEventArguments(args, fnName = 'fn') {
             : `expect(${expectInfo}).toBeTruthy();`;
         }
         const expectVal = typeof value === 'string' && !isRegExp(value) ? `'${value}'` : value;
-        return getOneArgEqual(fnName, index, expectVal, oneProperty);
+        return getOneArgEqual(framework, fnName, index, expectVal, oneProperty);
       }).join('\n');
     }
-    return getOneArgEqual(fnName, index, oneArgument);
+    return getOneArgEqual(framework, fnName, index, oneArgument);
   });
   arr.unshift(`expect(${fnName}).toHaveBeenCalled(1);`);
   return arr;
 }
 
 // 处理正则表达式的校验
-function getOneArgEqual(fnName, index, oneArgument, oneProperty = '') {
+function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '') {
   const property = oneProperty ? `.${oneProperty}` : '';
   if (isRegExp(oneArgument)) {
     return `expect(${oneArgument}.test(${fnName}.mock.calls[0][${index}]${property})).toBeTruthy();`;
   } else {
     const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
-    return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${oneArgument});`;
+    const value = framework.indexOf('React') !== -1 && /^'input'$/.test(oneArgument) && fnName.indexOf('onChange') !== -1
+      ? `'change'`
+      : oneArgument;
+    return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${value});`;
   }
 }
 

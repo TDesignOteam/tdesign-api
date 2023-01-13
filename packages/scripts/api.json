@@ -48809,7 +48809,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"attribute\":[{\"value\":\"true\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello World\"}}]},{\"value\":\"false\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello\",\"maxlength\":5},\"expect\":[{\"trigger\":\"simulateInputChange('input', \\\"Hello TDesign\\\")\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49348,7 +49348,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"value\":\"你好 TDesign\"},\"attribute\":[{\"value\":\"4\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"你好\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"你好 TDesign\",\"maxcharacter\":4},\"description\":\"length of value is over than maxcharacter\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"你好\",{\"trigger\":\"initial\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49397,7 +49397,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"value\":\"Hello TDesign\"},\"attribute\":[{\"value\":\"5\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello\"}}]}]}}",
+      "test_description": "{\"PC\":{\"props\":\"{\\\"value\\\":\\\"Hello TDesign\\\"}\",\"event\":[{\"props\":{\"value\":\"Hello TDesign\",\"maxlength\":5},\"description\":\"length of value is over than maxlength\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"Hello\",{\"trigger\":\"initial\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
