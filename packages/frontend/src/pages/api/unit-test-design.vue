@@ -24,11 +24,11 @@
 
       <!-- <t-divider /> -->
 
-      <!-- <t-textarea
+      <t-textarea
         v-model="testDescription"
-        style="height: 300px; margin-top: 16px"
+        style="margin-top: 16px"
         @blur="onTestDescriptionBlur"
-      ></t-textarea> -->
+      ></t-textarea>
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
       </div>
