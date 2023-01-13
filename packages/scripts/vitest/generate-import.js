@@ -20,6 +20,8 @@ function getImportsConfig(params = {}, tests) {
     importedComponents = [],
     importedMounts = new Set(),
     needDefaultRender = false,
+    // simulateEvent...
+    importedTestUtils = [],
   } = params;
 
   const str = tests.join('');
@@ -31,18 +33,21 @@ function getImportsConfig(params = {}, tests) {
       'vitest': [],
       '..': [],
       './mount': [],
+      '@test/utils': [],
     },
     'VueNext(PC)': {
       '@vue/test-utils': [],
       'vitest': [],
       '..': [],
       './mount': [],
+      '@test/utils': [],
     },
     'Vue(Mobile)': {
       '@vue/test-utils': [],
       'vitest': [],
       '..': [],
       './mount': [],
+      '@test/utils': [],
     },
     'React(PC)': {
       'react': 'React',
@@ -83,6 +88,12 @@ function getImportsConfig(params = {}, tests) {
   if (reactTestUtils) {
     obj['React(PC)']['@test/utils'].push(...reactTestUtils);
     obj['React(Mobile)']['@test/utils'].push(...reactTestUtils);
+  }
+  if (importedTestUtils && importedTestUtils.length) {
+    const list = [...new Set(importedTestUtils)];
+    Object.keys(obj).forEach(framework => {
+      obj[framework]['@test/utils'] = list;
+    });
   }
   return obj;
 }

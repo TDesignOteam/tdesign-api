@@ -8,6 +8,7 @@ const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 const { copyUnitTestsToOtherWrapper } = require('./copy');
 const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
+const { SIMULATE_FUNCTIONS } = require('./core');
 
 const generateFunctionsMap = {
   // 元素类名测试
@@ -30,6 +31,26 @@ function getBaseData(framework, component, apiData, map) {
   return baseData;
 }
 
+function getMoreEventImports(event) {
+  const imports = [];
+  event.forEach((oneEventExpect) => {
+    if (Array.isArray(oneEventExpect.expect)) {
+      oneEventExpect.expect.forEach((oneExpect) => {
+        if (typeof oneExpect === 'object'
+          && oneExpect.trigger
+        ) {
+          SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
+            if (oneExpect.trigger.includes(simulateEvent)) {
+              imports.push(simulateEvent);
+            }
+          })
+        }
+      })
+    }
+  })
+  return imports;
+}
+
 /**
  * 获取一个 it 单位测试用例
  * @param {Object} testDescription 测试用例描述 JSON
@@ -42,6 +63,7 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
   let oneUnitTests = [];
   let hasEvent = false;
   const importedMounts = [];
+  let importedTestUtils = [];
   Object.keys(testDescription.PC).forEach((key) => {
     // 空对象无效，返回
     if (!testDescription.PC[key] || typeof testDescription.PC[key] === 'object' && !Object.keys(testDescription.PC[key]).length) return;
@@ -51,6 +73,7 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
           hasEvent = true;
+          importedTestUtils = getMoreEventImports(testDescription.PC[key]);
         }
         // 同样的测试用例复用到其他实例
         if (testDescription.PC.copyTestToWrapper) {
@@ -65,7 +88,7 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
       }
     }
   });
-  return { oneUnitTests, hasEvent, importedMounts };
+  return { oneUnitTests, hasEvent, importedMounts, importedTestUtils };
 }
 
 function getUnitTestCode(baseData, framework) {
@@ -75,6 +98,7 @@ function getUnitTestCode(baseData, framework) {
     importedComponents: [],
     importedMounts: new Set(),
     needDefaultRender: false,
+    importedTestUtils: [],
   };
   // 一个组件可能由多个子组件拼凑而成
   Object.entries(baseData).forEach(([component, oneComponentApi]) => {
@@ -88,13 +112,16 @@ function getUnitTestCode(baseData, framework) {
 
       // 存在 Web 框架的单测用例，再输出
       // console.log(testDescription.PC);
-      const { oneUnitTests, hasEvent, importedMounts } = getOneUnitTest(framework, component, oneApiData, testDescription);
+      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, testDescription);
       if (oneUnitTests && oneUnitTests.length) {
         oneComponentTests = oneComponentTests.concat(oneUnitTests);
         configFlag.hasEvent = hasEvent || configFlag.hasEvent;
         importedMounts.forEach((oneMount) => {
           configFlag.importedMounts.add(oneMount);
         });
+      }
+      if (importedTestUtils && importedTestUtils.length) {
+        configFlag.importedTestUtils = configFlag.importedTestUtils.concat(importedTestUtils);
       }
 
       if (testDescription.PC.wrapper) {

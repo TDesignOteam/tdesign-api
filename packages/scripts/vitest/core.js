@@ -8,6 +8,8 @@ const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
 const ATTRIBUTES_STYLE = 'style';
 
+const SIMULATE_FUNCTIONS = ['simulateInputChange'];
+
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
   return `'${type}.${oneApiData.field_name} works fine'`;
@@ -615,33 +617,103 @@ function getFireEventName(event, framework) {
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
  function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '') {
-  let fireEventCode = '';
+  let fireEventCode = [];
+  const eventInfo = parseSimulateEvents(event, dom);
+  const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
+  if (eventInfo.isSimulateEvent) {
+    const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex = '');
+    if (simulateEventCode) {
+      fireEventCode.push(simulateEventCode);
+    }
+  } else {
+    const fireNormalEventCode = getFireNormalEventCode(framework, { dom: findDom, event, component }, wrapperIndex = '');
+    if (fireNormalEventCode) {
+      fireEventCode.push(fireNormalEventCode);
+    }
+  }
+  if (framework.indexOf('Vue') !== -1) {
+    fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
+  } else if (framework.indexOf('React') !== -1) {
+    if (getReactNeedMockDelay(event, delay)) {
+      const delayTime = delay && delay !== true ? delay : '';
+      fireEventCode.push(`await mockDelay(${delayTime});`);
+    }
+  }
+  return fireEventCode.join('\n');
+}
+
+function getFireNormalEventCode(framework, { dom, event, component }, wrapperIndex = '') {
   const { eventName, eventModifier } = getFireEventName(event, framework) || {};
   if (framework.indexOf('Vue') !== -1) {
     let eventFireCode = '';
     if (eventName) {
-      if (dom === 'self') {
+      if (dom === 'self' || !dom) {
         eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
+      } else if (dom.indexOf('document') !== -1) {
+        const tDom = dom.replace('document', '');
+        eventFireCode = `document.querySelector('${tDom}').trigger('${eventName}')`;
       } else {
         eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
       }
     }
-    fireEventCode = [eventFireCode, `await wrapper${wrapperIndex}.vm.$nextTick();`].filter(v => v).join('\n');
+    return eventFireCode;
   } else if (framework.indexOf('React') !== -1) {
-    const tmpDom = dom === 'self'
+    let tmpDom = dom === 'self' || !dom
       ? `container${wrapperIndex}.firstChild`
       : `container.querySelector('${dom}')`;
+    if (dom.indexOf('document') !== -1) {
+      const tDom = dom.replace('document', '');
+      tmpDom = `document.querySelector('${tDom}')`;
+    }
     const params = [tmpDom, eventModifier].filter(v => v).join(', ');
     const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
-
-    if (getReactNeedMockDelay(event, delay)) {
-      const delayTime = delay && delay !== true ? delay : '';
-      fireEventCode = [eventCode, `await mockDelay(${delayTime});`].filter(v => v).join('\n');
-    } else {
-      fireEventCode = eventCode;
-    }
+    return eventCode;
   }
-  return fireEventCode;
+}
+
+function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex = '') {
+  const { simulateEvent, args } = eventInfo;
+  const domVariable = `${camelCase(args[0])}Dom`;
+  const dom = args[0];
+  const arr = [];
+  if (framework.indexOf('Vue') !== -1) {
+    let eventFireCode = '';
+    if (dom === 'self' || !dom) {
+      eventFireCode = `const ${domVariable} = wrapper${wrapperIndex}.findComponent(${component}).element;`;
+    } else if (dom.indexOf('document') !== -1) {
+      const tDom = dom.replace('document', '');
+      eventFireCode = `const ${domVariable} = document.querySelector(${tDom}).element`;
+    } else {
+      eventFireCode = `const ${domVariable} = wrapper${wrapperIndex}.find(${dom}).element;`;
+    }
+    arr.push(eventFireCode);
+  } else if (framework.indexOf('React') !== -1) {
+    let tmpDom = dom === 'self' || !dom
+      ? `container${wrapperIndex}.firstChild`
+      : `container.querySelector(${dom})`;
+    if (dom.indexOf('document') !== -1) {
+      const tDom = dom.replace('document', '');
+      tmpDom = `document.querySelector(${tDom})`;
+    }
+    tmpDom = `const ${domVariable} = ` + tmpDom;
+    const params = [tmpDom, eventModifier].filter(v => v).join(', ');
+    const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
+    arr.push(eventCode);
+  }
+  arr.push(`${simulateEvent}(${[`${domVariable}`].concat(args.slice(1)).join(', ')});`);
+  return arr.join('\n');
+}
+
+function parseSimulateEvents(simulateEvent, args) {
+  const isSimulateEvent = Boolean(SIMULATE_FUNCTIONS.find((item) => simulateEvent.indexOf(item) !== -1));
+  if (!isSimulateEvent) {
+    return { isSimulateEvent };
+  }
+  return {
+    isSimulateEvent,
+    simulateEvent,
+    args: args.split(',').map(t => t.trim()),
+  }
 }
 
 // 判断是否需要 mockDelay
@@ -676,6 +748,7 @@ function isRegExp(str) {
 }
 
 module.exports = {
+  SIMULATE_FUNCTIONS,
   getEventName,
   getEventFnName,
   isRegExp,
