@@ -305,7 +305,7 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '', eventI
       clearElement = countOrIndex;
       return;
     }
-    if (typeof countOrIndex === 'number') {
+    if (typeof countOrIndex === 'number' || countOrIndex === false) {
       return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
     }
     if (typeof countOrIndex === 'object') {
@@ -340,10 +340,18 @@ function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperInd
     return getDocumentDomExpect(className, countOrIndex, framework);
   }
   if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
+    if (countOrIndex === false) {
+      return `expect(wrapper${wrapperIndex}.find('${className}')).toBeFalsy();`;
+    } else {
+      return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
+    }
   }
   if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
+    if (countOrIndex === false) {
+      return `expect(container${wrapperIndex}.querySelector('${className}')).toBeFalsy();`;
+    } else {
+      return `expect(container${wrapperIndex}.querySelectorAll('${className}').length).toBe(${countOrIndex});`;
+    }
   }
 }
 
@@ -729,12 +737,9 @@ function getReactFireEventAsync(expect, framework) {
   // const tailList = [];
   let async = false;
   tmpExpect.forEach((p) => {
-    // const { exist, event, delay, clearElementAtEnd } = p;
     const { delay } = p;
     const { trigger } = formatToTriggerAndDom(p);
     if (getReactNeedMockDelay(trigger, delay)) {
-      // const delayCode = delay && delay !== true ? `, ${delay}` : '';
-      // tailList.push(`}${delayCode});`);
       async = true;
     }
   });
