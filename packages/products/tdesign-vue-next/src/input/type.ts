@@ -143,6 +143,10 @@ export interface TdInputProps {
    */
   onClear?: (context: { e: MouseEvent }) => void;
   /**
+   * 点击组件时触发
+   */
+  onClick?: (context: { e: MouseEvent }) => void;
+  /**
    * 中文输入结束时触发
    */
   onCompositionend?: (value: InputValue, context: { e: CompositionEvent }) => void;

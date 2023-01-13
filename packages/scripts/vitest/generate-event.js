@@ -32,18 +32,21 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
   // click/blur/mouseEnter/...
   if (typeof event === 'object' && !Array.isArray(event)) {
     const eventKeys = Object.keys(event);
-    const firstEvent = eventKeys[0];
+    const currentEvent = eventKeys[0];
+    const eventInfo = formatToTriggerAndDom({ trigger: currentEvent });
+    const firstEvent = eventInfo.trigger;
+    const finalDom = eventInfo.triggerDom;
     // Vue2 和 Vue3/React 事件绑定方式不同
     const attachEventToDom = getEventsCode(framework, { [firstEvent]: 'fn' });
     const mountCode = getMountComponent(framework, component, { events: attachEventToDom }, extraCode);
     const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
     const arr = [
-      `it${getSkipCode(skip)}('${component} Event: ${firstEvent}', ${isVue || reactAsync ? 'async' : ''} () => {
+      `it${getSkipCode(skip)}('events.${firstEvent} works fine', ${isVue || reactAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode),
-        getFireEventCode(framework, { dom: 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(event[firstEvent].arguments).join('\n')}`,
+        getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),
+        `${getEventArguments(event[currentEvent].arguments).join('\n')}`,
       `});`,
     ];
     return arr;

@@ -33,6 +33,7 @@ function getBaseData(framework, component, apiData, map) {
 
 function getMoreEventImports(event) {
   const imports = [];
+  if (!Array.isArray(event)) return [];
   event.forEach((oneEventExpect) => {
     if (Array.isArray(oneEventExpect.expect)) {
       oneEventExpect.expect.forEach((oneExpect) => {

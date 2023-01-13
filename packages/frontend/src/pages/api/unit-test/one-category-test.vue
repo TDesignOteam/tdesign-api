@@ -150,8 +150,8 @@
         </t-radio-group>
         <t-card v-if="eventType === 'object'" class="t-event-object-card">
           <div v-for="(item, index) in objectEvent" :key="index" class="unit-test-ui__one-object-event">
-            <t-tooltip trigger="focus" theme="light" content="事件名，如：click">
-              <t-input v-model="objectEvent[index].trigger" placeholder="事件名" style="min-width: 100px; width: 100px"
+            <t-tooltip trigger="focus" theme="light" content="事件名，如：click 或者 click(.t-input)">
+              <t-input v-model="objectEvent[index].trigger" placeholder="事件名" style="min-width: 130px; width: 130px"
                 @change="onObjectEventChange"></t-input>
             </t-tooltip>
             <t-tooltip trigger="focus" theme="light">
