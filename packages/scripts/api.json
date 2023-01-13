@@ -50116,7 +50116,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"attribute\":{\"type\":[\"text\",\"number\",\"url\",\"tel\",\"password\",\"search\",\"submit\",\"hidden\"]},\"attributeDom\":\"input\"}}",
+      "test_description": "{\"PC\":{\"attribute\":{\"type\":[\"text\",\"number\",\"url\",\"tel\",\"password\",\"search\",\"submit\",\"hidden\"]},\"attributeDom\":\"input\",\"dom\":{\"password\":{\".t-icon-browse-off\":1}},\"event\":[{\"props\":{\"type\":\"password\"},\"description\":\"password could be visible by click browse icon\",\"expect\":[{\"trigger\":\"click(.t-icon-browse-off)\",\"exist\":[\".t-icon-browse\",{\"input\":{\"attribute\":{\"type\":\"text\"}}}]},{\"trigger\":\"click(.t-icon-browse)\",\"exist\":[\".t-icon-browse-off\",{\"input\":{\"attribute\":{\"type\":\"password\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
