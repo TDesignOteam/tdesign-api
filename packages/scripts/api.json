@@ -48809,7 +48809,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"expect\":[{\"trigger\":\"keydown\",\"event\":{\"validate\":[{\"error\":\"exceed-maximum\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"attribute\":[{\"value\":\"true\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello World\"}}]},{\"value\":\"false\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"Hello\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50920,7 +50920,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"expect\":[{\"trigger\":\"\",\"event\":{\"validate\":[{\"error\":\"exceed-maximum\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
