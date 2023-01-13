@@ -68,3 +68,9 @@ mouseleave | `(context: { e: MouseEvent })` | trigger on mouseleave
 paste | `(context: { e: ClipboardEvent; pasteValue: string })` | \-
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
 wheel | `(context: { e: WheelEvent })` | trigger on mouse wheel
+
+### InputGroup Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+separate | Boolean | - | need separate between multiple inputs | N

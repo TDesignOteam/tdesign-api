@@ -595,6 +595,10 @@
         "type": "TS"
       },
       {
+        "value": "InputGroup",
+        "label": "输入框组"
+      },
+      {
         "value": "InputNumber",
         "label": "数字输入框"
       },

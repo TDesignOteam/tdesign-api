@@ -68,3 +68,9 @@ mouseleave | `(context: { e: MouseEvent })` | 离开输入框时触发
 paste | `(context: { e: ClipboardEvent; pasteValue: string })` | 粘贴事件，`pasteValue` 表示粘贴板的内容
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数超出限制时触发
 wheel | `(context: { e: WheelEvent })` | 输入框中滚动鼠标时触发
+
+### InputGroup Props
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+separate | Boolean | - | 多个输入框之间是否需要间隔 | N

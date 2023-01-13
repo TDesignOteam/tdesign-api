@@ -102,6 +102,7 @@ const COMPONENT_API_MD_MAP = {
   StickyTool: ['StickyTool', 'StickyItem'],
   ConfigProvider: GLOBAL_CONFIG_PROVIDER,
   RangeInput: ['RangeInput', 'RangeInputPopup'],
+  Input: ['Input', 'InputGroup'],
   Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
   TimeLine: ['TimeLine', 'TimeLineItem'],
   Guide:['Guide', 'GuideStep'],
@@ -236,6 +237,9 @@ const TYPES_COMBINE_MAP = {
   },
   RangeInput: {
     list: ['RangeInput', 'RangeInputPopup'],
+  },
+  Input: {
+    list: ['Input', 'InputGroup'],
   },
   Watermark: {
     list: ['Watermark', 'WatermarkText', 'WatermarkImage'],

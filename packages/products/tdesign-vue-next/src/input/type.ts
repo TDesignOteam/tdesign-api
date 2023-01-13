@@ -196,6 +196,13 @@ export interface TdInputProps {
   onWheel?: (context: { e: WheelEvent }) => void;
 }
 
+export interface TdInputGroupProps {
+  /**
+   * 多个输入框之间是否需要间隔
+   */
+  separate?: boolean;
+}
+
 export type InputFormatType = (value: InputValue) => string;
 
 export type InputValue = string;
