@@ -5200,7 +5200,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"compositionstart(input)\",\"event\":{\"compositionend\":[{\"e.type\":\"compositionend\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"compositionstart(input)\",\"event\":{\"compositionend\":[{\"e.type\":\"compositionstart\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
