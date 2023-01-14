@@ -320,6 +320,12 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '', eventI
       clearElement = countOrIndex;
       return;
     }
+    if (typeof countOrIndex === 'object') {
+      if (countOrIndex.className) {
+        // 已在内部处理 document selector
+        return getOneDomClassNameExpectCode(framework, className, countOrIndex, wrapperIndex, eventIndex);
+      }
+    }
     if (typeof countOrIndex === 'number' || countOrIndex === false) {
       return getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex);
     }
@@ -399,6 +405,15 @@ function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperInd
     } else if (isReact) {
       arr.push(getReactOneAttributeCode(framework, domVariable, attributeName, attributeValue, 'attrDom'));
     }
+  });
+  return arr.filter(v => v).join('\n');
+}
+
+function getOneDomClassNameExpectCode(framework, dom, classNameExpect, wrapperIndex, domIndex) {
+  const arr = [];
+  classNameExpect.className.forEach((oneClass) => {
+    const expect = [{ dom, className: { [oneClass]: true } }];
+    arr.push(getDomClassNameExpect(framework, expect, wrapperIndex, domIndex));
   });
   return arr.filter(v => v).join('\n');
 }
@@ -557,18 +572,21 @@ function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperInd
  * @param {*} expect "expect": [{ "dom": "tbody > tr", "className": { "tdesign-class": true } }]
  * @param {*} wrapperIndex 
  */
-function getDomClassNameExpect(framework, expect, wrapperIndex = '') {
+function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = '') {
   let arr = [];
   if (framework.indexOf('Vue') !== -1) {
     expect.forEach(({ dom, className }, index) => {
-      const domNode = dom.indexOf('document') !== -1
-        ? `const domWrapper${index || ''} = document.querySelector('${dom.replace('document', '')}');`
-        : `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`;
+      const domVariable = `domWrapper${domIndex || index || ''}`;
+      const isDocument = dom.indexOf('document') !== -1;
+      const domNode = isDocument
+        ? `const ${domVariable} = document.querySelector('${dom.replace('document', '')}');`
+        : `const ${domVariable} = wrapper${wrapperIndex}.find('${dom}');`;
       const oneExpect = [
         domNode,
         Object.entries(className).map(([className, exist]) => {
           const truthyOrFalsy = exist ? 'toBeTruthy' : 'toBeFalsy';
-          return `expect(domWrapper${index || ''}.classes('${className}')).${truthyOrFalsy}();`;
+          const classes = isDocument ? `classList.contains('${className}')` : `classes('${className}')`;
+          return `expect(${domVariable}.${classes}).${truthyOrFalsy}();`;
         }).join('\n'),
       ];
       arr = arr.concat(oneExpect);
