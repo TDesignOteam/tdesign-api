@@ -46,7 +46,7 @@
               <t-checkbox v-model="formData.finalProject">输出文件到各框架仓库</t-checkbox>&nbsp;&nbsp;
               <t-checkbox v-model="formData.onlyDocs">仅输出 API 文档</t-checkbox>&nbsp;&nbsp;
               <t-checkbox v-model="formData.useDefault">输出 useDefault/useVModel 文件(Vue2)</t-checkbox>&nbsp;&nbsp;
-              <t-checkbox v-model="formData.isUseUnitTest">输出单测用例（实验功能）</t-checkbox>
+              <t-checkbox v-model="formData.vitest">输出单测用例</t-checkbox>
             </div>
           </div>
           <!-- 暂时没有用上，需要的时候再恢复 -->
@@ -120,6 +120,7 @@ export default {
         finalProject: this.formData.finalProject,
         onlyDocs: this.formData.onlyDocs,
         useDefault: this.formData.useDefault,
+        vitest: this.formData.vitest,
         isUseUnitTest: this.formData.isUseUnitTest
       }
       // 组件全选的情况下，只能输出全部 API 文档
