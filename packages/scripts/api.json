@@ -5308,10 +5308,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLLIElement>/KeyboardEvent",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"click(document.t-select-option)\",\"event\":{\"select\":[\"FirstKeyword\",{\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
