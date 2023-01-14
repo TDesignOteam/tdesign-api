@@ -8,7 +8,7 @@ const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
 const ATTRIBUTES_STYLE = 'style';
 
-const SIMULATE_FUNCTIONS = ['simulateInputChange'];
+const SIMULATE_FUNCTIONS = ['simulateInputChange', 'simulateKeydownEvent'];
 
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
@@ -723,6 +723,9 @@ function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex 
   const domVariable = `${camelCase(args[0])}Dom`;
   const dom = args[0];
   const arr = [];
+  if (dom === 'document') {
+    return `${simulateEvent}(${args.join(', ')});`;
+  }
   if (framework.indexOf('Vue') !== -1) {
     let eventFireCode = '';
     if (dom === 'self' || !dom) {
@@ -743,8 +746,6 @@ function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex 
       tmpDom = `document.querySelector(${tDom})`;
     }
     tmpDom = `const ${domVariable} = ` + tmpDom;
-    // const params = [tmpDom, eventModifier].filter(v => v).join(', ');
-    // const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
     arr.push(tmpDom);
   }
   arr.push(`${simulateEvent}(${[`${domVariable}`].concat(args.slice(1)).join(', ')});`);
