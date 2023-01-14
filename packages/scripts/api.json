@@ -4554,7 +4554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"description\":\"option.label could be defined to any element\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\",{\"clearElementAtEnd\":\".t-select-option\"}]}]},{\"description\":\"5 options should exist\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"option.label could be defined to any element\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\",{\"clearElementAtEnd\":\".t-select-option\"}]}]},{\"description\":\"5 options should exist\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]},{\"description\":\"expect empty options with no panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-autocomplete__panel\":false}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

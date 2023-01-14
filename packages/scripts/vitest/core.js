@@ -353,7 +353,7 @@ function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperInd
   }
   if (framework.indexOf('Vue') !== -1) {
     if (countOrIndex === false) {
-      return `expect(wrapper${wrapperIndex}.find('${className}')).toBeFalsy();`;
+      return `expect(wrapper${wrapperIndex}.find('${className}').exists()).toBeFalsy();`;
     } else {
       return `expect(wrapper${wrapperIndex}.findAll('${className}').length).toBe(${countOrIndex});`;
     }

@@ -188,15 +188,6 @@
               ></t-input>
             </div>
 
-            <div style="display: flex; align-items: center; margin-bottom: 16px">
-              <label style="width: 100px">组件属性：</label>
-              <t-input
-                v-model="arrayEvent[index].props"
-                placeholder="选填，当前测试用例所需的必要属性，格式：JSON"
-                @blur="onEventPropsChange"
-              ></t-input>
-            </div>
-
             <div
               v-for="(expect, expectIndex) in arrayEvent[index].expect"
             >
@@ -224,6 +215,24 @@
              <p v-if="expect.trigger || expect.event || expect.exist" class="t-input__tips t-input__tips--default" style="position: relative">
                 {{getEventDescription(expect)}}
               </p>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <label style="width: 100px">组件属性：</label>
+              <t-input
+                v-model="arrayEvent[index].props"
+                placeholder="选填，当前测试用例所需的必要属性，格式：JSON"
+                @blur="onEventPropsChange"
+              ></t-input>
+            </div>
+
+            <div style="display: flex; align-items: center; margin-bottom: 16px">
+              <label style="width: 100px">实例函数：</label>
+              <t-input
+                v-model="arrayEvent[index].wrapper"
+                placeholder="默认直接使用组件获取，示例：getRadioGroupDefaultMount"
+                @blur="onEventPropsChange"
+              ></t-input>
             </div>
 
             <!-- {{ arrayEvent[index] }} -->

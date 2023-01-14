@@ -53,7 +53,10 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
   } else if (Array.isArray(event)) {
     let arr = [];
     event.forEach((oneEventUnitCase) => {
-      const { props, expect, description } = oneEventUnitCase;
+      const { props, expect, description, wrapper: oneEventUnitCaseWrapper } = oneEventUnitCase;
+      if (oneEventUnitCaseWrapper) {
+        extraCode.wrapper = oneEventUnitCaseWrapper;
+      }
       const codeProps = {
         ...(props || {}),
         events: getEventFunctions(expect, framework, extraCode),
@@ -70,7 +73,10 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const oneEventArr = [
         `it${getSkipCode(skip)}(${itDescription}, ${async} () => {`,
         getEventsDefinition(expect),
-        getWrapper(framework, mountCode, '', '', { trigger: getFocusTrigger(expect), wrapper }),
+        getWrapper(framework, mountCode, '', '', {
+          trigger: getFocusTrigger(expect),
+          wrapper: extraCode.wrapper,
+        }),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
       ];
