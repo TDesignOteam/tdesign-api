@@ -1,4 +1,5 @@
 const kebabCase = require('lodash/kebabCase');
+const camelCase = require('lodash/camelCase');
 const {
   getWrapper,
   getMountComponent,
@@ -45,8 +46,9 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const mountCode = getMountComponent(framework, component, tmpProps, extraCode);
     const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
+    const categoryType = oneApiData.field_category_text ? camelCase(oneApiData.field_category_text) : 'interactive';
     const arr = [
-      `it${getSkipCode(skip)}('events.${firstEvent} works fine', ${isVue || reactAsync ? 'async' : ''} () => {
+      `it${getSkipCode(skip)}('${categoryType}.${oneApiData.field_name} works fine', ${isVue || reactAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
         getWrapper(framework, mountCode, '', '', { trigger: firstEvent, wrapper }),
         getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),

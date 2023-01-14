@@ -1,6 +1,6 @@
 const pick = require('lodash/pick');
 const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } = require('./utils');
-const { getImportsConfig, getImportsCode, getMoreEventImports } = require('./generate-import');
+const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
 const { generateAttributeUnitCase } = require('./generate-attribute');
@@ -57,6 +57,13 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
           importedTestUtils = imports.importedTestUtils;
           if (imports.importedMounts && imports.importedMounts.length) {
             importedMounts.push(...imports.importedMounts);
+          }
+        }
+        if (key === 'tnode' && typeof testDescription.PC[key] === 'object') {
+          // if (testDescription.PC[key].trigger) {}
+          const list = getSimulateEvents(testDescription.PC[key].trigger);
+          if (list && list.length) {
+            importedTestUtils.push(...list);
           }
         }
         // 同样的测试用例复用到其他实例

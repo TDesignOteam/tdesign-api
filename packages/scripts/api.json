@@ -46219,7 +46219,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"src\":\"https://this.is.an.error.img.com\"},\"tnode\":{\"trigger\":\"\",\"dom\":[]}}}",
+      "test_description": "{\"PC\":{\"props\":{\"src\":\"https://this.is.an.error.img.com\"},\"tnode\":{\"trigger\":\"simulateImageEvent('img', 'error')\",\"dom\":[]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46608,7 +46608,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content\",{\".t-image__overlay-content--hidden\":0}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"overlayTrigger\":\"hover\",\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"description\":\"show overlay content on hover\",\"wrapper\":\"getOverlayImageMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content\",{\".t-image__overlay-content--hidden\":0}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46910,10 +46910,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "ImageEvent<HTMLImageElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://load-failed-img.png\"},\"expect\":[{\"trigger\":\"\",\"event\":{\"error\":[{\"e.type\":\"error\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://load-failed-img.png\"},\"expect\":[{\"trigger\":\"simulateImageEvent('img', 'error')\",\"event\":{\"error\":[{\"e.type\":\"error\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -46955,10 +46955,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "ImageEvent<HTMLImageElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"expect\":[{\"trigger\":\"\"},{\"event\":{\"load\":[{\"e.type\":\"load\"}]},\"delay\":300}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"expect\":[{\"trigger\":\"\"},{\"trigger\":\"simulateImageEvent('img', 'load')\",\"event\":{\"load\":[{\"e.type\":\"load\"}]},\"delay\":300}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

@@ -113,6 +113,15 @@ function getImportsCode(importsConfig, framework) {
   return arr.join(';\n');
 }
 
+function getSimulateEvents(trigger) {
+  const arr = [];
+  SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
+    if (trigger.includes(simulateEvent)) {
+      arr.push(simulateEvent);
+    }
+  });
+  return arr;
+}
 
 function getMoreEventImports(framework, event, wrapper) {
   const importedTestUtils = [];
@@ -125,11 +134,10 @@ function getMoreEventImports(framework, event, wrapper) {
           && oneExpect.trigger
         ) {
           // 添加模拟事件
-          SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
-            if (oneExpect.trigger.includes(simulateEvent)) {
-              importedTestUtils.push(simulateEvent);
-            }
-          })
+          const list = getSimulateEvents(oneExpect.trigger);
+          if (list && list.length) {
+            importedTestUtils.push(...list);
+          }
           // 添加 Vue2 的 createElementById
           if (framework === 'Vue(PC)' && !wrapper && oneExpect.trigger.includes('focus')) {
             importedTestUtils.push('createElementById');
@@ -149,4 +157,5 @@ module.exports = {
   getImportsConfig,
   getImportsCode,
   getMoreEventImports,
+  getSimulateEvents,
 };
