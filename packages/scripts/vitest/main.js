@@ -55,7 +55,9 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
           hasEvent = true;
           const imports = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper);
           importedTestUtils = imports.importedTestUtils;
-          importedMounts.push(...imports.importedMounts);
+          if (imports.importedMounts && imports.importedMounts.length) {
+            importedMounts.push(...imports.importedMounts);
+          }
         }
         // 同样的测试用例复用到其他实例
         if (testDescription.PC.copyTestToWrapper) {
