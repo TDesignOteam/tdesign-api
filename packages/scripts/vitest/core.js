@@ -594,7 +594,7 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = 
   }
   if (framework.indexOf('React') !== -1) {
     expect.forEach(({ dom, className }, index) => {
-      const kidDomVariable = `domWrapper${index || ''}`;
+      const kidDomVariable = `domWrapper${domIndex || index || ''}`;
       const domNode = dom.indexOf('document') !== -1
         ? `const ${kidDomVariable} = document.querySelector('${dom.replace('document', '')}');`
         : `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`
