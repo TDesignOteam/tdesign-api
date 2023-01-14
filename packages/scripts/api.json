@@ -4722,7 +4722,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName: 'custom-class-name'}\"},\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-class-name\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5311,7 +5311,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"click(document.t-select-option)\",\"event\":{\"select\":[\"FirstKeyword\",{\"e.type\":\"click\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName:'select-event-class-name'}\"},\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"click(document.select-event-class-name .t-select-option)\",\"event\":{\"select\":[\"FirstKeyword\",{\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

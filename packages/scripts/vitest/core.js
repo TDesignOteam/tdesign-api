@@ -558,8 +558,11 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '') {
   let arr = [];
   if (framework.indexOf('Vue') !== -1) {
     expect.forEach(({ dom, className }, index) => {
+      const domNode = dom.indexOf('document') !== -1
+        ? `const domWrapper${index || ''} = document.querySelector('${dom.replace('document', '')}');`
+        : `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`;
       const oneExpect = [
-        `const domWrapper${index || ''} = wrapper${wrapperIndex}.find('${dom}');`,
+        domNode,
         Object.entries(className).map(([className, exist]) => {
           const truthyOrFalsy = exist ? 'toBeTruthy' : 'toBeFalsy';
           return `expect(domWrapper${index || ''}.classes('${className}')).${truthyOrFalsy}();`;
@@ -571,8 +574,11 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '') {
   if (framework.indexOf('React') !== -1) {
     expect.forEach(({ dom, className }, index) => {
       const kidDomVariable = `domWrapper${index || ''}`;
+      const domNode = dom.indexOf('document') !== -1
+        ? `const ${kidDomVariable} = document.querySelector('${dom.replace('document', '')}');`
+        : `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`
       const oneExpect = [
-        `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`,
+        domNode,
         Object.entries(className).map(([className, exist]) => {
           if (exist) {
             return `expect(${kidDomVariable}).toHaveClass('${className}');`;
@@ -671,7 +677,7 @@ function getFireNormalEventCode(framework, { dom, event, component }, wrapperInd
         eventFireCode = `wrapper${wrapperIndex}.findComponent(${component}).trigger('${eventName}');`;
       } else if (dom.indexOf('document') !== -1) {
         const tDom = dom.replace('document', '');
-        eventFireCode = `document.querySelector('${tDom}').trigger('${eventName}')`;
+        eventFireCode = `document.querySelector('${tDom}').${eventName}()`;
       } else {
         eventFireCode = `wrapper${wrapperIndex}.find('${dom}').trigger('${eventName}');`;
       }
