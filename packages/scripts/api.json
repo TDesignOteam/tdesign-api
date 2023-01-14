@@ -70460,7 +70460,7 @@
       "field_desc_zh": "范围输入框值发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent; position?: RangeInputPosition; trigger?: 'input' | 'clear' })  【type RangeInputPosition = 'first' | 'second' | 'all'】 ",
+      "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; position?: RangeInputPosition; trigger?: 'input' | 'initial' | 'clear' })  【type RangeInputPosition = 'first' | 'second' | 'all'】 ",
       "create_time": "2022-03-24 09:25:34",
       "update_time": "2022-03-28 06:56:44",
       "event_output": null,
@@ -70468,7 +70468,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<HTMLElement | SVGElement>",
+      "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<HTMLElement | SVGElement>/",
       "deprecated": 0,
       "version": "",
       "test_description": null,
@@ -70995,6 +70995,7 @@
       "field_category": 1,
       "field_name": "panel",
       "field_type": [
+        "1",
         "64"
       ],
       "field_default_value": "",
@@ -71022,6 +71023,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
+        "String",
         "TNode"
       ]
     },
