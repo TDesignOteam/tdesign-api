@@ -4554,7 +4554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"option.label could be defined to any element\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\",{\"clearElementAtEnd\":\".t-select-option\"}]}]},{\"description\":\"5 options should exist\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]},{\"description\":\"expect empty options with no panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-autocomplete__panel\":0}]}]},{\"props\":{\"popupProps\":\"{ overlayClassName: 'option-slot-class-name' }\"},\"description\":\"define one option\",\"wrapper\":\"getOptionSlotAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.option-slot-class-name .custom-slot-option\":{\"text\":\"First Keyword\"}},{\"clearElementAtEnd\":\".t-select-option\"}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"option.label could be defined to any element\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\",{\"clearElementAtEnd\":\".t-select-option\"}]}]},{\"description\":\"5 options should exist\",\"wrapper\":\"getNormalAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]},{\"props\":{\"popupProps\":\"{ overlayClassName: 'empty-options-class-name' }\"},\"description\":\"expect empty options with no panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.empty-options-class-name .t-autocomplete__panel\":0}]}]},{\"props\":{\"popupProps\":\"{ overlayClassName: 'option-slot-class-name' }\"},\"description\":\"define one option\",\"wrapper\":\"getOptionSlotAutoCompleteMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.option-slot-class-name .custom-slot-option\":{\"text\":\"First Keyword\"}},{\"clearElementAtEnd\":\".t-select-option\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -50149,7 +50149,7 @@
         "1",
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "''",
       "field_enum": "",
       "field_desc_zh": "输入框的值",
       "field_desc_en": null,
@@ -51233,7 +51233,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[{\"t-align-left\":false},\"t-align-center\",\"t-align-right\"],\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
