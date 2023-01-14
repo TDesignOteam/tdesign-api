@@ -4554,7 +4554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"description\":\"option.label could be defined to any element\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\"]}]},{\"description\":\"5 options should exist\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"description\":\"option.label could be defined to any element\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\"document.custom-node\",{\"clearElementAtEnd\":\".t-select-option\"}]}]},{\"description\":\"5 options should exist\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":5}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5311,7 +5311,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName:'select-event-class-name'}\"},\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"click(document.select-event-class-name .t-select-option)\",\"event\":{\"select\":[\"FirstKeyword\",{\"e.type\":\"click\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName:'select-event-class-name'}\"},\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"click(document.select-event-class-name .t-select-option)\",\"event\":{\"select\":[\"FirstKeyword\",{\"e.type\":\"click\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-select-option\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
