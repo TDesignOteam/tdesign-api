@@ -431,7 +431,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
     result[cmp] = docs.join('\n').replace(/`[^`]+`/g, (str) => str.replace(/\|/g, '\\|'));
     // 小程序，事件参数只需要描述 DetailType，因此去除 e: MouseEvent
     if (framework === 'Miniprogram') {
-      result[cmp] = result[cmp].replace(/ e: (MouseEvent|Event)[ ,]/g, '')
+      result[cmp] = result[cmp].replace(/ e: (MouseEvent|Event|ImageEvent)[ ,]/g, '')
         .replace(/`\(context: {}\)`/g, '-')
         .replace(/, context: {}/g, '')
         .replace(/`\(context: {/g, '`(detail: {');

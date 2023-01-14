@@ -31,3 +31,5 @@ export interface UploadDisplayDragEvents {
   dragover?: (event: DragEvent) => void;
   dragleave?: (event: DragEvent) => void;
 }
+
+export type ImageEvent = Event;

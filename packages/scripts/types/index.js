@@ -279,12 +279,12 @@ function replaceInputEvent(str, newApi) {
   if (!str) return;
   // React 里面使用 FormEvent，而非 InputEvent
   let newStr = str.replace(/InputEvent/g, 'FormEvent');
-  const reg = new RegExp(`(${REACT_EVENTS.join('|')})`, 'g');
+  const reg = new RegExp(`(${REACT_EVENTS.concat('ImageEvent').join('|')})`, 'g');
   // 处理字段 trigger_elements，可能存在多个事件替换的情况
   const triggerElements = newApi.trigger_elements.split('/');
   newStr = newStr.replace(reg, (val) => {
-    const r = triggerElements.filter(el => el && el.indexOf(val) !== -1);
-    return (r[0] || `${val}<HTMLDivElement>`);
+    const r = triggerElements.find(el => el && el.indexOf(val) !== -1);
+    return (r || `${val}<HTMLDivElement>`);
   });
   return newStr;
 }

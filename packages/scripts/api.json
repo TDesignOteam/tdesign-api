@@ -46547,6 +46547,7 @@
       "field_category": 1,
       "field_name": "overlayContent",
       "field_type": [
+        "1",
         "64"
       ],
       "field_default_value": "",
@@ -46574,6 +46575,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
+        "String",
         "TNode"
       ]
     },
@@ -46900,7 +46902,7 @@
       "field_desc_zh": "图片加载失败时触发",
       "field_desc_en": "trigger on image load failed",
       "field_required": 0,
-      "event_input": "(context: { e: Event })",
+      "event_input": "(context: { e: ImageEvent })",
       "create_time": "2023-01-11 06:29:34",
       "update_time": "2023-01-11 06:29:34",
       "event_output": null,
@@ -46908,7 +46910,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "ImageEvent<HTMLImageElement>",
       "deprecated": 0,
       "version": "",
       "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://load-failed-img.png\"},\"expect\":[{\"trigger\":\"\",\"event\":{\"error\":[{\"e.type\":\"error\"}]}}]}]}}",
