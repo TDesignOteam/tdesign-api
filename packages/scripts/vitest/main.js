@@ -1,6 +1,6 @@
 const pick = require('lodash/pick');
 const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } = require('./utils');
-const { getImportsConfig, getImportsCode } = require('./generate-import');
+const { getImportsConfig, getImportsCode, getMoreEventImports } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
 const { generateAttributeUnitCase } = require('./generate-attribute');
@@ -8,7 +8,6 @@ const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 const { copyUnitTestsToOtherWrapper } = require('./copy');
 const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
-const { SIMULATE_FUNCTIONS } = require('./core');
 
 const generateFunctionsMap = {
   // 元素类名测试
@@ -31,31 +30,6 @@ function getBaseData(framework, component, apiData, map) {
   return baseData;
 }
 
-function getMoreEventImports(framework, event, wrapper) {
-  const imports = [];
-  if (!Array.isArray(event)) return [];
-  event.forEach((oneEventExpect) => {
-    if (Array.isArray(oneEventExpect.expect)) {
-      oneEventExpect.expect.forEach((oneExpect) => {
-        if (typeof oneExpect === 'object'
-          && oneExpect.trigger
-        ) {
-          // 添加模拟事件
-          SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
-            if (oneExpect.trigger.includes(simulateEvent)) {
-              imports.push(simulateEvent);
-            }
-          })
-          // 添加 Vue2 的 createElementById
-          if (framework === 'Vue(PC)' && !wrapper && oneExpect.trigger.includes('focus')) {
-            imports.push('createElementById');
-          }
-        }
-      })
-    }
-  })
-  return imports;
-}
 
 /**
  * 获取一个 it 单位测试用例
@@ -79,7 +53,9 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
           hasEvent = true;
-          importedTestUtils = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper);
+          const imports = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper);
+          importedTestUtils = imports.importedTestUtils;
+          importedMounts.push(...imports.importedMounts);
         }
         // 同样的测试用例复用到其他实例
         if (testDescription.PC.copyTestToWrapper) {

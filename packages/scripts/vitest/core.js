@@ -286,7 +286,10 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
       }
     })(),
     isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
-    isVue ? `${domVariable}.forEach(node => node.remove());` : '',
+    isVue ? (() => {
+      if (isObject) return `${domVariable}.remove();`
+      return `${domVariable}.forEach(node => node.remove());`;
+    })() : '',
   ].filter(v => v).join('\n');
 }
 
@@ -296,7 +299,7 @@ function getDocumentDomExpectCount(domVariable, count) {
 
 function getDocumentDomTextExpect(domVariable, textInfo, framework) {
   if (framework.indexOf('Vue') !== -1) {
-    return `expect(${domVariable}.text()).toBe('${textInfo.text}');`
+    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`
   } else if (framework.indexOf('React') !== -1) {
     return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`
   }

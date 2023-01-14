@@ -191,7 +191,7 @@
             <div
               v-for="(expect, expectIndex) in arrayEvent[index].expect"
             >
-             <div style="display: flex; align-items: center">
+             <div style="display: flex; align-items: center; margin-bottom: 16px">
                第{{ ['一', '二', '三', '四', '五'][expectIndex] }}个事件：
                <t-button
                  theme="primary"

@@ -3,6 +3,7 @@
  * hasEvent 是否引入事件 vi
  * importedComponents 引入了哪些组件依赖
  */
+const { SIMULATE_FUNCTIONS } = require('./core');
 
 // fireEvent, vi, render 等已经单独处理
 const REACT_KEYWORDS = ['mockDelay', 'mockTimeout'];
@@ -112,7 +113,40 @@ function getImportsCode(importsConfig, framework) {
   return arr.join(';\n');
 }
 
+
+function getMoreEventImports(framework, event, wrapper) {
+  const importedTestUtils = [];
+  const importedMounts = [];
+  if (!Array.isArray(event)) return [];
+  event.forEach((oneEventExpect) => {
+    if (Array.isArray(oneEventExpect.expect)) {
+      oneEventExpect.expect.forEach((oneExpect) => {
+        if (typeof oneExpect === 'object'
+          && oneExpect.trigger
+        ) {
+          // 添加模拟事件
+          SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
+            if (oneExpect.trigger.includes(simulateEvent)) {
+              importedTestUtils.push(simulateEvent);
+            }
+          })
+          // 添加 Vue2 的 createElementById
+          if (framework === 'Vue(PC)' && !wrapper && oneExpect.trigger.includes('focus')) {
+            importedTestUtils.push('createElementById');
+          }
+        }
+      });
+
+      if (oneEventExpect.wrapper) {
+        importedMounts.push(oneEventExpect.wrapper);
+      }
+    }
+  })
+  return { importedTestUtils, importedMounts };
+}
+
 module.exports = {
   getImportsConfig,
   getImportsCode,
+  getMoreEventImports,
 };
