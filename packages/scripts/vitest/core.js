@@ -634,6 +634,7 @@ function getObjectCode(obj) {
  * 如分离 trigger: 'click(.t-input__suffix-clear)' 为 trigger: 'click' 和 triggerDom: '.t-input__suffix-clear'
  */
 function formatToTriggerAndDom(oneExpect) {
+  if (!oneExpect.trigger) return {};
   const [trigger, tmpTriggerDom] = oneExpect.trigger.split('(');
   const triggerDom = oneExpect.triggerDom || tmpTriggerDom?.slice(0, -1);
   return { trigger, triggerDom };
@@ -753,7 +754,7 @@ function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex 
 }
 
 function parseSimulateEvents(simulateEvent, args) {
-  const isSimulateEvent = Boolean(SIMULATE_FUNCTIONS.find((item) => simulateEvent.indexOf(item) !== -1));
+  const isSimulateEvent = Boolean(SIMULATE_FUNCTIONS.find((item) => simulateEvent && simulateEvent.indexOf(item) !== -1));
   if (!isSimulateEvent) {
     return { isSimulateEvent };
   }

@@ -134,7 +134,7 @@ function getFocusTrigger(expect) {
   if (!Array.isArray(expect)) return;
   let trigger = '';
   expect.forEach((item) => {
-    if (item.trigger.includes('focus')) {
+    if (item.trigger && item.trigger.includes('focus')) {
       trigger = 'focus';
     }
   })
