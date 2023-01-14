@@ -44,7 +44,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const arr = [
       `it${getSkipCode(skip)}('events.${firstEvent} works fine', ${isVue || reactAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
-        getWrapper(framework, mountCode),
+        getWrapper(framework, mountCode, '', '', { trigger: firstEvent, wrapper }),
         getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),
         `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
       `});`,
@@ -70,7 +70,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const oneEventArr = [
         `it${getSkipCode(skip)}(${itDescription}, ${async} () => {`,
         getEventsDefinition(expect),
-        getWrapper(framework, mountCode),
+        getWrapper(framework, mountCode, '', '', { trigger: getFocusTrigger(expect), wrapper }),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
       ];
@@ -116,6 +116,18 @@ function getExistDomExpect(framework, exist, eventIndex) {
     }
     return getDomExpectTruthy(framework, `'${domSelector}'`);
   }).join('\n');
+}
+
+// 如果事件存在 focus，返回 focus；如果不存在，则返回空（Vue2 的 focus 需要 attachTo）
+function getFocusTrigger(expect) {
+  if (!Array.isArray(expect)) return;
+  let trigger = '';
+  expect.forEach((item) => {
+    if (item.trigger.includes('focus')) {
+      trigger = 'focus';
+    }
+  })
+  return trigger;
 }
 
 function getEventArguments(framework, args, fnName = 'fn') {

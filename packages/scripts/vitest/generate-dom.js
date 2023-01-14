@@ -33,10 +33,10 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
           ? getDomExpectTruthy(framework, `'${dom}'`)
           : getDomExpectFalsy(framework, `'${dom}'`),
         `// ${oneApiData.field_name} = false`,
-        getWrapper(framework, mountCode1, '1'),
+        getWrapper(framework, mountCode1, undefined, '1'),
         getDomExpectFalsy(framework, `'${dom}'`, '1'),
         `// ${oneApiData.field_name} = true`,
-        getWrapper(framework, mountCode2, '2'),
+        getWrapper(framework, mountCode2, undefined, '2'),
         getDomExpectTruthy(framework, `'${dom}'`, '2'),
         getSnapshotCase(snapshot, framework, '2'),
       `})`,

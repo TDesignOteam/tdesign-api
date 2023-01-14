@@ -568,7 +568,6 @@ export default {
           expectExist.push(item)
         } else if (typeof item === 'object') {
           const keys = Object.keys(item)
-          console.log(keys);
           if (item[keys[0]] === false) {
             expectNotExist.push(keys[0])
           } else if (item[keys[0]].attribute) {

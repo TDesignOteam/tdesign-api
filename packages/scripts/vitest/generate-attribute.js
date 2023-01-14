@@ -35,7 +35,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
       `const attributeValues = ${getArrayCode(attributeValue)};`,
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
         `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${item}\`, () => {`,
-          getWrapper(framework, componentCode, '', attributeDom),
+          getWrapper(framework, componentCode, attributeDom),
           // 变量使用双斜杠包裹
           getAttributeExpect(framework, { [attributeName]: '/attributeValues[index]/' }, '', attributeDom),
           getSnapshotCase(snapshot, framework),
@@ -49,7 +49,7 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: attributeValue, ...props }, extraCode);
     const arr = [
       `it${getSkipCode(skip)}(${getItDescription(oneApiData)}, () => {`,
-        getWrapper(framework, componentCode, '', attributeDom),
+        getWrapper(framework, componentCode, attributeDom),
         getAttributeExpect(framework, { [attributeName]: attributeValue }, '', attributeDom),
         getSnapshotCase(snapshot, framework),
       `});`,
@@ -66,7 +66,7 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
     const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
     const arr = [
       `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`, () => {`,
-        getWrapper(framework, mountCode, '', attributeDom),
+        getWrapper(framework, mountCode, attributeDom),
         getDomAttributeExpect(framework, expect, component),
         getSnapshotCase(snapshot, framework),
       `});`

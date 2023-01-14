@@ -173,17 +173,29 @@ function getSnapshotCase(snapshot, framework, wrapperIndex = '') {
  * @param {String} goalDom 寻找目标元素的选择器
  * @returns 
  */
-function getWrapper(framework, mountCode, wrapperIndex = '', goalDom = '') {
+function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extraData = {}) {
+  const { trigger = '', wrapper } = extraData;
   if (framework.indexOf('Vue') !== -1) {
     const findDomCode = goalDom ? `.find('${goalDom}')` : '';
-    return `const wrapper${wrapperIndex} = ${mountCode}${findDomCode};`;
+    const wrapperDefinition = [];
+    let tmpMountCode = Array.isArray(mountCode) ? mountCode.join('\n') : mountCode;
+    // Vue2 的 trigger focus 需要 createElement 和 attachTo
+    if (framework === 'Vue(PC)' && trigger.includes('focus') && !wrapper) {
+      wrapperDefinition.push(...[
+        '// Vue2 need attachTo to trigger \`focus\` event. https://v1.test-utils.vuejs.org/api/wrapper/#trigger',
+        'createElementById()',
+      ]);
+      tmpMountCode = tmpMountCode.replace(/\)$/, ', { attachTo: \'#focus-dom\' })');
+    }
+    wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
+    return wrapperDefinition.join('\n');
   }
   if (framework.indexOf('React') !== -1) {
-    return getReactWrapper(mountCode, wrapperIndex, goalDom);
+    return getReactWrapper(mountCode, goalDom, wrapperIndex);
   }
 }
 
-function getReactWrapper(mountCode, wrapperIndex = '', goalDom = '') {
+function getReactWrapper(mountCode, goalDom = '', wrapperIndex = '') {
   const i = wrapperIndex;
   if (goalDom) {
     return [

@@ -28,7 +28,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     const arr = [
       `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
       `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
-      getWrapper(framework, mountCode, '', classNameDom),
+      getWrapper(framework, mountCode, classNameDom),
       getClassNameExpectTruthy(framework, `\`${className}\``, '', classNameDom),
       getSnapshotCase(snapshot, framework),
       `});`,
@@ -47,7 +47,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         `const ${classNameVariable} = ${getArrayCode(className)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {`,
         `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${ item }\`, () => {`,
-        getWrapper(framework, mountCode, '', classNameDom),
+        getWrapper(framework, mountCode, classNameDom),
         hasObjectClassName
         ? [
             `if (typeof ${classNameVariable}[index] === 'string') {`,
@@ -86,16 +86,16 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     const arr = [
       `it${getSkipCode(skip)}(${getItDescription(oneApiData)}, () => {`,
       `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
-      getWrapper(framework, mountCode1, '1', classNameDom),
+      getWrapper(framework, mountCode1, classNameDom, '1'),
       oneApiData.field_default_value === 'true'
         ? getClassNameExpectTruthy(framework, `'${className}'`, '1', classNameDom)
         : getClassNameExpectFalsy(framework, `'${className}'`, '1', classNameDom),
       `// ${oneApiData.field_name} = true`,
-      getWrapper(framework, mountCode2, '2', classNameDom),
+      getWrapper(framework, mountCode2, classNameDom, '2'),
       getClassNameExpectTruthy(framework, `'${className}'`, '2', classNameDom),
       getSnapshotCase(snapshot, framework, '2'),
       `// ${oneApiData.field_name} = false`,
-      getWrapper(framework, mountCode3, '3', classNameDom),
+      getWrapper(framework, mountCode3, classNameDom, '3'),
       getClassNameExpectFalsy(framework, `'${className}'`, '3', classNameDom),
       getSnapshotCase(snapshot, framework, '3'),
       '});',
@@ -113,7 +113,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`, () => {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
-          getWrapper(framework, mountCode, '', classNameDom),
+          getWrapper(framework, mountCode, classNameDom),
           getClassNameExpectTruthy(framework, 'expectedClassName'),
         `});
       });`,

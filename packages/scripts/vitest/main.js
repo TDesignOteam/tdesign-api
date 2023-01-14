@@ -31,7 +31,7 @@ function getBaseData(framework, component, apiData, map) {
   return baseData;
 }
 
-function getMoreEventImports(event) {
+function getMoreEventImports(framework, event, wrapper) {
   const imports = [];
   if (!Array.isArray(event)) return [];
   event.forEach((oneEventExpect) => {
@@ -40,11 +40,16 @@ function getMoreEventImports(event) {
         if (typeof oneExpect === 'object'
           && oneExpect.trigger
         ) {
+          // 添加模拟事件
           SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
             if (oneExpect.trigger.includes(simulateEvent)) {
               imports.push(simulateEvent);
             }
           })
+          // 添加 Vue2 的 createElementById
+          if (framework === 'Vue(PC)' && !wrapper && oneExpect.trigger.includes('focus')) {
+            imports.push('createElementById');
+          }
         }
       })
     }
@@ -74,7 +79,7 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
           hasEvent = true;
-          importedTestUtils = getMoreEventImports(testDescription.PC[key]);
+          importedTestUtils = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper);
         }
         // 同样的测试用例复用到其他实例
         if (testDescription.PC.copyTestToWrapper) {
