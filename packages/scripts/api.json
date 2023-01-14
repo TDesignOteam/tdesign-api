@@ -46608,7 +46608,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\"t-image__overlay-content\",{\".t-image__overlay-content--hidden\":0}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content\",{\".t-image__overlay-content--hidden\":0}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46695,7 +46695,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":{\"top\":\"t-image--position-top\",\"bottom\":\"t-image--position-bottom\",\"left\":\"t-image--position-left\",\"right\":\"t-image--position-right\",\"center\":\"t-image--position-center\"}}}",
+      "test_description": "{\"PC\":{\"className\":{\"top\":\"t-image--position-top\",\"bottom\":\"t-image--position-bottom\",\"left\":\"t-image--position-left\",\"right\":\"t-image--position-right\",\"center\":\"t-image--position-center\"},\"classNameDom\":\".t-image\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

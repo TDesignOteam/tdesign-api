@@ -114,7 +114,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
           getWrapper(framework, mountCode, classNameDom),
-          getClassNameExpectTruthy(framework, 'expectedClassName'),
+          getClassNameExpectTruthy(framework, 'expectedClassName', '', classNameDom),
         `});
       });`,
     ];
