@@ -54,17 +54,18 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     let arr = [];
     event.forEach((oneEventUnitCase) => {
       const { props, expect, description, wrapper: oneEventUnitCaseWrapper } = oneEventUnitCase;
+      const currentExtraCode = { ...extraCode };
       if (oneEventUnitCaseWrapper) {
-        extraCode.wrapper = oneEventUnitCaseWrapper;
+        currentExtraCode.wrapper = oneEventUnitCaseWrapper;
       }
       const codeProps = {
         ...(props || {}),
-        events: getEventFunctions(expect, framework, extraCode),
+        events: getEventFunctions(expect, framework, currentExtraCode),
       };
       if (oneApiData.field_type_text && oneApiData.field_type_text[0] === 'Boolean' && !codeProps[oneApiData.field_name]) {
         codeProps[oneApiData.field_name] = true;
       }
-      const mountCode = getMountComponent(framework, component, codeProps, extraCode);
+      const mountCode = getMountComponent(framework, component, codeProps, currentExtraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
       const async = framework.indexOf('Vue') !== -1 || reactAsync ? 'async' : '';
       const category = oneApiData.field_category_text?.toLocaleLowerCase();
@@ -75,7 +76,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         getEventsDefinition(expect),
         getWrapper(framework, mountCode, '', '', {
           trigger: getFocusTrigger(expect),
-          wrapper: extraCode.wrapper,
+          wrapper: currentExtraCode.wrapper,
         }),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
