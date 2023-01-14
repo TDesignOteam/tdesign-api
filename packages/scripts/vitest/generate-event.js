@@ -38,7 +38,11 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const finalDom = eventInfo.triggerDom;
     // Vue2 和 Vue3/React 事件绑定方式不同
     const attachEventToDom = getEventsCode(framework, { [firstEvent]: 'fn' });
-    const mountCode = getMountComponent(framework, component, { events: attachEventToDom }, extraCode);
+    const tmpProps = { events: attachEventToDom }
+    if (oneApiData.field_type_text[0] === 'Boolean') {
+      tmpProps[oneApiData.field_name] = true;
+    }
+    const mountCode = getMountComponent(framework, component, tmpProps, extraCode);
     const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
     const arr = [
@@ -139,7 +143,7 @@ function getFocusTrigger(expect) {
 
 function getEventArguments(framework, args, fnName = 'fn') {
   if (typeof args === 'string' && args === 'not') {
-    return [`expect(${fnName}).not.toHaveBeenCalled(1);`];
+    return [`expect(${fnName}).not.toHaveBeenCalled();`];
   }
   if (!Array.isArray(args)) return [];
   const arr = args.map((oneArgument, index) => {

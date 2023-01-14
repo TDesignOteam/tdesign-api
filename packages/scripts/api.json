@@ -46130,7 +46130,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "preDepend: {'alt':'图片占位'}",
+      "test_description": "{\"PC\":{\"props\":{\"src\":\"https://www.error.img.com\"},\"attribute\":{\"alt\":\"text image load failed\"},\"attributeDom\":\"img\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46174,7 +46174,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":\"not\"}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46219,7 +46219,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"src\":\"https://this.is.an.error.img.com\"},\"tnode\":{\"trigger\":\"\",\"dom\":[]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46343,7 +46343,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-image--fit-${item}\",\"classNameDom\":\".t-image\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46387,7 +46387,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "{\"PC\":{\"props\":{\"gallery\":true},\"className\":\"t-image__wrapper--gallery\",\"dom\":[\".t-image__gallery-shadow\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46565,7 +46565,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[\".t-image__overlay-content\"],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46606,7 +46606,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46648,7 +46648,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46693,7 +46693,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":{\"top\":\"t-image--position-top\",\"bottom\":\"t-image--position-bottom\",\"left\":\"t-image--position-left\",\"right\":\"t-image--position-right\",\"center\":\"t-image--position-center\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46741,7 +46741,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-image__wrapper--shape-${item}\",\"classNameDom\":\".t-image__wrapper\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -46827,7 +46827,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "skip: true\\npreDepend: { 'src' : 'https://tdesign.gtimg.com/site/upload1.png'}",
+      "test_description": "{\"PC\":{\"attribute\":{\"href\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"attributeDom\":\"img\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
