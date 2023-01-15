@@ -447,6 +447,7 @@ export default {
     getDomRecommend() {
       return [
         '元素校验规则：',
+        '最简规则：".t-tag__icon-close"，表示值为 true 时存在元素 `.t-tag__icon-close`',
         '推荐规则一：["button", "a", "div"]。存在枚举值，依次验证这几个元素是否存在。如：Button.tag',
         '推荐规则二：["tfoot.t-table__footer", { "tfoot > tr": 2 }]。直接校验组件实例是否存在这些元素，数字表示存在几个',
         '推荐规则三：{ "[3, 1]": { ".t-table__row--fixed-top": 3 } }。表示值为 [3, 1] 时，校验 .t-table__row--fixed-top 是否存在 3 个',
