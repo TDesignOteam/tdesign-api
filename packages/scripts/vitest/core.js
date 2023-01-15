@@ -8,7 +8,7 @@ const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
 const ATTRIBUTES_STYLE = 'style';
 
-const SIMULATE_FUNCTIONS = ['simulateInputChange', 'simulateKeydownEvent', 'simulateImageEvent'];
+const SIMULATE_FUNCTIONS = ['simulateInputChange', 'simulateInputEnter', 'simulateKeydownEvent', 'simulateImageEvent'];
 
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
