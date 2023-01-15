@@ -50279,10 +50279,10 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<any>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value could trigger change event\",\"expect\":[{\"trigger\":\"simulateInputChange('input', 'initial value')\",\"event\":{\"change\":[\"initial value\",{\"e.type\":\"input\"}]}}]},{\"props\":{\"value\":\"TDesign\"},\"description\":\"controlled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"TDesign\"}}}]}]},{\"props\":{\"defaultValue\":\"Hello\"},\"description\":\"uncontrolled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value could trigger change event\",\"expect\":[{\"trigger\":\"simulateInputChange('input', 'initial value')\",\"event\":{\"change\":[\"initial value\",{\"e.type\":\"input\"}]}}]},{\"props\":{\"value\":\"TDesign\"},\"description\":\"controlled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"TDesign\"}}}]}]},{\"props\":{\"defaultValue\":\"Hello\"},\"description\":\"uncontrolled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello TDesign\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -91445,7 +91445,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"className\":[{\"t-tag-input--break-line\":false},\"t-tag-input--break-line\"],\"attribute\":\"\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91486,7 +91486,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[{\"value\":\"{size: 'small'}\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"t-size-s\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91528,7 +91528,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"input value text\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"input value text\"}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91571,7 +91571,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91613,7 +91613,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":1},\"description\":\"could type only three tags\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateKeydownEvent(document, 'Enter')\"},{\"trigger\":\" simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateKeydownEvent(document, 'Enter')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91654,7 +91654,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"dom\":{\"3\":{\".t-tag\":4}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

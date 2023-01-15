@@ -18,7 +18,7 @@
 
         <p>Document 模拟事件：simulateKeydownEvent(document, 'ArrowDown')</p>
         <p>Document 模拟事件：simulateKeydownEvent(document, 'Enter')</p>
-        <p>输入框文本输入模拟事件：simulateInputChange('.t-input', 'Input Text')</p>
+        <p>输入框文本输入模拟事件：simulateInputChange('input', 'Input Text')</p>
       </template>
       <t-input v-model="eventData.trigger" placeholder="选填，交互操作，示例：mouseenter(.t-input)"></t-input>
     </t-tooltip>
