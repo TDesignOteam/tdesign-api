@@ -46905,7 +46905,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://load-failed-img.png\"},\"expect\":[{\"trigger\":\"simulateImageEvent('img', 'error')\",\"event\":{\"error\":[{\"e.type\":\"error\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"src\":\"https://load-failed-img.png\"},\"expect\":[{\"trigger\":\"simulateImageEvent('img', 'error')\",\"event\":{\"error\":[{\"e.type\":\"error\"}]},\"exist\":[\".t-image__error\",\".t-icon-image-error\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -78213,7 +78213,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"className\":\"t-skeleton--animation-${item}\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78232,6 +78232,7 @@
     {
       "id": 1788,
       "platform_framework": [
+        "2",
         "16"
       ],
       "component": "Skeleton",
@@ -78257,10 +78258,11 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(PC)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -78271,9 +78273,13 @@
     {
       "id": 1786,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Skeleton",
       "field_category": 1,
@@ -78298,13 +78304,17 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -78314,6 +78324,7 @@
     {
       "id": 1787,
       "platform_framework": [
+        "1",
         "8"
       ],
       "component": "Skeleton",
@@ -78339,10 +78350,11 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
         "Vue(Mobile)"
       ],
       "field_type_text": [
@@ -78369,7 +78381,7 @@
       ],
       "field_default_value": "0",
       "field_enum": "",
-      "field_desc_zh": "【开发中】延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒",
+      "field_desc_zh": "延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -78383,7 +78395,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"delay\":1000,\"loading\":true},\"description\":\"show loading delay 300ms\",\"wrapper\":\"getSkeletonDefaultMount\",\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-skeleton__row\":false}]},{\"exist\":[\".t-skeleton__row\"],\"delay\":1000}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78469,7 +78481,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"dom\":{\"true\":{\".t-skeleton__row\":1},\"false\":{\".t-skeleton__row\":0}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78678,7 +78690,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"dom\":{\"text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-text\":1},\"avatar\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-circle\":1},\"paragraph\":{\".t-skeleton__row\":3,\".t-skeleton__col\":3,\".t-skeleton--type-text\":3},\"avatar-text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-text\":1,\".t-skeleton--type-circle\":1},\"tab\":{\".t-skeleton__row\":2,\".t-skeleton__col\":2,\".t-skeleton--type-text\":2},\"article\":{\".t-skeleton__row\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
