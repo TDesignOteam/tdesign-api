@@ -78566,7 +78566,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"dom\":{\"[1,1,2]\":{\".t-skeleton__row\":3,\".t-skeleton__row:first-child .t-skeleton__col\":1,\".t-skeleton__row:nth-child(2) .t-skeleton__col\":1,\".t-skeleton__row:nth-child(3) .t-skeleton__col\":2},\"[1, 1, { width: '100px' }]\":{\".t-skeleton__row\":3,\".t-skeleton__row:first-child .t-skeleton__col\":1,\".t-skeleton__row:nth-child(3) .t-skeleton__col\":1},\"[1, 2, [{ width, height }, { width, height, marginLeft }]]\":{\".t-skeleton__row:first-child .t-skeleton__col\":1,\".t-skeleton__row:nth-child(2) .t-skeleton__col\":2,\".t-skeleton__row:nth-child(3) .t-skeleton__col\":2}},\"attribute\":[{\"value\":\"[1, 1, { width: '100px' }]\",\"expect\":[{\"dom\":\".t-skeleton__row:nth-child(3)\",\"attribute\":{\"style.width\":\"100px\"}}]},{\"value\":\"[1, 2, [{ width: '100px', height: '35px' }, { width: '101px', height: '36px', marginLeft: '16px' }]]\",\"expect\":[{\"dom\":\".t-skeleton__row:nth-child(3) .t-skeleton__col:first-child\",\"attribute\":{\"style.width\":\"100px\"}},{\"dom\":\".t-skeleton__row:nth-child(3) .t-skeleton__col:nth-child(2)\",\"attribute\":{\"style.width\":\"101px\",\"style.height\":\"36px\",\"style.marginLeft\":\"16px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
