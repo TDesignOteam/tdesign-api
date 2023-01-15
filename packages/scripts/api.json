@@ -91308,7 +91308,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示标签值，`collapsedTags` 表示折叠标签值，`count` 表示总标签数量",
+      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示总标签数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -91322,7 +91322,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"trigger\":\"\",\"dom\":[]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91363,7 +91363,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"disabled TagInput does not need clearIcon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-tag-input__suffix-clear\":false}]}]},{\"description\":\"disabled TagInput can not trigger focus event\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91736,7 +91736,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"readonly TagInput does not need clearIcon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"event\":[{\".t-tag-input__suffix-clear\":false}]}]},{\"description\":\"readonly TagInput can not trigger focus event\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

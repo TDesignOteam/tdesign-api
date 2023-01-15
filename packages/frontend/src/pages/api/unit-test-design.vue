@@ -303,12 +303,13 @@ export default {
 }
 .unit-test-design__out {
   width: 50%;
-  max-height: 100%;
+  /* max-height: 100%; */
+  height: fit-content;
 }
-.unit-test-code {
+/* .unit-test-code {
   height: 100%;
   overflow: auto;
-}
+} */
 
 .unit-test-design .t-textarea textarea,
 .unit-test-design .t-textarea__wrap .t-textarea {
