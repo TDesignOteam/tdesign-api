@@ -78213,7 +78213,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"className\":\"t-skeleton--animation-${item}\"}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"className\":\"t-skeleton--animation-${item}\",\"classNameDom\":\".t-skeleton__col\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78258,7 +78258,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"props\":{\"loading\":false},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78304,7 +78304,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"props\":{\"loading\":false},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78690,7 +78690,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"dom\":{\"text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-text\":1},\"avatar\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-circle\":1},\"paragraph\":{\".t-skeleton__row\":3,\".t-skeleton__col\":3,\".t-skeleton--type-text\":3},\"avatar-text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-text\":1,\".t-skeleton--type-circle\":1},\"tab\":{\".t-skeleton__row\":2,\".t-skeleton__col\":2,\".t-skeleton--type-text\":2},\"article\":{\".t-skeleton__row\":1}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getSkeletonDefaultMount\",\"dom\":{\"text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-text\":1},\"avatar\":{\".t-skeleton__row\":1,\".t-skeleton__col\":1,\".t-skeleton--type-circle\":1},\"paragraph\":{\".t-skeleton__row\":3,\".t-skeleton__col\":3,\".t-skeleton--type-text\":3},\"avatar-text\":{\".t-skeleton__row\":1,\".t-skeleton__col\":2,\".t-skeleton--type-text\":1,\".t-skeleton--type-circle\":1},\"tab\":{\".t-skeleton__row\":2,\".t-skeleton__col\":2,\".t-skeleton--type-text\":2},\"article\":{\".t-skeleton__row\":6}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

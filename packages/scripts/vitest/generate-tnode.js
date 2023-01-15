@@ -34,10 +34,9 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
     }, extraCode);
   } else if (framework.indexOf('React') !== -1) {
     if (oneApiData.field_name === 'children') {
-      componentCode = getMountComponent(framework, component, {}, {
+      componentCode = getMountComponent(framework, component, {...props}, {
         ...extraCode,
         content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
-        ...props,
       });
     } else {
       componentCode = getMountComponent(framework, component, {
