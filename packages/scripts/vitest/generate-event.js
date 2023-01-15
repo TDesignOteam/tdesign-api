@@ -179,9 +179,13 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '')
     return `expect(${oneArgument}.test(${fnName}.mock.calls[0][${index}]${property})).toBeTruthy();`;
   } else {
     const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
-    const value = framework.indexOf('React') !== -1 && /^'input'$/.test(oneArgument) && fnName.indexOf('onChange') !== -1
+    // Vue 的 input === react 的 change
+    let value = framework.indexOf('React') !== -1 && /^'input'$/.test(oneArgument) && fnName.indexOf('onChange') !== -1
       ? `'change'`
       : oneArgument;
+    if (typeof value === 'object') {
+      value = JSON.stringify(value);
+    }
     return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${value});`;
   }
 }
