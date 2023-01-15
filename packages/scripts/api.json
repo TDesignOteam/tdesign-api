@@ -91613,7 +91613,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":1},\"description\":\"could type only three tags\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateKeydownEvent(document, 'Enter')\"},{\"trigger\":\" simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateKeydownEvent(document, 'Enter')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":1},\"description\":\"could type only three tags\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag3')\"},{\"trigger\":\"keydown.enter(input)\",\"exist\":[{\".t-tag\":1}]},{\"trigger\":\" simulateInputChange('input', 'Tag5')\"},{\"trigger\":\"keydown.enter(input)\",\"exist\":[{\".t-tag\":1}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
