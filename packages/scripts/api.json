@@ -92226,7 +92226,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"click clear icon, then clear all tags\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"clearable\":true},\"description\":\"click clear icon, then clear all tags\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
