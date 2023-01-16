@@ -92367,10 +92367,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "FocusEvent<HTMLInputElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[[],{\"e.type\":\"focus\",\"inputValue\":\"\"}]}}]},{\"props\":{\"inputValue\":\"tag\"},\"description\":\"expect focus not change inputValue\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[[],{\"e.type\":\"focus\",\"inputValue\":\"tag\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
