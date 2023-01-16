@@ -83,11 +83,12 @@ function getEventFunctions(expect, framework, extraCode) {
   expect.forEach((item, index) => {
     if (!item.event) return;
     Object.keys(item.event).forEach((eventName) => {
-      const formattedEventname = getEventNameByFramework(eventName, framework);
+      const [fEvent] = eventName.split('.');
+      const formattedEventname = getEventNameByFramework(fEvent, framework);
       if (needPropsEvent) {
-        fns.push(`${formattedEventname}={${getEventFnName(eventName, index)}}`);
+        fns.push(`${formattedEventname}={${getEventFnName(fEvent, index)}}`);
       } else {
-        fns.push(`${formattedEventname}: ${getEventFnName(eventName, index)}`);
+        fns.push(`${formattedEventname}: ${getEventFnName(fEvent, index)}`);
       }
     })
   });
@@ -657,10 +658,10 @@ function getFireEventName(event, framework) {
 }
 
 // 处理正则表达式的校验
-function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '') {
+function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '', calls = 'calls[0]') {
   const property = oneProperty ? `.${oneProperty}` : '';
   if (isRegExp(oneArgument)) {
-    return `expect(${oneArgument}.test(${fnName}.mock.calls[0][${index}]${property})).toBeTruthy();`;
+    return `expect(${oneArgument}.test(${fnName}.mock.${calls}[${index}]${property})).toBeTruthy();`;
   } else {
     const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
     // Vue 的 input === react 的 change
@@ -670,35 +671,36 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '')
     if (typeof value === 'object') {
       value = JSON.stringify(value);
     }
-    return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${value});`;
+    return `expect(${fnName}.mock.${calls}[${index}]${property}).${toEqual}(${value});`;
   }
 }
 
 // 事件参数测试
-function getEventArguments(framework, args, fnName = 'fn') {
+function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
   if (typeof args === 'string' && args === 'not') {
     return [`expect(${fnName}).not.toHaveBeenCalled();`];
   }
   if (!Array.isArray(args)) return [];
   const arr = args.map((oneArgument, index) => {
+
     if (oneArgument === undefined || oneArgument === 'skip') return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
-      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`);
+      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, calls);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
       return Object.keys(oneArgument).map(oneProperty => {
         const value = oneArgument[oneProperty];
         if (value === true) {
-          const expectInfo = `${fnName}.mock.calls[0][${index}].${oneProperty}`;
+          const expectInfo = `${fnName}.mock.${calls}[${index}].${oneProperty}`;
           return isRegExp(oneArgument)
             ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
             : `expect(${expectInfo}).toBeTruthy();`;
         }
         const expectVal = typeof value === 'string' && !isRegExp(value) ? `'${value}'` : value;
-        return getOneArgEqual(framework, fnName, index, expectVal, oneProperty);
+        return getOneArgEqual(framework, fnName, index, expectVal, oneProperty, calls);
       }).join('\n');
     }
-    return getOneArgEqual(framework, fnName, index, oneArgument);
+    return getOneArgEqual(framework, fnName, index, oneArgument, undefined, calls);
   });
   arr.unshift(`expect(${fnName}).toHaveBeenCalled(1);`);
   return arr.filter(v => v);

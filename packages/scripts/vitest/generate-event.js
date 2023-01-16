@@ -112,9 +112,10 @@ function getEventExpectCode(p, index, framework, component) {
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }, '', index),
     getExistDomExpect(framework, exist, index),
     event && Object.entries(event).map(([eventName, args]) => {
+      const [fEventName, calls] = eventName.split('.');
       const fnName = getEventFnName(eventName, index);
       return [
-        getEventArguments(framework, args, fnName).join(''),
+        getEventArguments(framework, args, fnName, calls).join(''),
       ].join('\n');
     }).join('\n'),
     clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),
