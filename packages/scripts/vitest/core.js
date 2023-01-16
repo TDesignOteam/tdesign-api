@@ -221,7 +221,7 @@ function getDocumentDomExpectTruthy(domSelector, framework) {
   const isVue = framework.indexOf('Vue') !== -1;
   return [
     `const ${domVariable} = document.querySelector(${selector});`,
-    `expect(${domVariable}).toBeDefined();`,
+    `expect(${domVariable}).toBeTruthy();`,
     isVue ? '// remove node in document to avoid influencing following test cases' : '',
     isVue ? `${domVariable}${emptyJudgement}.remove();` : '',
   ].filter(v => v).join('\n');

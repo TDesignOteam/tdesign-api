@@ -103019,7 +103019,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"data\":[]},\"description\":\"empty data with panel content node\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__empty\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103102,7 +103102,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"data\":[]},\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"tnode\":{\"dom\":[\"document.custom-node\"],\"trigger\":\"click(.t-input)\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103832,7 +103832,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103964,7 +103964,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104008,7 +104008,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":[{\"t-is-default\":false},\"t-is-success\",\"t-is-warning\",\"t-is-error\"],\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104038,7 +104038,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】透传 Tag 标签组件全部属性",
+      "field_desc_zh": "透传 Tag 标签组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -104097,7 +104097,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":{\"this is a tip\":{\".t-input__tips\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104179,7 +104179,7 @@
       "create_time": "2021-04-14 03:06:08",
       "update_time": "2022-01-21 04:23:43",
       "event_output": null,
-      "custom_field_type": "TreeSelectValue【type TreeSelectValue = string | number | Array<TreeSelectValue>】",
+      "custom_field_type": "TreeSelectValue【type TreeSelectValue<T extends TreeOptionData = TreeOptionData> = string | number | T | Array<TreeSelectValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
