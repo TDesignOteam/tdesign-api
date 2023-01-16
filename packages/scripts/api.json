@@ -77354,7 +77354,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否显示下拉框",
       "field_desc_en": null,
@@ -77364,7 +77364,7 @@
       "update_time": "2022-03-08 11:06:05",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "sync",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
