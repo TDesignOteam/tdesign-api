@@ -217,21 +217,31 @@ export default {
         tmpJSON.copyTestToWrapper = formData.copyTestToWrapper.trim().split(',')
       }
 
-      if (trigger === 'category' && formData.list.length) {
-        const tnodeInfo = formData.list.find(t => t.category === 'tnode')
-        if (tnodeInfo) {
-          const { tnode } = tnodeInfo
-          if ((!tnode.dom || !tnode.dom.length) && !tnode.trigger) {
-            tnodeInfo.tnode = true
-          }
-        }
-      }
+      // if (trigger === 'category' && formData.list.length) {
+      //   const tnodeInfo = formData.list.find(t => t.category === 'tnode')
+      //   if (tnodeInfo) {
+      //     const { tnode } = tnodeInfo
+      //     if ((!tnode.dom || !tnode.dom.length) && !tnode.trigger) {
+      //       tnodeInfo.tnode = true
+      //     }
+      //   }
+      // }
 
       let listProps = undefined
       //  && CATEGORY_OPTIONS.find(t => t.value === trigger)
       if (formData.list?.length) {
         formData.list.map((item) => {
           tmpJSON[item.category] = item[item.category]
+          // tnode 数据都为空时，意味着保持默认值 true
+          if (item.category === 'tnode' && typeof item.tnode !== true) {
+            const { tnode } = item;
+            if ((!tnode.dom || !tnode.dom.length) && !tnode.trigger && !tnode.params) {
+              tmpJSON.tnode = true;
+            }
+          }
+          if (trigger === 'tnode' && item.tnode.params) {
+            tmpJSON.tnode.params = parseJSON(item.tnode.params)
+          }
           if (item.className) {
             tmpJSON.className = parseJSON(item.className, item.className)
           }

@@ -290,8 +290,10 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ### 4.2 TNode 本身之外的更多断言
 
 ```json
-{"tnode":{
-  "dom": [".t-table__first-full-row", "td[colspan=\"3\"]"] },
+{
+  "tnode":{
+    "dom": [".t-table__first-full-row", "td[colspan=\"3\"]"]
+  },
   "wrapper":"getNormalTableMount"
 }
 ```
@@ -303,17 +305,31 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 在某些场景下，自定义元素并非默认就显示，而是触发某个条件才会存在。如：Popup/AutoComplete/Select 等组件的面板，在点击后才会显示。
 
 ```json
-{"tnode": {
-  "trigger": "focus(.t-input__wrap)",
-  "dom": [".t-is-focused", "document.t-popup"],
+{
+  "tnode": {
+    "trigger": "focus(.t-input__wrap)",
+    "dom": [".t-is-focused", "document.t-popup"],
+  },
   "wrapper": "getNormalAutoCompleteMount"
-}}
+}
 ```
 
 元素 `.t-input__wrap` 聚焦后，组件才会出现子元素 `.t-is-focused`，且文档（document.querySelector）中才会出现元素 `t-popup`。
 
 注意：TNode 一类用例，默认会全部校验自定义元素 `.custom-node` 是否存在，为固定类名。属于 TNode 校验中的关键词。
 如果这个元素不属于组件的子元素，而是存在于 document 中，请给 `"dom"` 添加一个元素 `"dom": ["document.custom-node"]`。
+
+### 4.4 校验 TNode 函数参数
+
+```json
+{
+  "tnode": {
+    "params": [{ "value": "tdesign-vue" }],
+  }
+}
+```
+
+表示 TNode 函数的第一个参数属性 `value` 值为 tdesign-vue`
 
 ---
 

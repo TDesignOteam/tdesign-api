@@ -17,12 +17,16 @@ export function formatToOneCategoryTest(formData) {
   }
   if (formData.tnode) {
     if (formData.tnode === true) {
-      newFormData.tnode = { trigger: '', dom: [] }
+      newFormData.tnode = { trigger: '', dom: [], params: '' }
     } else {
-      newFormData.tnode.trigger = formData.tnode.trigger
+      newFormData.tnode = { ...newFormData.tnode };
+      newFormData.tnode.trigger = formData.tnode.trigger;
       newFormData.tnode.dom = formData.tnode.dom
         ? (Array.isArray(formData.tnode.dom) ? formData.tnode.dom : JSON.parse(formData.tnode.dom))
-        : []
+        : [];
+      newFormData.tnode.params = typeof formData.tnode.params === 'object'
+        ? JSON.stringify(formData.tnode.params)
+        : formData.tnode.params;
     }
   }
   if (formData.props) {

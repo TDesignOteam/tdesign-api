@@ -8,6 +8,7 @@ const {
   formatToTriggerAndDom,
   getFireEventCode,
   getReactFireEventAsync,
+  getEventArguments,
 } = require('./core');
 const { getSkipCode } = require('./utils');
 
@@ -55,6 +56,12 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props);
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
+  }
+
+  // 如果 TNode 存在参数，则一定是函数。进行函数参数测试
+  if (typeof tnode === 'object' && tnode.params) {
+    const list = getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props);
+    arr.push(list);
   }
   return arr;
 }
@@ -133,6 +140,35 @@ function getTestCaseByComponentCode(params) {
     `});`
   ];
   return arr.filter(v => v);
+}
+
+function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props) {
+  const skipText = skip ? '.skip' : '';
+  const arr = [
+    `\nit${skipText}('${oneApiData.field_name} is a function with params', () => {`,
+      `const fn = vi.fn();`,
+      getMountComponent(framework, component, {
+        [oneApiData.field_name]: '/-fn-/',
+        ...props,
+      }, extraCode),
+      getEventArguments(framework, tnode.params).join('\n'),
+    `})`,
+  ];
+  // 插槽参数测试
+  if (framework.indexOf('Vue') !== -1) {
+    const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
+    arr.push(...[
+      `it${skipText}('${oneApiData.field_name} is a function with params', () => {`,
+        `const fn = vi.fn();`,
+        getMountComponent(framework, component, {
+          [slotsText]: { [oneApiData.field_name]: '/-fn-/' },
+          ...props,
+        }, extraCode),
+        getEventArguments(framework, tnode.params).join('\n'),
+      `})`,
+    ]);
+  }
+  return arr.join('\n');
 }
 
 function getTriggerList(trigger) {

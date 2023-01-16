@@ -656,6 +656,54 @@ function getFireEventName(event, framework) {
   return { eventName: eventInfo };
 }
 
+// 处理正则表达式的校验
+function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '') {
+  const property = oneProperty ? `.${oneProperty}` : '';
+  if (isRegExp(oneArgument)) {
+    return `expect(${oneArgument}.test(${fnName}.mock.calls[0][${index}]${property})).toBeTruthy();`;
+  } else {
+    const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
+    // Vue 的 input === react 的 change
+    let value = framework.indexOf('React') !== -1 && /^'input'$/.test(oneArgument) && fnName.indexOf('onChange') !== -1
+      ? `'change'`
+      : oneArgument;
+    if (typeof value === 'object') {
+      value = JSON.stringify(value);
+    }
+    return `expect(${fnName}.mock.calls[0][${index}]${property}).${toEqual}(${value});`;
+  }
+}
+
+// 事件参数测试
+function getEventArguments(framework, args, fnName = 'fn') {
+  if (typeof args === 'string' && args === 'not') {
+    return [`expect(${fnName}).not.toHaveBeenCalled();`];
+  }
+  if (!Array.isArray(args)) return [];
+  const arr = args.map((oneArgument, index) => {
+    if (oneArgument === undefined || oneArgument === 'skip') return;
+    if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
+      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`);
+    }
+    if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
+      return Object.keys(oneArgument).map(oneProperty => {
+        const value = oneArgument[oneProperty];
+        if (value === true) {
+          const expectInfo = `${fnName}.mock.calls[0][${index}].${oneProperty}`;
+          return isRegExp(oneArgument)
+            ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
+            : `expect(${expectInfo}).toBeTruthy();`;
+        }
+        const expectVal = typeof value === 'string' && !isRegExp(value) ? `'${value}'` : value;
+        return getOneArgEqual(framework, fnName, index, expectVal, oneProperty);
+      }).join('\n');
+    }
+    return getOneArgEqual(framework, fnName, index, oneArgument);
+  });
+  arr.unshift(`expect(${fnName}).toHaveBeenCalled(1);`);
+  return arr.filter(v => v);
+}
+
 /**
  * 获取事件触发代码，如：trigger('click')
  * @param {*} framework 框架名
@@ -813,6 +861,7 @@ module.exports = {
   getAttributeExpect,
   getDomAttributeExpect,
   getDomClassNameExpect,
+  getEventArguments,
   getFireEventCode,
   getClearDomInDocumentCode,
   getReactFireEventAsync,

@@ -19,6 +19,15 @@
 
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
+          <template #content>
+            示例：[{ "value": "tdesign-vue" }]
+          </template>
+          <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数" @blur="() => onFormDataChange('tnode')"></t-input>
+        </t-tooltip>
+      </div>
+
+      <div class="unit-test-ui__form-item-inner">
+        <t-tooltip theme="light">
           <t-input v-model="formData.tnode.trigger" placeholder="触发自定义节点显示的前置事件，如：focus(.t-input__wrap)"
             @change="() => onFormDataChange('tnode')"></t-input>
           <template #content>
