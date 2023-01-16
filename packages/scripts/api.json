@@ -104423,7 +104423,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<SVGElement>",
+      "trigger_elements": "MouseEvent<SVGSVGElement>",
       "deprecated": 0,
       "version": null,
       "test_description": null,
