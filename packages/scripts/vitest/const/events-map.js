@@ -17,6 +17,8 @@ const UNIT_TEST_EVENTS_MAP = {
   'focus': 'focus',
   'blur': 'blur',
   'click': 'click',
+  'wheel': 'wheel',
+  'paste': 'paste',
   'mousedown': 'mouseDown',
   'mouseenter': 'mouseEnter',
   'mouseleave': 'mouseLeave',
