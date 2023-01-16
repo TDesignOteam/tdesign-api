@@ -114,11 +114,6 @@ export interface TdTagInputProps {
    */
   defaultValue?: TagInputValue;
   /**
-   * 值
-   * @default []
-   */
-  modelValue?: TagInputValue;
-  /**
    * 自定义值呈现的全部内容，参数为所有标签的值
    */
   valueDisplay?: string | TNode<{ value: TagInputValue; onClose: (index: number, item?: any) => void }>;

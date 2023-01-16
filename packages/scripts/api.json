@@ -77122,7 +77122,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-input__suffix-icon\"}}",
+      "test_description": "{\"PC\":{\"props\":{\"loading\":true},\"dom\":[\".t-loading\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -77204,7 +77204,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-tag-input\"}}",
+      "test_description": "{\"PC\":{\"dom\":\".t-tag-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -77246,7 +77246,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"tnode\":{\"dom\":[\"document.custom-node\"],\"trigger\":\"click(.t-input)\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -77288,7 +77288,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"This is SelectInput placeholder\"}}}",
+      "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"This is SelectInput placeholder\"},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

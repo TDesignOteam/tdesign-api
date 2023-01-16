@@ -37,6 +37,8 @@ export interface UploadDisplayDragEvents {
   onDragover?: (event: DragEvent) => void;
   onDragleave?: (event: DragEvent) => void;
 }
+
+export type ImageEvent = Event;
 /** 通用全局类型 */
 
 export type OptionData = {
