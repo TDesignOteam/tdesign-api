@@ -92152,7 +92152,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"trigger blur event and clear inputValue on blur\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'tag1')\"},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[[],{\"e.type\":\"blur\",\"inputValue\":\"\"}],\"inputChange\":[\"\",{\"e.type\":\"blur\",\"trigger\":\"blur\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"\"}}}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"trigger blur event and clear inputValue on blur\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'tag1')\"},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[[],{\"e.type\":\"blur\",\"inputValue\":\"\"}],\"inputChange.calls[1]\":[\"\",{\"e.type\":\"blur\",\"trigger\":\"blur\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

@@ -98,7 +98,8 @@ function getEventsDefinition(expect) {
   return expect.map(({ event }, index) => {
     if (!event) return '';
     const arr = Object.keys(event).map((eventName) => {
-      return `const ${getEventFnName(eventName, index)} = vi.fn();`;
+      const [fEventName] = eventName.split('.');
+      return `const ${getEventFnName(fEventName, index)} = vi.fn();`;
     })
     return arr && arr.join('\n');
   }).filter(v => v).join('\n');
@@ -113,7 +114,7 @@ function getEventExpectCode(p, index, framework, component) {
     getExistDomExpect(framework, exist, index),
     event && Object.entries(event).map(([eventName, args]) => {
       const [fEventName, calls] = eventName.split('.');
-      const fnName = getEventFnName(eventName, index);
+      const fnName = getEventFnName(fEventName, index);
       return [
         getEventArguments(framework, args, fnName, calls).join(''),
       ].join('\n');

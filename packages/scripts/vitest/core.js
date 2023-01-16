@@ -685,7 +685,7 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
 
     if (oneArgument === undefined || oneArgument === 'skip') return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
-      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, calls);
+      return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, undefined, calls);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
       return Object.keys(oneArgument).map(oneProperty => {
