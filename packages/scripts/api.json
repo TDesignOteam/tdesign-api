@@ -92239,7 +92239,9 @@
     {
       "id": 2323,
       "platform_framework": [
-        "2"
+        "1",
+        "2",
+        "4"
       ],
       "component": "TagInput",
       "field_category": 2,
@@ -92261,11 +92263,13 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":{\"click(.t-input)\":{\"arguments\":[{\"e.type\":\"click\"}]}}}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "React(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -92333,7 +92337,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"['tag']\"},\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"enter\":[[\"tag\"],{\"e.type\":\"keydown\",\"inputValue\":\"\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
