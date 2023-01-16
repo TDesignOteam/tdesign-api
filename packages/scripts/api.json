@@ -92112,7 +92112,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[\"tdesign-vue\",\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\",\"tdesign-mobile-react\"]}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

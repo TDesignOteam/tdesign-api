@@ -145,7 +145,7 @@ function getTestCaseByComponentCode(params) {
 function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props) {
   const skipText = skip ? '.skip' : '';
   const arr = [
-    `\nit${skipText}('${oneApiData.field_name} is a function with params', () => {`,
+    `\nit${skipText}('props.${oneApiData.field_name} is a function with params', () => {`,
       `const fn = vi.fn();`,
       getMountComponent(framework, component, {
         [oneApiData.field_name]: '/-fn-/',
@@ -158,7 +158,7 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip
   if (framework.indexOf('Vue') !== -1) {
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
     arr.push(...[
-      `it${skipText}('${oneApiData.field_name} is a function with params', () => {`,
+      `it${skipText}('slots.${oneApiData.field_name} is a function with params', () => {`,
         `const fn = vi.fn();`,
         getMountComponent(framework, component, {
           [slotsText]: `{ [${oneApiData.field_name}]: fn }`,
