@@ -161,7 +161,7 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip
       `it${skipText}('${oneApiData.field_name} is a function with params', () => {`,
         `const fn = vi.fn();`,
         getMountComponent(framework, component, {
-          [slotsText]: { [oneApiData.field_name]: '/-fn-/' },
+          [slotsText]: `{ [${oneApiData.field_name}]: fn }`,
           ...props,
         }, extraCode),
         getEventArguments(framework, tnode.params).join('\n'),
