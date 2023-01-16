@@ -92223,10 +92223,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<SVGElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"click clear icon, then clear all tags\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -92448,7 +92448,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"event\":{\"mouseenter\":[{\"e.type\":\"mouseenter\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -92485,7 +92485,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"expect\":[{\"trigger\":\"mouseleave(.t-input)\",\"event\":{\"mouseleave\":[{\"e.type\":\"mouseleave\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -92519,10 +92519,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "ClipboardEvent<HTMLInputElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"paste(input)\",\"event\":{\"paste\":[{\"e.type\":\"paste\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
