@@ -239,7 +239,7 @@ export default {
               tmpJSON.tnode = true;
             }
           }
-          if (trigger === 'tnode' && item.tnode.params) {
+          if (trigger === 'tnode' && item.tnode?.params) {
             tmpJSON.tnode.params = parseJSON(item.tnode.params)
           }
           if (item.className) {
