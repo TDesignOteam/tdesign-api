@@ -92559,7 +92559,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"remove last tag on keydown Backspace\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"keydown.backspace(input)\",\"event\":{\"remove\":[{\"value\":[\"tdesign-vue\",\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\"]}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"remove last tag on keydown Backspace\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"keydown.backspace(input)\",\"event\":{\"remove\":[{\"value\":[\"tdesign-vue\",\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\"],\"index\":4,\"trigger\":\"backspace\",\"item\":\"tdesign-mobile-react\",\"e.type\":\"keydown\"}]}}]},{\"description\":\"remove any tag on click tag close icon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"click(.t-tag__icon-close)\",\"event\":{\"remove\":[{\"value\":[\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\",\"tdesign-mobile-react\"],\"index\":0,\"trigger\":\"tag-remove\",\"item\":\"tdesign-vue\",\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
