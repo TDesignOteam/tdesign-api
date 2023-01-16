@@ -92337,7 +92337,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"['tag']\"},\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"enter\":[[\"tag\"],{\"e.type\":\"keydown\",\"inputValue\":\"\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"['tag']\"},\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"enter\":[[\"tag\"],{\"e.type\":\"keydown\",\"inputValue\":\"\"}]}}]},{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
