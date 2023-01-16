@@ -664,12 +664,12 @@ function getFireEventName(event, framework) {
  *  params1.event 事件名称，可选值：@vue/test-utils 的 trigger 函数的参数
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
- function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '') {
+ function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '', eventIndex = '') {
   let fireEventCode = [];
   const eventInfo = parseSimulateEvents(event, dom);
   const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
   if (eventInfo.isSimulateEvent) {
-    const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex = '');
+    const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex });
     if (simulateEventCode) {
       fireEventCode.push(simulateEventCode);
     }
@@ -719,9 +719,9 @@ function getFireNormalEventCode(framework, { dom, event, component }, wrapperInd
   }
 }
 
-function getSimulateEventCode(framework, { component, eventInfo }, wrapperIndex = '') {
+function getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex }) {
   const { simulateEvent, args } = eventInfo;
-  const domVariable = `${camelCase(args[0])}Dom`;
+  const domVariable = `${camelCase(args[0])}Dom${(eventIndex || '')}`;
   const dom = args[0];
   const arr = [];
   if (dom === 'document') {

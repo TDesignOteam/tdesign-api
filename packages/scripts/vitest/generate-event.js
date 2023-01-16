@@ -108,7 +108,7 @@ function getEventExpectCode(p, index, framework, component) {
   const { triggerDom = 'self', trigger } = formatToTriggerAndDom(p);
 
   const arr = [
-    getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }),
+    getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }, '', index),
     getExistDomExpect(framework, exist, index),
     event && Object.entries(event).map(([eventName, args]) => {
       const fnName = getEventFnName(eventName, index);
