@@ -92070,7 +92070,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputDefaultMount\",\"event\":[{\"description\":\"controlled value test: only props can change count of tags\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":false}]}]},{\"description\":\"uncontrolled value test: only props can change count of tags\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
