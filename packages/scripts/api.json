@@ -95932,7 +95932,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"className\":{\"left\":\"t-timeline-left\",\"alternate\":\"t-timeline-alternate\",\"right\":\"t-timeline-right\"},\"event\":[{\"props\":{\"layout\":\"horizontal\",\"labelAlign\":\"top\"},\"description\":\"layout=horizontal labelAlign=top works fine\",\"wrapper\":\"getTimelineDefaultMount\",\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-timeline\":{\"className\":[\"t-timeline-top\"]}}]}]},{\"props\":{\"layout\":\"horizontal\",\"labelAlign\":\"bottom\"},\"description\":\"layout=horizontal labelAlign=bottom works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-timeline\":{\"className\":[\"t-timeline-bottom\"]}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -95981,7 +95981,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-timeline-${item}\"}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"className\":\"t-timeline-${item}\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96030,7 +96030,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-timeline-label--${item}\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
