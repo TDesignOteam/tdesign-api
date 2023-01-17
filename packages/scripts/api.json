@@ -103914,7 +103914,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"popupProps\":\"{placement: 'top'}\"},\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-popup\":{\"attribute\":{\"data-popper-placement\":\"top\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
