@@ -672,9 +672,13 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '',
   } else {
     const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
     // Vue 的 input === react 的 change
-    let value = framework.indexOf('React') !== -1 && /^'input'$/.test(oneArgument) && fnName.indexOf('onChange') !== -1
-      ? `'change'`
-      : oneArgument;
+    const events = ['onChange', 'onInputChange'];
+    let value = framework.indexOf('React') !== -1
+      && (property === '.e.type' || property === '.type')
+      && /^'input'$/.test(oneArgument)
+      && events.find((changeEvent) => fnName.indexOf(changeEvent) !== -1)
+        ? `'change'`
+        : oneArgument;
     if (typeof value === 'object') {
       value = JSON.stringify(value);
     }

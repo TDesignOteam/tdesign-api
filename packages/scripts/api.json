@@ -103483,7 +103483,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true},\"description\":\"controlled inputValue works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign')\",\"event\":{\"inputChange\":[\"tdesign\",{\"e.type\":\"change\",\"trigger\":\"change\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true},\"description\":\"controlled inputValue works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign')\",\"event\":{\"inputChange\":[\"tdesign\",{\"e.type\":\"input\",\"trigger\":\"input\"}]}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
