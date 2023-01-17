@@ -104,7 +104,7 @@ const COMPONENT_API_MD_MAP = {
   RangeInput: ['RangeInput', 'RangeInputPopup'],
   Input: ['Input', 'InputGroup'],
   Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
-  TimeLine: ['TimeLine', 'TimeLineItem'],
+  Timeline: ['Timeline', 'TimelineItem'],
   Guide:['Guide', 'GuideStep'],
   Tooltip:['Tooltip', 'TooltipLite'],
   SideBar: ['SideBar', 'SideBarItem'],
@@ -244,8 +244,8 @@ const TYPES_COMBINE_MAP = {
   Watermark: {
     list: ['Watermark', 'WatermarkText', 'WatermarkImage'],
   },
-  TimeLine: {
-    list: ['TimeLine', 'TimeLineItem'],
+  Timeline: {
+    list: ['Timeline', 'TimelineItem'],
   },
   Guide: {
     list: ['Guide', 'GuideStep'],
