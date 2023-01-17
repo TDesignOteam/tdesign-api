@@ -103055,7 +103055,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value can not show clear icon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":1},\"description\":\"show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"[1]\"},\"description\":\"show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value can not show clear icon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":1},\"description\":\"show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"[1]\"},\"description\":\"show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103099,7 +103099,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":5}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":5}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103250,7 +103250,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "当下拉列表为空时显示的内容",
       "field_desc_en": null,
@@ -103308,7 +103308,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"description\":\"\",\"wrapper\":\"getTreeMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"description\":\"\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103352,7 +103352,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103652,7 +103652,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103693,7 +103693,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeMultipleMount\",\"props\":{\"minCollapsedNum\":2},\"dom\":[{\".t-tag\":3,\".t-tag:last-child\":{\"text\":\"+3\"}}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":2},\"dom\":[{\".t-tag\":3,\".t-tag:last-child\":{\"text\":\"+3\"}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104397,7 +104397,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"value\":1,\"data\":\"[{label: 'tdesign-vue',value: 1}]\"},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"value\":1,\"data\":\"[{label: 'tdesign-vue',value: 1}]\"},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
