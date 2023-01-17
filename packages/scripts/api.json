@@ -94007,582 +94007,6 @@
       "field_type_text": []
     },
     {
-      "id": 2823,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLine",
-      "field_category": 1,
-      "field_name": "labelAlign",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right/alternate/top/bottom",
-      "field_desc_zh": "标签信息放在时间轴的位置，`mode='alternate'` 时生效。纵向时间轴信息位置：左侧、右侧或两侧，默认信息在时间轴右侧。横向时间轴信息位置：上方、下方、两侧",
-      "field_desc_en": "label info placement",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:31:51",
-      "update_time": "2022-07-18 09:11:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2824,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLine",
-      "field_category": 1,
-      "field_name": "layout",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "vertical",
-      "field_enum": "horizontal/vertical",
-      "field_desc_zh": "时间轴方向：水平方向、垂直方向",
-      "field_desc_en": "time line layout",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:36:14",
-      "update_time": "2022-07-14 03:12:21",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-timeline-${item}\"}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2913,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLine",
-      "field_category": 1,
-      "field_name": "mode",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "alternate",
-      "field_enum": "alternate/same",
-      "field_desc_zh": "标签与内容文本的位置关系，`alternate` 为展示在轴两侧，`same` 为展示在同一侧",
-      "field_desc_en": "The position relationship between the label and the content text, 'alternate' is displayed on both sides of the axis, and 'same' is displayed on the same side",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-08-08 09:32:35",
-      "update_time": "2022-08-08 09:32:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2826,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLine",
-      "field_category": 1,
-      "field_name": "reverse",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "时间轴是否表现为倒序",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:38:37",
-      "update_time": "2022-07-14 02:39:45",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 2825,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLine",
-      "field_category": 1,
-      "field_name": "theme",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "default",
-      "field_enum": "default/dot",
-      "field_desc_zh": "步骤条风格",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:37:53",
-      "update_time": "2022-07-14 02:37:53",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2837,
-      "platform_framework": [
-        "2",
-        "16"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "children",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "描述内容，同 content",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 11:48:59",
-      "update_time": "2022-07-14 11:49:08",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 2836,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "content",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "描述内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 11:48:41",
-      "update_time": "2022-07-14 11:48:41",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 2828,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "dot",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于自定义时间轴节点元素",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:41:46",
-      "update_time": "2022-07-14 02:41:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
-      "id": 2827,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "dotColor",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "primary",
-      "field_enum": "primary/warning/error/default",
-      "field_desc_zh": "时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:41:06",
-      "update_time": "2022-07-14 02:41:06",
-      "event_output": null,
-      "custom_field_type": "string",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2835,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "label",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标签文本内容，可完全自定义",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 11:48:20",
-      "update_time": "2022-07-14 11:48:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 2830,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "labelAlign",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "left/right/top/bottom",
-      "field_desc_zh": "标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-14 02:58:38",
-      "update_time": "2022-07-18 09:11:25",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2931,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "TimeLineItem",
-      "field_category": 1,
-      "field_name": "loading",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "是否处在加载状态",
-      "field_desc_en": "Whether it is in the loading state",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-08-15 01:33:48",
-      "update_time": "2022-08-15 01:33:48",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 630,
       "platform_framework": [
         "1",
@@ -96474,6 +95898,582 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 2823,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Timeline",
+      "field_category": 1,
+      "field_name": "labelAlign",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right/alternate/top/bottom",
+      "field_desc_zh": "标签信息放在时间轴的位置，`mode='alternate'` 时生效。纵向时间轴信息位置：左侧、右侧或两侧，默认信息在时间轴右侧。横向时间轴信息位置：上方、下方、两侧",
+      "field_desc_en": "label info placement",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:31:51",
+      "update_time": "2022-07-18 09:11:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2824,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Timeline",
+      "field_category": 1,
+      "field_name": "layout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "vertical",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "时间轴方向：水平方向、垂直方向",
+      "field_desc_en": "time line layout",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:36:14",
+      "update_time": "2022-07-14 03:12:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":\"t-timeline-${item}\"}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2913,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Timeline",
+      "field_category": 1,
+      "field_name": "mode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "alternate",
+      "field_enum": "alternate/same",
+      "field_desc_zh": "标签与内容文本的位置关系，`alternate` 为展示在轴两侧，`same` 为展示在同一侧",
+      "field_desc_en": "The position relationship between the label and the content text, 'alternate' is displayed on both sides of the axis, and 'same' is displayed on the same side",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-08 09:32:35",
+      "update_time": "2022-08-08 09:32:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2826,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Timeline",
+      "field_category": 1,
+      "field_name": "reverse",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "时间轴是否表现为倒序",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:38:37",
+      "update_time": "2022-07-14 02:39:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 2825,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Timeline",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/dot",
+      "field_desc_zh": "步骤条风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:37:53",
+      "update_time": "2022-07-14 02:37:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2837,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 11:48:59",
+      "update_time": "2022-07-14 11:49:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2836,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 11:48:41",
+      "update_time": "2022-07-14 11:48:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2828,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "dot",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义时间轴节点元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:41:46",
+      "update_time": "2022-07-14 02:41:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 2827,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "dotColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "primary",
+      "field_enum": "primary/warning/error/default",
+      "field_desc_zh": "时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:41:06",
+      "update_time": "2022-07-14 02:41:06",
+      "event_output": null,
+      "custom_field_type": "string",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2835,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签文本内容，可完全自定义",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 11:48:20",
+      "update_time": "2022-07-14 11:48:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 2830,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "labelAlign",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "left/right/top/bottom",
+      "field_desc_zh": "标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-07-14 02:58:38",
+      "update_time": "2022-07-18 09:11:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2931,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimelineItem",
+      "field_category": 1,
+      "field_name": "loading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否处在加载状态",
+      "field_desc_en": "Whether it is in the loading state",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-08-15 01:33:48",
+      "update_time": "2022-08-15 01:33:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
     },
     {
       "id": 1352,

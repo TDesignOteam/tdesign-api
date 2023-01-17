@@ -878,11 +878,11 @@
         "label": "标签输入框"
       },
       {
-        "value": "TimeLine",
+        "value": "Timeline",
         "label": "时间轴"
       },
       {
-        "value": "TimeLineItem",
+        "value": "TimelineItem",
         "label": "时间轴"
       },
       {
