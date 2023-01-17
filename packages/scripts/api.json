@@ -102970,7 +102970,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104037,7 +104037,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104216,7 +104216,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":{\"{ theme: 'warning' }\":{\".t-tag--warning\":5}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104397,7 +104397,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[1,2,3,\"4\",\"5\"]}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
