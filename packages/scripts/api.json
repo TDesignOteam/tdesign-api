@@ -103652,7 +103652,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
