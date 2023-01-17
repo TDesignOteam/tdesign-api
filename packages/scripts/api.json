@@ -96318,7 +96318,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":{\"primary\":\"t-timeline-item__dot--primary\",\"warning\":\"t-timeline-item__dot--warning\",\"error\":\"t-timeline-item__dot--error\",\"default\":\"t-timeline-item__dot--primary\"},\"classNameDom\":\".t-timeline-item__dot\",\"attribute\":[{\"value\":\"yellowgreen\",\"expect\":[{\"dom\":\".t-timeline-item__dot\",\"attribute\":{\"style.borderColor\":\"yellowgreen\"}}]}]}}",
+      "test_description": "{\"PC\":{\"className\":{\"primary\":\"t-timeline-item__dot--primary\",\"warning\":\"t-timeline-item__dot--warning\",\"error\":\"t-timeline-item__dot--error\",\"default\":\"t-timeline-item__dot--default\"},\"classNameDom\":\".t-timeline-item__dot\",\"attribute\":[{\"value\":\"yellowgreen\",\"expect\":[{\"dom\":\".t-timeline-item__dot\",\"attribute\":{\"style.borderColor\":\"yellowgreen\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96404,7 +96404,7 @@
       ],
       "field_default_value": "",
       "field_enum": "left/right/top/bottom",
-      "field_desc_zh": "标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `TimeLine.labelAlign`",
+      "field_desc_zh": "标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `Timeline.labelAlign`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -103352,7 +103352,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"skip\":true,\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
