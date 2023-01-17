@@ -103483,7 +103483,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"tdesign-vue\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"tdesign-vue\"}}]}]}}",
+      "test_description": "",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104350,7 +104350,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"tdesign-vue\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"tdesign-vue\"}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
