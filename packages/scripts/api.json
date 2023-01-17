@@ -96173,7 +96173,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96219,7 +96219,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96269,7 +96269,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96303,7 +96303,7 @@
         "1"
       ],
       "field_default_value": "primary",
-      "field_enum": "primary/warning/error/default",
+      "field_enum": "",
       "field_desc_zh": "时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.",
       "field_desc_en": null,
       "field_required": 0,
@@ -96318,7 +96318,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":{\"primary\":\"t-timeline-item__dot--primary\",\"warning\":\"t-timeline-item__dot--warning\",\"error\":\"t-timeline-item__dot--error\",\"default\":\"t-timeline-item__dot--primary\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96368,7 +96368,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96463,7 +96463,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":\".t-timeline-item__dot .t-loading\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
