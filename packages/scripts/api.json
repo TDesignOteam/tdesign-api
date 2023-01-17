@@ -104735,7 +104735,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "MouseEvent<SVGSVGElement>/KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": null,
       "test_description": "{\"PC\":{\"event\":[{\"description\":\"remove first value on click close icon\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-tag__icon-close)\",\"event\":{\"remove\":[{\"value\":1,\"index\":0,\"trigger\":\"tag-remove\",\"data\":{\"label\":\"tdesign-vue\",\"value\":1},\"e.type\":\"click\"}]}}]},{\"props\":{\"filterable\":true},\"description\":\"remove last child on keydown.backspace\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"keydown.backspace(input)\",\"event\":{\"remove\":[{\"value\":\"5\",\"index\":4,\"trigger\":\"backspace\",\"data\":{\"label\":\"tdesign-angular\",\"value\":\"5\"},\"e.type\":\"keydown\"}]}}]}]}}",
