@@ -104477,7 +104477,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectDefaultMount\",\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":{\"label\":\"tdesign-vue\",\"value\":1}}]}},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[{\"e.type\":\"blur\",\"value\":{\"label\":\"tdesign-vue\",\"value\":1}}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -104627,7 +104627,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"event\":[{\"props\":{\"filterable\":true,\"value\":[1]},\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}],\"e.type\":\"focus\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
