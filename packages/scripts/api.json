@@ -104690,7 +104690,7 @@
       "field_desc_zh": "下拉框显示或隐藏时触发。单选场景，选中某个选项时触发关闭，此时需要添加参数 `node`",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(visible: boolean, context: PopupVisibleChangeContext & { node?: TreeNodeModel<DataOption>; e?: MouseEvent | KeyboardEvent })【import { PopupVisibleChangeContext } from '@Popup'】",
+      "event_input": "(visible: boolean, context: PopupVisibleChangeContext & { node?: TreeNodeModel<DataOption>; e?: PopupTriggerEvent })【import { PopupVisibleChangeContext, PopupTriggerEvent } from '@Popup'】",
       "create_time": "2022-03-08 11:01:06",
       "update_time": "2022-03-08 11:01:06",
       "event_output": null,
@@ -104701,7 +104701,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":[true]},\"delay\":200}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
