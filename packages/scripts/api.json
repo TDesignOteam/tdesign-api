@@ -103610,7 +103610,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"loading\":true},\"description\":\"loading status show loading text in panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__loading-tips\"]}]}],\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-select__loading-tips\"],\"trigger\":\"click(.t-input)\"}}}",
+      "test_description": "{\"PC\":{\"props\":{\"loading\":true},\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-select__loading-tips\"],\"trigger\":\"click(.t-input)\"},\"event\":[{\"props\":{\"loading\":true},\"description\":\"loading status show loading text in panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__loading-tips\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103652,7 +103652,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103693,7 +103693,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"props\":{\"minCollapsedNum\":2,\"multiple\":true},\"dom\":[{\".t-tag\":3,\".t-tag:last-child\":{\"text\":\"+3\"}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
