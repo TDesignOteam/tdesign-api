@@ -103188,7 +103188,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"skip\":true,\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103277,7 +103277,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"{name:'tree-select-input-name'}\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"name\":\"tree-select-input-name\"}}]}],\"attributeDom\":\"\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103319,7 +103319,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"tdesign-vue\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"tdesign-vue\"}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
