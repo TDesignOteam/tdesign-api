@@ -96318,7 +96318,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":{\"primary\":\"t-timeline-item__dot--primary\",\"warning\":\"t-timeline-item__dot--warning\",\"error\":\"t-timeline-item__dot--error\",\"default\":\"t-timeline-item__dot--primary\"},\"attribute\":[{\"value\":\"yellowgreen\",\"expect\":[{\"dom\":\".t-timeline-item__dot\",\"attribute\":{\"style.borderColor\":\"yellowgreen\"}}]}]}}",
+      "test_description": "{\"PC\":{\"className\":{\"primary\":\"t-timeline-item__dot--primary\",\"warning\":\"t-timeline-item__dot--warning\",\"error\":\"t-timeline-item__dot--error\",\"default\":\"t-timeline-item__dot--primary\"},\"classNameDom\":\".t-timeline-item__dot\",\"attribute\":[{\"value\":\"yellowgreen\",\"expect\":[{\"dom\":\".t-timeline-item__dot\",\"attribute\":{\"style.borderColor\":\"yellowgreen\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
