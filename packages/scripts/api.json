@@ -16230,6 +16230,47 @@
       ]
     },
     {
+      "id": 3300,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "autofocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "自动聚焦",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-17 03:06:12",
+      "update_time": "2023-01-17 03:06:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 397,
       "platform_framework": [
         "1",
@@ -74546,6 +74587,47 @@
       ]
     },
     {
+      "id": 3299,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Select",
+      "field_category": 1,
+      "field_name": "autofocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "自动聚焦",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-17 03:06:08",
+      "update_time": "2023-01-17 03:06:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2377,
       "platform_framework": [
         "1",
@@ -76741,6 +76823,47 @@
       "event_input": "",
       "create_time": "2022-02-20 08:45:24",
       "update_time": "2022-02-20 08:45:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3297,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "SelectInput",
+      "field_category": 1,
+      "field_name": "autofocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "自动聚焦",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-17 03:05:34",
+      "update_time": "2023-01-17 03:05:34",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -102819,6 +102942,47 @@
       ]
     },
     {
+      "id": 3298,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "autofocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "自动聚焦",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-17 03:05:55",
+      "update_time": "2023-01-17 03:05:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2376,
       "platform_framework": [
         "1",
@@ -103404,7 +103568,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":\".t-loading\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103446,7 +103610,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"loading\":true},\"description\":\"loading status show loading text in panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__loading-tips\"]}]}],\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-select__loading-tips\"],\"trigger\":\"click(.t-input)\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -110245,5 +110409,5 @@
       ]
     }
   ],
-  "total": 2632
+  "total": 2636
 }
