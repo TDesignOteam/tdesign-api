@@ -96079,7 +96079,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"dom\":{\"true\":{\".t-timeline-item__content\":{\"text\":\"Event4\"}}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -96128,7 +96128,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"dom\":{\"dot\":{\".t-timeline-item__tail--theme-dot\":4}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
