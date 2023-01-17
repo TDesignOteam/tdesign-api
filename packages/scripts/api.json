@@ -103652,7 +103652,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103914,7 +103914,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"popupProps\":\"{placement: 'top'}\"},\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-popup\":{\"attribute\":{\"data-popper-placement\":\"top\"}}}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName: 'custom-popup-class-name'}\"},\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-popup\":{\"className\":[\"custom-popup-class-name\"]}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

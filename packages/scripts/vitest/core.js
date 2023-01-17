@@ -395,10 +395,14 @@ function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperInd
   const isVue = framework.indexOf('Vue') !== -1;
   const isReact = framework.indexOf('React') !== -1;
   const domVariable = `attrDom${wrapperIndex || ''}${domIndex || ''}`;
-  if (isVue) {
-    arr.push(`const ${domVariable} = wrapper${wrapperIndex}.find('${className}');`);
-  } else if (isReact) {
-    arr.push(`const ${domVariable} = container${wrapperIndex}.querySelector('${className}');`);
+  if (className !== 'document' !== -1) {
+    arr.push(`const ${domVariable} = document.querySelector('${className.replace('document', '')}');`);
+  } else {
+    if (isVue) {
+      arr.push(`const ${domVariable} = wrapper${wrapperIndex}.find('${className}');`);
+    } else if (isReact) {
+      arr.push(`const ${domVariable} = container${wrapperIndex}.querySelector('${className}');`);
+    }
   }
   Object.entries(attrInfo.attribute).forEach(([attributeName, attributeValue]) => {
     if (isVue) {
