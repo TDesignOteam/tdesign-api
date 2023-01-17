@@ -104216,7 +104216,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"dom\":{\"{ theme: 'warning' }\":{\".t-tag--warning\":5}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"dom\":{\"{ theme: 'warning' }\":{\".t-tag--warning\":5}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104397,7 +104397,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[1,2,3,\"4\",\"5\"]}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"value\":1,\"data\":\"[{label: 'tdesign-vue',value: 1}]\"},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
