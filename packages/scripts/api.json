@@ -103483,7 +103483,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"controlled inputValue works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign')\",\"event\":{\"inputChange\":[\"tdesign\",{\"e.type\":\"change\",\"trigger\":\"change\"}]}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104438,7 +104438,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"multiple\":true,\"value\":\"[{ label: 'tdesign-vue', value: 1 }]\"},\"dom\":{\"object\":{\".t-tag\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
