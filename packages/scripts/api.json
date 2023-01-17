@@ -103188,7 +103188,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
