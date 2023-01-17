@@ -460,7 +460,7 @@ function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attrib
 }
 
 function getVueOneAttributeCode(framework, wrapper, attribute, value) {
-  const expectValueCode = getAttributeValue(value, framework);
+  const expectValueCode = getAttributeValue(attribute, value, framework);
   if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
     return `expect(${wrapper}.element.${getAttributeStr(attribute)}).${expectValueCode};`;
   }
@@ -468,7 +468,7 @@ function getVueOneAttributeCode(framework, wrapper, attribute, value) {
 }
 
 function getReactOneAttributeCode(framework, wrapper, attribute, value, attributeDom) {
-  const expectValueCode = getAttributeValue(value, framework);
+  const expectValueCode = getAttributeValue(attribute, value, framework);
   const firstChildCode = attributeDom ? '' : '.firstChild';
   if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
     return `expect(${wrapper}${firstChildCode}.${getAttributeStr(attribute)}).${expectValueCode};`;
@@ -483,7 +483,7 @@ function getAttributeStr(attribute) {
     .join('.');
 }
 
-function getAttributeValue(attributeValue, framework = '') {
+function getAttributeValue(attribute, attributeValue, framework = '') {
   // 属性不存在时，各框架检测有差异
   if (attributeValue === false) {
     return getAttributeNotExit(framework);
@@ -496,6 +496,9 @@ function getAttributeValue(attributeValue, framework = '') {
   const toBeOrNotToBe = isNotToBe ? 'not.' : '';
   // 如果是关键词，直接返回
   if (['toBeUndefined', 'toBeDefined'].includes(value)) {
+    if (value === 'toBeDefined' && attribute === 'autofocus') {
+      return 'toBeTruthy()';
+    }
     return `${attributeValue}()`;
   }
   const valueCode = /^\/.+\/$/.test(attributeValue) ? attributeValue.slice(1, -1) : `'${attributeValue}'`;
