@@ -34,4 +34,4 @@ export interface UploadDisplayDragEvents {
   onDragLeave?: (event: DragEvent<HTMLDivElement>) => void;
 }
 
-export type ImageEvent<T = any> = SyntheticEvent<T>
+export type ImageEvent<T = any> = SyntheticEvent<T>;

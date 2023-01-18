@@ -344,14 +344,13 @@ export default {
   },
 
   watch: {
-    // TODO，不同的测试用例支持不同的 props
     testProps: {
       immediate: true,
       handler(props) {
         if (!this.formData) return;
         this.$nextTick(() => {
           const tmpProps = typeof props === 'string' ? parseJSON(props) : props;
-          const oldProps = this.formData.props ? JSON.parse (this.formData.props) : {};
+          const oldProps = this.formData.props ? parseJSON(this.formData.props, {}) : {};
           const finalProps = { ...oldProps, ...tmpProps };
           this.$set(this.formData, 'props', Object.keys(finalProps).length ? JSON.stringify(finalProps) : '');
         });
