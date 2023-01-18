@@ -32,6 +32,7 @@
   'AnchorConfig',
   'MessageConfig',
   'ImageConfig',
+  'ImageViewerConfig',
   'GuideConfig',
 ].sort((a, b) => a.localeCompare(b) > 0);
 

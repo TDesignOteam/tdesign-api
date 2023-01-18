@@ -281,6 +281,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'GuideConfig', label: '引导全局配置', type: 'TS' },
   { value: 'AnchorConfig', label: '锚点全局配置', type: 'TS' },
   { value: 'ImageConfig', label: '图片全局配置', type: 'TS' },
+  { value: 'ImageViewerConfig', label: '图片全局配置', type: 'TS' },
   { value: 'ActionSheetItem', label: '动作面板项的配置', type: 'TS' },
   { value: 'WatermarkText', label: '水印文字配置', type: 'TS' },
   { value: 'WatermarkImage', label: '水印图片配置', type: 'TS' },
