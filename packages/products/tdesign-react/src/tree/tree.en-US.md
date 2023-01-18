@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Tree Props
 
 name | type | default | description | required
