@@ -644,8 +644,8 @@ function getObjectCode(obj) {
 function formatToTriggerAndDom(oneExpect) {
   if (!oneExpect.trigger) return {};
   const [trigger] = oneExpect.trigger.split('(');
-  const [tmpTriggerDom] = oneExpect.trigger.match(/\(.+\)$/)
-  const triggerDom = oneExpect.triggerDom || tmpTriggerDom.slice(1, -1);
+  const [tmpTriggerDom] = oneExpect.trigger.match(/\(.+\)$/) || [];
+  const triggerDom = oneExpect.triggerDom || tmpTriggerDom?.slice(1, -1);
   return { trigger, triggerDom };
 }
 
