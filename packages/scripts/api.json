@@ -104763,7 +104763,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据",
+      "field_desc_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据。设置 `filterable=true` 开启此功能",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(filterWords: string)",
@@ -104777,7 +104777,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true},\"description\":\"Single TreeSelect, trigger search event on input text\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"event\":{\"search\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Single TreeSelect, trigger search event on input enter\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\"},{\"trigger\":\"simulateInputEnter\",\"event\":{\"search\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Multiple TreeSelect, trigger search event on input text\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"event\":{\"search\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Multiple TreeSelect, trigger search event on input enter\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\"},{\"trigger\":\"simulateInputEnter\",\"event\":{\"search\":[\"tdesign-vue\"]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

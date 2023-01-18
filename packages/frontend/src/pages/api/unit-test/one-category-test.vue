@@ -551,7 +551,7 @@ export default {
         this.$set(this.arrayEvent[eventIndex].expect, expectIndex, eventData)
       } else if (this.eventExpectMode === 'add') {
         const expectList = [...this.arrayEvent[eventIndex].expect]
-        expectList.splice(expectIndex, 0, eventData);
+        expectList.splice(expectIndex + 1, 0, eventData);
         this.$set(this.arrayEvent[eventIndex], 'expect', expectList)
       }
       this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
