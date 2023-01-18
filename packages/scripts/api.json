@@ -104517,7 +104517,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child)\",\"event\":{\"change\":[[1,2,3,\"4\",\"5\",\"6\"],{\"e.type\":\"click\",\"node.label\":\"tdesign-mobile-vue\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
