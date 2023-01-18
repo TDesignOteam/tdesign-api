@@ -7,6 +7,7 @@ const kebabCase = require('lodash/kebabCase');
 const { FRAMEWORK_MAP } = require('../config');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
 const { getUnitTestCode } = require('./main');
+const { generateTestDescriptionToVitestFile } = require('./tests');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   const cases = getUnitTestCode(baseData, framework, { component });
@@ -50,28 +51,6 @@ function getFileComment(framework, component) {
     'If you need to modify this file, contact PMC first please.\n */\n',
   ].join('');
   return vue2Comment + comment;
-}
-
-// 将 api.json 中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
-function generateTestDescriptionToVitestFile(baseData, { component }) {
-  const tests = {};
-  // 一个组件可能由多个子组件拼凑而成
-  Object.entries(baseData).forEach(([childComponent, oneComponentApi]) => {
-    if (!oneComponentApi) return;
-    tests[childComponent] = {};
-    oneComponentApi.forEach((oneApiData) => {
-      tests[childComponent][oneApiData.field_name] = JSON.parse(oneApiData.test_description);
-    });
-  });
-  const outputPath = path.resolve(__dirname, `./tests/${kebabCase(component)}.js`);
-  const data = 'module.exports=' + JSON.stringify(tests);
-  const codeData = prettier.format(data, {...prettierConfig, printWidth: 100});
-  fs.writeFile(outputPath, codeData, (err) => {
-    if (err) {
-      return console.error(err);
-    }
-    console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
-  });
 }
 
 module.exports = {

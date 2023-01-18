@@ -1,4 +1,13 @@
-## 命令行
+## 设计开发测试用例
+
+在 vitest/tests 中开发输出测试用例，然后执行 `npm run api:test` 实时联调。
+
+开发完成后，执行 `npm run upload:tests` 将用例数据保存到本地 DB 文件中，避免被拉取命令覆盖，或者用例丢失。
+
+## 直接输出测试用例到项目
+
+注意：会自动拉取远程仓库的 DB 文件中的测试用例，覆盖 `vitest/tests` 中的内容，
+如果你此时正在本地 `vitest/tests` 中进行测试用例开发，千万不要执行下面的命令行，否则会被覆盖。
 
 ```bash
 npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
