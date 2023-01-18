@@ -577,6 +577,11 @@
         "type": "TS"
       },
       {
+        "value": "ImageViewerConfig",
+        "label": "图片全局配置",
+        "type": "TS"
+      },
+      {
         "value": "InfinityScroll",
         "label": "无限滚动配置",
         "type": "TS"

@@ -48077,6 +48077,170 @@
       "field_type_text": []
     },
     {
+      "id": 3301,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewerConfig",
+      "field_category": 1,
+      "field_name": "errorText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局语言配置，默认为 “图片加载失败，可尝试重新加载”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-18 07:31:08",
+      "update_time": "2023-01-18 07:31:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3302,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewerConfig",
+      "field_category": 1,
+      "field_name": "mirrorTipText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局语言配置，默认为 “镜像”",
+      "field_desc_en": "mirror operation text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-18 07:31:48",
+      "update_time": "2023-01-18 07:31:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3304,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewerConfig",
+      "field_category": 1,
+      "field_name": "originsizeTipText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局语言配置，默认为 “原始大小”",
+      "field_desc_en": "orignal size tips",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-18 07:32:35",
+      "update_time": "2023-01-18 07:32:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3303,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewerConfig",
+      "field_category": 1,
+      "field_name": "rotateTipText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局语言配置，默认为 “旋转”",
+      "field_desc_en": "roate operation text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-18 07:32:04",
+      "update_time": "2023-01-18 07:32:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3053,
       "platform_framework": [
         "64"
@@ -104514,7 +104678,7 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "MouseEvent<any> / KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": null,
       "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\"}]}}]}]}}",
@@ -104587,7 +104751,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "MouseEvent<SVGSVGElement>",
       "deprecated": 0,
       "version": null,
       "test_description": "{\"PC\":{\"event\":[{\"props\":{\"clearable\":true},\"description\":\"Multiple TreeSelect, clear all value on click clear icon\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}],\"popupVisibleChange\":[false,{\"trigger\":\"trigger-element-click\"}]}}]},{\"props\":{\"value\":1,\"clearable\":true},\"description\":\"Single TreeSelect, clear value on click clear icon\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[\"undefined\",{\"trigger\":\"clear\"}],\"popupVisibleChange\":[false,{\"trigger\":\"trigger-element-click\"}]}}]}]}}",
@@ -110409,5 +110573,5 @@
       ]
     }
   ],
-  "total": 2636
+  "total": 2640
 }
