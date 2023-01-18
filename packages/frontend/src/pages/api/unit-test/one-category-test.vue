@@ -479,7 +479,8 @@ export default {
         this.$message.warning('请把当前内容填写完整后再添加')
         return;
       }
-      this.objectEvent.splice(index + 1, 0, { trigger: '', arguments: '' })
+      debugger
+      this.objectEvent.splice(index, 0, { trigger: '', arguments: '' })
     },
 
     onObjectEventDelete(index) {
@@ -532,6 +533,7 @@ export default {
 
     onEventExpectDelete(expectIndex, eventIndex) {
       this.arrayEvent[eventIndex].expect.splice(expectIndex, 1)
+      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
     },
 
     showEventExpectDialog(expectData, expectIndex, eventIndex) {
@@ -548,8 +550,9 @@ export default {
       if (this.eventExpectMode === 'edit') {
         this.$set(this.arrayEvent[eventIndex].expect, expectIndex, eventData)
       } else if (this.eventExpectMode === 'add') {
-        // this.$set(this.arrayEvent[eventIndex].expect, expectIndex + 1, eventData)
-        this.arrayEvent[eventIndex].expect.push(eventData)
+        const expectList = [...this.arrayEvent[eventIndex].expect]
+        expectList.splice(expectIndex, 0, eventData);
+        this.$set(this.arrayEvent[eventIndex], 'expect', expectList)
       }
       this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
     },
