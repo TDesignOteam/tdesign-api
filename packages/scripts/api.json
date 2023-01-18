@@ -41975,7 +41975,7 @@
       ]
     },
     {
-      "id": 3305,
+      "id": 3306,
       "platform_framework": [
         "1",
         "2",
@@ -41990,11 +41990,11 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "图片全局配置",
-      "field_desc_en": "Image global configs",
+      "field_desc_en": "image global configs",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-01-18 09:00:15",
-      "update_time": "2023-01-18 09:00:15",
+      "create_time": "2023-01-18 09:17:35",
+      "update_time": "2023-01-18 09:17:35",
       "event_output": null,
       "custom_field_type": "ImageConfig",
       "syntactic_sugar": null,
@@ -42016,7 +42016,7 @@
       ]
     },
     {
-      "id": 3306,
+      "id": 3305,
       "platform_framework": [
         "1",
         "2",
@@ -42030,12 +42030,12 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图片查看全局配置",
-      "field_desc_en": "ImageViewer global configs",
+      "field_desc_zh": "图片预览器全局配置",
+      "field_desc_en": "imageViewer global configs",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-01-18 09:00:55",
-      "update_time": "2023-01-18 09:00:55",
+      "create_time": "2023-01-18 09:17:21",
+      "update_time": "2023-01-18 09:17:21",
       "event_output": null,
       "custom_field_type": "ImageViewerConfig",
       "syntactic_sugar": null,
