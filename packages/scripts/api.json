@@ -100486,7 +100486,7 @@
       "field_desc_zh": "节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T> })",
+      "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any })",
       "create_time": "2020-12-28 07:14:06",
       "update_time": "2021-12-06 02:54:18",
       "event_output": null,
@@ -104517,7 +104517,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child)\",\"event\":{\"change\":[[1,2,3,\"4\",\"5\",\"6\"],{\"e.type\":\"click\",\"node.label\":\"tdesign-mobile-vue\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
