@@ -103816,7 +103816,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:first-child)\",\"event\":{\"change\":\"not\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104678,10 +104678,10 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<any> / KeyboardEvent<HTMLInputElement>",
+      "trigger_elements": "MouseEvent<any>/KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"trigger\":\"check\",\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to delete\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"change\":[[\"2.1\",\"2.2\",3,\"4\",\"5\"],{\"trigger\":\"uncheck\",\"e.type\":\"change\",\"node.label\":\"tdesign-vue\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -104825,10 +104825,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLElement | SVGElement>/FocusEvent<HTMLInputElement>/KeyboardEvent<HTMLInputElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"description\":\"clear filter words on change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"inputChange\":[\"\",{\"trigger\":\"clear\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -104865,7 +104865,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":[true]},\"delay\":200}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":[true]},\"delay\":200}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
