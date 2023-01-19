@@ -42,25 +42,49 @@ function uploadOneApi(id, testDescription) {
   });
 }
 
+function readTestsFile(component) {
+  return new Promise((resolve) => {
+    const basePath = path.resolve(__dirname, './tests');
+    const filePath = path.resolve(basePath, `${kebabCase(component)}.js`);
+    fs.readFile(filePath, (error, data) => {
+      if (error) {
+        throw Error(error);
+      }
+      const tests = eval(data.toString());
+      resolve(tests);
+    });
+    // fs.readdir(basePath, (error, files) => {
+    //   if (error) {
+    //     throw Error(error);
+    //   }
+    // });
+  })
+}
+
 // 上传本地测试用例 vitest/tests 到 DB 文件
 function uploadVitestFileDataToDB(component) {
-  const componentName = kebabCase(component);
-  // TODO: 读取文件
-  const componentTests = {};
-  const promiseList = [];
-  Object.entries(componentTests).forEach(([key, childComponentItem]) => {
-    Object.entries(childComponentItem).forEach((apiName, apiData) => {
-      const current = { ...apiData };
-      const id = current.id;
-      delete id;
-      promiseList.push(
-        uploadOneApi(id, Object.keys(current).length ? JSON.stringify(current) : null)
-      );
-    })
-  });
-  Promise.all(promiseList).then(() => {
-    console.log(chalk.red('one of api test upload failed, try again.'));
-  });
+  return new Promise((resolve, reject) => {
+    readTestsFile(component).then((componentTests) => {
+      // console.log(componentTests);
+      const promiseList = [];
+      Object.entries(componentTests).forEach(([key, childComponentItem]) => {
+        Object.entries(childComponentItem).forEach(([apiName, apiData]) => {
+          const current = { ...apiData };
+          const id = current.id;
+          delete id;
+          promiseList.push(
+            uploadOneApi(id, Object.keys(current).length ? JSON.stringify(current) : null)
+          );
+        })
+      });
+      Promise.all(promiseList).then(() => {
+        resolve();
+      }, () => {
+        console.log(chalk.red('one of api test upload failed, try again.'));
+        reject();
+      });
+    });
+  })
 }
 
 module.exports = {

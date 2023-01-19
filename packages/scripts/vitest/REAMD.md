@@ -2,7 +2,7 @@
 
 在 vitest/tests 中开发输出测试用例，然后执行 `npm run api:test` 实时联调。
 
-开发完成后，执行 `npm run upload:tests` 将用例数据保存到本地 DB 文件中，避免被拉取命令覆盖，或者用例丢失。
+开发完成后，执行 `npm run api:upload-test` 将用例数据保存到本地 DB 文件中，避免被拉取命令覆盖，或者用例丢失。
 
 ## 直接输出测试用例到项目
 
