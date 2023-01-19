@@ -71,7 +71,7 @@ function uploadVitestFileDataToDB(component) {
         Object.entries(childComponentItem).forEach(([apiName, apiData]) => {
           const current = { ...apiData };
           const id = current.id;
-          delete id;
+          delete current.id;
           promiseList.push(
             uploadOneApi(id, Object.keys(current).length ? JSON.stringify(current) : null)
           );
