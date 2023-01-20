@@ -9,6 +9,7 @@ const {
   getFireEventCode,
   getReactFireEventAsync,
   getEventArguments,
+  getDelayCode,
 } = require('./core');
 const { getSkipCode } = require('./utils');
 
@@ -126,11 +127,13 @@ function getTestCaseByComponentCode(params) {
     framework, component, snapshot, tnode, skip
   } = params;
   const { reactAsync } = getReactFireEventAsync(getTriggerList(tnode.trigger), framework);
-  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger || reactAsync ? 'async' : '';
+  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger || reactAsync || tnode.trigger.includes('delay') ? 'async' : '';
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
+  const onlyDocumentDom = tnode.dom.every(item => item.includes('document'));
   const arr = [
     `it${getSkipCode(skip)}(${tnode.description || itDesc}, ${needAsync} () => {`,
-    getWrapper(framework, componentCode),
+    // 只有 document 元素的场景下，不需要 container 变量
+    getWrapper(framework, componentCode, '', '', { onlyDocumentDom }),
     tnode.trigger && getTriggerExpect(tnode.trigger, framework, component),
     // 校验自定义元素是否存在
     !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
@@ -144,26 +147,30 @@ function getTestCaseByComponentCode(params) {
 
 function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props) {
   const skipText = skip ? '.skip' : '';
+  const hasDelay = tnode.trigger.includes('delay');
+  const async = hasDelay ? 'async' : '';
   const arr = [
-    `\nit${skipText}('props.${oneApiData.field_name} is a function with params', () => {`,
+    `\nit${skipText}('props.${oneApiData.field_name} is a function with params', ${async} () => {`,
       `const fn = vi.fn();`,
       getMountComponent(framework, component, {
         [oneApiData.field_name]: '/-fn-/',
         ...props,
       }, extraCode),
+      getDelayCode(tnode.trigger, framework),
       getEventArguments(framework, tnode.params).join('\n'),
     `})`,
-  ];
+  ].filter(v => v);
   // 插槽参数测试
   if (framework.indexOf('Vue') !== -1) {
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
     arr.push(...[
-      `it${skipText}('slots.${oneApiData.field_name} is a function with params', () => {`,
+      `it${skipText}('slots.${oneApiData.field_name} is a function with params', ${async}() => {`,
         `const fn = vi.fn();`,
         getMountComponent(framework, component, {
           [slotsText]: `{ [${oneApiData.field_name}]: fn }`,
           ...props,
         }, extraCode),
+        getDelayCode(tnode.trigger, framework),
         getEventArguments(framework, tnode.params).join('\n'),
       `})`,
     ]);

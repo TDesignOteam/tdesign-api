@@ -177,6 +177,7 @@ export default {
         })
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       } catch(e) {
+        console.warn(e);
         const error = 'unit test code has syntax error. check test code please.'
         // this.$message.error(error)
         const code = `console.log('${error}')`

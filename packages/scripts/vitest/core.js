@@ -170,12 +170,12 @@ function getSnapshotCase(snapshot, framework, wrapperIndex = '') {
  * 或者测试实例定义
  * @param {String} framework 框架名称
  * @param {String} mountCode 测试代码实例，如：<Button disabled={true} /> 或者 getNormalTableMount(BaseTable, { bordered: false })
- * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
+ * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2。值为 false 表示不需要变量定义
  * @param {String} goalDom 寻找目标元素的选择器
  * @returns 
  */
 function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extraData = {}) {
-  const { trigger = '', wrapper } = extraData;
+  const { trigger = '', wrapper, onlyDocumentDom } = extraData;
   if (framework.indexOf('Vue') !== -1) {
     const findDomCode = goalDom ? `.find('${goalDom}')` : '';
     const wrapperDefinition = [];
@@ -188,10 +188,12 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
       ]);
       tmpMountCode = tmpMountCode.replace(/\)$/, ', { attachTo: \'#focus-dom\' })');
     }
+    if (onlyDocumentDom) return `${tmpMountCode}${findDomCode};`;
     wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
     return wrapperDefinition.join('\n');
   }
   if (framework.indexOf('React') !== -1) {
+    if (onlyDocumentDom) return mountCode;
     return getReactWrapper(mountCode, goalDom, wrapperIndex);
   }
 }
@@ -728,28 +730,44 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
  */
  function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '', eventIndex = '') {
   let fireEventCode = [];
-  const eventInfo = parseSimulateEvents(event, dom);
-  const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
-  if (eventInfo.isSimulateEvent) {
-    const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex });
-    if (simulateEventCode) {
-      fireEventCode.push(simulateEventCode);
-    }
-  } else {
-    const fireNormalEventCode = getFireNormalEventCode(framework, { dom: findDom, event, component }, wrapperIndex = '');
-    if (fireNormalEventCode) {
-      fireEventCode.push(fireNormalEventCode);
+  if (event !== 'delay') {
+    const eventInfo = parseSimulateEvents(event, dom);
+    const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
+    if (eventInfo.isSimulateEvent) {
+      const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex });
+      if (simulateEventCode) {
+        fireEventCode.push(simulateEventCode);
+      }
+    } else {
+      const fireNormalEventCode = getFireNormalEventCode(framework, { dom: findDom, event, component }, wrapperIndex = '');
+      if (fireNormalEventCode) {
+        fireEventCode.push(fireNormalEventCode);
+      }
     }
   }
   if (framework.indexOf('Vue') !== -1) {
     fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
   } else if (framework.indexOf('React') !== -1) {
-    if (getReactNeedMockDelay(event, delay)) {
+    if (getReactNeedMockDelay(event, delay) || event === 'delay') {
       const delayTime = delay && delay !== true ? delay : '';
       fireEventCode.push(`await mockDelay(${delayTime});`);
     }
   }
   return fireEventCode.join('\n');
+}
+
+function getDelayCode(delay, framework, wrapperIndex = '') {
+  if (!delay) return '';
+  const delayCode = [];
+  const hasDelay = delay.includes('delay');
+  if (!hasDelay) return '';
+  if (framework.indexOf('Vue') !== -1) {
+    delayCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
+  } else if (framework.indexOf('React') !== -1) {
+    const delayTime = delay.match(/\((.+)\)/)?.[1] || '';
+    delayCode.push(`await mockDelay(${delayTime});`);
+  }
+  return delayCode.join('\n');
 }
 
 function getFireNormalEventCode(framework, { dom, event, component }, wrapperIndex = '') {
@@ -880,4 +898,5 @@ module.exports = {
   getClearDomInDocumentCode,
   getReactFireEventAsync,
   getEventFunctions,
+  getDelayCode,
 };

@@ -1,6 +1,16 @@
 module.exports = {
   Guide: {
-    counter: { id: 2970 },
+    counter: {
+      PC: {
+        wrapper: 'getGuideDefaultMount',
+        tnode: {
+          dom: ['document.t-guide__counter', 'document.custom-node'],
+          trigger: 'delay',
+          params: [{ total: 1, current: 0 }],
+        },
+      },
+      id: 2970,
+    },
     current: { id: 2971 },
     finishButtonProps: { id: 2972 },
     hideCounter: { id: 2976 },

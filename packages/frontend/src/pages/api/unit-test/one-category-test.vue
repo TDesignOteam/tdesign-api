@@ -32,7 +32,8 @@
             @change="() => onFormDataChange('tnode')"></t-input>
           <template #content>
             <p>
-              格式：EventName(DomSelector)。focus(.t-input__wrap) 表示当元素 .t-input__wrap 聚焦后才会出现前面期望的元素。
+              格式：EventName(DomSelector)  或者 delay。focus(.t-input__wrap) 表示当元素 .t-input__wrap 聚焦后才会出现前面期望的元素。
+              示例：delay 、 delay(100)
               <t-link underline href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
                 target="_blank">所有事件列表</t-link>
             </p>
