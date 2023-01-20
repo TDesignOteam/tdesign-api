@@ -1,6 +1,6 @@
 module.exports = {
   Button: {
-    block: { PC: { className: 't-size-full-width1', content: 'Text', snapshot: true }, id: 33 },
+    block: { PC: { className: 't-size-full-width', content: 'Text', snapshot: true }, id: 33 },
     children: { PC: { tnode: true, snapshot: true }, id: 1234 },
     content: { PC: { tnode: true, snapshot: true }, id: 730 },
     disabled: { PC: { className: 't-is-disabled', content: 'Text', snapshot: true }, id: 39 },
