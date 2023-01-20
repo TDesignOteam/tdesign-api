@@ -68,11 +68,12 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
   const { attribute, props, snapshot, content, wrapper, skip } = test;
   const extraCode = { content, wrapper };
   const async = getItAsync(trigger, framework);
+  const onlyDocumentDom = isOnlyDocumentDom(attribute);
   return attribute.map(({ value, expect }) => {
     const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
     const arr = [
       `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
-        getWrapper(framework, mountCode, attributeDom),
+        getWrapper(framework, mountCode, attributeDom, '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomAttributeExpect(framework, expect, component),
         getSnapshotCase(snapshot, framework),
@@ -80,6 +81,21 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
     ];
     return arr.filter(v => v).join('\n');
   });
+}
+
+function isOnlyDocumentDom(attribute) {
+  if (!Array.isArray(attribute)) return;
+  for (let i = attribute, len = attribute.length; i < len; i++) {
+    const item = attribute[i];
+    if (item.expect && item.expect.length) {
+      for (let j = 0, len = item.expect.length; j < len; j++) {
+        if (!item.expect[j].dom.includes('document')) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 }
 
 module.exports = {

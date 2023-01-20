@@ -56,11 +56,6 @@ function readTestsFile(component) {
         console.log(chalk.red(`${filePath} code error.`));
       }
     });
-    // fs.readdir(basePath, (error, files) => {
-    //   if (error) {
-    //     throw Error(error);
-    //   }
-    // });
   }, (e) => {
     console.error(e);
   })

@@ -91,12 +91,95 @@ module.exports = {
       },
       id: 2978,
     },
-    highlightPadding: { id: 2981 },
+    highlightPadding: {
+      PC: {
+        wrapper: 'getGuideDefaultMount',
+        trigger: 'delay(100)',
+        attribute: [
+          {
+            value: 32,
+            expect: [
+              {
+                dom: 'document.t-guide__highlight--mask',
+                attribute: {
+                  'style.width': '64px',
+                  'style.height': '64px',
+                  'style.top': '-32px',
+                  'style.left': '-32px',
+                },
+              },
+              {
+                dom: 'document.t-guide__reference',
+                attribute: {
+                  'style.width': '64px',
+                  'style.height': '64px',
+                  'style.top': '-32px',
+                  'style.left': '-32px',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2981,
+    },
     mode: { id: 2968 },
-    nextButtonProps: { id: 2969 },
-    prevButtonProps: { id: 2973 },
-    showOverlay: { id: 2979 },
-    skipButtonProps: { id: 2974 },
+    nextButtonProps: {
+      PC: {
+        wrapper: 'getGuideStepsMount',
+        trigger: 'delay(100)',
+        props: { current: 1 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__next', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2969,
+    },
+    prevButtonProps: {
+      PC: {
+        wrapper: 'getGuideStepsMount',
+        trigger: 'delay(100)',
+        props: { current: 2 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__prev', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2973,
+    },
+    showOverlay: {
+      PC: {
+        wrapper: 'getGuideDefaultMount',
+        trigger: 'delay(100)',
+        dom: ['document.t-guide__highlight--mask'],
+      },
+      id: 2979,
+    },
+    skipButtonProps: {
+      PC: {
+        wrapper: 'getGuideStepsMount',
+        trigger: 'delay(100)',
+        props: { current: 0 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__skip', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2974,
+    },
     steps: {
       PC: {
         wrapper: 'getGuideDefaultMount',
@@ -115,8 +198,49 @@ module.exports = {
       },
       id: 2975,
     },
-    zIndex: { id: 2980 },
-    change: { id: 2948 },
+    zIndex: {
+      PC: {
+        wrapper: 'getGuideDefaultMount',
+        trigger: 'delay(100)',
+        attribute: [
+          {
+            value: '5000',
+            expect: [
+              { dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } },
+              { dom: 'document.t-guide__highlight--mask', attribute: { 'style.zIndex': 4999 } },
+            ],
+          },
+        ],
+      },
+      id: 2980,
+    },
+    change: {
+      PC: {
+        wrapper: 'getGuideStepsMount',
+        trigger: 'delay(100)',
+        event: [
+          {
+            props: { current: 0 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__next)',
+                event: { change: [1, { 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+          {
+            props: { current: 2 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__prev)',
+                event: { change: [1, { 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2948,
+    },
     finish: { id: 2950 },
     nextStepClick: { id: 2952 },
     prevStepClick: { id: 2951 },

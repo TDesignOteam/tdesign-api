@@ -28,20 +28,21 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false, ...props }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true, ...props }, extraCode);
+    const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1);
     const arr = [
       `it${getSkipCode(skip)}('props.${oneApiData.field_name}: ${component} contains element \`${dom}\`', ${async}() => {`,
         `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
-        getWrapper(framework, mountCode),
+        getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         oneApiData.field_default_value === 'true'
           ? getDomExpectTruthy(framework, `'${dom}'`)
           : getDomExpectFalsy(framework, `'${dom}'`),
         `// ${oneApiData.field_name} = false`,
-        getWrapper(framework, mountCode1, undefined, '1'),
+        getWrapper(framework, mountCode1, undefined, '1', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomExpectFalsy(framework, `'${dom}'`, '1'),
         `// ${oneApiData.field_name} = true`,
-        getWrapper(framework, mountCode2, undefined, '2'),
+        getWrapper(framework, mountCode2, undefined, '2', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomExpectTruthy(framework, `'${dom}'`, '2'),
         getSnapshotCase(snapshot, framework, '2'),

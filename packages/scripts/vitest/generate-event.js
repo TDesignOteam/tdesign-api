@@ -14,6 +14,8 @@ const {
   getEventName,
   getEventFnName,
   getEventArguments,
+  getPresetsExpect,
+  getItAsync,
 } = require("./core");
 const { getSkipCode } = require('./utils');
 
@@ -28,8 +30,10 @@ function generateEventUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
-  const { event, content, wrapper, delay, skip } = test;
+  const { event, trigger, content, wrapper, delay, skip } = test;
   const extraCode = { content, wrapper };
+  const onlyDocumentDom = isOnlyDocumentDom(event);
+  const topAsync = getItAsync(trigger, framework);
   // click/blur/mouseEnter/...
   if (typeof event === 'object' && !Array.isArray(event)) {
     const eventKeys = Object.keys(event);
@@ -48,9 +52,10 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const isVue = framework.indexOf('Vue') !== -1;
     const categoryType = oneApiData.field_category_text ? camelCase(oneApiData.field_category_text) : 'interactive';
     const arr = [
-      `it${getSkipCode(skip)}('${categoryType}.${oneApiData.field_name} works fine', ${isVue || reactAsync ? 'async' : ''} () => {
+      `it${getSkipCode(skip)}('${categoryType}.${oneApiData.field_name} works fine', ${isVue || reactAsync || topAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
-        getWrapper(framework, mountCode, '', '', { trigger: firstEvent, wrapper }),
+        getWrapper(framework, mountCode, '', '', { trigger: firstEvent, wrapper, onlyDocumentDom }),
+        trigger && getPresetsExpect(trigger, framework, component),
         getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),
         `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
       `});`,
@@ -73,7 +78,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       }
       const mountCode = getMountComponent(framework, component, codeProps, currentExtraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
-      const async = framework.indexOf('Vue') !== -1 || reactAsync ? 'async' : '';
+      const async = framework.indexOf('Vue') !== -1 || reactAsync || topAsync ? 'async' : '';
       const category = oneApiData.field_category_text?.toLocaleLowerCase();
       const apiPrefix = category? `${category}.${oneApiData.field_name}: ` : '';
       const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
@@ -83,7 +88,9 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         getWrapper(framework, mountCode, '', '', {
           trigger: getFocusTrigger(expect),
           wrapper: currentExtraCode.wrapper,
+          onlyDocumentDom,
         }),
+        trigger && getPresetsExpect(trigger, framework, component),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
       ];
@@ -159,6 +166,21 @@ function getEventsCode(framework, events) {
     tmpEventsCode.push(`${getEventName(event)}={${fn}}`);
   });
   return tmpEventsCode.join('\n');
+}
+
+function isOnlyDocumentDom(event) {
+  if (!Array.isArray(event)) return false;
+  for (let i = 0, len = event.length; i < len; i++) {
+    const item = event[i];
+    if (item.expect && item.expect.length) {
+      for (let j = 0, len = item.expect.length; j < len; j++) {
+        if (!item.expect[j].trigger.includes('document')) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 }
 
 module.exports = {

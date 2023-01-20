@@ -215,9 +215,9 @@ function getVariableBySelector(selector) {
   return camelCase(selector.replace(/(\.|#|)/g, ''));
 }
 
-function getDocumentDomExpectTruthy(domSelector, framework) {
+function getDocumentDomExpectTruthy(domSelector, framework, wrapperIndex = '') {
   const selector = domSelector.replace('document', '');
-  const domVariable = `${getVariableBySelector(selector)}Dom`;
+  const domVariable = `${getVariableBySelector(selector)}Dom${wrapperIndex}`;
   // Vue2 元素可能不存在，需要判空
   const emptyJudgement = framework === 'Vue(PC)' ? '?' : '';
   const isVue = framework.indexOf('Vue') !== -1;
@@ -240,7 +240,7 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
   // 在整个文档范围内查询节点（此时的元素不在组件内部），此时测试用例没有框架差异 `'document.class-name'`
   if (domSelector.indexOf('document') !== -1) {
-    return getDocumentDomExpectTruthy(domSelector, framework);
+    return getDocumentDomExpectTruthy(domSelector, framework, wrapperIndex);
   }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.find(${domSelector}).exists()).toBeTruthy();`;
@@ -546,10 +546,20 @@ function getDomAttributeExpect(framework, expectAttributes, component, wrapperIn
   return arr.join('\n');
 }
 
+function getDocumentDomCode(dom, backup) {
+  if (dom.indexOf('document') !== -1) {
+    const finalDom = ['document', 'body'].includes(dom)
+      ? dom
+      : dom.replace('document', '').replace('document.body', 'body');
+    return `document.querySelector('${finalDom}');`
+  }
+  return backup;
+}
+
 function getVueDomAttributeExpect(framework, dom, component, index, attribute, wrapperIndex) {
   const domFindCode = dom === 'self' || !dom ? `findComponent(${component})` : `find('${dom}')`;
   const oneExpect = [
-    `const domWrapper${index || ''} = wrapper${wrapperIndex}.${domFindCode};`,
+    `const domWrapper${index || ''} = ${getDocumentDomCode(dom, `wrapper${wrapperIndex}.${domFindCode}`)};`,
     Object.entries(attribute).map(([attributeName, attributeValue]) => {
       return getVueOneAttributeCode(
         framework,
@@ -565,7 +575,7 @@ function getVueDomAttributeExpect(framework, dom, component, index, attribute, w
 function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperIndex) {
   const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
   const oneExpect = [
-    `const domWrapper${index || ''} = container${wrapperIndex}.${domFindCode};`,
+    `const domWrapper${index || ''} = ${getDocumentDomCode(dom, `container${wrapperIndex}.${domFindCode}`)};`,
     Object.entries(attribute).map(([attributeName, attributeValue]) => {
       return getReactOneAttributeCode(
         framework,

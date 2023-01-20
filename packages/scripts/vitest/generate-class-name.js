@@ -69,11 +69,12 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       ];
       return arr;
     } else {
+      const onlyDocumentDom = isOnlyDocumentDom(className);
       return className.map(({ value, expect }) => {
         const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: value }, extraCode);
         const arr = [
           `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
-            getWrapper(framework, mountCode),
+            getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
             trigger && getPresetsExpect(trigger, framework, component),
             getDomClassNameExpect(framework, expect),
             getSnapshotCase(snapshot, framework),
@@ -137,6 +138,22 @@ function hasObjectInArray(arr) {
     if (typeof arr[i] !== 'string') return true
   }
   return false;
+}
+
+function isOnlyDocumentDom(className) {
+  if (!Array.isArray(className)) return;
+  for (let i = className, len = className.length; i < len; i++) {
+    const item = className[i];
+    if (typeof item !== 'object') continue;
+    if (item.expect && item.expect.length) {
+      for (let j = 0, len = item.expect.length; j < len; j++) {
+        if (!item.expect[j].dom.includes('document')) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 }
 
 module.exports = {
