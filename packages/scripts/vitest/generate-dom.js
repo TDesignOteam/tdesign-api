@@ -71,11 +71,14 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     } else {
       // API 不存在枚举值，直接检测数组中的元素是否存在，以及元素的数量
       let arr = [];
+      const onlyDocumentDom = isOnlyDocumentDom(dom);
       dom.forEach((domInfo) => {
         const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
+        let domInfoText = JSON.stringify(domInfo);
+        domInfoText = domInfoText.length > 100 ? '' : ' `${domInfoText}` should exist';
         const oneValueArr = [
-          `it${getSkipCode(skip)}('props.${oneApiData.field_name} works fine. \`${JSON.stringify(domInfo)}\` should exist',${async} () => {`,
-          getWrapper(framework, mountCode),
+          `it${getSkipCode(skip)}('props.${oneApiData.field_name} works fine.${domInfoText}',${async} () => {`,
+          getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
           trigger && getPresetsExpect(trigger, framework, component),
           getDomExpect(framework, domInfo),
           getSnapshotCase(snapshot, framework),
@@ -108,14 +111,20 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
 
 function isOnlyDocumentDom(dom) {
   let onlyDocumentDom = true;
-  Object.entries(dom).forEach(([one, item]) => {
+  let domList = [];
+  if (Array.isArray(dom)) {
+    domList = dom;
+  } else if (typeof dom === 'object') {
+    domList = Object.values(dom);
+  }
+  domList.forEach((item) => {
     if (typeof item !== 'object') return;
     Object.keys(item).forEach((selector) => {
       if (!selector.includes('document')) {
         onlyDocumentDom = false;
       }
     })
-  });
+  })
   return onlyDocumentDom;
 }
 

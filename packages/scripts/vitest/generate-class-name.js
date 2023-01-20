@@ -21,10 +21,10 @@ function generateClassNameUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactClassName(test, oneApiData, framework, component) {
-  const { className, classNameDom, snapshot, content, wrapper, trigger, skip } = test;
+  const { className, classNameDom, props, snapshot, content, wrapper, trigger, skip } = test;
   const extraCode = { content, wrapper };
   const async = getItAsync(trigger, framework);
-  const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/' }, extraCode);
+  const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-item-/' }, extraCode);
   const enums = oneApiData.field_enum.split('/').filter(v => v);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
   if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
@@ -70,7 +70,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       return arr;
     } else {
       return className.map(({ value, expect }) => {
-        const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value }, extraCode);
+        const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: value }, extraCode);
         const arr = [
           `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
             getWrapper(framework, mountCode),
@@ -86,9 +86,9 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
   if (typeof className === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
-    const mountCode1 = getMountComponent(framework, component, {}, extraCode);
-    const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true }, extraCode);
-    const mountCode3 = getMountComponent(framework, component, { [oneApiData.field_name]: false }, extraCode);
+    const mountCode1 = getMountComponent(framework, component, { ...props }, extraCode);
+    const mountCode2 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: true }, extraCode);
+    const mountCode3 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: false }, extraCode);
     const arr = [
       `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
       `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
@@ -115,7 +115,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   // 如果是「枚举值：类名」映射关系
   if (typeof className === 'object' && !Array.isArray(className)) {
     const mapVariable = `${oneApiData.field_name}ClassNameMap`;
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-propValue-/' }, extraCode);
+    const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-propValue-/' }, extraCode);
     const arr = [
       `const ${mapVariable} = ${JSON.stringify(className)};`,
       `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {
