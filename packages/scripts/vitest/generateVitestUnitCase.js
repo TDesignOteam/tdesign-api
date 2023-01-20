@@ -7,7 +7,7 @@ const kebabCase = require('lodash/kebabCase');
 const { FRAMEWORK_MAP } = require('../config');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
 const { getUnitTestCode } = require('./main');
-const { generateTestDescriptionToVitestFile } = require('./tests');
+const { generateTestDescriptionToVitestFile } = require('./tests/core/utils');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   const cases = getUnitTestCode(baseData, framework, { component });

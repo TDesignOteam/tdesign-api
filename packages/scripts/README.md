@@ -41,7 +41,7 @@ npm run api:docs ALL 'Miniprogram' onlyDocs
 **参数组合使用**
 
 ```bash
-npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
+npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,vitest
 ```
 
 | name | description |
@@ -49,8 +49,7 @@ npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
 | finalProject | 是否直接输出 API 相关产物到各个仓库项目中，默认输出当前项目 `tdesign-api` |
 | onlyDocs | 是否仅输出文档，不输出 TS 定义 |
 | useDefault | 只有 Vue2 需要关注这个参数。使用 map-props 实现受控时不需要该参数，使用 useDefault/useVModel 实现受控时，则一定需要该参数 |
-| isUseUnitTest | 是否输出单测用例（实践组件不多，实验性功能） |
-
+| vitest | 是否同时输出单测用例 |
 
 ## npm run api:vscode
 

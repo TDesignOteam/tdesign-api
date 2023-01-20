@@ -1,11 +1,11 @@
 const prettier = require('prettier');
-const prettierConfig = require('../config/prettier');
+const prettierConfig = require('../../../config/prettier');
 const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 const kebabCase = require('lodash/kebabCase');
-const { parseJSON } = require('./utils');
+const { parseJSON } = require('../../utils');
 
 // 将 api.json 中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
 function generateTestDescriptionToVitestFile(baseData, { component }) {
@@ -19,7 +19,7 @@ function generateTestDescriptionToVitestFile(baseData, { component }) {
       tests[childComponent][oneApiData.field_name].id = oneApiData.id;
     });
   });
-  const outputPath = path.resolve(__dirname, `./tests/${kebabCase(component)}.js`);
+  const outputPath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
   const data = 'module.exports=' + JSON.stringify(tests);
   const codeData = prettier.format(data, {...prettierConfig, printWidth: 100});
   fs.writeFile(outputPath, codeData, (err) => {
@@ -44,20 +44,25 @@ function uploadOneApi(id, testDescription) {
 
 function readTestsFile(component) {
   return new Promise((resolve) => {
-    const basePath = path.resolve(__dirname, './tests');
-    const filePath = path.resolve(basePath, `${kebabCase(component)}.js`);
+    const filePath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
     fs.readFile(filePath, (error, data) => {
       if (error) {
         throw Error(error);
       }
-      const tests = eval(data.toString());
-      resolve(tests);
+      try {
+        const tests = eval(data.toString());
+        resolve(tests);
+      } catch(e) {
+        console.log(chalk.red(`${filePath} code error.`));
+      }
     });
     // fs.readdir(basePath, (error, files) => {
     //   if (error) {
     //     throw Error(error);
     //   }
     // });
+  }, (e) => {
+    console.error(e);
   })
 }
 
