@@ -276,11 +276,14 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
   const isVue = framework.indexOf('Vue') !== -1;
-  const isObject = typeof countOrText === 'object';
+  const isObject = typeof countOrText === 'object' || countOrText == false;
   const querySelector = isObject ? 'querySelector' : 'querySelectorAll';
   return [
     `const ${domVariable} = document.${querySelector}('${selector}')`,
     (() => {
+      if (countOrText === false) {
+        return `expect(${domVariable}).toBeFalsy()`;
+      }
       if (typeof countOrText === 'number') {
         return getDocumentDomExpectCount(domVariable, countOrText);
       }
@@ -748,8 +751,12 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
   if (framework.indexOf('Vue') !== -1) {
     fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
   } else if (framework.indexOf('React') !== -1) {
+    // 如果是 delay， dom 表示时间
     if (getReactNeedMockDelay(event, delay) || event === 'delay') {
-      const delayTime = delay && delay !== true ? delay : '';
+      let delayTime = delay && delay !== true ? delay : '';
+      if (event === 'delay' && !isNaN(dom)) {
+        delayTime = dom;
+      }
       fireEventCode.push(`await mockDelay(${delayTime});`);
     }
   }
@@ -873,6 +880,32 @@ function isRegExp(str) {
   return /\/(.+)\//.test(str);
 }
 
+// 获取开始单测的前置条件。如：延迟校验、mouseenter 后校验。不同的元素渲染的时机不同，条件不同
+function getPresetsExpect(triggerList, framework, component) {
+  if (!triggerList) return;
+  const tmpTrigger = Array.isArray(triggerList) ? triggerList : [triggerList];
+  return tmpTrigger.map((oneTrigger) => {
+    const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });
+    return getFireEventCode(framework, {
+      dom: triggerDom,
+      event: trigger,
+      component,
+    });
+  }).join('\n');
+}
+
+function getTriggerList(trigger) {
+  if (typeof trigger === 'string') return [{ trigger }];
+  if (Array.isArray(trigger)) {
+    return trigger.map(t => ({ trigger: t }));
+  }
+}
+
+function getItAsync(trigger, framework) {
+  const { reactAsync } = getReactFireEventAsync(getTriggerList(trigger), framework);
+  return framework.indexOf('Vue') !== -1 && trigger || reactAsync || trigger?.includes('delay') ? 'async' : '';
+}
+
 module.exports = {
   SIMULATE_FUNCTIONS,
   getEventName,
@@ -899,4 +932,6 @@ module.exports = {
   getReactFireEventAsync,
   getEventFunctions,
   getDelayCode,
+  getPresetsExpect,
+  getItAsync,
 };

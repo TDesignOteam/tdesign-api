@@ -53,7 +53,7 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
           hasEvent = true;
-          const imports = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper);
+          const imports = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper, testDescription.PC.trigger);
           importedTestUtils = imports.importedTestUtils;
           if (imports.importedMounts && imports.importedMounts.length) {
             importedMounts.push(...imports.importedMounts);

@@ -116,14 +116,14 @@ function getImportsCode(importsConfig, framework) {
 function getSimulateEvents(trigger) {
   const arr = [];
   SIMULATE_FUNCTIONS.forEach((simulateEvent) => {
-    if (trigger.includes(simulateEvent)) {
+    if (trigger && trigger.includes(simulateEvent)) {
       arr.push(simulateEvent);
     }
   });
   return arr;
 }
 
-function getMoreEventImports(framework, event, wrapper) {
+function getMoreEventImports(framework, event, wrapper, trigger) {
   const importedTestUtils = [];
   const importedMounts = [];
   if (!Array.isArray(event)) return [];
@@ -134,7 +134,7 @@ function getMoreEventImports(framework, event, wrapper) {
           && oneExpect.trigger
         ) {
           // 添加模拟事件
-          const list = getSimulateEvents(oneExpect.trigger);
+          const list = getSimulateEvents(oneExpect.trigger || trigger);
           if (list && list.length) {
             importedTestUtils.push(...list);
           }

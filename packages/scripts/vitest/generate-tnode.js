@@ -5,11 +5,10 @@ const {
   getSnapshotCase,
   getDomExpectTruthy,
   getMountComponent,
-  formatToTriggerAndDom,
-  getFireEventCode,
-  getReactFireEventAsync,
   getEventArguments,
   getDelayCode,
+  getPresetsExpect,
+  getItAsync,
 } = require('./core');
 const { getSkipCode } = require('./utils');
 
@@ -25,7 +24,7 @@ function generateTNodeElement(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactTNode(test, oneApiData, framework, component) {
-  const { tnode, props, snapshot, content, wrapper, skip } = test;
+  const { tnode, props, snapshot, content, wrapper, trigger, skip } = test;
   const extraCode = { content, wrapper };
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
@@ -51,23 +50,25 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   let arr = getTestCaseByComponentCode({
     itDesc,
     componentCode,
+    // 开始单测的前置条件：trigger
+    trigger: tnode.trigger || trigger,
     framework, component, snapshot, tnode, skip,
   });
 
-  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props);
+  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger);
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
   }
 
   // 如果 TNode 存在参数，则一定是函数。进行函数参数测试
   if (typeof tnode === 'object' && tnode.params) {
-    const list = getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props);
+    const list = getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props, trigger);
     arr.push(list);
   }
   return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props) {
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];
@@ -89,6 +90,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
     secondArr = getTestCaseByComponentCode({
       itDesc: slotTtDesc,
       componentCode: slotCode,
+      trigger: tnode.trigger || trigger,
       framework, component, snapshot, tnode, skip,
     });
 
@@ -106,6 +108,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       thirdArr = getTestCaseByComponentCode({
         itDesc: slotTtDesc2,
         componentCode: slotCode2,
+        trigger: tnode.trigger || trigger,
         framework, component, snapshot, tnode, skip,
       });
     }
@@ -124,17 +127,17 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
 function getTestCaseByComponentCode(params) {
   const {
     itDesc, componentCode,
+    trigger,
     framework, component, snapshot, tnode, skip
   } = params;
-  const { reactAsync } = getReactFireEventAsync(getTriggerList(tnode.trigger), framework);
-  const needAsync = framework.indexOf('Vue') !== -1 && tnode.trigger || reactAsync || tnode.trigger.includes('delay') ? 'async' : '';
+  const needAsync = getItAsync(trigger, framework);
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
-  const onlyDocumentDom = tnode.dom.every(item => item.includes('document'));
+  const onlyDocumentDom = tnode.dom?.every(item => item.includes('document'));
   const arr = [
     `it${getSkipCode(skip)}(${tnode.description || itDesc}, ${needAsync} () => {`,
     // 只有 document 元素的场景下，不需要 container 变量
     getWrapper(framework, componentCode, '', '', { onlyDocumentDom }),
-    tnode.trigger && getTriggerExpect(tnode.trigger, framework, component),
+    trigger && getPresetsExpect(trigger, framework, component),
     // 校验自定义元素是否存在
     !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
     // 校验额外的元素是否存在
@@ -145,10 +148,10 @@ function getTestCaseByComponentCode(params) {
   return arr.filter(v => v);
 }
 
-function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props) {
+function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props, trigger) {
+  const finalTrigger = tnode.trigger || trigger;
   const skipText = skip ? '.skip' : '';
-  const hasDelay = tnode.trigger.includes('delay');
-  const async = hasDelay ? 'async' : '';
+  const async = getItAsync(finalTrigger, framework);
   const arr = [
     `\nit${skipText}('props.${oneApiData.field_name} is a function with params', ${async} () => {`,
       `const fn = vi.fn();`,
@@ -156,7 +159,7 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip
         [oneApiData.field_name]: '/-fn-/',
         ...props,
       }, extraCode),
-      getDelayCode(tnode.trigger, framework),
+      getDelayCode(finalTrigger, framework),
       getEventArguments(framework, tnode.params).join('\n'),
     `})`,
   ].filter(v => v);
@@ -170,32 +173,12 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip
           [slotsText]: `{ [${oneApiData.field_name}]: fn }`,
           ...props,
         }, extraCode),
-        getDelayCode(tnode.trigger, framework),
+        getDelayCode(finalTrigger, framework),
         getEventArguments(framework, tnode.params).join('\n'),
       `})`,
     ]);
   }
   return arr.join('\n');
-}
-
-function getTriggerList(trigger) {
-  if (typeof trigger === 'string') return [{ trigger }];
-  if (Array.isArray(trigger)) {
-    return trigger.map(t => ({ trigger: t }));
-  }
-}
-
-function getTriggerExpect(triggerList, framework, component) {
-  if (!triggerList) return;
-  const tmpTrigger = Array.isArray(triggerList) ? triggerList : [triggerList];
-  return tmpTrigger.map((oneTrigger) => {
-    const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });
-    return getFireEventCode(framework, {
-      dom: triggerDom,
-      event: trigger,
-      component,
-    });
-  }).join('\n');
 }
 
 function getDomExpect(framework, tnodeDom) {

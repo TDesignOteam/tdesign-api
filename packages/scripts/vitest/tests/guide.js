@@ -3,15 +3,46 @@ module.exports = {
     counter: {
       PC: {
         wrapper: 'getGuideDefaultMount',
+        trigger: 'delay(100)',
         tnode: {
           dom: ['document.t-guide__counter', 'document.custom-node'],
-          trigger: 'delay',
           params: [{ total: 1, current: 0 }],
         },
       },
       id: 2970,
     },
-    current: { id: 2971 },
+    current: {
+      PC: {
+        wrapper: 'getGuideStepsMount',
+        trigger: 'delay(100)',
+        dom: {
+          '0': {
+            'document.t-guide__counter': { text: '1/3' },
+            'document.t-guide__title': 1,
+            'document.t-guide__desc': 1,
+            'document.t-guide__action .t-guide__skip': 1,
+            'document.t-guide__action .t-guide__next': 1,
+          },
+          '1': {
+            'document.t-guide__counter': { text: '2/3' },
+            'document.t-guide__title': 1,
+            'document.t-guide__desc': 1,
+            'document.t-guide__action .t-guide__skip': 1,
+            'document.t-guide__action .t-guide__prev': 1,
+            'document.t-guide__action .t-guide__next': 1,
+          },
+          '2': {
+            'document.t-guide__counter': { text: '3/3' },
+            'document.t-guide__title': 1,
+            'document.t-guide__desc': 1,
+            'document.t-guide__action .t-guide__finish': 1,
+            'document.t-guide__action .t-guide__prev': 1,
+          },
+          '-1': { 'document.t-guide__counter': false },
+        },
+      },
+      id: 2971,
+    },
     finishButtonProps: { id: 2972 },
     hideCounter: { id: 2976 },
     hidePrev: { id: 2977 },

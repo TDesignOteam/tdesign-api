@@ -59,6 +59,20 @@
           </t-tooltip>
         </t-form-item>
 
+        <div class="unit-test-ui__form-item-inner">
+          <t-tooltip theme="light">
+            <t-input v-model="formData.trigger" placeholder="等待渲染延迟或触发事件后再开始校验"
+              @change="() => onFormDataChange('trigger')"></t-input>
+            <template #content>
+              <p>
+                开启校验的前置条件，示例一：focus(.t-input__wrap)。示例二：delay 或者 delay(100)。
+                <t-link underline href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
+                  target="_blank">所有事件列表</t-link>
+              </p>
+            </template>
+          </t-tooltip>
+        </div>
+
         <t-form-item style="margin: 16px 0 8px 0">
           <t-checkbox v-model="formData.snapshot" @change="() => onFormDataChange('snapshot')">生成快照（Snapshots）</t-checkbox>
         </t-form-item>
@@ -151,6 +165,7 @@ export default {
         props: testJSON.props,
         content: testJSON.content,
         wrapper: testJSON.wrapper,
+        trigger: testJSON.trigger,
         copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
         needCopy: Boolean(testJSON.copyTestToWrapper && testJSON.copyTestToWrapper.length),
         snapshot: testJSON.snapshot,

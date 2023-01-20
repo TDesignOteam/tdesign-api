@@ -7,7 +7,6 @@ const {
   getItDescription,
   formatToTriggerAndDom,
   getFireEventCode,
-  isRegExp,
   getDomCountExpectCode,
   getClearDomInDocumentCode,
   getReactFireEventAsync,
