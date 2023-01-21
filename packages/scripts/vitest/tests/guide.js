@@ -343,7 +343,15 @@ module.exports = {
       id: 2954,
     },
     element: { PC: {}, id: 2956 },
-    highlightContent: { id: 2966 },
+    highlightContent: {
+      PC: {
+        wrapper: 'getGuideStepMount',
+        trigger: 'delay(100)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
+      id: 2966,
+    },
     highlightPadding: { id: 2965 },
     mode: { id: 2967 },
     nextButtonProps: { id: 2957 },
