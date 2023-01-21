@@ -43848,7 +43848,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(100)\",\"dom\":[\"document.t-guide__highlight--mask\"]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(100)\",\"dom\":{\"true\":{\"document.t-guide__highlight--mask\":1},\"false\":{\"document.t-guide__highlight--mask\":false}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44362,7 +44362,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44405,7 +44405,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44447,7 +44447,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44531,7 +44531,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44572,7 +44572,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44613,7 +44613,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"dom\":[\"document.t-popup\",\"document.t-guide__dialog\"],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44654,7 +44654,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(100)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44681,8 +44681,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
-      "field_desc_en": null,
+      "field_desc_zh": "【讨论确认中】相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
+      "field_desc_en": "this api is in discussing. do not use it.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-30 08:41:11",
@@ -44736,7 +44736,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"attribute\":[{\"value\":\"bottom-left\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"bottom-start\"}}]}],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44746,6 +44746,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3307,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传全部属性到 Popup 组件。`mode=popup` 时有效",
+      "field_desc_en": "Popup component props if `mode = popup`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-01-21 04:02:09",
+      "update_time": "2023-01-21 04:02:09",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"attribute\":[{\"value\":\"{placement: 'top-left'}\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"top-start\"}}]}]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -44777,7 +44818,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(100)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44818,7 +44859,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(100)\",\"dom\":{\"true\":{\"document.t-guide__highlight--mask\":1},\"false\":{\"document.t-guide__highlight--mask\":false}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44859,7 +44900,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(100)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44900,7 +44941,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"className\":[{\"value\":\"t-test-guide-step-overlay\",\"expect\":[{\"dom\":\"document.t-popup\",\"className\":{\"t-test-guide-step-overlay\":true}}]}],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44941,7 +44982,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(100)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68358,7 +68399,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n    \"event\": [\n        {\n            \"props\": { \"checked\": \"true\" },\n            \"expect\": [\n                {\n                    \"trigger\": \"click\",\n                    \"event\": {\n                        \"change\": [\n                            false,\n                            {\n                                \"e.type\": \"click\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        }\n    ]\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"checked\":\"true\"},\"expect\":[{\"trigger\":\"click\",\"event\":{\"change\":[false,{\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68406,7 +68447,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"snapshot\": true,\n        \"className\": \"t-is-checked\",\n        \"attribute\": [\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"checked\": true\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-is-checked\",\"attribute\":[{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"checked\":true}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68451,7 +68492,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68662,7 +68703,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\n\"className\":\"t-is-disabled\", \"content\": \"Text\", \"snapshot\": true,\n\t\"event\": [\n      {\n        \"expect\": [\n          {\n            \"trigger\": \"click\",\n            \"event\": { \"change\": \"not\" }\n          }\n        ]\n      }\n    ]\n}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"content\":\"Text\",\"snapshot\":true,\"event\":[{\"expect\":[{\"trigger\":\"click\",\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68831,7 +68872,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{ \"PC\": { \"tnode\": { \"dom\": [\".t-radio__label\"] }, \"snapshot\": true } }",
+      "test_description": "{\"PC\":{\"tnode\":{\"dom\":[\".t-radio__label\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -68963,7 +69004,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\"attribute\": { \"name\": \"radio-gender-name\" }, \"attributeDom\": \"input\" }}",
+      "test_description": "{\"PC\":{\"attribute\":{\"name\":\"radio-gender-name\"},\"attributeDom\":\"input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69051,7 +69092,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": \"'radio-value'\",\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"value\": \"radio-value\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'radio-value'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"radio-value\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69131,7 +69172,7 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "Event<HTMLDivElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": null,
       "test_description": null,
@@ -69200,10 +69241,10 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLLabelElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"expect\": [{ \"trigger\": \"click\", \"event\": { \"click\": [{ \"e.stopPropagation\": true }] }}]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"click\",\"event\":{\"click\":[{\"e.stopPropagation\":true}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -69328,7 +69369,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n    \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"],\n    \"event\": [\n        {\n            \"props\": { \"value\": 1 },\n            \"expect\": [\n                {\n                    \"trigger\": \"click(.t-radio)\",\n                    \"event\": {\n                        \"change\": [\n                          \"undefined\",\n                            {\n                                \"e.type\": \"click\"\n                            }\n                        ]\n                    }\n                }\n            ]\n        }\n    ]\n}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"],\"event\":[{\"props\":{\"value\":1},\"expect\":[{\"trigger\":\"click(.t-radio)\",\"event\":{\"change\":[\"undefined\",{\"e.type\":\"click\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69377,7 +69418,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"dom\": {\n            \"true\": {\n                \".t-radio.t-is-disabled\": 4\n            }\n        },\n        \"event\": [\n            {\n                \"description\": \"disabled radio can not trigger change\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": \"not\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"snapshot\": true,\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n        \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n    }\n}",
+      "test_description": "{\"PC\":{\"dom\":{\"true\":{\".t-radio.t-is-disabled\":4}},\"event\":[{\"description\":\"disabled radio can not trigger change\",\"expect\":[{\"trigger\":\"click(.t-radio)\",\"event\":{\"change\":\"not\"}}]}],\"snapshot\":true,\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69465,7 +69506,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n  \"snapshot\": true,\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n    \"attribute\": [\n    {\n      \"value\": \"'custom-radio-name'\",\n      \"expect\": [{ \"dom\": \"input\", \"attribute\": { \"name\": \"custom-radio-name\" }}]\n    }\n  ],\n\"copyTestToWrapper\": [\"getRadioGroupKidsMount\"]\n}}",
+      "test_description": "{\"PC\":{\"snapshot\":true,\"wrapper\":\"getRadioGroupDefaultMount\",\"attribute\":[{\"value\":\"'custom-radio-name'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"name\":\"custom-radio-name\"}}]}],\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69513,7 +69554,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getRadioGroupDefaultMount\",\n  \"dom\": [{ \".t-radio\": 4 }, \".custom-node\", { \".t-radio.t-is-disabled\": 1 }]\n}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getRadioGroupDefaultMount\",\"dom\":[{\".t-radio\":4},\".custom-node\",{\".t-radio.t-is-disabled\":1}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69678,7 +69719,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"attribute\": [\n    {\n      \"value\": \"'2'\",\n      \"expect\": [{ \"dom\": \".t-radio.t-is-checked input\", \"attribute\": { \"value\": \"2\" }}]\n    }\n  ], \"wrapper\": \"getRadioGroupDefaultMount\", \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"] }}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'2'\",\"expect\":[{\"dom\":\".t-radio.t-is-checked input\",\"attribute\":{\"value\":\"2\"}}]}],\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69725,7 +69766,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": {\n\"className\": [\n    \"t-radio-group__outline\",\n    \"t-radio-group--primary-filled\",\n    \"t-radio-group--filled\"\n  ]\n}}",
+      "test_description": "{\"PC\":{\"className\":[\"t-radio-group__outline\",\"t-radio-group--primary-filled\",\"t-radio-group--filled\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -69801,7 +69842,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "ChangeEvent<HTMLInputElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": null,
       "test_description": null,
@@ -110655,5 +110696,5 @@
       ]
     }
   ],
-  "total": 2642
+  "total": 2643
 }

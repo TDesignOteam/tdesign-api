@@ -8,6 +8,7 @@ const {
   getDomAttributeExpect,
   getItAsync,
   getPresetsExpect,
+  getCategoryDesc,
 } = require("./core");
 const { getSkipCode } = require("./utils");
 
@@ -34,10 +35,11 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   // 按顺序处理枚举值对应的属性
   if (Array.isArray(attributeValue) && propsValues.length) {
     const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/', ...props }, extraCode);
+    const propsCode = getCategoryDesc(oneApiData, component);
     const arr = [
       `const attributeValues = ${getArrayCode(attributeValue)};`,
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
-        `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${item}\`, ${async} () => {`,
+        `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${item}\`, ${async} () => {`,
           getWrapper(framework, componentCode, attributeDom),
           trigger && getPresetsExpect(trigger, framework, component),
           // 变量使用双斜杠包裹
@@ -71,8 +73,9 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
   const onlyDocumentDom = isOnlyDocumentDom(attribute);
   return attribute.map(({ value, expect }) => {
     const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
+    const propsCode = getCategoryDesc(oneApiData, component);
     const arr = [
-      `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
+      `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
         getWrapper(framework, mountCode, attributeDom, '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomAttributeExpect(framework, expect, component),
@@ -85,10 +88,10 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
 
 function isOnlyDocumentDom(attribute) {
   if (!Array.isArray(attribute)) return;
-  for (let i = attribute, len = attribute.length; i < len; i++) {
+  for (let i = 0, len = attribute.length; i < len; i++) {
     const item = attribute[i];
     if (item.expect && item.expect.length) {
-      for (let j = 0, len = item.expect.length; j < len; j++) {
+      for (let j = 0, len1 = item.expect.length; j < len1; j++) {
         if (!item.expect[j].dom.includes('document')) {
           return false;
         }

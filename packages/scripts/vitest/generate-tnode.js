@@ -49,7 +49,6 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
       }, extraCode);
     }
   }
-  console.log(oneApiData.component, component)
   const itDesc = oneApiData.component === component
     ? getItDescription(oneApiData)
     : `'${oneApiData.component}.${oneApiData.field_name} works fine'`;

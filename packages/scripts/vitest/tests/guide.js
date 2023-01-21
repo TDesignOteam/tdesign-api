@@ -160,7 +160,10 @@ module.exports = {
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(100)',
-        dom: ['document.t-guide__highlight--mask'],
+        dom: {
+          true: { 'document.t-guide__highlight--mask': 1 },
+          false: { 'document.t-guide__highlight--mask': false },
+        },
       },
       id: 2979,
     },
@@ -317,7 +320,7 @@ module.exports = {
   GuideStep: {
     body: {
       PC: {
-        wrapper: 'getGuideStepMount',
+        wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(100)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
@@ -326,7 +329,7 @@ module.exports = {
     },
     children: {
       PC: {
-        wrapper: 'getGuideStepMount',
+        wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(100)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
@@ -335,7 +338,7 @@ module.exports = {
     },
     content: {
       PC: {
-        wrapper: 'getGuideStepMount',
+        wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(100)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
@@ -345,25 +348,162 @@ module.exports = {
     element: { PC: {}, id: 2956 },
     highlightContent: {
       PC: {
-        wrapper: 'getGuideStepMount',
+        wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(100)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
       id: 2966,
     },
-    highlightPadding: { id: 2965 },
-    mode: { id: 2967 },
-    nextButtonProps: { id: 2957 },
+    highlightPadding: {
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(100)',
+        attribute: [
+          {
+            value: 32,
+            expect: [
+              {
+                dom: 'document.t-guide__highlight--mask',
+                attribute: {
+                  'style.width': '64px',
+                  'style.height': '64px',
+                  'style.top': '-32px',
+                  'style.left': '-32px',
+                },
+              },
+              {
+                dom: 'document.t-guide__reference',
+                attribute: {
+                  'style.width': '64px',
+                  'style.height': '64px',
+                  'style.top': '-32px',
+                  'style.left': '-32px',
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2965,
+    },
+    mode: {
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(100)',
+        dom: ['document.t-popup', 'document.t-guide__dialog'],
+        snapshot: true,
+      },
+      id: 2967,
+    },
+    nextButtonProps: {
+      PC: {
+        wrapper: 'getCustomMultipleGuideStepMount',
+        trigger: 'delay(100)',
+        props: { current: 1 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__next', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2957,
+    },
     offset: { id: 2958 },
-    placement: { id: 2959 },
-    prevButtonProps: { id: 2960 },
-    showOverlay: { id: 2964 },
-    skipButtonProps: { id: 2961 },
-    stepOverlayClass: { id: 2963 },
+    placement: {
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(100)',
+        attribute: [
+          {
+            value: 'bottom-left',
+            expect: [
+              { dom: 'document.t-popup', attribute: { 'data-popper-placement': 'bottom-start' } },
+            ],
+          },
+        ],
+        snapshot: true,
+      },
+      id: 2959,
+    },
+    popupProps: {
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(100)',
+        attribute: [
+          {
+            value: "{placement: 'top-left'}",
+            expect: [
+              { dom: 'document.t-popup', attribute: { 'data-popper-placement': 'top-start' } },
+            ],
+          },
+        ],
+      },
+      id: 3307,
+    },
+    prevButtonProps: {
+      PC: {
+        wrapper: 'getCustomMultipleGuideStepMount',
+        trigger: 'delay(100)',
+        props: { current: 2 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__prev', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2960,
+    },
+    showOverlay: {
+      PC: {
+        wrapper: 'getCustomMultipleGuideStepMount',
+        trigger: 'delay(100)',
+        dom: {
+          true: { 'document.t-guide__highlight--mask': 1 },
+          false: { 'document.t-guide__highlight--mask': false },
+        },
+      },
+      id: 2964,
+    },
+    skipButtonProps: {
+      PC: {
+        wrapper: 'getCustomMultipleGuideStepMount',
+        trigger: 'delay(100)',
+        props: { current: 1 },
+        className: [
+          {
+            value: "{theme: 'warning'}",
+            expect: [
+              { dom: 'document.t-guide__skip', className: { 't-button--theme-warning': true } },
+            ],
+          },
+        ],
+      },
+      id: 2961,
+    },
+    stepOverlayClass: {
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(100)',
+        className: [
+          {
+            value: 't-test-guide-step-overlay',
+            expect: [{ dom: 'document.t-popup', className: { 't-test-guide-step-overlay': true } }],
+          },
+        ],
+        snapshot: true,
+      },
+      id: 2963,
+    },
     title: {
       PC: {
-        wrapper: 'getGuideStepMount',
+        wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(100)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,

@@ -9,6 +9,7 @@ const {
   getDomClassNameExpect,
   getPresetsExpect,
   getItAsync,
+  getCategoryDesc,
 } = require('./core');
 const { getSkipCode } = require('./utils');
 
@@ -26,11 +27,12 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   const async = getItAsync(trigger, framework);
   const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-item-/' }, extraCode);
   const enums = oneApiData.field_enum.split('/').filter(v => v);
+  const propsCode = getCategoryDesc(oneApiData, component);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
   if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
     const arr = [
       `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
-      `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${ item }\`,${async} () => {`,
+      `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${ item }\`,${async} () => {`,
       getWrapper(framework, mountCode, classNameDom),
       trigger && getPresetsExpect(trigger, framework, component),
       getClassNameExpectTruthy(framework, `\`${className}\``, '', classNameDom),
@@ -47,10 +49,11 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     if (oneApiData.field_type_text[0] === 'String' && enums.length) {
       const classNameVariable = `${oneApiData.field_name}ClassNameList`;
       const hasObjectClassName = hasObjectInArray(className);
+      const propsCode = getCategoryDesc(oneApiData, component);
       const arr = [
         `const ${classNameVariable} = ${getArrayCode(className)};`,
         `${getArrayCode(enums)}.forEach((item, index) => {`,
-        `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to \${ item }\`, ${async} () => {`,
+        `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${ item }\`, ${async} () => {`,
         getWrapper(framework, mountCode, classNameDom),
         trigger && getPresetsExpect(trigger, framework, component),
         hasObjectClassName
@@ -70,10 +73,11 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       return arr;
     } else {
       const onlyDocumentDom = isOnlyDocumentDom(className);
+      const propsCode = getCategoryDesc(oneApiData, component);
       return className.map(({ value, expect }) => {
         const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: value }, extraCode);
         const arr = [
-          `it${getSkipCode(skip)}(\`props.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
+          `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
             getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
             trigger && getPresetsExpect(trigger, framework, component),
             getDomClassNameExpect(framework, expect),
@@ -115,12 +119,13 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
 
   // 如果是「枚举值：类名」映射关系
   if (typeof className === 'object' && !Array.isArray(className)) {
+    const propsCode = getCategoryDesc(oneApiData, component);
     const mapVariable = `${oneApiData.field_name}ClassNameMap`;
     const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-propValue-/' }, extraCode);
     const arr = [
       `const ${mapVariable} = ${JSON.stringify(className)};`,
       `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {
-        it(\`props.${oneApiData.field_name} is equal to \${ enumValue }\`,${async} () => {
+        it(\`${propsCode}.${oneApiData.field_name} is equal to \${ enumValue }\`,${async} () => {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
           getWrapper(framework, mountCode, classNameDom),
@@ -142,11 +147,11 @@ function hasObjectInArray(arr) {
 
 function isOnlyDocumentDom(className) {
   if (!Array.isArray(className)) return;
-  for (let i = className, len = className.length; i < len; i++) {
+  for (let i = 0, len = className.length; i < len; i++) {
     const item = className[i];
     if (typeof item !== 'object') continue;
     if (item.expect && item.expect.length) {
-      for (let j = 0, len = item.expect.length; j < len; j++) {
+      for (let j = 0, len1 = item.expect.length; j < len1; j++) {
         if (!item.expect[j].dom.includes('document')) {
           return false;
         }

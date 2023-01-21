@@ -732,7 +732,7 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
     }
     return getOneArgEqual(framework, fnName, index, oneArgument, undefined, calls);
   });
-  arr.unshift(`expect(${fnName}).toHaveBeenCalled(1);`);
+  arr.unshift(`expect(${fnName}).toHaveBeenCalled();`);
   return arr.filter(v => v);
 }
 
@@ -919,6 +919,11 @@ function getItAsync(trigger, framework) {
   return framework.indexOf('Vue') !== -1 && trigger || reactAsync || trigger?.includes('delay') ? 'async' : '';
 }
 
+function getCategoryDesc(oneApiData, component) {
+  if (oneApiData.component === component) return 'props';
+  return oneApiData.component;
+}
+
 module.exports = {
   SIMULATE_FUNCTIONS,
   getEventName,
@@ -947,4 +952,5 @@ module.exports = {
   getDelayCode,
   getPresetsExpect,
   getItAsync,
+  getCategoryDesc,
 };
