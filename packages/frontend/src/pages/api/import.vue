@@ -269,9 +269,9 @@ import {
 import { cmpApiInstance } from '../../services/api-server'
 import { getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
-import prettierConfig from '../../../../scripts/config/prettier'
-import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
-import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
+// import prettierConfig from '../../../../scripts/config/prettier'
+// import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
+// import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
 
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',

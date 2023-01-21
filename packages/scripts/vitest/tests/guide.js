@@ -13,7 +13,7 @@ module.exports = {
     },
     current: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         dom: {
           '0': {
@@ -50,7 +50,7 @@ module.exports = {
     },
     finishButtonProps: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 2 },
         className: [
@@ -75,7 +75,7 @@ module.exports = {
     },
     hidePrev: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 1, hidePrev: true },
         dom: [{ 'document.t-guide__action .t-guide__prev': false }],
@@ -84,7 +84,7 @@ module.exports = {
     },
     hideSkip: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 1, hideSkip: true },
         dom: [{ 'document.t-guide__action .t-guide__skip': false }],
@@ -126,7 +126,7 @@ module.exports = {
     mode: { id: 2968 },
     nextButtonProps: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 1 },
         className: [
@@ -142,7 +142,7 @@ module.exports = {
     },
     prevButtonProps: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 2 },
         className: [
@@ -166,7 +166,7 @@ module.exports = {
     },
     skipButtonProps: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         props: { current: 0 },
         className: [
@@ -216,7 +216,7 @@ module.exports = {
     },
     change: {
       PC: {
-        wrapper: 'getGuideStepsMount',
+        wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(100)',
         event: [
           {
@@ -229,11 +229,11 @@ module.exports = {
             ],
           },
           {
-            props: { current: 2 },
+            props: { current: 1 },
             expect: [
               {
                 trigger: 'click(document.t-guide__prev)',
-                event: { change: [1, { 'e.type': 'click', total: 3 }] },
+                event: { change: [0, { 'e.type': 'click', total: 3 }] },
               },
             ],
           },
@@ -241,16 +241,93 @@ module.exports = {
       },
       id: 2948,
     },
-    finish: { id: 2950 },
-    nextStepClick: { id: 2952 },
-    prevStepClick: { id: 2951 },
-    skip: { id: 2949 },
+    finish: {
+      PC: {
+        wrapper: 'getGuideMultipleStepsMount',
+        trigger: 'delay(100)',
+        event: [
+          {
+            props: { current: 2 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__finish)',
+                event: { finish: [{ current: 2, 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2950,
+    },
+    nextStepClick: {
+      PC: {
+        wrapper: 'getGuideMultipleStepsMount',
+        trigger: 'delay(100)',
+        event: [
+          {
+            props: { current: 1 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__next)',
+                event: { nextStepClick: [{ current: 1, next: 2, 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2952,
+    },
+    prevStepClick: {
+      PC: {
+        wrapper: 'getGuideMultipleStepsMount',
+        trigger: 'delay(100)',
+        event: [
+          {
+            props: { current: 1 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__prev)',
+                event: { prevStepClick: [{ current: 1, prev: 0, 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2951,
+    },
+    skip: {
+      PC: {
+        wrapper: 'getGuideMultipleStepsMount',
+        trigger: 'delay(100)',
+        event: [
+          {
+            props: { current: 0 },
+            expect: [
+              {
+                trigger: 'click(document.t-guide__skip)',
+                event: { skip: [{ current: 0, 'e.type': 'click', total: 3 }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2949,
+    },
   },
   GuideStep: {
-    body: { id: 2955 },
-    children: { id: 2953 },
-    content: { id: 2954 },
-    element: { id: 2956 },
+    body: {
+      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      id: 2955,
+    },
+    children: {
+      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      id: 2953,
+    },
+    content: {
+      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      id: 2954,
+    },
+    element: { PC: {}, id: 2956 },
     highlightContent: { id: 2966 },
     highlightPadding: { id: 2965 },
     mode: { id: 2967 },
@@ -261,6 +338,9 @@ module.exports = {
     showOverlay: { id: 2964 },
     skipButtonProps: { id: 2961 },
     stepOverlayClass: { id: 2963 },
-    title: { id: 2962 },
+    title: {
+      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      id: 2962,
+    },
   },
 };

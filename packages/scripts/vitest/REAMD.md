@@ -1,18 +1,29 @@
-## 设计开发测试用例
+## 设计&开发测试用例
 
-在 vitest/tests 中开发输出测试用例，然后执行 `npm run api:test Button 'React(PC)' vitest,finalProject` 实时联调。
+在 vitest/tests 中开发输出测试用例，保存后，执行 `npm run api:test Button 'React(PC)' vitest,finalProject` 进行实时联调。
+会自动输出测试用例到项目文件中。
 
-## 直接输出测试用例到项目
+```bash
+npm run api:test <component> <framework> vitest,finalProject
+```
+
+- 第一个参数：组件名称。示例：Button，大驼峰命名。
+- 第二个参数：框架名称，示例：Vue(PC)，可选值：Vue(PC)、VueNext(PC)、React(PC)、Vue(Mobile)、React(Mobile)。
+  其中 Vue(PC) 表示 Vue2，VueNext(PC) 表示 Vue3。Vue(Mobile) 表示 Vue3。
+
+## 只更新测试用例到项目
 
 注意：会自动拉取远程仓库的 DB 文件中的测试用例，覆盖 `vitest/tests` 中的内容，
 如果你此时正在本地 `vitest/tests` 中进行测试用例开发，千万不要执行下面的命令行，否则会被覆盖。
 
 ```bash
 npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
-npm run api:docs Button 'Vue(PC)'  vitest,finalProject
-npm run api:docs Button 'React(PC)'  vitest,finalProject
 ```
 
+- 第一个参数：组件名称。示例：Button，大驼峰命名。
+- 第二个参数：框架名称，示例：Vue(PC)，可选值：Vue(PC)、VueNext(PC)、React(PC)、Vue(Mobile)、React(Mobile)。
+  其中 Vue(PC) 表示 Vue2，VueNext(PC) 表示 Vue3。Vue(Mobile) 表示 Vue3。
+  
 ## API
 
 总述：将测试用例分为 5 大类：类名检测、属性检测、元素检测、TNode 检测以及人机交互检测。
@@ -28,6 +39,9 @@ npm run api:docs Button 'React(PC)'  vitest,finalProject
 | dom | String/Object/Array | 【元素校验】校验某个子元素是否存在。不同的 API 值对应着不同的 DOM 子元素 |
 | tnode | Boolean/Object | 校验自定义元素（因框架实现差异大，故而单独定义），方便以最少的定义输出更多的单测用例 |
 | event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |
+| props | Object | 给组件添加属性 |
+| trigger | String | 开启校验的前置条件。主要应用于需要触发某个事件 或者 延迟 N 秒后，才会显示相关元素的场景。如：TreeSelect 点击后才会显示面板；Guide 需要等待 100 毫秒渲染完成后才能开始校验）|
+| skip | Boolean | 是否跳过当前测试用例 |
 
 ### 类名 className
 

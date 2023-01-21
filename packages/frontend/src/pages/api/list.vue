@@ -30,7 +30,7 @@
             <template v-if="row.deprecated">已废弃。</template>
             <template v-if="row.html_attribute">HTML 原生属性。</template>
             <template v-if="row.field_required">必需。</template>
-            {{row.field_desc_zh}} <t-tag v-if="row.test_description">Tested</t-tag>
+            {{row.field_desc_zh}} <t-tag v-if="isTestedPC(row.test_description)">Tested(PC)</t-tag>
           </p>
           <template v-if="row.field_enum"><p>可选值：{{row.field_enum}}。</p></template>
           <template v-if="row.custom_field_type"><p>TS 类型定义：{{row.custom_field_type}}。</p></template>
@@ -102,6 +102,7 @@
 </template>
 
 <script>
+import { parseJSON } from './util';
 import { cmpApiInstance } from '../../services/api-server'
 import {
   BaseTable as TTable,
@@ -205,7 +206,13 @@ export default {
     },
     onCodePreivew (data, framework) {
       this.$emit('code-preview', data, framework)
-    }
+    },
+    isTestedPC(test) {
+      if (!test) return false;
+      const json = parseJSON(test);
+      if (!json || !json.PC) return false;
+      return true;
+    },
   }
 }
 </script>
