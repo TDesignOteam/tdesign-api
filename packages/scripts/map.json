@@ -549,7 +549,8 @@
       },
       {
         "value": "GuideStep",
-        "label": "引导步骤"
+        "label": "引导步骤",
+        "type": "TS"
       },
       {
         "value": "Header",

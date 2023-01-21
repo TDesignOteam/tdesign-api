@@ -43923,7 +43923,7 @@
       "create_time": "2022-08-30 09:09:42",
       "update_time": "2022-08-30 09:09:42",
       "event_output": null,
-      "custom_field_type": "Array<TdGuideStepProps>",
+      "custom_field_type": "Array<GuideStep>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
