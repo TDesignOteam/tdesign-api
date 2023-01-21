@@ -156,8 +156,11 @@ function getPropsValue(value) {
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  * @returns 快照代码
  */
-function getSnapshotCase(snapshot, framework, wrapperIndex = '') {
+function getSnapshotCase(snapshot, framework, wrapperIndex = '', onlyDocumentDom) {
   if (!snapshot) return;
+  if (onlyDocumentDom) {
+    return `expect(document.body).toMatchSnapshot();`
+  }
   if (framework.indexOf('Vue') !== -1) {
     return `expect(wrapper${wrapperIndex}.element).toMatchSnapshot();`
   }

@@ -11,6 +11,9 @@ const {
   getItAsync,
 } = require('./core');
 const { getSkipCode } = require('./utils');
+const map = require('../map.json');
+
+const componentMap = map.data.components;
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
@@ -34,7 +37,7 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
       ...props,
     }, extraCode);
   } else if (framework.indexOf('React') !== -1) {
-    if (oneApiData.field_name === 'children') {
+    if (oneApiData.field_name === 'children' && component === oneApiData.component) {
       componentCode = getMountComponent(framework, component, {...props}, {
         ...extraCode,
         content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
@@ -46,7 +49,10 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
       }, extraCode);
     }
   }
-  const itDesc = getItDescription(oneApiData);
+  console.log(oneApiData.component, component)
+  const itDesc = oneApiData.component === component
+    ? getItDescription(oneApiData)
+    : `'${oneApiData.component}.${oneApiData.field_name} works fine'`;
   let arr = getTestCaseByComponentCode({
     itDesc,
     componentCode,
@@ -142,7 +148,7 @@ function getTestCaseByComponentCode(params) {
     !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
     // 校验额外的元素是否存在
     tnode.dom && getDomExpect(framework, tnode.dom),
-    getSnapshotCase(snapshot, framework),
+    getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
     `});`
   ];
   return arr.filter(v => v);
@@ -152,8 +158,9 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip
   const finalTrigger = tnode.trigger || trigger;
   const skipText = skip ? '.skip' : '';
   const async = getItAsync(finalTrigger, framework);
+  const category = oneApiData.component === component ? 'props': oneApiData.component;
   const arr = [
-    `\nit${skipText}('props.${oneApiData.field_name} is a function with params', ${async} () => {`,
+    `\nit${skipText}('${category}.${oneApiData.field_name} is a function with params', ${async} () => {`,
       `const fn = vi.fn();`,
       getMountComponent(framework, component, {
         [oneApiData.field_name]: '/-fn-/',

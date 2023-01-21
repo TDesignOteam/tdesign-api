@@ -70,10 +70,22 @@ function getApiComponentMapByFrameWork(map, framework) {
   return rMap;
 }
 
+// 根据子组件或子类型获取父组件
+function getParentByChildComponent(combineMap, childComponent) {
+  const list = Object.entries(combineMap);
+  for (let i = 0, len = list.length; i < len; i++) {
+    const [parent, item] = list[i];
+    if (item.includes(childComponent)) {
+      return parent;
+    }
+  }
+}
+
 module.exports = {
   parseJSON,
   formatArrayToMap,
   groupByComponent,
   getApiComponentMapByFrameWork,
   getSkipCode,
+  getParentByChildComponent,
 };

@@ -77,7 +77,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
             getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
             trigger && getPresetsExpect(trigger, framework, component),
             getDomClassNameExpect(framework, expect),
-            getSnapshotCase(snapshot, framework),
+            getSnapshotCase(snapshot, framework, '', { onlyDocumentDom }),
           `});`
         ];
         return arr.filter(v => v).join('\n');

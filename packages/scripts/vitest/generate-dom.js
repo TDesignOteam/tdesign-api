@@ -45,7 +45,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
         getWrapper(framework, mountCode2, undefined, '2', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomExpectTruthy(framework, `'${dom}'`, '2'),
-        getSnapshotCase(snapshot, framework, '2'),
+        getSnapshotCase(snapshot, framework, '2', onlyDocumentDom),
       `})`,
     ];
     return arr.filter(v => v);
@@ -82,7 +82,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
           getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
           trigger && getPresetsExpect(trigger, framework, component),
           getDomExpect(framework, domInfo),
-          getSnapshotCase(snapshot, framework),
+          getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
           `});\n`,
         ];
         arr = arr.concat(oneValueArr);
@@ -101,7 +101,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
         getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomExpect(framework, domInfo),
-        getSnapshotCase(snapshot, framework),
+        getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
         `});\n`,
       ];
       arr = arr.concat(oneValueArr);

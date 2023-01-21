@@ -76,7 +76,7 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
         getWrapper(framework, mountCode, attributeDom, '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomAttributeExpect(framework, expect, component),
-        getSnapshotCase(snapshot, framework),
+        getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
       `});`
     ];
     return arr.filter(v => v).join('\n');

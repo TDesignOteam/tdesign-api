@@ -316,15 +316,30 @@ module.exports = {
   },
   GuideStep: {
     body: {
-      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      PC: {
+        wrapper: 'getGuideStepMount',
+        trigger: 'delay(100)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
       id: 2955,
     },
     children: {
-      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      PC: {
+        wrapper: 'getGuideStepMount',
+        trigger: 'delay(100)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
       id: 2953,
     },
     content: {
-      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      PC: {
+        wrapper: 'getGuideStepMount',
+        trigger: 'delay(100)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
       id: 2954,
     },
     element: { PC: {}, id: 2956 },
@@ -339,7 +354,12 @@ module.exports = {
     skipButtonProps: { id: 2961 },
     stepOverlayClass: { id: 2963 },
     title: {
-      PC: { wrapper: 'getGuideStepMount', trigger: 'delay(100)', tnode: true, snapshot: true },
+      PC: {
+        wrapper: 'getGuideStepMount',
+        trigger: 'delay(100)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
       id: 2962,
     },
   },

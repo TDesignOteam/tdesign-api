@@ -1,5 +1,5 @@
 const pick = require('lodash/pick');
-const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } = require('./utils');
+const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork, getParentByChildComponent } = require('./utils');
 const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
@@ -8,6 +8,9 @@ const { generateDomUnitCase } = require('./generate-dom');
 const { generateEventUnitCase } = require('./generate-event');
 const { copyUnitTestsToOtherWrapper } = require('./copy');
 const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
+const map = require('../map.json');
+
+const componentMap = map.data.components;
 
 const generateFunctionsMap = {
   // 元素类名测试
@@ -92,8 +95,17 @@ function getUnitTestCode(baseData, framework) {
     importedTestUtils: [],
   };
   // 一个组件可能由多个子组件拼凑而成
-  Object.entries(baseData).forEach(([component, oneComponentApi]) => {
+  Object.entries(baseData).forEach(([componentOri, oneComponentApi]) => {
     if (!oneComponentApi) return;
+
+    let component = componentOri;
+    const typeInfo = componentMap.find(item => item.value === componentOri);
+    // 如果是 TS 类型，而非一个组件，则直接使用根组件输出用例。只要 type 存在，就不是组件
+    if (typeInfo.type) {
+      const combineMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
+      component = getParentByChildComponent(combineMap, componentOri);
+    }
+
     let oneComponentTests = [];
     oneComponentApi.forEach((oneApiData) => {
       if (!oneApiData.test_description) return;

@@ -70,7 +70,7 @@ function getImportsConfig(params = {}, tests) {
   }
   if (importedComponents.length) {
     Object.keys(obj).forEach(framework => {
-      obj[framework]['..'].push(...importedComponents);
+      obj[framework]['..'].push(...[...new Set(importedComponents)]);
     });
   }
   if (importedMounts.size > 0) {
