@@ -3,7 +3,7 @@ module.exports = {
     counter: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: {
           dom: ['document.t-guide__counter', 'document.custom-node'],
           params: [{ total: 1, current: 0 }],
@@ -14,7 +14,7 @@ module.exports = {
     current: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         dom: {
           '0': {
             'document.t-guide__counter': { text: '1/3' },
@@ -51,7 +51,7 @@ module.exports = {
     finishButtonProps: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 2 },
         className: [
           {
@@ -67,7 +67,7 @@ module.exports = {
     hideCounter: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { hideCounter: true },
         dom: [{ 'document.t-guide__counter': false }],
       },
@@ -76,7 +76,7 @@ module.exports = {
     hidePrev: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 1, hidePrev: true },
         dom: [{ 'document.t-guide__action .t-guide__prev': false }],
       },
@@ -85,7 +85,7 @@ module.exports = {
     hideSkip: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 1, hideSkip: true },
         dom: [{ 'document.t-guide__action .t-guide__skip': false }],
       },
@@ -94,7 +94,7 @@ module.exports = {
     highlightPadding: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         attribute: [
           {
             value: 32,
@@ -127,7 +127,7 @@ module.exports = {
     nextButtonProps: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 1 },
         className: [
           {
@@ -143,7 +143,7 @@ module.exports = {
     prevButtonProps: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 2 },
         className: [
           {
@@ -159,7 +159,7 @@ module.exports = {
     showOverlay: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         dom: {
           true: { 'document.t-guide__highlight--mask': 1 },
           false: { 'document.t-guide__highlight--mask': false },
@@ -170,7 +170,7 @@ module.exports = {
     skipButtonProps: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 0 },
         className: [
           {
@@ -186,7 +186,7 @@ module.exports = {
     steps: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         dom: [
           {
             'document.t-guide__counter': { text: '1/1' },
@@ -204,7 +204,7 @@ module.exports = {
     zIndex: {
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         attribute: [
           {
             value: '5000',
@@ -220,7 +220,7 @@ module.exports = {
     change: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         event: [
           {
             props: { current: 0 },
@@ -247,7 +247,7 @@ module.exports = {
     finish: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         event: [
           {
             props: { current: 2 },
@@ -265,7 +265,7 @@ module.exports = {
     nextStepClick: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         event: [
           {
             props: { current: 1 },
@@ -283,7 +283,7 @@ module.exports = {
     prevStepClick: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         event: [
           {
             props: { current: 1 },
@@ -301,7 +301,7 @@ module.exports = {
     skip: {
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         event: [
           {
             props: { current: 0 },
@@ -321,7 +321,7 @@ module.exports = {
     body: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -330,7 +330,7 @@ module.exports = {
     children: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -339,7 +339,7 @@ module.exports = {
     content: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -349,7 +349,7 @@ module.exports = {
     highlightContent: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -358,7 +358,7 @@ module.exports = {
     highlightPadding: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         attribute: [
           {
             value: 32,
@@ -390,7 +390,7 @@ module.exports = {
     mode: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         dom: ['document.t-popup', 'document.t-guide__dialog'],
         snapshot: true,
       },
@@ -399,7 +399,7 @@ module.exports = {
     nextButtonProps: {
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 1 },
         className: [
           {
@@ -416,7 +416,7 @@ module.exports = {
     placement: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         attribute: [
           {
             value: 'bottom-left',
@@ -432,7 +432,7 @@ module.exports = {
     popupProps: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         attribute: [
           {
             value: "{placement: 'top-left'}",
@@ -447,7 +447,7 @@ module.exports = {
     prevButtonProps: {
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 2 },
         className: [
           {
@@ -463,7 +463,7 @@ module.exports = {
     showOverlay: {
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         dom: {
           true: { 'document.t-guide__highlight--mask': 1 },
           false: { 'document.t-guide__highlight--mask': false },
@@ -474,7 +474,7 @@ module.exports = {
     skipButtonProps: {
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         props: { current: 1 },
         className: [
           {
@@ -490,7 +490,7 @@ module.exports = {
     stepOverlayClass: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         className: [
           {
             value: 't-test-guide-step-overlay',
@@ -504,7 +504,7 @@ module.exports = {
     title: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(100)',
+        trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },

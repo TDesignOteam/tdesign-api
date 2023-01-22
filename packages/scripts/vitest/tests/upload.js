@@ -4,6 +4,7 @@ module.exports = {
     accept: { PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' }, id: 872 },
     action: {
       PC: {
+        skip: true,
         event: [
           {
             props: { action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76' },
@@ -56,7 +57,51 @@ module.exports = {
       },
       id: 873,
     },
-    allowUploadDuplicateFile: { id: 2454 },
+    allowUploadDuplicateFile: {
+      PC: {
+        event: [
+          {
+            props: {
+              files: [
+                {
+                  name: 'image-name.png',
+                  url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
+                },
+              ],
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              allowUploadDuplicateFile: false,
+            },
+            description: 'allowUploadDuplicateFile is equal to false',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  validate: [{ type: 'FILTER_FILE_SAME_NAME', 'files[0].raw': '${fileList[0]}' }],
+                },
+                delay: true,
+              },
+            ],
+          },
+          {
+            props: {
+              files: [
+                {
+                  name: 'image-name.png',
+                  url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
+                },
+              ],
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              allowUploadDuplicateFile: true,
+            },
+            description: 'allowUploadDuplicateFile is equal to true',
+            expect: [
+              { trigger: "simulateFileChange('input')", event: { validate: 'not' }, delay: true },
+            ],
+          },
+        ],
+      },
+      id: 2454,
+    },
     autoUpload: { id: 885 },
     beforeAllFilesUpload: { id: 2928 },
     beforeUpload: { id: 876 },
@@ -100,7 +145,6 @@ module.exports = {
     triggerButtonProps: { id: 2985 },
     uploadAllFilesInOneRequest: { id: 2362 },
     useMockProgress: { id: 1987 },
-    value: { id: 3009 },
     withCredentials: { id: 882 },
     cancelUpload: { id: 1791 },
     change: { id: 888 },
