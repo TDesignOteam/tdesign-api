@@ -5,6 +5,7 @@ const { COMPONENT_API_MD_MAP, TYPES_COMBINE_MAP, GLOBAL_COMPONENTS_CONFIG } = re
 
 // common 数据类型，用于引入具体的组件类型定义文件中
 const GLOBAL_TYPES = [
+  'PlainObject',
   'TNode',
   'TNodeReturnValue',
   'TElement',
@@ -48,7 +49,7 @@ module.exports = {
     '*/'].join('\n * '),
   TNode: 'TNode',
   // 这里配置好之后，可以在 API 文档中显示「查看通用类型定义」
-  TDESIGN_GLOBALS: ['TNode', 'Styles',  'ClassName', 'CSSSelector', 'AttachNode', 'OptionData', 'TreeOptionData', 'SizeEnum', 'HorizontalAlignEnum', 'VerticalAlignEnum', 'KeysType', 'ComponentType', 'InfinityScroll'],
+  TDESIGN_GLOBALS: GLOBAL_TYPES,
   // 真实路径，默认为当前项目，finalProject 值为 true，则表示直接输出到项目中，方便快速测试类型定义
   BASE_PATH_URL: finalProject
     ? path.resolve(process.cwd(), '../')

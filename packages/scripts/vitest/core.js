@@ -8,7 +8,13 @@ const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
 const ATTRIBUTES_STYLE = 'style';
 
-const SIMULATE_FUNCTIONS = ['simulateInputChange', 'simulateInputEnter', 'simulateKeydownEvent', 'simulateImageEvent'];
+const SIMULATE_FUNCTIONS = [
+  'simulateInputChange',
+  'simulateInputEnter',
+  'simulateKeydownEvent',
+  'simulateImageEvent',
+  'simulateFileChange',
+];
 
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
@@ -130,7 +136,7 @@ function getPropsValue(value) {
   // 带多余引号的字符串
   if (/^'.+'$/.test(value)) return value;
   // 测试用例变量
-  if (/\/-.+-\//.test(value)) return value.slice(2, -2);
+  if (/^\/-.+-\/$/.test(value)) return value.slice(2, -2);
   // 可能是一个函数，或者 TNode
   if (typeof value === 'string' && (
     value.indexOf('=>') !== -1
@@ -683,25 +689,63 @@ function getFireEventName(event, framework) {
   return { eventName: eventInfo };
 }
 
-// 处理正则表达式的校验
+function makeObjectToString(objectArgs) {
+  const arr = ['{'];
+  const argsList = Object.entries(objectArgs).map(([key, value]) => {
+    let tmpValue = typeof value === 'string' && value !== 'undefined'
+      ? `'${value}'`
+      : value;
+    if (/\$\{.+\}/.test(value)) {
+      tmpValue = value.match(/\$\{(.+)\}/)[1];
+    }
+    return `'${key}': ${tmpValue}`;
+  }).join(',');
+  arr.push(argsList);
+  arr.push('}');
+  return arr.join('');
+}
+
+function makeArrayToString(arrayArgs) {
+  const arr = ['['];
+  const objList = arrayArgs.map((obj) => makeObjectToString(obj)).join(',');
+  arr.push(objList);
+  arr.push(']');
+  return arr.join('');
+}
+
+// Vue 的 input === react 的 change
+function handleVueAndReactInputEventDifference(framework, fnName, oneArgument, property) {
+  const events = ['onChange', 'onInputChange'];
+  return framework.indexOf('React') !== -1
+    && (property === '.e.type' || property === '.type')
+    && /^'input'$/.test(oneArgument)
+    && events.find((changeEvent) => fnName.indexOf(changeEvent) !== -1)
+      ? `'change'`
+      : oneArgument;
+}
+
+// Support RegExp Test
 function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '', calls = 'calls[0]') {
-  const property = oneProperty ? `.${oneProperty}` : '';
+  // /^\[\d\]\./.test(oneProperty) 表示数组 '[0].lastModified'。不需要数组深度相等的时候需要
+  const property = oneProperty
+    ? /^\[\d\]\./.test(oneProperty) ? oneProperty : `.${oneProperty}`
+    : '';
   if (isRegExp(oneArgument)) {
     return `expect(${oneArgument}.test(${fnName}.mock.${calls}[${index}]${property})).toBeTruthy();`;
   } else {
-    const toEqual = typeof oneArgument === 'object' ? 'toEqual' : 'toBe';
-    // Vue 的 input === react 的 change
-    const events = ['onChange', 'onInputChange'];
-    let value = framework.indexOf('React') !== -1
-      && (property === '.e.type' || property === '.type')
-      && /^'input'$/.test(oneArgument)
-      && events.find((changeEvent) => fnName.indexOf(changeEvent) !== -1)
-        ? `'change'`
-        : oneArgument;
+    // /\$\{.+\}/.test(oneArgument) 表示这是定义好的一个变量。如：'${fileList}'
+    const toEqual = typeof oneArgument === 'object' || /\$\{.+\}/.test(oneArgument) ? 'toEqual' : 'toBe';
+
+    let value = handleVueAndReactInputEventDifference(framework, fnName, oneArgument, property);
+
     if (typeof value === 'object') {
-      value = JSON.stringify(value);
+      value = Array.isArray(value) ? makeArrayToString(value) : makeObjectToString(value);
     }
-    return `expect(${fnName}.mock.${calls}[${index}]${property}).${toEqual}(${value});`;
+    if (/\$\{.+\}/.test(oneArgument)) {
+      value = oneArgument.match(/\$\{(.+)\}/)[1];
+    }
+    const lastExpectCode = /toBeTruthy/.test(value) ? 'toBeTruthy()' : `${toEqual}(${value})`;
+    return `expect(${fnName}.mock.${calls}[${index}]${property}).${lastExpectCode};`;
   }
 }
 
@@ -890,7 +934,7 @@ function getReactFireEventAsync(expect, framework) {
 
 // 判断一个字符串是否为正则表达式
 function isRegExp(str) {
-  return /\/(.+)\//.test(str);
+  return /^\/(.+)\/$/.test(str);
 }
 
 // 获取开始单测的前置条件。如：延迟校验、mouseenter 后校验。不同的元素渲染的时机不同，条件不同

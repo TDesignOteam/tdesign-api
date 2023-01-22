@@ -20,7 +20,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   accept?: string;
   /**
-   * 上传接口。设接口响应数据为字段 `response`，那么 `response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片
+   * 上传接口。设接口响应数据为字段 `response`，那么 `response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片或文件
    * @default ''
    */
   action?: string;
@@ -112,6 +112,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   method?: 'POST' | 'GET' | 'PUT' | 'OPTION' | 'PATCH' | 'post' | 'get' | 'put' | 'option' | 'patch';
   /**
+   * 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效
+   */
+  mockProgressDuration?: number;
+  /**
    * 是否支持多选文件
    * @default false
    */
@@ -127,7 +131,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   placeholder?: string;
   /**
-   * 自定义上传方法。返回值 `status` 表示上传成功或失败，`error` 或 `response.error` 表示上传失败的原因，`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片地址。示例一：`{ status: 'fail', error: '上传失败', response }`。示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`
+   * 自定义上传方法。返回值 `status` 表示上传成功或失败，`error` 或 `response.error` 表示上传失败的原因，`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片地址。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`
    */
   requestMethod?: (files: UploadFile | UploadFile[]) => Promise<RequestMethodResponse>;
   /**
@@ -371,7 +375,7 @@ export type UploadProgressType = 'real' | 'mock';
 export interface UploadRemoveContext {
   index?: number;
   file?: UploadFile;
-  e: MouseEvent<any>;
+  e: MouseEvent<HTMLDivElement>;
 }
 
 export interface UploadSelectChangeContext {

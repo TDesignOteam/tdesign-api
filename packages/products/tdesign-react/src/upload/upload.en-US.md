@@ -30,6 +30,7 @@ isBatchUpload | Boolean | false | \- | N
 locale | Object | - | Typescript：`UploadConfig` `import { UploadConfig } from '../config-provider/type'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/upload/type.ts) | N
 max | Number | 0 | \- | N
 method | String | POST | options：POST/GET/PUT/OPTION/PATCH/post/get/put/option/patch | N
+mockProgressDuration | Number | - | \- | N
 multiple | Boolean | false | \- | N
 name | String | file | \- | N
 placeholder | String | - | \- | N

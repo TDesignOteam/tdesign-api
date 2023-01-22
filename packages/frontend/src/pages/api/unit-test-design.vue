@@ -56,11 +56,11 @@ import UnitTestUI from './unit-test/unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON } from './util'
-// import prettierConfig from '../../../../scripts/config/prettier'
-// import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
-// import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs"
-// import Prism from 'prismjs'
-// import 'prismjs/components/prism-json';
+import prettierConfig from '../../../../scripts/config/prettier'
+import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
+import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs"
+import Prism from 'prismjs'
+import 'prismjs/components/prism-json';
 import 'tdesign-site-components/lib/styles/prism-theme.less'
 
 export default {
@@ -168,21 +168,21 @@ export default {
         return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
       }
 
-      // try {
-      //   // 格式化代码
-      //   const code = prettier.format(codeData, {
-      //     ...prettierConfig,
-      //     parser: "babel",
-      //     plugins: [parserBabel],
-      //   })
-      //   return Prism.highlight(code, Prism.languages.javascript, 'javascript')
-      // } catch(e) {
-      //   console.warn(e);
-      //   const error = 'unit test code has syntax error. check test code please.'
-      //   // this.$message.error(error)
-      //   const code = `console.log('${error}')`
-      //   return Prism.highlight(code, Prism.languages.javascript, 'javascript')
-      // }
+      try {
+        // 格式化代码
+        const code = prettier.format(codeData, {
+          ...prettierConfig,
+          parser: "babel",
+          plugins: [parserBabel],
+        })
+        return Prism.highlight(code, Prism.languages.javascript, 'javascript')
+      } catch(e) {
+        console.warn(e);
+        const error = 'unit test code has syntax error. check test code please.'
+        // this.$message.error(error)
+        const code = `console.log('${error}')`
+        return Prism.highlight(code, Prism.languages.javascript, 'javascript')
+      }
     },
 
     validateJSON(json) {
