@@ -59,7 +59,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       const enums = oneApiData.field_enum.split('/');
       const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/', ...props }, extraCode);
-      const domInDocument = dom.find(item => item.includes('document')) ? 'document' : '';
+      const domInDocument = dom.find(item => typeof item === 'string' && item.includes('document')) ? 'document' : '';
       const arr = [
         `const ${expectedVariable} = ${getArrayCode(dom.map(t => t.replace('document', '')))};`,
         `${getArrayCode(enums)}.forEach((item, index) => {

@@ -756,7 +756,6 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
   }
   if (!Array.isArray(args)) return [];
   const arr = args.map((oneArgument, index) => {
-
     if (oneArgument === undefined || oneArgument === 'skip') return;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
       return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, undefined, calls);
@@ -770,10 +769,11 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
             ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
             : `expect(${expectInfo}).toBeTruthy();`;
         }
-        const expectVal = typeof value === 'string' && !isRegExp(value) ? `'${value}'` : value;
+        const expectVal = typeof value === 'string' && !isRegExp(value) && value !== 'undefined' ? `'${value}'` : value;
         return getOneArgEqual(framework, fnName, index, expectVal, oneProperty, calls);
       }).join('\n');
     }
+    
     return getOneArgEqual(framework, fnName, index, oneArgument, undefined, calls);
   });
   arr.unshift(`expect(${fnName}).toHaveBeenCalled();`);

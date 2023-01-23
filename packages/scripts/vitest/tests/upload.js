@@ -18,7 +18,7 @@ module.exports = {
                       currentSelectedFiles: [
                         {
                           lastModified: 1674355700444,
-                          name: 'image-name.png',
+                          name: 'file-name.txt',
                           percent: 0,
                           raw: '${fileList[0]}',
                           size: 10,
@@ -32,7 +32,7 @@ module.exports = {
                     {
                       '[0].lastModified': 1674355700444,
                       '[0].response': 'toBeTruthy',
-                      '[0].name': 'image-name.png',
+                      '[0].name': 'file-name.txt',
                       '[0].percent': 100,
                       '[0].status': 'success',
                       '[0].raw': '${fileList[0]}',
@@ -43,7 +43,7 @@ module.exports = {
                       'file.raw': '${fileList[0]}',
                       'file.url':
                         'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-                      'file.name': 'image-name.png',
+                      'file.name': 'file-name.txt',
                       'file.uploadTime': 'toBeTruthy',
                       'file.response': 'toBeTruthy',
                     },
@@ -64,7 +64,7 @@ module.exports = {
             props: {
               files: [
                 {
-                  name: 'image-name.png',
+                  name: 'file-name.txt',
                   url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
                 },
               ],
@@ -86,7 +86,7 @@ module.exports = {
             props: {
               files: [
                 {
-                  name: 'image-name.png',
+                  name: 'file-name.txt',
                   url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
                 },
               ],
@@ -102,11 +102,150 @@ module.exports = {
       },
       id: 2454,
     },
-    autoUpload: { id: 885 },
-    beforeAllFilesUpload: { id: 2928 },
-    beforeUpload: { id: 876 },
-    children: { id: 1169 },
-    data: { id: 877 },
+    autoUpload: {
+      PC: {
+        event: [
+          {
+            props: { autoUpload: false, action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            description: 'autoUpload is equal false',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  change: [
+                    {
+                      '[0].response': 'undefined',
+                      '[0].raw': '${fileList[0]}',
+                      '[0].name': 'file-name.txt',
+                      '[0].status': 'waiting',
+                      '[0].percent': 0,
+                    },
+                  ],
+                },
+                delay: true,
+              },
+            ],
+          },
+        ],
+      },
+      id: 885,
+    },
+    beforeAllFilesUpload: {
+      PC: {
+        event: [
+          {
+            props: {
+              autoUpload: false,
+              beforeAllFilesUpload: '() => false',
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            description: 'beforeAllFilesUpload can stop uploading',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                event: {
+                  change: 'not',
+                  validate: [
+                    { type: 'BEFORE_ALL_FILES_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
+                  ],
+                },
+                delay: true,
+              },
+            ],
+          },
+        ],
+      },
+      id: 2928,
+    },
+    beforeUpload: {
+      PC: {
+        event: [
+          {
+            props: {
+              autoUpload: false,
+              beforeUpload: '() => false',
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            description:
+              'beforeUpload can skip all files to upload, just like beforeAllFilesUpload',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                event: {
+                  change: 'not',
+                  validate: [
+                    { type: 'CUSTOM_BEFORE_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
+                  ],
+                },
+                delay: true,
+              },
+            ],
+          },
+          {
+            props: {
+              autoUpload: false,
+              beforeUpload: "(file) => file.name === 'file-name1.txt'",
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            description: 'beforeUpload can skip some of files to upload',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                event: {
+                  change: [{ '[0].raw': '${fileList[1]}' }],
+                  validate: [
+                    {
+                      type: 'CUSTOM_BEFORE_UPLOAD',
+                      'files.map(t => t.raw)': '${[fileList[0], fileList[2]]}',
+                    },
+                  ],
+                },
+                delay: true,
+              },
+            ],
+          },
+        ],
+      },
+      id: 876,
+    },
+    children: {
+      PC: {
+        props: { theme: 'file', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        tnode: true,
+      },
+      id: 1169,
+    },
+    data: {
+      PC: {
+        event: [
+          {
+            props: {
+              data: { file_name: 'custom-file-name.excel' },
+              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+            },
+            description: 'upload request can send extra data',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  fail: [
+                    {
+                      'XMLHttpRequest.upload.requestParams': {
+                        file_name: 'custom-file-name.excel',
+                        file: '${fileList[0]}',
+                        length: 1,
+                      },
+                    },
+                  ],
+                },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 877,
+    },
     disabled: {
       PC: {
         event: [
@@ -138,9 +277,26 @@ module.exports = {
     requestMethod: { id: 1789 },
     showUploadProgress: { id: 1790 },
     sizeLimit: { id: 1564 },
-    status: { id: 2994 },
+    status: {
+      PC: {
+        props: { tips: 'upload tips text', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        dom: [
+          '.t-upload__tips-default',
+          '.t-upload__tips-success',
+          '.t-upload__tips-warning',
+          '.t-upload__tips-error',
+        ],
+      },
+      id: 2994,
+    },
     theme: { id: 1182 },
-    tips: { id: 1183 },
+    tips: {
+      PC: {
+        props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        tnode: { dom: ['.t-upload__tips'], trigger: '' },
+      },
+      id: 1183,
+    },
     trigger: { id: 889 },
     triggerButtonProps: { id: 2985 },
     uploadAllFilesInOneRequest: { id: 2362 },
@@ -151,7 +307,30 @@ module.exports = {
     dragenter: { id: 1184 },
     dragleave: { id: 1185 },
     drop: { id: 2628 },
-    fail: { id: 892 },
+    fail: {
+      PC: {
+        event: [
+          {
+            props: { action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json' },
+            description: '',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  fail: [
+                    {
+                      'XMLHttpRequest.upload.requestParams': { file: '${fileList[0]}', length: 1 },
+                    },
+                  ],
+                },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 892,
+    },
     oneFileFail: { id: 2984 },
     oneFileSuccess: { id: 2945 },
     preview: { id: 893 },

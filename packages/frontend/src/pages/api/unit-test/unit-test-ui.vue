@@ -21,7 +21,7 @@
                   style="margin-top: 16px"
                   size="small"
                   @click="onAddMore"
-                >添加</t-button>
+                >添加其他类别</t-button>
                 <t-button
                   theme="danger"
                   style="margin-top: 16px; margin-left: 16px"

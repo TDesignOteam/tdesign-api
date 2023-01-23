@@ -248,7 +248,7 @@
             <!-- {{ arrayEvent[index] }} -->
             <div style="margin-top: 16px; text-align: right;">
               <t-button @click="() => onArrayEventAdd(index)" size="small">
-                继续
+                再来一个
                 <!-- <AddCircleIcon /> -->
               </t-button>
               <t-button
