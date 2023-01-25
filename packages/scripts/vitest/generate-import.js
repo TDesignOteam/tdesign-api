@@ -3,7 +3,7 @@
  * hasEvent 是否引入事件 vi
  * importedComponents 引入了哪些组件依赖
  */
-const { SIMULATE_FUNCTIONS } = require('./core');
+const { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } = require('./core');
 
 // fireEvent, vi, render 等已经单独处理
 const REACT_KEYWORDS = ['mockDelay', 'mockTimeout'];
@@ -153,9 +153,30 @@ function getMoreEventImports(framework, event, wrapper, trigger) {
   return { importedTestUtils, importedMounts };
 }
 
+// 获取函数变量
+function getVariableImports(test) {
+  const { variables, tnode } = test;
+  const allVariables = variables || [];
+  if (Array.isArray(tnode)) {
+    tnode.forEach((oneTNode) => {
+      if (oneTNode.variables) {
+        allVariables.push(...oneTNode.variables);
+      }
+    });
+  }
+  const imports = [];
+  GET_VAR_FUNCTIONS.forEach((variable) => {
+    if (allVariables.find(t => t.includes(variable))) {
+      imports.push(variable);
+    }
+  });
+  return imports;
+}
+
 module.exports = {
   getImportsConfig,
   getImportsCode,
   getMoreEventImports,
   getSimulateEvents,
+  getVariableImports,
 };

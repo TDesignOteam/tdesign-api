@@ -1,6 +1,6 @@
 const pick = require('lodash/pick');
 const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork, getParentByChildComponent } = require('./utils');
-const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents } = require('./generate-import');
+const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents, getVariableImports } = require('./generate-import');
 const { generateClassNameUnitCase } = require('./generate-class-name');
 const { generateTNodeElement } = require('./generate-tnode');
 const { generateAttributeUnitCase } = require('./generate-attribute');
@@ -42,36 +42,36 @@ function getBaseData(framework, component, apiData, map) {
  * @param {String} component 组件名称
  * @returns 
  */
-function getOneUnitTest(framework, component, oneApiData, testDescription) {
+function getOneUnitTest(framework, component, oneApiData, test) {
   let oneUnitTests = [];
   let hasEvent = false;
   const importedMounts = [];
-  let importedTestUtils = [];
-  Object.keys(testDescription.PC).forEach((key) => {
+  const importedTestUtils = [];
+  Object.keys(test).forEach((key) => {
     // 空对象无效，返回
-    if (!testDescription.PC[key] || typeof testDescription.PC[key] === 'object' && !Object.keys(testDescription.PC[key]).length) return;
+    if (!test[key] || typeof test[key] === 'object' && !Object.keys(test[key]).length) return;
     if (generateFunctionsMap[key]) {
-      const oneApiTestCase = generateFunctionsMap[key](testDescription.PC, oneApiData, framework, component)
+      const oneApiTestCase = generateFunctionsMap[key](test, oneApiData, framework, component)
       if (oneApiTestCase && oneApiTestCase.length) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
           hasEvent = true;
-          const imports = getMoreEventImports(framework, testDescription.PC[key], testDescription.PC.wrapper, testDescription.PC.trigger);
-          importedTestUtils = imports.importedTestUtils;
+          const imports = getMoreEventImports(framework, test[key], test.wrapper, test.trigger);
+          importedTestUtils.push(...imports.importedTestUtils);
           if (imports.importedMounts && imports.importedMounts.length) {
             importedMounts.push(...imports.importedMounts);
           }
         }
-        if (key === 'tnode' && typeof testDescription.PC[key] === 'object') {
-          // if (testDescription.PC[key].trigger) {}
-          const list = getSimulateEvents(testDescription.PC[key].trigger);
+        if (key === 'tnode' && typeof test[key] === 'object') {
+          // if (test[key].trigger) {}
+          const list = getSimulateEvents(test[key].trigger);
           if (list && list.length) {
             importedTestUtils.push(...list);
           }
         }
         // 同样的测试用例复用到其他实例
-        if (testDescription.PC.copyTestToWrapper) {
-          const { copyCode, wrappers } = copyUnitTestsToOtherWrapper(oneApiTestCase, testDescription.PC, framework);
+        if (test.copyTestToWrapper) {
+          const { copyCode, wrappers } = copyUnitTestsToOtherWrapper(oneApiTestCase, test, framework);
           if (copyCode) {
             oneUnitTests = oneUnitTests.concat(copyCode);
             wrappers.forEach((wrapper) => {
@@ -82,6 +82,8 @@ function getOneUnitTest(framework, component, oneApiData, testDescription) {
       }
     }
   });
+
+  importedTestUtils.push(...getVariableImports(test));
   return { oneUnitTests, hasEvent, importedMounts, importedTestUtils };
 }
 
@@ -115,7 +117,7 @@ function getUnitTestCode(baseData, framework) {
 
       // 存在 Web 框架的单测用例，再输出
       // console.log(testDescription.PC);
-      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, testDescription);
+      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, testDescription.PC);
       if (oneUnitTests && oneUnitTests.length) {
         oneComponentTests = oneComponentTests.concat(oneUnitTests);
         configFlag.hasEvent = hasEvent || configFlag.hasEvent;

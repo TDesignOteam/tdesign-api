@@ -16,6 +16,9 @@ const SIMULATE_FUNCTIONS = [
   'simulateFileChange',
 ];
 
+// 获取变量的函数
+const GET_VAR_FUNCTIONS = ['getFakeFileList'];
+
 function getItDescription(oneApiData) {
   const type = oneApiData.field_category_text.toLocaleLowerCase();
   return `'${type}.${oneApiData.field_name} works fine'`;
@@ -135,7 +138,9 @@ function getPropsObjectString(props, events) {
 function getPropsValue(value) {
   // 带多余引号的字符串
   if (/^'.+'$/.test(value)) return value;
-  // 测试用例变量
+  // 测试用例变量（vitest/tests 文件）
+  if (/^\$\{.+\}$/.test(value)) return value.slice(2, -1);
+  // 测试用例变量（vitest core 内部）
   if (/^\/-.+-\/$/.test(value)) return value.slice(2, -2);
   // 可能是一个函数，或者 TNode
   if (typeof value === 'string' && (
@@ -968,8 +973,13 @@ function getCategoryDesc(oneApiData, component) {
   return oneApiData.component;
 }
 
+function getVariablesCode(variables) {
+  return variables && variables.join('\n');
+}
+
 module.exports = {
   SIMULATE_FUNCTIONS,
+  GET_VAR_FUNCTIONS,
   getEventName,
   getEventFnName,
   isRegExp,
@@ -997,4 +1007,5 @@ module.exports = {
   getPresetsExpect,
   getItAsync,
   getCategoryDesc,
+  getVariablesCode,
 };

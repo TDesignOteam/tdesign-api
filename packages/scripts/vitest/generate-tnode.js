@@ -9,11 +9,12 @@ const {
   getDelayCode,
   getPresetsExpect,
   getItAsync,
+  getVariablesCode,
 } = require('./core');
 const { getSkipCode } = require('./utils');
-const map = require('../map.json');
+// const map = require('../map.json');
 
-const componentMap = map.data.components;
+// const componentMap = map.data.components;
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
@@ -22,12 +23,26 @@ const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
  * TNode 自定义元素（插槽）测试
  */
 function generateTNodeElement(test, oneApiData, framework, component) {
-  const arr = generateVueAndReactTNode(test, oneApiData, framework, component);
+  let arr = [];
+  const { tnode, props, variables } = test;
+  if (Array.isArray(tnode)) {
+    tnode.forEach((oneTNode) => {
+      const tmpTest = {
+        ...test,
+        tnode: oneTNode,
+        props: { ...oneTNode.props, ...props },
+        variables: [...(oneTNode.variables || []), ...(variables || [])],
+      };
+      arr = arr.concat(generateVueAndReactTNode(tmpTest, oneApiData, framework, component), '\n');
+    });
+  } else {
+    arr = arr.concat(generateVueAndReactTNode(test, oneApiData, framework, component));
+  }
   return arr.filter(v => v);
 }
 
 function generateVueAndReactTNode(test, oneApiData, framework, component) {
-  const { tnode, props, snapshot, content, wrapper, trigger, skip } = test;
+  const { tnode, props, variables, snapshot, content, wrapper, trigger, skip } = test;
   const extraCode = { content, wrapper };
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
@@ -57,7 +72,7 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
     componentCode,
     // 开始单测的前置条件：trigger
     trigger: tnode.trigger || trigger,
-    framework, component, snapshot, tnode, skip,
+    framework, component, snapshot, tnode, skip, variables,
   });
 
   const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger);
@@ -67,7 +82,10 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
 
   // 如果 TNode 存在参数，则一定是函数。进行函数参数测试
   if (typeof tnode === 'object' && tnode.params) {
-    const list = getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props, trigger);
+    const list = getTNodeFnTest(tnode, oneApiData, framework, component, {
+      extraCode, skip, props, trigger, variables,
+      description: tnode.description,
+    });
     arr.push(list);
   }
   return arr;
@@ -96,7 +114,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       itDesc: slotTtDesc,
       componentCode: slotCode,
       trigger: tnode.trigger || trigger,
-      framework, component, snapshot, tnode, skip,
+      framework, component, snapshot, tnode, skip, variables,
     });
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
@@ -114,7 +132,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
         itDesc: slotTtDesc2,
         componentCode: slotCode2,
         trigger: tnode.trigger || trigger,
-        framework, component, snapshot, tnode, skip,
+        framework, component, snapshot, tnode, skip, variables,
       });
     }
   }
@@ -133,13 +151,14 @@ function getTestCaseByComponentCode(params) {
   const {
     itDesc, componentCode,
     trigger,
-    framework, component, snapshot, tnode, skip
+    framework, component, snapshot, tnode, skip, variables
   } = params;
   const needAsync = getItAsync(trigger, framework);
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
-  const onlyDocumentDom = tnode.dom?.every(item => item.includes('document'));
+  const onlyDocumentDom = Boolean(tnode.dom && tnode.dom.length && tnode.dom.every(item => item.includes('document')));
   const arr = [
-    `it${getSkipCode(skip)}(${tnode.description || itDesc}, ${needAsync} () => {`,
+    `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
+    getVariablesCode(variables),
     // 只有 document 元素的场景下，不需要 container 变量
     getWrapper(framework, componentCode, '', '', { onlyDocumentDom }),
     trigger && getPresetsExpect(trigger, framework, component),
@@ -153,13 +172,17 @@ function getTestCaseByComponentCode(params) {
   return arr.filter(v => v);
 }
 
-function getTNodeFnTest(tnode, oneApiData, framework, component, extraCode, skip, props, trigger) {
+function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
+  const { extraCode, skip, props, trigger, variables } = params;
   const finalTrigger = tnode.trigger || trigger;
   const skipText = skip ? '.skip' : '';
   const async = getItAsync(finalTrigger, framework);
   const category = oneApiData.component === component ? 'props': oneApiData.component;
+  const moreDesc = tnode.description ? `, ${tnode.description}` : '';
+  const defaultDescription = `'${category}.${oneApiData.field_name} is a function with params${moreDesc}'`;
   const arr = [
-    `\nit${skipText}('${category}.${oneApiData.field_name} is a function with params', ${async} () => {`,
+    `\nit${skipText}(${defaultDescription}, ${async} () => {`,
+      getVariablesCode(variables),
       `const fn = vi.fn();`,
       getMountComponent(framework, component, {
         [oneApiData.field_name]: '/-fn-/',

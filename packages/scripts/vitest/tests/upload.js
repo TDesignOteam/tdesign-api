@@ -258,9 +258,71 @@ module.exports = {
       },
       id: 879,
     },
-    dragContent: { id: 2991 },
+    dragContent: {
+      PC: {
+        props: {
+          theme: 'custom',
+          draggable: 'true',
+          action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+        },
+        tnode: true,
+      },
+      id: 2991,
+    },
     draggable: { id: 886 },
-    fileListDisplay: { id: 2383 },
+    fileListDisplay: {
+      PC: {
+        tnode: [
+          {
+            description: 'props.fileListDisplay works fine if theme=file',
+            variables: ["const fileList = getFakeFileList('file', 3);"],
+            props: {
+              files: '${fileList}',
+              theme: 'file',
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            dom: [],
+            trigger: '',
+            params: [{ files: '${fileList}' }],
+          },
+          {
+            description:
+              'props.fileListDisplay works fine if theme=image-flow && multiple=true && draggable=true',
+            variables: [
+              "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
+            ],
+            props: {
+              files: '${fileList}',
+              theme: 'image-flow',
+              multiple: true,
+              draggable: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            dom: [],
+            trigger: '',
+            params: [{ files: '${fileList}' }],
+          },
+          {
+            description:
+              'props.fileListDisplay works fine if theme=file-flow && multiple=true && draggable=true',
+            variables: [
+              "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
+            ],
+            props: {
+              files: '${fileList}',
+              theme: 'file-flow',
+              multiple: true,
+              draggable: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            dom: [],
+            trigger: '',
+            params: [{ files: '${fileList}' }],
+          },
+        ],
+      },
+      id: 2383,
+    },
     files: { id: 887 },
     format: { id: 884 },
     formatRequest: { id: 2946 },
