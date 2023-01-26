@@ -324,18 +324,165 @@ module.exports = {
       id: 2383,
     },
     files: { id: 887 },
-    format: { id: 884 },
-    formatRequest: { id: 2946 },
-    formatResponse: { id: 1220 },
-    headers: { id: 878 },
-    isBatchUpload: { id: 2363 },
-    locale: { id: 2733 },
+    format: {
+      PC: {
+        event: [
+          {
+            props: {
+              format:
+                "(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })",
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  selectChange: [
+                    '${fileList}',
+                    {
+                      'currentSelectedFiles[0].name': 'another name',
+                      'currentSelectedFiles[0].field_custom': 'a new file field',
+                      'currentSelectedFiles[0].raw': '${fileList[0]}',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 884,
+    },
+    formatRequest: {
+      PC: {
+        event: [
+          {
+            props: {
+              formatRequest: "(requestData) => ({ requestData, more_field: 'more custom field' })",
+              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+            },
+            description: 'upload request data can be changed through formatRequest',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  fail: [
+                    {
+                      'XMLHttpRequest.upload.requestParams.requestData': {
+                        file: '${fileList[0]}',
+                        length: 1,
+                      },
+                      'XMLHttpRequest.upload.requestParams.more_field': 'more custom field',
+                    },
+                  ],
+                },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 2946,
+    },
+    formatResponse: {
+      PC: {
+        event: [
+          {
+            props: {
+              formatResponse:
+                "(response) => ({ responseData: response, extra_field: 'extra value' })",
+              action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input')",
+                delay: 3000,
+                event: {
+                  change: [
+                    {
+                      '[0].response.responseData.url': 'toBeTruthy',
+                      '[0].response.extra_field': 'extra value',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1220,
+    },
+    headers: {
+      PC: {
+        event: [
+          {
+            props: {
+              headers: { 'XML-HTTP-REQUEST': 'tdesign_token' },
+              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+            },
+            description: '',
+            expect: [
+              {
+                trigger: "simulateFileChange('input')",
+                event: {
+                  fail: [
+                    { "XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']": 'tdesign_token' },
+                  ],
+                },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 878,
+    },
+    isBatchUpload: {
+      PC: {
+        event: [
+          {
+            props: {
+              isBatchUpload: true,
+              autoUpload: false,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              files: "${[{ url: 'https://file.txt', name: 'file.txt' }]}",
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 3)",
+                delay: 300,
+                event: { change: ['length=3'] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2363,
+    },
+    locale: {
+      PC: {
+        props: {
+          theme: 'file-flow',
+          files: [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png', status: 'progress' }],
+          action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+        },
+        dom: {
+          "{progress: { uploadingText: 'uploading' }}": {
+            '.t-upload__file-flow-progress': { text: 'uploading 0%' },
+          },
+        },
+      },
+      id: 2733,
+    },
     max: { id: 1191 },
     method: { id: 874 },
     mockProgressDuration: { id: 3253 },
-    multiple: { id: 880 },
+    multiple: { PC: { attribute: { multiple: true }, attributeDom: 'input' }, id: 880 },
     name: { id: 881 },
-    placeholder: { id: 1167 },
+    placeholder: {
+      PC: { dom: { 'this is placeholder': { '.t-upload__placeholder': 1 } } },
+      id: 1167,
+    },
     requestMethod: { id: 1789 },
     showUploadProgress: { id: 1790 },
     sizeLimit: { id: 1564 },
@@ -359,11 +506,31 @@ module.exports = {
       },
       id: 1183,
     },
-    trigger: { id: 889 },
+    trigger: { PC: { props: { theme: 'file' }, tnode: true }, id: 889 },
     triggerButtonProps: { id: 2985 },
     uploadAllFilesInOneRequest: { id: 2362 },
     useMockProgress: { id: 1987 },
-    withCredentials: { id: 882 },
+    withCredentials: {
+      PC: {
+        event: [
+          {
+            props: {
+              withCredentials: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+            },
+            description: '',
+            expect: [
+              {
+                trigger: "simulateFileChange('input')",
+                event: { fail: [{ 'XMLHttpRequest.withCredentials': true }] },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 882,
+    },
     cancelUpload: { id: 1791 },
     change: { id: 888 },
     dragenter: { id: 1184 },

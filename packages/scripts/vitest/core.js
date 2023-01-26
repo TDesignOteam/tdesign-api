@@ -735,7 +735,11 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '',
   const property = oneProperty
     ? /^\[\d\]\./.test(oneProperty) ? oneProperty : `.${oneProperty}`
     : '';
-  if (isRegExp(oneArgument)) {
+  // 长度校验；正则校验；其他校验
+  if (/length=/.test(oneArgument)) {
+    const [_, length] = oneArgument.slice(1, -1).split('=');
+    return `expect(${fnName}.mock.${calls}[${index}].length).toBe(${length});`;
+  } else if (isRegExp(oneArgument)) {
     return `expect(${oneArgument}.test(${fnName}.mock.${calls}[${index}]${property})).toBeTruthy();`;
   } else {
     // /\$\{.+\}/.test(oneArgument) 表示这是定义好的一个变量。如：'${fileList}'
