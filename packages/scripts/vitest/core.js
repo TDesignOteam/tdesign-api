@@ -738,7 +738,7 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '',
   // 长度校验；正则校验；其他校验
   if (/length=/.test(oneArgument)) {
     const [_, length] = oneArgument.slice(1, -1).split('=');
-    return `expect(${fnName}.mock.${calls}[${index}].length).toBe(${length});`;
+    return `expect(${fnName}.mock.${calls}[${index}]${property}.length).toBe(${length});`;
   } else if (isRegExp(oneArgument)) {
     return `expect(${oneArgument}.test(${fnName}.mock.${calls}[${index}]${property})).toBeTruthy();`;
   } else {

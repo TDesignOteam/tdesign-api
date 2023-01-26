@@ -105362,7 +105362,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"skip\":true,\"event\":[{\"props\":{\"action\":\"https://www.mocky.io/v2/5cc8019d300000980a055e76\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles\":[{\"lastModified\":1674355700444,\"name\":\"file-name.txt\",\"percent\":0,\"raw\":\"${fileList[0]}\",\"size\":10,\"type\":\"image/png\",\"status\":\"undefined\"}]}],\"change\":[{\"[0].lastModified\":1674355700444,\"[0].response\":\"toBeTruthy\",\"[0].name\":\"file-name.txt\",\"[0].percent\":100,\"[0].status\":\"success\",\"[0].raw\":\"${fileList[0]}\",\"[0].uploadTime\":\"toBeTruthy\"},{\"trigger\":\"add\",\"file.raw\":\"${fileList[0]}\",\"file.url\":\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\",\"file.name\":\"file-name.txt\",\"file.uploadTime\":\"toBeTruthy\",\"file.response\":\"toBeTruthy\"}]},\"delay\":3000}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"action\":\"https://www.mocky.io/v2/5cc8019d300000980a055e76\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles\":[{\"lastModified\":1674355700444,\"name\":\"file-name.txt\",\"percent\":0,\"raw\":\"${fileList[0]}\",\"size\":22,\"type\":\"image/png\",\"status\":\"undefined\"}]}],\"change\":[{\"[0].lastModified\":1674355700444,\"[0].response\":\"toBeTruthy\",\"[0].name\":\"file-name.txt\",\"[0].percent\":100,\"[0].status\":\"success\",\"[0].raw\":\"${fileList[0]}\",\"[0].uploadTime\":\"toBeTruthy\"},{\"trigger\":\"add\",\"file.raw\":\"${fileList[0]}\",\"file.url\":\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\",\"file.name\":\"file-name.txt\",\"file.uploadTime\":\"toBeTruthy\",\"file.response\":\"toBeTruthy\"}]},\"delay\":3000}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105759,7 +105759,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106417,7 +106417,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"isBatchUpload\":true,\"autoUpload\":false,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\",\"files\":\"${[{ url: 'https://file.txt', name: 'file.txt' }]}\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 3)\",\"delay\":300,\"event\":{\"change\":[\"length=3\"]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"isBatchUpload\":true,\"autoUpload\":false,\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\",\"files\":\"${[{ url: 'https://file.txt', name: 'file.txt' }]}\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 3)\",\"delay\":300,\"event\":{\"change\":[\"length=3\"]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106503,7 +106503,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"multiple\":true,\"autoUpload\":false,\"files\":\"[{ url: 'xxxx.url', name: 'file1.txt' }, { url: 'yyyy.url', name: 'file2.txt' }]\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 1)\",\"delay\":300,\"event\":{\"change\":\"not\"}}]},{\"description\":\"max=0 means any count of files are allowed\",\"props\":{\"max\":0,\"multiple\":true,\"autoUpload\":false,\"files\":\"[]\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 3)\",\"delay\":300,\"event\":{\"change\":[\"length=3\"]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106720,7 +106720,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"name\":\"file_name\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"rename file in request data to be file_name\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file_name\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106842,7 +106842,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"theme\":\"image-flow\",\"multiple\":true,\"files\":\"[]\",\"requestMethod\":\"() => Promise.resolve({ status: 'success', response: { url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' } })\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'image')\",\"delay\":300,\"event\":{\"change\":[{\"[0].raw\":\"${fileList[0]}\",\"[0].response.url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}]}}]},{\"props\":{\"theme\":\"file-flow\",\"multiple\":true,\"files\":\"[]\",\"requestMethod\":\"() => Promise.resolve({ status: 'fail', error: 'upload failed' })\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"delay\":300,\"event\":{\"fail\":[{\"failedFiles.map(t => t.raw)\":\"${fileList}\",\"currentFiles.map(t => t.raw)\":\"${fileList}\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106889,7 +106889,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":[{\"props\":{\"theme\":\"file-flow\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":80,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[{\".t-upload__file-flow-progress\":{\"text\":\"上传中\"}}]},{\"props\":{\"theme\":\"image\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":10,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[{\".t-upload__image-progress\":{\"text\":\"上传中\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106924,7 +106924,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图片文件大小限制，单位 KB。可选单位有：`'B' | 'KB' | 'MB' | 'GB'`。示例一：`1000`。示例二：`{ size: 2, unit: 'MB', message: '图片大小不超过 {sizeLimit} MB' }`",
+      "field_desc_zh": "图片文件大小限制，默认单位 KB。可选单位有：`'B' | 'KB' | 'MB' | 'GB'`。示例一：`1000`。示例二：`{ size: 2, unit: 'MB', message: '图片大小不超过 {sizeLimit} MB' }`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -106938,7 +106938,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"sizeLimit\":{\"size\":23,\"unit\":\"B\"},\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]},{\"props\":{\"sizeLimit\":0.023,\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107230,7 +107230,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":{\"{ theme: 'warning' }\":{\".t-button--theme-warning\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107257,7 +107257,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否在同一个请求中上传全部文件，默认一个请求上传一个文件",
+      "field_desc_zh": "是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -107696,7 +107696,7 @@
       "field_desc_zh": "上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`",
       "field_desc_en": "`response.error` used for error tips, `formatResponse` can format `response`",
       "field_required": 0,
-      "event_input": "(options: UploadFailContext)【interface UploadFailContext { e: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest}】",
+      "event_input": "(options: UploadFailContext)【interface UploadFailContext { e?: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest}】",
       "create_time": "2021-02-18 15:27:40",
       "update_time": "2021-12-28 01:49:20",
       "event_output": null,

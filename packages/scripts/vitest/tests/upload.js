@@ -4,7 +4,6 @@ module.exports = {
     accept: { PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' }, id: 872 },
     action: {
       PC: {
-        skip: true,
         event: [
           {
             props: { action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76' },
@@ -21,7 +20,7 @@ module.exports = {
                           name: 'file-name.txt',
                           percent: 0,
                           raw: '${fileList[0]}',
-                          size: 10,
+                          size: 22,
                           type: 'image/png',
                           status: 'undefined',
                         },
@@ -444,6 +443,7 @@ module.exports = {
             props: {
               isBatchUpload: true,
               autoUpload: false,
+              multiple: true,
               action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
               files: "${[{ url: 'https://file.txt', name: 'file.txt' }]}",
             },
@@ -474,18 +474,200 @@ module.exports = {
       },
       id: 2733,
     },
-    max: { id: 1191 },
+    max: {
+      PC: {
+        event: [
+          {
+            props: {
+              max: 2,
+              multiple: true,
+              autoUpload: false,
+              files:
+                "[{ url: 'xxxx.url', name: 'file1.txt' }, { url: 'yyyy.url', name: 'file2.txt' }]",
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 1)",
+                delay: 300,
+                event: { change: 'not' },
+              },
+            ],
+          },
+          {
+            description: 'max=0 means any count of files are allowed',
+            props: { max: 0, multiple: true, autoUpload: false, files: '[]' },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 3)",
+                delay: 300,
+                event: { change: ['length=3'] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1191,
+    },
     method: { id: 874 },
     mockProgressDuration: { id: 3253 },
     multiple: { PC: { attribute: { multiple: true }, attributeDom: 'input' }, id: 880 },
-    name: { id: 881 },
+    name: {
+      PC: {
+        event: [
+          {
+            props: { name: 'file_name', action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json' },
+            description: 'rename file in request data to be file_name',
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                event: {
+                  fail: [
+                    {
+                      'XMLHttpRequest.upload.requestParams': {
+                        file_name: '${fileList[0]}',
+                        length: 1,
+                      },
+                    },
+                  ],
+                },
+                delay: 700,
+              },
+            ],
+          },
+        ],
+      },
+      id: 881,
+    },
     placeholder: {
       PC: { dom: { 'this is placeholder': { '.t-upload__placeholder': 1 } } },
       id: 1167,
     },
-    requestMethod: { id: 1789 },
-    showUploadProgress: { id: 1790 },
-    sizeLimit: { id: 1564 },
+    requestMethod: {
+      PC: {
+        event: [
+          {
+            props: {
+              theme: 'image-flow',
+              multiple: true,
+              files: '[]',
+              requestMethod:
+                "() => Promise.resolve({ status: 'success', response: { url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' } })",
+            },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'image')",
+                delay: 300,
+                event: {
+                  change: [
+                    {
+                      '[0].raw': '${fileList[0]}',
+                      '[0].response.url': 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            props: {
+              theme: 'file-flow',
+              multiple: true,
+              files: '[]',
+              requestMethod: "() => Promise.resolve({ status: 'fail', error: 'upload failed' })",
+            },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                delay: 300,
+                event: {
+                  fail: [
+                    {
+                      'failedFiles.map(t => t.raw)': '${fileList}',
+                      'currentFiles.map(t => t.raw)': '${fileList}',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1789,
+    },
+    showUploadProgress: {
+      PC: {
+        dom: [
+          {
+            props: {
+              theme: 'file-flow',
+              showUploadProgress: false,
+              files: [
+                {
+                  name: 'file1.txt',
+                  status: 'progress',
+                  percent: 80,
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                },
+              ],
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            dom: [{ '.t-upload__file-flow-progress': { text: '上传中' } }],
+          },
+          {
+            props: {
+              theme: 'image',
+              showUploadProgress: false,
+              files: [
+                {
+                  name: 'file1.txt',
+                  status: 'progress',
+                  percent: 10,
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                },
+              ],
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            dom: [{ '.t-upload__image-progress': { text: '上传中' } }],
+          },
+        ],
+      },
+      id: 1790,
+    },
+    sizeLimit: {
+      PC: {
+        event: [
+          {
+            props: {
+              sizeLimit: { size: 23, unit: 'B' },
+              multiple: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 5)",
+                delay: 100,
+                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+              },
+            ],
+          },
+          {
+            props: {
+              sizeLimit: 0.023,
+              multiple: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 5)",
+                delay: 100,
+                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1564,
+    },
     status: {
       PC: {
         props: { tips: 'upload tips text', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
@@ -507,7 +689,13 @@ module.exports = {
       id: 1183,
     },
     trigger: { PC: { props: { theme: 'file' }, tnode: true }, id: 889 },
-    triggerButtonProps: { id: 2985 },
+    triggerButtonProps: {
+      PC: {
+        props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        dom: { "{ theme: 'warning' }": { '.t-button--theme-warning': 1 } },
+      },
+      id: 2985,
+    },
     uploadAllFilesInOneRequest: { id: 2362 },
     useMockProgress: { id: 1987 },
     withCredentials: {

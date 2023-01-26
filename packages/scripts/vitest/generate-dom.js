@@ -9,6 +9,7 @@ const {
   getPresetsExpect,
   getItAsync,
   getCategoryDesc,
+  getVariablesCode,
 } = require("./core");
 const { getSkipCode } = require("./utils");
 
@@ -16,12 +17,30 @@ const { getSkipCode } = require("./utils");
  * 检测某个元素是否存在
  */
 function generateDomUnitCase(test, oneApiData, framework, component) {
-  const arr = generateVueAndReactDomCase(test, oneApiData, framework, component);
+  let arr = [];
+  const { dom, props, variables } = test;
+  if (Array.isArray(dom)) {
+    dom.forEach((oneDom) => {
+      const oneDomProps = oneDom.props;
+      const oneDomVariables = oneDom.variables;
+      delete oneDom.props;
+      delete oneDom.variables;
+      const tmpTest = {
+        ...test,
+        dom: oneDom.dom,
+        props: { ...oneDomProps, ...props },
+        variables: [...(oneDomVariables || []), ...(variables || [])],
+      };
+      arr = arr.concat(generateVueAndReactDomCase(tmpTest, oneApiData, framework, component), '\n');
+    })
+  } else {
+    arr = arr.concat(generateVueAndReactDomCase(test, oneApiData, framework, component));
+  }
   return arr && arr.filter(v => v);
 }
 
 function generateVueAndReactDomCase(test, oneApiData, framework, component) {
-  const { props, dom, snapshot, content, wrapper, trigger, skip } = test;
+  const { props, variables, dom, snapshot, content, wrapper, trigger, skip } = test;
   const extraCode = { content, wrapper };
   const async = getItAsync(trigger, framework);
   const propsCode = getCategoryDesc(oneApiData, component);
@@ -33,6 +52,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1);
     const arr = [
       `it${getSkipCode(skip)}('${propsCode}.${oneApiData.field_name}: ${component} contains element \`${dom}\`', ${async}() => {`,
+        getVariablesCode(variables),
         `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
         getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
@@ -64,6 +84,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
         `const ${expectedVariable} = ${getArrayCode(dom.map(t => t.replace('document', '')))};`,
         `${getArrayCode(enums)}.forEach((item, index) => {
           it(\`${propsCode}.${oneApiData.field_name} is equal to \${item}\`, ${async} () => {`,
+          getVariablesCode(variables),
             getWrapper(framework, mountCode),
             trigger && getPresetsExpect(trigger, framework, component),
             getDomExpectTruthy(framework, `${domInDocument}${expectedVariable}[index]`),
@@ -82,6 +103,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
         domInfoText = domInfoText.length > 100 ? '' : ` \`${domInfoText}\` should exist`;
         const oneValueArr = [
           `it${getSkipCode(skip)}('${propsCode}.${oneApiData.field_name} works fine.${domInfoText}',${async} () => {`,
+          getVariablesCode(variables),
           getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
           trigger && getPresetsExpect(trigger, framework, component),
           getDomExpect(framework, domInfo),
@@ -101,6 +123,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
       const oneValueArr = [
         `it${getSkipCode(skip)}('${propsCode}.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}', ${async} () => {`,
+        getVariablesCode(variables),
         getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomExpect(framework, domInfo),
