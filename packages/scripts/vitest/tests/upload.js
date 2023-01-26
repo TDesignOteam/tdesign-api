@@ -5,10 +5,12 @@ module.exports = {
         props: { abridgeName: [8, 6] },
         dom: [
           {
+            description: 'props.abridgeName works fine if theme=file-input',
             props: { theme: 'file-input', files: [{ name: 'this_is_a_long_name.png' }] },
             dom: [{ '.t-upload__single-input-text': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=file and file url exists',
             props: {
               theme: 'file',
               files: [{ name: 'this_is_a_long_name.png', url: 'https://xxx.png' }],
@@ -16,18 +18,22 @@ module.exports = {
             dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=file and file url does not exist',
             props: { theme: 'file', files: [{ name: 'this_is_a_long_name.png' }] },
             dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=image',
             props: { theme: 'image', files: [{ name: 'this_is_a_long_name.png' }] },
             dom: [{ '.t-upload__card-name': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=file&draggable=true',
             props: { theme: 'file', draggable: true, files: [{ name: 'this_is_a_long_name.png' }] },
             dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=image&draggable=true',
             props: {
               theme: 'image',
               draggable: true,
@@ -37,6 +43,7 @@ module.exports = {
             dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=image-flow',
             props: {
               theme: 'image-flow',
               files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
@@ -44,6 +51,7 @@ module.exports = {
             dom: [{ '.t-upload__card-name': { text: 'this_is_…me.jpg' } }],
           },
           {
+            description: 'props.abridgeName works fine if theme=file-flow and file url exists',
             props: {
               theme: 'file-flow',
               files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
@@ -51,6 +59,8 @@ module.exports = {
             dom: [{ '.t-upload__file-name > a': { text: 'this_is_…me.jpg' } }],
           },
           {
+            description:
+              'props.abridgeName works fine if theme=file-flow and file url does not exist',
             props: { theme: 'file-flow', files: [{ name: 'this_is_a_long_name.jpg' }] },
             dom: [{ '.t-upload__file-name': { text: 'this_is_…me.jpg' } }],
           },
@@ -813,17 +823,20 @@ module.exports = {
       PC: {
         event: [
           {
-            describe: 'remove single file, trigger remove event',
+            description: 'remove single file, trigger remove event',
             props: { files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }] },
             expect: [
               {
                 trigger: 'click(.t-upload__icon-delete)',
-                event: { change: [[], { 'e.type': 'click' }] },
+                event: {
+                  change: [[], { 'e.type': 'click' }],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                },
               },
             ],
           },
           {
-            describe: 'remove only one of file list, trigger remove event',
+            description: 'remove only one of file list, trigger remove event',
             props: {
               multiple: true,
               files: [
@@ -843,6 +856,24 @@ module.exports = {
                     ],
                     { index: 0, file: 'toBeTruthy', 'e.type': 'click' },
                   ],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                },
+              },
+            ],
+          },
+          {
+            description: 'failed status file can be removed',
+            props: {
+              theme: 'image',
+              multiple: true,
+              files: [{ name: 'image1.png', status: 'fail' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__card-mask-item .t-icon-delete)',
+                event: {
+                  change: [[], { index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
                 },
               },
             ],
