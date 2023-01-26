@@ -1,6 +1,63 @@
 module.exports = {
   Upload: {
-    abridgeName: { id: 2995 },
+    abridgeName: {
+      PC: {
+        props: { abridgeName: [8, 6] },
+        dom: [
+          {
+            props: { theme: 'file-input', files: [{ name: 'this_is_a_long_name.png' }] },
+            dom: [{ '.t-upload__single-input-text': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: {
+              theme: 'file',
+              files: [{ name: 'this_is_a_long_name.png', url: 'https://xxx.png' }],
+            },
+            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: { theme: 'file', files: [{ name: 'this_is_a_long_name.png' }] },
+            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: { theme: 'image', files: [{ name: 'this_is_a_long_name.png' }] },
+            dom: [{ '.t-upload__card-name': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: { theme: 'file', draggable: true, files: [{ name: 'this_is_a_long_name.png' }] },
+            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: {
+              theme: 'image',
+              draggable: true,
+              status: 'success',
+              files: [{ name: 'this_is_a_long_name.png', url: 'https://wwww.png' }],
+            },
+            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+          },
+          {
+            props: {
+              theme: 'image-flow',
+              files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
+            },
+            dom: [{ '.t-upload__card-name': { text: 'this_is_…me.jpg' } }],
+          },
+          {
+            props: {
+              theme: 'file-flow',
+              files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
+            },
+            dom: [{ '.t-upload__file-name > a': { text: 'this_is_…me.jpg' } }],
+          },
+          {
+            props: { theme: 'file-flow', files: [{ name: 'this_is_a_long_name.jpg' }] },
+            dom: [{ '.t-upload__file-name': { text: 'this_is_…me.jpg' } }],
+          },
+        ],
+      },
+      id: 2995,
+    },
     accept: { PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' }, id: 872 },
     action: {
       PC: {
@@ -752,7 +809,48 @@ module.exports = {
     oneFileSuccess: { id: 2945 },
     preview: { id: 893 },
     progress: { id: 890 },
-    remove: { id: 1170 },
+    remove: {
+      PC: {
+        event: [
+          {
+            describe: 'remove single file, trigger remove event',
+            props: { files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }] },
+            expect: [
+              {
+                trigger: 'click(.t-upload__icon-delete)',
+                event: { change: [[], { 'e.type': 'click' }] },
+              },
+            ],
+          },
+          {
+            describe: 'remove only one of file list, trigger remove event',
+            props: {
+              multiple: true,
+              files: [
+                { name: 'file1.txt', url: 'https://xxx1.txt' },
+                { name: 'file2.txt', url: 'https://xxx2.txt' },
+                { name: 'file3.txt', url: 'https://xxx3.txt' },
+              ],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__single-display-text .t-upload__icon-delete)',
+                event: {
+                  change: [
+                    [
+                      { name: 'file2.txt', url: 'https://xxx2.txt' },
+                      { name: 'file3.txt', url: 'https://xxx3.txt' },
+                    ],
+                    { index: 0, file: 'toBeTruthy', 'e.type': 'click' },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1170,
+    },
     selectChange: { id: 2337 },
     success: { id: 891 },
     validate: { id: 2929 },
