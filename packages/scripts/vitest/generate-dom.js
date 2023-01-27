@@ -27,6 +27,7 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
       delete oneDom.props;
       delete oneDom.variables;
       delete oneDom.description;
+      oneApiData.field_enum = '';
       const tmpTest = {
         ...test,
         dom: oneDom.dom,
@@ -146,12 +147,25 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
 function isOnlyDocumentDom(dom) {
   let onlyDocumentDom = true;
   let domList = [];
-  if (Array.isArray(dom)) {
-    domList = dom;
-  } else if (typeof dom === 'object') {
-    domList = Object.values(dom);
-  }
+  const loop = (dom) => {
+    if (Array.isArray(dom)) {
+      if (typeof dom[0] === 'object' && dom[0].dom) {
+        dom.forEach((oneDom) => {
+          loop(oneDom);
+        })
+      } else {
+        domList = domList.concat(dom);
+      }
+    } else if (typeof dom === 'object') {
+      domList = Object.values(dom);
+    }
+  };
+  loop(dom);
   domList.forEach((item) => {
+    if (typeof item === 'string' && !item.includes('document')) {
+      onlyDocumentDom = false
+      return;
+    }
     if (typeof item !== 'object') return;
     Object.keys(item).forEach((selector) => {
       if (!selector.includes('document')) {

@@ -316,9 +316,19 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { disabled: true },
             description: 'disabled upload can not trigger onSelectChange',
+            props: { disabled: true },
             expect: [{ trigger: "simulateFileChange('input')", event: { selectChange: 'not' } }],
+          },
+          {
+            description: 'disabled upload can not remove file',
+            props: { theme: 'file', files: [{ name: 'file1.txt' }] },
+            expect: [{ exist: [{ '.t-upload__icon-delete': false }] }],
+          },
+          {
+            description: 'disabled upload can not remove image',
+            props: { theme: 'image', files: [{ name: 'img1.txt', url: 'https://img1.png' }] },
+            expect: [{ exist: [{ '.t-upload__icon-delete': false }] }],
           },
         ],
       },
@@ -529,20 +539,55 @@ module.exports = {
     locale: {
       PC: {
         props: {
-          theme: 'file-flow',
-          files: [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png', status: 'progress' }],
+          files: [
+            {
+              url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+              status: 'progress',
+              percent: 80,
+            },
+          ],
           action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
         },
-        dom: {
-          "{progress: { uploadingText: 'uploading' }}": {
-            '.t-upload__file-flow-progress': { text: 'uploading 0%' },
+        dom: [
+          {
+            description: 'props.locale works fine if theme=file-flow',
+            props: { theme: 'file-flow' },
+            dom: {
+              "{progress: { uploadingText: 'uploading' }}": {
+                '.t-upload__file-flow-progress': { text: 'uploading 80%' },
+              },
+            },
           },
-        },
+          {
+            description: 'props.locale works fine if theme=image',
+            props: { theme: 'image' },
+            dom: {
+              "{progress: { uploadingText: 'uploading' }}": {
+                '.t-upload__image-progress': { text: 'uploading 80%' },
+              },
+            },
+          },
+        ],
       },
       id: 2733,
     },
     max: {
       PC: {
+        dom: [
+          {
+            description: 'can not show image add trigger if count of image is over than max',
+            props: {
+              theme: 'image',
+              max: 2,
+              files: [
+                { url: 'xxxx.url', name: 'file1.txt' },
+                { url: 'yyyy.url', name: 'file2.txt' },
+              ],
+              multiple: true,
+            },
+            dom: [{ '.t-upload__image-add': false }],
+          },
+        ],
         event: [
           {
             props: {
@@ -747,7 +792,26 @@ module.exports = {
       },
       id: 2994,
     },
-    theme: { id: 1182 },
+    theme: {
+      PC: {
+        dom: [
+          {
+            description:
+              'props.theme: show image add trigger even if count of image is over than max',
+            props: {
+              files: [
+                { url: 'xxxx.url', name: 'file1.txt' },
+                { url: 'yyyy.url', name: 'file2.txt' },
+              ],
+              multiple: true,
+              theme: 'image',
+            },
+            dom: ['.t-upload__image-add'],
+          },
+        ],
+      },
+      id: 1182,
+    },
     tips: {
       PC: {
         props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
@@ -817,7 +881,91 @@ module.exports = {
     },
     oneFileFail: { id: 2984 },
     oneFileSuccess: { id: 2945 },
-    preview: { id: 893 },
+    preview: {
+      PC: {
+        event: [
+          {
+            description: 'single image preview works fine',
+            props: {
+              files: [
+                {
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  name: 'demo-image-1.png',
+                },
+              ],
+              theme: 'image',
+            },
+            expect: [
+              { trigger: 'mouseenter(.t-upload__card-item)' },
+              {
+                trigger: 'click(.t-icon-browse)',
+                delay: 300,
+                exist: [
+                  {
+                    '.t-image-viewer__modal-image': {
+                      attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                    },
+                  },
+                ],
+                event: {
+                  preview: [
+                    {
+                      file: {
+                        url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                        name: 'demo-image-1.png',
+                      },
+                      index: 0,
+                      'e.type': 'click',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            description: 'multiple image preview works fine',
+            props: {
+              files: [
+                {
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  name: 'demo-image-1.png',
+                },
+                { url: 'https://tdesign.gtimg.com/site/avatar.jpg', name: 'avatar.jpg' },
+              ],
+              theme: 'image',
+              multiple: true,
+            },
+            expect: [
+              { trigger: 'mouseenter(.t-upload__card-item:last-child)' },
+              {
+                trigger: 'click(.t-upload__card-item:nth-child(2) .t-icon-browse)',
+                delay: 300,
+                exist: [
+                  {
+                    '.t-image-viewer__modal-image': {
+                      attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
+                    },
+                  },
+                ],
+                event: {
+                  preview: [
+                    {
+                      file: {
+                        url: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                        name: 'avatar.jpg',
+                      },
+                      index: 1,
+                      'e.type': 'click',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 893,
+    },
     progress: { id: 890 },
     remove: {
       PC: {
