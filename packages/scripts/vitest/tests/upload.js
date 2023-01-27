@@ -314,6 +314,12 @@ module.exports = {
     },
     disabled: {
       PC: {
+        dom: [
+          {
+            props: { theme: 'file-input', disabled: true },
+            dom: ['.t-input.t-is-disabled', '.t-upload__trigger .t-button.t-is-disabled'],
+          },
+        ],
         event: [
           {
             description: 'disabled upload can not trigger onSelectChange',
@@ -651,7 +657,20 @@ module.exports = {
       id: 881,
     },
     placeholder: {
-      PC: { dom: { 'this is placeholder': { '.t-upload__placeholder': 1 } } },
+      PC: {
+        dom: [
+          {
+            description: 'theme=file works fine',
+            props: { theme: 'file', placeholder: 'this is placeholder' },
+            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+          },
+          {
+            description: 'theme=file-input works fine',
+            props: { theme: 'file-input', placeholder: 'this is placeholder' },
+            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+          },
+        ],
+      },
       id: 1167,
     },
     requestMethod: {
@@ -796,8 +815,7 @@ module.exports = {
       PC: {
         dom: [
           {
-            description:
-              'props.theme: show image add trigger even if count of image is over than max',
+            description: 'show image add trigger even if count of image is over than max',
             props: {
               files: [
                 { url: 'xxxx.url', name: 'file1.txt' },
@@ -807,6 +825,35 @@ module.exports = {
               theme: 'image',
             },
             dom: ['.t-upload__image-add'],
+          },
+          {
+            description: 'theme=file and file status is fail works fine',
+            props: {
+              theme: 'file',
+              autoUpload: false,
+              files: [{ name: 'file1.txt', status: 'fail' }],
+            },
+            dom: ['.t-icon-error-circle-filled'],
+          },
+          {
+            description: 'theme=file-input and file status is progress works fine',
+            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'progress' }] },
+            dom: ['.t-upload__single-progress'],
+          },
+          {
+            description: 'theme=file-input and file status is waiting works fine',
+            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'waiting' }] },
+            dom: ['.t-upload__file-waiting.t-icon-time-filled'],
+          },
+          {
+            description: 'theme=file-input and file status is fail works fine',
+            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'fail' }] },
+            dom: ['.t-icon-error-circle-filled'],
+          },
+          {
+            description: 'theme=file-input and file status is success works fine',
+            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'success' }] },
+            dom: ['.t-icon-check-circle-filled'],
           },
         ],
       },
@@ -1010,7 +1057,7 @@ module.exports = {
             ],
           },
           {
-            description: 'failed status file can be removed',
+            description: 'failed image file can be removed',
             props: {
               theme: 'image',
               multiple: true,
@@ -1023,6 +1070,33 @@ module.exports = {
                   change: [[], { index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
                   remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
                 },
+              },
+            ],
+          },
+          {
+            description: 'success status image can be removed',
+            props: {
+              theme: 'image',
+              multiple: true,
+              files: [{ url: 'https://image1.png', status: 'success' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__card-mask-item .t-icon-delete)',
+                event: {
+                  change: [[], { index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=file-input, file can be removed to be empty',
+            props: { theme: 'file-input', files: [{ name: 'file.txt', status: 'success' }] },
+            expect: [
+              {
+                trigger: 'click(.t-upload__single-input-clear)',
+                event: { change: [[]], remove: [{ 'e.type': 'click' }] },
               },
             ],
           },

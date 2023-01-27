@@ -33,8 +33,11 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
         dom: oneDom.dom,
         props: { ...oneDomProps, ...props },
         variables: [...(oneDomVariables || []), ...(variables || [])],
-        description:oneDomDescription || description,
+        description: oneDomDescription || description,
       };
+      if (tmpTest.description) {
+        tmpTest.description = `props.${oneApiData.field_name}: ${tmpTest.description}`;
+      }
       arr = arr.concat(generateVueAndReactDomCase(tmpTest, oneApiData, framework, component), '\n');
     })
   } else {
