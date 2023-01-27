@@ -105497,7 +105497,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"autoUpload is equal false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"change\":[{\"[0].response\":\"undefined\",\"[0].raw\":\"${fileList[0]}\",\"[0].name\":\"file-name.txt\",\"[0].status\":\"waiting\",\"[0].percent\":0}]},\"delay\":true}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"autoUpload is equal false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"change\":[{\"[0].response\":\"undefined\",\"[0].raw\":\"${fileList[0]}\",\"[0].name\":\"file-name.txt\",\"[0].status\":\"waiting\",\"[0].percent\":0}]},\"delay\":true}]},{\"description\":\"autoUpload=false & theme=file-flow, cancel upload works fine\",\"props\":{\"theme\":\"file-flow\",\"autoUpload\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"fail\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"click(.t-upload__continue)\"},{\"trigger\":\"click(.t-upload__cancel)\",\"event\":{\"change\":[[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],{\"trigger\":\"abort\"}],\"remove\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107517,7 +107517,7 @@
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "MouseEvent<HTMLElement> ",
       "deprecated": 0,
       "version": null,
       "test_description": null,

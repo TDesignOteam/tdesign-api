@@ -192,6 +192,66 @@ module.exports = {
               },
             ],
           },
+          {
+            description: 'autoUpload=false & theme=file-flow, cancel upload works fine',
+            props: {
+              theme: 'file-flow',
+              autoUpload: false,
+              files: [
+                {
+                  name: 'file1.txt',
+                  status: 'waiting',
+                  uploadTime: '2023-01-27',
+                  lastModified: 1674830942522,
+                },
+                {
+                  name: 'file2.txt',
+                  status: 'success',
+                  uploadTime: '2023-01-27',
+                  lastModified: 1674831204354,
+                },
+                {
+                  name: 'file3.txt',
+                  status: 'fail',
+                  uploadTime: '2023-01-27',
+                  lastModified: 1674831204354,
+                },
+              ],
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            expect: [
+              { trigger: 'click(.t-upload__continue)' },
+              {
+                trigger: 'click(.t-upload__cancel)',
+                event: {
+                  change: [
+                    [
+                      {
+                        name: 'file1.txt',
+                        status: 'waiting',
+                        uploadTime: '2023-01-27',
+                        lastModified: 1674830942522,
+                      },
+                      {
+                        name: 'file2.txt',
+                        status: 'success',
+                        uploadTime: '2023-01-27',
+                        lastModified: 1674831204354,
+                      },
+                      {
+                        name: 'file3.txt',
+                        status: 'waiting',
+                        uploadTime: '2023-01-27',
+                        lastModified: 1674831204354,
+                      },
+                    ],
+                    { trigger: 'abort' },
+                  ],
+                  remove: 'not',
+                },
+              },
+            ],
+          },
         ],
       },
       id: 885,

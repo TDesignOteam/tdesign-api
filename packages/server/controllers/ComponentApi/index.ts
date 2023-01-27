@@ -74,7 +74,10 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
   if (_params.field_category) {
     _params.field_category = Number(_params.field_category);
   }
-  _params.trigger_elements = _params.trigger_elements || '';
+  // 字段没传，表示不修改这个字段。不能赋值为 ''
+  if (params.trigger_elements !== undefined) {
+    _params.trigger_elements = _params.trigger_elements || '';
+  }
   return _params;
 }
 
