@@ -319,6 +319,24 @@ module.exports = {
             props: { theme: 'file-input', disabled: true },
             dom: ['.t-input.t-is-disabled', '.t-upload__trigger .t-button.t-is-disabled'],
           },
+          {
+            props: {
+              theme: 'file-flow',
+              disabled: true,
+              multiple: true,
+              files: [{ name: 'file1.txt', status: 'success' }],
+            },
+            dom: [{ '.t-upload__delete': false }],
+          },
+          {
+            props: {
+              theme: 'image-flow',
+              disabled: true,
+              multiple: true,
+              files: [{ name: 'file1.txt', status: 'success' }],
+            },
+            dom: [{ '.t-upload__delete': false }],
+          },
         ],
         event: [
           {
@@ -669,6 +687,16 @@ module.exports = {
             props: { theme: 'file-input', placeholder: 'this is placeholder' },
             dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
           },
+          {
+            description: 'theme=image-flow works fine',
+            props: { theme: 'image-flow', placeholder: 'this is placeholder' },
+            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+          },
+          {
+            description: 'theme=file-flow works fine',
+            props: { theme: 'file-flow', placeholder: 'this is placeholder' },
+            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+          },
         ],
       },
       id: 1167,
@@ -855,6 +883,35 @@ module.exports = {
             props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'success' }] },
             dom: ['.t-icon-check-circle-filled'],
           },
+          {
+            description: 'theme=file-flow works fine',
+            props: {
+              theme: 'file-flow',
+              files: [
+                { name: 'file1.txt', status: 'success' },
+                { name: 'file2.txt', status: 'waiting' },
+                { name: 'file3.txt', status: 'fail' },
+                { name: 'file4.txt', status: 'progress', percent: 90 },
+              ],
+            },
+            dom: [{ '.t-upload__flow-table tbody > tr': 4 }],
+            snapshot: true,
+          },
+          {
+            description: 'theme=image-flow works fine',
+            props: {
+              theme: 'image-flow',
+              files: [
+                { url: '', status: 'success', name: 'img.txt' },
+                { url: 'https://img1.txt', status: 'success', name: 'img1.txt' },
+                { url: 'https://img2.txt', status: 'waiting', name: 'img2.txt' },
+                { url: 'https://img3.txt', status: 'fail', name: 'img3.txt' },
+                { url: 'https://img4.txt', status: 'progress', percent: 90, name: 'img4.txt' },
+              ],
+            },
+            dom: [{ '.t-upload__card-item': 5 }],
+            snapshot: true,
+          },
         ],
       },
       id: 1182,
@@ -1009,6 +1066,46 @@ module.exports = {
               },
             ],
           },
+          {
+            description: 'theme=image-flow, image preview works fine',
+            props: {
+              files: [
+                {
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  name: 'demo-image-1.png',
+                },
+                { url: 'https://tdesign.gtimg.com/site/avatar.jpg', name: 'avatar.jpg' },
+              ],
+              theme: 'image-flow',
+              multiple: true,
+            },
+            expect: [
+              { trigger: 'mouseenter(.t-upload__card-item:nth-child(2))' },
+              {
+                trigger: 'click(.t-upload__card-item:nth-child(2) .t-icon-browse)',
+                delay: 300,
+                exist: [
+                  {
+                    '.t-image-viewer__modal-image': {
+                      attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
+                    },
+                  },
+                ],
+                event: {
+                  preview: [
+                    {
+                      file: {
+                        url: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                        name: 'avatar.jpg',
+                      },
+                      index: 1,
+                      'e.type': 'click',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
         ],
       },
       id: 893,
@@ -1097,6 +1194,62 @@ module.exports = {
               {
                 trigger: 'click(.t-upload__single-input-clear)',
                 event: { change: [[]], remove: [{ 'e.type': 'click' }] },
+              },
+            ],
+          },
+          {
+            description: 'theme=file-flow, remove file, trigger remove event',
+            props: {
+              theme: 'file-flow',
+              multiple: true,
+              files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__delete)',
+                event: {
+                  change: [[], { 'e.type': 'click' }],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=image-flow, remove file, trigger remove event',
+            props: {
+              theme: 'image-flow',
+              multiple: true,
+              files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__delete)',
+                event: {
+                  change: [[], { 'e.type': 'click' }],
+                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                },
+              },
+            ],
+          },
+          {
+            description:
+              'theme=file-flow & isBatchUpload=true, remove all files if click delete node',
+            props: {
+              theme: 'file-flow',
+              multiple: true,
+              isBatchUpload: true,
+              files: [
+                { name: 'file1.txt', url: 'https://xxx1.txt' },
+                { name: 'file2.txt', url: 'https://xxx2.txt' },
+              ],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__delete)',
+                event: {
+                  change: [[], { 'e.type': 'click' }],
+                  remove: [{ index: -1, file: 'undefined', 'e.type': 'click' }],
+                },
               },
             ],
           },

@@ -18,15 +18,17 @@ const { getSkipCode } = require("./utils");
  */
 function generateDomUnitCase(test, oneApiData, framework, component) {
   let arr = [];
-  const { dom, props, variables, description } = test;
+  const { dom, props, variables, description, snapshot } = test;
   if (Array.isArray(dom)) {
     dom.forEach((oneDom) => {
       const oneDomProps = oneDom.props;
       const oneDomVariables = oneDom.variables;
       const oneDomDescription = oneDom.description;
+      const oneDomSnapshot = oneDom.snapshot;
       delete oneDom.props;
       delete oneDom.variables;
       delete oneDom.description;
+      delete oneDom.snapshot;
       oneApiData.field_enum = '';
       const tmpTest = {
         ...test,
@@ -34,6 +36,7 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
         props: { ...oneDomProps, ...props },
         variables: [...(oneDomVariables || []), ...(variables || [])],
         description: oneDomDescription || description,
+        snapshot: oneDomSnapshot || snapshot,
       };
       if (tmpTest.description) {
         tmpTest.description = `props.${oneApiData.field_name}: ${tmpTest.description}`;
