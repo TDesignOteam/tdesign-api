@@ -336,8 +336,28 @@ module.exports = {
     },
     children: {
       PC: {
-        props: { theme: 'file', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
-        tnode: true,
+        tnode: [
+          {
+            description: 'children works fine if theme = file',
+            props: { theme: 'file', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            snapshot: true,
+          },
+          {
+            description: 'children works fine if theme = custom',
+            props: { theme: 'custom', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            snapshot: true,
+          },
+          {
+            description: 'children works fine if theme = custom & draggable=true',
+            props: {
+              theme: 'custom',
+              draggable: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            params: [{ dragActive: false, files: [] }],
+            snapshot: true,
+          },
+        ],
       },
       id: 1169,
     },
@@ -429,7 +449,129 @@ module.exports = {
       },
       id: 2991,
     },
-    draggable: { id: 886 },
+    draggable: {
+      PC: {
+        dom: [
+          {
+            description: 'theme=image & draggable=true, success file render fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [
+                {
+                  url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  name: 'image1.png',
+                  status: 'success',
+                },
+              ],
+            },
+            dom: [
+              {
+                '.t-icon-check-circle-filled': 1,
+                '.t-upload__dragger-img-wrap img': {
+                  attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                },
+              },
+            ],
+            snapshot: true,
+          },
+          {
+            description:
+              'theme=image & draggable=true, success file render fine with file.response.url',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [
+                {
+                  response: { url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                  name: 'image1.png',
+                  status: 'success',
+                },
+              ],
+            },
+            dom: [
+              {
+                '.t-icon-check-circle-filled': 1,
+                '.t-upload__dragger-img-wrap img': {
+                  attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                },
+              },
+            ],
+            snapshot: true,
+          },
+          {
+            description: 'theme=image & draggable=true, fail file render fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [{ url: 'https://image4.png', name: 'image4.png', status: 'fail' }],
+            },
+            dom: [{ '.t-icon-error-circle-filled': 1 }],
+            snapshot: true,
+          },
+          {
+            description: 'theme=image & draggable=true, progress file render fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [
+                { url: 'https://image2.png', name: 'image2.png', status: 'progress', percent: 80 },
+              ],
+            },
+            dom: [{ '.t-upload__single-percent': { text: '80%' } }],
+            snapshot: true,
+          },
+          {
+            description: 'theme=image & draggable=true, waiting file render fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+            },
+            dom: [{ '.t-upload__dragger-progress-cancel': 1 }],
+            snapshot: true,
+          },
+          {
+            description:
+              'theme=image & draggable=true & autoUpload=false, waiting file render fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              autoUpload: false,
+              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+            },
+            dom: [{ '.t-upload__dragger-progress-cancel': 1 }],
+          },
+        ],
+        event: [
+          {
+            description:
+              'theme=image & draggable=true & autoUpload=false, cancel upload works fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              autoUpload: false,
+              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__dragger-progress-cancel)',
+                event: {
+                  remove: [
+                    {
+                      file: { url: 'https://image3.png', name: 'image3.png', status: 'waiting' },
+                      'e.type': 'click',
+                      index: 0,
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 886,
+    },
     fileListDisplay: {
       PC: {
         tnode: [
@@ -983,7 +1125,39 @@ module.exports = {
       },
       id: 1183,
     },
-    trigger: { PC: { props: { theme: 'file' }, tnode: true }, id: 889 },
+    trigger: {
+      PC: {
+        tnode: [
+          {
+            description: 'theme = file, trigger works fine',
+            props: { theme: 'file' },
+            snapshot: true,
+          },
+          {
+            description: 'theme = custom & draggable = true, trigger works fine',
+            props: { theme: 'custom', draggable: true },
+            params: [{ dragActive: false, files: [] }],
+            snapshot: true,
+          },
+          {
+            description: 'theme = custom, trigger works fine',
+            props: { theme: 'custom' },
+            snapshot: true,
+          },
+          {
+            description: 'theme = custom, trigger is right with files',
+            props: {
+              theme: 'custom',
+              draggable: true,
+              files: [{ name: 'file-name.txt', status: 'progress' }],
+            },
+            params: [{ dragActive: false, files: [{ name: 'file-name.txt', status: 'progress' }] }],
+            snapshot: true,
+          },
+        ],
+      },
+      id: 889,
+    },
     triggerButtonProps: {
       PC: {
         props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
@@ -1309,6 +1483,29 @@ module.exports = {
                 event: {
                   change: [[], { 'e.type': 'click' }],
                   remove: [{ index: -1, file: 'undefined', 'e.type': 'click' }],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=image & draggable=true, success file can be removed',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [{ url: 'https://www.image.png', status: 'success' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__dragger-delete-btn)',
+                event: {
+                  change: [[], { 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: 0,
+                      file: { url: 'https://www.image.png', status: 'success' },
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],

@@ -33,6 +33,9 @@ function generateTNodeElement(test, oneApiData, framework, component) {
         props: { ...oneTNode.props, ...props },
         variables: [...(oneTNode.variables || []), ...(variables || [])],
       };
+      if (tmpTest.tnode.description) {
+        tmpTest.tnode.description = `props.${oneApiData.field_name}: ${tmpTest.tnode.description}`;
+      }
       arr = arr.concat(generateVueAndReactTNode(tmpTest, oneApiData, framework, component), '\n');
     });
   } else {
