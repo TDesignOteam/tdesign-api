@@ -71,9 +71,16 @@ module.exports = {
     accept: { PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' }, id: 872 },
     action: {
       PC: {
+        global: {
+          imports: ["import { getUploadServer } from './request'"],
+          variables: ['const server = getUploadServer()'],
+          beforeAll: ["server.listen({ onUnhandledRequest: 'error' })"],
+          afterEach: ['server.resetHandlers()'],
+          afterAll: ['server.close()'],
+        },
         event: [
           {
-            props: { action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76' },
+            props: { action: 'https://tdesign.test.com/upload/image_success' },
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
@@ -107,15 +114,14 @@ module.exports = {
                     {
                       trigger: 'add',
                       'file.raw': '${fileList[0]}',
-                      'file.url':
-                        'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+                      'file.url': 'https://tdesign.gtimg.com/demo/demo-image-1.png',
                       'file.name': 'file-name.txt',
                       'file.uploadTime': 'toBeTruthy',
                       'file.response': 'toBeTruthy',
                     },
                   ],
                 },
-                delay: 3000,
+                delay: true,
               },
             ],
           },
@@ -134,7 +140,7 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
                 },
               ],
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
               allowUploadDuplicateFile: false,
             },
             description: 'allowUploadDuplicateFile is equal to false',
@@ -156,7 +162,7 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
                 },
               ],
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
               allowUploadDuplicateFile: true,
             },
             description: 'allowUploadDuplicateFile is equal to true',
@@ -172,7 +178,7 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { autoUpload: false, action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            props: { autoUpload: false, action: 'https://tdesign.test.com/upload/file_success' },
             description: 'autoUpload is equal false',
             expect: [
               {
@@ -217,7 +223,7 @@ module.exports = {
                   lastModified: 1674831204354,
                 },
               ],
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               { trigger: 'click(.t-upload__continue)' },
@@ -263,7 +269,7 @@ module.exports = {
             props: {
               autoUpload: false,
               beforeAllFilesUpload: '() => false',
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             description: 'beforeAllFilesUpload can stop uploading',
             expect: [
@@ -290,7 +296,7 @@ module.exports = {
             props: {
               autoUpload: false,
               beforeUpload: '() => false',
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             description:
               'beforeUpload can skip all files to upload, just like beforeAllFilesUpload',
@@ -311,7 +317,7 @@ module.exports = {
             props: {
               autoUpload: false,
               beforeUpload: "(file) => file.name === 'file-name1.txt'",
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             description: 'beforeUpload can skip some of files to upload',
             expect: [
@@ -339,12 +345,12 @@ module.exports = {
         tnode: [
           {
             description: 'children works fine if theme = file',
-            props: { theme: 'file', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            props: { theme: 'file', action: 'https://tdesign.test.com/upload/file_success' },
             snapshot: true,
           },
           {
             description: 'children works fine if theme = custom',
-            props: { theme: 'custom', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+            props: { theme: 'custom', action: 'https://tdesign.test.com/upload/file_success' },
             snapshot: true,
           },
           {
@@ -352,7 +358,7 @@ module.exports = {
             props: {
               theme: 'custom',
               draggable: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             params: [{ dragActive: false, files: [] }],
             snapshot: true,
@@ -367,7 +373,7 @@ module.exports = {
           {
             props: {
               data: { file_name: 'custom-file-name.excel' },
-              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+              action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             description: 'upload request can send extra data',
             expect: [
@@ -443,7 +449,7 @@ module.exports = {
         props: {
           theme: 'custom',
           draggable: 'true',
-          action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+          action: 'https://tdesign.test.com/upload/file_success',
         },
         tnode: true,
       },
@@ -582,7 +588,7 @@ module.exports = {
             props: {
               files: '${fileList}',
               theme: 'file',
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             dom: [],
             trigger: '',
@@ -599,7 +605,7 @@ module.exports = {
               theme: 'image-flow',
               multiple: true,
               draggable: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             dom: [],
             trigger: '',
@@ -616,7 +622,7 @@ module.exports = {
               theme: 'file-flow',
               multiple: true,
               draggable: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             dom: [],
             trigger: '',
@@ -658,7 +664,7 @@ module.exports = {
             props: {
               format:
                 "(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })",
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               {
@@ -686,7 +692,7 @@ module.exports = {
           {
             props: {
               formatRequest: "(requestData) => ({ requestData, more_field: 'more custom field' })",
-              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+              action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             description: 'upload request data can be changed through formatRequest',
             expect: [
@@ -717,17 +723,25 @@ module.exports = {
           {
             props: {
               formatResponse:
-                "(response) => ({ responseData: response, extra_field: 'extra value' })",
-              action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+                "(response) => ({ responseData: { ret: response.ret, data: response.data }, url: response.data.url, extra_field: 'extra value' })",
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               {
                 trigger: "simulateFileChange('input')",
-                delay: 3000,
+                delay: true,
                 event: {
                   change: [
                     {
-                      '[0].response.responseData.url': 'toBeTruthy',
+                      '[0].response.responseData': {
+                        ret: 0,
+                        data: {
+                          name: 'tdesign.min.js',
+                          url: 'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
+                        },
+                      },
+                      '[0].response.url':
+                        'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
                       '[0].response.extra_field': 'extra value',
                     },
                   ],
@@ -745,7 +759,7 @@ module.exports = {
           {
             props: {
               headers: { 'XML-HTTP-REQUEST': 'tdesign_token' },
-              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+              action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             description: '',
             expect: [
@@ -756,7 +770,7 @@ module.exports = {
                     { "XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']": 'tdesign_token' },
                   ],
                 },
-                delay: 700,
+                delay: true,
               },
             ],
           },
@@ -772,7 +786,7 @@ module.exports = {
               isBatchUpload: true,
               autoUpload: false,
               multiple: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
               files: "${[{ url: 'https://file.txt', name: 'file.txt' }]}",
             },
             expect: [
@@ -797,7 +811,7 @@ module.exports = {
               percent: 80,
             },
           ],
-          action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+          action: 'https://tdesign.test.com/upload/file_success',
         },
         dom: [
           {
@@ -878,7 +892,10 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { name: 'file_name', action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json' },
+            props: {
+              name: 'file_name',
+              action: 'https://tdesign.test.com/upload/fail/status_error',
+            },
             description: 'rename file in request data to be file_name',
             expect: [
               {
@@ -995,7 +1012,7 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
                 },
               ],
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             dom: [{ '.t-upload__file-flow-progress': { text: '上传中' } }],
           },
@@ -1011,7 +1028,7 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
                 },
               ],
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             dom: [{ '.t-upload__image-progress': { text: '上传中' } }],
           },
@@ -1027,7 +1044,7 @@ module.exports = {
             props: {
               sizeLimit: { size: 23, unit: 'B' },
               multiple: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               {
@@ -1046,7 +1063,7 @@ module.exports = {
                 message: 'image size can not over than {sizeLimit}',
               },
               multiple: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               {
@@ -1069,7 +1086,7 @@ module.exports = {
             props: {
               sizeLimit: 0.023,
               multiple: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+              action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
               {
@@ -1085,7 +1102,7 @@ module.exports = {
     },
     status: {
       PC: {
-        props: { tips: 'upload tips text', action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        props: { tips: 'upload tips text', action: 'https://tdesign.test.com/upload/file_success' },
         dom: [
           '.t-upload__tips-default',
           '.t-upload__tips-success',
@@ -1174,7 +1191,7 @@ module.exports = {
     },
     tips: {
       PC: {
-        props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        props: { action: 'https://tdesign.test.com/upload/file_success' },
         tnode: { dom: ['.t-upload__tips'], trigger: '' },
       },
       id: 1183,
@@ -1214,7 +1231,7 @@ module.exports = {
     },
     triggerButtonProps: {
       PC: {
-        props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        props: { action: 'https://tdesign.test.com/upload/file_success' },
         dom: { "{ theme: 'warning' }": { '.t-button--theme-warning': 1 } },
       },
       id: 2985,
@@ -1227,14 +1244,14 @@ module.exports = {
           {
             props: {
               withCredentials: true,
-              action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json',
+              action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             description: '',
             expect: [
               {
                 trigger: "simulateFileChange('input')",
                 event: { fail: [{ 'XMLHttpRequest.withCredentials': true }] },
-                delay: 700,
+                delay: true,
               },
             ],
           },
@@ -1348,7 +1365,11 @@ module.exports = {
         event: [
           {
             description: 'drag image drop, trigger onDrop event',
-            props: { theme: 'image', draggable: true },
+            props: {
+              theme: 'image',
+              draggable: true,
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
             expect: [
               {
                 trigger:
@@ -1359,7 +1380,11 @@ module.exports = {
           },
           {
             description: 'drag file drop, trigger onDrop event',
-            props: { theme: 'file', draggable: true },
+            props: {
+              theme: 'file',
+              draggable: true,
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
             expect: [
               {
                 trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'drop')",
@@ -1375,7 +1400,7 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { action: 'https://cdc.cdn-go.cn/tdc/latest/mock-fail.json' },
+            props: { action: 'https://tdesign.test.com/upload/fail/status_error' },
             description: '',
             expect: [
               {

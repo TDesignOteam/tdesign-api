@@ -99,7 +99,7 @@ function getImportsConfig(params = {}, tests) {
   return obj;
 }
 
-function getImportsCode(importsConfig, framework) {
+function getImportsCode(importsConfig, framework, customImported = []) {
   const config = importsConfig[framework];
   const arr = [];
   Object.entries(config).forEach(([key, item]) => {
@@ -110,6 +110,7 @@ function getImportsCode(importsConfig, framework) {
       arr.push(`import ${item} from '${key}'`);
     }
   });
+  arr.push(...customImported);
   return arr.join(';\n');
 }
 
@@ -153,7 +154,7 @@ function getMoreEventImports(framework, event, wrapper, trigger) {
   return { importedTestUtils, importedMounts };
 }
 
-// 获取函数变量
+// 引入公共函数/变量
 function getVariableImports(test) {
   const { variables, tnode } = test;
   const allVariables = variables || [];

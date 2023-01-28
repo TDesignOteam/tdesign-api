@@ -105362,7 +105362,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"action\":\"https://www.mocky.io/v2/5cc8019d300000980a055e76\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles\":[{\"lastModified\":1674355700444,\"name\":\"file-name.txt\",\"percent\":0,\"raw\":\"${fileList[0]}\",\"size\":22,\"type\":\"image/png\",\"status\":\"undefined\"}]}],\"change\":[{\"[0].lastModified\":1674355700444,\"[0].response\":\"toBeTruthy\",\"[0].name\":\"file-name.txt\",\"[0].percent\":100,\"[0].status\":\"success\",\"[0].raw\":\"${fileList[0]}\",\"[0].uploadTime\":\"toBeTruthy\"},{\"trigger\":\"add\",\"file.raw\":\"${fileList[0]}\",\"file.url\":\"https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png\",\"file.name\":\"file-name.txt\",\"file.uploadTime\":\"toBeTruthy\",\"file.response\":\"toBeTruthy\"}]},\"delay\":3000}]}]}}",
+      "test_description": "{\"PC\":{\"global\":{\"imports\":[\"import { getUploadServer } from './request'\"],\"variables\":[\"const server = getUploadServer()\"],\"beforeAll\":[\"server.listen({ onUnhandledRequest: 'error' })\"],\"afterEach\":[\"server.resetHandlers()\"],\"afterAll\":[\"server.close()\"]},\"event\":[{\"props\":{\"action\":\"https://tdesign.test.com/upload/image_success\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles\":[{\"lastModified\":1674355700444,\"name\":\"file-name.txt\",\"percent\":0,\"raw\":\"${fileList[0]}\",\"size\":22,\"type\":\"image/png\",\"status\":\"undefined\"}]}],\"change\":[{\"[0].lastModified\":1674355700444,\"[0].response\":\"toBeTruthy\",\"[0].name\":\"file-name.txt\",\"[0].percent\":100,\"[0].status\":\"success\",\"[0].raw\":\"${fileList[0]}\",\"[0].uploadTime\":\"toBeTruthy\"},{\"trigger\":\"add\",\"file.raw\":\"${fileList[0]}\",\"file.url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\",\"file.name\":\"file-name.txt\",\"file.uploadTime\":\"toBeTruthy\",\"file.response\":\"toBeTruthy\"}]},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105449,7 +105449,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\",\"allowUploadDuplicateFile\":false},\"description\":\"allowUploadDuplicateFile is equal to false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"validate\":[{\"type\":\"FILTER_FILE_SAME_NAME\",\"files[0].raw\":\"${fileList[0]}\"}]},\"delay\":true}]},{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\",\"allowUploadDuplicateFile\":true},\"description\":\"allowUploadDuplicateFile is equal to true\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"validate\":\"not\"},\"delay\":true}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\",\"allowUploadDuplicateFile\":false},\"description\":\"allowUploadDuplicateFile is equal to false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"validate\":[{\"type\":\"FILTER_FILE_SAME_NAME\",\"files[0].raw\":\"${fileList[0]}\"}]},\"delay\":true}]},{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\",\"allowUploadDuplicateFile\":true},\"description\":\"allowUploadDuplicateFile is equal to true\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"validate\":\"not\"},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105497,7 +105497,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"autoUpload is equal false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"change\":[{\"[0].response\":\"undefined\",\"[0].raw\":\"${fileList[0]}\",\"[0].name\":\"file-name.txt\",\"[0].status\":\"waiting\",\"[0].percent\":0}]},\"delay\":true}]},{\"description\":\"autoUpload=false & theme=file-flow, cancel upload works fine\",\"props\":{\"theme\":\"file-flow\",\"autoUpload\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"fail\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"click(.t-upload__continue)\"},{\"trigger\":\"click(.t-upload__cancel)\",\"event\":{\"change\":[[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],{\"trigger\":\"abort\"}],\"remove\":\"not\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"description\":\"autoUpload is equal false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"change\":[{\"[0].response\":\"undefined\",\"[0].raw\":\"${fileList[0]}\",\"[0].name\":\"file-name.txt\",\"[0].status\":\"waiting\",\"[0].percent\":0}]},\"delay\":true}]},{\"description\":\"autoUpload=false & theme=file-flow, cancel upload works fine\",\"props\":{\"theme\":\"file-flow\",\"autoUpload\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"fail\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"click(.t-upload__continue)\"},{\"trigger\":\"click(.t-upload__cancel)\",\"event\":{\"change\":[[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674830942522},{\"name\":\"file2.txt\",\"status\":\"success\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354},{\"name\":\"file3.txt\",\"status\":\"waiting\",\"uploadTime\":\"2023-01-27\",\"lastModified\":1674831204354}],{\"trigger\":\"abort\"}],\"remove\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105544,7 +105544,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"beforeAllFilesUpload\":\"() => false\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"beforeAllFilesUpload can stop uploading\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":\"not\",\"validate\":[{\"type\":\"BEFORE_ALL_FILES_UPLOAD\",\"files.map(t => t.raw)\":\"${fileList}\"}]},\"delay\":true}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"beforeAllFilesUpload\":\"() => false\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"description\":\"beforeAllFilesUpload can stop uploading\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":\"not\",\"validate\":[{\"type\":\"BEFORE_ALL_FILES_UPLOAD\",\"files.map(t => t.raw)\":\"${fileList}\"}]},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105591,7 +105591,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"beforeUpload\":\"() => false\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"beforeUpload can skip all files to upload, just like beforeAllFilesUpload\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":\"not\",\"validate\":[{\"type\":\"CUSTOM_BEFORE_UPLOAD\",\"files.map(t => t.raw)\":\"${fileList}\"}]},\"delay\":true}]},{\"props\":{\"autoUpload\":false,\"beforeUpload\":\"(file) => file.name === 'file-name1.txt'\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"description\":\"beforeUpload can skip some of files to upload\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":[{\"[0].raw\":\"${fileList[1]}\"}],\"validate\":[{\"type\":\"CUSTOM_BEFORE_UPLOAD\",\"files.map(t => t.raw)\":\"${[fileList[0], fileList[2]]}\"}]},\"delay\":true}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"autoUpload\":false,\"beforeUpload\":\"() => false\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"description\":\"beforeUpload can skip all files to upload, just like beforeAllFilesUpload\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":\"not\",\"validate\":[{\"type\":\"CUSTOM_BEFORE_UPLOAD\",\"files.map(t => t.raw)\":\"${fileList}\"}]},\"delay\":true}]},{\"props\":{\"autoUpload\":false,\"beforeUpload\":\"(file) => file.name === 'file-name1.txt'\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"description\":\"beforeUpload can skip some of files to upload\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'file', 3)\",\"event\":{\"change\":[{\"[0].raw\":\"${fileList[1]}\"}],\"validate\":[{\"type\":\"CUSTOM_BEFORE_UPLOAD\",\"files.map(t => t.raw)\":\"${[fileList[0], fileList[2]]}\"}]},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105635,7 +105635,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"tnode\":[{\"description\":\"children works fine if theme = file\",\"props\":{\"theme\":\"file\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"snapshot\":true},{\"description\":\"children works fine if theme = custom\",\"props\":{\"theme\":\"custom\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"snapshot\":true},{\"description\":\"children works fine if theme = custom & draggable=true\",\"props\":{\"theme\":\"custom\",\"draggable\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"params\":[{\"dragActive\":false,\"files\":[]}],\"snapshot\":true}]}}",
+      "test_description": "{\"PC\":{\"tnode\":[{\"description\":\"children works fine if theme = file\",\"props\":{\"theme\":\"file\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"snapshot\":true},{\"description\":\"children works fine if theme = custom\",\"props\":{\"theme\":\"custom\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"snapshot\":true},{\"description\":\"children works fine if theme = custom & draggable=true\",\"props\":{\"theme\":\"custom\",\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"params\":[{\"dragActive\":false,\"files\":[]}],\"snapshot\":true}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105716,7 +105716,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"data\":{\"file_name\":\"custom-file-name.excel\"},\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"upload request can send extra data\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file_name\":\"custom-file-name.excel\",\"file\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"data\":{\"file_name\":\"custom-file-name.excel\"},\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"upload request can send extra data\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file_name\":\"custom-file-name.excel\",\"file\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105890,7 +105890,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"theme\":\"custom\",\"draggable\":\"true\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"props\":{\"theme\":\"custom\",\"draggable\":\"true\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105977,7 +105977,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":[{\"description\":\"theme=file, fileListDisplay works fine\",\"variables\":[\"const fileList = getFakeFileList('file', 3);\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"file\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=image-flow && multiple=true && draggable=true, fileListDisplay works fine\",\"variables\":[\"const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"image-flow\",\"multiple\":true,\"draggable\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=file-flow && multiple=true && draggable=true, fileListDisplay works fine\",\"variables\":[\"const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"file-flow\",\"multiple\":true,\"draggable\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=file && draggable=true, fileListDisplay works fine\",\"props\":{\"theme\":\"file\",\"draggable\":true,\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]},\"params\":[{\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]}]},{\"description\":\"theme=image && draggable=true, fileListDisplay works fine\",\"props\":{\"theme\":\"image\",\"draggable\":true,\"files\":[{\"url\":\"https://img1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]},\"params\":[{\"files\":[{\"url\":\"https://img1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]}]}]}}",
+      "test_description": "{\"PC\":{\"tnode\":[{\"description\":\"theme=file, fileListDisplay works fine\",\"variables\":[\"const fileList = getFakeFileList('file', 3);\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"file\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=image-flow && multiple=true && draggable=true, fileListDisplay works fine\",\"variables\":[\"const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"image-flow\",\"multiple\":true,\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=file-flow && multiple=true && draggable=true, fileListDisplay works fine\",\"variables\":[\"const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];\"],\"props\":{\"files\":\"${fileList}\",\"theme\":\"file-flow\",\"multiple\":true,\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[],\"trigger\":\"\",\"params\":[{\"files\":\"${fileList}\"}]},{\"description\":\"theme=file && draggable=true, fileListDisplay works fine\",\"props\":{\"theme\":\"file\",\"draggable\":true,\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]},\"params\":[{\"files\":[{\"name\":\"file1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]}]},{\"description\":\"theme=image && draggable=true, fileListDisplay works fine\",\"props\":{\"theme\":\"image\",\"draggable\":true,\"files\":[{\"url\":\"https://img1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]},\"params\":[{\"files\":[{\"url\":\"https://img1.txt\",\"status\":\"waiting\",\"uploadTime\":1674897038406}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106109,7 +106109,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"format\":\"(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles[0].name\":\"another name\",\"currentSelectedFiles[0].field_custom\":\"a new file field\",\"currentSelectedFiles[0].raw\":\"${fileList[0]}\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"format\":\"(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"selectChange\":[\"${fileList}\",{\"currentSelectedFiles[0].name\":\"another name\",\"currentSelectedFiles[0].field_custom\":\"a new file field\",\"currentSelectedFiles[0].raw\":\"${fileList[0]}\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106156,7 +106156,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"formatRequest\":\"(requestData) => ({ requestData, more_field: 'more custom field' })\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"upload request data can be changed through formatRequest\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams.requestData\":{\"file\":\"${fileList[0]}\",\"length\":1},\"XMLHttpRequest.upload.requestParams.more_field\":\"more custom field\"}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"formatRequest\":\"(requestData) => ({ requestData, more_field: 'more custom field' })\",\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"upload request data can be changed through formatRequest\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams.requestData\":{\"file\":\"${fileList[0]}\",\"length\":1},\"XMLHttpRequest.upload.requestParams.more_field\":\"more custom field\"}]},\"delay\":700}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106203,7 +106203,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"formatResponse\":\"(response) => ({ responseData: response, extra_field: 'extra value' })\",\"action\":\"https://www.mocky.io/v2/5cc8019d300000980a055e76\"},\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"delay\":3000,\"event\":{\"change\":[{\"[0].response.responseData.url\":\"toBeTruthy\",\"[0].response.extra_field\":\"extra value\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"formatResponse\":\"(response) => ({ responseData: { ret: response.ret, data: response.data }, url: response.data.url, extra_field: 'extra value' })\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"delay\":true,\"event\":{\"change\":[{\"[0].response.responseData\":{\"ret\":0,\"data\":{\"name\":\"tdesign.min.js\",\"url\":\"https://tdesign.gtimg.com/site/spline/script/tdesign.min.js\"}},\"[0].response.url\":\"https://tdesign.gtimg.com/site/spline/script/tdesign.min.js\",\"[0].response.extra_field\":\"extra value\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106330,7 +106330,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"headers\":{\"XML-HTTP-REQUEST\":\"tdesign_token\"},\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']\":\"tdesign_token\"}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"headers\":{\"XML-HTTP-REQUEST\":\"tdesign_token\"},\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']\":\"tdesign_token\"}]},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106417,7 +106417,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"isBatchUpload\":true,\"autoUpload\":false,\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\",\"files\":\"${[{ url: 'https://file.txt', name: 'file.txt' }]}\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 3)\",\"delay\":300,\"event\":{\"change\":[\"length=3\"]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"isBatchUpload\":true,\"autoUpload\":false,\"multiple\":true,\"action\":\"https://tdesign.test.com/upload/file_success\",\"files\":\"${[{ url: 'https://file.txt', name: 'file.txt' }]}\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 3)\",\"delay\":300,\"event\":{\"change\":[\"length=3\"]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106458,7 +106458,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"files\":[{\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\",\"status\":\"progress\",\"percent\":80}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[{\"description\":\"props.locale works fine if theme=file-flow\",\"props\":{\"theme\":\"file-flow\"},\"dom\":{\"{progress: { uploadingText: 'uploading' }}\":{\".t-upload__file-flow-progress\":{\"text\":\"uploading 80%\"}}}},{\"description\":\"props.locale works fine if theme=image\",\"props\":{\"theme\":\"image\"},\"dom\":{\"{progress: { uploadingText: 'uploading' }}\":{\".t-upload__image-progress\":{\"text\":\"uploading 80%\"}}}}]}}",
+      "test_description": "{\"PC\":{\"props\":{\"files\":[{\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\",\"status\":\"progress\",\"percent\":80}],\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[{\"description\":\"props.locale works fine if theme=file-flow\",\"props\":{\"theme\":\"file-flow\"},\"dom\":{\"{progress: { uploadingText: 'uploading' }}\":{\".t-upload__file-flow-progress\":{\"text\":\"uploading 80%\"}}}},{\"description\":\"props.locale works fine if theme=image\",\"props\":{\"theme\":\"image\"},\"dom\":{\"{progress: { uploadingText: 'uploading' }}\":{\".t-upload__image-progress\":{\"text\":\"uploading 80%\"}}}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106720,7 +106720,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"name\":\"file_name\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"rename file in request data to be file_name\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file_name\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"name\":\"file_name\",\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"rename file in request data to be file_name\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file_name\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106889,7 +106889,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"dom\":[{\"props\":{\"theme\":\"file-flow\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":80,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[{\".t-upload__file-flow-progress\":{\"text\":\"上传中\"}}]},{\"props\":{\"theme\":\"image\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":10,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[{\".t-upload__image-progress\":{\"text\":\"上传中\"}}]}]}}",
+      "test_description": "{\"PC\":{\"dom\":[{\"props\":{\"theme\":\"file-flow\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":80,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[{\".t-upload__file-flow-progress\":{\"text\":\"上传中\"}}]},{\"props\":{\"theme\":\"image\",\"showUploadProgress\":false,\"files\":[{\"name\":\"file1.txt\",\"status\":\"progress\",\"percent\":10,\"url\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[{\".t-upload__image-progress\":{\"text\":\"上传中\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -106938,7 +106938,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"file size is over than 23B, show default error tips\",\"props\":{\"sizeLimit\":{\"size\":23,\"unit\":\"B\"},\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]},{\"description\":\"file size is over than 23B, show custom error tips\",\"props\":{\"sizeLimit\":{\"size\":23,\"unit\":\"B\",\"message\":\"image size can not over than {sizeLimit}\"},\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"dom\":[{\".t-upload__single .t-upload__tips-error\":{\"text\":\"image size can not over than 23\"}}],\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]},{\"description\":\"file size is over than 0.023KB, show default error tips (KB is default unit)\",\"props\":{\"sizeLimit\":0.023,\"multiple\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"file size is over than 23B, show default error tips\",\"props\":{\"sizeLimit\":{\"size\":23,\"unit\":\"B\"},\"multiple\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]},{\"description\":\"file size is over than 23B, show custom error tips\",\"props\":{\"sizeLimit\":{\"size\":23,\"unit\":\"B\",\"message\":\"image size can not over than {sizeLimit}\"},\"multiple\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"dom\":[{\".t-upload__single .t-upload__tips-error\":{\"text\":\"image size can not over than 23\"}}],\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]},{\"description\":\"file size is over than 0.023KB, show default error tips (KB is default unit)\",\"props\":{\"sizeLimit\":0.023,\"multiple\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"simulateFileChange('input', 'file', 5)\",\"delay\":100,\"event\":{\"validate\":[{\"type\":\"FILE_OVER_SIZE_LIMIT\",\"files\":\"length=3\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107021,7 +107021,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"tips\":\"upload tips text\",\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":[\".t-upload__tips-default\",\".t-upload__tips-success\",\".t-upload__tips-warning\",\".t-upload__tips-error\"]}}",
+      "test_description": "{\"PC\":{\"props\":{\"tips\":\"upload tips text\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":[\".t-upload__tips-default\",\".t-upload__tips-success\",\".t-upload__tips-warning\",\".t-upload__tips-error\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107141,7 +107141,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"tnode\":{\"dom\":[\".t-upload__tips\"],\"trigger\":\"\"}}}",
+      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://tdesign.test.com/upload/file_success\"},\"tnode\":{\"dom\":[\".t-upload__tips\"],\"trigger\":\"\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107230,7 +107230,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://cdc.cdn-go.cn/tdc/latest/menu.json\"},\"dom\":{\"{ theme: 'warning' }\":{\".t-button--theme-warning\":1}}}}",
+      "test_description": "{\"PC\":{\"props\":{\"action\":\"https://tdesign.test.com/upload/file_success\"},\"dom\":{\"{ theme: 'warning' }\":{\".t-button--theme-warning\":1}}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107399,7 +107399,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"withCredentials\":true,\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.withCredentials\":true}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"withCredentials\":true,\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.withCredentials\":true}]},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -107667,7 +107667,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"drag image drop, trigger onDrop event\",\"props\":{\"theme\":\"image\",\"draggable\":true},\"expect\":[{\"trigger\":\"const files = simulateDragFileChange('.t-upload__dragger', 'drop', 'image')\",\"event\":{\"drop\":[{\"e.type\":\"drop\",\"e.dataTransfer.files\":\"${files}\"}]}}]},{\"description\":\"drag file drop, trigger onDrop event\",\"props\":{\"theme\":\"file\",\"draggable\":true},\"expect\":[{\"trigger\":\"const files = simulateDragFileChange('.t-upload__dragger', 'drop')\",\"event\":{\"drop\":[{\"e.type\":\"drop\",\"e.dataTransfer.files\":\"${files}\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"drag image drop, trigger onDrop event\",\"props\":{\"theme\":\"image\",\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"const files = simulateDragFileChange('.t-upload__dragger', 'drop', 'image')\",\"event\":{\"drop\":[{\"e.type\":\"drop\",\"e.dataTransfer.files\":\"${files}\"}]}}]},{\"description\":\"drag file drop, trigger onDrop event\",\"props\":{\"theme\":\"file\",\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"expect\":[{\"trigger\":\"const files = simulateDragFileChange('.t-upload__dragger', 'drop')\",\"event\":{\"drop\":[{\"e.type\":\"drop\",\"e.dataTransfer.files\":\"${files}\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -107707,7 +107707,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"action\":\"https://cdc.cdn-go.cn/tdc/latest/mock-fail.json\"},\"description\":\"\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"action\":\"https://tdesign.test.com/upload/fail/status_error\"},\"description\":\"\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"fail\":[{\"XMLHttpRequest.upload.requestParams\":{\"file\":\"${fileList[0]}\",\"length\":1}}]},\"delay\":700}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

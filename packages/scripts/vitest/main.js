@@ -96,6 +96,7 @@ function getUnitTestCode(baseData, framework) {
     needDefaultRender: false,
     importedTestUtils: [],
   };
+  const customImported = [];
   // 一个组件可能由多个子组件拼凑而成
   Object.entries(baseData).forEach(([componentOri, oneComponentApi]) => {
     if (!oneComponentApi) return;
@@ -108,38 +109,58 @@ function getUnitTestCode(baseData, framework) {
       component = getParentByChildComponent(combineMap, componentOri);
     }
 
+    const global = {
+      variables: [],
+      beforeAll: [],
+      afterEach: [],
+      afterAll: [],
+    };
     let oneComponentTests = [];
     oneComponentApi.forEach((oneApiData) => {
       if (!oneApiData.test_description) return;
       const jsonError = `${oneApiData.field_name}: ${oneApiData.test_description} is not a valid JSON.`;
       const testDescription = parseJSON(oneApiData.test_description, jsonError);
-      if (!testDescription.PC || framework.indexOf('PC') === -1) return;
+      const hasPC = testDescription.PC && framework.indexOf('PC') !== -1;
+      const hasMobile = testDescription.Mobile && framework.indexOf('Mobile') !== -1;
+      if (!hasPC && !hasMobile) return;
+
+      const finalDescription = testDescription.PC || testDescription.Mobile;
+
+      if (finalDescription.global) {
+        Object.keys(global).forEach((item) => {
+          global[item].push(...finalDescription.global[item]);
+        })
+      }
 
       // 存在 Web 框架的单测用例，再输出
-      // console.log(testDescription.PC);
-      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, testDescription.PC);
+      // console.log(finalDescription);
+      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, finalDescription);
       if (oneUnitTests && oneUnitTests.length) {
+
         oneComponentTests = oneComponentTests.concat(oneUnitTests);
+
         configFlag.hasEvent = hasEvent || configFlag.hasEvent;
         importedMounts.forEach((oneMount) => {
           configFlag.importedMounts.add(oneMount);
         });
       }
+
       if (importedTestUtils && importedTestUtils.length) {
         configFlag.importedTestUtils = configFlag.importedTestUtils.concat(importedTestUtils);
       }
-
-      if (testDescription.PC.wrapper) {
-        configFlag.importedMounts.add(testDescription.PC.wrapper);
+      if (finalDescription.wrapper) {
+        configFlag.importedMounts.add(finalDescription.wrapper);
       } else {
         configFlag.needDefaultRender = true;
       }
       if (testDescription.Mobile && testDescription.Mobile.wrapper) {
         configFlag.importedMounts.add(testDescription.Mobile.wrapper);
       }
+      customImported.push(...(finalDescription.global?.imports || []));
     });
 
     if (oneComponentTests.length) {
+      addGlobalCode(global, oneComponentTests);
       oneComponentTests.unshift(`describe('${component} Component', () => {`);
       oneComponentTests.push('});\n');
       tests = tests.concat(oneComponentTests);
@@ -148,7 +169,7 @@ function getUnitTestCode(baseData, framework) {
   });
 
   const importConfig = getImportsConfig(configFlag, tests);
-  const importCodes = getImportsCode(importConfig, framework);
+  const importCodes = getImportsCode(importConfig, framework, customImported);
   const cases = [importCodes].concat(tests).join('\n\n');
   return cases;
 }
@@ -156,6 +177,23 @@ function getUnitTestCode(baseData, framework) {
 function getComponentUnitTests(framework, component, apiData, map) {
   const baseData = getBaseData(framework, component, apiData, map);
   return getUnitTestCode(baseData, framework)
+}
+
+function addGlobalCode(global, oneComponentTests) {
+  if (global) {
+    if (global.afterAll.length) {
+      oneComponentTests.unshift('afterAll(() => {', ...global.afterAll, '});');
+    }
+    if (global.afterEach.length) {
+      oneComponentTests.unshift('afterEach(() => {', ...global.afterEach, '});');
+    }
+    if (global.beforeAll.length) {
+      oneComponentTests.unshift('beforeAll(() => {', ...global.beforeAll, '});');
+    }
+    if (global.variables.length) {
+      oneComponentTests.unshift(...global.variables);
+    }
+  }
 }
 
 module.exports = {

@@ -704,6 +704,9 @@ function makeObjectToString(objectArgs) {
     if (/\$\{.+\}/.test(value)) {
       tmpValue = value.match(/\$\{(.+)\}/)[1];
     }
+    if (typeof tmpValue === 'object') {
+      tmpValue = makeObjectToString(tmpValue);
+    }
     return `'${key}': ${tmpValue}`;
   }).join(',');
   arr.push(argsList);
@@ -734,7 +737,7 @@ function handleVueAndReactInputEventDifference(framework, fnName, oneArgument, p
 function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '', calls = 'calls[0]') {
   // /^\[\d\]\./.test(oneProperty) 表示数组 '[0].lastModified'。不需要数组深度相等的时候需要
   const property = oneProperty
-    ? /^\[\d\]/.test(oneProperty) ? oneProperty : `.${oneProperty}`
+    ? /^\[\d+\]/.test(oneProperty) ? oneProperty : `.${oneProperty}`
     : '';
   // 长度校验；正则校验；其他校验
   if (/length=/.test(oneArgument)) {
@@ -751,6 +754,7 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '',
     if (typeof value === 'object') {
       value = Array.isArray(value) ? makeArrayToString(value) : makeObjectToString(value);
     }
+    // 变量直出
     if (/\$\{.+\}/.test(oneArgument)) {
       value = oneArgument.match(/\$\{(.+)\}/)[1];
     }
