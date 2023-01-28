@@ -14,6 +14,7 @@ const SIMULATE_FUNCTIONS = [
   'simulateKeydownEvent',
   'simulateImageEvent',
   'simulateFileChange',
+  'simulateDragFileChange',
 ];
 
 // 获取变量的函数
@@ -733,7 +734,7 @@ function handleVueAndReactInputEventDifference(framework, fnName, oneArgument, p
 function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '', calls = 'calls[0]') {
   // /^\[\d\]\./.test(oneProperty) 表示数组 '[0].lastModified'。不需要数组深度相等的时候需要
   const property = oneProperty
-    ? /^\[\d\]\./.test(oneProperty) ? oneProperty : `.${oneProperty}`
+    ? /^\[\d\]/.test(oneProperty) ? oneProperty : `.${oneProperty}`
     : '';
   // 长度校验；正则校验；其他校验
   if (/length=/.test(oneArgument)) {

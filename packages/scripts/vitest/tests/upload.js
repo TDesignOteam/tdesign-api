@@ -557,6 +557,7 @@ module.exports = {
               {
                 trigger: 'click(.t-upload__dragger-progress-cancel)',
                 event: {
+                  cancelUpload: [],
                   remove: [
                     {
                       file: { url: 'https://image3.png', name: 'image3.png', status: 'waiting' },
@@ -576,7 +577,7 @@ module.exports = {
       PC: {
         tnode: [
           {
-            description: 'props.fileListDisplay works fine if theme=file',
+            description: 'theme=file, fileListDisplay works fine',
             variables: ["const fileList = getFakeFileList('file', 3);"],
             props: {
               files: '${fileList}',
@@ -589,7 +590,7 @@ module.exports = {
           },
           {
             description:
-              'props.fileListDisplay works fine if theme=image-flow && multiple=true && draggable=true',
+              'theme=image-flow && multiple=true && draggable=true, fileListDisplay works fine',
             variables: [
               "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
             ],
@@ -606,7 +607,7 @@ module.exports = {
           },
           {
             description:
-              'props.fileListDisplay works fine if theme=file-flow && multiple=true && draggable=true',
+              'theme=file-flow && multiple=true && draggable=true, fileListDisplay works fine',
             variables: [
               "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
             ],
@@ -620,6 +621,30 @@ module.exports = {
             dom: [],
             trigger: '',
             params: [{ files: '${fileList}' }],
+          },
+          {
+            description: 'theme=file && draggable=true, fileListDisplay works fine',
+            props: {
+              theme: 'file',
+              draggable: true,
+              files: [{ name: 'file1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+            },
+            params: [
+              { files: [{ name: 'file1.txt', status: 'waiting', uploadTime: 1674897038406 }] },
+            ],
+          },
+          {
+            description: 'theme=image && draggable=true, fileListDisplay works fine',
+            props: {
+              theme: 'image',
+              draggable: true,
+              files: [{ url: 'https://img1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+            },
+            params: [
+              {
+                files: [{ url: 'https://img1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+              },
+            ],
           },
         ],
       },
@@ -998,6 +1023,7 @@ module.exports = {
       PC: {
         event: [
           {
+            description: 'file size is over than 23B, show default error tips',
             props: {
               sizeLimit: { size: 23, unit: 'B' },
               multiple: true,
@@ -1012,6 +1038,34 @@ module.exports = {
             ],
           },
           {
+            description: 'file size is over than 23B, show custom error tips',
+            props: {
+              sizeLimit: {
+                size: 23,
+                unit: 'B',
+                message: 'image size can not over than {sizeLimit}',
+              },
+              multiple: true,
+              action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json',
+            },
+            expect: [
+              {
+                trigger: "simulateFileChange('input', 'file', 5)",
+                delay: 100,
+                dom: [
+                  {
+                    '.t-upload__single .t-upload__tips-error': {
+                      text: 'image size can not over than 23',
+                    },
+                  },
+                ],
+                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+              },
+            ],
+          },
+          {
+            description:
+              'file size is over than 0.023KB, show default error tips (KB is default unit)',
             props: {
               sizeLimit: 0.023,
               multiple: true,
@@ -1189,10 +1243,134 @@ module.exports = {
       id: 882,
     },
     cancelUpload: { id: 1791 },
-    change: { id: 888 },
-    dragenter: { id: 1184 },
+    change: {
+      PC: {
+        event: [
+          {
+            description: 'can trigger change if autoUpload is false for image',
+            props: { theme: 'image', draggable: true, autoUpload: false, files: [] },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'image', 1)",
+                event: {
+                  change: [
+                    { '[0].raw': '${fileList[0]}' },
+                    { trigger: 'add', index: 0, 'file.raw': '${fileList[0]}' },
+                  ],
+                },
+                delay: 100,
+              },
+            ],
+          },
+          {
+            description: 'can trigger change if autoUpload is false for image-flow',
+            props: {
+              theme: 'image-flow',
+              draggable: true,
+              autoUpload: false,
+              multiple: true,
+              files: [{ url: 'https://image1.png', status: 'success' }],
+            },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input', 'image', 1)",
+                event: {
+                  change: [
+                    {
+                      '[0]': { url: 'https://image1.png', status: 'success' },
+                      '[1].raw': '${fileList[0]}',
+                    },
+                    {
+                      trigger: 'add',
+                      index: 1,
+                      'file.raw': '${fileList[0]}',
+                      'files.map(t => t.raw)': '${fileList}',
+                    },
+                  ],
+                },
+                delay: 100,
+              },
+            ],
+          },
+        ],
+      },
+      id: 888,
+    },
+    dragenter: {
+      PC: {
+        event: [
+          {
+            description: 'drag image enter, trigger onDragenter event',
+            props: { theme: 'image', draggable: true },
+            expect: [
+              {
+                trigger:
+                  "const files = simulateDragFileChange('.t-upload__dragger', 'dragEnter', 'image')",
+                event: {
+                  dragenter: [{ 'e.type': 'dragenter', 'e.dataTransfer.files': '${files}' }],
+                },
+              },
+              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__dragger', 'dragLeave')",
+                event: {
+                  dragleave: [{ 'e.type': 'dragleave', 'e.dataTransfer.files': '${files}' }],
+                },
+              },
+            ],
+          },
+          {
+            description: 'drag file enter, trigger onDragenter event',
+            props: { theme: 'file', draggable: true },
+            expect: [
+              {
+                trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'dragEnter')",
+                event: {
+                  dragenter: [{ 'e.type': 'dragenter', 'e.dataTransfer.files': '${files}' }],
+                },
+              },
+              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__dragger', 'dragLeave')",
+                event: {
+                  dragleave: [{ 'e.type': 'dragleave', 'e.dataTransfer.files': '${files}' }],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1184,
+    },
     dragleave: { id: 1185 },
-    drop: { id: 2628 },
+    drop: {
+      PC: {
+        event: [
+          {
+            description: 'drag image drop, trigger onDrop event',
+            props: { theme: 'image', draggable: true },
+            expect: [
+              {
+                trigger:
+                  "const files = simulateDragFileChange('.t-upload__dragger', 'drop', 'image')",
+                event: { drop: [{ 'e.type': 'drop', 'e.dataTransfer.files': '${files}' }] },
+              },
+            ],
+          },
+          {
+            description: 'drag file drop, trigger onDrop event',
+            props: { theme: 'file', draggable: true },
+            expect: [
+              {
+                trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'drop')",
+                event: { drop: [{ 'e.type': 'drop', 'e.dataTransfer.files': '${files}' }] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 2628,
+    },
     fail: {
       PC: {
         event: [
@@ -1505,6 +1683,92 @@ module.exports = {
                       file: { url: 'https://www.image.png', status: 'success' },
                       'e.type': 'click',
                     },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=file & multiple=true & autoUpload=false',
+            props: {
+              theme: 'file',
+              multiple: true,
+              autoUpload: false,
+              files: [
+                { name: 'file1.txt' },
+                { name: 'file2.txt', status: 'success' },
+                { name: 'file3.txt', status: 'waiting' },
+              ],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__single-display-text:last-child .t-upload__icon-delete)',
+                event: {
+                  change: [[{ name: 'file1.txt' }, { name: 'file2.txt', status: 'success' }]],
+                  remove: [
+                    { index: 2, file: { name: 'file3.txt', status: 'waiting' }, 'e.type': 'click' },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=file-flow & multiple=true & autoUpload=true, remove success file',
+            props: {
+              theme: 'file-flow',
+              multiple: true,
+              autoUpload: true,
+              files: [
+                { name: 'file1.txt' },
+                { name: 'file2.txt', status: 'success' },
+                { name: 'file3.txt', status: 'waiting' },
+                { name: 'file4.txt', status: 'fail' },
+              ],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__flow-table tr:nth-child(2) .t-upload__delete)',
+                event: {
+                  change: [
+                    [
+                      { name: 'file1.txt' },
+                      { name: 'file3.txt', status: 'waiting' },
+                      { name: 'file4.txt', status: 'fail' },
+                    ],
+                  ],
+                  remove: [
+                    { index: 1, file: { name: 'file2.txt', status: 'success' }, 'e.type': 'click' },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            description: 'theme=file-flow & multiple=true & autoUpload=true, remove waiting file',
+            props: {
+              theme: 'file-flow',
+              multiple: true,
+              autoUpload: true,
+              files: [
+                { name: 'file1.txt' },
+                { name: 'file2.txt', status: 'success' },
+                { name: 'file3.txt', status: 'waiting' },
+                { name: 'file4.txt', status: 'fail' },
+              ],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__flow-table tr:nth-child(3) .t-upload__delete)',
+                event: {
+                  change: [
+                    [
+                      { name: 'file1.txt' },
+                      { name: 'file2.txt', status: 'success' },
+                      { name: 'file4.txt', status: 'fail' },
+                    ],
+                  ],
+                  remove: [
+                    { index: 2, file: { name: 'file3.txt', status: 'waiting' }, 'e.type': 'click' },
                   ],
                 },
               },
