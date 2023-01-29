@@ -258,6 +258,35 @@ module.exports = {
               },
             ],
           },
+          {
+            description:
+              'autoUpload=false & theme=image & draggable = true, cancel upload works fine',
+            props: {
+              theme: 'image',
+              autoUpload: false,
+              draggable: true,
+              action: 'https://tdesign.test.com/upload/image_success',
+              files: [{ url: 'https://image.png', status: 'waiting' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__dragger-upload-btn)',
+                delay: true,
+                event: {
+                  success: [
+                    {
+                      'fileList[0].url': 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                      'currentFiles[0].url': 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                      'file.url': 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                      results: 'undefined',
+                      response: 'toBeTruthy',
+                      XMLHttpRequest: 'toBeTruthy',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
         ],
       },
       id: 885,
@@ -721,6 +750,7 @@ module.exports = {
       PC: {
         event: [
           {
+            description: 'format upload success response',
             props: {
               formatResponse:
                 "(response) => ({ responseData: { ret: response.ret, data: response.data }, url: response.data.url, extra_field: 'extra value' })",
@@ -743,6 +773,31 @@ module.exports = {
                       '[0].response.url':
                         'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
                       '[0].response.extra_field': 'extra value',
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            description: 'format upload fail response',
+            props: {
+              action: 'https://tdesign.test.com/upload/fail/response_error',
+              formatResponse: '(response) => ({ error: response.error, name: response.name })',
+            },
+            expect: [
+              {
+                trigger: "const fileList = simulateFileChange('input')",
+                delay: true,
+                event: {
+                  fail: [
+                    {
+                      'failedFiles[0].raw': '${fileList[0]}',
+                      'currentFiles[0].raw': '${fileList[0]}',
+                      'file.raw': '${fileList[0]}',
+                      'e.type': 'load',
+                      XMLHttpRequest: 'toBeTruthy',
+                      response: { error: 'upload failed', name: 'file-name.txt' },
                     },
                   ],
                 },
@@ -1259,7 +1314,29 @@ module.exports = {
       },
       id: 882,
     },
-    cancelUpload: { id: 1791 },
+    cancelUpload: {
+      PC: {
+        event: [
+          {
+            props: {
+              theme: 'file',
+              draggable: true,
+              autoUpload: true,
+              action: 'https://tdesign.test.com/upload/file_success',
+              files: [{ name: 'xxx.txt', status: 'progress' }],
+            },
+            expect: [
+              {
+                trigger: 'click(.t-upload__dragger-progress-cancel)',
+                delay: true,
+                event: { change: 'not', cancelUpload: [] },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1791,
+    },
     change: {
       PC: {
         event: [
@@ -1359,7 +1436,28 @@ module.exports = {
       },
       id: 1184,
     },
-    dragleave: { id: 1185 },
+    dragleave: {
+      PC: {
+        event: [
+          {
+            description: 'can not trigger dragleave event if drag leave other dom',
+            props: {
+              theme: 'image',
+              draggable: true,
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
+            expect: [
+              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragEnter')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__trigger', 'dragLeave')",
+                event: { dragleave: 'not' },
+              },
+            ],
+          },
+        ],
+      },
+      id: 1185,
+    },
     drop: {
       PC: {
         event: [
@@ -1752,7 +1850,7 @@ module.exports = {
             },
             expect: [
               {
-                trigger: 'click(.t-upload__flow-table tr:nth-child(2) .t-upload__delete)',
+                trigger: 'click(.t-upload__flow-table tbody tr:nth-child(2) .t-upload__delete)',
                 event: {
                   change: [
                     [
@@ -1769,31 +1867,27 @@ module.exports = {
             ],
           },
           {
-            description: 'theme=file-flow & multiple=true & autoUpload=true, remove waiting file',
+            description: 'theme=file-flow & multiple=true & autoUpload=true, remove fail file',
             props: {
               theme: 'file-flow',
               multiple: true,
               autoUpload: true,
-              files: [
-                { name: 'file1.txt' },
-                { name: 'file2.txt', status: 'success' },
-                { name: 'file3.txt', status: 'waiting' },
-                { name: 'file4.txt', status: 'fail' },
-              ],
+              files: [{ name: 'file1.txt' }, { name: 'file2.txt', status: 'success' }],
+              action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             expect: [
+              { trigger: "simulateFileChange('input')", delay: true },
               {
-                trigger: 'click(.t-upload__flow-table tr:nth-child(3) .t-upload__delete)',
+                trigger: 'click(.t-upload__flow-table tbody tr:last-child .t-upload__delete)',
                 event: {
-                  change: [
-                    [
-                      { name: 'file1.txt' },
-                      { name: 'file2.txt', status: 'success' },
-                      { name: 'file4.txt', status: 'fail' },
-                    ],
-                  ],
+                  change: 'not',
                   remove: [
-                    { index: 2, file: { name: 'file3.txt', status: 'waiting' }, 'e.type': 'click' },
+                    {
+                      index: 2,
+                      'file.name': 'file-name.txt',
+                      'file.status': 'fail',
+                      'e.type': 'click',
+                    },
                   ],
                 },
               },
