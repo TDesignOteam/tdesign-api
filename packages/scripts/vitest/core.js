@@ -415,7 +415,8 @@ function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperInd
   const isVue = framework.indexOf('Vue') !== -1;
   const isReact = framework.indexOf('React') !== -1;
   const domVariable = `attrDom${wrapperIndex || ''}${domIndex || ''}`;
-  if (className !== 'document' !== -1) {
+  const isDocumentNode = className.indexOf('document') !== -1;
+  if (isDocumentNode) {
     arr.push(`const ${domVariable} = document.querySelector('${className.replace('document', '')}');`);
   } else {
     if (isVue) {
@@ -426,7 +427,7 @@ function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperInd
   }
   Object.entries(attrInfo.attribute).forEach(([attributeName, attributeValue]) => {
     if (isVue) {
-      arr.push(getVueOneAttributeCode(framework, domVariable, attributeName, attributeValue));
+      arr.push(getVueOneAttributeCode(framework, domVariable, attributeName, attributeValue, { isDocumentNode }));
     } else if (isReact) {
       arr.push(getReactOneAttributeCode(framework, domVariable, attributeName, attributeValue, 'attrDom'));
     }
@@ -483,10 +484,14 @@ function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attrib
   }
 }
 
-function getVueOneAttributeCode(framework, wrapper, attribute, value) {
+function getVueOneAttributeCode(framework, wrapper, attribute, value, extra = {}) {
+  const { isDocumentNode } = extra;
   const expectValueCode = getAttributeValue(attribute, value, framework);
   if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
     return `expect(${wrapper}.element.${getAttributeStr(attribute)}).${expectValueCode};`;
+  }
+  if (isDocumentNode) {
+    return `expect(${wrapper}.getAttribute('${attribute}')).${expectValueCode};`;
   }
   return `expect(${wrapper}.attributes('${attribute}')).${expectValueCode};`;
 }
@@ -580,7 +585,8 @@ function getVueDomAttributeExpect(framework, dom, component, index, attribute, w
         framework,
         `domWrapper${index || ''}`,
         attributeName,
-        attributeValue
+        attributeValue,
+        { isDocumentNode: dom.indexOf('document') !== -1 },
       );
     }).join('\n'),
   ];
@@ -764,13 +770,16 @@ function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '',
 }
 
 // 事件参数测试
-function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
+function getEventArguments(framework, args, extra = {}) {
+  const { fnName = 'fn', calls = 'calls[0]', tnodeProps = false } = extra;
   if (typeof args === 'string' && args === 'not') {
     return [`expect(${fnName}).not.toHaveBeenCalled();`];
   }
   if (!Array.isArray(args)) return [];
-  const arr = args.map((oneArgument, index) => {
+  const arr = args.map((oneArgument, tIndex) => {
     if (oneArgument === undefined || oneArgument === 'skip') return;
+    // Vue 的 props tnode 第一个参数是 h，第二个参数开始是实际数据
+    const index = tnodeProps && framework.indexOf('Vue') !== -1 ? tIndex + 1 : tIndex;
     if (typeof oneArgument === 'string' && !isRegExp(oneArgument) && oneArgument !== 'undefined') {
       return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, undefined, calls);
     }
@@ -819,7 +828,7 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
       }
     }
   }
-  let delayTime = delay !== undefined && delay !== true ? delay : '';
+  let delayTime = delay && delay !== true || delay === 0 ? delay : '';
   if (framework.indexOf('Vue') !== -1) {
     // 无论什么事件，Vue 都需要 nextTick
     fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
@@ -832,7 +841,7 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
       if (event === 'delay' && !isNaN(dom)) {
         delayTime = dom;
       }
-      fireEventCode.push(`await mockDelay(${delayTime});`);
+      fireEventCode.push(`await mockDelay(${delayTime || ''});`);
     }
   }
   return fireEventCode.join('\n');
@@ -929,7 +938,7 @@ function parseSimulateEvents(simulateEvent, args) {
 
 // 判断是否需要 mockDelay
 function getReactNeedMockDelay(event, delay) {
-  if (delay) return true;
+  if (delay || delay === 0 || delay === '0') return true;
   return reactNeedMockDelayEvents.includes(event);
 }
 

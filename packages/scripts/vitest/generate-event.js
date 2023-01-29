@@ -128,7 +128,7 @@ function getEventExpectCode(p, index, framework, component) {
       const [fEventName, calls] = eventName.split('.');
       const fnName = getEventFnName(fEventName, index);
       return [
-        getEventArguments(framework, args, fnName, calls).join(''),
+        getEventArguments(framework, args, { fnName, calls }).join(''),
       ].join('\n');
     }).join('\n'),
     clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),

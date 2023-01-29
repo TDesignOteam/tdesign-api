@@ -176,13 +176,13 @@ function getTestCaseByComponentCode(params) {
 }
 
 function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
-  const { extraCode, skip, props, trigger, variables } = params;
+  const { extraCode, skip, props, trigger, variables, description } = params;
   const finalTrigger = tnode.trigger || trigger;
   const skipText = skip ? '.skip' : '';
   const async = getItAsync(finalTrigger, framework);
   const category = oneApiData.component === component ? 'props': oneApiData.component;
-  const moreDesc = tnode.description ? `, ${tnode.description}` : '';
-  const defaultDescription = `'${category}.${oneApiData.field_name} is a function with params${moreDesc}'`;
+  const defaultDescription = description ? `'${category}.${oneApiData.field_name}: a function with params, ${description}'` : `'${category}.${oneApiData.field_name} is a function with params'`;
+  // props params test
   const arr = [
     `\nit${skipText}(${defaultDescription}, ${async} () => {`,
       getVariablesCode(variables),
@@ -192,17 +192,19 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
         ...props,
       }, extraCode),
       getDelayCode(finalTrigger, framework),
-      getEventArguments(framework, tnode.params).join('\n'),
+      getEventArguments(framework, tnode.params, { tnodeProps: true }).join('\n'),
     `})`,
   ].filter(v => v);
-  // 插槽参数测试
+  // slot params test
   if (framework.indexOf('Vue') !== -1) {
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
+    const defaultDescription = `slots.${oneApiData.field_name}: a function with params, ${description}` || `slots.${oneApiData.field_name} is a function with params`;
     arr.push(...[
-      `it${skipText}('slots.${oneApiData.field_name} is a function with params', ${async}() => {`,
+      `it${skipText}('${defaultDescription}', ${async}() => {`,
+        getVariablesCode(variables),
         `const fn = vi.fn();`,
         getMountComponent(framework, component, {
-          [slotsText]: `{ [${oneApiData.field_name}]: fn }`,
+          [slotsText]: `{ '${oneApiData.field_name}': fn }`,
           ...props,
         }, extraCode),
         getDelayCode(finalTrigger, framework),

@@ -91,6 +91,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   selectChange: [
                     '${fileList}',
@@ -128,7 +129,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 0,
               },
             ],
           },
@@ -193,6 +193,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   change: [
                     {
@@ -204,7 +205,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: true,
               },
             ],
           },
@@ -281,7 +281,7 @@ module.exports = {
             expect: [
               {
                 trigger: 'click(.t-upload__dragger-upload-btn)',
-                delay: true,
+                delay: 0,
                 event: {
                   success: [
                     {
@@ -315,13 +315,13 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                delay: 0,
                 event: {
                   change: 'not',
                   validate: [
                     { type: 'BEFORE_ALL_FILES_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
                   ],
                 },
-                delay: true,
               },
             ],
           },
@@ -344,13 +344,13 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                delay: 0,
                 event: {
                   change: 'not',
                   validate: [
                     { type: 'CUSTOM_BEFORE_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
                   ],
                 },
-                delay: true,
               },
             ],
           },
@@ -364,6 +364,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'file', 3)",
+                delay: 0,
                 event: {
                   change: [{ '[0].raw': '${fileList[1]}' }],
                   validate: [
@@ -373,7 +374,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: true,
               },
             ],
           },
@@ -423,6 +423,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -434,7 +435,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 700,
               },
             ],
           },
@@ -479,7 +479,9 @@ module.exports = {
           {
             description: 'disabled upload can not trigger onSelectChange',
             props: { disabled: true },
-            expect: [{ trigger: "simulateFileChange('input')", event: { selectChange: 'not' } }],
+            expect: [
+              { trigger: "simulateFileChange('input')", delay: 0, event: { selectChange: 'not' } },
+            ],
           },
           {
             description: 'disabled upload can not remove file',
@@ -725,6 +727,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   selectChange: [
                     '${fileList}',
@@ -755,6 +758,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -766,7 +770,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 700,
               },
             ],
           },
@@ -788,7 +791,7 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input')",
-                delay: true,
+                delay: 0,
                 event: {
                   change: [
                     {
@@ -817,7 +820,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
-                delay: true,
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -852,12 +855,12 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input')",
+                delay: 0,
                 event: {
                   fail: [
                     { "XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']": 'tdesign_token' },
                   ],
                 },
-                delay: true,
               },
             ],
           },
@@ -881,7 +884,7 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input', 'file', 3)",
-                delay: 300,
+                delay: 0,
                 event: { change: ['length=3'] },
               },
             ],
@@ -997,6 +1000,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -1007,7 +1011,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 700,
               },
             ],
           },
@@ -1059,7 +1062,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'image')",
-                delay: 300,
+                delay: 0,
                 event: {
                   change: [
                     {
@@ -1081,7 +1084,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
-                delay: 300,
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -1151,7 +1154,7 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input', 'file', 5)",
-                delay: 100,
+                delay: 0,
                 event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
               },
             ],
@@ -1170,7 +1173,7 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input', 'file', 5)",
-                delay: 100,
+                delay: 0,
                 dom: [
                   {
                     '.t-upload__single .t-upload__tips-error': {
@@ -1193,7 +1196,7 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input', 'file', 5)",
-                delay: 100,
+                delay: 0,
                 event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
               },
             ],
@@ -1361,8 +1364,8 @@ module.exports = {
             expect: [
               {
                 trigger: "simulateFileChange('input')",
+                delay: 0,
                 event: { fail: [{ 'XMLHttpRequest.withCredentials': true }] },
-                delay: true,
               },
             ],
           },
@@ -1405,13 +1408,13 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'image', 1)",
+                delay: 100,
                 event: {
                   change: [
                     { '[0].raw': '${fileList[0]}' },
                     { trigger: 'add', index: 0, 'file.raw': '${fileList[0]}' },
                   ],
                 },
-                delay: 100,
               },
             ],
           },
@@ -1427,6 +1430,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'image', 1)",
+                delay: 100,
                 event: {
                   change: [
                     {
@@ -1441,7 +1445,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 100,
               },
             ],
           },
@@ -1567,6 +1570,7 @@ module.exports = {
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
+                delay: 0,
                 event: {
                   fail: [
                     {
@@ -1574,7 +1578,6 @@ module.exports = {
                     },
                   ],
                 },
-                delay: 700,
               },
             ],
           },
@@ -1607,9 +1610,10 @@ module.exports = {
                 delay: 300,
                 exist: [
                   {
-                    '.t-image-viewer__modal-image': {
+                    'document.t-image-viewer__modal-image': {
                       attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
                     },
+                    clearElementAtEnd: ['.t-image-viewer'],
                   },
                 ],
                 event: {
@@ -1647,9 +1651,10 @@ module.exports = {
                 delay: 300,
                 exist: [
                   {
-                    '.t-image-viewer__modal-image': {
+                    'document.t-image-viewer__modal-image': {
                       attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
                     },
+                    clearElementAtEnd: ['.t-image-viewer'],
                   },
                 ],
                 event: {
@@ -1687,9 +1692,10 @@ module.exports = {
                 delay: 300,
                 exist: [
                   {
-                    '.t-image-viewer__modal-image': {
+                    'document.t-image-viewer__modal-image': {
                       attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
                     },
+                    clearElementAtEnd: ['.t-image-viewer'],
                   },
                 ],
                 event: {
@@ -1943,7 +1949,7 @@ module.exports = {
               action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             expect: [
-              { trigger: "simulateFileChange('input')", delay: true },
+              { trigger: "simulateFileChange('input')", delay: 0 },
               {
                 trigger: 'click(.t-upload__flow-table tbody tr:last-child .t-upload__delete)',
                 event: {
