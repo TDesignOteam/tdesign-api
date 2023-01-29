@@ -819,12 +819,16 @@ function getEventArguments(framework, args, fnName = 'fn', calls = 'calls[0]') {
       }
     }
   }
+  let delayTime = delay !== undefined && delay !== true ? delay : '';
   if (framework.indexOf('Vue') !== -1) {
+    // 无论什么事件，Vue 都需要 nextTick
     fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
+    if (delayTime || delayTime === 0) {
+      fireEventCode.push(`await mockDelay(${delayTime});`);
+    }
   } else if (framework.indexOf('React') !== -1) {
     // 如果是 delay， dom 表示时间
     if (getReactNeedMockDelay(event, delay) || event === 'delay') {
-      let delayTime = delay && delay !== true ? delay : '';
       if (event === 'delay' && !isNaN(dom)) {
         delayTime = dom;
       }

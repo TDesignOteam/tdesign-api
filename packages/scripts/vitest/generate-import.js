@@ -6,10 +6,10 @@
 const { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } = require('./core');
 
 // fireEvent, vi, render 等已经单独处理
-const REACT_KEYWORDS = ['mockDelay', 'mockTimeout'];
+const TEST_KEYWORDS = ['mockDelay', 'mockTimeout'];
 
-function getReactImports(str) {
-  return REACT_KEYWORDS.filter((keyword) => {
+function getKeywordsImports(str) {
+  return TEST_KEYWORDS.filter((keyword) => {
     const regExp = new RegExp(keyword);
     return regExp.test(str);
   });
@@ -26,7 +26,7 @@ function getImportsConfig(params = {}, tests) {
   } = params;
 
   const str = tests.join('');
-  const reactTestUtils = getReactImports(str);
+  const keywordsImports = getKeywordsImports(str);
 
   const obj = {
     'Vue(PC)': {
@@ -86,9 +86,10 @@ function getImportsConfig(params = {}, tests) {
     obj['VueNext(PC)']['@vue/test-utils'].push('mount');
     obj['Vue(Mobile)']['@vue/test-utils'].push('mount');
   }
-  if (reactTestUtils) {
-    obj['React(PC)']['@test/utils'].push(...reactTestUtils);
-    obj['React(Mobile)']['@test/utils'].push(...reactTestUtils);
+  if (keywordsImports) {
+    Object.keys(obj).forEach(framework => {
+      obj[framework]['@test/utils'].push(...keywordsImports);
+    });
   }
   if (importedTestUtils && importedTestUtils.length) {
     const list = [...new Set(importedTestUtils)];

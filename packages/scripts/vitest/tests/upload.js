@@ -128,7 +128,7 @@ module.exports = {
                     },
                   ],
                 },
-                delay: true,
+                delay: 0,
               },
             ],
           },

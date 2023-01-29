@@ -73,6 +73,11 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | snapshot | Boolean | 通用属性。是否输出快照 |
 | content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
 
+### 延迟 delay
+
+- `delay: true` 表示只要延迟就行，无需关心具体时间，Vue 表现为 nextTick，React 表现为 act(() => {})。注意和 `delay: 0` 有一个 `setTimeout(() => {}, 0)` 的区别
+- `delay: 100` 表示延迟 100 毫秒；`delay: 0` 表示延迟 0 毫秒。凡事存在时间，无论值为多少，一定会有 `setTimeout` 延迟。
+
 ### 模拟事件列表
 
 | 事件 | 描述 |

@@ -100,7 +100,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
       ];
-      arr = arr.concat(oneEventArr);
+      arr = arr.concat(oneEventArr, '\n');
     });
     return arr;
   }
