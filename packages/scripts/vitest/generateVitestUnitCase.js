@@ -7,7 +7,7 @@ const kebabCase = require('lodash/kebabCase');
 const { FRAMEWORK_MAP } = require('../config');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
 const { getUnitTestCode } = require('./main');
-const { generateTestDescriptionToVitestFile } = require('./tests/core/utils');
+// const { generateTestDescriptionToVitestFile } = require('./tests/core/utils');
 
 function generateVitestUnitCase(baseData, framework, { component }) {
   const cases = getUnitTestCode(baseData, framework, { component });
@@ -36,9 +36,6 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
     console.warn(e);
   }
-
-  // 输出测试用例数据到 vitest/tests
-  generateTestDescriptionToVitestFile(baseData, { component });
 }
 
 function getFileComment(framework, component) {

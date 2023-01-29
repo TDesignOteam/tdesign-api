@@ -15,8 +15,12 @@ function generateTestDescriptionToVitestFile(baseData, { component }) {
     if (!oneComponentApi) return;
     tests[childComponent] = {};
     oneComponentApi.forEach((oneApiData) => {
-      tests[childComponent][oneApiData.field_name] = parseJSON(oneApiData.test_description, { PC: {}, Mobile: {} });
-      tests[childComponent][oneApiData.field_name].id = oneApiData.id;
+      const uniqueKey = [oneApiData.field_name, oneApiData.id].join('_');
+      tests[childComponent][uniqueKey] = { field_name: oneApiData.field_name, id: oneApiData.id };
+      tests[childComponent][uniqueKey] = {
+        ...tests[childComponent][uniqueKey],
+        ...parseJSON(oneApiData.test_description, { PC: {}, Mobile: {} })
+      };
     });
   });
   const outputPath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
@@ -72,6 +76,7 @@ function uploadVitestFileDataToDB(component) {
           const current = { ...apiData };
           const id = current.id;
           delete current.id;
+          delete current.field_name;
           promiseList.push(
             uploadOneApi(id, Object.keys(current).length ? JSON.stringify(current) : null)
           );

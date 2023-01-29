@@ -33,6 +33,7 @@ const { generateTypes } = require('./types');
 const { generateReactDefaultProps } = require('./types/react-default-props');
 const { generateVueProps } = require('./types/vue-props');
 const { generateVitestUnitCase } = require('./vitest/generateVitestUnitCase');
+const { generateTestDescriptionToVitestFile } = require('./vitest/tests/core/utils');
 const chalk = require('chalk');
 const pick = require('lodash/pick');
 const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
@@ -120,6 +121,10 @@ function generateComponentApi() {
   // 统一输出 vitest 通用测试用例
   if (vitest) {
     generateVitestUnitCase(baseData, framework, { component: currentComponent });
+    // 输出测试用例数据到 vitest/tests
+    const currentComponentData = groupByComponent(ALL_API);
+    const apiData = pick(currentComponentData, cmpMap[component] || [component]);
+    generateTestDescriptionToVitestFile(apiData, { component });
   }
 }
 

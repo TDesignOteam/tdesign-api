@@ -78,7 +78,7 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
     framework, component, snapshot, tnode, skip, variables,
   });
 
-  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger);
+  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger, variables);
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
   }
@@ -94,7 +94,7 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger) {
+function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger, variables) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];

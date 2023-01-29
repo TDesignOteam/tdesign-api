@@ -1,6 +1,8 @@
 module.exports = {
   Upload: {
-    abridgeName: {
+    abridgeName_2995: {
+      field_name: 'abridgeName',
+      id: 2995,
       PC: {
         props: { abridgeName: [8, 6] },
         dom: [
@@ -66,10 +68,15 @@ module.exports = {
           },
         ],
       },
-      id: 2995,
     },
-    accept: { PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' }, id: 872 },
-    action: {
+    accept_872: {
+      field_name: 'accept',
+      id: 872,
+      PC: { attribute: { accept: 'image/*' }, attributeDom: 'input' },
+    },
+    action_873: {
+      field_name: 'action',
+      id: 873,
       PC: {
         global: {
           imports: ["import { getUploadServer } from './request'"],
@@ -127,9 +134,11 @@ module.exports = {
           },
         ],
       },
-      id: 873,
     },
-    allowUploadDuplicateFile: {
+    addContent_1559: { field_name: 'addContent', id: 1559 },
+    allowUploadDuplicateFile_2454: {
+      field_name: 'allowUploadDuplicateFile',
+      id: 2454,
       PC: {
         event: [
           {
@@ -172,9 +181,10 @@ module.exports = {
           },
         ],
       },
-      id: 2454,
     },
-    autoUpload: {
+    autoUpload_885: {
+      field_name: 'autoUpload',
+      id: 885,
       PC: {
         event: [
           {
@@ -289,9 +299,10 @@ module.exports = {
           },
         ],
       },
-      id: 885,
     },
-    beforeAllFilesUpload: {
+    beforeAllFilesUpload_2928: {
+      field_name: 'beforeAllFilesUpload',
+      id: 2928,
       PC: {
         event: [
           {
@@ -316,9 +327,10 @@ module.exports = {
           },
         ],
       },
-      id: 2928,
     },
-    beforeUpload: {
+    beforeUpload_876: {
+      field_name: 'beforeUpload',
+      id: 876,
       PC: {
         event: [
           {
@@ -367,9 +379,10 @@ module.exports = {
           },
         ],
       },
-      id: 876,
     },
-    children: {
+    children_1169: {
+      field_name: 'children',
+      id: 1169,
       PC: {
         tnode: [
           {
@@ -394,9 +407,11 @@ module.exports = {
           },
         ],
       },
-      id: 1169,
     },
-    data: {
+    config_1671: { field_name: 'config', id: 1671 },
+    data_877: {
+      field_name: 'data',
+      id: 877,
       PC: {
         event: [
           {
@@ -425,9 +440,16 @@ module.exports = {
           },
         ],
       },
-      id: 877,
     },
-    disabled: {
+    default_1168: {
+      field_name: 'default',
+      id: 1168,
+      PC: { props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' }, tnode: true },
+    },
+    deleteBtn_1567: { field_name: 'deleteBtn', id: 1567 },
+    disabled_879: {
+      field_name: 'disabled',
+      id: 879,
       PC: {
         dom: [
           {
@@ -471,9 +493,10 @@ module.exports = {
           },
         ],
       },
-      id: 879,
     },
-    dragContent: {
+    dragContent_2991: {
+      field_name: 'dragContent',
+      id: 2991,
       PC: {
         props: {
           theme: 'custom',
@@ -482,9 +505,10 @@ module.exports = {
         },
         tnode: true,
       },
-      id: 2991,
     },
-    draggable: {
+    draggable_886: {
+      field_name: 'draggable',
+      id: 886,
       PC: {
         dom: [
           {
@@ -606,9 +630,10 @@ module.exports = {
           },
         ],
       },
-      id: 886,
     },
-    fileListDisplay: {
+    fileListDisplay_2383: {
+      field_name: 'fileListDisplay',
+      id: 2383,
       PC: {
         tnode: [
           {
@@ -683,10 +708,12 @@ module.exports = {
           },
         ],
       },
-      id: 2383,
     },
-    files: { id: 887 },
-    format: {
+    files_887: { field_name: 'files', id: 887 },
+    files_1676: { field_name: 'files', id: 1676 },
+    format_884: {
+      field_name: 'format',
+      id: 884,
       PC: {
         event: [
           {
@@ -713,9 +740,10 @@ module.exports = {
           },
         ],
       },
-      id: 884,
     },
-    formatRequest: {
+    formatRequest_2946: {
+      field_name: 'formatRequest',
+      id: 2946,
       PC: {
         event: [
           {
@@ -744,9 +772,10 @@ module.exports = {
           },
         ],
       },
-      id: 2946,
     },
-    formatResponse: {
+    formatResponse_1220: {
+      field_name: 'formatResponse',
+      id: 1220,
       PC: {
         event: [
           {
@@ -806,9 +835,12 @@ module.exports = {
           },
         ],
       },
-      id: 1220,
     },
-    headers: {
+    gridConfig_1817: { field_name: 'gridConfig', id: 1817 },
+    gutter_1556: { field_name: 'gutter', id: 1556 },
+    headers_878: {
+      field_name: 'headers',
+      id: 878,
       PC: {
         event: [
           {
@@ -831,9 +863,11 @@ module.exports = {
           },
         ],
       },
-      id: 878,
     },
-    isBatchUpload: {
+    imageProps_2426: { field_name: 'imageProps', id: 2426 },
+    isBatchUpload_2363: {
+      field_name: 'isBatchUpload',
+      id: 2363,
       PC: {
         event: [
           {
@@ -854,9 +888,10 @@ module.exports = {
           },
         ],
       },
-      id: 2363,
     },
-    locale: {
+    locale_2733: {
+      field_name: 'locale',
+      id: 2733,
       PC: {
         props: {
           files: [
@@ -889,9 +924,10 @@ module.exports = {
           },
         ],
       },
-      id: 2733,
     },
-    max: {
+    max_1191: {
+      field_name: 'max',
+      id: 1191,
       PC: {
         dom: [
           {
@@ -938,12 +974,18 @@ module.exports = {
           },
         ],
       },
-      id: 1191,
     },
-    method: { id: 874 },
-    mockProgressDuration: { id: 3253 },
-    multiple: { PC: { attribute: { multiple: true }, attributeDom: 'input' }, id: 880 },
-    name: {
+    mediaType_1561: { field_name: 'mediaType', id: 1561 },
+    method_874: { field_name: 'method', id: 874 },
+    mockProgressDuration_3253: { field_name: 'mockProgressDuration', id: 3253 },
+    multiple_880: {
+      field_name: 'multiple',
+      id: 880,
+      PC: { attribute: { multiple: true }, attributeDom: 'input' },
+    },
+    name_881: {
+      field_name: 'name',
+      id: 881,
       PC: {
         event: [
           {
@@ -971,9 +1013,10 @@ module.exports = {
           },
         ],
       },
-      id: 881,
     },
-    placeholder: {
+    placeholder_1167: {
+      field_name: 'placeholder',
+      id: 1167,
       PC: {
         dom: [
           {
@@ -998,9 +1041,11 @@ module.exports = {
           },
         ],
       },
-      id: 1167,
     },
-    requestMethod: {
+    requestMethod_1675: { field_name: 'requestMethod', id: 1675 },
+    requestMethod_1789: {
+      field_name: 'requestMethod',
+      id: 1789,
       PC: {
         event: [
           {
@@ -1050,9 +1095,10 @@ module.exports = {
           },
         ],
       },
-      id: 1789,
     },
-    showUploadProgress: {
+    showUploadProgress_1790: {
+      field_name: 'showUploadProgress',
+      id: 1790,
       PC: {
         dom: [
           {
@@ -1089,9 +1135,10 @@ module.exports = {
           },
         ],
       },
-      id: 1790,
     },
-    sizeLimit: {
+    sizeLimit_1564: {
+      field_name: 'sizeLimit',
+      id: 1564,
       PC: {
         event: [
           {
@@ -1153,9 +1200,11 @@ module.exports = {
           },
         ],
       },
-      id: 1564,
     },
-    status: {
+    source_3123: { field_name: 'source', id: 3123 },
+    status_2994: {
+      field_name: 'status',
+      id: 2994,
       PC: {
         props: { tips: 'upload tips text', action: 'https://tdesign.test.com/upload/file_success' },
         dom: [
@@ -1165,9 +1214,11 @@ module.exports = {
           '.t-upload__tips-error',
         ],
       },
-      id: 2994,
     },
-    theme: {
+    style_3077: { field_name: 'style', id: 3077 },
+    theme_1182: {
+      field_name: 'theme',
+      id: 1182,
       PC: {
         dom: [
           {
@@ -1242,16 +1293,18 @@ module.exports = {
           },
         ],
       },
-      id: 1182,
     },
-    tips: {
+    tips_1183: {
+      field_name: 'tips',
+      id: 1183,
       PC: {
         props: { action: 'https://tdesign.test.com/upload/file_success' },
         tnode: { dom: ['.t-upload__tips'], trigger: '' },
       },
-      id: 1183,
     },
-    trigger: {
+    trigger_889: {
+      field_name: 'trigger',
+      id: 889,
       PC: {
         tnode: [
           {
@@ -1282,18 +1335,21 @@ module.exports = {
           },
         ],
       },
-      id: 889,
     },
-    triggerButtonProps: {
+    triggerButtonProps_2985: {
+      field_name: 'triggerButtonProps',
+      id: 2985,
       PC: {
         props: { action: 'https://tdesign.test.com/upload/file_success' },
         dom: { "{ theme: 'warning' }": { '.t-button--theme-warning': 1 } },
       },
-      id: 2985,
     },
-    uploadAllFilesInOneRequest: { id: 2362 },
-    useMockProgress: { id: 1987 },
-    withCredentials: {
+    uploadAllFilesInOneRequest_2362: { field_name: 'uploadAllFilesInOneRequest', id: 2362 },
+    useMockProgress_1987: { field_name: 'useMockProgress', id: 1987 },
+    value_3009: { field_name: 'value', id: 3009 },
+    withCredentials_882: {
+      field_name: 'withCredentials',
+      id: 882,
       PC: {
         event: [
           {
@@ -1312,9 +1368,11 @@ module.exports = {
           },
         ],
       },
-      id: 882,
     },
-    cancelUpload: {
+    add_2307: { field_name: 'add', id: 2307 },
+    cancelUpload_1791: {
+      field_name: 'cancelUpload',
+      id: 1791,
       PC: {
         event: [
           {
@@ -1335,9 +1393,10 @@ module.exports = {
           },
         ],
       },
-      id: 1791,
     },
-    change: {
+    change_888: {
+      field_name: 'change',
+      id: 888,
       PC: {
         event: [
           {
@@ -1388,9 +1447,11 @@ module.exports = {
           },
         ],
       },
-      id: 888,
     },
-    dragenter: {
+    complete_1674: { field_name: 'complete', id: 1674 },
+    dragenter_1184: {
+      field_name: 'dragenter',
+      id: 1184,
       PC: {
         event: [
           {
@@ -1434,9 +1495,10 @@ module.exports = {
           },
         ],
       },
-      id: 1184,
     },
-    dragleave: {
+    dragleave_1185: {
+      field_name: 'dragleave',
+      id: 1185,
       PC: {
         event: [
           {
@@ -1456,9 +1518,10 @@ module.exports = {
           },
         ],
       },
-      id: 1185,
     },
-    drop: {
+    drop_2628: {
+      field_name: 'drop',
+      id: 2628,
       PC: {
         event: [
           {
@@ -1492,9 +1555,10 @@ module.exports = {
           },
         ],
       },
-      id: 2628,
     },
-    fail: {
+    fail_892: {
+      field_name: 'fail',
+      id: 892,
       PC: {
         event: [
           {
@@ -1516,11 +1580,13 @@ module.exports = {
           },
         ],
       },
-      id: 892,
     },
-    oneFileFail: { id: 2984 },
-    oneFileSuccess: { id: 2945 },
-    preview: {
+    fail_1673: { field_name: 'fail', id: 1673 },
+    oneFileFail_2984: { field_name: 'oneFileFail', id: 2984 },
+    oneFileSuccess_2945: { field_name: 'oneFileSuccess', id: 2945 },
+    preview_893: {
+      field_name: 'preview',
+      id: 893,
       PC: {
         event: [
           {
@@ -1643,10 +1709,11 @@ module.exports = {
           },
         ],
       },
-      id: 893,
     },
-    progress: { id: 890 },
-    remove: {
+    progress_890: { field_name: 'progress', id: 890 },
+    remove_1170: {
+      field_name: 'remove',
+      id: 1170,
       PC: {
         event: [
           {
@@ -1895,27 +1962,32 @@ module.exports = {
           },
         ],
       },
-      id: 1170,
     },
-    selectChange: { id: 2337 },
-    success: { id: 891 },
-    validate: { id: 2929 },
-    waitingUploadFilesChange: { id: 2947 },
-    triggerUpload: { id: 2989 },
-    uploadFiles: { id: 2990 },
-    '<T extends UploadFile = UploadFile>': { id: 2996 },
+    remove_2537: { field_name: 'remove', id: 2537 },
+    selectChange_2337: { field_name: 'selectChange', id: 2337 },
+    selectChange_2338: { field_name: 'selectChange', id: 2338 },
+    success_891: { field_name: 'success', id: 891 },
+    success_1672: { field_name: 'success', id: 1672 },
+    validate_2929: { field_name: 'validate', id: 2929 },
+    waitingUploadFilesChange_2947: { field_name: 'waitingUploadFilesChange', id: 2947 },
+    triggerUpload_2989: { field_name: 'triggerUpload', id: 2989 },
+    uploadFiles_2990: { field_name: 'uploadFiles', id: 2990 },
+    '<T extends UploadFile = UploadFile>_2996': {
+      field_name: '<T extends UploadFile = UploadFile>',
+      id: 2996,
+    },
   },
   UploadFile: {
-    lastModified: { id: 1177 },
-    name: { id: 1179 },
-    percent: { id: 1181 },
-    raw: { id: 982 },
-    response: { id: 1186 },
-    size: { id: 1178 },
-    status: { id: 979 },
-    type: { id: 1180 },
-    uploadTime: { id: 2993 },
-    url: { id: 981 },
-    PlainObject: { id: 3308 },
+    lastModified_1177: { field_name: 'lastModified', id: 1177 },
+    name_1179: { field_name: 'name', id: 1179 },
+    percent_1181: { field_name: 'percent', id: 1181 },
+    raw_982: { field_name: 'raw', id: 982 },
+    response_1186: { field_name: 'response', id: 1186 },
+    size_1178: { field_name: 'size', id: 1178 },
+    status_979: { field_name: 'status', id: 979 },
+    type_1180: { field_name: 'type', id: 1180 },
+    uploadTime_2993: { field_name: 'uploadTime', id: 2993 },
+    url_981: { field_name: 'url', id: 981 },
+    PlainObject_3308: { field_name: 'PlainObject', id: 3308 },
   },
 };

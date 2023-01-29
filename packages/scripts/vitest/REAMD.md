@@ -40,6 +40,11 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | tnode | Boolean/Object | 校验自定义元素（因框架实现差异大，故而单独定义），方便以最少的定义输出更多的单测用例 |
 | event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |
 | props | Object | 给组件添加属性 |
+| variables | Array | 整个测试用例全局变量 |
+| imports | Array | 额外引入的针对单个组件的函数或变量 |
+| beforeAll | Array | 全部单测用例之前执行 |
+| afterEach | Array | 每个单测用例之后执行 |
+| afterAll | Array | 全部单测用例结束后执行 |
 | trigger | String | 开启校验的前置条件。主要应用于需要触发某个事件 或者 延迟 N 秒后，才会显示相关元素的场景。如：TreeSelect 点击后才会显示面板；Guide 需要等待 100 毫秒渲染完成后才能开始校验）|
 | skip | Boolean | 是否跳过当前测试用例 |
 
@@ -67,6 +72,20 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
 | snapshot | Boolean | 通用属性。是否输出快照 |
 | content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
+
+### 模拟事件列表
+
+| 事件 | 描述 |
+| -- | -- |
+| mockDelay | 延迟校验，示例：`mockDelay` 或 `mockDelay(300)`|
+| simulateInputChange | 输入框输入事件，示例：simulateInputChange('input', 'hello tdesign')，表示在元素 `input` 中输入字符 `hello tdesign` |
+| simulateInputEnter | 输入框回车事件，示例：simulateInputEnter('input')，表示触发元素 `input` 回车事件 |
+| 'keydown.enter' | 输入框回车事件，示例：`'keydown.enter(input)'`。同 `simulateInputEnter`，区别主要在于 React 单测示例输出代码不同，但功能完全相同。 |
+| simulateImageEvent | 图片加载事件，示例: `simulateImageEvent('load')` 或 `simulateImageEvent('error')`，表示加载成功或失败 |
+| simulateKeydownEvent | 文档 `document` 键盘事件 |
+| getFakeFileList | 获取模拟文件列表，主要用于 Upload 组件，示例：`getFakeFileList('file', 1)` 或 `getFakeFileList('image', 3)` |
+| simulateFileChange | 触发文件选择变化，主要用于 Upload 组件，示例：`simulateFileChange('input')` 或 `simulateFileChange('.input', 'file', 2)` |
+| simulateDragFileChange | 触发文件拖拽选择变化，主要用于 Upload 组件，示例：`simulateDragFileChange('input', 'dragLeave')` 或 `simulateDragFileChange('input', 'dragEnter', 'image', 3)`。第二个参数可选值有：`dragEnter/dragLeave/dragOver/drop` |
 
 ## 1. 类名 `{ "className": {} }`
 

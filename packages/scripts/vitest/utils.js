@@ -23,7 +23,7 @@ function getSkipCode(skip) {
 function groupByComponent(allApi, framework) {
   const result = {};
   allApi.forEach((api) => {
-    if (!api.platform_framework.includes(framework)) return;
+    if (framework && !api.platform_framework.includes(framework)) return;
     if (result[api.component]) {
       result[api.component].push(api);
     } else {
