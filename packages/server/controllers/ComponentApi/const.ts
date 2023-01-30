@@ -213,6 +213,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'CalendarController', label: '日历控制器', type: 'TS' },
   { value: 'CalendarCell', label: '日历项参数', type: 'TS' },
   { value: 'Cascader', label: '级联选择' },
+  { value: 'ConfigProvider', label: '全局特性配置' },
   { value: 'InputNumber', label: '数字输入框' },
   { value: 'Progress', label: '进度条' },
   { value: 'Slider', label: '滑块' },
