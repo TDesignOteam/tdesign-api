@@ -390,8 +390,7 @@
       },
       {
         "value": "ConfigProvider",
-        "label": "全局配置",
-        "type": "TS"
+        "label": "全局特性配置"
       },
       {
         "value": "Container",

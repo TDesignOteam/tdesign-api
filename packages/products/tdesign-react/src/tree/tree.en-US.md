@@ -40,8 +40,8 @@ transition | Boolean | true | \- | N
 value | Array | [] | Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tree/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tree/type.ts) | N
 valueMode | String | onlyLeaf | options：onlyLeaf/parentFirst/all | N
-onActive | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T> }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T> }) => void`<br/> | N
+onActive | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e: MouseEvent }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any }) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void`<br/> | N
 onDragEnd | Function |  | Typescript：`(context: { e: DragEvent; node: TreeNodeModel<T> }) => void`<br/> | N
 onDragLeave | Function |  | Typescript：`(context: { e: DragEvent; node: TreeNodeModel<T> }) => void`<br/> | N
@@ -96,7 +96,7 @@ data | Object | - | required。Typescript：`T` | Y
 expanded | Boolean | - | required | Y
 indeterminate | Boolean | - | required | Y
 loading | Boolean | - | required | Y
-`TreeNodeState` | \- | - | \- | N
+`TreeNodeState` | \- | - | extends `TreeNodeState` | N
 ### TreeNodeModel
 
 name | params | return | description
