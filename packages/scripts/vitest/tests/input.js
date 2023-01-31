@@ -145,7 +145,6 @@ module.exports = {
       field_name: 'maxlength',
       id: 749,
       PC: {
-        props: '{"value":"Hello TDesign"}',
         event: [
           {
             props: { value: 'Hello TDesign', maxlength: 5 },

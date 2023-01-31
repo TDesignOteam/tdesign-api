@@ -136,6 +136,7 @@ export default {
   methods: {
     getCols () {
       const columns = [
+        { title: 'ID', colKey: 'id' },
         {
           title: '组件/插件',
           colKey: 'component',

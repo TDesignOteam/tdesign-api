@@ -49124,7 +49124,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"className\": [{ \"t-align-left\": false }, \"t-align-center\", \"t-align-right\"], \"classNameDom\": \".t-input\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"className\":[{\"t-align-left\":false},\"t-align-center\",\"t-align-right\"],\"classNameDom\":\".t-input\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49303,7 +49303,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"toBeDefined\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -49760,7 +49760,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":\"{\\\"value\\\":\\\"Hello TDesign\\\"}\",\"event\":[{\"props\":{\"value\":\"Hello TDesign\",\"maxlength\":5},\"description\":\"length of value is over than maxlength\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"Hello\",{\"trigger\":\"initial\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello TDesign\",\"maxlength\":5},\"description\":\"length of value is over than maxlength\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"Hello\",{\"trigger\":\"initial\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
