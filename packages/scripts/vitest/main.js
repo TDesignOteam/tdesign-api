@@ -57,7 +57,7 @@ function getOneUnitTest(framework, component, oneApiData, test) {
         if (key === 'event') {
           hasEvent = true;
           const imports = getMoreEventImports(framework, test[key], test.wrapper, test.trigger);
-          importedTestUtils.push(...imports.importedTestUtils);
+          importedTestUtils.push(...(imports.importedTestUtils || []));
           if (imports.importedMounts && imports.importedMounts.length) {
             importedMounts.push(...imports.importedMounts);
           }

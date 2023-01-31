@@ -1,17 +1,24 @@
 module.exports = {
   TreeSelect: {
-    autoWidth: { id: 2375 },
-    autofocus: {
+    autoWidth_2375: { field_name: 'autoWidth', id: 2375 },
+    autofocus_3298: {
+      field_name: 'autofocus',
+      id: 3298,
       PC: {
         attribute: [
           { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
           { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
         ],
       },
-      id: 3298,
     },
-    borderless: { PC: { className: 't-select-input--borderless' }, id: 2376 },
-    clearable: {
+    borderless_2376: {
+      field_name: 'borderless',
+      id: 2376,
+      PC: { className: 't-select-input--borderless' },
+    },
+    clearable_1133: {
+      field_name: 'clearable',
+      id: 1133,
       PC: {
         event: [
           {
@@ -34,17 +41,20 @@ module.exports = {
           },
         ],
       },
-      id: 1133,
     },
-    collapsedItems: {
+    collapsedItems_1822: {
+      field_name: 'collapsedItems',
+      id: 1822,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         props: { minCollapsedNum: 3 },
         tnode: { dom: [], trigger: '', params: [{ count: 5 }] },
       },
-      id: 1822,
     },
-    data: {
+    customStyle_3230: { field_name: 'customStyle', id: 3230 },
+    data_1149: {
+      field_name: 'data',
+      id: 1149,
       PC: {
         event: [
           {
@@ -54,14 +64,20 @@ module.exports = {
           },
         ],
       },
-      id: 1149,
     },
-    disabled: { PC: { className: 't-is-disabled', classNameDom: '.t-input' }, id: 1136 },
-    empty: {
-      PC: { tnode: { dom: ['document.custom-node'], trigger: 'click(.t-input)' } },
+    disabled_1136: {
+      field_name: 'disabled',
+      id: 1136,
+      PC: { className: 't-is-disabled', classNameDom: '.t-input' },
+    },
+    empty_1142: {
+      field_name: 'empty',
       id: 1142,
+      PC: { tnode: { dom: ['document.custom-node'], trigger: 'click(.t-input)' } },
     },
-    filter: {
+    filter_294: {
+      field_name: 'filter',
+      id: 294,
       PC: {
         event: [
           {
@@ -92,9 +108,10 @@ module.exports = {
           },
         ],
       },
-      id: 294,
     },
-    filterable: {
+    filterable_1138: {
+      field_name: 'filterable',
+      id: 1138,
       PC: {
         event: [
           {
@@ -106,9 +123,11 @@ module.exports = {
           },
         ],
       },
-      id: 1138,
     },
-    inputProps: {
+    height_3224: { field_name: 'height', id: 3224 },
+    inputProps_2367: {
+      field_name: 'inputProps',
+      id: 2367,
       PC: {
         attribute: [
           {
@@ -118,9 +137,10 @@ module.exports = {
         ],
         attributeDom: '',
       },
-      id: 2367,
     },
-    inputValue: {
+    inputValue_2368: {
+      field_name: 'inputValue',
+      id: 2368,
       PC: {
         event: [
           {
@@ -150,10 +170,12 @@ module.exports = {
           },
         ],
       },
-      id: 2368,
     },
-    loading: { PC: { dom: '.t-loading' }, id: 1140 },
-    loadingText: {
+    keys_3228: { field_name: 'keys', id: 3228 },
+    loading_1140: { field_name: 'loading', id: 1140, PC: { dom: '.t-loading' } },
+    loadingText_1141: {
+      field_name: 'loadingText',
+      id: 1141,
       PC: {
         props: { loading: true },
         tnode: {
@@ -169,9 +191,10 @@ module.exports = {
           },
         ],
       },
-      id: 1141,
     },
-    max: {
+    max_1190: {
+      field_name: 'max',
+      id: 1190,
       PC: {
         event: [
           {
@@ -187,22 +210,27 @@ module.exports = {
           },
         ],
       },
-      id: 1190,
     },
-    minCollapsedNum: {
+    minCollapsedNum_1821: {
+      field_name: 'minCollapsedNum',
+      id: 1821,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         props: { minCollapsedNum: 2 },
         dom: [{ '.t-tag': 3, '.t-tag:last-child': { text: '+3' } }],
       },
-      id: 1821,
     },
-    multiple: { id: 1134 },
-    placeholder: {
-      PC: { attribute: { placeholder: 'this is tree select placeholder' }, attributeDom: 'input' },
+    multiple_1134: { field_name: 'multiple', id: 1134 },
+    multiple_3231: { field_name: 'multiple', id: 3231 },
+    options_3229: { field_name: 'options', id: 3229 },
+    placeholder_1137: {
+      field_name: 'placeholder',
       id: 1137,
+      PC: { attribute: { placeholder: 'this is tree select placeholder' }, attributeDom: 'input' },
     },
-    popupProps: {
+    popupProps_1144: {
+      field_name: 'popupProps',
+      id: 1144,
       PC: {
         event: [
           {
@@ -216,57 +244,76 @@ module.exports = {
           },
         ],
       },
-      id: 1144,
     },
-    popupVisible: { PC: { className: 't-select-input--popup-visible' }, id: 2396 },
-    prefixIcon: { PC: { tnode: true }, id: 1145 },
-    readonly: { PC: { className: 't-is-readonly', classNameDom: '.t-input' }, id: 2387 },
-    selectInputProps: { id: 2330 },
-    size: {
-      PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'], classNameDom: '.t-input' },
+    popupVisible_2396: {
+      field_name: 'popupVisible',
+      id: 2396,
+      PC: { className: 't-select-input--popup-visible' },
+    },
+    prefixIcon_1145: { field_name: 'prefixIcon', id: 1145, PC: { tnode: true } },
+    readonly_2387: {
+      field_name: 'readonly',
+      id: 2387,
+      PC: { className: 't-is-readonly', classNameDom: '.t-input' },
+    },
+    selectInputProps_2330: { field_name: 'selectInputProps', id: 2330 },
+    size_1132: {
+      field_name: 'size',
       id: 1132,
+      PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'], classNameDom: '.t-input' },
     },
-    status: {
+    status_2916: {
+      field_name: 'status',
+      id: 2916,
       PC: {
         className: [{ 't-is-default': false }, 't-is-success', 't-is-warning', 't-is-error'],
         classNameDom: '.t-input',
       },
-      id: 2916,
     },
-    tagProps: {
+    tagProps_2329: {
+      field_name: 'tagProps',
+      id: 2329,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         dom: { "{ theme: 'warning' }": { '.t-tag--warning': 5 } },
       },
-      id: 2329,
     },
-    tips: { PC: { dom: { 'this is a tip': { '.t-input__tips': 1 } } }, id: 2917 },
-    treeProps: { id: 1156 },
-    value: {
+    tips_2917: {
+      field_name: 'tips',
+      id: 2917,
+      PC: { dom: { 'this is a tip': { '.t-input__tips': 1 } } },
+    },
+    treeProps_1156: { field_name: 'treeProps', id: 1156 },
+    value_1131: {
+      field_name: 'value',
+      id: 1131,
       PC: {
         attribute: [
           { value: 'tdesign-vue', expect: [{ dom: 'input', attribute: { value: 'tdesign-vue' } }] },
         ],
       },
-      id: 1131,
     },
-    valueDisplay: {
+    valueDisplay_1833: {
+      field_name: 'valueDisplay',
+      id: 1833,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         props: { value: 1, data: "[{label: 'tdesign-vue',value: 1}]" },
         tnode: { dom: [], trigger: '', params: [{ value: [{ label: 'tdesign-vue', value: 1 }] }] },
       },
-      id: 1833,
     },
-    valueType: {
+    valueType_1143: {
+      field_name: 'valueType',
+      id: 1143,
       PC: {
         wrapper: 'getTreeSelectDefaultMount',
         props: { multiple: true, value: "[{ label: 'tdesign-vue', value: 1 }]" },
         dom: { object: { '.t-tag': 1 } },
       },
-      id: 1143,
     },
-    blur: {
+    blur_1155: {
+      field_name: 'blur',
+      id: 1155,
       PC: {
         event: [
           {
@@ -303,9 +350,10 @@ module.exports = {
           },
         ],
       },
-      id: 1155,
     },
-    change: {
+    change_1148: {
+      field_name: 'change',
+      id: 1148,
       PC: {
         event: [
           {
@@ -355,9 +403,11 @@ module.exports = {
           },
         ],
       },
-      id: 1148,
     },
-    clear: {
+    change_3232: { field_name: 'change', id: 3232 },
+    clear_1153: {
+      field_name: 'clear',
+      id: 1153,
       PC: {
         event: [
           {
@@ -394,9 +444,10 @@ module.exports = {
           },
         ],
       },
-      id: 1153,
     },
-    focus: {
+    focus_1154: {
+      field_name: 'focus',
+      id: 1154,
       PC: {
         event: [
           {
@@ -413,9 +464,10 @@ module.exports = {
           },
         ],
       },
-      id: 1154,
     },
-    inputChange: {
+    inputChange_2370: {
+      field_name: 'inputChange',
+      id: 2370,
       PC: {
         event: [
           {
@@ -432,9 +484,10 @@ module.exports = {
           },
         ],
       },
-      id: 2370,
     },
-    popupVisibleChange: {
+    popupVisibleChange_2395: {
+      field_name: 'popupVisibleChange',
+      id: 2395,
       PC: {
         event: [
           {
@@ -446,9 +499,10 @@ module.exports = {
           },
         ],
       },
-      id: 2395,
     },
-    remove: {
+    remove_1152: {
+      field_name: 'remove',
+      id: 1152,
       PC: {
         event: [
           {
@@ -495,9 +549,10 @@ module.exports = {
           },
         ],
       },
-      id: 1152,
     },
-    search: {
+    search_1151: {
+      field_name: 'search',
+      id: 1151,
       PC: {
         event: [
           {
@@ -552,8 +607,10 @@ module.exports = {
           },
         ],
       },
-      id: 1151,
     },
-    '<DataOption extends TreeOptionData = TreeOptionData>': { id: 1150 },
+    '<DataOption extends TreeOptionData = TreeOptionData>_1150': {
+      field_name: '<DataOption extends TreeOptionData = TreeOptionData>',
+      id: 1150,
+    },
   },
 };

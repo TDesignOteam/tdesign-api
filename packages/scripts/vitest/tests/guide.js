@@ -1,6 +1,8 @@
 module.exports = {
   Guide: {
-    counter: {
+    counter_2970: {
+      field_name: 'counter',
+      id: 2970,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
@@ -9,9 +11,10 @@ module.exports = {
           params: [{ total: 1, current: 0 }],
         },
       },
-      id: 2970,
     },
-    current: {
+    current_2971: {
+      field_name: 'current',
+      id: 2971,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -46,9 +49,10 @@ module.exports = {
           '-1': { 'document.t-guide__counter': false },
         },
       },
-      id: 2971,
     },
-    finishButtonProps: {
+    finishButtonProps_2972: {
+      field_name: 'finishButtonProps',
+      id: 2972,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -62,36 +66,40 @@ module.exports = {
           },
         ],
       },
-      id: 2972,
     },
-    hideCounter: {
+    hideCounter_2976: {
+      field_name: 'hideCounter',
+      id: 2976,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
         props: { hideCounter: true },
         dom: [{ 'document.t-guide__counter': false }],
       },
-      id: 2976,
     },
-    hidePrev: {
+    hidePrev_2977: {
+      field_name: 'hidePrev',
+      id: 2977,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
         props: { current: 1, hidePrev: true },
         dom: [{ 'document.t-guide__action .t-guide__prev': false }],
       },
-      id: 2977,
     },
-    hideSkip: {
+    hideSkip_2978: {
+      field_name: 'hideSkip',
+      id: 2978,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
         props: { current: 1, hideSkip: true },
         dom: [{ 'document.t-guide__action .t-guide__skip': false }],
       },
-      id: 2978,
     },
-    highlightPadding: {
+    highlightPadding_2981: {
+      field_name: 'highlightPadding',
+      id: 2981,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
@@ -121,10 +129,11 @@ module.exports = {
           },
         ],
       },
-      id: 2981,
     },
-    mode: { id: 2968 },
-    nextButtonProps: {
+    mode_2968: { field_name: 'mode', id: 2968 },
+    nextButtonProps_2969: {
+      field_name: 'nextButtonProps',
+      id: 2969,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -138,9 +147,10 @@ module.exports = {
           },
         ],
       },
-      id: 2969,
     },
-    prevButtonProps: {
+    prevButtonProps_2973: {
+      field_name: 'prevButtonProps',
+      id: 2973,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -154,9 +164,10 @@ module.exports = {
           },
         ],
       },
-      id: 2973,
     },
-    showOverlay: {
+    showOverlay_2979: {
+      field_name: 'showOverlay',
+      id: 2979,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
@@ -165,9 +176,10 @@ module.exports = {
           false: { 'document.t-guide__highlight--mask': false },
         },
       },
-      id: 2979,
     },
-    skipButtonProps: {
+    skipButtonProps_2974: {
+      field_name: 'skipButtonProps',
+      id: 2974,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -181,9 +193,10 @@ module.exports = {
           },
         ],
       },
-      id: 2974,
     },
-    steps: {
+    steps_2975: {
+      field_name: 'steps',
+      id: 2975,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
@@ -199,9 +212,10 @@ module.exports = {
           },
         ],
       },
-      id: 2975,
     },
-    zIndex: {
+    zIndex_2980: {
+      field_name: 'zIndex',
+      id: 2980,
       PC: {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(10)',
@@ -215,9 +229,10 @@ module.exports = {
           },
         ],
       },
-      id: 2980,
     },
-    change: {
+    change_2948: {
+      field_name: 'change',
+      id: 2948,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -242,9 +257,10 @@ module.exports = {
           },
         ],
       },
-      id: 2948,
     },
-    finish: {
+    finish_2950: {
+      field_name: 'finish',
+      id: 2950,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -260,9 +276,10 @@ module.exports = {
           },
         ],
       },
-      id: 2950,
     },
-    nextStepClick: {
+    nextStepClick_2952: {
+      field_name: 'nextStepClick',
+      id: 2952,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -278,9 +295,10 @@ module.exports = {
           },
         ],
       },
-      id: 2952,
     },
-    prevStepClick: {
+    prevStepClick_2951: {
+      field_name: 'prevStepClick',
+      id: 2951,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -296,9 +314,10 @@ module.exports = {
           },
         ],
       },
-      id: 2951,
     },
-    skip: {
+    skip_2949: {
+      field_name: 'skip',
+      id: 2949,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
         trigger: 'delay(10)',
@@ -314,48 +333,53 @@ module.exports = {
           },
         ],
       },
-      id: 2949,
     },
   },
   GuideStep: {
-    body: {
-      PC: {
-        wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
-        tnode: { dom: ['document.custom-node'] },
-        snapshot: true,
-      },
+    body_2955: {
+      field_name: 'body',
       id: 2955,
-    },
-    children: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
+    },
+    children_2953: {
+      field_name: 'children',
       id: 2953,
-    },
-    content: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
+    },
+    content_2954: {
+      field_name: 'content',
       id: 2954,
-    },
-    element: { PC: {}, id: 2956 },
-    highlightContent: {
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
-      id: 2966,
     },
-    highlightPadding: {
+    element_2956: { field_name: 'element', id: 2956, PC: {} },
+    highlightContent_2966: {
+      field_name: 'highlightContent',
+      id: 2966,
+      PC: {
+        wrapper: 'getCustomGuideStepMount',
+        trigger: 'delay(10)',
+        tnode: { dom: ['document.custom-node'] },
+        snapshot: true,
+      },
+    },
+    highlightPadding_2965: {
+      field_name: 'highlightPadding',
+      id: 2965,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
@@ -385,18 +409,20 @@ module.exports = {
           },
         ],
       },
-      id: 2965,
     },
-    mode: {
+    mode_2967: {
+      field_name: 'mode',
+      id: 2967,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
         dom: ['document.t-popup', 'document.t-guide__dialog'],
         snapshot: true,
       },
-      id: 2967,
     },
-    nextButtonProps: {
+    nextButtonProps_2957: {
+      field_name: 'nextButtonProps',
+      id: 2957,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
         trigger: 'delay(10)',
@@ -410,10 +436,11 @@ module.exports = {
           },
         ],
       },
-      id: 2957,
     },
-    offset: { id: 2958 },
-    placement: {
+    offset_2958: { field_name: 'offset', id: 2958 },
+    placement_2959: {
+      field_name: 'placement',
+      id: 2959,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
@@ -427,9 +454,10 @@ module.exports = {
         ],
         snapshot: true,
       },
-      id: 2959,
     },
-    popupProps: {
+    popupProps_3307: {
+      field_name: 'popupProps',
+      id: 3307,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
@@ -442,9 +470,10 @@ module.exports = {
           },
         ],
       },
-      id: 3307,
     },
-    prevButtonProps: {
+    prevButtonProps_2960: {
+      field_name: 'prevButtonProps',
+      id: 2960,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
         trigger: 'delay(10)',
@@ -458,9 +487,10 @@ module.exports = {
           },
         ],
       },
-      id: 2960,
     },
-    showOverlay: {
+    showOverlay_2964: {
+      field_name: 'showOverlay',
+      id: 2964,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
         trigger: 'delay(10)',
@@ -469,9 +499,10 @@ module.exports = {
           false: { 'document.t-guide__highlight--mask': false },
         },
       },
-      id: 2964,
     },
-    skipButtonProps: {
+    skipButtonProps_2961: {
+      field_name: 'skipButtonProps',
+      id: 2961,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
         trigger: 'delay(10)',
@@ -485,9 +516,10 @@ module.exports = {
           },
         ],
       },
-      id: 2961,
     },
-    stepOverlayClass: {
+    stepOverlayClass_2963: {
+      field_name: 'stepOverlayClass',
+      id: 2963,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
@@ -499,16 +531,16 @@ module.exports = {
         ],
         snapshot: true,
       },
-      id: 2963,
     },
-    title: {
+    title_2962: {
+      field_name: 'title',
+      id: 2962,
       PC: {
         wrapper: 'getCustomGuideStepMount',
         trigger: 'delay(10)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
-      id: 2962,
     },
   },
 };

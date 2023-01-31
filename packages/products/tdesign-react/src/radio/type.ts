@@ -95,7 +95,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
   /**
    * 选中值发生变化时触发
    */
-  onChange?: (value: T, context: { e: ChangeEvent<HTMLInputElement> }) => void;
+  onChange?: (value: T, context: { e: ChangeEvent<HTMLDivElement> }) => void;
 }
 
 export type RadioValue = string | number | boolean;

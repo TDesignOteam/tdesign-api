@@ -30,7 +30,8 @@ function generateEventUnitCase(test, oneApiData, framework, component) {
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
-  const { event, props, trigger, content, wrapper, delay, skip } = test;
+  const { props, trigger, content, wrapper, delay, skip } = test;
+  let { event } = test;
   if (props && Array.isArray(event)) {
     event = event.map((oneEvent) => ({
       ...oneEvent,
