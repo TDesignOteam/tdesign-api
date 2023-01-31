@@ -722,7 +722,10 @@ function makeObjectToString(objectArgs) {
 
 function makeArrayToString(arrayArgs) {
   const arr = ['['];
-  const objList = arrayArgs.map((obj) => makeObjectToString(obj)).join(',');
+  const objList = arrayArgs.map((obj) => {
+    if (typeof obj === 'object') return makeObjectToString(obj);
+    return typeof obj === 'string' ? `'${obj}'` : obj;
+  }).join(',');
   arr.push(objList);
   arr.push(']');
   return arr.join('');

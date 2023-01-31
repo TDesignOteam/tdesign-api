@@ -59,7 +59,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false, ...props }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true, ...props }, extraCode);
-    const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1);
+    const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1 && trigger && trigger.indexOf('document') !== -1);
     const defaultDesc = description || `${propsCode}.${oneApiData.field_name}: ${component} contains element \`${dom}\``;
     const arr = [
       `it${getSkipCode(skip)}('${defaultDesc}', ${async}() => {`,
@@ -108,7 +108,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     } else {
       // API 不存在枚举值，直接检测数组中的元素是否存在，以及元素的数量
       let arr = [];
-      const onlyDocumentDom = isOnlyDocumentDom(dom);
+      const onlyDocumentDom = isOnlyDocumentDom(dom, trigger);
       dom.forEach((domInfo) => {
         const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
         let domInfoText = JSON.stringify(domInfo);
@@ -131,7 +131,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   // 不同的值对应不同的 DOM 元素，示例：{"PC":{ "dom": { "[3, 1]": ".t-table__row--fixed-top" } }}
   if (!Array.isArray(dom) && typeof dom === 'object') {
     let arr = [];
-    const onlyDocumentDom = isOnlyDocumentDom(dom);
+    const onlyDocumentDom = isOnlyDocumentDom(dom, trigger);
     Object.entries(dom).forEach(([value, domInfo]) => {
       const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
       const defaultDesc = description || `${propsCode}.${oneApiData.field_name} is equal ${value.replace(/'/g, '')}`;
@@ -150,7 +150,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   }
 }
 
-function isOnlyDocumentDom(dom) {
+function isOnlyDocumentDom(dom, trigger) {
   let onlyDocumentDom = true;
   let domList = [];
   const loop = (dom) => {
@@ -179,6 +179,10 @@ function isOnlyDocumentDom(dom) {
       }
     })
   })
+  const triggerIsInDocument = Boolean(trigger && trigger.indexOf('document') !== -1);
+  if (!triggerIsInDocument) {
+    onlyDocumentDom = false;
+  }
   return onlyDocumentDom;
 }
 

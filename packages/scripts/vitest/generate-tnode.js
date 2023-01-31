@@ -158,7 +158,8 @@ function getTestCaseByComponentCode(params) {
   } = params;
   const needAsync = getItAsync(trigger, framework);
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
-  const onlyDocumentDom = Boolean(tnode.dom && tnode.dom.length && tnode.dom.every(item => item.includes('document')));
+  const triggerIsInDocument = Boolean(trigger && trigger.indexOf('document') !== -1);
+  const onlyDocumentDom = Boolean(triggerIsInDocument && tnode.dom && tnode.dom.length && tnode.dom.every(item => item.includes('document')));
   const arr = [
     `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),
