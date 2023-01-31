@@ -50,8 +50,8 @@ function groupByFieldCategory(componentApi) {
         api.field_desc_zh = curLanguage.PlainObjectText.replace(/\${component}/g, api.component);
         api.field_desc_en = curLanguage.PlainObjectText.replace(/\${component}/g, api.component);
       } else {
-        api.field_desc_zh = extendsText.replace(/\${fieldName}/g, api.field_name.replace('Td', ''));
-        api.field_desc_en = extendsText.replace(/\${fieldName}/g, api.field_name.replace('Td', ''));
+        api.field_desc_zh = curLanguage.extendsText.replace(/\${fieldName}/g, api.field_name.replace('Td', ''));
+        api.field_desc_en = curLanguage.extendsText.replace(/\${fieldName}/g, api.field_name.replace('Td', ''));
       }
     }
     const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
