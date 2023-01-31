@@ -284,7 +284,7 @@ function replaceInputEvent(str, newApi) {
   const triggerElements = newApi.trigger_elements.split('/');
   newStr = newStr.replace(reg, (val) => {
     const r = triggerElements.find(el => el && el.indexOf(val) !== -1);
-    return (r || `${val}<HTMLDivElement>`);
+    return (r || `${val}<${['FormEvent', 'InputEvent'].includes(val) ? 'HTMLInputElement' : 'HTMLDivElement'}>`);
   });
   return newStr;
 }
