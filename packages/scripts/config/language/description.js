@@ -20,6 +20,8 @@ module.exports = {
     htmlAttributeText: 'HTML 原生属性',
     tsTypeText: 'TS 类型',
     deprecated: '已废弃',
+    extendsText: '继承 ${fieldName} 中的全部属性',
+    PlainObjectText: `\`PlainObject\` 不是 \${component} 中的属性，而表示 \${component} 本身支持添加任意属性，\`type PlainObject = {[key: string]: any}\`'`,
   },
   en: {
     descriptionField: 'field_desc_en',
@@ -42,5 +44,7 @@ module.exports = {
     htmlAttributeText: 'html attribute',
     tsTypeText: 'Typescript',
     deprecated: '`deprecated`',
+    extendsText: 'extends ${fieldName}',
+    PlainObjectText: `\`PlainObject\` is not an attribute of \${component}，it means you can add and attributes to \${component}, \`type PlainObject = {[key: string]: any}\`'`,
   },
 };
