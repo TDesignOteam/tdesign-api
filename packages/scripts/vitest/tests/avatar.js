@@ -116,9 +116,11 @@ module.exports = {
         wrapper: 'getAvatarGroupDefaultMount',
         props: { max: 3 },
         dom: [
-          { '.t-avatar': 4 },
-          { '.t-avatar__collapse': 1 },
-          { '.t-avatar__collapse > span': { text: '+2' } },
+          {
+            '.t-avatar': 4,
+            '.t-avatar__collapse': 1,
+            '.t-avatar__collapse > span': { text: '+2' },
+          },
         ],
       },
     },

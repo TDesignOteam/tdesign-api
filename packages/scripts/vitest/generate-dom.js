@@ -19,7 +19,7 @@ const { getSkipCode } = require("./utils");
 function generateDomUnitCase(test, oneApiData, framework, component) {
   let arr = [];
   const { dom, props, variables, description, snapshot } = test;
-  if (Array.isArray(dom)) {
+  if (Array.isArray(dom) && dom[0] && dom[0].dom) {
     dom.forEach((oneDom) => {
       const oneDomProps = oneDom.props;
       const oneDomVariables = oneDom.variables;

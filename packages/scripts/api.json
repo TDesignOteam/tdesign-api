@@ -6283,7 +6283,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"props\":{\"max\":3},\"dom\":[{\".t-avatar\":4},{\".t-avatar__collapse\":1},{\".t-avatar__collapse > span\":{\"text\":\"+2\"}}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"props\":{\"max\":3},\"dom\":[{\".t-avatar\":4,\".t-avatar__collapse\":1,\".t-avatar__collapse > span\":{\"text\":\"+2\"}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52803,7 +52803,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52844,7 +52844,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52885,7 +52885,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52925,7 +52925,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\", \"content\": \"Text\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -52966,7 +52966,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\": \"t-link--hover-${item}\", \"content\": \"Text\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-link--hover-${item}\",\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53007,7 +53007,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\": { \"href\": \"https://tdesign.tencent.com/\" }, \"content\": \"Text\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"attribute\":{\"href\":\"https://tdesign.tencent.com/\"},\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53048,7 +53048,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53089,7 +53089,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"content\": \"Text\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53130,7 +53130,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53171,7 +53171,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\": { \"target\": \"_blank\" }, \"content\": \"Text\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"attribute\":{\"target\":\"_blank\"},\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53212,7 +53212,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\": \"t-link--theme-${item}\", \"content\": \"Text\", \"snapshot\": true}}",
+      "test_description": "{\"PC\":{\"className\":\"t-link--theme-${item}\",\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53253,7 +53253,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-is-underline\", \"content\": \"Text\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-underline\",\"content\":\"Text\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -53292,7 +53292,7 @@
       "trigger_elements": "MouseEvent<HTMLAnchorElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{ \"event\": { \"click\": { \"arguments\": [{ \"stopPropagation\": true, \"type\": \"click\" }] } } }}",
+      "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"stopPropagation\":true,\"type\":\"click\"}]}}}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
