@@ -1,7 +1,26 @@
 module.exports = {
   Tree: {
     activable_536: { field_name: 'activable', id: 536 },
-    activeMultiple_537: { field_name: 'activeMultiple', id: 537 },
+    activeMultiple_537: {
+      field_name: 'activeMultiple',
+      id: 537,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            props: { activable: true, actived: [1] },
+            expect: [
+              {
+                trigger: '.t-tree__item:nth-child(2)',
+                delay: true,
+                exist: { '.t-tree__item.t-is-active': 2 },
+                event: { change: [[1, 2]] },
+              },
+            ],
+          },
+        ],
+      },
+    },
     actived_538: {
       field_name: 'actived',
       id: 538,
