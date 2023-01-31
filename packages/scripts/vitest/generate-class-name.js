@@ -90,31 +90,44 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   }
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
-  if (typeof className === 'string' && oneApiData.field_type_text[0] === 'Boolean') {
-    const mountCode1 = getMountComponent(framework, component, { ...props }, extraCode);
-    const mountCode2 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: true }, extraCode);
-    const mountCode3 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: false }, extraCode);
-    const arr = [
-      `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
-      `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
-      getWrapper(framework, mountCode1, classNameDom, '1'),
-      trigger && getPresetsExpect(trigger, framework, component),
-      oneApiData.field_default_value === 'true'
-        ? getClassNameExpectTruthy(framework, `'${className}'`, '1', classNameDom)
-        : getClassNameExpectFalsy(framework, `'${className}'`, '1', classNameDom),
-      `// ${oneApiData.field_name} = true`,
-      getWrapper(framework, mountCode2, classNameDom, '2'),
-      trigger && getPresetsExpect(trigger, framework, component),
-      getClassNameExpectTruthy(framework, `'${className}'`, '2', classNameDom),
-      getSnapshotCase(snapshot, framework, '2'),
-      `// ${oneApiData.field_name} = false`,
-      getWrapper(framework, mountCode3, classNameDom, '3'),
-      trigger && getPresetsExpect(trigger, framework, component),
-      getClassNameExpectFalsy(framework, `'${className}'`, '3', classNameDom),
-      getSnapshotCase(snapshot, framework, '3'),
-      '});',
-    ];
-    return arr;
+  if (typeof className === 'string') {
+    if (oneApiData.field_type_text[0] === 'Boolean') {
+      const mountCode1 = getMountComponent(framework, component, { ...props }, extraCode);
+      const mountCode2 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: true }, extraCode);
+      const mountCode3 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: false }, extraCode);
+      const arr = [
+        `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
+        `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
+        getWrapper(framework, mountCode1, classNameDom, '1'),
+        trigger && getPresetsExpect(trigger, framework, component),
+        oneApiData.field_default_value === 'true'
+          ? getClassNameExpectTruthy(framework, `'${className}'`, '1', classNameDom)
+          : getClassNameExpectFalsy(framework, `'${className}'`, '1', classNameDom),
+        `// ${oneApiData.field_name} = true`,
+        getWrapper(framework, mountCode2, classNameDom, '2'),
+        trigger && getPresetsExpect(trigger, framework, component),
+        getClassNameExpectTruthy(framework, `'${className}'`, '2', classNameDom),
+        getSnapshotCase(snapshot, framework, '2'),
+        `// ${oneApiData.field_name} = false`,
+        getWrapper(framework, mountCode3, classNameDom, '3'),
+        trigger && getPresetsExpect(trigger, framework, component),
+        getClassNameExpectFalsy(framework, `'${className}'`, '3', classNameDom),
+        getSnapshotCase(snapshot, framework, '3'),
+        '});',
+      ];
+      return arr;
+    } else {
+      // 纯字符串验证，不是 Boolean 类型
+      const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
+      return [
+        `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
+        getWrapper(framework, mountCode, classNameDom),
+        trigger && getPresetsExpect(trigger, framework, component),
+        getClassNameExpectTruthy(framework, `'${className}'`, '', classNameDom),
+        getSnapshotCase(snapshot, framework),
+        '});',
+      ];
+    }
   }
 
   // 如果是「枚举值：类名」映射关系

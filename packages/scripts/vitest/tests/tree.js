@@ -2,7 +2,18 @@ module.exports = {
   Tree: {
     activable_536: { field_name: 'activable', id: 536 },
     activeMultiple_537: { field_name: 'activeMultiple', id: 537 },
-    actived_538: { field_name: 'actived', id: 538 },
+    actived_538: {
+      field_name: 'actived',
+      id: 538,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        props: { actived: [1] },
+        trigger: 'delay(300)',
+        classNameDom: '.t-tree__item:first-child',
+        className: 't-is-active',
+        snapshot: true,
+      },
+    },
     allowFoldNodeOnFilter_2444: { field_name: 'allowFoldNodeOnFilter', id: 2444 },
     checkProps_526: { field_name: 'checkProps', id: 526 },
     checkStrictly_527: { field_name: 'checkStrictly', id: 527 },

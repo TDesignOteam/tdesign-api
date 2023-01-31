@@ -27,8 +27,6 @@ function generateToFinalProject() {
     shell.exec('npm run api:download')
     const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
     shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
-    // 推送所有变更到远程仓库（手动操作，在合适的时机，无需每次变更都提交）
-    // shell.exec('git add . && git commit -m "feat(test): upload tests to db" && git push');
   }, (e) => {
     console.error(e);
   });

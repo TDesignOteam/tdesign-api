@@ -150,7 +150,11 @@ function getPropsValue(value) {
     || value.indexOf('/>') !== -1
     || /^\[.+\]$/.test(value)
     || /^\{.+\}$/.test(value)
-  )) return value;
+    )) return value;
+  // 对象数组
+  if (Array.isArray(value) || !Array.isArray(value) && typeof value) {
+    return JSON.stringify(value);
+  }
   // 可能是一个对象或数组字符串
   try {
     JSON.parse(value)

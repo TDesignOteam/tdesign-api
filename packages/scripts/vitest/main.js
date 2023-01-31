@@ -51,7 +51,7 @@ function getOneUnitTest(framework, component, oneApiData, test) {
     // 空对象无效，返回
     if (!test[key] || typeof test[key] === 'object' && !Object.keys(test[key]).length) return;
     if (generateFunctionsMap[key]) {
-      const oneApiTestCase = generateFunctionsMap[key](test, oneApiData, framework, component)
+      const oneApiTestCase = generateFunctionsMap[key](test, oneApiData, framework, component);
       if (oneApiTestCase && oneApiTestCase.length) {
         oneUnitTests = oneUnitTests.concat([oneApiTestCase.join('\n')]);
         if (key === 'event') {
@@ -84,6 +84,7 @@ function getOneUnitTest(framework, component, oneApiData, test) {
   });
 
   importedTestUtils.push(...getVariableImports(test));
+
   return { oneUnitTests, hasEvent, importedMounts, importedTestUtils };
 }
 
