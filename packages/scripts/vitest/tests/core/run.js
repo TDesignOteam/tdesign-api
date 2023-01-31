@@ -1,8 +1,14 @@
+const fs = require('fs');
+const path = require('path');
 const shell = require('shelljs');
+const kebabCase = require('lodash/kebabCase');
 const { uploadVitestFileDataToDB } = require('./utils');
 const chalk = require('chalk');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('../../const/vue2-use-default');
-const [component, framework] = process.argv.slice(2);
+const [component, framework, args] = process.argv.slice(2);
+
+const argsList = args.split(',');
+const isWatch = argsList.includes('watch');
 
 if (!component) {
   console.log(chalk.red('component is required.'));
@@ -13,8 +19,9 @@ if (!framework) {
   return;
 }
 
-// 同步 vitest/tests 文件数据到本地 DB 文件
-uploadVitestFileDataToDB(component)
+function generateToFinalProject() {
+  // 同步 vitest/tests 文件数据到本地 DB 文件
+  uploadVitestFileDataToDB(component)
   .then(() => {
     // 同步 DB 文件数据到 JSON
     shell.exec('npm run api:download')
@@ -25,3 +32,17 @@ uploadVitestFileDataToDB(component)
   }, (e) => {
     console.error(e);
   });
+}
+
+if (isWatch) {
+  const filePath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
+  console.log(`start to listen ${filePath}`);
+  fs.watchFile(filePath, { interval: 1000 }, (current, previous) => {
+    console.log('---- starting to generate -----');
+    if (current.size !== previous.size) {
+      generateToFinalProject();
+    }
+  });
+} else {
+  generateToFinalProject();
+}
