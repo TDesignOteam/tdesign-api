@@ -13,6 +13,8 @@ npm run api:test <component> <framework> vitest,finalProject
 - 第二个参数：框架名称，示例：Vue(PC)，可选值：Vue(PC)、VueNext(PC)、React(PC)、Vue(Mobile)、React(Mobile)。
   其中 Vue(PC) 表示 Vue2，VueNext(PC) 表示 Vue3。Vue(Mobile) 表示 Vue3。
 
+加上参数 `watch` 表示改动 vitest/tests 中的文件时，会实时同步测试用例到项目里面。`npm run api:test Button 'React(PC)' vitest,finalProject,watch`
+
 ## 从 DB 更新测试用例到项目
 
 注意：会自动拉取远程仓库的 DB 文件中的测试用例，覆盖 `vitest/tests` 中的内容，
