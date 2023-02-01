@@ -11,7 +11,7 @@ module.exports = {
             props: { activable: true, actived: [1] },
             expect: [
               {
-                trigger: '.t-tree__item:nth-child(2)',
+                trigger: 'click(.t-tree__item:nth-child(2))',
                 delay: true,
                 exist: { '.t-tree__item.t-is-active': 2 },
                 event: { change: [[1, 2]] },
