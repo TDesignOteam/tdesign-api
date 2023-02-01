@@ -77,6 +77,9 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |
 | props | Object | 给组件添加属性 |
 | trigger | String | 开启校验的前置条件。主要应用于需要触发某个事件 或者 延迟 N 秒后，才会显示相关元素的场景。如：TreeSelect 点击后才会显示面板；Guide 需要等待 100 毫秒渲染完成后才能开始校验）。示例一：`trigger: 'click(.t-input)'`，示例二：`trigger: 'delay(300)'`|
+| wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
+| snapshot | Boolean | 通用属性。是否输出快照 |
+| content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
 | variables | Array | 整个测试用例全局变量 |
 | imports | Array | 额外引入的针对单个组件的函数或变量 |
 | beforeAll | Array | 全部单测用例之前执行 |
