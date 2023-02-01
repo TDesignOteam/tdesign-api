@@ -470,7 +470,7 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 
 ### 4.5 输出多个 TNode 测试用例
 
-```json
+```js
 tnode: [
   {
     description: 'children works fine if theme = file',
@@ -541,7 +541,7 @@ React 的测试用例会根据这里面的枚举值自动转化
 其中，`props` 表示传递给组件的额外属性参数。
 
 
-#### 5.2.2 一次交互触发多个事件，同时校验元素是否存在**
+#### 5.2.2 一次交互触发多个事件，同时校验元素是否存在
 
 事件枚举值：https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109
 
@@ -556,7 +556,7 @@ React 的测试用例会根据这里面的枚举值自动转化
           "trigger": "click(.t-input__suffix-clear)",
           "event": {
             "clear": [{ "stopPropagation": true, "e.type": "click" }],
-            "change": ["''", { "e.type": 'click' }]
+            "change": ["''", { "e.type": "click" }]
           }
         }
       ],
