@@ -213,8 +213,10 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
     return wrapperDefinition.join('\n');
   }
   if (framework.indexOf('React') !== -1) {
-    if (onlyDocumentDom) return mountCode;
     const triggerCode = trigger && getPresetsExpect(trigger, framework, component);
+    if (onlyDocumentDom) {
+      return [mountCode, triggerCode].filter(v => v).join('\n');
+    }
     return getReactWrapper(mountCode, goalDom, wrapperIndex, { triggerCode });
   }
 }
