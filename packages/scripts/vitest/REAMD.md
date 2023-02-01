@@ -27,13 +27,17 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 - 第一个参数：组件名称。示例：Button，大驼峰命名。
 - 第二个参数：框架名称，示例：Vue(PC)，可选值：Vue(PC)、VueNext(PC)、React(PC)、Vue(Mobile)、React(Mobile)。
   其中 Vue(PC) 表示 Vue2，VueNext(PC) 表示 Vue3。Vue(Mobile) 表示 Vue3。
-  
+
 ## API
 
 总述：将测试用例分为 5 大类：类名检测、属性检测、元素检测、TNode 检测以及人机交互检测。
 
 - 以一个 API 为单位，输出测试用例。如 button.disabled 表示一个 API，会一次性输出一个或多个测试用例。如果是多个 API 联合作用，可以只写一个。
 - 测试用例尽量保持简洁，方便阅读和排查问题，切勿一个用例测试很多个功能。
+- 交互少以 UI 为主的组件，校验重要元素是否存在，并使用 `snapshot: true` 辅助测试即可，无需每个元素都校验。
+- 交互多的组件，以 `event` 人机交互测试用例为主。
+- 类名校验使用 `className`，内联样式(style)使用属性校验规则 `attribute`，具体参看下方示例。
+- `tnode/className/tnode` 等规则支持不同规则使用不同的 Props 属性，以数组形式存在，可以搜索 `vitest/tests` 中的文件寻找示例代码。
 
 ### 概览
 
@@ -151,7 +155,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | simulateInputEnter | 输入框回车事件，示例：simulateInputEnter('input')，表示触发元素 `input` 回车事件 |
 | 'keydown.enter' | 输入框回车事件，示例：`'keydown.enter(input)'`。同 `simulateInputEnter`，区别主要在于 React 单测示例输出代码不同，但功能完全相同。 |
 | simulateImageEvent | 图片加载事件，示例: `simulateImageEvent('load')` 或 `simulateImageEvent('error')`，表示加载成功或失败 |
-| simulateKeydownEvent | 文档 `document` 键盘事件 |
+| simulateKeydownEvent | 文档 `document` 键盘事件，示例：`trigger: "simulateKeydownEvent(document, 'ArrowDown')"` |
 | getFakeFileList | 获取模拟文件列表，主要用于 Upload 组件，示例：`getFakeFileList('file', 1)` 或 `getFakeFileList('image', 3)` |
 | simulateFileChange | 触发文件选择变化，主要用于 Upload 组件，示例：`simulateFileChange('input')` 或 `simulateFileChange('.input', 'file', 2)` |
 | simulateDragFileChange | 触发文件拖拽选择变化，主要用于 Upload 组件，示例：`simulateDragFileChange('input', 'dragLeave')` 或 `simulateDragFileChange('input', 'dragEnter', 'image', 3)`。第二个参数可选值有：`dragEnter/dragLeave/dragOver/drop` |
@@ -439,6 +443,33 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ```
 
 表示 TNode 函数的第一个参数属性 `value` 值为 tdesign-vue`
+
+### 4.5 输出多个 TNode 测试用例
+
+```json
+tnode: [
+  {
+    description: 'children works fine if theme = file',
+    props: { theme: 'file', action: 'https://tdesign.test.com/upload/file_success' },
+    snapshot: true,
+  },
+  {
+    description: 'children works fine if theme = custom',
+    props: { theme: 'custom', action: 'https://tdesign.test.com/upload/file_success' },
+    snapshot: true,
+  },
+  {
+    description: 'children works fine if theme = custom & draggable=true',
+    props: {
+      theme: 'custom',
+      draggable: true,
+      action: 'https://tdesign.test.com/upload/file_success',
+    },
+    params: [{ dragActive: false, files: [] }],
+    snapshot: true,
+  },
+]
+```
 
 ---
 
