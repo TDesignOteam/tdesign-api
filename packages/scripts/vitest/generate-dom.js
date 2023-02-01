@@ -138,8 +138,8 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
       const oneValueArr = [
         `it${getSkipCode(skip)}('${defaultDesc}', ${async} () => {`,
         getVariablesCode(variables),
-        trigger && getPresetsExpect(trigger, framework, component),
         getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
+        trigger && getPresetsExpect(trigger, framework, component),
         getDomExpect(framework, domInfo),
         getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
         `});\n`,

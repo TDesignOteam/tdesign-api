@@ -194,7 +194,7 @@ function getSnapshotCase(snapshot, framework, wrapperIndex = '', onlyDocumentDom
  * @returns 
  */
 function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extraData = {}) {
-  const { trigger = '', wrapper, onlyDocumentDom } = extraData;
+  const { trigger = '', component, wrapper, onlyDocumentDom } = extraData;
   if (framework.indexOf('Vue') !== -1) {
     const findDomCode = goalDom ? `.find('${goalDom}')` : '';
     const wrapperDefinition = [];
@@ -209,25 +209,31 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
     }
     if (onlyDocumentDom) return `${tmpMountCode}${findDomCode};`;
     wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
+    trigger && wrapperDefinition.push(getPresetsExpect(trigger, framework, component));
     return wrapperDefinition.join('\n');
   }
   if (framework.indexOf('React') !== -1) {
     if (onlyDocumentDom) return mountCode;
-    return getReactWrapper(mountCode, goalDom, wrapperIndex);
+    const triggerCode = trigger && getPresetsExpect(trigger, framework, component);
+    return getReactWrapper(mountCode, goalDom, wrapperIndex, { triggerCode });
   }
 }
 
-function getReactWrapper(mountCode, goalDom = '', wrapperIndex = '') {
+function getReactWrapper(mountCode, goalDom = '', wrapperIndex = '', { triggerCode }) {
   const i = wrapperIndex;
   if (goalDom) {
     return [
       `const wrapper${i} = ${mountCode};`,
+      triggerCode,
       `const container${i} = wrapper${i}.container.querySelector('${goalDom}');`
-    ].join('\n');
+    ].filter(v => v).join('\n');
   }
-  return wrapperIndex
-    ? `const { container: container${wrapperIndex} } = ${mountCode};`
-    : `const { container } = ${mountCode};`;
+  return [
+    wrapperIndex
+      ? `const { container: container${wrapperIndex} } = ${mountCode};`
+      : `const { container } = ${mountCode};`,
+    triggerCode,
+  ].filter(v => v).join('\n');
 }
 
 function getVariableBySelector(selector) {

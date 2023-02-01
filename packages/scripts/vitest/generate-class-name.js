@@ -121,8 +121,8 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
       return [
         `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
-        getWrapper(framework, mountCode, classNameDom),
-        trigger && getPresetsExpect(trigger, framework, component),
+        getWrapper(framework, mountCode, classNameDom, '', { trigger, component, ...extraCode }),
+        // trigger && getPresetsExpect(trigger, framework, component),
         getClassNameExpectTruthy(framework, `'${className}'`, '', classNameDom),
         getSnapshotCase(snapshot, framework),
         '});',
