@@ -39,7 +39,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 - 交互少以 UI 为主的组件，校验重要元素是否存在，并使用 `snapshot: true` 辅助测试即可，无需每个元素都校验。
 - 交互多的组件，以 `event` 人机交互测试用例为主。
 - 类名校验使用 `className`，内联样式(style)使用属性校验规则 `attribute`，具体参看下方示例。
-- `tnode/className/tnode` 等规则支持不同规则使用不同的 Props 属性，以数组形式存在，可以搜索 `vitest/tests` 中的文件寻找示例代码。
+- `tnode/className/dom` 等规则支持不同规则使用不同的 Props 属性，以数组形式存在，可以搜索 `vitest/tests` 中的文件寻找示例代码。
 
 ### 概览
 
@@ -47,10 +47,15 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 
 ```js
 {
+  // 类名校验 ''/[]/{}
   className: '',
+  // 属性校验 ''/{}/[]
   attribute: '',
+  // 元素校验 ''/{}/[]
   dom: [],
+  // TNode 校验 true/{}
   tnode: true,
+  // 人机交互事件校验
   event: [],
   classNameDom: '',
   attributeDom: '',
@@ -121,7 +126,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | attributeDom | String | 子元素 DOM 选择器，当 `attribute` 字段存在时有意义。表示 `attribute` 所有规则应用到组件的子元素 `attributeDom` 上。<br/>若 `attributeDom` 不存在，则表示 `attribute` 规则应用到组件根元素。 示例：`"attributeDom": ".t-input"`<br/>如果元素不是子元素，而存在于文档中根元素（body）中，使用 `'document.t-popup'` 表示|
 | attribute | Object | API 存在枚举值，校验不同的枚举值对应的不同属性。示例：`{"attribute": { "type": ["submit", "reset", "button"] }}`|
 | attribute | Object | API 的值是多少，期望的属性值就是多少。示例：`{"attribute": { "href": "https://tdesign.tencent.com/" }}` |
-| attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }> }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"` |
+| attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }> }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"`。<br>1) `{ dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } }` 表示校验 `.t-guide__overlay` 元素 是否存在内联样式 `style.zIndex`，且值为 `4988`|
 
 ---
 
@@ -132,7 +137,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | dom | String | 检测某个元素是否存在，示例：`{ dom: '.t-loading' }` |
 | dom | Object | 不同的 API 值对应着不同 DOM 元素的存在。示例：`{ "dom": { "[3, 1]": ".t-table__row--fixed-top" } }`，表示当 API 值为 `[3,1]` 时，元素 `.t-table__row--fixed-top` 是否存在 |
 | dom | `Array<string | object>` | 检测某个元素是否存在，示例：`['tfoot.t-table__footer']`。<br/> 检测某个元素存在 3 个，示例：`[{ ".t-table__row--fixed-top": 3 }]`。<br/> 检测某个元素不存在，示例：`[{ '.t-input': false }]`。检测元素的文本内容，示例：`[{ '.t-input': { text: 'this is textContent' } }]` |
-| dom | `Array<{ dom: {}, props: {}, trigger: '', ... }>` | 应用于复杂场景，一个 API 需要多个 DOM 测试用例，每个测试用例有不同的规则、不同的组件属性、不同的延迟规则等 |
+| dom | Array | `Array<{ dom: {}, props: {}, trigger: '', ... }>`。应用于复杂场景，一个 API 需要多个 DOM 测试用例，每个测试用例有不同的规则、不同的组件属性、不同的延迟规则等。可以在 `vitest/tests` 目录中搜索实际应用场景，如：Upload 组件中有示例 |
 
 ## TNode Tests
 
@@ -140,7 +145,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | - | - | - |
 | tnode | Boolean | `{ tnode: true }` 直接输出测试用例 |
 | tnode | Object | `{ dom: string[], trigger: string, params: {} }`，`dom` 表示除自定义元素外，还需要检测哪些元素存在，trigger 表示延迟多少毫秒或者点击什么元素后再开始验证，params 表示 TNode 参数 |
-| tnode | `Array<{ props, dom, trigger, params }>` | 上述规则的数组形式，输出多个测试用例 |
+| tnode | Array | `Array<{ props, dom, trigger, params }>`。上述规则的数组形式，输出多个测试用例 |
 
 ## 人机交互 Event Tests
 
