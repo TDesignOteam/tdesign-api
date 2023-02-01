@@ -122,7 +122,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
 
     if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
       const slotCodeProps2 = {
-        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': () => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
+        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': (${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
         ...props,
       };
       if (isBothBooleanAndTNode) {
