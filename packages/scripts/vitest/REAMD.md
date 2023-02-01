@@ -139,6 +139,18 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | tnode | Object | `{ dom: string[], trigger: string, params: {} }`，`dom` 表示除自定义元素外，还需要检测哪些元素存在，trigger 表示延迟多少毫秒或者点击什么元素后再开始验证，params 表示 TNode 参数 |
 | tnode | `Array<{ props, dom, trigger, params }>` | 上述规则的数组形式，输出多个测试用例 |
 
+## 人机交互 Event Tests
+
+数据结构示例：`event: [{ trigger, delay, exist, event }]`
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| trigger | String | `trigger= 'mousenter(.t-input)'` ，鼠标移动到输入框。普通事件名有：`click/mouseenter/mouseleave/blur/focus` 等，模拟事件见下方单独的文档描述。 |
+| delay | Boolean/Number | `delay: true` 表示延迟开始校验。`delay: 0` 表示 0 毫秒开始校验，注意和 `delay: true` 有一个 `setTimeout(() => {}, 0)` 的区别。`delay: 300` 延迟 300 毫秒开始校验 |
+| event | Array | 类型：`Array<{ [eventHandler: string]: Array<any>}>`。`eventHandler` 为不带 on 的驼峰命名事件。 <br/>1) `event: { change: [] }` 表示校验是否触发 `onChange` 事件；<br/>2) `event: { change: [[1,2], { 'e.type': 'click' }] }` 表示触发的 `onChange` 事件参数第一个参数为 `[1,2]`，第二个参数必须存在属性 `e`，且 `e.type` 值为 `click`；<br/>3) `event: { change: ['length=3'] }` 表示 `onChange` 第一个参数的长度为 3 |
+| exist | Array | 类型：`Array<string \| object>`。<br/> 1) `exist: ['.t-input']` 表示校验元素 `.t-input` 是否存在；<br/>2) `exist: [{ '.t-tree__item': 3 }]` 表示校验元素 `'.t-tree__item'` 是否存在 3 个；<br/>3) `exist: [{ '.t-is-active': false }]` 表示校验元素 `.t-is-active` 是否不存在；<br/>4) `exist: [{ '.t-is-active': { text: 'Custom Text' } }]` 表示校验元素 `.t-is-active` 的文本内容是否为 `Custom Text`。<br/>5) `exist: [{ input: { attribute: { value: '100' } } }]` 表示校验元素的值是否为 `'100'`。<br/>6) `exist: [{ input: { attribute: { type: 'password' } } }]`表示校验元素的属性 `type` 值是否为 `password`。<br/>7) `exist: [{ 'document.t-popup': { className: ['custom-popup-class-name'] } }]` 表示校验文档元素 `.t-popup` 是否存在类名 `'custom-popup-class-name'` |
+
+
 ---
 
 ### 延迟 delay
@@ -149,6 +161,8 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 ---
 
 ### 模拟事件列表
+
+普通事件名：`click/mouseenter/mouseleave/blur/focus` 等。
 
 | 事件 | 描述 |
 | -- | -- |
@@ -533,8 +547,8 @@ React 的测试用例会根据这里面的枚举值自动转化
         {
           "trigger": "click(.t-input__suffix-clear)",
           "event": {
-            "clear": [{ "stopPropagation": true }],
-            "change": ["''", { "stopPropagation": true }]
+            "clear": [{ "stopPropagation": true, "e.type": "click" }],
+            "change": ["''", { "e.type": 'click' }]
           }
         }
       ],
