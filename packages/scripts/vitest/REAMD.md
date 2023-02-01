@@ -2,6 +2,8 @@
 
 输出测试用例到 DB 和 项目中。
 
+⚠️ 注意：先启动本地 DB 服务，`npm run dev`。
+
 在 vitest/tests 中开发输出测试用例，保存后，执行 `npm run api:test Button 'React(PC)' vitest,finalProject` 进行实时联调。
 会自动输出测试用例到项目文件中。
 
