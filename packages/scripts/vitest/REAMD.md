@@ -1,5 +1,7 @@
 ## 设计&开发测试用例
 
+输出测试用例到 DB 和 项目中。
+
 在 vitest/tests 中开发输出测试用例，保存后，执行 `npm run api:test Button 'React(PC)' vitest,finalProject` 进行实时联调。
 会自动输出测试用例到项目文件中。
 
@@ -11,7 +13,7 @@ npm run api:test <component> <framework> vitest,finalProject
 - 第二个参数：框架名称，示例：Vue(PC)，可选值：Vue(PC)、VueNext(PC)、React(PC)、Vue(Mobile)、React(Mobile)。
   其中 Vue(PC) 表示 Vue2，VueNext(PC) 表示 Vue3。Vue(Mobile) 表示 Vue3。
 
-## 只更新测试用例到项目
+## 从 DB 更新测试用例到项目
 
 注意：会自动拉取远程仓库的 DB 文件中的测试用例，覆盖 `vitest/tests` 中的内容，
 如果你此时正在本地 `vitest/tests` 中进行测试用例开发，千万不要执行下面的命令行，否则会被覆盖。
@@ -28,9 +30,35 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 
 总述：将测试用例分为 5 大类：类名检测、属性检测、元素检测、TNode 检测以及人机交互检测。
 
-以一个 API 为单位，输出测试用例。如 button.disabled 表示一个 API，会一次性输出一个或多个测试用例。
+- 以一个 API 为单位，输出测试用例。如 button.disabled 表示一个 API，会一次性输出一个或多个测试用例。如果是多个 API 联合作用，可以只写一个。
+- 测试用例尽量保持简洁，方便阅读和排查问题，切勿一个用例测试很多个功能。
 
 ### 概览
+
+数据结构示例：
+
+```js
+{
+  className: '',
+  attribute: '',
+  dom: [],
+  tnode: true,
+  event: [],
+  classNameDom: '',
+  attributeDom: '',
+  wrapper: '',
+  props: {},
+  trigger: 'click(.t-input)',
+  snapshot: true,
+  content: 'text',
+  variables: [],
+  imports: [],
+  beforeAll: [],
+  afterEach: [],
+  afterAll: [],
+  skip: true,
+}
+```
 
 | 名称 | 类型 | 说明 |
 | - | - | - |
@@ -40,7 +68,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | tnode | Boolean/Object | 校验自定义元素（因框架实现差异大，故而单独定义），方便以最少的定义输出更多的单测用例 |
 | event | Object/Array | 【人机交互】触发不同的交互会有不同的行为表现。一次交互可能触发一个事件处理，也可能触发多次事件处理 |
 | props | Object | 给组件添加属性 |
-| trigger | String | 开启校验的前置条件。主要应用于需要触发某个事件 或者 延迟 N 秒后，才会显示相关元素的场景。如：TreeSelect 点击后才会显示面板；Guide 需要等待 100 毫秒渲染完成后才能开始校验）|
+| trigger | String | 开启校验的前置条件。主要应用于需要触发某个事件 或者 延迟 N 秒后，才会显示相关元素的场景。如：TreeSelect 点击后才会显示面板；Guide 需要等待 100 毫秒渲染完成后才能开始校验）。示例一：`trigger: 'click(.t-input)'`，示例二：`trigger: 'delay(300)'`|
 | variables | Array | 整个测试用例全局变量 |
 | imports | Array | 额外引入的针对单个组件的函数或变量 |
 | beforeAll | Array | 全部单测用例之前执行 |
@@ -48,35 +76,69 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | afterAll | Array | 全部单测用例结束后执行 |
 | skip | Boolean | 是否跳过当前测试用例 |
 
-### 类名 className
+---
+
+### 类名检测 ClassName Tests
+
+数据结构示例：
+
+```js
+{ classNameDom: '', className: '', wrapper: '', snapshot: true, content: 'text' }
+```
 
 | 名称 | 类型 | 说明 |
 | - | - | - |
-| classNameDom | String | 子元素 DOM 选择器，当 `className` 存在时有意义。表示 `className` 所有规则应用到组件的子元素 `classNameDom` 上。若 `classNameDom` 不存在，则表示 `className` 规则应用到组件本身。 示例：`"classNameDom": ".t-input"`|
+| classNameDom | String | 子元素 DOM 选择器，当 `className` 存在时有意义。表示 `className` 所有规则应用到组件的子元素 `classNameDom` 上。<br/>若 `classNameDom` 不存在，则表示 `className` 规则应用到组件根元素。 示例：`"classNameDom": ".t-input"`<br/>如果元素不是子元素，而存在于文档中根元素（body）中，使用 `'document.t-popup'` 表示|
 | className | String | 检测某个元素是否存在此类名，此时 API 类型须为 Boolean，会一次性输出 3 个 `expect`，分别校验默认值、值为 true、值为 false 等 3 种情况|
 | className | String | 字符串中带有 `${item}` 字样，如：`t-button--variant-${item}`。此时 API 必须字符串、存在枚举值，且枚举值是类名名称的一部分。 |
 | className | Object | 不同的 API 值，一一映射不同的类名，此时的 API 值和类名没有直接关系。如：`"className": { "underline": "t-link--hover-xxx" }` 表示 API 值为 `underline` 时，元素对应的类名为 `t-link--hover-underline`。 |
 | className | Array | `Array<string \| { [key: string]: boolean }>` API 是字符串，存在枚举值，枚举值和类名名称无法通过前面的 `t-xxx-${item}` 来表达。此时，便可使用数组，和枚举值保持顺序。依次列举枚举值对应的类名，示例：API 枚举值为 `small/medium/large`，则 `"className": ["t-size-s", { "t-size-m": false }, "t-size-l"]`，其中 `t-size-m` 不允许存在 |
 | className | Array | `Array<{ value: string, expect: { dom: string, className: { [name: string]: boolean } } }>` 表示当 API 值为 `value` 时，期望 `dom` 元素存在或不存在类名 `className`。数组则表示 API 的值可能为多个，为每一个可能的值输出一个 `it` 测试用例。 |
-| wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
-| snapshot | Boolean | 通用属性。是否输出快照 |
-| content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
 
-### 属性 attribute
+---
+
+### 属性检测 Attribute Tests
+
+数据结构示例：
+
+```js
+{ attributeDom: '', attribute: '', wrapper: '', snapshot: true, content: 'text' }
+```
 
 | 名称 | 类型 | 说明 |
 | - | - | - |
+| attributeDom | String | 子元素 DOM 选择器，当 `attribute` 字段存在时有意义。表示 `attribute` 所有规则应用到组件的子元素 `attributeDom` 上。<br/>若 `attributeDom` 不存在，则表示 `attribute` 规则应用到组件根元素。 示例：`"attributeDom": ".t-input"`<br/>如果元素不是子元素，而存在于文档中根元素（body）中，使用 `'document.t-popup'` 表示|
 | attribute | Object | API 存在枚举值，校验不同的枚举值对应的不同属性。示例：`{"attribute": { "type": ["submit", "reset", "button"] }}`|
 | attribute | Object | API 的值是多少，期望的属性值就是多少。示例：`{"attribute": { "href": "https://tdesign.tencent.com/" }}` |
 | attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }> }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"` |
-| wrapper | String | 通用属性。表示当前测试用例基于 `wrapper` 获取到的组件实例，如果不存在则表示使用默认的 `mount()` 或者 `render()` 输出。示例：`getNormalTableMount` |
-| snapshot | Boolean | 通用属性。是否输出快照 |
-| content | String | 通用属性。组件的直接子元素，示例一：`content: "Text"`，示例二： `content: "<span>TNode</span>"` |
+
+---
+
+## 元素检测 DOM Tests
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| dom | String | 检测某个元素是否存在，示例：`{ dom: '.t-loading' }` |
+| dom | Object | 不同的 API 值对应着不同 DOM 元素的存在。示例：`{ "dom": { "[3, 1]": ".t-table__row--fixed-top" } }`，表示当 API 值为 `[3,1]` 时，元素 `.t-table__row--fixed-top` 是否存在 |
+| dom | `Array<string | object>` | 检测某个元素是否存在，示例：`['tfoot.t-table__footer']`。<br/> 检测某个元素存在 3 个，示例：`[{ ".t-table__row--fixed-top": 3 }]`。<br/> 检测某个元素不存在，示例：`[{ '.t-input': false }]`。检测元素的文本内容，示例：`[{ '.t-input': { text: 'this is textContent' } }]` |
+| dom | `Array<{ dom: {}, props: {}, trigger: '', ... }>` | 应用于复杂场景，一个 API 需要多个 DOM 测试用例，每个测试用例有不同的规则、不同的组件属性、不同的延迟规则等 |
+
+## TNode Tests
+
+| 名称 | 类型 | 说明 |
+| - | - | - |
+| tnode | Boolean | `{ tnode: true }` 直接输出测试用例 |
+| tnode | Object | `{ dom: string[], trigger: string, params: {} }`，`dom` 表示除自定义元素外，还需要检测哪些元素存在，trigger 表示延迟多少毫秒或者点击什么元素后再开始验证，params 表示 TNode 参数 |
+| tnode | `Array<{ props, dom, trigger, params }>` | 上述规则的数组形式，输出多个测试用例 |
+
+---
 
 ### 延迟 delay
 
 - `delay: true` 表示只要延迟就行，无需关心具体时间，Vue 表现为 nextTick，React 表现为 act(() => {})。注意和 `delay: 0` 有一个 `setTimeout(() => {}, 0)` 的区别
 - `delay: 100` 表示延迟 100 毫秒；`delay: 0` 表示延迟 0 毫秒。凡事存在时间，无论值为多少，一定会有 `setTimeout` 延迟。
+
+---
 
 ### 模拟事件列表
 
@@ -320,7 +382,7 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 ```json
 {"PC": { "dom": { "'this is a tip'": ".t-input__tips" } }}
 ```
-当 API 值为 `'this is a tip'` 时，期望元素 `.t-input__tips` 存在，如 AutoComplete.tips。注意字符串需要加上单引号。
+当 API 值为 `'this is a tip'` 时，期望元素 `.t-input__tips` 存在，如 AutoComplete.tips。
 
 ---
 
