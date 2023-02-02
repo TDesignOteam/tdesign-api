@@ -182,7 +182,9 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
   const skipText = skip ? '.skip' : '';
   const async = getItAsync(finalTrigger, framework);
   const category = oneApiData.component === component ? 'props': oneApiData.component;
-  const defaultDescription = description ? `'${category}.${oneApiData.field_name}: a function with params, ${description}'` : `'${category}.${oneApiData.field_name} is a function with params'`;
+  const defaultDescription = description
+    ? `'${category}.${oneApiData.field_name}: a function with params${description ? `, ${description}` : ''}'`
+    : `'${category}.${oneApiData.field_name} is a function with params'`;
   // props params test
   const arr = [
     `\nit${skipText}(${defaultDescription}, ${async} () => {`,
@@ -199,7 +201,8 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
   // slot params test
   if (framework.indexOf('Vue') !== -1) {
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
-    const defaultDescription = `slots.${oneApiData.field_name}: a function with params, ${description}` || `slots.${oneApiData.field_name} is a function with params`;
+    const defaultDescription = `slots.${oneApiData.field_name}: a function with params${description ? `, ${description}` : ''}`
+      || `slots.${oneApiData.field_name} is a function with params`;
     arr.push(...[
       `it${skipText}('${defaultDescription}', ${async}() => {`,
         getVariablesCode(variables),

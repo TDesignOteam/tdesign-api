@@ -77862,7 +77862,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -78185,7 +78185,7 @@
         "16",
         "128"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "全部标签值。值为数组表示多个标签，值为非数组表示单个数值",
       "field_desc_en": null,
