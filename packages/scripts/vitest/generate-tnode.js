@@ -164,8 +164,8 @@ function getTestCaseByComponentCode(params) {
     `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),
     // 只有 document 元素的场景下，不需要 container 变量
-    getWrapper(framework, componentCode, '', '', { onlyDocumentDom }),
-    trigger && getPresetsExpect(trigger, framework, component),
+    getWrapper(framework, componentCode, '', '', { onlyDocumentDom, trigger, component }),
+    // trigger && getPresetsExpect(trigger, framework, component),
     // 校验自定义元素是否存在
     !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
     // 校验额外的元素是否存在
