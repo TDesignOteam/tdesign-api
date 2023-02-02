@@ -19175,7 +19175,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
       "field_desc_en": null,
@@ -19277,7 +19277,7 @@
       "create_time": "2021-02-20 12:57:07",
       "update_time": "2021-08-30 02:47:23",
       "event_output": null,
-      "custom_field_type": "string | number | string[]",
+      "custom_field_type": "string | number | string[] | TNode",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -78029,7 +78029,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"multiple\":true,\"value\":[\"tdesign-vue\",\"tdesign-react\"]},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":\"tdesign-vue\"}]}}}",
+      "test_description": "{\"PC\":{\"props\":{\"multiple\":true,\"value\":[\"tdesign-vue\"]},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":\"tdesign-vue\"}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91333,7 +91333,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-tag--${item}\"}}",
+      "test_description": "{\"PC\":{\"className\":[{\"t-tag--square\":false},\"t-tag--round\",\"t-tag--mark\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -91378,7 +91378,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-tag--${item}\"}}",
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",\"t-size-m\",\"t-size-l\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

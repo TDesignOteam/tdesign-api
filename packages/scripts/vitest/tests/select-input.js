@@ -86,7 +86,7 @@ module.exports = {
       field_name: 'tag',
       id: 2302,
       PC: {
-        props: { multiple: true, value: ['tdesign-vue', 'tdesign-react'] },
+        props: { multiple: true, value: ['tdesign-vue'] },
         tnode: { dom: [], trigger: '', params: [{ value: 'tdesign-vue' }] },
       },
     },
