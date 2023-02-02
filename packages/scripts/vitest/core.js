@@ -303,7 +303,8 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
   const isVue = framework.indexOf('Vue') !== -1;
-  const isObject = typeof countOrText === 'object' || countOrText == false;
+  // number 表示检测数量（AutoComplete.options）；false 表示验证不存在
+  const isObject = (typeof countOrText === 'object' || countOrText == false) && typeof countOrText !== 'number';
   const querySelector = isObject ? 'querySelector' : 'querySelectorAll';
   return [
     `const ${domVariable} = document.${querySelector}('${selector}')`,
