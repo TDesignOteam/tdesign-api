@@ -1,9 +1,10 @@
 module.exports = {
   Tag: {
+    children_3310: { field_name: 'children', id: 3310, PC: { tnode: true } },
     closable_24: { field_name: 'closable', id: 24, PC: { dom: '.t-tag__icon-close' } },
     content_733: { field_name: 'content', id: 733, PC: { tnode: true } },
     customStyle_3093: { field_name: 'customStyle', id: 3093 },
-    default_29: { field_name: 'default', id: 29, PC: { tnode: true } },
+    default_3311: { field_name: 'default', id: 3311, PC: { tnode: true } },
     disabled_1125: {
       field_name: 'disabled',
       id: 1125,
@@ -80,10 +81,11 @@ module.exports = {
   },
   CheckTag: {
     checked_418: { field_name: 'checked', id: 418 },
+    children_3313: { field_name: 'children', id: 3313, PC: { tnode: true } },
     closable_1124: { field_name: 'closable', id: 1124 },
-    content_957: { field_name: 'content', id: 957 },
+    content_957: { field_name: 'content', id: 957, PC: { tnode: true } },
     customStyle_3094: { field_name: 'customStyle', id: 3094 },
-    default_959: { field_name: 'default', id: 959 },
+    default_3312: { field_name: 'default', id: 3312, PC: { tnode: true } },
     disabled_419: { field_name: 'disabled', id: 419 },
     externalClasses_3237: { field_name: 'externalClasses', id: 3237 },
     icon_1122: { field_name: 'icon', id: 1122 },

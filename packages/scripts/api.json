@@ -19208,6 +19208,47 @@
       ]
     },
     {
+      "id": 3313,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件子元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-02 09:59:21",
+      "update_time": "2023-02-02 09:59:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1124,
       "platform_framework": [
         "8",
@@ -19284,7 +19325,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -19341,43 +19382,43 @@
       ]
     },
     {
-      "id": 959,
+      "id": 3312,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "CheckTag",
       "field_category": 1,
       "field_name": "default",
       "field_type": [
         "1",
-        "2",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件子元素，同 content",
+      "field_desc_zh": "组件子元素，默认插槽",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-02-20 12:57:31",
-      "update_time": "2021-04-09 02:12:20",
+      "create_time": "2023-02-02 09:58:55",
+      "update_time": "2023-02-02 09:58:55",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "",
+      "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": null,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
-        "Number",
         "TNode"
       ]
     },
@@ -90898,6 +90939,47 @@
       "field_type_text": []
     },
     {
+      "id": 3310,
+      "platform_framework": [
+        "2",
+        "16"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件子元素，同 `content`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-02 09:56:22",
+      "update_time": "2023-02-02 09:56:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 24,
       "platform_framework": [
         "1",
@@ -90961,7 +91043,6 @@
       "field_name": "content",
       "field_type": [
         "1",
-        "2",
         "64"
       ],
       "field_default_value": "",
@@ -90993,7 +91074,6 @@
       ],
       "field_type_text": [
         "String",
-        "Number",
         "TNode"
       ]
     },
@@ -91035,26 +91115,26 @@
       ]
     },
     {
-      "id": 29,
+      "id": 3311,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "Tag",
       "field_category": 1,
       "field_name": "default",
       "field_type": [
         "1",
-        "2",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件子元素（默认插槽），同 content",
+      "field_desc_zh": "组件子元素，同 `content`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-10-23 02:55:24",
-      "update_time": "2022-01-04 02:13:24",
+      "create_time": "2023-02-02 09:57:10",
+      "update_time": "2023-02-02 09:57:10",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -91062,16 +91142,16 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
-        "Number",
         "TNode"
       ]
     },
@@ -92105,7 +92185,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"dom\":{\"3\":{\".t-tag\":4}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"minCollapsedNum\":3},\"dom\":[{\".t-tag\":4}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -92395,7 +92475,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":\"tdesign-vue\"}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"value\":[\"tdesign-vue\"]},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":\"tdesign-vue\"}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -92521,7 +92601,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputDefaultMount\",\"event\":[{\"props\":{\"value\":\"[]\"},\"description\":\"controlled value test: only props can change count of tags\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":false}]}]},{\"description\":\"uncontrolled value test: count of tags can be changed inner TagInput\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTagInputDefaultMount\",\"event\":[{\"props\":{\"value\":[]},\"description\":\"controlled value test: only props can change count of tags\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":false}]}]},{\"description\":\"uncontrolled value test: count of tags can be changed inner TagInput\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -92640,7 +92720,7 @@
       "trigger_elements": "MouseEvent<SVGSVGElement>/KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -110780,5 +110860,5 @@
       ]
     }
   ],
-  "total": 2645
+  "total": 2647
 }

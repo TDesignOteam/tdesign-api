@@ -138,7 +138,11 @@ module.exports = {
     minCollapsedNum_2104: {
       field_name: 'minCollapsedNum',
       id: 2104,
-      PC: { wrapper: 'getTagInputValueMount', dom: { '3': { '.t-tag': 4 } } },
+      PC: {
+        wrapper: 'getTagInputValueMount',
+        props: { minCollapsedNum: 3 },
+        dom: [{ '.t-tag': 4 }],
+      },
     },
     placeholder_2094: {
       field_name: 'placeholder',
@@ -186,6 +190,7 @@ module.exports = {
       id: 2107,
       PC: {
         wrapper: 'getTagInputValueMount',
+        props: { value: ['tdesign-vue'] },
         tnode: { dom: [], trigger: '', params: [{ value: 'tdesign-vue' }] },
       },
     },
@@ -210,7 +215,7 @@ module.exports = {
         wrapper: 'getTagInputDefaultMount',
         event: [
           {
-            props: { value: '[]' },
+            props: { value: [] },
             description: 'controlled value test: only props can change count of tags',
             wrapper: '',
             expect: [
