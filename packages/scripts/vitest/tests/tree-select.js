@@ -608,9 +608,11 @@ module.exports = {
         ],
       },
     },
-    '<DataOption extends TreeOptionData = TreeOptionData>_1150': {
-      field_name: '<DataOption extends TreeOptionData = TreeOptionData>',
-      id: 1150,
-    },
+    '<DataOption extends TreeOptionData = TreeOptionData, TreeValueType extends TreeSelectValue  = TreeSelectValue>_1150':
+      {
+        field_name:
+          '<DataOption extends TreeOptionData = TreeOptionData, TreeValueType extends TreeSelectValue  = TreeSelectValue>',
+        id: 1150,
+      },
   },
 };
