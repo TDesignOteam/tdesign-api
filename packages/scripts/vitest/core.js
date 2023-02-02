@@ -210,7 +210,7 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
     if (onlyDocumentDom) return `${tmpMountCode}${findDomCode};`;
     wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
     trigger && wrapperDefinition.push(getPresetsExpect(trigger, framework, component));
-    return wrapperDefinition.join('\n');
+    return wrapperDefinition.filter(v => v).join('\n');
   }
   if (framework.indexOf('React') !== -1) {
     const triggerCode = trigger && getPresetsExpect(trigger, framework, component);
@@ -976,12 +976,12 @@ function getReactFireEventAsync(expect, framework) {
 
 // 判断一个字符串是否为正则表达式
 function isRegExp(str) {
-  return /^\/(.+)\/$/.test(str);
+  return /^\/(.+)\/[i|g|m/s]*$/.test(str);
 }
 
 // 获取开始单测的前置条件。如：延迟校验、mouseenter 后校验。不同的元素渲染的时机不同，条件不同
 function getPresetsExpect(triggerList, framework, component) {
-  if (!triggerList) return;
+  if (!triggerList || !component) return;
   const tmpTrigger = Array.isArray(triggerList) ? triggerList : [triggerList];
   return tmpTrigger.map((oneTrigger) => {
     const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });

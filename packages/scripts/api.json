@@ -4189,7 +4189,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\n    \"PC\": {\n        \"attribute\": [\n            {\n                \"value\": false,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": true,\n                \"expect\": [\n                    {\n                        \"dom\": \"input\",\n                        \"attribute\": {\n                            \"autofocus\": \"toBeDefined\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4229,7 +4229,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4269,7 +4269,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"description\": \"show clear icon on mouse enter\",\n      \"expect\": [{ \"trigger\": \"mouseenter(.t-input)\", \"exist\": [\".t-input__suffix-clear\"] }],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    },\n    {\n      \"description\": \"expect trigger clear and change events after clear icon has been clicked\",\n      \"expect\": [\n        { \"trigger\": \"mouseenter(.t-input)\", \"delay\": true, \"exist\": [\".t-input__suffix-clear\"] },\n        {\n          \"trigger\": \"click(.t-input__suffix-clear)\",\n          \"event\": {\n            \"clear\": [{ \"e.stopPropagation\": true, \"e.type\": \"click\" }],\n            \"change\": [\"\", { \"e.stopPropagation\": true, \"e.type\": \"click\" }]\n          }\n        }\n      ],\n      \"props\": { \"value\": \"'Default Keyword'\" }\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"description\":\"show clear icon on mouse enter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}],\"props\":{\"value\":\"'Default Keyword'\"}},{\"description\":\"expect trigger clear and change events after clear icon has been clicked\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":true,\"exist\":[\".t-input__suffix-clear\"]},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}],\"props\":{\"value\":\"'Default Keyword'\"}}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4309,7 +4309,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4349,7 +4349,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\", \"classNameDom\": \".t-input\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4390,7 +4390,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"filter\": \"(filterWords, option) => option.text.includes('Second')\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWords, option) => option.text.includes('Second')\"},\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":1,\"clearElementAtEnd\":\".t-popup\"}]}]}],\"wrapper\":\"getNormalAutoCompleteMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4431,7 +4431,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"value\": \"'First'\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'First'\"},\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":1,\"clearElementAtEnd\":\".t-popup\"}]}]}],\"wrapper\":\"getNormalAutoCompleteMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4472,7 +4472,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"event\": [\n    {\n      \"props\": { \"value\": \"'Second'\" },\n      \"expect\": [{ \"trigger\": \"focus(input)\", \"exist\": [{ \"document.t-select-option\": 1, \"clearElementAtEnd\": \".t-popup\" }]}]\n    }\n  ],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Second'\"},\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"document.t-select-option\":1,\"clearElementAtEnd\":\".t-popup\"}]}]}],\"wrapper\":\"getNormalAutoCompleteMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4596,7 +4596,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": {\n  \"trigger\": \"focus(input)\",\n  \"dom\": [\"document.custom-node\", \"document.t-popup\"],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n} }}",
+      "test_description": "{\"PC\":{\"tnode\":{\"trigger\":\"focus(input)\",\"dom\":[\"document.custom-node\",\"document.t-popup\"],\"wrapper\":\"getNormalAutoCompleteMount\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4639,7 +4639,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": {\n  \"trigger\": \"focus(input)\",\n  \"dom\": [\"document.custom-node\", \"document.t-popup\"],\n  \"wrapper\": \"getNormalAutoCompleteMount\"\n} }}",
+      "test_description": "{\"PC\":{\"tnode\":{\"trigger\":\"focus(input)\",\"dom\":[\"document.custom-node\",\"document.t-popup\"],\"wrapper\":\"getNormalAutoCompleteMount\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4681,7 +4681,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\n  \"PC\": {\n    \"attribute\": [\n      {\n        \"value\": \"'type keyword to search'\",\n        \"expect\": [\n          {\n            \"dom\": \"input\",\n            \"attribute\": {\n              \"placeholder\": \"type keyword to search\"\n            }\n          }\n        ]\n      }\n    ]\n  }\n}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'type keyword to search'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"placeholder\":\"type keyword to search\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4763,7 +4763,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getNormalAutoCompleteMount\",\n        \"classNameDom\": \".t-input\",\n        \"className\": \"t-is-readonly\"\n    }\n}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"classNameDom\":\".t-input\",\"className\":\"t-is-readonly\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4804,7 +4804,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"classNameDom\": \".t-input\", \"wrapper\": \"getNormalAutoCompleteMount\"}}",
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\",\"wrapper\":\"getNormalAutoCompleteMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4928,7 +4928,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"dom\": { \"'this is a tip'\": \".t-input__tips\" } }}",
+      "test_description": "{\"PC\":{\"dom\":{\"'this is a tip'\":\".t-input__tips\"}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -4971,7 +4971,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": { \"tnode\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5013,7 +5013,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'DefaultKeyword'\",\n      \"expect\": [{ \"dom\": \"input\", \"attribute\": { \"value\": \"DefaultKeyword\" }}]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'DefaultKeyword'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"DefaultKeyword\"}}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -5052,7 +5052,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        },\n        {\n          \"trigger\": \"blur(input)\",\n          \"delay\": 300,\n          \"event\": {\n            \"blur\": [{ \"e.type\": \"blur\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"blur(input)\",\"delay\":300,\"event\":{\"blur\":[{\"e.type\":\"blur\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -5237,7 +5237,7 @@
       "trigger_elements": "KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"keydown.enter(input)\",\"event\":{\"enter\":[{\"e.type\":\"keydown\",\"e.key\":\"/Enter/i\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"keydown.enter(input)\",\"event\":{\"enter\":[{\"e.type\":\"keydown\",\"e.key\":\"/Enter/i\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -5274,7 +5274,7 @@
       "trigger_elements": "FocusEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"wrapper\": \"getNormalAutoCompleteMount\",\n  \"event\": [\n    {\n      \"expect\": [\n        {\n          \"trigger\": \"focus(input)\",\n          \"exist\": [\".t-is-focused\"],\n          \"event\": {\n            \"focus\": [{ \"e.type\": \"focus\" }]\n          }\n        }\n      ]\n    }\n  ]\n}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getNormalAutoCompleteMount\",\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[\".t-is-focused\"],\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -99421,7 +99421,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"expect\":[{\"trigger\":\".t-tree__item:nth-child(2)\",\"delay\":true,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"change\":[[1,2]]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"trigger\":\"delay(100)\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"expect\":[{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":true,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"change\":[[1,2]]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

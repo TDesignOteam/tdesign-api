@@ -67,7 +67,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
       `});`,
     ];
-    return arr;
+    return arr.filter(v => v);
   } else if (Array.isArray(event)) {
     let arr = [];
     event.forEach((oneEventUnitCase) => {
@@ -101,7 +101,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
         `});`
       ];
-      arr = arr.concat(oneEventArr, '\n');
+      arr = arr.filter(v => v).concat(oneEventArr, '\n');
     });
     return arr;
   }
