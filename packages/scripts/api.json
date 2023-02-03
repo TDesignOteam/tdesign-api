@@ -78282,7 +78282,7 @@
       "create_time": "2022-01-12 13:18:16",
       "update_time": "2022-02-20 06:38:48",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: SelectInputValue; onClose: (index: number, item?: any) => void }>",
+      "custom_field_type": "string | TNode<{ value: TagInputValue; onClose: (index: number, item?: any) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -104746,6 +104746,7 @@
       "field_type": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "field_default_value": "",
@@ -104779,6 +104780,7 @@
       "field_type_text": [
         "String",
         "Number",
+        "Object",
         "Array"
       ]
     },
