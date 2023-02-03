@@ -78466,7 +78466,7 @@
       "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发等",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputValue, context?: SelectInputValueChangeContext)【interface SelectInputValueChangeContext { e?: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent; trigger: 'input' | 'clear' | 'blur' | 'initial' }】",
+      "event_input": "(value: InputValue, context?: SelectInputValueChangeContext)【interface SelectInputValueChangeContext { e?: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent; trigger: 'input' | 'clear' | 'blur' | 'focus' | 'initial' | 'change' }】",
       "create_time": "2022-02-25 11:15:30",
       "update_time": "2022-03-11 14:08:04",
       "event_output": null,
