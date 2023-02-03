@@ -31,7 +31,9 @@ module.exports = {
             props: { value: 1 },
             description: 'show clear icon on mouse enter in single tree select',
             wrapper: 'getTreeSelectDefaultMount',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'] }],
+            expect: [
+              { trigger: 'mouseenter(.t-input)', delay: 0, exist: ['.t-input__suffix-clear'] },
+            ],
           },
           {
             props: { value: '[1]' },

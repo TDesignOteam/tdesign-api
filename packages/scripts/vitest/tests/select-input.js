@@ -5,7 +5,7 @@ module.exports = {
       id: 2293,
       PC: {
         className: [
-          { value: 'true', expect: [{ dom: '.t-input', className: { 't-is-readonly': false } }] },
+          { value: true, expect: [{ dom: '.t-input', className: { 't-is-readonly': false } }] },
         ],
         classNameDom: '',
       },
@@ -42,7 +42,15 @@ module.exports = {
         ],
       },
     },
-    collapsedItems_2133: { field_name: 'collapsedItems', id: 2133 },
+    collapsedItems_2133: {
+      field_name: 'collapsedItems',
+      id: 2133,
+      PC: {
+        wrapper: 'getSelectInputMultipleMount',
+        props: { minCollapsedNum: 3 },
+        tnode: { dom: [], trigger: '', params: [{ count: 5 }] },
+      },
+    },
     disabled_2134: {
       field_name: 'disabled',
       id: 2134,
