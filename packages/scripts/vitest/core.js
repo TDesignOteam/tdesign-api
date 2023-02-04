@@ -15,6 +15,7 @@ const SIMULATE_FUNCTIONS = [
   'simulateImageEvent',
   'simulateFileChange',
   'simulateDragFileChange',
+  'simulateDocumentClick',
 ];
 
 // 获取变量的函数

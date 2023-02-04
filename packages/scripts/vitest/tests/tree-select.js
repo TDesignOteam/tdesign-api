@@ -388,8 +388,8 @@ module.exports = {
                 event: { focus: [{ 'e.type': 'focus', value: 1 }] },
               },
               {
-                trigger: 'blur(input)',
-                event: { blur: [{ 'e.type': 'blur', value: 1 }] },
+                trigger: 'simulateDocumentClick(document)',
+                event: { blur: [{ 'e.type': 'click', value: 1 }] },
                 exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
@@ -401,8 +401,8 @@ module.exports = {
             expect: [
               { trigger: 'click(.t-input)', event: { focus: [{ 'e.type': 'focus' }] } },
               {
-                trigger: 'blur(input)',
-                event: { blur: [{ 'e.type': 'blur', value: [1] }] },
+                trigger: 'simulateDocumentClick(document)',
+                event: { blur: [{ 'e.type': 'click', value: [1] }] },
                 exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
@@ -498,8 +498,9 @@ module.exports = {
                 event: {
                   clear: [{ 'e.type': 'click' }],
                   change: [[], { trigger: 'clear' }],
-                  popupVisibleChange: [false, { trigger: 'trigger-element-click' }],
+                  popupVisibleChange: [false, { trigger: 'clear' }],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -514,8 +515,9 @@ module.exports = {
                 event: {
                   clear: [{ 'e.type': 'click' }],
                   change: ['undefined', { trigger: 'clear' }],
-                  popupVisibleChange: [false, { trigger: 'trigger-element-click' }],
+                  popupVisibleChange: [false, { trigger: 'clear' }],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -532,7 +534,11 @@ module.exports = {
             props: { filterable: true, value: [1] },
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
-              { trigger: 'focus(input)', event: { focus: [{ value: [1], 'e.type': 'focus' }] } },
+              {
+                trigger: 'focus(input)',
+                event: { focus: [{ value: [1], 'e.type': 'focus' }] },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
+              },
             ],
           },
           {
@@ -544,6 +550,7 @@ module.exports = {
                 event: {
                   focus: [{ value: [{ label: 'tdesign-vue', value: 1 }], 'e.type': 'focus' }],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
