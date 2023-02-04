@@ -6,6 +6,7 @@ module.exports = {
       id: 537,
       PC: {
         wrapper: 'getTreeDefaultMount',
+        trigger: 'delay(100)',
         event: [
           {
             props: { activable: true, actived: [1] },

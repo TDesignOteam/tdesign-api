@@ -104806,7 +104806,7 @@
       "create_time": "2021-11-09 06:29:19",
       "update_time": "2022-02-20 06:40:00",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: TreeSelectValue; onClose: (index: number, item?: any) => void }>",
+      "custom_field_type": "string | TNode<{ value: TreeOptionData | TreeOptionData[]; onClose: (index: number, item?: any) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
