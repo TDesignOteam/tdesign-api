@@ -179,14 +179,16 @@ module.exports = {
             ],
           },
           {
-            props: { filterable: true, inputValue: 'tdesign' },
+            props: { filterable: true, inputValue: 'tdesign', popupVisible: true },
             description: 'controlled inputValue works fine',
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
               {
                 trigger: "simulateInputChange('input', 'Hello TDesign')",
                 event: { inputChange: ['Hello TDesign', { 'e.type': 'input', trigger: 'input' }] },
-                exist: [{ input: { attribute: { value: 'tdesign' } } }],
+                exist: [
+                  { input: { attribute: { value: 'tdesign' } }, clearElementAtEnd: '.t-popup' },
+                ],
               },
             ],
           },
