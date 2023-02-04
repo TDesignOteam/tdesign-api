@@ -92,7 +92,12 @@ module.exports = {
               { trigger: 'click(.t-input)' },
               {
                 trigger: "simulateInputChange('input', 'tdesign-react')",
-                exist: [{ 'document.t-tree__item:not(.t-tree__item--hidden)': 1 }],
+                exist: [
+                  {
+                    'document.t-tree__item:not(.t-tree__item--hidden)': 1,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
                 delay: 100,
               },
             ],
@@ -107,7 +112,11 @@ module.exports = {
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
               { trigger: 'click(.t-input)' },
-              { trigger: "simulateInputChange('input', 'tdesign-react')", exist: [], delay: 100 },
+              {
+                trigger: "simulateInputChange('input', 'tdesign-react')",
+                exist: [{ clearElementAtEnd: '.t-popup' }],
+                delay: 100,
+              },
             ],
           },
         ],
@@ -124,7 +133,12 @@ module.exports = {
             expect: [
               {
                 trigger: 'click(.t-input)',
-                exist: [{ 'document.t-tree__item:not(.t-tree__item--hidden)': 1 }],
+                exist: [
+                  {
+                    'document.t-tree__item:not(.t-tree__item--hidden)': 1,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
                 delay: 100,
               },
             ],
@@ -246,7 +260,12 @@ module.exports = {
             expect: [
               {
                 trigger: 'click(.t-input)',
-                exist: [{ 'document.t-popup': { className: ['custom-popup-class-name'] } }],
+                exist: [
+                  {
+                    'document.t-popup': { className: ['custom-popup-class-name'] },
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
               },
             ],
           },
@@ -487,7 +506,7 @@ module.exports = {
               { trigger: 'click(.t-input)', delay: 200 },
               {
                 trigger: 'click(document.t-tree__item:first-child .t-checkbox__label)',
-                event: { inputChange: ['', { trigger: 'clear' }] },
+                event: { inputChange: ['', { trigger: 'change' }] },
               },
             ],
           },
