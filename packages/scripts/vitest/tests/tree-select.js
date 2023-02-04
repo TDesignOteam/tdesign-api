@@ -83,14 +83,16 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { filter: '(filterWord, option) => !filterWord || option.label === filterWord' },
+            props: {
+              filter: '(filterWord, node) => !filterWord || node.data.label === filterWord',
+            },
             description: '',
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
               { trigger: 'click(.t-input)' },
               {
                 trigger: "simulateInputChange('input', 'tdesign-react')",
-                exist: [{ 'document.t-tree__item': 1 }],
+                exist: [{ 'document.t-tree__item:not(.t-tree__item--hidden)': 1 }],
                 delay: 100,
               },
             ],
@@ -120,7 +122,11 @@ module.exports = {
             props: { inputValue: 'tdesign-vue' },
             wrapper: 'getTreeSelectDefaultMount',
             expect: [
-              { trigger: 'click(.t-input)', exist: [{ 'document.t-tree__item': 1 }], delay: 100 },
+              {
+                trigger: 'click(.t-input)',
+                exist: [{ 'document.t-tree__item:not(.t-tree__item--hidden)': 1 }],
+                delay: 100,
+              },
             ],
           },
         ],
@@ -447,6 +453,7 @@ module.exports = {
         ],
       },
     },
+    enter_3314: { field_name: 'enter', id: 3314 },
     focus_1154: {
       field_name: 'focus',
       id: 1154,

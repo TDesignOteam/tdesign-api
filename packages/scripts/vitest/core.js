@@ -148,8 +148,8 @@ function getPropsValue(value) {
     value.indexOf('=>') !== -1
     || value.indexOf('</') !== -1
     || value.indexOf('/>') !== -1
-    || /^\[.+\]$/.test(value)
-    || /^\{.+\}$/.test(value)
+    || /^\[.*\]$/.test(value)
+    || /^\{.*\}$/.test(value)
     )) return value;
   // 对象数组
   if (Array.isArray(value) || !Array.isArray(value) && typeof value) {

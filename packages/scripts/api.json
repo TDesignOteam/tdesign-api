@@ -76861,7 +76861,7 @@
       "field_desc_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(filterWords: string)",
+      "event_input": "(filterWords: string, context: { e: KeyboardEvent })",
       "create_time": "2020-12-17 10:59:39",
       "update_time": "2021-01-06 07:45:54",
       "event_output": null,
@@ -103716,7 +103716,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"description\":\"\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]},{\"props\":{\"onSearch\":\"() => {}\",\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"description\":\"priority of onSearch is higher than props.filter, props.filter is forbidden to work in this scene\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWord, node) => !filterWord || node.data.label === filterWord\"},\"description\":\"\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item:not(.t-tree__item--hidden)\":1}],\"delay\":100}]},{\"props\":{\"onSearch\":\"() => {}\",\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"description\":\"priority of onSearch is higher than props.filter, props.filter is forbidden to work in this scene\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103760,7 +103760,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item\":1}],\"delay\":100}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item:not(.t-tree__item--hidden)\":1}],\"delay\":100}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105017,6 +105017,43 @@
       "field_type_text": []
     },
     {
+      "id": 3314,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 2,
+      "field_name": "enter",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值。泛型 `TreeValueType` 继承 `TreeSelectValue`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { inputValue: string; e: KeyboardEvent; value: TreeValueType })",
+      "create_time": "2023-02-04 01:44:53",
+      "update_time": "2023-02-04 01:44:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1154,
       "platform_framework": [
         "1",
@@ -105143,7 +105180,7 @@
       "field_desc_zh": "多选模式下，选中数据被移除时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(options: RemoveOptions<DataOption, TreeValueType>)【export interface RemoveOptions<T extends TreeOptionData = TreeOptionData, N extends TreeSelectValue = TreeSelectValue> {   value: N;   data: T;  index: number; node: TreeNodeModel<DataOption>;   e?: MouseEvent | KeyboardEvent;   trigger: 'tag-remove' | 'backspace'; }】",
+      "event_input": "(options: RemoveOptions<DataOption, TreeValueType>)【export interface RemoveOptions<T extends TreeOptionData = TreeOptionData, N extends TreeSelectValue = TreeSelectValue> {   value: N;   data: T;  index: number; node: TreeNodeModel<T>;   e?: MouseEvent | KeyboardEvent;   trigger: 'tag-remove' | 'backspace'; }】",
       "create_time": "2021-04-14 03:47:14",
       "update_time": "2022-02-16 07:58:04",
       "event_output": null,
@@ -105182,7 +105219,7 @@
       "field_desc_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据。设置 `filterable=true` 开启此功能。优先级高于本地数据搜索 `filter`，即一旦存在这个远程搜索事件 `filter` 失效",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(filterWords: string)",
+      "event_input": "(filterWords: string, context: { e: KeyboardEvent })",
       "create_time": "2021-04-14 03:44:56",
       "update_time": "2021-04-14 03:44:56",
       "event_output": null,
@@ -110868,5 +110905,5 @@
       ]
     }
   ],
-  "total": 2647
+  "total": 2648
 }
