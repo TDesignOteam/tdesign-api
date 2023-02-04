@@ -115,7 +115,7 @@ module.exports = {
             props: {
               filter: '(filterWord, node) => !filterWord || node.data.label === filterWord',
             },
-            description: '',
+            description: 'multiple tree select & filterable',
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
               { trigger: 'click(.t-input)' },
@@ -132,19 +132,73 @@ module.exports = {
             ],
           },
           {
+            description:
+              'priority of onSearch is higher than props.filter, props.filter is forbidden to work in this scene',
+            wrapper: 'getTreeSelectMultipleMount',
             props: {
               onSearch: '() => {}',
               filter: '(filterWord, option) => !filterWord || option.label === filterWord',
             },
-            description:
-              'priority of onSearch is higher than props.filter, props.filter is forbidden to work in this scene',
-            wrapper: 'getTreeSelectMultipleMount',
             expect: [
               { trigger: 'click(.t-input)' },
               {
                 trigger: "simulateInputChange('input', 'tdesign-react')",
-                exist: [{ clearElementAtEnd: '.t-popup' }],
+                exist: [
+                  {
+                    'document.t-tree__item:not(.t-tree__item--hidden)': 6,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
                 delay: 100,
+              },
+            ],
+          },
+          {
+            description: 'multiple tree select, check filter nodes',
+            wrapper: 'getTreeSelectMultipleMount',
+            props: { filterable: true },
+            expect: [
+              { trigger: 'click(.t-input)' },
+              { trigger: "simulateInputChange('input', 'tdesign-vue')", delay: 100 },
+              {
+                trigger: 'click(document.t-tree__item:first-child)',
+                events: {
+                  change: [
+                    [1],
+                    {
+                      node: 'toBeTruthy',
+                      data: { label: 'tdesign-vue', value: 1 },
+                      index: 0,
+                      trigger: 'check',
+                      'e.type': 'change',
+                    },
+                  ],
+                },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
+              },
+            ],
+          },
+          {
+            description: 'single tree select, check filter nodes',
+            wrapper: 'getTreeSelectDefaultMount',
+            props: { filterable: true },
+            expect: [
+              { trigger: 'click(.t-input)' },
+              { trigger: "simulateInputChange('input', 'tdesign-vue')", delay: 100 },
+              {
+                trigger: 'click(document.t-tree__item:first-child)',
+                event: {
+                  change: [
+                    1,
+                    {
+                      node: 'toBeTruthy',
+                      data: { label: 'tdesign-vue', value: 1 },
+                      trigger: 'check',
+                      'e.type': 'click',
+                    },
+                  ],
+                },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
