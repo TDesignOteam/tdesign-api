@@ -36,7 +36,7 @@ module.exports = {
             ],
           },
           {
-            props: { value: '[1]' },
+            props: { value: [1] },
             description: 'show clear icon on mouse enter in multiple tree select',
             wrapper: 'getTreeSelectMultipleMount',
             expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-tag-input__suffix-clear'] }],
@@ -70,7 +70,36 @@ module.exports = {
     disabled_1136: {
       field_name: 'disabled',
       id: 1136,
-      PC: { className: 't-is-disabled', classNameDom: '.t-input' },
+      PC: {
+        className: 't-is-disabled',
+        classNameDom: '.t-input',
+        event: [
+          {
+            description: 'disabled TreeSelect can not open popup',
+            expect: [{ trigger: 'click(.t-input)', event: { popupVisibleChange: 'not' } }],
+          },
+          {
+            props: { value: 1, disabled: true },
+            description: 'cant not show clear icon on mouse enter in single tree select',
+            wrapper: 'getTreeSelectDefaultMount',
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                delay: 0,
+                exist: [{ '.t-input__suffix-clear': false }],
+              },
+            ],
+          },
+          {
+            props: { value: [1], disabled: true },
+            description: 'cant not show clear icon on mouse enter in multiple tree select',
+            wrapper: 'getTreeSelectMultipleMount',
+            expect: [
+              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-tag-input__suffix-clear': false }] },
+            ],
+          },
+        ],
+      },
     },
     empty_1142: {
       field_name: 'empty',
@@ -229,6 +258,7 @@ module.exports = {
               {
                 trigger: 'click(document.t-popup .t-tree__item:last-child .t-checkbox__label)',
                 event: { change: 'not' },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -283,7 +313,9 @@ module.exports = {
     readonly_2387: {
       field_name: 'readonly',
       id: 2387,
-      PC: { className: 't-is-readonly', classNameDom: '.t-input' },
+      PC: {
+        event: [{ expect: [{ trigger: 'click(.t-input)', event: { popupVisibleChange: 'not' } }] }],
+      },
     },
     selectInputProps_2330: { field_name: 'selectInputProps', id: 2330 },
     size_1132: {
@@ -352,14 +384,13 @@ module.exports = {
             expect: [
               {
                 trigger: 'focus(input)',
-                event: {
-                  focus: [{ 'e.type': 'focus', value: { label: 'tdesign-vue', value: 1 } }],
-                },
                 delay: 100,
+                event: { focus: [{ 'e.type': 'focus', value: 1 }] },
               },
               {
                 trigger: 'blur(input)',
-                event: { blur: [{ 'e.type': 'blur', value: { label: 'tdesign-vue', value: 1 } }] },
+                event: { blur: [{ 'e.type': 'blur', value: 1 }] },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -371,9 +402,8 @@ module.exports = {
               { trigger: 'click(.t-input)', event: { focus: [{ 'e.type': 'focus' }] } },
               {
                 trigger: 'blur(input)',
-                event: {
-                  blur: [{ 'e.type': 'blur', value: [{ label: 'tdesign-vue', value: 1 }] }],
-                },
+                event: { blur: [{ 'e.type': 'blur', value: [1] }] },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -388,19 +418,29 @@ module.exports = {
           {
             description: 'Single TreeSelect, click one tree item to trigger value change',
             wrapper: 'getTreeSelectDefaultMount',
+            props: { treeProps: { expandAll: true } },
             expect: [
               { trigger: 'click(.t-input)', delay: 200 },
               {
                 trigger: 'click(document.t-tree__item:nth-child(3))',
                 event: {
-                  change: ['2.1', { 'e.type': 'click', 'node.label': 'tdesign-web-react' }],
+                  change: [
+                    '2.1',
+                    {
+                      'e.type': 'click',
+                      'node.label': 'tdesign-web-react',
+                      data: { label: 'tdesign-web-react', value: '2.1' },
+                    },
+                  ],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
           {
             description: 'Multiple TreeSelect, click one tree item to trigger value change',
             wrapper: 'getTreeSelectMultipleMount',
+            props: { treeProps: { expandAll: true } },
             expect: [
               { trigger: 'click(.t-input)', delay: 200 },
               {
@@ -408,15 +448,22 @@ module.exports = {
                 event: {
                   change: [
                     [1, '2.1', '2.2', 3, '4', '5', '6'],
-                    { trigger: 'check', 'e.type': 'change', 'node.label': 'tdesign-mobile-vue' },
+                    {
+                      trigger: 'check',
+                      'e.type': 'change',
+                      'node.label': 'tdesign-mobile-vue',
+                      data: { label: 'tdesign-mobile-vue', value: '6' },
+                    },
                   ],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
           {
             description: 'Multiple TreeSelect, click one tree item to delete',
             wrapper: 'getTreeSelectMultipleMount',
+            props: { treeProps: { expandAll: true } },
             expect: [
               { trigger: 'click(.t-input)', delay: 200 },
               {
@@ -427,6 +474,7 @@ module.exports = {
                     { trigger: 'uncheck', 'e.type': 'change', 'node.label': 'tdesign-vue' },
                   ],
                 },
+                exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
           },
@@ -482,6 +530,13 @@ module.exports = {
         event: [
           {
             props: { filterable: true, value: [1] },
+            wrapper: 'getTreeSelectMultipleMount',
+            expect: [
+              { trigger: 'focus(input)', event: { focus: [{ value: [1], 'e.type': 'focus' }] } },
+            ],
+          },
+          {
+            props: { filterable: true, value: [{ label: 'tdesign-vue', value: 1 }] },
             wrapper: 'getTreeSelectMultipleMount',
             expect: [
               {

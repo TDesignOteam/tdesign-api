@@ -103463,7 +103463,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value can not show clear icon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":1},\"description\":\"show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":0,\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"[1]\"},\"description\":\"show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value can not show clear icon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":1},\"description\":\"show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":0,\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":[1]},\"description\":\"show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103632,7 +103632,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"disabled TreeSelect can not open popup\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":\"not\"}}]},{\"props\":{\"value\":1,\"disabled\":true},\"description\":\"cant not show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":0,\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":[1],\"disabled\":true},\"description\":\"cant not show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-tag-input__suffix-clear\":false}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104066,7 +104066,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":\"not\"}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":\"not\"},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104451,7 +104451,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
+      "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104893,7 +104893,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"description\":\"single select blur works fine\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":{\"label\":\"tdesign-vue\",\"value\":1}}]},\"delay\":100},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[{\"e.type\":\"blur\",\"value\":{\"label\":\"tdesign-vue\",\"value\":1}}]}}]},{\"props\":{\"filterable\":true,\"value\":[1]},\"description\":\"multiple select blur works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[{\"e.type\":\"blur\",\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"description\":\"single select blur works fine\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"delay\":100,\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":1}]}},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[{\"e.type\":\"blur\",\"value\":1}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"filterable\":true,\"value\":[1]},\"description\":\"multiple select blur works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[{\"e.type\":\"blur\",\"value\":[1]}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -104933,7 +104933,7 @@
       "trigger_elements": "MouseEvent<any>/KeyboardEvent<HTMLInputElement>",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"trigger\":\"check\",\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\"}]}}]},{\"description\":\"Multiple TreeSelect, click one tree item to delete\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"change\":[[\"2.1\",\"2.2\",3,\"4\",\"5\"],{\"trigger\":\"uncheck\",\"e.type\":\"change\",\"node.label\":\"tdesign-vue\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\",\"data\":{\"label\":\"tdesign-web-react\",\"value\":\"2.1\"}}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"trigger\":\"check\",\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\",\"data\":{\"label\":\"tdesign-mobile-vue\",\"value\":\"6\"}}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"description\":\"Multiple TreeSelect, click one tree item to delete\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"change\":[[\"2.1\",\"2.2\",3,\"4\",\"5\"],{\"trigger\":\"uncheck\",\"e.type\":\"change\",\"node.label\":\"tdesign-vue\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -105080,7 +105080,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":[1]},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}],\"e.type\":\"focus\"}]}}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":[1]},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"value\":[1],\"e.type\":\"focus\"}]}}]},{\"props\":{\"filterable\":true,\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}],\"e.type\":\"focus\"}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -105106,7 +105106,7 @@
       "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: InputValue, context: SelectInputValueChangeContext)【import { SelectInputValueChangeContext } from '@SelectInput'】",
+      "event_input": "(value: InputValue, context: SelectInputValueChangeContext)",
       "create_time": "2022-03-03 07:10:58",
       "update_time": "2022-03-03 07:15:02",
       "event_output": null,
