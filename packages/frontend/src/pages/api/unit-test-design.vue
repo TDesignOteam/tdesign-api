@@ -30,7 +30,7 @@
         style="margin-top: 16px"
         @blur="onTestDescriptionBlur"
       ></t-textarea> -->
-      <div id="test-json-editor"></div>
+      <div id="test-json-editor" style="height: 500px"></div>
 
       <div style="margin-top: 32px; display: flex; width: 100%; justify-content: flex-end;">
         <t-button @click="jsonConfirm">
