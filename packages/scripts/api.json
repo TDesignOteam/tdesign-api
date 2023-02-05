@@ -16453,7 +16453,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示选中的标签数量 ",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -16725,6 +16725,49 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3318,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:03:03",
+      "update_time": "2023-02-05 02:03:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -17428,6 +17471,90 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3319,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置图标前的后置内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:03:36",
+      "update_time": "2023-02-05 02:03:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3320,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件后置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:03:44",
+      "update_time": "2023-02-05 02:03:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -75093,7 +75220,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示选中的标签数量 ",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -75449,6 +75576,49 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3317,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Select",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:00:14",
+      "update_time": "2023-02-05 02:00:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -76240,6 +76410,90 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3315,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Select",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置图标前的后置内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 01:55:56",
+      "update_time": "2023-02-05 01:55:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3316,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Select",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件后置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 01:56:04",
+      "update_time": "2023-02-05 01:56:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -77350,7 +77604,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 `collapsedItems` 自定义。`value` 表示所有标签值，`collapsedTags` 表示折叠标签值，`count` 表示选中的标签数量",
+      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 `collapsedItems` 自定义。`value` 表示所有标签值，`collapsedTags` 表示折叠标签值，`count` 表示折叠的数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -91839,7 +92093,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示总标签数量",
+      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -103493,21 +103747,21 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示选中的标签数量 ",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-10-13 08:37:42",
       "update_time": "2021-11-09 06:38:29",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: DataOption[]; collapsedSelectedItems: DataOption[]; count: number }>",
+      "custom_field_type": "TNode<{ value: TreeValueType[]; collapsedSelectedItems: DataOption[]; count: number }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":5}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":2}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103951,6 +104205,49 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3323,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:04:50",
+      "update_time": "2023-02-05 02:04:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -104596,6 +104893,90 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3321,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置图标前的后置内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:04:03",
+      "update_time": "2023-02-05 02:04:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3322,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件后置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 02:04:11",
+      "update_time": "2023-02-05 02:04:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -110905,5 +111286,5 @@
       ]
     }
   ],
-  "total": 2648
+  "total": 2657
 }

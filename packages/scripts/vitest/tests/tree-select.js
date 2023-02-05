@@ -50,7 +50,7 @@ module.exports = {
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         props: { minCollapsedNum: 3 },
-        tnode: { dom: [], trigger: '', params: [{ count: 5 }] },
+        tnode: { dom: [], trigger: '', params: [{ count: 2 }] },
       },
     },
     customStyle_3230: { field_name: 'customStyle', id: 3230 },
@@ -279,6 +279,7 @@ module.exports = {
       },
     },
     keys_3228: { field_name: 'keys', id: 3228 },
+    label_3323: { field_name: 'label', id: 3323 },
     loading_1140: { field_name: 'loading', id: 1140, PC: { dom: '.t-loading' } },
     loadingText_1141: {
       field_name: 'loadingText',
@@ -385,6 +386,8 @@ module.exports = {
         classNameDom: '.t-input',
       },
     },
+    suffix_3321: { field_name: 'suffix', id: 3321 },
+    suffixIcon_3322: { field_name: 'suffixIcon', id: 3322 },
     tagProps_2329: {
       field_name: 'tagProps',
       id: 2329,
