@@ -17896,6 +17896,49 @@
       ]
     },
     {
+      "id": 3324,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "valueDisplay",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "【开发中】自定义选中项呈现的内容",
+      "field_desc_en": "`MouseEvent<SVGElement>`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-05 03:59:14",
+      "update_time": "2023-02-05 03:59:14",
+      "event_output": null,
+      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 396,
       "platform_framework": [
         "1",
@@ -76696,14 +76739,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义选中项呈现方式",
+      "field_desc_zh": "自定义选中项呈现的内容",
       "field_desc_en": "`MouseEvent<SVGElement>`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-28 06:25:31",
       "update_time": "2022-05-25 06:38:48",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void; displayValue?: SelectValue }>",
+      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -77618,7 +77661,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getSelectInputMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":5}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getSelectInputMultipleMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":2}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105187,7 +105230,7 @@
       "create_time": "2021-11-09 06:29:19",
       "update_time": "2022-02-20 06:40:00",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: TreeOptionData | TreeOptionData[]; onClose: (index: number, item?: any) => void }>",
+      "custom_field_type": "string | TNode<{ value: TreeOptionData | TreeOptionData[]; onClose: (index: number) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -111286,5 +111329,5 @@
       ]
     }
   ],
-  "total": 2657
+  "total": 2658
 }

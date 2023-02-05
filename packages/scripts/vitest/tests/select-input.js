@@ -48,7 +48,7 @@ module.exports = {
       PC: {
         wrapper: 'getSelectInputMultipleMount',
         props: { minCollapsedNum: 3 },
-        tnode: { dom: [], trigger: '', params: [{ count: 5 }] },
+        tnode: { dom: [], trigger: '', params: [{ count: 2 }] },
       },
     },
     disabled_2134: {
