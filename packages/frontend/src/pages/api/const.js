@@ -15,7 +15,7 @@ export const API_CATEGORY_MAP = {
   [API_CATEGORY_EVENTS]: {
     placeholder: {
       name: '事件名称录入时统一使用小驼峰命名，且不带on，如：visibleChange',
-      inputParams: '事件参数，如：({ e: Event, value: string | number })',
+      inputParams: '事件参数，如：(context: { e: Event, value: string | number })',
       descZh: '请输入事件描述（中文），如：点击确认按钮时触发',
       descEn: 'type event description in English',
       triggerElements: '事件触发元素描述，默认为 MouseEvent<HTMLDivElement>'

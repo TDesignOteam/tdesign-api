@@ -64,3 +64,16 @@ export function parseJSON(json, defaultValue = undefined) {
 export function getEventName(name) {
   return `on${upperFirst(camelCase(name))}`;
 }
+
+export function loadScript(src) {
+  const scriptDom = document.querySelector(`script[src="${src}"]`);
+  if (scriptDom) return Promise.resolve();
+  const script = document.createElement('script');
+  script.src = src;
+  document.body.appendChild(script);
+  return new Promise((resolve) => {
+    script.onload = () => {
+      resolve();
+    }
+  })
+}

@@ -15,20 +15,29 @@
 
       <!-- <t-divider /> -->
 
-      <UnitTestUI
+      <!-- <UnitTestUI
         ref="unit-test-ui"
         :currentTestJSON="currentTestJSON"
         :apiInfo="apiInfo"
         @test-ui-form-data-change="onTestUIFormDataChange"
-      />
+      /> -->
 
       <!-- <t-divider /> -->
 
-      <t-textarea
+      <!-- <t-textarea
+        id="test-json-editor"
         v-model="testDescription"
         style="margin-top: 16px"
         @blur="onTestDescriptionBlur"
-      ></t-textarea>
+      ></t-textarea> -->
+      <div id="test-json-editor"></div>
+
+      <div style="margin-top: 32px; display: flex; width: 100%; justify-content: flex-end;">
+        <t-button @click="jsonConfirm">
+          <ChevronRightDoubleIcon />
+        </t-button>
+      </div>
+
       <div v-if="jsonError" class="t-textarea__tips t-textarea__tips--error">
         {{ jsonError }}
       </div>
@@ -51,22 +60,25 @@
 </template>
 
 <script>
+import { ChevronRightDoubleIcon } from 'tdesign-icons-vue';
 import { CATEGORY_OPTIONS } from './unit-test/const'
 import UnitTestUI from './unit-test/unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
-import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON } from './util'
+import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON, loadScript } from './util'
 import prettierConfig from '../../../../scripts/config/prettier'
 import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
 import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs"
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json';
+// import JSONEditor from'https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.2/jsoneditor.min.js';
+// import 'https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.2/jsoneditor.min.css';
 import 'tdesign-site-components/lib/styles/prism-theme.less'
 
 export default {
   name: 'UnitTestDesign',
 
-  components: { UnitTestUI },
+  components: { UnitTestUI, ChevronRightDoubleIcon },
 
   props: {
     map: Object,
@@ -94,6 +106,7 @@ export default {
       testDescription: '',
       jsonError: '',
       unitTestType: 'current',
+      jsonEditor: null,
     }
   },
 
@@ -111,12 +124,18 @@ export default {
     },
   },
 
+  mounted() {
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.2/jsoneditor.min.js').then(() => {
+      this.initJsEditor();
+    });
+  },
+
   watch: {
     visible(visible) {
       if (visible) {
         this.getCurrentComponentData()
       } else {
-        this.$refs['unit-test-ui'].clearFormData();
+        this.$refs['unit-test-ui']?.clearFormData();
       }
     },
     apiInfo(apiInfo) {
@@ -129,9 +148,33 @@ export default {
       if (index < 0) return
       this.$set(this.componentApiData[index], 'test_description', val || undefined)
     },
+    testDescription: {
+      handler(val) {
+        this.$nextTick(() => {
+          this.jsonEditor?.set(parseJSON(val, {}));
+        });
+      },
+      immediate: true,
+    },
   },
 
   methods: {
+    initJsEditor() {
+      const container = document.querySelector('#test-json-editor');
+      this.jsonEditor = new JSONEditor(container, {
+        mode: 'code',
+        onEditable: (json, b) => {
+          console.log(json, b);
+          return true;
+        },
+      });
+    },
+
+    jsonConfirm() {
+      const json = this.jsonEditor.get();
+      this.testDescription = JSON.stringify(json);
+    },
+
     checkInFramework() {
       const framework = this.tab === 'VueNext(PC)' ? 'Vue(PC)' : this.tab;
       return this.apiInfo && this.apiInfo.platform_framework_text.includes(framework);
@@ -150,7 +193,8 @@ export default {
         const finalComponent = rootComponentMap[this.apiInfo.component] || this.apiInfo.component
         if (this.unitTestType === 'current') {
           if (Object.keys(this.currentTestJSON).length !== 0 && this.checkInFramework()) {
-            const { oneUnitTests } = getOneUnitTest(this.tab, this.apiInfo.component, this.apiInfo, this.currentTestJSON);
+            const testData = this.tab.indexOf('PC') !== -1 ? this.currentTestJSON.PC : this.currentTestJSON.Mobile;
+            const { oneUnitTests } = getOneUnitTest(this.tab, this.apiInfo.component, this.apiInfo, testData);
             codeData = oneUnitTests.join('')
           } else {
             codeData = 'console.log(\'current unit test is empty\')'
@@ -290,7 +334,7 @@ export default {
       }).then((res) => {
         this.componentApiData = res.data.data
         // 更新表单数据
-        this.$refs['unit-test-ui'].updateDataByJSON()
+        this.$refs['unit-test-ui']?.updateDataByJSON()
         this.loading = false
       }, () => {
         this.loading = false
@@ -298,7 +342,7 @@ export default {
     },
 
     onTestDescriptionBlur() {
-      this.$refs['unit-test-ui'].updateDataByJSON()
+      this.$refs['unit-test-ui']?.updateDataByJSON()
     },
   }
 };

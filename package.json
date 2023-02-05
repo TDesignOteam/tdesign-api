@@ -24,6 +24,7 @@
     "qs": "^6.9.4",
     "sql.js": "^1.6.2",
     "squel": "^5.13.0",
+    "tdesign-icons-vue": "^0.1.6",
     "tdesign-vue": "^1.0.3"
   },
   "devDependencies": {
