@@ -71,16 +71,12 @@ export interface TdAvatarGroupProps {
    */
   max?: number;
   /**
-   * 超出的头像呈现位置
-   */
-  placement?: MaxOverPlacement;
-  /**
    * 头像右上角提示信息
    */
   popupProps?: PopupProps;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
-   * @default medium
+   * @default ''
    */
   size?: string;
 }
@@ -88,5 +84,3 @@ export interface TdAvatarGroupProps {
 export type ShapeEnum = 'circle' | 'round';
 
 export type CascadingValue = 'left-up' | 'right-up';
-
-export type MaxOverPlacement = 'left' | 'top' | 'bottom' | 'right';

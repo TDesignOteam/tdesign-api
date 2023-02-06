@@ -25,14 +25,6 @@ export default {
   max: {
     type: Number,
   },
-  /** 超出的头像呈现位置 */
-  placement: {
-    type: String as PropType<TdAvatarGroupProps['placement']>,
-    validator(val: TdAvatarGroupProps['placement']): boolean {
-      if (!val) return true;
-      return ['left', 'top', 'bottom', 'right'].includes(val);
-    },
-  },
   /** 头像右上角提示信息 */
   popupProps: {
     type: Object as PropType<TdAvatarGroupProps['popupProps']>,
@@ -40,6 +32,6 @@ export default {
   /** 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size */
   size: {
     type: String,
-    default: 'medium',
+    default: '',
   },
 };

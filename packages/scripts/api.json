@@ -6357,7 +6357,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
       "field_desc_en": "size",
