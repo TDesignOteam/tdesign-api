@@ -54,7 +54,7 @@ module.exports = {
     size_23: {
       field_name: 'size',
       id: 23,
-      PC: { className: ['t-size-s', 't-size-m', 't-size-l'] },
+      PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'] },
     },
     size_3240: { field_name: 'size', id: 3240, PC: { className: 't-tag--${item}' } },
     theme_4: { field_name: 'theme', id: 4, PC: { className: 't-tag--${item}' } },
