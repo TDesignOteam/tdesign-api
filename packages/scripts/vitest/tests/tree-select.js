@@ -440,13 +440,13 @@ module.exports = {
             wrapper: 'getTreeSelectDefaultMount',
             expect: [
               {
-                trigger: 'focus(input)',
+                trigger: 'click(.t-input)',
                 delay: 100,
                 event: { focus: [{ 'e.type': 'focus', value: 1 }] },
               },
               {
-                trigger: 'simulateDocumentClick(document)',
-                event: { blur: [{ 'e.type': 'click', value: 1 }] },
+                trigger: "simulateDocumentMouseEvent(document, 'mousedown')",
+                event: { blur: [{ 'e.type': 'mousedown', value: 1 }] },
                 exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],
@@ -458,8 +458,8 @@ module.exports = {
             expect: [
               { trigger: 'click(.t-input)', event: { focus: [{ 'e.type': 'focus' }] } },
               {
-                trigger: 'simulateDocumentClick(document)',
-                event: { blur: [{ 'e.type': 'click', value: [1] }] },
+                trigger: "simulateDocumentMouseEvent(document, 'mousedown')",
+                event: { blur: [{ 'e.type': 'mousedown', value: [1] }] },
                 exist: [{ clearElementAtEnd: '.t-popup' }],
               },
             ],

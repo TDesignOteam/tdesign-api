@@ -91755,7 +91755,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",\"t-size-m\",\"t-size-l\"]}}",
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -105317,7 +105317,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"description\":\"single select blur works fine\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"delay\":100,\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":1}]}},{\"trigger\":\"simulateDocumentClick(document)\",\"event\":{\"blur\":[{\"e.type\":\"click\",\"value\":1}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"filterable\":true,\"value\":[1]},\"description\":\"multiple select blur works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"simulateDocumentClick(document)\",\"event\":{\"blur\":[{\"e.type\":\"click\",\"value\":[1]}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"description\":\"single select blur works fine\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":100,\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":1}]}},{\"trigger\":\"simulateDocumentMouseEvent(document, 'mousedown')\",\"event\":{\"blur\":[{\"e.type\":\"mousedown\",\"value\":1}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"filterable\":true,\"value\":[1]},\"description\":\"multiple select blur works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"simulateDocumentMouseEvent(document, 'mousedown')\",\"event\":{\"blur\":[{\"e.type\":\"mousedown\",\"value\":[1]}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [

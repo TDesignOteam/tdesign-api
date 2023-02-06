@@ -15,7 +15,7 @@ const SIMULATE_FUNCTIONS = [
   'simulateImageEvent',
   'simulateFileChange',
   'simulateDragFileChange',
-  'simulateDocumentClick',
+  'simulateDocumentMouseEvent',
 ];
 
 // 获取变量的函数
@@ -991,6 +991,7 @@ function getPresetsExpect(triggerList, framework, component) {
       dom: triggerDom,
       event: trigger,
       component,
+      // delay: framework.indexOf('React') !== -1 ? true : undefined,
     });
   }).join('\n');
 }
