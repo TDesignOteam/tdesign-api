@@ -35,9 +35,8 @@ module.exports = {
       field_name: 'gallery',
       id: 2869,
       PC: {
-        props: { gallery: true },
         className: 't-image__wrapper--gallery',
-        dom: ['.t-image__gallery-shadow'],
+        dom: [{ props: { gallery: true }, dom: ['.t-image__gallery-shadow'] }],
       },
     },
     lazy_2211: { field_name: 'lazy', id: 2211 },
@@ -67,7 +66,10 @@ module.exports = {
             expect: [
               {
                 trigger: 'mouseenter(.t-image__wrapper)',
-                exist: ['.t-image__overlay-content', { '.t-image__overlay-content--hidden': 0 }],
+                exist: [
+                  '.t-image__overlay-content',
+                  { '.t-image__overlay-content--hidden': false },
+                ],
               },
               {
                 trigger: 'mouseleave(.t-image__wrapper)',

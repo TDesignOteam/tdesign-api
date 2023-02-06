@@ -46795,7 +46795,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"gallery\":true},\"className\":\"t-image__wrapper--gallery\",\"dom\":[\".t-image__gallery-shadow\"]}}",
+      "test_description": "{\"PC\":{\"className\":\"t-image__wrapper--gallery\",\"dom\":[{\"props\":{\"gallery\":true},\"dom\":[\".t-image__gallery-shadow\"]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -47016,7 +47016,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"overlayTrigger\":\"hover\",\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"description\":\"show overlay content on hover\",\"wrapper\":\"getOverlayImageMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content\",{\".t-image__overlay-content--hidden\":0}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"overlayTrigger\":\"hover\",\"src\":\"https://tdesign.gtimg.com/demo/demo-image-1.png\"},\"description\":\"show overlay content on hover\",\"wrapper\":\"getOverlayImageMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content\",{\".t-image__overlay-content--hidden\":false}]},{\"trigger\":\"mouseleave(.t-image__wrapper)\",\"exist\":[\".t-image__overlay-content--hidden\"]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
