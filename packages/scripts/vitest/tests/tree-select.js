@@ -49,8 +49,32 @@ module.exports = {
       id: 1822,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
-        props: { minCollapsedNum: 3 },
-        tnode: { dom: [], trigger: '', params: [{ count: 2 }] },
+        props: {
+          minCollapsedNum: 2,
+          value: [1, 3, '5'],
+          data: [
+            { label: 'tdesign-vue', value: 1 },
+            { label: 'tdesign-react', value: 2 },
+            { label: 'tdesign-miniprogram', value: 3 },
+            { label: 'tdesign-angular', value: '5' },
+            { label: 'tdesign-mobile-vue', value: '6' },
+          ],
+        },
+        tnode: {
+          dom: [],
+          trigger: '',
+          params: [
+            {
+              count: 1,
+              value: [
+                { label: 'tdesign-vue', value: 1 },
+                { label: 'tdesign-miniprogram', value: 3 },
+                { label: 'tdesign-angular', value: '5' },
+              ],
+              collapsedSelectedItems: [{ label: 'tdesign-angular', value: '5' }],
+            },
+          ],
+        },
       },
     },
     customStyle_3230: { field_name: 'customStyle', id: 3230 },
@@ -417,7 +441,11 @@ module.exports = {
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
         props: { value: 1, data: "[{label: 'tdesign-vue',value: 1}]" },
-        tnode: { dom: [], trigger: '', params: [{ value: [{ label: 'tdesign-vue', value: 1 }] }] },
+        tnode: {
+          dom: [],
+          trigger: '',
+          params: [{ value: [{ label: 'tdesign-vue', value: 1 }], onClose: 'toBeTruthy' }],
+        },
       },
     },
     valueType_1143: {
