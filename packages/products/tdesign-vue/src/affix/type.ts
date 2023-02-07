@@ -13,7 +13,7 @@ export interface TdAffixProps {
    */
   container?: ScrollContainer;
   /**
-   * 内容（暂未实现）
+   * 内容
    */
   content?: string | TNode;
   /**

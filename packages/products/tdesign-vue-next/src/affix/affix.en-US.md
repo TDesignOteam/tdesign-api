@@ -1,12 +1,11 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Affix Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-container | String / Function | () => (() => window) | Typescript：`ScrollContainer` | N
+container | String / Function | () => (() => window) | Typescript：`ScrollContainer`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 offsetBottom | Number | 0 | \- | N

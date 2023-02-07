@@ -13,7 +13,7 @@ export default {
     type: [String, Function] as PropType<TdAffixProps['container']>,
     default: () => (() => window),
   },
-  /** 内容（暂未实现） */
+  /** 内容 */
   content: {
     type: [String, Function] as PropType<TdAffixProps['content']>,
   },
