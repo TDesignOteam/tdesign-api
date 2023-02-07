@@ -12,7 +12,7 @@ import { TagInputProps } from '../tag-input';
 import { TagProps } from '../tag';
 import { SelectInputValueChangeContext } from '../select-input';
 import { PopupVisibleChangeContext } from '../popup';
-import { TNode, TElement, SizeEnum, InfinityScroll } from '../common';
+import { PlainObject, TNode, TElement, SizeEnum, InfinityScroll } from '../common';
 import { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
 
 export interface TdSelectProps<T extends SelectOption = SelectOption> {
@@ -315,7 +315,7 @@ export interface SelectRemoveContext<T> {
   e: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;
 }
 
-export type SelectOption = TdOptionProps | SelectOptionGroup;
+export type SelectOption = TdOptionProps | SelectOptionGroup | PlainObject;
 
 export interface SelectOptionGroup extends TdOptionGroupProps {
   group: string;

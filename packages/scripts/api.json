@@ -77233,7 +77233,7 @@
       ],
       "component": "Select",
       "field_category": 64,
-      "field_name": "<T extends SelectOption = SelectOption>【type SelectOption = TdOptionProps | SelectOptionGroup】【interface SelectOptionGroup extends TdOptionGroupProps { group: string; children: Array<TdOptionProps> }】",
+      "field_name": "<T extends SelectOption = SelectOption>【type SelectOption = TdOptionProps | SelectOptionGroup | PlainObject 】【interface SelectOptionGroup extends TdOptionGroupProps { group: string; children: Array<TdOptionProps> }】",
       "field_type": [
         "32"
       ],
