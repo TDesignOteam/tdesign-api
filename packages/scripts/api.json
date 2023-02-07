@@ -99841,7 +99841,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"trigger\":\"delay(100)\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"expect\":[{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":true,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"change\":[[1,2]]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"defaultActived\":[1],\"activeMultiple\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"active\":[[1,2]]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -99888,7 +99888,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"props\":{\"actived\":[1]},\"trigger\":\"delay(300)\",\"classNameDom\":\".t-tree__item:first-child\",\"className\":\"t-is-active\",\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":1},\"event\":{\"active\":[[2]]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -100168,7 +100168,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"checkable\":true,\"disableCheck\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":2}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":{\"change\":\"not\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -100257,7 +100257,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"checkable\":true,\"disableCheck\":true,\"draggable\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true},{\"trigger\":\"dragover(.t-tree__item)\",\"delay\":true,\"event\":{\"dragOver\":[]}},{\"trigger\":\"dragend(.t-tree__item)\",\"delay\":true,\"event\":{\"dragEnd\":[]}},{\"trigger\":\"dragstart(.t-tree__item)\",\"delay\":true,\"event\":{\"dragStart\":[]}},{\"trigger\":\"dragleave(.t-tree__item)\",\"delay\":true,\"event\":{\"dragLeave\":[]}}]},{\"props\":{\"draggable\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true},{\"trigger\":\"dragend(.t-tree__item:nth-child(2))\",\"delay\":true,\"event\":{\"dragEnd\":[]}},{\"trigger\":\"drop(.t-tree__item)\",\"delay\":true,\"event\":{\"drop\":[]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -100727,7 +100727,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"icon\":false},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__icon\":2}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -100921,7 +100921,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"expandAll\":true,\"line\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__line\":2}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -103302,7 +103302,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"description\":\"TreeNode is not disabled && Tree is not disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":false}],\"disabled\":false},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":1},\"event\":[{\"change\":[[1]]},{\"click\":[]}]}]},{\"description\":\"TreeNode is not disabled && Tree is disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":false}],\"disabled\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]},{\"description\":\"TreeNode is disabled && Tree is disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":true}],\"disabled\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]},{\"description\":\"TreeNode is disabled && Tree is not disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":true}],\"disabled\":false},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
