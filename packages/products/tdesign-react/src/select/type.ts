@@ -22,6 +22,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   autoWidth?: boolean;
   /**
+   * 自动聚焦
+   * @default false
+   */
+  autofocus?: boolean;
+  /**
    * 无边框模式
    * @default false
    */
@@ -32,7 +37,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   clearable?: boolean;
   /**
-   * 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义
+   * 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量
    */
   collapsedItems?: TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number }>;
   /**
@@ -72,6 +77,10 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    * 用来定义 value / label 在 `options` 中对应的字段别名
    */
   keys?: SelectKeysType;
+  /**
+   * 左侧文本
+   */
+  label?: TNode;
   /**
    * 是否为加载状态
    * @default false
@@ -162,6 +171,14 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
+   * 后置图标前的后置内容
+   */
+  suffix?: TNode;
+  /**
+   * 组件后置图标
+   */
+  suffixIcon?: TElement;
+  /**
    * 透传 TagInput 标签输入框组件的全部属性
    */
   tagInputProps?: TagInputProps;
@@ -182,9 +199,9 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   defaultValue?: SelectValue;
   /**
-   * 自定义选中项呈现方式
+   * 自定义选中项呈现的内容
    */
-  valueDisplay?: string | TNode<{ value: SelectValue; onClose: (index: number, item?: any) => void }>;
+  valueDisplay?: string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>;
   /**
    * 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。
    * @default value
@@ -237,7 +254,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 输入值变化时，触发搜索事件。主要用于远程搜索新数据
    */
-  onSearch?: (filterWords: string) => void;
+  onSearch?: (filterWords: string, context: { e: KeyboardEvent<HTMLDivElement> }) => void;
 }
 
 export interface TdOptionProps {

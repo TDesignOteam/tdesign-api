@@ -6,6 +6,7 @@ import { TdSelectProps, TdOptionProps, TdOptionGroupProps } from './type';
 
 export const selectDefaultProps: TdSelectProps = {
   autoWidth: false,
+  autofocus: false,
   borderless: false,
   clearable: false,
   creatable: false,
