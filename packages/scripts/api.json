@@ -16242,7 +16242,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "自动聚焦",
       "field_desc_en": null,
@@ -16492,7 +16492,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -18079,7 +18079,7 @@
       "field_desc_zh": "当输入框失去焦点时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { value: CascaderValue<CascaderOption>; e: SelectInputBlurContext['e'] })",
+      "event_input": "(context: { value: CascaderValue<CascaderOption> } & SelectInputBlurContext )",
       "create_time": "2020-12-21 06:49:01",
       "update_time": "2021-04-23 14:27:20",
       "event_output": null,
@@ -95387,7 +95387,7 @@
       "field_desc_zh": "当输入框失去焦点时触发，value 表示组件当前有效值",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { value: TimePickerValue; e: FocusEvent })",
+      "event_input": "(context: { value: TimePickerValue } & SelectInputBlurContext)【import { SelectInputBlurContext } from '@SelectInput'】",
       "create_time": "2021-01-15 03:58:52",
       "update_time": "2022-04-21 06:55:29",
       "event_output": null,
