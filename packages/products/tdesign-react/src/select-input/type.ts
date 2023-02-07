@@ -10,7 +10,8 @@ import { PopupProps } from '../popup';
 import { TagInputProps, TagInputValue, TagInputChangeContext } from '../tag-input';
 import { TagProps } from '../tag';
 import { PopupVisibleChangeContext } from '../popup';
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
+import { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
 
 export interface TdSelectInputProps {
   /**
@@ -65,7 +66,7 @@ export interface TdSelectInputProps {
   /**
    * 左侧文本
    */
-  label?: string | TNode;
+  label?: TNode;
   /**
    * 是否处于加载状态
    * @default false
@@ -84,7 +85,7 @@ export interface TdSelectInputProps {
   /**
    * 下拉框内容，可完全自定义
    */
-  panel?: string | TNode;
+  panel?: TNode;
   /**
    * 占位符
    * @default ''
@@ -115,11 +116,11 @@ export interface TdSelectInputProps {
   /**
    * 后置图标前的后置内容
    */
-  suffix?: string | TNode;
+  suffix?: TNode;
   /**
    * 组件后置图标
    */
-  suffixIcon?: TNode;
+  suffixIcon?: TElement;
   /**
    * 多选场景下，自定义选中标签的内部内容。注意和 `valueDisplay` 区分，`valueDisplay`  是用来定义全部标签内容，而非某一个标签
    */
@@ -135,7 +136,7 @@ export interface TdSelectInputProps {
   /**
    * 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式
    */
-  tips?: string | TNode;
+  tips?: TNode;
   /**
    * 全部标签值。值为数组表示多个标签，值为非数组表示单个数值
    */
@@ -151,13 +152,13 @@ export interface TdSelectInputProps {
   /**
    * 清空按钮点击时触发
    */
-  onClear?: (context: { e: MouseEvent }) => void;
+  onClear?: (context: { e: MouseEvent<SVGSVGElement> }) => void;
   /**
    * 按键按下 Enter 时触发
    */
   onEnter?: (
     value: SelectInputValue,
-    context: { e: KeyboardEvent; inputValue: InputValue; tagInputValue?: TagInputValue },
+    context: { e: KeyboardEvent<HTMLDivElement>; inputValue: InputValue; tagInputValue?: TagInputValue },
   ) => void;
   /**
    * 聚焦时触发
@@ -170,15 +171,15 @@ export interface TdSelectInputProps {
   /**
    * 进入输入框时触发
    */
-  onMouseenter?: (context: { e: MouseEvent }) => void;
+  onMouseenter?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 离开输入框时触发
    */
-  onMouseleave?: (context: { e: MouseEvent }) => void;
+  onMouseleave?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 粘贴事件，`pasteValue` 表示粘贴板的内容
    */
-  onPaste?: (context: { e: ClipboardEvent; pasteValue: string }) => void;
+  onPaste?: (context: { e: ClipboardEvent<HTMLDivElement>; pasteValue: string }) => void;
   /**
    * 下拉框显示或隐藏时触发
    */
@@ -202,11 +203,17 @@ export type SelectInputBlurContext = PopupVisibleChangeContext & { inputValue: s
 export interface SelectInputFocusContext {
   inputValue: InputValue;
   tagInputValue?: TagInputValue;
-  e: FocusEvent;
+  e: FocusEvent<HTMLInputElement>;
 }
 
 export interface SelectInputValueChangeContext {
-  e?: Event | InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent;
+  e?:
+    | Event
+    | FormEvent<HTMLInputElement>
+    | MouseEvent<HTMLElement | SVGElement>
+    | FocusEvent<HTMLInputElement>
+    | KeyboardEvent<HTMLInputElement>
+    | CompositionEvent<HTMLDivElement>;
   trigger: 'input' | 'clear' | 'blur' | 'focus' | 'initial' | 'change';
 }
 

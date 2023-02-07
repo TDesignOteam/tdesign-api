@@ -31,7 +31,6 @@ export default {
   /** 输入框的值 */
   inputValue: {
     type: [String, Number] as PropType<TdSelectInputProps['inputValue']>,
-    default: undefined,
   },
   /** 输入框的值，非受控属性 */
   defaultInputValue: {
@@ -68,10 +67,7 @@ export default {
     type: Object as PropType<TdSelectInputProps['popupProps']>,
   },
   /** 是否显示下拉框 */
-  popupVisible: {
-    type: Boolean,
-    default: undefined,
-  },
+  popupVisible: Boolean,
   /** 是否显示下拉框，非受控属性 */
   defaultPopupVisible: Boolean,
   /** 只读状态，值为真会隐藏输入框，且无法打开下拉框 */
