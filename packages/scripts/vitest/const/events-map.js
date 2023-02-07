@@ -35,6 +35,7 @@ const UNIT_TEST_EVENTS_MAP = {
   'dragleave': 'dragLeave',
   'dragover': 'dragOver',
   'dragstart': 'dragStart',
+  'drop': 'drop',
   'compositionend': 'compositionEnd',
   'compositionstart': 'compositionStart',
   'compositionupdate': 'compositionUpdate',
