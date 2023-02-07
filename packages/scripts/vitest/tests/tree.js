@@ -6,16 +6,17 @@ module.exports = {
       id: 537,
       PC: {
         wrapper: 'getTreeDefaultMount',
-        trigger: 'delay(100)',
         event: [
           {
-            props: { activable: true, actived: [1] },
+            props: { activable: true, defaultActived: [1], activeMultiple: true },
+            trigger: 'delay(300)',
             expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-tree__item': 2 } },
               {
                 trigger: 'click(.t-tree__item:nth-child(2))',
-                delay: true,
+                delay: 300,
                 exist: { '.t-tree__item.t-is-active': 2 },
-                event: { change: [[1, 2]] },
+                event: { active: [[1, 2]] },
               },
             ],
           },
@@ -27,11 +28,21 @@ module.exports = {
       id: 538,
       PC: {
         wrapper: 'getTreeDefaultMount',
-        props: { actived: [1] },
-        trigger: 'delay(300)',
-        classNameDom: '.t-tree__item:first-child',
-        className: 't-is-active',
-        snapshot: true,
+        event: [
+          {
+            props: { activable: true, actived: [1] },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-tree__item': 2 } },
+              {
+                trigger: 'click(.t-tree__item:nth-child(2))',
+                delay: 300,
+                exist: { '.t-tree__item.t-is-active': 1 },
+                event: { active: [[2]] },
+              },
+            ],
+          },
+        ],
       },
     },
     allowFoldNodeOnFilter_2444: { field_name: 'allowFoldNodeOnFilter', id: 2444 },
@@ -39,9 +50,60 @@ module.exports = {
     checkStrictly_527: { field_name: 'checkStrictly', id: 527 },
     checkable_525: { field_name: 'checkable', id: 525 },
     data_519: { field_name: 'data', id: 519 },
-    disableCheck_1859: { field_name: 'disableCheck', id: 1859 },
+    disableCheck_1859: {
+      field_name: 'disableCheck',
+      id: 1859,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            props: { checkable: true, disableCheck: true },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 2 } },
+              {
+                trigger: 'click(.t-checkbox__input)',
+                delay: 300,
+                exist: { '.t-is-checked': 0 },
+                event: { change: 'not' },
+              },
+            ],
+          },
+        ],
+      },
+    },
     disabled_539: { field_name: 'disabled', id: 539 },
-    draggable_2808: { field_name: 'draggable', id: 2808 },
+    draggable_2808: {
+      field_name: 'draggable',
+      id: 2808,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            props: { checkable: true, disableCheck: true, draggable: true },
+            expect: [
+              { trigger: 'delay(300)', delay: true },
+              { trigger: 'dragover(.t-tree__item)', delay: true, event: { dragOver: [] } },
+              { trigger: 'dragend(.t-tree__item)', delay: true, event: { dragEnd: [] } },
+              { trigger: 'dragstart(.t-tree__item)', delay: true, event: { dragStart: [] } },
+              { trigger: 'dragleave(.t-tree__item)', delay: true, event: { dragLeave: [] } },
+            ],
+          },
+          {
+            props: { draggable: true },
+            expect: [
+              { trigger: 'delay(300)', delay: true },
+              {
+                trigger: 'dragend(.t-tree__item:nth-child(2))',
+                delay: true,
+                event: { dragEnd: [] },
+              },
+              { trigger: 'drop(.t-tree__item)', delay: true, event: { drop: [] } },
+            ],
+          },
+        ],
+      },
+    },
     empty_521: { field_name: 'empty', id: 521 },
     expandAll_531: { field_name: 'expandAll', id: 531 },
     expandLevel_533: { field_name: 'expandLevel', id: 533 },
@@ -51,11 +113,35 @@ module.exports = {
     expanded_532: { field_name: 'expanded', id: 532 },
     filter_545: { field_name: 'filter', id: 545 },
     hover_540: { field_name: 'hover', id: 540 },
-    icon_541: { field_name: 'icon', id: 541 },
+    icon_541: {
+      field_name: 'icon',
+      id: 541,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            props: { icon: false },
+            expect: [{ trigger: 'delay(300)', delay: true, exist: { '.t-tree__icon': 2 } }],
+          },
+        ],
+      },
+    },
     keys_520: { field_name: 'keys', id: 520 },
     label_529: { field_name: 'label', id: 529 },
     lazy_544: { field_name: 'lazy', id: 544 },
-    line_542: { field_name: 'line', id: 542 },
+    line_542: {
+      field_name: 'line',
+      id: 542,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            props: { expandAll: true, line: true },
+            expect: [{ trigger: 'delay(300)', delay: true, exist: { '.t-tree__line': 2 } }],
+          },
+        ],
+      },
+    },
     load_543: { field_name: 'load', id: 543 },
     operations_546: { field_name: 'operations', id: 546 },
     transition_535: { field_name: 'transition', id: 535 },
@@ -92,7 +178,87 @@ module.exports = {
     actived_510: { field_name: 'actived', id: 510 },
     checkable_513: { field_name: 'checkable', id: 513 },
     checked_514: { field_name: 'checked', id: 514 },
-    disabled_516: { field_name: 'disabled', id: 516 },
+    disabled_516: {
+      field_name: 'disabled',
+      id: 516,
+      PC: {
+        wrapper: 'getTreeDefaultMount',
+        event: [
+          {
+            description: 'TreeNode is not disabled && Tree is not disabled',
+            props: {
+              checkable: true,
+              data: [{ value: 1, label: 1, disabled: false }],
+              disabled: false,
+            },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'click(.t-checkbox__input)',
+                delay: 300,
+                exist: { '.t-is-checked': 1 },
+                event: [{ change: [[1]] }, { click: [] }],
+              },
+            ],
+          },
+          {
+            description: 'TreeNode is not disabled && Tree is disabled',
+            props: {
+              checkable: true,
+              data: [{ value: 1, label: 1, disabled: false }],
+              disabled: true,
+            },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'click(.t-checkbox__input)',
+                delay: 300,
+                exist: { '.t-is-checked': 0 },
+                event: [{ change: 'not' }, { click: [] }],
+              },
+            ],
+          },
+          {
+            description: 'TreeNode is disabled && Tree is disabled',
+            props: {
+              checkable: true,
+              data: [{ value: 1, label: 1, disabled: true }],
+              disabled: true,
+            },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'click(.t-checkbox__input)',
+                delay: 300,
+                exist: { '.t-is-checked': 0 },
+                event: [{ change: 'not' }, { click: [] }],
+              },
+            ],
+          },
+          {
+            description: 'TreeNode is disabled && Tree is not disabled',
+            props: {
+              checkable: true,
+              data: [{ value: 1, label: 1, disabled: true }],
+              disabled: false,
+            },
+            trigger: 'delay(300)',
+            expect: [
+              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'click(.t-checkbox__input)',
+                delay: 300,
+                exist: { '.t-is-checked': 0 },
+                event: [{ change: 'not' }, { click: [] }],
+              },
+            ],
+          },
+        ],
+      },
+    },
     expandMutex_509: { field_name: 'expandMutex', id: 509 },
     expanded_508: { field_name: 'expanded', id: 508 },
     indeterminate_515: { field_name: 'indeterminate', id: 515 },
