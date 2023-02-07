@@ -11586,7 +11586,7 @@
       "create_time": "2020-12-14 13:23:01",
       "update_time": "2021-05-16 14:39:52",
       "event_output": null,
-      "custom_field_type": "Route【interface Route { path?: string; name?: string; hash?: string; query?: RouteData; params?: RouteData }】【type RouteData = { [key: string]: string | string[] }】",
+      "custom_field_type": "string | Route【interface Route { path?: string; name?: string; hash?: string; query?: RouteData; params?: RouteData }】【type RouteData = { [key: string]: string | string[] }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
