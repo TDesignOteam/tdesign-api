@@ -101505,7 +101505,7 @@
       "field_desc_zh": "节点展开或收起时触发，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e: MouseEvent })",
+      "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: trigger: 'node-click' | 'icon-click' | 'setItem' })",
       "create_time": "2020-12-28 07:30:42",
       "update_time": "2021-12-06 02:54:32",
       "event_output": null,
