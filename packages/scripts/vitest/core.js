@@ -208,8 +208,11 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
       ]);
       tmpMountCode = tmpMountCode.replace(/\)$/, ', { attachTo: \'#focus-dom\' })');
     }
-    if (onlyDocumentDom) return `${tmpMountCode}${findDomCode};`;
-    wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
+    if (onlyDocumentDom) {
+      wrapperDefinition.push(`${tmpMountCode}${findDomCode};`);
+    } else {
+      wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
+    }
     trigger && wrapperDefinition.push(getPresetsExpect(trigger, framework, component));
     return wrapperDefinition.filter(v => v).join('\n');
   }
@@ -829,8 +832,8 @@ function getEventArguments(framework, args, extra = {}) {
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
  function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '', eventIndex = '') {
-  let fireEventCode = [];
-  if (event !== 'delay') {
+   let fireEventCode = [];
+   if (event !== 'delay') {
     const eventInfo = parseSimulateEvents(event, dom);
     const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
     if (eventInfo.isSimulateEvent) {
@@ -845,12 +848,17 @@ function getEventArguments(framework, args, extra = {}) {
       }
     }
   }
+
   let delayTime = delay && delay !== true || delay === 0 ? delay : '';
   if (framework.indexOf('Vue') !== -1) {
-    // 无论什么事件，Vue 都需要 nextTick
-    fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
+    if (!delayTime && event === 'delay' && !isNaN(dom)) {
+      delayTime = dom;
+    }
     if (delayTime || delayTime === 0) {
       fireEventCode.push(`await mockDelay(${delayTime});`);
+    } else {
+      // 无论什么事件，Vue 都需要 nextTick
+      fireEventCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
     }
   } else if (framework.indexOf('React') !== -1) {
     // 如果是 delay， dom 表示时间
@@ -871,9 +879,10 @@ function getDelayCode(delay, framework, wrapperIndex = '') {
   if (!hasDelay) return '';
   const delayTime = delay.match(/\((.+)\)/)?.[1] || '';
   if (framework.indexOf('Vue') !== -1) {
-    delayCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
     if (delayTime) {
       delayCode.push(`await mockDelay(${delayTime});`);
+    } else {
+      delayCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
     }
   } else if (framework.indexOf('React') !== -1) {
     delayCode.push(`await mockDelay(${delayTime});`);

@@ -160,7 +160,6 @@ function getTestCaseByComponentCode(params) {
   const triggerIsInDocument = Boolean(!trigger || trigger.indexOf('delay') !== -1 || trigger && trigger.indexOf('document') !== -1);
   const hasDom = Boolean(tnode.dom && tnode.dom.length);
   const onlyDocumentDom = Boolean(triggerIsInDocument && (!hasDom | hasDom && tnode.dom.every(item => item.includes('document'))));
-  console.log('onlyDocumentDom', onlyDocumentDom, triggerIsInDocument);
   const arr = [
     `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),
