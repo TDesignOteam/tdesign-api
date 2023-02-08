@@ -869,10 +869,13 @@ function getDelayCode(delay, framework, wrapperIndex = '') {
   const delayCode = [];
   const hasDelay = delay.includes('delay');
   if (!hasDelay) return '';
+  const delayTime = delay.match(/\((.+)\)/)?.[1] || '';
   if (framework.indexOf('Vue') !== -1) {
     delayCode.push(`await wrapper${wrapperIndex}.vm.$nextTick();`);
+    if (delayTime) {
+      delayCode.push(`await mockDelay(${delayTime});`);
+    }
   } else if (framework.indexOf('React') !== -1) {
-    const delayTime = delay.match(/\((.+)\)/)?.[1] || '';
     delayCode.push(`await mockDelay(${delayTime});`);
   }
   return delayCode.join('\n');
@@ -989,9 +992,8 @@ function getPresetsExpect(triggerList, framework, component) {
     const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });
     return getFireEventCode(framework, {
       dom: triggerDom,
-      event: trigger,
+      event: oneTrigger.indexOf('delay') ? oneTrigger : trigger,
       component,
-      // delay: framework.indexOf('React') !== -1 ? true : undefined,
     });
   }).join('\n');
 }

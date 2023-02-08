@@ -59,7 +59,8 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
     const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false, ...props }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true, ...props }, extraCode);
-    const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1 && trigger && trigger.indexOf('document') !== -1);
+    const isTriggerOnlyDocument = (!trigger || trigger && trigger.indexOf('document') !== -1 || trigger.indexOf('delay') !== -1);
+    const onlyDocumentDom = Boolean(dom && dom.indexOf('document') !== -1 && isTriggerOnlyDocument);
     const defaultDesc = description || `${propsCode}.${oneApiData.field_name}: ${component} contains element \`${dom}\``;
     const arr = [
       `it${getSkipCode(skip)}('${defaultDesc}', ${async}() => {`,
@@ -179,7 +180,11 @@ function isOnlyDocumentDom(dom, trigger) {
       }
     })
   })
-  const triggerIsInDocument = Boolean(trigger && trigger.indexOf('document') !== -1);
+  const triggerIsInDocument = Boolean(
+    !trigger
+    || trigger && trigger.indexOf('document') !== -1
+    || trigger.indexOf('delay') !== -1
+  );
   if (!triggerIsInDocument) {
     onlyDocumentDom = false;
   }

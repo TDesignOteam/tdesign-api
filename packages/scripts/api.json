@@ -43733,7 +43733,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.t-guide__counter\",\"document.custom-node\"],\"params\":[{\"total\":1,\"current\":0}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-guide__counter\"],\"params\":[{\"total\":1,\"current\":0}]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43774,7 +43774,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"dom\":{\"0\":{\"document.t-guide__counter\":{\"text\":\"1/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":1,\"document.t-guide__action .t-guide__prev\":false,\"document.t-guide__action .t-guide__next\":1,\"document.t-guide__action .t-guide__finish\":false},\"1\":{\"document.t-guide__counter\":{\"text\":\"2/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":1,\"document.t-guide__action .t-guide__prev\":1,\"document.t-guide__action .t-guide__next\":1,\"document.t-guide__action .t-guide__finish\":false},\"2\":{\"document.t-guide__counter\":{\"text\":\"3/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":false,\"document.t-guide__action .t-guide__prev\":1,\"document.t-guide__action .t-guide__next\":false,\"document.t-guide__action .t-guide__finish\":1},\"-1\":{\"document.t-guide__counter\":false}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"dom\":[{\"props\":{\"current\":0},\"dom\":[{\"document.t-guide__counter\":{\"text\":\"1/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":1,\"document.t-guide__action .t-guide__prev\":false,\"document.t-guide__action .t-guide__next\":1,\"document.t-guide__action .t-guide__finish\":false}]},{\"props\":{\"current\":1},\"dom\":[{\"document.t-guide__counter\":{\"text\":\"2/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":1,\"document.t-guide__action .t-guide__prev\":1,\"document.t-guide__action .t-guide__next\":1,\"document.t-guide__action .t-guide__finish\":false}]},{\"props\":{\"current\":2},\"dom\":[{\"document.t-guide__counter\":{\"text\":\"3/3\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":false,\"document.t-guide__action .t-guide__prev\":1,\"document.t-guide__action .t-guide__next\":false,\"document.t-guide__action .t-guide__finish\":1}]},{\"props\":{\"current\":-1},\"dom\":[{\"document.t-guide__counter\":false}]}]}}",
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43815,7 +43815,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__finish\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__finish\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43856,7 +43856,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"props\":{\"hideCounter\":true},\"dom\":[{\"document.t-guide__counter\":false}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"props\":{\"hideCounter\":true},\"dom\":[{\"document.t-guide__counter\":false}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43897,7 +43897,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":1,\"hidePrev\":true},\"dom\":[{\"document.t-guide__action .t-guide__prev\":false}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1,\"hidePrev\":true},\"dom\":[{\"document.t-guide__action .t-guide__prev\":false}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43938,7 +43938,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":1,\"hideSkip\":true},\"dom\":[{\"document.t-guide__action .t-guide__skip\":false}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1,\"hideSkip\":true},\"dom\":[{\"document.t-guide__action .t-guide__skip\":false}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -43979,7 +43979,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44061,7 +44061,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44102,7 +44102,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44143,7 +44143,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"dom\":{\"true\":{\"document.t-guide__highlight--mask\":1},\"false\":{\"document.t-guide__highlight--mask\":false}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"dom\":[{\"props\":{\"showOverlay\":true},\"dom\":[{\"document.t-guide__highlight--mask\":1}]},{\"props\":{\"showOverlay\":false},\"dom\":[{\"document.t-guide__highlight--mask\":false}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44184,7 +44184,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":0},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":0},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44225,7 +44225,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"dom\":[{\"document.t-guide__counter\":{\"text\":\"1/1\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":false,\"document.t-guide__action .t-guide__prev\":false,\"document.t-guide__action .t-guide__next\":false,\"document.t-guide__action .t-guide__finish\":1}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"dom\":[{\"document.t-guide__counter\":{\"text\":\"1/1\"},\"document.t-guide__title\":1,\"document.t-guide__desc\":1,\"document.t-guide__action .t-guide__skip\":false,\"document.t-guide__action .t-guide__prev\":false,\"document.t-guide__action .t-guide__next\":false,\"document.t-guide__action .t-guide__finish\":1}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44266,7 +44266,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(10)\",\"attribute\":[{\"value\":\"5000\",\"expect\":[{\"dom\":\"document.t-guide__overlay\",\"attribute\":{\"style.zIndex\":4998}},{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.zIndex\":4999}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":\"5000\",\"expect\":[{\"dom\":\"document.t-guide__overlay\",\"attribute\":{\"style.zIndex\":4998}},{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.zIndex\":4999}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44305,7 +44305,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"change\":[1,{\"e.type\":\"click\",\"total\":3}]}}]},{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"change\":[0,{\"e.type\":\"click\",\"total\":3}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"change\":[1,{\"e.type\":\"click\",\"total\":3}]}}]},{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"change\":[0,{\"e.type\":\"click\",\"total\":3}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -44342,7 +44342,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"event\":[{\"props\":{\"current\":2},\"expect\":[{\"trigger\":\"click(document.t-guide__finish)\",\"event\":{\"finish\":[{\"current\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"event\":[{\"props\":{\"current\":2},\"expect\":[{\"trigger\":\"click(document.t-guide__finish)\",\"event\":{\"finish\":[{\"current\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -44379,7 +44379,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"nextStepClick\":[{\"current\":1,\"next\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"nextStepClick\":[{\"current\":1,\"next\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -44416,7 +44416,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"prevStepClick\":[{\"current\":1,\"prev\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"prevStepClick\":[{\"current\":1,\"prev\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -44453,7 +44453,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(10)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__skip)\",\"event\":{\"skip\":[{\"current\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(60)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__skip)\",\"event\":{\"skip\":[{\"current\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
@@ -44657,7 +44657,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44700,7 +44700,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44742,7 +44742,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44826,7 +44826,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44867,7 +44867,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44908,7 +44908,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"dom\":[\"document.t-popup\",\"document.t-guide__dialog\"],\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"dom\":[\"document.t-popup\",\"document.t-guide__dialog\"],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44949,7 +44949,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45031,7 +45031,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"attribute\":[{\"value\":\"bottom-left\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"bottom-start\"}}]}],\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":\"bottom-left\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"bottom-start\"}}]}],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45072,7 +45072,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"attribute\":[{\"value\":\"{placement: 'top-left'}\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"top-start\"}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":\"{placement: 'top-left'}\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"top-start\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45113,7 +45113,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45154,7 +45154,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(10)\",\"dom\":{\"true\":{\"document.t-guide__highlight--mask\":1},\"false\":{\"document.t-guide__highlight--mask\":false}}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(60)\",\"dom\":[{\"description\":\".t-guide__highlight--mask should exit if showOverlay=true\",\"props\":{\"showOverlay\":true},\"dom\":[{\"document.t-guide__highlight--mask\":1}]},{\"description\":\".t-guide__highlight--mask should not exit if showOverlay=false\",\"props\":{\"showOverlay\":false},\"dom\":[{\"document.t-guide__highlight--mask\":false}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45195,7 +45195,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(10)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45236,7 +45236,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"className\":[{\"value\":\"t-test-guide-step-overlay\",\"expect\":[{\"dom\":\"document.t-popup\",\"className\":{\"t-test-guide-step-overlay\":true}}]}],\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"className\":[{\"value\":\"t-test-guide-step-overlay\",\"expect\":[{\"dom\":\"document.t-popup\",\"className\":{\"t-test-guide-step-overlay\":true}}]}],\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -45277,7 +45277,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(10)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

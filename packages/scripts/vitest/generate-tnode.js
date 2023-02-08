@@ -7,7 +7,6 @@ const {
   getMountComponent,
   getEventArguments,
   getDelayCode,
-  getPresetsExpect,
   getItAsync,
   getVariablesCode,
 } = require('./core');
@@ -158,8 +157,10 @@ function getTestCaseByComponentCode(params) {
   } = params;
   const needAsync = getItAsync(trigger, framework);
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
-  const triggerIsInDocument = Boolean(trigger && trigger.indexOf('document') !== -1);
-  const onlyDocumentDom = Boolean(triggerIsInDocument && tnode.dom && tnode.dom.length && tnode.dom.every(item => item.includes('document')));
+  const triggerIsInDocument = Boolean(!trigger || trigger.indexOf('delay') !== -1 || trigger && trigger.indexOf('document') !== -1);
+  const hasDom = Boolean(tnode.dom && tnode.dom.length);
+  const onlyDocumentDom = Boolean(triggerIsInDocument && (!hasDom | hasDom && tnode.dom.every(item => item.includes('document'))));
+  console.log('onlyDocumentDom', onlyDocumentDom, triggerIsInDocument);
   const arr = [
     `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),
@@ -194,7 +195,7 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
         [oneApiData.field_name]: '/-fn-/',
         ...props,
       }, extraCode),
-      getDelayCode(finalTrigger, framework),
+      finalTrigger && getDelayCode(finalTrigger, framework),
       getEventArguments(framework, tnode.params, { tnodeProps: true }).join('\n'),
     `})`,
   ].filter(v => v);

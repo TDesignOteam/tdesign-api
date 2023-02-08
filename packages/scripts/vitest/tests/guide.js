@@ -5,9 +5,9 @@ module.exports = {
       id: 2970,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: {
-          dom: ['document.t-guide__counter', 'document.custom-node'],
+          dom: ['document.custom-node', 'document.t-guide__counter'],
           params: [{ total: 1, current: 0 }],
         },
       },
@@ -17,37 +17,52 @@ module.exports = {
       id: 2971,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
-        dom: {
-          '0': {
-            'document.t-guide__counter': { text: '1/3' },
-            'document.t-guide__title': 1,
-            'document.t-guide__desc': 1,
-            'document.t-guide__action .t-guide__skip': 1,
-            'document.t-guide__action .t-guide__prev': false,
-            'document.t-guide__action .t-guide__next': 1,
-            'document.t-guide__action .t-guide__finish': false,
+        trigger: 'delay(60)',
+        dom: [
+          {
+            props: { current: 0 },
+            dom: [
+              {
+                'document.t-guide__counter': { text: '1/3' },
+                'document.t-guide__title': 1,
+                'document.t-guide__desc': 1,
+                'document.t-guide__action .t-guide__skip': 1,
+                'document.t-guide__action .t-guide__prev': false,
+                'document.t-guide__action .t-guide__next': 1,
+                'document.t-guide__action .t-guide__finish': false,
+              },
+            ],
           },
-          '1': {
-            'document.t-guide__counter': { text: '2/3' },
-            'document.t-guide__title': 1,
-            'document.t-guide__desc': 1,
-            'document.t-guide__action .t-guide__skip': 1,
-            'document.t-guide__action .t-guide__prev': 1,
-            'document.t-guide__action .t-guide__next': 1,
-            'document.t-guide__action .t-guide__finish': false,
+          {
+            props: { current: 1 },
+            dom: [
+              {
+                'document.t-guide__counter': { text: '2/3' },
+                'document.t-guide__title': 1,
+                'document.t-guide__desc': 1,
+                'document.t-guide__action .t-guide__skip': 1,
+                'document.t-guide__action .t-guide__prev': 1,
+                'document.t-guide__action .t-guide__next': 1,
+                'document.t-guide__action .t-guide__finish': false,
+              },
+            ],
           },
-          '2': {
-            'document.t-guide__counter': { text: '3/3' },
-            'document.t-guide__title': 1,
-            'document.t-guide__desc': 1,
-            'document.t-guide__action .t-guide__skip': false,
-            'document.t-guide__action .t-guide__prev': 1,
-            'document.t-guide__action .t-guide__next': false,
-            'document.t-guide__action .t-guide__finish': 1,
+          {
+            props: { current: 2 },
+            dom: [
+              {
+                'document.t-guide__counter': { text: '3/3' },
+                'document.t-guide__title': 1,
+                'document.t-guide__desc': 1,
+                'document.t-guide__action .t-guide__skip': false,
+                'document.t-guide__action .t-guide__prev': 1,
+                'document.t-guide__action .t-guide__next': false,
+                'document.t-guide__action .t-guide__finish': 1,
+              },
+            ],
           },
-          '-1': { 'document.t-guide__counter': false },
-        },
+          { props: { current: -1 }, dom: [{ 'document.t-guide__counter': false }] },
+        ],
       },
     },
     finishButtonProps_2972: {
@@ -55,7 +70,7 @@ module.exports = {
       id: 2972,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 2 },
         className: [
           {
@@ -72,7 +87,7 @@ module.exports = {
       id: 2976,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { hideCounter: true },
         dom: [{ 'document.t-guide__counter': false }],
       },
@@ -82,7 +97,7 @@ module.exports = {
       id: 2977,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 1, hidePrev: true },
         dom: [{ 'document.t-guide__action .t-guide__prev': false }],
       },
@@ -92,7 +107,7 @@ module.exports = {
       id: 2978,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 1, hideSkip: true },
         dom: [{ 'document.t-guide__action .t-guide__skip': false }],
       },
@@ -102,7 +117,7 @@ module.exports = {
       id: 2981,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         attribute: [
           {
             value: 32,
@@ -136,7 +151,7 @@ module.exports = {
       id: 2969,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 1 },
         className: [
           {
@@ -153,7 +168,7 @@ module.exports = {
       id: 2973,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 2 },
         className: [
           {
@@ -170,11 +185,11 @@ module.exports = {
       id: 2979,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
-        dom: {
-          true: { 'document.t-guide__highlight--mask': 1 },
-          false: { 'document.t-guide__highlight--mask': false },
-        },
+        trigger: 'delay(60)',
+        dom: [
+          { props: { showOverlay: true }, dom: [{ 'document.t-guide__highlight--mask': 1 }] },
+          { props: { showOverlay: false }, dom: [{ 'document.t-guide__highlight--mask': false }] },
+        ],
       },
     },
     skipButtonProps_2974: {
@@ -182,7 +197,7 @@ module.exports = {
       id: 2974,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 0 },
         className: [
           {
@@ -199,7 +214,7 @@ module.exports = {
       id: 2975,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         dom: [
           {
             'document.t-guide__counter': { text: '1/1' },
@@ -218,7 +233,7 @@ module.exports = {
       id: 2980,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         attribute: [
           {
             value: '5000',
@@ -235,7 +250,7 @@ module.exports = {
       id: 2948,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         event: [
           {
             props: { current: 0 },
@@ -263,7 +278,7 @@ module.exports = {
       id: 2950,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         event: [
           {
             props: { current: 2 },
@@ -282,7 +297,7 @@ module.exports = {
       id: 2952,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         event: [
           {
             props: { current: 1 },
@@ -301,7 +316,7 @@ module.exports = {
       id: 2951,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         event: [
           {
             props: { current: 1 },
@@ -320,7 +335,7 @@ module.exports = {
       id: 2949,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         event: [
           {
             props: { current: 0 },
@@ -341,7 +356,7 @@ module.exports = {
       id: 2955,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -351,7 +366,7 @@ module.exports = {
       id: 2953,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -361,7 +376,7 @@ module.exports = {
       id: 2954,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -372,7 +387,7 @@ module.exports = {
       id: 2966,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -382,7 +397,7 @@ module.exports = {
       id: 2965,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         attribute: [
           {
             value: 32,
@@ -415,7 +430,7 @@ module.exports = {
       id: 2967,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         dom: ['document.t-popup', 'document.t-guide__dialog'],
         snapshot: true,
       },
@@ -425,7 +440,7 @@ module.exports = {
       id: 2957,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 1 },
         className: [
           {
@@ -443,7 +458,7 @@ module.exports = {
       id: 2959,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         attribute: [
           {
             value: 'bottom-left',
@@ -460,7 +475,7 @@ module.exports = {
       id: 3307,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         attribute: [
           {
             value: "{placement: 'top-left'}",
@@ -476,7 +491,7 @@ module.exports = {
       id: 2960,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 2 },
         className: [
           {
@@ -493,11 +508,19 @@ module.exports = {
       id: 2964,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(10)',
-        dom: {
-          true: { 'document.t-guide__highlight--mask': 1 },
-          false: { 'document.t-guide__highlight--mask': false },
-        },
+        trigger: 'delay(60)',
+        dom: [
+          {
+            description: '.t-guide__highlight--mask should exit if showOverlay=true',
+            props: { showOverlay: true },
+            dom: [{ 'document.t-guide__highlight--mask': 1 }],
+          },
+          {
+            description: '.t-guide__highlight--mask should not exit if showOverlay=false',
+            props: { showOverlay: false },
+            dom: [{ 'document.t-guide__highlight--mask': false }],
+          },
+        ],
       },
     },
     skipButtonProps_2961: {
@@ -505,7 +528,7 @@ module.exports = {
       id: 2961,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         props: { current: 1 },
         className: [
           {
@@ -522,7 +545,7 @@ module.exports = {
       id: 2963,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         className: [
           {
             value: 't-test-guide-step-overlay',
@@ -537,7 +560,7 @@ module.exports = {
       id: 2962,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(10)',
+        trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
