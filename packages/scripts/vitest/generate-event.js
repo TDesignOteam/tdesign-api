@@ -39,7 +39,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     }));
   }
   const extraCode = { content, wrapper };
-  const onlyDocumentDom = isOnlyDocumentDom(event);
+  const onlyDocumentDom = isOnlyDocumentDom(event) && framework.indexOf('Vue') === -1;
   const topAsync = getItAsync(trigger, framework);
   // click/blur/mouseEnter/...
   if (typeof event === 'object' && !Array.isArray(event)) {

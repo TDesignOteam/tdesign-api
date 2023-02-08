@@ -250,13 +250,13 @@ function getDocumentDomExpectTruthy(domSelector, framework, wrapperIndex = '') {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom${wrapperIndex}`;
   // Vue2 元素可能不存在，需要判空
-  const emptyJudgement = framework === 'Vue(PC)' ? '?' : '';
-  const isVue = framework.indexOf('Vue') !== -1;
+  // const emptyJudgement = framework === 'Vue(PC)' ? '?' : '';
+  // const isVue = framework.indexOf('Vue') !== -1;
   return [
     `const ${domVariable} = document.querySelector(${selector});`,
     `expect(${domVariable}).toBeTruthy();`,
-    isVue ? '// remove node in document to avoid influencing following test cases' : '',
-    isVue ? `${domVariable}${emptyJudgement}.remove();` : '',
+    // isVue ? '// remove node in document to avoid influencing following test cases' : '',
+    // isVue ? `${domVariable}${emptyJudgement}.remove();` : '',
   ].filter(v => v).join('\n');
 }
 
@@ -306,7 +306,7 @@ function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
 function getDocumentDomExpect(domSelector, countOrText, framework) {
   const selector = domSelector.replace('document', '');
   const domVariable = `${getVariableBySelector(selector)}Dom`;
-  const isVue = framework.indexOf('Vue') !== -1;
+  // const isVue = framework.indexOf('Vue') !== -1;
   // number 表示检测数量（AutoComplete.options）；false 表示验证不存在
   const isObject = (typeof countOrText === 'object' || countOrText == false) && typeof countOrText !== 'number';
   const querySelector = isObject ? 'querySelector' : 'querySelectorAll';
@@ -323,11 +323,11 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
         return getDocumentDomTextExpect(domVariable, countOrText, framework);
       }
     })(),
-    isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
-    isVue ? (() => {
-      if (isObject) return `${domVariable}.remove();`
-      return `${domVariable}.forEach(node => node.remove());`;
-    })() : '',
+    // isVue ? '// remove nodes from document to avoid influencing following test cases' : '',
+    // isVue ? (() => {
+    //   if (isObject) return `${domVariable}.remove();`
+    //   return `${domVariable}.forEach(node => node.remove());`;
+    // })() : '',
   ].filter(v => v).join('\n');
 }
 
