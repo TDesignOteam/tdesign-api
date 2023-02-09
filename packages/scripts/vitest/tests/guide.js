@@ -10,6 +10,15 @@ module.exports = {
           dom: ['document.custom-node', 'document.t-guide__counter'],
           params: [{ total: 1, current: 0 }],
         },
+        global: {
+          afterEach: [
+            "document.querySelector('.t-guide__overlay')?.remove()",
+            "document.querySelector('.t-guide__highlight--popup')?.remove()",
+            "document.querySelector('.t-guide__reference')?.remove()",
+            "document.querySelector('.t-guide__highlight--mask')?.remove()",
+            "document.querySelector('.t-popup')?.remove()",
+          ],
+        },
       },
     },
     current_2971: {
@@ -236,7 +245,7 @@ module.exports = {
         trigger: 'delay(60)',
         attribute: [
           {
-            value: '5000',
+            value: 5000,
             expect: [
               { dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } },
               { dom: 'document.t-guide__highlight--mask', attribute: { 'style.zIndex': 4999 } },
@@ -359,6 +368,15 @@ module.exports = {
         trigger: 'delay(60)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
+        global: {
+          afterEach: [
+            "document.querySelector('.t-guide__overlay')?.remove()",
+            "document.querySelector('.t-guide__highlight--popup')?.remove()",
+            "document.querySelector('.t-guide__reference')?.remove()",
+            "document.querySelector('.t-guide__highlight--mask')?.remove()",
+            "document.querySelector('.t-popup')?.remove()",
+          ],
+        },
       },
     },
     children_2953: {

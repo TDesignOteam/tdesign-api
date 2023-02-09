@@ -129,6 +129,7 @@ function getUnitTestCode(baseData, framework) {
 
       if (finalDescription.global) {
         Object.keys(global).forEach((item) => {
+          if (!finalDescription.global[item]) return;
           global[item].push(...finalDescription.global[item]);
         })
       }
@@ -183,13 +184,13 @@ function getComponentUnitTests(framework, component, apiData, map) {
 function addGlobalCode(global, oneComponentTests) {
   if (global) {
     if (global.afterAll.length) {
-      oneComponentTests.unshift('afterAll(() => {', ...global.afterAll, '});');
+      oneComponentTests.unshift('afterAll(() => {', global.afterAll.join('\n'), '});');
     }
     if (global.afterEach.length) {
-      oneComponentTests.unshift('afterEach(() => {', ...global.afterEach, '});');
+      oneComponentTests.unshift('afterEach(() => {', global.afterEach.join('\n'), '});');
     }
     if (global.beforeAll.length) {
-      oneComponentTests.unshift('beforeAll(() => {', ...global.beforeAll, '});');
+      oneComponentTests.unshift('beforeAll(() => {', global.beforeAll.join('\n'), '});');
     }
     if (global.variables.length) {
       oneComponentTests.unshift(...global.variables);

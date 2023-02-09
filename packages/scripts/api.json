@@ -43733,7 +43733,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-guide__counter\"],\"params\":[{\"total\":1,\"current\":0}]}}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-guide__counter\"],\"params\":[{\"total\":1,\"current\":0}]},\"global\":{\"afterEach\":[\"document.querySelector('.t-guide__overlay')?.remove()\",\"document.querySelector('.t-guide__highlight--popup')?.remove()\",\"document.querySelector('.t-guide__reference')?.remove()\",\"document.querySelector('.t-guide__highlight--mask')?.remove()\",\"document.querySelector('.t-popup')?.remove()\"]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44266,7 +44266,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":\"5000\",\"expect\":[{\"dom\":\"document.t-guide__overlay\",\"attribute\":{\"style.zIndex\":4998}},{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.zIndex\":4999}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getGuideDefaultMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":5000,\"expect\":[{\"dom\":\"document.t-guide__overlay\",\"attribute\":{\"style.zIndex\":4998}},{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.zIndex\":4999}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44657,7 +44657,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true,\"global\":{\"afterEach\":[\"document.querySelector('.t-guide__overlay')?.remove()\",\"document.querySelector('.t-guide__highlight--popup')?.remove()\",\"document.querySelector('.t-guide__reference')?.remove()\",\"document.querySelector('.t-guide__highlight--mask')?.remove()\",\"document.querySelector('.t-popup')?.remove()\"]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -44673,9 +44673,7 @@
     {
       "id": 2953,
       "platform_framework": [
-        "1",
-        "2",
-        "4"
+        "2"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -44704,9 +44702,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",

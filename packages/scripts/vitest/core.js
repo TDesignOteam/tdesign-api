@@ -505,7 +505,8 @@ function getVueOneAttributeCode(framework, wrapper, attribute, value, extra = {}
   const { isDocumentNode } = extra;
   const expectValueCode = getAttributeValue(attribute, value, framework);
   if (ATTRIBUTES_DIRECT.includes(attribute) || attribute.includes(ATTRIBUTES_STYLE)) {
-    return `expect(${wrapper}.element.${getAttributeStr(attribute)}).${expectValueCode};`;
+    const element = isDocumentNode ? '' : '.element';
+    return `expect(${wrapper}${element}.${getAttributeStr(attribute)}).${expectValueCode};`;
   }
   if (isDocumentNode) {
     return `expect(${wrapper}.getAttribute('${attribute}')).${expectValueCode};`;
