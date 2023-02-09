@@ -131,9 +131,9 @@ function formatDesc(
       // 处理：import { PopupProps } from '@Popup' 等引用，更为相关组件文档链接
       let importIndex = -1;
       customFieldType.forEach((item, index) => {
-        if (item.indexOf('@Popup') !== -1) {
-          console.log(`${item} 更为相关组件文档跳转路径`);
-        }
+        // if (item.indexOf('@Popup') !== -1) {
+        //   console.log(`${item} 更为相关组件文档跳转路径`);
+        // }
         const importComponent = item.match(/'@\w+'/g);
         if (!importComponent) return;
         const name = importComponent[0].slice(1, -1);
