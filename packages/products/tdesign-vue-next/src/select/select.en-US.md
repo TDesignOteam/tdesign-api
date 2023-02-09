@@ -84,6 +84,7 @@ content | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 label | String | - | \- | N
+title | String | - | \- | N
 value | String / Number | - | \- | N
 
 ### OptionGroup Props
