@@ -73,6 +73,7 @@ children | TNode | - | Typescript：`string \| TNode`。[see more ts definition]
 content | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 label | String | - | \- | N
+title | String | - | \- | N
 value | String / Number | - | \- | N
 
 ### OptionGroup Props

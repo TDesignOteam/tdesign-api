@@ -84,6 +84,7 @@ content | String / Slot / Function | - | 用于定义复杂的选项内容。TS 
 default | String / Slot / Function | - | 用于定义复杂的选项内容。同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 disabled | Boolean | false | 是否禁用该选项 | N
 label | String | - | 选项名称 | N
+title | String | - | 选项标题，在选项过长时hover选项展示 | N
 value | String / Number | - | 选项值 | N
 
 ### OptionGroup Props

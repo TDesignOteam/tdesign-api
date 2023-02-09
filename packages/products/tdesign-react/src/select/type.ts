@@ -282,6 +282,11 @@ export interface TdOptionProps {
    */
   label?: string;
   /**
+   * 选项标题，在选项过长时hover选项展示
+   * @default ''
+   */
+  title?: string;
+  /**
    * 选项值
    */
   value?: string | number;
