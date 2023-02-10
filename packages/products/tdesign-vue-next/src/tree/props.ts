@@ -84,7 +84,7 @@ export default {
     type: [Boolean, Function] as PropType<TdTreeProps['icon']>,
     default: true,
   },
-  /** 用来定义 value / label / children 在 `options` 中对应的字段别名 */
+  /** 用来定义 `value / label / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }` */
   keys: {
     type: Object as PropType<TdTreeProps['keys']>,
   },
