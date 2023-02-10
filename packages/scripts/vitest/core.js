@@ -843,7 +843,11 @@ function getEventArguments(framework, args, extra = {}) {
         fireEventCode.push(simulateEventCode);
       }
     } else {
-      const fireNormalEventCode = getFireNormalEventCode(framework, { dom: findDom, event, component }, wrapperIndex = '');
+      const fireNormalEventCode = getFireNormalEventCode(framework, {
+        dom: findDom,
+        event: event.indexOf('delay') !== -1 ? event : event?.replace(/\(.+\)/, ''),
+        component
+      }, wrapperIndex = '');
       if (fireNormalEventCode) {
         fireEventCode.push(fireNormalEventCode);
       }
