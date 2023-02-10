@@ -159,7 +159,7 @@ function getTestCaseByComponentCode(params) {
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
   const triggerIsInDocument = Boolean(!trigger || trigger.indexOf('delay') !== -1 || trigger && trigger.indexOf('document') !== -1);
   const hasDom = Boolean(tnode.dom && tnode.dom.length);
-  const onlyDocumentDom = Boolean(triggerIsInDocument && (!hasDom | hasDom && tnode.dom.every(item => item.includes('document'))));
+  let onlyDocumentDom = Boolean(triggerIsInDocument && (hasDom && tnode?.dom?.every(item => item.includes('document'))));
   const arr = [
     `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),

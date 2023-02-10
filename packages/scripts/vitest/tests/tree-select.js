@@ -302,7 +302,37 @@ module.exports = {
         ],
       },
     },
-    keys_3228: { field_name: 'keys', id: 3228 },
+    keys_3228: {
+      field_name: 'keys',
+      id: 3228,
+      PC: {
+        dom: [
+          {
+            description: 'single tree select',
+            props: { keys: { label: 'name', value: 'key' }, treeProps: { expandAll: true } },
+            dom: [
+              { '.t-tree__label': { text: 'tdesign-vue' } },
+              { '.t-tree__label:nth-child(2)': { text: 'tdesign-react' } },
+              { '.t-tree__label:nth-child(3)': { text: 'tdesign-web-react' } },
+              { '.t-tree__label:last-child': { text: 'tdesign-miniprogram' } },
+            ],
+          },
+          {
+            props: {
+              multiple: true,
+              keys: { label: 'name', value: 'key' },
+              treeProps: { expandAll: true },
+            },
+            dom: [
+              { '.t-tree__label': { text: 'tdesign-vue' } },
+              { '.t-tree__label:nth-child(2)': { text: 'tdesign-react' } },
+              { '.t-tree__label:nth-child(3)': { text: 'tdesign-web-react' } },
+              { '.t-tree__label:last-child': { text: 'tdesign-miniprogram' } },
+            ],
+          },
+        ],
+      },
+    },
     label_3323: { field_name: 'label', id: 3323 },
     loading_1140: { field_name: 'loading', id: 1140, PC: { dom: '.t-loading' } },
     loadingText_1141: {

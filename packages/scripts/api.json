@@ -104314,7 +104314,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"dom\":[{\"description\":\"single tree select\",\"props\":{\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true}},\"dom\":[{\".t-tree__label\":{\"text\":\"tdesign-vue\"}},{\".t-tree__label:nth-child(2)\":{\"text\":\"tdesign-react\"}},{\".t-tree__label:nth-child(3)\":{\"text\":\"tdesign-web-react\"}},{\".t-tree__label:last-child\":{\"text\":\"tdesign-miniprogram\"}}]},{\"props\":{\"multiple\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true}},\"dom\":[{\".t-tree__label\":{\"text\":\"tdesign-vue\"}},{\".t-tree__label:nth-child(2)\":{\"text\":\"tdesign-react\"}},{\".t-tree__label:nth-child(3)\":{\"text\":\"tdesign-web-react\"}},{\".t-tree__label:last-child\":{\"text\":\"tdesign-miniprogram\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
