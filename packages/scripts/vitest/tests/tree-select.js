@@ -9,7 +9,9 @@ module.exports = {
           { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
           { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
         ],
-        global: { afterEach: ["document.querySelectorAll('.t-popup').forEach((node) => node?.remove())"] },
+        global: {
+          afterEach: ["document.querySelectorAll('.t-popup').forEach((node) => node?.remove())"],
+        },
       },
     },
     borderless_2376: {
@@ -316,13 +318,20 @@ module.exports = {
               keys: { label: 'name', value: 'key' },
               popupVisible: true,
               treeProps: { expandAll: true },
+              popupProps: { overlayClassName: 'singleTreeSelectKeys' },
             },
             dom: [
               {
-                'document.t-tree__item .t-tree__label': { text: 'tdesign-vue' },
-                'document.t-tree__item:nth-child(2) .t-tree__label': { text: 'tdesign-react' },
-                'document.t-tree__item:nth-child(3) .t-tree__label': { text: 'tdesign-web-react' },
-                'document.t-tree__item:last-child .t-tree__label': { text: 'tdesign-miniprogram' },
+                'document.singleTreeSelectKeys .t-tree__item': { text: 'tdesign-vue' },
+                'document.singleTreeSelectKeys .t-tree__item:nth-child(2)': {
+                  text: 'tdesign-react',
+                },
+                'document.singleTreeSelectKeys .t-tree__item:nth-child(3)': {
+                  text: 'tdesign-web-react',
+                },
+                'document.singleTreeSelectKeys .t-tree__item:last-child': {
+                  text: 'tdesign-miniprogram',
+                },
               },
             ],
           },
@@ -333,13 +342,54 @@ module.exports = {
               popupVisible: true,
               keys: { label: 'name', value: 'key' },
               treeProps: { expandAll: true },
+              popupProps: { overlayClassName: 'multipleTreeSelectKeys' },
             },
             dom: [
               {
-                'document.t-tree__item .t-tree__label': { text: 'tdesign-vue' },
-                'document.t-tree__item:nth-child(2) .t-tree__label': { text: 'tdesign-react' },
-                'document.t-tree__item:nth-child(3) .t-tree__label': { text: 'tdesign-web-react' },
-                'document.t-tree__item:last-child .t-tree__label': { text: 'tdesign-miniprogram' },
+                'document.multipleTreeSelectKeys .t-tree__item': { text: 'tdesign-vue' },
+                'document.multipleTreeSelectKeys .t-tree__item:nth-child(2)': {
+                  text: 'tdesign-react',
+                },
+                'document.multipleTreeSelectKeys .t-tree__item:nth-child(3)': {
+                  text: 'tdesign-web-react',
+                },
+                'document.multipleTreeSelectKeys .t-tree__item:last-child': {
+                  text: 'tdesign-miniprogram',
+                },
+              },
+            ],
+          },
+        ],
+        event: [
+          {
+            description: 'single tree select, change event works fine',
+            props: {
+              value: 1,
+              popupVisible: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'keysPropsSingle' },
+            },
+            expect: [
+              {
+                trigger: 'click(document.keysPropsSingle .t-tree__item:last-child)',
+                event: { change: [3] },
+              },
+            ],
+          },
+          {
+            description: 'multiple tree select, change event works fine',
+            props: {
+              value: [1],
+              multiple: true,
+              popupVisible: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'keysPropsMultiple' },
+            },
+            expect: [
+              {
+                trigger:
+                  'click(document.keysPropsMultiple .t-tree__item:last-child .t-checkbox__label)',
+                event: { change: [[1, 3]] },
               },
             ],
           },
@@ -468,7 +518,95 @@ module.exports = {
       id: 2917,
       PC: { dom: { 'this is a tip': { '.t-input__tips': 1 } } },
     },
-    treeProps_1156: { field_name: 'treeProps', id: 1156 },
+    treeProps_1156: {
+      field_name: 'treeProps',
+      id: 1156,
+      PC: {
+        wrapper: 'getTreeSelectKeysMount',
+        trigger: 'delay(200)',
+        dom: [
+          {
+            description: 'single tree select, treeProps.keys works fined',
+            props: {
+              popupVisible: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'singleTreeSelectKeys' },
+            },
+            dom: [
+              {
+                'document.singleTreeSelectKeys .t-tree__item': { text: 'tdesign-vue' },
+                'document.singleTreeSelectKeys .t-tree__item:nth-child(2)': {
+                  text: 'tdesign-react',
+                },
+                'document.singleTreeSelectKeys .t-tree__item:nth-child(3)': {
+                  text: 'tdesign-web-react',
+                },
+                'document.singleTreeSelectKeys .t-tree__item:last-child': {
+                  text: 'tdesign-miniprogram',
+                },
+              },
+            ],
+          },
+          {
+            description: 'multiple tree select, treeProps.keys works fined',
+            props: {
+              multiple: true,
+              popupVisible: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'multipleTreeSelectKeys' },
+            },
+            dom: [
+              {
+                'document.multipleTreeSelectKeys .t-tree__item': { text: 'tdesign-vue' },
+                'document.multipleTreeSelectKeys .t-tree__item:nth-child(2)': {
+                  text: 'tdesign-react',
+                },
+                'document.multipleTreeSelectKeys .t-tree__item:nth-child(3)': {
+                  text: 'tdesign-web-react',
+                },
+                'document.multipleTreeSelectKeys .t-tree__item:last-child': {
+                  text: 'tdesign-miniprogram',
+                },
+              },
+            ],
+          },
+        ],
+        event: [
+          {
+            description: 'single tree select, trigger change event to check treeProps.keys',
+            props: {
+              value: 1,
+              popupVisible: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'treePropsKeysSingle' },
+            },
+            expect: [
+              {
+                trigger: 'click(document.treePropsKeysSingle .t-tree__item:last-child)',
+                event: { change: [3] },
+              },
+            ],
+          },
+          {
+            description: 'multiple tree select, trigger change event to check treeProps.keys',
+            props: {
+              value: [1],
+              popupVisible: true,
+              multiple: true,
+              treeProps: { expandAll: true, keys: { label: 'name', value: 'key' } },
+              popupProps: { overlayClassName: 'treePropsKeysMultiple' },
+            },
+            expect: [
+              {
+                trigger:
+                  'click(document.treePropsKeysMultiple .t-tree__item:last-child .t-checkbox__label)',
+                event: { change: [[1, 3]] },
+              },
+            ],
+          },
+        ],
+      },
+    },
     value_1131: {
       field_name: 'value',
       id: 1131,
