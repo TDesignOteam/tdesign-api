@@ -9,6 +9,7 @@ module.exports = {
           { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
           { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
         ],
+        global: { afterEach: ["document.querySelectorAll('.t-popup').forEach((node) => node?.remove())"] },
       },
     },
     borderless_2376: {
@@ -306,28 +307,40 @@ module.exports = {
       field_name: 'keys',
       id: 3228,
       PC: {
+        wrapper: 'getTreeSelectKeysMount',
+        trigger: 'delay(200)',
         dom: [
           {
-            description: 'single tree select',
-            props: { keys: { label: 'name', value: 'key' }, treeProps: { expandAll: true } },
+            description: 'single tree select, keys works fined',
+            props: {
+              keys: { label: 'name', value: 'key' },
+              popupVisible: true,
+              treeProps: { expandAll: true },
+            },
             dom: [
-              { '.t-tree__label': { text: 'tdesign-vue' } },
-              { '.t-tree__label:nth-child(2)': { text: 'tdesign-react' } },
-              { '.t-tree__label:nth-child(3)': { text: 'tdesign-web-react' } },
-              { '.t-tree__label:last-child': { text: 'tdesign-miniprogram' } },
+              {
+                'document.t-tree__item .t-tree__label': { text: 'tdesign-vue' },
+                'document.t-tree__item:nth-child(2) .t-tree__label': { text: 'tdesign-react' },
+                'document.t-tree__item:nth-child(3) .t-tree__label': { text: 'tdesign-web-react' },
+                'document.t-tree__item:last-child .t-tree__label': { text: 'tdesign-miniprogram' },
+              },
             ],
           },
           {
+            description: 'multiple tree select, keys works fined',
             props: {
               multiple: true,
+              popupVisible: true,
               keys: { label: 'name', value: 'key' },
               treeProps: { expandAll: true },
             },
             dom: [
-              { '.t-tree__label': { text: 'tdesign-vue' } },
-              { '.t-tree__label:nth-child(2)': { text: 'tdesign-react' } },
-              { '.t-tree__label:nth-child(3)': { text: 'tdesign-web-react' } },
-              { '.t-tree__label:last-child': { text: 'tdesign-miniprogram' } },
+              {
+                'document.t-tree__item .t-tree__label': { text: 'tdesign-vue' },
+                'document.t-tree__item:nth-child(2) .t-tree__label': { text: 'tdesign-react' },
+                'document.t-tree__item:nth-child(3) .t-tree__label': { text: 'tdesign-web-react' },
+                'document.t-tree__item:last-child .t-tree__label': { text: 'tdesign-miniprogram' },
+              },
             ],
           },
         ],

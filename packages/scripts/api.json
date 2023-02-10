@@ -103755,7 +103755,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}]}}",
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}],\"global\":{\"afterEach\":[\"document.querySelector('.t-popup')?.remove()\"]}}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -104314,7 +104314,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"dom\":[{\"description\":\"single tree select\",\"props\":{\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true}},\"dom\":[{\".t-tree__label\":{\"text\":\"tdesign-vue\"}},{\".t-tree__label:nth-child(2)\":{\"text\":\"tdesign-react\"}},{\".t-tree__label:nth-child(3)\":{\"text\":\"tdesign-web-react\"}},{\".t-tree__label:last-child\":{\"text\":\"tdesign-miniprogram\"}}]},{\"props\":{\"multiple\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true}},\"dom\":[{\".t-tree__label\":{\"text\":\"tdesign-vue\"}},{\".t-tree__label:nth-child(2)\":{\"text\":\"tdesign-react\"}},{\".t-tree__label:nth-child(3)\":{\"text\":\"tdesign-web-react\"}},{\".t-tree__label:last-child\":{\"text\":\"tdesign-miniprogram\"}}]}]}}",
+      "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectKeysMount\",\"trigger\":\"delay(200)\",\"dom\":[{\"description\":\"single tree select, keys works fined\",\"props\":{\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"popupVisible\":true,\"treeProps\":{\"expandAll\":true}},\"dom\":[{\"document.t-tree__item .t-tree__label\":{\"text\":\"tdesign-vue\"},\"document.t-tree__item:nth-child(2) .t-tree__label\":{\"text\":\"tdesign-react\"},\"document.t-tree__item:nth-child(3) .t-tree__label\":{\"text\":\"tdesign-web-react\"},\"document.t-tree__item:last-child .t-tree__label\":{\"text\":\"tdesign-miniprogram\"}}]},{\"description\":\"multiple tree select, keys works fined\",\"props\":{\"multiple\":true,\"popupVisible\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true}},\"dom\":[{\"document.t-tree__item .t-tree__label\":{\"text\":\"tdesign-vue\"},\"document.t-tree__item:nth-child(2) .t-tree__label\":{\"text\":\"tdesign-react\"},\"document.t-tree__item:nth-child(3) .t-tree__label\":{\"text\":\"tdesign-web-react\"},\"document.t-tree__item:last-child .t-tree__label\":{\"text\":\"tdesign-miniprogram\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
