@@ -69,7 +69,6 @@ function readTestsFile(component) {
 function uploadVitestFileDataToDB(component) {
   return new Promise((resolve, reject) => {
     readTestsFile(component).then((componentTests) => {
-      // console.log(componentTests);
       const promiseList = [];
       Object.entries(componentTests).forEach(([key, childComponentItem]) => {
         Object.entries(childComponentItem).forEach(([apiName, apiData]) => {
