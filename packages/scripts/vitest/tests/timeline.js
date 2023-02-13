@@ -40,7 +40,9 @@ module.exports = {
       id: 2826,
       PC: {
         wrapper: 'getTimelineDefaultMount',
-        dom: { true: { '.t-timeline-item__content': { text: 'Event4' } } },
+        dom: [
+          { props: { reverse: true }, dom: [{ '.t-timeline-item__content': { text: 'Event4' } }] },
+        ],
       },
     },
     theme_2825: {
@@ -83,7 +85,7 @@ module.exports = {
       id: 2830,
       PC: {
         wrapper: 'getTimelineItemMount',
-        dom: { left: { '.t-timeline-item:first-child .t-timeline-item-left': 1 } },
+        dom: { left: { '.t-timeline-item:first-child.t-timeline-item-left': 1 } },
       },
     },
     loading_2931: {
