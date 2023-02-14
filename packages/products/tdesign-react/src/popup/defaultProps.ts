@@ -7,10 +7,8 @@ import { TdPopupProps } from './type';
 export const popupDefaultProps: TdPopupProps = {
   attach: 'body',
   destroyOnClose: false,
-  disabled: false,
   hideEmptyPopup: false,
   placement: 'top',
   showArrow: false,
   trigger: 'hover',
-  visible: false,
 };
