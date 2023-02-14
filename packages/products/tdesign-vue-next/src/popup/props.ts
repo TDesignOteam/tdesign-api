@@ -64,7 +64,7 @@ export default {
     default: 'hover' as TdPopupProps['trigger'],
     validator(val: TdPopupProps['trigger']): boolean {
       if (!val) return true;
-      return ['hover', 'click', 'focus', 'context-menu'].includes(val);
+      return ['hover', 'click', 'focus', 'mousedown', 'context-menu'].includes(val);
     },
   },
   /** 触发元素。值类型为字符串表示元素选择器 */
@@ -88,6 +88,8 @@ export default {
   },
   /** 下拉选项滚动事件 */
   onScroll: Function as PropType<TdPopupProps['onScroll']>,
+  /** 下拉滚动触底事件，常用于滚动到底执行具体业务逻辑 */
+  onScrollToBottom: Function as PropType<TdPopupProps['onScrollToBottom']>,
   /** 当浮层隐藏或显示时触发，`trigger=document` 表示点击非浮层元素触发；`trigger=context-menu` 表示右击触发 */
   onVisibleChange: Function as PropType<TdPopupProps['onVisibleChange']>,
 };
