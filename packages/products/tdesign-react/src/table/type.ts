@@ -157,7 +157,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   rowClassName?: ClassName | ((params: RowClassNameParams<T>) => ClassName);
   /**
-   * 使用 rowKey 唯一标识一行数据
+   * 唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法
    * @default 'id'
    */
   rowKey: string;

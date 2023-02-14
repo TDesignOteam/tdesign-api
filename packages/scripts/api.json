@@ -9104,7 +9104,7 @@
       ],
       "field_default_value": "'id'",
       "field_enum": "",
-      "field_desc_zh": "使用 rowKey 唯一标识一行数据",
+      "field_desc_zh": "唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法",
       "field_desc_en": "unique key for each row data",
       "field_required": 1,
       "event_input": "",

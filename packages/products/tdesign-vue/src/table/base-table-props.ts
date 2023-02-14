@@ -124,7 +124,7 @@ export default {
   rowClassName: {
     type: [String, Object, Array, Function] as PropType<TdBaseTableProps['rowClassName']>,
   },
-  /** 使用 rowKey 唯一标识一行数据 */
+  /** 唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法 */
   rowKey: {
     type: String,
     default: 'id',
