@@ -55,6 +55,7 @@ function getHelperData(baseData, framework) {
     const componentName = `t-${kebabCase(key)}`;
     const props = [];
     const propsList = [];
+    const slotsList = [];
     const eventsList = [];
     const componentDocs = `${current.docsPath}${kebabCase(key)}`;
     const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
@@ -88,7 +89,23 @@ function getHelperData(baseData, framework) {
               ? { type: /^string$/i.test(api.field_type_text.join('')) ? 'enum' : 'of-match' }
               : undefined,
             values: api.field_enum ? api.field_enum.split('/').map(name => ({ name })) : undefined,
-          })
+          });
+          // vue slots types
+          if (api.field_type_text.indexOf('TNode') !== -1) {
+            const slotApiDescription = `${apiDescription}${api.custom_field_type ? `类型和参数：${api.custom_field_type}` : ''}`;
+            slotsList.push({
+              name: api.field_name,
+              description: slotApiDescription,
+              'doc-url': `${apiDocs}-props`,
+            });
+            if (api.field_name !== prop) {
+              slotsList.push({
+                name: prop,
+                description: slotApiDescription,
+                'doc-url': `${apiDocs}-props`,
+              });
+            }
+          }
           break;
         case 'Events':
           props.push(prop);
@@ -118,6 +135,7 @@ function getHelperData(baseData, framework) {
       'doc-url': componentDocs,
       props: propsList,
       js: eventsList.length ? { events: eventsList } : undefined,
+      slots: slotsList,
     })
   }
 
