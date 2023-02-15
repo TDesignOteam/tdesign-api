@@ -113,7 +113,8 @@ function getDefaultWithType(api, dl, valueType) {
   }
   // 小程序的默认值使用 `value` 表示；Vue 的默认值使用 `default` 表示
   const defaultField = isMiniprogram ? 'value:' : 'default:';
-  return api.field_enum && !isMiniprogram
+  // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
+  return api.field_enum && !isMiniprogram || (api.field_type_text?.length > 1 && currentFramework === 'VueNext(PC)')
     ? `${defaultField} ${dl} as ${valueType}`
     : `${defaultField} ${dl}`;
 }

@@ -23,7 +23,7 @@ export default {
   /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例 */
   closeBtn: {
     type: [String, Boolean, Function] as PropType<TdDialogProps['closeBtn']>,
-    default: true,
+    default: true as TdDialogProps['closeBtn'],
   },
   /** 按下 ESC 时是否触发对话框关闭事件 */
   closeOnEscKeydown: {
@@ -52,12 +52,12 @@ export default {
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容 */
   footer: {
     type: [Boolean, Function] as PropType<TdDialogProps['footer']>,
-    default: true,
+    default: true as TdDialogProps['footer'],
   },
   /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容 */
   header: {
     type: [String, Boolean, Function] as PropType<TdDialogProps['header']>,
-    default: true,
+    default: true as TdDialogProps['header'],
   },
   /** 对话框类型，有 3 种：模态对话框、非模态对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件 */
   mode: {
