@@ -120,7 +120,7 @@ export default {
   rowAttributes: {
     type: [Object, Array, Function] as PropType<TdBaseTableProps['rowAttributes']>,
   },
-  /** 行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type=body` 表示类名作用于 `tfoot` 中的元素 */
+  /** 行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素 */
   rowClassName: {
     type: [String, Object, Array, Function] as PropType<TdBaseTableProps['rowClassName']>,
   },
