@@ -20,11 +20,16 @@ module.exports = {
       field_name: 'hideOnLoadFailed',
       id: 1683,
       PC: {
-        skip: true,
         event: [
           {
             props: { image: 'https://this.is.an.error.path.jpg' },
-            expect: [{ trigger: '', exist: [{ '.t-image': false }], delay: 300 }],
+            expect: [
+              {
+                trigger: "simulateImageEvent('img', 'error')",
+                exist: [{ '.t-image': false }],
+                delay: 300,
+              },
+            ],
           },
         ],
       },
@@ -79,12 +84,16 @@ module.exports = {
       field_name: 'error',
       id: 1467,
       PC: {
-        skip: true,
         event: [
           {
             props: { image: 'https://this.is.an.error.path.jpg' },
             expect: [
-              { trigger: '', event: { error: [{ 'e.type': 'error' }] }, exist: [], delay: 300 },
+              {
+                trigger: "simulateImageEvent('img', 'error')",
+                event: { error: [{ 'e.type': 'error' }] },
+                exist: [],
+                delay: 300,
+              },
             ],
           },
         ],

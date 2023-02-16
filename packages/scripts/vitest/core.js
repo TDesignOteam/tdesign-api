@@ -139,7 +139,6 @@ function getPropsObjectString(props, events) {
 
 function getPropsValue(value) {
   // boolean
-  console.log(value, typeof value, /(true|false)/.test(value));
   if (typeof value === 'boolean') return value;
   // 带多余引号的字符串
   if (/^'.+'$/.test(value)) return value;

@@ -135,7 +135,6 @@ function getUnitTestCode(baseData, framework) {
       }
 
       // 存在 Web 框架的单测用例，再输出
-      // console.log(finalDescription);
       const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, finalDescription);
       if (oneUnitTests && oneUnitTests.length) {
 

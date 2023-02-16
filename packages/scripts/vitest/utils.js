@@ -33,7 +33,6 @@ function groupByComponent(allApi, framework) {
   // API 默认顺序为字母顺序，但是插件 API 的顺序应当为创建顺序。插件 API 形如：$Message.info(theme, duration)
   Object.keys(result).forEach((componentName) => {
     const plugin = result[componentName].type === 'plugin';
-    // console.log(plugin, result[componentName]);
     if (plugin) {
       result[componentName] = result[componentName].sort((a, b) => {
         // props 放在前面，其余类型放在后面 (props 的 field_category 值最小)
