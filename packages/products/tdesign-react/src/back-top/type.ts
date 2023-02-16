@@ -9,7 +9,7 @@ import { MouseEvent } from 'react';
 
 export interface TdBackTopProps {
   /**
-   * 回到顶部内容，同 content
+   * 回到顶部内容，同 `content`
    */
   children?: TNode;
   /**
@@ -21,6 +21,10 @@ export interface TdBackTopProps {
    * 回到顶部内容
    */
   content?: TNode;
+  /**
+   * 回到顶部内容，同 `content`
+   */
+  default?: TNode;
   /**
    * 回到顶部的耗时单位：毫秒
    * @default 200
@@ -49,7 +53,7 @@ export interface TdBackTopProps {
   /**
    * 点击回到顶部时触发
    */
-  onClick?: (e: MouseEvent<HTMLElement>) => void;
+  onClick?: (context: { e: MouseEvent<HTMLElement> }) => void;
 }
 
 export type BackTopShapeEnum = 'circle' | 'square';

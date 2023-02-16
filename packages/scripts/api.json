@@ -6404,8 +6404,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "回到顶部内容，同 content",
-      "field_desc_en": "Backtop's children elements",
+      "field_desc_zh": "回到顶部内容，同 `content`",
+      "field_desc_en": "Backtop's children elements, same as `content`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-10-28 02:53:44",
@@ -6504,6 +6504,49 @@
       "deprecated": 0,
       "version": "",
       "test_description": "preDepend: { 'content': '回到顶部' }",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3328,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BackTop",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "回到顶部内容，同 `content`",
+      "field_desc_en": "Backtop's children elements, same as `content`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-16 12:11:51",
+      "update_time": "2023-02-16 12:11:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -7065,7 +7108,7 @@
       "field_desc_zh": "点击回到顶部时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: MouseEvent)",
+      "event_input": "(context: { e: MouseEvent })",
       "create_time": "2022-10-28 02:52:42",
       "update_time": "2022-10-28 02:52:42",
       "event_output": null,
@@ -111446,5 +111489,5 @@
       ]
     }
   ],
-  "total": 2661
+  "total": 2662
 }

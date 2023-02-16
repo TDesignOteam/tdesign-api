@@ -11,11 +11,15 @@ export default {
   /** 监听滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   container: {
     type: [String, Function] as PropType<TdBackTopProps['container']>,
-    default: 'body',
+    default: 'body' as TdBackTopProps['container'],
   },
   /** 回到顶部内容 */
   content: {
     type: [String, Function] as PropType<TdBackTopProps['content']>,
+  },
+  /** 回到顶部内容，同 `content` */
+  default: {
+    type: [String, Function] as PropType<TdBackTopProps['default']>,
   },
   /** 回到顶部的耗时单位：毫秒 */
   duration: {
@@ -39,12 +43,12 @@ export default {
   /** 指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   target: {
     type: [String, Function] as PropType<TdBackTopProps['target']>,
-    default: 'body',
+    default: 'body' as TdBackTopProps['target'],
   },
   /** 滚动高度达到此参数值才出现 */
   visibleHeight: {
     type: [String, Number] as PropType<TdBackTopProps['visibleHeight']>,
-    default: '200px',
+    default: '200px' as TdBackTopProps['visibleHeight'],
   },
   /** 点击回到顶部时触发 */
   onClick: Function as PropType<TdBackTopProps['onClick']>,

@@ -17,6 +17,10 @@ export default {
   content: {
     type: [String, Function] as PropType<TdBackTopProps['content']>,
   },
+  /** 回到顶部内容，同 `content` */
+  default: {
+    type: [String, Function] as PropType<TdBackTopProps['default']>,
+  },
   /** 回到顶部的耗时单位：毫秒 */
   duration: {
     type: Number,

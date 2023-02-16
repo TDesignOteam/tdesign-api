@@ -17,6 +17,10 @@ export interface TdBackTopProps {
    */
   content?: string | TNode;
   /**
+   * 回到顶部内容，同 `content`
+   */
+  default?: string | TNode;
+  /**
    * 回到顶部的耗时单位：毫秒
    * @default 200
    */
@@ -44,7 +48,7 @@ export interface TdBackTopProps {
   /**
    * 点击回到顶部时触发
    */
-  onClick?: (e: MouseEvent) => void;
+  onClick?: (context: { e: MouseEvent }) => void;
 }
 
 export type BackTopShapeEnum = 'circle' | 'square';
