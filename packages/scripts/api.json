@@ -6418,7 +6418,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -6503,7 +6503,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "preDepend: { 'content': '回到顶部' }",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -6546,7 +6546,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -6830,7 +6830,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"className\":\"t-back-top--${item}\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -7119,7 +7119,7 @@
       "trigger_elements": "MouseEvent<HTMLElement>",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"stopPropagation\":true,\"e.type\":\"click\"}]}}}}",
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
