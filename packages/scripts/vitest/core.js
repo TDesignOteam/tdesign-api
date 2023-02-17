@@ -956,7 +956,8 @@ function getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, e
     tmpDom = `const ${domVariable} = ` + tmpDom;
     arr.push(tmpDom);
   }
-  arr.push(`${simulateEvent}(${[`${domVariable}`].concat(args.slice(1)).join(', ')});`);
+  const simulateEventName = simulateEvent.replace(/\(.+\)$/, '');
+  arr.push(`${simulateEventName}(${[`${domVariable}`].concat(args.slice(1)).join(', ')});`);
   return arr.join('\n');
 }
 
