@@ -67,8 +67,8 @@ import { cmpApiInstance } from '../../services/api-server'
 import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON, loadScript } from './util'
 import prettierConfig from '../../../../scripts/config/prettier'
-import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs"
-import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs"
+import prettier from "https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs"
+import parserBabel from "https://tdesign.gtimg.com/js/prettier%402.8.1-parser-babel.mjs"
 import Prism from 'prismjs'
 import 'prismjs/components/prism-json';
 // import JSONEditor from'https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.9.2/jsoneditor.min.js';
