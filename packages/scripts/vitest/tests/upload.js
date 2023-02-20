@@ -502,7 +502,7 @@ module.exports = {
       PC: {
         props: {
           theme: 'custom',
-          draggable: 'true',
+          draggable: true,
           action: 'https://tdesign.test.com/upload/file_success',
         },
         tnode: true,
@@ -1225,7 +1225,7 @@ module.exports = {
       PC: {
         dom: [
           {
-            description: 'show image add trigger even if count of image is over than max',
+            description: 'show image adding trigger in multiple image upload',
             props: {
               files: [
                 { url: 'xxxx.url', name: 'file1.txt' },

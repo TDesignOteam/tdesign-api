@@ -106640,7 +106640,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"theme\":\"custom\",\"draggable\":\"true\",\"action\":\"https://tdesign.test.com/upload/file_success\"},\"tnode\":true}}",
+      "test_description": "{\"PC\":{\"props\":{\"theme\":\"custom\",\"draggable\":true,\"action\":\"https://tdesign.test.com/upload/file_success\"},\"tnode\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
