@@ -36,10 +36,20 @@ export interface TdBackTopProps {
    */
   shape?: BackTopShapeEnum;
   /**
+   * 组件尺寸
+   * @default medium
+   */
+  size?: 'medium' | 'small';
+  /**
    * 指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
    * @default 'body'
    */
   target?: AttachNode;
+  /**
+   * 组件主题风格，浅色、主色、深色
+   * @default light
+   */
+  theme?: 'light' | 'primary' | 'dark';
   /**
    * 滚动高度达到此参数值才出现
    * @default '200px'

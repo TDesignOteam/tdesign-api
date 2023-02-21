@@ -9,6 +9,8 @@ export const backTopDefaultProps: TdBackTopProps = {
   duration: 200,
   offset: ['24px', '80px'],
   shape: 'square',
+  size: 'medium',
   target: 'body',
+  theme: 'light',
   visibleHeight: '200px',
 };

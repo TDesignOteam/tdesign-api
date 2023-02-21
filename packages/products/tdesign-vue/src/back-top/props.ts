@@ -40,10 +40,28 @@ export default {
       return ['circle', 'square'].includes(val);
     },
   },
+  /** 组件尺寸 */
+  size: {
+    type: String as PropType<TdBackTopProps['size']>,
+    default: 'medium' as TdBackTopProps['size'],
+    validator(val: TdBackTopProps['size']): boolean {
+      if (!val) return true;
+      return ['medium', 'small'].includes(val);
+    },
+  },
   /** 指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   target: {
     type: [String, Function] as PropType<TdBackTopProps['target']>,
     default: 'body',
+  },
+  /** 组件主题风格，浅色、主色、深色 */
+  theme: {
+    type: String as PropType<TdBackTopProps['theme']>,
+    default: 'light' as TdBackTopProps['theme'],
+    validator(val: TdBackTopProps['theme']): boolean {
+      if (!val) return true;
+      return ['light', 'primary', 'dark'].includes(val);
+    },
   },
   /** 滚动高度达到此参数值才出现 */
   visibleHeight: {
