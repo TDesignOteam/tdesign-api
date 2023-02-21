@@ -31,7 +31,7 @@ export default {
   /** 输入框的值 */
   inputValue: {
     type: [String, Number] as PropType<TdSelectInputProps['inputValue']>,
-    default: undefined,
+    default: undefined as TdSelectInputProps['inputValue'],
   },
   /** 输入框的值，非受控属性 */
   defaultInputValue: {
@@ -112,6 +112,7 @@ export default {
   /** 全部标签值。值为数组表示多个标签，值为非数组表示单个数值 */
   value: {
     type: [String, Number, Boolean, Object, Array, Date] as PropType<TdSelectInputProps['value']>,
+    default: undefined as TdSelectInputProps['value'],
   },
   /** 自定义值呈现的全部内容，参数为所有标签的值 */
   valueDisplay: {

@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### SelectInput Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -34,7 +33,7 @@ tag | String / Slot / Function | - | 多选场景下，自定义选中标签的�
 tagInputProps | Object | - | 透传 TagInput 组件全部属性。TS 类型：`TagInputProps`，[TagInput API Documents](./tag-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select-input/type.ts) | N
 tagProps | Object | - | 透传 Tag 标签组件全部属性。TS 类型：`TagProps`，[Tag API Documents](./tag?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select-input/type.ts) | N
 tips | String / Slot / Function | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-value | String / Number / Boolean / Object / Array / Date | - | 全部标签值。值为数组表示多个标签，值为非数组表示单个数值。TS 类型：`SelectInputValue` `type SelectInputValue = string \| number \| boolean \| Date \| Object \| Array<any> \| Array<SelectInputValue>`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select-input/type.ts) | N
+value | String / Number / Boolean / Object / Array / Date | undefined | 全部标签值。值为数组表示多个标签，值为非数组表示单个数值。TS 类型：`SelectInputValue` `type SelectInputValue = string \| number \| boolean \| Date \| Object \| Array<any> \| Array<SelectInputValue>`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select-input/type.ts) | N
 valueDisplay | String / Slot / Function | - | 自定义值呈现的全部内容，参数为所有标签的值。TS 类型：`string \| TNode<{ value: TagInputValue; onClose: (index: number, item?: any) => void }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onBlur | Function |  | TS 类型：`(value: SelectInputValue, context: SelectInputBlurContext) => void`<br/>失去焦点时触发，`context.inputValue` 表示输入框的值；`context.tagInputValue` 表示标签输入框的值。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select-input/type.ts)。<br/>`type SelectInputBlurContext = PopupVisibleChangeContext & { inputValue: string; tagInputValue?: TagInputValue; }`<br/> | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
