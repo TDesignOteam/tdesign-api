@@ -132,7 +132,7 @@ module.exports = {
             value: 32,
             expect: [
               {
-                dom: 'document.t-guide__highlight--mask',
+                dom: 'document.t-guide__highlight--popup',
                 attribute: {
                   'style.width': '64px',
                   'style.height': '64px',
