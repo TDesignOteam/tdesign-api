@@ -17398,6 +17398,47 @@
       ]
     },
     {
+      "id": 3332,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "reserveKeyword",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-22 06:48:04",
+      "update_time": "2023-02-22 06:48:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2332,
       "platform_framework": [
         "1",
@@ -78455,6 +78496,47 @@
       ]
     },
     {
+      "id": 3331,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "SelectInput",
+      "field_category": 1,
+      "field_name": "reserveKeyword",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-22 06:47:50",
+      "update_time": "2023-02-22 06:47:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2148,
       "platform_framework": [
         "1",
@@ -105046,6 +105128,47 @@
       ]
     },
     {
+      "id": 3333,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "reserveKeyword",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-22 06:48:14",
+      "update_time": "2023-02-22 06:48:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2330,
       "platform_framework": [
         "1",
@@ -111571,5 +111694,5 @@
       ]
     }
   ],
-  "total": 2664
+  "total": 2667
 }
