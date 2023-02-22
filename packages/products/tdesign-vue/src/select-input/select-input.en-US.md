@@ -26,6 +26,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 popupVisible | Boolean | - | `.sync` is supported | N
 defaultPopupVisible | Boolean | - | uncontrolled property | N
 readonly | Boolean | false | \- | N
+reserveKeyword | Boolean | false | \- | N
 status | String | default | options：default/success/warning/error | N
 suffix | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 suffixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N

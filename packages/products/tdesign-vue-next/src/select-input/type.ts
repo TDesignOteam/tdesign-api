@@ -108,6 +108,11 @@ export interface TdSelectInputProps {
    */
   readonly?: boolean;
   /**
+   * 多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词
+   * @default false
+   */
+  reserveKeyword?: boolean;
+  /**
    * 输入框状态
    * @default default
    */
