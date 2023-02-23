@@ -34,4 +34,9 @@ github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，
 
 ### 命令行操作
 
-[命令行操作](./packages/scripts/README.md)
+拉取某技术栈仓库 Button 组件的 API 定义文件：
+组件仓库放在同级目录 然后执行脚本 如 npm run api:docs Button 'Vue(PC)' finalProject
+
+更多指令见 [命令行操作](./packages/scripts/README.md)
+
+
