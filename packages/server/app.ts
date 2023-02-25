@@ -30,7 +30,7 @@ const staticPath = path.resolve('packages/frontend/_site');
 app.use(serve(staticPath));
 
 // support for spa
-app.use(async ctx => {
+app.use(async (ctx:Koa.Context) => {
   await send(ctx, `/index.html`, {
       root: staticPath,
   });
