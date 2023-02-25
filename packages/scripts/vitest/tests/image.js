@@ -109,6 +109,28 @@ module.exports = {
         attributeDom: 'img',
       },
     },
+    srcset_3339: {
+      field_name: 'srcset',
+      id: 3339,
+      PC: {
+        attribute: [
+          {
+            value:
+              "{'image/avif': 'https://tdesign.gtimg.com/img/tdesign-image.avif','image/webp': 'https://tdesign.gtimg.com/img/tdesign-image.webp'}",
+            expect: [
+              {
+                dom: 'picture > source',
+                attribute: { srcset: 'https://tdesign.gtimg.com/img/tdesign-image.avif' },
+              },
+              {
+                dom: 'picture > source:nth-child(2)',
+                attribute: { srcset: 'https://tdesign.gtimg.com/img/tdesign-image.webp' },
+              },
+            ],
+          },
+        ],
+      },
+    },
     style_3086: { field_name: 'style', id: 3086 },
     error_3290: {
       field_name: 'error',
