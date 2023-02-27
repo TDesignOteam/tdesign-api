@@ -63,7 +63,7 @@ export interface TdCheckboxProps {
   onClick?: (context: { e: MouseEvent }) => void;
 }
 
-export interface TdCheckboxGroupProps {
+export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
    * 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled
    * @default false
@@ -87,16 +87,16 @@ export interface TdCheckboxGroupProps {
    * 选中值
    * @default []
    */
-  value?: CheckboxGroupValue;
+  value?: T;
   /**
    * 选中值，非受控属性
    * @default []
    */
-  defaultValue?: CheckboxGroupValue;
+  defaultValue?: T;
   /**
    * 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项
    */
-  onChange?: (value: CheckboxGroupValue, context: CheckboxGroupChangeContext) => void;
+  onChange?: (value: T, context: CheckboxGroupChangeContext) => void;
 }
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
@@ -109,7 +109,7 @@ export interface CheckboxOptionObj {
   checkAll?: true;
 }
 
-export type CheckboxGroupValue = Array<string | number>;
+export type CheckboxGroupValue = Array<string | number | boolean>;
 
 export interface CheckboxGroupChangeContext {
   e: Event;
