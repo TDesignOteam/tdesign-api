@@ -157,6 +157,7 @@ function validateParams(components) {
     return true;
   }
   if (!(components.includes(component))) {
+    console.log(chalk.green(JSON.stringify(components)));
     console.error(chalk.red(`\nError: 组件 ${component} 不存在。如果在上述组件中没有找到想要的组件，需要新增组件，请联系 PMC\n`));
     return false;
   }
