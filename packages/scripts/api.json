@@ -86944,7 +86944,7 @@
       "create_time": "2020-11-30 08:32:34",
       "update_time": "2022-04-07 05:30:38",
       "event_output": null,
-      "custom_field_type": "SwitchValue【type SwitchValue = string | number | boolean】",
+      "custom_field_type": "T【type SwitchValue = string | number | boolean】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -86990,7 +86990,7 @@
       "create_time": "2022-10-31 17:29:41",
       "update_time": "2022-10-31 17:29:41",
       "event_output": null,
-      "custom_field_type": "SwitchValue【type SwitchValue = string | number | boolean】",
+      "custom_field_type": "T【type SwitchValue = string | number | boolean】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -87031,7 +87031,7 @@
       "field_desc_zh": "数据发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: SwitchValue)",
+      "event_input": "(value: T)",
       "create_time": "2020-11-30 08:23:04",
       "update_time": "2021-11-27 15:49:21",
       "event_output": null,
@@ -87057,6 +87057,51 @@
       "field_type_text": [
         "Boolean"
       ]
+    },
+    {
+      "id": 3341,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 64,
+      "field_name": "<T = SwitchValue>",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-27 11:43:05",
+      "update_time": "2023-02-27 11:43:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "<T>",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1377,
@@ -111851,5 +111896,5 @@
       ]
     }
   ],
-  "total": 2670
+  "total": 2671
 }

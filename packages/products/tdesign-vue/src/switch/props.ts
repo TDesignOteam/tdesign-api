@@ -11,6 +11,7 @@ export default {
   /** 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close'] */
   customValue: {
     type: Array as PropType<TdSwitchProps['customValue']>,
+    default: (): TdSwitchProps['customValue'] => [true, false],
   },
   /** 是否禁用组件 */
   disabled: Boolean,

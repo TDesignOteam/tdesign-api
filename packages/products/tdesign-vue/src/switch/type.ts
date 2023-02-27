@@ -6,13 +6,15 @@
 
 import { TNode } from '../common';
 
-export interface TdSwitchProps {
+export interface TdSwitchProps<T = SwitchValue> {
   /**
    * 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']
+   * @default [true, false]
    */
   customValue?: Array<SwitchValue>;
   /**
    * 是否禁用组件
+   * @default false
    */
   disabled?: boolean;
   /**
@@ -33,15 +35,15 @@ export interface TdSwitchProps {
   /**
    * 开关值
    */
-  value?: SwitchValue;
+  value?: T;
   /**
    * 开关值，非受控属性
    */
-  defaultValue?: SwitchValue;
+  defaultValue?: T;
   /**
    * 数据发生变化时触发
    */
-  onChange?: (value: SwitchValue) => void;
+  onChange?: (value: T) => void;
 }
 
 export type SwitchValue = string | number | boolean;
