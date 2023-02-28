@@ -70037,7 +70037,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled",
       "field_desc_en": null,

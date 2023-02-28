@@ -33,11 +33,11 @@ export default {
   /** 选中的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdRadioGroupProps['value'],
   },
   modelValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdRadioGroupProps['value'],
   },
   /** 选中的值，非受控属性 */
   defaultValue: {

@@ -6,7 +6,7 @@
 
 import { TNode, SizeEnum } from '../common';
 
-export interface TdRadioProps<T = RadioValue> {
+export interface TdRadioProps {
   /**
    * 是否允许取消选中
    * @default false
@@ -47,7 +47,7 @@ export interface TdRadioProps<T = RadioValue> {
   /**
    * 单选按钮的值
    */
-  value?: T;
+  value?: string | number | boolean;
   /**
    * 选中状态变化时触发
    */
@@ -66,7 +66,6 @@ export interface TdRadioGroupProps<T = RadioValue> {
   allowUncheck?: boolean;
   /**
    * 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled
-   * @default false
    */
   disabled?: boolean;
   /**
@@ -106,8 +105,6 @@ export interface TdRadioGroupProps<T = RadioValue> {
   onChange?: (value: T, context: { e: Event }) => void;
 }
 
-export type RadioValue = string | number | boolean;
-
 export type RadioOption = string | number | RadioOptionObj;
 
 export interface RadioOptionObj {
@@ -115,3 +112,5 @@ export interface RadioOptionObj {
   value?: string | number;
   disabled?: boolean;
 }
+
+export type RadioValue = string | number | boolean;
