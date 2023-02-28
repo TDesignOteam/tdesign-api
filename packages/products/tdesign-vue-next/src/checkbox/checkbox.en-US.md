@@ -29,7 +29,7 @@ click | `(context: { e: MouseEvent })` | trigger on click
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-disabled | Boolean | false | \- | N
+disabled | Boolean | - | \- | N
 max | Number | undefined | \- | N
 name | String | - | \- | N
 options | Array | [] | Typescript：`Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj { label?: string \| TNode; value?: string \| number; disabled?: boolean; name?: string; checkAll?: true }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/checkbox/type.ts) | N

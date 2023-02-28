@@ -66,7 +66,6 @@ export interface TdCheckboxProps {
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
    * 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled
-   * @default false
    */
   disabled?: boolean;
   /**

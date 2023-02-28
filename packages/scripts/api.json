@@ -21241,7 +21241,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled",
       "field_desc_en": null,
