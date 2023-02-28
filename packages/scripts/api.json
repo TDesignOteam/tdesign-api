@@ -1984,6 +1984,49 @@
       "field_type_text": []
     },
     {
+      "id": 3342,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 1,
+      "field_name": "align",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "center",
+      "field_enum": "center/left",
+      "field_desc_zh": "水平对齐方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 08:06:56",
+      "update_time": "2023-02-28 08:06:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.29.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1612,
       "platform_framework": [
         "8",
@@ -2070,6 +2113,49 @@
       ]
     },
     {
+      "id": 3343,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 1,
+      "field_name": "description",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "动作面板描述文字",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 08:07:20",
+      "update_time": "2023-02-28 08:07:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.29.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1608,
       "platform_framework": [
         "8",
@@ -2153,43 +2239,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3095,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "ActionSheet",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:43:56",
-      "update_time": "2022-10-31 11:43:56",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -2399,7 +2448,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'command' | 'select' 】",
       "create_time": "2022-04-08 09:07:06",
       "update_time": "2022-07-06 14:55:12",
       "event_output": null,
@@ -16853,6 +16902,49 @@
       ]
     },
     {
+      "id": 3347,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 10:15:01",
+      "update_time": "2023-02-28 10:15:01",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3318,
       "platform_framework": [
         "1",
@@ -17603,26 +17695,29 @@
       ]
     },
     {
-      "id": 3063,
+      "id": 3348,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Cascader",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "subTitles",
       "field_type": [
-        "1"
+        "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "每级展示的次标题",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:34:11",
-      "update_time": "2022-10-31 11:34:11",
+      "create_time": "2023-02-28 10:15:55",
+      "update_time": "2023-02-28 10:15:55",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "Array<string>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -17633,10 +17728,13 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "Array"
       ]
     },
     {
@@ -17803,6 +17901,49 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3349,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "step",
+      "field_enum": "step/tab",
+      "field_desc_zh": "展示风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 10:16:55",
+      "update_time": "2023-02-28 10:16:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -18043,7 +18184,7 @@
       "create_time": "2022-10-31 16:57:29",
       "update_time": "2022-10-31 16:57:29",
       "event_output": null,
-      "custom_field_type": "null",
+      "custom_field_type": "",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -18304,6 +18445,84 @@
       "field_type_text": []
     },
     {
+      "id": 3345,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "值发生变更时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: string | number, selectedOptions: string[])",
+      "create_time": "2023-02-28 08:47:25",
+      "update_time": "2023-02-28 08:47:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3346,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'close-btn' | 'finish'】",
+      "create_time": "2023-02-28 10:11:28",
+      "update_time": "2023-02-28 10:11:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 403,
       "platform_framework": [
         "1",
@@ -18337,6 +18556,45 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3344,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 2,
+      "field_name": "pick",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选择后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: string | number, index: number)",
+      "create_time": "2023-02-28 08:45:51",
+      "update_time": "2023-02-28 08:45:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -33627,6 +33885,49 @@
       ]
     },
     {
+      "id": 3351,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉的底部",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 12:06:01",
+      "update_time": "2023-02-28 12:06:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.29.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 683,
       "platform_framework": [
         "1",
@@ -33676,8 +33977,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Drawer",
       "field_category": 1,
@@ -33707,7 +34007,43 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3350,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "items",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉里的列表项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-02-28 12:04:36",
+      "update_time": "2023-02-28 12:04:36",
+      "event_output": null,
+      "custom_field_type": "DrawerItem[] 【interface DrawerItem { title: string; icon: string; }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -34065,24 +34401,28 @@
       ]
     },
     {
-      "id": 3098,
+      "id": 3352,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Drawer",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "title",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "抽屉的标题",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:44:55",
-      "update_time": "2022-10-31 11:44:55",
+      "create_time": "2023-02-28 12:08:56",
+      "update_time": "2023-02-28 12:08:56",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -34090,15 +34430,19 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.29.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {
@@ -34208,7 +34552,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "11500",
       "field_enum": "",
       "field_desc_zh": "抽屉层级，样式默认为 11500",
       "field_desc_en": null,
@@ -34317,6 +34661,9 @@
     {
       "id": 2545,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Drawer",
@@ -34325,10 +34672,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "关闭事件，取消按钮点击时、关闭按钮点击时、点击蒙层时均会触发",
+      "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: DrawerEventSource)【type DrawerEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay'】",
+      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay'】",
       "create_time": "2022-04-06 08:50:33",
       "update_time": "2022-04-06 08:50:33",
       "event_output": null,
@@ -34336,13 +34683,16 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -111896,5 +112246,5 @@
       ]
     }
   ],
-  "total": 2671
+  "total": 2679
 }
