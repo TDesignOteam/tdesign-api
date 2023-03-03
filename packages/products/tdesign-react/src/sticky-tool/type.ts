@@ -5,7 +5,7 @@
  * */
 
 import { PopupProps } from '../popup';
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
 import { MouseEvent } from 'react';
 
 export interface TdStickyToolProps {
@@ -55,7 +55,7 @@ export interface TdStickyItemProps {
   /**
    * 图标
    */
-  icon?: TNode;
+  icon?: TElement;
   /**
    * 名称
    */

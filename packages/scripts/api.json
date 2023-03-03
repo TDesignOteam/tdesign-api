@@ -83503,7 +83503,6 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
@@ -83531,7 +83530,6 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
       ]
     },
