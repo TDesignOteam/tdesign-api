@@ -26,6 +26,7 @@ expandParent | Boolean | false | \- | N
 expanded | Array | [] | `v-model:expanded` is supported。Typescript：`Array<TreeNodeValue>` | N
 defaultExpanded | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` | N
 filter | Function | - | Typescript：`(node: TreeNodeModel<T>) => boolean` | N
+height | String / Number | - | table height | N
 hover | Boolean | - | \- | N
 icon | Boolean / Slot / Function | true | Typescript：`boolean \| TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 keys | Object | - | Typescript：`TreeKeysType` `interface TreeKeysType { value?: string; label?: string; children?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
@@ -33,6 +34,7 @@ label | String / Boolean / Slot / Function | true | Typescript：`string \| bool
 lazy | Boolean | true | \- | N
 line | Boolean / Slot / Function | false | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 load | Function | - | Typescript：`(node: TreeNodeModel<T>) => Promise<Array<T>>` | N
+maxHeight | String / Number | - | table max height | N
 operations | Slot / Function | - | Typescript：`TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 scroll | Object | - | lazy load and virtual scroll。Typescript：`TScroll`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 transition | Boolean | true | \- | N
@@ -49,6 +51,7 @@ onDragStart | Function |  | Typescript：`(context: { e: DragEvent; node: TreeNo
 onDrop | Function |  | Typescript：`(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   }) => void`<br/> | N
 onExpand | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' }) => void`<br/> | N
 onLoad | Function |  | Typescript：`(context: { node: TreeNodeModel<T> }) => void`<br/> | N
+onScroll | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>trigger on table content scroll | N
 
 ### Tree Events
 
@@ -64,6 +67,7 @@ drag-start | `(context: { e: DragEvent; node: TreeNodeModel<T> })` | \-
 drop | `(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   })` | \-
 expand | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' })` | \-
 load | `(context: { node: TreeNodeModel<T> })` | \-
+scroll | `(params: { e: WheelEvent })` | trigger on table content scroll
 
 ### TreeInstanceFunctions 组件实例方法
 
