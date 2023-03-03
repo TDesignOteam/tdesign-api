@@ -83755,7 +83755,7 @@
       "field_category": 1,
       "field_name": "offset",
       "field_type": [
-        "8"
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -83782,7 +83782,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Array"
       ]
     },
     {

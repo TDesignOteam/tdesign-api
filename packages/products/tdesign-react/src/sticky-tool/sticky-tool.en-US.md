@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### StickyTool Props
 
 name | type | default | description | required
@@ -9,7 +8,7 @@ name | type | default | description | required
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 list | Array | [] | Typescript：`Array<TdStickyItemProps>` | N
-offset | Object | - | Typescript：`Array<string \| number>` | N
+offset | Array | - | Typescript：`Array<string \| number>` | N
 placement | String | right-bottom | options：right-top/right-center/right-bottom/left-top/left-center/left-bottom | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/sticky-tool/type.ts) | N
 shape | String | square | stickytool shape。options：square/round | N
