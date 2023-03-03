@@ -41,7 +41,7 @@ transition | Boolean | true | \- | N
 value | Array | [] | `v-model` and `v-model:value` is supported。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
 valueMode | String | onlyLeaf | options：onlyLeaf/parentFirst/all | N
-onActive | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent<HTMLDivElement>; trigger: 'node-click' \| 'setItem' }) => void`<br/> | N
+onActive | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' }) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void`<br/> | N
 onDragEnd | Function |  | Typescript：`(context: { e: DragEvent; node: TreeNodeModel<T> }) => void`<br/> | N
@@ -51,13 +51,13 @@ onDragStart | Function |  | Typescript：`(context: { e: DragEvent; node: TreeNo
 onDrop | Function |  | Typescript：`(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   }) => void`<br/> | N
 onExpand | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' }) => void`<br/> | N
 onLoad | Function |  | Typescript：`(context: { node: TreeNodeModel<T> }) => void`<br/> | N
-onScroll | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>trigger on table content scroll | N
+onScroll | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>trigger on content scroll | N
 
 ### Tree Events
 
 name | params | description
 -- | -- | --
-active | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent<HTMLDivElement>; trigger: 'node-click' \| 'setItem' })` | \-
+active | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' })` | \-
 change | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' })` | \-
 click | `(context: { node: TreeNodeModel<T>; e: MouseEvent })` | \-
 drag-end | `(context: { e: DragEvent; node: TreeNodeModel<T> })` | \-
@@ -67,7 +67,7 @@ drag-start | `(context: { e: DragEvent; node: TreeNodeModel<T> })` | \-
 drop | `(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   })` | \-
 expand | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' })` | \-
 load | `(context: { node: TreeNodeModel<T> })` | \-
-scroll | `(params: { e: WheelEvent })` | trigger on table content scroll
+scroll | `(params: { e: WheelEvent })` | trigger on content scroll
 
 ### TreeInstanceFunctions 组件实例方法
 
@@ -84,6 +84,55 @@ insertAfter | `(value: TreeNodeValue, newData: T)` | \- | required
 insertBefore | `(value: TreeNodeValue, newData: T)` | \- | required
 remove | `(value: TreeNodeValue)` | \- | required
 setItem | `(value: TreeNodeValue, options: TreeNodeState)` | \- | required
+
+### TreeNodeState
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+activable | Boolean | false | \- | N
+actived | Boolean | false | \- | N
+checkable | Boolean | false | \- | N
+checked | Boolean | false | \- | N
+disabled | Boolean | false | \- | N
+expandMutex | Boolean | false | \- | N
+expanded | Boolean | false | \- | N
+indeterminate | Boolean | false | \- | N
+label | String | - | \- | N
+loading | Boolean | false | \- | N
+value | String / Number | - | \- | N
+visible | Boolean | false | \- | N
+
+### TreeNodeModel
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+actived | Boolean | - | required | Y
+checked | Boolean | - | required | Y
+data | Object | - | required。node data, extends `TreeOptionData`。Typescript：`T` | Y
+expanded | Boolean | - | required | Y
+indeterminate | Boolean | - | required | Y
+loading | Boolean | - | required | Y
+`TreeNodeState` | \- | - | extends `TreeNodeState` | N
+### TreeNodeModel
+
+name | params | return | description
+-- | -- | -- | --
+appendData | `(data: T \| Array<T>)` | \- | required。add node data, `T` extends `TreeOptionData`
+getChildren | `(deep: boolean)` | `Array<TreeNodeModel<T>> \| boolean` | required
+getIndex | \- | `number` | required
+getLevel | \- | `number` | required
+getParent | \- | `TreeNodeModel<T>` | required
+getParents | \- | `Array<TreeNodeModel<T>>` | required
+getPath | \- | `Array<TreeNodeModel<T>>` | required
+getRoot | \- | `TreeNodeModel<T>` | required
+getSiblings | \- | `Array<TreeNodeModel<T>>` | required
+insertAfter | `(newData: T)` | \- | required
+insertBefore | `(newData: T)` | \- | required
+isFirst | \- | `boolean` | required
+isLast | \- | `boolean` | required
+isLeaf | \- | `boolean` | required
+remove | `(value?: TreeNodeValue)` | \- | required
+setData | `(data: T)` | \- | required。set node data, `T` extends `TreeOptionData`
 
 ### TScroll
 

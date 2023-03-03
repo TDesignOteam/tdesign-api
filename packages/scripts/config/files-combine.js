@@ -75,10 +75,9 @@ const COMPONENT_API_MD_MAP = {
   DropdownMenu: ['DropdownMenu', 'DropdownItem'],
   Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
-  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
   // 只有文档需要 TScroll，类型定义不需要
   Table: TABLE_LIST.concat('TScroll'),
-  Tree: ['Tree', 'TScroll'],
+  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Steps: ['Steps', 'StepItem'],
   Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],

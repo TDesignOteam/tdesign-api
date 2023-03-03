@@ -166,6 +166,6 @@ export default {
   onExpand: Function as PropType<TdTreeProps['onExpand']>,
   /** 异步加载后触发，泛型 `T` 表示树节点 TS 类型 */
   onLoad: Function as PropType<TdTreeProps['onLoad']>,
-  /** 表格内容滚动时触发 */
+  /** 滚动事件 */
   onScroll: Function as PropType<TdTreeProps['onScroll']>,
 };

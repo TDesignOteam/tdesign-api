@@ -41,7 +41,7 @@ transition | Boolean | true | 节点展开折叠时是否使用过渡动画 | N
 value | Array | [] | 选中值（组件为可选状态时）。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
 defaultValue | Array | [] | 选中值（组件为可选状态时）。非受控属性。TS 类型：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
 valueMode | String | onlyLeaf | 选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaft 表示无论什么情况，选中值仅呈现叶子节点。可选项：onlyLeaf/parentFirst/all | N
-onActive | Function |  | TS 类型：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent<HTMLDivElement>; trigger: 'node-click' \| 'setItem' }) => void`<br/>节点激活时触发，泛型 `T` 表示树节点 TS 类型 | N
+onActive | Function |  | TS 类型：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' }) => void`<br/>节点激活时触发，泛型 `T` 表示树节点 TS 类型 | N
 onChange | Function |  | TS 类型：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' }) => void`<br/>节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 `T` 表示树节点 TS 类型 | N
 onClick | Function |  | TS 类型：`(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void`<br/>节点点击时触发，泛型 `T` 表示树节点 TS 类型 | N
 onDragEnd | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNodeModel<T> }) => void`<br/>节点结束拖拽时触发，泛型 `T` 表示树节点 TS 类型 | N
@@ -51,13 +51,13 @@ onDragStart | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNod
 onDrop | Function |  | TS 类型：`(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   }) => void`<br/>节点在目标元素上释放时触发，泛型 `T` 表示树节点 TS 类型 | N
 onExpand | Function |  | TS 类型：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' }) => void`<br/>节点展开或收起时触发，泛型 `T` 表示树节点 TS 类型 | N
 onLoad | Function |  | TS 类型：`(context: { node: TreeNodeModel<T> }) => void`<br/>异步加载后触发，泛型 `T` 表示树节点 TS 类型 | N
-onScroll | Function |  | TS 类型：`(params: { e: WheelEvent }) => void`<br/>表格内容滚动时触发 | N
+onScroll | Function |  | TS 类型：`(params: { e: WheelEvent }) => void`<br/>滚动事件 | N
 
 ### Tree Events
 
 名称 | 参数 | 描述
 -- | -- | --
-active | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent<HTMLDivElement>; trigger: 'node-click' \| 'setItem' })` | 节点激活时触发，泛型 `T` 表示树节点 TS 类型
+active | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' })` | 节点激活时触发，泛型 `T` 表示树节点 TS 类型
 change | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' })` | 节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 `T` 表示树节点 TS 类型
 click | `(context: { node: TreeNodeModel<T>; e: MouseEvent })` | 节点点击时触发，泛型 `T` 表示树节点 TS 类型
 drag-end | `(context: { e: DragEvent; node: TreeNodeModel<T> })` | 节点结束拖拽时触发，泛型 `T` 表示树节点 TS 类型
@@ -67,7 +67,7 @@ drag-start | `(context: { e: DragEvent; node: TreeNodeModel<T> })` | 节点开�
 drop | `(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   })` | 节点在目标元素上释放时触发，泛型 `T` 表示树节点 TS 类型
 expand | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' })` | 节点展开或收起时触发，泛型 `T` 表示树节点 TS 类型
 load | `(context: { node: TreeNodeModel<T> })` | 异步加载后触发，泛型 `T` 表示树节点 TS 类型
-scroll | `(params: { e: WheelEvent })` | 表格内容滚动时触发
+scroll | `(params: { e: WheelEvent })` | 滚动事件
 
 ### TreeInstanceFunctions 组件实例方法
 
@@ -84,6 +84,55 @@ insertAfter | `(value: TreeNodeValue, newData: T)` | \- | 必需。插入新节�
 insertBefore | `(value: TreeNodeValue, newData: T)` | \- | 必需。插入新节点到指定节点前面，泛型 `T` 表示树节点 TS 类型
 remove | `(value: TreeNodeValue)` | \- | 必需。移除指定节点
 setItem | `(value: TreeNodeValue, options: TreeNodeState)` | \- | 必需。设置节点状态
+
+### TreeNodeState
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+activable | Boolean | false | 节点是否允许被激活 | N
+actived | Boolean | false | 节点是否被激活 | N
+checkable | Boolean | false | 节点是否允许被选中 | N
+checked | Boolean | false | 节点是否被选中 | N
+disabled | Boolean | false | 节点是否被禁用 | N
+expandMutex | Boolean | false | 子节点是否互斥展开 | N
+expanded | Boolean | false | 节点是否已展开 | N
+indeterminate | Boolean | false | 节点是否为半选中状态 | N
+label | String | - | 节点标签文案 | N
+loading | Boolean | false | 子节点数据是否在加载中 | N
+value | String / Number | - | 节点值 | N
+visible | Boolean | false | 节点是否可视 | N
+
+### TreeNodeModel
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+actived | Boolean | - | 必需。当前节点是否处于高亮激活态 | Y
+checked | Boolean | - | 必需。当前节点是否被选中 | Y
+data | Object | - | 必需。节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`。TS 类型：`T` | Y
+expanded | Boolean | - | 必需。当前节点是否展开 | Y
+indeterminate | Boolean | - | 必需。当前节点是否处于半选状态 | Y
+loading | Boolean | - | 必需。当前节点是否处于加载中状态 | Y
+`TreeNodeState` | \- | - | 继承 `TreeNodeState` 中的全部属性 | N
+### TreeNodeModel
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+appendData | `(data: T \| Array<T>)` | \- | 必需。追加子节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`
+getChildren | `(deep: boolean)` | `Array<TreeNodeModel<T>> \| boolean` | 必需。默认获取当前节点的全部子节点，deep 值为 true 则表示获取全部子孙节点
+getIndex | \- | `number` | 必需。获取节点在父节点的子节点列表中的位置，如果没有父节点，则获取节点在根节点列表的位置
+getLevel | \- | `number` | 必需。获取节点所在的层级
+getParent | \- | `TreeNodeModel<T>` | 必需。获取单个父节点
+getParents | \- | `Array<TreeNodeModel<T>>` | 必需。获取所有父节点
+getPath | \- | `Array<TreeNodeModel<T>>` | 必需。获取节点全路径
+getRoot | \- | `TreeNodeModel<T>` | 必需。获取根节点
+getSiblings | \- | `Array<TreeNodeModel<T>>` | 必需。获取兄弟节点，包含自己在内
+insertAfter | `(newData: T)` | \- | 必需。在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型
+insertBefore | `(newData: T)` | \- | 必需。在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型
+isFirst | \- | `boolean` | 必需。是否为兄弟节点中的第一个节点
+isLast | \- | `boolean` | 必需。是否为兄弟节点中的最后一个节点
+isLeaf | \- | `boolean` | 必需。是否为叶子节点
+remove | `(value?: TreeNodeValue)` | \- | 必需。移除当前节点或当前节点的子节点，值为空则移除当前节点，值存在则移除当前节点的子节点
+setData | `(data: T)` | \- | 必需。设置节点数据，数据变化可自动刷新页面，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`
 
 ### TScroll
 
