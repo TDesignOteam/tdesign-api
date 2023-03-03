@@ -34,6 +34,7 @@ lazy | Boolean | true | \- | N
 line | Boolean / Slot / Function | false | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 load | Function | - | Typescript：`(node: TreeNodeModel<T>) => Promise<Array<T>>` | N
 operations | Slot / Function | - | Typescript：`TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+scroll | Object | - | lazy load and virtual scroll。Typescript：`TScroll`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 transition | Boolean | true | \- | N
 value | Array | [] | `v-model` and `v-model:value` is supported。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree/type.ts) | N
@@ -80,51 +81,12 @@ insertBefore | `(value: TreeNodeValue, newData: T)` | \- | required
 remove | `(value: TreeNodeValue)` | \- | required
 setItem | `(value: TreeNodeValue, options: TreeNodeState)` | \- | required
 
-### TreeNodeState
+### TScroll
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-activable | Boolean | false | \- | N
-actived | Boolean | false | \- | N
-checkable | Boolean | false | \- | N
-checked | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
-expandMutex | Boolean | false | \- | N
-expanded | Boolean | false | \- | N
-indeterminate | Boolean | false | \- | N
-label | String | - | \- | N
-loading | Boolean | false | \- | N
-value | String / Number | - | \- | N
-visible | Boolean | false | \- | N
-
-### TreeNodeModel
-
-name | type | default | description | required
--- | -- | -- | -- | --
-actived | Boolean | - | required | Y
-checked | Boolean | - | required | Y
-data | Object | - | required。node data, extends `TreeOptionData`。Typescript：`T` | Y
-expanded | Boolean | - | required | Y
-indeterminate | Boolean | - | required | Y
-loading | Boolean | - | required | Y
-`TreeNodeState` | \- | - | extends `TreeNodeState` | N
-### TreeNodeModel
-
-name | params | return | description
--- | -- | -- | --
-appendData | `(data: T \| Array<T>)` | \- | required。add node data, `T` extends `TreeOptionData`
-getChildren | `(deep: boolean)` | `Array<TreeNodeModel<T>> \| boolean` | required
-getIndex | \- | `number` | required
-getLevel | \- | `number` | required
-getParent | \- | `TreeNodeModel<T>` | required
-getParents | \- | `Array<TreeNodeModel<T>>` | required
-getPath | \- | `Array<TreeNodeModel<T>>` | required
-getRoot | \- | `TreeNodeModel<T>` | required
-getSiblings | \- | `Array<TreeNodeModel<T>>` | required
-insertAfter | `(newData: T)` | \- | required
-insertBefore | `(newData: T)` | \- | required
-isFirst | \- | `boolean` | required
-isLast | \- | `boolean` | required
-isLeaf | \- | `boolean` | required
-remove | `(value?: TreeNodeValue)` | \- | required
-setData | `(data: T)` | \- | required。set node data, `T` extends `TreeOptionData`
+bufferSize | Number | 20 | \- | N
+isFixedRowHeight | Boolean | false | \- | N
+rowHeight | Number | - | \- | N
+threshold | Number | 100 | \- | N
+type | String | - | required。options：lazy/virtual | Y

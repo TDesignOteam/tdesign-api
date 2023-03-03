@@ -5,7 +5,7 @@
  * */
 
 import { CheckboxProps } from '../checkbox';
-import { TNode, TreeOptionData } from '../common';
+import { TNode, TreeOptionData, TScroll } from '../common';
 
 export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
   /**
@@ -144,6 +144,10 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   operations?: TNode<TreeNodeModel<T>>;
   /**
+   * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
+   */
+  scroll?: TScroll;
+  /**
    * 节点展开折叠时是否使用过渡动画
    * @default true
    */
@@ -265,159 +269,6 @@ export interface TreeInstanceFunctions<T extends TreeOptionData = TreeOptionData
    * 设置节点状态
    */
   setItem: (value: TreeNodeValue, options: TreeNodeState) => void;
-}
-
-export interface TreeNodeState {
-  /**
-   * 节点是否允许被激活
-   * @default false
-   */
-  activable?: boolean;
-  /**
-   * 节点是否被激活
-   * @default false
-   */
-  actived?: boolean;
-  /**
-   * 节点是否允许被选中
-   * @default false
-   */
-  checkable?: boolean;
-  /**
-   * 节点是否被选中
-   * @default false
-   */
-  checked?: boolean;
-  /**
-   * 节点是否被禁用
-   * @default false
-   */
-  disabled?: boolean;
-  /**
-   * 子节点是否互斥展开
-   * @default false
-   */
-  expandMutex?: boolean;
-  /**
-   * 节点是否已展开
-   * @default false
-   */
-  expanded?: boolean;
-  /**
-   * 节点是否为半选中状态
-   * @default false
-   */
-  indeterminate?: boolean;
-  /**
-   * 节点标签文案
-   * @default ''
-   */
-  label?: string;
-  /**
-   * 子节点数据是否在加载中
-   * @default false
-   */
-  loading?: boolean;
-  /**
-   * 节点值
-   */
-  value?: string | number;
-  /**
-   * 节点是否可视
-   * @default false
-   */
-  visible?: boolean;
-}
-
-export interface TreeNodeModel<T extends TreeOptionData = TreeOptionData> extends TreeNodeState {
-  /**
-   * 当前节点是否处于高亮激活态
-   */
-  actived: boolean;
-  /**
-   * 当前节点是否被选中
-   */
-  checked: boolean;
-  /**
-   * 节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`
-   */
-  data: T;
-  /**
-   * 当前节点是否展开
-   */
-  expanded: boolean;
-  /**
-   * 当前节点是否处于半选状态
-   */
-  indeterminate: boolean;
-  /**
-   * 当前节点是否处于加载中状态
-   */
-  loading: boolean;
-  /**
-   * 追加子节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`
-   */
-  appendData: (data: T | Array<T>) => void;
-  /**
-   * 默认获取当前节点的全部子节点，deep 值为 true 则表示获取全部子孙节点
-   */
-  getChildren: (deep: boolean) => Array<TreeNodeModel<T>> | boolean;
-  /**
-   * 获取节点在父节点的子节点列表中的位置，如果没有父节点，则获取节点在根节点列表的位置
-   */
-  getIndex: () => number;
-  /**
-   * 获取节点所在的层级
-   */
-  getLevel: () => number;
-  /**
-   * 获取单个父节点
-   */
-  getParent: () => TreeNodeModel<T>;
-  /**
-   * 获取所有父节点
-   */
-  getParents: () => Array<TreeNodeModel<T>>;
-  /**
-   * 获取节点全路径
-   */
-  getPath: () => Array<TreeNodeModel<T>>;
-  /**
-   * 获取根节点
-   */
-  getRoot: () => TreeNodeModel<T>;
-  /**
-   * 获取兄弟节点，包含自己在内
-   */
-  getSiblings: () => Array<TreeNodeModel<T>>;
-  /**
-   * 在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型
-   */
-  insertAfter: (newData: T) => void;
-  /**
-   * 在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型
-   */
-  insertBefore: (newData: T) => void;
-  /**
-   * 是否为兄弟节点中的第一个节点
-   */
-  isFirst: () => boolean;
-  /**
-   * 是否为兄弟节点中的最后一个节点
-   */
-  isLast: () => boolean;
-  /**
-   * 是否为叶子节点
-   */
-  isLeaf: () => boolean;
-  /**
-   * 移除当前节点或当前节点的子节点，值为空则移除当前节点，值存在则移除当前节点的子节点
-   */
-  remove: (value?: TreeNodeValue) => void;
-  /**
-   * 设置节点数据，数据变化可自动刷新页面，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`
-   */
-  setData: (data: T) => void;
 }
 
 export interface TreeKeysType {
