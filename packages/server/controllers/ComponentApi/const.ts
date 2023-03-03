@@ -129,6 +129,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'TableColumnFilter', label: '表格列过滤条件配置', type: 'TS' },
   { value: 'TableColumnController', label: '表格自定义显示列配置', type: 'TS' },
   { value: 'InfinityScroll', label: '无限滚动配置', type: 'TS' },
+  { value: 'TScroll', label: '滚动配置', type: 'TS' },
   { value: 'BaseTable', label: '基础表格' },
   { value: 'BaseTableCol', label: '基础表格列', type: 'TS' },
   { value: 'PrimaryTable', label: '主表格' },

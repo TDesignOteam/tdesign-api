@@ -65,7 +65,7 @@ const COMPONENT_API_MD_MAP = {
   // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
   Grid: ['Grid', 'Row', 'Col', 'GridItem'],
   Icon: ['IconSVG', 'Iconfont'],
-  Select: ['Select', 'Option', 'OptionGroup', 'InfinityScroll'],
+  Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
   Tag: ['Tag', 'CheckTag'],
   Collapse: ['Collapse', 'CollapsePanel'],
   Dropdown: {
@@ -76,8 +76,9 @@ const COMPONENT_API_MD_MAP = {
   Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel'],
-  // 只有文档需要 InfinityScroll，类型定义不需要
-  Table: TABLE_LIST.concat('InfinityScroll'),
+  // 只有文档需要 TScroll，类型定义不需要
+  Table: TABLE_LIST.concat('TScroll'),
+  Tree: ['Tree', 'TScroll'],
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Steps: ['Steps', 'StepItem'],
   Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],

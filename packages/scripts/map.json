@@ -957,6 +957,11 @@
         "type": "TS"
       },
       {
+        "value": "TScroll",
+        "label": "滚动配置",
+        "type": "TS"
+      },
+      {
         "value": "Typography",
         "label": "排版"
       },

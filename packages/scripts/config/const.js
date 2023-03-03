@@ -25,6 +25,7 @@ const GLOBAL_TYPES = [
   'KeysType',
   'HTMLElementAttributes',
   'ComponentType',
+  'TScroll',
   'InfinityScroll',
   'UploadDisplayDragEvents',
   'ImageEvent',
