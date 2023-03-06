@@ -60,6 +60,7 @@
     "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
     "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env",
     "api:download": "node packages/scripts/download.js",
+    "api:upload": "node packages/scripts/upload.js",
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
     "api:pure": "node packages/scripts/index.js",
     "api:docs": "git checkout main && git pull && node packages/scripts/index.js",

@@ -83,6 +83,7 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
 
 async function apiCreate(params: BaseObject) {
   return new Promise((resolve, reject) => {
+    console.log('~~~~~', formatParams(params, true));
     TAPI.create(formatParams(params, true)).then(
       handleSuccess(resolve),
       handleError(reject),
