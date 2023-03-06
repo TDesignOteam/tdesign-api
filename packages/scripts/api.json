@@ -9145,7 +9145,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否允许调整列宽。如果想要配置宽度可调整的最小值和最大值，请使用 `column.resize`，示例：`columns: [{ resize: { minWidth: 120, maxWidth: 300 } }]`。<br/> 默认规则：因列宽超出存在横向滚动条时，列宽调整仅影响当前列宽和总列宽；表格列较少没有横向滚动条时，列宽调整表现为自身宽度和相邻宽度",
+      "field_desc_zh": "是否允许调整列宽。如果想要配置宽度可调整的最小值和最大值，请使用 `column.resize`，示例：`columns: [{ resize: { minWidth: 120, maxWidth: 300 } }]`。<br/> 默认规则：因列宽超出存在横向滚动条时，列宽调整仅影响当前列宽和总列宽；表格列较少没有横向滚动条时，列宽调整表现为自身宽度和相邻宽度变化",
       "field_desc_en": "allow to resize column width",
       "field_required": 0,
       "event_input": "",
@@ -90367,6 +90367,47 @@
       ]
     },
     {
+      "id": 3359,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableEditableCellConfig",
+      "field_category": 1,
+      "field_name": "validateTrigger",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'exit'",
+      "field_enum": "",
+      "field_desc_zh": "触发校验的时机，有 2 种：退出编辑时和数据变化时",
+      "field_desc_en": "when to trigger validate",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-06 02:37:19",
+      "update_time": "2023-03-06 02:37:19",
+      "event_output": null,
+      "custom_field_type": "'exit' | 'change'",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2701,
       "platform_framework": [
         "1",
@@ -112369,5 +112410,5 @@
       ]
     }
   ],
-  "total": 2682
+  "total": 2683
 }
