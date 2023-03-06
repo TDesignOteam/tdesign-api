@@ -25,7 +25,7 @@ function getPropType(cmp, name) {
 
 function isNeedPropType(typeName, api) {
   if (currentFramework === 'Miniprogram') return false;
-  const multipleTypeStr = !!(typeName === 'String' && api.field_enum);
+  const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
   const complicatedApi =    ['Function', 'Object', 'Array'].includes(typeName)
     || api.field_type_text.length > 1;
   return multipleTypeStr || complicatedApi;
