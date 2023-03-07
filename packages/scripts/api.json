@@ -25196,6 +25196,45 @@
       ]
     },
     {
+      "id": 3360,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "defaultTime",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'00:00:00'",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "field_desc_en": "Time selector default value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-07 07:04:34",
+      "update_time": "2023-03-07 07:04:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1015,
       "platform_framework": [
         "1",
@@ -27080,6 +27119,45 @@
       ]
     },
     {
+      "id": 3361,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePickerPanel",
+      "field_category": 1,
+      "field_name": "defaultTime",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'00:00:00'",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "field_desc_en": "Time selector default value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-07 07:04:54",
+      "update_time": "2023-03-07 07:04:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2740,
       "platform_framework": [
         "1",
@@ -27492,6 +27570,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3362,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "defaultTime",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[\"00:00:00\", \"23:59:59\"]",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "field_desc_en": "Time selector default value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-07 07:05:37",
+      "update_time": "2023-03-07 07:05:37",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -28518,6 +28635,45 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3363,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePickerPanel",
+      "field_category": 1,
+      "field_name": "defaultTime",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[\"00:00:00\", \"23:59:59\"]",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+      "field_desc_en": "Time selector default value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-07 07:05:45",
+      "update_time": "2023-03-07 07:05:45",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
     },
     {
       "id": 2748,
@@ -112410,5 +112566,5 @@
       ]
     }
   ],
-  "total": 2683
+  "total": 2687
 }
