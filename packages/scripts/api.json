@@ -10996,6 +10996,53 @@
       ]
     },
     {
+      "id": 3364,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTableCol",
+      "field_category": 1,
+      "field_name": "thClassName",
+      "field_type": [
+        "1",
+        "8",
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列表头类名，值类型是函数时使用返回值作为列类名。泛型 T 指表格数据类型",
+      "field_desc_en": "th classnames",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-08 02:59:12",
+      "update_time": "2023-03-08 02:59:12",
+      "event_output": null,
+      "custom_field_type": "TableColumnClassName<T> | TableColumnClassName<T>[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "Array",
+        "Function"
+      ]
+    },
+    {
       "id": 804,
       "platform_framework": [
         "1",
@@ -112566,5 +112613,5 @@
       ]
     }
   ],
-  "total": 2687
+  "total": 2688
 }
