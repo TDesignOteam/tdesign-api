@@ -1984,6 +1984,131 @@
       "field_type_text": []
     },
     {
+      "id": 3366,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "气泡框的内容",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-03-09 03:10:46",
+      "update_time": "2023-03-09 03:10:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3367,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传气泡框/浮层的属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:11:19",
+      "update_time": "2023-03-09 03:11:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3365,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "triggerElement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "触发气泡框/浮层的元素，传入选择器即可",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-03-09 03:10:00",
+      "update_time": "2023-03-09 03:10:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3342,
       "platform_framework": [
         "8",
@@ -112613,5 +112738,5 @@
       ]
     }
   ],
-  "total": 2688
+  "total": 2691
 }

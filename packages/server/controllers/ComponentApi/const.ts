@@ -108,6 +108,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: '$Message.question', label: '全局提醒插件', type: 'plugin' },
   { value: '$Message.loading', label: '全局提醒插件', type: 'plugin' },
   { value: '$Message.config', label: '全局提醒插件', type: 'plugin' },
+  { value: '$Popup', label: '全局气泡框插件', type: 'plugin' },
   { value: 'Icon', label: '图标' },
   { value: 'IconSVG', label: '图标（IconSVG）' },
   { value: 'Iconfont', label: '图标（Iconfont）' },
