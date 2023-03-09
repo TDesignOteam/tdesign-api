@@ -11,7 +11,7 @@ export default {
   /** 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdPopupProps['attach']>,
-    default: 'body',
+    default: 'body' as TdPopupProps['attach'],
   },
   /** 浮层里面的内容 */
   content: {
@@ -49,7 +49,7 @@ export default {
   },
   /** 浮层出现位置 */
   placement: {
-    type: String,
+    type: String as PropType<TdPopupProps['placement']>,
     default: 'top',
   },
   /** popper 初始化配置，详情参考 https://popper.js.org/docs/ */
