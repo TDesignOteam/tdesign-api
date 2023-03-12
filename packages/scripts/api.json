@@ -1984,6 +1984,131 @@
       "field_type_text": []
     },
     {
+      "id": 3366,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "气泡框的内容",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-03-09 03:10:46",
+      "update_time": "2023-03-09 03:10:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3367,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传气泡框/浮层的属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:11:19",
+      "update_time": "2023-03-09 03:11:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3365,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "$Popup",
+      "field_category": 1,
+      "field_name": "triggerElement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "触发气泡框/浮层的元素，传入选择器即可",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-03-09 03:10:00",
+      "update_time": "2023-03-09 03:10:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3342,
       "platform_framework": [
         "8",
@@ -5515,7 +5640,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否显示外边框",
+      "field_desc_zh": "已废弃。是否显示外边框",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -6142,7 +6267,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'right-up'",
+      "field_default_value": "left-up",
       "field_enum": "left-up/right-up",
       "field_desc_zh": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上",
       "field_desc_en": "multiple images cascading",
@@ -12356,11 +12481,12 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1"
+        "1",
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 Object 类型，表示透传至 icon。",
       "field_desc_en": "icon name",
       "field_required": 0,
       "event_input": "",
@@ -12381,43 +12507,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2709,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "iconProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "{}",
-      "field_enum": "",
-      "field_desc_zh": "图标属性，透传至 icon",
-      "field_desc_en": "icon properties",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-05-30 08:06:58",
-      "update_time": "2022-05-30 08:06:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -12792,7 +12882,7 @@
         "1"
       ],
       "field_default_value": "default",
-      "field_enum": "default/primary/danger",
+      "field_enum": "default/primary/danger/light",
       "field_desc_zh": "组件风格，依次为品牌色、危险色",
       "field_desc_en": "button theme",
       "field_required": 0,
@@ -12958,7 +13048,7 @@
         "1"
       ],
       "field_default_value": "base",
-      "field_enum": "base/outline/text",
+      "field_enum": "base/outline/dashed/text",
       "field_desc_zh": "按钮形式，基础、线框、文字",
       "field_desc_en": "button variant",
       "field_required": 0,
@@ -19074,14 +19164,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、标题类名、右侧说明文字类名、下方描述内容类名、图片类名、激活态类名、左侧图标类名、右侧图标类名 等",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、标题类名、下方描述内容类名、右侧说明文字类名、激活态类名、图片类名、左侧内容、左侧图标类名、右侧内容、右侧图标类名 等",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-07-25 07:57:03",
       "update_time": "2021-07-25 16:58:24",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-title', 't-class-note', 't-class-description', 't-class-thumb', 't-class-hover', 't-class-left', 't-class-right']",
+      "custom_field_type": "['t-class', 't-class-title', 't-class-description', 't-class-note', 't-class-hover', 't-class-image', 't-class-left', 't-class-left-icon', 't-class-right', 't-class-right-icon']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -19738,6 +19828,43 @@
       "event_input": "",
       "create_time": "2022-10-31 11:24:16",
       "update_time": "2022-10-31 11:24:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3415,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CellGroup",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/card",
+      "field_desc_zh": "单元格风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:55:38",
+      "update_time": "2023-03-09 04:55:38",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -20470,7 +20597,7 @@
       ],
       "field_default_value": "left",
       "field_enum": "left/right",
-      "field_desc_zh": "多选框和内容相对位置",
+      "field_desc_zh": "已废弃。多选框和内容相对位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -21237,6 +21364,49 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3391,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "多选框和内容相对位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:43:01",
+      "update_time": "2023-03-09 03:43:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -24902,7 +25072,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.5.1\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -24945,7 +25115,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.5.1\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -25025,7 +25195,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.5.1\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -25068,7 +25238,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -30856,6 +31026,45 @@
       ]
     },
     {
+      "id": 3423,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否展示关闭按钮，值为 true 显示默认关闭按钮；值为 false 则不显示关闭按钮；使用 Object 时透传至图标组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:05:51",
+      "update_time": "2023-03-09 06:05:51",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\":\"0.31.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
+      ]
+    },
+    {
       "id": 708,
       "platform_framework": [
         "1",
@@ -33483,7 +33692,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "分隔线颜色",
+      "field_desc_zh": "已废弃。分隔线颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -37045,6 +37254,39 @@
       "field_type_text": []
     },
     {
+      "id": 3424,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownItem",
+      "field_category": 2,
+      "field_name": "reset",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击重置时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:07:43",
+      "update_time": "2023-03-09 06:07:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1698,
       "platform_framework": [
         "8",
@@ -37461,11 +37703,12 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1"
+        "1",
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 Object 类型，表示透传至 icon",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -37486,7 +37729,8 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Object"
       ]
     },
     {
@@ -38578,7 +38822,7 @@
       ],
       "field_default_value": "''",
       "field_enum": "",
-      "field_desc_zh": "版权信息，type 为`text`生效",
+      "field_desc_zh": "已废弃。版权信息，type 为`text`生效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -38641,6 +38885,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3417,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "links",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "链接列表。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 05:02:16",
+      "update_time": "2023-03-09 05:02:16",
+      "event_output": null,
+      "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; openType?: 'navigate' | 'redirect' | 'relaunch' | 'switchTab' | 'navigateBack' }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -38718,6 +38999,43 @@
       ]
     },
     {
+      "id": 3416,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "text",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "''",
+      "field_enum": "",
+      "field_desc_zh": "版权信息",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 05:01:11",
+      "update_time": "2023-03-09 05:01:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1603,
       "platform_framework": [
         "64"
@@ -38730,7 +39048,7 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
+      "field_desc_zh": "已废弃。链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -38767,7 +39085,7 @@
       ],
       "field_default_value": "'text'",
       "field_enum": "text/logo",
-      "field_desc_zh": "页脚展示类型",
+      "field_desc_zh": "已废弃。页脚展示类型",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -46417,43 +46735,6 @@
       ]
     },
     {
-      "id": 2085,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Icon",
-      "field_category": 1,
-      "field_name": "classPrefix",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义icon前缀",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-12-29 08:50:34",
-      "update_time": "2021-12-29 08:50:34",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1691,
       "platform_framework": [
         "64"
@@ -46503,7 +46784,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义样式（即将废弃，推荐使用 `style` ）",
+      "field_desc_zh": "自定义组件样式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -46515,7 +46796,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -46525,6 +46806,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3365,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Icon",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、图片图标、基础图标等元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 02:58:58",
+      "update_time": "2023-03-09 02:58:58",
+      "event_output": null,
+      "custom_field_type": "['t-class']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -46540,12 +46858,49 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称或图片链接",
       "field_desc_en": null,
       "field_required": 1,
       "event_input": "",
       "create_time": "2021-09-20 07:50:16",
       "update_time": "2021-09-20 07:51:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 2085,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Icon",
+      "field_category": 1,
+      "field_name": "prefix",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义图标前缀",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-12-29 08:50:34",
+      "update_time": "2021-12-29 08:50:34",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -46578,8 +46933,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
-      "field_desc_en": "图标大小",
+      "field_desc_zh": "图标大小, 如 20, 20px, 48rpx, 默认单位是 px",
+      "field_desc_en": "",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-20 08:02:20",
@@ -46639,6 +46994,39 @@
       "field_type_text": [
         "String"
       ]
+    },
+    {
+      "id": 3366,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Icon",
+      "field_category": 2,
+      "field_name": "click",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击图标时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(e: MouseEvent)",
+      "create_time": "2023-03-09 03:03:50",
+      "update_time": "2023-03-09 03:03:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 246,
@@ -47615,6 +48003,45 @@
       ]
     },
     {
+      "id": 3418,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "height",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "高度，默认单位为 px",
+      "field_desc_en": "",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 05:03:17",
+      "update_time": "2023-03-09 05:03:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 2211,
       "platform_framework": [
         "1",
@@ -48068,8 +48495,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Image",
       "field_category": 1,
@@ -48102,8 +48528,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -48144,6 +48569,82 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3420,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "webp",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "默认不解析 webP 格式，只支持网络资源",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 05:05:32",
+      "update_time": "2023-03-09 05:05:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3419,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "width",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "width，默认单位为 px",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 05:03:42",
+      "update_time": "2023-03-09 05:03:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
       ]
     },
     {
@@ -48397,7 +48898,7 @@
       ],
       "field_default_value": "rgba(0, 0, 0, .6)",
       "field_enum": "",
-      "field_desc_zh": "遮罩的背景颜色",
+      "field_desc_zh": "即将废弃。遮罩的背景颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -48817,7 +49318,7 @@
       ],
       "field_default_value": "3",
       "field_enum": "",
-      "field_desc_zh": "最大放大比例",
+      "field_desc_zh": "开发中。最大放大比例",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -49267,6 +49768,39 @@
       ]
     },
     {
+      "id": 3421,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "翻页时回调",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(index: Number)",
+      "create_time": "2023-03-09 05:09:53",
+      "update_time": "2023-03-09 05:09:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2712,
       "platform_framework": [
         "1",
@@ -49312,6 +49846,39 @@
       "field_type_text": []
     },
     {
+      "id": 3422,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 2,
+      "field_name": "delete",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击删除操作按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(index: Number)",
+      "create_time": "2023-03-09 05:10:05",
+      "update_time": "2023-03-09 05:10:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2714,
       "platform_framework": [
         "1",
@@ -49319,8 +49886,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "ImageViewer",
       "field_category": 2,
@@ -49351,8 +49917,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -50590,6 +51155,43 @@
       ]
     },
     {
+      "id": 3392,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "layout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "vertical/horizontal",
+      "field_desc_zh": "标题输入框布局方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:55:08",
+      "update_time": "2023-03-09 03:55:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1402,
       "platform_framework": [
         "1",
@@ -50840,11 +51442,12 @@
       "field_name": "prefixIcon",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件前置图标，值为字符串则表示图标名称",
+      "field_desc_zh": "组件前置图标。值为字符串表示图标名称，值为 Object 类型，表示透传至 icon",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -50866,6 +51469,7 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
       ]
     },
@@ -51057,7 +51661,7 @@
       ],
       "field_default_value": "small",
       "field_enum": "small/medium",
-      "field_desc_zh": "输入框尺寸",
+      "field_desc_zh": "已废弃。输入框尺寸",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -51278,6 +51882,7 @@
       "field_name": "suffixIcon",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
@@ -51304,6 +51909,7 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
       ]
     },
@@ -51935,6 +52541,39 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "FocusEvent<HTMLInputElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3393,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 2,
+      "field_name": "keyboardheightchange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "键盘高度发生变化的时候触发此事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(height: number, duration: number)",
+      "create_time": "2023-03-09 03:59:11",
+      "update_time": "2023-03-09 03:59:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
@@ -53769,6 +54408,43 @@
       ]
     },
     {
+      "id": 3367,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "链接内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:07:03",
+      "update_time": "2023-03-09 03:07:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2922,
       "platform_framework": [
         "1"
@@ -53812,7 +54488,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -53842,10 +54522,51 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3372,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "样式类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:10:50",
+      "update_time": "2023-03-09 03:10:50",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-hover', 't-class-prefix-icon', 't-class-content', 't-class-suffix-icon']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -53890,6 +54611,43 @@
       ]
     },
     {
+      "id": 3370,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "hover",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否开启点击反馈",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:09:23",
+      "update_time": "2023-03-09 03:09:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2894,
       "platform_framework": [
         "1",
@@ -53931,11 +54689,51 @@
       ]
     },
     {
+      "id": 3368,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "navigatorProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "与 navigator 原生组件属性保持一致，具体使用参考：https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:07:34",
+      "update_time": "2023-03-09 03:07:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2897,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Link",
       "field_category": 1,
@@ -53965,10 +54763,52 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "TNode"
+      ]
+    },
+    {
+      "id": 3369,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:08:01",
+      "update_time": "2023-03-09 03:08:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
       ]
     },
     {
@@ -53976,7 +54816,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54006,10 +54850,51 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3376,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "success",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接跳转成功后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:12:35",
+      "update_time": "2023-03-09 03:12:35",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -54017,7 +54902,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54047,7 +54936,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "TNode"
@@ -54099,7 +54992,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54129,7 +55026,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -54140,7 +55041,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54170,7 +55075,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -54210,6 +55119,113 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3374,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "complete",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接执行完成后触发（失败或成功均会触发）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:12:01",
+      "update_time": "2023-03-09 03:12:01",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3375,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "fail",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接跳转失败后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:12:22",
+      "update_time": "2023-03-09 03:12:22",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3377,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 2,
+      "field_name": "success",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "页面链接跳转成功后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:15:18",
+      "update_time": "2023-03-09 03:15:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -56073,7 +57089,7 @@
         "1"
       ],
       "field_default_value": "circular",
-      "field_enum": "circular/spinner/bar/error/dots",
+      "field_enum": "circular/spinner/dots",
       "field_desc_zh": "加载组件类型",
       "field_desc_en": null,
       "field_required": 0,
@@ -57126,7 +58142,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "操作",
+      "field_desc_zh": "已废弃。操作",
       "field_desc_en": "operation",
       "field_required": 0,
       "event_input": "",
@@ -57168,7 +58184,7 @@
       "field_desc_zh": "文本对齐方式",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "-",
+      "event_input": "",
       "create_time": "2021-09-02 12:23:28",
       "update_time": "2021-12-05 07:49:14",
       "event_output": null,
@@ -57198,8 +58214,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Message",
       "field_category": 1,
@@ -57234,12 +58249,54 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3426,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "4",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:10:39",
+      "update_time": "2023-03-09 06:10:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
         "String",
         "Boolean",
+        "Object",
         "TNode"
       ]
     },
@@ -57363,7 +58420,7 @@
       "create_time": "2021-08-03 14:08:15",
       "update_time": "2021-08-03 14:09:44",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-content', 't-class-icon', 't-class-action', 't-class-close-btn']",
+      "custom_field_type": "['t-class', 't-class-content', 't-class-icon', 't-class-link', 't-class-close-btn']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -57434,6 +58491,7 @@
       "field_type": [
         "1",
         "4",
+        "8",
         "64"
       ],
       "field_default_value": "true",
@@ -57461,6 +58519,48 @@
       "field_type_text": [
         "String",
         "Boolean",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3425,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 1,
+      "field_name": "link",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "链接名称。值为字符串表示链接名称，值为 Object 类型，表示透传至 Link",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:09:24",
+      "update_time": "2023-03-09 06:09:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\":\"1.0.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
         "TNode"
       ]
     },
@@ -57799,7 +58899,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "当操作按钮存在时，用户点击操作按钮时触发",
+      "field_desc_zh": "已废弃。当操作按钮存在时，用户点击操作按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
@@ -57904,8 +59004,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Message",
       "field_category": 2,
@@ -57933,8 +59032,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -58053,6 +59151,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3427,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "link-click",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当link链接存在时，点击链接文本时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2023-03-09 06:12:30",
+      "update_time": "2023-03-09 06:12:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -58520,7 +59651,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "背景",
+      "field_desc_zh": "已废弃。背景",
       "field_desc_en": "background",
       "field_required": 0,
       "event_input": "",
@@ -58545,6 +59676,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3379,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "capsule",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧胶囊区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:23:45",
+      "update_time": "2023-03-09 03:23:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -58604,7 +59772,7 @@
       "create_time": "2021-09-03 04:32:32",
       "update_time": "2021-09-07 03:48:49",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-title', 't-class-left-icon', 't-class-home-icon', 't-class-capsule']",
+      "custom_field_type": "['t-class', 't-class-title', 't-class-left', 't-class-center', 't-class-capsule']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -58677,7 +59845,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "首页图标地址。值为 '' 或者 undefiend 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_zh": "已废弃。首页图标地址。值为 '' 或者 undefiend 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
       "field_desc_en": "homeIcon",
       "field_required": 0,
       "event_input": "",
@@ -58745,6 +59913,43 @@
       ]
     },
     {
+      "id": 3378,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "left",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧内容区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:22:07",
+      "update_time": "2023-03-09 03:22:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.26.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 3150,
       "platform_framework": [
         "8",
@@ -58786,6 +59991,43 @@
       ]
     },
     {
+      "id": 3380,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "leftArrow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否展示左侧箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:24:36",
+      "update_time": "2023-03-09 03:24:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.26.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1625,
       "platform_framework": [
         "64"
@@ -58798,7 +60040,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "左侧图标地址，值为 '' 或者 undefiend 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_zh": "已废弃。左侧图标地址，值为 '' 或者 undefiend 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -59143,7 +60385,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "点击 Home 触发",
+      "field_desc_zh": "已废弃。点击 Home 触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -59285,6 +60527,7 @@
       "field_name": "content",
       "field_type": [
         "1",
+        "16",
         "64"
       ],
       "field_default_value": "",
@@ -59314,7 +60557,88 @@
       ],
       "field_type_text": [
         "String",
+        "Array",
         "TNode"
+      ]
+    },
+    {
+      "id": 3429,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 1,
+      "field_name": "direction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "滚动方向",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:14:53",
+      "update_time": "2023-03-09 06:14:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3431,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:15:47",
+      "update_time": "2023-03-09 06:15:47",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-content', 't-class-prefix-icon', 't-class-operation', 't-class-suffix-icon']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -59334,7 +60658,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "右侧额外信息",
+      "field_desc_zh": "已废弃。右侧额外信息",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -59405,6 +60729,51 @@
       "field_type_text": [
         "Boolean",
         "Object"
+      ]
+    },
+    {
+      "id": 3428,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 1,
+      "field_name": "operation",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "右侧额外信息",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:14:04",
+      "update_time": "2023-03-09 06:14:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -59693,8 +61062,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "NoticeBar",
       "field_category": 2,
@@ -59722,8 +61090,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -59744,7 +61111,7 @@
       "field_desc_zh": "点击事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: NoticeBarTrigger)【type NoticeBarTrigger = 'prefix-icon' | 'content' | 'extra' | 'suffix-icon';】",
+      "event_input": "(trigger: NoticeBarTrigger)【type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';】",
       "create_time": "2021-04-10 02:19:17",
       "update_time": "2022-04-29 02:42:21",
       "event_output": null,
@@ -60880,7 +62247,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义样式（即将废弃，推荐使用 `style` ）",
+      "field_desc_zh": "自定义组件样式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -60892,7 +62259,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -60920,7 +62287,7 @@
       ],
       "field_default_value": "300",
       "field_enum": "",
-      "field_desc_zh": "动画时长，单位毫秒",
+      "field_desc_zh": "背景色过渡时间，单位毫秒",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -60963,7 +62330,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "防止滚动穿透",
+      "field_desc_zh": "防止滚动穿透，即不允许点击和滚动",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -61032,8 +62399,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Overlay",
       "field_category": 1,
@@ -61063,8 +62429,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -61075,8 +62440,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Overlay",
       "field_category": 1,
@@ -61088,7 +62452,7 @@
       "field_enum": "",
       "field_desc_zh": "是否展示",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2022-07-06 03:18:49",
       "update_time": "2022-07-06 03:18:49",
@@ -61106,8 +62470,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -61118,8 +62481,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Overlay",
       "field_category": 1,
@@ -61149,7 +62511,43 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3433,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Overlay",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "11000",
+      "field_enum": "",
+      "field_desc_zh": "遮罩层级。移动端样式默认为 1000，小程序样式默认为11000",
+      "field_desc_en": "",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:20:33",
+      "update_time": "2023-03-09 06:20:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -64467,7 +65865,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "弹出层的自定义样式（即将废弃，推荐使用 `style` ）",
+      "field_desc_zh": "自定义组件样式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -64690,6 +66088,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3434,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "duration",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "240",
+      "field_enum": "",
+      "field_desc_zh": "动画过渡时间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:26:31",
+      "update_time": "2023-03-09 06:26:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -65385,43 +66820,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1303,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "transitionProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "动画效果定义",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 04:25:28",
-      "update_time": "2021-12-01 09:32:54",
-      "event_output": null,
-      "custom_field_type": "TdTransitionProps【import { TdTransitionProps } from '@Transition'】【interface PopupVisibleChangeContext { trigger: 'close-btn' | 'overlay' }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
       ]
     },
     {
@@ -69329,7 +70727,7 @@
       ],
       "field_default_value": "left",
       "field_enum": "left/right",
-      "field_desc_zh": "复选框和内容相对位置",
+      "field_desc_zh": "已废弃。复选框和内容相对位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -69506,7 +70904,7 @@
       ],
       "field_default_value": "#0052d9",
       "field_enum": "",
-      "field_desc_zh": "单选按钮颜色",
+      "field_desc_zh": "已废弃。单选按钮颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -69798,7 +71196,8 @@
       "field_name": "icon",
       "field_type": [
         "1",
-        "16"
+        "16",
+        "64"
       ],
       "field_default_value": "'fill-circle'",
       "field_enum": "",
@@ -69824,7 +71223,8 @@
       ],
       "field_type_text": [
         "String",
-        "Array"
+        "Array",
+        "TNode"
       ]
     },
     {
@@ -70000,6 +71400,49 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3394,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "复选框和内容相对位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:01:21",
+      "update_time": "2023-03-09 04:01:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -70255,8 +71698,8 @@
         "1"
       ],
       "field_default_value": "left",
-      "field_enum": "",
-      "field_desc_zh": "复选框和内容相对位置；仅在使用 options 时生效",
+      "field_enum": "left/right",
+      "field_desc_zh": "已废弃。复选框和内容相对位置；仅在使用 options 时生效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -70323,6 +71766,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3397,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "borderless",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否开启无边框模式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:06:58",
+      "update_time": "2023-03-09 04:06:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -70415,6 +71895,43 @@
       "field_type_text": [
         "String",
         "Array"
+      ]
+    },
+    {
+      "id": 3396,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "left",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label 在 options 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:05:49",
+      "update_time": "2023-03-09 04:05:49",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -70548,6 +72065,43 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3395,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "复选框和内容相对位置；仅在使用 options 时生效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:03:24",
+      "update_time": "2023-03-09 04:03:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -72745,7 +74299,7 @@
       ],
       "field_default_value": "'#ED7B2F'",
       "field_enum": "",
-      "field_desc_zh": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']",
+      "field_desc_zh": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -72758,7 +74312,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\":\"0.30.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -72875,6 +74429,55 @@
       ]
     },
     {
+      "id": 3398,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Rate",
+      "field_category": 1,
+      "field_name": "externalClasses",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、评分图标类名、辅助文字类名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:09:31",
+      "update_time": "2023-03-09 04:09:31",
+      "event_output": null,
+      "custom_field_type": "['t-class', 't-class-icon', 't-class-text']",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 1354,
       "platform_framework": [
         "1",
@@ -72979,24 +74582,25 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "64"
+        "1",
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义评分图标，插槽参数：{ type: 'grey' | 'highlight' | 'half' }，分别表示 灰色图标、高亮图标 和 半分图标",
+      "field_desc_zh": "自定义评分图标，[选中图标，未选中图标]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-02 12:06:08",
       "update_time": "2022-08-02 12:06:08",
       "event_output": null,
-      "custom_field_type": "TNode<{ type: 'grey' | 'highlight' | 'half' }>",
+      "custom_field_type": "string | string[]",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"0.30.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -73004,7 +74608,8 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "TNode"
+        "String",
+        "Array"
       ]
     },
     {
@@ -73075,7 +74680,7 @@
       ],
       "field_default_value": "24px",
       "field_enum": "",
-      "field_desc_zh": "评分图标的大小，示例：`20px`",
+      "field_desc_zh": "评分图标的大小",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -73256,7 +74861,7 @@
       ],
       "field_default_value": "outline",
       "field_enum": "outline/filled",
-      "field_desc_zh": "形状类型，有描边类型和填充类型两种",
+      "field_desc_zh": "已废弃。形状类型，有描边类型和填充类型两种",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -73423,7 +75028,9 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1"
+        "1",
+        "4",
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -73448,7 +75055,9 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -74233,7 +75842,7 @@
       "create_time": "2022-01-25 12:19:32",
       "update_time": "2022-03-03 03:13:10",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-input', 't-class-input-container', 't-class-cancel','t-class-left','t-class-right']",
+      "custom_field_type": "['t-class', 't-class-input', 't-class-input-container', 't-class-action','t-class-left','t-class-clear']",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -74385,8 +75994,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Search",
       "field_category": 1,
@@ -74420,7 +76028,84 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3399,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "''",
+      "field_enum": "",
+      "field_desc_zh": "已废弃。搜索框内部左侧内容，位于 `prefixIcon` 左侧",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:14:30",
+      "update_time": "2023-03-09 04:14:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3400,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "leftIcon",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "'search'",
+      "field_enum": "",
+      "field_desc_zh": "左侧图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:16:22",
+      "update_time": "2023-03-09 04:16:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -74573,7 +76258,7 @@
       ],
       "field_default_value": "'search'",
       "field_enum": "",
-      "field_desc_zh": "前置图标，默认为搜索图标。值为 `null` 时则不显示",
+      "field_desc_zh": "已废弃。前置图标，默认为搜索图标。值为 `null` 时则不显示",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -74858,8 +76543,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Search",
       "field_category": 1,
@@ -74893,8 +76577,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -74997,7 +76680,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "后置图标",
+      "field_desc_zh": "已废弃。后置图标",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -79703,6 +81386,308 @@
       "field_type_text": []
     },
     {
+      "id": 3381,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBar",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选项值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:27:11",
+      "update_time": "2023-03-09 03:27:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 3383,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBar",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选项值发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: number | string, label: string)",
+      "create_time": "2023-03-09 03:30:05",
+      "update_time": "2023-03-09 03:30:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3384,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBar",
+      "field_category": 2,
+      "field_name": "click",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击选项时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: number | string, label: string)",
+      "create_time": "2023-03-09 03:30:26",
+      "update_time": "2023-03-09 03:30:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 3385,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 1,
+      "field_name": "badgeProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传至 Badge 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:30:59",
+      "update_time": "2023-03-09 03:30:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3386,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:31:16",
+      "update_time": "2023-03-09 03:31:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3387,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标，传对象则透传至 Icon",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:32:02",
+      "update_time": "2023-03-09 03:32:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.0-rc\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
+      ]
+    },
+    {
+      "id": 3388,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "展示的标签",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:33:03",
+      "update_time": "2023-03-09 03:33:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3389,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前选项的值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:33:49",
+      "update_time": "2023-03-09 03:33:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.0.0-rc\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 1774,
       "platform_framework": [
         "1",
@@ -80237,7 +82222,7 @@
       ],
       "field_default_value": "['#0052D9', 'rgba(220, 220, 220, 1)']",
       "field_enum": "",
-      "field_desc_zh": "颜色，[已选择, 未选择]",
+      "field_desc_zh": "已废弃。颜色，[已选择, 未选择]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -80323,7 +82308,7 @@
       ],
       "field_default_value": "['#bbd3fb', '#dcdcdc']",
       "field_enum": "",
-      "field_desc_zh": "禁用状态滑动条的颜色，[已选, 未选]",
+      "field_desc_zh": "已废弃。禁用状态滑动条的颜色，[已选, 未选]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -80955,6 +82940,43 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3401,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Slider",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/capsule",
+      "field_desc_zh": "滑块风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:19:54",
+      "update_time": "2023-03-09 04:19:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.30.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -82183,6 +84205,43 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 3403,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Stepper",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:22:06",
+      "update_time": "2023-03-09 04:22:06",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.30.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -84581,6 +86640,51 @@
       ]
     },
     {
+      "id": 3435,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 1,
+      "field_name": "opened",
+      "field_type": [
+        "4",
+        "16"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 06:30:03",
+      "update_time": "2023-03-09 06:30:03",
+      "event_output": null,
+      "custom_field_type": "boolean | Array<boolean>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Array"
+      ]
+    },
+    {
       "id": 1748,
       "platform_framework": [
         "8",
@@ -86878,7 +88982,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]",
+      "field_desc_zh": "已废弃。自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -87004,6 +89108,43 @@
       ]
     },
     {
+      "id": 3404,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "开关的图标；[打开时的图标，关闭时的图标]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:24:07",
+      "update_time": "2023-03-09 04:24:07",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"0.27.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 424,
       "platform_framework": [
         "1",
@@ -87064,22 +89205,22 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "''",
+      "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "开关的标签",
+      "field_desc_zh": "开关的标签；[打开时的标签，关闭时的标签]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-01 07:19:40",
       "update_time": "2022-04-01 00:38:33",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string[]",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"0.27.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -87124,7 +89265,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"0.27.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -87171,7 +89312,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"0.27.0\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -88140,11 +90281,12 @@
       "field_name": "icon",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称。传入对象时透传至 Icon 组件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -88168,6 +90310,7 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
       ]
     },
@@ -88544,6 +90687,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3390,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标，传对象则透传至 Icon",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 03:40:37",
+      "update_time": "2023-03-09 03:40:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\":\"1.0.0-rc\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
       ]
     },
     {
@@ -91680,7 +93862,7 @@
       ],
       "field_default_value": "top",
       "field_enum": "left/top",
-      "field_desc_zh": "选项卡位置",
+      "field_desc_zh": "已废弃。选项卡位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -94696,6 +96878,43 @@
       ]
     },
     {
+      "id": 3407,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "bordered",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示外边框",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:28:39",
+      "update_time": "2023-03-09 04:28:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1720,
       "platform_framework": [
         "64"
@@ -94770,6 +96989,117 @@
       ]
     },
     {
+      "id": 3408,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursor",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "-1",
+      "field_enum": "",
+      "field_desc_zh": "指定 focus 时的光标位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:29:17",
+      "update_time": "2023-03-09 04:29:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3405,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursorSpacing",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:26:49",
+      "update_time": "2023-03-09 04:26:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3409,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "disableDefaultPadding",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否去掉 iOS 下的默认内边距",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:29:44",
+      "update_time": "2023-03-09 04:29:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 963,
       "platform_framework": [
         "1",
@@ -94838,7 +97168,7 @@
       "create_time": "2021-12-20 05:26:30",
       "update_time": "2021-12-20 05:26:30",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-textarea', 't-class-placeholder', 't-class-name']",
+      "custom_field_type": "['t-class', 't-class-textarea', 't-class-label, 't-class-indicator]",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -94874,6 +97204,80 @@
       "event_input": "",
       "create_time": "2021-09-27 03:32:16",
       "update_time": "2021-09-27 03:32:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3413,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "holdKeyboard",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "focus时，点击页面的时候不收起键盘",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:31:29",
+      "update_time": "2023-03-09 04:31:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3406,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "indicator",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "显示文本计数器，如 0/140。当 maxlength < 0 && maxcharacter < 0 成立时， indicator无效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:27:50",
+      "update_time": "2023-03-09 04:27:50",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95173,6 +97577,117 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3412,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "selectionEnd",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "-1",
+      "field_enum": "",
+      "field_desc_zh": "光标结束位置，自动聚集时有效，需与 selection-start 搭配使用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:31:06",
+      "update_time": "2023-03-09 04:31:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3411,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "selectionStart",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "-1",
+      "field_enum": "",
+      "field_desc_zh": "光标起始位置，自动聚集时有效，需与 selection-end 搭配使用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:30:40",
+      "update_time": "2023-03-09 04:30:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3410,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "showConfirmBar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否显示键盘上方带有”完成“按钮那一栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-09 04:30:16",
+      "update_time": "2023-03-09 04:30:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -95636,6 +98151,39 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "FocusEvent<HTMLTextAreaElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3414,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 2,
+      "field_name": "keyboardheightchange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "键盘高度发生变化的时候触发此事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(height: number, duration: number)",
+      "create_time": "2023-03-09 04:33:04",
+      "update_time": "2023-03-09 04:33:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
@@ -98391,7 +100939,9 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1"
+        "1",
+        "8",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -98416,7 +100966,9 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Object",
+        "TNode"
       ]
     },
     {
@@ -98731,7 +101283,7 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "loading/success/fail",
+      "field_enum": "loading/success/error",
       "field_desc_zh": "提示类型",
       "field_desc_en": null,
       "field_required": 0,
@@ -112613,5 +115165,5 @@
       ]
     }
   ],
-  "total": 2688
+  "total": 2751
 }

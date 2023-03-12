@@ -236,6 +236,11 @@
         "type": "plugin"
       },
       {
+        "value": "$Popup",
+        "label": "全局气泡框插件",
+        "type": "plugin"
+      },
+      {
         "value": "ActionSheetItem",
         "label": "动作面板项的配置",
         "type": "TS"
