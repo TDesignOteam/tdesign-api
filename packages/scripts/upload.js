@@ -18,13 +18,42 @@ function updateOneApi(oneApi) {
   delete oneApi.field_category_text;
   delete oneApi.create_time;
   delete oneApi.update_time;
-  return axios.request({
-    method: 'put',
-    url: `http://${url}/cmp/api`,
-    data: {
-      ...oneApi,
-    },
-  });
+  return new Promise((resolve, reject) => {
+    axios.request({
+      method: 'get',
+      url: `http://${url}/cmp/api?page=1&page_size=200`,
+      params: { id: oneApi.id },
+    }).then((res) => {
+      console.log(res.data.data?.length);
+      if (res.data?.data?.length) {
+        console.log('update', oneApi.id, oneApi.field_name);
+        // 更新
+        axios.request({
+          method: 'put',
+          url: `http://${url}/cmp/api`,
+          data: {
+            ...oneApi,
+          },
+        }).then(() => {
+          resolve();
+        }, reject);
+      } else {
+        console.log('addNew', oneApi.id, oneApi.field_name);
+        // 创建
+        const newApiInfo = { ...oneApi };
+        delete newApiInfo.id;
+        axios.request({
+          method: 'post',
+          url: `http://${url}/cmp/api`,
+          data: {
+            ...newApiInfo,
+          },
+        }).then(() => {
+          resolve();
+        }, reject);
+      }
+    });
+  })
 }
 
 function uploadApiToDB() {
