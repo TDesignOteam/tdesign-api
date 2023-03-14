@@ -83887,6 +83887,9 @@
     {
       "id": 3389,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Stepper",
@@ -83915,6 +83918,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -84016,7 +84022,7 @@
         "1"
       ],
       "field_default_value": "normal",
-      "field_enum": "normal/grey",
+      "field_enum": "normal/filled/outline",
       "field_desc_zh": "组件风格",
       "field_desc_en": "stylish",
       "field_required": 0,
