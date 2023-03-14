@@ -868,6 +868,19 @@ module.exports = {
       },
     },
     imageProps_2426: { field_name: 'imageProps', id: 2426 },
+    inputAttributes_3421: {
+      field_name: 'inputAttributes',
+      id: 3421,
+      PC: {
+        props: { theme: 'file-input' },
+        attribute: [
+          {
+            value: "{ webkitdirectory: 'webkitdirectory' }",
+            expect: [{ dom: 'input', attribute: { webkitdirectory: 'webkitdirectory' } }],
+          },
+        ],
+      },
+    },
     isBatchUpload_2363: {
       field_name: 'isBatchUpload',
       id: 2363,
@@ -1225,7 +1238,7 @@ module.exports = {
       PC: {
         dom: [
           {
-            description: 'show image adding trigger in multiple image upload',
+            description: 'show image add trigger even if count of image is over than max',
             props: {
               files: [
                 { url: 'xxxx.url', name: 'file1.txt' },
