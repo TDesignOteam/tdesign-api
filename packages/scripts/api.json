@@ -70602,6 +70602,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -70635,6 +70636,50 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3418,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 1,
+      "field_name": "block",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否为块级元素\t",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-14 08:40:37",
+      "update_time": "2023-03-14 08:40:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -71123,6 +71168,7 @@
     {
       "id": 1422,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -71153,6 +71199,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -71164,6 +71211,7 @@
     {
       "id": 1423,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -71194,6 +71242,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -71703,6 +71752,49 @@
       ]
     },
     {
+      "id": 3419,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-14 08:44:00",
+      "update_time": "2023-03-14 08:44:00",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 496,
       "platform_framework": [
         "1",
@@ -71833,6 +71925,49 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 3420,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "复选框和内容相对位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-14 08:45:30",
+      "update_time": "2023-03-14 08:45:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -110316,47 +110451,6 @@
       ]
     },
     {
-      "id": 3418,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "inputAttributes",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于添加属性到 HTML 元素 `input`",
-      "field_desc_en": "add attributes to HTML element `input`",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-03-14 09:17:50",
-      "update_time": "2023-03-14 09:17:50",
-      "event_output": null,
-      "custom_field_type": "CSSProperties",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
       "id": 2363,
       "platform_framework": [
         "1",
@@ -114707,5 +114801,5 @@
       ]
     }
   ],
-  "total": 2742
+  "total": 2744
 }
