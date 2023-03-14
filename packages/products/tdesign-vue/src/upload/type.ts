@@ -92,6 +92,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   headers?: { [key: string]: string };
   /**
+   * 用于添加属性到 HTML 元素 `input`
+   */
+  inputAttributes?: object;
+  /**
    * 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效
    * @default false
    */

@@ -86,6 +86,10 @@ export default {
   headers: {
     type: Object as PropType<TdUploadProps['headers']>,
   },
+  /** 用于添加属性到 HTML 元素 `input` */
+  inputAttributes: {
+    type: Object as PropType<TdUploadProps['inputAttributes']>,
+  },
   /** 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效 */
   isBatchUpload: Boolean,
   /** 上传组件文本语言配置，支持自定义配置组件中的全部文本。优先级高于全局配置中语言 */
