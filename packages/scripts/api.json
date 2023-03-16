@@ -88759,7 +88759,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
@@ -88910,6 +88910,47 @@
       ]
     },
     {
+      "id": 3424,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Switch",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "开关的图标；[打开时的图标，关闭时的图标]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-16 11:15:49",
+      "update_time": "2023-03-16 11:15:49",
+      "event_output": null,
+      "custom_field_type": "TNode[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 424,
       "platform_framework": [
         "1",
@@ -88968,7 +89009,7 @@
       "field_category": 1,
       "field_name": "label",
       "field_type": [
-        "1"
+        "16"
       ],
       "field_default_value": "[]",
       "field_enum": "",
@@ -88996,7 +89037,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "Array"
       ]
     },
     {
@@ -89005,6 +89046,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -89038,6 +89080,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -89052,6 +89095,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -89085,6 +89129,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -114930,5 +114975,5 @@
       ]
     }
   ],
-  "total": 2747
+  "total": 2748
 }
