@@ -6,6 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
+const kebabCase = require('lodash/kebabCase');
 const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } = require('../config/const');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const generateGlobals = require('./global');
@@ -526,7 +527,16 @@ function combineTsFile(componentMap, framework) {
           ? [current[type]]
           : current[type];
         if (ts[innerCmp]) {
-          current[type] = [...new Set(current[type].concat(ts[innerCmp][type]))];
+          let innerCmpType= ts[innerCmp][type];
+          if(type==='imports'){
+            //排除 import 自身
+            innerCmpType=innerCmpType.forEach((item)=>{
+                if(item.includes(`'../${kebabCase(cmp)}'`)){
+                  return;
+                }
+            });
+          }
+          current[type] = [...new Set(current[type].concat(innerCmpType))];
         }
       });
     });
