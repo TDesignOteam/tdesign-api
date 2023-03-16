@@ -527,16 +527,7 @@ function combineTsFile(componentMap, framework) {
           ? [current[type]]
           : current[type];
         if (ts[innerCmp]) {
-          let innerCmpType= ts[innerCmp][type];
-          if(type==='imports'){
-            //排除 import 自身
-            innerCmpType=innerCmpType.forEach((item)=>{
-                if(item.includes(`'../${kebabCase(cmp)}'`)){
-                  return;
-                }
-            });
-          }
-          current[type] = [...new Set(current[type].concat(innerCmpType))];
+          current[type] = [...new Set(current[type].concat(ts[innerCmp][type]))];
         }
       });
     });
@@ -557,6 +548,8 @@ function combineTsFile(componentMap, framework) {
   Object.keys(ts).forEach((cmp) => {
     const bodyDesc = typeof ts[cmp].body === 'string' ? ts[cmp].body : ts[cmp].body.filter(v => !!v).join('\n\n');
     const exportDesc = ts[cmp].exports.filter(v => !!v).join('\n\n');
+    //排除import自己
+    ts[cmp].imports=ts[cmp].imports.filter(v=> !v.includes(`'../${kebabCase(cmp)}'`));
     if (['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'React(Mobile)'].includes(framework)) {
       ts[cmp].imports = ts[cmp].imports.concat(getGlobalsImports(bodyDesc + exportDesc, framework));
     }
