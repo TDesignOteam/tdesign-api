@@ -38724,8 +38724,50 @@
       ]
     },
     {
+      "id": 3425,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "links",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "链接列表。name 表示链接名称， url 表示跳转链接，target 表示跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-20 02:40:39",
+      "update_time": "2023-03-20 02:40:39",
+      "event_output": null,
+      "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; target?: string}】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 1619,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Footer",
@@ -38736,14 +38778,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标配置，type 为`logo`生效。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址",
+      "field_desc_zh": "图标配置，type 为`logo`生效。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-03 03:21:26",
       "update_time": "2021-09-03 03:23:15",
       "event_output": null,
-      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; titleUrl?: string }】",
+      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; titleUrl?: string; titleTarget: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -38754,6 +38796,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -38800,6 +38845,9 @@
     {
       "id": 3402,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Footer",
@@ -38828,6 +38876,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -114975,5 +115026,5 @@
       ]
     }
   ],
-  "total": 2748
+  "total": 2749
 }
