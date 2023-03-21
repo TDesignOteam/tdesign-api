@@ -19,8 +19,16 @@ const chalk = require('chalk');
   */
 const [framework] = process.argv.slice(2);
 
+const PREFIX = 't';
+
+// 支持同名组件，如 TTable 和 TPrimaryTable 等效
+const aliasComponents = {
+  [`${PREFIX}-primary-table`]: `${PREFIX}-table`,
+  [`${PREFIX}-base-table`]: `${PREFIX}-table`,
+};
+
 start();
- 
+
 function start() {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
     return console.log(chalk.blue(`不支持向当前框架生成代码提示文件（框架：${framework}）`));
@@ -36,7 +44,6 @@ function start() {
 
 function generateHelper(baseData, framework) {
   const { webTypes, tags, attributes } = getHelperData(baseData, framework);
-
   write(framework, 'tags.json', tags);
   write(framework, 'attributes.json', attributes);
   write(framework, 'web-types.json', webTypes);
@@ -52,7 +59,7 @@ function getHelperData(baseData, framework) {
     if (!isComponent(key)) {
       continue;
     }
-    const componentName = `t-${kebabCase(key)}`;
+    const componentName = `${PREFIX}-${kebabCase(key)}`;
     const props = [];
     const propsList = [];
     const slotsList = [];
@@ -74,10 +81,14 @@ function getHelperData(baseData, framework) {
       switch (api.field_category_text) {
         case 'Props':
           props.push(prop);
-          attributes[attributeKey] = {
+          const attributesData = {
             type: api.field_type_text.join('|') || undefined,
             options: api.field_enum ? api.field_enum.split('/') : undefined,
             description: `${apiDescription}\n\n${api.field_default_value ? `default: ${api.field_default_value}\n\n` : ''}[docs](${apiDocs}-props)`,
+          };
+          attributes[attributeKey] = attributesData;
+          if (aliasComponents[componentName]) {
+            attributes[`${aliasComponents[componentName]}/${prop}`] = attributesData;
           }
           propsList.push({
             name: prop,
@@ -109,15 +120,19 @@ function getHelperData(baseData, framework) {
           break;
         case 'Events':
           props.push(prop);
-          attributes[attributeKey] = {
+          const attributesData1 = {
             type: 'event',
             description: `${apiDescription}\n\n[docs](${apiDocs}-events)`,
+          };
+          attributes[attributeKey] = attributesData1;
+          if (aliasComponents[componentName]) {
+            attributes[`${aliasComponents[componentName]}/${prop}`] = attributesData1;
           }
           eventsList.push({
             name: prop,
             description: apiDescription,
             'doc-url': `${apiDocs}-events`,
-          })
+          });
           break
         default:
           break;
@@ -128,7 +143,8 @@ function getHelperData(baseData, framework) {
       attributes: props,
       description: `${description}\n\n[docs](${componentDocs})`
     }
-    vueComponents.push({
+
+    const componentWebTypesData = {
       name: componentName,
       source: { symbol: key },
       description,
@@ -136,7 +152,14 @@ function getHelperData(baseData, framework) {
       props: propsList,
       js: eventsList.length ? { events: eventsList } : undefined,
       slots: slotsList,
-    })
+    };
+    vueComponents.push(componentWebTypesData);
+
+    const moreNewComponent = aliasComponents[componentName]
+    if (moreNewComponent) {
+      vueComponents.push({ ...componentWebTypesData, name: moreNewComponent });
+      tags[moreNewComponent] = tags[componentName];
+    }
   }
 
   return {
