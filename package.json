@@ -22,7 +22,7 @@
     "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "qs": "^6.9.4",
-    "sql.js": "^1.6.2",
+    "sql.js": "^1.8.0",
     "squel": "^5.13.0",
     "tdesign-icons-vue": "^0.1.6",
     "tdesign-vue": "^1.0.3"
