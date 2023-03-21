@@ -20457,49 +20457,6 @@
       "field_type_text": []
     },
     {
-      "id": 1411,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Checkbox",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right",
-      "field_desc_zh": "多选框和内容相对位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-06 05:50:39",
-      "update_time": "2022-03-31 08:04:42",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 3287,
       "platform_framework": [
         "8",
@@ -20983,18 +20940,19 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
+        "1",
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "'circle'",
       "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]",
+      "field_desc_zh": "自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-08-06 05:48:42",
       "update_time": "2021-08-10 05:28:54",
       "event_output": null,
-      "custom_field_type": "Array<TNode>",
+      "custom_field_type": "'circle' | 'line' | 'rectangle' | Array<TNode | String>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -21010,6 +20968,7 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Array"
       ]
     },
@@ -21239,6 +21198,49 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1411,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "多选框和内容相对位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-08-06 05:50:39",
+      "update_time": "2022-03-31 08:04:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -21703,7 +21705,7 @@
       "create_time": "2021-07-10 09:34:47",
       "update_time": "2021-12-11 18:09:30",
       "event_output": null,
-      "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean; name?: string; checkAll?: true }】",
+      "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
