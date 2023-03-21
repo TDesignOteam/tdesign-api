@@ -21705,7 +21705,7 @@
       "create_time": "2021-07-10 09:34:47",
       "update_time": "2021-12-11 18:09:30",
       "event_output": null,
-      "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean; name?: string; checkAll?: true }】",
+      "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
