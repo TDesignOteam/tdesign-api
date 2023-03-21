@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Tabs Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -35,5 +34,5 @@ draggable | Boolean | true | 选项卡组件开启允许拖动排序时，当前
 label | TNode | - | 选项卡名称，可自定义选项卡导航内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 panel | TNode | - | 用于自定义选项卡面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 removable | Boolean | false | 当前选项卡是否允许移除 | N
-value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabValue`，[Tabs API Documents](./tabs?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
+value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabValue` | N
 onRemove | Function |  | TS 类型：`(options: { value: TabValue; e: MouseEvent }) => void`<br/>点击删除按钮时触发 | N

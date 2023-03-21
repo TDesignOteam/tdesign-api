@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Tabs Props
 
 name | type | default | description | required
@@ -35,5 +34,5 @@ draggable | Boolean | true | \- | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 panel | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 removable | Boolean | false | \- | N
-value | String / Number | - | Typescript：`TabValue`，[Tabs API Documents](./tabs?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
+value | String / Number | - | Typescript：`TabValue` | N
 onRemove | Function |  | Typescript：`(options: { value: TabValue; e: MouseEvent }) => void`<br/> | N

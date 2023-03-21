@@ -90753,7 +90753,7 @@
       "create_time": "2020-12-01 11:11:08",
       "update_time": "2021-07-16 06:05:30",
       "event_output": null,
-      "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】",
+      "custom_field_type": "TabValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
