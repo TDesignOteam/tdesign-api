@@ -23742,6 +23742,47 @@
       ]
     },
     {
+      "id": 3426,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "enableMultipleGradient",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-21 10:11:20",
+      "update_time": "2023-03-21 10:11:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2120,
       "platform_framework": [
         "1",
@@ -115034,5 +115075,5 @@
       ]
     }
   ],
-  "total": 2749
+  "total": 2750
 }
