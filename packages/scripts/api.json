@@ -19759,6 +19759,49 @@
       ]
     },
     {
+      "id": 3427,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "CellGroup",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/card",
+      "field_desc_zh": "单元格组风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-22 08:51:25",
+      "update_time": "2023-03-22 08:51:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"0.15.0\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1078,
       "platform_framework": [
         "8",
@@ -22105,6 +22148,51 @@
       ]
     },
     {
+      "id": 3430,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Col",
+      "field_category": 1,
+      "field_name": "offset",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列的偏移量（默认单位px）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-22 10:55:41",
+      "update_time": "2023-03-22 10:55:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 205,
       "platform_framework": [
         "1",
@@ -22308,6 +22396,51 @@
         "Angular(PC)"
       ],
       "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3429,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Col",
+      "field_category": 1,
+      "field_name": "span",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列的宽度（默认单位px）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-22 10:55:11",
+      "update_time": "2023-03-22 10:55:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -56823,9 +56956,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'40rpx'",
+      "field_default_value": "'20px'",
       "field_enum": "",
-      "field_desc_zh": "尺寸，示例：40rpx/20px",
+      "field_desc_zh": "尺寸，示例：20px",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -75352,6 +75485,51 @@
         "Number",
         "Object",
         "Array"
+      ]
+    },
+    {
+      "id": 3428,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Row",
+      "field_category": 1,
+      "field_name": "gutter",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列之间的间距（默认单位px）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-22 10:54:21",
+      "update_time": "2023-03-22 10:54:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
       ]
     },
     {
@@ -115089,5 +115267,5 @@
       ]
     }
   ],
-  "total": 2750
+  "total": 2754
 }

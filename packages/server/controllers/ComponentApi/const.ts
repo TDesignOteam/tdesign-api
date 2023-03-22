@@ -300,6 +300,8 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'PaginationMini', label: '迷你分页' },
   { value: 'Dialog', label: '对话框' },
   { value: 'DialogCard', label: '对话框卡片' },
+  { value: 'Row', label: '栅格-横向' },
+  { value: 'Col', label: '栅格-纵向' },
   { value: 'Toast', label: '轻提示' },
   { value: 'Message', label: '消息通知' },
   { value: 'NoticeBar', label: '公告栏' },

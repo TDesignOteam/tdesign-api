@@ -46,6 +46,10 @@ const mobileFrames = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
 const COMPONENT_API_MD_MAP = {
   Avatar: ['Avatar', 'AvatarGroup'],
   Checkbox: ['Checkbox', 'CheckboxGroup'],
+  Cell: {
+    list: ['Cell', 'CellGroup'],
+    excludes: ['Miniprogram'],
+  },
   Radio: ['Radio', 'RadioGroup'],
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
   Tabs: ['Tabs', 'TabPanel'],
@@ -61,6 +65,10 @@ const COMPONENT_API_MD_MAP = {
     // includes 以下框架将 'Layout', 'Header', 'Aside', 'Content', 'Footer' 等组件的 API 文档，合并输出到目录 layout
     // 也可以使用 excludes 用于排除某些框架使用该父子组件关系
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+  },
+  Col: {
+    list: ['Col', 'Row'],
+    includes: mobileFrames
   },
   // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
   Grid: ['Grid', 'Row', 'Col', 'GridItem'],
@@ -121,6 +129,10 @@ const TYPES_COMBINE_MAP = {
   },
   Checkbox: {
     list: ['Checkbox', 'CheckboxGroup'],
+    excludes: ['Miniprogram']
+  },
+  Cell: {
+    list: ['Cell', 'CellGroup'],
     excludes: ['Miniprogram']
   },
   Radio: {
