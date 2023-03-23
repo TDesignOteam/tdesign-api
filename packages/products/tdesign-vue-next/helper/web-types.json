@@ -2630,6 +2630,9 @@
               },
               "values": [
                 {
+                  "name": "extra-small"
+                },
+                {
                   "name": "small"
                 },
                 {
@@ -4496,6 +4499,15 @@
                 "Boolean"
               ],
               "default": "false"
+            },
+            {
+              "name": "enable-multiple-gradient",
+              "description": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/color-picker?tab=api#colorpicker-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "true"
             },
             {
               "name": "format",
@@ -11781,6 +11793,106 @@
         },
         {
           "name": "t-radio",
+          "source": {
+            "symbol": "Radio"
+          },
+          "description": "Radio\n\n单选框",
+          "doc-url": "https://tdesign.tencent.com/vue-next/components/radio",
+          "props": [
+            {
+              "name": "allow-uncheck",
+              "description": "是否允许取消选中",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "description": "是否选中",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "default",
+              "description": "单选按钮内容，同 label",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "disabled",
+              "description": "是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "undefined"
+            },
+            {
+              "name": "label",
+              "description": "主文案",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "name",
+              "description": "HTML 元素原生属性",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "String"
+              ]
+            },
+            {
+              "name": "value",
+              "description": "单选按钮的值",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "Number",
+                "Boolean"
+              ],
+              "default": "undefined"
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "change",
+                "description": "选中状态变化时触发",
+                "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events"
+              },
+              {
+                "name": "click",
+                "description": "trigger on click\n\n点击时出发，一般用于外层阻止冒泡场景",
+                "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events"
+              }
+            ]
+          },
+          "slots": [
+            {
+              "name": "default",
+              "description": "单选按钮内容，同 label",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props"
+            },
+            {
+              "name": "label",
+              "description": "主文案",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props"
+            }
+          ]
+        },
+        {
+          "name": "t-radio-button",
           "source": {
             "symbol": "Radio"
           },

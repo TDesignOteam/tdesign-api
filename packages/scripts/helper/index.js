@@ -25,6 +25,7 @@ const PREFIX = 't';
 const aliasComponents = {
   [`${PREFIX}-primary-table`]: `${PREFIX}-table`,
   [`${PREFIX}-base-table`]: `${PREFIX}-table`,
+  [`${PREFIX}-radio`]: `${PREFIX}-radio-button`,
 };
 
 start();

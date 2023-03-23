@@ -978,6 +978,7 @@
   "t-button/size": {
     "type": "String",
     "options": [
+      "extra-small",
       "small",
       "medium",
       "large"
@@ -1661,6 +1662,10 @@
   "t-color-picker/enable-alpha": {
     "type": "Boolean",
     "description": "是否开启透明通道\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/enable-multiple-gradient": {
+    "type": "Boolean",
+    "description": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue-next/components/color-picker?tab=api#colorpicker-props)"
   },
   "t-color-picker/format": {
     "type": "String",
@@ -4405,7 +4410,15 @@
     "type": "Boolean",
     "description": "是否允许取消选中\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
+  "t-radio-button/allow-uncheck": {
+    "type": "Boolean",
+    "description": "是否允许取消选中\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
   "t-radio/checked": {
+    "type": "Boolean",
+    "description": "是否选中\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
+  "t-radio-button/checked": {
     "type": "Boolean",
     "description": "是否选中\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
@@ -4413,7 +4426,15 @@
     "type": "String|TNode",
     "description": "单选按钮内容，同 label\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
+  "t-radio-button/default": {
+    "type": "String|TNode",
+    "description": "单选按钮内容，同 label\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
   "t-radio/disabled": {
+    "type": "Boolean",
+    "description": "是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
+  "t-radio-button/disabled": {
     "type": "Boolean",
     "description": "是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
@@ -4421,7 +4442,15 @@
     "type": "String|TNode",
     "description": "主文案\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
+  "t-radio-button/label": {
+    "type": "String|TNode",
+    "description": "主文案\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
   "t-radio/name": {
+    "type": "String",
+    "description": "HTML 元素原生属性\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
+  "t-radio-button/name": {
     "type": "String",
     "description": "HTML 元素原生属性\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
@@ -4429,11 +4458,23 @@
     "type": "String|Number|Boolean",
     "description": "单选按钮的值\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
   },
+  "t-radio-button/value": {
+    "type": "String|Number|Boolean",
+    "description": "单选按钮的值\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-props)"
+  },
   "t-radio/change": {
     "type": "event",
     "description": "选中状态变化时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events)"
   },
+  "t-radio-button/change": {
+    "type": "event",
+    "description": "选中状态变化时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events)"
+  },
   "t-radio/click": {
+    "type": "event",
+    "description": "trigger on click\n\n点击时出发，一般用于外层阻止冒泡场景\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events)"
+  },
+  "t-radio-button/click": {
     "type": "event",
     "description": "trigger on click\n\n点击时出发，一般用于外层阻止冒泡场景\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio?tab=api#radio-events)"
   },

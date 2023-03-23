@@ -487,6 +487,7 @@
       "color-modes",
       "disabled",
       "enable-alpha",
+      "enable-multiple-gradient",
       "format",
       "input-props",
       "multiple",
@@ -1273,6 +1274,20 @@
     "description": "Progress\n\n进度条\n\n[docs](https://tdesign.tencent.com/vue-next/components/progress)"
   },
   "t-radio": {
+    "attributes": [
+      "allow-uncheck",
+      "checked",
+      "default",
+      "disabled",
+      "label",
+      "name",
+      "value",
+      "change",
+      "click"
+    ],
+    "description": "Radio\n\n单选框\n\n[docs](https://tdesign.tencent.com/vue-next/components/radio)"
+  },
+  "t-radio-button": {
     "attributes": [
       "allow-uncheck",
       "checked",
