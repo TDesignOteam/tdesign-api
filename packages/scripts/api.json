@@ -12259,7 +12259,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "32"
       ],
@@ -12292,7 +12291,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -12576,7 +12574,7 @@
         "1"
       ],
       "field_default_value": "medium",
-      "field_enum": "small/medium/large",
+      "field_enum": "extra-small/small/medium/large",
       "field_desc_zh": "组件尺寸",
       "field_desc_en": "a button has three size",
       "field_required": 0,
@@ -12697,7 +12695,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "32"
       ],
@@ -12730,7 +12727,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -12828,6 +12824,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -12860,6 +12857,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],

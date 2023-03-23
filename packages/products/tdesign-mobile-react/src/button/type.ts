@@ -23,6 +23,7 @@ export interface TdButtonProps {
   content?: TNode;
   /**
    * 禁用状态
+   * @default false
    */
   disabled?: boolean;
   /**
@@ -66,7 +67,7 @@ export interface TdButtonProps {
    * 组件风格，依次为品牌色、危险色
    * @default default
    */
-  theme?: 'default' | 'primary' | 'danger';
+  theme?: 'default' | 'primary' | 'danger' | 'light';
   /**
    * 按钮类型
    * @default button
@@ -76,7 +77,7 @@ export interface TdButtonProps {
    * 按钮形式，基础、线框、文字
    * @default base
    */
-  variant?: 'base' | 'outline' | 'text';
+  variant?: 'base' | 'outline' | 'dashed' | 'text';
   /**
    * 点击时触发
    */
