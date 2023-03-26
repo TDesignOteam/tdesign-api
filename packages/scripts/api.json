@@ -10198,6 +10198,43 @@
       "field_type_text": []
     },
     {
+      "id": 3433,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 4,
+      "field_name": "scrollColumnIntoView",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "横向滚动到指定列，呈现在可视范围内",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "(colKey: string)",
+      "create_time": "2023-03-26 11:19:12",
+      "update_time": "2023-03-26 11:19:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3432,
       "platform_framework": [
         "1",
@@ -115339,5 +115376,5 @@
       ]
     }
   ],
-  "total": 2756
+  "total": 2757
 }
