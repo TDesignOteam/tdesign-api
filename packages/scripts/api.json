@@ -10161,6 +10161,80 @@
       "field_type_text": []
     },
     {
+      "id": 3431,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 4,
+      "field_name": "refreshTable",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全部重新渲染表格",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-03-26 11:01:42",
+      "update_time": "2023-03-26 11:01:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3432,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 4,
+      "field_name": "scrollToElement",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "(params: ScrollToElementParams)",
+      "create_time": "2023-03-26 11:06:32",
+      "update_time": "2023-03-26 11:06:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 586,
       "platform_framework": [
         "1",
@@ -115265,5 +115339,5 @@
       ]
     }
   ],
-  "total": 2754
+  "total": 2756
 }

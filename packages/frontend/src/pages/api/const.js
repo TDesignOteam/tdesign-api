@@ -24,8 +24,8 @@ export const API_CATEGORY_MAP = {
   [API_CATEGORY_FUNCTIONS]: {
     placeholder: {
       name: '组件对外暴露的方法名称',
-      inputParams: '方法参数，如：(validateRules: RulesObject) => {}',
-      outputParams: '方法返回值，如：() => (validateResult: boolean)',
+      inputParams: '方法参数，如：(validateRules: RulesObject)',
+      outputParams: '方法返回值，如：(validateResult: boolean)',
       descZh: '输入方法描述，如：使用该方法进行表单校验',
       descEn: 'type function description in English'
     }
