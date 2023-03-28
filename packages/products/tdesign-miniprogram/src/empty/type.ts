@@ -20,12 +20,11 @@ export interface TdEmptyProps {
     value?: ['t-class', 't-class-description', 't-class-image', 't-class-actions'];
   };
   /**
-   * 图标名称
-   * @default ''
+   * 图标名称。值为字符串表示图标名称，值为 Object 类型，表示透传至 icon
    */
   icon?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: string | object;
   };
   /**
    * 图片地址
