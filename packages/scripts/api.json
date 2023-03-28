@@ -101252,7 +101252,7 @@
       "create_time": "2022-04-28 02:50:39",
       "update_time": "2022-04-28 02:51:01",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "OverlayProps 【import { OverlayProps } from '@Overlay'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -101479,6 +101479,92 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3434,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "轻提示隐藏的时候触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-28 02:23:51",
+      "update_time": "2023-03-28 02:23:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 3435,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 2,
+      "field_name": "destory",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "轻提示销毁的时候触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-28 02:24:05",
+      "update_time": "2023-03-28 02:24:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
       ]
     },
     {
@@ -115376,5 +115462,5 @@
       ]
     }
   ],
-  "total": 2757
+  "total": 2759
 }
