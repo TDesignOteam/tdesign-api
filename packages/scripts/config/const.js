@@ -29,6 +29,7 @@ const GLOBAL_TYPES = [
   'InfinityScroll',
   'UploadDisplayDragEvents',
   'ImageEvent',
+  'ScrollToElementParams',
 ];
 
 // InputEvent is not included in SyntheticEvent, but SyntheticEvent includes FormEvent
