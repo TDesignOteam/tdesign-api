@@ -74601,7 +74601,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -74765,12 +74765,6 @@
     {
       "id": 3385,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Rate",
@@ -74799,12 +74793,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -74865,10 +74853,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Rate",
       "field_category": 1,
@@ -74898,10 +74883,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "TNode"
@@ -74944,6 +74926,45 @@
       "field_type_text": [
         "String",
         "Array"
+      ]
+    },
+    {
+      "id": 3438,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Rate",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "16",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义评分图标，[选中图标，未选中图标]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-29 07:19:05",
+      "update_time": "2023-03-29 07:19:05",
+      "event_output": null,
+      "custom_field_type": "string | string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Array",
+        "TNode"
       ]
     },
     {
@@ -115529,5 +115550,5 @@
       ]
     }
   ],
-  "total": 2760
+  "total": 2761
 }
