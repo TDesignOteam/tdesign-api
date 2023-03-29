@@ -75367,8 +75367,48 @@
       ]
     },
     {
+      "id": 3439,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Result",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标名称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-03-29 11:45:43",
+      "update_time": "2023-03-29 11:45:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 3130,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Result",
@@ -75398,6 +75438,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -75445,6 +75488,9 @@
     {
       "id": 3131,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Result",
@@ -75454,8 +75500,8 @@
         "1"
       ],
       "field_default_value": "default",
-      "field_enum": "",
-      "field_desc_zh": "内置主题。可选项：default/success/warning/error",
+      "field_enum": "default/success/warning/error",
+      "field_desc_zh": "内置主题。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -75473,6 +75519,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
