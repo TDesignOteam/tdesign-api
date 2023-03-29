@@ -37818,49 +37818,6 @@
       ]
     },
     {
-      "id": 3437,
-      "platform_framework": [
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Empty",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图标",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-03-28 07:15:58",
-      "update_time": "2023-03-28 07:15:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
       "id": 1385,
       "platform_framework": [
         "8",
@@ -58634,7 +58591,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Message",
       "field_category": 1,
@@ -58665,7 +58625,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -58718,6 +58681,9 @@
     {
       "id": 3410,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Message",
@@ -58748,6 +58714,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -58804,6 +58773,9 @@
     {
       "id": 1449,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Message",
@@ -58832,6 +58804,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -59140,7 +59115,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -59192,7 +59167,7 @@
       "field_type_text": []
     },
     {
-      "id": 3194,
+      "id": 3437,
       "platform_framework": [
         "8",
         "16",
@@ -59201,22 +59176,25 @@
       "component": "Message",
       "field_category": 2,
       "field_name": "close",
-      "field_type": [],
+      "field_type": [
+        "1",
+        "64"
+      ],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "关闭消息时触发",
       "field_desc_en": "close message event",
       "field_required": 0,
-      "event_input": "(context: { trigger: 'close-click' | 'duration-end' })",
-      "create_time": "2022-11-25 01:52:02",
-      "update_time": "2022-11-25 01:52:02",
+      "event_input": "(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })",
+      "create_time": "2023-03-28 07:15:58",
+      "update_time": "2023-03-28 07:15:58",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -59226,7 +59204,10 @@
         "React(Mobile)",
         "Angular(Mobile)"
       ],
-      "field_type_text": []
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
     },
     {
       "id": 103,
@@ -59234,6 +59215,9 @@
         "1",
         "2",
         "4",
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Message",
@@ -59263,6 +59247,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -59294,7 +59281,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -59314,6 +59301,9 @@
         "1",
         "2",
         "4",
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Message",
@@ -59343,6 +59333,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -59350,6 +59343,9 @@
     {
       "id": 3411,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Message",
@@ -59376,6 +59372,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -59407,7 +59406,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -59448,7 +59447,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -115524,5 +115523,5 @@
       ]
     }
   ],
-  "total": 2761
+  "total": 2760
 }
