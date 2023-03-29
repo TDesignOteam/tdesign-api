@@ -96,7 +96,10 @@ const COMPONENT_API_MD_MAP = {
     excludes: ['Miniprogram'],
   },
   List: ['List', 'ListItem', 'ListItemMeta'],
-  Picker: ['Picker', 'PickerItem'],
+  Picker: {
+    list: ['Picker', 'PickerItem'],
+    includes: ['Miniprogram']
+  },
   TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
   DateTimePicker: ['DateTimePicker'],
   DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],

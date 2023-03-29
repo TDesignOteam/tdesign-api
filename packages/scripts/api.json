@@ -64332,47 +64332,6 @@
       ]
     },
     {
-      "id": 2508,
-      "platform_framework": [
-        "8",
-        "16",
-        "64"
-      ],
-      "component": "Picker",
-      "field_category": 1,
-      "field_name": "footer",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "底部内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-02 09:27:01",
-      "update_time": "2022-07-15 09:12:38",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
       "id": 2507,
       "platform_framework": [
         "8",
@@ -64427,7 +64386,6 @@
       "field_category": 1,
       "field_name": "renderLabel",
       "field_type": [
-        "1",
         "32"
       ],
       "field_default_value": "",
@@ -64456,7 +64414,6 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
         "Function"
       ]
     },
@@ -64713,9 +64670,6 @@
     {
       "id": 3353,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Picker",
@@ -64742,9 +64696,6 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -64767,7 +64718,7 @@
       "field_desc_zh": "点击确认按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, context: {index: number[] })",
+      "event_input": "(value: Array<PickerValue>, context: { index: number[], e: MouseEvent, label: string[] })",
       "create_time": "2022-06-04 02:02:14",
       "update_time": "2022-06-30 02:55:35",
       "event_output": null,
@@ -115550,5 +115501,5 @@
       ]
     }
   ],
-  "total": 2761
+  "total": 2760
 }
