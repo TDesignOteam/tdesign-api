@@ -72281,7 +72281,7 @@
       "create_time": "2020-12-28 02:58:07",
       "update_time": "2021-08-10 05:53:32",
       "event_output": null,
-      "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean }】",
+      "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string | TNode; value?: string | number | boolean; disabled?: boolean }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
