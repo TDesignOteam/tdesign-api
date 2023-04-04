@@ -64205,8 +64205,7 @@
       "field_name": "cancelBtn",
       "field_type": [
         "1",
-        "4",
-        "8"
+        "4"
       ],
       "field_default_value": "true",
       "field_enum": "",
@@ -64217,7 +64216,7 @@
       "create_time": "2021-08-23 08:25:49",
       "update_time": "2022-07-14 11:39:09",
       "event_output": null,
-      "custom_field_type": "boolean | string | ButtonProps",
+      "custom_field_type": "boolean | string",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -64235,8 +64234,7 @@
       ],
       "field_type_text": [
         "String",
-        "Boolean",
-        "Object"
+        "Boolean"
       ]
     },
     {
@@ -64297,8 +64295,7 @@
       "field_name": "confirmBtn",
       "field_type": [
         "1",
-        "4",
-        "8"
+        "4"
       ],
       "field_default_value": "true",
       "field_enum": "",
@@ -64309,7 +64306,7 @@
       "create_time": "2021-08-23 08:24:52",
       "update_time": "2022-07-14 11:39:01",
       "event_output": null,
-      "custom_field_type": "boolean | string | ButtonProps【import { ButtonProps } from '@Button'】",
+      "custom_field_type": "boolean | string",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -64327,8 +64324,7 @@
       ],
       "field_type_text": [
         "String",
-        "Boolean",
-        "Object"
+        "Boolean"
       ]
     },
     {
@@ -64342,12 +64338,11 @@
       "field_category": 1,
       "field_name": "header",
       "field_type": [
-        "4",
         "64"
       ],
-      "field_default_value": "true",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容",
+      "field_desc_zh": "自定义头部内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -64370,7 +64365,6 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean",
         "TNode"
       ]
     },
