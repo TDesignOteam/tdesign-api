@@ -109,7 +109,7 @@ export type RadioOption = string | number | RadioOptionObj;
 
 export interface RadioOptionObj {
   label?: string | TNode;
-  value?: string | number;
+  value?: string | number | boolean;
   disabled?: boolean;
 }
 
