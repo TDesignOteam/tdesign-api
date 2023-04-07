@@ -15,11 +15,11 @@ preventScrollThrough | Boolean | false | \- | N
 showOverlay | Boolean | false | \- | N
 theme | String | - | options：loading/success/error | N
 onClose | Function |  | Typescript：`() => void`<br/> | N
-onDestory | Function |  | Typescript：`() => void`<br/> | N
+onDestroy | Function |  | Typescript：`() => void`<br/> | N
 
 ### Toast Events
 
 name | params | description
 -- | -- | --
 close | \- | \-
-destory | \- | \-
+destroy | \- | \-

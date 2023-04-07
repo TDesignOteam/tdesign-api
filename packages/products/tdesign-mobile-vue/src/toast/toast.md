@@ -15,11 +15,11 @@ preventScrollThrough | Boolean | false | 防止滚动穿透，即不允许点击
 showOverlay | Boolean | false | 是否显示遮罩层 | N
 theme | String | - | 提示类型。可选项：loading/success/error | N
 onClose | Function |  | TS 类型：`() => void`<br/>轻提示隐藏的时候触发 | N
-onDestory | Function |  | TS 类型：`() => void`<br/>轻提示销毁的时候触发 | N
+onDestroy | Function |  | TS 类型：`() => void`<br/>轻提示销毁的时候触发 | N
 
 ### Toast Events
 
 名称 | 参数 | 描述
 -- | -- | --
 close | \- | 轻提示隐藏的时候触发
-destory | \- | 轻提示销毁的时候触发
+destroy | \- | 轻提示销毁的时候触发
