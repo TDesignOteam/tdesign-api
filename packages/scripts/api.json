@@ -75383,8 +75383,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-29 11:45:43",
-      "update_time": "2023-03-29 11:45:43",
+      "create_time": "2023-04-03 11:27:40",
+      "update_time": "2023-04-03 11:27:40",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -79483,6 +79483,7 @@
       "field_type": [
         "1",
         "2",
+        "4",
         "8",
         "16"
       ],
@@ -79495,7 +79496,7 @@
       "create_time": "2020-12-17 10:48:27",
       "update_time": "2022-01-21 04:21:17",
       "event_output": null,
-      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | T | Array<SelectValue<T>>】",
+      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -79513,6 +79514,7 @@
       "field_type_text": [
         "String",
         "Number",
+        "Boolean",
         "Object",
         "Array"
       ]
@@ -82301,43 +82303,6 @@
         "Angular(PC)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 3439,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Skeleton",
-      "field_category": 1,
-      "field_name": "rowCol",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "[1, 1, 1, { width: '70%' }]",
-      "field_enum": "",
-      "field_desc_zh": "高级设置，用于自定义行列数量、宽度高度、间距等。【示例一】，`[1, 1, 2]` 表示输出三行骨架图，第一行一列，第二行一列，第三行两列。【示例二】，`[1, 1, { width: '100px' }]` 表示自定义第三行的宽度为 `100px`。【示例三】，`[1, 2, [{ width, height }, { width, height, marginLeft }]]` 表示第三行有两列，且自定义宽度、高度、尺寸（圆形或方形使用）、间距、内容等",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-04-03 11:27:40",
-      "update_time": "2023-04-03 11:27:40",
-      "event_output": null,
-      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; height?: string; size?: string; marginRight?: string; marginLeft?: string; margin?: string; content?: string | TNode; type?: 'rect' | 'circle' | 'text' }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
