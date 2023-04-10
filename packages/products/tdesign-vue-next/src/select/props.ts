@@ -41,7 +41,7 @@ export default {
   /** 输入框的值 */
   inputValue: {
     type: [String, Number] as PropType<TdSelectProps['inputValue']>,
-    default: undefined,
+    default: undefined as TdSelectProps['inputValue'],
   },
   /** 输入框的值，非受控属性 */
   defaultInputValue: {
@@ -162,16 +162,16 @@ export default {
   },
   /** 选中值 */
   value: {
-    type: [String, Number, Object, Array] as PropType<TdSelectProps['value']>,
-    default: undefined,
+    type: [String, Number, Boolean, Object, Array] as PropType<TdSelectProps['value']>,
+    default: undefined as TdSelectProps['value'],
   },
   modelValue: {
-    type: [String, Number, Object, Array] as PropType<TdSelectProps['value']>,
-    default: undefined,
+    type: [String, Number, Boolean, Object, Array] as PropType<TdSelectProps['value']>,
+    default: undefined as TdSelectProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {
-    type: [String, Number, Object, Array] as PropType<TdSelectProps['defaultValue']>,
+    type: [String, Number, Boolean, Object, Array] as PropType<TdSelectProps['defaultValue']>,
   },
   /** 自定义选中项呈现的内容 */
   valueDisplay: {
