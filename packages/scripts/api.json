@@ -54510,7 +54510,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54541,7 +54544,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -54588,7 +54594,8 @@
     {
       "id": 2922,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54617,7 +54624,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -54754,6 +54762,9 @@
     {
       "id": 3369,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Link",
@@ -54782,6 +54793,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -54793,7 +54807,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Link",
       "field_category": 1,
@@ -54823,7 +54840,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -55002,43 +55022,6 @@
       ]
     },
     {
-      "id": 3372,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Link",
-      "field_category": 1,
-      "field_name": "success",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "页面链接跳转成功后触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-03-13 02:16:33",
-      "update_time": "2023-03-13 02:16:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 2898,
       "platform_framework": [
         "1",
@@ -55092,7 +55075,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Link",
       "field_category": 1,
@@ -55122,7 +55108,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -55231,7 +55220,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Link",
       "field_category": 2,
@@ -55259,7 +55251,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -115540,5 +115535,5 @@
       ]
     }
   ],
-  "total": 2761
+  "total": 2760
 }
