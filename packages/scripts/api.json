@@ -44755,19 +44755,18 @@
       "field_category": 1,
       "field_name": "border",
       "field_type": [
-        "4",
-        "8"
+        "4"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式",
+      "field_desc_zh": "是否显示边框",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-24 06:38:54",
       "update_time": "2021-10-01 01:43:11",
       "event_output": null,
-      "custom_field_type": "boolean | { color?: string; width?: string; style?: 'solid' | 'dashed' | 'dotted' | 'double' | 'groove' | 'inset' | 'outset' }",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44784,8 +44783,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean",
-        "Object"
+        "Boolean"
       ]
     },
     {
@@ -45038,7 +45036,7 @@
       ],
       "component": "GridItem",
       "field_category": 1,
-      "field_name": "badgeProps",
+      "field_name": "badge",
       "field_type": [
         "8"
       ],
@@ -45242,11 +45240,12 @@
       "field_name": "image",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图片，可以是图片地址，也可以自定义图片节点",
+      "field_desc_zh": "图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -45271,15 +45270,13 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
       ]
     },
     {
       "id": 3187,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "GridItem",
@@ -45308,9 +45305,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
