@@ -27,6 +27,7 @@ import {
   HTMLElementAttributes,
   ComponentType,
   TScroll,
+  ScrollToElementParams,
 } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
@@ -262,6 +263,22 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   onScrollY?: (params: { e: WheelEvent }) => void;
 }
 
+/** 组件实例方法 */
+export interface BaseTableInstanceFunctions<T extends TableRowData = TableRowData> {
+  /**
+   * 全部重新渲染表格
+   */
+  refreshTable: () => void;
+  /**
+   * 横向滚动到指定列，呈现在可视范围内
+   */
+  scrollColumnIntoView: (colKey: string) => void;
+  /**
+   * 虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
+   */
+  scrollToElement: (params: ScrollToElementParams) => void;
+}
+
 export interface BaseTableCol<T extends TableRowData = TableRowData> {
   /**
    * 列横向对齐方式
@@ -340,6 +357,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    * 是否阻止当列单元格点击事件冒泡
    */
   stopPropagation?: boolean;
+  /**
+   * 列表头类名，值类型是函数时使用返回值作为列类名。泛型 T 指表格数据类型
+   */
+  thClassName?: TableColumnClassName<T> | TableColumnClassName<T>[];
   /**
    * 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render
    */
@@ -423,7 +444,7 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
   /**
    * 自定义过滤图标，支持全局配置 `GlobalConfigProvider`
    */
-  filterIcon?: TNode;
+  filterIcon?: TNode<{ col: PrimaryTableCol<T>; colIndex: number }>;
   /**
    * 自定义过滤状态行及清空筛选等
    */
@@ -558,11 +579,11 @@ export interface PrimaryTableInstanceFunctions<T extends TableRowData = TableRow
   /**
    * 校验行信息，校验完成后，会触发事件 `onRowValidate`。参数 `rowValue` 表示行唯一标识的值
    */
-  validateRowData: (rowValue: any) => void;
+  validateRowData: (rowValue: any) => Promise<{ trigger: TableValidateTrigger; result: ErrorListObjectType<T>[] }>;
   /**
    * 校验表格全部数据，校验完成后，会触发事件 `onValidate`
    */
-  validateTableData: () => void;
+  validateTableData: () => Promise<{ result: TableErrorListMap }>;
 }
 
 export interface PrimaryTableCol<T extends TableRowData = TableRowData>
@@ -1053,6 +1074,8 @@ export interface PrimaryTableValidateContext {
 }
 
 export type TableErrorListMap = { [key: string]: AllValidateResult[] };
+
+export type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] };
 
 export interface PrimaryTableCellParams<T> {
   row: T;

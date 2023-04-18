@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Collapse Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -17,7 +16,7 @@ expandMutex | Boolean | false | 每个面板互斥展开，每次只展开一个
 expandOnRowClick | Boolean | true | 是否允许点击整行标题展开面板 | N
 value | Array | [] | 展开的面板集合。TS 类型：`CollapseValue` `type CollapseValue = Array<string \| number>`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/collapse/type.ts) | N
 defaultValue | Array | [] | 展开的面板集合。非受控属性。TS 类型：`CollapseValue` `type CollapseValue = Array<string \| number>`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/collapse/type.ts) | N
-onChange | Function |  | TS 类型：`(value: CollapseValue) => void`<br/>切换面板时触发，返回变化的值 | N
+onChange | Function |  | TS 类型：`(value: CollapseValue, context: { e: MouseEvent }) => void`<br/>切换面板时触发，返回变化的值 | N
 
 ### CollapsePanel Props
 

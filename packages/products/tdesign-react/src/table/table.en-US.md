@@ -59,6 +59,16 @@ onScroll | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>
 onScrollX | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>`deprecated`。trigger on scroll horizontal | N
 onScrollY | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>`deprecated`。trigger on scroll vertical | N
 
+### BaseTableInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+className | String | - | 类名 | N
+style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+refreshTable | \- | \- | required
+scrollColumnIntoView | `(colKey: string)` | \- | required
+scrollToElement | `(params: ScrollToElementParams)` | \- | required
+
 ### BaseTableCol
 
 name | type | default | description | required
@@ -79,6 +89,7 @@ render | Function | - | render function can be used to render cell or head。Typ
 resizable | Boolean | true | resize current column width | N
 resize | Object | - | Typescript：`TableColumnResizeConfig` `interface TableColumnResizeConfig { minWidth: number; maxWidth: number }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
 stopPropagation | Boolean | - | stop cells of current col to propagation | N
+thClassName | String / Object / Array / Function | - | th classnames。Typescript：`TableColumnClassName<T> \| TableColumnClassName<T>[]`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 title | String / Function | - | th content。Typescript：`string \| TNode \| TNode<{ col: BaseTableCol; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 width | String / Number | - | column width | N
 
@@ -104,7 +115,7 @@ expandOnRowClick | Boolean | - | expand row on click | N
 expandedRow | TNode | - | table expanded row, to show more detail information。Typescript：`TNode<TableExpandedRowParams<T>>` `interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] \| BaseTableCol<T>[] }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
 expandedRowKeys | Array | [] | expanded row keys, row key value is from data[rowKey]。Typescript：`Array<string \| number>` | N
 defaultExpandedRowKeys | Array | [] | expanded row keys, row key value is from data[rowKey]。uncontrolled property。Typescript：`Array<string \| number>` | N
-filterIcon | TElement | - | filter icon。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+filterIcon | TElement | - | filter icon。Typescript：`TNode<{ col: PrimaryTableCol<T>; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 filterRow | TNode | - | filter value。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 filterValue | Object | - | filter value。Typescript：`FilterValue` `type FilterValue = { [key: string]: any }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
 defaultFilterValue | Object | - | filter value。uncontrolled property。Typescript：`FilterValue` `type FilterValue = { [key: string]: any }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
@@ -143,8 +154,8 @@ name | params | return | description
 -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
-validateRowData | `(rowValue: any)` | \- | required
-validateTableData | \- | \- | required
+validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
+validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | required
 
 ### PrimaryTableCol
 

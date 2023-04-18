@@ -75,6 +75,14 @@ scroll | `(params: { e: WheelEvent })` | trigger on table content scroll
 scroll-x | `(params: { e: WheelEvent })` | `deprecated`。trigger on scroll horizontal
 scroll-y | `(params: { e: WheelEvent })` | `deprecated`。trigger on scroll vertical
 
+### BaseTableInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+refreshTable | \- | \- | required
+scrollColumnIntoView | `(colKey: string)` | \- | required
+scrollToElement | `(params: ScrollToElementParams)` | \- | required
+
 ### BaseTableCol
 
 name | type | default | description | required
@@ -95,6 +103,7 @@ render | Function | - | render function can be used to render cell or head。Typ
 resizable | Boolean | true | resize current column width | N
 resize | Object | - | Typescript：`TableColumnResizeConfig` `interface TableColumnResizeConfig { minWidth: number; maxWidth: number }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/table/type.ts) | N
 stopPropagation | Boolean | - | stop cells of current col to propagation | N
+thClassName | String / Object / Array / Function | - | th classnames。Typescript：`TableColumnClassName<T> \| TableColumnClassName<T>[]`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 title | String / Function | - | th content。Typescript：`string \| TNode<{ col: BaseTableCol; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 width | String / Number | - | column width | N
 
@@ -118,7 +127,7 @@ expandOnRowClick | Boolean | - | expand row on click | N
 expandedRow | String / Slot / Function | - | table expanded row, to show more detail information。Typescript：`TNode<TableExpandedRowParams<T>>` `interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] \| BaseTableCol<T>[] }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/table/type.ts) | N
 expandedRowKeys | Array | [] | expanded row keys, row key value is from data[rowKey]。`.sync` is supported。Typescript：`Array<string \| number>` | N
 defaultExpandedRowKeys | Array | [] | expanded row keys, row key value is from data[rowKey]。uncontrolled property。Typescript：`Array<string \| number>` | N
-filterIcon | Slot / Function | - | filter icon。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | - | filter icon。Typescript：`TNode<{ col: PrimaryTableCol<T>; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 filterRow | String / Slot / Function | - | filter value。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 filterValue | Object | - | filter value。`.sync` is supported。Typescript：`FilterValue` `type FilterValue = { [key: string]: any }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/table/type.ts) | N
 defaultFilterValue | Object | - | filter value。uncontrolled property。Typescript：`FilterValue` `type FilterValue = { [key: string]: any }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/table/type.ts) | N
@@ -175,8 +184,8 @@ validate | `(context: PrimaryTableValidateContext)` | trigger after row data val
 
 name | params | return | description
 -- | -- | -- | --
-validateRowData | `(rowValue: any)` | \- | required
-validateTableData | \- | \- | required
+validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | required。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
+validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | required
 
 ### PrimaryTableCol
 

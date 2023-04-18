@@ -75,6 +75,14 @@ scroll | `(params: { e: WheelEvent })` | 表格内容滚动时触发
 scroll-x | `(params: { e: WheelEvent })` | 已废弃。表格内容横向滚动时触发。请更为使用 `onScroll` 事件
 scroll-y | `(params: { e: WheelEvent })` | 已废弃。表格内容纵向滚动时触发。当内容超出高度(height)或最大高度(max-height)时，会出现纵向滚动条。请更为使用 `onScroll` 事件
 
+### BaseTableInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+refreshTable | \- | \- | 必需。全部重新渲染表格
+scrollColumnIntoView | `(colKey: string)` | \- | 必需。横向滚动到指定列，呈现在可视范围内
+scrollToElement | `(params: ScrollToElementParams)` | \- | 必需。虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
+
 ### BaseTableCol
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -95,6 +103,7 @@ render | Function | - | 自定义表头或单元格，泛型 T 指表格数据�
 resizable | Boolean | true | 是否允许调整当前列列宽 | N
 resize | Object | - | 限制拖拽调整的最小宽度和最大宽度。`resize.minWidth` 默认为 `80`，`resize.maxWidth` 默认为 `600`。TS 类型：`TableColumnResizeConfig` `interface TableColumnResizeConfig { minWidth: number; maxWidth: number }`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
 stopPropagation | Boolean | - | 是否阻止当列单元格点击事件冒泡 | N
+thClassName | String / Object / Array / Function | - | 列表头类名，值类型是函数时使用返回值作为列类名。泛型 T 指表格数据类型。TS 类型：`TableColumnClassName<T> \| TableColumnClassName<T>[]`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 title | String / Function | - | 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render。TS 类型：`string \| TNode<{ col: BaseTableCol; colIndex: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 width | String / Number | - | 列宽，可以作为最小宽度使用。当列宽总和小于 `table` 元素时，浏览器根据宽度设置情况自动分配宽度；当列宽总和大于 `table` 元素，表现为定宽。可以同时调整 `table` 元素的宽度来达到自己想要的效果 | N
 
@@ -118,7 +127,7 @@ expandOnRowClick | Boolean | - | 是否允许点击行展开 | N
 expandedRow | String / Slot / Function | - | 展开行内容，泛型 T 指表格数据类型。TS 类型：`TNode<TableExpandedRowParams<T>>` `interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] \| BaseTableCol<T>[] }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
 expandedRowKeys | Array | [] | 展开行。支持语法糖 `v-model:expandedRowKeys`。TS 类型：`Array<string \| number>` | N
 defaultExpandedRowKeys | Array | [] | 展开行。非受控属性。TS 类型：`Array<string \| number>` | N
-filterIcon | Slot / Function | - | 自定义过滤图标，支持全局配置 `GlobalConfigProvider`。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | - | 自定义过滤图标，支持全局配置 `GlobalConfigProvider`。TS 类型：`TNode<{ col: PrimaryTableCol<T>; colIndex: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 filterRow | String / Slot / Function | - | 自定义过滤状态行及清空筛选等。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 filterValue | Object | - | 过滤数据的值。支持语法糖 `v-model:filterValue`。TS 类型：`FilterValue` `type FilterValue = { [key: string]: any }`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
 defaultFilterValue | Object | - | 过滤数据的值。非受控属性。TS 类型：`FilterValue` `type FilterValue = { [key: string]: any }`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts) | N
@@ -175,8 +184,8 @@ validate | `(context: PrimaryTableValidateContext)` | 可编辑行表格，全�
 
 名称 | 参数 | 返回值 | 描述
 -- | -- | -- | --
-validateRowData | `(rowValue: any)` | \- | 必需。校验行信息，校验完成后，会触发事件 `onRowValidate`。参数 `rowValue` 表示行唯一标识的值
-validateTableData | \- | \- | 必需。校验表格全部数据，校验完成后，会触发事件 `onValidate`
+validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | 必需。校验行信息，校验完成后，会触发事件 `onRowValidate`。参数 `rowValue` 表示行唯一标识的值。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
+validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | 必需。校验表格全部数据，校验完成后，会触发事件 `onValidate`
 
 ### PrimaryTableCol
 
