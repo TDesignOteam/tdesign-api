@@ -26297,6 +26297,47 @@
       ]
     },
     {
+      "id": 3448,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "输入框尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-18 11:19:40",
+      "update_time": "2023-04-18 11:19:40",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2906,
       "platform_framework": [
         "1",
@@ -28786,6 +28827,47 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3449,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "输入框尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-18 11:19:50",
+      "update_time": "2023-04-18 11:19:50",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -116038,5 +116120,5 @@
       ]
     }
   ],
-  "total": 2765
+  "total": 2767
 }
