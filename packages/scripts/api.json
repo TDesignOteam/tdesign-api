@@ -2398,6 +2398,43 @@
       "field_type_text": []
     },
     {
+      "id": 1616,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ActionSheet",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2021-09-02 12:12:59",
+      "update_time": "2022-07-06 14:55:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2551,
       "platform_framework": [
         "8",
@@ -2433,6 +2470,43 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1614,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ActionSheet",
+      "field_category": 2,
+      "field_name": "selected",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选择菜单项时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(selected: ActionSheetItem | string, index: number)",
+      "create_time": "2021-09-02 12:12:15",
+      "update_time": "2022-07-06 14:55:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -91198,6 +91272,9 @@
     {
       "id": 3286,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TabPanel",
@@ -91226,6 +91303,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -94742,6 +94822,9 @@
     {
       "id": 3113,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Tabs",
@@ -94770,6 +94853,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -94906,6 +94992,9 @@
     {
       "id": 3283,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Tabs",
@@ -94934,6 +95023,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -95076,6 +95168,9 @@
     {
       "id": 3284,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Tabs",
@@ -95102,6 +95197,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -95183,6 +95281,9 @@
     {
       "id": 3285,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Tabs",
@@ -95209,6 +95310,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -115860,5 +115964,5 @@
       ]
     }
   ],
-  "total": 2764
+  "total": 2763
 }
