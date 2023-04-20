@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Statistic Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -20,5 +19,4 @@ title | String / Slot / Function | - | 数值显示的标题。TS 类型：`stri
 trend | String | - | 趋势。可选项：increase/decrease | N
 trendPlacement | String | left | 趋势展示位置。可选项：left/right | N
 unit | String / Slot / Function | - | 单位内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-value | Number | - | 数值显示的值。支持语法糖 `v-model` | N
-defaultValue | Number | - | 数值显示的值。非受控属性 | N
+value | Number | - | 数值显示的值 | N

@@ -27,7 +27,7 @@ export interface TdStatisticProps {
   /**
    * 额外的显示内容
    */
-  extra?: string | TNode;
+  extra?: TNode;
   /**
    * 格式化数值显示值
    */
@@ -40,7 +40,7 @@ export interface TdStatisticProps {
   /**
    * 前缀内容，展示优先级高于 trend
    */
-  prefix?: string | TNode;
+  prefix?: TNode;
   /**
    * 默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符
    * @default ,
@@ -49,11 +49,11 @@ export interface TdStatisticProps {
   /**
    * 后缀内容，展示优先级高于 trend
    */
-  suffix?: string | TNode;
+  suffix?: TNode;
   /**
    * 数值显示的标题
    */
-  title?: string | TNode;
+  title?: TNode;
   /**
    * 趋势
    */
@@ -66,7 +66,7 @@ export interface TdStatisticProps {
   /**
    * 单位内容
    */
-  unit?: string | TNode;
+  unit?: TNode;
   /**
    * 数值显示的值
    */

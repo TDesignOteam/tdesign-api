@@ -84987,7 +84987,7 @@
       "update_time": "2023-04-20 11:06:53",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",

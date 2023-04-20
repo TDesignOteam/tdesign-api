@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Statistic Props
 
 name | type | default | description | required
@@ -20,5 +19,4 @@ title | String / Slot / Function | - | The title of Statistic。Typescript：`st
 trend | String | - | trend。options：increase/decrease | N
 trendPlacement | String | left | Position of trending placements。options：left/right | N
 unit | String / Slot / Function | - | Unit content。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-value | Number | - | The value of Statistic。`v-model` is supported | N
-defaultValue | Number | - | The value of Statistic。uncontrolled property | N
+value | Number | - | The value of Statistic | N
