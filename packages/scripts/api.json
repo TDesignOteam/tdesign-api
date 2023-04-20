@@ -84381,6 +84381,631 @@
       ]
     },
     {
+      "id": 3457,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "animation",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "动画效果控制，`duration` 指动画的过渡时间`单位：毫秒`，`valueFrom` 指动画的起始数值。`{ duration, valueFrom }`",
+      "field_desc_en": "Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:25:15",
+      "update_time": "2023-04-20 11:25:15",
+      "event_output": null,
+      "custom_field_type": "animation【interface animation { duration: number; valueFrom: number;  }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 3455,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "animationStart",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否开始动画",
+      "field_desc_en": "Whether to start animation",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:11:10",
+      "update_time": "2023-04-20 11:11:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3459,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "color",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "black/blue/red/orange/green",
+      "field_desc_zh": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
+      "field_desc_en": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:27:29",
+      "update_time": "2023-04-20 11:27:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3453,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "decimalPlaces",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "小数保留位数",
+      "field_desc_en": " Decimal places",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:08:56",
+      "update_time": "2023-04-20 11:08:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3462,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "extra",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "额外的显示内容",
+      "field_desc_en": " Additional display content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:30:06",
+      "update_time": "2023-04-20 11:30:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3452,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "format",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "格式化数值显示值",
+      "field_desc_en": "Format numeric display value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:07:37",
+      "update_time": "2023-04-20 11:07:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 3456,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "loading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否加载中",
+      "field_desc_en": "Loading",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:11:54",
+      "update_time": "2023-04-20 11:11:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3463,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "prefix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前缀内容，展示优先级高于 trend",
+      "field_desc_en": "Prefix content, display priority is higher than trend",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:30:41",
+      "update_time": "2023-04-20 11:30:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3454,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "separator",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": ",",
+      "field_enum": "",
+      "field_desc_zh": "默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符",
+      "field_desc_en": "The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:09:45",
+      "update_time": "2023-04-20 11:09:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3464,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后缀内容，展示优先级高于 trend",
+      "field_desc_en": " Suffix content, display priority is higher than trend",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:31:07",
+      "update_time": "2023-04-20 11:31:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3450,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数值显示的标题",
+      "field_desc_en": "The title of Statistic",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:02:12",
+      "update_time": "2023-04-20 11:02:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3460,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "trend",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "increase/decrease",
+      "field_desc_zh": "趋势",
+      "field_desc_en": "trend",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:28:11",
+      "update_time": "2023-04-20 11:28:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3461,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "trendPlacement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "趋势展示位置",
+      "field_desc_en": "Position of trending placements",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:29:19",
+      "update_time": "2023-04-20 11:29:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3465,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "unit",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单位内容",
+      "field_desc_en": "Unit content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:31:46",
+      "update_time": "2023-04-20 11:31:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3451,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Statistic",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数值显示的值",
+      "field_desc_en": "The value of Statistic",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-20 11:06:53",
+      "update_time": "2023-04-20 11:06:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1254,
       "platform_framework": [
         "2",
@@ -116120,5 +116745,5 @@
       ]
     }
   ],
-  "total": 2767
+  "total": 2782
 }
