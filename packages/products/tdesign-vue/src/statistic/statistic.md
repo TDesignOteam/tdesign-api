@@ -10,7 +10,7 @@ animationStart | Boolean | false | 是否开始动画 | N
 color | String | - | 颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值。可选项：black/blue/red/orange/green | N
 decimalPlaces | Number | - | 小数保留位数 | N
 extra | String / Slot / Function | - | 额外的显示内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-format | Function | - | 格式化数值显示值 | N
+format | Function | - | 格式化数值显示值。TS 类型：`(value: number) => number` | N
 loading | Boolean | false | 是否加载中 | N
 prefix | String / Slot / Function | - | 前缀内容，展示优先级高于 trend。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 separator | String | , | 默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符 | N

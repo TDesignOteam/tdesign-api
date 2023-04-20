@@ -31,7 +31,7 @@ export interface TdStatisticProps {
   /**
    * 格式化数值显示值
    */
-  format?: function;
+  format?: (value: number) => number;
   /**
    * 是否加载中
    * @default false

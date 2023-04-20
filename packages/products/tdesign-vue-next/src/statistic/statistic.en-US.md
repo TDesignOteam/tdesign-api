@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Statistic Props
 
 name | type | default | description | required
@@ -11,7 +10,7 @@ animationStart | Boolean | false | Whether to start animation | N
 color | String | - | Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)。options：black/blue/red/orange/green | N
 decimalPlaces | Number | - |  Decimal places | N
 extra | String / Slot / Function | - |  Additional display content。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-format | Function | - | Format numeric display value | N
+format | Function | - | Format numeric display value。Typescript：`(value: number) => number` | N
 loading | Boolean | false | Loading | N
 prefix | String / Slot / Function | - | Prefix content, display priority is higher than trend。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 separator | String | , | The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden | N

@@ -84609,7 +84609,7 @@
       "create_time": "2023-04-20 11:07:37",
       "update_time": "2023-04-20 11:07:37",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "(value: number) => number",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
