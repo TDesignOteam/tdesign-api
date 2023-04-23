@@ -14,3 +14,7 @@ temp
 
 package-lock.json
 yarn.lock
+
+# editor
+.idea/
+.vscode/

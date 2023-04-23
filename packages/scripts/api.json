@@ -91573,6 +91573,43 @@
       ]
     },
     {
+      "id": 3466,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "safeAreaInsetBottom",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否为 iPhoneX 留出底部安全距离",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-23 11:46:23",
+      "update_time": "2023-04-23 11:46:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3281,
       "platform_framework": [
         "64"
@@ -91604,6 +91641,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3467,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "shape",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'normal'",
+      "field_enum": "normal/round",
+      "field_desc_zh": "标签栏的形状",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-23 11:47:19",
+      "update_time": "2023-04-23 11:47:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -91647,6 +91721,43 @@
       ]
     },
     {
+      "id": 3468,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "split",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否需要分割线",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-23 11:48:26",
+      "update_time": "2023-04-23 11:48:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3282,
       "platform_framework": [
         "64"
@@ -91678,6 +91789,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3469,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'normal'",
+      "field_enum": "normal/tag",
+      "field_desc_zh": "选项风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-23 11:52:31",
+      "update_time": "2023-04-23 11:52:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -91940,11 +92088,13 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
+        "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标名称",
+      "field_desc_zh": "图标名称。传入对象时透传至 Icon 组件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -91965,6 +92115,8 @@
         "Vue(Mobile)"
       ],
       "field_type_text": [
+        "String",
+        "Object",
         "TNode"
       ]
     },
@@ -116751,5 +116903,5 @@
       ]
     }
   ],
-  "total": 2782
+  "total": 2786
 }
