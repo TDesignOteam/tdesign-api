@@ -61447,7 +61447,7 @@
       "create_time": "2021-04-10 02:14:37",
       "update_time": "2022-04-19 06:59:54",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | string[] | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -61695,7 +61695,6 @@
       "field_category": 1,
       "field_name": "prefixIcon",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
@@ -61723,7 +61722,6 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
       ]
     },
@@ -61990,7 +61988,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
