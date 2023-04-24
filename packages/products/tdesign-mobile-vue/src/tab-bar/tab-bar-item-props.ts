@@ -12,9 +12,9 @@ export default {
   badgeProps: {
     type: Object as PropType<TdTabBarItemProps['badgeProps']>,
   },
-  /** 图标名称。传入对象时透传至 Icon 组件 */
+  /** 图标名称 */
   icon: {
-    type: [String, Object, Function] as PropType<TdTabBarItemProps['icon']>,
+    type: Function as PropType<TdTabBarItemProps['icon']>,
   },
   /** 二级菜单 */
   subTabBar: {
