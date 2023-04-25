@@ -80,7 +80,10 @@ const COMPONENT_API_MD_MAP = {
     list: ['Dropdown', 'DropdownItem'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
-  DropdownMenu: ['DropdownMenu', 'DropdownItem'],
+  DropdownMenu: {
+    list: ['DropdownMenu', 'DropdownItem'],
+    excludes: ['Miniprogram']
+  },
   Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
   Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
   // 只有文档需要 TScroll，类型定义不需要
@@ -120,7 +123,10 @@ const COMPONENT_API_MD_MAP = {
   Guide:['Guide', 'GuideStep'],
   Tooltip:['Tooltip', 'TooltipLite'],
   SideBar: ['SideBar', 'SideBarItem'],
-  Indexes: ['Indexes', 'IndexesAnchor'],
+  Indexes: {
+    list: ['Indexes', 'IndexesAnchor'],
+    excludes: ['Miniprogram']
+  },
   Popup: ['Popup','$Popup']
 };
 
@@ -187,6 +193,10 @@ const TYPES_COMBINE_MAP = {
   Dropdown: {
     list: ['Dropdown', 'DropdownItem'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+  },
+  DropdownMenu: {
+    list: ['DropdownMenu', 'DropdownItem'],
+    excludes: ['Miniprogram']
   },
   Dialog: {
     list: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
@@ -269,6 +279,10 @@ const TYPES_COMBINE_MAP = {
   },
   Tooltip: {
     list: ['Tooltip', 'TooltipLite'],
+  },
+  Indexes: {
+    list: ['Indexes', 'IndexesAnchor'],
+    excludes: ['Miniprogram']
   },
 };
 
