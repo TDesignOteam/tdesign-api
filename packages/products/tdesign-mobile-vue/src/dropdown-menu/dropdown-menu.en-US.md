@@ -8,7 +8,7 @@ name | type | default | description | required
 closeOnClickOverlay | Boolean | true | \- | N
 duration | String / Number | 200 | \- | N
 showOverlay | Boolean | true | \- | N
-zIndex | Number | 11600 | \- | N
+zIndex | Number | - | \- | N
 
 ### DropdownItem Props
 

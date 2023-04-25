@@ -8,7 +8,7 @@
 closeOnClickOverlay | Boolean | true | 是否在点击遮罩层后关闭菜单 | N
 duration | String / Number | 200 | 动画时长 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-zIndex | Number | 11600 | 菜单栏 z-index 层级 | N
+zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
 
 ### DropdownItem Props
 

@@ -39034,8 +39034,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "DropdownMenu",
       "field_category": 1,
@@ -39043,14 +39042,14 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11600",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "菜单栏 z-index 层级",
+      "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-04-14 02:56:41",
-      "update_time": "2022-04-14 02:56:41",
+      "create_time": "2021-09-21 07:11:25",
+      "update_time": "2022-04-14 02:56:47",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -39065,8 +39064,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Number"
