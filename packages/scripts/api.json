@@ -13163,9 +13163,6 @@
     {
       "id": 3263,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Calendar",
@@ -13194,9 +13191,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -14401,7 +14395,7 @@
       "update_time": "2022-11-01 02:50:05",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "sync",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
@@ -23001,43 +22995,6 @@
       ]
     },
     {
-      "id": 3081,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Collapse",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:39:49",
-      "update_time": "2022-10-31 11:39:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1680,
       "platform_framework": [
         "1",
@@ -23143,8 +23100,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Collapse",
       "field_category": 1,
@@ -23178,12 +23134,48 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
         "TNode"
+      ]
+    },
+    {
+      "id": 3471,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Collapse",
+      "field_category": 1,
+      "field_name": "expandIcon",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "展开图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-26 07:14:17",
+      "update_time": "2023-04-26 07:14:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -23547,43 +23539,6 @@
       ]
     },
     {
-      "id": 3082,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CollapsePanel",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:40:01",
-      "update_time": "2022-10-31 11:40:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2315,
       "platform_framework": [
         "1",
@@ -23852,6 +23807,45 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3470,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CollapsePanel",
+      "field_category": 1,
+      "field_name": "headerLeftIcon",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板头左侧图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-04-26 07:12:19",
+      "update_time": "2023-04-26 07:12:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -67984,7 +67978,7 @@
       "field_desc_zh": "组件准备关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(context: { e: MouseEvent })",
       "create_time": "2021-12-02 08:19:54",
       "update_time": "2021-12-02 08:19:54",
       "event_output": null,
