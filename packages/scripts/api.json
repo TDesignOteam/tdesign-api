@@ -49822,6 +49822,43 @@
       ]
     },
     {
+      "id": 3471,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "backgroundColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'rgba(0, 0, 0, 1)'",
+      "field_enum": "",
+      "field_desc_zh": "遮罩的背景颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 02:46:15",
+      "update_time": "2023-05-04 02:46:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2711,
       "platform_framework": [
         "1",
@@ -49829,8 +49866,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "ImageViewer",
       "field_category": 1,
@@ -49864,11 +49900,53 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3472,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "4",
+        "8",
+        "64"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示关闭操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `close`，值为 `Object` 类型，表示透传至 `icon` ，不传表示不显示图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 02:46:15",
+      "update_time": "2023-05-04 02:46:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "Object",
         "TNode"
       ]
     },
@@ -49922,11 +50000,14 @@
       "field_category": 1,
       "field_name": "deleteBtn",
       "field_type": [
-        "4"
+        "1",
+        "4",
+        "8",
+        "64"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否显示删除操作",
+      "field_desc_zh": "是否显示删除操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `delete`，值为 `Object` 类型，表示透传至 `icon`，不传表示不显示图标",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -49947,7 +50028,10 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean"
+        "String",
+        "Boolean",
+        "Object",
+        "TNode"
       ]
     },
     {
@@ -50205,8 +50289,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "ImageViewer",
       "field_category": 1,
@@ -50236,8 +50319,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -50535,6 +50617,49 @@
       ]
     },
     {
+      "id": 3473,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 02:46:15",
+      "update_time": "2023-05-04 02:46:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2719,
       "platform_framework": [
         "1",
@@ -50706,8 +50831,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "ImageViewer",
       "field_category": 2,
@@ -50738,7 +50862,39 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3474,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击操作按钮button或者overlay时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(trigger: 'overlay' | 'button', visible: Boolean, index: Number)",
+      "create_time": "2023-05-04 02:46:15",
+      "update_time": "2023-05-04 02:46:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -64994,8 +65150,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -65008,7 +65163,7 @@
       "field_enum": "",
       "field_desc_zh": "配置每一列的选项",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2022-06-21 09:12:37",
       "update_time": "2022-06-24 06:22:10",
@@ -65026,8 +65181,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array",
@@ -65086,7 +65240,7 @@
       "platform_framework": [
         "8",
         "16",
-        "64"
+        "32"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -65117,6 +65271,45 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3476,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 03:05:38",
+      "update_time": "2023-05-04 03:05:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -65125,12 +65318,54 @@
       ]
     },
     {
-      "id": 2779,
+      "id": 3475,
       "platform_framework": [
         "8",
         "16",
         "32",
         "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 02:59:53",
+      "update_time": "2023-05-04 02:59:53",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 2779,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -65160,8 +65395,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -89682,43 +89916,6 @@
         "Miniprogram"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 3091,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SwiperItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:49",
-      "update_time": "2022-10-31 11:42:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
     },
     {
       "id": 3271,
@@ -116858,5 +117055,5 @@
       ]
     }
   ],
-  "total": 2785
+  "total": 2790
 }

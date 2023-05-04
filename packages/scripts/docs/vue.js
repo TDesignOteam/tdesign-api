@@ -154,7 +154,7 @@ function formatDesc(
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
-    if (filters.length && framework !== 'Miniprogram') {
+    if (filters.length) {
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
     }
