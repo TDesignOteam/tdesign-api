@@ -73,6 +73,10 @@ export default {
   },
   /** 是否允许多选 */
   multiple: Boolean,
+  /** 自定义单个级联选项 */
+  option: {
+    type: Function as PropType<TdCascaderProps['option']>,
+  },
   /** 可选项数据源 */
   options: {
     type: Array as PropType<TdCascaderProps['options']>,

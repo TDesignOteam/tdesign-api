@@ -101,6 +101,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   multiple?: boolean;
   /**
+   * 自定义单个级联选项
+   */
+  option?: TNode<{ item: CascaderOption; index: number }>;
+  /**
    * 可选项数据源
    * @default []
    */

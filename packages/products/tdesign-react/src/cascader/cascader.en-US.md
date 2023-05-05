@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Cascader Props
 
 name | type | default | description | required
@@ -27,6 +26,7 @@ loadingText | TNode | - | Typescript：`string \| TNode`。[see more ts definiti
 max | Number | 0 | \- | N
 minCollapsedNum | Number | 0 | \- | N
 multiple | Boolean | false | \- | N
+option | TElement | - | customize one option。Typescript：`TNode<{ item: CascaderOption; index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 options | Array | [] | Typescript：`Array<CascaderOption>` | N
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
