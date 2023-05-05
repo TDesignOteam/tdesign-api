@@ -30004,49 +30004,6 @@
       ]
     },
     {
-      "id": 2510,
-      "platform_framework": [
-        "8",
-        "16",
-        "64"
-      ],
-      "component": "DateTimePicker",
-      "field_category": 1,
-      "field_name": "footer",
-      "field_type": [
-        "4",
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "底部内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-02 09:42:07",
-      "update_time": "2022-07-15 08:25:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
       "id": 1572,
       "platform_framework": [
         "8",
@@ -30062,7 +30019,7 @@
       ],
       "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
       "field_enum": "",
-      "field_desc_zh": "用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -30105,7 +30062,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容",
+      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -30307,6 +30264,49 @@
       ]
     },
     {
+      "id": 3482,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "steps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "时间间隔步数，示例：`{ minute: 5 }`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-05 03:02:45",
+      "update_time": "2023-05-05 03:02:45",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1734,
       "platform_framework": [
         "8",
@@ -30320,7 +30320,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'选择时间'",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "标题",
       "field_desc_en": "title of picker",
