@@ -57522,7 +57522,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Loading",
       "field_category": 1,
@@ -57553,54 +57557,15 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1299,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Loading",
-      "field_category": 1,
-      "field_name": "indicator",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否显示加载指示符",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-14 09:28:02",
-      "update_time": "2021-07-14 09:28:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "TNode"
       ]
     },
     {
@@ -58038,43 +58003,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3099,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Loading",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:45:07",
-      "update_time": "2022-10-31 11:45:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -71422,6 +71350,80 @@
       ]
     },
     {
+      "id": 3480,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "enableBackToTop",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向。自 2.27.3 版本开始，若非显式设置为 false，则在显示尺寸大于屏幕 90% 时自动开启",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 07:20:22",
+      "update_time": "2023-05-04 07:20:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.1.5\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3481,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "enablePassive",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "开启 passive 特性，能优化一定的滚动性能",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 07:20:52",
+      "update_time": "2023-05-04 07:20:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.1.5\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1761,
       "platform_framework": [
         "64"
@@ -71590,6 +71592,45 @@
       ]
     },
     {
+      "id": 3478,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "lowerThreshold",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "50",
+      "field_enum": "",
+      "field_desc_zh": "距底部/右边多远时，触发 scrolltolower 事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 07:18:16",
+      "update_time": "2023-05-04 07:18:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.1.5\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 1756,
       "platform_framework": [
         "8",
@@ -71678,24 +71719,24 @@
       ]
     },
     {
-      "id": 3108,
+      "id": 3479,
       "platform_framework": [
         "64"
       ],
       "component": "PullDownRefresh",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "scrollIntoView",
       "field_type": [
         "1"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 14:52:27",
-      "update_time": "2022-10-31 14:52:27",
+      "create_time": "2023-05-04 07:19:17",
+      "update_time": "2023-05-04 07:19:17",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -71703,7 +71744,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\": \"1.1.5\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -71712,6 +71753,45 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3477,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "upperThreshold",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "50",
+      "field_enum": "",
+      "field_desc_zh": "距顶部/左边多远时，触发 scrolltoupper 事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-04 07:17:55",
+      "update_time": "2023-05-04 07:17:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.1.5\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
       ]
     },
     {
@@ -117055,5 +117135,5 @@
       ]
     }
   ],
-  "total": 2790
+  "total": 2792
 }
