@@ -4,4 +4,4 @@
 
 import { TdColorPickerProps } from './type';
 
-export const colorPickerDefaultProps: TdColorPickerProps = {clearable: false,closeBtn: true,colorModes: '()=> ['monochrome', 'linear-gradient']',enableAlpha: false,format: 'RGB',multiple: false,defaultRecentColors: [],showPrimaryColorPreview: true,};
+export const colorPickerDefaultProps: TdColorPickerProps = {clearable: false,closeBtn: true,colorModes: '()=> ['monochrome', 'linear-gradient']',enableAlpha: false,enableMultipleGradient: true,format: 'RGB',multiple: false,defaultRecentColors: [],showPrimaryColorPreview: true,size: 'medium',};

@@ -24,6 +24,11 @@ export default {
   disabled: Boolean,
   /** 是否开启透明通道 */
   enableAlpha: Boolean,
+  /** 是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色 */
+  enableMultipleGradient: {
+    type: Boolean,
+    default: true,
+  },
   /** 格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效 */
   format: {
     type: String as PropType<TdColorPickerProps['format']>,
@@ -61,6 +66,15 @@ export default {
   showPrimaryColorPreview: {
     type: Boolean,
     default: true,
+  },
+  /** 组件尺寸 */
+  size: {
+    type: String as PropType<TdColorPickerProps['size']>,
+    default: 'medium' as TdColorPickerProps['size'],
+    validator(val: TdColorPickerProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
   },
   /** 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色 */
   swatchColors: {
