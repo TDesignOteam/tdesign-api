@@ -25,6 +25,8 @@ loadingText | String / Slot / Function | - | Typescript：`string \| TNode`。[s
 max | Number | 0 | \- | N
 minCollapsedNum | Number | 0 | \- | N
 multiple | Boolean | false | \- | N
+panelBottomContent | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+panelTopContent | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/tree-select/type.ts) | N
 popupVisible | Boolean | undefined | show popup。`v-model:popupVisible` is supported | N

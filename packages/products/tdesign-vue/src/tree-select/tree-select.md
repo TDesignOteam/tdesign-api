@@ -25,6 +25,8 @@ loadingText | String / Slot / Function | - | 远程加载时显示的文字，�
 max | Number | 0 | 用于控制多选数量，值为 0 则不限制 | N
 minCollapsedNum | Number | 0 | 最小折叠数量，用于多选情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠 | N
 multiple | Boolean | false | 是否允许多选 | N
+panelBottomContent | String / Slot / Function | - | 面板内的底部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+panelTopContent | String / Slot / Function | - | 面板内的顶部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 placeholder | String | undefined | 占位符 | N
 popupProps | Object | - | 透传给 popup 组件的全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tree-select/type.ts) | N
 popupVisible | Boolean | undefined | 是否显示下拉框。支持语法糖 `.sync` | N
