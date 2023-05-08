@@ -18644,7 +18644,7 @@
       "create_time": "2023-02-05 03:59:14",
       "update_time": "2023-02-05 03:59:14",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+      "custom_field_type": "string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24610,47 +24610,6 @@
       ]
     },
     {
-      "id": 3482,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "ColorPicker",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large",
-      "field_desc_zh": "组件尺寸",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-05-05 06:12:50",
-      "update_time": "2023-05-05 06:12:50",
-      "event_output": null,
-      "custom_field_type": "SizeEnum",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2124,
       "platform_framework": [
         "1",
@@ -30004,6 +29963,49 @@
       ]
     },
     {
+      "id": 2510,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-04-02 09:42:07",
+      "update_time": "2022-07-15 08:25:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
       "id": 1572,
       "platform_framework": [
         "8",
@@ -30283,8 +30285,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-05-05 03:02:45",
-      "update_time": "2023-05-05 03:02:45",
+      "create_time": "2023-05-05 06:12:50",
+      "update_time": "2023-05-05 06:12:50",
       "event_output": null,
       "custom_field_type": "",
       "syntactic_sugar": null,
