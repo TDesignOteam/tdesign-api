@@ -42,6 +42,7 @@ tips | String / Slot / Function | - | 组件下方文本提示，可以使用 `s
 trigger | Slot / Function | - | 触发上传的元素，`files` 指本次显示的全部文件。TS 类型：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean;  files: UploadFile[] }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 triggerButtonProps | Object | - | 透传选择按钮全部属性。TS 类型：`ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/upload/type.ts) | N
 uploadAllFilesInOneRequest | Boolean | false | 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 | N
+uploadPastedFiles | Boolean | false | 是否允许粘贴上传剪贴板中的文件 | N
 useMockProgress | Boolean | true | 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 | N
 value | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFile`。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`Array<T>` | N
 defaultValue | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFile`。非受控属性。TS 类型：`Array<T>` | N
