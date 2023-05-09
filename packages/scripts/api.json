@@ -37961,49 +37961,11 @@
       ]
     },
     {
-      "id": 1695,
+      "id": 2570,
       "platform_framework": [
         "8",
         "16",
-        "32"
-      ],
-      "component": "DropdownMenu",
-      "field_category": 1,
-      "field_name": "zIndex",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "菜单栏 z-index 层级",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-21 07:11:25",
-      "update_time": "2022-04-14 02:56:47",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 2570,
-      "platform_framework": [
+        "32",
         "64"
       ],
       "component": "DropdownMenu",
@@ -38032,6 +37994,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -117274,5 +117239,5 @@
       ]
     }
   ],
-  "total": 2795
+  "total": 2794
 }
