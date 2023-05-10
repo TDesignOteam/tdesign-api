@@ -315,6 +315,11 @@ export interface TreeNodeState {
    */
   disabled?: boolean;
   /**
+   * 该节点是否允许被拖动，当树本身开启时，默认允许
+   * @default true
+   */
+  draggable?: boolean;
+  /**
    * 子节点是否互斥展开
    * @default false
    */

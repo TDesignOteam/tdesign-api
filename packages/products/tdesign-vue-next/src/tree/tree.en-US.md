@@ -94,6 +94,7 @@ actived | Boolean | false | \- | N
 checkable | Boolean | false | \- | N
 checked | Boolean | false | \- | N
 disabled | Boolean | false | \- | N
+draggable | Boolean | true | \- | N
 expandMutex | Boolean | false | \- | N
 expanded | Boolean | false | \- | N
 indeterminate | Boolean | false | \- | N
