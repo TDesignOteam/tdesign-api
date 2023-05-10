@@ -7789,6 +7789,9 @@
     {
       "id": 899,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Badge",
@@ -7798,7 +7801,7 @@
         "1"
       ],
       "field_default_value": "circle",
-      "field_enum": "circle/square/round/ribbon",
+      "field_enum": "circle/square/bubble/ribbon",
       "field_desc_zh": "形状",
       "field_desc_en": null,
       "field_required": 0,
@@ -7817,6 +7820,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -7863,43 +7869,6 @@
         "Angular(PC)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2086,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Badge",
-      "field_category": 1,
-      "field_name": "shape",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "circle",
-      "field_enum": "circle/round/ribbon",
-      "field_desc_zh": "形状",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-12-29 15:39:10",
-      "update_time": "2021-12-29 15:40:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -85775,6 +85744,43 @@
       ]
     },
     {
+      "id": 3056,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:46",
+      "update_time": "2022-10-31 11:30:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2475,
       "platform_framework": [
         "64"
@@ -85799,7 +85805,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -86972,6 +86978,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3055,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Steps",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义组件样式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-10-31 11:30:36",
+      "update_time": "2022-10-31 11:30:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
