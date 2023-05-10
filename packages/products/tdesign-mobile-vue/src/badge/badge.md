@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Badge Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -14,4 +13,4 @@ maxCount | Number | 99 | 封顶的数字值 | N
 offset | Array | - | 设置状态点的位置偏移，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：`Array<string \| number>` | N
 shape | String | circle | 形状。可选项：circle/square/bubble/ribbon | N
 showZero | Boolean | false | 当数值为 0 时，是否展示徽标 | N
-size | String | medium | 尺寸。可选项：small/medium | N
+size | String | medium | 尺寸。可选项：medium/large | N

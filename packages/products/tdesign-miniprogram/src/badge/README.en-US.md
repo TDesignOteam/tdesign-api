@@ -14,5 +14,4 @@ max-count | Number | 99 | \- | N
 offset | Array | - | Typescript：`Array<string \| number>` | N
 shape | String | circle | options：circle/square/bubble/ribbon | N
 show-zero | Boolean | false | \- | N
-size | String | medium | options：small/medium | N
-style | String | - | \- | N
+size | String | medium | options：medium/large | N

@@ -7834,9 +7834,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Badge",
       "field_category": 1,
@@ -7866,9 +7864,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -7928,11 +7924,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Badge",
       "field_category": 1,
@@ -7962,35 +7954,34 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
       ]
     },
     {
-      "id": 3080,
+      "id": 3488,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Badge",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "size",
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_default_value": "medium",
+      "field_enum": "medium/large",
+      "field_desc_zh": "尺寸",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:39:35",
-      "update_time": "2022-10-31 11:39:35",
+      "create_time": "2023-05-10 10:05:09",
+      "update_time": "2023-05-10 10:05:09",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -8003,6 +7994,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
