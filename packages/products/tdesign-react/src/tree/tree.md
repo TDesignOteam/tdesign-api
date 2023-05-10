@@ -82,6 +82,7 @@ actived | Boolean | false | 节点是否被激活 | N
 checkable | Boolean | false | 节点是否允许被选中 | N
 checked | Boolean | false | 节点是否被选中 | N
 disabled | Boolean | false | 节点是否被禁用 | N
+draggable | Boolean | true | 该节点是否允许被拖动，当树本身开启时，默认允许 | N
 expandMutex | Boolean | false | 子节点是否互斥展开 | N
 expanded | Boolean | false | 节点是否已展开 | N
 indeterminate | Boolean | false | 节点是否为半选中状态 | N
