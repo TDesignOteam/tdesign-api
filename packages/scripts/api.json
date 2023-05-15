@@ -28180,7 +28180,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否显示清楚按钮",
+      "field_desc_zh": "是否显示清除按钮",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
