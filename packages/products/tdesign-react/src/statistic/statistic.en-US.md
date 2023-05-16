@@ -15,7 +15,7 @@ extra | TNode | - |  Additional display content。Typescript：`string \| TNode`
 format | Function | - | Format numeric display value。Typescript：`(value: number) => number` | N
 loading | Boolean | false | Loading | N
 prefix | TNode | - | Prefix content, display priority is higher than trend。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-separator | String | , | The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden | N
+separator | String | , | The carry separator is displayed by default, and can be customized to other content, and the default separator is displayed when `separator = ''` is set to an empty string/null/undefined | N
 suffix | TNode | - |  Suffix content, display priority is higher than trend。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 title | TNode | - | The title of Statistic。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 trend | String | - | trend。options：increase/decrease | N
