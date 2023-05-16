@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### DatePicker Props
 
 name | type | default | description | required
@@ -22,6 +23,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 prefixIcon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 presets | Object | - | Typescript：`PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options：left/top/right/bottom | N
+size | String | medium | options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 status | String | default | options：default/success/warning/error | N
 suffixIcon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 timePickerProps | Object | - | Typescript：`TimePickerProps`，[TimePicker API Documents](./time-picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts) | N
@@ -33,6 +35,7 @@ onBlur | Function |  | Typescript：`(context: { value: DateValue; e: FocusEvent
 onChange | Function |  | Typescript：`(value: DateValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' \| 'pick' \| 'enter' \| 'preset' \| 'clear'`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: DateValue; e: FocusEvent }) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
+onPresetClick | Function |  | Typescript：`(context: { preset: PresetDate, e: MouseEvent }) => void`<br/> | N
 
 ### DateRangePicker Props
 
@@ -57,6 +60,7 @@ presets | Object | - | Typescript：`PresetRange` `interface PresetRange { [rang
 presetsPlacement | String | bottom | options：left/top/right/bottom | N
 rangeInputProps | Object | - | Typescript：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts) | N
 separator | String | - | \- | N
+size | String | medium | options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 status | String | default | options：default/success/warning/error | N
 suffixIcon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 timePickerProps | Object | - | Typescript：`TimePickerProps`，[TimePicker API Documents](./time-picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts) | N
@@ -69,6 +73,7 @@ onChange | Function |  | Typescript：`(value: DateRangeValue, context: { dayjsV
 onFocus | Function |  | Typescript：`(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent }) => void`<br/> | N
 onInput | Function |  | Typescript：`(context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: DateValue, context: PickContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/date-picker/type.ts)。<br/>`interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }`<br/> | N
+onPresetClick | Function |  | Typescript：`(context: { preset: PresetDate, e: MouseEvent }) => void`<br/> | N
 
 ### DatePickerPanel Props
 

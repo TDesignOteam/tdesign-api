@@ -9,7 +9,7 @@ import { PopupProps } from '../popup';
 import { TimePickerProps } from '../time-picker';
 import { Dayjs } from 'dayjs';
 import { RangeInputProps } from '../range-input';
-import { TNode } from '../common';
+import { TNode, SizeEnum } from '../common';
 
 export interface TdDatePickerProps {
   /**
@@ -79,6 +79,11 @@ export interface TdDatePickerProps {
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
   /**
+   * 输入框尺寸
+   * @default medium
+   */
+  size?: SizeEnum;
+  /**
    * 输入框状态
    * @default default
    */
@@ -126,6 +131,10 @@ export interface TdDatePickerProps {
    * 面板选中值后触发
    */
   onPick?: (value: DateValue) => void;
+  /**
+   * 点击预设按钮后触发
+   */
+  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
 }
 
 export interface TdDateRangePickerProps {
@@ -135,7 +144,7 @@ export interface TdDateRangePickerProps {
    */
   allowInput?: boolean;
   /**
-   * 是否显示清楚按钮
+   * 是否显示清除按钮
    * @default false
    */
   clearable?: boolean;
@@ -207,6 +216,11 @@ export interface TdDateRangePickerProps {
    */
   separator?: string;
   /**
+   * 输入框尺寸
+   * @default medium
+   */
+  size?: SizeEnum;
+  /**
    * 输入框状态
    * @default default
    */
@@ -266,6 +280,10 @@ export interface TdDateRangePickerProps {
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
   onPick?: (value: DateValue, context: PickContext) => void;
+  /**
+   * 点击预设按钮后触发
+   */
+  onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
 }
 
 export interface TdDatePickerPanelProps
@@ -316,7 +334,7 @@ export interface TdDatePickerPanelProps
    */
   onPanelClick?: (context: { e: MouseEvent }) => void;
   /**
-   * 如果存在“确认”按钮，则点击“确认”按钮时触发
+   * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
   /**
@@ -384,7 +402,7 @@ export interface TdDateRangePickerPanelProps
    */
   onPanelClick?: (context: { e: MouseEvent }) => void;
   /**
-   * 如果存在“确认”按钮，则点击“确认”按钮时触发
+   * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
   /**

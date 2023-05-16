@@ -368,6 +368,7 @@
       "max",
       "min-collapsed-num",
       "multiple",
+      "option",
       "options",
       "placeholder",
       "popup-props",
@@ -532,6 +533,7 @@
       "prefix-icon",
       "presets",
       "presets-placement",
+      "size",
       "status",
       "suffix-icon",
       "time-picker-props",
@@ -541,7 +543,8 @@
       "blur",
       "change",
       "focus",
-      "pick"
+      "pick",
+      "preset-click"
     ],
     "description": "DatePicker\n\n日期选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker)"
   },
@@ -578,6 +581,7 @@
       "presets-placement",
       "range-input-props",
       "separator",
+      "size",
       "status",
       "suffix-icon",
       "time-picker-props",
@@ -588,7 +592,8 @@
       "change",
       "focus",
       "input",
-      "pick"
+      "pick",
+      "preset-click"
     ],
     "description": "DateRangePicker\n\n日期范围选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-range-picker)"
   },
@@ -1367,7 +1372,6 @@
       "color",
       "count",
       "disabled",
-      "external-classes",
       "gap",
       "icon",
       "show-text",
@@ -1556,6 +1560,26 @@
       "size"
     ],
     "description": "Space\n\n间距\n\n[docs](https://tdesign.tencent.com/vue-next/components/space)"
+  },
+  "t-statistic": {
+    "attributes": [
+      "animation",
+      "animation-start",
+      "color",
+      "decimal-places",
+      "extra",
+      "format",
+      "loading",
+      "prefix",
+      "separator",
+      "suffix",
+      "title",
+      "trend",
+      "trend-placement",
+      "unit",
+      "value"
+    ],
+    "description": "Statistic\n\n统计数值\n\n[docs](https://tdesign.tencent.com/vue-next/components/statistic)"
   },
   "t-step-item": {
     "attributes": [
@@ -1952,6 +1976,8 @@
       "max",
       "min-collapsed-num",
       "multiple",
+      "panel-bottom-content",
+      "panel-top-content",
       "placeholder",
       "popup-props",
       "popup-visible",
@@ -2019,6 +2045,7 @@
       "trigger",
       "trigger-button-props",
       "upload-all-files-in-one-request",
+      "upload-pasted-files",
       "use-mock-progress",
       "value",
       "with-credentials",

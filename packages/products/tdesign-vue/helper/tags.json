@@ -368,6 +368,7 @@
       "max",
       "min-collapsed-num",
       "multiple",
+      "option",
       "options",
       "placeholder",
       "popup-props",
@@ -487,6 +488,7 @@
       "color-modes",
       "disabled",
       "enable-alpha",
+      "enable-multiple-gradient",
       "format",
       "input-props",
       "multiple",
@@ -531,6 +533,7 @@
       "prefix-icon",
       "presets",
       "presets-placement",
+      "size",
       "status",
       "suffix-icon",
       "time-picker-props",
@@ -540,7 +543,8 @@
       "blur",
       "change",
       "focus",
-      "pick"
+      "pick",
+      "preset-click"
     ],
     "description": "DatePicker\n\n日期选择器\n\n[docs](https://tdesign.tencent.com/vue/components/date-picker)"
   },
@@ -577,6 +581,7 @@
       "presets-placement",
       "range-input-props",
       "separator",
+      "size",
       "status",
       "suffix-icon",
       "time-picker-props",
@@ -587,7 +592,8 @@
       "change",
       "focus",
       "input",
-      "pick"
+      "pick",
+      "preset-click"
     ],
     "description": "DateRangePicker\n\n日期范围选择器\n\n[docs](https://tdesign.tencent.com/vue/components/date-range-picker)"
   },
@@ -1286,6 +1292,20 @@
     ],
     "description": "Radio\n\n单选框\n\n[docs](https://tdesign.tencent.com/vue/components/radio)"
   },
+  "t-radio-button": {
+    "attributes": [
+      "allow-uncheck",
+      "checked",
+      "default",
+      "disabled",
+      "label",
+      "name",
+      "value",
+      "change",
+      "click"
+    ],
+    "description": "Radio\n\n单选框\n\n[docs](https://tdesign.tencent.com/vue/components/radio)"
+  },
   "t-radio-group": {
     "attributes": [
       "allow-uncheck",
@@ -1352,7 +1372,6 @@
       "color",
       "count",
       "disabled",
-      "external-classes",
       "gap",
       "icon",
       "show-text",
@@ -1541,6 +1560,26 @@
       "size"
     ],
     "description": "Space\n\n间距\n\n[docs](https://tdesign.tencent.com/vue/components/space)"
+  },
+  "t-statistic": {
+    "attributes": [
+      "animation",
+      "animation-start",
+      "color",
+      "decimal-places",
+      "extra",
+      "format",
+      "loading",
+      "prefix",
+      "separator",
+      "suffix",
+      "title",
+      "trend",
+      "trend-placement",
+      "unit",
+      "value"
+    ],
+    "description": "Statistic\n\n统计数值\n\n[docs](https://tdesign.tencent.com/vue/components/statistic)"
   },
   "t-step-item": {
     "attributes": [
@@ -1937,6 +1976,8 @@
       "max",
       "min-collapsed-num",
       "multiple",
+      "panel-bottom-content",
+      "panel-top-content",
       "placeholder",
       "popup-props",
       "popup-visible",
@@ -2004,6 +2045,7 @@
       "trigger",
       "trigger-button-props",
       "upload-all-files-in-one-request",
+      "upload-pasted-files",
       "use-mock-progress",
       "value",
       "with-credentials",

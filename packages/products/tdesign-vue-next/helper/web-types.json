@@ -833,7 +833,8 @@
               "doc-url": "https://tdesign.tencent.com/vue-next/components/avatar?tab=api#avatar-props",
               "type": [
                 "String"
-              ]
+              ],
+              "default": "medium"
             }
           ],
           "js": {
@@ -922,7 +923,8 @@
               "doc-url": "https://tdesign.tencent.com/vue-next/components/avatar-group?tab=api#avatargroup-props",
               "type": [
                 "String"
-              ]
+              ],
+              "default": "medium"
             }
           ],
           "slots": [
@@ -3475,6 +3477,14 @@
               "default": "false"
             },
             {
+              "name": "option",
+              "description": "customize one option\n\n自定义单个级联选项",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props",
+              "type": [
+                "TNode"
+              ]
+            },
+            {
               "name": "options",
               "description": "可选项数据源",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props",
@@ -3779,6 +3789,11 @@
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props"
             },
             {
+              "name": "option",
+              "description": "customize one option\n\n自定义单个级联选项类型和参数：TNode<{ item: CascaderOption; index: number }>",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props"
+            },
+            {
               "name": "suffix",
               "description": "后置图标前的后置内容",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props"
@@ -3800,12 +3815,12 @@
             },
             {
               "name": "valueDisplay",
-              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props"
             },
             {
               "name": "value-display",
-              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props"
             }
           ]
@@ -4961,6 +4976,29 @@
               ]
             },
             {
+              "name": "size",
+              "description": "输入框尺寸",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-props",
+              "type": [
+                "String"
+              ],
+              "default": "medium",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "medium"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            },
+            {
               "name": "status",
               "description": "输入框状态",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-props",
@@ -5053,6 +5091,11 @@
                 "name": "pick",
                 "description": "面板选中值后触发",
                 "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-events"
+              },
+              {
+                "name": "preset-click",
+                "description": "点击预设按钮后触发",
+                "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-events"
               }
             ]
           },
@@ -5131,7 +5174,7 @@
               },
               {
                 "name": "preset-click",
-                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker-panel?tab=api#datepickerpanel-events"
               },
               {
@@ -5167,7 +5210,7 @@
             },
             {
               "name": "clearable",
-              "description": "是否显示清楚按钮",
+              "description": "是否显示清除按钮",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-props",
               "type": [
                 "Boolean"
@@ -5366,6 +5409,29 @@
               ]
             },
             {
+              "name": "size",
+              "description": "输入框尺寸",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-props",
+              "type": [
+                "String"
+              ],
+              "default": "medium",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "medium"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            },
+            {
               "name": "status",
               "description": "输入框状态",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-props",
@@ -5468,6 +5534,11 @@
                 "name": "pick",
                 "description": "选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期",
                 "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-events"
+              },
+              {
+                "name": "preset-click",
+                "description": "点击预设按钮后触发",
+                "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-events"
               }
             ]
           },
@@ -5546,7 +5617,7 @@
               },
               {
                 "name": "preset-click",
-                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker-panel?tab=api#daterangepickerpanel-events"
               },
               {
@@ -12560,14 +12631,6 @@
               ]
             },
             {
-              "name": "external-classes",
-              "description": "组件类名，分别用于设置 组件外层类名、评分图标类名、辅助文字类名",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/rate?tab=api#rate-props",
-              "type": [
-                "Array"
-              ]
-            },
-            {
               "name": "gap",
               "description": "评分图标的间距",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/rate?tab=api#rate-props",
@@ -13348,6 +13411,7 @@
               "type": [
                 "String",
                 "Number",
+                "Boolean",
                 "Object",
                 "Array"
               ]
@@ -14280,6 +14344,214 @@
               "name": "separator",
               "description": "separator\n\n分隔符",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/space?tab=api#space-props"
+            }
+          ]
+        },
+        {
+          "name": "t-statistic",
+          "source": {
+            "symbol": "Statistic"
+          },
+          "description": "Statistic\n\n统计数值",
+          "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic",
+          "props": [
+            {
+              "name": "animation",
+              "description": "Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`\n\n动画效果控制，`duration` 指动画的过渡时间`单位：毫秒`，`valueFrom` 指动画的起始数值。`{ duration, valueFrom }`",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
+              "name": "animation-start",
+              "description": "Whether to start animation\n\n是否开始动画",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "color",
+              "description": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)\n\n颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "black"
+                },
+                {
+                  "name": "blue"
+                },
+                {
+                  "name": "red"
+                },
+                {
+                  "name": "orange"
+                },
+                {
+                  "name": "green"
+                }
+              ]
+            },
+            {
+              "name": "decimal-places",
+              "description": " Decimal places\n\n小数保留位数",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Number"
+              ]
+            },
+            {
+              "name": "extra",
+              "description": " Additional display content\n\n额外的显示内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "format",
+              "description": "Format numeric display value\n\n格式化数值显示值",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Function"
+              ]
+            },
+            {
+              "name": "loading",
+              "description": "Loading\n\n是否加载中",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix content, display priority is higher than trend\n\n前缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "separator",
+              "description": "The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden\n\n默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "default": ","
+            },
+            {
+              "name": "suffix",
+              "description": " Suffix content, display priority is higher than trend\n\n后缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "title",
+              "description": "The title of Statistic\n\n数值显示的标题",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "trend",
+              "description": "trend\n\n趋势",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "increase"
+                },
+                {
+                  "name": "decrease"
+                }
+              ]
+            },
+            {
+              "name": "trend-placement",
+              "description": "Position of trending placements\n\n趋势展示位置",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "default": "left",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "left"
+                },
+                {
+                  "name": "right"
+                }
+              ]
+            },
+            {
+              "name": "unit",
+              "description": "Unit content\n\n单位内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "value",
+              "description": "The value of Statistic\n\n数值显示的值",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Number"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "name": "extra",
+              "description": " Additional display content\n\n额外的显示内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix content, display priority is higher than trend\n\n前缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "suffix",
+              "description": " Suffix content, display priority is higher than trend\n\n后缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "title",
+              "description": "The title of Statistic\n\n数值显示的标题",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "unit",
+              "description": "Unit content\n\n单位内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/statistic?tab=api#statistic-props"
             }
           ]
         },
@@ -17789,6 +18061,24 @@
               "default": "false"
             },
             {
+              "name": "panel-bottom-content",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "panel-top-content",
+              "description": "面板内的顶部内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
               "name": "placeholder",
               "description": "占位符",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props",
@@ -18057,6 +18347,26 @@
             {
               "name": "loading-text",
               "description": "远程加载时显示的文字，支持自定义。如加上超链接",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panelBottomContent",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panel-bottom-content",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panelTopContent",
+              "description": "面板内的顶部内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panel-top-content",
+              "description": "面板内的顶部内容",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props"
             },
             {
@@ -18489,6 +18799,15 @@
               "default": "false"
             },
             {
+              "name": "upload-pasted-files",
+              "description": "allow to upload files in clipboard after pasting\n\n是否允许粘贴上传剪贴板中的文件",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/upload?tab=api#upload-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
               "name": "use-mock-progress",
               "description": "是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/upload?tab=api#upload-props",
@@ -18565,7 +18884,7 @@
               },
               {
                 "name": "progress",
-                "description": "上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度",
+                "description": "上传进度变化时触发，真实进度和模拟进度都会触发。<br/>⚠️ 原始上传请求，小文件的上传进度只有 0 和 100，故而不会触发 `progress` 事件；只有大文件才有真实的中间进度。如果你希望很小的文件也显示上传进度，保证 `useMockProgress=true` 的情况下，设置 `mockProgressDuration` 为更小的值。<br/>参数 `options.type=real` 表示真实上传进度，`options.type=mock` 表示模拟上传进度",
                 "doc-url": "https://tdesign.tencent.com/vue-next/components/upload?tab=api#upload-events"
               },
               {
