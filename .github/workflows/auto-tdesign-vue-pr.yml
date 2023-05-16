@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: Tencent/tdesign-vue
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN || github.token }}
           path: target-repo
       - run: |
           echo "NOW=$(date +'%Y-%m-%d-%H_%M_%S')" >> $GITHUB_ENV
