@@ -66658,7 +66658,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -66689,7 +66692,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -66770,6 +66776,55 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3489,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-16 12:20:54",
+      "update_time": "2023-05-16 12:20:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -66865,80 +66920,6 @@
       ]
     },
     {
-      "id": 2822,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-11 07:55:12",
-      "update_time": "2022-07-11 07:55:12",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3106,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "''",
-      "field_enum": "",
-      "field_desc_zh": "弹出层的自定义样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:45:02",
-      "update_time": "2022-10-31 14:45:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1228,
       "platform_framework": [
         "1"
@@ -67025,7 +67006,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -67055,7 +67040,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -67220,7 +67209,7 @@
     {
       "id": 1998,
       "platform_framework": [
-        "8"
+        "64"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -67248,7 +67237,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -67640,6 +67629,49 @@
       ]
     },
     {
+      "id": 3490,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "preventScrollThrough",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "防止滚动穿透",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-16 12:22:49",
+      "update_time": "2023-05-16 12:22:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1360,
       "platform_framework": [
         "1",
@@ -67721,80 +67753,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3105,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:41:20",
-      "update_time": "2022-10-31 14:41:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1993,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "to",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传给teleport组件的to属性",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-12-02 08:11:17",
-      "update_time": "2022-04-08 06:36:59",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -68139,7 +68097,7 @@
       "field_desc_zh": "组件准备关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(context: { e: MouseEvent })",
       "create_time": "2021-12-02 08:19:54",
       "update_time": "2021-12-02 08:19:54",
       "event_output": null,
@@ -117275,5 +117233,5 @@
       ]
     }
   ],
-  "total": 2796
+  "total": 2794
 }
