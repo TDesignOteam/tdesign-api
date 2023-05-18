@@ -403,7 +403,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         const oneApi = getOneApi(newApi, current, docTitleType);
         md[category].apis.push(oneApi);
         // 添加非受控属性 API 文档
-        if (api.syntactic_sugar && api.field_category_text !== 'Events') {
+        if (api.support_default_value && api.field_category_text !== 'Events') {
           const newSugarApi = formatToVueApi(api, { current, framework, isUncontrol: 'uncontrol' });
           const oneSugarApi = getOneApi(newSugarApi, current, docTitleType);
           md[category].apis.push(oneSugarApi);
