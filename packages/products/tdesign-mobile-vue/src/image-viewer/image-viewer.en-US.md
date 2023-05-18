@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### ImageViewer Props
 
 name | type | default | description | required
@@ -14,8 +13,7 @@ defaultIndex | Number | - | uncontrolled property | N
 maxZoom | Number | 3 | Typescript：`Number` | N
 showIndex | Boolean | false | \- | N
 visible | Boolean | false | `v-model` and `v-model:visible` is supported | N
-defaultVisible | Boolean | false | uncontrolled property | N
-onClose | Function |  | Typescript：`(context: { trigger: 'overlay' \| 'close-button', visible: Boolean, index: Number }) => void`<br/> | N
+onClose | Function |  | Typescript：`(context: { trigger: 'overlay' \| 'close-btn', visible: Boolean, index: Number }) => void`<br/> | N
 onDelete | Function |  | Typescript：`(index: Number) => void`<br/> | N
 onIndexChange | Function |  | Typescript：`(index: number, context: { trigger: 'prev' \| 'next' }) => void`<br/> | N
 
@@ -23,6 +21,6 @@ onIndexChange | Function |  | Typescript：`(index: number, context: { trigger: 
 
 name | params | description
 -- | -- | --
-close | `(context: { trigger: 'overlay' \| 'close-button', visible: Boolean, index: Number })` | \-
+close | `(context: { trigger: 'overlay' \| 'close-btn', visible: Boolean, index: Number })` | \-
 delete | `(index: Number)` | \-
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | \-
