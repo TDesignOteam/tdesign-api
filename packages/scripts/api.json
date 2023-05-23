@@ -89181,7 +89181,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -89460,6 +89460,49 @@
       ]
     },
     {
+      "id": 3495,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "nextAffset",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "后边距偏移量，可用于露出后一项的一小部分。默认单位 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-23 15:30:18",
+      "update_time": "2023-05-23 15:30:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 3245,
       "platform_framework": [
         "64"
@@ -89501,9 +89544,6 @@
     {
       "id": 2804,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Swiper",
@@ -89532,13 +89572,53 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 3496,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "previousAffset",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "前边距偏移量，可用于露出前一项的一小部分。默认单位 `px`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-23 15:31:42",
+      "update_time": "2023-05-23 15:31:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
       ]
     },
     {
@@ -89967,9 +90047,6 @@
     {
       "id": 3273,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "SwiperNav",
@@ -89998,9 +90075,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -90094,6 +90168,47 @@
       ]
     },
     {
+      "id": 3494,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "SwiperNav",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "inside",
+      "field_enum": "inside/outside",
+      "field_desc_zh": "导航器位置，位于主体的内侧或是外侧",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-23 14:36:31",
+      "update_time": "2023-05-23 14:36:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3276,
       "platform_framework": [
         "8",
@@ -90139,9 +90254,6 @@
     {
       "id": 3277,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "SwiperNav",
@@ -90170,9 +90282,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -90225,6 +90334,9 @@
     {
       "id": 3249,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SwiperNavigation",
@@ -90253,6 +90365,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -90424,7 +90539,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "SwiperNavigation",
       "field_category": 1,
@@ -90454,7 +90572,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -90588,6 +90709,9 @@
     {
       "id": 3250,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SwiperNavigation",
@@ -90616,6 +90740,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -90677,7 +90804,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "dots",
       "field_enum": "",
       "field_desc_zh": "导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等",
       "field_desc_en": null,
@@ -117239,5 +117366,5 @@
       ]
     }
   ],
-  "total": 2794
+  "total": 2797
 }
