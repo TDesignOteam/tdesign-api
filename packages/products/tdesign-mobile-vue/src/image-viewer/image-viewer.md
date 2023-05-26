@@ -16,6 +16,7 @@ visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model` 或 
 onClose | Function |  | TS 类型：`(context: { trigger: 'overlay' \| 'close-btn', visible: Boolean, index: Number }) => void`<br/>关闭时触发 | N
 onDelete | Function |  | TS 类型：`(index: Number) => void`<br/>点击删除操作按钮时触发 | N
 onIndexChange | Function |  | TS 类型：`(index: number, context: { trigger: 'prev' \| 'next' }) => void`<br/>预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片 | N
+wheelBehavior | String | mac | 滚轮缩放图片行为，`mac`默认，适用于mac使用习惯，`win`适用于window使用习惯 | N
 
 ### ImageViewer Events
 
