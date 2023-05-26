@@ -16,6 +16,7 @@ visible | Boolean | false | `v-model` and `v-model:visible` is supported | N
 onClose | Function |  | Typescript：`(context: { trigger: 'overlay' \| 'close-btn', visible: Boolean, index: Number }) => void`<br/> | N
 onDelete | Function |  | Typescript：`(index: Number) => void`<br/> | N
 onIndexChange | Function |  | Typescript：`(index: number, context: { trigger: 'prev' \| 'next' }) => void`<br/> | N
+wheelBehavior | String | mac | Scroll wheel zooming behavior, default on `mac`, suitable for Mac usage habits, `win` suitable for Windows usage habits. | N
 
 ### ImageViewer Events
 
