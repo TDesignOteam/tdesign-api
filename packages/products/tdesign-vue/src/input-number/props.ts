@@ -73,6 +73,7 @@ export default {
   /** 文本框状态 */
   status: {
     type: String as PropType<TdInputNumberProps['status']>,
+    default: 'default' as TdInputNumberProps['status'],
     validator(val: TdInputNumberProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);

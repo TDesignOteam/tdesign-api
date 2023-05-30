@@ -47,12 +47,12 @@ export default {
   /** 最大值。如果是大数，请传入字符串 */
   max: {
     type: [String, Number] as PropType<TdInputNumberProps['max']>,
-    default: Infinity,
+    default: Infinity as TdInputNumberProps['max'],
   },
   /** 最小值。如果是大数，请传入字符串 */
   min: {
     type: [String, Number] as PropType<TdInputNumberProps['min']>,
-    default: -Infinity,
+    default: -Infinity as TdInputNumberProps['min'],
   },
   /** 占位符 */
   placeholder: {
@@ -73,6 +73,7 @@ export default {
   /** 文本框状态 */
   status: {
     type: String as PropType<TdInputNumberProps['status']>,
+    default: 'default' as TdInputNumberProps['status'],
     validator(val: TdInputNumberProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);
@@ -81,7 +82,7 @@ export default {
   /** 数值改变步数，可以是小数。如果是大数，请保证数据类型为字符串 */
   step: {
     type: [String, Number] as PropType<TdInputNumberProps['step']>,
-    default: 1,
+    default: 1 as TdInputNumberProps['step'],
   },
   /** 后置内容 */
   suffix: {
@@ -103,11 +104,11 @@ export default {
   /** 数字输入框的值。当值为 '' 时，输入框显示为空 */
   value: {
     type: [String, Number] as PropType<TdInputNumberProps['value']>,
-    default: undefined,
+    default: undefined as TdInputNumberProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdInputNumberProps['value']>,
-    default: undefined,
+    default: undefined as TdInputNumberProps['value'],
   },
   /** 数字输入框的值。当值为 '' 时，输入框显示为空，非受控属性 */
   defaultValue: {
