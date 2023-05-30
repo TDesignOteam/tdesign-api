@@ -38671,6 +38671,47 @@
       ]
     },
     {
+      "id": 3539,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DropdownItem",
+      "field_category": 1,
+      "field_name": "visible",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否展示",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-05-30 05:35:54",
+      "update_time": "2023-05-30 05:35:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2304,
       "platform_framework": [
         "8",
@@ -74885,7 +74926,7 @@
       ]
     },
     {
-      "id": 3539,
+      "id": 3540,
       "platform_framework": [
         "8",
         "16",
