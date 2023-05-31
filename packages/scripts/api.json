@@ -50950,7 +50950,7 @@
       "field_desc_zh": "预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(index: number, context: { trigger: 'prev' | 'next' })",
+      "event_input": "(index: number, context: { trigger: 'prev' | 'next' | 'current' })",
       "create_time": "2022-05-30 12:48:56",
       "update_time": "2022-05-30 12:48:56",
       "event_output": null,
