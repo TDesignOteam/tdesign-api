@@ -50,7 +50,7 @@ defaultValue | String / Number / Boolean / Object / Array | - | uncontrolled pro
 valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescript：`string \| TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 valueType | String | value | options：value/object | N
 onBlur | Function |  | Typescript：`(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck'`<br/> | N
+onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck' \| 'default'`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCreate | Function |  | Typescript：`(value: string \| number) => void`<br/> | N
 onEnter | Function |  | Typescript：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/> | N
@@ -65,7 +65,7 @@ onSearch | Function |  | Typescript：`(filterWords: string, context: { e: Keybo
 name | params | description
 -- | -- | --
 blur | `(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent })` | \-
-change | `(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent })` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck'`<br/>
+change | `(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent })` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck' \| 'default'`<br/>
 clear | `(context: { e: MouseEvent })` | \-
 create | `(value: string \| number)` | \-
 enter | `(context: { inputValue: string; e: KeyboardEvent; value: SelectValue })` | \-

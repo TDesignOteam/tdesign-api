@@ -80710,7 +80710,7 @@
       "field_desc_zh": "选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })【type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'】",
+      "event_input": "(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent })【type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default'】",
       "create_time": "2020-12-18 02:40:39",
       "update_time": "2022-03-11 04:02:19",
       "event_output": null,

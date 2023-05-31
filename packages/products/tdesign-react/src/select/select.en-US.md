@@ -47,12 +47,12 @@ suffixIcon | TElement | - | Typescript：`TNode`。[see more ts definition](http
 tagInputProps | Object | - | Typescript：`TagInputProps`，[TagInput API Documents](./tag-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
 tagProps | Object | - | Typescript：`TagProps`，[Tag API Documents](./tag?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
 tips | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-value | String / Number / Object / Array | - | Typescript：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| T \| Array<SelectValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
-defaultValue | String / Number / Object / Array | - | uncontrolled property。Typescript：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| T \| Array<SelectValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
+value | String / Number / Boolean / Object / Array | - | Typescript：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| boolean \| T \| Array<SelectValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
+defaultValue | String / Number / Boolean / Object / Array | - | uncontrolled property。Typescript：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| boolean \| T \| Array<SelectValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
 valueDisplay | TNode | - | `MouseEvent<SVGElement>`。Typescript：`string \| TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 valueType | String | value | options：value/object | N
 onBlur | Function |  | Typescript：`(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck'`<br/> | N
+onChange | Function |  | Typescript：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck' \| 'default'`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onCreate | Function |  | Typescript：`(value: string \| number) => void`<br/> | N
 onEnter | Function |  | Typescript：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/> | N
@@ -85,7 +85,7 @@ style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 divider | Boolean | true | \- | N
 label | String | - | \- | N
 
-### InfinityScroll
+### TScroll
 
 name | type | default | description | required
 -- | -- | -- | -- | --
