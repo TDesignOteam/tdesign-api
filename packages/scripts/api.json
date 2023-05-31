@@ -68395,7 +68395,7 @@
       "field_desc_zh": "当浮层隐藏或显示时触发，`trigger=document` 表示点击非浮层元素触发；`trigger=context-menu` 表示右击触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【interface PopupVisibleChangeContext { e?: PopupTriggerEvent; trigger?: PopupTriggerSource }】【type PopupTriggerEvent = MouseEvent | FocusEvent | KeyboardEvent】【type PopupTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus' | 'trigger-element-mousedown' | 'context-menu' | 'keydown-esc'】",
+      "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【interface PopupVisibleChangeContext { e?: PopupTriggerEvent; trigger?: PopupTriggerSource }】【type PopupTriggerEvent = MouseEvent | FocusEvent | KeyboardEvent】【type PopupTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus' | 'trigger-element-mousedown' | 'trigger-element-close' | 'context-menu' | 'keydown-esc'】",
       "create_time": "2020-11-19 12:19:39",
       "update_time": "2022-06-10 11:44:28",
       "event_output": null,
