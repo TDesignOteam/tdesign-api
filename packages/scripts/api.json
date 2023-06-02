@@ -26660,6 +26660,43 @@
       "field_type_text": []
     },
     {
+      "id": 3496,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 2,
+      "field_name": "confirm",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { date: Date, e: MouseEvent })",
+      "create_time": "2023-06-02 08:40:35",
+      "update_time": "2023-06-02 08:40:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1033,
       "platform_framework": [
         "1",
@@ -29192,6 +29229,43 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3497,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 2,
+      "field_name": "confirm",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { date: Date[], e: MouseEvent, partial: DateRangePickerPartial })",
+      "create_time": "2023-06-02 08:42:44",
+      "update_time": "2023-06-02 08:42:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -117307,5 +117381,5 @@
       ]
     }
   ],
-  "total": 2796
+  "total": 2798
 }
