@@ -530,6 +530,10 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    */
   onColumnControllerVisibleChange?: (visible: boolean, context: { trigger: 'cancel' | 'confirm' }) => void;
   /**
+   * 列调整大小之后触发。`context.column` 表示操作的列；`context.index` 表示操作的列的序号；
+   */
+  onColumnResizeChange?: (context: { column: PrimaryTableCol<T>; index: number }) => void;
+  /**
    * 本地数据排序导致 `data` 变化时触发，第一个参数指变化后的数据，第二个参数 `context.trigger` 表示触发本次变化的来源
    */
   onDataChange?: (data: Array<T>, context: TableDataChangeContext) => void;

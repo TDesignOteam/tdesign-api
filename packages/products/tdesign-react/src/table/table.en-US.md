@@ -102,7 +102,6 @@ style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 asyncLoading | TNode | - | async loading state。Typescript：`'loading' \| 'load-more' \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 columnController | Object | - | Typescript：`TableColumnController` | N
 columnControllerVisible | Boolean | undefined | \- | N
-defaultColumnControllerVisible | Boolean | undefined | uncontrolled property | N
 columns | Array | [] | table column configs。Typescript：`Array<PrimaryTableCol<T>>` | N
 displayColumns | Array | - | Typescript：`CheckboxGroupValue` | N
 defaultDisplayColumns | Array | - | uncontrolled property。Typescript：`CheckboxGroupValue` | N
@@ -137,6 +136,7 @@ onCellClick | Function |  | Typescript：`(context: PrimaryTableCellEventContext
 onChange | Function |  | Typescript：`(data: TableChangeData, context: TableChangeContext<T>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }`<br/><br/>`interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }`<br/><br/>`type TableChangeTrigger = 'filter' \| 'sorter' \| 'pagination'`<br/> | N
 onColumnChange | Function |  | Typescript：`(context: PrimaryTableColumnChange<T>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' \| 'uncheck'; e?: ChangeEvent }`<br/> | N
 onColumnControllerVisibleChange | Function |  | Typescript：`(visible: boolean, context: { trigger: 'cancel' \| 'confirm' }) => void`<br/> | N
+onColumnResizeChange | Function |  | Typescript：`(context: { column: PrimaryTableCol<T>; index: number; }) => void`<br/> | N
 onDataChange | Function |  | Typescript：`(data: Array<T>, context: TableDataChangeContext) => void`<br/>trigger on data changing。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableDataChangeContext { trigger: 'sort' }`<br/> | N
 onDisplayColumnsChange | Function |  | Typescript：`(value: CheckboxGroupValue) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`import { CheckboxGroupValue } from '@Checkbox'`<br/> | N
 onDragSort | Function |  | Typescript：`(context: DragSortContext<T>) => void`<br/>trigger on drag sort。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' \| 'col' }`<br/><br/>`import { SortableEvent, SortableOptions } from 'sortablejs'`<br/> | N
