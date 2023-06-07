@@ -89293,7 +89293,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Swiper",
       "field_category": 1,
@@ -89323,54 +89327,13 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 3243,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Swiper",
-      "field_category": 1,
-      "field_name": "height",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "192",
-      "field_enum": "",
-      "field_desc_zh": "轮播的高度；默认单位 `px`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-01-03 09:15:55",
-      "update_time": "2023-01-03 09:15:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
         "Number"
       ]
     },
@@ -89639,6 +89602,9 @@
     {
       "id": 3245,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Swiper",
@@ -89668,6 +89634,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -89678,9 +89647,6 @@
     {
       "id": 2804,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Swiper",
@@ -89709,9 +89675,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -89721,6 +89684,9 @@
     {
       "id": 3246,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Swiper",
@@ -89750,6 +89716,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -89922,7 +89891,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Swiper",
       "field_category": 1,
@@ -89952,7 +89924,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -90107,6 +90082,9 @@
     {
       "id": 3271,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SwiperNav",
@@ -90135,6 +90113,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -90228,7 +90209,7 @@
       ]
     },
     {
-      "id": 3275,
+      "id": 3499,
       "platform_framework": [
         "8",
         "16",
@@ -90237,18 +90218,18 @@
       ],
       "component": "SwiperNav",
       "field_category": 1,
-      "field_name": "paginationPosition",
+      "field_name": "placement",
       "field_type": [
         "1"
       ],
-      "field_default_value": "bottom",
-      "field_enum": "top-left/top/top-right/bottom-left/bottom/bottom-right",
-      "field_desc_zh": "页码信息展示位置",
+      "field_default_value": "inside",
+      "field_enum": "inside/outside",
+      "field_desc_zh": "导航器位置，位于主体的内侧或是外侧",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-01-09 07:43:53",
-      "update_time": "2023-01-09 07:43:53",
+      "create_time": "2023-06-06 03:57:15",
+      "update_time": "2023-06-06 03:57:15",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -90256,7 +90237,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -117416,5 +117397,5 @@
       ]
     }
   ],
-  "total": 2799
+  "total": 2798
 }
