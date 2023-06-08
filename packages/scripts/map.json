@@ -435,6 +435,11 @@
         "label": "描述列表"
       },
       {
+        "value": "DescriptionsConfig",
+        "label": "描述全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Dialog",
         "label": "对话框"
       },

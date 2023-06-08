@@ -29,6 +29,7 @@
   'TagConfig',
   'StepsConfig',
   'AlertConfig',
+  'DescriptionsConfig',
   'AnchorConfig',
   'MessageConfig',
   'ImageConfig',

@@ -31696,6 +31696,47 @@
       ]
     },
     {
+      "id": 3510,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DescriptionsConfig",
+      "field_category": 1,
+      "field_name": "colon",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "字段旁边的冒号，中文为“：”",
+      "field_desc_en": "colon on the right of label, \":\"",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:30:23",
+      "update_time": "2023-06-08 04:30:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1374,
       "platform_framework": [
         "8",
@@ -41647,6 +41688,47 @@
         "React(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3511,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "FormConfig",
+      "field_category": 1,
+      "field_name": "colon",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "字段旁边的冒号，中文为“：”",
+      "field_desc_en": "colon on the right of label \":\"",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:30:42",
+      "update_time": "2023-06-08 04:30:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 2205,
@@ -117768,5 +117850,5 @@
       ]
     }
   ],
-  "total": 2807
+  "total": 2809
 }
