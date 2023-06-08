@@ -12687,7 +12687,7 @@
       "field_default_value": "medium",
       "field_enum": "extra-small/small/medium/large",
       "field_desc_zh": "组件尺寸",
-      "field_desc_en": "a button has three size",
+      "field_desc_en": "a button has four size",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-10-23 02:58:31",
@@ -31323,6 +31323,377 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3500,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DescriptionItem",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述项字段名",
+      "field_desc_en": "label of description item",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:00:38",
+      "update_time": "2023-06-08 04:00:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 3501,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DescriptionItem",
+      "field_category": 1,
+      "field_name": "span",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "占用的宽度数量",
+      "field_desc_en": "width count",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:03:20",
+      "update_time": "2023-06-08 04:03:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3503,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "bordered",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否带边框",
+      "field_desc_en": "set description list with grey border",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:04:51",
+      "update_time": "2023-06-08 04:04:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":\"t-descriptions--bordered\"}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3507,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "colon",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "字段名右侧是否携带冒号“：”",
+      "field_desc_en": "set label with \":\" on the right",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:10:59",
+      "update_time": "2023-06-08 04:10:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3504,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "columns",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "2",
+      "field_enum": "",
+      "field_desc_zh": "一行 DescriptionItem 的数量",
+      "field_desc_en": "count of DescriptionItem in one row",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:06:30",
+      "update_time": "2023-06-08 04:06:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 3509,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "contentAlign",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/center",
+      "field_desc_zh": "字段值内容的对齐方式：左对齐、居中对齐",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:12:56",
+      "update_time": "2023-06-08 04:12:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":[\"t-descriptions__content--align-left\",\"t-descriptions__content--align-center\"]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3508,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "labelAlign",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "right",
+      "field_enum": "left/right/top",
+      "field_desc_zh": "字段标签对齐方式：左对齐、右对齐、顶部对齐",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:11:45",
+      "update_time": "2023-06-08 04:11:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":[\"t-descriptions__label--align-left\",\"t-descriptions__label--align-right\",\"t-descriptions__label--align-top\"]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3505,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "layout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "排列方向",
+      "field_desc_en": "layout direction",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:07:27",
+      "update_time": "2023-06-08 04:07:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":[\"t-descriptions--horizontal\",\"t-descriptions--vertical\"]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 3506,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": "a descriptions has three size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-08 04:08:27",
+      "update_time": "2023-06-08 04:08:27",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-descriptions\"}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 1374,
@@ -117397,5 +117768,5 @@
       ]
     }
   ],
-  "total": 2798
+  "total": 2807
 }

@@ -52,6 +52,7 @@ const COMPONENT_API_MD_MAP = {
   },
   Radio: ['Radio', 'RadioGroup'],
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
+  Descriptions: ['Descriptions', 'DescriptionItem'],
   Tabs: ['Tabs', 'TabPanel'],
   TabBar: ['TabBar', 'TabBarItem'],
   Pagination: ['Pagination', 'PaginationMini'],
@@ -216,6 +217,9 @@ const TYPES_COMBINE_MAP = {
   },
   Calendar: {
     list: ['Calendar', 'CalendarController', 'CalendarCell'],
+  },
+  Descriptions: {
+    list: ['Descriptions', 'DescriptionItem'],
   },
   Menu: {
     list: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],

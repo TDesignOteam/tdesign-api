@@ -427,6 +427,10 @@
         "label": "日期范围选择器面板"
       },
       {
+        "value": "DescriptionItem",
+        "label": "描述项"
+      },
+      {
         "value": "Descriptions",
         "label": "描述列表"
       },
