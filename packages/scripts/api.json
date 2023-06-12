@@ -88822,6 +88822,47 @@
       ]
     },
     {
+      "id": 3512,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Submenu",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Popup 组件全部特性",
+      "field_desc_en": "Transparent all feature props of the Popup",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-12 02:56:01",
+      "update_time": "2023-06-12 02:56:01",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 871,
       "platform_framework": [
         "1",
@@ -117850,5 +117891,5 @@
       ]
     }
   ],
-  "total": 2809
+  "total": 2810
 }
