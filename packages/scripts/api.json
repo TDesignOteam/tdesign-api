@@ -24471,7 +24471,7 @@
       "create_time": "2022-02-23 11:06:05",
       "update_time": "2022-03-20 14:28:27",
       "event_output": null,
-      "custom_field_type": "boolean | Array<string>",
+      "custom_field_type": "boolean | Array<string> | null",
       "syntactic_sugar": "sync",
       "readonly": 1,
       "html_attribute": 0,
@@ -24594,7 +24594,7 @@
       "create_time": "2022-01-11 11:30:41",
       "update_time": "2022-03-04 06:05:18",
       "event_output": null,
-      "custom_field_type": "Array<string>",
+      "custom_field_type": "Array<string> | null",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -93066,43 +93066,6 @@
       ]
     },
     {
-      "id": 3061,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabPanel",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:31",
-      "update_time": "2022-10-31 11:33:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 735,
       "platform_framework": [
         "1"
@@ -93158,7 +93121,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "选项卡内容隐藏时是否销毁",
+      "field_desc_zh": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -93276,6 +93239,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 3516,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标，传对象则透传至 Icon",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-20 07:57:05",
+      "update_time": "2023-06-20 07:57:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Miniprogram\": \"1.0.0-rc.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
       ]
     },
     {
@@ -93483,7 +93485,7 @@
       "create_time": "2020-12-01 11:11:08",
       "update_time": "2021-07-16 06:05:30",
       "event_output": null,
-      "custom_field_type": "TabValue",
+      "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -96125,7 +96127,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "动画效果设置。其中 duration 表示动画时长",
+      "field_desc_zh": "动画效果设置。其中 duration 表示动画时长。（单位：秒）",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -96150,43 +96152,6 @@
       ],
       "field_type_text": [
         "Object"
-      ]
-    },
-    {
-      "id": 3060,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:05",
-      "update_time": "2022-10-31 11:33:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -96356,6 +96321,49 @@
       ]
     },
     {
+      "id": 3514,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "middle",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间内容，介于头部和内容之间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-20 07:55:24",
+      "update_time": "2023-06-20 07:55:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 158,
       "platform_framework": [
         "1",
@@ -96391,49 +96399,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1322,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "placement",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "top",
-      "field_enum": "left/top",
-      "field_desc_zh": "已废弃。选项卡位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 06:04:04",
-      "update_time": "2021-12-16 02:46:08",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -96559,6 +96524,49 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3513,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "split",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否展示分割线",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-20 07:50:25",
+      "update_time": "2023-06-20 07:50:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Miniprogram\": \"1.1.10\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
