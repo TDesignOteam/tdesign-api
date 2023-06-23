@@ -21234,7 +21234,7 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled",
+      "field_desc_zh": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -21949,9 +21949,6 @@
     {
       "id": 149,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32",
@@ -21965,7 +21962,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled",
+      "field_desc_zh": "是否禁用组件，默认为 false。 CheckboxGroup.disabled < Checkbox.disabled ，后续新增 Form 组件后，Form.disabled 优先级最低",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -21983,13 +21980,51 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3517,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-23 14:27:42",
+      "update_time": "2023-06-23 14:27:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -117899,5 +117934,5 @@
       ]
     }
   ],
-  "total": 2810
+  "total": 2811
 }
