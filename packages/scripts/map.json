@@ -1188,6 +1188,10 @@
       {
         "value": "SwiperNav",
         "label": "轮播导航"
+      },
+      {
+        "value": "Popover",
+        "label": "气泡弹出框"
       }
     ]
   }
