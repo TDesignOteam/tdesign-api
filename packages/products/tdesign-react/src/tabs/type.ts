@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { TabValue } from '../tabs';
 import { TNode } from '../common';
 import { MouseEvent } from 'react';
 
@@ -61,7 +62,7 @@ export interface TdTabsProps {
   /**
    * 激活的选项卡发生变化时触发
    */
-  onChange?: (value: TabValue, label: string) => void;
+  onChange?: (value: TabValue) => void;
   /**
    * 拖拽排序时触发
    */
@@ -74,7 +75,7 @@ export interface TdTabsProps {
 
 export interface TdTabPanelProps {
   /**
-   * 选项卡内容隐藏时是否销毁
+   * 【实现有误，暂不支持】选项卡内容隐藏时是否销毁
    * @default true
    */
   destroyOnHide?: boolean;

@@ -18,7 +18,7 @@ theme | String | normal | options：normal/card | N
 value | String / Number | - | Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
 onAdd | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: TabValue, label: string) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: TabValue) => void`<br/> | N
 onDragSort | Function |  | Typescript：`(context: TabsDragSortContext) => void`<br/>trigger on drag sort。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/> | N
 onRemove | Function |  | Typescript：`(options: { value: TabValue; index: number; e: MouseEvent }) => void`<br/> | N
 
@@ -34,5 +34,5 @@ draggable | Boolean | true | \- | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 panel | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 removable | Boolean | false | \- | N
-value | String / Number | - | Typescript：`TabValue` | N
+value | String / Number | - | Typescript：`TabValue`，[Tabs API Documents](./tabs?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
 onRemove | Function |  | Typescript：`(options: { value: TabValue; e: MouseEvent }) => void`<br/> | N

@@ -21990,47 +21990,6 @@
       ]
     },
     {
-      "id": 3517,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "CheckboxGroup",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-23 14:27:42",
-      "update_time": "2023-06-23 14:27:42",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1415,
       "platform_framework": [
         "1",
@@ -67180,8 +67139,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-20 09:21:40",
-      "update_time": "2023-06-20 09:21:40",
+      "create_time": "2023-06-26 11:18:59",
+      "update_time": "2023-06-26 11:18:59",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67218,8 +67177,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-20 07:58:48",
-      "update_time": "2023-06-20 07:58:48",
+      "create_time": "2023-06-20 07:55:24",
+      "update_time": "2023-06-20 07:55:24",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67255,8 +67214,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-20 07:58:34",
-      "update_time": "2023-06-20 07:58:34",
+      "create_time": "2023-06-20 07:50:25",
+      "update_time": "2023-06-20 07:50:25",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67292,8 +67251,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-20 08:07:43",
-      "update_time": "2023-06-20 08:07:43",
+      "create_time": "2023-06-20 07:57:05",
+      "update_time": "2023-06-20 07:57:05",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67330,8 +67289,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-20 09:07:40",
-      "update_time": "2023-06-20 09:07:40",
+      "create_time": "2023-06-23 14:27:42",
+      "update_time": "2023-06-23 14:27:42",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67389,7 +67348,7 @@
       ]
     },
     {
-      "id": 3515,
+      "id": 3519,
       "platform_framework": [
         "8"
       ],
@@ -67403,8 +67362,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(visible: boolean)",
-      "create_time": "2023-06-20 08:06:04",
-      "update_time": "2023-06-20 08:06:04",
+      "create_time": "2023-06-27 07:46:38",
+      "update_time": "2023-06-27 07:46:38",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -87174,51 +87133,6 @@
       ]
     },
     {
-      "id": 3518,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Stepper",
-      "field_category": 2,
-      "field_name": "focus",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "0",
-      "field_enum": "",
-      "field_desc_zh": "输入框聚焦时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: string | number)",
-      "create_time": "2023-06-26 11:18:59",
-      "update_time": "2023-06-26 11:18:59",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
       "id": 2065,
       "platform_framework": [
         "64"
@@ -93411,45 +93325,6 @@
       ]
     },
     {
-      "id": 3516,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabPanel",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1",
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图标，传对象则透传至 Icon",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-20 07:57:05",
-      "update_time": "2023-06-20 07:57:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{ \"Miniprogram\": \"1.0.0-rc.1\" }",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Object"
-      ]
-    },
-    {
       "id": 162,
       "platform_framework": [
         "1",
@@ -96490,49 +96365,6 @@
       ]
     },
     {
-      "id": 3514,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "middle",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "中间内容，介于头部和内容之间",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-20 07:55:24",
-      "update_time": "2023-06-20 07:55:24",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
       "id": 158,
       "platform_framework": [
         "1",
@@ -96693,49 +96525,6 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3513,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "split",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否展示分割线",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-20 07:50:25",
-      "update_time": "2023-06-20 07:50:25",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{ \"Miniprogram\": \"1.1.10\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -97053,9 +96842,6 @@
     {
       "id": 724,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32",
@@ -97085,13 +96871,47 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 3521,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Tabs",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "激活的选项卡发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: TabValue)",
+      "create_time": "2023-06-28 08:32:59",
+      "update_time": "2023-06-28 08:32:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -118068,5 +117888,5 @@
       ]
     }
   ],
-  "total": 2809
+  "total": 2811
 }
