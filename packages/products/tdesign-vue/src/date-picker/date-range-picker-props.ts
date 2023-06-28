@@ -131,7 +131,7 @@ export default {
     type: String as PropType<TdDateRangePickerProps['valueType']>,
     validator(val: TdDateRangePickerProps['valueType']): boolean {
       if (!val) return true;
-      return ['time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
+      return ['time-stamp', 'Date', 'YYYY', 'YYYY-MM', 'YYYY-MM-DD', 'YYYY-MM-DD HH', 'YYYY-MM-DD HH:mm', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
     },
   },
   /** 当输入框失去焦点时触发 */
