@@ -833,7 +833,8 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/avatar?tab=api#avatar-props",
               "type": [
                 "String"
-              ]
+              ],
+              "default": "medium"
             }
           ],
           "js": {
@@ -922,7 +923,8 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/avatar-group?tab=api#avatargroup-props",
               "type": [
                 "String"
-              ]
+              ],
+              "default": "medium"
             }
           ],
           "slots": [
@@ -1651,6 +1653,11 @@
                 "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
               },
               {
+                "name": "column-resize-change",
+                "description": "列调整大小之后触发。`context.columnsWidth` 表示操作后各个列的宽度；",
+                "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
+              },
+              {
                 "name": "page-change",
                 "description": "trigger on pagination changing\n\n分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型",
                 "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
@@ -2194,6 +2201,11 @@
                 "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
               },
               {
+                "name": "column-resize-change",
+                "description": "列调整大小之后触发。`context.columnsWidth` 表示操作后各个列的宽度；",
+                "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
+              },
+              {
                 "name": "page-change",
                 "description": "trigger on pagination changing\n\n分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型",
                 "doc-url": "https://tdesign.tencent.com/vue/components/base-table?tab=api#basetable-events"
@@ -2619,7 +2631,7 @@
             },
             {
               "name": "size",
-              "description": "a button has three size\n\n组件尺寸",
+              "description": "a button has four size\n\n组件尺寸",
               "doc-url": "https://tdesign.tencent.com/vue/components/button?tab=api#button-props",
               "type": [
                 "String"
@@ -2629,6 +2641,9 @@
                 "type": "enum"
               },
               "values": [
+                {
+                  "name": "extra-small"
+                },
                 {
                   "name": "small"
                 },
@@ -3472,6 +3487,14 @@
               "default": "false"
             },
             {
+              "name": "option",
+              "description": "customize one option\n\n自定义单个级联选项",
+              "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props",
+              "type": [
+                "TNode"
+              ]
+            },
+            {
               "name": "options",
               "description": "可选项数据源",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props",
@@ -3776,6 +3799,11 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
             },
             {
+              "name": "option",
+              "description": "customize one option\n\n自定义单个级联选项类型和参数：TNode<{ item: CascaderOption; index: number }>",
+              "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
+            },
+            {
               "name": "suffix",
               "description": "后置图标前的后置内容",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
@@ -3797,12 +3825,12 @@
             },
             {
               "name": "valueDisplay",
-              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
             },
             {
               "name": "value-display",
-              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>",
+              "description": "`MouseEvent<SVGElement>`\n\n【开发中】自定义选中项呈现的内容类型和参数：string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
             }
           ]
@@ -3940,7 +3968,7 @@
             },
             {
               "name": "disabled",
-              "description": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled",
+              "description": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled",
               "doc-url": "https://tdesign.tencent.com/vue/components/checkbox?tab=api#checkbox-props",
               "type": [
                 "Boolean"
@@ -4028,14 +4056,6 @@
           "description": "CheckboxGroup\n\n多选框组",
           "doc-url": "https://tdesign.tencent.com/vue/components/checkbox-group",
           "props": [
-            {
-              "name": "disabled",
-              "description": "是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled",
-              "doc-url": "https://tdesign.tencent.com/vue/components/checkbox-group?tab=api#checkboxgroup-props",
-              "type": [
-                "Boolean"
-              ]
-            },
             {
               "name": "max",
               "description": "支持最多选中的数量",
@@ -4498,6 +4518,15 @@
               "default": "false"
             },
             {
+              "name": "enable-multiple-gradient",
+              "description": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+              "doc-url": "https://tdesign.tencent.com/vue/components/color-picker?tab=api#colorpicker-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "true"
+            },
+            {
               "name": "format",
               "description": "格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效",
               "doc-url": "https://tdesign.tencent.com/vue/components/color-picker?tab=api#colorpicker-props",
@@ -4949,6 +4978,29 @@
               ]
             },
             {
+              "name": "size",
+              "description": "输入框尺寸",
+              "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-props",
+              "type": [
+                "String"
+              ],
+              "default": "medium",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "medium"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            },
+            {
               "name": "status",
               "description": "输入框状态",
               "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-props",
@@ -5033,6 +5085,11 @@
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
               },
               {
+                "name": "confirm",
+                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
+              },
+              {
                 "name": "focus",
                 "description": "输入框获得焦点时触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
@@ -5040,6 +5097,11 @@
               {
                 "name": "pick",
                 "description": "面板选中值后触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
+              },
+              {
+                "name": "preset-click",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
               }
             ]
@@ -5119,7 +5181,7 @@
               },
               {
                 "name": "preset-click",
-                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-picker-panel?tab=api#datepickerpanel-events"
               },
               {
@@ -5155,7 +5217,7 @@
             },
             {
               "name": "clearable",
-              "description": "是否显示清楚按钮",
+              "description": "是否显示清除按钮",
               "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-props",
               "type": [
                 "Boolean"
@@ -5354,6 +5416,29 @@
               ]
             },
             {
+              "name": "size",
+              "description": "输入框尺寸",
+              "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-props",
+              "type": [
+                "String"
+              ],
+              "default": "medium",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "medium"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            },
+            {
               "name": "status",
               "description": "输入框状态",
               "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-props",
@@ -5443,6 +5528,11 @@
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-events"
               },
               {
+                "name": "confirm",
+                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-events"
+              },
+              {
                 "name": "focus",
                 "description": "输入框获得焦点时触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-events"
@@ -5455,6 +5545,11 @@
               {
                 "name": "pick",
                 "description": "选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期",
+                "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-events"
+              },
+              {
+                "name": "preset-click",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-events"
               }
             ]
@@ -5534,7 +5629,7 @@
               },
               {
                 "name": "preset-click",
-                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "description": "点击预设按钮后触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-range-picker-panel?tab=api#daterangepickerpanel-events"
               },
               {
@@ -5549,6 +5644,164 @@
               }
             ]
           },
+          "slots": []
+        },
+        {
+          "name": "t-description-item",
+          "source": {
+            "symbol": "DescriptionItem"
+          },
+          "description": "DescriptionItem\n\n描述项",
+          "doc-url": "https://tdesign.tencent.com/vue/components/description-item",
+          "props": [
+            {
+              "name": "label",
+              "description": "label of description item\n\n描述项字段名",
+              "doc-url": "https://tdesign.tencent.com/vue/components/description-item?tab=api#descriptionitem-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "span",
+              "description": "width count\n\n占用的宽度数量",
+              "doc-url": "https://tdesign.tencent.com/vue/components/description-item?tab=api#descriptionitem-props",
+              "type": [
+                "Number"
+              ],
+              "default": "1"
+            }
+          ],
+          "slots": [
+            {
+              "name": "label",
+              "description": "label of description item\n\n描述项字段名",
+              "doc-url": "https://tdesign.tencent.com/vue/components/description-item?tab=api#descriptionitem-props"
+            }
+          ]
+        },
+        {
+          "name": "t-descriptions",
+          "source": {
+            "symbol": "Descriptions"
+          },
+          "description": "Descriptions\n\n描述列表",
+          "doc-url": "https://tdesign.tencent.com/vue/components/descriptions",
+          "props": [
+            {
+              "name": "bordered",
+              "description": "set description list with grey border\n\n是否带边框",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "colon",
+              "description": "set label with \":\" on the right\n\n字段名右侧是否携带冒号“：”",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "Boolean"
+              ]
+            },
+            {
+              "name": "columns",
+              "description": "count of DescriptionItem in one row\n\n一行 DescriptionItem 的数量",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "Number"
+              ],
+              "default": "2"
+            },
+            {
+              "name": "content-align",
+              "description": "字段值内容的对齐方式：左对齐、居中对齐",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "String"
+              ],
+              "default": "left",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "left"
+                },
+                {
+                  "name": "center"
+                }
+              ]
+            },
+            {
+              "name": "label-align",
+              "description": "字段标签对齐方式：左对齐、右对齐、顶部对齐",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "String"
+              ],
+              "default": "right",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "left"
+                },
+                {
+                  "name": "right"
+                },
+                {
+                  "name": "top"
+                }
+              ]
+            },
+            {
+              "name": "layout",
+              "description": "layout direction\n\n排列方向",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "String"
+              ],
+              "default": "horizontal",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "horizontal"
+                },
+                {
+                  "name": "vertical"
+                }
+              ]
+            },
+            {
+              "name": "size",
+              "description": "a descriptions has three size\n\n组件尺寸",
+              "doc-url": "https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props",
+              "type": [
+                "String"
+              ],
+              "default": "medium",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "medium"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            }
+          ],
           "slots": []
         },
         {
@@ -9015,6 +9268,14 @@
               ]
             },
             {
+              "name": "scroll",
+              "description": "lazy load and virtual scroll\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+              "doc-url": "https://tdesign.tencent.com/vue/components/list?tab=api#list-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
               "name": "size",
               "description": "尺寸",
               "doc-url": "https://tdesign.tencent.com/vue/components/list?tab=api#list-props",
@@ -10426,15 +10687,6 @@
               "default": "''"
             },
             {
-              "name": "content",
-              "description": "确认框内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props",
-              "type": [
-                "String",
-                "TNode"
-              ]
-            },
-            {
               "name": "default",
               "description": "触发元素，同 triggerElement",
               "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props",
@@ -10558,14 +10810,6 @@
                 "String",
                 "TNode"
               ]
-            },
-            {
-              "name": "visible",
-              "description": "是否显示气泡确认框",
-              "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props",
-              "type": [
-                "Boolean"
-              ]
             }
           ],
           "js": {
@@ -10609,11 +10853,6 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props"
             },
             {
-              "name": "content",
-              "description": "确认框内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props"
-            },
-            {
               "name": "default",
               "description": "触发元素，同 triggerElement",
               "doc-url": "https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props"
@@ -10652,6 +10891,15 @@
                 "Function"
               ],
               "default": "'body'"
+            },
+            {
+              "name": "close-btn",
+              "description": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮",
+              "doc-url": "https://tdesign.tencent.com/vue/components/popup?tab=api#popup-props",
+              "type": [
+                "Boolean",
+                "TNode"
+              ]
             },
             {
               "name": "content",
@@ -10847,6 +11095,16 @@
             ]
           },
           "slots": [
+            {
+              "name": "closeBtn",
+              "description": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮",
+              "doc-url": "https://tdesign.tencent.com/vue/components/popup?tab=api#popup-props"
+            },
+            {
+              "name": "close-btn",
+              "description": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮",
+              "doc-url": "https://tdesign.tencent.com/vue/components/popup?tab=api#popup-props"
+            },
             {
               "name": "content",
               "description": "浮层里面的内容",
@@ -11880,6 +12138,106 @@
           ]
         },
         {
+          "name": "t-radio-button",
+          "source": {
+            "symbol": "Radio"
+          },
+          "description": "Radio\n\n单选框",
+          "doc-url": "https://tdesign.tencent.com/vue/components/radio",
+          "props": [
+            {
+              "name": "allow-uncheck",
+              "description": "是否允许取消选中",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "description": "是否选中",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "default",
+              "description": "单选按钮内容，同 label",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "disabled",
+              "description": "是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "undefined"
+            },
+            {
+              "name": "label",
+              "description": "主文案",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "name",
+              "description": "HTML 元素原生属性",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "String"
+              ]
+            },
+            {
+              "name": "value",
+              "description": "单选按钮的值",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props",
+              "type": [
+                "String",
+                "Number",
+                "Boolean"
+              ],
+              "default": "undefined"
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "change",
+                "description": "选中状态变化时触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-events"
+              },
+              {
+                "name": "click",
+                "description": "trigger on click\n\n点击时出发，一般用于外层阻止冒泡场景",
+                "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-events"
+              }
+            ]
+          },
+          "slots": [
+            {
+              "name": "default",
+              "description": "单选按钮内容，同 label",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props"
+            },
+            {
+              "name": "label",
+              "description": "主文案",
+              "doc-url": "https://tdesign.tencent.com/vue/components/radio?tab=api#radio-props"
+            }
+          ]
+        },
+        {
           "name": "t-radio-group",
           "source": {
             "symbol": "RadioGroup"
@@ -12445,14 +12803,6 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/rate?tab=api#rate-props",
               "type": [
                 "Boolean"
-              ]
-            },
-            {
-              "name": "external-classes",
-              "description": "组件类名，分别用于设置 组件外层类名、评分图标类名、辅助文字类名",
-              "doc-url": "https://tdesign.tencent.com/vue/components/rate?tab=api#rate-props",
-              "type": [
-                "Array"
               ]
             },
             {
@@ -13236,6 +13586,7 @@
               "type": [
                 "String",
                 "Number",
+                "Boolean",
                 "Object",
                 "Array"
               ]
@@ -14172,6 +14523,214 @@
           ]
         },
         {
+          "name": "t-statistic",
+          "source": {
+            "symbol": "Statistic"
+          },
+          "description": "Statistic\n\n统计数值",
+          "doc-url": "https://tdesign.tencent.com/vue/components/statistic",
+          "props": [
+            {
+              "name": "animation",
+              "description": "Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`\n\n动画效果控制，`duration` 指动画的过渡时间`单位：毫秒`，`valueFrom` 指动画的起始数值。`{ duration, valueFrom }`",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
+              "name": "animation-start",
+              "description": "Whether to start animation\n\n是否开始动画",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "color",
+              "description": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)\n\n颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "black"
+                },
+                {
+                  "name": "blue"
+                },
+                {
+                  "name": "red"
+                },
+                {
+                  "name": "orange"
+                },
+                {
+                  "name": "green"
+                }
+              ]
+            },
+            {
+              "name": "decimal-places",
+              "description": " Decimal places\n\n小数保留位数",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Number"
+              ]
+            },
+            {
+              "name": "extra",
+              "description": " Additional display content\n\n额外的显示内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "format",
+              "description": "Format numeric display value\n\n格式化数值显示值",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Function"
+              ]
+            },
+            {
+              "name": "loading",
+              "description": "Loading\n\n是否加载中",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix content, display priority is higher than trend\n\n前缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "separator",
+              "description": "The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden\n\n默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "default": ","
+            },
+            {
+              "name": "suffix",
+              "description": " Suffix content, display priority is higher than trend\n\n后缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "title",
+              "description": "The title of Statistic\n\n数值显示的标题",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "trend",
+              "description": "trend\n\n趋势",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "increase"
+                },
+                {
+                  "name": "decrease"
+                }
+              ]
+            },
+            {
+              "name": "trend-placement",
+              "description": "Position of trending placements\n\n趋势展示位置",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String"
+              ],
+              "default": "left",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "left"
+                },
+                {
+                  "name": "right"
+                }
+              ]
+            },
+            {
+              "name": "unit",
+              "description": "Unit content\n\n单位内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "value",
+              "description": "The value of Statistic\n\n数值显示的值",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
+              "type": [
+                "Number"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "name": "extra",
+              "description": " Additional display content\n\n额外的显示内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix content, display priority is higher than trend\n\n前缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "suffix",
+              "description": " Suffix content, display priority is higher than trend\n\n后缀内容，展示优先级高于 trend",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "title",
+              "description": "The title of Statistic\n\n数值显示的标题",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props"
+            },
+            {
+              "name": "unit",
+              "description": "Unit content\n\n单位内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props"
+            }
+          ]
+        },
+        {
           "name": "t-step-item",
           "source": {
             "symbol": "StepItem"
@@ -14675,6 +15234,14 @@
               ]
             },
             {
+              "name": "popup-props",
+              "description": "Transparent all feature props of the Popup\n\n透传 Popup 组件全部特性",
+              "doc-url": "https://tdesign.tencent.com/vue/components/submenu?tab=api#submenu-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
               "name": "title",
               "description": "二级菜单内容",
               "doc-url": "https://tdesign.tencent.com/vue/components/submenu?tab=api#submenu-props",
@@ -15025,7 +15592,7 @@
             },
             {
               "name": "destroy-on-hide",
-              "description": "选项卡内容隐藏时是否销毁",
+              "description": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁",
               "doc-url": "https://tdesign.tencent.com/vue/components/tab-panel?tab=api#tabpanel-props",
               "type": [
                 "Boolean"
@@ -17677,6 +18244,24 @@
               "default": "false"
             },
             {
+              "name": "panel-bottom-content",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
+              "name": "panel-top-content",
+              "description": "面板内的顶部内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
               "name": "placeholder",
               "description": "占位符",
               "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props",
@@ -17945,6 +18530,26 @@
             {
               "name": "loading-text",
               "description": "远程加载时显示的文字，支持自定义。如加上超链接",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panelBottomContent",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panel-bottom-content",
+              "description": "面板内的底部内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panelTopContent",
+              "description": "面板内的顶部内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props"
+            },
+            {
+              "name": "panel-top-content",
+              "description": "面板内的顶部内容",
               "doc-url": "https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props"
             },
             {
@@ -18377,6 +18982,15 @@
               "default": "false"
             },
             {
+              "name": "upload-pasted-files",
+              "description": "allow to upload files in clipboard after pasting\n\n是否允许粘贴上传剪贴板中的文件",
+              "doc-url": "https://tdesign.tencent.com/vue/components/upload?tab=api#upload-props",
+              "type": [
+                "Boolean"
+              ],
+              "default": "false"
+            },
+            {
               "name": "use-mock-progress",
               "description": "是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。",
               "doc-url": "https://tdesign.tencent.com/vue/components/upload?tab=api#upload-props",
@@ -18453,7 +19067,7 @@
               },
               {
                 "name": "progress",
-                "description": "上传进度变化时触发，真实进度和模拟进度都会触发。`type=real` 表示真实上传进度，`type=mock` 表示模拟上传进度",
+                "description": "上传进度变化时触发，真实进度和模拟进度都会触发。<br/>⚠️ 原始上传请求，小文件的上传进度只有 0 和 100，故而不会触发 `progress` 事件；只有大文件才有真实的中间进度。如果你希望很小的文件也显示上传进度，保证 `useMockProgress=true` 的情况下，设置 `mockProgressDuration` 为更小的值。<br/>参数 `options.type=real` 表示真实上传进度，`options.type=mock` 表示模拟上传进度",
                 "doc-url": "https://tdesign.tencent.com/vue/components/upload?tab=api#upload-events"
               },
               {

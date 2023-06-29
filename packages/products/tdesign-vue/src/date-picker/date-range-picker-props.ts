@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许输入日期 */
   allowInput: Boolean,
-  /** 是否显示清楚按钮 */
+  /** 是否显示清除按钮 */
   clearable: Boolean,
   /** 时间选择器默认值，当 value/defaultValue 未设置值时有效 */
   defaultTime: {
@@ -86,6 +86,15 @@ export default {
     type: String,
     default: '',
   },
+  /** 输入框尺寸 */
+  size: {
+    type: String as PropType<TdDateRangePickerProps['size']>,
+    default: 'medium' as TdDateRangePickerProps['size'],
+    validator(val: TdDateRangePickerProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
   /** 输入框状态 */
   status: {
     type: String as PropType<TdDateRangePickerProps['status']>,
@@ -122,17 +131,21 @@ export default {
     type: String as PropType<TdDateRangePickerProps['valueType']>,
     validator(val: TdDateRangePickerProps['valueType']): boolean {
       if (!val) return true;
-      return ['time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
+      return ['time-stamp', 'Date', 'YYYY', 'YYYY-MM', 'YYYY-MM-DD', 'YYYY-MM-DD HH', 'YYYY-MM-DD HH:mm', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
     },
   },
   /** 当输入框失去焦点时触发 */
   onBlur: Function as PropType<TdDateRangePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdDateRangePickerProps['onChange']>,
+  /** 如果存在“确认”按钮，则点击“确认”按钮时触发 */
+  onConfirm: Function as PropType<TdDateRangePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发 */
   onFocus: Function as PropType<TdDateRangePickerProps['onFocus']>,
   /** 输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值 */
   onInput: Function as PropType<TdDateRangePickerProps['onInput']>,
   /** 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期 */
   onPick: Function as PropType<TdDateRangePickerProps['onPick']>,
+  /** 点击预设按钮后触发 */
+  onPresetClick: Function as PropType<TdDateRangePickerProps['onPresetClick']>,
 };
