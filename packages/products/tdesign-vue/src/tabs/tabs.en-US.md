@@ -16,7 +16,7 @@ theme | String | normal | options：normal/card | N
 value | String / Number | - | `v-model` is supported。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts) | N
 onAdd | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: TabValue, label: string) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: TabValue) => void`<br/> | N
 onDragSort | Function |  | Typescript：`(context: TabsDragSortContext) => void`<br/>trigger on drag sort。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/> | N
 onRemove | Function |  | Typescript：`(options: { value: TabValue; index: number; e: MouseEvent }) => void`<br/> | N
 
@@ -25,7 +25,7 @@ onRemove | Function |  | Typescript：`(options: { value: TabValue; index: numbe
 name | params | description
 -- | -- | --
 add | `(context: { e: MouseEvent })` | \-
-change | `(value: TabValue, label: string)` | \-
+change | `(value: TabValue)` | \-
 drag-sort | `(context: TabsDragSortContext)` | trigger on drag sort。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/>
 remove | `(options: { value: TabValue; index: number; e: MouseEvent })` | \-
 
