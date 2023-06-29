@@ -16,7 +16,7 @@ theme | String | normal | 选项卡风格，包含 默认风格 和 卡片风格
 value | String / Number | - | 激活的选项卡值。支持语法糖 `v-model`。TS 类型：`TabValue` `type TabValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | 激活的选项卡值。非受控属性。TS 类型：`TabValue` `type TabValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts) | N
 onAdd | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>添加选项卡时触发 | N
-onChange | Function |  | TS 类型：`(value: TabValue, label: string) => void`<br/>激活的选项卡发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: TabValue) => void`<br/>激活的选项卡发生变化时触发 | N
 onDragSort | Function |  | TS 类型：`(context: TabsDragSortContext) => void`<br/>拖拽排序时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/> | N
 onRemove | Function |  | TS 类型：`(options: { value: TabValue; index: number; e: MouseEvent }) => void`<br/>删除选项卡时触发 | N
 
@@ -25,7 +25,7 @@ onRemove | Function |  | TS 类型：`(options: { value: TabValue; index: number
 名称 | 参数 | 描述
 -- | -- | --
 add | `(context: { e: MouseEvent })` | 添加选项卡时触发
-change | `(value: TabValue, label: string)` | 激活的选项卡发生变化时触发
+change | `(value: TabValue)` | 激活的选项卡发生变化时触发
 drag-sort | `(context: TabsDragSortContext)` | 拖拽排序时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/>
 remove | `(options: { value: TabValue; index: number; e: MouseEvent })` | 删除选项卡时触发
 

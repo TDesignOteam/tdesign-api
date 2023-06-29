@@ -64,7 +64,7 @@ export interface TdTabsProps {
   /**
    * 激活的选项卡发生变化时触发
    */
-  onChange?: (value: TabValue, label: string) => void;
+  onChange?: (value: TabValue) => void;
   /**
    * 拖拽排序时触发
    */

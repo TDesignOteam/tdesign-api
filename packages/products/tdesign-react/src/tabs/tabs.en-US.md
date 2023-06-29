@@ -18,7 +18,7 @@ theme | String | normal | options：normal/card | N
 value | String / Number | - | Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N
 onAdd | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: TabValue, label: string) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: TabValue) => void`<br/> | N
 onDragSort | Function |  | Typescript：`(context: TabsDragSortContext) => void`<br/>trigger on drag sort。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts)。<br/>`interface TabsDragSortContext { currentIndex: number; current: TabValue; targetIndex: number; target: TabValue }`<br/> | N
 onRemove | Function |  | Typescript：`(options: { value: TabValue; index: number; e: MouseEvent }) => void`<br/> | N
 
