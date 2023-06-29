@@ -93204,7 +93204,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁",
+      "field_desc_zh": "选项卡内容隐藏时是否销毁",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

@@ -12,7 +12,7 @@ export default {
   default: {
     type: Function as PropType<TdTabPanelProps['default']>,
   },
-  /** 【实现有误，暂不支持】选项卡内容隐藏时是否销毁 */
+  /** 选项卡内容隐藏时是否销毁 */
   destroyOnHide: {
     type: Boolean,
     default: true,

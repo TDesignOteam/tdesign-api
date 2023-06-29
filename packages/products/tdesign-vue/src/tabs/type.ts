@@ -78,7 +78,7 @@ export interface TdTabPanelProps {
    */
   default?: TNode;
   /**
-   * 【实现有误，暂不支持】选项卡内容隐藏时是否销毁
+   * 选项卡内容隐藏时是否销毁
    * @default true
    */
   destroyOnHide?: boolean;
