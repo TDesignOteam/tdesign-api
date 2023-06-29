@@ -93510,8 +93510,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -93529,7 +93528,7 @@
       "create_time": "2020-12-01 11:11:08",
       "update_time": "2021-07-16 06:05:30",
       "event_output": null,
-      "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】",
+      "custom_field_type": "TabValue",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -93545,7 +93544,45 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 3522,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选项卡的值，唯一标识",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-29 03:24:11",
+      "update_time": "2023-06-29 03:24:11",
+      "event_output": null,
+      "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -117888,5 +117925,5 @@
       ]
     }
   ],
-  "total": 2811
+  "total": 2812
 }
