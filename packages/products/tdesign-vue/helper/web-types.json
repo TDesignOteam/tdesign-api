@@ -5086,7 +5086,7 @@
               },
               {
                 "name": "confirm",
-                "description": "如果存在“确认”按钮，则点击“确认”按钮时触发",
+                "description": "如果存在“确定”按钮，则点击“确定”按钮时触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-events"
               },
               {
@@ -5510,7 +5510,31 @@
               },
               "values": [
                 {
-                  "name": "'time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS'"
+                  "name": "time-stamp"
+                },
+                {
+                  "name": "Date"
+                },
+                {
+                  "name": "YYYY"
+                },
+                {
+                  "name": "YYYY-MM"
+                },
+                {
+                  "name": "YYYY-MM-DD"
+                },
+                {
+                  "name": "YYYY-MM-DD HH"
+                },
+                {
+                  "name": "YYYY-MM-DD HH:mm"
+                },
+                {
+                  "name": "YYYY-MM-DD HH:mm:ss"
+                },
+                {
+                  "name": "YYYY-MM-DD HH:mm:ss:SSS"
                 }
               ]
             }
@@ -15592,7 +15616,7 @@
             },
             {
               "name": "destroy-on-hide",
-              "description": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁",
+              "description": "选项卡内容隐藏时是否销毁",
               "doc-url": "https://tdesign.tencent.com/vue/components/tab-panel?tab=api#tabpanel-props",
               "type": [
                 "Boolean"

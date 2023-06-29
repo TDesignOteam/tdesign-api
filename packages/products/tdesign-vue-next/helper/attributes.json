@@ -1894,7 +1894,7 @@
   },
   "t-date-picker/confirm": {
     "type": "event",
-    "description": "如果存在“确认”按钮，则点击“确认”按钮时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-events)"
+    "description": "如果存在“确定”按钮，则点击“确定”按钮时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-events)"
   },
   "t-date-picker/focus": {
     "type": "event",
@@ -2072,7 +2072,15 @@
   "t-date-range-picker/value-type": {
     "type": "String",
     "options": [
-      "'time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS'"
+      "time-stamp",
+      "Date",
+      "YYYY",
+      "YYYY-MM",
+      "YYYY-MM-DD",
+      "YYYY-MM-DD HH",
+      "YYYY-MM-DD HH:mm",
+      "YYYY-MM-DD HH:mm:ss",
+      "YYYY-MM-DD HH:mm:ss:SSS"
     ],
     "description": "用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ `YYYYMMDD` 这种格式不支持，请勿使用，如果希望支持可以给 `dayjs` 提个 PR。注意和 `format` 的区别，`format` 仅用于处理日期在页面中呈现的格式\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-props)"
   },
@@ -5839,7 +5847,7 @@
   },
   "t-tab-panel/destroy-on-hide": {
     "type": "Boolean",
-    "description": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue-next/components/tab-panel?tab=api#tabpanel-props)"
+    "description": "选项卡内容隐藏时是否销毁\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue-next/components/tab-panel?tab=api#tabpanel-props)"
   },
   "t-tab-panel/disabled": {
     "type": "Boolean",
