@@ -124,7 +124,7 @@ export interface TdDatePickerProps {
    */
   onChange?: (value: DateValue, context: { dayjsValue?: Dayjs; trigger?: DatePickerTriggerSource }) => void;
   /**
-   * 如果存在“确认”按钮，则点击“确认”按钮时触发
+   * 如果存在“确定”按钮，则点击“确定”按钮时触发
    */
   onConfirm?: (context: { date: Date; e: MouseEvent }) => void;
   /**
