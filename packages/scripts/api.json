@@ -21972,9 +21972,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。 CheckboxGroup.disabled < Checkbox.disabled ，后续新增 Form 组件后，Form.disabled 优先级最低",
+      "field_desc_zh": "是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -40742,7 +40742,7 @@
       "create_time": "2020-12-02 05:54:11",
       "update_time": "2021-03-15 15:15:13",
       "event_output": null,
-      "custom_field_type": "FormRules<FormData>【type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }】",
+      "custom_field_type": "FormRules<FormData>【type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
