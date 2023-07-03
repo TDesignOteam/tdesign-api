@@ -67126,6 +67126,43 @@
       ]
     },
     {
+      "id": 3526,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Popover",
+      "field_category": 1,
+      "field_name": "closeOnClickOutside",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否在点击外部元素后关闭菜单 ",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-03 07:22:50",
+      "update_time": "2023-07-03 07:22:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 942,
       "platform_framework": [
         "8"
@@ -117968,5 +118005,5 @@
       ]
     }
   ],
-  "total": 2813
+  "total": 2814
 }
