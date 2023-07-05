@@ -59334,7 +59334,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "跳转链接",
+      "field_desc_zh": "跳转链接，菜单项渲染为a标签，当routerLink为true时将使用Router进行路由跳转",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -59473,6 +59473,43 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 3527,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "MenuItem",
+      "field_category": 1,
+      "field_name": "routerLink",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "菜单项内容是否渲染为使用Router进行跳转的a标签，当且仅当 Router 存在时，该 API 有效",
+      "field_desc_en": "Whether the menu item content is rendered as `<a></a>` that uses Router to jump. This API is valid when and only when Router exists",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-05 07:37:08",
+      "update_time": "2023-07-05 07:37:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -118005,5 +118042,5 @@
       ]
     }
   ],
-  "total": 2814
+  "total": 2815
 }
