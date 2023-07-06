@@ -22,8 +22,6 @@ class TAPI {
     if (columns) {
       columns.map(column => querySQL.field(column));
     }
-    const queryParams: any = {
-    };
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
       const { field_name: fieldName, component } = params;
@@ -53,19 +51,17 @@ class TAPI {
         expr.and(`${paramName} = "${params[paramName]}"`);
       });
     }
-    // 分页参数设置
-    if (limitObj) {
-      const { size, offset = 0 } = limitObj;
-      queryParams.limit = size;
-      queryParams.offset = offset;
-    }
     
     querySQL.where(expr)
       .order('component')
       .order('field_category')
-      .order('field_name')
-      .limit(queryParams.limit)
-      .offset(queryParams.offset);
+      .order('field_name');
+
+    // 分页参数设置
+    if (limitObj) {
+      const { size, offset = 0 } = limitObj;
+      querySQL.limit(size).offset(offset);
+    }
     
     countSQL.where(expr);
 

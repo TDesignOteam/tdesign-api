@@ -42,4 +42,8 @@ router.post('/generate-api', (ctx: Koa.Context) => {
   };
 });
 
+router.get('/export-api', async(ctx: Koa.Context) => {
+  ctx.body = await ComponentApiController.exportAPI();
+});
+
 export default router.routes();
