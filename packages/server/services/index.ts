@@ -2,6 +2,7 @@ import { BaseObject, QueryPaginationProps } from '../../types';
 import { isEmpty } from 'lodash';
 import squel from 'squel';
 import executeSQL from './sqlite';
+import moment from 'moment';
 
 const tableName = 't_api';
 
@@ -72,10 +73,8 @@ class TAPI {
   }
 
   public static async create(params: {}) {
-    const queryMaxID = squel.select().field('MAX(id)').from(tableName).toString();
-    const maxID = await executeSQL(queryMaxID);
-    
-    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', Number(maxID[0]['MAX(id)']) + 1);
+    const newID= moment().unix();
+    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id',newID);
     
     Object.keys(params).map(param => insertSQL.set(param, params[param]));
     const res = await executeSQL(insertSQL.toString(), true);
