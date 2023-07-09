@@ -114,7 +114,7 @@ function formatDesc(
   }
   // 可选值
   if (api.field_enum) {
-    desc.push(`${curLanguage.optionsText}：${api.field_enum}`);
+    desc.push(`${curLanguage.optionsText}${api.field_enum}`);
   }
   if (api.custom_field_type) {
     let customFieldType = api.custom_field_type;
