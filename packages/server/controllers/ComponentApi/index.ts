@@ -191,7 +191,7 @@ async function generateAPI(params?: { commandLines: string[] }) {
 
 async function exportAPI()
 {
-  const [res, total]: any = await TAPI.query();
+  const [res]: any = await TAPI.query();
 
   const formattedData = formatRecords(res);
   
@@ -199,7 +199,6 @@ async function exportAPI()
     code: 0,
     msg: 'success',
     data: formattedData,
-    total,
   };
 }
 
