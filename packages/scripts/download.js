@@ -30,7 +30,7 @@ function download() {
       }),
       axios.request({
         method: 'get',
-        url: `http://${url}/cmp/export-api`,
+        url: `http://${url}/cmp/export-api-data`,
       }),
     ]).then(
       ([mapRes, apiRes]) => {

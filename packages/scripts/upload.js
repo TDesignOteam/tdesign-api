@@ -49,7 +49,7 @@ function syncDelete(record){
 function uploadApiToDB() {
     axios.request({
       method: 'get',
-      url: `http://${url}/cmp/export-api`,
+      url: `http://${url}/cmp/export-api-data`,
     }).then((res) => {
       let jsonRecordIds=[];
       const jsonRecords= new Map();
