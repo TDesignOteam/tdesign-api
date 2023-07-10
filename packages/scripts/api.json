@@ -115537,6 +115537,43 @@
       "field_type_text": []
     },
     {
+      "id": 3527,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 4,
+      "field_name": "uploadFilePercent",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置上传中文件的上传进度",
+      "field_desc_en": "instance function: set uploading file progress percent",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2023-07-09 04:04:18",
+      "update_time": "2023-07-09 04:04:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2990,
       "platform_framework": [
         "1",
@@ -118005,5 +118042,5 @@
       ]
     }
   ],
-  "total": 2814
+  "total": 2815
 }
