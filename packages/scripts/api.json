@@ -72471,6 +72471,43 @@
       ]
     },
     {
+      "id": 3528,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "showScrollbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "滚动条显隐控制 (同时开启 enhanced 属性后生效)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-10 07:27:45",
+      "update_time": "2023-07-10 07:27:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3477,
       "platform_framework": [
         "64"
@@ -118042,5 +118079,5 @@
       ]
     }
   ],
-  "total": 2815
+  "total": 2816
 }
