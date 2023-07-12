@@ -8,7 +8,6 @@ name | type | default | description | required
 activable | Boolean | false | \- | N
 activeMultiple | Boolean | false | \- | N
 actived | Array | - | `.sync` is supported。Typescript：`Array<TreeNodeValue>` | N
-defaultActived | Array | - | uncontrolled property。Typescript：`Array<TreeNodeValue>` | N
 allowFoldNodeOnFilter | Boolean | false | \- | N
 checkProps | Object | - | Typescript：`CheckboxProps`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tree/type.ts) | N
 checkStrictly | Boolean | false | \- | N
@@ -24,7 +23,6 @@ expandMutex | Boolean | false | \- | N
 expandOnClickNode | Boolean | false | \- | N
 expandParent | Boolean | false | \- | N
 expanded | Array | [] | `.sync` is supported。Typescript：`Array<TreeNodeValue>` | N
-defaultExpanded | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` | N
 filter | Function | - | Typescript：`(node: TreeNodeModel<T>) => boolean` | N
 height | String / Number | - | table height | N
 hover | Boolean | - | \- | N
@@ -40,7 +38,7 @@ scroll | Object | - | lazy load and virtual scroll。Typescript：`TScroll`。[s
 transition | Boolean | true | \- | N
 value | Array | [] | `v-model` is supported。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tree/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/tree/type.ts) | N
-valueMode | String | onlyLeaf | options：onlyLeaf/parentFirst/all | N
+valueMode | String | onlyLeaf | options: onlyLeaf/parentFirst/all | N
 onActive | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' }) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { node: TreeNodeModel<T>; e: MouseEvent }) => void`<br/> | N
@@ -143,4 +141,4 @@ bufferSize | Number | 20 | \- | N
 isFixedRowHeight | Boolean | false | \- | N
 rowHeight | Number | - | \- | N
 threshold | Number | 100 | \- | N
-type | String | - | required。options：lazy/virtual | Y
+type | String | - | required。options: lazy/virtual | Y
