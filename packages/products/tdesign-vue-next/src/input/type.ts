@@ -94,8 +94,7 @@ export interface TdInputProps {
    */
   size?: SizeEnum;
   /**
-   * 输入框状态
-   * @default default
+   * 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
@@ -117,14 +116,17 @@ export interface TdInputProps {
   type?: 'text' | 'number' | 'url' | 'tel' | 'password' | 'search' | 'submit' | 'hidden';
   /**
    * 输入框的值
+   * @default ''
    */
   value?: InputValue;
   /**
    * 输入框的值，非受控属性
+   * @default ''
    */
   defaultValue?: InputValue;
   /**
    * 输入框的值
+   * @default ''
    */
   modelValue?: InputValue;
   /**
@@ -136,7 +138,7 @@ export interface TdInputProps {
    */
   onChange?: (
     value: InputValue,
-    context?: { e?: InputEvent | MouseEvent; trigger: 'input' | 'initial' | 'clear' },
+    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' },
   ) => void;
   /**
    * 清空按钮点击时触发
@@ -205,4 +207,4 @@ export interface TdInputGroupProps {
 
 export type InputFormatType = (value: InputValue) => string;
 
-export type InputValue = string;
+export type InputValue = string | number;

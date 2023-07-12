@@ -53573,7 +53573,7 @@
       "create_time": "2021-01-31 08:08:18",
       "update_time": "2022-01-21 04:14:32",
       "event_output": null,
-      "custom_field_type": "InputValue【type InputValue = string】",
+      "custom_field_type": "InputValue【type InputValue = string | number】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,

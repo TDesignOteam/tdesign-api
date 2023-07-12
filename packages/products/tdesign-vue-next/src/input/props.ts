@@ -81,10 +81,10 @@ export default {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
-  /** 输入框状态 */
+  /** 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化 */
   status: {
     type: String as PropType<TdInputProps['status']>,
-    default: 'default' as TdInputProps['status'],
+    default: undefined as TdInputProps['status'],
     validator(val: TdInputProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);
@@ -114,15 +114,16 @@ export default {
   /** 输入框的值 */
   value: {
     type: [String, Number] as PropType<TdInputProps['value']>,
-    default: undefined,
+    default: undefined as TdInputProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdInputProps['value']>,
-    default: undefined,
+    default: undefined as TdInputProps['value'],
   },
   /** 输入框的值，非受控属性 */
   defaultValue: {
     type: [String, Number] as PropType<TdInputProps['defaultValue']>,
+    default: '' as TdInputProps['defaultValue'],
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputProps['onBlur']>,
