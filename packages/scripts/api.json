@@ -53561,8 +53561,7 @@
       "field_category": 1,
       "field_name": "value",
       "field_type": [
-        "1",
-        "2"
+        "1"
       ],
       "field_default_value": "''",
       "field_enum": "",
@@ -53593,8 +53592,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "Number"
+        "String"
       ]
     },
     {
@@ -107074,8 +107072,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`",
-      "field_desc_en": "table height",
+      "field_desc_zh": "树的高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 `maxHeight`",
+      "field_desc_en": "The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight`.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-03-03 04:10:06",
@@ -107454,8 +107452,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
-      "field_desc_en": "table max height",
+      "field_desc_zh": "树的最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+      "field_desc_en": "The max height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. ",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-03-03 04:10:12",
