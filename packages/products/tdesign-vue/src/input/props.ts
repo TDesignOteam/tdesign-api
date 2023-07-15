@@ -81,10 +81,10 @@ export default {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
-  /** 输入框状态 */
+  /** 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化 */
   status: {
     type: String as PropType<TdInputProps['status']>,
-    default: 'default' as TdInputProps['status'],
+    default: undefined as TdInputProps['status'],
     validator(val: TdInputProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);
@@ -113,18 +113,22 @@ export default {
   },
   /** 输入框的值 */
   value: {
-    type: [String, Number] as PropType<TdInputProps['value']>,
+    type: String as PropType<TdInputProps['value']>,
+    default: undefined,
   },
   /** 输入框的值，非受控属性 */
   defaultValue: {
-    type: [String, Number] as PropType<TdInputProps['defaultValue']>,
+    type: String as PropType<TdInputProps['defaultValue']>,
+    default: '',
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputProps['onBlur']>,
-  /** 输入框值发生变化时触发 */
+  /** 输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制 */
   onChange: Function as PropType<TdInputProps['onChange']>,
   /** 清空按钮点击时触发 */
   onClear: Function as PropType<TdInputProps['onClear']>,
+  /** 点击组件时触发 */
+  onClick: Function as PropType<TdInputProps['onClick']>,
   /** 中文输入结束时触发 */
   onCompositionend: Function as PropType<TdInputProps['onCompositionend']>,
   /** 中文输入开始时触发 */

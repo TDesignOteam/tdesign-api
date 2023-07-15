@@ -53647,8 +53647,7 @@
       "field_category": 1,
       "field_name": "value",
       "field_type": [
-        "1",
-        "2"
+        "1"
       ],
       "field_default_value": "''",
       "field_enum": "",
@@ -53679,8 +53678,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "Number"
+        "String"
       ]
     },
     {
