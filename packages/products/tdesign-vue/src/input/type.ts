@@ -94,8 +94,7 @@ export interface TdInputProps {
    */
   size?: SizeEnum;
   /**
-   * 输入框状态
-   * @default default
+   * 输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
@@ -117,10 +116,12 @@ export interface TdInputProps {
   type?: 'text' | 'number' | 'url' | 'tel' | 'password' | 'search' | 'submit' | 'hidden';
   /**
    * 输入框的值
+   * @default ''
    */
   value?: InputValue;
   /**
    * 输入框的值，非受控属性
+   * @default ''
    */
   defaultValue?: InputValue;
   /**
@@ -128,13 +129,20 @@ export interface TdInputProps {
    */
   onBlur?: (value: InputValue, context: { e: FocusEvent }) => void;
   /**
-   * 输入框值发生变化时触发
+   * 输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制
    */
-  onChange?: (value: InputValue, context?: { e?: InputEvent | MouseEvent }) => void;
+  onChange?: (
+    value: InputValue,
+    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' },
+  ) => void;
   /**
    * 清空按钮点击时触发
    */
   onClear?: (context: { e: MouseEvent }) => void;
+  /**
+   * 点击组件时触发
+   */
+  onClick?: (context: { e: MouseEvent }) => void;
   /**
    * 中文输入结束时触发
    */
@@ -183,6 +191,13 @@ export interface TdInputProps {
    * 输入框中滚动鼠标时触发
    */
   onWheel?: (context: { e: WheelEvent }) => void;
+}
+
+export interface TdInputGroupProps {
+  /**
+   * 多个输入框之间是否需要间隔
+   */
+  separate?: boolean;
 }
 
 export type InputFormatType = (value: InputValue) => string;
