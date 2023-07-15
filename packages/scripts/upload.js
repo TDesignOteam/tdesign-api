@@ -7,7 +7,7 @@ const apiJSON = require('./api.json');
 const chalk = require('chalk');
 
 const url = '127.0.0.1:16001';
-function syncCreate(record){
+function syncCreate(record) {
   return new Promise((resolve, reject) => {
     console.log(`syncCreate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
     axios.request({
@@ -19,7 +19,7 @@ function syncCreate(record){
     }, reject);
   });
 }
-function syncUpdate(record){
+function syncUpdate(record) {
   return new Promise((resolve, reject) => {
     console.log(`syncUpdate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
     axios.request({
@@ -31,13 +31,13 @@ function syncUpdate(record){
     }, reject);
   });
 }
-function syncDelete(record){
+function syncDelete(record) {
   return new Promise((resolve, reject) => {
     console.log(`syncDelete ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
     axios.request({
       method: 'delete',
       url: `http://${url}/cmp/api`,
-      data:  {
+      data: {
         id: record.id
       },
     }).then(() => {
@@ -47,63 +47,63 @@ function syncDelete(record){
 }
 
 function uploadApiToDB() {
-    axios.request({
-      method: 'get',
-      url: `http://${url}/cmp/export-api-data`,
-    }).then((res) => {
-      let jsonRecordIds=[];
-      const jsonRecords= new Map();
-      let dbRecordIds=[];
-      let updateIds=[];
-      const dbRecords= new Map();
+  axios.request({
+    method: 'get',
+    url: `http://${url}/cmp/export-api-data`,
+  }).then((res) => {
+    let jsonRecordIds = [];
+    const jsonRecords = new Map();
+    let dbRecordIds = [];
+    let updateIds = [];
+    const dbRecords = new Map();
 
-      //api.json
-      apiJSON.data.map(record=>{
-        if (jsonRecordIds.includes(record.id)){
-          throw new Error("Duplicate ID "+record.id);
-        }
-        jsonRecordIds.push(record.id);
-        delete record.platform_framework_text;
-        delete record.field_type_text;
-        delete record.field_category_text;
-        jsonRecords.set(record.id,record);
-      })
-
-      //TDesign.db
-      res.data.data.map(record=>{
-        dbRecordIds.push(record.id)
-        delete record.platform_framework_text;
-        delete record.field_type_text;
-        delete record.field_category_text;
-        dbRecords.set(record.id,record);
-        const jsonRecord=jsonRecords.get(record.id)
-        if (jsonRecord&&JSON.stringify(record)!==JSON.stringify(jsonRecord)){
-          updateIds.push(record.id);
-        }
-      })
-      const deleteIds=dbRecordIds.filter(t=> !jsonRecordIds.includes(t));
-      const createIds= jsonRecordIds.filter(t=> !dbRecordIds.includes(t));
-
-      if([].concat(createIds,deleteIds,updateIds).length===0){
-        console.log(chalk.green(`No difference. api.json === TDesign.db\n`));
-        return;
+    //api.json
+    apiJSON.data.map(record => {
+      if (jsonRecordIds.includes(record.id)) {
+        throw new Error("Duplicate ID " + record.id);
       }
+      jsonRecordIds.push(record.id);
+      delete record.platform_framework_text;
+      delete record.field_type_text;
+      delete record.field_category_text;
+      jsonRecords.set(record.id, record);
+    })
 
-      //sync
-      const createPromises=createIds.map(id=>syncCreate(jsonRecords.get(id)))
-      const updatePromises=updateIds.map(id=> syncUpdate(jsonRecords.get(id)));
-      const deletePromises=deleteIds.map(id=>syncDelete(dbRecords.get(id)))
-      
+    //TDesign.db
+    res.data.data.map(record => {
+      dbRecordIds.push(record.id)
+      delete record.platform_framework_text;
+      delete record.field_type_text;
+      delete record.field_category_text;
+      dbRecords.set(record.id, record);
+      const jsonRecord = jsonRecords.get(record.id)
+      if (jsonRecord && JSON.stringify(record) !== JSON.stringify(jsonRecord)) {
+        updateIds.push(record.id);
+      }
+    })
+    const deleteIds = dbRecordIds.filter(t => !jsonRecordIds.includes(t));
+    const createIds = jsonRecordIds.filter(t => !dbRecordIds.includes(t));
 
-      Promise.all([...createPromises, ...updatePromises, ...deletePromises]).then(() => {
-        console.log(chalk.green(`Upload API to DB successfully!\n`));
-      }, () => {
-        console.log(chalk.red(`Upload API to DB failed!\n`));
-      });
-      
-    }).catch(function (error) {
-      console.log(chalk.red(`Upload API to DB failed! Error: ${error.message}\n`));
+    if ([].concat(createIds, deleteIds, updateIds).length === 0) {
+      console.log(chalk.green(`No difference. api.json === TDesign.db\n`));
+      return;
+    }
+
+    //sync
+    const createPromises = createIds.map(id => syncCreate(jsonRecords.get(id)))
+    const updatePromises = updateIds.map(id => syncUpdate(jsonRecords.get(id)));
+    const deletePromises = deleteIds.map(id => syncDelete(dbRecords.get(id)))
+
+
+    Promise.all([...createPromises, ...updatePromises, ...deletePromises]).then(() => {
+      console.log(chalk.green(`Upload API to DB successfully!\n`));
+    }, () => {
+      console.log(chalk.red(`Upload API to DB failed!\n`));
     });
+
+  }).catch(function (error) {
+    console.log(chalk.red(`Upload API to DB failed! Error: ${error.message}\n`));
+  });
 }
 console.log('----- Upload API to DB Start -----\n');
 uploadApiToDB();

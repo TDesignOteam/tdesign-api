@@ -52,7 +52,7 @@ class TAPI {
         expr.and(`${paramName} = "${params[paramName]}"`);
       });
     }
-    
+
     querySQL.where(expr)
       .order('component')
       .order('field_category')
@@ -63,7 +63,7 @@ class TAPI {
       const { size, offset = 0 } = limitObj;
       querySQL.limit(size).offset(offset);
     }
-    
+
     countSQL.where(expr);
 
     // 查询符合条件的记录、统计条数
@@ -73,9 +73,9 @@ class TAPI {
   }
 
   public static async create(params: {}) {
-    const newID= moment().unix();
-    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id',newID);
-    
+    const newID = moment().unix();
+    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
+
     Object.keys(params).map(param => insertSQL.set(param, params[param]));
     const res = await executeSQL(insertSQL.toString(), true);
     return res;
@@ -83,7 +83,7 @@ class TAPI {
 
   public static async update(params: {}, id: number) {
     const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
-    
+
     Object.keys(params).map(param => updateSQL.set(param, params[param]));
     const res = await executeSQL(updateSQL.toString(), true);
     return res;
@@ -91,7 +91,7 @@ class TAPI {
 
   public static async delete(id: number) {
     const deleteSQL = squel.delete().from(tableName).where(`id = ${id}`);
-    
+
     const res = await executeSQL(deleteSQL.toString(), true);
     return res;
   }
