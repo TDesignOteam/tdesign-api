@@ -8,7 +8,8 @@
 
 同步api.json数据到TDesign.db
 
-当合并分支发生冲突时，TDesign.db文件使用其他人的版本，然后本地执行 `npm run api:upload Button` 同步刚刚修改的组件数据到TDesign.db。
+当合并分支发生冲突时，TDesign.db文件使用其他人的版本，
+然后本地执行 `npm run api:upload` 同步刚刚修改的组件数据到TDesign.db。
 
 ## npm run api:docs
 
