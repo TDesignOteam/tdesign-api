@@ -21492,6 +21492,55 @@
       ]
     },
     {
+      "id": 3529,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "lazyLoad",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；或内容复杂时建议开启（如包含大量图片）",
+      "field_desc_en": "load checkbox content when it entering the visible area",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-15 04:49:18",
+      "update_time": "2023-07-15 04:49:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1414,
       "platform_framework": [
         "8",
@@ -21881,9 +21930,7 @@
     {
       "id": 3258,
       "platform_framework": [
-        "1",
-        "2",
-        "4"
+        "2"
       ],
       "component": "Checkbox",
       "field_category": 2,
@@ -21909,9 +21956,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
+        "React(PC)"
       ],
       "field_type_text": []
     },
@@ -21961,10 +22006,9 @@
     {
       "id": 149,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
+        "1",
+        "2",
+        "4"
       ],
       "component": "CheckboxGroup",
       "field_category": 1,
@@ -21988,6 +22032,48 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 3530,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用组件，默认为 false。优先级：CheckboxGroup.disabled < Checkbox.disabled",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-15 04:55:51",
+      "update_time": "2023-07-15 04:55:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -107074,8 +107160,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`",
-      "field_desc_en": "table height",
+      "field_desc_zh": "树的高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 `maxHeight`",
+      "field_desc_en": "The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight`.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-03-03 04:10:06",
@@ -107454,8 +107540,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
-      "field_desc_en": "table max height",
+      "field_desc_zh": "树的最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+      "field_desc_en": "The max height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. ",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-03-03 04:10:12",
@@ -118079,5 +118165,5 @@
       ]
     }
   ],
-  "total": 2816
+  "total": 2818
 }
