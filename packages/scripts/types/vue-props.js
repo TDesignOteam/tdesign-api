@@ -166,7 +166,16 @@ function formatNormalProps(api, cmp, extraParams = {}) {
       const tType = isMiniprogram && 'Function' === types ? 'null' : types;
       content.push(`${indent}type: ${tType}`);
     }
-    const dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
+    let dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
+
+    // Vue3 Props default value need redefine its type (Vue types bug)
+    if (currentFramework === 'VueNext(PC)'
+      && api.custom_field_type
+      && ['\'\'', 'undefined'].includes(dl)
+    ) {
+      dl = `${dl} as ${getPropType(cmp, api.field_name)}`;
+    }
+
     const defaultTypeContent = getDefaultWithType(api, dl, valueType);
     (dl || dl === 0) && content.push(defaultTypeContent);
     if (api.field_required) {
