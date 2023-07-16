@@ -21496,11 +21496,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Checkbox",
       "field_category": 1,
@@ -21510,7 +21506,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；或内容复杂时建议开启（如包含大量图片）",
+      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
       "field_desc_en": "load checkbox content when it entering the visible area",
       "field_required": 0,
       "event_input": "",
@@ -21530,11 +21526,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -22082,6 +22074,47 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1689498234,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 1,
+      "field_name": "lazyLoad",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
+      "field_desc_en": "load checkbox content when it entering the visible area",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-16 09:03:54",
+      "update_time": "2023-07-16 09:03:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
