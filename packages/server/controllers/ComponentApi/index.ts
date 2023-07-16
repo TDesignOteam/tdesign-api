@@ -141,6 +141,19 @@ function formatMap(obj: { [key: string]: string }) {
   return r;
 }
 
+function formatRecords(records:any){
+  return records.map((item: any) => {
+    item.create_time = moment(item.create_time).format('YYYY-MM-DD HH:mm:ss');
+    item.update_time = moment(item.update_time).format('YYYY-MM-DD HH:mm:ss');
+    item.field_category_text = API_CATEGORY[String(item.field_category)];
+    item.platform_framework = formatIntToArray(PLATFORM_FRAMEWORK, item.platform_framework);
+    item.platform_framework_text = item.platform_framework.map((index: string) => (PLATFORM_FRAMEWORK[index]));
+    item.field_type = formatIntToArray(FIELD_TYPE_MAP, item.field_type);
+    item.field_type_text = item.field_type.map((index: string) => (FIELD_TYPE_MAP[index]));
+    return item;
+  });
+}
+
 async function queryRecords(params?: BaseObject) {
   const p = filterParams(params);
   const pageSize = Number(p.page_size);
@@ -154,16 +167,8 @@ async function queryRecords(params?: BaseObject) {
 
   const [res, total]: any = await TAPI.query(p, paginationParams);
 
-  const formattedData = res.map((item: any) => {
-    item.create_time = moment(item.create_time).format('YYYY-MM-DD HH:mm:ss');
-    item.update_time = moment(item.update_time).format('YYYY-MM-DD HH:mm:ss');
-    item.field_category_text = API_CATEGORY[String(item.field_category)];
-    item.platform_framework = formatIntToArray(PLATFORM_FRAMEWORK, item.platform_framework);
-    item.platform_framework_text = item.platform_framework.map((index: string) => (PLATFORM_FRAMEWORK[index]));
-    item.field_type = formatIntToArray(FIELD_TYPE_MAP, item.field_type);
-    item.field_type_text = item.field_type.map((index: string) => (FIELD_TYPE_MAP[index]));
-    return item;
-  });
+  const formattedData = formatRecords(res);
+
   return {
     code: 0,
     msg: 'success',
@@ -184,6 +189,19 @@ async function generateAPI(params?: { commandLines: string[] }) {
   };
 }
 
+async function exportAPI()
+{
+  const [res]: any = await TAPI.query();
+
+  const formattedData = formatRecords(res);
+  
+  return {
+    code: 0,
+    msg: 'success',
+    data: formattedData,
+  };
+}
+
 export default {
   apiCreate,
   getMap,
@@ -191,4 +209,5 @@ export default {
   apiDelete,
   apiUpdate,
   generateAPI,
+  exportAPI,
 };
