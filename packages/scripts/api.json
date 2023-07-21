@@ -12240,9 +12240,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "禁用状态",
+      "field_desc_zh": "禁用状态。优先级：Button.disabled > Form.disabled",
       "field_desc_en": "disable the button, make it can not be clicked",
       "field_required": 0,
       "event_input": "",
