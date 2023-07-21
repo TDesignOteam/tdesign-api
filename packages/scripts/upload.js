@@ -23,7 +23,7 @@ function syncUpdate(record) {
   return new Promise((resolve, reject) => {
     console.log(`syncUpdate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
     axios.request({
-      method: 'post',
+      method: 'put',
       url: `http://${url}/cmp/api`,
       data: record,
     }).then(() => {
