@@ -114267,6 +114267,47 @@
       ]
     },
     {
+      "id": 1689991478,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "showThumbnail",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否在文件列表中显示缩略图",
+      "field_desc_en": "show thumbnail before file name, only works on `theme=file-flow` ",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-22 02:04:38",
+      "update_time": "2023-07-22 02:04:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1790,
       "platform_framework": [
         "1",
