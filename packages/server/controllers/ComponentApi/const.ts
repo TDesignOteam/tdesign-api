@@ -15,6 +15,7 @@ const ARRAY = 16;
 const FUNCTION = 32;
 const TNODE = 64;
 const Date = 128;
+const FILE = 256;
 
 const P_VUE_PC = 1;
 const P_REACT_PC = 2;
@@ -63,6 +64,7 @@ export const FIELD_TYPE_MAP: MapOptions = {
     [FUNCTION]: "Function",
     [TNODE]: "TNode",
     [Date]: "Date",
+    [FILE]: 'File',
 };
 
 export const PLATFORM_FRAMEWORK: MapOptions = {

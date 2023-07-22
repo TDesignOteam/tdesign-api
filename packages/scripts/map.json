@@ -117,6 +117,10 @@
       {
         "label": "Date",
         "value": "128"
+      },
+      {
+        "label": "File",
+        "value": "256"
       }
     ],
     "components": [

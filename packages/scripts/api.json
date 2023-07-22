@@ -50049,18 +50049,19 @@
       "field_category": 1,
       "field_name": "src",
       "field_type": [
-        "1"
+        "1",
+        "256"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图片链接",
-      "field_desc_en": null,
+      "field_desc_zh": "用于显示图片的链接或原始图片文件对象",
+      "field_desc_en": "src attribute of `<img>`. image File can also be loaded",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-23 07:56:38",
       "update_time": "2022-07-21 10:18:47",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | File",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -50080,7 +50081,8 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "File"
       ]
     },
     {
