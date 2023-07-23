@@ -8879,6 +8879,47 @@
       ]
     },
     {
+      "id": 1690078441,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "lazyLoad",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用整个表格元素的懒加载，当页面滚动到可视区域后再渲染表格。注意和表格内部行滚动懒加载的区别，内部行滚动无论表格是否在可视区域都会默认渲染第一屏的行元素",
+      "field_desc_en": "load table content when it entering the visible area, all elements in table are not rendered before it become visible",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-23 02:14:01",
+      "update_time": "2023-07-23 02:14:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 332,
       "platform_framework": [
         "1",
@@ -21506,7 +21547,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
+      "field_desc_zh": "是否启用懒加载。数据量大时建议开启；加载复杂内容或大量图片时建议开启",
       "field_desc_en": "load checkbox content when it entering the visible area",
       "field_required": 0,
       "event_input": "",
@@ -22094,7 +22135,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否启用懒加载。数据量加大时建议开启；加载复杂内容或大量图片时建议开启",
+      "field_desc_zh": "是否启用懒加载。子组件 Checkbox 数据量大时建议开启；加载复杂内容或大量图片时建议开启",
       "field_desc_en": "load checkbox content when it entering the visible area",
       "field_required": 0,
       "event_input": "",
@@ -95617,7 +95658,7 @@
       "create_time": "2022-05-22 14:02:26",
       "update_time": "2022-05-22 14:02:26",
       "event_output": null,
-      "custom_field_type": "TableEditableCellProps<T>【type TableEditableCellProps<T> = TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject)】【interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> { editedRow: T }】【interface TablePlainObject{ [key: string]: any }】",
+      "custom_field_type": "TableEditableCellProps<T>【type TableEditableCellProps<T> = TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject)】【interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> { editedRow: T; updateEditedCellValue: (val: any) => void }】【interface TablePlainObject{ [key: string]: any }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
