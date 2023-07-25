@@ -12,7 +12,7 @@ export default {
   allowInput: Boolean,
   /** 是否允许清除选中值 */
   clearable: Boolean,
-  /** 禁用时间项 */
+  /** 禁用时间项的配置函数 */
   disableTime: {
     type: Function as PropType<TdTimePickerProps['disableTime']>,
   },
@@ -57,6 +57,7 @@ export default {
   /** 输入框状态 */
   status: {
     type: String as PropType<TdTimePickerProps['status']>,
+    default: 'default' as TdTimePickerProps['status'],
     validator(val: TdTimePickerProps['status']): boolean {
       if (!val) return true;
       return ['default', 'success', 'warning', 'error'].includes(val);
@@ -73,12 +74,12 @@ export default {
   },
   /** 选中值 */
   value: {
-    type: String,
+    type: String as PropType<TdTimePickerProps['value']>,
     default: '',
   },
   /** 选中值，非受控属性 */
   defaultValue: {
-    type: String,
+    type: String as PropType<TdTimePickerProps['defaultValue']>,
     default: '',
   },
   /** 当输入框失去焦点时触发，value 表示组件当前有效值 */
