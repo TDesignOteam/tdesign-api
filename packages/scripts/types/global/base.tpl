@@ -37,7 +37,7 @@ export interface KeysType {
 }
 
 export interface HTMLElementAttributes {
-  [css: string]: string;
+  [attribute: string]: string;
 }
 
 export interface TScroll {

@@ -94762,7 +94762,7 @@
       "create_time": "2023-07-27 08:13:46",
       "update_time": "2023-07-27 08:13:46",
       "event_output": null,
-      "custom_field_type": "CSSProperties",
+      "custom_field_type": "Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
