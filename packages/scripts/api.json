@@ -94386,7 +94386,7 @@
       "field_category": 1,
       "field_name": "attrs",
       "field_type": [
-        "16"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -94413,7 +94413,48 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Array"
+        "Object"
+      ]
+    },
+    {
+      "id": 1690445477,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "classNames",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传类名到自定义组件 `component`",
+      "field_desc_en": "component class names",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-27 08:11:17",
+      "update_time": "2023-07-27 08:11:17",
+      "event_output": null,
+      "custom_field_type": "ClassName",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -94591,7 +94632,7 @@
       "field_category": 1,
       "field_name": "props",
       "field_type": [
-        "16"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -94618,7 +94659,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Array"
+        "Object"
       ]
     },
     {
@@ -94697,6 +94738,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1690445626,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "styles",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传内联样式到自定义组件 `component`",
+      "field_desc_en": "styles of component",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-27 08:13:46",
+      "update_time": "2023-07-27 08:13:46",
+      "event_output": null,
+      "custom_field_type": "CSSProperties",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
