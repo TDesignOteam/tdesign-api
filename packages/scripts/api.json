@@ -94376,6 +94376,47 @@
       ]
     },
     {
+      "id": 1690444114,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "attrs",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于透传筛选器属性，HTML 原生属性",
+      "field_desc_en": "html attributes of component",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-27 07:48:34",
+      "update_time": "2023-07-27 07:48:34",
+      "event_output": null,
+      "custom_field_type": "HTMLElementAttributes",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 2060,
       "platform_framework": [
         "1",
