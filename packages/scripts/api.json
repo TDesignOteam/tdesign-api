@@ -94749,7 +94749,7 @@
       ],
       "component": "TableColumnFilter",
       "field_category": 1,
-      "field_name": "styles",
+      "field_name": "style",
       "field_type": [
         "8"
       ],
