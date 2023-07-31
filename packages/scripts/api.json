@@ -50043,7 +50043,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "strict-origin-when-cross-origin",
+      "field_default_value": "",
       "field_enum": "no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
       "field_desc_zh": "`<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
       "field_desc_en": "attribute of `<img>`, [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
