@@ -38519,6 +38519,45 @@
       "field_type_text": []
     },
     {
+      "id": 1690896981,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "arrowIcon",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "'caret-down-small'",
+      "field_enum": "",
+      "field_desc_zh": "自定义箭头图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-08-01 13:36:21",
+      "update_time": "2023-08-01 13:36:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
+      ]
+    },
+    {
       "id": 1698,
       "platform_framework": [
         "8",
@@ -38559,43 +38598,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3051,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DropdownMenu",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:26:13",
-      "update_time": "2022-10-31 11:26:13",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
