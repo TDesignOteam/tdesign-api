@@ -56422,6 +56422,49 @@
       ]
     },
     {
+      "id": 1690964502,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Link",
+      "field_category": 1,
+      "field_name": "download",
+      "field_type": [
+        "1",
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "使得浏览器将链接的 URL 视为可下载资源",
+      "field_desc_en": "Causes the browser to treat the linked URL as a download",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-08-02 08:21:42",
+      "update_time": "2023-08-02 08:21:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean"
+      ]
+    },
+    {
       "id": 3368,
       "platform_framework": [
         "64"
