@@ -38,7 +38,7 @@ export default {
   inputProps: {
     type: Object as PropType<TdCascaderProps['inputProps']>,
   },
-  /** 用来定义 value / label / children 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
   },
