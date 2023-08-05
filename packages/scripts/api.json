@@ -50211,7 +50211,6 @@
     {
       "id": 2207,
       "platform_framework": [
-        "1",
         "2",
         "4",
         "8",
@@ -50246,7 +50245,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
@@ -50257,6 +50255,45 @@
       "field_type_text": [
         "String",
         "Object"
+      ]
+    },
+    {
+      "id": 1691226927,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "src",
+      "field_type": [
+        "1",
+        "256"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于显示图片的链接或原始图片文件对象",
+      "field_desc_en": "src attribute of `<img>`. image File can also be loaded",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-08-05 09:15:27",
+      "update_time": "2023-08-05 09:15:27",
+      "event_output": null,
+      "custom_field_type": "string | File",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "File"
       ]
     },
     {
