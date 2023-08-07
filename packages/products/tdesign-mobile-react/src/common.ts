@@ -71,6 +71,7 @@ export type CSSSelector = string;
 export interface KeysType {
   value?: string;
   label?: string;
+  disabled?: string;
 }
 
 export interface HTMLElementAttributes {
