@@ -23,6 +23,7 @@ const GLOBAL_TYPES = [
   'FormResetEvent',
   'FormSubmitEvent',
   'KeysType',
+  'TreeKeysType',
   'HTMLElementAttributes',
   'ComponentType',
   'TScroll',
