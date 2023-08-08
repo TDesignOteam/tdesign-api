@@ -16862,6 +16862,47 @@
       ]
     },
     {
+      "id": 1691465578,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "borderless",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "无边框模式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-08-08 03:32:58",
+      "update_time": "2023-08-08 03:32:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 397,
       "platform_framework": [
         "1",
@@ -17299,7 +17340,7 @@
       "create_time": "2020-12-21 06:27:55",
       "update_time": "2022-03-18 09:37:46",
       "event_output": null,
-      "custom_field_type": "CascaderKeysType【interface CascaderKeysType { value?: string; label?: string; children?: string; disabled?: string }】",
+      "custom_field_type": "TreeKeysType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -23196,7 +23237,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否为无边框模式",
+      "field_desc_zh": "无边框模式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -52762,6 +52803,53 @@
     {
       "id": 2372,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "borderless",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "【开发中】无边框模式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2022-03-04 02:27:39",
+      "update_time": "2022-03-24 03:49:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1691465640,
+      "platform_framework": [
         "64"
       ],
       "component": "Input",
@@ -52772,12 +52860,12 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
+      "field_desc_zh": "无边框模式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-03-04 02:27:39",
-      "update_time": "2022-03-24 03:49:13",
+      "create_time": "2023-08-08 03:34:00",
+      "update_time": "2023-08-08 03:34:00",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -80683,7 +80771,7 @@
       "create_time": "2020-12-18 02:24:01",
       "update_time": "2021-07-18 07:51:38",
       "event_output": null,
-      "custom_field_type": "SelectKeysType【interface SelectKeysType { value?: string; label?: string }】",
+      "custom_field_type": "KeysType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -107898,7 +107986,7 @@
       "create_time": "2020-12-28 05:52:42",
       "update_time": "2021-07-18 07:51:23",
       "event_output": null,
-      "custom_field_type": "TreeKeysType【interface TreeKeysType { value?: string; label?: string; children?: string }】",
+      "custom_field_type": "TreeKeysType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

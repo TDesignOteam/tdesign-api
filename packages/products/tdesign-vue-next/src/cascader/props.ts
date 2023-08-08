@@ -10,6 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 无边框模式 */
+  borderless: Boolean,
   /** 参考 checkbox 组件 API */
   checkProps: {
     type: Object as PropType<TdCascaderProps['checkProps']>,
