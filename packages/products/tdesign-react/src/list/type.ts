@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, InfinityScroll } from '../common';
+import { TNode, TScroll, InfinityScroll } from '../common';
 import { MouseEvent, WheelEvent } from 'react';
 
 export interface TdListProps {
@@ -29,6 +29,10 @@ export interface TdListProps {
    * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
    */
   scroll?: InfinityScroll;
+  /**
+   * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
+   */
+  scroll?: TScroll;
   /**
    * 尺寸
    * @default medium

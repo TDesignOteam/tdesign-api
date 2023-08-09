@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### List Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -11,6 +10,7 @@ footer | String / Slot / Function | - | 底部。TS 类型：`string \| TNode`�
 header | String / Slot / Function | - | 头部。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | 排列方式（待设计稿输出）。可选项：horizontal/vertical | N
 scroll | Object | - | 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`。TS 类型：`InfinityScroll`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+scroll | Object | - | 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`。TS 类型：`TScroll`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
 split | Boolean | false | 是否展示分割线 | N
 stripe | Boolean | false | 是否展示斑马纹 | N
