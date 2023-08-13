@@ -43040,8 +43040,10 @@
       "id": 180,
       "platform_framework": [
         "1",
+        "2",
         "4",
         "8",
+        "16",
         "32",
         "64"
       ],
@@ -43049,8 +43051,7 @@
       "field_category": 1,
       "field_name": "name",
       "field_type": [
-        "1",
-        "2"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -43061,7 +43062,7 @@
       "create_time": "2020-12-02 06:10:20",
       "update_time": "2022-06-16 08:15:16",
       "event_output": null,
-      "custom_field_type": "string | number",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43073,57 +43074,15 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
+        "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 2770,
-      "platform_framework": [
-        "2",
-        "16"
-      ],
-      "component": "FormItem",
-      "field_category": 1,
-      "field_name": "name",
-      "field_type": [
-        "1",
-        "2",
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "表单字段名称",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-06-16 08:15:30",
-      "update_time": "2022-06-16 08:17:12",
-      "event_output": null,
-      "custom_field_type": "NamePath【type NamePath = string | number | Array<string | number>】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number",
-        "Array"
+        "String"
       ]
     },
     {
