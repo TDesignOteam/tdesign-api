@@ -92304,9 +92304,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false",
+      "field_desc_zh": "是否禁用组件。优先级：Switch.disabled > Form.disabled",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
