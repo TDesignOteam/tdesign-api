@@ -56596,9 +56596,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "禁用链接",
+      "field_desc_zh": "禁用链接。优先级：Link.disabled > Form.disabled",
       "field_desc_en": "make link to be disabled",
       "field_required": 0,
       "event_input": "",
