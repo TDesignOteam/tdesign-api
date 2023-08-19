@@ -39358,7 +39358,7 @@
       "field_desc_zh": "展开行发生变化时触发，泛型 T 指表格数据类型",
       "field_desc_en": "trigger on tree node expand or fold",
       "field_required": 0,
-      "event_input": "(expandedRowKeys: Array<string | number>, options: TableTreeNodeExpandOptions <T>)【interface TableTreeNodeExpandOptions<T> { currentRowData: T; type: 'fold' | 'expand' }】",
+      "event_input": "(expandedRowKeys: Array<string | number>, options: TableTreeNodeExpandOptions <T>)【interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' | 'expand'; trigger?: 'expand-fold-icon' | 'row-click' }】",
       "create_time": "2023-08-19 07:54:47",
       "update_time": "2023-08-19 07:54:47",
       "event_output": null,
