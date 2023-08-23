@@ -109492,6 +109492,43 @@
       "field_type_text": []
     },
     {
+      "id": 1692780713,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Tree",
+      "field_category": 4,
+      "field_name": "scrollTo",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "虚拟滚动场景下 支持指定滚动到具体的节点",
+      "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
+      "field_required": 0,
+      "event_input": "(scrollToParams: ScrollToElementParams)",
+      "create_time": "2023-08-23 08:51:53",
+      "update_time": "2023-08-23 08:51:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 562,
       "platform_framework": [
         "1",
