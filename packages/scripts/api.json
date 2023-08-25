@@ -53460,6 +53460,7 @@
       "field_category": 1,
       "field_name": "maxlength",
       "field_type": [
+        "1",
         "2"
       ],
       "field_default_value": "",
@@ -53491,6 +53492,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -101021,6 +101023,7 @@
       "field_category": 1,
       "field_name": "maxlength",
       "field_type": [
+        "1",
         "2"
       ],
       "field_default_value": "",
@@ -101052,6 +101055,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
