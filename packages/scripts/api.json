@@ -71396,7 +71396,7 @@
       "field_desc_zh": "过滤参数发生变化时触发，泛型 T 指表格数据类型",
       "field_desc_en": "trigger on filter value changing",
       "field_required": 0,
-      "event_input": "(filterValue: FilterValue, context: { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' })",
+      "event_input": "(filterValue: FilterValue, context: TableFilterChangeContext<T>)【interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }】",
       "create_time": "2021-02-09 12:16:58",
       "update_time": "2021-12-18 13:45:19",
       "event_output": null,
