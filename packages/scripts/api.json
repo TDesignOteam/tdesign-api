@@ -51381,7 +51381,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "0",
       "field_enum": "",
       "field_desc_zh": "当前预览图片所在的下标",
       "field_desc_en": null,
@@ -51724,7 +51724,7 @@
       "create_time": "2022-05-30 12:51:14",
       "update_time": "2022-07-04 12:02:41",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ open: () => void }>",
+      "custom_field_type": "TNode | TNode<{ open: () => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -51856,7 +51856,7 @@
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
