@@ -95005,6 +95005,47 @@
       ]
     },
     {
+      "id": 1693805055,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于 `title` 字段不是字符串时，过滤文本行无法正常显示列标题文本的场景",
+      "field_desc_en": "filter column title text, used to be showed in filter row",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-04 05:24:15",
+      "update_time": "2023-09-04 05:24:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2058,
       "platform_framework": [
         "1",
