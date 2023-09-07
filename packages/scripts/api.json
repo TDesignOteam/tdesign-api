@@ -114078,6 +114078,45 @@
       ]
     },
     {
+      "id": 1690274500,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "addContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-07-25 08:41:40",
+      "update_time": "2023-07-25 08:41:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 2454,
       "platform_framework": [
         "1",
@@ -115974,7 +116013,8 @@
     {
       "id": 3009,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -116002,7 +116042,8 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
