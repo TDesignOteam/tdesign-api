@@ -17568,6 +17568,47 @@
       ]
     },
     {
+      "id": 3538,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否异步加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-20 17:43:02",
+      "update_time": "2023-06-20 17:43:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 394,
       "platform_framework": [
         "1",
@@ -17606,6 +17647,47 @@
       ],
       "field_type_text": [
         "Function"
+      ]
+    },
+    {
+      "id": 3537,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "loadCompleted",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否完成异步加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-21 03:38:56",
+      "update_time": "2023-06-21 03:38:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -74063,7 +74145,7 @@
       "create_time": "2021-08-10 05:23:21",
       "update_time": "2021-12-25 15:54:08",
       "event_output": null,
-      "custom_field_type": "'circle' | 'line' | 'dot' | Array<TNode>",
+      "custom_field_type": "'circle' | 'line' | 'dot' | 'loading' | Array<TNode>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -74324,7 +74406,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "undefined",
       "field_enum": "left/right",
       "field_desc_zh": "复选框和内容相对位置",
       "field_desc_en": null,
@@ -74796,6 +74878,49 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Array"
+      ]
+    },
+    {
+      "id": 3539,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "1",
+        "16"
+      ],
+      "field_default_value": "'circle'",
+      "field_enum": "",
+      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-21 04:08:54",
+      "update_time": "2023-06-21 04:08:54",
+      "event_output": null,
+      "custom_field_type": "'circle' | 'line' | 'dot' | 'loading' | Array<TNode>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
