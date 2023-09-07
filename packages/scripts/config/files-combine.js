@@ -285,6 +285,9 @@ const TYPES_COMBINE_MAP = {
   Tooltip: {
     list: ['Tooltip', 'TooltipLite'],
   },
+  SideBar: {
+    list:  ['SideBar', 'SideBarItem']
+  },
   Indexes: {
     list: ['Indexes', 'IndexesAnchor'],
     excludes: ['Miniprogram']
