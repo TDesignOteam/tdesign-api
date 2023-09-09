@@ -8086,6 +8086,47 @@
       ]
     },
     {
+      "id": 1694267086,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "activeRowType",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认不会高亮点击行，`activeRowType=single` 表示仅允许同时高亮一行，`activeRowType= multiple ` 表示允许同时高亮多行",
+      "field_desc_en": "make nodes can be highlight on clicked",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-09 13:44:46",
+      "update_time": "2023-09-09 13:44:46",
+      "event_output": null,
+      "custom_field_type": "'single' | 'multiple'",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2646,
       "platform_framework": [
         "1"
@@ -107664,10 +107705,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Tree",
       "field_category": 1,
@@ -107678,7 +107716,7 @@
       "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "节点是否可高亮",
-      "field_desc_en": null,
+      "field_desc_en": "make nodes can be highlight",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-28 06:30:27",
@@ -107697,10 +107735,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -107711,10 +107746,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Tree",
       "field_category": 1,
@@ -107744,10 +107776,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
