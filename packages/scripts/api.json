@@ -8465,6 +8465,47 @@
       ]
     },
     {
+      "id": 1694319326,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "disableSpaceInactiveRow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "默认重复按下 Space 键可取消当前行高亮，是否禁用取消",
+      "field_desc_en": "can not set row to be inactive with Space keydown",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-10 04:15:26",
+      "update_time": "2023-09-10 04:15:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 328,
       "platform_framework": [
         "1",
@@ -9926,7 +9967,7 @@
       "field_desc_zh": "高亮行发生变化时触发，泛型 T 指表格数据类型。参数 `activeRowList` 表示所有高亮行数据， `currentRowData` 表示当前操作行数据",
       "field_desc_en": "trigger on row active change",
       "field_required": 0,
-      "event_input": "(activeRowKeys: Array<string | number>, context: ActiveChangeContext<T>)【interface ActiveChangeContext<T> { activeRowList: Array<T>; currentRowData?: T; type: 'active' | 'inactive' }】",
+      "event_input": "(activeRowKeys: Array<string | number>, context: ActiveChangeContext<T>)【interface ActiveChangeContext<T> { activeRowList: Array<{ row: T, rowIndex: number }>; currentRowData?: T; type: 'active' | 'inactive' }】",
       "create_time": "2023-09-09 12:34:16",
       "update_time": "2023-09-09 12:34:16",
       "event_output": null,
@@ -9963,7 +10004,7 @@
       "field_desc_zh": "通过键盘(Shift)或鼠标操作连续选中高亮行时触发，一般用于处理行选中等批量操作，模拟操作系统区域选择行为",
       "field_desc_en": "trigger on active row area selection confirm, selection behavior is just like macOS or windows",
       "field_required": 0,
-      "event_input": "(context: AreaSelectionConfirmContext<T>)【interface AreaSelectionConfirmContext <T> { activeRowList: Array<T> }】",
+      "event_input": "(context: AreaSelectionConfirmContext<T>)【interface AreaSelectionConfirmContext <T> { activeRowList: Array<{ row: T, rowIndex: number }> }】",
       "create_time": "2023-09-10 03:24:49",
       "update_time": "2023-09-10 03:24:49",
       "event_output": null,
