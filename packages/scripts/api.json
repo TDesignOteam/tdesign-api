@@ -10004,7 +10004,7 @@
       "field_desc_zh": "键盘操作事件。开启行高亮功能后，会自动开启键盘操作功能，如：通过键盘(Shift)或鼠标操作连续选中高亮行时触发，一般用于处理行选中等批量操作，模拟操作系统区域选择行为",
       "field_desc_en": "keyboard operation event actions. used to mock selection behavior, just like macOS or windows",
       "field_required": 0,
-      "event_input": "(context: activeRowAction<T>)【interface activeRowAction <T> { action: ActiveRowActionType,  activeRowList: Array<{ row: T, rowIndex: number }> }】【type ActiveRowActionType = 'shift-mouse-area-selection' | 'shift-arrow-up-down-area-selection' | 'space' | 'clear' | 'select-all'】",
+      "event_input": "(context: activeRowAction<T>)【interface activeRowAction <T> { action: ActiveRowActionType,  activeRowList: Array<{ row: T, rowIndex: number }> }】【type ActiveRowActionType ='shift-area-selection' | 'space-one-selection' | 'clear' | 'select-all'】",
       "create_time": "2023-09-10 03:24:49",
       "update_time": "2023-09-10 03:24:49",
       "event_output": null,
