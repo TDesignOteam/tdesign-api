@@ -95348,6 +95348,47 @@
       ]
     },
     {
+      "id": 1694508459,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnController",
+      "field_category": 1,
+      "field_name": "groupColumns",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列分组功能配置，当列数量过多的时候，为了方便阅读，一般需要进行列分组设置",
+      "field_desc_en": "show columns by group",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-12 08:47:39",
+      "update_time": "2023-09-12 08:47:39",
+      "event_output": null,
+      "custom_field_type": "TableColumnGroup[]【interface TableColumnGroup { label: string; value?: string | number; columns: string[] }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 2528,
       "platform_framework": [
         "1",
