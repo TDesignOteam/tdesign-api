@@ -9246,7 +9246,7 @@
       "create_time": "2023-09-12 11:08:08",
       "update_time": "2023-09-12 11:08:08",
       "event_output": null,
-      "custom_field_type": "TableConfig",
+      "custom_field_type": "TableConfig【import { TableConfig } from '@ConfigProvider'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
