@@ -68771,9 +68771,6 @@
     {
       "id": 3489,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
         "8",
         "16",
         "32"
@@ -68805,9 +68802,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
@@ -70134,43 +70128,6 @@
       ]
     },
     {
-      "id": 1695438218,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Popup",
-      "field_category": 2,
-      "field_name": "contentClick",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "内容面板点击时触发",
-      "field_desc_en": "trigger on popup content click",
-      "field_required": 0,
-      "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2023-09-23 03:03:38",
-      "update_time": "2023-09-23 03:03:38",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": []
-    },
-    {
       "id": 1994,
       "platform_framework": [
         "8"
@@ -70243,6 +70200,43 @@
       "field_type_text": [
         "Function"
       ]
+    },
+    {
+      "id": 1695438218,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 2,
+      "field_name": "overlayClick",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容面板点击时触发",
+      "field_desc_en": "trigger on popup content click",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2023-09-23 03:03:38",
+      "update_time": "2023-09-23 03:03:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2193,
@@ -70401,6 +70395,117 @@
       "field_type_text": [
         "Function"
       ]
+    },
+    {
+      "id": 1695463182,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 4,
+      "field_name": "getOverlay",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取浮层元素",
+      "field_desc_en": "used to get overly html element",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-23 09:59:42",
+      "update_time": "2023-09-23 09:59:42",
+      "event_output": "HTMLElement",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1695463300,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 4,
+      "field_name": "getOverlayState",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取浮层悬浮状态",
+      "field_desc_en": "get mouseover state of overlay",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-23 10:01:40",
+      "update_time": "2023-09-23 10:01:40",
+      "event_output": "{ hover: boolean }",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1695463043,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Popup",
+      "field_category": 4,
+      "field_name": "update",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "更新浮层内容",
+      "field_desc_en": "used to update overlay content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-23 09:57:23",
+      "update_time": "2023-09-23 09:57:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 333,
