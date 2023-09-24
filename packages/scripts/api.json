@@ -18390,6 +18390,47 @@
       ]
     },
     {
+      "id": 1695533113,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-24 05:25:13",
+      "update_time": "2023-09-24 05:25:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2389,
       "platform_framework": [
         "1",
@@ -19159,14 +19200,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】自定义选中项呈现的内容",
+      "field_desc_zh": "自定义选中项呈现的内容",
       "field_desc_en": "`MouseEvent<SVGElement>`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-02-05 03:59:14",
       "update_time": "2023-02-05 03:59:14",
       "event_output": null,
-      "custom_field_type": "string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>",
+      "custom_field_type": "string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption>; selectedOptions: CascaderOption[] }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
