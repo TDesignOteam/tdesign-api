@@ -20827,6 +20827,55 @@
       ]
     },
     {
+      "id": 1695545685,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "checkedProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传标签选中态属性",
+      "field_desc_en": "used to set checked tag props",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-24 08:54:45",
+      "update_time": "2023-09-24 08:54:45",
+      "event_output": null,
+      "custom_field_type": "TdTagProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3313,
       "platform_framework": [
         "2",
@@ -21297,6 +21346,55 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1695545724,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "uncheckedProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传标签未选态属性",
+      "field_desc_en": "used to set unchecked tag props",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-24 08:55:24",
+      "update_time": "2023-09-24 08:55:24",
+      "event_output": null,
+      "custom_field_type": "TdTagProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
