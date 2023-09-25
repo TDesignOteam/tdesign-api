@@ -76,7 +76,7 @@ const COMPONENT_API_MD_MAP = {
   Grid: ['Grid', 'Row', 'Col', 'GridItem'],
   Icon: ['IconSVG', 'Iconfont'],
   Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
-  Tag: ['Tag', 'CheckTag'],
+  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
   Collapse: ['Collapse', 'CollapsePanel'],
   Dropdown: {
     list: ['Dropdown', 'DropdownItem'],
@@ -174,7 +174,7 @@ const TYPES_COMBINE_MAP = {
     list: ['Pagination', 'PaginationMini'],
   },
   Tag: {
-    list: ['Tag', 'CheckTag'],
+    list: ['Tag', 'CheckTag', 'CheckTagGroup'],
     excludes: ['Miniprogram']
   },
   Collapse: {

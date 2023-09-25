@@ -149,6 +149,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: "OptionGroup", label: "选择器选项组" },
     { value: "Tag", label: "标签" },
     { value: "CheckTag", label: "可选标签" },
+    { value: "CheckTagGroup", label: "可选标签组" },
     { value: "Breadcrumb", label: "面包屑" },
     { value: "BreadcrumbItem", label: "面包屑项" },
     { value: "Menu", label: "侧边导航菜单" },

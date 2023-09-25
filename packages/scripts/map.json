@@ -373,6 +373,10 @@
         "label": "可选标签"
       },
       {
+        "value": "CheckTagGroup",
+        "label": "可选标签组"
+      },
+      {
         "value": "Col",
         "label": "栅格-纵向"
       },
