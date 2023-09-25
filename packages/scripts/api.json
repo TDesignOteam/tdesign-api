@@ -21398,6 +21398,49 @@
       ]
     },
     {
+      "id": 1695615361,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签唯一标识，一般用于标签组场景，单个可选择标签无需设置",
+      "field_desc_en": "tag unique key",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-09-25 04:16:01",
+      "update_time": "2023-09-25 04:16:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 3239,
       "platform_framework": [
         "8",
@@ -21460,7 +21503,7 @@
       "field_desc_zh": "状态切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(checked: boolean, context: CheckTagChangeContext)【interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent }】",
+      "event_input": "(checked: boolean, context: CheckTagChangeContext)【interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }】",
       "create_time": "2021-02-20 12:58:23",
       "update_time": "2021-11-27 15:47:10",
       "event_output": null,
@@ -21642,7 +21685,7 @@
       "create_time": "2023-09-24 14:09:58",
       "update_time": "2023-09-24 14:09:58",
       "event_output": null,
-      "custom_field_type": "CheckTagGroupOption[]【interface CheckTagGroupOption extends TdCheckTagProps { label: string; value: string | number; content?: TNode }】",
+      "custom_field_type": "CheckTagGroupOption[]【interface CheckTagGroupOption extends TdCheckTagProps { label: string | TNode; value: string | number }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -21767,7 +21810,7 @@
       "field_desc_zh": null,
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: CheckTagGroupValue, context: CheckTagGroupChangeContext)【interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent }】",
+      "event_input": "(value: CheckTagGroupValue, context: CheckTagGroupChangeContext)【interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }】",
       "create_time": "2023-09-24 14:03:11",
       "update_time": "2023-09-24 14:03:11",
       "event_output": null,
