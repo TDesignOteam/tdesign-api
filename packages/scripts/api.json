@@ -109034,7 +109034,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "[开发中]节点是否可拖拽",
+      "field_desc_zh": "节点是否可拖拽",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
