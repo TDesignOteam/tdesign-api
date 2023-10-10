@@ -7,7 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
-activable | Boolean | false | \- | N
+activable | Boolean | false | make nodes can be highlight | N
 activeMultiple | Boolean | false | \- | N
 actived | Array | - | Typescript：`Array<TreeNodeValue>` | N
 allowFoldNodeOnFilter | Boolean | false | \- | N
@@ -26,15 +26,15 @@ expandOnClickNode | Boolean | false | \- | N
 expandParent | Boolean | false | \- | N
 expanded | Array | [] | Typescript：`Array<TreeNodeValue>` | N
 filter | Function | - | Typescript：`(node: TreeNodeModel<T>) => boolean` | N
-height | String / Number | - | table height | N
+height | String / Number | - | The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight`. | N
 hover | Boolean | - | \- | N
 icon | TNode | true | Typescript：`boolean \| TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-keys | Object | - | Typescript：`TreeKeysType` `interface TreeKeysType { value?: string; label?: string; children?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tree/type.ts) | N
+keys | Object | - | alias field name in data。Typescript：`TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 label | TNode | true | Typescript：`string \| boolean \| TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 lazy | Boolean | true | \- | N
 line | TNode | false | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 load | Function | - | Typescript：`(node: TreeNodeModel<T>) => Promise<Array<T>>` | N
-maxHeight | String / Number | - | table max height | N
+maxHeight | String / Number | - | The max height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'.  | N
 operations | TElement | - | Typescript：`TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 scroll | Object | - | lazy load and virtual scroll。Typescript：`TScroll`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 transition | Boolean | true | \- | N
@@ -69,6 +69,7 @@ getPath | `(value: TreeNodeValue)` | `TreeNodeModel<T>[]` | required
 insertAfter | `(value: TreeNodeValue, newData: T)` | \- | required
 insertBefore | `(value: TreeNodeValue, newData: T)` | \- | required
 remove | `(value: TreeNodeValue)` | \- | required
+scrollTo | `(scrollToParams: ScrollToElementParams)` | \- | support scrolling to a specific node when virtual scrolling 
 setItem | `(value: TreeNodeValue, options: TreeNodeState)` | \- | required
 
 ### TreeNodeState
