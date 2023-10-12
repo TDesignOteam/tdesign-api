@@ -145,7 +145,7 @@ export default {
         method: 'post',
         url: '/cmp/generate-api',
         data: {
-          commandLines: this.commandLine.map(command => command.replace('npm run api:docs', ''))
+          commandLines: this.commandLine.map(command => command.replace('npm run api:docs', '').replaceAll("'", ''))
         }
       }).then(() => {
         this.generateFilesVisible = false
