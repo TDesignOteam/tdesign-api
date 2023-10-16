@@ -95557,7 +95557,7 @@
       ],
       "component": "TabPanel",
       "field_category": 1,
-      "field_name": "lazyLoad",
+      "field_name": "lazy",
       "field_type": [
         "4"
       ],
