@@ -27,10 +27,10 @@ jobs:
       - name: Check Diff
         id: check_diff
         run: |
-          echo IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
+           echo "IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)" >> $GITHUB_OUTPUT
     
       - name: Comment 
-        if: steps.check_diff.outputs.IS_DIFF=='true'
+        if: steps.check_diff.outputs.IS_DIFF=='true' 
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
