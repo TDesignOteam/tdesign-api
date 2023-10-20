@@ -30,7 +30,7 @@ jobs:
           echo IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
     
       - name: Comment 
-        if: ${{steps.check_diff.IS_DIFF=='true'}}
+        if: ${{steps.check_diff.outputs.IS_DIFF=='true'}}
         uses: actions-cool/maintain-one-comment@v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,7 +38,7 @@ jobs:
             `TDesign.db`和`api.json`数据不一致，请执行`npm run api:download`。
 
       - name: Error
-        if: ${{steps.check_diff.IS_DIFF=='true'}}  
+        if: ${{steps.check_diff.outputs.IS_DIFF=='true'}}  
         run:  |
           git diff packages/scripts/api.json
           exit 1       
