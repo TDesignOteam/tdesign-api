@@ -25,11 +25,20 @@ jobs:
         run: npm run api:download
 
       - name: Check Diff
+        id: check_diff
         run: |
-          IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
-          echo "IS_DIFF: $IS_DIFF"
-          if [[ $IS_DIFF == 'true' ]]; then
-            git diff packages/scripts/api.json
-            echo "TDesign.db and api.json data inconsistency. Workflow will fail."
-            exit 1
-          fi
+          echo IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
+    
+      - name: Comment 
+        if: ${{steps.check_diff.IS_DIFF=='true'}}
+        uses: actions-cool/maintain-one-comment@v2.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            `TDesign.db`和`api.json`数据不一致，请执行`npm run api:download`。
+
+      - name: Error
+        if: ${{steps.check_diff.IS_DIFF=='true'}}  
+        run:  |
+          git diff packages/scripts/api.json
+          exit 1       
