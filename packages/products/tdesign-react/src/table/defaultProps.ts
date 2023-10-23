@@ -5,15 +5,18 @@
 import { TdBaseTableProps, TdPrimaryTableProps, TdEnhancedTableProps } from './type';
 
 export const baseTableDefaultProps: TdBaseTableProps = {
+  defaultActiveRowKeys: [],
   bordered: false,
   columns: [],
   data: [],
   disableDataPage: false,
+  disableSpaceInactiveRow: undefined,
   empty: '',
   footData: [],
   footerAffixedBottom: false,
   headerAffixedTop: false,
   hover: false,
+  keyboardRowHover: true,
   lazyLoad: false,
   loading: undefined,
   resizable: false,

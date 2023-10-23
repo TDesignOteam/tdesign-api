@@ -24041,7 +24041,7 @@
       "create_time": "2020-12-14 12:52:37",
       "update_time": "2020-12-23 03:19:04",
       "event_output": null,
-      "custom_field_type": "number | BaseColProps【interface BaseColProps { offset: number; order: number; pull: number; push: number; span: number }】",
+      "custom_field_type": "number | BaseColProps【interface BaseColProps { offset?: number; order?: number; pull?: number; push?: number; span?: number }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -79297,7 +79297,7 @@
       "create_time": "2020-12-14 10:15:27",
       "update_time": "2021-11-02 03:05:51",
       "event_output": null,
-      "custom_field_type": "number |  GutterObject | Array<GutterObject | number>【interface GutterObject { xs: number; sm: number; md: number; lg: number, xl: number; xxl: number; } 】",
+      "custom_field_type": "number |  GutterObject | Array<GutterObject | number>【interface GutterObject { xs?: number; sm?: number; md?: number; lg?: number, xl?: number; xxl?: number; } 】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -97781,7 +97781,8 @@
       "field_category": 1,
       "field_name": "props",
       "field_type": [
-        "8"
+        "8",
+        "32"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -97808,7 +97809,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Object",
+        "Function"
       ]
     },
     {
