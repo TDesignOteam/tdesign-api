@@ -95340,7 +95340,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "选项卡内容隐藏时是否销毁",
       "field_desc_en": null,
