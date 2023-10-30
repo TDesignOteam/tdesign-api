@@ -118176,7 +118176,7 @@
       "field_desc_zh": "设置上传中文件的上传进度",
       "field_desc_en": "instance function: set uploading file progress percent",
       "field_required": 1,
-      "event_input": "",
+      "event_input": "(params: { file: UploadFile; percent: number })",
       "create_time": "2023-07-09 04:04:18",
       "update_time": "2023-07-09 04:04:18",
       "event_output": null,
