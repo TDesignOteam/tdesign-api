@@ -110917,6 +110917,49 @@
       "field_type_text": []
     },
     {
+      "id": 1698917228,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Tree",
+      "field_category": 4,
+      "field_name": "getTreeData",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取某节点的全部树形结构；参数为空，则表示获取整棵树的结构数据，泛型 `T` 表示树节点 TS 类型",
+      "field_desc_en": "get tree struct data",
+      "field_required": 1,
+      "event_input": "(value?: TreeNodeValue)",
+      "create_time": "2023-11-02 09:27:08",
+      "update_time": "2023-11-02 09:27:08",
+      "event_output": "Array<TreeNodeModel<T>>",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 568,
       "platform_framework": [
         "1",
