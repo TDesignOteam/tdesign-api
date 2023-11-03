@@ -82055,7 +82055,7 @@
       "create_time": "2020-12-18 02:24:01",
       "update_time": "2021-07-18 07:51:38",
       "event_output": null,
-      "custom_field_type": "SelectKeysType【interface SelectKeysType { value?: string | (option: SelectOption) => string; label?: string | (option: SelectOption) => string; disabled?: string }】",
+      "custom_field_type": "SelectKeysType【interface SelectKeysType { value?: string | ((option: SelectOption) => string); label?: string | ((option: SelectOption) => string); disabled?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
