@@ -8,12 +8,7 @@ module.exports = {
     breakLine_2775: {
       field_name: 'breakLine',
       id: 2775,
-      PC: {
-        attribute: [
-          { value: true, expect: [{ dom: 'self', attribute: { 'style.flex-wrap': 'wrap' } }] },
-        ],
-        wrapper: 'getSpaceDefaultMount',
-      },
+      PC: { className: 't-space--break-line', wrapper: 'getSpaceDefaultMount' },
     },
     direction_2773: {
       field_name: 'direction',

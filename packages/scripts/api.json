@@ -87406,7 +87406,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": true,\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.flex-wrap\": \"wrap\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}",
+      "test_description": "{\"PC\":{\"className\":\"t-space--break-line\",\"wrapper\":\"getSpaceDefaultMount\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
