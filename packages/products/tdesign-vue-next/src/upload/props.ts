@@ -29,7 +29,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示不触发文件变化 */
+  /** 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示本次选中的文件不会加入到文件列表中，即不触发 `onChange` 事件 */
   beforeAllFilesUpload: {
     type: Function as PropType<TdUploadProps['beforeAllFilesUpload']>,
   },
@@ -56,14 +56,14 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 用于完全自定义文件列表内容 */
+  /** 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
   },
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
-    default: undefined,
+    default: undefined as TdUploadProps['files'],
   },
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile`，非受控属性 */
   defaultFiles: {
@@ -74,7 +74,7 @@ export default {
   format: {
     type: Function as PropType<TdUploadProps['format']>,
   },
-  /** 用于新增或修改文件上传请求参数。`action` 存在时有效。一个请求上传一个文件时，默认请求字段有 `file`；<br/>一个请求上传多个文件时，默认字段有 `file[0]/file[1]/file[2]/.../length`，其中 `length` 表示本次上传的文件数量。<br/>⚠️非常注意，此处的 `file[0]/file[1]` 仅仅是一个字段名，并非表示 `file` 是一个数组，接口获取字段时注意区分。<br/>可以使用 `name` 定义 `file` 字段的别名，也可以使用 `formatRequest` 自定义任意字段 */
+  /** 用于新增或修改文件上传请求 参数。`action` 存在时有效。一个请求上传一个文件时，默认请求字段有 `file`。<br/>一个请求上传多个文件时，默认字段有 `file[0]/file[1]/file[2]/.../length`，其中 `length` 表示本次上传的文件数量。<br/>⚠️非常注意，此处的 `file[0]/file[1]` 仅仅是一个字段名，并非表示 `file` 是一个数组，接口获取字段时注意区分。<br/>可以使用 `name` 定义 `file` 字段的别名。<br/>也可以使用 `formatRequest` 自定义任意字段，如添加一个字段 `fileList` ，存储文件数组 */
   formatRequest: {
     type: Function as PropType<TdUploadProps['formatRequest']>,
   },
@@ -85,6 +85,10 @@ export default {
   /** 设置上传的请求头部，`action` 存在时有效 */
   headers: {
     type: Object as PropType<TdUploadProps['headers']>,
+  },
+  /** 透传图片预览组件全部属性 */
+  imageViewerProps: {
+    type: Object as PropType<TdUploadProps['imageViewerProps']>,
   },
   /** 用于添加属性到 HTML 元素 `input` */
   inputAttributes: {
@@ -130,6 +134,8 @@ export default {
   requestMethod: {
     type: Function as PropType<TdUploadProps['requestMethod']>,
   },
+  /** 是否在文件列表中显示缩略图，`theme=file-flow` 时有效 */
+  showThumbnail: Boolean,
   /** 是否显示上传进度 */
   showUploadProgress: {
     type: Boolean,
@@ -180,11 +186,11 @@ export default {
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
   value: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性 */
   defaultValue: {

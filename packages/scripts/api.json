@@ -116268,6 +116268,47 @@
       ]
     },
     {
+      "id": 1699169820,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "imageViewerProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传图片预览组件全部属性",
+      "field_desc_en": "ImageViewer Component Props",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-05 07:37:00",
+      "update_time": "2023-11-05 07:37:00",
+      "event_output": null,
+      "custom_field_type": "ImageViewerProps【import { ImageViewerProps } from '@ImageViewer'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3421,
       "platform_framework": [
         "1",
@@ -116409,7 +116450,7 @@
       ],
       "field_default_value": "0",
       "field_enum": "",
-      "field_desc_zh": "用于控制文件上传数量，值为 0 则不限制",
+      "field_desc_zh": "用于控制文件上传数量，值为 0 则不限制。注意，单文件上传场景，请勿设置 `max` 属性",
       "field_desc_en": "max count of files limit",
       "field_required": 0,
       "event_input": "",
