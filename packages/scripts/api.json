@@ -33306,7 +33306,7 @@
       "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "按下 ESC 时是否触发对话框关闭事件",
-      "field_desc_en": null,
+      "field_desc_en": "trigger dialog close event on `ESC` keydown",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-01-17 16:25:00",
@@ -35023,7 +35023,7 @@
       "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "按下 ESC 时是否触发对话框关闭事件",
-      "field_desc_en": null,
+      "field_desc_en": "trigger dialog close on `ESC` keydown",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-06-25 14:05:24",
@@ -36194,7 +36194,7 @@
       "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "按下 ESC 时是否触发抽屉关闭事件",
-      "field_desc_en": null,
+      "field_desc_en": "trigger drawer close event on `ESC` keydown",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-01-17 15:12:10",
@@ -37561,7 +37561,7 @@
       "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "按下 ESC 时是否触发抽屉关闭事件",
-      "field_desc_en": null,
+      "field_desc_en": "trigger drawer close event on `ESC` keydown",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-06-25 14:09:21",
@@ -51952,6 +51952,47 @@
         "Boolean",
         "Object",
         "TNode"
+      ]
+    },
+    {
+      "id": 1699168758,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "closeOnEscKeydown",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "按下 ESC 时是否触发图片预览器关闭事件",
+      "field_desc_en": "trigger image viewer close event on `ESC` keydown",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-05 07:19:18",
+      "update_time": "2023-11-05 07:19:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
