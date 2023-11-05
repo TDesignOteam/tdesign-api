@@ -43,6 +43,13 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
   /**
+   * 透传“取消上传”按钮属性
+   */
+  cancelUploadButton?:
+    | null
+    | ButtonProps
+    | TNode<{ disabled: boolean; cancelUploadText: string; cancelUpload: (ctx: { e: MouseEvent }) => void }>;
+  /**
    * 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段
    */
   data?: Record<string, any> | ((files: UploadFile[]) => Record<string, any>);
@@ -110,7 +117,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   locale?: UploadConfig;
   /**
-   * 用于控制文件上传数量，值为 0 则不限制
+   * 用于控制文件上传数量，值为 0 则不限制。注意，单文件上传场景，请勿设置 `max` 属性
    * @default 0
    */
   max?: number;
@@ -142,6 +149,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 自定义上传方法。返回值 `status` 表示上传成功或失败；`error` 或 `response.error` 表示上传失败的原因；<br/>`response` 表示请求上传成功后的返回数据，`response.url` 表示上传成功后的图片/文件地址，`response.files` 表示一个请求上传多个文件/图片后的返回值。<br/>示例一：`{ status: 'fail', error: '上传失败', response }`。<br/>示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }`。<br/> 示例三：`{ status: 'success', files: [{ url: 'https://xxx.png', name: 'xxx.png' }]}`
    */
   requestMethod?: (files: UploadFile | UploadFile[]) => Promise<RequestMethodResponse>;
+  /**
+   * 是否显示图片的文件名称
+   * @default true
+   */
+  showImageFileName?: boolean;
   /**
    * 是否在文件列表中显示缩略图，`theme=file-flow` 时有效
    * @default false
@@ -182,6 +194,13 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * @default false
    */
   uploadAllFilesInOneRequest?: boolean;
+  /**
+   * 透传“点击上传”按钮属性
+   */
+  uploadButton?:
+    | null
+    | ButtonProps
+    | TNode<{ disabled: boolean; uploading: boolean; uploadFiles: () => void; uploadText: string }>;
   /**
    * 是否允许粘贴上传剪贴板中的文件
    * @default false

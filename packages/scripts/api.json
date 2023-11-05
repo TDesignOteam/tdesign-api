@@ -115611,6 +115611,49 @@
       ]
     },
     {
+      "id": 1699181253,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "cancelUploadButton",
+      "field_type": [
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "批量文件/图片上传，`autoUpload=false` 场景下，透传“取消上传”按钮属性",
+      "field_desc_en": "cancel upload button props, which showed on `autoUpload=false` and multiple files/images upload",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-05 10:47:33",
+      "update_time": "2023-11-05 10:47:33",
+      "event_output": null,
+      "custom_field_type": "null | ButtonProps | TNode<{ disabled: boolean; cancelUploadText: string; cancelUpload: (ctx: { e: MouseEvent }) => void }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object",
+        "TNode"
+      ]
+    },
+    {
       "id": 1169,
       "platform_framework": [
         "2",
@@ -116148,14 +116191,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 此函数的返回值 `error` 或 `response.error` 会作为错误文本提醒，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 或 `response.url` 会作为上传成功后的链接",
+      "field_desc_zh": "用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 示例返回值：`{ error, url, status, files }` <br/> 此函数的返回值 `error` 会作为错误文本提醒，表示上传失败的原因，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 会作为单个文件上传成功后的链接。<br/> `files` 表示一个请求同时上传多个文件后的文件列表",
       "field_desc_en": "redefine response data structure",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-04-28 09:34:51",
       "update_time": "2022-04-20 09:05:15",
       "event_output": null,
-      "custom_field_type": "(response: any, context: FormatResponseContext) => ResponseType 【type ResponseType = { error?: string; url?: string } & Record<string, any>】【interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] }】",
+      "custom_field_type": "(response: any, context: FormatResponseContext) => ResponseType 【type ResponseType = { error?: string; url?: string; status?: 'fail' | 'success'; files?: UploadFile[] } & Record<string, any>】【interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -116823,11 +116866,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -116857,11 +116896,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -117320,6 +117355,49 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1699181198,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "uploadButton",
+      "field_type": [
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "批量文件/图片上传，`autoUpload=false` 场景下，透传“点击上传”按钮属性",
+      "field_desc_en": "upload button props, which showed on `autoUpload=false` and multiple files/images upload",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-05 10:46:38",
+      "update_time": "2023-11-05 10:46:38",
+      "event_output": null,
+      "custom_field_type": "null | ButtonProps | TNode<{ disabled: boolean; uploading: boolean; uploadFiles: () => void; uploadText: string }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object",
+        "TNode"
       ]
     },
     {
