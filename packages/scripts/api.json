@@ -51967,7 +51967,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "按下 ESC 时是否触发图片预览器关闭事件",
       "field_desc_en": "trigger image viewer close event on `ESC` keydown",
@@ -52765,7 +52765,7 @@
       "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "隐藏/显示预览",
-      "field_desc_en": null,
+      "field_desc_en": "hide or show image viewer",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-04-18 13:56:37",
