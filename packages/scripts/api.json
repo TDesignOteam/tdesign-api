@@ -110979,7 +110979,7 @@
       "event_input": "(value?: TreeNodeValue)",
       "create_time": "2023-11-02 09:27:08",
       "update_time": "2023-11-02 09:27:08",
-      "event_output": "Array<TreeNodeModel<T>>",
+      "event_output": "Array<T>",
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
