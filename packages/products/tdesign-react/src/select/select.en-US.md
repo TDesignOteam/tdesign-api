@@ -11,7 +11,7 @@ autoWidth | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
-collapsedItems | TElement | - | Typescript：`TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+collapsedItems | TElement | - | Typescript：`TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number, onClose: (index: number) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 creatable | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
 empty | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
