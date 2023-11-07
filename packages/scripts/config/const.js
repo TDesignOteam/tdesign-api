@@ -37,6 +37,7 @@ const GLOBAL_TYPES = [
 // FormEvent comes from onChange/onInput/onInvalid/onReset/onSubmit .etc.
 const REACT_EVENTS = ['MouseEvent', 'KeyboardEvent', 'ClipboardEvent', 'FocusEvent', 'WheelEvent', 'FormEvent', 'TransitionEvent', 'ChangeEvent', 'DragEvent', 'CompositionEvent'];
 const REACT_TYPES = ['CSSProperties'].concat(REACT_EVENTS);
+const VUE_TYPES =  ['CSSProperties'];
 
 const [component, framework, allParams] = process.argv.slice(2);
 // const { finalProject } = parseParams(allParams);
@@ -45,7 +46,7 @@ const finalProject = allParams && allParams.includes('finalProject');
 module.exports = {
   GLOBAL_TYPES,
   REACT_EVENTS,
-  REACT_TYPES,
+  VUE_TYPES,
   FILE_RIGHTS_DESC: [
     '/**',
     '该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC',

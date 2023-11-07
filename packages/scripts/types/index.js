@@ -6,7 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
-const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } = require('../config/const');
+const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES, VUE_TYPES } = require('../config/const');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const generateGlobals = require('./global');
 const formatTNode = require('./t-node');
@@ -270,6 +270,12 @@ function getGlobalsImports(str, framework) {
       types: formatCommonTypeImports(str, REACT_TYPES),
     };
   }
+  if (framework === 'VueNext(PC)' || framework === 'Vue(Mobile)') {
+    map.vue = {
+      path: 'vue',
+      types: formatCommonTypeImports(str, VUE_TYPES),
+    };
+  }
   const r = Object.keys(map).filter(key => map[key].types.length)
     .map(key => `import { ${map[key].types.join(', ')} } from '${map[key].path}';`);
   return r;
@@ -293,7 +299,7 @@ function replaceInputEvent(str, newApi) {
 function handleApiByFramework(api, framework) {
   const newApi = { ...api };
   // 某些组件的 API 定义在 Vue 中没有那么细，需要忽略
-  if (framework.indexOf('Vue') !== -1 && newApi.custom_field_type) {
+  if (framework === 'Vue(PC)' && newApi.custom_field_type) {
     // Vue 需要忽略的 TS 类型定义
     const VUE_IGNORE_TYPES = ['CSSProperties'];
     const filters = VUE_IGNORE_TYPES.filter(item => newApi.custom_field_type.indexOf(item) !== -1);
