@@ -5,6 +5,7 @@
  * */
 
 import { TNode, AttachNode } from '../common';
+import { CSSProperties } from 'vue';
 
 export interface TdMessageProps {
   /**
@@ -67,7 +68,7 @@ export interface MessageOptions extends TdMessageProps {
   /**
    * 内敛样式
    */
-  style?: object;
+  style?: CSSProperties;
   /**
    * 消息层级
    * @default 5000
