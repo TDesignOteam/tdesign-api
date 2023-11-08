@@ -6,7 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
-const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES, VUE_TYPES } = require('../config/const');
+const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES, VUE_NEXT_TYPES } = require('../config/const');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const generateGlobals = require('./global');
 const formatTNode = require('./t-node');
@@ -270,10 +270,12 @@ function getGlobalsImports(str, framework) {
       types: formatCommonTypeImports(str, REACT_TYPES),
     };
   }
+
+  // 从vue3框架中引入数据类型，如： import { CSSProperties } from 'vue';
   if (framework === 'VueNext(PC)' || framework === 'Vue(Mobile)') {
-    map.vue = {
+    map.VueNext = {
       path: 'vue',
-      types: formatCommonTypeImports(str, VUE_TYPES),
+      types: formatCommonTypeImports(str, VUE_NEXT_TYPES),
     };
   }
   const r = Object.keys(map).filter(key => map[key].types.length)
@@ -298,9 +300,9 @@ function replaceInputEvent(str, newApi) {
 // 根据框架预处理 API
 function handleApiByFramework(api, framework) {
   const newApi = { ...api };
-  // 某些组件的 API 定义在 Vue 中没有那么细，需要忽略
+  // 某些组件的 API 定义在 Vue2 中没有那么细，需要忽略
   if (framework === 'Vue(PC)' && newApi.custom_field_type) {
-    // Vue 需要忽略的 TS 类型定义
+    // Vue2 需要忽略的 TS 类型定义
     const VUE_IGNORE_TYPES = ['CSSProperties'];
     const filters = VUE_IGNORE_TYPES.filter(item => newApi.custom_field_type.indexOf(item) !== -1);
     if (filters.length) {
