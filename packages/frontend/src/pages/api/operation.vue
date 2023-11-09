@@ -129,7 +129,7 @@ export default {
       }
       const commandParams = Object.keys(params).filter(key => params[key]).join()
       const frameworks = this.frameworkOptions.filter(t => this.formData.platform.includes(t.value))
-      return frameworks.map(framework => `npm run api:docs ${component} '${framework.label}' ${commandParams}`)
+      return frameworks.map(framework => `npm run api:docs ${component} "${framework.label}" ${commandParams}`)
     }
   },
 
