@@ -18,8 +18,8 @@ empty | TNode | - | Typescript：`string \| TNode`。[see more ts definition](ht
 filter | Function | - | Typescript：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
 filterable | Boolean | false | \- | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
-inputValue | String / Number | - | input value。Typescript：`InputValue`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
-defaultInputValue | String / Number | - | input value。uncontrolled property。Typescript：`InputValue`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
+inputValue | String / Number | - | input value。Typescript：`string` | N
+defaultInputValue | String / Number | - | input value。uncontrolled property。Typescript：`string` | N
 keys | Object | - | alias option field。Typescript：`SelectKeysType` `interface SelectKeysType { value?: string \| ((option: SelectOption) => string); label?: string \| ((option: SelectOption) => string); disabled?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts) | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 loading | Boolean | false | \- | N
@@ -28,6 +28,7 @@ max | Number | 0 | \- | N
 minCollapsedNum | Number | 0 | \- | N
 multiple | Boolean | false | \- | N
 options | Array | - | Typescript：`Array<T>` | N
+optionsLayout | String | vertical | layout of options in popup。Typescript：`vertical \| horizontal` | N
 panelBottomContent | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 panelTopContent | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 placeholder | String | undefined | \- | N
@@ -57,7 +58,7 @@ onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>
 onCreate | Function |  | Typescript：`(value: string \| number) => void`<br/> | N
 onEnter | Function |  | Typescript：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent }) => void`<br/> | N
-onInputChange | Function |  | Typescript：`(value: InputValue, context?: SelectInputValueChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`import { SelectInputValueChangeContext } from '@SelectInput'`<br/> | N
+onInputChange | Function |  | Typescript：`(value: string, context?: SelectInputValueChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`import { SelectInputValueChangeContext } from '@SelectInput'`<br/> | N
 onPopupVisibleChange | Function |  | Typescript：`(visible: boolean, context: PopupVisibleChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`import { PopupVisibleChangeContext } from '@Popup'`<br/> | N
 onRemove | Function |  | Typescript：`(options: SelectRemoveContext<T>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`interface SelectRemoveContext<T> { value: string \| number; data: T; e: MouseEvent \| KeyboardEvent }`<br/> | N
 onSearch | Function |  | Typescript：`(filterWords: string, context: { e: KeyboardEvent }) => void`<br/> | N

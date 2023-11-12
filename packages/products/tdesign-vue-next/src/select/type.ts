@@ -5,7 +5,6 @@
  * */
 
 import { InputProps } from '../input';
-import { InputValue } from '../input';
 import { PopupProps } from '../popup';
 import { SelectInputProps } from '../select-input';
 import { TagInputProps } from '../tag-input';
@@ -67,11 +66,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 输入框的值
    */
-  inputValue?: InputValue;
+  inputValue?: string;
   /**
    * 输入框的值，非受控属性
    */
-  defaultInputValue?: InputValue;
+  defaultInputValue?: string;
   /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
@@ -108,6 +107,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    * 数据化配置选项内容
    */
   options?: Array<T>;
+  /**
+   * 下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列
+   * @default vertical
+   */
+  optionsLayout?: vertical | horizontal;
   /**
    * 面板内的底部内容
    */
@@ -240,7 +244,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等
    */
-  onInputChange?: (value: InputValue, context?: SelectInputValueChangeContext) => void;
+  onInputChange?: (value: string, context?: SelectInputValueChangeContext) => void;
   /**
    * 下拉框显示或隐藏时触发
    */

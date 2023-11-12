@@ -82446,6 +82446,47 @@
       ]
     },
     {
+      "id": 1699786048,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Select",
+      "field_category": 1,
+      "field_name": "optionsLayout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "vertical",
+      "field_enum": "",
+      "field_desc_zh": "下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列",
+      "field_desc_en": "layout of options in popup",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-12 10:47:28",
+      "update_time": "2023-11-12 10:47:28",
+      "event_output": null,
+      "custom_field_type": "vertical | horizontal",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2089,
       "platform_framework": [
         "1",
