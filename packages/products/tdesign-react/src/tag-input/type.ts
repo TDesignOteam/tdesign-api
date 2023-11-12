@@ -5,7 +5,6 @@
  * */
 
 import { InputProps } from '../input';
-import { InputValue } from '../input';
 import { TagProps } from '../tag';
 import { TNode, TElement } from '../common';
 import { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
@@ -22,7 +21,7 @@ export interface TdTagInputProps {
    */
   clearable?: boolean;
   /**
-   * 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示总标签数量
+   * 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量
    */
   collapsedItems?: TNode<{ value: TagInputValue; collapsedTags: TagInputValue; count: number }>;
   /**
@@ -47,12 +46,12 @@ export interface TdTagInputProps {
    * 输入框的值
    * @default ''
    */
-  inputValue?: InputValue;
+  inputValue?: string;
   /**
    * 输入框的值，非受控属性
    * @default ''
    */
-  defaultInputValue?: InputValue;
+  defaultInputValue?: string;
   /**
    * 左侧文本
    */
@@ -70,6 +69,10 @@ export interface TdTagInputProps {
    * 占位符
    */
   placeholder?: string;
+  /**
+   * 组件前置图标
+   */
+  prefixIcon?: TElement;
   /**
    * 只读状态，值为真会隐藏标签移除按钮和输入框
    * @default false
@@ -121,7 +124,7 @@ export interface TdTagInputProps {
   /**
    * 失去焦点时触发
    */
-  onBlur?: (value: TagInputValue, context: { inputValue: InputValue; e: FocusEvent<HTMLInputElement> }) => void;
+  onBlur?: (value: TagInputValue, context: { inputValue: string; e: FocusEvent<HTMLInputElement> }) => void;
   /**
    * 值变化时触发，参数 `context.trigger` 表示数据变化的触发来源；`context.index` 指当前变化项的下标；`context.item` 指当前变化项；`context.e` 表示事件参数
    */
@@ -141,15 +144,15 @@ export interface TdTagInputProps {
   /**
    * 按键按下 Enter 时触发
    */
-  onEnter?: (value: TagInputValue, context: { e: KeyboardEvent<HTMLDivElement>; inputValue: InputValue }) => void;
+  onEnter?: (value: TagInputValue, context: { e: KeyboardEvent<HTMLDivElement>; inputValue: string }) => void;
   /**
    * 聚焦时触发
    */
-  onFocus?: (value: TagInputValue, context: { inputValue: InputValue; e: FocusEvent<HTMLInputElement> }) => void;
+  onFocus?: (value: TagInputValue, context: { inputValue: string; e: FocusEvent<HTMLInputElement> }) => void;
   /**
    * 输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等
    */
-  onInputChange?: (value: InputValue, context?: InputValueChangeContext) => void;
+  onInputChange?: (value: string, context?: InputValueChangeContext) => void;
   /**
    * 进入输入框时触发
    */
@@ -174,7 +177,7 @@ export interface TagInputChangeContext {
   trigger: TagInputTriggerSource;
   index?: number;
   item?: string | number;
-  e?: MouseEvent<SVGSVGElement> | KeyboardEvent<HTMLDivElement>;
+  e?: MouseEvent<SVGSVGElement> | KeyboardEvent<HTMLInputElement>;
 }
 
 export type TagInputTriggerSource = 'enter' | 'tag-remove' | 'backspace' | 'clear';
@@ -189,10 +192,10 @@ export interface TagInputDragSortContext {
 
 export interface InputValueChangeContext {
   e?:
-    | FormEvent<HTMLDivElement>
+    | FormEvent<HTMLInputElement>
     | MouseEvent<HTMLElement | SVGElement>
     | CompositionEvent<HTMLDivElement>
-    | KeyboardEvent<HTMLDivElement>;
+    | KeyboardEvent<HTMLInputElement>;
   trigger: 'input' | 'clear' | 'enter' | 'blur';
 }
 
@@ -200,7 +203,7 @@ export interface TagInputRemoveContext {
   value: TagInputValue;
   index: number;
   item: string | number;
-  e?: MouseEvent<SVGSVGElement> | KeyboardEvent<HTMLDivElement>;
+  e?: MouseEvent<SVGSVGElement> | KeyboardEvent<HTMLInputElement>;
   trigger: TagInputRemoveTrigger;
 }
 

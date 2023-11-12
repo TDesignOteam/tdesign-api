@@ -12,7 +12,7 @@ export default {
   autoWidth: Boolean,
   /** 是否可清空 */
   clearable: Boolean,
-  /** 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示总标签数量 */
+  /** 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量 */
   collapsedItems: {
     type: Function as PropType<TdTagInputProps['collapsedItems']>,
   },
@@ -36,12 +36,12 @@ export default {
   /** 输入框的值 */
   inputValue: {
     type: [String, Number] as PropType<TdTagInputProps['inputValue']>,
-    default: undefined,
+    default: undefined as TdTagInputProps['inputValue'],
   },
   /** 输入框的值，非受控属性 */
   defaultInputValue: {
     type: [String, Number] as PropType<TdTagInputProps['defaultInputValue']>,
-    default: '',
+    default: '' as TdTagInputProps['defaultInputValue'],
   },
   /** 左侧文本 */
   label: {
@@ -60,6 +60,10 @@ export default {
   placeholder: {
     type: String,
     default: undefined,
+  },
+  /** 组件前置图标 */
+  prefixIcon: {
+    type: Function as PropType<TdTagInputProps['prefixIcon']>,
   },
   /** 只读状态，值为真会隐藏标签移除按钮和输入框 */
   readonly: Boolean,
@@ -103,11 +107,11 @@ export default {
   /** 值 */
   value: {
     type: Array as PropType<TdTagInputProps['value']>,
-    default: undefined,
+    default: undefined as TdTagInputProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdTagInputProps['value']>,
-    default: undefined,
+    default: undefined as TdTagInputProps['value'],
   },
   /** 值，非受控属性 */
   defaultValue: {
