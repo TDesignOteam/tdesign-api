@@ -45,6 +45,7 @@ module.exports = {
       },
     },
     borderless_2372: { field_name: 'borderless', id: 2372 },
+    borderless_1691465640: { field_name: 'borderless', id: 1691465640 },
     clearable_742: {
       field_name: 'clearable',
       id: 742,
@@ -128,6 +129,7 @@ module.exports = {
       id: 2070,
       PC: { snapshot: true, tnode: { trigger: '', dom: ['.t-input__prefix'] } },
     },
+    layout_3382: { field_name: 'layout', id: 3382 },
     maxcharacter_1402: {
       field_name: 'maxcharacter',
       id: 1402,
@@ -380,11 +382,16 @@ module.exports = {
       id: 755,
       PC: {
         event: [
-          { expect: [{ trigger: 'focus(input)', event: { focus: ['', { 'e.type': 'focus' }] } }] },
+          {
+            expect: [
+              { trigger: 'focus(input)', event: { focus: ['undefined', { 'e.type': 'focus' }] } },
+            ],
+          },
         ],
       },
     },
     focus_2543: { field_name: 'focus', id: 2543 },
+    keyboardheightchange_3383: { field_name: 'keyboardheightchange', id: 3383 },
     keydown_818: {
       field_name: 'keydown',
       id: 818,
@@ -489,6 +496,7 @@ module.exports = {
         ],
       },
     },
+    '<T = InputValue>_1699771883': { field_name: '<T = InputValue>', id: 1699771883 },
   },
   InputGroup: {
     separate_3296: {

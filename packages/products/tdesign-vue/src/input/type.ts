@@ -121,12 +121,10 @@ export interface TdInputProps<T = InputValue> {
   type?: 'text' | 'number' | 'url' | 'tel' | 'password' | 'search' | 'submit' | 'hidden';
   /**
    * 输入框的值
-   * @default ''
    */
   value?: T;
   /**
    * 输入框的值，非受控属性
-   * @default ''
    */
   defaultValue?: T;
   /**
