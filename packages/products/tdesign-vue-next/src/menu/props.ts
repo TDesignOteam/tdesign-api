@@ -24,7 +24,7 @@ export default {
   /** 子菜单展开的导航集合 */
   expanded: {
     type: Array as PropType<TdMenuProps['expanded']>,
-    default: undefined,
+    default: undefined as TdMenuProps['expanded'],
   },
   /** 子菜单展开的导航集合，非受控属性 */
   defaultExpanded: {
@@ -51,11 +51,11 @@ export default {
   /** 激活菜单项 */
   value: {
     type: [String, Number] as PropType<TdMenuProps['value']>,
-    default: undefined,
+    default: undefined as TdMenuProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdMenuProps['value']>,
-    default: undefined,
+    default: undefined as TdMenuProps['value'],
   },
   /** 激活菜单项，非受控属性 */
   defaultValue: {
@@ -64,7 +64,7 @@ export default {
   /** 菜单宽度。值类型为数组时，分别表示菜单展开和折叠的宽度。[ 展开时的宽度, 折叠时的宽度 ]，示例：['200px', '80px'] */
   width: {
     type: [String, Number, Array] as PropType<TdMenuProps['width']>,
-    default: '232px',
+    default: '232px' as TdMenuProps['width'],
   },
   /** 激活菜单项发生变化时触发 */
   onChange: Function as PropType<TdMenuProps['onChange']>,
