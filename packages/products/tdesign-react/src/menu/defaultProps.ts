@@ -2,7 +2,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdMenuProps, TdHeadMenuProps } from './type';
+import { TdMenuProps, TdHeadMenuProps, TdMenuItemProps } from './type';
 
 export const menuDefaultProps: TdMenuProps = {
   collapsed: false,
@@ -14,3 +14,5 @@ export const menuDefaultProps: TdMenuProps = {
 };
 
 export const headMenuDefaultProps: TdHeadMenuProps = { expandType: 'normal', expanded: [], theme: 'light' };
+
+export const menuItemDefaultProps: TdMenuItemProps = { target: '_self' };
