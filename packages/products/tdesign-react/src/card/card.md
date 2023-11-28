@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Card Props
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -20,6 +19,7 @@ header | TNode | - | 卡片顶部内容，优先级高于其他所有元素。TS
 headerBordered | Boolean | false | 头部是否带分割线，仅在有header时有效 | N
 hoverShadow | Boolean | false | hover时是否有阴影 | N
 loading | TNode | false | 加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Sketon 组件完全自定义加载态呈现内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+loadingProps | Object | - | 透传加载组件(Loading)全部属性。TS 类型：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/card/type.ts) | N
 shadow | Boolean | false | 是否显示卡片阴影，默认不显示 | N
 size | String | medium | 尺寸。可选项：medium/small | N
 status | String | - | 卡片状态内容，仅在操作区域不在顶部时有效（即 `theme=poster2` ） | N

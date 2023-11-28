@@ -16931,6 +16931,47 @@
       ]
     },
     {
+      "id": 1701155589,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "loadingProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传加载组件(Loading)全部属性",
+      "field_desc_en": "Loading Component Props",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-11-28 07:13:09",
+      "update_time": "2023-11-28 07:13:09",
+      "event_output": null,
+      "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2032,
       "platform_framework": [
         "1",
