@@ -8,15 +8,15 @@
 
 ### 主功能界面
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/7600149/179940926-04c29ef5-85dd-4513-b73d-46356b37312e.png">
+<img width="500" alt="image" src="https://github.com/TDesignOteam/tdesign-api/assets/36812439/5b6c5dc0-54ee-4838-8978-5f7d4a9699c2">
 
 你可以主界面里做组件 API 的增删改查操作。
 
 ### 生成 API 
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/7600149/179941570-ad3ff186-c4a5-40b2-b24c-4c4d65d70b26.png">
+<img width="500" alt="image" src="https://github.com/TDesignOteam/tdesign-api/assets/36812439/a6de19e7-a68a-4012-8ab1-d0d809dc75d0">
 
-点击 “生成文件” 按钮，指定生成组件和技术栈框架平台，确认后会在本地 `packages/products/` 对应仓库目录下生成对应 md 文档、API 定义等文件。
+点击 “Generate API Files” 按钮，指定生成组件和技术栈框架平台，确认后会在本地 `packages/products/` 对应仓库目录下生成对应 md 文档、API 定义等文件。
 
 ### 提交
 

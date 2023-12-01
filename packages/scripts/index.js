@@ -50,6 +50,10 @@ const { useDefault, onlyDocs, isUseUnitTest, vitest } = parseParams(allParams);
 
 let selfUseDefault = useDefault;
 
+if (isAll(component)) {
+    console.warn(chalk.yellow('\nWarn: 全量生成由于改动过大，目前限制为只能生成文档，如需生成TS文件，请单独生成组件\n'));
+}
+
 // 全量组件，改动较大，限制为暂时只能生成文档，不能生成 TS 文件
 if (isAll(component) && onlyDocs) {
   generateDocuments();

@@ -24,6 +24,7 @@
                 placeholder="请选择组件"
                 clearable
                 filterable
+                :tips="formData.component === 'ALL' ? tips : ''"
               >
                 <t-option
                   v-for="(item, index) in componentList"
@@ -96,9 +97,10 @@ export default {
       codeType: '',
       generateFilesVisible: false,
       checkedAll: false,
+      tips: '全量输出时限制为只能输出文档，如需输出其他文件请选择对应组件',
       formData: {
         platform: [],
-        component: '',
+        component: 'ALL',
         finalProject: false,
       }
     }
