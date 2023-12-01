@@ -14,6 +14,7 @@ export interface TdImageViewerProps {
   closeBtn?: boolean | TNode;
   /**
    * 按下 ESC 时是否触发图片预览器关闭事件
+   * @default true
    */
   closeOnEscKeydown?: boolean;
   /**
@@ -25,7 +26,7 @@ export interface TdImageViewerProps {
    */
   draggable?: boolean;
   /**
-   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度
+   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度；`imageScale.defaultScale` 默认的缩放比例
    */
   imageScale?: ImageScale;
   /**
@@ -102,6 +103,7 @@ export interface ImageScale {
   max: number;
   min: number;
   step: number;
+  defaultScale?: number;
 }
 
 export interface ImageInfo {
