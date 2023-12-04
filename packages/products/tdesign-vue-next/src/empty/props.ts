@@ -16,7 +16,7 @@ export default {
   description: {
     type: [String, Function] as PropType<TdEmptyProps['description']>,
   },
-  /** 图片地址 */
+  /** 组件图片，可以完全自定义内容。值类型为字符串时，表示图片地址；值类型为对象时，则表示透传全部属性到图片组件，示例：`<Empty image={{ src: '', shape: 'round' }} />` */
   image: {
     type: [String, Function] as PropType<TdEmptyProps['image']>,
   },

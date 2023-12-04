@@ -17,7 +17,7 @@ export interface TdEmptyProps {
    */
   description?: string | TNode;
   /**
-   * 图片地址
+   * 组件图片，可以完全自定义内容。值类型为字符串时，表示图片地址；值类型为对象时，则表示透传全部属性到图片组件，示例：`<Empty image={{ src: '', shape: 'round' }} />`
    */
   image?: string | ImageProps | TNode;
   /**
