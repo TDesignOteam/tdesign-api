@@ -31,6 +31,7 @@ export default {
   /** 组件类型，如：空数据/成功/失败/网络错误/建设中 */
   type: {
     type: String as PropType<TdEmptyProps['type']>,
+    default: 'empty' as TdEmptyProps['type'],
     validator(val: TdEmptyProps['type']): boolean {
       if (!val) return true;
       return ['empty', 'success', 'fail', 'network-error', 'maintenance'].includes(val);
