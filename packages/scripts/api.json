@@ -39876,6 +39876,9 @@
     {
       "id": 1387,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
         "32",
@@ -39889,8 +39892,8 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "操作按钮",
-      "field_desc_en": null,
+      "field_desc_zh": "操作区域",
+      "field_desc_en": "action block",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-08-01 14:34:10",
@@ -39907,6 +39910,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -39919,6 +39925,9 @@
     {
       "id": 1386,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
         "32",
@@ -39934,7 +39943,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "描述文字",
-      "field_desc_en": null,
+      "field_desc_en": "empty description",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-08-01 14:32:56",
@@ -39951,6 +39960,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -40040,6 +40052,9 @@
     {
       "id": 1385,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
         "32",
@@ -40072,6 +40087,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -40080,6 +40098,47 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 1701690759,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Empty",
+      "field_category": 1,
+      "field_name": "imageStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传图片样式表",
+      "field_desc_en": "pass Cascading Style Sheets to image element",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-04 11:52:39",
+      "update_time": "2023-12-04 11:52:39",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -40114,6 +40173,90 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1701690668,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Empty",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "错误标题",
+      "field_desc_en": "empty title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-04 11:51:08",
+      "update_time": "2023-12-04 11:51:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1701691111,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Empty",
+      "field_category": 1,
+      "field_name": "type",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "empty/success/fail/network-error/maintenance",
+      "field_desc_zh": "组件类型，如：空数据/成功/失败/网络错误/建设中",
+      "field_desc_en": "Empty component type",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-04 11:58:31",
+      "update_time": "2023-12-04 11:58:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
