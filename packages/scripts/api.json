@@ -117763,7 +117763,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "是否允许粘贴上传剪贴板中的文件",
       "field_desc_en": "allow to upload files in clipboard after pasting",

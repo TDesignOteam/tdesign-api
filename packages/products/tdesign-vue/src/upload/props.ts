@@ -37,7 +37,7 @@ export default {
   beforeUpload: {
     type: Function as PropType<TdUploadProps['beforeUpload']>,
   },
-  /** 透传“取消上传”按钮属性 */
+  /** 批量文件/图片上传，`autoUpload=false` 场景下，透传“取消上传”按钮属性 */
   cancelUploadButton: {
     type: [Object, Function] as PropType<TdUploadProps['cancelUploadButton']>,
   },
@@ -82,7 +82,7 @@ export default {
   formatRequest: {
     type: Function as PropType<TdUploadProps['formatRequest']>,
   },
-  /** 用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 此函数的返回值 `error` 或 `response.error` 会作为错误文本提醒，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 或 `response.url` 会作为上传成功后的链接 */
+  /** 用于格式化文件上传后的接口响应数据，`response` 便是接口响应的原始数据。`action` 存在时有效。<br/> 示例返回值：`{ error, url, status, files }` <br/> 此函数的返回值 `error` 会作为错误文本提醒，表示上传失败的原因，如果存在会判定为本次上传失败。<br/> 此函数的返回值 `url` 会作为单个文件上传成功后的链接。<br/> `files` 表示一个请求同时上传多个文件后的文件列表 */
   formatResponse: {
     type: Function as PropType<TdUploadProps['formatResponse']>,
   },
@@ -185,12 +185,15 @@ export default {
   },
   /** 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 */
   uploadAllFilesInOneRequest: Boolean,
-  /** 透传“点击上传”按钮属性 */
+  /** 批量文件/图片上传，`autoUpload=false` 场景下，透传“点击上传”按钮属性 */
   uploadButton: {
     type: [Object, Function] as PropType<TdUploadProps['uploadButton']>,
   },
   /** 是否允许粘贴上传剪贴板中的文件 */
-  uploadPastedFiles: Boolean,
+  uploadPastedFiles: {
+    type: Boolean,
+    default: true,
+  },
   /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 */
   useMockProgress: {
     type: Boolean,
