@@ -118056,7 +118056,7 @@
       "field_desc_zh": "已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源",
       "field_desc_en": "trigger on uploaded files change",
       "field_required": 0,
-      "event_input": "(value: Array<T>, context: UploadChangeContext)【interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }】【type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail'】",
+      "event_input": "(value: Array<T>, context: UploadChangeContext)【interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }】【type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'default'】",
       "create_time": "2021-02-18 15:22:12",
       "update_time": "2021-12-28 01:51:04",
       "event_output": null,
