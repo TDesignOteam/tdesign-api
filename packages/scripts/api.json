@@ -72083,6 +72083,55 @@
       ]
     },
     {
+      "id": 1702872178,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "rowSelectionType",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "single/multiple",
+      "field_desc_zh": "行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样",
+      "field_desc_en": "single row selection, or multiple row selection",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-18 04:02:58",
+      "update_time": "2023-12-18 04:02:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3209,
       "platform_framework": [
         "1",

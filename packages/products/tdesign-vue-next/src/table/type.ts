@@ -523,6 +523,10 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    */
   reserveSelectedRowOnPaginate?: boolean;
   /**
+   * 行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样
+   */
+  rowSelectionType?: 'single' | 'multiple';
+  /**
    * 是否在点击整行时选中
    */
   selectOnRowClick?: boolean;
