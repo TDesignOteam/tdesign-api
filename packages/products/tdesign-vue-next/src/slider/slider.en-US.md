@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Slider Props
 
 name | type | default | description | required
