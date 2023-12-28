@@ -7,9 +7,7 @@ import { TdDescriptionsProps, TdDescriptionItemProps } from './type';
 export const descriptionsDefaultProps: TdDescriptionsProps = {
   bordered: false,
   columns: 2,
-  contentAlign: 'left',
   itemLayout: 'horizontal',
-  labelAlign: 'left',
   layout: 'horizontal',
   size: 'medium',
 };
