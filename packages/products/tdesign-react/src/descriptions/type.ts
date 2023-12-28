@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, SizeEnum, ClassName } from '../common';
+import { TNode, SizeEnum, Styles } from '../common';
 
 export interface TdDescriptionsProps {
   /**
@@ -22,10 +22,9 @@ export interface TdDescriptionsProps {
    */
   columns?: number;
   /**
-   * 字段值内容的对齐方式：左对齐、居中对齐
-   * @default left
+   * 自定义描述项内容的样式
    */
-  contentAlign?: 'left' | 'right' | 'center';
+  contentStyle?: Styles;
   /**
    * 描述项的排列方向
    * @default horizontal
@@ -36,14 +35,9 @@ export interface TdDescriptionsProps {
    */
   items?: Array<T>;
   /**
-   * 字段标签对齐方式：左对齐、右对齐、居中对齐
-   * @default left
+   * 自定义描述项标签的样式
    */
-  labelAlign?: 'left' | 'right' | 'center';
-  /**
-   * 自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`
-   */
-  labelClassName?: ClassName;
+  labelStyle?: Styles;
   /**
    * 排列方向
    * @default horizontal

@@ -32822,7 +32822,7 @@
       ]
     },
     {
-      "id": 3509,
+      "id": 1703752844,
       "platform_framework": [
         "1",
         "2",
@@ -32830,27 +32830,27 @@
       ],
       "component": "Descriptions",
       "field_category": 1,
-      "field_name": "contentAlign",
+      "field_name": "contentStyle",
       "field_type": [
-        "1"
+        "8"
       ],
-      "field_default_value": "left",
-      "field_enum": "left/right/center",
-      "field_desc_zh": "字段值内容的对齐方式：左对齐、居中对齐",
-      "field_desc_en": null,
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义描述项内容的样式",
+      "field_desc_en": "style of description cotent",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-06-08 04:12:56",
-      "update_time": "2023-06-08 04:12:56",
+      "create_time": "2023-12-28 08:40:44",
+      "update_time": "2023-12-28 08:40:44",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":[\"t-descriptions__content--align-left\",\"t-descriptions__content--align-center\"]}}",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -32859,7 +32859,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Object"
       ]
     },
     {
@@ -32945,7 +32945,7 @@
       ]
     },
     {
-      "id": 3508,
+      "id": 1703752820,
       "platform_framework": [
         "1",
         "2",
@@ -32953,63 +32953,20 @@
       ],
       "component": "Descriptions",
       "field_category": 1,
-      "field_name": "labelAlign",
+      "field_name": "labelStyle",
       "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right/center",
-      "field_desc_zh": "字段标签对齐方式：左对齐、右对齐、居中对齐",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-08 04:11:45",
-      "update_time": "2023-06-08 04:11:45",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": "{\"PC\":{\"className\":[\"t-descriptions__label--align-left\",\"t-descriptions__label--align-right\",\"t-descriptions__label--align-top\"]}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1703751296,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Descriptions",
-      "field_category": 1,
-      "field_name": "labelClassName",
-      "field_type": [
-        "1",
-        "8",
-        "16"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
-      "field_desc_en": null,
+      "field_desc_zh": "自定义描述项标签的样式",
+      "field_desc_en": "style of description item",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-12-28 08:14:56",
-      "update_time": "2023-12-28 08:14:56",
+      "create_time": "2023-12-28 08:40:20",
+      "update_time": "2023-12-28 08:40:20",
       "event_output": null,
-      "custom_field_type": "ClassName",
+      "custom_field_type": "Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -33025,9 +32982,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
-        "Object",
-        "Array"
+        "Object"
       ]
     },
     {

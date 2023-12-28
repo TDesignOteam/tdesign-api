@@ -17,14 +17,9 @@ export default {
     type: Number,
     default: 2,
   },
-  /** 字段值内容的对齐方式：左对齐、居中对齐 */
-  contentAlign: {
-    type: String as PropType<TdDescriptionsProps['contentAlign']>,
-    default: 'left' as TdDescriptionsProps['contentAlign'],
-    validator(val: TdDescriptionsProps['contentAlign']): boolean {
-      if (!val) return true;
-      return ['left', 'right', 'center'].includes(val);
-    },
+  /** 自定义描述项内容的样式 */
+  contentStyle: {
+    type: Object as PropType<TdDescriptionsProps['contentStyle']>,
   },
   /** 描述项的排列方向 */
   itemLayout: {
@@ -39,18 +34,9 @@ export default {
   items: {
     type: Array as PropType<TdDescriptionsProps['items']>,
   },
-  /** 字段标签对齐方式：左对齐、右对齐、居中对齐 */
-  labelAlign: {
-    type: String as PropType<TdDescriptionsProps['labelAlign']>,
-    default: 'left' as TdDescriptionsProps['labelAlign'],
-    validator(val: TdDescriptionsProps['labelAlign']): boolean {
-      if (!val) return true;
-      return ['left', 'right', 'center'].includes(val);
-    },
-  },
-  /** 自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]` */
-  labelClassName: {
-    type: [String, Object, Array] as PropType<TdDescriptionsProps['labelClassName']>,
+  /** 自定义描述项标签的样式 */
+  labelStyle: {
+    type: Object as PropType<TdDescriptionsProps['labelStyle']>,
   },
   /** 排列方向 */
   layout: {
