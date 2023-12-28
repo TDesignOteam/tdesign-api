@@ -32572,6 +32572,49 @@
       "field_type_text": []
     },
     {
+      "id": 1703750907,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DescriptionItem",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述项内容",
+      "field_desc_en": "content of description item",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-28 08:08:27",
+      "update_time": "2023-12-28 08:08:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 3500,
       "platform_framework": [
         "1",
@@ -32587,7 +32630,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "描述项字段名",
+      "field_desc_zh": "描述项标签",
       "field_desc_en": "label of description item",
       "field_required": 0,
       "event_input": "",
@@ -32792,7 +32835,7 @@
         "1"
       ],
       "field_default_value": "left",
-      "field_enum": "left/center",
+      "field_enum": "left/right/center",
       "field_desc_zh": "字段值内容的对齐方式：左对齐、居中对齐",
       "field_desc_en": null,
       "field_required": 0,
@@ -32820,6 +32863,88 @@
       ]
     },
     {
+      "id": 1703751056,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "itemLayout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "描述项的排列方向",
+      "field_desc_en": "layout direction of description item",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-28 08:10:56",
+      "update_time": "2023-12-28 08:10:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1703751197,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "items",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述项的列表",
+      "field_desc_en": "list of descriptions items",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-28 08:13:17",
+      "update_time": "2023-12-28 08:13:17",
+      "event_output": null,
+      "custom_field_type": "Array<T>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
       "id": 3508,
       "platform_framework": [
         "1",
@@ -32832,9 +32957,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "right",
-      "field_enum": "left/right/top",
-      "field_desc_zh": "字段标签对齐方式：左对齐、右对齐、顶部对齐",
+      "field_default_value": "left",
+      "field_enum": "left/right/center",
+      "field_desc_zh": "字段标签对齐方式：左对齐、右对齐、居中对齐",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -32858,6 +32983,51 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1703751296,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "labelClassName",
+      "field_type": [
+        "1",
+        "8",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-28 08:14:56",
+      "update_time": "2023-12-28 08:14:56",
+      "event_output": null,
+      "custom_field_type": "ClassName",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "Array"
       ]
     },
     {
@@ -32940,6 +33110,49 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1703751109,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述列表的标题",
+      "field_desc_en": "title of descriptions",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-12-28 08:11:49",
+      "update_time": "2023-12-28 08:11:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {

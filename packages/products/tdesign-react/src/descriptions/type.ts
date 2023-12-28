@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, SizeEnum } from '../common';
+import { TNode, SizeEnum, ClassName } from '../common';
 
 export interface TdDescriptionsProps {
   /**
@@ -25,12 +25,25 @@ export interface TdDescriptionsProps {
    * 字段值内容的对齐方式：左对齐、居中对齐
    * @default left
    */
-  contentAlign?: 'left' | 'center';
+  contentAlign?: 'left' | 'right' | 'center';
   /**
-   * 字段标签对齐方式：左对齐、右对齐、顶部对齐
-   * @default right
+   * 描述项的排列方向
+   * @default horizontal
    */
-  labelAlign?: 'left' | 'right' | 'top';
+  itemLayout?: 'horizontal' | 'vertical';
+  /**
+   * 描述项的列表
+   */
+  items?: Array<T>;
+  /**
+   * 字段标签对齐方式：左对齐、右对齐、居中对齐
+   * @default left
+   */
+  labelAlign?: 'left' | 'right' | 'center';
+  /**
+   * 自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`
+   */
+  labelClassName?: ClassName;
   /**
    * 排列方向
    * @default horizontal
@@ -41,11 +54,19 @@ export interface TdDescriptionsProps {
    * @default medium
    */
   size?: SizeEnum;
+  /**
+   * 描述列表的标题
+   */
+  title?: TNode;
 }
 
 export interface TdDescriptionItemProps {
   /**
-   * 描述项字段名
+   * 描述项内容
+   */
+  content?: TNode;
+  /**
+   * 描述项标签
    */
   label?: TNode;
   /**
