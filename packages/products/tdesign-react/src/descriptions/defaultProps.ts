@@ -8,7 +8,8 @@ export const descriptionsDefaultProps: TdDescriptionsProps = {
   bordered: false,
   columns: 2,
   contentAlign: 'left',
-  labelAlign: 'right',
+  itemLayout: 'horizontal',
+  labelAlign: 'left',
   layout: 'horizontal',
   size: 'medium',
 };

@@ -23,17 +23,34 @@ export default {
     default: 'left' as TdDescriptionsProps['contentAlign'],
     validator(val: TdDescriptionsProps['contentAlign']): boolean {
       if (!val) return true;
-      return ['left', 'center'].includes(val);
+      return ['left', 'right', 'center'].includes(val);
     },
   },
-  /** 字段标签对齐方式：左对齐、右对齐、顶部对齐 */
+  /** 描述项的排列方向 */
+  itemLayout: {
+    type: String as PropType<TdDescriptionsProps['itemLayout']>,
+    default: 'horizontal' as TdDescriptionsProps['itemLayout'],
+    validator(val: TdDescriptionsProps['itemLayout']): boolean {
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
+    },
+  },
+  /** 描述项的列表 */
+  items: {
+    type: Array as PropType<TdDescriptionsProps['items']>,
+  },
+  /** 字段标签对齐方式：左对齐、右对齐、居中对齐 */
   labelAlign: {
     type: String as PropType<TdDescriptionsProps['labelAlign']>,
-    default: 'right' as TdDescriptionsProps['labelAlign'],
+    default: 'left' as TdDescriptionsProps['labelAlign'],
     validator(val: TdDescriptionsProps['labelAlign']): boolean {
       if (!val) return true;
-      return ['left', 'right', 'top'].includes(val);
+      return ['left', 'right', 'center'].includes(val);
     },
+  },
+  /** 自定义描述项的标签的类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]` */
+  labelClassName: {
+    type: [String, Object, Array] as PropType<TdDescriptionsProps['labelClassName']>,
   },
   /** 排列方向 */
   layout: {
@@ -52,5 +69,9 @@ export default {
       if (!val) return true;
       return ['small', 'medium', 'large'].includes(val);
     },
+  },
+  /** 描述列表的标题 */
+  title: {
+    type: [String, Function] as PropType<TdDescriptionsProps['title']>,
   },
 };
