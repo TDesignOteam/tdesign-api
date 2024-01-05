@@ -17,7 +17,7 @@ export interface TdDescriptionsProps {
    */
   colon?: boolean;
   /**
-   * 一行 DescriptionItem 的数量
+   * 一行 `DescriptionItem` 的数量
    * @default 2
    */
   columns?: number;

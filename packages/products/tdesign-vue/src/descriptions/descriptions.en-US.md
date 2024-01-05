@@ -5,6 +5,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+align | String | - | content align type。options: top/middle/bottom | N
 bordered | Boolean | false | set description list with grey border | N
 colon | Boolean | - | set label with ":" on the right | N
 columns | Number | 2 | count of DescriptionItem in one row | N
@@ -20,6 +21,8 @@ title | String / Slot / Function | - | title of descriptions。Typescript：`str
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+align | String | - | content align type。options: top/middle/bottom | N
 content | String / Slot / Function | - | content of description item。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | content of description item。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | - | label of description item。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 span | Number | 1 | width count | N

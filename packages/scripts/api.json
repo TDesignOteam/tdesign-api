@@ -32572,6 +32572,43 @@
       "field_type_text": []
     },
     {
+      "id": 1704432526,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DescriptionItem",
+      "field_category": 1,
+      "field_name": "align",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "top/middle/bottom",
+      "field_desc_zh": "内容垂直对齐方式，DescriptionItem.align 优先级高于 Descriptions.align",
+      "field_desc_en": "content align type",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-05 05:28:46",
+      "update_time": "2024-01-05 05:28:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1703750907,
       "platform_framework": [
         "1",
@@ -32608,6 +32645,45 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1704432423,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DescriptionItem",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述项内容，同 `content`",
+      "field_desc_en": "content of description item",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-05 05:27:03",
+      "update_time": "2024-01-05 05:27:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": [
         "String",
@@ -32696,6 +32772,43 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 1704432557,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "align",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "top/middle/bottom",
+      "field_desc_zh": "内容垂直对齐方式，DescriptionItem.align 优先级高于 Descriptions.align",
+      "field_desc_en": "content align type",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-05 05:29:17",
+      "update_time": "2024-01-05 05:29:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -32795,7 +32908,7 @@
       ],
       "field_default_value": "2",
       "field_enum": "",
-      "field_desc_zh": "一行 DescriptionItem 的数量",
+      "field_desc_zh": "一行 `DescriptionItem` 的数量",
       "field_desc_en": "count of DescriptionItem in one row",
       "field_required": 0,
       "event_input": "",
