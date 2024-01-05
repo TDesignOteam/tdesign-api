@@ -32902,7 +32902,7 @@
       ],
       "component": "Descriptions",
       "field_category": 1,
-      "field_name": "columns",
+      "field_name": "column",
       "field_type": [
         "2"
       ],
@@ -33038,7 +33038,7 @@
       "create_time": "2023-12-28 08:13:17",
       "update_time": "2023-12-28 08:13:17",
       "event_output": null,
-      "custom_field_type": "Array<T>",
+      "custom_field_type": "Array<TdDescriptionItemProps>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

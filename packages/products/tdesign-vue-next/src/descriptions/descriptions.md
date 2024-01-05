@@ -8,10 +8,10 @@
 align | String | - | 内容垂直对齐方式，DescriptionItem.align 优先级高于 Descriptions.align。可选项：top/middle/bottom | N
 bordered | Boolean | false | 是否带边框 | N
 colon | Boolean | - | 字段名右侧是否携带冒号“：” | N
-columns | Number | 2 | 一行 `DescriptionItem` 的数量 | N
+column | Number | 2 | 一行 `DescriptionItem` 的数量 | N
 contentStyle | Object | - | 自定义描述项内容的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 itemLayout | String | horizontal | 描述项的排列方向。可选项：horizontal/vertical | N
-items | Array | - | 描述项的列表。TS 类型：`Array<T>` | N
+items | Array | - | 描述项的列表。TS 类型：`Array<TdDescriptionItemProps>` | N
 labelStyle | Object | - | 自定义描述项标签的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 layout | String | horizontal | 排列方向。可选项：horizontal/vertical | N
 size | String | medium | 组件尺寸。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N

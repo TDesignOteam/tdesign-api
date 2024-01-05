@@ -21,7 +21,7 @@ export default {
   /** 字段名右侧是否携带冒号“：” */
   colon: Boolean,
   /** 一行 `DescriptionItem` 的数量 */
-  columns: {
+  column: {
     type: Number,
     default: 2,
   },
