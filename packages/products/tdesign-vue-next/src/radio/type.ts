@@ -45,6 +45,11 @@ export interface TdRadioProps {
    */
   name?: string;
   /**
+   * 只读状态
+   * @default false
+   */
+  readonly?: boolean;
+  /**
    * 单选按钮的值
    */
   value?: string | number | boolean;
