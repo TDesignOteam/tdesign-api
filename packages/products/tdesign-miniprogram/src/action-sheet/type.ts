@@ -6,6 +6,14 @@
 
 export interface TdActionSheetProps {
   /**
+   * 水平对齐方式
+   * @default center
+   */
+  align?: {
+    type: StringConstructor;
+    value?: 'center' | 'left';
+  };
+  /**
    * 设置取消按钮的文本
    * @default ''
    */
@@ -22,6 +30,14 @@ export interface TdActionSheetProps {
     value?: number;
   };
   /**
+   * 动作面板描述文字
+   * @default ''
+   */
+  description?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 菜单项
    */
   items: {
@@ -35,14 +51,6 @@ export interface TdActionSheetProps {
   showCancel?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 展示类型，列表和表格形式展示
