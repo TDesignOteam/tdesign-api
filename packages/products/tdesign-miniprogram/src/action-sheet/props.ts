@@ -31,8 +31,18 @@ const props: TdActionSheetProps = {
     type: Array,
     required: true,
   },
+  /** popupProps透传 */
+  popupProps: {
+    type: Object,
+    value: {},
+  },
   /** 是否显示取消按钮 */
   showCancel: {
+    type: Boolean,
+    value: true,
+  },
+  /** 是否显示遮罩层 */
+  showOverlay: {
     type: Boolean,
     value: true,
   },
