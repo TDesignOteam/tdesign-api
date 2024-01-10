@@ -7,28 +7,29 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 alt | String | - | show it when url is not valid | N
 badge-props | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
-external-classes | Array | - | `['t-class']` | N
+bordered | Boolean | false | \- | N
+custom-style | String | - | `0.25.0` | N
+external-classes | Array | - | `['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content']` | N
 hide-on-load-failed | Boolean | false | hide image when loading image failed | N
-icon | String / Slot | - | \- | N
+icon | String / Object | - | \- | N
 image | String | - | images url | N
-image-props | Object | - | \- | N
-shape | String | circle | shape。options：circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
-size | String | - | size | N
-style | String | - | \- | N
+image-props | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
+shape | String | circle | shape。options: circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
+size | String | medium | size | N
 
 ### Avatar Events
 
 name | params | description
 -- | -- | --
-error | \- | trigger on image load failed
+error | - | trigger on image load failed
 
 ### AvatarGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-cascading | String | 'right-up' | multiple images cascading。options：left-up/right-up。Typescript：`CascadingValue` `type CascadingValue = 'left-up' \| 'right-up'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
-collapse-avatar | String / Slot | - | \- | N
+cascading | String | 'right-up' | multiple images cascading。options: left-up/right-up。Typescript：`CascadingValue` `type CascadingValue = 'left-up' \| 'right-up'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar-group/type.ts) | N
+collapse-avatar | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+custom-style | String | - | `0.25.0` | N
 external-classes | Array | - | `['t-class', 't-class-image', 't-class-content']` | N
 max | Number | - | \- | N
 size | String | medium | size | N
-style | String | - | \- | N

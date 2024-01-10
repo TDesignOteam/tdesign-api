@@ -34,6 +34,11 @@ export type HorizontalAlignEnum = 'left' | 'center' | 'right';
 
 export type VerticalAlignEnum = 'top' | 'middle' | 'bottom';
 
+export enum LayoutEnum {
+  VERTICAL = 'vertical',
+  HORIZONTAL = 'horizontal',
+}
+
 export type ClassName = { [className: string]: any } | ClassName[] | string;
 
 export type CSSSelector = string;
@@ -85,7 +90,7 @@ export type InfinityScroll = TScroll;
 
 export interface ScrollToElementParams {
   /** 跳转元素下标 */
-  index: number;
+  index?: number;
   /** 跳转元素距离顶部的距离 */
   top?: number;
   /** 单个元素高度非固定场景下，即 isFixedRowHeight = false。延迟设置元素位置，一般用于依赖不同高度异步渲染等场景，单位：毫秒 */
@@ -94,5 +99,5 @@ export interface ScrollToElementParams {
 }
 
 export interface ComponentScrollToElementParams extends ScrollToElementParams {
-  key: string | number;
+  key?: string | number;
 }
