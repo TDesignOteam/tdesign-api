@@ -46031,7 +46031,7 @@
         "1"
       ],
       "field_default_value": "change",
-      "field_enum": "change/blur",
+      "field_enum": "",
       "field_desc_zh": "校验触发方式",
       "field_desc_en": null,
       "field_required": 0,
@@ -46039,7 +46039,7 @@
       "create_time": "2020-12-17 04:32:16",
       "update_time": "2021-03-15 15:22:17",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "ValidateTriggerType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
