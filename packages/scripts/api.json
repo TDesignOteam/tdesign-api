@@ -43266,12 +43266,49 @@
       "field_enum": "",
       "field_desc_zh": "获取 form dom 元素",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-23 06:23:07",
       "update_time": "2022-08-23 06:23:07",
       "event_output": "HTMLFormElement",
       "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1706499223,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Form",
+      "field_category": 4,
+      "field_name": "getCurrentElement",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取 form dom 元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-29 03:33:43",
+      "update_time": "2024-01-29 03:33:43",
+      "event_output": "HTMLFormElement",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44755,7 +44792,9 @@
       "field_category": 1,
       "field_name": "name",
       "field_type": [
-        "1"
+        "1",
+        "2",
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -44766,7 +44805,7 @@
       "create_time": "2020-12-02 06:10:20",
       "update_time": "2022-06-16 08:15:16",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "NamePath【type NamePath = string | number | Array<string | number>】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44786,7 +44825,9 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Number",
+        "Array"
       ]
     },
     {
