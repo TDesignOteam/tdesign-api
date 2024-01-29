@@ -44781,12 +44781,53 @@
       "id": 180,
       "platform_framework": [
         "1",
-        "2",
         "4",
         "8",
         "16",
         "32",
         "64"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "name",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表单字段名称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-12-02 06:10:20",
+      "update_time": "2022-06-16 08:15:16",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1706508590,
+      "platform_framework": [
+        "2"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -44802,8 +44843,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-12-02 06:10:20",
-      "update_time": "2022-06-16 08:15:16",
+      "create_time": "2024-01-29 06:09:50",
+      "update_time": "2024-01-29 06:09:50",
       "event_output": null,
       "custom_field_type": "NamePath【type NamePath = string | number | Array<string | number>】",
       "syntactic_sugar": null,
@@ -44811,18 +44852,12 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",
