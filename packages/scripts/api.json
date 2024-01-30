@@ -43378,7 +43378,7 @@
       "field_desc_zh": "获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据",
       "field_desc_en": null,
       "field_required": 1,
-      "event_input": "【interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}】",
+      "event_input": "(nameList: string[] | boolean)【interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}】",
       "create_time": "2022-01-27 05:22:02",
       "update_time": "2022-07-06 08:39:10",
       "event_output": "getFieldsValue<FormData>",
