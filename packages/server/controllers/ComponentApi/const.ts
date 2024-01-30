@@ -64,7 +64,7 @@ export const FIELD_TYPE_MAP: MapOptions = {
     [FUNCTION]: "Function",
     [TNODE]: "TNode",
     [Date]: "Date",
-    [FILE]: 'File',
+    [FILE]: "File",
 };
 
 export const PLATFORM_FRAMEWORK: MapOptions = {
@@ -264,6 +264,10 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: "Result", label: "结果" },
     { value: "Skeleton", label: "骨架屏" },
     { value: "Watermark", label: "水印" },
+    { value: "Typography", label: "排版" },
+    { value: "Text", label: "文本" },
+    { value: "Title", label: "标题" },
+    { value: "Paragraph", label: "段落" },
     { value: "Anchor", label: "锚点" },
     { value: "BackTop", label: "回到顶部" },
     { value: "Container", label: "布局容器" },
