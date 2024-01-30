@@ -239,6 +239,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: "AvatarGroup", label: "头像组" },
     { value: "Carousel", label: "走马灯" },
     { value: "Typography", label: "排版" },
+    { value: "TypographyEllipsis", label: "排版省略配置", type: "TS" },
+    { value: "TypographyCopyable", label: "排版复制配置", type: "TS" },
     { value: "Space", label: "间距" },
     { value: "Swiper", label: "轮播" },
     { value: "SwiperItem", label: "轮播项" },

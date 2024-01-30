@@ -12,8 +12,18 @@ export default {
   content: {
     type: [String, Function] as PropType<TdParagraphProps['content']>,
   },
+  /** 是否可复制，可通过配置参数自定义复制操作的具体功能和样式 */
+  copyable: {
+    type: [Boolean, Object] as PropType<TdParagraphProps['copyable']>,
+    default: false,
+  },
   /** 段落内容 */
   default: {
     type: [String, Function] as PropType<TdParagraphProps['default']>,
+  },
+  /** 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式 */
+  ellipsis: {
+    type: [Boolean, Object] as PropType<TdParagraphProps['ellipsis']>,
+    default: false,
   },
 };

@@ -1000,6 +1000,16 @@
         "label": "排版"
       },
       {
+        "value": "TypographyCopyable",
+        "label": "排版复制配置",
+        "type": "TS"
+      },
+      {
+        "value": "TypographyEllipsis",
+        "label": "排版省略配置",
+        "type": "TS"
+      },
+      {
         "value": "Upload",
         "label": "上传"
       },

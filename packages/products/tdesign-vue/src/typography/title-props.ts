@@ -16,6 +16,11 @@ export default {
   default: {
     type: [String, Function] as PropType<TdTitleProps['default']>,
   },
+  /** 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式 */
+  ellipsis: {
+    type: [Boolean, Object] as PropType<TdTitleProps['ellipsis']>,
+    default: false,
+  },
   /** 标题等级 */
   level: {
     type: String as PropType<TdTitleProps['level']>,
