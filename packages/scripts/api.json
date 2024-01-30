@@ -43266,12 +43266,49 @@
       "field_enum": "",
       "field_desc_zh": "获取 form dom 元素",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-23 06:23:07",
       "update_time": "2022-08-23 06:23:07",
       "event_output": "HTMLFormElement",
       "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1706499223,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Form",
+      "field_category": 4,
+      "field_name": "getCurrentElement",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取 form dom 元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-29 03:33:43",
+      "update_time": "2024-01-29 03:33:43",
+      "event_output": "HTMLFormElement",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43586,7 +43623,7 @@
       "field_desc_zh": "校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表",
       "field_desc_en": null,
       "field_required": 1,
-      "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'all'】",
+      "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all'】",
       "create_time": "2021-08-05 02:22:58",
       "update_time": "2022-06-13 08:17:38",
       "event_output": "Promise<FormValidateResult<FormData>>",
@@ -44744,7 +44781,6 @@
       "id": 180,
       "platform_framework": [
         "1",
-        "2",
         "4",
         "8",
         "16",
@@ -44778,7 +44814,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
@@ -44787,6 +44822,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1706508590,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "name",
+      "field_type": [
+        "1",
+        "2",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表单字段名称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-29 06:09:50",
+      "update_time": "2024-01-29 06:09:50",
+      "event_output": null,
+      "custom_field_type": "NamePath【type NamePath = string | number | Array<string | number>】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number",
+        "Array"
       ]
     },
     {
@@ -46031,7 +46107,7 @@
         "1"
       ],
       "field_default_value": "change",
-      "field_enum": "change/blur",
+      "field_enum": "",
       "field_desc_zh": "校验触发方式",
       "field_desc_en": null,
       "field_required": 0,
@@ -46039,7 +46115,7 @@
       "create_time": "2020-12-17 04:32:16",
       "update_time": "2021-03-15 15:22:17",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "ValidateTriggerType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
