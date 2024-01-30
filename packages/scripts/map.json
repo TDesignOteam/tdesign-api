@@ -711,6 +711,10 @@
         "type": "TS"
       },
       {
+        "value": "Paragraph",
+        "label": "段落"
+      },
+      {
         "value": "Popconfirm",
         "label": "气泡确认框"
       },
@@ -905,6 +909,10 @@
         "label": "标签输入框"
       },
       {
+        "value": "Text",
+        "label": "文本"
+      },
+      {
         "value": "Timeline",
         "label": "时间轴"
       },
@@ -932,6 +940,10 @@
       {
         "value": "TimeRangePickerPanel",
         "label": "时间范围选择器面板"
+      },
+      {
+        "value": "Title",
+        "label": "标题"
       },
       {
         "value": "Tooltip",
@@ -986,6 +998,16 @@
       {
         "value": "Typography",
         "label": "排版"
+      },
+      {
+        "value": "TypographyCopyable",
+        "label": "排版复制配置",
+        "type": "TS"
+      },
+      {
+        "value": "TypographyEllipsis",
+        "label": "排版省略配置",
+        "type": "TS"
       },
       {
         "value": "Upload",

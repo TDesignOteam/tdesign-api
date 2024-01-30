@@ -129,7 +129,8 @@ const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
     excludes: ['Miniprogram']
   },
-  Popup: ['Popup','$Popup']
+  Popup: ['Popup','$Popup'],
+  Typography: ['Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -292,6 +293,9 @@ const TYPES_COMBINE_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
     excludes: ['Miniprogram']
   },
+  Typography: {
+    list: ['Typography','Text', 'Title','Paragraph','TypographyEllipsis','TypographyCopyable'],
+  }
 };
 
 exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;

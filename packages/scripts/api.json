@@ -67939,6 +67939,213 @@
       ]
     },
     {
+      "id": 1706635398,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Paragraph",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "段落内容，同 content",
+      "field_desc_en": "children of paragraph",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:23:18",
+      "update_time": "2024-01-30 17:23:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635275,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Paragraph",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "段落内容",
+      "field_desc_en": "content of paragraph",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:21:15",
+      "update_time": "2024-01-30 17:21:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706638324,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Paragraph",
+      "field_category": 1,
+      "field_name": "copyable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否可复制，可通过配置参数自定义复制操作的具体功能和样式",
+      "field_desc_en": "add copyable style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:12:04",
+      "update_time": "2024-01-30 18:12:04",
+      "event_output": null,
+      "custom_field_type": "boolean | TypographyCopyable",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
+      "id": 1706635334,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Paragraph",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "段落内容",
+      "field_desc_en": "default slot of paragraph",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:22:14",
+      "update_time": "2024-01-30 17:22:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706638282,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Paragraph",
+      "field_category": 1,
+      "field_name": "ellipsis",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+      "field_desc_en": "add ellipsis style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:11:22",
+      "update_time": "2024-01-30 18:11:22",
+      "event_output": null,
+      "custom_field_type": "boolean | TypographyEllipsis",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
       "id": 2834,
       "platform_framework": [
         "64"
@@ -102846,6 +103053,537 @@
       "field_type_text": []
     },
     {
+      "id": 1706635543,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文本内容，同content",
+      "field_desc_en": "children of text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:25:43",
+      "update_time": "2024-01-30 17:25:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635187,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "code",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加代码样式",
+      "field_desc_en": "add code style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:19:47",
+      "update_time": "2024-01-30 17:19:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635518,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文本内容",
+      "field_desc_en": "content of text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:25:18",
+      "update_time": "2024-01-30 17:25:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635501,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文本内容",
+      "field_desc_en": "default slot of text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:25:01",
+      "update_time": "2024-01-30 17:25:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635746,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "delete",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加删除线样式",
+      "field_desc_en": "add delete line style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:29:06",
+      "update_time": "2024-01-30 17:29:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635833,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加不可用样式",
+      "field_desc_en": "add disabled style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:30:33",
+      "update_time": "2024-01-30 17:30:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706636550,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "ellipsis",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+      "field_desc_en": "add ellipsis style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:42:30",
+      "update_time": "2024-01-30 17:42:30",
+      "event_output": null,
+      "custom_field_type": "boolean | TypographyEllipsis",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
+      "id": 1706635810,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "italic",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "文本是否为斜体",
+      "field_desc_en": "add italic style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:30:10",
+      "update_time": "2024-01-30 17:30:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635845,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "keyboard",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加键盘样式",
+      "field_desc_en": "add keyboard style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:30:45",
+      "update_time": "2024-01-30 17:30:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635902,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "mark",
+      "field_type": [
+        "1",
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加标记样式，默认为黄色，可通过配置颜色修改标记样式，如#0052D9",
+      "field_desc_en": "add mark style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:31:42",
+      "update_time": "2024-01-30 17:31:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635791,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "strong",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "文本是否加粗",
+      "field_desc_en": "add bold style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:29:51",
+      "update_time": "2024-01-30 17:29:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706635970,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "primary/secondary/success/warning/error",
+      "field_desc_zh": "主题",
+      "field_desc_en": "theme of text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:32:50",
+      "update_time": "2024-01-30 17:32:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1706635764,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "underline",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否添加下划线样式",
+      "field_desc_en": "add underline style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:29:24",
+      "update_time": "2024-01-30 17:29:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1719,
       "platform_framework": [
         "64"
@@ -107052,6 +107790,211 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1706635433,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Title",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "段落内容，同 content",
+      "field_desc_en": "children of title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:23:53",
+      "update_time": "2024-01-30 17:23:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635466,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Title",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "段落内容",
+      "field_desc_en": "content of title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:24:26",
+      "update_time": "2024-01-30 17:24:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706635482,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Title",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题内容",
+      "field_desc_en": "default slot of title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:24:42",
+      "update_time": "2024-01-30 17:24:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706638273,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Title",
+      "field_category": 1,
+      "field_name": "ellipsis",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+      "field_desc_en": "add ellipsis style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:11:13",
+      "update_time": "2024-01-30 18:11:13",
+      "event_output": null,
+      "custom_field_type": "boolean | TypographyEllipsis",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
+      "id": 1706635230,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Title",
+      "field_category": 1,
+      "field_name": "level",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "h1",
+      "field_enum": "h1/h2/h3/h4/h5/h6",
+      "field_desc_zh": "标题等级",
+      "field_desc_en": "level of title",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:20:30",
+      "update_time": "2024-01-30 17:20:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 1352,
@@ -116282,6 +117225,408 @@
       "field_type_text": [
         "String"
       ]
+    },
+    {
+      "id": 1706638036,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyCopyable",
+      "field_category": 1,
+      "field_name": " text",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "复制的文本内容，默认为全部文本",
+      "field_desc_en": "copied content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:07:16",
+      "update_time": "2024-01-30 18:07:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1706638088,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyCopyable",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义复制触发元素，一般用于自定义复制图标",
+      "field_desc_en": "custom element configuration for copy icon",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:08:08",
+      "update_time": "2024-01-30 18:08:08",
+      "event_output": null,
+      "custom_field_type": "TNode<{ copied: boolean }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706638172,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyCopyable",
+      "field_category": 1,
+      "field_name": "tooltipProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "光标在复制图标上出现的tooltip的配置",
+      "field_desc_en": "Configuration of the tooltip that appears on the copy icon when the cursor is over it.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:09:32",
+      "update_time": "2024-01-30 18:09:32",
+      "event_output": null,
+      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1706638129,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyCopyable",
+      "field_category": 2,
+      "field_name": "copy",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击复制按钮的回调",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:08:49",
+      "update_time": "2024-01-30 18:08:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1706637229,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 1,
+      "field_name": "collapsible",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "展开后是否可以重新收起",
+      "field_desc_en": "collapsible after expanding",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:53:49",
+      "update_time": "2024-01-30 17:53:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706637150,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 1,
+      "field_name": "expandable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否可展开",
+      "field_desc_en": "expandable",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:52:30",
+      "update_time": "2024-01-30 17:52:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1706637000,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 1,
+      "field_name": "row",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "省略配置默认展示行数",
+      "field_desc_en": "default row number of ellipsis ",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:50:00",
+      "update_time": "2024-01-30 17:50:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1706637830,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义省略触发元素，一般用于自定义折叠图标",
+      "field_desc_en": "custom element configuration for ellipsis and collapse icon",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:03:50",
+      "update_time": "2024-01-30 18:03:50",
+      "event_output": null,
+      "custom_field_type": "TNode<{ expanded: boolean }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1706637302,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 1,
+      "field_name": "tooltipProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "光标在省略图标上出现的tooltip的配置",
+      "field_desc_en": "Configuration of the tooltip that appears on the ellipsis icon when the cursor is over it.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 17:55:02",
+      "update_time": "2024-01-30 17:55:02",
+      "event_output": null,
+      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1706637464,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyEllipsis",
+      "field_category": 2,
+      "field_name": "expand",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击省略按钮的回调",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(expanded:boolean)",
+      "create_time": "2024-01-30 17:57:44",
+      "update_time": "2024-01-30 17:57:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2995,
