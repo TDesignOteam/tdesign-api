@@ -7,6 +7,7 @@
 -- | -- | -- | -- | --
 code | Boolean | false | 是否添加代码样式 | N
 content | String / Slot / Function | - | 文本内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+copyable | Boolean / Object | false | 是否可复制，可通过配置参数自定义复制操作的具体功能和样式。TS 类型：`boolean \| TypographyCopyable` | N
 default | String / Slot / Function | - | 文本内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 delete | Boolean | false | 是否添加删除线样式 | N
 disabled | Boolean | false | 是否添加不可用样式 | N
@@ -32,7 +33,6 @@ level | String | h1 | 标题等级。可选项：h1/h2/h3/h4/h5/h6 | N
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-copyable | Boolean / Object | false | 是否可复制，可通过配置参数自定义复制操作的具体功能和样式。TS 类型：`boolean \| TypographyCopyable` | N
 default | String / Slot / Function | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 ellipsis | Boolean / Object | false | 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式。TS 类型：`boolean \| TypographyEllipsis` | N
 

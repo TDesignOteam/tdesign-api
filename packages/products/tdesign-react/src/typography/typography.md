@@ -9,6 +9,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 children | TNode | - | 文本内容，同content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 code | Boolean | false | 是否添加代码样式 | N
+copyable | Boolean / Object | false | 是否可复制，可通过配置参数自定义复制操作的具体功能和样式。TS 类型：`boolean \| TypographyCopyable` | N
 delete | Boolean | false | 是否添加删除线样式 | N
 disabled | Boolean | false | 是否添加不可用样式 | N
 ellipsis | Boolean / Object | false | 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式。TS 类型：`boolean \| TypographyEllipsis` | N
@@ -38,7 +39,6 @@ className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 children | TNode | - | 段落内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 content | TNode | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-copyable | Boolean / Object | false | 是否可复制，可通过配置参数自定义复制操作的具体功能和样式。TS 类型：`boolean \| TypographyCopyable` | N
 ellipsis | Boolean / Object | false | 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式。TS 类型：`boolean \| TypographyEllipsis` | N
 
 ### TypographyEllipsis

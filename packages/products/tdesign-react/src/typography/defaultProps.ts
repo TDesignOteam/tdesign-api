@@ -6,6 +6,7 @@ import { TdTextProps, TdTitleProps, TdParagraphProps } from './type';
 
 export const textDefaultProps: TdTextProps = {
   code: false,
+  copyable: false,
   delete: false,
   disabled: false,
   ellipsis: false,
@@ -18,4 +19,4 @@ export const textDefaultProps: TdTextProps = {
 
 export const titleDefaultProps: TdTitleProps = { ellipsis: false, level: 'h1' };
 
-export const paragraphDefaultProps: TdParagraphProps = { copyable: false, ellipsis: false };
+export const paragraphDefaultProps: TdParagraphProps = { ellipsis: false };

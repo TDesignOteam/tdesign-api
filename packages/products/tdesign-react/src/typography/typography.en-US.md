@@ -9,6 +9,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 children | TNode | - | children of text。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 code | Boolean | false | add code style | N
+copyable | Boolean / Object | false | add copyable style。Typescript：`boolean \| TypographyCopyable` | N
 delete | Boolean | false | add delete line style | N
 disabled | Boolean | false | add disabled style | N
 ellipsis | Boolean / Object | false | add ellipsis style。Typescript：`boolean \| TypographyEllipsis` | N
@@ -38,7 +39,6 @@ className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 children | TNode | - | children of paragraph。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 content | TNode | - | content of paragraph。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-copyable | Boolean / Object | false | add copyable style。Typescript：`boolean \| TypographyCopyable` | N
 ellipsis | Boolean / Object | false | add ellipsis style。Typescript：`boolean \| TypographyEllipsis` | N
 
 ### TypographyEllipsis
