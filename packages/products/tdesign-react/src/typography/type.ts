@@ -18,6 +18,11 @@ export interface TdTextProps {
    */
   code?: boolean;
   /**
+   * 是否可复制，可通过配置参数自定义复制操作的具体功能和样式
+   * @default false
+   */
+  copyable?: boolean | TypographyCopyable;
+  /**
    * 是否添加删除线样式
    * @default false
    */
@@ -93,11 +98,6 @@ export interface TdParagraphProps {
    * 段落内容
    */
   content?: TNode;
-  /**
-   * 是否可复制，可通过配置参数自定义复制操作的具体功能和样式
-   * @default false
-   */
-  copyable?: boolean | TypographyCopyable;
   /**
    * 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式
    * @default false

@@ -14,6 +14,11 @@ export default {
   content: {
     type: [String, Function] as PropType<TdTextProps['content']>,
   },
+  /** 是否可复制，可通过配置参数自定义复制操作的具体功能和样式 */
+  copyable: {
+    type: [Boolean, Object] as PropType<TdTextProps['copyable']>,
+    default: false,
+  },
   /** 文本内容 */
   default: {
     type: [String, Function] as PropType<TdTextProps['default']>,

@@ -68021,49 +68021,6 @@
       ]
     },
     {
-      "id": 1706638324,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Paragraph",
-      "field_category": 1,
-      "field_name": "copyable",
-      "field_type": [
-        "4",
-        "8"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否可复制，可通过配置参数自定义复制操作的具体功能和样式",
-      "field_desc_en": "add copyable style",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-01-30 18:12:04",
-      "update_time": "2024-01-30 18:12:04",
-      "event_output": null,
-      "custom_field_type": "boolean | TypographyCopyable",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "Object"
-      ]
-    },
-    {
       "id": 1706635334,
       "platform_framework": [
         "1"
@@ -103169,6 +103126,49 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 1706638324,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Text",
+      "field_category": 1,
+      "field_name": "copyable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否可复制，可通过配置参数自定义复制操作的具体功能和样式",
+      "field_desc_en": "add copyable style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-01-30 18:12:04",
+      "update_time": "2024-01-30 18:12:04",
+      "event_output": null,
+      "custom_field_type": "boolean | TypographyCopyable",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
       ]
     },
     {

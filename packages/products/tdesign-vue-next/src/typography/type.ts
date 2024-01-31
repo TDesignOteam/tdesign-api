@@ -18,6 +18,11 @@ export interface TdTextProps {
    */
   content?: string | TNode;
   /**
+   * 是否可复制，可通过配置参数自定义复制操作的具体功能和样式
+   * @default false
+   */
+  copyable?: boolean | TypographyCopyable;
+  /**
    * 文本内容
    */
   default?: string | TNode;
@@ -93,11 +98,6 @@ export interface TdParagraphProps {
    * 段落内容
    */
   content?: string | TNode;
-  /**
-   * 是否可复制，可通过配置参数自定义复制操作的具体功能和样式
-   * @default false
-   */
-  copyable?: boolean | TypographyCopyable;
   /**
    * 段落内容
    */

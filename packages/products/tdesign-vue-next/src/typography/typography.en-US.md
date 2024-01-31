@@ -7,6 +7,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 code | Boolean | false | add code style | N
 content | String / Slot / Function | - | content of text。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+copyable | Boolean / Object | false | add copyable style。Typescript：`boolean \| TypographyCopyable` | N
 default | String / Slot / Function | - | default slot of text。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 delete | Boolean | false | add delete line style | N
 disabled | Boolean | false | add disabled style | N
@@ -32,7 +33,6 @@ level | String | h1 | level of title。options: h1/h2/h3/h4/h5/h6 | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | content of paragraph。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-copyable | Boolean / Object | false | add copyable style。Typescript：`boolean \| TypographyCopyable` | N
 default | String / Slot / Function | - | default slot of paragraph。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 ellipsis | Boolean / Object | false | add ellipsis style。Typescript：`boolean \| TypographyEllipsis` | N
 
