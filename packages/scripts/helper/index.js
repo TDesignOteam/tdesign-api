@@ -213,7 +213,6 @@ function writeVolar(framework, data) {
   export {};
   
   `
-  prettier.format(volarTemplate, prettierConfig);
   writeFileRecursive(current.volarPath, prettier.format(volarTemplate, prettierConfig));
 }
 
