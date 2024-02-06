@@ -10643,7 +10643,7 @@
       "field_desc_zh": "虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
       "field_desc_en": null,
       "field_required": 1,
-      "event_input": "(params: ScrollToElementParams)",
+      "event_input": "(params: ComponentScrollToElementParams)",
       "create_time": "2023-03-26 11:06:32",
       "update_time": "2023-03-26 11:06:32",
       "event_output": null,
