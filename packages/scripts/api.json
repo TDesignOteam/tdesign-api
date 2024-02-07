@@ -18437,7 +18437,7 @@
         "1",
         "64"
       ],
-      "field_default_value": "",
+      "field_default_value": "选择选项",
       "field_enum": "",
       "field_desc_zh": "未选中时的提示文案",
       "field_desc_en": null,
