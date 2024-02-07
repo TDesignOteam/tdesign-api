@@ -8,7 +8,7 @@ name | type | default | description | required
 close-btn | Boolean / Slot | true | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 options | Array | [] | Typescript：`Array<CascaderOption>` | N
-placeholder | String / Slot | 选择选项 | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+placeholder | String | 选择选项 | \- | N
 sub-titles | Array | [] | Typescript：`Array<string>` | N
 theme | String | step | options: step/tab | N
 title | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
