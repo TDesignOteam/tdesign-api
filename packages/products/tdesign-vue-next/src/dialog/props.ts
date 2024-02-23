@@ -39,6 +39,11 @@ export default {
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['confirmBtn']>,
   },
+  /** 确认按钮加载状态 */
+  confirmLoading: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否在按下回车键时，触发确认事件 */
   confirmOnEnter: Boolean,
   /** 对话框内容，同 body */
@@ -47,6 +52,11 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
+  /** 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' */
+  dialogClassName: {
+    type: String,
+    default: '',
+  },
   /** 对话框是否可以拖拽（仅在非模态对话框时有效） */
   draggable: Boolean,
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容 */
