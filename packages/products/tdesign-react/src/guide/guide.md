@@ -47,4 +47,4 @@ prevButtonProps | Object | - | 用于自定义当前引导框的上一步按钮�
 showOverlay | Boolean | true | 是否出现遮罩层 | N
 skipButtonProps | Object | - | 用于自定义当前步骤引导框的跳过按钮的内容。TS 类型：`ButtonProps` | N
 stepOverlayClass | String | - | 覆盖引导框的类名 | N
-title | String | - | 当前步骤的标题内容 | N
+title | TNode | - | 当前步骤的标题内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

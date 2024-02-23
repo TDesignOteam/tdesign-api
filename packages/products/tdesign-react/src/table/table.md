@@ -77,7 +77,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 refreshTable | \- | \- | 必需。全部重新渲染表格
 scrollColumnIntoView | `(colKey: string)` | \- | 必需。横向滚动到指定列，呈现在可视范围内
-scrollToElement | `(params: ScrollToElementParams)` | \- | 必需。虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
+scrollToElement | `(params: ComponentScrollToElementParams)` | \- | 必需。虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
 
 ### BaseTableCol
 
@@ -96,7 +96,7 @@ fixed | String | left | 固定列显示位置。可选项：left/right | N
 foot | String / Function | - | 自定义表尾内容。TS 类型：`string \| TNode \| TNode<{ col: BaseTableCol; colIndex: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 minWidth | String / Number | - | 透传 CSS 属性 `min-width` 到 `<col>` 元素。⚠️ 仅少部分浏览器支持，如：使用 [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview) 渲染的 Chrome 浏览器支持 `minWidth` | N
 render | Function | - | 自定义表头或单元格，泛型 T 指表格数据类型。TS 类型：`TNode<BaseTableRenderParams<T>>` `interface BaseTableRenderParams<T> extends BaseTableCellParams<T> { type: RenderType }` `type RenderType = 'cell' \| 'title'`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
-resizable | Boolean | true | 是否允许调整当前列列宽 | N
+resizable | Boolean | true | 是否允许调整当前列列宽，一般用于设置为 `false` 禁止调整某一列列宽。如果是允许列宽调整，需要先设置 `BaseTable.resizable` 为 `true` 打开所有列宽调整 | N
 resize | Object | - | 限制拖拽调整的最小宽度和最大宽度。`resize.minWidth` 默认为 `80`，`resize.maxWidth` 默认为 `600`。TS 类型：`TableColumnResizeConfig` `interface TableColumnResizeConfig { minWidth: number; maxWidth: number }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
 stopPropagation | Boolean | - | 是否阻止当列单元格点击事件冒泡 | N
 thClassName | String / Object / Array / Function | - | 列表头类名，值类型是函数时使用返回值作为列类名。泛型 T 指表格数据类型。TS 类型：`TableColumnClassName<T> \| TableColumnClassName<T>[]`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
@@ -132,6 +132,8 @@ hideSortTips | Boolean | - | 隐藏排序文本提示，支持全局配置 `Glob
 indeterminateSelectedRowKeys | Array | - | 半选状态行。选中行请更为使用 `selectedRowKeys` 控制。TS 类型：`Array<string \| number>` | N
 multipleSort | Boolean | false | 是否支持多列排序 | N
 reserveSelectedRowOnPaginate | Boolean | true | 行选中功能，是否在分页时保留上一页选中结果不清空，本地数据分页场景下，会全选所有页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页；本地数据分页场景下，全选仅选中当前页 | N
+rowSelectionAllowUncheck | Boolean | - | 行选中单选场景，是否允许取消选中 | N
+rowSelectionType | String | - | 行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样。可选项：single/multiple | N
 selectOnRowClick | Boolean | - | 是否在点击整行时选中 | N
 selectedRowKeys | Array | [] | 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制。TS 类型：`Array<string \| number>` | N
 defaultSelectedRowKeys | Array | [] | 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制。非受控属性。TS 类型：`Array<string \| number>` | N
@@ -163,6 +165,7 @@ onValidate | Function |  | TS 类型：`(context: PrimaryTableValidateContext) =
 -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+clearValidateData | \- | \- | 必需。清空所有校验结果
 validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | 必需。校验行信息，校验完成后，会触发事件 `onRowValidate`。参数 `rowValue` 表示行唯一标识的值。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
 validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | 必需。校验表格全部数据，校验完成后，会触发事件 `onValidate`
 
@@ -194,7 +197,7 @@ beforeDragSort | Function | - | 树形结构中，拖拽排序前控制，返回
 expandedTreeNodes | Array | [] | 展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。TS 类型：`Array<string \| number>` | N
 defaultExpandedTreeNodes | Array | [] | 展开的树形节点。非必须。在需要自由控制展开的树形节点时使用。其他场景无需设置，表格组件有内置展开逻辑。非受控属性。TS 类型：`Array<string \| number>` | N
 tree | Object | - | 树形结构相关配置。具体属性文档查看 `TableTreeConfig` 相关描述。TS 类型：`TableTreeConfig` | N
-treeExpandAndFoldIcon | Function | - | 自定义树形结构展开图标，支持全局配置 `GlobalConfigProvider`。TS 类型：`TNode<{ type: 'expand' \| 'fold' }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+treeExpandAndFoldIcon | Function | - | 自定义树形结构展开图标，支持全局配置 `GlobalConfigProvider`。TS 类型：`TNode<{ type: 'expand' \| 'fold', row: T }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 `PrimaryTableProps<T>` | \- | - | 继承 `PrimaryTableProps<T>` 中的全部属性 | N
 onAbnormalDragSort | Function |  | TS 类型：`(context: TableAbnormalDragSortContext<T>) => void`<br/>异常拖拽排序时触发，如：树形结构中，非同层级之间的交换。`context.code` 指交换异常错误码，固定值；`context.reason` 指交换异常的原因。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableAbnormalDragSortContext<T> { code: number; reason: string }`<br/> | N
 onExpandedTreeNodesChange | Function |  | TS 类型：`(expandedTreeNodes: Array<string \| number>, options: TableTreeNodeExpandOptions <T>) => void`<br/>树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' \| 'expand'; trigger?: 'expand-fold-icon' \| 'row-click' \| 'default-expand-all' \| 'expand-all' \| 'fold-all' }`<br/> | N

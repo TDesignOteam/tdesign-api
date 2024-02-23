@@ -11393,8 +11393,8 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否允许调整当前列列宽",
-      "field_desc_en": "resize current column width",
+      "field_desc_zh": "是否允许调整当前列列宽，一般用于设置为 `false` 禁止调整某一列列宽。如果是允许列宽调整，需要先设置 `BaseTable.resizable` 为 `true` 打开所有列宽调整",
+      "field_desc_en": "resize current column width, you can set to be false to forbidden resizing current column. `BaseTable.resizable` need set to be true to allow resizing all columns",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-09-25 12:37:19",
@@ -49951,12 +49951,13 @@
       "field_category": 1,
       "field_name": "title",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "当前步骤的标题内容",
-      "field_desc_en": null,
+      "field_desc_en": "title of current step",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-08-30 08:44:05",
@@ -49978,7 +49979,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {

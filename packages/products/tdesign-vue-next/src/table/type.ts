@@ -392,7 +392,7 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   render?: TNode<BaseTableRenderParams<T>>;
   /**
-   * 是否允许调整当前列列宽
+   * 是否允许调整当前列列宽，一般用于设置为 `false` 禁止调整某一列列宽。如果是允许列宽调整，需要先设置 `BaseTable.resizable` 为 `true` 打开所有列宽调整
    * @default true
    */
   resizable?: boolean;

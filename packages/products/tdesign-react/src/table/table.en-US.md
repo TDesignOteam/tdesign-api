@@ -77,7 +77,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
 refreshTable | \- | \- | required
 scrollColumnIntoView | `(colKey: string)` | \- | required
-scrollToElement | `(params: ScrollToElementParams)` | \- | required
+scrollToElement | `(params: ComponentScrollToElementParams)` | \- | required
 
 ### BaseTableCol
 
@@ -96,7 +96,7 @@ fixed | String | left | fixed current column to left or right。options: left/ri
 foot | String / Function | - | tfoot content。Typescript：`string \| TNode \| TNode<{ col: BaseTableCol; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 minWidth | String / Number | - | add CSS property `min-width` to HTML Element `<col>`，Browsers with [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview)  support `minWidth` | N
 render | Function | - | render function can be used to render cell or head。Typescript：`TNode<BaseTableRenderParams<T>>` `interface BaseTableRenderParams<T> extends BaseTableCellParams<T> { type: RenderType }` `type RenderType = 'cell' \| 'title'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
-resizable | Boolean | true | resize current column width | N
+resizable | Boolean | true | resize current column width, you can set to be false to forbidden resizing current column. `BaseTable.resizable` need set to be true to allow resizing all columns | N
 resize | Object | - | Typescript：`TableColumnResizeConfig` `interface TableColumnResizeConfig { minWidth: number; maxWidth: number }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts) | N
 stopPropagation | Boolean | - | stop cells of current col to propagation | N
 thClassName | String / Object / Array / Function | - | th classnames。Typescript：`TableColumnClassName<T> \| TableColumnClassName<T>[]`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
@@ -132,6 +132,8 @@ hideSortTips | Boolean | - | hide sort tips | N
 indeterminateSelectedRowKeys | Array | - | indeterminate selected row keys, row key is from data[rowKey]。Typescript：`Array<string \| number>` | N
 multipleSort | Boolean | false | support multiple column fields sort | N
 reserveSelectedRowOnPaginate | Boolean | true | \- | N
+rowSelectionAllowUncheck | Boolean | - | allow to uncheck selection in table with single row selection | N
+rowSelectionType | String | - | single row selection, or multiple row selection。options: single/multiple | N
 selectOnRowClick | Boolean | - | select row data on row click | N
 selectedRowKeys | Array | [] | selected row keys, row key is from data[rowKey]。Typescript：`Array<string \| number>` | N
 defaultSelectedRowKeys | Array | [] | selected row keys, row key is from data[rowKey]。uncontrolled property。Typescript：`Array<string \| number>` | N
@@ -163,6 +165,7 @@ name | params | return | description
 -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+clearValidateData | \- | \- | required。clear all validated errors
 validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
 validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | required
 
@@ -194,7 +197,7 @@ beforeDragSort | Function | - | stop to drag sort。Typescript：`(context: Drag
 expandedTreeNodes | Array | [] | expanded tree node row keys, row key value is from data[rowKey]。Typescript：`Array<string \| number>` | N
 defaultExpandedTreeNodes | Array | [] | expanded tree node row keys, row key value is from data[rowKey]。uncontrolled property。Typescript：`Array<string \| number>` | N
 tree | Object | - | tree data configs。Typescript：`TableTreeConfig` | N
-treeExpandAndFoldIcon | Function | - | sort icon。Typescript：`TNode<{ type: 'expand' \| 'fold' }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+treeExpandAndFoldIcon | Function | - | sort icon。Typescript：`TNode<{ type: 'expand' \| 'fold', row: T }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 `PrimaryTableProps<T>` | \- | - | extends `PrimaryTableProps<T>` | N
 onAbnormalDragSort | Function |  | Typescript：`(context: TableAbnormalDragSortContext<T>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableAbnormalDragSortContext<T> { code: number; reason: string }`<br/> | N
 onExpandedTreeNodesChange | Function |  | Typescript：`(expandedTreeNodes: Array<string \| number>, options: TableTreeNodeExpandOptions <T>) => void`<br/>trigger on tree node expanded or folded。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/table/type.ts)。<br/>`interface TableTreeNodeExpandOptions<T> { row: T; rowIndex: number; rowState: TableRowState<T>; type: 'fold' \| 'expand'; trigger?: 'expand-fold-icon' \| 'row-click' \| 'default-expand-all' \| 'expand-all' \| 'fold-all' }`<br/> | N
