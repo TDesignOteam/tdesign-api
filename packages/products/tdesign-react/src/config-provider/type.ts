@@ -4,13 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { GlobalIconConfig } from 'tdesign-icons-vue-next';
+import { GlobalIconConfig } from 'tdesign-icons-react';
 import { CalendarController } from '../calendar';
 import { ButtonProps } from '../button';
 import { FormErrorMessage } from '../form';
 import { MessageOptions } from '../message';
 import { ImageProps } from '../image';
-import { TNode, SizeEnum } from '../common';
+import { TNode, TElement, SizeEnum } from '../common';
 
 export interface GlobalConfigProvider {
   /**
@@ -537,15 +537,15 @@ export interface TableConfig {
   /**
    * 语言配置，“暂无数据” 描述文本
    */
-  empty?: string | TNode;
+  empty?: TNode;
   /**
    * 展开和收起图标（配置传入收起图标即可），如果没有配置，会使用组件内置的默认图标
    */
-  expandIcon?: TNode;
+  expandIcon?: TElement;
   /**
    * 过滤图标，如果没有配置，会使用组件内置的默认图标
    */
-  filterIcon?: TNode;
+  filterIcon?: TElement;
   /**
    * 隐藏排序文本提示
    * @default false
@@ -599,7 +599,7 @@ export interface TableConfig {
   /**
    * 排序图标（配置传入降序图标即可），如果没有配置，会使用组件内置的默认图标
    */
-  sortIcon?: TNode;
+  sortIcon?: TElement;
   /**
    * 树形结构，展开和折叠图标。如果没有配置，会使用组件内置的默认图标
    */
@@ -802,7 +802,7 @@ export interface StepsConfig {
   /**
    * 错误步骤图标，【注意】使用渲染函数输出图标组件
    */
-  errorIcon?: TNode;
+  errorIcon?: TElement;
 }
 
 export interface AlertConfig {
