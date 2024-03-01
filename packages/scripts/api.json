@@ -48442,11 +48442,49 @@
       ]
     },
     {
+      "id": 1708481239,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "backButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-21 02:07:19",
+      "update_time": "2024-02-21 02:07:19",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2970,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48476,7 +48514,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -48487,7 +48526,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48517,7 +48557,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -48528,7 +48569,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48558,7 +48600,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -48569,7 +48612,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48599,7 +48643,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -48651,7 +48696,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48681,7 +48727,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -48692,7 +48739,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48722,7 +48770,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -48770,11 +48819,49 @@
       ]
     },
     {
+      "id": 1709177566,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "mode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "popover",
+      "field_enum": "popover/dialog",
+      "field_desc_zh": "引导框的类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-29 03:32:46",
+      "update_time": "2024-02-29 03:32:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2969,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48804,7 +48891,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -48856,7 +48944,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48886,7 +48975,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -48897,7 +48987,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48927,7 +49018,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -48938,7 +49030,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -48968,7 +49061,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -48979,7 +49073,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -49009,18 +49104,53 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
       ]
     },
     {
+      "id": 1708481171,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Guide",
+      "field_category": 2,
+      "field_name": "back",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击返回按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent, current: number, total: number  })",
+      "create_time": "2024-02-21 02:06:11",
+      "update_time": "2024-02-21 02:06:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2948,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 2,
@@ -49048,7 +49178,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -49057,7 +49188,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 2,
@@ -49085,7 +49217,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -49094,7 +49227,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 2,
@@ -49122,7 +49256,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -49168,7 +49303,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Guide",
       "field_category": 2,
@@ -49196,7 +49332,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -49365,11 +49502,49 @@
       ]
     },
     {
+      "id": 1708481323,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "backButtonProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义当前引导框的返回按钮的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-21 02:08:43",
+      "update_time": "2024-02-21 02:08:43",
+      "event_output": null,
+      "custom_field_type": "ButtonProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2955,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49400,7 +49575,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -49451,7 +49627,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49481,7 +49658,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -49492,7 +49670,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49523,7 +49702,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -49572,11 +49752,49 @@
       ]
     },
     {
+      "id": 1709178118,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "highlightContent",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用户自定义的高亮框 (仅当 `mode` 为 `popover` 时生效)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-29 03:41:58",
+      "update_time": "2024-02-29 03:41:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2965,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49606,7 +49824,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -49654,11 +49873,49 @@
       ]
     },
     {
+      "id": 1709178151,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "mode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "popover/dialog",
+      "field_desc_zh": "引导框的类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-29 03:42:31",
+      "update_time": "2024-02-29 03:42:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2957,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49688,7 +49945,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -49699,7 +49957,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49729,7 +49988,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -49774,6 +50034,80 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1709197181,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'top'",
+      "field_enum": "",
+      "field_desc_zh": "引导框相对于高亮元素出现的位置，(仅当 `mode` 为 `popover` 时生效)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-29 08:59:41",
+      "update_time": "2024-02-29 08:59:41",
+      "event_output": null,
+      "custom_field_type": "StepPopoverPlacement 【type StepPopoverPlacement = 'top'|'left'|'right'|'bottom'|'top-left'|'top-right'|'bottom-left'|'bottom-right'|'left-top'|'left-bottom'|'right-top'|'right-bottom'|'center'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709178092,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GuideStep",
+      "field_category": 1,
+      "field_name": "popoverProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传全部属性到 Popover 组件。`mode=popover` 时有效",
+      "field_desc_en": "Popover component props if `mode = popover`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-02-29 03:41:32",
+      "update_time": "2024-02-29 03:41:32",
+      "event_output": null,
+      "custom_field_type": "PopoverProps【import { PopoverProps } from '@Popover'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -49863,7 +50197,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49893,7 +50228,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -49904,7 +50240,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -49934,7 +50271,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -49986,7 +50324,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -50017,7 +50356,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
