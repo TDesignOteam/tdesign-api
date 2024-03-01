@@ -18,6 +18,8 @@ drawer | Object | - | 抽屉全局配置。TS 类型：`DrawerConfig` | N
 form | Object | - | 表单组件全局配置。TS 类型：`FormConfig` | N
 guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
 icon | Object | - | 图标全局配置。TS 类型：`IconConfig` `type IconConfig = GlobalIconConfig` `import { GlobalIconConfig } from '@icon'`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
+image | Object | - | 图片全局配置。TS 类型：`ImageConfig` | N
+imageViewer | Object | - | 图片预览器全局配置。TS 类型：`ImageViewerConfig` | N
 input | Object | - | 输入框组件全局配置。TS 类型：`InputConfig` | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 message | Object | - | 消息组件全局配置。TS 类型：`MessageConfig` | N
@@ -107,6 +109,7 @@ postMeridiem | String | - | 语言配置，“下午”描述文本 | N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 描述文本 | N
 dayAriaLabel | String | - | 语言配置，“日” 描述文本 | N
+dayjsLocale | String | - | dayjs 语言国际化配置 | N
 direction | String | 'ltr' | 日期方向，'ltr' 表示从左往右 | N
 firstDayOfWeek | Number | 7 | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | 日期格式化规则 | N
@@ -176,6 +179,7 @@ loadingText | String | - | 语言配置，“正在加载中，请稍后” 描�
 resetText | String | - | 语言配置，“重置” 描述文本 | N
 searchResultText | String | - | 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果' | N
 selectAllText | String | - | 语言配置，'全选' 描述文本 | N
+size | String | medium | 全局表格尺寸配置。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 sortAscendingOperationText | String | - | 语言配置，'点击升序' 描述文本 | N
 sortCancelOperationText | String | - | 语言配置，'点击取消排序' 描述文本 | N
 sortDescendingOperationText | String | - | 语言配置，'点击降序' 描述文本 | N
@@ -256,6 +260,7 @@ fileStatusText | String | - | 语言配置，“状态” 描述文本 | N
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
+colon | String | - | 字段旁边的冒号，中文为“：” | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | 是否显示必填符号（*），默认显示 | N
 
@@ -278,12 +283,41 @@ errorIcon | Slot / Function | - | 错误步骤图标，【注意】使用渲染�
 collapseText | String | - | 语言配置，“收起”描述文本 | N
 expandText | String | - | 语言配置，“展开更多”描述文本 | N
 
+### DescriptionsConfig
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+colon | String | - | 字段旁边的冒号，中文为“：” | N
+
 ### AnchorConfig
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 copySuccessText | String | - | 语言配置，“链接复制成功”描述文本 | N
 copyText | String | - | 语言配置，“复制链接” 描述文本 | N
+
+### MessageConfig
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+`MessageOptions` | \- | - | 继承 `MessageOptions` 中的全部属性 | N
+
+### ImageConfig
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+errorText | String | - | 图片加载失败显示的文本，中文默认为“图片无法显示” | N
+loadingText | String | - | 图片加载中显示的文本，中文默认为“图片加载中” | N
+replaceImageSrc | Function | - | 统一替换图片 `src` 地址，参数为组件的全部属性，返回值为新的图片地址。TS 类型：`(params: ImageProps) => string`，[Image API Documents](./image?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
+
+### ImageViewerConfig
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+errorText | String | - | 全局语言配置，默认为 “图片加载失败，可尝试重新加载” | N
+mirrorTipText | String | - | 全局语言配置，默认为 “镜像” | N
+originalSizeTipText | String | - | 全局语言配置，默认为 “原始大小” | N
+rotateTipText | String | - | 全局语言配置，默认为 “旋转” | N
 
 ### GuideConfig
 
