@@ -98205,6 +98205,47 @@
       ]
     },
     {
+      "id": 1709366584,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "listFilterConfig",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "选项过滤功能配置，`listFilterConfig=true` 表示使用默认过滤功能和组件风格，`listFilterConfig.filterMethod` 用于自定义过滤方法，其中 `props/className/style` 分别表示透传属性、类名、样式到输入框组件",
+      "field_desc_en": "config of `filter.list`, used to filter `list`. `listFilterConfig=true` means default filter function used. `listFilterConfig.filterMethod` used to custom filter rules",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-02 08:03:04",
+      "update_time": "2024-03-02 08:03:04",
+      "event_output": null,
+      "custom_field_type": "boolean | ListFilterConfig【interface ListFilterConfig { filterMethod?: (item: OptionData, keyword: string) => boolean; props?: InputProps; className?: string; style?: Styles; slots?: { [key: string]: () => JSX.Element }}】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3208,
       "platform_framework": [
         "1",

@@ -85,19 +85,24 @@ function getPropsApiType(api, framework) {
   const csType = api.custom_field_type;
   const baseType = api.field_type_text;
   const hasTNodes = baseType.includes('TNode');
+  const exports = [];
   if (hasTNodes) {
     type = formatTNode(framework, baseType, csType);
   } else {
     if (csType) {
-      const { baseName } = formatTsTypeDesc(csType);
+      const { baseName, exports: exp } = formatTsTypeDesc(csType);
+      exp.length && exports.push(...exp);
       type = baseName;
     } else {
       type = baseType.map(item => formatOneType(api, item, framework)).join(' | ');
     }
   }
+  if (csType && csType.includes('ListFilterConfig')) {
+    console.log(exports);
+  }
   return {
     type,
-    export: [],
+    exports,
     imports: [],
   };
 }
