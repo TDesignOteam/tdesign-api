@@ -12334,69 +12334,32 @@
       ]
     },
     {
-      "id": 1291,
+      "id": 1709459753,
       "platform_framework": [
         "64"
       ],
       "component": "Button",
       "field_category": 1,
-      "field_name": "MP_EXCLUDE_PROPS",
+      "field_name": "appParameter",
       "field_type": [
         "1"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "为避免重复或冲突，需要过滤掉的小程序原生属性",
+      "field_desc_zh": "原生按钮属性，打开 APP 时，向 APP 传递的参数，`open-type=launchApp` 时有效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-07-11 02:02:27",
-      "update_time": "2021-07-11 10:52:41",
+      "create_time": "2024-03-03 09:55:53",
+      "update_time": "2024-03-03 09:55:53",
       "event_output": null,
-      "custom_field_type": "size,type,plain,disabled,loading,form-type,hover-class",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1288,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "MP_PROPS",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "[小程序原生属性](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-10 04:21:50",
-      "update_time": "2021-07-11 02:28:27",
-      "event_output": null,
-      "custom_field_type": "button",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -12674,43 +12637,6 @@
       ]
     },
     {
-      "id": 1794,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-26 13:32:00",
-      "update_time": "2022-05-30 08:11:21",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-icon', 't-class-loading']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 489,
       "platform_framework": [
         "1",
@@ -12753,6 +12679,154 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1709458832,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "hoverClass",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，指定按钮按下去的样式类。当 `hover-class=\"none\"` 时，没有点击态效果",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:40:32",
+      "update_time": "2024-03-03 09:40:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709458975,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "hoverStartTime",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "20",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，按住后多久出现点击态，单位毫秒",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:42:55",
+      "update_time": "2024-03-03 09:42:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1709459011,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "hoverStayTime",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "70",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，手指松开后点击态保留时间，单位毫秒",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:43:31",
+      "update_time": "2024-03-03 09:43:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1709458937,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "hoverStopPropagation",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，指定是否阻止本节点的祖先节点出现点击态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:42:17",
+      "update_time": "2024-03-03 09:42:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -12928,6 +13002,43 @@
       ]
     },
     {
+      "id": 1709459081,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "lang",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "en/zh_CN/zh_TW",
+      "field_desc_zh": "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文",
+      "field_desc_en": "message language",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:44:41",
+      "update_time": "2024-03-03 09:44:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 36,
       "platform_framework": [
         "1",
@@ -13020,6 +13131,228 @@
       ]
     },
     {
+      "id": 1709458728,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "openType",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "contact/liveActivity/share/getPhoneNumber/getRealtimePhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization",
+      "field_desc_zh": "原生按钮属性，按钮类型，枚举值同[小程序官网按钮](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+      "field_desc_en": "open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:38:48",
+      "update_time": "2024-03-03 09:38:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709459838,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "phoneNumberNoQuotaToast",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，当手机号快速验证或手机号实时验证额度用尽时，是否对用户展示“申请获取你的手机号，但该功能使用次数已达当前小程序上限，暂时无法使用”的提示，默认展示，open-type=\"getPhoneNumber\" 或 open-type=\"getRealtimePhoneNumber\" 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:57:18",
+      "update_time": "2024-03-03 09:57:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1709459686,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "sendMessageImg",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，会话内消息卡片图片，`open-type=\"contact\"` 时有效，默认为“截图”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:54:46",
+      "update_time": "2024-03-03 09:54:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709459448,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "sendMessagePath",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，会话内消息卡片点击跳转小程序路径，`open-type=\"contact\"` 时有效，默认为“当前分享路径”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:50:48",
+      "update_time": "2024-03-03 09:50:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709459391,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "sendMessageTitle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，会话内消息卡片标题，`open-type=\"contact\"` 时有效，默认为“当前标题”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:49:51",
+      "update_time": "2024-03-03 09:49:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1709459157,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "sessionFrom",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，会话来源，`open-type=\"contact\"` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:45:57",
+      "update_time": "2024-03-03 09:45:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 35,
       "platform_framework": [
         "1",
@@ -13066,6 +13399,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1709459794,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "showMessageCard",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示\"可能要发送的小程序\"提示，用户点击后可以快速发送小程序消息，`open-type=\"contact\"`时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:56:34",
+      "update_time": "2024-03-03 09:56:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -13538,6 +13908,72 @@
       ]
     },
     {
+      "id": 1709460216,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "agreeprivacyauthorization",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，用户同意隐私协议事件回调，open-type=agreePrivacyAuthorization时有效 （Tips: 如果使用 onNeedPrivacyAuthorization 接口，需要在 bindagreeprivacyauthorization 触发后再调用 resolve({ event: \"agree\", buttonId })）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:03:36",
+      "update_time": "2024-03-03 10:03:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460195,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "chooseavatar",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，获取用户头像回调，`open-type=chooseAvatar` 时有效。返回 `e.detail.avatarUrl` 为头像临时文件链接",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:03:15",
+      "update_time": "2024-03-03 10:03:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1990,
       "platform_framework": [
         "1",
@@ -13578,6 +14014,270 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709459969,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "contact",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，客服消息回调，`open-type=\"contact\"` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:59:29",
+      "update_time": "2024-03-03 09:59:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460045,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "createliveactivity",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "新的一次性订阅消息下发机制回调，`open-type=liveActivity` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:00:45",
+      "update_time": "2024-03-03 10:00:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460137,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "error",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，当使用开放能力时，发生错误的回调，`open-type=launchApp` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:02:17",
+      "update_time": "2024-03-03 10:02:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460067,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "getphonenumber",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，手机号快速验证回调，open-type=getPhoneNumber时有效。Tips：在触发 bindgetphonenumber 回调后应立即隐藏手机号按钮组件，或置为 disabled 状态，避免用户重复授权手机号产生额外费用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:01:07",
+      "update_time": "2024-03-03 10:01:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460095,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "getrealtimephonenumber",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，手机号实时验证回调，open-type=getRealtimePhoneNumber 时有效。Tips：在触发 bindgetrealtimephonenumber 回调后应立即隐藏手机号按钮组件，或置为 disabled 状态，避免用户重复授权手机号产生额外费用",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:01:35",
+      "update_time": "2024-03-03 10:01:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709459941,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "getuserinfo",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type=\"getUserInfo\"时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 09:59:01",
+      "update_time": "2024-03-03 09:59:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460173,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "launchapp",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "打开 APP 成功的回调，`open-type=launchApp` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:02:53",
+      "update_time": "2024-03-03 10:02:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709460154,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 2,
+      "field_name": "opensetting",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "原生按钮属性，在打开授权设置页后回调，open-type=openSetting时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 10:02:34",
+      "update_time": "2024-03-03 10:02:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []

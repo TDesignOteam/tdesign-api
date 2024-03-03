@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <template v-show="formData.apiCategory === API_CATEGORY_CSS_VAR_API">
+    <template v-if="formData.apiCategory === API_CATEGORY_CSS_VAR_API">
       <div class="t-form-item">
         <label>默认值：</label>
         <div class="t-form-content">
