@@ -54,11 +54,18 @@ function outputComponentMD(file, apiData, isVscode) {
     // 自动生成的 API 文档会自动替换 SIGNATURE 之后的内容
     // 如果 SIGNATURE 不存在，则会自动在文末补充
     const SIGNATURE = isVscode ? '/** 当前文件为自动生成，请勿手动调整 */' : `## API${os.EOL}`;
+    let cssVariables = data.split('### CSS 变量')[1];
+    if (!cssVariables) {
+      cssVariables = data.split('### CSS Variables')[1];
+    }
     const APIIndex = data.lastIndexOf(SIGNATURE);
     let result = APIIndex !== -1
       ? `${data.slice(0, APIIndex + 7)}${apiData}`
       : `${data}\n${SIGNATURE}\n${apiData}`;
     result = result.replace('\n:: BASE_PROPS ::\n', '');
+    if (cssVariables) {
+      result += `\n### CSS 变量\n\n${cssVariables.trim()}`;
+    }
     fs.writeFile(file, result, 'utf8', (err) => {
       if (err) return console.error(err);
       console.log(chalk.green(`generate docs: ${file} has been created.`));
