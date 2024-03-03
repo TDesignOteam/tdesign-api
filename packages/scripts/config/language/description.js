@@ -22,6 +22,9 @@ module.exports = {
     deprecated: '已废弃',
     extendsText: '继承 ${fieldName} 中的全部属性',
     PlainObjectText: `\`PlainObject\` 不是 \${component} 中的属性，而表示 \${component} 本身支持添加任意属性，\`type PlainObject = {[key: string]: any}\`'`,
+    classNameText: '类名',
+    styleText: '样式',
+    customStyleText: '一般用于开启虚拟化组件节点场景',
   },
   en: {
     descriptionField: 'field_desc_en',
@@ -46,5 +49,8 @@ module.exports = {
     deprecated: '`deprecated`',
     extendsText: 'extends ${fieldName}',
     PlainObjectText: `\`PlainObject\` is not an attribute of \${component}，it means you can add and attributes to \${component}, \`type PlainObject = {[key: string]: any}\`'`,
+    classNameText: 'className of component',
+    styleText: 'CSS(Cascading Style Sheets)',
+    customStyleText: 'used to set style on virtual component',
   },
 };

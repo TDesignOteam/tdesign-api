@@ -13162,7 +13162,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Button",
       "field_category": 1,
@@ -13195,10 +13196,48 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "TNode"
+      ]
+    },
+    {
+      "id": 1709453000,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "tId",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "按钮标签 `id`",
+      "field_desc_en": "id",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 08:03:20",
+      "update_time": "2024-03-03 08:03:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -13390,7 +13429,7 @@
       ],
       "field_default_value": "",
       "field_enum": "submit/reset",
-      "field_desc_zh": "同小程序的 formType",
+      "field_desc_zh": "同小程序的 `formType`，[button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
       "field_desc_en": "type of button element, same as formType of Miniprogram",
       "field_required": 0,
       "event_input": "",
@@ -13539,6 +13578,105 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709437692,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点类名",
+      "field_desc_en": "class name of root node",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 03:48:12",
+      "update_time": "2024-03-03 03:48:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709439384,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 128,
+      "field_name": "t-class-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标类名",
+      "field_desc_en": "class name of icon",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 04:16:24",
+      "update_time": "2024-03-03 04:16:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1709439405,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 128,
+      "field_name": "t-class-loading",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "加载样式类",
+      "field_desc_en": "class name of loading",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-03 04:16:45",
+      "update_time": "2024-03-03 04:16:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []

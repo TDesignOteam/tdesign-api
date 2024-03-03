@@ -30,6 +30,17 @@ const IMPORT_COMPONENT_PATH = map.data.components.map(cmp => `@${cmp.value}`);
 let LANGUAGE = 'zh';
 let currentFramework = '';
 
+const API_DOC_BLOCKS = {
+  'Vue(PC)': ['Props', 'Events', 'Functions'],
+  'VueNext(PC)': ['Props', 'Events', 'Functions'],
+  'React(PC)': ['Props', 'Functions'],
+  'Vue(Mobile)': ['Props', 'Events', 'Functions'],
+  'React(Mobile)': ['Props', 'Functions'],
+  Miniprogram: ['Props', 'Events', 'Functions', 'External Classes', 'CSS Variables'],
+};
+
+// 通用属性
+const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
 // category: props / events / functions / extends / return
 function groupByFieldCategory(componentApi) {
@@ -318,6 +329,29 @@ function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
   return apiArr;
 }
 
+function addCommonProperties({
+  framework,
+  category,
+  cmp,
+  md,
+  languageInfo,
+}) {
+  // 部分组件无包裹元素不需要添加 className、style
+  const filterComponents = ['Popup', 'Tooltip'];
+  // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
+  if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
+    md[category].apis = md[category].apis.concat([
+      `className | String | - | ${languageInfo.classNameText} | N`,
+      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
+    ]);
+  } else if (framework === 'Miniprogram' && category === 'Props') {
+    md[category].apis.push(...[
+      `style | Object | - | ${languageInfo.styleText} | N`,
+      `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
+    ]);
+  }
+}
+
 /**
  * 输出 API 文档
  * @param {Object} componentMap 组件 API
@@ -368,15 +402,10 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
       const titleFields = current.titleMap[LANGUAGE][docTitleType].titles;
       const mdTitles = getApiTitles(titleFields);
       md[category].apis.push(mdTitles);
-      // 部分组件无包裹元素不需要添加 className、style
-      const filterComponents = ['Popup', 'Tooltip'];
-      // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
-      if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
-        md[category].apis = md[category].apis.concat([
-          'className | String | - | 类名 | N',
-          `style | Object | - | 样式，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
-        ]);
-      }
+
+      // 添加通用属性：className/style/customStyle...
+      addCommonProperties({ framework, category, cmp, md, languageInfo });
+
       // 具体 API 内容
       const apis = fieldCategoryMap[category];
       const miniprogram = {};
@@ -401,7 +430,9 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         // start
         const newApi = formatToVueApi(api, { current, framework });
         const oneApi = getOneApi(newApi, current, docTitleType);
-        md[category].apis.push(oneApi);
+        if (!COMMON_PROPS.includes(api.field_name)) {
+          md[category].apis.push(oneApi);
+        }
         // 添加非受控属性 API 文档
         if (api.support_default_value && api.field_category_text !== 'Events') {
           const newSugarApi = formatToVueApi(api, { current, framework, isUncontrol: 'uncontrol' });
@@ -418,20 +449,13 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
           md.Props && md.Props.apis.push(`\n插件返回值：\`${api.field_name}\``);
         }
       });
-      // 添加小程序组件原生属性
-      // if (miniprogram.MP_PROPS) {
-      //   const mp = getMiniprogramOriginalApi(miniprogram, current, docTitleType);
-      //   md[category].apis = md[category].apis.concat(mp);
-      // }
     });
 
     // 整理数据到一个数组
     let docs = [];
     Object.keys(md).forEach((category) => {
       const item = md[category];
-      // React 不用再单独输出 Events 文档，Props 里面已经包含事件
-      const cts = ['React(PC)', 'React(Mobile)'].includes(framework) ? ['Props', 'Functions'] : ['Props', 'Events', 'Functions'];
-      if (cts.includes(category)) {
+      if (API_DOC_BLOCKS[framework].includes(category)) {
         docs = docs.concat(item.title, item.apis);
       }
     });

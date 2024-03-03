@@ -122,7 +122,8 @@ import {
   Option as TOption,
   Input as TInput,
   Pagination as TPagination,
-  Dialog as TDialog
+  Dialog as TDialog,
+  Loading as TLoading,
 } from 'tdesign-vue'
 
 const TYPE_MAP = {
@@ -150,6 +151,7 @@ export default {
     TInput,
     TPagination,
     TDialog,
+    TLoading,
     UnitTestDesign,
   },
 

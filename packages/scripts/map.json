@@ -25,6 +25,14 @@
       {
         "label": "<T>",
         "value": "64"
+      },
+      {
+        "label": "External Classes",
+        "value": "128"
+      },
+      {
+        "label": "CSS Variables",
+        "value": "256"
       }
     ],
     "platform": [

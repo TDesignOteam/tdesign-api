@@ -32,6 +32,8 @@ const API_CATEGORY_FUNCTIONS = 4;
 const API_CATEGORY_EXTENDS_API = 16;
 const API_CATEGORY_RETURN_API = 32;
 const API_CATEGORY_T_API = 64;
+const API_CATEGORY_CLASS_API = 128;
+const API_CATEGORY_CSS_VAR_API = 256;
 
 export const API_CATEGORY: MapOptions = {
     [API_CATEGORY_PROPS]: "Props",
@@ -41,6 +43,8 @@ export const API_CATEGORY: MapOptions = {
     [API_CATEGORY_EXTENDS_API]: "Extends",
     [API_CATEGORY_RETURN_API]: "Return",
     [API_CATEGORY_T_API]: "<T>",
+    [API_CATEGORY_CLASS_API]: "External Classes",
+    [API_CATEGORY_CSS_VAR_API]: "CSS Variables",
 };
 
 export const PLATFORM_MAP: MapOptions = {
