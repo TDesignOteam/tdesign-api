@@ -215,8 +215,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   showHeader?: boolean;
   /**
-   * 表格尺寸
-   * @default medium
+   * 表格尺寸，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `medium`
    */
   size?: SizeEnum;
   /**
@@ -867,6 +866,11 @@ export interface TableColumnFilter {
    */
   list?: Array<OptionData>;
   /**
+   * 选项过滤功能配置，`listFilterConfig=true` 表示使用默认过滤功能和组件风格，`listFilterConfig.filterMethod` 用于自定义过滤方法，其中 `props/className/style` 分别表示透传属性、类名、样式到输入框组件
+   * @default false
+   */
+  listFilterConfig?: boolean | ListFilterConfig;
+  /**
    * 透传 Popup 组件全部属性到筛选器浮层
    */
   popupProps?: PopupProps;
@@ -1254,6 +1258,14 @@ export interface SwapParams<T> {
   target: T;
   currentIndex: number;
   targetIndex: number;
+}
+
+export interface ListFilterConfig {
+  filterMethod?: (item: OptionData, keyword: string) => boolean;
+  props?: InputProps;
+  className?: string;
+  style?: Styles;
+  slots?: { [key: string]: () => JSX.Element };
 }
 
 export type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any };
