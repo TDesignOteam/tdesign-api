@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Drawer Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 attach | String / Function | - | 抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 body | String / Slot / Function | - | 抽屉内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
@@ -22,7 +23,7 @@ preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 size | String | 'small' | 尺寸，支持 'small', 'medium', 'large'，'35px', '30%',  '3em' 等。纵向抽屉调整的是抽屉宽度，横向抽屉调整的是抽屉高度 | N
-sizeDraggable | Boolean | false | 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度 | N
+sizeDraggable | Boolean / Object | false | 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度。`sizeDraggable.max` 和 `sizeDraggable.min` 用于控制拖拽尺寸大小限制。TS 类型：`boolean \| SizeDragLimit` `interface SizeDragLimit { max: number, min: number }`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/drawer/type.ts) | N
 visible | Boolean | false | 组件是否可见 | N
 zIndex | Number | - | 抽屉层级，样式默认为 1500 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，点击“取消”按钮时触发，同时触发关闭事件 | N
@@ -31,6 +32,7 @@ onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => voi
 onConfirm | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“确认”按钮存在，则点击“确认”按钮时触发 | N
 onEscKeydown | Function |  | TS 类型：`(context: { e: KeyboardEvent }) => void`<br/>按下 ESC 键时触发 | N
 onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果蒙层存在，点击蒙层时触发 | N
+onSizeDragEnd | Function |  | TS 类型：`(context: { e: MouseEvent; size: number  }) => void`<br/>抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度 | N
 
 ### Drawer Events
 
@@ -42,15 +44,15 @@ close-btn-click | `(context: { e: MouseEvent })` | 如果关闭按钮存在，�
 confirm | `(context: { e: MouseEvent })` | 如果“确认”按钮存在，则点击“确认”按钮时触发
 esc-keydown | `(context: { e: KeyboardEvent })` | 按下 ESC 键时触发
 overlay-click | `(context: { e: MouseEvent })` | 如果蒙层存在，点击蒙层时触发
+size-drag-end | `(context: { e: MouseEvent; size: number  })` | 抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度
 
 ### DrawerOptions
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 attach | String / Function | 'body' | 抽屉挂载的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 className | String | - | 抽屉类名，示例：'t-class-drawer-first t-class-drawer-second' | N
-style | String / Object | - | 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)。TS 类型：`string \| Styles`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-`Omit<DrawerProps, 'attach'>` | \- | - | 继承 `Omit<DrawerProps, 'attach'>` 中的全部 API | N
+`Omit<DrawerProps, 'attach'>` | \- | - | 继承 `Omit<DrawerProps, 'attach'>` 中的全部属性 | N
 
 ### DrawerInstance
 
@@ -65,6 +67,6 @@ update | `(props: DrawerOptions)` | \- | 更新抽屉内容
 
 同时也支持 `this.$drawer`。
 
-参数名称 | 参数类型 | 参数默认值 | 参数说明
+参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DrawerOptions`

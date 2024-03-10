@@ -38994,7 +38994,7 @@
       "field_desc_zh": "抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度",
       "field_desc_en": "trigger on size drag end",
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; size: number  })",
+      "event_input": "(context: { e: MouseEvent; size: number  })",
       "create_time": "2024-03-04 02:48:49",
       "update_time": "2024-03-04 02:48:49",
       "event_output": null,
