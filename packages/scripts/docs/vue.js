@@ -430,7 +430,8 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         // start
         const newApi = formatToVueApi(api, { current, framework });
         const oneApi = getOneApi(newApi, current, docTitleType);
-        if (!COMMON_PROPS.includes(api.field_name)) {
+        const isMiniprogram = framework === 'Miniprogram';
+        if (isMiniprogram && !COMMON_PROPS.includes(api.field_name) || !isMiniprogram) {
           md[category].apis.push(oneApi);
         }
         // 添加非受控属性 API 文档
