@@ -51,6 +51,15 @@
       </div>
     </div>
 
+    <template v-if="formData.apiCategory === API_CATEGORY_CSS_VAR_API">
+      <div class="t-form-item">
+        <label>默认值：</label>
+        <div class="t-form-content">
+          <t-input v-model="formData.defaultValue" placeholder="请输入字段默认值"></t-input>
+        </div>
+      </div>
+    </template>
+
     <div class="t-form-item" v-show="isShowSuger">
       <label>语法糖(Vue)：</label>
       <div class="t-form-content">
@@ -66,7 +75,7 @@
       </div>
     </div>
 
-    <div class="t-form-item">
+    <div class="t-form-item" v-if="isShowSuger">
       <label></label>
       <div class="t-form-content">
         <t-checkbox v-model="formData.supportDefaultValue">是否支持非受控属性</t-checkbox>
@@ -130,14 +139,14 @@
     <!-- Props 结束 -->
 
     <template v-else-if="!isExtendsApi && !isReturnApi && !isT">
-      <div class="t-form-item">
+      <div class="t-form-item" v-show="isShowParams">
         <label>参数：</label>
         <div class="t-form-content">
           <t-input v-model="formData.eventInput" :placeholder="currentApiCategory.placeholder.inputParams">
           </t-input>
         </div>
       </div>
-      <div class="t-form-item" v-show="Number(formData.apiCategory) !== API_CATEGORY_EVENTS">
+      <div class="t-form-item" v-show="isShowReturn">
         <label>返回值：</label>
         <div class="t-form-content">
           <t-input v-model="formData.eventOutput" :placeholder="currentApiCategory.placeholder.outputParams"></t-input>
@@ -155,7 +164,7 @@
           <t-input v-model="formData.descEn" :placeholder="currentApiCategory.placeholder.descEn"></t-input>
         </div>
       </div>
-      <div class="t-form-item">
+      <div class="t-form-item" v-show="formData.apiCategory === API_CATEGORY_EVENTS">
         <label>
           <span>触发元素(React)</span>
           <t-popup
@@ -257,6 +266,8 @@ import {
   API_CATEGORY_EVENTS,
   API_CATEGORY_PROPS,
   API_CATEGORY_PLUGINS,
+  API_CATEGORY_FUNCTIONS,
+  API_CATEGORY_CSS_VAR_API,
   STRING,
   NUMBER,
   P_VUE_PC,
@@ -301,6 +312,8 @@ export default {
       API_CATEGORY_EVENTS,
       API_CATEGORY_PROPS,
       API_CATEGORY_PLUGINS,
+      API_CATEGORY_FUNCTIONS,
+      API_CATEGORY_CSS_VAR_API,
       STRING,
       list: [],
       versionDescription,
@@ -365,7 +378,13 @@ export default {
     isShowEnumField () {
       return this.formData.fieldType.includes(String(STRING)) ||
         this.formData.fieldType.includes(String(NUMBER))
-    }
+    },
+    isShowParams() {
+      return [API_CATEGORY_FUNCTIONS, API_CATEGORY_EVENTS].includes(Number(this.formData.apiCategory));
+    },
+    isShowReturn() {
+      return [API_CATEGORY_FUNCTIONS].includes(Number(this.formData.apiCategory));
+    },
   },
 
   watch: {

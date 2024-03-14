@@ -22,7 +22,6 @@ export const baseTableDefaultProps: TdBaseTableProps = {
   resizable: false,
   rowKey: 'id',
   showHeader: true,
-  size: 'medium',
   stripe: false,
   tableLayout: 'fixed',
   verticalAlign: 'middle',

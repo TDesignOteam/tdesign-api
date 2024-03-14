@@ -5,6 +5,8 @@ export const API_CATEGORY_PLUGINS = 8
 export const API_CATEGORY_EXTENDS = 16
 export const API_CATEGORY_RETURN = 32
 export const API_CATEGORY_T = 64
+export const API_CATEGORY_CLASS_API = 128
+export const API_CATEGORY_CSS_VAR_API = 256
 
 export const API_CATEGORY_MAP = {
   [API_CATEGORY_PROPS]: {

@@ -18,6 +18,8 @@ drawer | Object | - | Drawer global configs。Typescript：`DrawerConfig` | N
 form | Object | - | Form global configs。Typescript：`FormConfig` | N
 guide | Object | - | Guide global configs。Typescript：`GuideConfig` | N
 icon | Object | - | icon config。Typescript：`IconConfig` `type IconConfig = GlobalIconConfig` `import { GlobalIconConfig } from '@icon'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
+image | Object | - | image global configs。Typescript：`ImageConfig` | N
+imageViewer | Object | - | imageViewer global configs。Typescript：`ImageViewerConfig` | N
 input | Object | - | Input global configs。Typescript：`InputConfig` | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 message | Object | - | Message Component global configs。Typescript：`MessageConfig` | N
@@ -56,7 +58,7 @@ name | type | default | description | required
 cellMonth | String | - | \- | N
 controllerConfig | Object | - | Typescript：`CalendarController`，[Calendar API Documents](./calendar?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
 fillWithZero | Boolean | true | \- | N
-firstDayOfWeek | Number | 1 | options：1/2/3/4/5/6/7 | N
+firstDayOfWeek | Number | 1 | options: 1/2/3/4/5/6/7 | N
 hideWeekend | String | - | \- | N
 monthRadio | String | - | \- | N
 monthSelection | String | - | \- | N
@@ -107,8 +109,9 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
 dayAriaLabel | String | - | date text | N
+dayjsLocale | String | - | dayjs language international configuration | N
 direction | String | 'ltr' | range separator text | N
-firstDayOfWeek | Number | 7 | options：1/2/3/4/5/6/7 | N
+firstDayOfWeek | Number | 7 | options: 1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | date format rules | N
 monthAriaLabel | String | - | month text | N
 months | Array | - | Typescript：`string[]` | N
@@ -134,7 +137,7 @@ yearAriaLabel | String | - | year text | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 cancel | Object | - | Typescript：`string \| ButtonProps`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
-closeOnEscKeydown | Boolean | true | \- | N
+closeOnEscKeydown | Boolean | true | trigger dialog close on `ESC` keydown | N
 closeOnOverlayClick | Boolean | true | \- | N
 confirm | Object | - | Typescript：`string \| ButtonProps` | N
 confirmBtnTheme | Object | - | Typescript：`{ default: string; info: string; warning: string; danger: string; success: string; }` | N
@@ -144,7 +147,7 @@ confirmBtnTheme | Object | - | Typescript：`{ default: string; info: string; wa
 name | type | default | description | required
 -- | -- | -- | -- | --
 cancel | String | - | Typescript：`string \| ButtonProps` | N
-closeOnEscKeydown | Boolean | true | \- | N
+closeOnEscKeydown | Boolean | true | trigger drawer close event on `ESC` keydown | N
 closeOnOverlayClick | Boolean | true | \- | N
 confirm | String | - | Typescript：`string \| ButtonProps` | N
 size | String | 'small' | \- | N
@@ -176,6 +179,7 @@ loadingText | String | - | \- | N
 resetText | String | - | \- | N
 searchResultText | String | - | \- | N
 selectAllText | String | - | \- | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 sortAscendingOperationText | String | - | \- | N
 sortCancelOperationText | String | - | \- | N
 sortDescendingOperationText | String | - | \- | N
@@ -256,6 +260,7 @@ fileStatusText | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+colon | String | - | colon on the right of label ":" | N
 errorMessage | Object | - | Typescript：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | \- | N
 
@@ -278,12 +283,41 @@ name | type | default | description | required
 collapseText | String | - | \- | N
 expandText | String | - | \- | N
 
+### DescriptionsConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+colon | String | - | colon on the right of label, ":" | N
+
 ### AnchorConfig
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 copySuccessText | String | - | \- | N
 copyText | String | - | \- | N
+
+### MessageConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+`MessageOptions` | \- | - | extends `MessageOptions` | N
+
+### ImageConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+errorText | String | - | loading text, default value is "Error" | N
+loadingText | String | - | loading text, default value is "loading" | N
+replaceImageSrc | Function | - | replace all `src` attribute of images。Typescript：`(params: ImageProps) => string`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/config-provider/type.ts) | N
+
+### ImageViewerConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+errorText | String | - | \- | N
+mirrorTipText | String | - | mirror operation text | N
+originalSizeTipText | String | - | original size tips | N
+rotateTipText | String | - | rotate operation text | N
 
 ### GuideConfig
 

@@ -15,7 +15,7 @@ hideCounter | Boolean | false | \- | N
 hidePrev | Boolean | false | \- | N
 hideSkip | Boolean | false | \- | N
 highlightPadding | Number | 8 | \- | N
-mode | String | popup | options：popup/dialog | N
+mode | String | popup | options: popup/dialog | N
 nextButtonProps | Object | - | Typescript：`ButtonProps`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/guide/type.ts) | N
 prevButtonProps | Object | - | Typescript：`ButtonProps` | N
 showOverlay | Boolean | true | \- | N
@@ -38,7 +38,7 @@ content | TElement | - | Typescript：`TNode`。[see more ts definition](https:/
 element | String / Function | - | required。Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | Y
 highlightContent | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 highlightPadding | Number | - | \- | N
-mode | String | - | options：popup/dialog | N
+mode | String | - | options: popup/dialog | N
 nextButtonProps | Object | - | Typescript：`ButtonProps` | N
 offset | Array | - | this api is in discussing. do not use it.。Typescript：`Array<string \| number>` | N
 placement | String | 'top' | Typescript：`StepPopupPlacement \| StepDialogPlacement` `type StepPopupPlacement = 'top'\|'left'\|'right'\|'bottom'\|'top-left'\|'top-right'\|'bottom-left'\|'bottom-right'\|'left-top'\|'left-bottom'\|'right-top'\|'right-bottom'` `type StepDialogPlacement = 'top'\|'center' `。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/guide/type.ts) | N
@@ -47,4 +47,4 @@ prevButtonProps | Object | - | Typescript：`ButtonProps` | N
 showOverlay | Boolean | true | \- | N
 skipButtonProps | Object | - | Typescript：`ButtonProps` | N
 stepOverlayClass | String | - | \- | N
-title | String | - | \- | N
+title | TNode | - | title of current step。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

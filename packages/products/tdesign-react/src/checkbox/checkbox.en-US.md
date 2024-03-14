@@ -14,6 +14,7 @@ children | TNode | - | Typescript：`string \| TNode`。[see more ts definition]
 disabled | Boolean | undefined | \- | N
 indeterminate | Boolean | false | \- | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 name | String | - | \- | N
 readonly | Boolean | false | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
@@ -26,6 +27,8 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+disabled | Boolean | undefined | \- | N
+lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 max | Number | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/checkbox/type.ts) | N

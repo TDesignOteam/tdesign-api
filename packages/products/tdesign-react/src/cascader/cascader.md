@@ -8,6 +8,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 autofocus | Boolean | - | 自动聚焦 | N
+borderless | Boolean | false | 无边框模式 | N
 checkProps | Object | - | 参考 checkbox 组件 API。TS 类型：`CheckboxProps`，[Checkbox API Documents](./checkbox?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
 checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各自选中或取消 | N
 clearable | Boolean | false | 是否支持清空选项 | N
@@ -17,7 +18,7 @@ empty | TNode | - | 无匹配选项时的内容，默认全局配置为 '暂无�
 filter | Function | - | 自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。TS 类型：`(filterWords: string, node: TreeNodeModel) => boolean \| Promise<boolean>` | N
 filterable | Boolean | false | 是否可搜索 | N
 inputProps | Object | - | 透传 Input 输入框组件的全部属性。TS 类型：`InputProps`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
-keys | Object | - | 用来定义 value / label / children 在 `options` 中对应的字段别名。TS 类型：`CascaderKeysType` `interface CascaderKeysType { value?: string; label?: string; children?: string \| boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
+keys | Object | - | 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名。TS 类型：`TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 label | TNode | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 lazy | Boolean | true | 延迟加载 children 为 true 的子节点，即使 expandAll 被设置为 true，也同样延迟加载 | N
 load | Function | - | 加载子树数据的方法（仅当节点 children 为 true 时生效）。TS 类型：`(node: TreeNodeModel<CascaderOption>) => Promise<Array<CascaderOption>>` | N
@@ -31,6 +32,8 @@ options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` 
 placeholder | String | undefined | 占位符 | N
 popupProps | Object | - | 参考 popup 组件 API。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框 | N
+defaultPopupVisible | Boolean | - | 是否显示下拉框。非受控属性 | N
+prefixIcon | TElement | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 readonly | Boolean | false | 只读状态，值为真会隐藏输入框，且无法打开下拉框 | N
 reserveKeyword | Boolean | false | 多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词 | N
 selectInputProps | Object | - | 透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
@@ -45,7 +48,7 @@ tips | TNode | - | 输入框下方提示文本，会根据不同的 `status` 呈
 trigger | String | click | 展开下一层级的方式。可选项：click/hover | N
 value | String / Number / Array | [] | 选中项的值。TS 类型：`CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| T \| Array<CascaderValue<T>>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
 defaultValue | String / Number / Array | [] | 选中项的值。非受控属性。TS 类型：`CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| T \| Array<CascaderValue<T>>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
-valueDisplay | TNode | - | 【开发中】自定义选中项呈现的内容。TS 类型：`string \| TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption> }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+valueDisplay | TNode | - | 自定义选中项呈现的内容。TS 类型：`string \| TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption>; selectedOptions: CascaderOption[] }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 valueMode | String | onlyLeaf | 选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点。可选项：onlyLeaf/parentFirst/all | N
 valueType | String | single | 用于控制选中值的类型。single 表示输入输出值为 叶子结点值， full 表示输入输出值为全路径。可选项：single/full | N
 onBlur | Function |  | TS 类型：`(context: { value: CascaderValue<CascaderOption> } & SelectInputBlurContext ) => void`<br/>当输入框失去焦点时触发 | N

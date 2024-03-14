@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### GlobalConfigProvider
 
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -180,6 +179,7 @@ loadingText | String | - | 语言配置，“正在加载中，请稍后” 描�
 resetText | String | - | 语言配置，“重置” 描述文本 | N
 searchResultText | String | - | 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果' | N
 selectAllText | String | - | 语言配置，'全选' 描述文本 | N
+size | String | medium | 全局表格尺寸配置。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 sortAscendingOperationText | String | - | 语言配置，'点击升序' 描述文本 | N
 sortCancelOperationText | String | - | 语言配置，'点击取消排序' 描述文本 | N
 sortDescendingOperationText | String | - | 语言配置，'点击降序' 描述文本 | N
@@ -260,6 +260,7 @@ fileStatusText | String | - | 语言配置，“状态” 描述文本 | N
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
+colon | String | - | 字段旁边的冒号，中文为“：” | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | 是否显示必填符号（*），默认显示 | N
 
@@ -281,6 +282,12 @@ errorIcon | TElement | - | 错误步骤图标，【注意】使用渲染函数�
 -- | -- | -- | -- | --
 collapseText | String | - | 语言配置，“收起”描述文本 | N
 expandText | String | - | 语言配置，“展开更多”描述文本 | N
+
+### DescriptionsConfig
+
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+colon | String | - | 字段旁边的冒号，中文为“：” | N
 
 ### AnchorConfig
 
