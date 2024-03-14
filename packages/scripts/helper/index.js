@@ -199,13 +199,14 @@ function write(framework, name, data) {
 function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
   const readerGlobalComponents=data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
+  const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
   const volarTemplate=`
   /**
    * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
    * https://github.com/TDesignOteam/tdesign-api
    * eslint-disable
    * */
-  declare module '@vue/runtime-core' {
+  declare module '${declareModule}' {
     export interface GlobalComponents {
       ${readerGlobalComponents.join('\n')}
     }
