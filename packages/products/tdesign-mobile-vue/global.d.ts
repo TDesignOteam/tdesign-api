@@ -1,8 +1,9 @@
-/* eslint-disable */
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * https://github.com/TDesignOteam/tdesign-api
+ * eslint-disable
  * */
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   export interface GlobalComponents {
     TActionSheet: typeof import('tdesign-mobile-vue')['ActionSheet'];
     TAvatar: typeof import('tdesign-mobile-vue')['Avatar'];
@@ -39,6 +40,7 @@ declare module '@vue/runtime-core' {
     TFormItem: typeof import('tdesign-mobile-vue')['FormItem'];
     TGrid: typeof import('tdesign-mobile-vue')['Grid'];
     TGridItem: typeof import('tdesign-mobile-vue')['GridItem'];
+    TGuide: typeof import('tdesign-mobile-vue')['Guide'];
     TIconSVG: typeof import('tdesign-mobile-vue')['IconSVG'];
     TIconfont: typeof import('tdesign-mobile-vue')['Iconfont'];
     TImage: typeof import('tdesign-mobile-vue')['Image'];
