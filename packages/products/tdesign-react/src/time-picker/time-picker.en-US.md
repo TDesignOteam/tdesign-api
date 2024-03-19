@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### TimePicker Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 allowInput | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disableTime | Function | - | disable time config function。Typescript：`(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number>  }>` | N
@@ -17,6 +18,7 @@ inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./in
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 presets | Object | - | Typescript：`PresetTime` `interface PresetTime { [presetName: string]: TimePickerValue \| (() => TimePickerValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
+selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 size | String | medium | options: small/medium/large | N
 status | String | default | options: default/success/warning/error | N
 steps | Array | [1, 1, 1] | Typescript：`Array<string \| number>` | N
@@ -31,12 +33,13 @@ onInput | Function |  | Typescript：`(context: { value: TimePickerValue; e: Inp
 onOpen | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: TimePickerValue, context: { e: MouseEvent }) => void`<br/> | N
 
+
 ### TimeRangePicker Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 allowInput | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disableTime | Function | - | Typescript：`(h: number, m: number, s: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
