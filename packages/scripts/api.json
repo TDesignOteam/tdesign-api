@@ -32311,6 +32311,43 @@
       ]
     },
     {
+      "id": 1710844467,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "customLocale",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "zh",
+      "field_enum": "",
+      "field_desc_zh": " 组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:34:27",
+      "update_time": "2024-03-19 10:34:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2678,
       "platform_framework": [
         "8",
@@ -32396,14 +32433,12 @@
       "id": 2510,
       "platform_framework": [
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
       "field_name": "footer",
       "field_type": [
-        "4",
         "64"
       ],
       "field_default_value": "true",
@@ -32420,18 +32455,53 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1710844322,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:32:02",
+      "update_time": "2024-03-19 10:32:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean",
         "TNode"
       ]
     },
@@ -32564,6 +32634,43 @@
       "field_type_text": [
         "String",
         "Array"
+      ]
+    },
+    {
+      "id": 1710844420,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_en": "popup properties",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:33:40",
+      "update_time": "2024-03-19 10:33:40",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -69701,6 +69808,43 @@
       ]
     },
     {
+      "id": 1710843235,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:13:55",
+      "update_time": "2024-03-19 10:13:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2507,
       "platform_framework": [
         "8",
@@ -69819,6 +69963,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1710843688,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_en": "popup properties",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:21:28",
+      "update_time": "2024-03-19 10:21:28",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
