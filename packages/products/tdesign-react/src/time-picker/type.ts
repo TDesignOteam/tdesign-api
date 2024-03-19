@@ -6,6 +6,7 @@
 
 import { InputProps } from '../input';
 import { PopupProps } from '../popup';
+import { SelectInputProps } from '../select-input';
 import { SelectInputBlurContext } from '../select-input';
 import { RangeInputProps } from '../range-input';
 import { TNode } from '../common';
@@ -61,6 +62,10 @@ export interface TdTimePickerProps {
    * 预设快捷时间选择，示例：`{ '前一小时': '11:00:00' }`
    */
   presets?: PresetTime;
+  /**
+   * 透传 SelectInput 筛选器输入框组件的全部属性
+   */
+  selectInputProps?: SelectInputProps;
   /**
    * 尺寸
    * @default medium

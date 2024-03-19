@@ -45,6 +45,10 @@ export default {
   presets: {
     type: Object as PropType<TdTimePickerProps['presets']>,
   },
+  /** 透传 SelectInput 筛选器输入框组件的全部属性 */
+  selectInputProps: {
+    type: Object as PropType<TdTimePickerProps['selectInputProps']>,
+  },
   /** 尺寸 */
   size: {
     type: String as PropType<TdTimePickerProps['size']>,

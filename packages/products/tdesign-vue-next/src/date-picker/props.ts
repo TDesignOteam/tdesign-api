@@ -77,6 +77,10 @@ export default {
       return ['left', 'top', 'right', 'bottom'].includes(val);
     },
   },
+  /** 透传 SelectInput 筛选器输入框组件的全部属性 */
+  selectInputProps: {
+    type: Object as PropType<TdDatePickerProps['selectInputProps']>,
+  },
   /** 输入框尺寸 */
   size: {
     type: String as PropType<TdDatePickerProps['size']>,
