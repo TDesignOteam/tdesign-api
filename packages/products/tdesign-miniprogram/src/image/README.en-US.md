@@ -6,21 +6,24 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-t-id | String | - | `1.2.10`. image tag id | N
-error | String / Slot | 'default' | \- | N
-external-classes | Array | - | `['t-class', 't-class-load']` | N
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+error | String / Slot | 'default' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+fallback | String | - | display `fallback` image on `src` loading failed. you can also use `error` to define more complex error content | N
+height | String / Number | - | \- | N
 lazy | Boolean | false | \- | N
-loading | String / Slot | 'default' | \- | N
-shape | String | square | options：circle/round/square | N
+loading | String / Slot | 'default' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+referrerpolicy | String | - | attribute of `<img>`, [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)。options: no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url | N
+shape | String | square | options: circle/round/square | N
 show-menu-by-longpress | Boolean | false | \- | N
-src | String | - | \- | N
-style | String | - | \- | N
-mode | 只支持 scaleToFill/aspectFit/aspectFill/widthFix/heightFix，其余暂未支持，表现为居中 | - | required | Y
-webp | 无需指定，默认支持 | - | required | Y
+src | String / Object | - | src attribute of `<img>`. image File can also be loaded。Typescript：`string \| File` | N
+t-id | String | - | `1.2.10`。image tag id | N
+webp | Boolean | false | \- | N
+width | String / Number | - | \- | N
 
 ### Image Events
 
 name | params | description
 -- | -- | --
-error | \- | \-
-load | \- | \-
+error | - | trigger on image load failed
+load | - | trigger on image loaded
