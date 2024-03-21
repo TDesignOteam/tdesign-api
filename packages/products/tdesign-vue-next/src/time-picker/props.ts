@@ -90,6 +90,10 @@ export default {
     type: String as PropType<TdTimePickerProps['defaultValue']>,
     default: '' as TdTimePickerProps['defaultValue'],
   },
+  /** 自定义选中项呈现的内容 */
+  valueDisplay: {
+    type: [String, Function] as PropType<TdTimePickerProps['valueDisplay']>,
+  },
   /** 当输入框失去焦点时触发，value 表示组件当前有效值 */
   onBlur: Function as PropType<TdTimePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */

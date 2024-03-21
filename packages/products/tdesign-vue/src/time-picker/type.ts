@@ -95,6 +95,10 @@ export interface TdTimePickerProps {
    */
   defaultValue?: TimePickerValue;
   /**
+   * 自定义选中项呈现的内容
+   */
+  valueDisplay?: string | TNode<{ value: TimePickerValue }>;
+  /**
    * 当输入框失去焦点时触发，value 表示组件当前有效值
    */
   onBlur?: (context: { value: TimePickerValue } & SelectInputBlurContext) => void;
