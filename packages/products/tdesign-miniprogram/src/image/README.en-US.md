@@ -1,10 +1,12 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Image Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+t-id | String | - | `1.2.10`. image tag id | N
 error | String / Slot | 'default' | \- | N
 external-classes | Array | - | `['t-class', 't-class-load']` | N
 lazy | Boolean | false | \- | N
