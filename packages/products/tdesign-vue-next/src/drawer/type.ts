@@ -85,10 +85,10 @@ export interface TdDrawerProps {
    */
   size?: string;
   /**
-   * 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度
+   * 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度。`sizeDraggable.max` 和 `sizeDraggable.min` 用于控制拖拽尺寸大小限制
    * @default false
    */
-  sizeDraggable?: boolean;
+  sizeDraggable?: boolean | SizeDragLimit;
   /**
    * 组件是否可见
    * @default false
@@ -122,6 +122,10 @@ export interface TdDrawerProps {
    * 如果蒙层存在，点击蒙层时触发
    */
   onOverlayClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度
+   */
+  onSizeDragEnd?: (context: { e: MouseEvent; size: number }) => void;
 }
 
 export interface DrawerOptions extends Omit<TdDrawerProps, 'attach'> {
@@ -161,6 +165,11 @@ export interface DrawerInstance {
 }
 
 export type FooterButton = string | ButtonProps | TNode;
+
+export interface SizeDragLimit {
+  max: number;
+  min: number;
+}
 
 export type DrawerEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay';
 

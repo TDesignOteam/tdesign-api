@@ -5,6 +5,22 @@
  * */
 
 import { TNode, TElement } from '../common';
+import { MouseEvent } from 'react';
+
+export interface TdBreadcrumbProps {
+  /**
+   * 单项最大宽度，超出后会以省略号形式呈现
+   */
+  maxItemWidth?: string;
+  /**
+   * 面包屑项，功能同 BreadcrumbItem
+   */
+  options?: Array<TdBreadcrumbItemProps>;
+  /**
+   * 自定义分隔符
+   */
+  separator?: TNode;
+}
 
 export interface TdBreadcrumbItemProps {
   /**
@@ -50,6 +66,10 @@ export interface TdBreadcrumbItemProps {
    * 路由跳转目标，当且仅当 Router 存在时，该 API 有效
    */
   to?: string | Route;
+  /**
+   * 点击时触发
+   */
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
 }
 
 export interface Route {

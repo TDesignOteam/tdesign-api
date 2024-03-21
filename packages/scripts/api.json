@@ -12334,6 +12334,43 @@
       ]
     },
     {
+      "id": 1710248858,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "BreadcrumbItem",
+      "field_category": 2,
+      "field_name": "click",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击时触发",
+      "field_desc_en": "trigger on click",
+      "field_required": 0,
+      "event_input": "(e: MouseEvent)",
+      "create_time": "2024-03-12 13:07:38",
+      "update_time": "2024-03-12 13:07:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1709459753,
       "platform_framework": [
         "64"
@@ -28600,6 +28637,47 @@
       ]
     },
     {
+      "id": 1710846991,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "selectInputProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 SelectInput 筛选器输入框组件的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 11:16:31",
+      "update_time": "2024-03-19 11:16:31",
+      "event_output": null,
+      "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3448,
       "platform_framework": [
         "1",
@@ -28851,6 +28929,49 @@
         "Number",
         "Array",
         "Date"
+      ]
+    },
+    {
+      "id": 1710991955,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "valueDisplay",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义选中项呈现的内容",
+      "field_desc_en": "`MouseEvent<SVGElement>`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-21 03:32:35",
+      "update_time": "2024-03-21 03:32:35",
+      "event_output": null,
+      "custom_field_type": "string | TNode<{ value: DateValue; displayValue?: DateValue }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -32233,6 +32354,43 @@
       ]
     },
     {
+      "id": 1710844467,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "customLocale",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "zh",
+      "field_enum": "",
+      "field_desc_zh": " 组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:34:27",
+      "update_time": "2024-03-19 10:34:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2678,
       "platform_framework": [
         "8",
@@ -32318,14 +32476,12 @@
       "id": 2510,
       "platform_framework": [
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
       "field_name": "footer",
       "field_type": [
-        "4",
         "64"
       ],
       "field_default_value": "true",
@@ -32342,18 +32498,53 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1710844322,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:32:02",
+      "update_time": "2024-03-19 10:32:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean",
         "TNode"
       ]
     },
@@ -32486,6 +32677,43 @@
       "field_type_text": [
         "String",
         "Array"
+      ]
+    },
+    {
+      "id": 1710844420,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_en": "popup properties",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:33:40",
+      "update_time": "2024-03-19 10:33:40",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -38994,7 +39222,7 @@
       "field_desc_zh": "抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度",
       "field_desc_en": "trigger on size drag end",
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; size: number  })",
+      "event_input": "(context: { e: MouseEvent; size: number  })",
       "create_time": "2024-03-04 02:48:49",
       "update_time": "2024-03-04 02:48:49",
       "event_output": null,
@@ -69660,6 +69888,43 @@
       ]
     },
     {
+      "id": 1710843235,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:13:55",
+      "update_time": "2024-03-19 10:13:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2507,
       "platform_framework": [
         "8",
@@ -69778,6 +70043,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1710843688,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_en": "popup properties",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 10:21:28",
+      "update_time": "2024-03-19 10:21:28",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -102399,6 +102701,47 @@
       ]
     },
     {
+      "id": 1710397655,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "color",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义标签颜色",
+      "field_desc_en": "self-defined tag color ",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-14 06:27:35",
+      "update_time": "2024-03-14 06:27:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 733,
       "platform_framework": [
         "1",
@@ -107190,6 +107533,47 @@
       ]
     },
     {
+      "id": 1710847014,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 1,
+      "field_name": "selectInputProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 SelectInput 筛选器输入框组件的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-19 11:16:54",
+      "update_time": "2024-03-19 11:16:54",
+      "event_output": null,
+      "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1053,
       "platform_framework": [
         "1",
@@ -107394,6 +107778,49 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1710991987,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 1,
+      "field_name": "valueDisplay",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义选中项呈现的内容",
+      "field_desc_en": "`MouseEvent<SVGElement>`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-21 03:33:07",
+      "update_time": "2024-03-21 03:33:07",
+      "event_output": null,
+      "custom_field_type": "string | TNode<{ value: TimePickerValue }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {

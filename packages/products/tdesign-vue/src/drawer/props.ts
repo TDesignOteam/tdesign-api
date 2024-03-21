@@ -89,8 +89,11 @@ export default {
     type: String,
     default: undefined,
   },
-  /** 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度 */
-  sizeDraggable: Boolean,
+  /** 抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度。`sizeDraggable.max` 和 `sizeDraggable.min` 用于控制拖拽尺寸大小限制 */
+  sizeDraggable: {
+    type: [Boolean, Object] as PropType<TdDrawerProps['sizeDraggable']>,
+    default: false,
+  },
   /** 组件是否可见 */
   visible: Boolean,
   /** 抽屉层级，样式默认为 1500 */
@@ -109,4 +112,6 @@ export default {
   onEscKeydown: Function as PropType<TdDrawerProps['onEscKeydown']>,
   /** 如果蒙层存在，点击蒙层时触发 */
   onOverlayClick: Function as PropType<TdDrawerProps['onOverlayClick']>,
+  /** 抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度 */
+  onSizeDragEnd: Function as PropType<TdDrawerProps['onSizeDragEnd']>,
 };
