@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Select Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -11,7 +12,7 @@ autoWidth | Boolean | false | 宽度随内容自适应 | N
 autofocus | Boolean | false | 自动聚焦 | N
 borderless | Boolean | false | 无边框模式 | N
 clearable | Boolean | false | 是否可以清空选项 | N
-collapsedItems | TElement | - | 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量, `onClose` 表示移除标签。TS 类型：`TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number, onClose: (index: number) => void }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+collapsedItems | TElement | - | 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量, `onClose` 表示移除标签。TS 类型：`TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 creatable | Boolean | false | 是否允许用户创建新条目，需配合 filterable 使用 | N
 disabled | Boolean | - | 是否禁用组件 | N
 empty | TNode | - | 当下拉列表为空时显示的内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
@@ -63,9 +64,10 @@ onPopupVisibleChange | Function |  | TS 类型：`(visible: boolean, context: Po
 onRemove | Function |  | TS 类型：`(options: SelectRemoveContext<T>) => void`<br/>多选模式下，选中数据被移除时触发。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/select/type.ts)。<br/>`interface SelectRemoveContext<T> { value: string \| number; data: T; e: MouseEvent \| KeyboardEvent }`<br/> | N
 onSearch | Function |  | TS 类型：`(filterWords: string, context: { e: KeyboardEvent }) => void`<br/>输入值变化时，触发搜索事件。主要用于远程搜索新数据 | N
 
+
 ### Option Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -77,9 +79,10 @@ label | String | - | 选项名称 | N
 title | String | - | 选项标题，在选项过长时hover选项展示 | N
 value | String / Number | - | 选项值 | N
 
+
 ### OptionGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -88,7 +91,7 @@ label | String | - | 分组别名 | N
 
 ### TScroll
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 bufferSize | Number | 20 | 表示除可视区域外，额外渲染的行数，避免快速滚动过程中，新出现的内容来不及渲染从而出现空白 | N
 isFixedRowHeight | Boolean | false | 表示每行内容是否同一个固定高度，仅在 `scroll.type` 为 `virtual` 时有效，该属性设置为 `true` 时，可用于简化虚拟滚动内部计算逻辑，提升性能，此时则需要明确指定 `scroll.rowHeight` 属性的值 | N
