@@ -103522,7 +103522,7 @@
       "create_time": "2022-01-03 06:46:06",
       "update_time": "2022-01-03 06:46:06",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: TagInputValue; collapsedTags: TagInputValue; count: number, onClose: (context: { index: number,  e?: MouseEvent }) => void }>",
+      "custom_field_type": "TNode<{ value: TagInputValue; collapsedTags: TagInputValue; count: number; onClose: (context: { index: number,  e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
