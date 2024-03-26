@@ -1,18 +1,19 @@
 :: BASE_DOC ::
 
 ## API
+
 ### SelectInput Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 allowInput | Boolean | false | \- | N
 autoWidth | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
-collapsedItems | TElement | - | Typescript：`TNode<{ value: SelectInputValue; collapsedTags: SelectInputValue; count: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+collapsedItems | TElement | - | Typescript：`TNode<{ value: SelectInputValue; collapsedTags: SelectInputValue; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 disabled | Boolean | - | \- | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select-input/type.ts) | N
 inputValue | String / Number | - | input value。Typescript：`string` | N
