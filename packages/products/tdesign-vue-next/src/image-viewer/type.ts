@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { ImageProps } from '../image';
 import { TNode } from '../common';
 
 export interface TdImageViewerProps {
@@ -14,6 +15,7 @@ export interface TdImageViewerProps {
   closeBtn?: boolean | TNode;
   /**
    * 按下 ESC 时是否触发图片预览器关闭事件
+   * @default true
    */
   closeOnEscKeydown?: boolean;
   /**
@@ -25,7 +27,11 @@ export interface TdImageViewerProps {
    */
   draggable?: boolean;
   /**
-   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度
+   * 透传内部 Image 图片的全部属性
+   */
+  imageProps?: ImageProps;
+  /**
+   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例
    */
   imageScale?: ImageScale;
   /**
@@ -102,12 +108,31 @@ export interface ImageScale {
   max: number;
   min: number;
   step: number;
+  defaultScale?: number;
+}
+
+export interface ImageScale {
+  max: number;
+  min: number;
+  step: number;
+  defaultScale?: number;
 }
 
 export interface ImageInfo {
   mainImage: string | File;
   thumbnail?: string | File;
   download?: boolean;
+}
+
+export interface ImageInfo {
+  mainImage: string | File;
+  thumbnail?: string | File;
+  download?: boolean;
+}
+
+export interface ImageViewerScale {
+  minWidth: number;
+  minHeight: number;
 }
 
 export interface ImageViewerScale {
