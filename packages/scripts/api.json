@@ -54466,6 +54466,47 @@
       ]
     },
     {
+      "id": 1711596997,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "imageReferrerpolicy",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
+      "field_desc_zh": "图片预览中的 `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
+      "field_desc_en": "attribute of `<img>`, [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-28 03:36:37",
+      "update_time": "2024-03-28 03:36:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2723,
       "platform_framework": [
         "1",
