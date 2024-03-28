@@ -14,10 +14,7 @@ export default {
     default: true,
   },
   /** 按下 ESC 时是否触发图片预览器关闭事件 */
-  closeOnEscKeydown: {
-    type: Boolean,
-    default: true,
-  },
+  closeOnEscKeydown: Boolean,
   /** 是否在点击遮罩层时，触发预览关闭 */
   closeOnOverlay: Boolean,
   /** 是否允许拖拽调整位置。`mode=modal` 时，默认不允许拖拽；`mode=modeless` 时，默认允许拖拽 */
@@ -25,11 +22,7 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 透传内部 Image 图片的全部属性 */
-  imageProps: {
-    type: Object as PropType<TdImageViewerProps['imageProps']>,
-  },
-  /**  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例 */
+  /**  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度 */
   imageScale: {
     type: Object as PropType<TdImageViewerProps['imageScale']>,
   },
