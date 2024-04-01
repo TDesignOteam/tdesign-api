@@ -18,6 +18,7 @@ closeOnOverlayClick | Boolean | true | \- | N
 confirmBtn | TNode | - | Typescript：`FooterButton` `type FooterButton = string \| ButtonProps \| TNode`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/drawer/type.ts) | N
 destroyOnClose | Boolean | false | \- | N
 footer | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+forceRender | Boolean | false | to force render Drawer | N
 header | TNode | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 mode | String | overlay | options: overlay/push | N
 placement | String | right | options: left/right/top/bottom | N
@@ -42,6 +43,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 attach | String / Function | 'body' | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 className | String | - | \- | N
+style | Object | - | Typescript：`Styles`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 `Omit<DrawerProps, 'attach'>` | \- | - | extends `Omit<DrawerProps, 'attach'>` | N
 
 ### DrawerInstance
