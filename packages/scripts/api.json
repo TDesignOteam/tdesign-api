@@ -18398,14 +18398,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-10-14 08:11:48",
       "update_time": "2021-11-09 06:44:58",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: CascaderOption[]; collapsedSelectedItems: CascaderOption[]; count: number }>",
+      "custom_field_type": "TNode<{ value: CascaderOption[]; collapsedSelectedItems: CascaderOption[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -35515,6 +35515,43 @@
       ]
     },
     {
+      "id": 1711943474,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "forceRender",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否强制渲染Dialog",
+      "field_desc_en": "to force render Dialog",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 03:51:14",
+      "update_time": "2024-04-01 03:51:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 52,
       "platform_framework": [
         "1",
@@ -38185,6 +38222,43 @@
       ],
       "field_type_text": [
         "TNode"
+      ]
+    },
+    {
+      "id": 1711943489,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "forceRender",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否强制渲染Drawer",
+      "field_desc_en": "to force render Drawer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 03:51:29",
+      "update_time": "2024-04-01 03:51:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -54463,6 +54537,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1711596997,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "imageReferrerpolicy",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "no-referrer/no-referrer-when-downgrade/origin/origin-when-cross-origin/same-origin/strict-origin/strict-origin-when-cross-origin/unsafe-url",
+      "field_desc_zh": "图片预览中的 `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
+      "field_desc_en": "attribute of `<img>`, [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-03-28 03:36:37",
+      "update_time": "2024-03-28 03:36:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -84648,14 +84763,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量, `onClose` 表示移除标签",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量, `onClose` 表示移除标签",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-28 05:17:31",
       "update_time": "2021-11-20 05:13:40",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number, onClose: (index: number) => void }>",
+      "custom_field_type": "TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -87075,14 +87190,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 `collapsedItems` 自定义。`value` 表示所有标签值，`collapsedTags` 表示折叠标签值，`count` 表示折叠的数量",
+      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 `collapsedItems` 自定义。`value` 表示所有标签值，`collapsedSelectedItems` 表示折叠标签值，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-12 13:10:03",
       "update_time": "2022-01-13 04:22:06",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: SelectInputValue; collapsedTags: SelectInputValue; count: number }>",
+      "custom_field_type": "TNode<{ value: SelectInputValue; collapsedSelectedItems: SelectInputValue; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -103651,14 +103766,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
+      "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-03 06:46:06",
       "update_time": "2022-01-03 06:46:06",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: TagInputValue; collapsedTags: TagInputValue; count: number }>",
+      "custom_field_type": "TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number,  e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -106840,7 +106955,7 @@
       "field_desc_zh": "失去焦点时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TextareaValue)",
+      "event_input": "(value: TextareaValue, cursor: number)",
       "create_time": "2022-04-06 08:33:34",
       "update_time": "2022-04-06 08:33:34",
       "event_output": null,
@@ -106916,7 +107031,7 @@
       "field_desc_zh": "输入内容变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TextareaValue)",
+      "event_input": "(value: TextareaValue, cursor: number)",
       "create_time": "2022-04-06 08:33:23",
       "update_time": "2022-04-06 08:33:23",
       "event_output": null,
@@ -117122,14 +117237,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量",
+      "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-10-13 08:37:42",
       "update_time": "2021-11-09 06:38:29",
       "event_output": null,
-      "custom_field_type": "TNode<{ value: DataOption[]; collapsedSelectedItems: DataOption[]; count: number }>",
+      "custom_field_type": "TNode<{ value: DataOption[]; collapsedSelectedItems: DataOption[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

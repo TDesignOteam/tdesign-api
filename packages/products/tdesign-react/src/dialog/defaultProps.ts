@@ -12,6 +12,7 @@ export const dialogDefaultProps: TdDialogProps = {
   destroyOnClose: false,
   draggable: false,
   footer: true,
+  forceRender: false,
   header: true,
   mode: 'modal',
   placement: 'top',
