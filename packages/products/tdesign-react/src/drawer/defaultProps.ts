@@ -9,6 +9,7 @@ export const drawerDefaultProps: TdDrawerProps = {
   closeOnOverlayClick: undefined,
   destroyOnClose: false,
   footer: true,
+  forceRender: false,
   header: true,
   mode: 'overlay',
   placement: 'right',
