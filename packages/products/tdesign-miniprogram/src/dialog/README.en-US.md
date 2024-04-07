@@ -1,23 +1,25 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Dialog Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 actions | Array / Slot | - | Typescript：`Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts) | N
-button-layout | String | horizontal | options：horizontal/vertical | N
-cancel-btn | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts) | N
+button-layout | String | horizontal | options: horizontal/vertical | N
+cancel-btn | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts) | N
+close-btn | Boolean / Object | false | `0.31.0`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts) | N
 close-on-overlay-click | Boolean | undefined | \- | N
-confirm-btn | String / Object / Slot | - | \- | N
-content | String / Slot | - | \- | N
-external-classes | Array | - | `['t-class', 't-class-content', 't-class-confirm', 't-class-cancel']` | N
+confirm-btn | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 overlay-props | Object | {} | \- | N
 prevent-scroll-through | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
-style | String | - | \- | N
-title | String / Slot | - | \- | N
-visible | Boolean | false | \- | N
+title | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+visible | Boolean | - | \- | N
 z-index | Number | 11500 | \- | N
 
 ### Dialog Events
@@ -25,6 +27,15 @@ z-index | Number | 11500 | \- | N
 name | params | description
 -- | -- | --
 cancel | - | \-
-close | `(trigger: DialogEventSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/>
+close | `(trigger: DialogEventSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
 confirm | - | \-
 overlay-click | - | \-
+### Dialog External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-action | \-
+t-class-cancel | \-
+t-class-confirm | \-
+t-class-content | \-

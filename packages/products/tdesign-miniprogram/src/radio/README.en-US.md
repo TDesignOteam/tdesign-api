@@ -1,48 +1,65 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Radio Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | left | options：left/right | N
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+align | String | left | options: left/right | N
 allow-uncheck | Boolean | false | \- | N
+block | Boolean | true | \- | N
 checked | Boolean | false | \- | N
 default-checked | Boolean | undefined | uncontrolled property | N
 color | String | #0052d9 | \- | N
-content | String / Slot | - | \- | N
-content-disabled | Boolean | - | \- | N
+content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+content-disabled | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
-external-classes | Array | - | `['t-class', 't-class-icon', 't-class-label', 't-class-content', 't-class-border']` | N
-icon | String / Array | 'fill-circle' | Typescript：`'fill-circle' \| 'stroke-line' \| Array<string>` | N
-label | String / Slot | - | \- | N
+icon | String / Array / Slot | 'circle' | Typescript：`'circle' \| 'line' \| 'dot' \| Array<string>` | N
+label | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 max-content-row | Number | 5 | \- | N
 max-label-row | Number | 3 | \- | N
 name | String | - | \- | N
-style | String | - | \- | N
-value | String / Number / Boolean | false | Typescript：`T` | N
+placement | String | left | options: left/right | N
+readonly | Boolean | false | \- | N
+value | String / Number / Boolean | false | Typescript：`RadioValue` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/radio/type.ts) | N
 
 ### Radio Events
 
 name | params | description
 -- | -- | --
 change | `(checked: boolean)` | \-
+### Radio External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-border | \-
+t-class-content | \-
+t-class-icon | \-
+t-class-label | \-
+
 
 ### RadioGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | left | \- | N
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+borderless | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'fill-circle' | \- | N
+icon | String / Array | 'circle' | \- | N
+keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string; value?: string \| number; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/radio-group/type.ts) | N
-style | String | - | \- | N
-value | String / Number / Boolean | - | Typescript：`T` | N
-default-value | String / Number / Boolean | undefined | uncontrolled property。Typescript：`T` | N
+placement | String | 'left' | options: left/right | N
+value | String / Number / Boolean | false | Typescript：`RadioValue` | N
+default-value | String / Number / Boolean | undefined | uncontrolled property。Typescript：`RadioValue` | N
 
 ### RadioGroup Events
 
 name | params | description
 -- | -- | --
-change | `(value: T)` | \-
+change | `(value: RadioValue)` | \-

@@ -1,23 +1,23 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Popup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-close-btn | Boolean / Slot | - | \- | N
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+close-btn | Boolean / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 close-on-overlay-click | Boolean | true | \- | N
-content | String / Slot | - | \- | N
-custom-style | String | - | \- | N
-external-classes | Array | - | `['t-class', 't-class-overlay', 't-class-content']` | N
+content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+default-visible | Boolean | - | Typescript：`boolean` | N
+duration | Number | 240 | \- | N
 overlay-props | Object | {} | \- | N
-placement | String | top | options：top/left/right/bottom/center | N
+placement | String | top | options: top/left/right/bottom/center | N
 prevent-scroll-through | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
-style | String | - | \- | N
-transition-props | Object | - | Typescript：`TdTransitionProps` `interface PopupVisibleChangeContext { trigger: 'close-btn' \| 'overlay' }`，[Transition API Documents](./transition?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/popup/type.ts) | N
 visible | Boolean | false | Typescript：`boolean` | N
-default-visible | Boolean | undefined | uncontrolled property。Typescript：`boolean` | N
 z-index | Number | 11500 | \- | N
 
 ### Popup Events
@@ -25,3 +25,9 @@ z-index | Number | 11500 | \- | N
 name | params | description
 -- | -- | --
 visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
+### Popup External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-content | \-

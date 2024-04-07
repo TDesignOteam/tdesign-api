@@ -1,17 +1,21 @@
 :: BASE_DOC ::
 
 ## API
+
 ### NoticeBar Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-content | String / Slot | - | \- | N
-extra | String / Slot | - | \- | N
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+content | String / Array / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+direction | String | horizontal | options: horizontal/vertical | N
+interval | Number | 2000 | \- | N
 marquee | Boolean / Object | false | Typescript：`boolean \| DrawMarquee` `interface DrawMarquee { speed?: number; loop?: number; delay?: number }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/notice-bar/type.ts) | N
-prefix-icon | String | - | \- | N
-style | String | - | \- | N
-suffix-icon | String | - | \- | N
-theme | String | info | options：info/success/warning/error | N
+operation | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+prefix-icon | String / Boolean / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+suffix-icon | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+theme | String | info | options: info/success/warning/error | N
 visible | Boolean | false | \- | N
 default-visible | Boolean | undefined | uncontrolled property | N
 
@@ -19,5 +23,14 @@ default-visible | Boolean | undefined | uncontrolled property | N
 
 name | params | description
 -- | -- | --
-change | `(value: boolean)` | \-
-click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'extra' \| 'suffix-icon';`<br/>
+change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
+click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+### NoticeBar External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-content | \-
+t-class-operation | \-
+t-class-prefix-icon | \-
+t-class-suffix-icon | \-

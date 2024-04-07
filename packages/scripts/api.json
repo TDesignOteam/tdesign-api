@@ -13691,9 +13691,7 @@
     },
     {
       "id": 2709,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Button",
       "field_category": 1,
       "field_name": "iconProps",
@@ -13719,9 +13717,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Object"
       ]
@@ -22980,8 +22976,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -23014,8 +23009,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -23502,8 +23496,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -23536,8 +23529,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -36905,8 +36897,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -36939,8 +36930,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -55911,8 +55901,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Image",
       "field_category": 1,
@@ -55945,8 +55934,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -56445,8 +56433,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Image",
       "field_category": 1,
@@ -56479,8 +56466,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -62460,6 +62446,270 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473155,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:15",
+      "update_time": "2024-04-07 06:59:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473182,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-clearable",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:42",
+      "update_time": "2024-04-07 06:59:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473174,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-input",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:34",
+      "update_time": "2024-04-07 06:59:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473169,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-label",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:29",
+      "update_time": "2024-04-07 06:59:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473164,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-prefix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:24",
+      "update_time": "2024-04-07 06:59:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473187,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-suffix",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:47",
+      "update_time": "2024-04-07 06:59:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473193,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-suffix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置图标样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:53",
+      "update_time": "2024-04-07 06:59:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712473199,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 128,
+      "field_name": "t-class-tips",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "提示样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-07 06:59:59",
+      "update_time": "2024-04-07 06:59:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -77315,9 +77565,7 @@
     },
     {
       "id": 1998,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Popup",
       "field_category": 1,
       "field_name": "lockScroll",
@@ -77343,9 +77591,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Boolean"
       ]
@@ -77700,9 +77946,7 @@
     },
     {
       "id": 1308,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Popup",
       "field_category": 1,
       "field_name": "preventScrollThrough",
@@ -77728,9 +77972,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Boolean"
       ]
@@ -77901,9 +78143,7 @@
     },
     {
       "id": 1303,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Popup",
       "field_category": 1,
       "field_name": "transitionProps",
@@ -77929,9 +78169,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Object"
       ]
@@ -84097,9 +84335,7 @@
     },
     {
       "id": 3118,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "RadioGroup",
       "field_category": 1,
       "field_name": "align",
@@ -84125,9 +84361,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String"
       ]
@@ -84140,8 +84374,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "RadioGroup",
       "field_category": 1,
@@ -84174,8 +84407,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -88516,9 +88748,7 @@
     },
     {
       "id": 2866,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Search",
       "field_category": 1,
       "field_name": "autocompleteOptions",
@@ -88544,9 +88774,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Array"
       ]
@@ -89568,9 +89796,7 @@
     },
     {
       "id": 1547,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Search",
       "field_category": 1,
       "field_name": "prefixIcon",
@@ -89597,9 +89823,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String",
         "TNode"
@@ -90093,9 +90317,7 @@
     },
     {
       "id": 2857,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Search",
       "field_category": 1,
       "field_name": "suffixIcon",
@@ -90122,9 +90344,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String",
         "TNode"
@@ -90722,9 +90942,7 @@
     },
     {
       "id": 2861,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Search",
       "field_category": 2,
       "field_name": "search",
@@ -90750,9 +90968,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String"
       ]
@@ -103579,8 +103795,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "SwiperNav",
       "field_category": 1,
@@ -103610,8 +103825,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -104268,8 +104482,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Switch",
       "field_category": 1,
@@ -104299,8 +104512,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
