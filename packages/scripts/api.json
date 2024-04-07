@@ -53887,6 +53887,43 @@
       ]
     },
     {
+      "id": 1711960430,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 1,
+      "field_name": "tId",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图片标签id",
+      "field_desc_en": "image tag id",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 08:33:50",
+      "update_time": "2024-04-01 08:33:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.2.10\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3404,
       "platform_framework": [
         "64"
