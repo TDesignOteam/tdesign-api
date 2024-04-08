@@ -6,11 +6,6 @@
 
 import { TdFooterProps } from './type';
 const props: TdFooterProps = {
-  /** 已废弃。版权信息，type 为`text`生效 */
-  copyright: {
-    type: String,
-    value: '',
-  },
   /** 链接列表。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式 */
   links: {
     type: Array,
@@ -29,16 +24,6 @@ const props: TdFooterProps = {
   text: {
     type: String,
     value: '',
-  },
-  /** 已废弃。链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式 */
-  textLinkList: {
-    type: Array,
-    value: [],
-  },
-  /** 已废弃。页脚展示类型 */
-  theme: {
-    type: String,
-    value: 'text',
   },
 };
 
