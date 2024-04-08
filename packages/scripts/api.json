@@ -45862,43 +45862,6 @@
     {
       "id": 1619,
       "platform_framework": [
-        "64"
-      ],
-      "component": "Footer",
-      "field_category": 1,
-      "field_name": "logo",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo. titleUrl ` 表示链接",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-03 03:21:26",
-      "update_time": "2021-09-03 03:23:15",
-      "event_output": null,
-      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; titleUrl?: string }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1712553470,
-      "platform_framework": [
         "8",
         "16",
         "32"
@@ -45915,10 +45878,49 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-08 05:17:50",
-      "update_time": "2024-04-08 05:17:50",
+      "create_time": "2021-09-03 03:21:26",
+      "update_time": "2021-09-03 03:23:15",
       "event_output": null,
-      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string; target?: string }】",
+      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string; target?: string; }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1712565039,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "logo",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.titleUrl` 表示链接",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-08 08:30:39",
+      "update_time": "2024-04-08 08:30:39",
+      "event_output": null,
+      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; titleUrl?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -45929,9 +45931,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
