@@ -6,6 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
+const uniq = require('lodash/uniq');
 const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } = require('../config/const');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const generateGlobals = require('./global');
@@ -192,6 +193,9 @@ function formatApi(api, framework, plugin) {
     exportsApi = exportsApi.concat(r.exports);
     importsApi = importsApi.concat(r.imports);
   }
+
+  exportsApi = uniq(exportsApi);
+  
   return {
     exports: exportsApi.filter(k => !!k),
     imports: importsApi.filter(k => !!k),
