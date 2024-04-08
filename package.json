@@ -4,9 +4,6 @@
   "description": "a tool for manage API",
   "main": "index.js",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "dependencies": {
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
