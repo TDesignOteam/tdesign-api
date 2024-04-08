@@ -50,7 +50,7 @@ badge-props | Object | null | 透传至 Badge 属性。TS 类型：`BadgeProps`�
 description | String / Slot | - | 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 icon | String / Object | - | 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon` | N
 image | String / Slot | - | 图片，可以是图片地址，也可以自定义图片节点，值为 slot 的时候才能使用插槽。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-image-props | Object | - | 透传至 Image 组件 | N
+image-props | Object | - | 透传至 Image 组件。TS 类型：`ImageProps`，[Image API Documents](./image?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/grid-item/type.ts) | N
 jump-type | String | navigate-to | 链接跳转类型。可选项：redirect-to/switch-tab/relaunch/navigate-to | N
 layout | String | vertical | 内容布局方式。可选项：vertical/horizontal | N
 text | String / Slot | - | 文本，可以通过 Props 传入文本，也可以自定义标题节点。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

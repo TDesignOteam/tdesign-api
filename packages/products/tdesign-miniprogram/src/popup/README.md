@@ -13,7 +13,7 @@ close-on-overlay-click | Boolean | true | 点击遮罩层是否关闭 | N
 content | String / Slot | - | 浮层里面的内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 default-visible | Boolean | - | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
 duration | Number | 240 | 动画过渡时间 | N
-overlay-props | Object | {} | 遮罩层的属性，透传至 overlay | N
+overlay-props | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/popup/type.ts) | N
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
 prevent-scroll-through | Boolean | true | 防止滚动穿透 | N
 show-overlay | Boolean | true | 是否显示遮罩层 | N

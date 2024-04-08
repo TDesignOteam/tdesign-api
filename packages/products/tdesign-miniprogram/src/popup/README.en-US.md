@@ -13,7 +13,7 @@ close-on-overlay-click | Boolean | true | \- | N
 content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 default-visible | Boolean | - | Typescript：`boolean` | N
 duration | Number | 240 | \- | N
-overlay-props | Object | {} | \- | N
+overlay-props | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/popup/type.ts) | N
 placement | String | top | options: top/left/right/bottom/center | N
 prevent-scroll-through | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N

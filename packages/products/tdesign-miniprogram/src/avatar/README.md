@@ -14,7 +14,7 @@ bordered | Boolean | false | 已废弃。是否显示外边框 | N
 hide-on-load-failed | Boolean | false | 加载失败时隐藏图片 | N
 icon | String / Object | - | 图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。 | N
 image | String | - | 图片地址 | N
-image-props | Object | - | 透传至 Image 组件 | N
+image-props | Object | - | 透传至 Image 组件。TS 类型：`ImageProps`，[Image API Documents](./image?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
 shape | String | circle | 形状。可选项：circle/round。TS 类型：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等 | N
 

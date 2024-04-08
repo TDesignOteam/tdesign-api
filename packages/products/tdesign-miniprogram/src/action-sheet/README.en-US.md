@@ -13,7 +13,7 @@ cancel-text | String | - | \- | N
 count | Number | 8 | \- | N
 description | String | - | `0.29.0` | N
 items | Array | - | required。Typescript：`Array<string \| ActionSheetItem>` `interface ActionSheetItem {label: string; color?: string; disabled?: boolean;icon?: string;suffixIcon?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/action-sheet/type.ts) | Y
-popup-props | Object | {} | \- | N
+popup-props | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/action-sheet/type.ts) | N
 show-cancel | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
 theme | String | list | options: list/grid | N
