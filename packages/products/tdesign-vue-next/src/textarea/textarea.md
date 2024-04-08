@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowInputOverMax | Boolean | false | 超出maxlength或maxcharacter之后是否还允许输入 | N
 autofocus | Boolean | false | 自动聚焦，拉起键盘 | N
@@ -11,8 +12,9 @@ autosize | Boolean / Object | false | 高度自动撑开。 autosize = true 表�
 disabled | Boolean | false | 是否禁用文本框 | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
-maxlength | Number | - | 用户最多可以输入的字符个数 | N
+maxlength | Number | -1 | 用户最多可以输入的字符个数。默认为 -1，不限制输入长度 | N
 name | String | - | 名称，HTML 元素原生属性 | N
+onValidate | Function | - | 字数超出限制时触发。TS 类型：`(context: { error?: 'exceed-maximum' \\| 'below-minimum' }) => void` | N
 placeholder | String | undefined | 占位符 | N
 readonly | Boolean | false | 只读状态 | N
 status | String | default | 文本框状态。可选项：default/success/warning/error | N
