@@ -45706,43 +45706,6 @@
       "field_type_text": []
     },
     {
-      "id": 1602,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Footer",
-      "field_category": 1,
-      "field_name": "copyright",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "''",
-      "field_enum": "",
-      "field_desc_zh": "已废弃。版权信息，type 为`text`生效",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-02 09:18:15",
-      "update_time": "2021-09-03 03:17:29",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 218,
       "platform_framework": [
         "1",
@@ -45862,9 +45825,6 @@
     {
       "id": 1619,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Footer",
@@ -45875,14 +45835,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址",
+      "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo. url ` 表示链接",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-03 03:21:26",
       "update_time": "2021-09-03 03:23:15",
       "event_output": null,
-      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; titleUrl?: string }】",
+      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -45893,10 +45853,48 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1712553470,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "logo",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-08 05:17:50",
+      "update_time": "2024-04-08 05:17:50",
+      "event_output": null,
+      "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string; target?: string }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -45976,80 +45974,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1603,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Footer",
-      "field_category": 1,
-      "field_name": "textLinkList",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "[]",
-      "field_enum": "",
-      "field_desc_zh": "已废弃。链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-02 09:19:14",
-      "update_time": "2021-09-03 03:28:03",
-      "event_output": null,
-      "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; openType?: 'navigate' | 'redirect' | 'relaunch' | 'switchTab' | 'navigateBack' }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 1601,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Footer",
-      "field_category": 1,
-      "field_name": "theme",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "'text'",
-      "field_enum": "text/logo",
-      "field_desc_zh": "已废弃。页脚展示类型",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-02 09:17:47",
-      "update_time": "2021-09-03 03:31:24",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
