@@ -23122,7 +23122,7 @@
       "create_time": "2021-02-20 12:57:07",
       "update_time": "2021-08-30 02:47:23",
       "event_output": null,
-      "custom_field_type": "string | number | string[]",
+      "custom_field_type": "string | number | string[] | TNode",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
