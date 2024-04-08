@@ -1,13 +1,21 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Empty Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-action | Slot | - | 操作按钮 | N
-description | String / Slot | - | 描述文字 | N
-external-classes | Array | - | 组件类名，分别用于设置 组件外层类名、文本描述类名、图片类名、操作按钮类名。`['t-class', 't-class-description', 't-class-image', 't-class-actions']` | N
-icon | String / Object | - | 图标名称。值为字符串表示图标名称，值为 Object 类型，表示透传至 icon | N
-image | String / Slot | - | 图片地址 | N
-style | String | - | 自定义组件样式 | N
+style | Object | - | 样式 | N
+custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
+action | Slot | - | 操作按钮。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+description | String / Slot | - | 描述文字。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+icon | String / Object | - | 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。 | N
+image | String / Slot | - | 图片地址。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/empty/type.ts) | N
+### Empty External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
+t-class-description | 描述样式类
+t-class-image | 图片样式类
