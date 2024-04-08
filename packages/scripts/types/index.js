@@ -401,6 +401,9 @@ function getTypeScriptDesc(componentMap, framework) {
     const isPluginFunctions = isPlugin(cmp);
     const miniprogram = {};
     apis.forEach((apiData) => {
+      //废弃属性不输出到到 TS 文件
+      if (apiData.deprecated) return;
+      
       const MP_PROPS = ['MP_PROPS', 'MP_EXCLUDE_PROPS'];
       MP_PROPS.forEach((prop) => {
         if (apiData.field_name === prop) {
