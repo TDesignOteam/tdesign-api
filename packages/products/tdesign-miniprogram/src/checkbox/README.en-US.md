@@ -24,7 +24,6 @@ max-label-row | Number | 3 | \- | N
 name | String | - | \- | N
 placement | String | left | options: left/right | N
 readonly | Boolean | false | \- | N
-title | String | - | html attribute | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 
 ### Checkbox Events

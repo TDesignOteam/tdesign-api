@@ -24947,8 +24947,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Checkbox",
       "field_category": 1,
@@ -24981,8 +24980,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -58871,105 +58869,6 @@
       ]
     },
     {
-      "id": 1711972926,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Indexes",
-      "field_category": 128,
-      "field_name": "t-class",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "根节点样式类",
-      "field_desc_en": "class name of root node",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-01 12:02:06",
-      "update_time": "2024-04-01 12:02:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "External Classes",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1711972955,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Indexes",
-      "field_category": 128,
-      "field_name": "t-class-sidebar",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "侧边栏样式类",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-01 12:02:35",
-      "update_time": "2024-04-01 12:02:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "External Classes",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1711972960,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Indexes",
-      "field_category": 128,
-      "field_name": "t-class-sidebar-item",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "侧边栏选项样式类",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-01 12:02:40",
-      "update_time": "2024-04-01 12:02:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "External Classes",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
       "id": 3235,
       "platform_framework": [
         "64"
@@ -59087,6 +58986,105 @@
         "String",
         "Number"
       ]
+    },
+    {
+      "id": 1711972926,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "IndexesAnchor",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": "class name of root node",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 12:02:06",
+      "update_time": "2024-04-01 12:02:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1711972955,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "IndexesAnchor",
+      "field_category": 128,
+      "field_name": "t-class-sidebar",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "侧边栏样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 12:02:35",
+      "update_time": "2024-04-01 12:02:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1711972960,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "IndexesAnchor",
+      "field_category": 128,
+      "field_name": "t-class-sidebar-item",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "侧边栏选项样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-01 12:02:40",
+      "update_time": "2024-04-01 12:02:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2670,
@@ -83030,8 +83028,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Radio",
       "field_category": 1,
@@ -83061,8 +83058,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -83293,9 +83289,7 @@
     },
     {
       "id": 1861,
-      "platform_framework": [
-        "64"
-      ],
+      "platform_framework": [],
       "component": "Radio",
       "field_category": 1,
       "field_name": "color",
@@ -83321,9 +83315,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String"
       ]
@@ -100503,6 +100495,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1712547366,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Steps",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-08 03:36:06",
+      "update_time": "2024-04-08 03:36:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
       "platform_framework_text": [
         "Miniprogram"
       ],

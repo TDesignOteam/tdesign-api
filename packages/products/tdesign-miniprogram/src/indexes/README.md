@@ -19,10 +19,3 @@ sticky-offset | Number | 0 | `1.0.0`。锚点吸顶时与顶部的距离	 | N
 -- | -- | --
 change | `(index: string \| number)` | `0.34.0`。索引发生变更时触发事件
 select | `(index: string \| number)` | 点击侧边栏时触发事件
-### Indexes External Classes
-
-类名 | 描述
--- | --
-t-class | 根节点样式类
-t-class-sidebar | 侧边栏样式类
-t-class-sidebar-item | 侧边栏选项样式类

@@ -8,12 +8,10 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-align | String | left | options: left/right | N
 allow-uncheck | Boolean | false | \- | N
 block | Boolean | true | \- | N
 checked | Boolean | false | \- | N
 default-checked | Boolean | undefined | uncontrolled property | N
-color | String | #0052d9 | \- | N
 content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 content-disabled | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N

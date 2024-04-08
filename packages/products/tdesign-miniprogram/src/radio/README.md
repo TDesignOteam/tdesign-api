@@ -8,12 +8,10 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-align | String | left | 已废弃。复选框和内容相对位置。可选项：left/right | N
 allow-uncheck | Boolean | false | 是否允许取消选中 | N
 block | Boolean | true | 是否为块级元素 | N
 checked | Boolean | false | 是否选中 | N
 default-checked | Boolean | undefined | 是否选中。非受控属性 | N
-color | String | #0052d9 | 已废弃。单选按钮颜色 | N
 content | String / Slot | - | 单选内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 content-disabled | Boolean | false | 是否禁用组件内容（content）触发选中 | N
 disabled | Boolean | undefined | 是否为禁用态 | N
