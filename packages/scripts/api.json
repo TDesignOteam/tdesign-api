@@ -45706,6 +45706,43 @@
       "field_type_text": []
     },
     {
+      "id": 1602,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "copyright",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "''",
+      "field_enum": "",
+      "field_desc_zh": "版权信息，type 为`text`生效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-02 09:18:15",
+      "update_time": "2021-09-03 03:17:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 218,
       "platform_framework": [
         "1",
@@ -45974,6 +46011,80 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1603,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "textLinkList",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-02 09:19:14",
+      "update_time": "2021-09-03 03:28:03",
+      "event_output": null,
+      "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; openType?: 'navigate' | 'redirect' | 'relaunch' | 'switchTab' | 'navigateBack' }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1601,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Footer",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'text'",
+      "field_enum": "text/logo",
+      "field_desc_zh": "页脚展示类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-02 09:17:47",
+      "update_time": "2021-09-03 03:31:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
