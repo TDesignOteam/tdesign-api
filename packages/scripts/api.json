@@ -110992,9 +110992,7 @@
       "field_category": 1,
       "field_name": "closable",
       "field_type": [
-        "4",
-        "8",
-        "64"
+        "4"
       ],
       "field_default_value": "false",
       "field_enum": "",
@@ -111025,9 +111023,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean",
-        "Object",
-        "TNode"
+        "Boolean"
       ]
     },
     {
