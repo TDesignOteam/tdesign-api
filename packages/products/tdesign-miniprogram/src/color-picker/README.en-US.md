@@ -1,10 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### ColorPicker Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 enable-alpha | Boolean | false | \- | N
 format | String | RGB | options: RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N
 swatch-colors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
