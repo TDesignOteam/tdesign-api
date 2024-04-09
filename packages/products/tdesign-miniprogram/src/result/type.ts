@@ -20,12 +20,12 @@ export interface TdResultProps {
     value?: array;
   };
   /**
-   * 图标名称
-   * @default ''
+   * 图标名称。值为字符串表示图标名称，值为 `false` 表示不显示图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标。
+   * @default true
    */
   icon?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: string | boolean | object;
   };
   /**
    * 图片地址
@@ -35,20 +35,12 @@ export interface TdResultProps {
     value?: string;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 内置主题。可选项：default/success/warning/error
+   * 内置主题
    * @default default
    */
   theme?: {
     type: StringConstructor;
-    value?: string;
+    value?: 'default' | 'success' | 'warning' | 'error';
   };
   /**
    * 标题
