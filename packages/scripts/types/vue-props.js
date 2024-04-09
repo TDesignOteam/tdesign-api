@@ -261,6 +261,9 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     const isMiniprogram = currentFramework === 'Miniprogram';
     const miniprogram = {};
     baseData[cmp].forEach((api) => {
+      //废弃属性不放在 props 中
+      if(api.deprecated) return; 
+      
       // 小程序原生属性替代属性不放在 props 中
       const MP_PROPS = ['MP_PROPS', 'MP_EXCLUDE_PROPS'];
       MP_PROPS.forEach((prop) => {

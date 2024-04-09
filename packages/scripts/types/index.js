@@ -6,6 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
+const uniq = require('lodash/uniq');
 const { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } = require('../config/const');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const generateGlobals = require('./global');
@@ -192,6 +193,9 @@ function formatApi(api, framework, plugin) {
     exportsApi = exportsApi.concat(r.exports);
     importsApi = importsApi.concat(r.imports);
   }
+
+  exportsApi = uniq(exportsApi);
+  
   return {
     exports: exportsApi.filter(k => !!k),
     imports: importsApi.filter(k => !!k),
@@ -401,6 +405,9 @@ function getTypeScriptDesc(componentMap, framework) {
     const isPluginFunctions = isPlugin(cmp);
     const miniprogram = {};
     apis.forEach((apiData) => {
+      //废弃属性不输出到到 TS 文件
+      if (apiData.deprecated) return;
+      
       const MP_PROPS = ['MP_PROPS', 'MP_EXCLUDE_PROPS'];
       MP_PROPS.forEach((prop) => {
         if (apiData.field_name === prop) {

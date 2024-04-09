@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
 name | type | default | description | required
@@ -11,11 +12,11 @@ autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: numbe
 disabled | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | - | \- | N
+maxlength | String / Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | false | \- | N
-status | String | default | options：default/success/warning/error | N
+status | String | default | options: default/success/warning/error | N
 tips | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | `v-model` is supported。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N

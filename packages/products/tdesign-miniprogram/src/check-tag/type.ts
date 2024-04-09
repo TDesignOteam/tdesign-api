@@ -4,14 +4,37 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-export interface TdTagProps {
+import { SizeEnum } from '../common/common';
+
+export interface TdCheckTagProps {
+  /**
+   * 标签选中的状态，默认风格（theme=default）才有选中态
+   */
+  checked?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 标签选中的状态，默认风格（theme=default）才有选中态，非受控属性
+   */
+  defaultChecked?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
   /**
    * 标签是否可关闭
    * @default false
    */
   closable?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 组件子元素；传入数组时：[选中内容，非选中内容]
+   */
+  content?: {
     type: null;
-    value?: boolean | object;
+    value?: string | number | string[];
   };
   /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
@@ -29,18 +52,11 @@ export interface TdTagProps {
     value?: ['t-class'];
   };
   /**
-   * 标签中的图标，可自定义图标呈现
+   * 标签图标
    */
   icon?: {
     type: null;
     value?: string | object;
-  };
-  /**
-   * 标签最大宽度，宽度超出后会出现省略号。示例：'50px' / 80
-   */
-  maxWidth?: {
-    type: null;
-    value?: string | number;
   };
   /**
    * 标签类型，有三种：方形、圆角方形、标记型
@@ -56,15 +72,7 @@ export interface TdTagProps {
    */
   size?: {
     type: StringConstructor;
-    value?: 'small' | 'medium' | 'large' | 'extra-large';
-  };
-  /**
-   * 组件风格，用于描述组件不同的应用场景
-   * @default default
-   */
-  theme?: {
-    type: StringConstructor;
-    value?: 'default' | 'primary' | 'warning' | 'danger' | 'success';
+    value?: SizeEnum;
   };
   /**
    * 标签风格变体

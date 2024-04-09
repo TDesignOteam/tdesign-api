@@ -14,15 +14,19 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Start Service
-        run: npm run dev &
+        run: pnpm run dev &
 
       - name: Update api.json
-        run: npm run api:download
+        run: pnpm run api:download
 
       - name: Check Diff
         run: |

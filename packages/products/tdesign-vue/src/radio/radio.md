@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Radio Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 checked | Boolean | false | 是否选中。支持语法糖 `v-model` | N
@@ -24,9 +25,10 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 change | `(checked: boolean, context: { e: Event })` | 选中状态变化时触发
 click | `(context: { e: MouseEvent })` | 点击时出发，一般用于外层阻止冒泡场景
 
+
 ### RadioGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 disabled | Boolean | - | 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled | N
@@ -36,10 +38,10 @@ size | String | medium | 组件尺寸【讨论中】。可选项：small/medium/
 value | String / Number / Boolean | - | 选中的值。支持语法糖 `v-model`。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | 选中的值。非受控属性。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/radio/type.ts) | N
 variant | String | outline | 单选组件按钮形式。可选项：outline/primary-filled/default-filled | N
-onChange | Function |  | TS 类型：`(value: T, context: { e: Event }) => void`<br/>选中值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: RadioValue, context: { e: Event }) => void`<br/>选中值发生变化时触发 | N
 
 ### RadioGroup Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: T, context: { e: Event })` | 选中值发生变化时触发
+change | `(value: RadioValue, context: { e: Event })` | 选中值发生变化时触发
