@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Upload Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 abridgeName | Array | - | 文件名过长时，需要省略中间的文本，保留首尾文本。示例：[10, 7]，表示首尾分别保留的文本长度。TS 类型：`Array<number>` | N
 accept | String | - | 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) | N
@@ -98,7 +99,7 @@ uploadFiles | `(files?: UploadFile[])` | \- | 必需。组件实例方法，默�
 
 ### UploadFile
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 lastModified | Number | - | 上一次变更的时间 | N
 name | String | - | 文件名称 | N
