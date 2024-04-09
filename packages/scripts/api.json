@@ -96393,43 +96393,6 @@
       ]
     },
     {
-      "id": 1776,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Skeleton",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置组件外层元素、头像、图片、文本等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-24 05:30:14",
-      "update_time": "2021-09-24 05:31:25",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-avatar', 't-class-image', 't-class-text']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1785,
       "platform_framework": [
         "1",
@@ -96498,7 +96461,7 @@
       "create_time": "2021-11-15 12:19:26",
       "update_time": "2022-02-14 01:55:42",
       "event_output": null,
-      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; height?: string; marginRight?: string; marginLeft?: string; margin?: string; }】",
+      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; size?: string; height?: string; marginRight?: string; marginLeft?: string; margin?: string; type?: 'rect' | 'circle' | 'text'; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -96521,6 +96484,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -96553,48 +96517,12 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
-      ]
-    },
-    {
-      "id": 3089,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Skeleton",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:18",
-      "update_time": "2022-10-31 11:42:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
