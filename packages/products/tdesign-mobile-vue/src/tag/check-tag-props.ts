@@ -22,10 +22,8 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 透传标签选中态属性 */
-  checkedProps: {
-    type: Object as PropType<TdCheckTagProps['checkedProps']>,
-  },
+  /** 标签是否可关闭 */
+  closable: Boolean,
   /** 组件子元素；传入数组时：[选中内容，非选中内容] */
   content: {
     type: [String, Number, Array, Function] as PropType<TdCheckTagProps['content']>,
@@ -36,6 +34,19 @@ export default {
   },
   /** 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态 */
   disabled: Boolean,
+  /** 标签中的图标，可自定义图标呈现 */
+  icon: {
+    type: Function as PropType<TdCheckTagProps['icon']>,
+  },
+  /** 标签类型，有三种：方形、圆角方形、标记型 */
+  shape: {
+    type: String as PropType<TdCheckTagProps['shape']>,
+    default: 'square' as TdCheckTagProps['shape'],
+    validator(val: TdCheckTagProps['shape']): boolean {
+      if (!val) return true;
+      return ['square', 'round', 'mark'].includes(val);
+    },
+  },
   /** 标签尺寸 */
   size: {
     type: String as PropType<TdCheckTagProps['size']>,
@@ -45,16 +56,19 @@ export default {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
-  /** 透传标签未选态属性 */
-  uncheckedProps: {
-    type: Object as PropType<TdCheckTagProps['uncheckedProps']>,
-  },
-  /** 标签唯一标识，一般用于标签组场景，单个可选择标签无需设置 */
-  value: {
-    type: [String, Number] as PropType<TdCheckTagProps['value']>,
+  /** 标签风格变体 */
+  variant: {
+    type: String as PropType<TdCheckTagProps['variant']>,
+    default: 'dark' as TdCheckTagProps['variant'],
+    validator(val: TdCheckTagProps['variant']): boolean {
+      if (!val) return true;
+      return ['dark', 'light', 'outline', 'light-outline'].includes(val);
+    },
   },
   /** 状态切换时触发 */
   onChange: Function as PropType<TdCheckTagProps['onChange']>,
   /** 点击标签时触发 */
   onClick: Function as PropType<TdCheckTagProps['onClick']>,
+  /** 如果关闭按钮存在，点击关闭按钮时触发 */
+  onClose: Function as PropType<TdCheckTagProps['onClose']>,
 };
