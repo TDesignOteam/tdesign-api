@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 block | Boolean | true | 是否为块级元素 | N
 checkAll | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
@@ -20,7 +21,7 @@ maxContentRow | Number | 5 | 内容最大行数限制 | N
 maxLabelRow | Number | 3 | 主文案最大行数限制 | N
 name | String | - | HTML 元素原生属性 | N
 placement | String | left | 多选框和内容相对位置。可选项：left/right | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | false | 【暂不支持】只读状态 | N
 value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \| number \| boolean` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>值变化时触发 | N
 
@@ -30,9 +31,10 @@ onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) 
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | 值变化时触发
 
+
 ### CheckboxGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disabled | Boolean | - | 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled | N
 max | Number | undefined | 支持最多选中的数量 | N

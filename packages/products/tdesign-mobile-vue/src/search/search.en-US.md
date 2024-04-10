@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Search Props
 
 name | type | default | description | required
@@ -14,7 +15,7 @@ focus | Boolean | false | \- | N
 leftIcon | String / Slot / Function | 'search' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String | '' | \- | N
 readonly | Boolean | false | \- | N
-shape | String | 'square' | options：square/round | N
+shape | String | 'square' | options: square/round | N
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onActionClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
