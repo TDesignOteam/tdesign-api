@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### ColorPicker Props
 
 name | type | default | description | required

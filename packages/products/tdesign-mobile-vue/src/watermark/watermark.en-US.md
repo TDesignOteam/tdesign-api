@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Watermark Props
 
 name | type | default | description | required

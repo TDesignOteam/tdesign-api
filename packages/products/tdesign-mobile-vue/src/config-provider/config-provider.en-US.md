@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### GlobalConfigProvider
 
 name | type | default | description | required

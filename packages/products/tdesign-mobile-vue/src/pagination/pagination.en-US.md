@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Pagination Props
 
 name | type | default | description | required

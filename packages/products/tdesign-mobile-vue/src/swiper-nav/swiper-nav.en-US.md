@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### SwiperNav Props
 
 name | type | default | description | required

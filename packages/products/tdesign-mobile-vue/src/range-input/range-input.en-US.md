@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### RangeInput Props
 
 name | type | default | description | required

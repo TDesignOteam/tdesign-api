@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### DateTimePicker Props
 
 name | type | default | description | required

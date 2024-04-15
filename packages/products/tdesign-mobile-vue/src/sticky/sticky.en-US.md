@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Sticky Props
 
 name | type | default | description | required

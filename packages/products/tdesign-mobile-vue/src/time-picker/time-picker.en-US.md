@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### TimeRangePicker Events
 
 name | params | description

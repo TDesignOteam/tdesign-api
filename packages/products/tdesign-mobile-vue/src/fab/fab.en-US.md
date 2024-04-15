@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Fab Props
 
 name | type | default | description | required

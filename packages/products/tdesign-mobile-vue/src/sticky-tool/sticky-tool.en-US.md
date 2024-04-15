@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### StickyTool Props
 
 name | type | default | description | required

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Picker Props
 
 name | type | default | description | required

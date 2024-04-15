@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Switch Props
 
 name | type | default | description | required

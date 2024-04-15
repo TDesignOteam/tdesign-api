@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### SwiperNavigation
 
 name | type | default | description | required

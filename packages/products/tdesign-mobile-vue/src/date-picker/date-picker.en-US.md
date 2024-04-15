@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### DateRangePicker Props
 
 name | type | default | description | required

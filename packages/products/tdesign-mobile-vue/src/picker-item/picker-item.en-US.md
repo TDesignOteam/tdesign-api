@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### PickerItem Props
 
 name | type | default | description | required

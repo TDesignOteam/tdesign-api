@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Indexes Props
 
 name | type | default | description | required
