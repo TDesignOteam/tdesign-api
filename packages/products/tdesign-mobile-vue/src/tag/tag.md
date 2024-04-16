@@ -13,7 +13,7 @@ disabled | Boolean | false | 标签禁用态，失效标签不能触发事件。
 icon | Slot / Function | undefined | 标签中的图标，可自定义图标呈现。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxWidth | String / Number | - | 标签最大宽度，宽度超出后会出现省略号。示例：'50px' / 80 | N
 shape | String | square | 标签类型，有三种：方形、圆角方形、标记型。可选项：square/round/mark | N
-size | String | medium | 标签尺寸。可选项：small/medium/large/extra-large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | 标签尺寸。可选项：small/medium/large/extra-large | N
 theme | String | default | 组件风格，用于描述组件不同的应用场景。可选项：default/primary/warning/danger/success | N
 variant | String | dark | 标签风格变体。可选项：dark/light/outline/light-outline | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击时触发 | N

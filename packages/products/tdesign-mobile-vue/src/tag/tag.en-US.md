@@ -13,7 +13,7 @@ disabled | Boolean | false | \- | N
 icon | Slot / Function | undefined | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxWidth | String / Number | - | \- | N
 shape | String | square | options: square/round/mark | N
-size | String | medium | options: small/medium/large/extra-large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | options: small/medium/large/extra-large | N
 theme | String | default | options: default/primary/warning/danger/success | N
 variant | String | dark | options: dark/light/outline/light-outline | N
 onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
