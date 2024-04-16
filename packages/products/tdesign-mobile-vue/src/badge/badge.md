@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Badge Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 color | String | - | 颜色 | N
 content | String / Slot / Function | - | 徽标内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

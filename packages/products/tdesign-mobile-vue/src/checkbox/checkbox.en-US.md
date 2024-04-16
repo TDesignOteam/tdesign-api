@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
 name | type | default | description | required
@@ -19,7 +20,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options：left/right | N
+placement | String | left | options: left/right | N
 readonly | Boolean | false | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
@@ -29,6 +30,7 @@ onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event })
 name | params | description
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | \-
+
 
 ### CheckboxGroup Props
 
