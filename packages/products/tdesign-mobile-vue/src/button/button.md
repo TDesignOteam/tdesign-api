@@ -14,7 +14,7 @@ icon | Slot / Function | - | 按钮内部图标，可完全自定义。TS 类型
 loading | Boolean | false | 是否显示为加载状态 | N
 loadingProps | Object | - | 透传加载组件全部属性。TS 类型：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/button/type.ts) | N
 shape | String | rectangle | 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形。可选项：rectangle/square/round/circle | N
-size | String | medium | 组件尺寸。可选项：extra-small/small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | 组件尺寸。可选项：extra-small/small/medium/large | N
 suffix | Slot / Function | - | 右侧内容，可用于定义右侧图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | 组件风格，依次为品牌色、危险色。可选项：default/primary/danger/light | N
 type | String | button | 按钮类型。可选项：submit/reset/button | N

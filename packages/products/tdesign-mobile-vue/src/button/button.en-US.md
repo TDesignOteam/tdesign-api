@@ -14,7 +14,7 @@ icon | Slot / Function | - | use it to set left icon in button。Typescript：`T
 loading | Boolean | false | set button to be loading state | N
 loadingProps | Object | - | Typescript：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/button/type.ts) | N
 shape | String | rectangle | button shape。options: rectangle/square/round/circle | N
-size | String | medium | a button has four size。options: extra-small/small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | a button has four size。options: extra-small/small/medium/large | N
 suffix | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | default | button theme。options: default/primary/danger/light | N
 type | String | button | type of button element in html。options: submit/reset/button | N
