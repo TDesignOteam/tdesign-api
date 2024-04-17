@@ -38,7 +38,7 @@ content | String / Number / Array / Slot / Function | - | Typescript：`string \
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | false | \- | N
 icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-shape | String | square | `deprecated`。options: square/round/mark | N
+shape | String | square | options: square/round/mark | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 variant | String | dark | options: dark/light/outline/light-outline | N
 onChange | Function |  | Typescript：`(checked: boolean) => void`<br/> | N
