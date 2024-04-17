@@ -58,13 +58,3 @@ close | \- | 如果关闭按钮存在，点击关闭按钮时触发
 类名 | 描述
 -- | --
 t-class | 根节点样式类
-
-
-### CheckTagGroup Props
-
-名称 | 类型 | 默认值 | 描述 | 必传
--- | -- | -- | -- | --
-style | Object | - | 样式 | N
-custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-checked-props | Object | - | 透传标签选中态属性。TS 类型：`TdTagProps` | N
-unchecked-props | Object | - | 透传标签未选态属性。TS 类型：`TdTagProps` | N

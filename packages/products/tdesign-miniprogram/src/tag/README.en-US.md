@@ -58,13 +58,3 @@ close | \- | \-
 className | Description
 -- | --
 t-class | \-
-
-
-### CheckTagGroup Props
-
-name | type | default | description | required
--- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-checked-props | Object | - | used to set checked tag props。Typescript：`TdTagProps` | N
-unchecked-props | Object | - | used to set unchecked tag props。Typescript：`TdTagProps` | N
