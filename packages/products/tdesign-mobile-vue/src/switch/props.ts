@@ -14,10 +14,15 @@ export default {
   },
   /** 是否禁用组件 */
   disabled: Boolean,
-  /** 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关' */
+  /** 开关的图标；[打开时的图标，关闭时的图标] */
+  icon: {
+    type: Array as PropType<TdSwitchProps['icon']>,
+    default: (): TdSwitchProps['icon'] => [],
+  },
+  /** 开关的标签；[打开时的标签，关闭时的标签] */
   label: {
-    type: [Array, Function] as PropType<TdSwitchProps['label']>,
-    default: (): TdSwitchProps['label'] => [] as TdSwitchProps['label'],
+    type: Array as PropType<TdSwitchProps['label']>,
+    default: (): TdSwitchProps['label'] => [],
   },
   /** 是否处于加载中状态 */
   loading: Boolean,
@@ -33,11 +38,11 @@ export default {
   /** 开关值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
-    default: undefined as TdSwitchProps['value'],
+    default: undefined,
   },
   modelValue: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
-    default: undefined as TdSwitchProps['value'],
+    default: undefined,
   },
   /** 开关值，非受控属性 */
   defaultValue: {

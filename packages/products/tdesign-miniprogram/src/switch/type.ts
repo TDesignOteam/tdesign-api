@@ -4,14 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-export interface TdSwitchProps {
-  /**
-   * 自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]
-   */
-  colors?: {
-    type: ArrayConstructor;
-    value?: string[];
-  };
+export interface TdSwitchProps<T = SwitchValue> {
   /**
    * 用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']
    * @default [true, false]
@@ -22,19 +15,26 @@ export interface TdSwitchProps {
   };
   /**
    * 是否禁用组件
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 开关的标签
-   * @default ''
+   * 开关的图标；[打开时的图标，关闭时的图标]
+   * @default []
+   */
+  icon?: {
+    type: ArrayConstructor;
+    value?: string[];
+  };
+  /**
+   * 开关的标签；[打开时的标签，关闭时的标签]
+   * @default []
    */
   label?: {
-    type: StringConstructor;
-    value?: string;
+    type: ArrayConstructor;
+    value?: string[];
   };
   /**
    * 是否处于加载中状态
