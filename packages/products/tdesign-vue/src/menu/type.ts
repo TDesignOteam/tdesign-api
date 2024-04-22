@@ -179,6 +179,10 @@ export interface TdMenuItemProps {
    */
   router?: Record<string, any>;
   /**
+   * 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签。
+   */
+  routerLink?: boolean;
+  /**
    * 链接或路由跳转方式
    * @default _self
    */
