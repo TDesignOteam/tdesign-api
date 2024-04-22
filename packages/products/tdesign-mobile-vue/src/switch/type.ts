@@ -16,10 +16,15 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   disabled?: boolean;
   /**
-   * 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'
+   * 开关的图标；[打开时的图标，关闭时的图标]
    * @default []
    */
-  label?: Array<string | TNode> | TNode<{ value: SwitchValue }>;
+  icon?: TNode[];
+  /**
+   * 开关的标签；[打开时的标签，关闭时的标签]
+   * @default []
+   */
+  label?: string[];
   /**
    * 是否处于加载中状态
    * @default false
@@ -38,6 +43,10 @@ export interface TdSwitchProps<T = SwitchValue> {
    * 开关值，非受控属性
    */
   defaultValue?: T;
+  /**
+   * 开关值
+   */
+  modelValue?: T;
   /**
    * 数据发生变化时触发
    */
