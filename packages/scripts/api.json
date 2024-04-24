@@ -135442,7 +135442,7 @@
         "1"
       ],
       "field_default_value": "POST",
-      "field_enum": "POST/GET/PUT/OPTION/PATCH/post/get/put/option/patch",
+      "field_enum": "POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch",
       "field_desc_zh": "HTTP 请求类型",
       "field_desc_en": "HTTP request method",
       "field_required": 0,
