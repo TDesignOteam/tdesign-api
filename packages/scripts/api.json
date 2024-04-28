@@ -111246,7 +111246,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "null",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "透传至 Badge 组件",
       "field_desc_en": null,
@@ -111616,7 +111616,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -111646,7 +111649,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
