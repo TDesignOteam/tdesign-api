@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Popover Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 closeOnClickOutside | Boolean | true | 是否在点击外部元素后关闭菜单  | N
 content | String / Slot / Function | - | 确认框内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

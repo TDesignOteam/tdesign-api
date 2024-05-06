@@ -4,7 +4,7 @@
 
 ### SideBar Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 value | String / Number | - | 选项值。支持语法糖 `v-model` 或 `v-model:value` | N
 defaultValue | String / Number | - | 选项值。非受控属性 | N
@@ -18,9 +18,10 @@ onClick | Function |  | TS 类型：`(value: number \| string, label: string) =>
 change | `(value: number \| string)` | 选项值发生变化时触发
 click | `(value: number \| string, label: string)` | 点击选项时触发
 
+
 ### SideBarItem Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 badgeProps | Object | - | 透传至 Badge 组件 | N
 disabled | Boolean | false | 是否禁用 | N

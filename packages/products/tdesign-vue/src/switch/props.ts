@@ -12,7 +12,7 @@ export default {
   customValue: {
     type: Array as PropType<TdSwitchProps['customValue']>,
   },
-  /** 是否禁用组件，默认为 false */
+  /** 是否禁用组件 */
   disabled: Boolean,
   /** 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关' */
   label: {

@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Toast Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 direction | String | row | 图标排列方式。可选项：row/column | N
 duration | Number | 2000 | 弹窗显示毫秒数 | N

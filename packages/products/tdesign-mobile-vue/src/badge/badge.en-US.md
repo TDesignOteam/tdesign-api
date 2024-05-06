@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Badge Props
 
 name | type | default | description | required
@@ -11,6 +12,6 @@ count | String / Number / Slot / Function | 0 | Typescript：`string \| number \
 dot | Boolean | false | \- | N
 maxCount | Number | 99 | \- | N
 offset | Array | - | Typescript：`Array<string \| number>` | N
-shape | String | circle | options：circle/square/bubble/ribbon | N
+shape | String | circle | options: circle/square/bubble/ribbon | N
 showZero | Boolean | false | \- | N
-size | String | medium | options：medium/large | N
+size | String | medium | options: medium/large | N

@@ -64,7 +64,7 @@ function outputComponentMD(file, apiData, isVscode) {
       : `${data}\n${SIGNATURE}\n${apiData}`;
     result = result.replace('\n:: BASE_PROPS ::\n', '');
     if (cssVariables) {
-      result += `\n### CSS 变量\n\n${cssVariables.trim()}`;
+      result += `\n### CSS Variables\n\n${cssVariables.trim()}`;
     }
     fs.writeFile(file, result, 'utf8', (err) => {
       if (err) return console.error(err);
