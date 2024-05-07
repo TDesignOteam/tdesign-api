@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Radio Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 checked | Boolean | false | 是否选中。支持语法糖 `v-model` 或 `v-model:checked` | N
@@ -15,18 +16,19 @@ name | String | - | HTML 元素原生属性 | N
 readonly | Boolean | false | 只读状态 | N
 value | String / Number / Boolean | undefined | 单选按钮的值。TS 类型：`string \| number \| boolean` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>选中状态变化时触发 | N
-onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击时出发，一般用于外层阻止冒泡场景 | N
+onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击时触发，一般用于外层阻止冒泡场景 | N
 
 ### Radio Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | 选中状态变化时触发
-click | `(context: { e: MouseEvent })` | 点击时出发，一般用于外层阻止冒泡场景
+click | `(context: { e: MouseEvent })` | 点击时触发，一般用于外层阻止冒泡场景
+
 
 ### RadioGroup Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | 是否允许取消选中 | N
 disabled | Boolean | - | 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled | N

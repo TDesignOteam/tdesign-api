@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Radio Props
 
 name | type | default | description | required
@@ -23,6 +24,7 @@ name | params | description
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | \-
 click | `(context: { e: MouseEvent })` | trigger on click
+
 
 ### RadioGroup Props
 
