@@ -7,6 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 allowInput | Boolean | false | \- | N
+borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disableTime | Function | - | disable time config function。Typescript：`(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number>  }>` | N
 disabled | Boolean | - | \- | N
@@ -50,6 +51,7 @@ pick | `(value: TimePickerValue, context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 allowInput | Boolean | false | \- | N
+borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 disableTime | Function | - | Typescript：`(h: number, m: number, s: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/time-picker/type.ts) | N
 disabled | Boolean / Array | - | Typescript：`boolean \| Array<boolean>` | N
