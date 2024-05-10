@@ -28,7 +28,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 allowUncheck | Boolean | false | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string \| TNode; value?: string \| number \| boolean; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/radio/type.ts) | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
