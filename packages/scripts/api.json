@@ -31395,6 +31395,45 @@
       ]
     },
     {
+      "id": 1715406453,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-11 05:47:33",
+      "update_time": "2024-05-11 05:47:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1005,
       "platform_framework": [
         "1",
@@ -34009,6 +34048,45 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1715406318,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-11 05:45:18",
+      "update_time": "2024-05-11 05:45:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
