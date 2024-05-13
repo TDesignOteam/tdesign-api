@@ -99269,6 +99269,47 @@
       ]
     },
     {
+      "id": 1715563717,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "SelectInput",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-13 01:28:37",
+      "update_time": "2024-05-13 01:28:37",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2148,
       "platform_framework": [
         "1",
@@ -117994,6 +118035,88 @@
       "deprecated": 0,
       "version": "",
       "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1715563732,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TagInput",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-13 01:28:52",
+      "update_time": "2024-05-13 01:28:52",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1715563830,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TagInput",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-13 01:30:30",
+      "update_time": "2024-05-13 01:30:30",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
