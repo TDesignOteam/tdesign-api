@@ -6,6 +6,7 @@ import { TdTagInputProps } from './type';
 
 export const tagInputDefaultProps: TdTagInputProps = {
   autoWidth: false,
+  borderless: false,
   clearable: false,
   dragSort: false,
   excessTagsDisplayType: 'break-line',
@@ -13,6 +14,7 @@ export const tagInputDefaultProps: TdTagInputProps = {
   minCollapsedNum: 0,
   placeholder: undefined,
   readonly: false,
+  size: 'medium',
   size: 'medium',
   defaultValue: [],
 };
