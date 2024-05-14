@@ -11,7 +11,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 closeBtn | TNode | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-colorModes | Array | ()=> ['monochrome', 'linear-gradient'] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
+colorModes | Array | ["monochrome", "linear-gradient"] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
 disabled | Boolean | - | \- | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
@@ -23,6 +23,7 @@ recentColors | Array | [] | used color recently。Typescript：`boolean \| Array
 defaultRecentColors | Array | [] | used color recently。uncontrolled property。Typescript：`boolean \| Array<string> \| null` | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/color-picker/type.ts) | N
 showPrimaryColorPreview | Boolean | true | \- | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 swatchColors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
 value | String | - | color value | N
 defaultValue | String | - | color value。uncontrolled property | N

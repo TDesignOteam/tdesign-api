@@ -9,7 +9,7 @@ name | type | default | description | required
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 closeBtn | String / Boolean / Slot / Function | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-colorModes | Array | ()=> ['monochrome', 'linear-gradient'] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
+colorModes | Array | ["monochrome", "linear-gradient"] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
 disabled | Boolean | - | \- | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
@@ -21,6 +21,7 @@ recentColors | Array | [] | used color recently。`v-model:recentColors` is supp
 defaultRecentColors | Array | [] | used color recently。uncontrolled property。Typescript：`boolean \| Array<string> \| null` | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/color-picker/type.ts) | N
 showPrimaryColorPreview | Boolean | true | \- | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 swatchColors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
 value | String | - | color value。`v-model` and `v-model:value` is supported | N
 defaultValue | String | - | color value。uncontrolled property | N
