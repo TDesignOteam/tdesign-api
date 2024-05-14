@@ -31397,7 +31397,9 @@
     {
       "id": 1715406453,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "DatePicker",
       "field_category": 1,
@@ -31426,7 +31428,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -34053,7 +34057,9 @@
     {
       "id": 1715406318,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "DateRangePicker",
       "field_category": 1,
@@ -34082,7 +34088,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -90921,7 +90929,9 @@
     {
       "id": 1715410545,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "RangeInputPopup",
       "field_category": 1,
@@ -90950,7 +90960,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
