@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### RangeInput Props
 
 name | type | default | description | required
@@ -65,6 +64,7 @@ autoWidth | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
 inputValue | Array | - | `v-model:inputValue` is supported。Typescript：`RangeInputValue` | N
 defaultInputValue | Array | - | uncontrolled property。Typescript：`RangeInputValue` | N
+label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 panel | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/range-input/type.ts) | N
 popupVisible | Boolean | - | \- | N
