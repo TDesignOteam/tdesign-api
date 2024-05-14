@@ -22,7 +22,6 @@ minCollapsedNum | Number | 0 | \- | N
 placeholder | String | undefined | placeholder description | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 readonly | Boolean | false | \- | N
-size | String | medium | options: small/medium/large | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 status | String | - | options: default/success/warning/error | N
 suffix | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N

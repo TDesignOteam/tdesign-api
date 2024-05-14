@@ -88,11 +88,6 @@ export interface TdTagInputProps {
    */
   readonly?: boolean;
   /**
-   * 尺寸
-   * @default medium
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
    * 组件尺寸
    * @default medium
    */

@@ -69,15 +69,6 @@ export default {
   },
   /** 只读状态，值为真会隐藏标签移除按钮和输入框 */
   readonly: Boolean,
-  /** 尺寸 */
-  size: {
-    type: String as PropType<TdTagInputProps['size']>,
-    default: 'medium' as TdTagInputProps['size'],
-    validator(val: TdTagInputProps['size']): boolean {
-      if (!val) return true;
-      return ['small', 'medium', 'large'].includes(val);
-    },
-  },
   /** 组件尺寸 */
   size: {
     type: String as PropType<TdTagInputProps['size']>,
