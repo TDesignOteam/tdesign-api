@@ -29165,7 +29165,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "()=> ['monochrome', 'linear-gradient']",
+      "field_default_value": "[\"monochrome\", \"linear-gradient\"]",
       "field_enum": "",
       "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
       "field_desc_en": null,
@@ -29605,6 +29605,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1715691745,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-14 13:02:25",
+      "update_time": "2024-05-14 13:02:25",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -31397,7 +31438,9 @@
     {
       "id": 1715406453,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "DatePicker",
       "field_category": 1,
@@ -31426,7 +31469,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -34053,7 +34098,9 @@
     {
       "id": 1715406318,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "DateRangePicker",
       "field_category": 1,
@@ -34082,7 +34129,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -90921,7 +90970,9 @@
     {
       "id": 1715410545,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "RangeInputPopup",
       "field_category": 1,
@@ -90950,7 +91001,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -99383,6 +99436,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1715565629,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "SelectInput",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large",
+      "field_desc_zh": "组件尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-13 02:00:29",
+      "update_time": "2024-05-13 02:00:29",
+      "event_output": null,
+      "custom_field_type": "SizeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -118096,14 +118190,14 @@
       ],
       "field_default_value": "medium",
       "field_enum": "small/medium/large",
-      "field_desc_zh": "尺寸",
+      "field_desc_zh": "组件尺寸",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-20 10:45:58",
       "update_time": "2022-01-20 10:45:58",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "SizeEnum",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -121886,6 +121980,49 @@
       ]
     },
     {
+      "id": 1715826159,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-16 02:22:39",
+      "update_time": "2024-05-16 02:22:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 631,
       "platform_framework": [
         "1",
@@ -123050,6 +123187,49 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1715826184,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimeRangePicker",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-16 02:23:04",
+      "update_time": "2024-05-16 02:23:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {

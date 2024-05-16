@@ -15,6 +15,7 @@ export const selectInputDefaultProps: TdSelectInputProps = {
   multiple: false,
   readonly: false,
   reserveKeyword: false,
+  size: 'medium',
   status: 'default',
   value: undefined,
 };
