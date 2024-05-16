@@ -14,7 +14,7 @@ icon | Slot / Function | - | use icon to fill。Typescript：`TNode`。[see more
 image | String | - | images url | N
 imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 shape | String | circle | shape。options: circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
-size | String | - | size | N
+size | String | medium | size | N
 onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>trigger on click | N
 onContextmenu | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>trigger on context menu | N
 onError | Function |  | Typescript：`(context: { e: Event }) => void`<br/>trigger on image load failed | N
