@@ -10,6 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许直接输入时间 */
   allowInput: Boolean,
+  /** 无边框模式 */
+  borderless: Boolean,
   /** 是否允许清除选中值 */
   clearable: Boolean,
   /** 禁用时间项 */
@@ -29,6 +31,10 @@ export default {
   hideDisabledTime: {
     type: Boolean,
     default: true,
+  },
+  /** 左侧文本 */
+  label: {
+    type: [String, Function] as PropType<TdTimeRangePickerProps['label']>,
   },
   /** 占位符，值为数组表示可分别为开始日期和结束日期设置占位符 */
   placeholder: {
