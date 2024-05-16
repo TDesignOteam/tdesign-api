@@ -7,6 +7,7 @@
 import { ImageProps } from '../image';
 import { PopupProps } from '../popup';
 import { TNode, TElement } from '../common';
+import { MouseEvent } from 'react';
 
 export interface TdAvatarProps {
   /**
@@ -51,9 +52,21 @@ export interface TdAvatarProps {
    */
   size?: string;
   /**
+   * 点击时触发
+   */
+  onClick?: (context: { e: MouseEvent<HTMLElement> }) => void;
+  /**
+   * 右键点击时触发
+   */
+  onContextmenu?: (context: { e: MouseEvent<HTMLElement> }) => void;
+  /**
    * 图片加载失败时触发
    */
   onError?: (context: { e: Event }) => void;
+  /**
+   * 鼠标移入时触发
+   */
+  onHover?: (context: { e: MouseEvent<HTMLElement> }) => void;
 }
 
 export interface TdAvatarGroupProps {
@@ -71,10 +84,6 @@ export interface TdAvatarGroupProps {
    */
   max?: number;
   /**
-   * 超出的头像呈现位置
-   */
-  placement?: MaxOverPlacement;
-  /**
    * 头像右上角提示信息
    */
   popupProps?: PopupProps;
@@ -88,5 +97,3 @@ export interface TdAvatarGroupProps {
 export type ShapeEnum = 'circle' | 'round';
 
 export type CascadingValue = 'left-up' | 'right-up';
-
-export type MaxOverPlacement = 'left' | 'top' | 'bottom' | 'right';

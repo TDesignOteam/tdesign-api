@@ -50,6 +50,12 @@ export default {
     type: String,
     default: '',
   },
+  /** 点击时触发 */
+  onClick: Function as PropType<TdAvatarProps['onClick']>,
+  /** 右键点击时触发 */
+  onContextmenu: Function as PropType<TdAvatarProps['onContextmenu']>,
   /** 图片加载失败时触发 */
   onError: Function as PropType<TdAvatarProps['onError']>,
+  /** 鼠标移入时触发 */
+  onHover: Function as PropType<TdAvatarProps['onHover']>,
 };

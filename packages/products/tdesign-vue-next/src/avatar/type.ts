@@ -51,9 +51,21 @@ export interface TdAvatarProps {
    */
   size?: string;
   /**
+   * 点击时触发
+   */
+  onClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 右键点击时触发
+   */
+  onContextmenu?: (context: { e: MouseEvent }) => void;
+  /**
    * 图片加载失败时触发
    */
   onError?: (context: { e: Event }) => void;
+  /**
+   * 鼠标移入时触发
+   */
+  onHover?: (context: { e: MouseEvent }) => void;
 }
 
 export interface TdAvatarGroupProps {
@@ -76,7 +88,7 @@ export interface TdAvatarGroupProps {
   popupProps?: PopupProps;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
-   * @default ''
+   * @default medium
    */
   size?: string;
 }
