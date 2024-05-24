@@ -14,6 +14,5 @@ export const transferDefaultProps: TdTransferProps = {
   targetDraggable: false,
   targetSort: 'original',
   title: [],
-  tree: '传入 Tree 组件定义树形结构',
   defaultValue: [],
 };

@@ -126633,9 +126633,9 @@
       "field_type": [
         "64"
       ],
-      "field_default_value": "传入 Tree 组件定义树形结构",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "传入 Tree 组件定义树形结构",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
