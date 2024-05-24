@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { LoadingProps } from '../loading';
 import { TNode, TElement, SizeEnum } from '../common';
 import { MouseEvent } from 'react';
 
@@ -45,6 +46,10 @@ export interface TdButtonProps {
    * @default false
    */
   loading?: boolean;
+  /**
+   * 透传至 Loading 组件
+   */
+  loadingProps?: LoadingProps;
   /**
    * 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形
    * @default rectangle
