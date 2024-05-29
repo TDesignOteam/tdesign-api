@@ -6,19 +6,20 @@
 
 import { TdBackTopProps } from './type';
 const props: TdBackTopProps = {
-  /** 组件类名，分别用于设置外层元素、图标、文本内容等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 是否绝对定位固定到屏幕右下方 */
   fixed: {
     type: Boolean,
     value: true,
   },
-  /** 图标 */
+  /** 图标。值为 `false` 表示不显示图标。不传表示使用默认图标 `'backtop'` */
   icon: {
-    type: String,
-    value: 'backtop',
+    type: null,
+    value: true,
+  },
+  /** 页面滚动距离 */
+  scrollTop: {
+    type: Number,
+    value: 0,
   },
   /** 自定义组件样式 */
   style: {
@@ -34,6 +35,11 @@ const props: TdBackTopProps = {
   theme: {
     type: String,
     value: 'round',
+  },
+  /** 滚动高度达到此参数值才出现 */
+  visibilityHeight: {
+    type: Number,
+    value: 200,
   },
 };
 
