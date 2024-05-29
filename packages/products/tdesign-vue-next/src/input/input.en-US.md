@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Input Props
 
 name | type | default | description | required
@@ -12,12 +13,12 @@ autocomplete | String | undefined | attribute of input element, [see here](https
 autofocus | Boolean | false | autofocus on first rendered | N
 borderless | Boolean | false | input without border | N
 clearable | Boolean | false | show clear icon, clicked to clear input value | N
-disabled | Boolean | - | make input to be disabled | N
-format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: string) => string`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/input/type.ts) | N
+disabled | Boolean | undefined | make input to be disabled | N
+format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/input/type.ts) | N
 inputClass | String / Object / Array | - | add className to the element with `t-input` class。Typescript：`ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 label | String / Slot / Function | - | text on the left of input。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | String / Number | - | \- | N
+maxlength | Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
@@ -30,8 +31,7 @@ suffix | String / Slot / Function | - | suffix content before suffixIcon。Types
 suffixIcon | Slot / Function | - | suffix icon of input。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 tips | String / Slot / Function | - | tips on the bottom of input, different `status` can make tips to be different color。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 type | String | text | type attribute of input element. if you are using `type=number`, `InputNumber` Component might be better。options: text/number/url/tel/password/search/submit/hidden | N
-value | String | - | input value。`v-model` and `v-model:value` is supported。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/input/type.ts) | N
-defaultValue | String | - | input value。uncontrolled property。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/input/type.ts) | N
+value | String / Number | - | input value。`v-model` and `v-model:value` is supported。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/input/type.ts) | N
 onBlur | Function |  | Typescript：`(value: T, context: { e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: T, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>trigger on input value changed | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -69,6 +69,7 @@ mouseleave | `(context: { e: MouseEvent })` | trigger on mouseleave
 paste | `(context: { e: ClipboardEvent; pasteValue: string })` | \-
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
 wheel | `(context: { e: WheelEvent })` | trigger on mouse wheel
+
 
 ### InputGroup Props
 
