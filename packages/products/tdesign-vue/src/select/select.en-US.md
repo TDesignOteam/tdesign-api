@@ -12,7 +12,7 @@ borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 collapsedItems | Slot / Function | - | Typescript：`TNode<{ value: T[]; collapsedSelectedItems: T[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 creatable | Boolean | false | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 empty | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 filter | Function | - | Typescript：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
 filterable | Boolean | false | \- | N

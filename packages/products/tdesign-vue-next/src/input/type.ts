@@ -32,7 +32,7 @@ export interface TdInputProps<T = InputValue> {
    */
   autofocus?: boolean;
   /**
-   * 【开发中】无边框模式
+   * 无边框模式
    * @default false
    */
   borderless?: boolean;
@@ -46,7 +46,7 @@ export interface TdInputProps<T = InputValue> {
    */
   disabled?: boolean;
   /**
-   * 指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件
+   * 【开发中】指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
@@ -64,7 +64,7 @@ export interface TdInputProps<T = InputValue> {
   /**
    * 用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
    */
-  maxlength?: string | number;
+  maxlength?: number;
   /**
    * 名称
    * @default ''
@@ -121,17 +121,14 @@ export interface TdInputProps<T = InputValue> {
   type?: 'text' | 'number' | 'url' | 'tel' | 'password' | 'search' | 'submit' | 'hidden';
   /**
    * 输入框的值
-   * @default ''
    */
   value?: T;
   /**
    * 输入框的值，非受控属性
-   * @default ''
    */
   defaultValue?: T;
   /**
    * 输入框的值
-   * @default ''
    */
   modelValue?: T;
   /**
@@ -210,6 +207,6 @@ export interface TdInputGroupProps {
   separate?: boolean;
 }
 
-export type InputFormatType = (value: string) => string;
+export type InputFormatType = (value: InputValue) => string;
 
 export type InputValue = string | number;
