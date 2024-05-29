@@ -14,7 +14,7 @@ autofocus | Boolean | false | \- | N
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 collapsedItems | TElement | - | Typescript：`TNode<{ value: SelectInputValue; collapsedSelectedItems: SelectInputValue; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/select-input/type.ts) | N
 inputValue | String / Number | - | input value。Typescript：`string` | N
 defaultInputValue | String / Number | - | input value。uncontrolled property。Typescript：`string` | N

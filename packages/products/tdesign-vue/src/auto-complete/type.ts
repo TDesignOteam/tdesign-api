@@ -15,6 +15,11 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   autofocus?: boolean;
   /**
+   * 无边框模式
+   * @default false
+   */
+  borderless?: boolean;
+  /**
    * 是否允许清空
    */
   clearable?: boolean;
@@ -107,7 +112,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
   /**
    * 输入框值发生变化时触发
    */
-  onChange?: (value: string, context?: { e?: InputEvent | MouseEvent | KeyboardEvent }) => void;
+  onChange?: (value: string, context?: { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent }) => void;
   /**
    * 清空按钮点击时触发
    */

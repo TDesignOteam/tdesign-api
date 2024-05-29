@@ -4676,7 +4676,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": null,
@@ -20244,7 +20244,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -29335,7 +29335,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -31372,7 +31372,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": "make DatePicker to be disabled",
@@ -34073,7 +34073,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -62745,7 +62745,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用输入框",
       "field_desc_en": "make input to be disabled",
@@ -66506,7 +66506,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "禁用组件",
       "field_desc_en": null,
@@ -89804,7 +89804,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用范围输入框",
       "field_desc_en": null,
@@ -96614,7 +96614,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -99000,7 +99000,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": null,
@@ -110242,7 +110242,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -117903,7 +117903,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用标签输入框",
       "field_desc_en": null,
@@ -120241,7 +120241,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用文本框",
       "field_desc_en": null,
@@ -121998,7 +121998,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -123248,7 +123248,7 @@
         "4",
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用",
       "field_desc_en": null,
@@ -132009,7 +132009,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -135186,7 +135186,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": "make upload to be disabled",
