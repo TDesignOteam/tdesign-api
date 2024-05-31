@@ -14,7 +14,7 @@ label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNo
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
 maxlength | String / Number | - | 用户最多可以输入的字符个数 | N
 name | String | - | 名称，HTML 元素原生属性 | N
-onValidate | Function | - | 字数超出限制时触发。TS 类型：`(context: { error?: 'exceed-maximum' \\| 'below-minimum' }) => void` | N
+onValidate | Function | - | 字数超出限制时触发。TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void` | N
 placeholder | String | undefined | 占位符 | N
 readonly | Boolean | false | 只读状态 | N
 status | String | default | 文本框状态。可选项：default/success/warning/error | N

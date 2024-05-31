@@ -66,6 +66,7 @@ export default {
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
+    default: undefined,
   },
   /** 文本框值，非受控属性 */
   defaultValue: {

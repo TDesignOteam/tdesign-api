@@ -14,7 +14,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 maxcharacter | Number | - | \- | N
 maxlength | String / Number | - | \- | N
 name | String | - | \- | N
-onValidate | Function | - | Typescript：`(context: { error?: 'exceed-maximum' \\| 'below-minimum' }) => void` | N
+onValidate | Function | - | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void` | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | false | \- | N
 status | String | default | options: default/success/warning/error | N
