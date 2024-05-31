@@ -60342,10 +60342,7 @@
     {
       "id": 2601,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
+        "8"
       ],
       "component": "ImageViewer",
       "field_category": 1,
@@ -60362,7 +60359,7 @@
       "create_time": "2022-04-18 13:55:45",
       "update_time": "2022-05-30 13:26:12",
       "event_output": null,
-      "custom_field_type": "Array<string>",
+      "custom_field_type": "Array<string|{url: string;align: 'start' | 'center' | 'end';}>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -60373,10 +60370,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
