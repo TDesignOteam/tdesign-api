@@ -8,6 +8,8 @@ import { TdColorPickerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 无边框模式 */
+  borderless: Boolean,
   /** 是否可清空 */
   clearable: Boolean,
   /** 关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 或 `undefined` 则不显示关闭按钮；值类型为函数，则表示自定义关闭按钮 */
@@ -18,7 +20,7 @@ export default {
   /** 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色 */
   colorModes: {
     type: Array as PropType<TdColorPickerProps['colorModes']>,
-    default: ()=> ['monochrome', 'linear-gradient'],
+    default: (): TdColorPickerProps['colorModes'] => ["monochrome", "linear-gradient"],
   },
   /** 是否禁用组件 */
   disabled: Boolean,

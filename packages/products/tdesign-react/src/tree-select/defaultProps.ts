@@ -10,6 +10,7 @@ export const treeSelectDefaultProps: TdTreeSelectProps = {
   borderless: false,
   clearable: false,
   data: [],
+  disabled: undefined,
   filterable: false,
   loading: false,
   max: 0,

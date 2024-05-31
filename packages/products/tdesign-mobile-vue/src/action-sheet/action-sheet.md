@@ -4,7 +4,7 @@
 
 ### ActionSheet Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 align | String | center | 水平对齐方式。可选项：center/left | N
 cancelText | String | - | 设置取消按钮的文本 | N

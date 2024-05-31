@@ -4,7 +4,7 @@
 
 ### SwipeCell Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 操作项以外的内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 操作项以外的内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
@@ -21,3 +21,9 @@ onClick | Function |  | TS 类型：`(action: SwipeActionItem, source: SwipeSour
 -- | -- | --
 change | `(value: string)` | 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。
 click | `(action: SwipeActionItem, source: SwipeSource)` | 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/>
+
+### SwipeCellInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+showSure | `(sure: string \| TNode, onClick?: SwipeActionItem['onClick'])` | `void` | 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content。TS 类型：`string \| TNode；如果设置了 `onClick`，则点击二次确认内容时，会执行此onClick方法。<br />[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)

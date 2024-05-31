@@ -55,6 +55,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   preventSubmitDefault?: boolean;
   /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
+  /**
    * 是否显示必填符号（*），默认显示
    */
   requiredMark?: boolean;
@@ -108,7 +112,11 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 获取 form dom 元素
    */
-  currentElement: () => HTMLFormElement;
+  currentElement?: () => HTMLFormElement;
+  /**
+   * 获取 form dom 元素
+   */
+  getCurrentElement?: () => HTMLFormElement;
   /**
    * 获取单个字段值
    */
@@ -116,7 +124,7 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据
    */
-  getFieldsValue: () => getFieldsValue<FormData>;
+  getFieldsValue: (nameList: string[] | boolean) => getFieldsValue<FormData>;
   /**
    * 重置表单，表单里面没有重置按钮`<button type=\"reset\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`
    */
@@ -176,9 +184,8 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
-   * @default ''
    */
-  name?: string;
+  name?: NamePath;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -214,6 +221,10 @@ export interface TdFormItemProps {
    * 自定义提示内容，样式跟随 `status` 变动，可在需要完全自主控制校验规则时使用
    */
   tips?: TNode;
+  /**
+   * 当用户交互产生数据变化时触发，用于格式化数据
+   */
+  valueFormat?: FormItemFormatType;
 }
 
 export interface TdFormListProps {
@@ -293,7 +304,7 @@ export interface FormRule {
    * 校验触发方式
    * @default change
    */
-  trigger?: 'change' | 'blur';
+  trigger?: ValidateTriggerType;
   /**
    * 校验未通过时呈现的错误信息类型，有 告警信息提示 和 错误信息提示 等两种
    * @default error
@@ -436,11 +447,15 @@ export interface FormValidateParams {
   trigger?: ValidateTriggerType;
 }
 
-export type ValidateTriggerType = 'blur' | 'change' | 'all';
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
 
 export type InitialData = any;
+
+export type NamePath = string | number | Array<string | number>;
+
+export type FormItemFormatType = (value: any) => any;
 
 export type FormListField = { key: number; name: number; isListField: boolean };
 

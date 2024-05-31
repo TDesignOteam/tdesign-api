@@ -10,11 +10,13 @@ export const selectInputDefaultProps: TdSelectInputProps = {
   autofocus: false,
   borderless: false,
   clearable: false,
+  disabled: undefined,
   loading: false,
   minCollapsedNum: 0,
   multiple: false,
   readonly: false,
   reserveKeyword: false,
+  size: 'medium',
   status: 'default',
   value: undefined,
 };

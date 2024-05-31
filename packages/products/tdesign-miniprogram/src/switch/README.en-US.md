@@ -9,7 +9,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 custom-value | Array | [true, false] | Typescript：`Array<SwitchValue>` | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | - | \- | N
 icon | Array | [] | `0.27.0`。Typescript：`string[]` | N
 label | Array | [] | `0.27.0`。Typescript：`string[]` | N
 loading | Boolean | false | `0.27.0` | N

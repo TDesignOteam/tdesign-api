@@ -27,7 +27,7 @@ export interface TdRadioProps {
    */
   default?: string | TNode;
   /**
-   * 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled
+   * 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
   disabled?: boolean;
   /**
@@ -53,7 +53,7 @@ export interface TdRadioProps {
    */
   onChange?: (checked: boolean, context: { e: Event }) => void;
   /**
-   * 点击时出发，一般用于外层阻止冒泡场景
+   * 点击时触发，一般用于外层阻止冒泡场景
    */
   onClick?: (context: { e: MouseEvent }) => void;
 }
@@ -65,7 +65,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   allowUncheck?: boolean;
   /**
-   * 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled
+   * 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
   disabled?: boolean;
   /**

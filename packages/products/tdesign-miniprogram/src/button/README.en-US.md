@@ -30,7 +30,7 @@ send-message-title \| String \| 当前标题 \| \- \| N
 session-from \| String \| - \| \- \| N
 shape \| String \| rectangle \| button shape。options: rectangle/square/round/circle \| N
 show-message-card \| Boolean \| false \| \- \| N
-size \| String \| medium \| a button has four size。options: extra-small/small/medium/large。Typescript：``SizeEnum``。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) \| N
+size \| String \| medium \| a button has four size。options: extra-small/small/medium/large \| N
 suffix \| Slot \| - \| [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) \| N
 t-id \| String \| - \| id \| N
 theme \| String \| default \| button theme。options: default/primary/danger/light \| N

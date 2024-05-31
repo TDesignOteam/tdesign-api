@@ -28,13 +28,16 @@ export default {
   },
   /** 自动聚焦 */
   autofocus: Boolean,
-  /** 【开发中】无边框模式 */
+  /** 无边框模式 */
   borderless: Boolean,
   /** 是否可清空 */
   clearable: Boolean,
   /** 是否禁用输入框 */
-  disabled: Boolean,
-  /** 指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件 */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 【开发中】指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },
@@ -52,7 +55,7 @@ export default {
   },
   /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxlength: {
-    type: [String, Number] as PropType<TdInputProps['maxlength']>,
+    type: Number,
   },
   /** 名称 */
   name: {
@@ -115,17 +118,16 @@ export default {
   },
   /** 输入框的值 */
   value: {
-    type: String as PropType<TdInputProps['value']>,
+    type: [String, Number] as PropType<TdInputProps['value']>,
     default: undefined as TdInputProps['value'],
   },
   modelValue: {
-    type: String as PropType<TdInputProps['value']>,
+    type: [String, Number] as PropType<TdInputProps['value']>,
     default: undefined as TdInputProps['value'],
   },
   /** 输入框的值，非受控属性 */
   defaultValue: {
-    type: String as PropType<TdInputProps['defaultValue']>,
-    default: '' as TdInputProps['defaultValue'],
+    type: [String, Number] as PropType<TdInputProps['defaultValue']>,
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputProps['onBlur']>,

@@ -16,7 +16,7 @@ export default {
   borderless: Boolean,
   /** 是否允许清空 */
   clearable: Boolean,
-  /** 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量 */
+  /** 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调 */
   collapsedItems: {
     type: Function as PropType<TdTreeSelectProps['collapsedItems']>,
   },
@@ -26,7 +26,10 @@ export default {
     default: (): TdTreeSelectProps['data'] => [],
   },
   /** 是否禁用组件 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 当下拉列表为空时显示的内容 */
   empty: {
     type: [String, Function] as PropType<TdTreeSelectProps['empty']>,
@@ -49,7 +52,7 @@ export default {
   defaultInputValue: {
     type: [String, Number] as PropType<TdTreeSelectProps['defaultInputValue']>,
   },
-  /** 用来定义 `value / label / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }` */
+  /** 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
   keys: {
     type: Object as PropType<TdTreeSelectProps['keys']>,
   },

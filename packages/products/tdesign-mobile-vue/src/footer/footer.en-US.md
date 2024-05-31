@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Footer Props
 
 name | type | default | description | required
