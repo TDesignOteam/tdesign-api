@@ -120772,7 +120772,9 @@
     {
       "id": 1712560690,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -120800,7 +120802,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Function"

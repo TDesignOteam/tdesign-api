@@ -18,7 +18,10 @@ export default {
     default: false,
   },
   /** 是否禁用文本框 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 左侧文本 */
   label: {
     type: [String, Function] as PropType<TdTextareaProps['label']>,
@@ -29,12 +32,16 @@ export default {
   },
   /** 用户最多可以输入的字符个数 */
   maxlength: {
-    type: Number,
+    type: [String, Number] as PropType<TdTextareaProps['maxlength']>,
   },
   /** 名称，HTML 元素原生属性 */
   name: {
     type: String,
     default: '',
+  },
+  /** 字数超出限制时触发 */
+  onValidate: {
+    type: Function as PropType<TdTextareaProps['onValidate']>,
   },
   /** 占位符 */
   placeholder: {

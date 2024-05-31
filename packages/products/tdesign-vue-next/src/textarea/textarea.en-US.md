@@ -9,10 +9,10 @@ name | type | default | description | required
 allowInputOverMax | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: number; maxRows?: number }` | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | -1 | \- | N
+maxlength | String / Number | - | \- | N
 name | String | - | \- | N
 onValidate | Function | - | Typescript：`(context: { error?: 'exceed-maximum' \\| 'below-minimum' }) => void` | N
 placeholder | String | undefined | \- | N
