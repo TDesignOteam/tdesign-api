@@ -60404,7 +60404,7 @@
       "create_time": "2022-05-30 13:32:30",
       "update_time": "2022-05-30 13:32:30",
       "event_output": null,
-      "custom_field_type": "Array<string | File | ImageInfo>【interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean }】",
+      "custom_field_type": "Array<string | File | ImageInfo>【interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean; isSvg?: boolean }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
