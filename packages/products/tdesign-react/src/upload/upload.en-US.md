@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Upload Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 abridgeName | Array | - | ellipsis text of medium file name。Typescript：`Array<number>` | N
 accept | String | - | File types that can be accepted. [W3C](https://www.w3schools.com/tags/att_input_accept.asp)，[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) | N
 action | String | - | Uploading URL | N
@@ -17,7 +18,7 @@ beforeUpload | Function | - | stop one of files to upload。Typescript：`(file:
 cancelUploadButton | TNode | - | cancel upload button props, which showed on `autoUpload=false` and multiple files/images upload。Typescript：`null \| ButtonProps \| TNode<{ disabled: boolean; cancelUploadText: string; cancelUpload: (ctx: { e: MouseEvent }) => void }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 children | TNode | - | to define upload trigger elements if `draggable=false`, to define drag elements if `draggable=true`。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript：`Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
-disabled | Boolean | - | make upload to be disabled | N
+disabled | Boolean | undefined | make upload to be disabled | N
 dragContent | TNode | - | define drag content nodes, it works on `theme=custom`。Typescript：`TNode \| TNode<TriggerContext>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 draggable | Boolean | undefined | if drag uploading allowed, works on `theme=file` or `theme=image` | N
 fileListDisplay | TElement | - | used to render file list UI。Typescript：`TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
@@ -32,7 +33,7 @@ inputAttributes | Object | - | add attributes to HTML element `input`。Typescri
 isBatchUpload | Boolean | false | make all files to be a whole package, files can only be replaced or deleted together, can not add more files | N
 locale | Object | - | upload language config, priority of `locale` is higher than global language config。Typescript：`UploadConfig` `import { UploadConfig } from '../config-provider/type'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/upload/type.ts) | N
 max | Number | 0 | max count of files limit | N
-method | String | POST | HTTP request method。options: POST/GET/PUT/OPTION/PATCH/post/get/put/option/patch | N
+method | String | POST | HTTP request method。options: POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
 mockProgressDuration | Number | - | mock progress duration time. more large files more duration time | N
 multiple | Boolean | false | multiple files uploading | N
 name | String | file | field name of files in upload request data | N
@@ -72,8 +73,8 @@ onWaitingUploadFilesChange | Function |  | Typescript：`(context: { files: Arra
 
 name | params | return | description
 -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 triggerUpload | \- | \- | required。instance function: trigger system file select
 uploadFilePercent | `(params: { file: UploadFile; percent: number })` | \- | required。instance function: set uploading file progress percent
 uploadFiles | `(files?: UploadFile[])` | \- | required。instance function: upload all files which status are not success

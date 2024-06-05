@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Textarea Props
 
 name | type | default | description | required
@@ -8,14 +9,15 @@ name | type | default | description | required
 allowInputOverMax | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: number; maxRows?: number }` | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | - | \- | N
+maxlength | String / Number | - | \- | N
 name | String | - | \- | N
+onValidate | Function | - | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void` | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | false | \- | N
-status | String | default | options：default/success/warning/error | N
+status | String | default | options: default/success/warning/error | N
 tips | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/textarea/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/textarea/type.ts) | N

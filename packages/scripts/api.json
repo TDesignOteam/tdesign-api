@@ -4676,7 +4676,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": null,
@@ -7277,6 +7277,47 @@
       ]
     },
     {
+      "id": 1716954799,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "BackTop",
+      "field_category": 1,
+      "field_name": "container",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动的容器",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-05-29 03:53:19",
+      "update_time": "2024-05-29 03:53:19",
+      "event_output": null,
+      "custom_field_type": "() => HTMLElement",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 3024,
       "platform_framework": [
         "1",
@@ -7978,6 +8019,9 @@
     {
       "id": 1711970473,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "BackTop",
@@ -8006,6 +8050,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -20197,7 +20244,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -29288,7 +29335,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -31325,7 +31372,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": "make DatePicker to be disabled",
@@ -34026,7 +34073,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -60357,7 +60404,7 @@
       "create_time": "2022-05-30 13:32:30",
       "update_time": "2022-05-30 13:32:30",
       "event_output": null,
-      "custom_field_type": "Array<string | File | ImageInfo>【interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean }】",
+      "custom_field_type": "Array<string | File | ImageInfo>【interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean; isSvg?: boolean }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -62698,7 +62745,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用输入框",
       "field_desc_en": "make input to be disabled",
@@ -66459,7 +66506,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "禁用组件",
       "field_desc_en": null,
@@ -89757,7 +89804,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用范围输入框",
       "field_desc_en": null,
@@ -96567,7 +96614,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -98953,7 +99000,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": null,
@@ -110195,7 +110242,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -117856,7 +117903,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用标签输入框",
       "field_desc_en": null,
@@ -120194,7 +120241,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用文本框",
       "field_desc_en": null,
@@ -120720,6 +120767,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1712560690,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "onValidate",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "字数超出限制时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-08 07:18:10",
+      "update_time": "2024-04-08 07:18:10",
+      "event_output": null,
+      "custom_field_type": "(context: { error?: 'exceed-maximum' | 'below-minimum' }) => void",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
       ]
     },
     {
@@ -121951,7 +122039,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -123201,7 +123289,7 @@
         "4",
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用",
       "field_desc_en": null,
@@ -131962,7 +132050,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -135139,7 +135227,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用",
       "field_desc_en": "make upload to be disabled",
