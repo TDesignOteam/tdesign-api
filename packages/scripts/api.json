@@ -69823,7 +69823,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Loading",
       "field_category": 1,
@@ -69854,7 +69855,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70126,7 +70128,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8"
       ],
       "component": "Loading",
       "field_category": 1,
@@ -70156,7 +70159,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
