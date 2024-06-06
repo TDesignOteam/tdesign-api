@@ -21,7 +21,7 @@ export default {
   /** 字段名右侧是否携带冒号“：” */
   colon: Boolean,
   /** 一行 `DescriptionItem` 的数量 */
-  columns: {
+  column: {
     type: Number,
     default: 2,
   },
@@ -62,6 +62,15 @@ export default {
     validator(val: TdDescriptionsProps['size']): boolean {
       if (!val) return true;
       return ['small', 'medium', 'large'].includes(val);
+    },
+  },
+  /** 用于设置底层 `table` 单元格、行和列的布局算法，与原生 table-layout css 属性完全一致。`fixed`：采用固定布局算法；`auto`：采用自动布局算法。详情可参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) */
+  tableLayout: {
+    type: String as PropType<TdDescriptionsProps['tableLayout']>,
+    default: 'fixed' as TdDescriptionsProps['tableLayout'],
+    validator(val: TdDescriptionsProps['tableLayout']): boolean {
+      if (!val) return true;
+      return ['fixed', 'auto'].includes(val);
     },
   },
   /** 描述列表的标题 */

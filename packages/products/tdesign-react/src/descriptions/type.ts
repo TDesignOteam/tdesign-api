@@ -20,7 +20,7 @@ export interface TdDescriptionsProps {
    * 一行 `DescriptionItem` 的数量
    * @default 2
    */
-  columns?: number;
+  column?: number;
   /**
    * 自定义描述项内容的样式
    */
@@ -33,7 +33,7 @@ export interface TdDescriptionsProps {
   /**
    * 描述项的列表
    */
-  items?: Array<T>;
+  items?: Array<TdDescriptionItemProps>;
   /**
    * 自定义描述项标签的样式
    */
@@ -48,6 +48,11 @@ export interface TdDescriptionsProps {
    * @default medium
    */
   size?: SizeEnum;
+  /**
+   * 用于设置底层 `table` 单元格、行和列的布局算法，与原生 table-layout css 属性完全一致。`fixed`：采用固定布局算法；`auto`：采用自动布局算法。详情可参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)
+   * @default fixed
+   */
+  tableLayout?: 'fixed' | 'auto';
   /**
    * 描述列表的标题
    */

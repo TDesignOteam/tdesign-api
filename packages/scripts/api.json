@@ -37974,6 +37974,47 @@
       ]
     },
     {
+      "id": 1717655432,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "tableLayout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "fixed",
+      "field_enum": "fixed/auto",
+      "field_desc_zh": "用于设置底层 `table` 单元格、行和列的布局算法，与原生 table-layout css 属性完全一致。`fixed`：采用固定布局算法；`auto`：采用自动布局算法。详情可参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)",
+      "field_desc_en": "Sets the algorithm used to layout `table` cells, rows, and columns, exactly the same as the native table-layout css property. `fixed`: uses fixed layout algorithm; `auto`: uses automatic layout algorithm. For more details, see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-06 06:30:32",
+      "update_time": "2024-06-06 06:30:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1703751109,
       "platform_framework": [
         "1",
