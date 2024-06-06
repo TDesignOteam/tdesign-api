@@ -6,6 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+className | String | - | \- | N
 direction | String | row | options: row/column | N
 duration | Number | 2000 | \- | N
 icon | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
