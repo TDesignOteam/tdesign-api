@@ -7,7 +7,7 @@
 import { TdInputProps } from './type';
 const props: TdInputProps = {
   /** 键盘弹起时，是否自动上推页面 */
-  adjust-position: {
+  adjustPosition: {
     type: Boolean,
     value: true,
   },
@@ -17,12 +17,12 @@ const props: TdInputProps = {
     value: 'left',
   },
   /** 强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效) */
-  always-embed: {
+  alwaysEmbed: {
     type: Boolean,
     value: false,
   },
   /** (即将废弃，请直接使用 focus )自动聚焦，拉起键盘 */
-  auto-focus: {
+  autoFocus: {
     type: Boolean,
     value: false,
   },
@@ -32,7 +32,7 @@ const props: TdInputProps = {
     value: false,
   },
   /** 清空图标触发方式，仅在输入框有值时有效 */
-  clear-trigger: {
+  clearTrigger: {
     type: String,
     value: 'always',
   },
@@ -42,12 +42,12 @@ const props: TdInputProps = {
     value: false,
   },
   /** 点击键盘右下角按钮时是否保持键盘不收起 */
-  confirm-hold: {
+  confirmHold: {
     type: Boolean,
     value: false,
   },
   /** 设置键盘右下角按钮的文字，仅在type='text'时生效。<br />具体释义：<br />`send` 右下角按钮为“发送”；<br />`search` 右下角按钮为“搜索”；<br />`next` 右下角按钮为“下一个”；<br />`go` 右下角按钮为“前往”；<br />`done` 右下角按钮为“完成”。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html) */
-  confirm-type: {
+  confirmType: {
     type: String,
     value: 'done',
   },
@@ -57,7 +57,7 @@ const props: TdInputProps = {
     required: true,
   },
   /** 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 */
-  cursor-spacing: {
+  cursorSpacing: {
     type: Number,
     value: 0,
   },
@@ -80,7 +80,7 @@ const props: TdInputProps = {
     type: null,
   },
   /** focus时，点击页面的时候不收起键盘 */
-  hold-keyboard: {
+  holdKeyboard: {
     type: Boolean,
     value: false,
   },
@@ -108,12 +108,12 @@ const props: TdInputProps = {
     value: undefined,
   },
   /** 指定 placeholder 的样式类 */
-  placeholder-class	: {
+  placeholderClass	: {
     type: String,
     value: 'input-placeholder',
   },
   /** 指定 placeholder 的样式 */
-  placeholder-style: {
+  placeholderStyle: {
     type: String,
     value: '',
     required: true,
@@ -128,40 +128,40 @@ const props: TdInputProps = {
     value: false,
   },
   /** 安全键盘加密公钥的路径，只支持包内路径 */
-  safe-password-cert-path: {
+  safePasswordCertPath: {
     type: String,
     value: '',
   },
   /** 安全键盘计算 hash 的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))` */
-  safe-password-custom-hash: {
+  safePasswordCustomHash: {
     type: String,
     value: '',
   },
   /** 安全键盘输入密码长度 */
-  safe-password-length: {
+  safePasswordLength: {
     type: Number,
   },
   /** 安全键盘加密盐值 */
-  safe-password-nonce: {
+  safePasswordNonce: {
     type: String,
     value: '',
   },
   /** 安全键盘计算 hash 盐值，若指定custom-hash 则无效 */
-  safe-password-salt: {
+  safePasswordSalt: {
     type: String,
     value: '',
   },
   /** 安全键盘加密时间戳 */
-  safe-password-time-stamp: {
+  safePasswordTimeStamp: {
     type: Number,
   },
   /** 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 */
-  selection-end: {
+  selectionEnd: {
     type: Number,
     value: -1,
   },
   /** 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 */
-  selection-start: {
+  selectionStart: {
     type: Number,
     value: -1,
   },

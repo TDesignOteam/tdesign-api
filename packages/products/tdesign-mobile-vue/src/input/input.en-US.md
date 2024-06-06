@@ -17,11 +17,11 @@ format | Function | - | input value formatter, `type=number` does not work. if y
 label | String / Slot / Function | - | text on the left of input。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options: vertical/horizontal | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | - | \- | N
+maxlength | String / Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 size | String | small | `deprecated`。options: small/medium。Typescript：`'medium' \| 'small'` | N
 spellCheck | Boolean | false | attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck) | N
 status | String | undefined | options: default/success/warning/error | N

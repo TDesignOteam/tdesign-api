@@ -16,15 +16,15 @@ autofocus | Boolean | false | autofocus on first rendered | N
 borderless | Boolean | false | input without border | N
 clearable | Boolean | false | show clear icon, clicked to clear input value | N
 disabled | Boolean | undefined | make input to be disabled | N
-format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/input/type.ts) | N
+format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: string) => string`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/input/type.ts) | N
 inputClass | String / Object / Array | - | add className to the element with `t-input` class。Typescript：`ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 label | TNode | - | text on the left of input。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | - | \- | N
+maxlength | String / Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 prefixIcon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 showClearIconOnEmpty | Boolean | false | show clear icon on empty input value | N
 showLimitNumber | Boolean | false | show limit number text on the right | N
 size | String | medium | make input to be different size。options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

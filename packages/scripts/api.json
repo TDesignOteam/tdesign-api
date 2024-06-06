@@ -62008,7 +62008,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "adjust-position",
+      "field_name": "adjustPosition",
       "field_type": [
         "4"
       ],
@@ -62141,7 +62141,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "always-embed",
+      "field_name": "alwaysEmbed",
       "field_type": [
         "4"
       ],
@@ -62178,7 +62178,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "auto-focus",
+      "field_name": "autoFocus",
       "field_type": [
         "4"
       ],
@@ -62465,7 +62465,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "clear-trigger",
+      "field_name": "clearTrigger",
       "field_type": [
         "1"
       ],
@@ -62588,7 +62588,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "confirm-hold",
+      "field_name": "confirmHold",
       "field_type": [
         "4"
       ],
@@ -62625,7 +62625,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "confirm-type",
+      "field_name": "confirmType",
       "field_type": [
         "1"
       ],
@@ -62699,7 +62699,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "cursor-spacing",
+      "field_name": "cursorSpacing",
       "field_type": [
         "2"
       ],
@@ -62943,14 +62943,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "指定输入框展示值的格式",
+      "field_desc_zh": "指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件",
       "field_desc_en": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-21 08:42:58",
       "update_time": "2022-03-24 05:33:11",
       "event_output": null,
-      "custom_field_type": "InputFormatType【type InputFormatType = (value: InputValue) => string】",
+      "custom_field_type": "InputFormatType【type InputFormatType = (value: string) => string】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -63019,7 +63019,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "hold-keyboard",
+      "field_name": "holdKeyboard",
       "field_type": [
         "4"
       ],
@@ -63236,17 +63236,23 @@
     {
       "id": 749,
       "platform_framework": [
-        "64"
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
       "field_name": "maxlength",
       "field_type": [
+        "1",
         "2"
       ],
-      "field_default_value": "-1",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -63264,21 +63270,22 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
     {
       "id": 1712579914,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -63286,9 +63293,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -63306,12 +63313,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -63457,7 +63459,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "placeholder-class\t",
+      "field_name": "placeholderClass\t",
       "field_type": [
         "1"
       ],
@@ -63494,7 +63496,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "placeholder-style",
+      "field_name": "placeholderStyle",
       "field_type": [
         "1"
       ],
@@ -63628,7 +63630,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -63703,7 +63705,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-cert-path",
+      "field_name": "safePasswordCertPath",
       "field_type": [
         "1"
       ],
@@ -63740,7 +63742,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-custom-hash",
+      "field_name": "safePasswordCustomHash",
       "field_type": [
         "1"
       ],
@@ -63777,7 +63779,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-length",
+      "field_name": "safePasswordLength",
       "field_type": [
         "2"
       ],
@@ -63814,7 +63816,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-nonce",
+      "field_name": "safePasswordNonce",
       "field_type": [
         "1"
       ],
@@ -63851,7 +63853,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-salt",
+      "field_name": "safePasswordSalt",
       "field_type": [
         "1"
       ],
@@ -63888,7 +63890,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "safe-password-time-stamp",
+      "field_name": "safePasswordTimeStamp",
       "field_type": [
         "2"
       ],
@@ -63925,7 +63927,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "selection-end",
+      "field_name": "selectionEnd",
       "field_type": [
         "2"
       ],
@@ -63962,7 +63964,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "selection-start",
+      "field_name": "selectionStart",
       "field_type": [
         "2"
       ],
@@ -64552,9 +64554,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64584,9 +64584,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -64632,7 +64630,9 @@
     {
       "id": 1712649360,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64660,7 +64660,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
