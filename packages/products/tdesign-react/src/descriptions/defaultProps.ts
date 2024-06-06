@@ -6,10 +6,11 @@ import { TdDescriptionsProps, TdDescriptionItemProps } from './type';
 
 export const descriptionsDefaultProps: TdDescriptionsProps = {
   bordered: false,
-  columns: 2,
+  column: 2,
   itemLayout: 'horizontal',
   layout: 'horizontal',
   size: 'medium',
+  tableLayout: 'fixed',
 };
 
 export const descriptionItemDefaultProps: TdDescriptionItemProps = { span: 1 };

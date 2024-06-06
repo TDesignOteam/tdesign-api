@@ -16,8 +16,15 @@ export default {
   default: {
     type: [String, Function] as PropType<TdLinkProps['default']>,
   },
-  /** 禁用链接 */
-  disabled: Boolean,
+  /** 禁用链接。优先级：Link.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 使得浏览器将链接的 URL 视为可下载资源 */
+  download: {
+    type: [String, Boolean] as PropType<TdLinkProps['download']>,
+  },
   /** 链接悬浮态样式，有 文本颜色变化、添加下划线等 2 种方法 */
   hover: {
     type: String as PropType<TdLinkProps['hover']>,
@@ -63,7 +70,7 @@ export default {
       return ['default', 'primary', 'danger', 'warning', 'success'].includes(val);
     },
   },
-  /** 普通状态是否显示链接下划线 */
+  /** 是否显示链接下划线 */
   underline: Boolean,
   /** 点击事件，禁用状态不会触发点击事件 */
   onClick: Function as PropType<TdLinkProps['onClick']>,
