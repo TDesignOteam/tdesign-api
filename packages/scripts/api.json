@@ -64671,9 +64671,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64704,9 +64702,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -64716,7 +64712,9 @@
     {
       "id": 1712580045,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64725,7 +64723,7 @@
         "1",
         "2"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "输入框的值",
       "field_desc_en": "input value",
@@ -64734,7 +64732,7 @@
       "create_time": "2024-04-08 12:40:45",
       "update_time": "2024-04-08 12:40:45",
       "event_output": null,
-      "custom_field_type": "InputValue【type InputValue = string】",
+      "custom_field_type": "InputValue【type InputValue = string | number】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -64745,7 +64743,9 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
