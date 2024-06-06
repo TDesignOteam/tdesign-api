@@ -64229,6 +64229,49 @@
       ]
     },
     {
+      "id": 1717603340,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "spellCheck",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+      "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-05 16:02:20",
+      "update_time": "2024-06-05 16:02:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 822,
       "platform_framework": [
         "64"
@@ -115421,7 +115464,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】选项卡右侧的操作区域",
+      "field_desc_zh": "选项卡右侧的操作区域",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -115846,6 +115889,49 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1717604259,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "scrollPosition",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "auto",
+      "field_enum": "auto/start/center/end",
+      "field_desc_zh": "Tab较多的时候，选中滑块滚动最终停留的位置",
+      "field_desc_en": "The final position where the tab item stops scrolling after being selected.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-05 16:17:39",
+      "update_time": "2024-06-05 16:17:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
