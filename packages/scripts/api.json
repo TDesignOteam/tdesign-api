@@ -64740,7 +64740,7 @@
       "deprecated": 0,
       "version": null,
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
