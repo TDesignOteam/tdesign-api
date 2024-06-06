@@ -46,7 +46,7 @@ export interface TdInputProps<T = InputValue> {
    */
   disabled?: boolean;
   /**
-   * 【开发中】指定输入框展示值的格式
+   * 指定输入框展示值的格式
    */
   format?: InputFormatType;
   /**
