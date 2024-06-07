@@ -12,7 +12,7 @@ export default {
   customValue: {
     type: Array as PropType<TdSwitchProps['customValue']>,
   },
-  /** 是否禁用组件 */
+  /** 是否禁用组件。优先级：Switch.disabled > Form.disabled */
   disabled: {
     type: Boolean,
     default: undefined,

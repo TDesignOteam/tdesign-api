@@ -14166,9 +14166,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "禁用状态",
+      "field_desc_zh": "禁用状态。优先级：Button.disabled > Form.disabled",
       "field_desc_en": "disable the button, make it can not be clicked",
       "field_required": 0,
       "event_input": "",
@@ -37962,6 +37962,47 @@
       "deprecated": 0,
       "version": "",
       "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-descriptions\"}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1717655432,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Descriptions",
+      "field_category": 1,
+      "field_name": "tableLayout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "fixed",
+      "field_enum": "fixed/auto",
+      "field_desc_zh": "用于设置底层 `table` 单元格、行和列的布局算法，与原生 table-layout css 属性完全一致。`fixed`：采用固定布局算法；`auto`：采用自动布局算法。详情可参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)",
+      "field_desc_en": "Sets the algorithm used to layout `table` cells, rows, and columns, exactly the same as the native table-layout css property. `fixed`: uses fixed layout algorithm; `auto`: uses automatic layout algorithm. For more details, see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-06 06:30:32",
+      "update_time": "2024-06-06 06:30:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -67764,9 +67805,9 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "禁用链接",
+      "field_desc_zh": "禁用链接。优先级：Link.disabled > Form.disabled",
       "field_desc_en": "make link to be disabled",
       "field_required": 0,
       "event_input": "",
@@ -110287,7 +110328,7 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件",
+      "field_desc_zh": "是否禁用组件。优先级：Switch.disabled > Form.disabled",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -115464,7 +115505,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】选项卡右侧的操作区域",
+      "field_desc_zh": "选项卡右侧的操作区域",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -115889,6 +115930,49 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1717604259,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "scrollPosition",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "auto",
+      "field_enum": "auto/start/center/end",
+      "field_desc_zh": "Tab较多的时候，选中滑块滚动最终停留的位置",
+      "field_desc_en": "The final position where the tab item stops scrolling after being selected.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-05 16:17:39",
+      "update_time": "2024-06-05 16:17:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -124871,6 +124955,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1717563519,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Toast",
+      "field_category": 1,
+      "field_name": "className",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "类名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-05 04:58:39",
+      "update_time": "2024-06-05 04:58:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
