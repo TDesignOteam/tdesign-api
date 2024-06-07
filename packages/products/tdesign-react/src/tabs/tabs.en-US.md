@@ -14,7 +14,7 @@ disabled | Boolean | false | \- | N
 dragSort | Boolean | false | \- | N
 list | Array | - | Typescript：`Array<TdTabPanelProps>` | N
 placement | String | top | options: left/top/bottom/right | N
-scrollPosition | TNode | auto | The final position where the tab item stops scrolling after being selected.。options: auto/start/center/end。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+scrollPosition | String | auto | The final position where the tab item stops scrolling after being selected.。options: auto/start/center/end | N
 size | String | medium | options: medium/large | N
 theme | String | normal | options: normal/card | N
 value | String / Number | - | Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tabs/type.ts) | N

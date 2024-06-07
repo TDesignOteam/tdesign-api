@@ -40,7 +40,7 @@ export interface TdTabsProps {
    * Tab较多的时候，选中滑块滚动最终停留的位置
    * @default auto
    */
-  scrollPosition?: TNode;
+  scrollPosition?: 'auto' | 'start' | 'center' | 'end';
   /**
    * 组件尺寸
    * @default medium

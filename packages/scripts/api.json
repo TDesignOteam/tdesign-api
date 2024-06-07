@@ -115943,8 +115943,7 @@
       "field_category": 1,
       "field_name": "scrollPosition",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "auto",
       "field_enum": "auto/start/center/end",
@@ -115971,8 +115970,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {
