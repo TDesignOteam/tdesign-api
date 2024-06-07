@@ -75,7 +75,7 @@ const props: TdInputProps = {
     type: Boolean,
     value: false,
   },
-  /** 【暂不支持】指定输入框展示值的格式 */
+  /** 【开发中】指定输入框展示值的格式 */
   format: {
     type: null,
   },

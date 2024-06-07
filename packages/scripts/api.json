@@ -63026,7 +63026,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【暂不支持】指定输入框展示值的格式",
+      "field_desc_zh": "【开发中】指定输入框展示值的格式",
       "field_desc_en": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better",
       "field_required": 0,
       "event_input": "",
