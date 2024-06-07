@@ -313,6 +313,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -345,6 +346,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -358,6 +360,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -388,6 +391,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
