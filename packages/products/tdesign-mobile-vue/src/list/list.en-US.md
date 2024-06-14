@@ -10,11 +10,11 @@ asyncLoading | String / Slot / Function | - | Typescript：`string \| TNode`。[
 footer | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onLoadMore | Function |  | Typescript：`() => void`<br/> | N
-onScroll | Function |  | Typescript：`(scrollTop: number, scrollBottom: number) => void`<br/> | N
+onScroll | Function |  | Typescript：`(bottomDistance: number, scrollTop: number) => void`<br/> | N
 
 ### List Events
 
 name | params | description
 -- | -- | --
 load-more | \- | \-
-scroll | `(scrollTop: number, scrollBottom: number)` | \-
+scroll | `(bottomDistance: number, scrollTop: number)` | \-
