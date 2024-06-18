@@ -5,6 +5,7 @@
  * */
 
 import { ButtonProps } from '../button/index';
+import { OverlayProps } from '../overlay/index';
 import { TNode } from '../common/common';
 
 export interface TdDialogProps {
@@ -24,21 +25,30 @@ export interface TdDialogProps {
     value?: 'horizontal' | 'vertical';
   };
   /**
-   * 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件
+   * 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 Slot 自定义按钮时，需自行控制取消事件
    */
   cancelBtn?: {
     type: null;
     value?: string | ButtonProps | null;
   };
   /**
+   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；使用 Object 时透传至图标组件
+   * @default false
+   */
+  closeBtn?: {
+    type: null;
+    value?: string | ButtonProps | TNode | null;
+  };
+  /**
    * 点击蒙层时是否触发关闭事件
+   * @default false
    */
   closeOnOverlayClick?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
+   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 Slot 自定义按钮时，需自行控制确认事件
    */
   confirmBtn?: {
     type: null;
@@ -64,7 +74,7 @@ export interface TdDialogProps {
    */
   overlayProps?: {
     type: ObjectConstructor;
-    value?: object;
+    value?: OverlayProps;
   };
   /**
    * 防止滚动穿透
@@ -99,7 +109,6 @@ export interface TdDialogProps {
   };
   /**
    * 控制对话框是否显示
-   * @default false
    */
   visible?: {
     type: BooleanConstructor;

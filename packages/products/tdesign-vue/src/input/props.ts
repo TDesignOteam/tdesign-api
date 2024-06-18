@@ -37,7 +37,7 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 【开发中】指定输入框展示值的格式 */
+  /** 指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
   },
@@ -53,9 +53,9 @@ export default {
   maxcharacter: {
     type: Number,
   },
-  /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。值为空，则表示不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
+  /** 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxlength: {
-    type: Number,
+    type: [String, Number] as PropType<TdInputProps['maxlength']>,
   },
   /** 名称 */
   name: {
@@ -72,7 +72,10 @@ export default {
     type: Function as PropType<TdInputProps['prefixIcon']>,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 输入框内容为空时，悬浮状态是否显示清空按钮，默认不显示 */
   showClearIconOnEmpty: Boolean,
   /** 是否在输入框右侧显示字数统计 */
