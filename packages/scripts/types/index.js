@@ -351,7 +351,7 @@ function formatAliasImportsPath(imports, framework) {
 // 处理 @TdTypes / @Button 一类依赖 imports
 function formatImportsPath(imports, framework) {
   let newImports = imports.concat();
-  if (['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Miniprogram'].includes(framework)) {
+  if (['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'Omi(PC)'].includes(framework)) {
     newImports = formatAliasImportsPath(imports, framework);
   }
   newImports = newImports.map(item => item && item.replace(/(?<='@TdTypes\/).*(?=')/, (cmp) => {

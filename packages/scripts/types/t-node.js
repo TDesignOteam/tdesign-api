@@ -73,6 +73,8 @@ function formatTNode(framework, type, customType) {
       return getReactTNodeType(type, newCustomType);
     case 'Miniprogram':
       return getMiniprogramTNodeType(type, newCustomType);
+    case 'Omi(PC)':
+      return getReactTNodeType(type, newCustomType);
   }
 }
 

@@ -242,7 +242,7 @@ function formatToVueApi(api, params) {
       tmp.splice(i, 1, 'Slot', 'Function');
     } else if (isMiniprogram) {
       tmp.splice(i, 1, 'Slot');
-    } else if (params.framework.indexOf('React') !== -1) {
+    } else if (params.framework.indexOf('React') !== -1 || params.framework.indexOf('Omi') !== -1) {
       tmp = type.join() === 'TNode' ? ['TElement'] : ['TNode'];
     }
     type = tmp;

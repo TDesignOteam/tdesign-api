@@ -9,6 +9,8 @@ export const buttonDefaultProps: TdButtonProps = {
   disabled: undefined,
   ghost: false,
   loading: false,
+  shape: 'rectangle',
   size: 'medium',
+  type: 'button',
   variant: 'base',
 };

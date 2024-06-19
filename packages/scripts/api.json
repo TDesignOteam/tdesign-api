@@ -14416,7 +14416,8 @@
         "2",
         "4",
         "16",
-        "32"
+        "32",
+        "128"
       ],
       "component": "Button",
       "field_category": 1,
@@ -14448,7 +14449,8 @@
         "React(PC)",
         "Angular(PC)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Omi(PC)"
       ],
       "field_type_text": [
         "String"
@@ -14978,7 +14980,8 @@
         "8",
         "16",
         "32",
-        "64"
+        "64",
+        "128"
       ],
       "component": "Button",
       "field_category": 1,
@@ -15012,7 +15015,8 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
+        "Miniprogram",
+        "Omi(PC)"
       ],
       "field_type_text": [
         "String"
@@ -15442,7 +15446,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "128"
       ],
       "component": "Button",
       "field_category": 1,
@@ -15475,7 +15480,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Omi(PC)"
       ],
       "field_type_text": [
         "String"
