@@ -37,6 +37,7 @@ const API_DOC_BLOCKS = {
   'Vue(Mobile)': ['Props', 'Events', 'Functions'],
   'React(Mobile)': ['Props', 'Functions'],
   Miniprogram: ['Props', 'Events', 'Functions', 'External Classes', 'CSS Variables'],
+  'Omi(PC)': ['Props', 'Functions'],
 };
 
 // 通用属性
@@ -348,6 +349,10 @@ function addCommonProperties({
     md[category].apis.push(...[
       `style | Object | - | ${languageInfo.styleText} | N`,
       `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
+    ]);
+  }else if (['Omi(PC)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
+    md[category].apis = md[category].apis.concat([
+      `className | String | - | ${languageInfo.classNameText} | N`,
     ]);
   }
 }

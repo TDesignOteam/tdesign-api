@@ -61,6 +61,10 @@
       {
         "label": "MP",
         "value": "3"
+      },
+      {
+        "label": "Omi",
+        "value": "4"
       }
     ],
     "platform_framework": [
@@ -91,6 +95,10 @@
       {
         "label": "Miniprogram",
         "value": "64"
+      },
+      {
+        "label": "Omi(PC)",
+        "value": "128"
       }
     ],
     "field_type": [

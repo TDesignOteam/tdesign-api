@@ -108,7 +108,7 @@ function generateComponentApi() {
     // 生成 props 文件
     generateVueProps(baseData, framework, selfUseDefault);
     // 生成 React defaultProps 文件
-    if (framework.indexOf('React') !== -1) {
+    if (framework.indexOf('React') !== -1 || framework.indexOf('Omi') !== -1) {
       generateReactDefaultProps(baseData, framework);
     }
     // 生成 props 单元测试文件
@@ -166,7 +166,7 @@ function validateParams(components) {
     return false;
   }
 
-  const keys = ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Angular(Mobile)', 'Miniprogram'];
+  const keys = ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Angular(Mobile)', 'Miniprogram', 'Omi(PC)'];
   if (!keys.includes(framework)) {
     console.error(chalk.red(`\n请输入正确的组件库框架名称，可选值有：${keys}。示例：npm run api-docs Button Vue(PC)\n`));
     return false;

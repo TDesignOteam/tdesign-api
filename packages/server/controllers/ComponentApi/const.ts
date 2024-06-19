@@ -6,6 +6,7 @@ const MINIPROGRAM = 3;
 
 const VUE = 1;
 const REACT = 2;
+const OMI = 4;
 
 const STRING = 1;
 const NUMBER = 2;
@@ -24,6 +25,7 @@ const P_VUE_MOBILE = 8;
 const P_REACT_MOBILE = 16;
 const P_ANGULAR_MOBILE = 32;
 const P_MINIPROGRAM = 64;
+const P_OMI = 128;
 
 const API_CATEGORY_PROPS = 1;
 const API_CATEGORY_EVENTS = 2;
@@ -57,6 +59,7 @@ export const FRAMEWORK_MAP: MapOptions = {
     [VUE]: "Vue",
     [REACT]: "React",
     [MINIPROGRAM]: "MP",
+    [OMI]: "Omi",
 };
 
 export const FIELD_TYPE_MAP: MapOptions = {
@@ -79,6 +82,7 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
     [P_ANGULAR_PC]: "Angular(PC)",
     [P_ANGULAR_MOBILE]: "Angular(Mobile)",
     [P_MINIPROGRAM]: "Miniprogram",
+    [P_OMI]:"Omi(PC)"
 };
 
 /**

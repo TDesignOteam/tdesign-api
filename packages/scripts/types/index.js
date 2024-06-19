@@ -311,7 +311,7 @@ function handleApiByFramework(api, framework) {
     }
   }
   // replace InputEvent to FormInput in React
-  if (framework.indexOf('React') !== -1) {
+  if (framework.indexOf('React') !== -1 ||framework.indexOf('Omi') !== -1) {
     newApi.event_input = replaceInputEvent(newApi.event_input, newApi);
     newApi.event_output = replaceInputEvent(newApi.event_output, newApi);
   }
@@ -559,7 +559,7 @@ function combineTsFile(componentMap, framework) {
   Object.keys(ts).forEach((cmp) => {
     const bodyDesc = typeof ts[cmp].body === 'string' ? ts[cmp].body : ts[cmp].body.filter(v => !!v).join('\n\n');
     const exportDesc = ts[cmp].exports.filter(v => !!v).join('\n\n');
-    if (['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'React(Mobile)'].includes(framework)) {
+    if (['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'React(Mobile)', 'Omi(PC)'].includes(framework)) {
       ts[cmp].imports = ts[cmp].imports.concat(getGlobalsImports(bodyDesc + exportDesc, framework));
     }
     const r = [

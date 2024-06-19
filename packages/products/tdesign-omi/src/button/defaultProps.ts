@@ -1,0 +1,14 @@
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+import { TdButtonProps } from './type';
+
+export const buttonDefaultProps: TdButtonProps = {
+  block: false,
+  disabled: undefined,
+  ghost: false,
+  loading: false,
+  size: 'medium',
+  variant: 'base',
+};
