@@ -1,15 +1,17 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Tree Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 activable | Boolean | false | make nodes can be highlight | N
 activeMultiple | Boolean | false | \- | N
 actived | Array | - | Typescript：`Array<TreeNodeValue>` | N
+allowDrop | Function | - | Determine whether the node can execute the drop operation。Typescript：`(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean` | N
 allowFoldNodeOnFilter | Boolean | false | \- | N
 checkProps | Object | - | Typescript：`CheckboxProps`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/tree/type.ts) | N
 checkStrictly | Boolean | false | \- | N
@@ -57,8 +59,8 @@ onScroll | Function |  | Typescript：`(params: { e: WheelEvent }) => void`<br/>
 
 name | params | return | description
 -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 appendTo | `(value: TreeNodeValue, newData: T \| Array<T>)` | \- | required
 getIndex | `(value: TreeNodeValue)` | `number` | required
 getItem | `(value: TreeNodeValue)` | `TreeNodeModel<T>` | required
