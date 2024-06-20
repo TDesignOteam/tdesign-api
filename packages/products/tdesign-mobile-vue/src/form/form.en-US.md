@@ -14,10 +14,11 @@ errorMessage | Object | - | Typescript：`FormErrorMessage` | N
 formControlledComponents | Array | - | Typescript：`Array<string>` | N
 labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
+readonly | Boolean | - | \- | N
 requiredMark | Boolean | undefined | \- | N
 resetType | String | empty | options: empty/initial | N
 rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/form/type.ts) | N
-scrollToFirstError | String | - | options: smooth/auto | N
+scrollToFirstError | String | - | options: ''/smooth/auto | N
 showErrorMessage | Boolean | true | \- | N
 submitWithWarningMessage | Boolean | false | \- | N
 onReset | Function |  | Typescript：`(context: { e?: FormResetEvent }) => void`<br/> | N
