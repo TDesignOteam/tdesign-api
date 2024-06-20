@@ -185,6 +185,10 @@ const TYPES_COMBINE_MAP = {
   // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
   Grid: {
     list: ['Grid', 'Row', 'Col', 'GridItem'],
+    excludes: mobileFrames
+  },
+  Col: {
+    list: ['Col', 'Row'],
     excludes: ['Miniprogram']
   },
   Layout: {
