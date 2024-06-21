@@ -48714,10 +48714,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48748,10 +48745,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -48761,7 +48755,10 @@
     {
       "id": 1712579340,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48790,7 +48787,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
