@@ -8,7 +8,7 @@ import { IsEmailOptions } from 'validator/es/lib/isEmail';
 import { IsURLOptions } from 'validator/es/lib/isURL';
 import { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
-export interface TdFormProps {
+export interface TdFormProps<FormData extends Data = Data> {
   /**
    * 是否在表单标签字段右侧显示冒号
    * @default false
@@ -33,10 +33,6 @@ export interface TdFormProps {
    */
   errorMessage?: FormErrorMessage;
   /**
-   * 【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`
-   */
-  formControlledComponents?: Array<string>;
-  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -47,9 +43,10 @@ export interface TdFormProps {
    */
   labelWidth?: string | number;
   /**
-   * 是否整个表单只读
+   * 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新
+   * @default true
    */
-  readonly?: boolean;
+  preventSubmitDefault?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */
@@ -92,7 +89,7 @@ export interface TdFormProps {
 }
 
 /** 组件实例方法 */
-export interface FormInstanceFunctions {
+export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 清空校验结果。可使用 fields 指定清除部分字段的校验结果，fields 值为空则表示清除所有字段校验结果。清除邮箱校验结果示例：`clearValidate(['email'])`
    */
@@ -120,6 +117,11 @@ export interface FormInstanceFunctions {
 }
 
 export interface TdFormItemProps {
+  /**
+   * 是否显示右侧箭头
+   * @default false
+   */
+  arrow?: boolean;
   /**
    * 表单内容对齐方式：左对齐、右对齐
    * @default left
@@ -357,6 +359,8 @@ export interface FormValidateParams {
 }
 
 export type ValidateTriggerType = 'blur' | 'change' | 'all';
+
+export type Data = { [key: string]: any };
 
 export interface IsDateOptions {
   format: string;
