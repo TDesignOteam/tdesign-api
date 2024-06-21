@@ -48587,10 +48587,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48620,47 +48617,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 1712579305,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Form",
-      "field_category": 1,
-      "field_name": "formControlledComponents",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:28:25",
-      "update_time": "2024-04-08 12:28:25",
-      "event_output": null,
-      "custom_field_type": "Array<string>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -48845,10 +48802,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48878,10 +48832,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -48893,6 +48844,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -48926,6 +48878,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -50036,7 +49989,11 @@
       "id": 603,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Form",
       "field_category": 64,
@@ -50063,7 +50020,11 @@
       "field_category_text": "<T>",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -50828,6 +50789,47 @@
       ]
     },
     {
+      "id": 1718950322,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "arrow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示右侧箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-21 06:12:02",
+      "update_time": "2024-06-21 06:12:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1712574874,
       "platform_framework": [
         "8"
@@ -51472,10 +51474,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51505,10 +51504,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -51519,10 +51515,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51553,10 +51546,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean",
@@ -51568,10 +51558,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51601,10 +51588,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -51615,10 +51599,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51649,10 +51630,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",

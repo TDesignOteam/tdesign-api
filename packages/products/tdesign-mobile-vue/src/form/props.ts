@@ -33,10 +33,6 @@ export default {
   errorMessage: {
     type: Object as PropType<TdFormProps['errorMessage']>,
   },
-  /** 【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']` */
-  formControlledComponents: {
-    type: Array as PropType<TdFormProps['formControlledComponents']>,
-  },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐 */
   labelAlign: {
     type: String as PropType<TdFormProps['labelAlign']>,
@@ -51,8 +47,11 @@ export default {
     type: [String, Number] as PropType<TdFormProps['labelWidth']>,
     default: '81px',
   },
-  /** 是否整个表单只读 */
-  readonly: Boolean,
+  /** 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 */
+  preventSubmitDefault: {
+    type: Boolean,
+    default: true,
+  },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {
     type: Boolean,

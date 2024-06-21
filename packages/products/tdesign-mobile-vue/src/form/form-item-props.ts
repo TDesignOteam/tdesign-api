@@ -8,6 +8,8 @@ import { TdFormItemProps } from '../form/type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否显示右侧箭头 */
+  arrow: Boolean,
   /** 表单内容对齐方式：左对齐、右对齐 */
   contentAlign: {
     type: String as PropType<TdFormItemProps['contentAlign']>,
