@@ -104159,7 +104159,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "禁用全部操作",
       "field_desc_en": null,
