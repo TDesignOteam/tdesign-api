@@ -28,11 +28,11 @@ export default {
   /** 评分图标的间距 */
   gap: {
     type: Number,
-    default: 4,
+    default: 8,
   },
-  /** 自定义评分图标 */
+  /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
-    type: Function as PropType<TdRateProps['icon']>,
+    type: [Array, Function] as PropType<TdRateProps['icon']>,
   },
   /** 是否显示对应的辅助文字 */
   showText: Boolean,
@@ -49,7 +49,11 @@ export default {
   /** 选择评分的值 */
   value: {
     type: Number,
-    default: 0,
+    default: undefined,
+  },
+  modelValue: {
+    type: Number,
+    default: undefined,
   },
   /** 选择评分的值，非受控属性 */
   defaultValue: {

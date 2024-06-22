@@ -28,13 +28,13 @@ export interface TdRateProps {
   disabled?: boolean;
   /**
    * 评分图标的间距
-   * @default 4
+   * @default 8
    */
   gap?: number;
   /**
-   * 自定义评分图标
+   * 自定义评分图标，[选中图标，未选中图标]
    */
-  icon?: TNode;
+  icon?: Array<TNode | Function>;
   /**
    * 是否显示对应的辅助文字
    * @default false
@@ -60,6 +60,11 @@ export interface TdRateProps {
    * @default 0
    */
   defaultValue?: number;
+  /**
+   * 选择评分的值
+   * @default 0
+   */
+  modelValue?: number;
   /**
    * 评分数改变时触发
    */
