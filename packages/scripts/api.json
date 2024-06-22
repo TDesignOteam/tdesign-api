@@ -104305,7 +104305,9 @@
     {
       "id": 1712658566,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Stepper",
       "field_category": 1,
@@ -104315,7 +104317,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否整形",
+      "field_desc_zh": "是否整型",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -104333,7 +104335,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -104803,7 +104807,9 @@
     {
       "id": 1712658600,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Stepper",
       "field_category": 2,
@@ -104832,7 +104838,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",

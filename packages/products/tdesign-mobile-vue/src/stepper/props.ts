@@ -19,7 +19,7 @@ export default {
   inputWidth: {
     type: Number,
   },
-  /** 是否整形 */
+  /** 是否整型 */
   integer: {
     type: Boolean,
     default: true,
