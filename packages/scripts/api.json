@@ -120285,7 +120285,9 @@
     {
       "id": 1712658977,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -120313,7 +120315,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -120999,7 +121003,7 @@
       "create_time": "2021-02-21 14:00:57",
       "update_time": "2022-02-19 07:24:52",
       "event_output": null,
-      "custom_field_type": "TextareaValue【type TextareaValue = string】",
+      "custom_field_type": "TextareaValue【type TextareaValue = string | number】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
