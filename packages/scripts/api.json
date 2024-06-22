@@ -62134,7 +62134,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -62165,7 +62167,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -62224,8 +62228,10 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -62235,7 +62241,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "无边框模式",
+      "field_desc_zh": "是否开启无边框模式",
       "field_desc_en": "input without border",
       "field_required": 0,
       "event_input": "",
@@ -62256,82 +62262,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1691465640,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "borderless",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-08-08 03:34:00",
-      "update_time": "2023-08-08 03:34:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712648998,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "borderless",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
-      "field_desc_en": "input without border",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 07:49:58",
-      "update_time": "2024-04-09 07:49:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -62377,45 +62311,6 @@
     {
       "id": 742,
       "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "clearable",
-      "field_type": [
-        "4",
-        "8"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`",
-      "field_desc_en": "show clear icon, clicked to clear input value",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-01-31 08:09:44",
-      "update_time": "2021-01-31 08:09:44",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"clear icon should exist on input mouseenter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"click clear icon could clear input value to be empty\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]},{\"props\":{\"type\":\"password\",\"value\":\"'this is my password'\"},\"description\":\"type=password, browseIcon and clearableIcon works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[\".t-icon-browse-off\"]},{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300}]}]}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "Object"
-      ]
-    },
-    {
-      "id": 1712579780,
-      "platform_framework": [
         "1",
         "2",
         "4",
@@ -62435,6 +62330,49 @@
       "field_desc_en": "show clear icon, clicked to clear input value",
       "field_required": 0,
       "event_input": "",
+      "create_time": "2021-01-31 08:09:44",
+      "update_time": "2021-01-31 08:09:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"clear icon should exist on input mouseenter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"click clear icon could clear input value to be empty\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]},{\"props\":{\"type\":\"password\",\"value\":\"'this is my password'\"},\"description\":\"type=password, browseIcon and clearableIcon works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[\".t-icon-browse-off\"]},{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300}]}]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1712579780,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "clearable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`",
+      "field_desc_en": "show clear icon, clicked to clear input value",
+      "field_required": 0,
+      "event_input": "",
       "create_time": "2024-04-08 12:36:20",
       "update_time": "2024-04-08 12:36:20",
       "event_output": null,
@@ -62449,15 +62387,11 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -63028,6 +62962,8 @@
       "id": 3382,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Input",
@@ -63057,6 +62993,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -64677,9 +64615,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64707,9 +64643,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -64749,7 +64683,9 @@
     {
       "id": 1712649678,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64775,7 +64711,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -64784,9 +64722,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64814,9 +64750,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -64856,7 +64790,9 @@
     {
       "id": 1712649727,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64882,7 +64818,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -65111,9 +65049,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65141,9 +65077,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -65185,9 +65119,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65215,9 +65147,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -65257,7 +65187,9 @@
     {
       "id": 1712649844,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65283,7 +65215,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
