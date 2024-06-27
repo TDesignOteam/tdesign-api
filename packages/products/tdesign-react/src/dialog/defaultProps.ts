@@ -7,7 +7,7 @@ import { TdDialogProps } from './type';
 export const dialogDefaultProps: TdDialogProps = {
   closeBtn: true,
   closeOnEscKeydown: undefined,
-  closeOnOverlayClick: undefined,
+  closeOnOverlayClick: false,
   confirmLoading: undefined,
   destroyOnClose: false,
   draggable: false,
