@@ -9,7 +9,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 disable-input | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 input-width | Number | - | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N

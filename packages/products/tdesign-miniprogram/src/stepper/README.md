@@ -9,7 +9,7 @@
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 disable-input | Boolean | false | 禁用输入框 | N
-disabled | Boolean | false | 禁用全部操作 | N
+disabled | Boolean | undefined | 禁用全部操作 | N
 input-width | Number | - | 输入框宽度，默认单位 `px` | N
 max | Number | 100 | 最大值 | N
 min | Number | 0 | 最小值 | N

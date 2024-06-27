@@ -9,7 +9,7 @@ name | type | default | description | required
 allowHalf | Boolean | false | \- | N
 color | String / Array | '#ED7B2F' | Typescript：`string \| Array<string>` | N
 count | Number | 5 | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 gap | Number | 8 | \- | N
 icon | Array / Slot / Function | - | Typescript：`Array<TNode \| Function>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 showText | Boolean | false | \- | N

@@ -11,7 +11,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 allow-half | Boolean | false | \- | N
 color | String / Array | '#ED7B2F' | `0.30.0`。Typescript：`string \| Array<string>` | N
 count | Number | 5 | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 gap | Number | 8 | \- | N
 icon | String / Array | - | `0.30.0`。Typescript：`string \| string[]` | N
 icon-prefix | String | undefined | \- | N

@@ -6,20 +6,10 @@
 
 import { TdSliderProps } from './type';
 const props: TdSliderProps = {
-  /** 颜色，[已选择, 未选择] */
-  colors: {
-    type: Array,
-    value: ['#0052D9', 'rgba(220, 220, 220, 1)'],
-  },
   /** 是否禁用组件 */
   disabled: {
-    type: Boolean,
-    value: false,
-  },
-  /** 禁用状态滑动条的颜色，[已选, 未选] */
-  disabledColor: {
-    type: Array,
-    value: ['#bbd3fb', '#dcdcdc'],
+    type: null,
+    value: undefined,
   },
   /** 组件类名，分别用于设置 组件外层元素、滑道底部、滑道激活态、滑道禁用态、游标 等元素类名 */
   externalClasses: {
@@ -65,6 +55,11 @@ const props: TdSliderProps = {
     type: String,
     value: '',
   },
+  /** 滑块风格 */
+  theme: {
+    type: String,
+    value: 'default',
+  },
   /** 滑块值 */
   value: {
     type: null,
@@ -74,6 +69,11 @@ const props: TdSliderProps = {
   defaultValue: {
     type: null,
     value: 0,
+  },
+  /** 是否是垂直的滑块（渲染垂直滑块时，默认高度为400rpx，可通过修改`--td-slider-bar-height`来自定义高度） */
+  vertical: {
+    type: Boolean,
+    value: false,
   },
 };
 
