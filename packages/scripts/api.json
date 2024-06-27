@@ -38839,6 +38839,47 @@
       ]
     },
     {
+      "id": 1719484808,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "dialogStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于对话框本身的样式",
+      "field_desc_en": "Styles that apply to the dialog box itself",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-27 10:40:08",
+      "update_time": "2024-06-27 10:40:08",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 60,
       "platform_framework": [
         "1",
