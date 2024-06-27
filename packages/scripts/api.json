@@ -92948,7 +92948,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "adjust-position",
+      "field_name": "adjustPosition",
       "field_type": [
         "4"
       ],
@@ -92985,7 +92985,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "always-embed",
+      "field_name": "alwaysEmbed",
       "field_type": [
         "4"
       ],
@@ -93426,7 +93426,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "confirm-hold",
+      "field_name": "confirmHold",
       "field_type": [
         "4"
       ],
@@ -93463,7 +93463,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "confirm-type",
+      "field_name": "confirmType",
       "field_type": [
         "1"
       ],
@@ -93537,7 +93537,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "cursor-spacing",
+      "field_name": "cursorSpacing",
       "field_type": [
         "2"
       ],
@@ -93652,43 +93652,6 @@
       ]
     },
     {
-      "id": 2257,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件外部样式类名，分别用于设置组件外层类名、输入框类名、输入框容器类名、右侧 cancel 文本类名、左侧图标类名、右侧图标类型",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-01-25 12:19:32",
-      "update_time": "2022-03-03 03:13:10",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-input', 't-class-input-container', 't-class-action','t-class-left','t-class-clear']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 2853,
       "platform_framework": [
         "1",
@@ -93779,7 +93742,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "hold-keyboard",
+      "field_name": "holdKeyboard",
       "field_type": [
         "4"
       ],
@@ -94183,7 +94146,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "placeholder-class",
+      "field_name": "placeholderClass",
       "field_type": [
         "1"
       ],
@@ -94220,7 +94183,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "placeholder-style",
+      "field_name": "placeholderStyle",
       "field_type": [
         "1"
       ],
@@ -94414,8 +94377,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Search",
       "field_category": 1,
@@ -94448,11 +94410,47 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1719488506,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "resultList",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "预览结果列表",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-27 11:41:46",
+      "update_time": "2024-06-27 11:41:46",
+      "event_output": null,
+      "custom_field_type": "Array<string>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -94462,7 +94460,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "right-icon",
+      "field_name": "rightIcon",
       "field_type": [
         "1",
         "64"
@@ -94542,7 +94540,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "selection-end",
+      "field_name": "selectionEnd",
       "field_type": [
         "2"
       ],
@@ -94579,7 +94577,7 @@
       ],
       "component": "Search",
       "field_category": 1,
-      "field_name": "selection-start",
+      "field_name": "selectionStart",
       "field_type": [
         "2"
       ],
@@ -94909,14 +94907,14 @@
       "update_time": "2024-04-02 04:18:05",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
@@ -94991,14 +94989,14 @@
       "update_time": "2024-04-09 09:09:42",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"

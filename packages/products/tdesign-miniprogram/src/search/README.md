@@ -27,15 +27,13 @@ maxlength | Number | -1 | 用户最多可以输入的文本长度，一个中文
 placeholder | String | '' | 占位符 | N
 placeholder-class | String | input-placeholder | 指定 placeholder 的样式类 | N
 placeholder-style | String | - | 必需。指定 placeholder 的样式 | Y
-readonly | Boolean | false | 只读状态 | N
+result-list | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 right-icon | String / Slot | 'close-circle-filled' | 已废弃。右侧图标。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 | N
 selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
 type | String | 'text' | 拉起键盘的类型。可选项：text/number/idcard/digit/nickname | N
-default-type | String | undefined | 拉起键盘的类型。非受控属性。可选项：text/number/idcard/digit/nickname | N
 value | String | '' | 值 | N
-default-value | String | undefined | 值。非受控属性 | N
 
 ### Search Events
 
