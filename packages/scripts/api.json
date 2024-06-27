@@ -14655,6 +14655,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -14667,7 +14668,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传至 Loading 组件",
+      "field_desc_zh": "透传 Loading 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -14688,46 +14689,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1712654734,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "loadingProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传加载组件全部属性",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 09:25:34",
-      "update_time": "2024-04-09 09:25:34",
-      "event_output": null,
-      "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -15086,6 +15051,8 @@
       "id": 1712914060,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Button",
@@ -15115,46 +15082,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1713235048,
-      "platform_framework": [
-        "16",
-        "32"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large",
-      "field_desc_zh": "组件尺寸",
-      "field_desc_en": "a button has four size",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-16 02:37:28",
-      "update_time": "2024-04-16 02:37:28",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -15540,6 +15470,7 @@
     {
       "id": 1126,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -15570,46 +15501,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712578143,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "variant",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "base",
-      "field_enum": "base/outline/text",
-      "field_desc_zh": "按钮形式，基础、线框、文字",
-      "field_desc_en": "button variant",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:09:03",
-      "update_time": "2024-04-08 12:09:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -23852,7 +23747,9 @@
     {
       "id": 1712660966,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "CellGroup",
       "field_category": 1,
@@ -23880,7 +23777,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -23976,7 +23875,7 @@
       ],
       "field_default_value": "default",
       "field_enum": "default/card",
-      "field_desc_zh": "单元格风格",
+      "field_desc_zh": "单元格组风格",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -25673,6 +25572,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -25706,46 +25606,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712578811,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Checkbox",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:20:11",
-      "update_time": "2024-04-08 12:20:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -26724,7 +26588,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "CheckboxGroup",
       "field_category": 1,
@@ -26734,7 +26601,7 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled",
+      "field_desc_zh": "是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -26754,85 +26621,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3530,
-      "platform_framework": [
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "CheckboxGroup",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。 CheckboxGroup.disabled < Checkbox.disabled ，后续新增 Form 组件后，Form.disabled 优先级最低",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-07-15 04:55:51",
-      "update_time": "2023-07-15 04:55:51",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712578949,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "CheckboxGroup",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:22:29",
-      "update_time": "2024-04-08 12:22:29",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -48587,10 +48379,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48620,47 +48409,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 1712579305,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Form",
-      "field_category": 1,
-      "field_name": "formControlledComponents",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TSwitch、TRadio、TRadioGroup、TUpload、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:28:25",
-      "update_time": "2024-04-08 12:28:25",
-      "event_output": null,
-      "custom_field_type": "Array<string>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -48757,10 +48506,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48791,10 +48537,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -48804,7 +48547,10 @@
     {
       "id": 1712579340,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48833,7 +48579,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -48845,10 +48594,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48878,10 +48624,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -48893,6 +48636,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -48926,6 +48670,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -48939,11 +48684,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Form",
       "field_category": 1,
@@ -48951,7 +48692,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否整个表单只读",
       "field_desc_en": null,
@@ -48973,11 +48714,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -49171,6 +48908,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -49204,46 +48942,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712579616,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Form",
-      "field_category": 1,
-      "field_name": "scrollToFirstError",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "smooth/auto",
-      "field_desc_zh": "【开发中】表单校验不通过时，是否自动滚动到第一个校验不通过的字段，平滑滚动或是瞬间直达。值为空则表示不滚动",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:33:36",
-      "update_time": "2024-04-08 12:33:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -50079,7 +49781,11 @@
       "id": 603,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Form",
       "field_category": 64,
@@ -50106,7 +49812,11 @@
       "field_category_text": "<T>",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -50871,6 +50581,47 @@
       ]
     },
     {
+      "id": 1718950322,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "FormItem",
+      "field_category": 1,
+      "field_name": "arrow",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示右侧箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-21 06:12:02",
+      "update_time": "2024-06-21 06:12:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1712574874,
       "platform_framework": [
         "8"
@@ -51515,10 +51266,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51548,10 +51296,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -51562,10 +51307,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51596,10 +51338,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean",
@@ -51611,10 +51350,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51644,10 +51380,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -51658,10 +51391,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -51692,10 +51422,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -62300,7 +62027,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -62331,7 +62060,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -62390,8 +62121,10 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -62401,7 +62134,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "无边框模式",
+      "field_desc_zh": "是否开启无边框模式",
       "field_desc_en": "input without border",
       "field_required": 0,
       "event_input": "",
@@ -62422,82 +62155,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1691465640,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "borderless",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-08-08 03:34:00",
-      "update_time": "2023-08-08 03:34:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712648998,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "borderless",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
-      "field_desc_en": "input without border",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 07:49:58",
-      "update_time": "2024-04-09 07:49:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -62543,45 +62204,6 @@
     {
       "id": 742,
       "platform_framework": [
-        "64"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "clearable",
-      "field_type": [
-        "4",
-        "8"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`",
-      "field_desc_en": "show clear icon, clicked to clear input value",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-01-31 08:09:44",
-      "update_time": "2021-01-31 08:09:44",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"clear icon should exist on input mouseenter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"click clear icon could clear input value to be empty\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]},{\"props\":{\"type\":\"password\",\"value\":\"'this is my password'\"},\"description\":\"type=password, browseIcon and clearableIcon works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[\".t-icon-browse-off\"]},{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300}]}]}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "Object"
-      ]
-    },
-    {
-      "id": 1712579780,
-      "platform_framework": [
         "1",
         "2",
         "4",
@@ -62601,6 +62223,49 @@
       "field_desc_en": "show clear icon, clicked to clear input value",
       "field_required": 0,
       "event_input": "",
+      "create_time": "2021-01-31 08:09:44",
+      "update_time": "2021-01-31 08:09:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"clear icon should exist on input mouseenter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"click clear icon could clear input value to be empty\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]},{\"props\":{\"type\":\"password\",\"value\":\"'this is my password'\"},\"description\":\"type=password, browseIcon and clearableIcon works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[\".t-icon-browse-off\"]},{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300}]}]}}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1712579780,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "clearable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`",
+      "field_desc_en": "show clear icon, clicked to clear input value",
+      "field_required": 0,
+      "event_input": "",
       "create_time": "2024-04-08 12:36:20",
       "update_time": "2024-04-08 12:36:20",
       "event_output": null,
@@ -62615,15 +62280,11 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -63194,6 +62855,8 @@
       "id": 3382,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Input",
@@ -63223,6 +62886,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -64843,9 +64508,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64873,9 +64536,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -64915,7 +64576,9 @@
     {
       "id": 1712649678,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64941,7 +64604,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -64950,9 +64615,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -64980,9 +64643,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -65022,7 +64683,9 @@
     {
       "id": 1712649727,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65048,7 +64711,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -65277,9 +64942,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65307,9 +64970,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -65351,9 +65012,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65381,9 +65040,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -65423,7 +65080,9 @@
     {
       "id": 1712649844,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 2,
@@ -65449,7 +65108,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -86335,6 +85996,43 @@
       ]
     },
     {
+      "id": 1718962073,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用下拉刷新",
+      "field_desc_en": "disabled pull down refresh",
+      "field_required": 0,
+      "event_input": "boolean",
+      "create_time": "2024-06-21 09:27:53",
+      "update_time": "2024-06-21 09:27:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3480,
       "platform_framework": [
         "64"
@@ -87866,6 +87564,7 @@
     {
       "id": 1420,
       "platform_framework": [
+        "8",
         "16",
         "32"
       ],
@@ -87878,14 +87577,14 @@
       ],
       "field_default_value": "'circle'",
       "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标",
+      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标、值为 'none' 则表示没有图标",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-08-10 05:23:21",
       "update_time": "2021-12-25 15:54:08",
       "event_output": null,
-      "custom_field_type": "'circle' | 'line' | 'dot' | 'loading' | Array<TNode>",
+      "custom_field_type": "'circle' | 'line' | 'dot' | 'none' |Array<TNode>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -87896,6 +87595,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -87943,45 +87643,6 @@
         "String",
         "Array",
         "TNode"
-      ]
-    },
-    {
-      "id": 1712656661,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1",
-        "16"
-      ],
-      "field_default_value": "'circle'",
-      "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标、值为 'none' 则表示没有图标",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 09:57:41",
-      "update_time": "2024-04-09 09:57:41",
-      "event_output": null,
-      "custom_field_type": "'circle' | 'line' | 'dot' | 'none' |Array<TNode>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Array"
       ]
     },
     {
@@ -89013,6 +88674,7 @@
     {
       "id": 3540,
       "platform_framework": [
+        "8",
         "16",
         "32"
       ],
@@ -89032,46 +88694,6 @@
       "create_time": "2023-06-21 04:08:54",
       "update_time": "2023-06-21 04:08:54",
       "event_output": null,
-      "custom_field_type": "'circle' | 'line' | 'dot' | 'loading' | Array<TNode>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Array"
-      ]
-    },
-    {
-      "id": 1712656800,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "1",
-        "16"
-      ],
-      "field_default_value": "'circle'",
-      "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:00:00",
-      "update_time": "2024-04-09 10:00:00",
-      "event_output": null,
       "custom_field_type": "'circle' | 'line' | 'dot' | Array<TNode>",
       "syntactic_sugar": null,
       "readonly": 1,
@@ -89083,7 +88705,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -89269,6 +88893,7 @@
     {
       "id": 3420,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -89279,9 +88904,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'left'",
+      "field_default_value": "left",
       "field_enum": "left/right",
-      "field_desc_zh": "复选框和内容相对位置；仅在使用 options 时生效。",
+      "field_desc_zh": "复选框和内容相对位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -89299,46 +88924,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712656884,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "placement",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right",
-      "field_desc_zh": "复选框和内容相对位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:01:24",
-      "update_time": "2024-04-09 10:01:24",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -91823,7 +91412,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用评分",
       "field_desc_en": null,
@@ -91860,9 +91449,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Rate",
       "field_category": 1,
@@ -91892,9 +91479,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Number"
@@ -91904,6 +91489,8 @@
       "id": 1712916879,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Rate",
@@ -91933,6 +91520,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101594,7 +101183,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -104500,7 +104089,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "禁用全部操作",
       "field_desc_en": null,
@@ -104646,7 +104235,9 @@
     {
       "id": 1712658566,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Stepper",
       "field_category": 1,
@@ -104656,7 +104247,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否整形",
+      "field_desc_zh": "是否整型",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -104674,7 +104265,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -105144,7 +104737,9 @@
     {
       "id": 1712658600,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Stepper",
       "field_category": 2,
@@ -105173,7 +104768,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -107706,6 +107303,72 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1719280157,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 2,
+      "field_name": "dragend",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滑动结束事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-25 01:49:17",
+      "update_time": "2024-06-25 01:49:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1719280112,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 2,
+      "field_name": "dragstart",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滑动开始事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-25 01:48:32",
+      "update_time": "2024-06-25 01:48:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -120618,7 +120281,9 @@
     {
       "id": 1712658977,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -120646,7 +120311,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -121332,7 +120999,7 @@
       "create_time": "2021-02-21 14:00:57",
       "update_time": "2022-02-19 07:24:52",
       "event_output": null,
-      "custom_field_type": "TextareaValue【type TextareaValue = string】",
+      "custom_field_type": "TextareaValue【type TextareaValue = string | number】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -127766,6 +127433,53 @@
       ]
     },
     {
+      "id": 1718771238,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "allowDrop",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "判断节点是否可以执行 drop 操作，泛型 `T` 表示树节点 TS 类型",
+      "field_desc_en": "Determine whether the node can execute the drop operation",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-06-19 04:27:18",
+      "update_time": "2024-06-19 04:27:18",
+      "event_output": null,
+      "custom_field_type": "(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2444,
       "platform_framework": [
         "1",
@@ -132007,10 +131721,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -132040,10 +131751,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -132776,7 +132484,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -132807,48 +132516,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3231,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "TreeSelect",
-      "field_category": 1,
-      "field_name": "multiple",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否多选",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-12-21 09:07:26",
-      "update_time": "2022-12-21 09:07:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -132992,10 +132659,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -133025,10 +132689,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -133244,10 +132905,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -133277,10 +132935,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -133291,10 +132946,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -133324,10 +132976,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -133463,10 +133112,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -133496,10 +133142,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -133594,10 +133237,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -133630,10 +133270,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -133645,6 +133282,9 @@
     {
       "id": 1712652245,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TreeSelect",
@@ -133675,6 +133315,9 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -133807,10 +133450,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 2,
@@ -133838,16 +133478,14 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
     {
       "id": 3232,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "TreeSelect",
@@ -133859,7 +133497,7 @@
       "field_desc_zh": "点击任何节点均会触发；level 代表当前点击的层级，0 代表最左侧，依次递进",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: TreeSelectValue, level: TreeLevel) 【type TreeLevel: 0 | 1 | 2】",
+      "event_input": "(value: TreeSelectValue, level: TreeLevel) 【type TreeLevel = 0 | 1 | 2】",
       "create_time": "2022-12-21 13:44:30",
       "update_time": "2022-12-21 13:44:30",
       "event_output": null,
@@ -133874,6 +133512,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []

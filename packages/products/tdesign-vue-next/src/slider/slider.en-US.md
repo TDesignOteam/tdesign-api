@@ -1,11 +1,12 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Slider Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 inputNumberProps | Boolean / Object | false | Typescript：`boolean \| InputNumberProps`，[InputNumber API Documents](./input-number?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/slider/type.ts) | N
 label | String / Boolean / Slot / Function | true | Typescript：`string \| boolean \| TNode<{ value: SliderValue; position?: 'start' \| 'end' }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 layout | String | horizontal | options: vertical/horizontal | N
