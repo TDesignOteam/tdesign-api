@@ -4,6 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { SizeEnum } from '../common/common';
+
 export interface TdStepperProps {
   /**
    * 禁用输入框
@@ -15,7 +17,6 @@ export interface TdStepperProps {
   };
   /**
    * 禁用全部操作
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
@@ -29,7 +30,7 @@ export interface TdStepperProps {
     value?: ['t-class', 't-class-input', 't-class-add', 't-class-minus'];
   };
   /**
-   * 输入框宽度
+   * 输入框宽度，默认单位 `px`
    */
   inputWidth?: {
     type: NumberConstructor;
@@ -50,6 +51,14 @@ export interface TdStepperProps {
   min?: {
     type: NumberConstructor;
     value?: number;
+  };
+  /**
+   * 组件尺寸
+   * @default medium
+   */
+  size?: {
+    type: StringConstructor;
+    value?: SizeEnum;
   };
   /**
    * 步长
@@ -73,7 +82,7 @@ export interface TdStepperProps {
    */
   theme?: {
     type: StringConstructor;
-    value?: 'normal' | 'grey';
+    value?: 'normal' | 'filled' | 'outline';
   };
   /**
    * 值

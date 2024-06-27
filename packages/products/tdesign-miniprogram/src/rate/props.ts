@@ -23,19 +23,34 @@ const props: TdRateProps = {
   },
   /** 是否禁用评分 */
   disabled: {
-    type: Boolean,
+    type: null,
+    value: undefined,
   },
   /** 评分图标的间距 */
   gap: {
     type: Number,
-    value: 4,
+    value: 8,
+  },
+  /** 自定义评分图标，[选中图标，未选中图标] */
+  icon: {
+    type: null,
+  },
+  /** 定义图标前缀 */
+  iconPrefix: {
+    type: String,
+    value: undefined,
+  },
+  /** 选择评分弹框的位置 */
+  placement: {
+    type: String,
+    value: 'top',
   },
   /** 是否显示对应的辅助文字 */
   showText: {
     type: Boolean,
     value: false,
   },
-  /** 评分图标的大小，示例：`20px` */
+  /** 评分图标的大小 */
   size: {
     type: String,
     value: '24px',
@@ -60,7 +75,7 @@ const props: TdRateProps = {
     type: Number,
     value: 0,
   },
-  /** 形状类型，有描边类型和填充类型两种 */
+  /** 已废弃。形状类型，有描边类型和填充类型两种 */
   variant: {
     type: String,
     value: 'outline',
