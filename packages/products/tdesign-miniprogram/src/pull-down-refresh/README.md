@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
+disabled | Boolean | false | 是否禁用下拉刷新 | N
 enable-back-to-top | Boolean | true | `1.1.5`。iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向。自 2.27.3 版本开始，若非显式设置为 false，则在显示尺寸大于屏幕 90% 时自动开启 | N
 enable-passive | Boolean | false | `1.1.5`。开启 passive 特性，能优化一定的滚动性能 | N
 header | Slot | - | `1.2.10`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
