@@ -18,3 +18,5 @@ right | Array / Slot | - | Typescript：`Array<SwipeActionItem>` `interface Swip
 name | params | description
 -- | -- | --
 click | `(action: SwipeActionItem, source: SwipeSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/>
+dragend | \- | \-
+dragstart | \- | \-

@@ -8,6 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+disabled | Boolean | false | disabled pull down refresh | N
 enable-back-to-top | Boolean | true | `1.1.5` | N
 enable-passive | Boolean | false | `1.1.5` | N
 header | Slot | - | `1.2.10`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
