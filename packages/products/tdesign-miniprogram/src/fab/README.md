@@ -12,6 +12,7 @@ button-props | Object | - | 透传至 Button 组件。TS 类型：`ButtonProps`�
 draggable | String / Boolean | false | `true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动 | N
 icon | String | - | 图标 | N
 text | String | - | 文本内容 | N
+using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 
 ### Fab Events
 

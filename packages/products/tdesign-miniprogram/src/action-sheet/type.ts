@@ -4,7 +4,17 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { PopupProps } from '../popup/index';
+
 export interface TdActionSheetProps {
+  /**
+   * 水平对齐方式
+   * @default center
+   */
+  align?: {
+    type: StringConstructor;
+    value?: 'center' | 'left';
+  };
   /**
    * 设置取消按钮的文本
    * @default ''
@@ -22,11 +32,27 @@ export interface TdActionSheetProps {
     value?: number;
   };
   /**
+   * 动作面板描述文字
+   * @default ''
+   */
+  description?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 菜单项
    */
   items: {
     type: ArrayConstructor;
     value?: Array<string | ActionSheetItem>;
+  };
+  /**
+   * popupProps透传
+   * @default {}
+   */
+  popupProps?: {
+    type: ObjectConstructor;
+    value?: PopupProps;
   };
   /**
    * 是否显示取消按钮
@@ -37,12 +63,12 @@ export interface TdActionSheetProps {
     value?: boolean;
   };
   /**
-   * 自定义组件样式
-   * @default ''
+   * 是否显示遮罩层
+   * @default true
    */
-  style?: {
-    type: StringConstructor;
-    value?: string;
+  showOverlay?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 展示类型，列表和表格形式展示
@@ -51,6 +77,14 @@ export interface TdActionSheetProps {
   theme?: {
     type: StringConstructor;
     value?: 'list' | 'grid';
+  };
+  /**
+   * 是否使用了自定义导航栏
+   * @default false
+   */
+  usingCustomNavbar?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 显示与隐藏
@@ -74,4 +108,6 @@ export interface ActionSheetItem {
   label: string;
   color?: string;
   disabled?: boolean;
+  icon?: string;
+  suffixIcon?: string;
 }

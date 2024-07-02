@@ -17,6 +17,7 @@ placement | String | middle | options:  top/middle/bottom | N
 prevent-scroll-through | Boolean | false | \- | N
 show-overlay | Boolean | false | \- | N
 theme | String | - | options: loading/success/error | N
+using-custom-navbar | Boolean | false | \- | N
 
 ### Toast Events
 

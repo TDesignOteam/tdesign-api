@@ -6,17 +6,22 @@
 
 import { TdOverlayProps } from './type';
 const props: TdOverlayProps = {
-  /** 自定义样式（即将废弃，推荐使用 `style` ） */
+  /** 遮罩层的背景色 */
+  backgroundColor: {
+    type: String,
+    value: '',
+  },
+  /** 自定义组件样式 */
   customStyle: {
     type: String,
     value: '',
   },
-  /** 动画时长，单位毫秒 */
+  /** 背景色过渡时间，单位毫秒 */
   duration: {
     type: Number,
     value: 300,
   },
-  /** 防止滚动穿透 */
+  /** 防止滚动穿透，即不允许点击和滚动 */
   preventScrollThrough: {
     type: Boolean,
     value: true,
@@ -26,27 +31,20 @@ const props: TdOverlayProps = {
     type: String,
     value: '',
   },
-  /** 遮罩层是否透明 */
-  transparent: {
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
     type: Boolean,
     value: false,
   },
   /** 是否展示 */
   visible: {
     type: Boolean,
-    value: null,
-    required: true,
+    value: false,
   },
-  /** 是否展示，非受控属性 */
-  defaultVisible: {
-    type: Boolean,
-    value: true,
-    required: true,
-  },
-  /** 遮罩的层级 */
+  /** 遮罩层级 */
   zIndex: {
     type: Number,
-    value: 1000,
+    value: 11000,
   },
 };
 

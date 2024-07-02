@@ -15,6 +15,7 @@ items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: 
 placement | String | right | options: left/right | N
 show-overlay | Boolean | true | \- | N
 title | String / Slot | - | `0.29.0`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | \- | N
 z-index | Number | 11500 | \- | N
 
