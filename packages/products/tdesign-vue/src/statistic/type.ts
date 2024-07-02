@@ -42,7 +42,7 @@ export interface TdStatisticProps {
    */
   prefix?: string | TNode;
   /**
-   * 默认展示进位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时隐藏分隔符
+   * 默认展示千位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时展示默认分隔符
    * @default ,
    */
   separator?: string;
@@ -76,9 +76,9 @@ export interface TdStatisticProps {
 /** 组件实例方法 */
 export interface StatisticInstanceFunctions {
   /**
-   * 设置数字滚动变化效果，从一个数字到另一个数字
+   * 开始动画
    */
-  start: (from: number, to: number) => void;
+  start: () => void;
 }
 
 export interface animation {
