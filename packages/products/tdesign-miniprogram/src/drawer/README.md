@@ -15,6 +15,7 @@ items | Array | - | 抽屉里的列表项。TS 类型：`DrawerItem[] ` `interfa
 placement | String | right | 抽屉方向。可选项：left/right | N
 show-overlay | Boolean | true | 是否显示遮罩层 | N
 title | String / Slot | - | `0.29.0`。抽屉的标题。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | false | 组件是否可见 | N
 z-index | Number | 11500 | 抽屉层级，样式默认为 11500 | N
 

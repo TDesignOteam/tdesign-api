@@ -17,6 +17,7 @@ popup-props | Object | {} | popupProps透传。TS 类型：`PopupProps`，[Popup
 show-cancel | Boolean | true | 是否显示取消按钮 | N
 show-overlay | Boolean | true | 是否显示遮罩层 | N
 theme | String | list | 展示类型，列表和表格形式展示。可选项：list/grid | N
+using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | false | 必需。显示与隐藏 | Y
 default-visible | Boolean | undefined | 必需。显示与隐藏。非受控属性 | Y
 
