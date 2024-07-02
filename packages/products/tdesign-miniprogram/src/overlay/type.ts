@@ -6,7 +6,15 @@
 
 export interface TdOverlayProps {
   /**
-   * 自定义样式（即将废弃，推荐使用 `style` ）
+   * 遮罩层的背景色
+   * @default ''
+   */
+  backgroundColor?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 自定义组件样式
    * @default ''
    */
   customStyle?: {
@@ -14,7 +22,7 @@ export interface TdOverlayProps {
     value?: string;
   };
   /**
-   * 动画时长，单位毫秒
+   * 背景色过渡时间，单位毫秒
    * @default 300
    */
   duration?: {
@@ -22,7 +30,7 @@ export interface TdOverlayProps {
     value?: number;
   };
   /**
-   * 防止滚动穿透
+   * 防止滚动穿透，即不允许点击和滚动
    * @default true
    */
   preventScrollThrough?: {
@@ -38,32 +46,24 @@ export interface TdOverlayProps {
     value?: string;
   };
   /**
-   * 遮罩层是否透明
+   * 是否使用了自定义导航栏
    * @default false
    */
-  transparent?: {
+  usingCustomNavbar?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
    * 是否展示
-   * @default true
+   * @default false
    */
-  visible: {
+  visible?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 是否展示，非受控属性
-   * @default true
-   */
-  defaultVisible: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 遮罩的层级
-   * @default 1000
+   * 遮罩层级
+   * @default 11000
    */
   zIndex?: {
     type: NumberConstructor;

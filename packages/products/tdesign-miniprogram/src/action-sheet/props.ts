@@ -6,6 +6,11 @@
 
 import { TdActionSheetProps } from './type';
 const props: TdActionSheetProps = {
+  /** 水平对齐方式 */
+  align: {
+    type: String,
+    value: 'center',
+  },
   /** 设置取消按钮的文本 */
   cancelText: {
     type: String,
@@ -16,25 +21,40 @@ const props: TdActionSheetProps = {
     type: Number,
     value: 8,
   },
+  /** 动作面板描述文字 */
+  description: {
+    type: String,
+    value: '',
+  },
   /** 菜单项 */
   items: {
     type: Array,
     required: true,
+  },
+  /** popupProps透传 */
+  popupProps: {
+    type: Object,
+    value: {},
   },
   /** 是否显示取消按钮 */
   showCancel: {
     type: Boolean,
     value: true,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
+  /** 是否显示遮罩层 */
+  showOverlay: {
+    type: Boolean,
+    value: true,
   },
   /** 展示类型，列表和表格形式展示 */
   theme: {
     type: String,
     value: 'list',
+  },
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
+    type: Boolean,
+    value: false,
   },
   /** 显示与隐藏 */
   visible: {

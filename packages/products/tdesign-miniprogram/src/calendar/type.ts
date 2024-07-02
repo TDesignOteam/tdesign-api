@@ -8,7 +8,15 @@ import { ButtonProps } from '../button/index';
 
 export interface TdCalendarProps {
   /**
-   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。
+   * 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible
+   * @default true
+   */
+  autoClose?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性
    * @default ''
    */
   confirmBtn?: {
@@ -35,26 +43,18 @@ export interface TdCalendarProps {
    */
   maxDate?: {
     type: NumberConstructor;
-    value?: number | date;
+    value?: number;
   };
   /**
    * 最小可选的日期，不传则默认今天
    */
   minDate?: {
     type: NumberConstructor;
-    value?: number | date;
+    value?: number;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 标题，不传默认为“请选择日期”
-   * @default ''
+   * 标题
+   * @default '请选择日期'
    */
   title?: {
     type: StringConstructor;
@@ -62,28 +62,44 @@ export interface TdCalendarProps {
   };
   /**
    * 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择
-   * @default single
+   * @default 'single'
    */
   type?: {
     type: StringConstructor;
     value?: 'single' | 'multiple' | 'range';
   };
   /**
+   * 是否使用弹出层包裹日历
+   * @default true
+   */
+  usePopup?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 是否使用了自定义导航栏
+   * @default false
+   */
+  usingCustomNavbar?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
    */
   value?: {
     type: null;
-    value?: CalendarValue | CalendarValue[];
+    value?: number | number[];
   };
   /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
    */
   defaultValue?: {
     type: null;
-    value?: CalendarValue | CalendarValue[];
+    value?: number | number[];
   };
   /**
-   * 是否显示日历
+   * 是否显示日历；`usePopup` 为 true 时有效
    * @default false
    */
   visible?: {
@@ -104,5 +120,3 @@ export interface TDate {
   prefix?: string;
   suffix?: string;
 }
-
-export type CalendarValue = number | Date;
