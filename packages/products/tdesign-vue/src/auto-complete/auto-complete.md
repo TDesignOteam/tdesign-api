@@ -1,14 +1,16 @@
 :: BASE_DOC ::
 
 ## API
+
 ### AutoComplete Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 autofocus | Boolean | - | 自动获取焦点 | N
+borderless | Boolean | false | 无边框模式 | N
 clearable | Boolean | - | 是否允许清空 | N
 default | String / Slot / Function | - | 触发显示联想词下拉框的元素，同 `triggerElement`。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-disabled | Boolean | - | 是否禁用 | N
+disabled | Boolean | undefined | 是否禁用 | N
 filter | Function | - | 自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`。TS 类型：`(filterWords: string, option: T) => boolean \| Promise<boolean>` | N
 filterable | Boolean | true | 是否根据输入内容过滤联想词。默认过滤规则不区分大小写，全文本任意位置匹配。如果默认搜索规则不符合业务需求，可以更为使用 `filter` 自定义过滤规则。部分场景下输入关键词和下拉联想词完全不同，此时可以设置为 `false` | N
 highlightKeyword | Boolean | true | 是否高亮联想词中和输入值的相同部分 | N
@@ -27,7 +29,7 @@ triggerElement | String / Slot / Function | - | 触发显示联想词下拉框�
 value | String | - | 输入框的值，即当前指定的联想词。支持语法糖 `v-model` | N
 defaultValue | String | - | 输入框的值，即当前指定的联想词。非受控属性 | N
 onBlur | Function |  | TS 类型：`(context: { e: FocusEvent; value: string }) => void`<br/>失去焦点时触发 | N
-onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>清空按钮点击时触发 | N
 onCompositionend | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入结束时触发 | N
 onCompositionstart | Function |  | TS 类型：`(context: { e: CompositionEvent; value: string }) => void`<br/>中文输入开始时触发 | N
@@ -40,7 +42,7 @@ onSelect | Function |  | TS 类型：`(value: string, context: { e: MouseEvent \
 名称 | 参数 | 描述
 -- | -- | --
 blur | `(context: { e: FocusEvent; value: string })` | 失去焦点时触发
-change | `(value: string, context?: { e?: InputEvent \| MouseEvent \| KeyboardEvent })` | 输入框值发生变化时触发
+change | `(value: string, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent })` | 输入框值发生变化时触发
 clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
 compositionend | `(context: { e: CompositionEvent; value: string })` | 中文输入结束时触发
 compositionstart | `(context: { e: CompositionEvent; value: string })` | 中文输入开始时触发

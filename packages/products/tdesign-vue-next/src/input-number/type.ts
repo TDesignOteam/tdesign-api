@@ -73,6 +73,7 @@ export interface TdInputNumberProps<T = InputNumberValue> {
   size?: 'small' | 'medium' | 'large';
   /**
    * 文本框状态
+   * @default default
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
@@ -146,4 +147,4 @@ export interface ChangeContext {
   e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent;
 }
 
-export type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear';
+export type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props';

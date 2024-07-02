@@ -47,13 +47,25 @@ export interface TdAvatarProps {
   shape?: ShapeEnum;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定
-   * @default ''
+   * @default medium
    */
   size?: string;
+  /**
+   * 点击时触发
+   */
+  onClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 右键点击时触发
+   */
+  onContextmenu?: (context: { e: MouseEvent }) => void;
   /**
    * 图片加载失败时触发
    */
   onError?: (context: { e: Event }) => void;
+  /**
+   * 鼠标移入时触发
+   */
+  onHover?: (context: { e: MouseEvent }) => void;
 }
 
 export interface TdAvatarGroupProps {

@@ -20,7 +20,7 @@ export default {
   /** 展开的子菜单集合 */
   expanded: {
     type: Array as PropType<TdHeadMenuProps['expanded']>,
-    default: undefined,
+    default: undefined as TdHeadMenuProps['expanded'],
   },
   /** 展开的子菜单集合，非受控属性 */
   defaultExpanded: {
@@ -47,11 +47,11 @@ export default {
   /** 激活菜单项 */
   value: {
     type: [String, Number] as PropType<TdHeadMenuProps['value']>,
-    default: undefined,
+    default: undefined as TdHeadMenuProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdHeadMenuProps['value']>,
-    default: undefined,
+    default: undefined as TdHeadMenuProps['value'],
   },
   /** 激活菜单项，非受控属性 */
   defaultValue: {

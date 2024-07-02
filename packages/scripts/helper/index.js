@@ -14,6 +14,8 @@ const { data: ALL_API } = require('../api.json');
 const { FRAMEWORK_MAP } = require('../config');
 const kebabCase = require('lodash/kebabCase');
 const chalk = require('chalk');
+const prettier = require('prettier');
+const prettierConfig = require('../config/prettier');
  /**
   * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
   */
@@ -32,7 +34,7 @@ start();
 
 function start() {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
-    return console.log(chalk.blue(`不支持向当前框架生成代码提示文件（框架：${framework}）`));
+    return console.log(chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'）`));
   }
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
   // [ labe, value ] => { label: value }
@@ -44,10 +46,11 @@ function start() {
 }
 
 function generateHelper(baseData, framework) {
-  const { webTypes, tags, attributes } = getHelperData(baseData, framework);
+  const { webTypes, tags, attributes, volar } = getHelperData(baseData, framework);
   write(framework, 'tags.json', tags);
   write(framework, 'attributes.json', attributes);
   write(framework, 'web-types.json', webTypes);
+  writeVolar(framework,volar)
 }
 
 function getHelperData(baseData, framework) {
@@ -55,11 +58,14 @@ function getHelperData(baseData, framework) {
   const tags = {};
   const attributes = {};
   const vueComponents = [];
+  const volar = [];
 
   for (const key in baseData) {
     if (!isComponent(key)) {
       continue;
     }
+    volar.push(key);
+
     const componentName = `${PREFIX}-${kebabCase(key)}`;
     const props = [];
     const propsList = [];
@@ -177,7 +183,8 @@ function getHelperData(baseData, framework) {
           'vue-components': vueComponents,
         },
       },
-    }
+    },
+    volar
   }
 }
 
@@ -187,6 +194,28 @@ function write(framework, name, data) {
   const buffer = JSON.stringify(data, null, 2);
 
   writeFileRecursive(fileName, buffer);
+}
+
+function writeVolar(framework, data) {
+  const current = FRAMEWORK_MAP[framework];
+  const readerGlobalComponents=data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
+  const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
+  const volarTemplate=`
+  /**
+   * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+   * https://github.com/TDesignOteam/tdesign-api
+   * eslint-disable
+   * */
+  declare module '${declareModule}' {
+    export interface GlobalComponents {
+      ${readerGlobalComponents.join('\n')}
+    }
+  }
+  
+  export {};
+  
+  `
+  writeFileRecursive(current.volarPath, prettier.format(volarTemplate, prettierConfig));
 }
 
 function writeFileRecursive(name, buffer) {

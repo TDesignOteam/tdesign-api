@@ -18,8 +18,11 @@ export default {
   default: {
     type: [String, Function] as PropType<TdButtonProps['default']>,
   },
-  /** 禁用状态 */
-  disabled: Boolean,
+  /** 禁用状态。优先级：Button.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否为幽灵按钮（镂空按钮） */
   ghost: Boolean,
   /** 跳转地址。href 存在时，按钮标签默认使用 `<a>` 渲染；如果指定了 `tag` 则使用指定的标签渲染 */
@@ -33,6 +36,10 @@ export default {
   },
   /** 是否显示为加载状态 */
   loading: Boolean,
+  /** 透传至 Loading 组件 */
+  loadingProps: {
+    type: Object as PropType<TdButtonProps['loadingProps']>,
+  },
   /** 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形 */
   shape: {
     type: String as PropType<TdButtonProps['shape']>,

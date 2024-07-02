@@ -24,7 +24,6 @@ export interface TdTextareaProps {
   autosize?: boolean | { minRows?: number; maxRows?: number };
   /**
    * 是否禁用文本框
-   * @default false
    */
   disabled?: boolean;
   /**
@@ -38,12 +37,16 @@ export interface TdTextareaProps {
   /**
    * 用户最多可以输入的字符个数
    */
-  maxlength?: number;
+  maxlength?: string | number;
   /**
    * 名称，HTML 元素原生属性
    * @default ''
    */
   name?: string;
+  /**
+   * 字数超出限制时触发
+   */
+  onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
   /**
    * 占位符
    */

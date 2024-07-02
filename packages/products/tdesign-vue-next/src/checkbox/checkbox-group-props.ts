@@ -8,8 +8,13 @@ import { TdCheckboxGroupProps } from '../checkbox/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled */
-  disabled: Boolean,
+  /** 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 是否启用懒加载。子组件 Checkbox 数据量大时建议开启；加载复杂内容或大量图片时建议开启 */
+  lazyLoad: Boolean,
   /** 支持最多选中的数量 */
   max: {
     type: Number,
@@ -27,11 +32,11 @@ export default {
   /** 选中值 */
   value: {
     type: Array as PropType<TdCheckboxGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdCheckboxGroupProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdCheckboxGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdCheckboxGroupProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

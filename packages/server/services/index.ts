@@ -2,6 +2,7 @@ import { BaseObject, QueryPaginationProps } from '../../types';
 import { isEmpty } from 'lodash';
 import squel from 'squel';
 import executeSQL from './sqlite';
+import moment from 'moment';
 
 const tableName = 't_api';
 
@@ -22,8 +23,6 @@ class TAPI {
     if (columns) {
       columns.map(column => querySQL.field(column));
     }
-    const queryParams: any = {
-    };
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
       const { field_name: fieldName, component } = params;
@@ -53,20 +52,18 @@ class TAPI {
         expr.and(`${paramName} = "${params[paramName]}"`);
       });
     }
-    // 分页参数设置
-    if (limitObj) {
-      const { size, offset = 0 } = limitObj;
-      queryParams.limit = size;
-      queryParams.offset = offset;
-    }
-    
+
     querySQL.where(expr)
       .order('component')
       .order('field_category')
-      .order('field_name')
-      .limit(queryParams.limit)
-      .offset(queryParams.offset);
-    
+      .order('field_name');
+
+    // 分页参数设置
+    if (limitObj) {
+      const { size, offset = 0 } = limitObj;
+      querySQL.limit(size).offset(offset);
+    }
+
     countSQL.where(expr);
 
     // 查询符合条件的记录、统计条数
@@ -76,11 +73,9 @@ class TAPI {
   }
 
   public static async create(params: {}) {
-    const queryMaxID = squel.select().field('MAX(id)').from(tableName).toString();
-    const maxID = await executeSQL(queryMaxID);
-    
-    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', Number(maxID[0]['MAX(id)']) + 1);
-    
+    const newID = moment().unix();
+    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
+
     Object.keys(params).map(param => insertSQL.set(param, params[param]));
     const res = await executeSQL(insertSQL.toString(), true);
     return res;
@@ -88,7 +83,7 @@ class TAPI {
 
   public static async update(params: {}, id: number) {
     const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
-    
+
     Object.keys(params).map(param => updateSQL.set(param, params[param]));
     const res = await executeSQL(updateSQL.toString(), true);
     return res;
@@ -96,7 +91,7 @@ class TAPI {
 
   public static async delete(id: number) {
     const deleteSQL = squel.delete().from(tableName).where(`id = ${id}`);
-    
+
     const res = await executeSQL(deleteSQL.toString(), true);
     return res;
   }

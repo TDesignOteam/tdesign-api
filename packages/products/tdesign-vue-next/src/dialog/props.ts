@@ -31,13 +31,15 @@ export default {
     default: undefined,
   },
   /** 点击蒙层时是否触发关闭事件 */
-  closeOnOverlayClick: {
-    type: Boolean,
-    default: undefined,
-  },
+  closeOnOverlayClick: Boolean,
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['confirmBtn']>,
+  },
+  /** 确认按钮加载状态 */
+  confirmLoading: {
+    type: Boolean,
+    default: undefined,
   },
   /** 是否在按下回车键时，触发确认事件 */
   confirmOnEnter: Boolean,
@@ -47,6 +49,15 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
+  /** 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' */
+  dialogClassName: {
+    type: String,
+    default: '',
+  },
+  /** 作用于对话框本身的样式 */
+  dialogStyle: {
+    type: Object as PropType<TdDialogProps['dialogStyle']>,
+  },
   /** 对话框是否可以拖拽（仅在非模态对话框时有效） */
   draggable: Boolean,
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容 */

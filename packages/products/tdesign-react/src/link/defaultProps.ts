@@ -4,4 +4,9 @@
 
 import { TdLinkProps } from './type';
 
-export const linkDefaultProps: TdLinkProps = { hover: 'underline', size: 'medium', theme: 'default' };
+export const linkDefaultProps: TdLinkProps = {
+  disabled: undefined,
+  hover: 'underline',
+  size: 'medium',
+  theme: 'default',
+};

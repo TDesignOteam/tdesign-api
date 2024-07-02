@@ -29,6 +29,7 @@
   'TagConfig',
   'StepsConfig',
   'AlertConfig',
+  'DescriptionsConfig',
   'AnchorConfig',
   'MessageConfig',
   'ImageConfig',
@@ -52,6 +53,7 @@ const COMPONENT_API_MD_MAP = {
   },
   Radio: ['Radio', 'RadioGroup'],
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
+  Descriptions: ['Descriptions', 'DescriptionItem'],
   Tabs: ['Tabs', 'TabPanel'],
   TabBar: ['TabBar', 'TabBarItem'],
   Pagination: ['Pagination', 'PaginationMini'],
@@ -74,7 +76,7 @@ const COMPONENT_API_MD_MAP = {
   Grid: ['Grid', 'Row', 'Col', 'GridItem'],
   Icon: ['IconSVG', 'Iconfont'],
   Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
-  Tag: ['Tag', 'CheckTag'],
+  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
   Collapse: ['Collapse', 'CollapsePanel'],
   Dropdown: {
     list: ['Dropdown', 'DropdownItem'],
@@ -127,7 +129,8 @@ const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
     excludes: ['Miniprogram']
   },
-  Popup: ['Popup','$Popup']
+  Popup: ['Popup','$Popup'],
+  Typography: ['Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -172,7 +175,7 @@ const TYPES_COMBINE_MAP = {
     list: ['Pagination', 'PaginationMini'],
   },
   Tag: {
-    list: ['Tag', 'CheckTag'],
+    list: ['Tag', 'CheckTag', 'CheckTagGroup'],
     excludes: ['Miniprogram']
   },
   Collapse: {
@@ -216,6 +219,9 @@ const TYPES_COMBINE_MAP = {
   },
   Calendar: {
     list: ['Calendar', 'CalendarController', 'CalendarCell'],
+  },
+  Descriptions: {
+    list: ['Descriptions', 'DescriptionItem'],
   },
   Menu: {
     list: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
@@ -280,10 +286,16 @@ const TYPES_COMBINE_MAP = {
   Tooltip: {
     list: ['Tooltip', 'TooltipLite'],
   },
+  SideBar: {
+    list:  ['SideBar', 'SideBarItem']
+  },
   Indexes: {
     list: ['Indexes', 'IndexesAnchor'],
     excludes: ['Miniprogram']
   },
+  Typography: {
+    list: ['Typography','Text', 'Title','Paragraph','TypographyEllipsis','TypographyCopyable'],
+  }
 };
 
 exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;

@@ -1,19 +1,21 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Stepper Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 disable-input | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
-external-classes | Array | - | `['t-class', 't-class-input', 't-class-add', 't-class-minus']` | N
+disabled | Boolean | undefined | \- | N
 input-width | Number | - | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 step | Number | 1 | \- | N
-style | String | - | \- | N
-theme | String | normal | stylish。options：normal/grey | N
+theme | String | normal | stylish。options: normal/filled/outline | N
 value | String / Number | 0 | \- | N
 default-value | String / Number | undefined | uncontrolled property | N
 
@@ -24,3 +26,11 @@ name | params | description
 blur | `({ type: string \| number })` | \-
 change | `({ value: string \| number })` | \-
 overlimit | `({type: 'minus' \| 'plus'})` | \-
+### Stepper External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-input | \-
+t-class-minus | \-
+t-class-plus | \-

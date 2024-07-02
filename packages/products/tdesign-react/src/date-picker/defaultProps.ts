@@ -6,25 +6,32 @@ import { TdDatePickerProps, TdDateRangePickerProps, TdDatePickerPanelProps, TdDa
 
 export const datePickerDefaultProps: TdDatePickerProps = {
   allowInput: false,
+  borderless: false,
   clearable: false,
   defaultTime: '00:00:00',
+  disabled: undefined,
   enableTimePicker: false,
   format: undefined,
   mode: 'date',
   placeholder: undefined,
   presetsPlacement: 'bottom',
+  size: 'medium',
   status: 'default',
   defaultValue: '',
 };
 
 export const dateRangePickerDefaultProps: TdDateRangePickerProps = {
   allowInput: false,
+  borderless: false,
+  cancelRangeSelectLimit: false,
   clearable: false,
   defaultTime: ['00:00:00', '23:59:59'],
+  disabled: undefined,
   enableTimePicker: false,
   mode: 'date',
   panelPreselection: true,
   presetsPlacement: 'bottom',
+  size: 'medium',
   status: 'default',
   defaultValue: [],
 };

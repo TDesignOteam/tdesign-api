@@ -19,6 +19,7 @@ const path = require('path');
  * commonRelativePath 用于 API 类型定义文件中。type 文件位置相对于 通用类型文件位置(common/global) 的路径
  * componentRelativiePath 用于 API 类型定义文件中。types 文件位置相对于组件文件位置的路径（某些组件的 API 类型包含另一个组件的 TS 类型）
  * helperPath 代码提示文件地址
+ * volarPath volar代码提示文件地址
  * docsPath 文档地址
  * vscodePath 输出 API 文档，用于 vscode 提示插件（项目：vscode-tdesign）
  */
@@ -42,6 +43,7 @@ const FRAMEWORK_MAP = {
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue2`,
     helperPath: `${BASE_PATH_URL}/tdesign-vue/helper`,
+    volarPath: `${BASE_PATH_URL}/tdesign-vue/global.d.ts`,
     docsPath: 'https://tdesign.tencent.com/vue/components/',
     name: 'tdesign-vue',
     TNode,
@@ -65,6 +67,7 @@ const FRAMEWORK_MAP = {
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue3`,
     helperPath: `${BASE_PATH_URL}/tdesign-vue-next/helper`,
+    volarPath: `${BASE_PATH_URL}/tdesign-vue-next/global.d.ts`,
     docsPath: 'https://tdesign.tencent.com/vue-next/components/',
     name: 'tdesign-vue-next',
     TNode,
@@ -114,6 +117,7 @@ const FRAMEWORK_MAP = {
     titleMap: VUE_TITILE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue_mobile`,
     helperPath: `${BASE_PATH_URL}/tdesign-mobile-vue/helper`,
+    volarPath: `${BASE_PATH_URL}/tdesign-mobile-vue/global.d.ts`,
     docsPath: 'https://tdesign.tencent.com/mobile-vue/components/',
     name: 'tdesign-mobile-vue',
     TNode,

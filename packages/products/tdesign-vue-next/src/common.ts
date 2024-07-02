@@ -51,7 +51,7 @@ export type OptionData = {
 } & PlainObject;
 
 export type TreeOptionData<T = string | number> = {
-  children?: Array<TreeOptionData<T>>;
+  children?: Array<TreeOptionData<T>> | boolean;
   /** option label content */
   label?: string | TNode;
   /** option search text */
@@ -68,6 +68,8 @@ export type HorizontalAlignEnum = 'left' | 'center' | 'right';
 
 export type VerticalAlignEnum = 'top' | 'middle' | 'bottom';
 
+export type LayoutEnum = 'vertical' | 'horizontal';
+
 export type ClassName = { [className: string]: any } | ClassName[] | string;
 
 export type CSSSelector = string;
@@ -75,10 +77,15 @@ export type CSSSelector = string;
 export interface KeysType {
   value?: string;
   label?: string;
+  disabled?: string;
+}
+
+export interface TreeKeysType extends KeysType {
+  children?: string;
 }
 
 export interface HTMLElementAttributes {
-  [css: string]: string;
+  [attribute: string]: string;
 }
 
 export interface TScroll {
@@ -114,10 +121,14 @@ export type InfinityScroll = TScroll;
 
 export interface ScrollToElementParams {
   /** 跳转元素下标 */
-  index: number;
+  index?: number;
   /** 跳转元素距离顶部的距离 */
   top?: number;
   /** 单个元素高度非固定场景下，即 isFixedRowHeight = false。延迟设置元素位置，一般用于依赖不同高度异步渲染等场景，单位：毫秒 */
   time?: number;
   behavior?: 'auto' | 'smooth';
+}
+
+export interface ComponentScrollToElementParams extends ScrollToElementParams {
+  key?: string | number;
 }

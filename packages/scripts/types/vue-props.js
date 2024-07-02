@@ -113,8 +113,15 @@ function getDefaultWithType(api, dl, valueType) {
   }
   // 小程序的默认值使用 `value` 表示；Vue 的默认值使用 `default` 表示
   const defaultField = isMiniprogram ? 'value:' : 'default:';
+
   // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
-  return api.field_enum && !isMiniprogram || (api.field_type_text?.length > 1 && currentFramework === 'VueNext(PC)')
+  const isVue3NeedDefaultTsType = currentFramework === 'VueNext(PC)'
+    && (
+      api.field_type_text?.length > 1
+      || (api.custom_field_type && ['\'\'', 'undefined'].includes(dl))
+    );
+
+  return api.field_enum && !isMiniprogram || isVue3NeedDefaultTsType
     ? `${defaultField} ${dl} as ${valueType}`
     : `${defaultField} ${dl}`;
 }
@@ -163,10 +170,20 @@ function formatNormalProps(api, cmp, extraParams = {}) {
       //   && content.push(`optionalTypes: [${optionalTypes.join()}]`);
       content.push(`${indent}type: null`);
     } else {
-      const tType = isMiniprogram && 'Function' === types ? 'null' : types;
+      let  tType = types
+
+      if (isMiniprogram){
+        if ('Function' === types ){
+          tType = 'null'
+        }
+        if ('Boolean' === types && api.field_default_value === 'undefined'){
+          tType = 'null'
+        }
+      }
       content.push(`${indent}type: ${tType}`);
     }
-    const dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
+    let dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
+
     const defaultTypeContent = getDefaultWithType(api, dl, valueType);
     (dl || dl === 0) && content.push(defaultTypeContent);
     if (api.field_required) {
@@ -253,6 +270,9 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     const isMiniprogram = currentFramework === 'Miniprogram';
     const miniprogram = {};
     baseData[cmp].forEach((api) => {
+      //废弃属性不放在 props 中
+      if(api.deprecated) return; 
+      
       // 小程序原生属性替代属性不放在 props 中
       const MP_PROPS = ['MP_PROPS', 'MP_EXCLUDE_PROPS'];
       MP_PROPS.forEach((prop) => {

@@ -10,6 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许输入日期 */
   allowInput: Boolean,
+  /** 无边框模式 */
+  borderless: Boolean,
   /** 是否显示清除按钮 */
   clearable: Boolean,
   /** 时间选择器默认值，当 value/defaultValue 未设置值时有效 */
@@ -22,7 +24,10 @@ export default {
     type: [Object, Array, Function] as PropType<TdDatePickerProps['disableDate']>,
   },
   /** 是否禁用组件 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否显示时间选择 */
   enableTimePicker: Boolean,
   /** 第一天从星期几开始 */
@@ -41,6 +46,10 @@ export default {
   /** 透传给输入框（Input）组件的参数 */
   inputProps: {
     type: Object as PropType<TdDatePickerProps['inputProps']>,
+  },
+  /** 左侧文本 */
+  label: {
+    type: [String, Function] as PropType<TdDatePickerProps['label']>,
   },
   /** 选择器模式 */
   mode: {
@@ -77,6 +86,19 @@ export default {
       return ['left', 'top', 'right', 'bottom'].includes(val);
     },
   },
+  /** 透传 SelectInput 筛选器输入框组件的全部属性 */
+  selectInputProps: {
+    type: Object as PropType<TdDatePickerProps['selectInputProps']>,
+  },
+  /** 输入框尺寸 */
+  size: {
+    type: String as PropType<TdDatePickerProps['size']>,
+    default: 'medium' as TdDatePickerProps['size'],
+    validator(val: TdDatePickerProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
   /** 输入框状态 */
   status: {
     type: String as PropType<TdDatePickerProps['status']>,
@@ -108,6 +130,10 @@ export default {
     type: [String, Number, Array, Date] as PropType<TdDatePickerProps['defaultValue']>,
     default: '',
   },
+  /** 自定义选中项呈现的内容 */
+  valueDisplay: {
+    type: [String, Function] as PropType<TdDatePickerProps['valueDisplay']>,
+  },
   /** 用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ `YYYYMMDD` 这种格式不支持，请勿使用，如果希望支持可以给 `dayjs` 提个 PR。注意和 `format` 的区别，`format` 仅用于处理日期在页面中呈现的格式。`ValueTypeEnum` 即将废弃，请更为使用 `DatePickerValueType` */
   valueType: {
     type: String as PropType<TdDatePickerProps['valueType']>,
@@ -117,8 +143,12 @@ export default {
   onBlur: Function as PropType<TdDatePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdDatePickerProps['onChange']>,
+  /** 如果存在“确定”按钮，则点击“确定”按钮时触发 */
+  onConfirm: Function as PropType<TdDatePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发 */
   onFocus: Function as PropType<TdDatePickerProps['onFocus']>,
   /** 面板选中值后触发 */
   onPick: Function as PropType<TdDatePickerProps['onPick']>,
+  /** 点击预设按钮后触发 */
+  onPresetClick: Function as PropType<TdDatePickerProps['onPresetClick']>,
 };

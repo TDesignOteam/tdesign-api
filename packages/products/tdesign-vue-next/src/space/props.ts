@@ -34,6 +34,6 @@ export default {
   /** 间距大小 */
   size: {
     type: [String, Number, Array] as PropType<TdSpaceProps['size']>,
-    default: 'medium',
+    default: 'medium' as TdSpaceProps['size'],
   },
 };

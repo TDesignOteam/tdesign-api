@@ -5,8 +5,10 @@
 import { TdCascaderProps } from './type';
 
 export const cascaderDefaultProps: TdCascaderProps = {
+  borderless: false,
   checkStrictly: false,
   clearable: false,
+  disabled: undefined,
   filterable: false,
   lazy: true,
   loading: false,

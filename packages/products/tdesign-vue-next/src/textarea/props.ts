@@ -15,10 +15,13 @@ export default {
   /** 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度 */
   autosize: {
     type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
-    default: false,
+    default: false as TdTextareaProps['autosize'],
   },
   /** 是否禁用文本框 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 左侧文本 */
   label: {
     type: [String, Function] as PropType<TdTextareaProps['label']>,
@@ -29,12 +32,16 @@ export default {
   },
   /** 用户最多可以输入的字符个数 */
   maxlength: {
-    type: Number,
+    type: [String, Number] as PropType<TdTextareaProps['maxlength']>,
   },
   /** 名称，HTML 元素原生属性 */
   name: {
     type: String,
     default: '',
+  },
+  /** 字数超出限制时触发 */
+  onValidate: {
+    type: Function as PropType<TdTextareaProps['onValidate']>,
   },
   /** 占位符 */
   placeholder: {
@@ -59,11 +66,11 @@ export default {
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
-    default: undefined,
+    default: undefined as TdTextareaProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
-    default: undefined,
+    default: undefined as TdTextareaProps['value'],
   },
   /** 文本框值，非受控属性 */
   defaultValue: {

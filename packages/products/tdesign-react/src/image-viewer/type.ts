@@ -14,6 +14,11 @@ export interface TdImageViewerProps {
    */
   closeBtn?: TNode;
   /**
+   * 按下 ESC 时是否触发图片预览器关闭事件
+   * @default true
+   */
+  closeOnEscKeydown?: boolean;
+  /**
    * 是否在点击遮罩层时，触发预览关闭
    */
   closeOnOverlay?: boolean;
@@ -22,20 +27,34 @@ export interface TdImageViewerProps {
    */
   draggable?: boolean;
   /**
-   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度
+   * 图片预览中的 `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+   */
+  imageReferrerpolicy?:
+    | 'no-referrer'
+    | 'no-referrer-when-downgrade'
+    | 'origin'
+    | 'origin-when-cross-origin'
+    | 'same-origin'
+    | 'strict-origin'
+    | 'strict-origin-when-cross-origin'
+    | 'unsafe-url';
+  /**
+   *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例
    */
   imageScale?: ImageScale;
   /**
    * 图片数组。`mainImage` 表示主图，必传；`thumbnail` 表示缩略图，如果不存在，则使用主图显示；`download` 是否允许下载图片，默认允许下载。示例: `['img_url_1', 'img_url_2']`，`[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]`
    * @default []
    */
-  images?: Array<string | ImageInfo>;
+  images?: Array<string | File | ImageInfo>;
   /**
    * 当前预览图片所在的下标
+   * @default 0
    */
   index?: number;
   /**
    * 当前预览图片所在的下标，非受控属性
+   * @default 0
    */
   defaultIndex?: number;
   /**
@@ -59,7 +78,7 @@ export interface TdImageViewerProps {
   /**
    * 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义
    */
-  trigger?: string | TNode<{ open: () => void }>;
+  trigger?: TNode | TNode<{ open: () => void }>;
   /**
    * 限制预览器缩放的最小宽度和最小高度，仅 `mode=modeless` 时有效
    */
@@ -85,19 +104,21 @@ export interface TdImageViewerProps {
   /**
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
-  onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' }) => void;
+  onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' | 'current' }) => void;
 }
 
 export interface ImageScale {
   max: number;
   min: number;
   step: number;
+  defaultScale?: number;
 }
 
 export interface ImageInfo {
-  mainImage: string;
-  thumbnail?: string;
+  mainImage: string | File;
+  thumbnail?: string | File;
   download?: boolean;
+  isSvg?: boolean;
 }
 
 export interface ImageViewerScale {

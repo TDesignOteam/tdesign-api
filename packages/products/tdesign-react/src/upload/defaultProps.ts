@@ -7,6 +7,7 @@ import { TdUploadProps } from './type';
 export const uploadDefaultProps: TdUploadProps = {
   allowUploadDuplicateFile: false,
   autoUpload: true,
+  disabled: undefined,
   draggable: undefined,
   defaultFiles: [],
   isBatchUpload: false,
@@ -14,10 +15,12 @@ export const uploadDefaultProps: TdUploadProps = {
   method: 'POST',
   multiple: false,
   name: 'file',
+  showImageFileName: true,
+  showThumbnail: false,
   showUploadProgress: true,
   theme: 'file',
   uploadAllFilesInOneRequest: false,
-  uploadPastedFiles: false,
+  uploadPastedFiles: true,
   useMockProgress: true,
   withCredentials: false,
 };

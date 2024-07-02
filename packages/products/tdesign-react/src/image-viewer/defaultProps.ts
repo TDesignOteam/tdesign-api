@@ -6,10 +6,12 @@ import { TdImageViewerProps } from './type';
 
 export const imageViewerDefaultProps: TdImageViewerProps = {
   closeBtn: true,
+  closeOnEscKeydown: true,
   draggable: undefined,
   images: [],
+  defaultIndex: 0,
   mode: 'modal',
   navigationArrow: true,
   showOverlay: undefined,
-  visible: false,
+  defaultVisible: false,
 };

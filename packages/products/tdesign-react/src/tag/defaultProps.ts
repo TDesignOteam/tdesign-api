@@ -2,7 +2,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTagProps, TdCheckTagProps } from './type';
+import { TdTagProps, TdCheckTagProps, TdCheckTagGroupProps } from './type';
 
 export const tagDefaultProps: TdTagProps = {
   closable: false,
@@ -14,4 +14,6 @@ export const tagDefaultProps: TdTagProps = {
   variant: 'dark',
 };
 
-export const checkTagDefaultProps: TdCheckTagProps = { disabled: false, size: 'medium' };
+export const checkTagDefaultProps: TdCheckTagProps = { defaultChecked: undefined, disabled: false, size: 'medium' };
+
+export const checkTagGroupDefaultProps: TdCheckTagGroupProps = { multiple: false, defaultValue: [] };

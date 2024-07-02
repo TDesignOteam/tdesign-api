@@ -14,13 +14,13 @@ content | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 contentDisabled | Boolean | - | \- | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'rectangle' \| Array<TNode \| String>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | String / Boolean / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'rectangle' \| boolean \| Array<TNode \| String>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 indeterminate | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options：left/right | N
+placement | String | left | options: left/right | N
 readonly | Boolean | false | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
@@ -31,11 +31,12 @@ name | params | description
 -- | -- | --
 change | `(checked: boolean, context: { e: Event })` | \-
 
+
 ### CheckboxGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 max | Number | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts) | N

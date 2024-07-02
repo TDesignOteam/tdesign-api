@@ -25,7 +25,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdRadioProps['default']>,
   },
-  /** 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled */
+  /** 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
   disabled: {
     type: Boolean,
     default: undefined,
@@ -39,6 +39,8 @@ export default {
     type: String,
     default: '',
   },
+  /** 只读状态 */
+  readonly: Boolean,
   /** 单选按钮的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
@@ -46,6 +48,6 @@ export default {
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,
-  /** 点击时出发，一般用于外层阻止冒泡场景 */
+  /** 点击时触发，一般用于外层阻止冒泡场景 */
   onClick: Function as PropType<TdRadioProps['onClick']>,
 };

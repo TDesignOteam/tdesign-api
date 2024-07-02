@@ -16,14 +16,17 @@ export default {
   borderless: Boolean,
   /** 是否可以清空选项 */
   clearable: Boolean,
-  /** 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量 */
+  /** 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，泛型 `T` 继承 `SelectOption`，表示选项数据；`count` 表示折叠的数量, `onClose` 表示移除标签 */
   collapsedItems: {
     type: Function as PropType<TdSelectProps['collapsedItems']>,
   },
   /** 是否允许用户创建新条目，需配合 filterable 使用 */
   creatable: Boolean,
   /** 是否禁用组件 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 当下拉列表为空时显示的内容 */
   empty: {
     type: [String, Function] as PropType<TdSelectProps['empty']>,
@@ -46,7 +49,7 @@ export default {
   defaultInputValue: {
     type: [String, Number] as PropType<TdSelectProps['defaultInputValue']>,
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdSelectProps['keys']>,
   },
@@ -75,6 +78,11 @@ export default {
   /** 数据化配置选项内容 */
   options: {
     type: Array as PropType<TdSelectProps['options']>,
+  },
+  /** 下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列 */
+  optionsLayout: {
+    type: String as PropType<TdSelectProps['optionsLayout']>,
+    default: 'vertical',
   },
   /** 面板内的底部内容 */
   panelBottomContent: {
@@ -158,11 +166,11 @@ export default {
   },
   /** 选中值 */
   value: {
-    type: [String, Number, Object, Array] as PropType<TdSelectProps['value']>,
+    type: [String, Number, Boolean, Object, Array] as PropType<TdSelectProps['value']>,
   },
   /** 选中值，非受控属性 */
   defaultValue: {
-    type: [String, Number, Object, Array] as PropType<TdSelectProps['defaultValue']>,
+    type: [String, Number, Boolean, Object, Array] as PropType<TdSelectProps['defaultValue']>,
   },
   /** 自定义选中项呈现的内容 */
   valueDisplay: {

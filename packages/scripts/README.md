@@ -1,10 +1,17 @@
-## tdesign-generate-api
+# tdesign-generate-api
 
-### npm run api:download
+## npm run api:download
 
-下载最新的 API 数据
+同步TDesign.db数据到api.json
 
-### npm run api:docs
+## npm run api:upload 
+
+同步api.json数据到TDesign.db
+
+当合并分支发生冲突时，TDesign.db文件使用其他人的版本，
+然后本地执行 `npm run api:upload` 同步刚刚修改的组件数据到TDesign.db。
+
+## npm run api:docs
 
 **自动生成 API 文档、Types 定义、Props 定义**
 

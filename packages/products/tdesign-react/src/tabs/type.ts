@@ -9,7 +9,7 @@ import { MouseEvent } from 'react';
 
 export interface TdTabsProps {
   /**
-   * 【开发中】选项卡右侧的操作区域
+   * 选项卡右侧的操作区域
    */
   action?: TNode;
   /**
@@ -37,6 +37,11 @@ export interface TdTabsProps {
    */
   placement?: 'left' | 'top' | 'bottom' | 'right';
   /**
+   * Tab较多的时候，选中滑块滚动最终停留的位置
+   * @default auto
+   */
+  scrollPosition?: 'auto' | 'start' | 'center' | 'end';
+  /**
    * 组件尺寸
    * @default medium
    */
@@ -61,7 +66,7 @@ export interface TdTabsProps {
   /**
    * 激活的选项卡发生变化时触发
    */
-  onChange?: (value: TabValue, label: string) => void;
+  onChange?: (value: TabValue) => void;
   /**
    * 拖拽排序时触发
    */
@@ -92,6 +97,11 @@ export interface TdTabPanelProps {
    * 选项卡名称，可自定义选项卡导航内容
    */
   label?: TNode;
+  /**
+   * 是否启用选项卡懒加载
+   * @default false
+   */
+  lazy?: boolean;
   /**
    * 用于自定义选项卡面板内容
    */

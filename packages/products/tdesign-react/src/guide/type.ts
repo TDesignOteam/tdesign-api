@@ -165,9 +165,8 @@ export interface GuideStep {
   stepOverlayClass?: string;
   /**
    * 当前步骤的标题内容
-   * @default ''
    */
-  title?: string;
+  title?: TNode;
 }
 
 export type StepPopupPlacement =

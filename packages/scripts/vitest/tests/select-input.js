@@ -80,6 +80,7 @@ module.exports = {
     popupProps_2166: { field_name: 'popupProps', id: 2166 },
     popupVisible_2164: { field_name: 'popupVisible', id: 2164 },
     readonly_2147: { field_name: 'readonly', id: 2147 },
+    reserveKeyword_3331: { field_name: 'reserveKeyword', id: 3331 },
     status_2148: {
       field_name: 'status',
       id: 2148,

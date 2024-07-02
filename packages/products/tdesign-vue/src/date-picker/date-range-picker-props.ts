@@ -10,7 +10,11 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许输入日期 */
   allowInput: Boolean,
-  /** 是否显示清楚按钮 */
+  /** 无边框模式 */
+  borderless: Boolean,
+  /** 默认的日期选择交互是根据点击前后日期的顺序来决定并且会加以限制。比如：用户先点击开始时间输入框，选择了一个日期例如2020-05-15，紧接着交互会自动将焦点跳到结束日期输入框，等待用户选择结束时间。此时用户只能选择大于2020-05-15的日期（之前的日期会被灰态禁止点击，限制用户的点击）。当该值传递`true`时，则取消该限制。 */
+  cancelRangeSelectLimit: Boolean,
+  /** 是否显示清除按钮 */
   clearable: Boolean,
   /** 时间选择器默认值，当 value/defaultValue 未设置值时有效 */
   defaultTime: {
@@ -22,7 +26,10 @@ export default {
     type: [Object, Array, Function] as PropType<TdDateRangePickerProps['disableDate']>,
   },
   /** 是否禁用组件 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否显示时间选择 */
   enableTimePicker: Boolean,
   /** 第一天从星期几开始 */
@@ -37,6 +44,10 @@ export default {
   format: {
     type: String,
     default: '',
+  },
+  /** 左侧文本 */
+  label: {
+    type: [String, Function] as PropType<TdDateRangePickerProps['label']>,
   },
   /** 选择器模式 */
   mode: {
@@ -86,6 +97,15 @@ export default {
     type: String,
     default: '',
   },
+  /** 输入框尺寸 */
+  size: {
+    type: String as PropType<TdDateRangePickerProps['size']>,
+    default: 'medium' as TdDateRangePickerProps['size'],
+    validator(val: TdDateRangePickerProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
   /** 输入框状态 */
   status: {
     type: String as PropType<TdDateRangePickerProps['status']>,
@@ -122,17 +142,21 @@ export default {
     type: String as PropType<TdDateRangePickerProps['valueType']>,
     validator(val: TdDateRangePickerProps['valueType']): boolean {
       if (!val) return true;
-      return ['time-stamp' | 'Date' | 'YYYY' | 'YYYY-MM' | 'YYYY-MM-DD' | 'YYYY-MM-DD HH' | 'YYYY-MM-DD HH:mm' | 'YYYY-MM-DD HH:mm:ss' | 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
+      return ['time-stamp', 'Date', 'YYYY', 'YYYY-MM', 'YYYY-MM-DD', 'YYYY-MM-DD HH', 'YYYY-MM-DD HH:mm', 'YYYY-MM-DD HH:mm:ss', 'YYYY-MM-DD HH:mm:ss:SSS'].includes(val);
     },
   },
   /** 当输入框失去焦点时触发 */
   onBlur: Function as PropType<TdDateRangePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdDateRangePickerProps['onChange']>,
+  /** 如果存在“确定”按钮，则点击“确定”按钮时触发 */
+  onConfirm: Function as PropType<TdDateRangePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发 */
   onFocus: Function as PropType<TdDateRangePickerProps['onFocus']>,
   /** 输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值 */
   onInput: Function as PropType<TdDateRangePickerProps['onInput']>,
   /** 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期 */
   onPick: Function as PropType<TdDateRangePickerProps['onPick']>,
+  /** 点击预设按钮后触发 */
+  onPresetClick: Function as PropType<TdDateRangePickerProps['onPresetClick']>,
 };

@@ -73,6 +73,14 @@ export interface TdStatisticProps {
   value?: number;
 }
 
+/** 组件实例方法 */
+export interface StatisticInstanceFunctions {
+  /**
+   * 开始动画
+   */
+  start: () => void;
+}
+
 export interface animation {
   duration: number;
   valueFrom: number;

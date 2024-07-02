@@ -23,6 +23,7 @@ const GLOBAL_TYPES = [
   'FormResetEvent',
   'FormSubmitEvent',
   'KeysType',
+  'TreeKeysType',
   'HTMLElementAttributes',
   'ComponentType',
   'TScroll',
@@ -30,6 +31,7 @@ const GLOBAL_TYPES = [
   'UploadDisplayDragEvents',
   'ImageEvent',
   'ScrollToElementParams',
+  'ComponentScrollToElementParams',
 ];
 
 // InputEvent is not included in SyntheticEvent, but SyntheticEvent includes FormEvent

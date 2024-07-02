@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-export type PopupMethod = (content: string | tnode, popupProps?: object, triggerElement: string) => void;
-sEvent, WheelEvent } from 'react';
+import { TNode, ClassName, Styles, AttachNode } from '../common';
+import { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
 
 export interface TdPopupProps {
   /**
@@ -17,6 +17,10 @@ export interface TdPopupProps {
    * 触发元素，同 triggerElement
    */
   children?: TNode;
+  /**
+   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮
+   */
+  closeBtn?: TNode;
   /**
    * 浮层里面的内容
    */
@@ -132,5 +136,6 @@ export type PopupTriggerSource =
   | 'trigger-element-blur'
   | 'trigger-element-focus'
   | 'trigger-element-mousedown'
+  | 'trigger-element-close'
   | 'context-menu'
   | 'keydown-esc';

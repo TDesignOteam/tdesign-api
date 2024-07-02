@@ -33,9 +33,12 @@ export default {
   router: {
     type: Object as PropType<TdMenuItemProps['router']>,
   },
+  /** 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签。 */
+  routerLink: Boolean,
   /** 链接或路由跳转方式 */
   target: {
     type: String as PropType<TdMenuItemProps['target']>,
+    default: '_self' as TdMenuItemProps['target'],
     validator(val: TdMenuItemProps['target']): boolean {
       if (!val) return true;
       return ['_blank', '_self', '_parent', '_top'].includes(val);

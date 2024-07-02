@@ -27,7 +27,7 @@ export interface TdCheckboxProps {
    */
   default?: string | TNode;
   /**
-   * 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled
+   * 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled
    */
   disabled?: boolean;
   /**
@@ -39,6 +39,11 @@ export interface TdCheckboxProps {
    * 主文案
    */
   label?: string | TNode;
+  /**
+   * 是否启用懒加载。数据量大时建议开启；加载复杂内容或大量图片时建议开启
+   * @default false
+   */
+  lazyLoad?: boolean;
   /**
    * HTML 元素原生属性
    * @default ''
@@ -57,17 +62,18 @@ export interface TdCheckboxProps {
    * 值变化时触发
    */
   onChange?: (checked: boolean, context: { e: Event }) => void;
-  /**
-   * 点击时出发，一般用于外层阻止冒泡场景
-   */
-  onClick?: (context: { e: MouseEvent }) => void;
 }
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
-   * 是否禁用组件，默认为 false。CheckboxGroup.disabled 优先级低于 Checkbox.disabled
+   * 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
+  /**
+   * 是否启用懒加载。子组件 Checkbox 数据量大时建议开启；加载复杂内容或大量图片时建议开启
+   * @default false
+   */
+  lazyLoad?: boolean;
   /**
    * 支持最多选中的数量
    */
@@ -99,19 +105,15 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
 
-export interface CheckboxOptionObj {
-  label?: string | TNode;
-  value?: string | number;
-  disabled?: boolean;
-  name?: string;
-  checkAll?: true;
+export interface CheckboxOptionObj extends TdCheckboxProps {
+  text?: string;
 }
 
 export type CheckboxGroupValue = Array<string | number | boolean>;
 
 export interface CheckboxGroupChangeContext {
   e: Event;
-  current: string | number;
+  current: string | number | boolean;
   option: CheckboxOption | TdCheckboxProps;
   type: 'check' | 'uncheck';
 }

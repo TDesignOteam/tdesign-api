@@ -25,6 +25,14 @@
       {
         "label": "<T>",
         "value": "64"
+      },
+      {
+        "label": "External Classes",
+        "value": "128"
+      },
+      {
+        "label": "CSS Variables",
+        "value": "256"
       }
     ],
     "platform": [
@@ -117,6 +125,10 @@
       {
         "label": "Date",
         "value": "128"
+      },
+      {
+        "label": "File",
+        "value": "256"
       }
     ],
     "components": [
@@ -369,6 +381,10 @@
         "label": "可选标签"
       },
       {
+        "value": "CheckTagGroup",
+        "label": "可选标签组"
+      },
+      {
         "value": "Col",
         "label": "栅格-纵向"
       },
@@ -427,8 +443,17 @@
         "label": "日期范围选择器面板"
       },
       {
+        "value": "DescriptionItem",
+        "label": "描述项"
+      },
+      {
         "value": "Descriptions",
         "label": "描述列表"
+      },
+      {
+        "value": "DescriptionsConfig",
+        "label": "描述全局配置",
+        "type": "TS"
       },
       {
         "value": "Dialog",
@@ -694,6 +719,10 @@
         "type": "TS"
       },
       {
+        "value": "Paragraph",
+        "label": "段落"
+      },
+      {
         "value": "Popconfirm",
         "label": "气泡确认框"
       },
@@ -888,6 +917,10 @@
         "label": "标签输入框"
       },
       {
+        "value": "Text",
+        "label": "文本"
+      },
+      {
         "value": "Timeline",
         "label": "时间轴"
       },
@@ -915,6 +948,10 @@
       {
         "value": "TimeRangePickerPanel",
         "label": "时间范围选择器面板"
+      },
+      {
+        "value": "Title",
+        "label": "标题"
       },
       {
         "value": "Tooltip",
@@ -969,6 +1006,16 @@
       {
         "value": "Typography",
         "label": "排版"
+      },
+      {
+        "value": "TypographyCopyable",
+        "label": "排版复制配置",
+        "type": "TS"
+      },
+      {
+        "value": "TypographyEllipsis",
+        "label": "排版省略配置",
+        "type": "TS"
       },
       {
         "value": "Upload",
@@ -1179,6 +1226,10 @@
       {
         "value": "SwiperNav",
         "label": "轮播导航"
+      },
+      {
+        "value": "Popover",
+        "label": "气泡弹出框"
       }
     ]
   }

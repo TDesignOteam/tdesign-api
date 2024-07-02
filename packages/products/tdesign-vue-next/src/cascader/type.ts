@@ -12,13 +12,18 @@ import { TagInputProps } from '../tag-input';
 import { TagProps } from '../tag';
 import { TreeNodeModel } from '../tree';
 import { PopupVisibleChangeContext } from '../popup';
-import { TNode, TreeOptionData, SizeEnum } from '../common';
+import { TNode, TreeOptionData, SizeEnum, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
    * 自动聚焦
    */
   autofocus?: boolean;
+  /**
+   * 无边框模式
+   * @default false
+   */
+  borderless?: boolean;
   /**
    * 参考 checkbox 组件 API
    */
@@ -34,9 +39,14 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   clearable?: boolean;
   /**
-   * 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedTags` 表示折叠的标签，`count` 表示折叠的数量
+   * 多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调
    */
-  collapsedItems?: TNode<{ value: CascaderOption[]; collapsedSelectedItems: CascaderOption[]; count: number }>;
+  collapsedItems?: TNode<{
+    value: CascaderOption[];
+    collapsedSelectedItems: CascaderOption[];
+    count: number;
+    onClose: (context: { index: number; e?: MouseEvent }) => void;
+  }>;
   /**
    * 是否禁用组件
    */
@@ -59,9 +69,9 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   inputProps?: InputProps;
   /**
-   * 用来定义 value / label / children 在 `options` 中对应的字段别名
+   * 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名
    */
-  keys?: CascaderKeysType;
+  keys?: TreeKeysType;
   /**
    * 左侧文本
    */
@@ -120,6 +130,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * 是否显示下拉框
    */
   popupVisible?: boolean;
+  /**
+   * 组件前置图标
+   */
+  prefixIcon?: TNode;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
    * @default false
@@ -190,7 +204,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   modelValue?: CascaderValue<CascaderOption>;
   /**
-   * 【开发中】自定义选中项呈现的内容
+   * 自定义选中项呈现的内容
    */
   valueDisplay?:
     | string
@@ -198,6 +212,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
         value: CascaderValue<CascaderOption>;
         onClose: (index: number) => void;
         displayValue?: CascaderValue<CascaderOption>;
+        selectedOptions: CascaderOption[];
       }>;
   /**
    * 选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点
@@ -229,12 +244,6 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * 多选模式下，选中数据被移除时触发
    */
   onRemove?: (context: RemoveContext<CascaderOption>) => void;
-}
-
-export interface CascaderKeysType {
-  value?: string;
-  label?: string;
-  children?: string | boolean;
 }
 
 export type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | T | Array<CascaderValue<T>>;
