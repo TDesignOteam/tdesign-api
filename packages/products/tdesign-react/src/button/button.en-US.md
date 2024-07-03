@@ -11,7 +11,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 block | Boolean | false | make button to be a block-level element | N
 children | TNode | - | button's children elements。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 content | TNode | - | button's children elements。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-disabled | Boolean | false | disable the button, make it can not be clicked | N
+disabled | Boolean | undefined | disable the button, make it can not be clicked | N
 ghost | Boolean | false | make background-color to be transparent | N
 href | String | - | \- | N
 icon | TElement | - | use it to set left icon in button。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

@@ -17,6 +17,7 @@ popup-props | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./
 show-cancel | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
 theme | String | list | options: list/grid | N
+using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | required | Y
 default-visible | Boolean | undefined | required。uncontrolled property | Y
 

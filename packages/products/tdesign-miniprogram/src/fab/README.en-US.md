@@ -12,6 +12,7 @@ button-props | Object | - | Typescript：`ButtonProps`，[Button API Documents](
 draggable | String / Boolean | false | \- | N
 icon | String | - | \- | N
 text | String | - | \- | N
+using-custom-navbar | Boolean | false | \- | N
 
 ### Fab Events
 

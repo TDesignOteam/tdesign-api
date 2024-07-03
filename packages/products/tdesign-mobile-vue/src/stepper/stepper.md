@@ -7,9 +7,9 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 disableInput | Boolean | false | 禁用输入框 | N
-disabled | Boolean | false | 禁用全部操作 | N
+disabled | Boolean | undefined | 禁用全部操作 | N
 inputWidth | Number | - | 输入框宽度 | N
-integer | Boolean | true | 是否整形 | N
+integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N
 min | Number | 0 | 最小值 | N
 size | String | medium | 组件尺寸。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

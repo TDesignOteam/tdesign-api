@@ -17,6 +17,7 @@ overlay-props | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
 prevent-scroll-through | Boolean | true | 防止滚动穿透 | N
 show-overlay | Boolean | true | 是否显示遮罩层 | N
+using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | false | 是否显示浮层。TS 类型：`boolean` | N
 z-index | Number | 11500 | 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500 | N
 

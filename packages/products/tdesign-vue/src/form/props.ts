@@ -57,7 +57,10 @@ export default {
     default: true,
   },
   /** 是否整个表单只读 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {
     type: Boolean,

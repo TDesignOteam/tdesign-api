@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Statistic Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 animation | Object | - | Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`。Typescript：`animation` `interface animation { duration: number; valueFrom: number;  }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/statistic/type.ts) | N
 animationStart | Boolean | false | Whether to start animation | N
 color | String | - | Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)。options: black/blue/red/orange/green | N
@@ -15,7 +16,7 @@ extra | TNode | - |  Additional display content。Typescript：`string \| TNode`
 format | Function | - | Format numeric display value。Typescript：`(value: number) => number` | N
 loading | Boolean | false | Loading | N
 prefix | TNode | - | Prefix content, display priority is higher than trend。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-separator | String | , | The carry separator is displayed by default, and can be customized to other content. When `separator = ''` is set to an empty string/null/undefined, the separator is hidden | N
+separator | String | , | Thousands separator is displayed by default, and can be customized to other content, and the default separator is displayed when `separator = ''` is set to an empty string/null/undefined | N
 suffix | TNode | - |  Suffix content, display priority is higher than trend。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 title | TNode | - | The title of Statistic。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 trend | String | - | trend。options: increase/decrease | N
@@ -27,6 +28,6 @@ value | Number | - | The value of Statistic | N
 
 name | params | return | description
 -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
-start | `(from: number, to: number)` | \- | required。Digital scrolling change, from one number to another number
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
+start | \- | \- | required。start animation

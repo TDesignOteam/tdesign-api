@@ -14,10 +14,11 @@ export const inputDefaultProps: TdInputProps = {
   clearable: false,
   disabled: undefined,
   placeholder: undefined,
-  readonly: false,
+  readonly: undefined,
   showClearIconOnEmpty: false,
   showLimitNumber: false,
   size: 'medium',
+  spellCheck: false,
   status: undefined,
   type: 'text',
 };

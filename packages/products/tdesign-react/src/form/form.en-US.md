@@ -18,7 +18,7 @@ labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '100px' | \- | N
 layout | String | vertical | options: vertical/inline | N
 preventSubmitDefault | Boolean | true | \- | N
-readonly | Boolean | - | \- | N
+readonly | Boolean | undefined | \- | N
 requiredMark | Boolean | true | \- | N
 resetType | String | empty | options: empty/initial | N
 rules | Object | - | Typescript：`FormRules<FormData>` `type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/form/type.ts) | N

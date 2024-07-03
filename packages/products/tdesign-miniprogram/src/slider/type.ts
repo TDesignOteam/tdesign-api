@@ -4,32 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common/common';
-
 export interface TdSliderProps {
   /**
-   * 颜色，[已选择, 未选择]
-   * @default ['#0052D9', 'rgba(220, 220, 220, 1)']
-   */
-  colors?: {
-    type: ArrayConstructor;
-    value?: Array<string>;
-  };
-  /**
    * 是否禁用组件
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 禁用状态滑动条的颜色，[已选, 未选]
-   * @default ['#bbd3fb', '#dcdcdc']
-   */
-  disabledColor?: {
-    type: ArrayConstructor;
-    value?: Array<string>;
   };
   /**
    * 组件类名，分别用于设置 组件外层元素、滑道底部、滑道激活态、滑道禁用态、游标 等元素类名
@@ -44,7 +25,7 @@ export interface TdSliderProps {
    */
   label?: {
     type: null;
-    value?: string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>;
+    value?: string | boolean;
   };
   /**
    * 刻度标记，示例：`[0, 10, 40, 200]` 或者 `{ 5:  '5¥', 10: '10%' }`
@@ -103,6 +84,14 @@ export interface TdSliderProps {
     value?: string;
   };
   /**
+   * 滑块风格
+   * @default default
+   */
+  theme?: {
+    type: StringConstructor;
+    value?: 'default' | 'capsule';
+  };
+  /**
    * 滑块值
    * @default 0
    */
@@ -117,6 +106,14 @@ export interface TdSliderProps {
   defaultValue?: {
     type: null;
     value?: SliderValue;
+  };
+  /**
+   * 是否是垂直的滑块（渲染垂直滑块时，默认高度为400rpx，可通过修改`--td-slider-bar-height`来自定义高度）
+   * @default false
+   */
+  vertical?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
 }
 
