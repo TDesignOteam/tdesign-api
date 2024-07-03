@@ -36,7 +36,7 @@ jobs:
             if (isReviewer) {
               const body = context.payload.comment.body
               core.info(`body: ${body}`)
-              if (body.startsWith('/resolve conflict')) {
+              if (body.startsWith('/resolve-conflict')) {
                 next_action='resolve-conflict'
               }
             } else {
