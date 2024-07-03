@@ -69,7 +69,7 @@ jobs:
 
       - name: Resolve conflict
         run: |
-          git merge main
+          git merge main --allow-unrelated-histories
 
           count_both_modified=$(git status | grep -c 'both modified:')
           both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db')
