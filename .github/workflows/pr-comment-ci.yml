@@ -72,7 +72,7 @@ jobs:
           git merge main
 
           count_both_modified=$(git status | grep -c 'both modified:')
-          both_modified_db=$(git status | grep -c 'both modified:   db/TDesign.db')
+          both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db')
           echo "count_both_modified $count_both_modified"
           echo "both_modified_db $both_modified_db"
 
