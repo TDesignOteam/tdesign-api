@@ -70,13 +70,13 @@ jobs:
       - name: Resolve conflict
         run: |
           git merge main
-          
+
           count_both_modified=$(git status | grep -c 'both modified:')
           both_modified_db=$(git status | grep -c 'both modified:   db/TDesign.db')
           echo "count_both_modified $count_both_modified"
           echo "both_modified_db $both_modified_db"
 
-          if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$both_modified_db" -eq "1" ]; then
+          if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$count_both_modified" -eq "1" ]; then
               git checkout -f main db/TDesign.db
               pnpm api:upload
               git config --local user.email "github-actions[bot]@users.noreply.github.com"
