@@ -1,0 +1,88 @@
+name: PR_COMMENT_CI
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      next_action: ${{ steps.get-action.outputs.next_action }}
+    if: ${{ github.event.issue.pull_request }}
+    steps:
+       - uses: actions/checkout@v4
+         with:
+          fetch-depth: 1
+       - uses: actions/github-script@v7
+         id: get-action
+         with:
+          script: |
+            const user = context.payload.comment.user.login
+            core.debug(`user: ${user}`)
+
+            const fs = require('fs')
+            const CODEOWNERS = fs.readFileSync('.github/CODEOWNERS', 'utf8')
+            core.debug(`CODEOWNERS: ${CODEOWNERS}`)
+
+            let isReviewer = false;
+            CODEOWNERS.match(/@\w+/g).forEach((owner) => {
+              if (owner === `@${user}`) {
+                isReviewer = true
+              }
+            })
+
+            let next_action = ''  
+            if (isReviewer) {
+              const body = context.payload.comment.body
+              core.info(`body: ${body}`)
+              if (body.startsWith('/resolve conflict')) {
+                next_action='resolve-conflict'
+              }
+            } else {
+               core.warning('You are not collaborator');
+            }
+            core.info(`next_action: ${next_action}`)
+            core.setOutput('next_action', next_action)
+  
+  resolve-conflict:
+    needs: check
+    runs-on: ubuntu-latest
+    if: ${{ needs.check.outputs.next_action == 'resolve-conflict' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+      - name: gh checkout pr
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: gh pr checkout ${{ github.event.issue.number }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Start Service
+        run: pnpm run dev &  
+
+      - name: Resolve conflict
+        run: |
+          git merge main
+          
+          count_both_modified=$(git status | grep -c 'both modified:')
+          both_modified_db=$(git status | grep -c 'both modified:   db/TDesign.db')
+          echo "count_both_modified $count_both_modified"
+          echo "both_modified_db $both_modified_db"
+
+          if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$both_modified_db" -eq "1" ]; then
+              git checkout -f main db/TDesign.db
+              pnpm api:upload
+              git config --local user.email "github-actions[bot]@users.noreply.github.com"
+              git config --local user.name "github-actions[bot]"
+              git commit -am "chore: resolve conflict"
+              git push
+          else
+            echo "Condition not established."
+          fi
