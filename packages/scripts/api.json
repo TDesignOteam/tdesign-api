@@ -3,6 +3,43 @@
   "msg": "success",
   "data": [
     {
+      "id": 1720093990,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "",
+      "field_category": 1,
+      "field_name": "itemHeight",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "80",
+      "field_enum": "",
+      "field_desc_zh": "PickerItem的子项高度，单位 rpx",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-04 11:53:10",
+      "update_time": "2024-07-04 11:53:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 364,
       "platform_framework": [
         "1",
@@ -79268,6 +79305,43 @@
       ],
       "field_type_text": [
         "TNode"
+      ]
+    },
+    {
+      "id": 1720094053,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "itemHeight",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "80",
+      "field_enum": "",
+      "field_desc_zh": "PickerItem 的子项高度，单位 rpx",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-04 11:54:13",
+      "update_time": "2024-07-04 11:54:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {

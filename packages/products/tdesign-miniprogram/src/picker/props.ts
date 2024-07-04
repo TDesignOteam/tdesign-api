@@ -26,6 +26,11 @@ const props: TdPickerProps = {
     type: Boolean,
     value: true,
   },
+  /** PickerItem 的子项高度，单位 rpx */
+  itemHeight: {
+    type: Number,
+    value: 80,
+  },
   /** 用来定义 value / label 在 `options` 中对应的字段别名 */
   keys: {
     type: Object,
