@@ -6,7 +6,12 @@
 
 import { TdCalendarProps } from './type';
 const props: TdCalendarProps = {
-  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。 */
+  /** 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible */
+  autoClose: {
+    type: Boolean,
+    value: true,
+  },
+  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性 */
   confirmBtn: {
     type: null,
     value: '',
@@ -22,18 +27,13 @@ const props: TdCalendarProps = {
   },
   /** 最大可选的日期，不传则默认半年后 */
   maxDate: {
-    type: null,
+    type: Number,
   },
   /** 最小可选的日期，不传则默认今天 */
   minDate: {
-    type: null,
+    type: Number,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
-  /** 标题，不传默认为“请选择日期” */
+  /** 标题 */
   title: {
     type: String,
     value: '',
@@ -42,6 +42,16 @@ const props: TdCalendarProps = {
   type: {
     type: String,
     value: 'single',
+  },
+  /** 是否使用弹出层包裹日历 */
+  usePopup: {
+    type: Boolean,
+    value: true,
+  },
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
+    type: Boolean,
+    value: false,
   },
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
@@ -52,7 +62,7 @@ const props: TdCalendarProps = {
   defaultValue: {
     type: null,
   },
-  /** 是否显示日历 */
+  /** 是否显示日历；`usePopup` 为 true 时有效 */
   visible: {
     type: Boolean,
     value: false,

@@ -19,10 +19,19 @@ const props: TdPopupProps = {
   content: {
     type: String,
   },
-  /** 弹出层的自定义样式（即将废弃，推荐使用 `style` ） */
-  customStyle: {
-    type: String,
-    value: '',
+  /** 是否显示浮层。非受控属性 */
+  defaultVisible: {
+    type: Boolean,
+    value: null,
+  },
+  /** 是否显示浮层。非受控属性，非受控属性 */
+  defaultDefaultVisible: {
+    type: Boolean,
+  },
+  /** 动画过渡时间 */
+  duration: {
+    type: Number,
+    value: 240,
   },
   /** 组件类名，分别用于设置 组件外层元素、遮罩层、浮层内容 等元素类名 */
   externalClasses: {
@@ -48,14 +57,10 @@ const props: TdPopupProps = {
     type: Boolean,
     value: true,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
-  /** 动画效果定义 */
-  transitionProps: {
-    type: Object,
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
+    type: Boolean,
+    value: false,
   },
   /** 是否显示浮层 */
   visible: {

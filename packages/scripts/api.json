@@ -2398,6 +2398,43 @@
       ]
     },
     {
+      "id": 1719908417,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:20:17",
+      "update_time": "2024-07-02 08:20:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1607,
       "platform_framework": [
         "8",
@@ -16162,7 +16199,7 @@
       ],
       "field_default_value": "''",
       "field_enum": "",
-      "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。",
+      "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -16232,43 +16269,6 @@
       "field_type_text": [
         "Boolean",
         "Object"
-      ]
-    },
-    {
-      "id": 3062,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:33:55",
-      "update_time": "2022-10-31 11:33:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -17024,9 +17024,9 @@
         "1",
         "64"
       ],
-      "field_default_value": "",
+      "field_default_value": "'请选择日期'",
       "field_enum": "",
-      "field_desc_zh": "标题，不传默认为“请选择日期”",
+      "field_desc_zh": "标题",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -17134,6 +17134,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1719908432,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:20:32",
+      "update_time": "2024-07-02 08:20:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -39513,6 +39550,43 @@
       ]
     },
     {
+      "id": 1719908441,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:20:41",
+      "update_time": "2024-07-02 08:20:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 45,
       "platform_framework": [
         "1",
@@ -42513,6 +42587,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 1719908453,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:20:53",
+      "update_time": "2024-07-02 08:20:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -47662,6 +47773,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1719908461,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:21:01",
+      "update_time": "2024-07-02 08:21:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -76888,6 +77036,43 @@
       ]
     },
     {
+      "id": 1719908470,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Overlay",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:21:10",
+      "update_time": "2024-07-02 08:21:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2809,
       "platform_framework": [
         "16",
@@ -79248,6 +79433,80 @@
       ]
     },
     {
+      "id": 1719909526,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "usePopup",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否使用弹出层包裹",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:38:46",
+      "update_time": "2024-07-02 08:38:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1719908481,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:21:21",
+      "update_time": "2024-07-02 08:21:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1485,
       "platform_framework": [
         "8",
@@ -79466,7 +79725,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'cancel-btn' | 'confrim-btn'】",
+      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn'】",
       "create_time": "2023-02-28 12:25:26",
       "update_time": "2023-02-28 12:25:26",
       "event_output": null,
@@ -82189,6 +82448,43 @@
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 1719908487,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:21:27",
+      "update_time": "2024-07-02 08:21:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -125070,43 +125366,6 @@
       ]
     },
     {
-      "id": 3110,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Toast",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:54:10",
-      "update_time": "2022-10-31 14:54:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1348,
       "platform_framework": [
         "8",
@@ -125147,6 +125406,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1719908493,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 1,
+      "field_name": "usingCustomNavbar",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用了自定义导航栏",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-02 08:21:33",
+      "update_time": "2024-07-02 08:21:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {

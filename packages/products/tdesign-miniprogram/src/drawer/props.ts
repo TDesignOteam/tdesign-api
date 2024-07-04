@@ -30,10 +30,14 @@ const props: TdDrawerProps = {
     type: Boolean,
     value: true,
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 抽屉的标题 */
+  title: {
     type: String,
-    value: '',
+  },
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
+    type: Boolean,
+    value: false,
   },
   /** 组件是否可见 */
   visible: {
@@ -43,6 +47,7 @@ const props: TdDrawerProps = {
   /** 抽屉层级，样式默认为 11500 */
   zIndex: {
     type: Number,
+    value: 11500,
   },
 };
 
