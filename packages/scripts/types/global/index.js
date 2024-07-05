@@ -29,7 +29,7 @@ function combineGlobals(framework) {
     data,
     (err) => {
       if (err) return console.error(err);
-      console.log(chalk.green(`globals: ${outputPath} has been created suceessfully!`));
+      console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
     },
   );
 }

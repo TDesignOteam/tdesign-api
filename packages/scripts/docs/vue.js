@@ -114,7 +114,7 @@ function formatDesc(
   // 语法糖
   if (framework.indexOf('Vue') !== -1 && api.syntactic_sugar && !isUncontrol) {
     if (api.syntactic_sugar === 'v-model') {
-      desc.push(curLanguage.vmodelSugerText[framework].replace('name', api.field_name));
+      desc.push(curLanguage.vmodelSugarText[framework].replace('name', api.field_name));
     } else if (api.syntactic_sugar === 'sync') {
       desc.push(curLanguage.syntaxSugarText[framework].replace('name', api.field_name));
     }

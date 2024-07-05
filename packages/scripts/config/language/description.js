@@ -5,7 +5,7 @@ module.exports = {
     commonDefineText: '通用类型定义',
     detailDefineText: '详细类型定义',
     requiredText: '必需',
-    vmodelSugerText: {
+    vmodelSugarText: {
       'Vue(PC)': '支持语法糖 `v-model`',
       'VueNext(PC)': '支持语法糖 `v-model` 或 `v-model:name`',
       'Vue(Mobile)': '支持语法糖 `v-model` 或 `v-model:name`',
@@ -31,7 +31,7 @@ module.exports = {
     commonDefineText: 'see more ts definition',
     detailDefineText: 'see more ts definition',
     requiredText: 'required',
-    vmodelSugerText: {
+    vmodelSugarText: {
       'Vue(PC)': '`v-model` is supported',
       'VueNext(PC)': '`v-model` and `v-model:name` is supported',
       'Vue(Mobile)': '`v-model` and `v-model:name` is supported',

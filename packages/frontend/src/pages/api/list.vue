@@ -76,12 +76,12 @@
         <div>
           <div class="t-demo-table-btns">
             <!-- <t-popup showArrow placement='top'>
-              <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">代码</t-button>
+              <t-button variant="text" @click="() => onCodePreview(data, 'Vue(PC)')">代码</t-button>
               <div slot="content">
-                <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(PC)')">Vue(PC)</t-button>
-                <t-button variant="text" @click="() => onCodePreivew(data, 'React(PC)')">React(PC)</t-button>
-                <t-button variant="text" @click="() => onCodePreivew(data, 'Miniprogram')">Miniprogram</t-button>
-                <t-button variant="text" @click="() => onCodePreivew(data, 'Vue(Mobile)')">Vue(Mobile)</t-button>
+                <t-button variant="text" @click="() => onCodePreview(data, 'Vue(PC)')">Vue(PC)</t-button>
+                <t-button variant="text" @click="() => onCodePreview(data, 'React(PC)')">React(PC)</t-button>
+                <t-button variant="text" @click="() => onCodePreview(data, 'Miniprogram')">Miniprogram</t-button>
+                <t-button variant="text" @click="() => onCodePreview(data, 'Vue(Mobile)')">Vue(Mobile)</t-button>
               </div>
             </t-popup> -->
             <t-button variant="text" theme="primary" @click="() => onEditClick(data)">Edit</t-button>
@@ -205,7 +205,7 @@ export default {
     onTestsEditClick (data) {
       this.$emit('click-test-edit-btn', data)
     },
-    onCodePreivew (data, framework) {
+    onCodePreview (data, framework) {
       this.$emit('code-preview', data, framework)
     },
     isTestedPC(test) {

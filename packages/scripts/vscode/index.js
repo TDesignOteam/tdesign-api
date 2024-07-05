@@ -31,7 +31,7 @@ function start() {
   console.log(chalk.blue(`\n ----- API 相关文件自动生成开始（框架：${framework}） ------ \n`));
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
-  const framworkData = groupByComponent(ALL_API, frameworkMap[framework]);
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework]);
   // 生成 API 文档
-  generateDocs(framworkData, framework, { isVscode: true });
+  generateDocs(frameworkData, framework, { isVscode: true });
 }
