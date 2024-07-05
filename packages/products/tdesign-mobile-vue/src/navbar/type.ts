@@ -13,28 +13,27 @@ export interface TdNavbarProps {
    */
   animation?: boolean;
   /**
-   * 背景
-   * @default ''
+   * 左侧胶囊区域
    */
-  background?: string;
+  capsule?: TNode;
   /**
    * 是否固定在顶部
    * @default true
    */
   fixed?: boolean;
   /**
-   * 左侧区域。值为 `string` 表示文本，为其他表示自定义内容
+   * 左侧区域
    */
-  left?: string | TNode;
+  left?: TNode;
   /**
-   * 是否显示左侧箭头
+   * 是否展示左侧箭头
    * @default false
    */
   leftArrow?: boolean;
   /**
-   * 右侧区域。值为 `string` 表示文本，为其他表示自定义内容
+   * 右侧区域
    */
-  right?: string | TNode;
+  right?: TNode;
   /**
    * 页面标题
    */
@@ -49,11 +48,11 @@ export interface TdNavbarProps {
    */
   visible?: boolean;
   /**
-   * 点击左侧区域时触发
+   * 点击左侧按钮时触发
    */
   onLeftClick?: () => void;
   /**
-   * 点击右侧区域时触发
+   * 点击右侧图标时触发
    */
   onRightClick?: () => void;
 }
