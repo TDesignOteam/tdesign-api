@@ -73545,7 +73545,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "已废弃。背景",
+      "field_desc_zh": "背景",
       "field_desc_en": "background",
       "field_required": 0,
       "event_input": "",
@@ -73557,7 +73557,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
@@ -73707,7 +73707,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "已废弃。首页图标地址。值为 '' 或者 undefiend 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_zh": "首页图标地址。值为 '' 或者 undefiend 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
       "field_desc_en": "homeIcon",
       "field_required": 0,
       "event_input": "",
@@ -73719,7 +73719,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
@@ -73902,7 +73902,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "已废弃。左侧图标地址，值为 '' 或者 undefiend 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+      "field_desc_zh": "左侧图标地址，值为 '' 或者 undefiend 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -73914,7 +73914,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
@@ -74002,43 +74002,6 @@
       ],
       "field_type_text": [
         "TNode"
-      ]
-    },
-    {
-      "id": 3054,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Navbar",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:01",
-      "update_time": "2022-10-31 11:30:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -74282,7 +74245,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "已废弃。点击 Home 触发",
+      "field_desc_zh": "点击 Home 触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -74294,7 +74257,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
