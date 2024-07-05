@@ -1,5 +1,5 @@
 const getVueApiDocs = require('../docs/vue');
-const { BASE_PATH_URL, VUE_TITILE_MAP, TNode, TYPES_COMBINE_MAP, COMPONENT_API_MD_MAP } = require('./const');
+const { BASE_PATH_URL, VUE_TITLE_MAP, TNode, TYPES_COMBINE_MAP, COMPONENT_API_MD_MAP } = require('./const');
 const path = require('path');
 
 /**
@@ -40,7 +40,7 @@ const FRAMEWORK_MAP = {
     commonRelativePath: '../common',
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue2`,
     helperPath: `${BASE_PATH_URL}/tdesign-vue/helper`,
     volarPath: `${BASE_PATH_URL}/tdesign-vue/global.d.ts`,
@@ -64,7 +64,7 @@ const FRAMEWORK_MAP = {
     commonRelativePath: '../common',
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue3`,
     helperPath: `${BASE_PATH_URL}/tdesign-vue-next/helper`,
     volarPath: `${BASE_PATH_URL}/tdesign-vue-next/global.d.ts`,
@@ -84,7 +84,7 @@ const FRAMEWORK_MAP = {
     globalTplPath: path.resolve(__dirname, '../types/global/react.tpl'),
     unitBasePath: '',
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
     commonTypePath: 'https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts',
     componentPath: 'https://github.com/Tencent/tdesign-react/blob/develop/src/',
     commonRelativePath: '../common',
@@ -114,7 +114,7 @@ const FRAMEWORK_MAP = {
     commonRelativePath: '../common',
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/vue_mobile`,
     helperPath: `${BASE_PATH_URL}/tdesign-mobile-vue/helper`,
     volarPath: `${BASE_PATH_URL}/tdesign-mobile-vue/global.d.ts`,
@@ -137,7 +137,7 @@ const FRAMEWORK_MAP = {
     commonRelativePath: '../common',
     componentRelativiePath: '../',
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react_mobile`,
     TNode,
   },
@@ -163,7 +163,7 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/miniprogram`,
     getDocs: getVueApiDocs,
-    titleMap: VUE_TITILE_MAP,
+    titleMap: VUE_TITLE_MAP,
   },
 };
 
