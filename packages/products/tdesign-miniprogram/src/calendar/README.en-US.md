@@ -14,9 +14,10 @@ first-day-of-week | Number | 0 | \- | N
 format | Function | - | Typescript：`CalendarFormatType ` `type CalendarFormatType = (day: TDate) => TDate` `type TDateType = 'selected' \| 'disabled' \| 'start' \| 'centre' \| 'end' \| ''` `interface TDate { date: Date; day: number; type: TDateType; className?: string; prefix?: string; suffix?: string;}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
 max-date | Number | - | \- | N
 min-date | Number | - | \- | N
-title | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+title | String / Slot | '请选择日期' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 type | String | 'single' | options: single/multiple/range | N
 use-popup | Boolean | true | `0.32.0` | N
+using-custom-navbar | Boolean | false | \- | N
 value | Number / Array | - | Typescript：`number \| number[]` | N
 default-value | Number / Array | undefined | uncontrolled property。Typescript：`number \| number[]` | N
 visible | Boolean | false | \- | N

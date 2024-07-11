@@ -1,6 +1,6 @@
 // const dayjs = require('dayjs');
 const path = require('path');
-const VUE_TITILE_MAP = require('./language/api-docs-title');
+const VUE_TITLE_MAP = require('./language/api-docs-title');
 const { COMPONENT_API_MD_MAP, TYPES_COMBINE_MAP, GLOBAL_COMPONENTS_CONFIG } = require('./files-combine');
 
 // common 数据类型，用于引入具体的组件类型定义文件中
@@ -61,7 +61,7 @@ module.exports = {
   BASE_PATH_URL_LOCAL: path.resolve(process.cwd(), '../'),
   // 开发或者测试路径
   // BASE_PATH_URL: '.',
-  VUE_TITILE_MAP,
+  VUE_TITLE_MAP,
   COMPONENT_API_MD_MAP,
   TYPES_COMBINE_MAP,
   GLOBAL_COMPONENTS_CONFIG,

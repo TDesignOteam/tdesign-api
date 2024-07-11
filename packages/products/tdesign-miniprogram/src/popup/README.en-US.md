@@ -17,6 +17,7 @@ overlay-props | Object | {} | Typescript：`OverlayProps`，[Overlay API Documen
 placement | String | top | options: top/left/right/bottom/center | N
 prevent-scroll-through | Boolean | true | \- | N
 show-overlay | Boolean | true | \- | N
+using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | Typescript：`boolean` | N
 z-index | Number | 11500 | \- | N
 

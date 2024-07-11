@@ -11,6 +11,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 background-color | String | - | \- | N
 duration | Number | 300 | \- | N
 prevent-scroll-through | Boolean | true | \- | N
+using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | \- | N
 z-index | Number | 11000 | \- | N
 

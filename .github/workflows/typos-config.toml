@@ -1,0 +1,8 @@
+default.check-filename = true
+
+[default.extend-words]
+actived = "actived"
+destory = "destory"
+
+[files]
+extend-exclude = ["packages/frontend/_site"]

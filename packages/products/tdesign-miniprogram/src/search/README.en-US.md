@@ -27,15 +27,13 @@ maxlength | Number | -1 | \- | N
 placeholder | String | '' | \- | N
 placeholder-class | String | input-placeholder | \- | N
 placeholder-style | String | - | required | Y
-readonly | Boolean | false | \- | N
+result-list | Array | [] | Typescript：`Array<string>` | N
 right-icon | String / Slot | 'close-circle-filled' | `deprecated`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N
 shape | String | 'square' | options: square/round | N
 type | String | 'text' | options: text/number/idcard/digit/nickname | N
-default-type | String | undefined | uncontrolled property。options: text/number/idcard/digit/nickname | N
 value | String | '' | \- | N
-default-value | String | undefined | uncontrolled property | N
 
 ### Search Events
 
