@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Breadcrumb Props
 
 name | type | default | description | required
