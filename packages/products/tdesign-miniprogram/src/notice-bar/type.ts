@@ -9,31 +9,53 @@ export interface TdNoticeBarProps {
    * 文本内容
    */
   content?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: string | string[];
   };
   /**
-   * 右侧额外信息
+   * 滚动方向
+   * @default horizontal
    */
-  extra?: {
+  direction?: {
     type: StringConstructor;
-    value?: string;
+    value?: 'horizontal' | 'vertical';
   };
   /**
-   * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
+   * 组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名
+   */
+  externalClasses?: {
+    type: ArrayConstructor;
+    value?: ['t-class', 't-class-content', 't-class-prefix-icon', 't-class-operation', 't-class-suffix-icon'];
+  };
+  /**
+   * 间隔时间【仅在 direction='vertical' 有效】
+   * @default 2000
+   */
+  interval?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放【仅在 direction='horizontal' 有效】
    * @default false
    */
   marquee?: {
     type: null;
-    value?: boolean | DrawMarquee;
+    value?: boolean | NoticeBarMarquee;
   };
   /**
-   * 前缀图标
-   * @default ''
+   * 右侧额外信息
    */
-  prefixIcon?: {
+  operation?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 前缀图标。值为字符串表示图标名称，值为 `false` 表示不显示前缀图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标
+   */
+  prefixIcon?: {
+    type: null;
+    value?: string | boolean | object;
   };
   /**
    * 自定义组件样式
@@ -44,12 +66,11 @@ export interface TdNoticeBarProps {
     value?: string;
   };
   /**
-   * 后缀图标
-   * @default ''
+   * 后缀图标。值为字符串表示图标名称。值为 `Object` 类型，表示透传至 `icon`，不传表示不显示后缀图标
    */
   suffixIcon?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: string | object;
   };
   /**
    * 内置主题
@@ -77,7 +98,7 @@ export interface TdNoticeBarProps {
   };
 }
 
-export interface DrawMarquee {
+export interface NoticeBarMarquee {
   speed?: number;
   loop?: number;
   delay?: number;
