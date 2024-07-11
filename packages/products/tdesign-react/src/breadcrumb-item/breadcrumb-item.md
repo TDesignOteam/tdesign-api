@@ -4,7 +4,7 @@
 
 ### BreadcrumbItem Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -18,3 +18,5 @@ replace | Boolean | false | 路由跳转是否采用覆盖的方式（覆盖后�
 router | Object | - | 路由对象。如果项目存在 Router，则默认使用 Router。TS 类型：`any` | N
 target | String | _self | 链接或路由跳转方式。可选项：_blank/_self/_parent/_top | N
 to | String / Object | - | 路由跳转目标，当且仅当 Router 存在时，该 API 有效。TS 类型：`string \| Route` `interface Route { path?: string; name?: string; hash?: string; query?: RouteData; params?: RouteData }` `type RouteData = { [key: string]: string \| string[] }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/breadcrumb/type.ts) | N
+tooltipProps | Object | - | 透传提示组件属性。TS 类型：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/breadcrumb/type.ts) | N
+onClick | Function |  | TS 类型：`(e: MouseEvent) => void`<br/>点击时触发 | N

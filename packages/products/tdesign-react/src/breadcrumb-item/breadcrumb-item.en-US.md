@@ -6,8 +6,8 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 children | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 content | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 disabled | Boolean | - | \- | N
@@ -16,5 +16,7 @@ icon | TElement | - | prefix icon in breadcrumb item。Typescript：`TNode`。[s
 maxWidth | String | undefined | \- | N
 replace | Boolean | false | \- | N
 router | Object | - | Typescript：`any` | N
-target | String | _self | options：_blank/_self/_parent/_top | N
+target | String | _self | options: _blank/_self/_parent/_top | N
 to | String / Object | - | Typescript：`string \| Route` `interface Route { path?: string; name?: string; hash?: string; query?: RouteData; params?: RouteData }` `type RouteData = { [key: string]: string \| string[] }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/breadcrumb/type.ts) | N
+tooltipProps | Object | - | Typescript：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/breadcrumb/type.ts) | N
+onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>trigger on click | N

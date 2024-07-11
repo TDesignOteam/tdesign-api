@@ -51,6 +51,10 @@ export default {
   to: {
     type: [String, Object] as PropType<TdBreadcrumbItemProps['to']>,
   },
+  /** 透传提示组件属性 */
+  tooltipProps: {
+    type: Object as PropType<TdBreadcrumbItemProps['tooltipProps']>,
+  },
   /** 点击时触发 */
   onClick: Function as PropType<TdBreadcrumbItemProps['onClick']>,
 };

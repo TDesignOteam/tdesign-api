@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { TooltipLiteProps as TooltipProps } from '../tooltip';
 import { TNode } from '../common';
 
 export interface TdBreadcrumbProps {
@@ -70,6 +71,10 @@ export interface TdBreadcrumbItemProps {
    * 路由跳转目标，当且仅当 Router 存在时，该 API 有效
    */
   to?: string | Route;
+  /**
+   * 透传提示组件属性
+   */
+  tooltipProps?: TooltipProps;
   /**
    * 点击时触发
    */

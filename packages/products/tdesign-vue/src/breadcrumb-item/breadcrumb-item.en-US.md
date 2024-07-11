@@ -14,5 +14,13 @@ icon | Slot / Function | - | prefix icon in breadcrumb item。Typescript：`TNod
 maxWidth | String | undefined | \- | N
 replace | Boolean | false | \- | N
 router | Object | - | Typescript：`any` | N
-target | String | _self | options：_blank/_self/_parent/_top | N
+target | String | _self | options: _blank/_self/_parent/_top | N
 to | String / Object | - | Typescript：`string \| Route` `interface Route { path?: string; name?: string; hash?: string; query?: RouteData; params?: RouteData }` `type RouteData = { [key: string]: string \| string[] }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/breadcrumb/type.ts) | N
+tooltipProps | Object | - | Typescript：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/breadcrumb/type.ts) | N
+onClick | Function |  | Typescript：`(e: MouseEvent) => void`<br/>trigger on click | N
+
+### BreadcrumbItem Events
+
+name | params | description
+-- | -- | --
+click | `(e: MouseEvent)` | trigger on click
