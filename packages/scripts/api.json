@@ -59988,6 +59988,49 @@
       ]
     },
     {
+      "id": 1721025806,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "attach",
+      "field_type": [
+        "1",
+        "32"
+      ],
+      "field_default_value": "'body'",
+      "field_enum": "",
+      "field_desc_zh": "制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-07-15 06:43:26",
+      "update_time": "2024-07-15 06:43:26",
+      "event_output": null,
+      "custom_field_type": "AttachNode",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Function"
+      ]
+    },
+    {
       "id": 2605,
       "platform_framework": [
         "64"
