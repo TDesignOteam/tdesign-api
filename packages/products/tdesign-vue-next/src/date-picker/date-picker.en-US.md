@@ -18,6 +18,7 @@ format | String | 'YYYY-MM-DD' | \- | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/date-picker/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
+needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time picker scenario, default is true | N
 placeholder | String / Array | undefined | Typescript：`string` | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
@@ -68,6 +69,7 @@ firstDayOfWeek | Number | - | options: 1/2/3/4/5/6/7 | N
 format | String | - | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
+needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time range picker scenario, default is true | N
 panelPreselection | Boolean | true | \- | N
 placeholder | String / Array | - | Typescript：`string \| Array<string>` | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/date-picker/type.ts) | N
