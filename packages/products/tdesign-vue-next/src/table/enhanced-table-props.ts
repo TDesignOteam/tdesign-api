@@ -34,6 +34,4 @@ export default {
   onAbnormalDragSort: Function as PropType<TdEnhancedTableProps['onAbnormalDragSort']>,
   /** 树形结构，展开的树节点发生变化时触发，泛型 T 指表格数据类型 */
   onExpandedTreeNodesChange: Function as PropType<TdEnhancedTableProps['onExpandedTreeNodesChange']>,
-  /** 已废弃。树形结构，用户操作引起节点展开或收起时触发。请更为使用 `onExpandedTreeNodesChange` */
-  onTreeExpandChange: Function as PropType<TdEnhancedTableProps['onTreeExpandChange']>,
 };
