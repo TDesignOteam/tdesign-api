@@ -148,8 +148,6 @@ export default {
   sortIcon: {
     type: Function as PropType<TdPrimaryTableProps['sortIcon']>,
   },
-  /** 已废弃。允许表格行拖拽时排序。请更为使用 `dragSort=\"row\"` */
-  sortOnRowDraggable: Boolean,
   /** 异步加载区域被点击时触发 */
   onAsyncLoadingClick: Function as PropType<TdPrimaryTableProps['onAsyncLoadingClick']>,
   /** 单元格点击时触发 */

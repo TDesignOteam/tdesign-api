@@ -23,11 +23,6 @@ export default {
     type: String as PropType<TdBaseTableProps['activeRowType']>,
     default: '' as TdBaseTableProps['activeRowType'],
   },
-  /** 已废弃。是否允许调整列宽。请更为使用 `resizable` */
-  allowResizeColumnWidth: {
-    type: Boolean,
-    default: undefined,
-  },
   /** 超出省略等所有浮层元素统一绑定到 `attach`，可根据实际情况调整挂载元素 */
   attach: {
     type: [String, Function] as PropType<TdBaseTableProps['attach']>,
@@ -77,11 +72,7 @@ export default {
     type: Array as PropType<TdBaseTableProps['footData']>,
     default: (): TdBaseTableProps['footData'] => [],
   },
-  /** 已废弃。请更为使用 `footerAffixedBottom`。表尾吸底基于 Affix 组件开发，透传全部 Affix 组件属性。 */
-  footerAffixProps: {
-    type: Object as PropType<TdBaseTableProps['footerAffixProps']>,
-  },
-  /** 表尾吸底。使用此向功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，则表示相对于整个窗口吸底。如果表格滚动的父元素不是整个窗口，请通过 `footerAffixedBottom.container` 调整固钉的吸顶范围。基于 Affix 组件开发，透传全部 Affix 组件属性 */
+  /** 表尾吸底。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，则表示相对于整个窗口吸底。如果表格滚动的父元素不是整个窗口，请通过 `footerAffixedBottom.container` 调整固钉的吸顶范围。基于 Affix 组件开发，透传全部 Affix 组件属性 */
   footerAffixedBottom: {
     type: [Boolean, Object] as PropType<TdBaseTableProps['footerAffixedBottom']>,
     default: false as TdBaseTableProps['footerAffixedBottom'],
@@ -89,10 +80,6 @@ export default {
   /** 表尾总结行 */
   footerSummary: {
     type: [String, Function] as PropType<TdBaseTableProps['footerSummary']>,
-  },
-  /** 已废弃。请更为使用 `headerAffixedTop`。表头吸顶基于 Affix 组件开发，透传全部 Affix 组件属性 */
-  headerAffixProps: {
-    type: Object as PropType<TdBaseTableProps['headerAffixProps']>,
   },
   /** 表头吸顶。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，表示相对于整个窗口吸顶。如果表格滚动的父元素不是整个窗口，请通过 `headerAffixedTop.container` 调整吸顶的位置。基于 Affix 组件开发，透传全部 Affix 组件属性。 */
   headerAffixedTop: {
@@ -241,8 +228,4 @@ export default {
   onRowMouseup: Function as PropType<TdBaseTableProps['onRowMouseup']>,
   /** 表格内容滚动时触发 */
   onScroll: Function as PropType<TdBaseTableProps['onScroll']>,
-  /** 已废弃。表格内容横向滚动时触发。请更为使用 `onScroll` 事件 */
-  onScrollX: Function as PropType<TdBaseTableProps['onScrollX']>,
-  /** 已废弃。表格内容纵向滚动时触发。当内容超出高度(height)或最大高度(max-height)时，会出现纵向滚动条。请更为使用 `onScroll` 事件 */
-  onScrollY: Function as PropType<TdBaseTableProps['onScrollY']>,
 };
