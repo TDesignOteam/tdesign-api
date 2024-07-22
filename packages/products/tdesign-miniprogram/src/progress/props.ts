@@ -25,7 +25,7 @@ const props: TdProgressProps = {
   status: {
     type: String,
   },
-  /** 进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度 */
+  /** 进度条线宽，默认单位 `px` */
   strokeWidth: {
     type: null,
   },
