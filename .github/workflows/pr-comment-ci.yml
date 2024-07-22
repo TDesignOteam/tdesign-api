@@ -53,6 +53,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
+          fetch-depth: 0
       - name: gh checkout pr
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
@@ -66,11 +67,15 @@ jobs:
 
       - name: Start Service
         run: pnpm run dev &  
-
+      
+      - name: Merge main
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git merge main --no-commit || true
+          
       - name: Resolve conflict
         run: |
-          git merge main
-
           count_both_modified=$(git status | grep -c 'both modified:')
           both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db')
           echo "count_both_modified $count_both_modified"
@@ -79,8 +84,6 @@ jobs:
           if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$count_both_modified" -eq "1" ]; then
               git checkout -f main db/TDesign.db
               pnpm api:upload
-              git config --local user.email "github-actions[bot]@users.noreply.github.com"
-              git config --local user.name "github-actions[bot]"
               git commit -am "chore: resolve conflict"
               git push
           else

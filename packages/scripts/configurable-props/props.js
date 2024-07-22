@@ -167,7 +167,7 @@ function generateProps(baseData, framework) {
   );
   const apiInfos = getApiInfos(baseData, current);
   const basePath = current.propsBasePath;
-  // 输出至 exmaples 目录
+  // 输出至 examples 目录
   const outputPath = path.resolve(current.usageDemoBasePath);
   Object.keys(apiInfos).forEach((cmp) => {
     const folder = getFolderPath(basePath, kebabCase(cmp));

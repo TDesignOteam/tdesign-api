@@ -6,7 +6,7 @@
 
 import { TdMessageProps } from './type';
 const props: TdMessageProps = {
-  /** 操作 */
+  /** 已废弃。操作 */
   action: {
     type: String,
   },
@@ -15,10 +15,10 @@ const props: TdMessageProps = {
     type: String,
     value: 'left',
   },
-  /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮 */
+  /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'user'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件 */
   closeBtn: {
     type: null,
-    value: undefined,
+    value: false,
   },
   /** 用于自定义消息弹出内容 */
   content: {
@@ -33,17 +33,21 @@ const props: TdMessageProps = {
   externalClasses: {
     type: Array,
   },
-  /** 消息提醒前面的图标。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 'info' 或 'bell' 则显示组件内置图标。也可以完全自定义图标节点 */
+  /** 消息提醒前面的图标，可以自定义。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'info'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件 */
   icon: {
     type: null,
     value: true,
+  },
+  /** 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link` */
+  link: {
+    type: null,
   },
   /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
   marquee: {
     type: null,
     value: false,
   },
-  /** 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx'] */
+  /** 相对于 placement 的偏移量，默认单位 rpx。示例：[-10, 20] 或 ['10rpx', '8rpx'] */
   offset: {
     type: Array,
   },

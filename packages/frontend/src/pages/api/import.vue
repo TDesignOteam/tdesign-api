@@ -60,7 +60,7 @@
       </div>
     </template>
 
-    <div class="t-form-item" v-show="isShowSuger">
+    <div class="t-form-item" v-show="isShowSugar">
       <label>语法糖(Vue)：</label>
       <div class="t-form-content">
         <t-radio-group v-model="formData.syntacticSugar">
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="t-form-item" v-if="isShowSuger">
+    <div class="t-form-item" v-if="isShowSugar">
       <label></label>
       <div class="t-form-content">
         <t-checkbox v-model="formData.supportDefaultValue">是否支持非受控属性</t-checkbox>
@@ -356,7 +356,7 @@ export default {
     currentApiCategory () {
       return API_CATEGORY_MAP[this.formData.apiCategory] || { placeholder: {} }
     },
-    isShowSuger () {
+    isShowSugar () {
       const intersection = this.formData.platform.filter(item => [P_VUE_PC, P_VUE_MOBILE].includes(Number(item)))
       const platformAllow = !!intersection.length
       const categoryAllow = [

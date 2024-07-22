@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common/common';
+import { PopupProps } from '../popup/index';
 
 export interface TdDateTimePickerProps {
   /**
@@ -24,6 +24,14 @@ export interface TdDateTimePickerProps {
     value?: string;
   };
   /**
+   *  组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言
+   * @default zh
+   */
+  customLocale?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 选择器的最大可选时间，默认为当前时间+10年
    */
   end?: {
@@ -38,15 +46,7 @@ export interface TdDateTimePickerProps {
     value?: ['t-class', 't-class-confirm', 't-class-cancel', 't-class-title'];
   };
   /**
-   * 底部内容
-   * @default true
-   */
-  footer?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
+   * 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)
    * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: {
@@ -54,7 +54,7 @@ export interface TdDateTimePickerProps {
     value?: string;
   };
   /**
-   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
+   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
    * @default true
    */
   header?: {
@@ -68,6 +68,14 @@ export interface TdDateTimePickerProps {
   mode?: {
     type: null;
     value?: DateTimePickerMode;
+  };
+  /**
+   * 透传 `Popup` 组件全部属性
+   * @default {}
+   */
+  popupProps?: {
+    type: ObjectConstructor;
+    value?: PopupProps;
   };
   /**
    * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
@@ -85,16 +93,15 @@ export interface TdDateTimePickerProps {
     value?: string | number;
   };
   /**
-   * 自定义组件样式
-   * @default ''
+   * 时间间隔步数，示例：`{ minute: 5 }`
    */
-  style?: {
-    type: StringConstructor;
-    value?: string;
+  steps?: {
+    type: ObjectConstructor;
+    value?: object;
   };
   /**
    * 标题
-   * @default '选择时间'
+   * @default ''
    */
   title?: {
     type: StringConstructor;
