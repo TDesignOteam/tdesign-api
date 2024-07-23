@@ -344,7 +344,7 @@ function addCommonProperties({
       `className | String | - | ${languageInfo.classNameText} | N`,
       `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
     ]);
-  } else if (framework === 'Miniprogram' && category === 'Props') {
+  } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[
       `style | Object | - | ${languageInfo.styleText} | N`,
       `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
