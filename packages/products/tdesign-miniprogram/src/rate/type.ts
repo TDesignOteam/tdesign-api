@@ -41,8 +41,8 @@ export interface TdRateProps {
    * @default 8
    */
   gap?: {
-    type: NumberConstructor;
-    value?: number;
+    type: null;
+    value?: string | number;
   };
   /**
    * 自定义评分图标，[选中图标，未选中图标]
@@ -59,12 +59,12 @@ export interface TdRateProps {
     value?: string;
   };
   /**
-   * 选择评分弹框的位置
+   * 选择评分弹框的位置，值为空字符表示不显示评分弹框
    * @default top
    */
   placement?: {
     type: StringConstructor;
-    value?: 'top' | 'bottom';
+    value?: 'top' | 'bottom' | '';
   };
   /**
    * 是否显示对应的辅助文字
@@ -79,14 +79,6 @@ export interface TdRateProps {
    * @default 24px
    */
   size?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

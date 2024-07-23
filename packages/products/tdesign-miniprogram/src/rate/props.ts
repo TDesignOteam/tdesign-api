@@ -28,7 +28,7 @@ const props: TdRateProps = {
   },
   /** 评分图标的间距 */
   gap: {
-    type: Number,
+    type: null,
     value: 8,
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
@@ -40,7 +40,7 @@ const props: TdRateProps = {
     type: String,
     value: undefined,
   },
-  /** 选择评分弹框的位置 */
+  /** 选择评分弹框的位置，值为空字符表示不显示评分弹框 */
   placement: {
     type: String,
     value: 'top',
@@ -54,11 +54,6 @@ const props: TdRateProps = {
   size: {
     type: String,
     value: '24px',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分'] */
   texts: {
