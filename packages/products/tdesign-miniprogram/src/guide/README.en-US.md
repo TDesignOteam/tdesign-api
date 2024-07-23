@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Guide Props
 
 name | type | default | description | required
@@ -52,8 +51,6 @@ t-class-tooltip | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 back-button-props | Object | - | Typescript：`ButtonProps` | N
 body | String | - | \- | N
 element | Function | - | required。Typescript：`StepElement` `type StepElement = () => Promise<WechatMiniprogram.BoundingClientRectCallbackResult>`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/guide/type.ts) | Y

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Guide Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -52,8 +51,6 @@ t-class-tooltip | 高亮框提示内容区域样式类
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-style | Object | - | 样式 | N
-custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 back-button-props | Object | - | 用于自定义当前引导框的返回按钮的内容。TS 类型：`ButtonProps` | N
 body | String | - | 当前步骤提示框的内容，支持插槽：slot="body-{{index}}" (1、当要显示body-{{index}}插槽时，请将body设置为空；2、当要显示content-{{index}}插槽完全自定义内容时，请将body和title都设置为空) | N
 element | Function | - | 必需。高亮的节点。示例： `() => new Promise((resolve) => this.createSelectorQuery().select('#tdesign').boundingClientRect((rect) => resolve(rect)).exec())`。TS 类型：`StepElement` `type StepElement = () => Promise<WechatMiniprogram.BoundingClientRectCallbackResult>`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/guide/type.ts) | Y
