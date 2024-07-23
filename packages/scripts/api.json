@@ -55442,7 +55442,7 @@
       "update_time": "2024-07-22 03:59:33",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "",
+      "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
