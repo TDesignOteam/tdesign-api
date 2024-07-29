@@ -125382,7 +125382,7 @@
       ],
       "field_default_value": "default",
       "field_enum": "default/dot",
-      "field_desc_zh": "步骤条风格",
+      "field_desc_zh": "时间轴风格",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
