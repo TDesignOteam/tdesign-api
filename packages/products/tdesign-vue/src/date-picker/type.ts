@@ -349,6 +349,7 @@ export interface TdDatePickerPanelProps
     | 'presets'
     | 'presetsPlacement'
     | 'timePickerProps'
+    | 'needConfirm'
   > {
   /**
    * 时间选择器默认值，当 value/defaultValue 未设置值时有效
