@@ -8,7 +8,9 @@ import { GlobalIconConfig } from 'tdesign-icons-vue-next';
 import { CalendarController } from '../calendar';
 import { ButtonProps } from '../button';
 import { FormErrorMessage } from '../form';
-import { TNode } from '../common';
+import { MessageOptions } from '../message';
+import { ImageProps } from '../image';
+import { TNode, SizeEnum, AttachNode } from '../common';
 
 export interface GlobalConfigProvider {
   /**
@@ -23,6 +25,10 @@ export interface GlobalConfigProvider {
    * 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`
    */
   animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
+  /**
+   * null
+   */
+  attach?: AttachNode | { imageViewer?: AttachNode; message?: AttachNode; popup?: AttachNode; dialog?: AttachNode };
   /**
    * 日历组件全局配置
    */
@@ -64,6 +70,14 @@ export interface GlobalConfigProvider {
    * 图标全局配置
    */
   icon?: IconConfig;
+  /**
+   * 图片全局配置
+   */
+  image?: ImageConfig;
+  /**
+   * 图片预览器全局配置
+   */
+  imageViewer?: ImageViewerConfig;
   /**
    * 输入框组件全局配置
    */
@@ -319,6 +333,11 @@ export interface DatePickerConfig {
    */
   dayAriaLabel?: string;
   /**
+   * dayjs 语言国际化配置
+   * @default ''
+   */
+  dayjsLocale?: string;
+  /**
    * 日期方向，'ltr' 表示从左往右
    * @default 'ltr'
    */
@@ -562,6 +581,11 @@ export interface TableConfig {
    */
   selectAllText?: string;
   /**
+   * 全局表格尺寸配置
+   * @default medium
+   */
+  size?: SizeEnum;
+  /**
    * 语言配置，'点击升序' 描述文本
    * @default ''
    */
@@ -756,6 +780,11 @@ export interface UploadConfigFileList {
 
 export interface FormConfig {
   /**
+   * 字段旁边的冒号，中文为“：”
+   * @default ''
+   */
+  colon?: string;
+  /**
    * 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`
    */
   errorMessage?: FormErrorMessage;
@@ -793,6 +822,14 @@ export interface AlertConfig {
   expandText?: string;
 }
 
+export interface DescriptionsConfig {
+  /**
+   * 字段旁边的冒号，中文为“：”
+   * @default ''
+   */
+  colon?: string;
+}
+
 export interface AnchorConfig {
   /**
    * 语言配置，“链接复制成功”描述文本
@@ -804,6 +841,48 @@ export interface AnchorConfig {
    * @default ''
    */
   copyText?: string;
+}
+
+export interface MessageConfig extends MessageOptions {}
+
+export interface ImageConfig {
+  /**
+   * 图片加载失败显示的文本，中文默认为“图片无法显示”
+   * @default ''
+   */
+  errorText?: string;
+  /**
+   * 图片加载中显示的文本，中文默认为“图片加载中”
+   * @default ''
+   */
+  loadingText?: string;
+  /**
+   * 统一替换图片 `src` 地址，参数为组件的全部属性，返回值为新的图片地址
+   */
+  replaceImageSrc?: (params: ImageProps) => string;
+}
+
+export interface ImageViewerConfig {
+  /**
+   * 全局语言配置，默认为 “图片加载失败，可尝试重新加载”
+   * @default ''
+   */
+  errorText?: string;
+  /**
+   * 全局语言配置，默认为 “镜像”
+   * @default ''
+   */
+  mirrorTipText?: string;
+  /**
+   * 全局语言配置，默认为 “原始大小”
+   * @default ''
+   */
+  originalSizeTipText?: string;
+  /**
+   * 全局语言配置，默认为 “旋转”
+   * @default ''
+   */
+  rotateTipText?: string;
 }
 
 export interface GuideConfig {
