@@ -7273,8 +7273,7 @@
     {
       "id": 3023,
       "platform_framework": [
-        "2",
-        "16"
+        "2"
       ],
       "component": "BackTop",
       "field_category": 1,
@@ -7303,8 +7302,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",
@@ -7611,7 +7609,6 @@
     {
       "id": 2392,
       "platform_framework": [
-        "16",
         "32"
       ],
       "component": "BackTop",
@@ -7640,7 +7637,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -7650,7 +7646,8 @@
     {
       "id": 1712643871,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "BackTop",
       "field_category": 1,
@@ -7679,7 +7676,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
