@@ -124414,7 +124414,7 @@
       "create_time": "2021-03-24 04:19:18",
       "update_time": "2022-05-06 08:42:40",
       "event_output": null,
-      "custom_field_type": "(h: number, m: number, s: number, ms: number,context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>【type TimeRangePickerPartial = 'start' | 'end'】",
+      "custom_field_type": "(h: number, m: number, s: number, ms: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>【type TimeRangePickerPartial = 'start' | 'end'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
