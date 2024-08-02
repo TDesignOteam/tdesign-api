@@ -39,7 +39,7 @@
             <div class="t-form-content">
               <t-checkbox v-model="formData.finalProject">输出文件到各框架仓库</t-checkbox>
               <t-tooltip :content="paramsTips[0]">
-                <div class="icon">?</div>
+                <div class="help-icon">?</div>
               </t-tooltip>
               <t-checkbox v-model="formData.onlyDocs">仅输出 README.en-US.md、README.md 文件</t-checkbox>
               <t-checkbox v-model="formData.useDefault" style="margin-right: 20px"
@@ -171,7 +171,7 @@ export default {
     text-decoration: underline;
   }
 }
-.icon {
+.help-icon {
   width: 14px;
   height: 14px;
   background-color: #007bff;
