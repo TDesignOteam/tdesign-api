@@ -41,7 +41,7 @@
               <t-tooltip :content="paramsTips[0]">
                 <div class="help-icon">?</div>
               </t-tooltip>
-              <t-checkbox v-model="formData.onlyDocs">仅输出 README.en-US.md、README.md 文件</t-checkbox>
+              <t-checkbox v-model="formData.onlyDocs">仅输出 md文件</t-checkbox>
               <t-checkbox v-model="formData.useDefault" style="margin-right: 20px"
                 >输出 useDefault/useVModel 文件(Vue2)</t-checkbox
               >
@@ -98,7 +98,7 @@ export default {
         finalProject: false,
       },
       paramsTips: [
-        '包括： props.ts、type.ts、README.en-US.md、README.md ，默认各端框架与当前项目在同一目录，路径调整请在本地修改 BASE_PATH_URL',
+        '包括： props.ts、type.ts、md文件 ，默认各端框架与当前项目在同一目录，路径调整请在本地修改 BASE_PATH_URL',
       ],
     };
   },
