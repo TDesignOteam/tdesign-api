@@ -79710,7 +79710,8 @@
     {
       "id": 1706635398,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "Paragraph",
       "field_category": 1,
@@ -79739,7 +79740,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -79751,7 +79753,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Paragraph",
       "field_category": 1,
@@ -79782,7 +79787,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -79833,7 +79841,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Paragraph",
       "field_category": 1,
@@ -79864,7 +79875,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
@@ -82570,7 +82584,8 @@
     {
       "id": 1712719525,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -82598,7 +82613,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -83177,6 +83193,7 @@
     {
       "id": 3490,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -83207,46 +83224,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712719572,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "preventScrollThrough",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否阻止背景滚动",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-10 03:26:12",
-      "update_time": "2024-04-10 03:26:12",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -83339,7 +83320,8 @@
     {
       "id": 1991,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -83367,7 +83349,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -83698,7 +83681,8 @@
     {
       "id": 1996,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83726,7 +83710,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83735,7 +83720,8 @@
     {
       "id": 1997,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83763,7 +83749,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83772,7 +83759,8 @@
     {
       "id": 1994,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83800,7 +83788,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83809,7 +83798,8 @@
     {
       "id": 1995,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83837,7 +83827,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -120284,7 +120275,8 @@
     {
       "id": 1706635543,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120313,7 +120305,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -120325,7 +120318,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120355,7 +120351,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -120364,7 +120363,10 @@
     {
       "id": 1706635518,
       "platform_framework": [
-        "1"
+        "1",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120393,7 +120395,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -120405,7 +120410,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120436,7 +120444,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
@@ -120446,7 +120457,8 @@
     {
       "id": 1706635501,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120475,7 +120487,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -120487,7 +120500,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120517,7 +120533,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -120528,7 +120547,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120558,7 +120580,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -120569,7 +120594,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120600,7 +120628,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
@@ -120612,7 +120643,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120642,7 +120676,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -120653,7 +120690,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120683,7 +120723,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -120694,7 +120737,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120725,7 +120771,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -120737,7 +120786,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120767,7 +120819,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -120778,7 +120833,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120808,7 +120866,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -120819,7 +120880,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Text",
       "field_category": 1,
@@ -120849,7 +120913,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -125750,7 +125817,8 @@
     {
       "id": 1706635433,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "Title",
       "field_category": 1,
@@ -125779,7 +125847,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -125791,7 +125860,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Title",
       "field_category": 1,
@@ -125822,7 +125894,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -125873,7 +125948,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Title",
       "field_category": 1,
@@ -125904,7 +125982,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
@@ -125916,7 +125997,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Title",
       "field_category": 1,
@@ -125946,7 +126030,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -135303,7 +135390,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyCopyable",
       "field_category": 1,
@@ -135333,7 +135423,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -135344,7 +135437,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyCopyable",
       "field_category": 1,
@@ -135374,7 +135470,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "TNode"
@@ -135426,7 +135525,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyCopyable",
       "field_category": 2,
@@ -135454,7 +135556,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -135463,7 +135568,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyEllipsis",
       "field_category": 1,
@@ -135493,7 +135601,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -135504,7 +135615,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyEllipsis",
       "field_category": 1,
@@ -135534,7 +135648,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -135545,7 +135662,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyEllipsis",
       "field_category": 1,
@@ -135575,7 +135695,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -135586,7 +135709,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyEllipsis",
       "field_category": 1,
@@ -135616,7 +135742,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "TNode"
@@ -135668,7 +135797,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "TypographyEllipsis",
       "field_category": 2,
@@ -135696,7 +135828,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
