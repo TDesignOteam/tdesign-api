@@ -23399,7 +23399,6 @@
     {
       "id": 1337,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -23429,7 +23428,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -23846,52 +23844,12 @@
       "field_type_text": []
     },
     {
-      "id": 1079,
-      "platform_framework": [
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "CellGroup",
-      "field_category": 1,
-      "field_name": "bordered",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "是否显示组边框",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-04-08 05:01:04",
-      "update_time": "2021-07-25 09:21:36",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1712660966,
       "platform_framework": [
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "CellGroup",
       "field_category": 1,
@@ -23921,7 +23879,8 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
