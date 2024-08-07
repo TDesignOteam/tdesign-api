@@ -23399,7 +23399,6 @@
     {
       "id": 1337,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -23429,7 +23428,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
