@@ -11,13 +11,18 @@ jobs:
       github.event.pull_request.merged == false
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           
-      - uses: pnpm/action-setup@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+  
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 8
+          node-version-file: .node-version
+          cache: pnpm
 
       - name: Install Dependencies
         run: pnpm install
