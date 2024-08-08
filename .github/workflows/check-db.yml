@@ -32,7 +32,10 @@ jobs:
         run: | 
           pnpm run dev &
           ip a
-
+      - name: Wait for Service
+        run: |
+          sleep 10
+          
       - name: Update api.json
         run: pnpm run api:download
       
