@@ -124452,7 +124452,7 @@
       ],
       "field_default_value": "HH:mm:ss",
       "field_enum": "",
-      "field_desc_zh": "用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化时间11，[详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

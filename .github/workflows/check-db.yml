@@ -36,11 +36,13 @@ jobs:
         run: |
           sleep 10
           
+      - name: Update DB
+        run: pnpm run api:upload  
+
       - name: Update api.json
         run: pnpm run api:download
       
-      - name: Update DB
-        run: pnpm run api:upload  
+      
 
       - name: Check Diff
         run: |
