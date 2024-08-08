@@ -68489,7 +68489,8 @@
     {
       "id": 2892,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "Link",
       "field_category": 1,
@@ -68518,7 +68519,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
