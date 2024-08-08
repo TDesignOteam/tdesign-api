@@ -54180,7 +54180,6 @@
     {
       "id": 1778,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -54211,7 +54210,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -54223,7 +54221,8 @@
     {
       "id": 1712661601,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Grid",
       "field_category": 1,
@@ -54251,7 +54250,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -54533,7 +54533,8 @@
     {
       "id": 1712661731,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "GridItem",
       "field_category": 1,
@@ -54561,7 +54562,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -54570,7 +54572,6 @@
     {
       "id": 2309,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -54600,7 +54601,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -54769,7 +54769,6 @@
     {
       "id": 1769,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -54800,7 +54799,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -54812,7 +54810,8 @@
     {
       "id": 1712661829,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "GridItem",
       "field_category": 1,
@@ -54842,7 +54841,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
