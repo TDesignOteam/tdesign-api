@@ -54,7 +54,7 @@ name | type | default | description | required
 allowInput | Boolean | false | \- | N
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
-disableTime | Function | - | Typescript：`(h: number, m: number, s: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
+disableTime | Function | - | Typescript：`(h: number, m: number, s: number, ms: number,context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 disabled | Boolean / Array | undefined | Typescript：`boolean \| Array<boolean>` | N
 format | String | HH:mm:ss | \- | N
 hideDisabledTime | Boolean | true | \- | N

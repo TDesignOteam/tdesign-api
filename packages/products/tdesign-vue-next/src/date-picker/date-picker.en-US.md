@@ -112,7 +112,7 @@ preset-click | `(context: { preset: PresetDate, e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 defaultTime | String | '00:00:00' | Time selector default value | N
-`Pick<DatePickerProps, 'value' \| 'defaultValue' \| 'disableDate' \| 'enableTimePicker' \| 'firstDayOfWeek' \| 'format' \| 'mode' \| 'presets' \| 'presetsPlacement' \| 'timePickerProps'>` | \- | - | extends `Pick<DatePickerProps, 'value' \| 'defaultValue' \| 'disableDate' \| 'enableTimePicker' \| 'firstDayOfWeek' \| 'format' \| 'mode' \| 'presets' \| 'presetsPlacement' \| 'timePickerProps'>` | N
+`Pick<DatePickerProps, 'value' \| 'defaultValue' \| 'disableDate' \| 'enableTimePicker' \| 'firstDayOfWeek' \| 'format' \| 'mode' \| 'presets' \| 'presetsPlacement' \| 'timePickerProps' \| 'needConfirm'>` | \- | - | extends `Pick<DatePickerProps, 'value' \| 'defaultValue' \| 'disableDate' \| 'enableTimePicker' \| 'firstDayOfWeek' \| 'format' \| 'mode' \| 'presets' \| 'presetsPlacement' \| 'timePickerProps' \| 'needConfirm'>` | N
 onCellClick | Function |  | Typescript：`(context: { date: Date, e: MouseEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateValue, context: { dayjsValue?: Dayjs, e?: MouseEvent, trigger?: DatePickerTriggerSource }) => void`<br/> | N
 onConfirm | Function |  | Typescript：`(context: { date: Date, e: MouseEvent }) => void`<br/> | N

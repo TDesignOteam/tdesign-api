@@ -165,6 +165,7 @@ export interface TdTimeRangePickerProps {
     h: number,
     m: number,
     s: number,
+    ms: number,
     context: { partial: TimeRangePickerPartial },
   ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number> }>;
   /**
