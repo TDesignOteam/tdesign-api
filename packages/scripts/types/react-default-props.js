@@ -8,7 +8,7 @@ const map = require('../map.json');
 const { lowerFirst, upperFirst } = require('lodash');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
-const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
+const { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, MOBILE_FRAMES } = require('../config');
 const reactDefaultValuePropsConfig = require('../config/reac-default-props');
 const { FILE_RIGHTS_DESC } = require('../config/const');
 const {
@@ -80,10 +80,9 @@ function getTsTypeName(cmp) {
 }
 
 function generateReactDefaultProps(baseData, framework) {
-  // console.log(baseData);
   const relationMap = getCmpTypeCombineMap(
-    TYPES_COMBINE_MAP,
-    framework,
+    framework === 'Miniprogram' ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
+    framework
   );
 
   // checkbox 和 checkboxGroup 等组件，组合输出
