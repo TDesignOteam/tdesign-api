@@ -75,19 +75,19 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Start Service
-        run: pnpm run dev &  
+      - name: Start Service by nohup
+        run: nohup pnpm run dev &  
       
       - name: Merge main
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git merge main --no-commit || true
-          
+      
       - name: Resolve conflict
         run: |
-          count_both_modified=$(git status | grep -c 'both modified:')
-          both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db')
+          count_both_modified=$(git status | grep -c 'both modified:') || true
+          both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db') || true
           echo "count_both_modified $count_both_modified"
           echo "both_modified_db $both_modified_db"
 
