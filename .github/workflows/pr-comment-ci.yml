@@ -80,9 +80,9 @@ jobs:
         
       - name: Wait for Service
         run: 
-          echo sleep 5 seconds start
-          sleep 5
-          echo sleep 5 seconds end
+          echo sleep 10 seconds start
+          sleep 10
+          echo sleep 10 seconds end
 
       - name: Merge main
         run: |
