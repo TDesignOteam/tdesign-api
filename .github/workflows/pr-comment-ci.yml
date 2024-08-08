@@ -79,7 +79,7 @@ jobs:
         run: nohup pnpm run dev & 
         
       - name: Wait for Service
-        run: 
+        run: |
           echo sleep 10 seconds start
           sleep 10
           echo sleep 10 seconds end
