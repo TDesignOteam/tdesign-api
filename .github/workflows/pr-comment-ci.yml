@@ -75,15 +75,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Start Service by nohup
-        run: nohup pnpm run dev & 
-        
-      - name: Wait for Service
-        run: |
-          echo sleep 10 seconds start
-          sleep 10
-          echo sleep 10 seconds end
-
       - name: Merge main
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -98,7 +89,10 @@ jobs:
           echo "both_modified_db $both_modified_db"
 
           if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$count_both_modified" -eq "1" ]; then
-              git checkout -f main db/TDesign.db
+              git checkout --theirs db/TDesign.db
+              git add db/TDesign.db
+              nohup pnpm run dev &
+              sleep 10
               pnpm api:upload
               git commit -am "chore: resolve conflict"
               git push
