@@ -29,7 +29,9 @@ jobs:
         run: pnpm install
 
       - name: Start Service
-        run: pnpm run dev &
+        run: | 
+          pnpm run dev &
+          ip a
 
       - name: Update api.json
         run: pnpm run api:download
