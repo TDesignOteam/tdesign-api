@@ -76,8 +76,14 @@ jobs:
         run: pnpm install
 
       - name: Start Service by nohup
-        run: nohup pnpm run dev &  
-      
+        run: nohup pnpm run dev & 
+        
+      - name: Wait for Service
+        run: 
+          echo sleep 5 seconds start
+          sleep 5
+          echo sleep 5 seconds end
+
       - name: Merge main
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
