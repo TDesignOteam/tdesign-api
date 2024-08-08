@@ -24156,53 +24156,6 @@
       "field_type_text": []
     },
     {
-      "id": 418,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "checked",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-12-22 14:45:16",
-      "update_time": "2022-02-12 14:41:38",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1712664425,
       "platform_framework": [
         "8"
@@ -24240,30 +24193,26 @@
       ]
     },
     {
-      "id": 1695545685,
+      "id": 1722672057,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "16",
-        "32"
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
-      "field_name": "checkedProps",
+      "field_name": "checked",
       "field_type": [
-        "8"
+        "4"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传标签选中态属性",
-      "field_desc_en": "used to set checked tag props",
+      "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
+      "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-09-24 08:54:45",
-      "update_time": "2023-09-24 08:54:45",
+      "create_time": "2024-08-03 08:00:57",
+      "update_time": "2024-08-03 08:00:57",
       "event_output": null,
-      "custom_field_type": "TdTagProps",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24274,20 +24223,15 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "React(Mobile)"
       ],
       "field_type_text": [
-        "Object"
+        "Boolean"
       ]
     },
     {
-      "id": 3313,
+      "id": 1722672250,
       "platform_framework": [
-        "2",
         "16"
       ],
       "component": "CheckTag",
@@ -24303,8 +24247,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-02-02 09:59:21",
-      "update_time": "2023-02-02 09:59:21",
+      "create_time": "2024-08-03 08:04:10",
+      "update_time": "2024-08-03 08:04:10",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24313,11 +24257,10 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -24326,12 +24269,9 @@
       ]
     },
     {
-      "id": 1124,
+      "id": 1722672119,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -24345,8 +24285,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-04-12 15:21:57",
-      "update_time": "2022-03-24 06:25:13",
+      "create_time": "2024-08-03 08:01:59",
+      "update_time": "2024-08-03 08:01:59",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24354,71 +24294,15 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 957,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "content",
-      "field_type": [
-        "1",
-        "2",
-        "16",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件子元素；传入数组时：[选中内容，非选中内容]",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-02-20 12:57:07",
-      "update_time": "2021-08-30 02:47:23",
-      "event_output": null,
-      "custom_field_type": "string | number | string[] | TNode",
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"tnode\":true}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number",
-        "Array",
-        "TNode"
       ]
     },
     {
@@ -24456,6 +24340,49 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number",
+        "Array",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1722672186,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "2",
+        "16",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件子元素；传入数组时：[选中内容，非选中内容]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-03 08:03:06",
+      "update_time": "2024-08-03 08:03:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -24506,15 +24433,46 @@
       ]
     },
     {
-      "id": 419,
+      "id": 1722672091,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "defaultChecked",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态。非受控属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-03 08:01:31",
+      "update_time": "2024-08-03 08:01:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1722672285,
+      "platform_framework": [
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -24528,8 +24486,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-12-22 14:46:46",
-      "update_time": "2021-05-06 02:52:34",
+      "create_time": "2024-08-03 08:04:45",
+      "update_time": "2024-08-03 08:04:45",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24537,62 +24495,15 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 1122,
-      "platform_framework": [
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标签中的图标，可自定义图标呈现",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-04-12 15:20:45",
-      "update_time": "2022-03-24 06:25:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
       ]
     },
     {
@@ -24637,25 +24548,24 @@
       ]
     },
     {
-      "id": 1490,
+      "id": 1722672324,
       "platform_framework": [
-        "16",
-        "64"
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
-      "field_name": "shape",
+      "field_name": "icon",
       "field_type": [
-        "1"
+        "64"
       ],
-      "field_default_value": "square",
-      "field_enum": "square/round/mark",
-      "field_desc_zh": "标签类型，有三种：方形、圆角方形、标记型",
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签中的图标，可自定义图标呈现",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-08-25 05:36:47",
-      "update_time": "2022-03-24 06:23:16",
+      "create_time": "2024-08-03 08:05:24",
+      "update_time": "2024-08-03 08:05:24",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24663,16 +24573,15 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "TNode"
       ]
     },
     {
@@ -24713,15 +24622,46 @@
       ]
     },
     {
-      "id": 1487,
+      "id": 1722672371,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
+      ],
+      "component": "CheckTag",
+      "field_category": 1,
+      "field_name": "shape",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "square",
+      "field_enum": "square/round/mark",
+      "field_desc_zh": "标签类型，有三种：方形、圆角方形、标记型。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-03 08:06:11",
+      "update_time": "2024-08-03 08:06:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1722672443,
+      "platform_framework": [
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -24735,57 +24675,10 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-08-25 05:35:33",
-      "update_time": "2022-01-21 09:20:41",
+      "create_time": "2024-08-03 08:07:23",
+      "update_time": "2024-08-03 08:07:23",
       "event_output": null,
       "custom_field_type": "SizeEnum",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1695545724,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "16",
-        "32"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "uncheckedProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传标签未选态属性",
-      "field_desc_en": "used to set unchecked tag props",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-09-24 08:55:24",
-      "update_time": "2023-09-24 08:55:24",
-      "event_output": null,
-      "custom_field_type": "TdTagProps",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24796,14 +24689,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "React(Mobile)"
       ],
       "field_type_text": [
-        "Object"
+        "String"
       ]
     },
     {
@@ -24850,12 +24739,9 @@
       ]
     },
     {
-      "id": 3239,
+      "id": 1722672527,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -24869,8 +24755,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-12-30 03:46:53",
-      "update_time": "2022-12-30 03:46:53",
+      "create_time": "2024-08-03 08:08:47",
+      "update_time": "2024-08-03 08:08:47",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24878,60 +24764,16 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.26.0\"}",
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
       ]
-    },
-    {
-      "id": 960,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "16",
-        "32"
-      ],
-      "component": "CheckTag",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "状态切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tag/type.ts)。<br/>`interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }`<br/>",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(checked: boolean, context: CheckTagChangeContext)",
-      "create_time": "2021-02-20 12:58:23",
-      "update_time": "2021-11-27 15:47:10",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": []
     },
     {
       "id": 1712912084,
@@ -24969,15 +24811,42 @@
       "field_type_text": []
     },
     {
-      "id": 420,
+      "id": 1723093692,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
+      ],
+      "component": "CheckTag",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "状态切换时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(checked: boolean)",
+      "create_time": "2024-08-08 05:08:12",
+      "update_time": "2024-08-08 05:08:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1723093736,
+      "platform_framework": [
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 2,
@@ -24989,27 +24858,21 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2020-12-22 15:09:28",
-      "update_time": "2021-12-22 10:24:55",
+      "create_time": "2024-08-08 05:08:56",
+      "update_time": "2024-08-08 05:08:56",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLSpanElement>",
+      "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -25047,11 +24910,9 @@
       "field_type_text": []
     },
     {
-      "id": 1713345042,
+      "id": 1723093762,
       "platform_framework": [
-        "8",
-        "16",
-        "32"
+        "16"
       ],
       "component": "CheckTag",
       "field_category": 2,
@@ -25063,23 +24924,21 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2024-04-17 09:10:42",
-      "update_time": "2024-04-17 09:10:42",
+      "create_time": "2024-08-08 05:09:22",
+      "update_time": "2024-08-08 05:09:22",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLSpanElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -117900,9 +117759,8 @@
       "field_type_text": []
     },
     {
-      "id": 3310,
+      "id": 1722583989,
       "platform_framework": [
-        "2",
         "16"
       ],
       "component": "Tag",
@@ -117914,12 +117772,12 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件子元素，同 `content`",
+      "field_desc_zh": "组件子元素，同`content`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-02-02 09:56:22",
-      "update_time": "2023-02-02 09:56:22",
+      "create_time": "2024-08-02 07:33:09",
+      "update_time": "2024-08-02 07:33:09",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -117928,63 +117786,15 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)",
         "React(Mobile)"
       ],
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 24,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "closable",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "标签是否可关闭",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-23 02:44:58",
-      "update_time": "2020-10-23 02:44:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"dom\":\".t-tag__icon-close\"}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {
@@ -118029,6 +117839,43 @@
       ]
     },
     {
+      "id": 1722583887,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "closable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "标签是否可关闭",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-02 07:31:27",
+      "update_time": "2024-08-02 07:31:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1710397655,
       "platform_framework": [
         "1",
@@ -118070,14 +117917,9 @@
       ]
     },
     {
-      "id": 733,
+      "id": 1722583939,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118092,26 +117934,21 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-01-27 04:28:57",
-      "update_time": "2022-01-04 02:13:27",
+      "create_time": "2024-08-02 07:32:19",
+      "update_time": "2024-08-02 07:32:19",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"tnode\":true}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -118193,15 +118030,9 @@
       ]
     },
     {
-      "id": 1125,
+      "id": 1722584413,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118215,8 +118046,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-04-12 15:23:32",
-      "update_time": "2021-08-30 10:58:07",
+      "create_time": "2024-08-02 07:40:13",
+      "update_time": "2024-08-02 07:40:13",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -118224,18 +118055,12 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"disabled\":true,\"closable\":true},\"description\":\"hide closeIcon if tag is disabled, and not trigger click event\",\"expect\":[{\"trigger\":\"click\",\"event\":{\"click\":\"not\"},\"exist\":[{\".t-tag__icon-close\":false}]}]}]}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -118276,53 +118101,6 @@
       ],
       "field_type_text": [
         "Array"
-      ]
-    },
-    {
-      "id": 25,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "icon",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "标签中的图标，可自定义图标呈现",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2020-10-23 02:47:48",
-      "update_time": "2021-09-13 09:33:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"tnode\":true}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
       ]
     },
     {
@@ -118367,15 +118145,46 @@
       ]
     },
     {
-      "id": 27,
+      "id": 1722584470,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
+        "16"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
         "64"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "标签中的图标，可自定义图标呈现",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-02 07:41:10",
+      "update_time": "2024-08-02 07:41:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1722584518,
+      "platform_framework": [
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118390,27 +118199,21 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-10-23 02:51:17",
-      "update_time": "2021-12-01 10:26:31",
+      "create_time": "2024-08-02 07:41:58",
+      "update_time": "2024-08-02 07:41:58",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\"},\"attribute\":[{\"value\":\"150px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]}]}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -118418,15 +118221,9 @@
       ]
     },
     {
-      "id": 26,
+      "id": 1722584594,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118440,8 +118237,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-10-23 02:49:14",
-      "update_time": "2021-08-29 15:27:16",
+      "create_time": "2024-08-02 07:43:14",
+      "update_time": "2024-08-02 07:43:14",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -118449,18 +118246,12 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"className\":[{\"t-tag--square\":false},\"t-tag--round\",\"t-tag--mark\"]}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -118502,45 +118293,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3240,
-      "platform_framework": [
-        "16",
-        "32"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large/extra-large",
-      "field_desc_zh": "标签尺寸",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-12-30 03:52:55",
-      "update_time": "2022-12-30 03:52:55",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-tag--${item}\"}}",
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -118621,15 +118373,46 @@
       ]
     },
     {
-      "id": 4,
+      "id": 1722584646,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
+      ],
+      "component": "Tag",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "medium",
+      "field_enum": "small/medium/large/extra-large",
+      "field_desc_zh": "标签尺寸",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-02 07:44:06",
+      "update_time": "2024-08-02 07:44:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1722584699,
+      "platform_framework": [
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118643,42 +118426,30 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2020-09-01 09:40:22",
-      "update_time": "2021-07-22 02:56:21",
-      "event_output": "",
+      "create_time": "2024-08-02 07:44:59",
+      "update_time": "2024-08-02 07:44:59",
+      "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-tag--${item}\"}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
       ]
     },
     {
-      "id": 2255,
+      "id": 1722584746,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118692,8 +118463,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-01-25 02:37:31",
-      "update_time": "2022-01-27 07:48:14",
+      "create_time": "2024-08-02 07:45:46",
+      "update_time": "2024-08-02 07:45:46",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -118702,32 +118473,20 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"className\":\"t-tag--${item}\"}}",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
       ]
     },
     {
-      "id": 625,
+      "id": 1723093434,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "Tag",
       "field_category": 2,
@@ -118739,40 +118498,28 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2021-01-11 05:38:15",
-      "update_time": "2021-05-14 08:36:00",
+      "create_time": "2024-08-08 05:03:54",
+      "update_time": "2024-08-08 05:03:54",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLSpanElement>",
+      "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"e.type\":\"click\"}]}}}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
     {
-      "id": 626,
+      "id": 1723093618,
       "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "16"
       ],
       "component": "Tag",
       "field_category": 2,
@@ -118784,27 +118531,21 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2021-01-11 05:40:09",
-      "update_time": "2021-04-28 02:20:04",
+      "create_time": "2024-08-08 05:06:58",
+      "update_time": "2024-08-08 05:06:58",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<SVGSVGElement>",
+      "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
-      "test_description": "{\"PC\":{\"event\":[{\"props\":{\"closable\":true},\"expect\":[{\"trigger\":\"click(.t-tag__icon-close)\",\"event\":{\"close\":[{\"e.type\":\"click\"}]}}]}]}}",
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
