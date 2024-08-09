@@ -24118,6 +24118,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -24151,46 +24152,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712664425,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "checked",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:07:05",
-      "update_time": "2024-04-09 12:07:05",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -24201,9 +24166,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "CheckTag",
       "field_category": 1,
@@ -24233,9 +24196,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -24596,7 +24557,9 @@
     {
       "id": 1490,
       "platform_framework": [
+        "8",
         "16",
+        "32",
         "64"
       ],
       "component": "CheckTag",
@@ -24625,45 +24588,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712664487,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "CheckTag",
-      "field_category": 1,
-      "field_name": "shape",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "square",
-      "field_enum": "square/round/mark",
-      "field_desc_zh": "标签类型，有三种：方形、圆角方形、标记型",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:08:07",
-      "update_time": "2024-04-09 12:08:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -24854,9 +24782,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "CheckTag",
       "field_category": 2,
@@ -24864,14 +24790,14 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "状态切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/tag/type.ts)。<br/>`interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }`<br/>",
+      "field_desc_zh": "状态切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(checked: boolean, context: CheckTagChangeContext)",
+      "event_input": "(checked: boolean, context: CheckTagChangeContext) 【interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }】",
       "create_time": "2021-02-20 12:58:23",
       "update_time": "2021-11-27 15:47:10",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -24884,9 +24810,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -24894,6 +24818,8 @@
       "id": 1712912084,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "CheckTag",
@@ -24921,6 +24847,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -118469,8 +118397,10 @@
     {
       "id": 3240,
       "platform_framework": [
+        "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Tag",
       "field_category": 1,
@@ -118498,82 +118428,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712653042,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large/extra-large",
-      "field_desc_zh": "标签尺寸",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 08:57:22",
-      "update_time": "2024-04-09 08:57:22",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712664388,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "small/medium/large/extra-large",
-      "field_desc_zh": "标签尺寸",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:06:28",
-      "update_time": "2024-04-09 12:06:28",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
