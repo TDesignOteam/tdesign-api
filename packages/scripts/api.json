@@ -77589,46 +77589,11 @@
       ]
     },
     {
-      "id": 1712057861,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "backgroundColor",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "遮罩层的背景色",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-02 11:37:41",
-      "update_time": "2024-04-02 11:37:41",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1712719030,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "Overlay",
       "field_category": 1,
@@ -77656,10 +77621,51 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1723374007,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-11 11:00:07",
+      "update_time": "2024-08-11 11:00:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -77691,43 +77697,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3104,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:49:04",
-      "update_time": "2022-10-31 11:49:04",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
       "field_type_text": [
         "String"
       ]
@@ -77891,82 +77860,6 @@
       ]
     },
     {
-      "id": 3102,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:46:18",
-      "update_time": "2022-10-31 11:46:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 2814,
-      "platform_framework": [
-        "16",
-        "32"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "transparent",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "遮罩层是否透明",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-06 08:08:48",
-      "update_time": "2022-07-06 08:08:48",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1719908470,
       "platform_framework": [
         "64"
@@ -78004,47 +77897,10 @@
       ]
     },
     {
-      "id": 2809,
-      "platform_framework": [
-        "16",
-        "32"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "visible",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否展示",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-07-06 03:18:49",
-      "update_time": "2022-07-06 03:18:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1712057795,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "Overlay",
@@ -78073,44 +77929,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712719179,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Overlay",
-      "field_category": 1,
-      "field_name": "visible",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否展示",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-10 03:19:39",
-      "update_time": "2024-04-10 03:19:39",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -78197,8 +78018,6 @@
     {
       "id": 2813,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "Overlay",
@@ -78225,8 +78044,6 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -78234,7 +78051,8 @@
     {
       "id": 1712719233,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Overlay",
       "field_category": 2,
@@ -78260,7 +78078,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
