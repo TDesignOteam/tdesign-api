@@ -15,7 +15,6 @@ overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Document
 placement | String | top | options: top/left/right/bottom/center | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
-transitionName | String | - | \- | N
 visible | Boolean | - | Typescript：`boolean` | N
 zIndex | Number | - | \- | N
 onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N

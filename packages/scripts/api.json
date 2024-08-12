@@ -82317,7 +82317,8 @@
     {
       "id": 1712719525,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -82345,7 +82346,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -82922,50 +82924,12 @@
       ]
     },
     {
-      "id": 3490,
+      "id": 1712719572,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "preventScrollThrough",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "防止滚动穿透",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-05-16 12:22:49",
-      "update_time": "2023-05-16 12:22:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712719572,
-      "platform_framework": [
-        "8"
       ],
       "component": "Popup",
       "field_category": 1,
@@ -82993,7 +82957,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -83445,7 +83412,8 @@
     {
       "id": 1996,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83473,7 +83441,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83482,7 +83451,8 @@
     {
       "id": 1997,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83510,7 +83480,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83519,7 +83490,8 @@
     {
       "id": 1994,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83547,7 +83519,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -83556,7 +83529,8 @@
     {
       "id": 1995,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popup",
       "field_category": 2,
@@ -83584,7 +83558,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
