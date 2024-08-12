@@ -328,3 +328,16 @@ finishButtonProps | Object | - | 最后一步中的完成按钮，示例：`{ co
 nextButtonProps | Object | - | 下一步按钮，示例：`{ content: '下一步', theme: 'primary' }`。TS 类型：`ButtonProps` | N
 prevButtonProps | Object | - | 上一步按钮，示例：`{ content: '上一步', theme: 'default' }`。TS 类型：`ButtonProps` | N
 skipButtonProps | Object | - | 跳过按钮，示例：`{ content: '跳过', theme: 'default' }`。TS 类型：`ButtonProps` | N
+
+### RateConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜'] | N
+
+### EmptyConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+image | Object | - | 空状态组件各类型的图片配置。TS 类型：`{ maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+titleText | Object | - | 空状态组件各类型的标题文本配置。TS 类型：`{ maintenance: string; success: string; fail: string; empty: string; networkError: string; }` | N

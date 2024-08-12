@@ -328,3 +328,16 @@ finishButtonProps | Object | - | finish button in last step. `{ content: 'Finish
 nextButtonProps | Object | - | next step button. `{ content: 'Next Button', theme: 'primary' }`。Typescript：`ButtonProps` | N
 prevButtonProps | Object | - | previous step button. `{ content: 'Previous Step', theme: 'default' }`。Typescript：`ButtonProps` | N
 skipButtonProps | Object | - | skip button. `{ content: 'Skip', theme: 'default' }`。Typescript：`ButtonProps` | N
+
+### RateConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+rateText | Array | - | \- | N
+
+### EmptyConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+image | Object | - | Typescript：`{ maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+titleText | Object | - | Typescript：`{ maintenance: string; success: string; fail: string; empty: string; networkError: string; }` | N

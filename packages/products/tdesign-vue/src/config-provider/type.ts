@@ -904,6 +904,24 @@ export interface GuideConfig {
   skipButtonProps?: ButtonProps;
 }
 
+export interface RateConfig {
+  /**
+   * 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']
+   */
+  rateText?: array;
+}
+
+export interface EmptyConfig {
+  /**
+   * 空状态组件各类型的图片配置
+   */
+  image?: { maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode };
+  /**
+   * 空状态组件各类型的标题文本配置
+   */
+  titleText?: { maintenance: string; success: string; fail: string; empty: string; networkError: string };
+}
+
 export type AnimationType = 'ripple' | 'expand' | 'fade';
 
 export type IconConfig = GlobalIconConfig;
