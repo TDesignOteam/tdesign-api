@@ -510,6 +510,11 @@
         "label": "空状态"
       },
       {
+        "value": "EmptyConfig",
+        "label": "空状态全局配置",
+        "type": "TS"
+      },
+      {
         "value": "EnhancedTable",
         "label": "增强表格"
       },
@@ -767,6 +772,11 @@
       {
         "value": "Rate",
         "label": "评分"
+      },
+      {
+        "value": "RateConfig",
+        "label": "评分全局配置",
+        "type": "TS"
       },
       {
         "value": "Result",

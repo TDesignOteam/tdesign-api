@@ -59,6 +59,10 @@ export interface GlobalConfigProvider {
    */
   drawer?: DrawerConfig;
   /**
+   * 空状态全局配置
+   */
+  empty?: EmptyConfig;
+  /**
    * 表单组件全局配置
    */
   form?: FormConfig;
@@ -98,6 +102,10 @@ export interface GlobalConfigProvider {
    * 气泡确认框全局配置
    */
   popconfirm?: PopconfirmConfig;
+  /**
+   * 评分全局配置
+   */
+  rate?: RateConfig;
   /**
    * 选择器组件全局配置
    */
@@ -902,6 +910,24 @@ export interface GuideConfig {
    * 跳过按钮，示例：`{ content: '跳过', theme: 'default' }`
    */
   skipButtonProps?: ButtonProps;
+}
+
+export interface RateConfig {
+  /**
+   * 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']
+   */
+  rateText?: array;
+}
+
+export interface EmptyConfig {
+  /**
+   * 空状态组件各类型的图片配置
+   */
+  image?: { maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode };
+  /**
+   * 空状态组件各类型的标题文本配置
+   */
+  titleText?: { maintenance: string; success: string; fail: string; empty: string; networkError: string };
 }
 
 export type AnimationType = 'ripple' | 'expand' | 'fade';

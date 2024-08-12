@@ -46706,6 +46706,88 @@
       "field_type_text": []
     },
     {
+      "id": 1723455343,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "EmptyConfig",
+      "field_category": 1,
+      "field_name": "image",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "空状态组件各类型的图片配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-12 09:35:43",
+      "update_time": "2024-08-12 09:35:43",
+      "event_output": null,
+      "custom_field_type": "{ maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1723455232,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "EmptyConfig",
+      "field_category": 1,
+      "field_name": "titleText",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "空状态组件各类型的标题文本配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-12 09:33:52",
+      "update_time": "2024-08-12 09:33:52",
+      "event_output": null,
+      "custom_field_type": "{ maintenance: string; success: string; fail: string; empty: string; networkError: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2690,
       "platform_framework": [
         "1",
@@ -53284,6 +53366,47 @@
       ]
     },
     {
+      "id": 1723455728,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "empty",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "空状态全局配置",
+      "field_desc_en": "Empty global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-12 09:42:08",
+      "update_time": "2024-08-12 09:42:08",
+      "event_output": null,
+      "custom_field_type": "EmptyConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1872,
       "platform_framework": [
         "1",
@@ -53675,6 +53798,47 @@
       "update_time": "2021-11-21 10:17:15",
       "event_output": null,
       "custom_field_type": "PopconfirmConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1723455704,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "rate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "评分全局配置",
+      "field_desc_en": "Rate global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-12 09:41:44",
+      "update_time": "2024-08-12 09:41:44",
+      "event_output": null,
+      "custom_field_type": "RateConfig",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -93218,6 +93382,47 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1723453113,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "RateConfig",
+      "field_category": 1,
+      "field_name": "rateText",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-12 08:58:33",
+      "update_time": "2024-08-12 08:58:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
     },
     {
       "id": 3126,
