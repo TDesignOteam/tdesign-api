@@ -35,6 +35,8 @@ const GLOBAL_COMPONENTS_CONFIG = [
     'ImageConfig',
     'ImageViewerConfig',
     'GuideConfig',
+    'RateConfig',
+    'EmptyConfig'
 ].sort((a, b) => a.localeCompare(b) > 0);
 
 const MESSAGE_LIST = [

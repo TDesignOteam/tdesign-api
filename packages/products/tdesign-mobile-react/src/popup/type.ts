@@ -43,7 +43,7 @@ export interface TdPopupProps {
    */
   placement?: 'top' | 'left' | 'right' | 'bottom' | 'center';
   /**
-   * 防止滚动穿透
+   * 是否阻止背景滚动
    * @default true
    */
   preventScrollThrough?: boolean;
@@ -52,11 +52,6 @@ export interface TdPopupProps {
    * @default true
    */
   showOverlay?: boolean;
-  /**
-   * 弹出层内容区的动画名，等价于transition组件的name属性
-   * @default ''
-   */
-  transitionName?: string;
   /**
    * 是否显示浮层
    */

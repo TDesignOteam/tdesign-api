@@ -9,6 +9,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 backgroundColor | String | - | 遮罩层的背景色 | N
+children | TNode | - | 遮罩内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 duration | Number | 300 | 背景色过渡时间，单位毫秒 | N
 preventScrollThrough | Boolean | true | 防止滚动穿透，即不允许点击和滚动 | N
 visible | Boolean | false | 是否展示 | N
