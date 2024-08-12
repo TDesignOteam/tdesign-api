@@ -31,8 +31,8 @@ close | `(context: { e: MouseEvent })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-checked | Boolean | - | `v-model` and `v-model:checked` is supported | N
-defaultChecked | Boolean | - | uncontrolled property | N
+checked | Boolean | undefined | `v-model` and `v-model:checked` is supported | N
+defaultChecked | Boolean | undefined | uncontrolled property | N
 closable | Boolean | false | \- | N
 content | String / Number / Array / Slot / Function | - | Typescript：`string \| number \| string[] \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
