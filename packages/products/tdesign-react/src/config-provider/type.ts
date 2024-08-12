@@ -59,6 +59,10 @@ export interface GlobalConfigProvider {
    */
   drawer?: DrawerConfig;
   /**
+   * 空状态全局配置
+   */
+  empty?: EmptyConfig;
+  /**
    * 表单组件全局配置
    */
   form?: FormConfig;
@@ -98,6 +102,10 @@ export interface GlobalConfigProvider {
    * 气泡确认框全局配置
    */
   popconfirm?: PopconfirmConfig;
+  /**
+   * 评分全局配置
+   */
+  rate?: RateConfig;
   /**
    * 选择器组件全局配置
    */
