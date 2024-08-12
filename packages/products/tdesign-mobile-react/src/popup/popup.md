@@ -13,9 +13,8 @@ closeOnOverlayClick | Boolean | true | 点击遮罩层是否关闭 | N
 destroyOnClose | Boolean | false | 是否在关闭浮层时销毁浮层 | N
 overlayProps | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/popup/type.ts) | N
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
-preventScrollThrough | Boolean | true | 防止滚动穿透 | N
+preventScrollThrough | Boolean | true | 是否阻止背景滚动 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-transitionName | String | - | 弹出层内容区的动画名，等价于transition组件的name属性 | N
 visible | Boolean | - | 是否显示浮层。TS 类型：`boolean` | N
 zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
 onClose | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>组件准备关闭时触发 | N
