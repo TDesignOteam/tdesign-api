@@ -6,17 +6,6 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-<<<<<<< HEAD
-attach | String / Function | 'body' | Typescript：`AttachNode`。[see more ts definition](https://github.com/TDesignOteam/tdesign-mobile-react/blob/develop/src/common.ts) | N
-children | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/TDesignOteam/tdesign-mobile-react/blob/develop/src/common.ts) | N
-closeBtn | TNode | - | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/TDesignOteam/tdesign-mobile-react/blob/develop/src/common.ts) | N
-closeOnOverlayClick | Boolean | true | \- | N
-destroyOnClose | Boolean | false | \- | N
-overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/TDesignOteam/tdesign-mobile-react/tree/develop/src/popup/type.ts) | N
-placement | String | top | options: top/left/right/bottom/center | N
-preventScrollThrough | Boolean | true | \- | N
-showOverlay | Boolean | true | \- | N
-=======
 attach | String / Function | 'body' | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 children | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 closeBtn | TNode | - | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
@@ -26,16 +15,10 @@ overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Document
 placement | String | top | options: top/left/right/bottom/center | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
-transitionName | String | - | \- | N
->>>>>>> main
 visible | Boolean | - | Typescript：`boolean` | N
 zIndex | Number | - | \- | N
 onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/> | N
 onOpen | Function |  | Typescript：`() => void`<br/> | N
 onOpened | Function |  | Typescript：`() => void`<br/> | N
-<<<<<<< HEAD
-onVisibleChange | Function |  | Typescript：`(visible: boolean, trigger: PopupSource)  => void`<br/>[see more ts definition](https://github.com/TDesignOteam/tdesign-mobile-react/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/> | N
-=======
 onVisibleChange | Function |  | Typescript：`(visible: boolean, trigger: PopupSource)  => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/> | N
->>>>>>> main
