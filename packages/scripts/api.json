@@ -106830,6 +106830,47 @@
       "field_type_text": []
     },
     {
+      "id": 1723520866,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "StepsConfig",
+      "field_category": 1,
+      "field_name": "checkIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "已完成步骤图标，【注意】使用渲染函数输出图标组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-13 03:47:46",
+      "update_time": "2024-08-13 03:47:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 1960,
       "platform_framework": [
         "1",

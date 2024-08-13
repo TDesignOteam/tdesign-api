@@ -278,6 +278,7 @@ closeIcon | Function | - | 关闭图标，【注意】使用渲染函数输出�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+checkIcon | Slot / Function | - | 已完成步骤图标，【注意】使用渲染函数输出图标组件。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 errorIcon | Slot / Function | - | 错误步骤图标，【注意】使用渲染函数输出图标组件。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 
 ### AlertConfig

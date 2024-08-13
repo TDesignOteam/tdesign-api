@@ -278,6 +278,7 @@ closeIcon | Function | - | Typescript：`TNode`。[see more ts definition](https
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+checkIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 errorIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 
 ### AlertConfig

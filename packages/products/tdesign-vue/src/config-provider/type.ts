@@ -816,6 +816,10 @@ export interface TagConfig {
 
 export interface StepsConfig {
   /**
+   * 已完成步骤图标，【注意】使用渲染函数输出图标组件
+   */
+  checkIcon?: TNode;
+  /**
    * 错误步骤图标，【注意】使用渲染函数输出图标组件
    */
   errorIcon?: TNode;
