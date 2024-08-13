@@ -1018,6 +1018,11 @@
         "label": "排版"
       },
       {
+        "value": "TypographyConfig",
+        "label": "排版全局配置",
+        "type": "TS"
+      },
+      {
         "value": "TypographyCopyable",
         "label": "排版复制配置",
         "type": "TS"

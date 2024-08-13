@@ -338,6 +338,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'ActionSheetItem', label: '动作面板项的配置', type: 'TS' },
     { value: 'WatermarkText', label: '水印文字配置', type: 'TS' },
     { value: 'WatermarkImage', label: '水印图片配置', type: 'TS' },
+    { value: 'TypographyConfig', label: '排版全局配置', type: 'TS' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [

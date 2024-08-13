@@ -36,6 +36,7 @@ timePicker | Object | - | 时间选择器全局配置。TS 类型：`TimePickerC
 transfer | Object | - | 穿梭框全局配置。TS 类型：`TransferConfig` | N
 tree | Object | - | 树组件全局配置。TS 类型：`TreeConfig` | N
 treeSelect | Object | - | 树选择器组件全局配置。TS 类型：`TreeSelectConfig` | N
+typography | Object | - | 排版组件全局配置。TS 类型：`TypographyConfig` | N
 upload | Object | - | 上传组件全局配置。TS 类型：`UploadConfig` | N
 
 ### InputConfig
@@ -277,6 +278,7 @@ closeIcon | Function | - | 关闭图标，【注意】使用渲染函数输出�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+checkIcon | Slot / Function | - | 已完成步骤图标，【注意】使用渲染函数输出图标组件。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 errorIcon | Slot / Function | - | 错误步骤图标，【注意】使用渲染函数输出图标组件。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 
 ### AlertConfig
@@ -335,7 +337,7 @@ skipButtonProps | Object | - | 跳过按钮，示例：`{ content: '跳过', the
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜'] | N
+rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']。TS 类型：`string[]` | N
 
 ### EmptyConfig
 
@@ -343,3 +345,11 @@ rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般',
 -- | -- | -- | -- | --
 image | Object | - | 空状态组件各类型的图片配置。TS 类型：`{ maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 titleText | Object | - | 空状态组件各类型的标题文本配置。TS 类型：`{ maintenance: string; success: string; fail: string; empty: string; networkError: string; }` | N
+
+### TypographyConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapseText | String | - | 语言配置，“收起”描述文本 | N
+copiedText | String | - | 语言配置，“复制成功”描述文本 | N
+expandText | String | - | 语言配置，“展开”描述文本 | N
