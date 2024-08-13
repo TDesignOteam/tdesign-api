@@ -337,7 +337,7 @@ skipButtonProps | Object | - | skip button. `{ content: 'Skip', theme: 'default'
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-rateText | Array | - | Typescript：`Array<string>` | N
+rateText | Array | - | Typescript：`string[]` | N
 
 ### EmptyConfig
 

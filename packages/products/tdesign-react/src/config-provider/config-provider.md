@@ -337,7 +337,7 @@ skipButtonProps | Object | - | 跳过按钮，示例：`{ content: '跳过', the
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']。TS 类型：`Array<string>` | N
+rateText | Array | - | 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']。TS 类型：`string[]` | N
 
 ### EmptyConfig
 

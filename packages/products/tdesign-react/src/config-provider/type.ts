@@ -924,7 +924,7 @@ export interface RateConfig {
   /**
    * 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']
    */
-  rateText?: Array<string>;
+  rateText?: string[];
 }
 
 export interface EmptyConfig {
