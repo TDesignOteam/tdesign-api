@@ -54186,6 +54186,47 @@
       ]
     },
     {
+      "id": 1723519338,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "typography",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "排版组件全局配置",
+      "field_desc_en": "Typography global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-13 03:22:18",
+      "update_time": "2024-08-13 03:22:18",
+      "event_output": null,
+      "custom_field_type": "TypographyConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1871,
       "platform_framework": [
         "1",
@@ -93405,7 +93446,7 @@
       "create_time": "2024-08-12 08:58:33",
       "update_time": "2024-08-12 08:58:33",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "Array<string>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -135157,7 +135198,11 @@
     },
     {
       "id": 1723517427,
-      "platform_framework": [],
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
       "component": "TypographyConfig",
       "field_category": 1,
       "field_name": "collapseText",
@@ -135167,7 +135212,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "语言配置，“收起”描述文本",
-      "field_desc_en": null,
+      "field_desc_en": "collapse text",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-08-13 02:50:27",
@@ -135183,14 +135228,63 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [],
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1723518937,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TypographyConfig",
+      "field_category": 1,
+      "field_name": "copiedText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“复制成功”描述文本",
+      "field_desc_en": "copied text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-13 03:15:37",
+      "update_time": "2024-08-13 03:15:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
       "field_type_text": [
         "String"
       ]
     },
     {
       "id": 1723517557,
-      "platform_framework": [],
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
       "component": "TypographyConfig",
       "field_category": 1,
       "field_name": "expandText",
@@ -135200,7 +135294,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "语言配置，“展开”描述文本",
-      "field_desc_en": null,
+      "field_desc_en": "expand text",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-08-13 02:52:37",
@@ -135216,7 +135310,11 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [],
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
       "field_type_text": [
         "String"
       ]
