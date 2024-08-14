@@ -17,7 +17,7 @@ loading | Boolean | true | \- | N
 pause | Boolean | false | \- | N
 progress | Number | - | \- | N
 reverse | Boolean | - | \- | N
-size | String | '40rpx' | \- | N
+size | String | '20px' | \- | N
 text | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 theme | String | circular | options: circular/spinner/dots | N
 ### Loading External Classes
