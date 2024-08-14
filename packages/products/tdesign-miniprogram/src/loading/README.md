@@ -17,7 +17,7 @@ loading | Boolean | true | 是否处于加载状态 | N
 pause | Boolean | false | 是否暂停动画 | N
 progress | Number | - | 加载进度 | N
 reverse | Boolean | - | 加载动画是否反向 | N
-size | String | '40rpx' | 尺寸，示例：40rpx/20px | N
+size | String | '20px' | 尺寸，示例：20px | N
 text | String / Slot | - | 加载提示文案。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 theme | String | circular | 加载组件类型。可选项：circular/spinner/dots | N
 ### Loading External Classes
