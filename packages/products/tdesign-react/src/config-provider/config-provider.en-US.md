@@ -14,6 +14,7 @@ cascader | Object | - | Cascader global configs。Typescript：`CascaderConfig` 
 classPrefix | String | t | \- | N
 colorPicker | Object | - | ColorPicker global configs。Typescript：`ColorPickerConfig` | N
 datePicker | Object | - | DatePicker global configs。Typescript：`DatePickerConfig` | N
+descriptions | Object | - | Descriptions global configs。Typescript：`DescriptionsConfig` | N
 dialog | Object | - | Dialog global configs。Typescript：`DialogConfig` | N
 drawer | Object | - | Drawer global configs。Typescript：`DrawerConfig` | N
 empty | Object | - | Empty global configs。Typescript：`EmptyConfig` | N

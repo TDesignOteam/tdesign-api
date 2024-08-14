@@ -51,6 +51,10 @@ export interface GlobalConfigProvider {
    */
   datePicker?: DatePickerConfig;
   /**
+   * 描述全局配置
+   */
+  descriptions?: DescriptionsConfig;
+  /**
    * 对话框全局配置
    */
   dialog?: DialogConfig;
