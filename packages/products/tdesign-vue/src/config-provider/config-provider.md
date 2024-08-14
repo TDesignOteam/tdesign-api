@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### GlobalConfigProvider
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -14,6 +15,7 @@ cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfi
 classPrefix | String | t | CSS 类名前缀 | N
 colorPicker | Object | - | 颜色选择器全局配置。TS 类型：`ColorPickerConfig` | N
 datePicker | Object | - | 日期选择器全局配置。TS 类型：`DatePickerConfig` | N
+descriptions | Object | - | 描述全局配置。TS 类型：`DescriptionsConfig` | N
 dialog | Object | - | 对话框全局配置。TS 类型：`DialogConfig` | N
 drawer | Object | - | 抽屉全局配置。TS 类型：`DrawerConfig` | N
 empty | Object | - | 空状态全局配置。TS 类型：`EmptyConfig` | N
@@ -264,7 +266,7 @@ fileStatusText | String | - | 语言配置，“状态” 描述文本 | N
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-colon | String | - | 字段旁边的冒号，中文为“：” | N
+colonText | String | - | 字段旁边的冒号，中文为“：” | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | 是否显示必填符号（*），默认显示 | N
 
@@ -292,7 +294,7 @@ expandText | String | - | 语言配置，“展开更多”描述文本 | N
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-colon | String | - | 字段旁边的冒号，中文为“：” | N
+colonText | String | - | 字段旁边的冒号，中文为“：” | N
 
 ### AnchorConfig
 
