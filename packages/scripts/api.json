@@ -37971,7 +37971,7 @@
       ],
       "component": "DescriptionsConfig",
       "field_category": 1,
-      "field_name": "colon",
+      "field_name": "colonText",
       "field_type": [
         "1"
       ],
@@ -50172,7 +50172,7 @@
       ],
       "component": "FormConfig",
       "field_category": 1,
-      "field_name": "colon",
+      "field_name": "colonText",
       "field_type": [
         "1"
       ],

@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### GlobalConfigProvider
 
 name | type | default | description | required
@@ -265,7 +266,7 @@ fileStatusText | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-colon | String | - | colon on the right of label ":" | N
+colonText | String | - | colon on the right of label ":" | N
 errorMessage | Object | - | Typescript：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | \- | N
 
@@ -293,7 +294,7 @@ expandText | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-colon | String | - | colon on the right of label, ":" | N
+colonText | String | - | colon on the right of label, ":" | N
 
 ### AnchorConfig
 
