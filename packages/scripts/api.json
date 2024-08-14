@@ -24652,7 +24652,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "CheckTag",
@@ -24684,7 +24683,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
