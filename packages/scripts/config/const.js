@@ -56,6 +56,7 @@ const REACT_EVENTS = [
     'ChangeEvent',
     'DragEvent',
     'CompositionEvent',
+    'TouchEvent',
 ];
 const REACT_TYPES = ['CSSProperties'].concat(REACT_EVENTS);
 
