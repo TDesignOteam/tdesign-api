@@ -83,14 +83,16 @@ jobs:
       
       - name: Resolve conflict
         run: |
-          count_both_modified=$(git status | grep -c 'both modified:') || true
-          both_modified_db=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db') || true
-          echo "count_both_modified $count_both_modified"
-          echo "both_modified_db $both_modified_db"
+          git status
+          conflict_count=$(git status | grep -c 'both modified:') || true
+          db_conflict=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db') || true
+          echo "conflict_count $conflict_count"
+          echo "db_conflict $db_conflict"
 
-          if [ "$count_both_modified" -eq "$both_modified_db" ]&&[ "$count_both_modified" -eq "1" ]; then
+          if [ "$conflict_count" -eq "$db_conflict" ]&&[ "$conflict_count" -eq "1" ]; then
               git checkout --theirs db/TDesign.db
               git add db/TDesign.db
+              git status
               nohup pnpm run dev &
               sleep 10
               pnpm api:upload
