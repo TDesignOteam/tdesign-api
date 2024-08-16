@@ -59643,6 +59643,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -59675,6 +59676,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -60163,6 +60165,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -60195,6 +60198,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -60293,7 +60297,6 @@
       "platform_framework": [
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Image",
@@ -60325,7 +60328,6 @@
       "platform_framework_text": [
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -60412,7 +60414,8 @@
     {
       "id": 1712661947,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Image",
       "field_category": 1,
@@ -60440,7 +60443,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -60452,6 +60456,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -60484,45 +60489,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1712661996,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Image",
-      "field_category": 1,
-      "field_name": "srcset",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图片地址，支持特殊格式的图片，如 `.avif` 和 `.webp`",
-      "field_desc_en": "for `.avif` and `.webp` image url, load `srcset` before `src`",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:26:36",
-      "update_time": "2024-04-09 11:26:36",
-      "event_output": null,
-      "custom_field_type": "ImageSrcset【interface ImageSrcset { 'image/avif': string; 'image/webp': string; }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
