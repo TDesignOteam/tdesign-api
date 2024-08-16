@@ -29,6 +29,9 @@ function getComponentsMap(components) {
 }
 
 function getDefaultValue(api) {
+  // 是否已废弃
+  if (api.deprecated) return;
+  
   const defaultValue = api.field_default_value;
   // 如果 API 平台显示设置了默认值为 undefined，则必须立即返回 undefined。这种一般属于优先级之类的 API
   if (defaultValue === 'undefined') return defaultValue;
