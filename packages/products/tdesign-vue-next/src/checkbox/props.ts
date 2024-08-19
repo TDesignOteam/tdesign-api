@@ -45,11 +45,6 @@ export default {
   },
   /** 只读状态 */
   readonly: Boolean,
-  /** HTML 原生属性 */
-  title: {
-    type: String,
-    default: '',
-  },
   /** 多选框的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdCheckboxProps['value']>,
