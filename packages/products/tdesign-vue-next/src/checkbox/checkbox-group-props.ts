@@ -8,7 +8,7 @@ import { TdCheckboxGroupProps } from '../checkbox/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
+  /** 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
     type: Boolean,
     default: undefined,
@@ -43,6 +43,6 @@ export default {
     type: Array as PropType<TdCheckboxGroupProps['defaultValue']>,
     default: (): TdCheckboxGroupProps['defaultValue'] => [],
   },
-  /** 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项，`context.name` 为该chekboxGroup的name属性 */
+  /** 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项 */
   onChange: Function as PropType<TdCheckboxGroupProps['onChange']>,
 };

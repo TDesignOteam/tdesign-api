@@ -60,11 +60,6 @@ export interface TdCheckboxProps {
    */
   readonly?: boolean;
   /**
-   * HTML 原生属性
-   * @default ''
-   */
-  title?: string;
-  /**
    * 多选框的值
    */
   value?: string | number | boolean;
@@ -76,7 +71,7 @@ export interface TdCheckboxProps {
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
-   * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
+   * 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
   /**
@@ -113,7 +108,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   modelValue?: T;
   /**
-   * 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项，`context.name` 为该chekboxGroup的name属性
+   * 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项
    */
   onChange?: (value: T, context: CheckboxGroupChangeContext) => void;
 }
@@ -131,5 +126,4 @@ export interface CheckboxGroupChangeContext {
   current: string | number | boolean;
   option: CheckboxOption | TdCheckboxProps;
   type: 'check' | 'uncheck';
-  name?: string;
 }
