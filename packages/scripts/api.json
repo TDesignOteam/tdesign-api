@@ -94314,10 +94314,7 @@
     },
     {
       "id": 2843,
-      "platform_framework": [
-        "2",
-        "16"
-      ],
+      "platform_framework": [],
       "component": "Search",
       "field_category": 1,
       "field_name": "autocompleteOptions",
@@ -94343,10 +94340,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "Array"
       ]
