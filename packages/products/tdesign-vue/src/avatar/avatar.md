@@ -39,3 +39,10 @@ collapseAvatar | String / Slot / Function | - | 头像数量超出时，会出�
 max | Number | - | 能够同时显示的最多头像数量 | N
 popupProps | Object | - | 头像右上角提示信息。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/avatar/type.ts) | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
+onOnCollapsedItemClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击头像折叠元素触发 | N
+
+### AvatarGroup Events
+
+名称 | 参数 | 描述
+-- | -- | --
+on-collapsed-item-click | `(context: { e: MouseEvent })` | 点击头像折叠元素触发
