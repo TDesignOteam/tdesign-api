@@ -94,7 +94,7 @@ export interface TdAvatarGroupProps {
   /**
    * 点击头像折叠元素触发
    */
-  onOnCollapsedItemClick?: (context: { e: MouseEvent }) => void;
+  onCollapsedItemClick?: (context: { e: MouseEvent }) => void;
 }
 
 export type ShapeEnum = 'circle' | 'round';

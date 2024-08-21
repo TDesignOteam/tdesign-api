@@ -49,7 +49,7 @@ size | String | medium | size | N
 
 name | params | description
 -- | -- | --
-on-collapsed-item-click | - | \-
+collapsed-item-click | - | \-
 ### AvatarGroup External Classes
 
 className | Description

@@ -31,5 +31,5 @@ export default {
     default: 'medium',
   },
   /** 点击头像折叠元素触发 */
-  onOnCollapsedItemClick: Function as PropType<TdAvatarGroupProps['onOnCollapsedItemClick']>,
+  onCollapsedItemClick: Function as PropType<TdAvatarGroupProps['onCollapsedItemClick']>,
 };

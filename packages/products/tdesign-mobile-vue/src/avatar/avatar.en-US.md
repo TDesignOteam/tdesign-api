@@ -31,10 +31,10 @@ cascading | String | 'right-up' | multiple images cascading。options: left-up/r
 collapseAvatar | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | - | \- | N
 size | String | medium | size | N
-onOnCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 
 ### AvatarGroup Events
 
 name | params | description
 -- | -- | --
-on-collapsed-item-click | `(context: { e: MouseEvent })` | \-
+collapsed-item-click | `(context: { e: MouseEvent })` | \-

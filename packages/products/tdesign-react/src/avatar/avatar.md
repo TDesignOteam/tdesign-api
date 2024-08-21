@@ -34,4 +34,4 @@ collapseAvatar | TNode | - | 头像数量超出时，会出现一个头像折叠
 max | Number | - | 能够同时显示的最多头像数量 | N
 popupProps | Object | - | 头像右上角提示信息。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/avatar/type.ts) | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
-onOnCollapsedItemClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击头像折叠元素触发 | N
+onCollapsedItemClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击头像折叠元素触发 | N

@@ -30,4 +30,4 @@ cascading | String | 'right-up' | multiple images cascading。options: left-up/r
 collapseAvatar | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 max | Number | - | \- | N
 size | String | medium | size | N
-onOnCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
