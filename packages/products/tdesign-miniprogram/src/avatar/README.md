@@ -49,7 +49,7 @@ size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等�
 
 名称 | 参数 | 描述
 -- | -- | --
-on-collapsed-item-click | - | 点击头像折叠元素触发
+collapsed-item-click | - | 点击头像折叠元素触发
 ### AvatarGroup External Classes
 
 类名 | 描述

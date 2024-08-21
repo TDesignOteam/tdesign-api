@@ -30,4 +30,4 @@ cascading | String | 'right-up' | 图片之间的层叠关系，可选值：左�
 collapseAvatar | TNode | - | 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 max | Number | - | 能够同时显示的最多头像数量 | N
 size | String | medium | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
-onOnCollapsedItemClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击头像折叠元素触发 | N
+onCollapsedItemClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击头像折叠元素触发 | N
