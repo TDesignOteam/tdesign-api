@@ -9299,7 +9299,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9330,7 +9332,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -9385,7 +9389,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9417,7 +9423,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -9430,7 +9438,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9461,7 +9471,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -9473,7 +9485,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9504,7 +9518,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -9598,7 +9614,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9630,7 +9648,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -9724,7 +9744,9 @@
     {
       "id": 1712663155,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -9752,7 +9774,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -10012,7 +10036,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10044,7 +10070,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -10266,7 +10294,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10298,7 +10328,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
@@ -10349,7 +10381,9 @@
     {
       "id": 1712663213,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10377,7 +10411,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -10430,7 +10466,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10462,7 +10500,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -10692,7 +10732,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10723,7 +10765,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -10858,7 +10902,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10889,7 +10935,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -10942,7 +10990,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10973,7 +11023,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -10985,7 +11037,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -11016,7 +11070,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -11066,7 +11122,9 @@
     {
       "id": 1712663466,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -11094,7 +11152,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -11149,7 +11209,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -11180,7 +11242,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -11266,7 +11330,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 2,
@@ -11295,7 +11361,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -11411,7 +11479,9 @@
     {
       "id": 1712663505,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 2,
@@ -11437,7 +11507,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -11669,7 +11741,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 2,
@@ -11698,7 +11772,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -11893,7 +11969,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 64,
@@ -11922,7 +12000,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -11932,6 +12012,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -11965,46 +12046,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712663635,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right/center",
-      "field_desc_zh": "列横向对齐方式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:53:55",
-      "update_time": "2024-04-09 11:53:55",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -12182,7 +12227,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "BaseTableCol",
@@ -12214,7 +12258,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -12227,7 +12270,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32",
         "64"
       ],
@@ -12263,7 +12305,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -12279,7 +12320,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -12309,44 +12353,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712663802,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "colKey",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "渲染列所需字段，值为 `serial-number` 表示当前列为「序号」列",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:56:42",
-      "update_time": "2024-04-09 11:56:42",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -12399,6 +12409,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -12434,50 +12445,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "Object",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1712663901,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "ellipsis",
-      "field_type": [
-        "4",
-        "8",
-        "64"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "单元格和表头内容超出时，是否显示省略号。如果仅希望单元格超出省略，可设置 `ellipsisTitle = false`。<br/> 值为 `true`，则超出省略浮层默认显示单元格内容；<br/>值类型为 `Function` 则自定义超出省略浮中层显示的内容；<br/>值类型为 `Object`，则自动透传属性到 Tooltip 组件，可用于调整浮层背景色和方向等特性。<br/> 同时透传 Tooltip 属性和自定义浮层内容，请使用 `{ props: { theme: 'light' }, content: () => 'something' }`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:58:21",
-      "update_time": "2024-04-09 11:58:21",
-      "event_output": null,
-      "custom_field_type": "boolean | TNode<BaseTableCellParams<T>> | TooltipProps | { props: TooltipProps; content: TNode<BaseTableCellParams<T>> }【import { TooltipProps } from '@Tooltip'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -12491,6 +12462,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -12526,50 +12498,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean",
-        "Object",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1712663973,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "ellipsisTitle",
-      "field_type": [
-        "4",
-        "8",
-        "64"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "表头内容超出时，是否显示省略号。优先级高于 `ellipsis`。<br/>值为 `true`，则超出省略的浮层默认显示表头全部内容；<br/>值类型为 `Function` 用于自定义超出省略浮层显示的表头内容；<br/>值类型为 `Object`，则自动透传属性到 Tooltip 组件，则自动透传属性到 Tooltip 组件，可用于调整浮层背景色和方向等特性。<br/> 同时透传 Tooltip 属性和自定义浮层内容，请使用 `{ props: { theme: 'light' }, content: () => 'something' }`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:59:33",
-      "update_time": "2024-04-09 11:59:33",
-      "event_output": null,
-      "custom_field_type": "boolean | TNode<BaseTableColParams<T>> | TooltipProps | { props: TooltipProps; content: TNode<BaseTableColParams<T>> }【interface BaseTableColParams<T> { col: BaseTableCol<T>; colIndex: number }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -12583,7 +12515,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32",
         "64"
       ],
@@ -12616,7 +12547,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -12627,7 +12557,8 @@
     {
       "id": 1712664063,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -12655,7 +12586,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -12707,8 +12639,7 @@
     {
       "id": 2276,
       "platform_framework": [
-        "2",
-        "16"
+        "2"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -12737,8 +12668,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",
@@ -12750,7 +12680,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -12781,46 +12714,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1712664112,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "minWidth",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传 CSS 属性 `min-width` 到 `<col>` 元素。⚠️ 仅少部分浏览器支持，如：使用 [TablesNG](https://docs.google.com/document/d/16PFD1GtMI9Zgwu0jtPaKZJ75Q2wyZ9EZnVbBacOfiNA/preview) 渲染的 Chrome 浏览器支持 `minWidth`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:01:52",
-      "update_time": "2024-04-09 12:01:52",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -12833,7 +12730,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "BaseTableCol",
@@ -12865,7 +12761,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -13047,6 +12942,7 @@
       "platform_framework": [
         "1",
         "4",
+        "8",
         "32"
       ],
       "component": "BaseTableCol",
@@ -13078,6 +12974,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -13127,50 +13024,12 @@
       ]
     },
     {
-      "id": 1712664206,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "title",
-      "field_type": [
-        "1",
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:03:26",
-      "update_time": "2024-04-09 12:03:26",
-      "event_output": null,
-      "custom_field_type": "string | TNode<{ col: BaseTableCol; colIndex: number }>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Function"
-      ]
-    },
-    {
       "id": 799,
       "platform_framework": [
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -13205,48 +13064,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1712664227,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "width",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "列宽，可以作为最小宽度使用。当列宽总和小于 `table` 元素时，浏览器根据宽度设置情况自动分配宽度；当列宽总和大于 `table` 元素，表现为定宽。可以同时调整 `table` 元素的宽度来达到自己想要的效果",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:03:47",
-      "update_time": "2024-04-09 12:03:47",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -13259,7 +13080,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "BaseTableCol",
@@ -13289,7 +13109,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": []
