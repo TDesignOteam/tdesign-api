@@ -35,4 +35,4 @@ size | String | medium | 组件尺寸【讨论中】。可选项：small/medium/
 value | String / Number / Boolean | - | 选中的值。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | 选中的值。非受控属性。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/radio/type.ts) | N
 variant | String | outline | 单选组件按钮形式。可选项：outline/primary-filled/default-filled | N
-onChange | Function |  | TS 类型：`(value: T, context: { e: ChangeEvent }) => void`<br/>选中值发生变化时触发 | N
+onChange | Function |  | TS 类型：`(value: T, context: { e: ChangeEvent; name?: string }) => void`<br/>选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性 | N

@@ -35,4 +35,4 @@ size | String | medium | options: small/medium/large。Typescript：`SizeEnum`�
 value | String / Number / Boolean | - | Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | uncontrolled property。Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/radio/type.ts) | N
 variant | String | outline | options: outline/primary-filled/default-filled | N
-onChange | Function |  | Typescript：`(value: T, context: { e: ChangeEvent }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: T, context: { e: ChangeEvent; name?: string }) => void`<br/> | N
