@@ -6,7 +6,7 @@
 
 import { BadgeProps } from '../badge';
 import { ImageProps } from '../image';
-import { TNode, ImageEvent } from '../common';
+import { TNode } from '../common';
 
 export interface TdAvatarProps {
   /**
@@ -49,7 +49,7 @@ export interface TdAvatarProps {
   /**
    * 图片加载失败时触发
    */
-  onError?: (context: { e: ImageEvent }) => void;
+  onError?: (context: { e: Event }) => void;
 }
 
 export interface TdAvatarGroupProps {
