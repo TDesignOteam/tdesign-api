@@ -12,4 +12,5 @@ export const countDownDefaultProps: TdCountDownProps = {
   size: 'medium',
   splitWithUnit: false,
   theme: 'default',
+  time: 0,
 };
