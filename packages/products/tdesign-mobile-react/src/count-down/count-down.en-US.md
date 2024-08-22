@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### CountDown Props
 
 name | type | default | description | required
@@ -17,6 +16,6 @@ millisecond | Boolean | false | \- | N
 size | String | 'medium' | options: small/medium/large | N
 splitWithUnit | Boolean | false | \- | N
 theme | String | 'default' | options: default/round/square | N
-time | Number | - | required | Y
+time | Number | 0 | required | Y
 onChange | Function |  | Typescript：`(time: TimeData) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/> | N
 onFinish | Function |  | Typescript：`() => void`<br/> | N

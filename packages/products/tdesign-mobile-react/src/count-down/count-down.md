@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### CountDown Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -17,6 +16,6 @@ millisecond | Boolean | false | 是否开启毫秒级渲染 | N
 size | String | 'medium' | 倒计时尺寸。可选项：small/medium/large | N
 splitWithUnit | Boolean | false | 使用时间单位分割 | N
 theme | String | 'default' | 倒计时风格。可选项：default/round/square | N
-time | Number | - | 必需。倒计时时长，单位毫秒 | Y
+time | Number | 0 | 必需。倒计时时长，单位毫秒 | Y
 onChange | Function |  | TS 类型：`(time: TimeData) => void`<br/>时间变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/> | N
 onFinish | Function |  | TS 类型：`() => void`<br/>倒计时结束时触发 | N
