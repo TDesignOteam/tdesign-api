@@ -9,7 +9,6 @@ import { TNode, TElement } from '../common';
 export interface TdSideBarProps {
   /**
    * 侧边导航内容
-   * @default ''
    */
   children?: TNode;
   /**
