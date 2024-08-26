@@ -20,11 +20,6 @@ const props: TdAvatarProps = {
     type: Boolean,
     value: false,
   },
-  /** 自定义组件样式 */
-  customStyle: {
-    type: String,
-    value: '',
-  },
   /** 组件类名，用于设置组件外层元素类名 */
   externalClasses: {
     type: Array,
@@ -52,7 +47,7 @@ const props: TdAvatarProps = {
     type: String,
     value: 'circle',
   },
-  /** 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定 */
+  /** 尺寸，示例值：small/medium/large/24px/38px 等 */
   size: {
     type: String,
     value: 'medium',

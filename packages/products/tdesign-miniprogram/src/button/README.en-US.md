@@ -12,7 +12,7 @@ app-parameter | String | - | \- | N
 block | Boolean | false | make button to be a block-level element | N
 content | String / Slot | - | button's children elements。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 custom-dataset | Object | - | Typescript：``any`` \| N
-disabled \| Boolean \| false \| disable the button, make it can not be clicked \| N
+disabled \| Boolean \| undefined \| disable the button, make it can not be clicked \| N
 ghost \| Boolean \| false \| make background-color to be transparent \| N
 hover-class \| String \| - \| \- \| N
 hover-start-time \| Number \| 20 \| \- \| N
@@ -35,7 +35,7 @@ suffix \| Slot \| - \| [see more ts definition](https://github.com/Tencent/tdesi
 t-id \| String \| - \| id \| N
 theme \| String \| default \| button theme。options: default/primary/danger/light \| N
 type \| String \| - \| type of button element, same as formType of Miniprogram。options: submit/reset \| N
-variant \| String \| base \| button variant。options: base/outline/dashed/text \| N
+variant \| String \| base \| variant of button。options: base/outline/dashed/text \| N
 
 ### Button Events
 

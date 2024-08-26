@@ -8,7 +8,7 @@ import { TdEmptyProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 操作区域 */
+  /** 操作按钮 */
   action: {
     type: Function as PropType<TdEmptyProps['action']>,
   },
@@ -23,6 +23,15 @@ export default {
   /** 透传图片样式表 */
   imageStyle: {
     type: Object as PropType<TdEmptyProps['imageStyle']>,
+  },
+  /** 空状态的尺寸，默认为 `medium` */
+  size: {
+    type: String as PropType<TdEmptyProps['size']>,
+    default: 'medium' as TdEmptyProps['size'],
+    validator(val: TdEmptyProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
   },
   /** 错误标题 */
   title: {

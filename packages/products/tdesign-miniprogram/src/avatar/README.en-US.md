@@ -44,6 +44,12 @@ cascading | String | 'left-up' | multiple images cascading。options: left-up/ri
 collapse-avatar | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 max | Number | - | \- | N
 size | String | medium | size | N
+
+### AvatarGroup Events
+
+name | params | description
+-- | -- | --
+collapsed-item-click | - | \-
 ### AvatarGroup External Classes
 
 className | Description

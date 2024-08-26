@@ -14,13 +14,13 @@ image | String | - | images url | N
 imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/avatar/type.ts) | N
 shape | String | circle | shape。options: circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/avatar/type.ts) | N
 size | String | medium | size | N
-onError | Function |  | Typescript：`(context: { e: ImageEvent }) => void`<br/>trigger on image load failed | N
+onError | Function |  | Typescript：`(context: { e: Event }) => void`<br/>trigger on image load failed | N
 
 ### Avatar Events
 
 name | params | description
 -- | -- | --
-error | `(context: { e: ImageEvent })` | trigger on image load failed
+error | `(context: { e: Event })` | trigger on image load failed
 
 
 ### AvatarGroup Props
@@ -31,3 +31,10 @@ cascading | String | 'right-up' | multiple images cascading。options: left-up/r
 collapseAvatar | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | - | \- | N
 size | String | medium | size | N
+onCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+
+### AvatarGroup Events
+
+name | params | description
+-- | -- | --
+collapsed-item-click | `(context: { e: MouseEvent })` | \-

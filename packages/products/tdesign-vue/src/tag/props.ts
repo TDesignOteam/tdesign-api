@@ -61,6 +61,11 @@ export default {
       return ['default', 'primary', 'warning', 'danger', 'success'].includes(val);
     },
   },
+  /** 标签标题，在标签hover时展示，默认为标签内容 */
+  title: {
+    type: String,
+    default: '',
+  },
   /** 标签风格变体 */
   variant: {
     type: String as PropType<TdTagProps['variant']>,
