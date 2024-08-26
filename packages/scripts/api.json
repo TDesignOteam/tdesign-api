@@ -101216,7 +101216,8 @@
       "field_category": 1,
       "field_name": "children",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -101241,7 +101242,8 @@
         "React(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {
