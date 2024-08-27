@@ -101332,7 +101332,8 @@
       "id": 1712580336,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "32"
       ],
       "component": "SideBar",
       "field_category": 2,
@@ -101361,7 +101362,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -101372,6 +101374,7 @@
       "platform_framework": [
         "8",
         "16",
+        "32",
         "64"
       ],
       "component": "SideBar",
@@ -101402,6 +101405,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101456,6 +101460,7 @@
       "platform_framework": [
         "8",
         "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101486,6 +101491,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101535,7 +101541,8 @@
       "id": 1712580374,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "32"
       ],
       "component": "SideBarItem",
       "field_category": 1,
@@ -101564,7 +101571,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -101575,6 +101583,7 @@
       "platform_framework": [
         "8",
         "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101605,6 +101614,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101616,6 +101626,7 @@
       "platform_framework": [
         "8",
         "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101647,6 +101658,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
