@@ -11,5 +11,4 @@ export const tabBarDefaultProps: TdTabBarProps = {
   shape: 'normal',
   split: true,
   theme: 'normal',
-  defaultValue: undefined,
 };

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### TabBar Props
 
 name | type | default | description | required
@@ -13,11 +12,11 @@ bordered | Boolean | true | \- | N
 children | TNode | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 fixed | Boolean | true | \- | N
 safeAreaInsetBottom | Boolean | true | \- | N
-shape | String | 'normal' | options: normal/round | N
+shape | String | normal | options: normal/round | N
 split | Boolean | true | \- | N
-theme | String | 'normal' | options: normal/tag | N
-value | String / Number / Array | undefined | Typescript：`string \| number \| Array<string \| number>` | N
-defaultValue | String / Number / Array | undefined | uncontrolled property。Typescript：`string \| number \| Array<string \| number>` | N
+theme | String | normal | options: normal/tag | N
+value | String / Number / Array | - | Typescript：`string \| number \| Array<string \| number>` | N
+defaultValue | String / Number / Array | - | uncontrolled property。Typescript：`string \| number \| Array<string \| number>` | N
 onChange | Function |  | Typescript：`(value: string \| number) => void`<br/> | N
 
 
