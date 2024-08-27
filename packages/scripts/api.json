@@ -101247,91 +101247,12 @@
       ]
     },
     {
-      "id": 1711973521,
-      "platform_framework": [
-        "16",
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 1,
-      "field_name": "defaultValue",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "选项值。非受控属性",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-01 12:12:01",
-      "update_time": "2024-04-01 12:12:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 3379,
-      "platform_framework": [
-        "16",
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "选项值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-03-13 02:16:36",
-      "update_time": "2023-03-13 02:16:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
       "id": 3532,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "SideBar",
       "field_category": 1,
@@ -101360,7 +101281,10 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",

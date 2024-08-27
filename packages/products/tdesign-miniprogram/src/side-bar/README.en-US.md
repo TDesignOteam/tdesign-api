@@ -8,8 +8,8 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-default-value | String / Number | undefined | \- | N
 value | String / Number | - | \- | N
+default-value | String / Number | undefined | uncontrolled property | N
 
 ### SideBar Events
 

@@ -8,8 +8,8 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-default-value | String / Number | undefined | 选项值。非受控属性 | N
 value | String / Number | - | 选项值 | N
+default-value | String / Number | undefined | 选项值。非受控属性 | N
 
 ### SideBar Events
 
