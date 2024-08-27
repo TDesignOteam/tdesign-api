@@ -5,7 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
 
 export interface TdTabBarProps {
   /**
@@ -13,6 +13,10 @@ export interface TdTabBarProps {
    * @default true
    */
   bordered?: boolean;
+  /**
+   * 标签栏内容
+   */
+  children?: TNode;
   /**
    * 是否固定在底部
    * @default true
@@ -47,10 +51,6 @@ export interface TdTabBarProps {
    */
   defaultValue?: string | number | Array<string | number>;
   /**
-   * 当前选中标签的索引
-   */
-  modelValue?: string | number | Array<string | number>;
-  /**
    * 选中标签切换时触发
    */
   onChange?: (value: string | number) => void;
@@ -62,9 +62,13 @@ export interface TdTabBarItemProps {
    */
   badgeProps?: BadgeProps;
   /**
+   * 标签内容
+   */
+  children?: TNode;
+  /**
    * 图标名称
    */
-  icon?: TNode;
+  icon?: TElement;
   /**
    * 二级菜单
    */

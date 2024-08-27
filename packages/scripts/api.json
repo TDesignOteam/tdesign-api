@@ -111958,40 +111958,42 @@
       ]
     },
     {
-      "id": 3058,
+      "id": 1724677279,
       "platform_framework": [
-        "64"
+        "16"
       ],
       "component": "TabBar",
       "field_category": 1,
-      "field_name": "customStyle",
+      "field_name": "children",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "标签栏内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:32:09",
-      "update_time": "2022-10-31 11:32:09",
+      "create_time": "2024-08-26 13:01:19",
+      "update_time": "2024-08-26 13:01:19",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {
@@ -112077,6 +112079,9 @@
     {
       "id": 1380,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TabBar",
@@ -112105,44 +112110,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3466,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "safeAreaInsetBottom",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否为 iPhoneX 留出底部安全距离",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-04-23 11:46:23",
-      "update_time": "2023-04-23 11:46:23",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -112151,6 +112122,9 @@
     {
       "id": 3281,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TabBar",
@@ -112179,44 +112153,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3467,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "shape",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "'normal'",
-      "field_enum": "normal/round",
-      "field_desc_zh": "标签栏的形状",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-04-23 11:47:19",
-      "update_time": "2023-04-23 11:47:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -112225,6 +112165,9 @@
     {
       "id": 2192,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TabBar",
@@ -112253,44 +112196,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 3468,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "split",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否需要分割线",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-04-23 11:48:26",
-      "update_time": "2023-04-23 11:48:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -112299,6 +112208,9 @@
     {
       "id": 3282,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TabBar",
@@ -112327,44 +112239,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3469,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "theme",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "'normal'",
-      "field_enum": "normal/tag",
-      "field_desc_zh": "选项风格",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-04-23 11:52:31",
-      "update_time": "2023-04-23 11:52:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -112375,7 +112253,8 @@
       "platform_framework": [
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "TabBar",
       "field_category": 1,
@@ -112385,7 +112264,7 @@
         "2",
         "16"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "当前选中标签的索引",
       "field_desc_en": null,
@@ -112407,47 +112286,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number",
-        "Array"
-      ]
-    },
-    {
-      "id": 3112,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2",
-        "16"
-      ],
-      "field_default_value": "null",
-      "field_enum": "",
-      "field_desc_zh": "当前选中标签的索引",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 16:48:18",
-      "update_time": "2022-10-31 16:48:18",
-      "event_output": null,
-      "custom_field_type": "string | number | Array<string | number>",
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -112572,47 +112411,47 @@
       ]
     },
     {
-      "id": 3059,
+      "id": 1724677465,
       "platform_framework": [
-        "64"
+        "16"
       ],
       "component": "TabBarItem",
       "field_category": 1,
-      "field_name": "customStyle",
+      "field_name": "children",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "标签内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:32:16",
-      "update_time": "2022-10-31 11:32:16",
+      "create_time": "2024-08-26 13:04:25",
+      "update_time": "2024-08-26 13:04:25",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {
       "id": 1437,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "TabBarItem",
@@ -112643,8 +112482,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -112656,7 +112493,9 @@
     {
       "id": 2069,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "TabBarItem",
       "field_category": 1,
@@ -112684,7 +112523,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "TNode"
