@@ -9,11 +9,11 @@ name | type | default | description | required
 bordered | Boolean | true | \- | N
 fixed | Boolean | true | \- | N
 safeAreaInsetBottom | Boolean | true | \- | N
-shape | String | 'normal' | options: normal/round | N
+shape | String | normal | options: normal/round | N
 split | Boolean | true | \- | N
-theme | String | 'normal' | options: normal/tag | N
-value | String / Number / Array | undefined | `v-model` and `v-model:value` is supported。Typescript：`string \| number \| Array<string \| number>` | N
-defaultValue | String / Number / Array | undefined | uncontrolled property。Typescript：`string \| number \| Array<string \| number>` | N
+theme | String | normal | options: normal/tag | N
+value | String / Number / Array | - | `v-model` and `v-model:value` is supported。Typescript：`string \| number \| Array<string \| number>` | N
+defaultValue | String / Number / Array | - | uncontrolled property。Typescript：`string \| number \| Array<string \| number>` | N
 onChange | Function |  | Typescript：`(value: string \| number) => void`<br/> | N
 
 ### TabBar Events

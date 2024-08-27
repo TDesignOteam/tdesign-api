@@ -14,7 +14,7 @@ safe-area-inset-bottom | Boolean | true | \- | N
 shape | String | normal | options: normal/round | N
 split | Boolean | true | \- | N
 theme | String | normal | options: normal/tag | N
-value | String / Number / Array | null | Typescript：`string \| number \| Array<string \| number>` | N
+value | String / Number / Array | - | Typescript：`string \| number \| Array<string \| number>` | N
 default-value | String / Number / Array | undefined | uncontrolled property。Typescript：`string \| number \| Array<string \| number>` | N
 
 ### TabBar Events
