@@ -101412,6 +101412,8 @@
       "id": 3533,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101429,44 +101431,6 @@
       "create_time": "2023-06-11 07:45:38",
       "update_time": "2023-06-11 07:45:38",
       "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1724674403,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "SideBarItem",
-      "field_category": 1,
-      "field_name": "badgeProps",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "透传至 Badge 组件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-08-26 12:13:23",
-      "update_time": "2024-08-26 12:13:23",
-      "event_output": null,
       "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】",
       "syntactic_sugar": null,
       "readonly": 1,
@@ -101478,7 +101442,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
