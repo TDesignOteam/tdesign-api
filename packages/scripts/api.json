@@ -44911,7 +44911,6 @@
     {
       "id": 1704,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -44941,7 +44940,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -45165,7 +45163,6 @@
     {
       "id": 3539,
       "platform_framework": [
-        "16",
         "32"
       ],
       "component": "DropdownItem",
@@ -45194,7 +45191,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -45702,7 +45698,8 @@
     {
       "id": 1712718160,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "DropdownMenu",
       "field_category": 1,
@@ -45730,7 +45727,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
