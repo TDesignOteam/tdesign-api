@@ -101208,27 +101208,27 @@
       "field_type_text": []
     },
     {
-      "id": 1711973521,
+      "id": 1724669424,
       "platform_framework": [
-        "64"
+        "16"
       ],
       "component": "SideBar",
       "field_category": 1,
-      "field_name": "defaultValue",
+      "field_name": "children",
       "field_type": [
         "1",
-        "2"
+        "64"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "选项值。非受控属性",
-      "field_desc_en": null,
+      "field_desc_zh": "侧边导航内容",
+      "field_desc_en": "children",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-01 12:12:01",
-      "update_time": "2024-04-01 12:12:01",
+      "create_time": "2024-08-26 10:50:24",
+      "update_time": "2024-08-26 10:50:24",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -101239,56 +101239,20 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 3379,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SideBar",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "选项值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-03-13 02:16:36",
-      "update_time": "2023-03-13 02:16:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
+        "TNode"
       ]
     },
     {
       "id": 3532,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "SideBar",
       "field_category": 1,
@@ -101317,7 +101281,10 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -101364,7 +101331,9 @@
     {
       "id": 1712580336,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "SideBar",
       "field_category": 2,
@@ -101392,7 +101361,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -101402,6 +101373,8 @@
       "id": 3381,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBar",
@@ -101431,6 +101404,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101441,6 +101416,8 @@
       "id": 3533,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101458,7 +101435,7 @@
       "create_time": "2023-06-11 07:45:38",
       "update_time": "2023-06-11 07:45:38",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -101470,6 +101447,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101480,6 +101459,8 @@
       "id": 3536,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101509,6 +101490,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101557,7 +101540,9 @@
     {
       "id": 1712580374,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "SideBarItem",
       "field_category": 1,
@@ -101585,7 +101570,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -101595,6 +101582,8 @@
       "id": 3535,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101624,6 +101613,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -101634,6 +101625,8 @@
       "id": 3515,
       "platform_framework": [
         "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "SideBarItem",
@@ -101664,6 +101657,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
