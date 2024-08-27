@@ -16,6 +16,7 @@ placement | String | top | 浮层出现位置。可选项：top/left/right/botto
 preventScrollThrough | Boolean | true | 是否阻止背景滚动 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 visible | Boolean | - | 是否显示浮层。TS 类型：`boolean` | N
+defaultVisible | Boolean | - | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
 zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
 onClose | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>组件准备关闭时触发 | N
 onClosed | Function |  | TS 类型：`() => void`<br/>组件关闭且动画结束后执行 | N
