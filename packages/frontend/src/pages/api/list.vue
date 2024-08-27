@@ -30,8 +30,12 @@
             <template v-if="row.deprecated">已废弃。</template>
             <template v-if="row.html_attribute">HTML 原生属性。</template>
             <template v-if="row.field_required">必需。</template>
-            {{row.field_desc_zh}} <t-tag v-if="isTestedPC(row.test_description)">Tested(PC)</t-tag>
+            {{row.field_desc_zh}} 
           </p>
+          <template v-if="row.test_description"><p>Tested：
+            <t-space :size="3">
+            <t-tag variant="outline" shape="round" size="small" theme="primary" v-for="item in getTested(row.test_description)" :key="item">{{item}}</t-tag>
+            </t-space></p></template>
           <template v-if="row.field_enum"><p>可选值：{{row.field_enum}}。</p></template>
           <template v-if="row.custom_field_type"><p>TS 类型定义：{{row.custom_field_type}}。</p></template>
           <template v-if="row.event_input"><p>
@@ -208,11 +212,18 @@ export default {
     onCodePreview (data, framework) {
       this.$emit('code-preview', data, framework)
     },
-    isTestedPC(test) {
-      if (!test) return false;
+    getTested(test) {
+      const testedList =[]
+      if (!test) return testedList;
       const json = parseJSON(test);
-      if (!json || !json.PC) return false;
-      return true;
+      if (!json) return testedList;
+      if (json.PC){
+        testedList.push('PC')
+      }
+      if (json.Mobile){
+        testedList.push('Mobile')
+      }
+      return testedList;
     },
   }
 }

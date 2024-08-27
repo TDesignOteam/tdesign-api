@@ -41098,7 +41098,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": \"t-divider--with-text-${item}\", \"content\": \"Text\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"className\":\"t-divider--with-text-${item}\",\"content\":\"Text\",\"snapshot\":true},\"Mobile\":{\"className\":\"t-divider--${item}\",\"content\":\"Text\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -41189,7 +41189,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true},\"Mobile\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -41239,7 +41239,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\":\"t-divider--dashed\"}}",
+      "test_description": "{\"PC\":{\"className\":\"t-divider--dashed\"},\"Mobile\":{\"className\":\"t-divider--dashed\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -41284,7 +41284,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\": { \"tnode\": true, \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true},\"Mobile\":{\"tnode\":true,\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -41329,7 +41329,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"className\": \"t-divider--${item}\", \"snapshot\": true }}",
+      "test_description": "{\"PC\":{\"className\":\"t-divider--${item}\",\"snapshot\":true},\"Mobile\":{\"className\":\"t-divider--${item}\",\"snapshot\":true}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

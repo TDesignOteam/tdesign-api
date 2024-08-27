@@ -124,8 +124,14 @@ function getUnitTestCode(baseData, framework) {
       const hasPC = testDescription.PC && framework.indexOf('PC') !== -1;
       const hasMobile = testDescription.Mobile && framework.indexOf('Mobile') !== -1;
       if (!hasPC && !hasMobile) return;
-
-      const finalDescription = testDescription.PC || testDescription.Mobile;
+      
+      let finalDescription = {}
+      if (hasPC){
+        finalDescription = testDescription.PC
+      }
+      if (hasMobile){
+        finalDescription = testDescription.Mobile
+      }
 
       if (finalDescription.global) {
         Object.keys(global).forEach((item) => {
