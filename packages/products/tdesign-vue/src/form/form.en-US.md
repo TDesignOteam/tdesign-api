@@ -105,3 +105,4 @@ required | String | - | \- | N
 telnumber | String | - | \- | N
 url | String | - | \- | N
 validator | String | - | \- | N
+whitespace | String | - | \- | N

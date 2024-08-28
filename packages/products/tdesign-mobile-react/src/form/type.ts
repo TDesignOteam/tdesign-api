@@ -23,41 +23,20 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
-   * 经 `Form.useForm()` 创建的 form 控制实例
-   */
-  form?: FormInstanceFunctions;
-  /**
-   * 允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TInputNumber、TCascader、TSelect、TOption、TSwitch、TCheckbox、TCheckboxGroup、TRadio、TRadioGroup、TTreeSelect、TDatePicker、TTimePicker、TUpload、TTransfer、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`
-   */
-  formControlledComponents?: Array<string>;
-  /**
-   * 表单初始数据，重置时所需初始数据，优先级小于 FormItem 设置的 initialData
-   */
-  initialData?: object;
-  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
   labelAlign?: 'left' | 'right' | 'top';
   /**
-   * 可以整体设置label标签宽度，默认为100px
-   * @default '100px'
+   * 可以整体设置label标签宽度，默认为81px
+   * @default '81px'
    */
   labelWidth?: string | number;
-  /**
-   * 表单布局，有两种方式：纵向布局 和 行内布局
-   * @default vertical
-   */
-  layout?: 'vertical' | 'inline';
   /**
    * 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新
    * @default true
    */
   preventSubmitDefault?: boolean;
-  /**
-   * 是否整个表单只读
-   */
-  readonly?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */
@@ -110,33 +89,9 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
    */
   clearValidate: (fields?: Array<keyof FormData>) => void;
   /**
-   * 获取 form dom 元素
-   */
-  currentElement?: () => HTMLFormElement;
-  /**
-   * 获取 form dom 元素
-   */
-  getCurrentElement?: () => HTMLFormElement;
-  /**
-   * 获取单个字段值
-   */
-  getFieldValue: (field: NamePath) => unknown;
-  /**
-   * 获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据
-   */
-  getFieldsValue: (nameList: string[] | boolean) => getFieldsValue<FormData>;
-  /**
    * 重置表单，表单里面没有重置按钮`<button type=\"reset\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`
    */
   reset: (params?: FormResetParams<FormData>) => void;
-  /**
-   * 设置多组字段状态
-   */
-  setFields: (fields: FieldData[]) => void;
-  /**
-   * 设置表单字段值
-   */
-  setFieldsValue: (field: Data) => void;
   /**
    * 设置自定义校验结果，如远程校验信息直接呈现。注意需要在组件挂载结束后使用该方法。`FormData` 指表单数据泛型
    */
@@ -157,6 +112,11 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
 
 export interface TdFormItemProps {
   /**
+   * 是否显示右侧箭头
+   * @default false
+   */
+  arrow?: boolean;
+  /**
    * label 原生属性
    * @default ''
    */
@@ -165,10 +125,6 @@ export interface TdFormItemProps {
    * 表单项说明内容
    */
   help?: TNode;
-  /**
-   * 表单初始数据，重置时所需初始数据
-   */
-  initialData?: InitialData;
   /**
    * 字段标签名称
    * @default ''
@@ -184,8 +140,9 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
+   * @default ''
    */
-  name?: NamePath;
+  name?: string;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -195,55 +152,9 @@ export interface TdFormItemProps {
    */
   rules?: Array<FormRule>;
   /**
-   * null
-   * @default false
-   */
-  shouldUpdate?: boolean | ((prevValue, curValue) => boolean);
-  /**
    * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
    */
   showErrorMessage?: boolean;
-  /**
-   * 校验状态，可在需要完全自主控制校验状态时使用
-   * @default ''
-   */
-  status?: 'error' | 'warning' | 'success' | 'validating';
-  /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标。优先级高级 Form 的 statusIcon
-   */
-  statusIcon?: TNode;
-  /**
-   * 是否显示校验成功的边框，默认不显示
-   * @default false
-   */
-  successBorder?: boolean;
-  /**
-   * 自定义提示内容，样式跟随 `status` 变动，可在需要完全自主控制校验规则时使用
-   */
-  tips?: TNode;
-  /**
-   * 当用户交互产生数据变化时触发，用于格式化数据
-   */
-  valueFormat?: FormItemFormatType;
-}
-
-export interface TdFormListProps {
-  /**
-   * 渲染函数
-   */
-  children?: (fields: FormListField[], operation: FormListFieldOperation) => React.ReactNode;
-  /**
-   * 设置子元素默认值，如果与 FormItem 的 initialData 冲突则以 FormItem 为准
-   */
-  initialData?: Array<any>;
-  /**
-   * 表单字段名称
-   */
-  name?: NamePath;
-  /**
-   * 表单字段校验规则
-   */
-  rules?: { [field in keyof FormData]: Array<FormRule> } | Array<FormRule>;
 }
 
 export interface FormRule {
@@ -422,21 +333,9 @@ export type ValidateResult<T> = { [key in keyof T]: boolean | ErrorList };
 
 export type ErrorList = Array<FormRule>;
 
-export interface getFieldsValue<T> {
-  (nameList: true): T;
-  (nameList: any[]): Record<keyof T, unknown>;
-}
-
 export interface FormResetParams<FormData> {
   type?: 'initial' | 'empty';
   fields?: Array<keyof FormData>;
-}
-
-export interface FieldData {
-  name: NamePath;
-  value?: unknown;
-  status?: string;
-  validateMessage?: { type?: string; message?: string };
 }
 
 export type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] };
@@ -455,20 +354,6 @@ export interface FormValidateParams {
 export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
-
-export type InitialData = any;
-
-export type NamePath = string | number | Array<string | number>;
-
-export type FormItemFormatType = (value: any) => any;
-
-export type FormListField = { key: number; name: number; isListField: boolean };
-
-export type FormListFieldOperation = {
-  add: (defaultValue?: any, insertIndex?: number) => void;
-  remove: (index: number | number[]) => void;
-  move: (from: number, to: number) => void;
-};
 
 export interface IsDateOptions {
   format: string;
