@@ -1111,6 +1111,11 @@
         "label": "轻提示"
       },
       {
+        "value": "ToastOptions",
+        "label": "轻提示插件参数",
+        "type": "TS"
+      },
+      {
         "value": "NoticeBar",
         "label": "公告栏"
       },
