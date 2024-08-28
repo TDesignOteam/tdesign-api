@@ -23,7 +23,7 @@ click | `(value: number \| string, label: string)` | 点击选项时触发
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-badgeProps | Object | - | 透传至 Badge 组件 | N
+badgeProps | Object | - | 透传至 Badge 组件。TS 类型：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/side-bar/type.ts) | N
 disabled | Boolean | false | 是否禁用 | N
 icon | Slot / Function | - | 图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | 展示的标签 | N
