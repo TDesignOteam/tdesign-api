@@ -11,10 +11,8 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 colon | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
 error-message | Object | - | Typescript：`FormErrorMessage` | N
-form-controlled-components | Array | - | Typescript：`Array<string>` | N
 label-align | String | right | options: left/right/top | N
-label-width | String / Number | '100px' | \- | N
-layout | String | vertical | options: vertical/inline | N
+label-width | String / Number | '81px' | \- | N
 prevent-submit-default | Boolean | true | \- | N
 required-mark | Boolean | undefined | \- | N
 reset-type | String | empty | options: empty/initial | N
@@ -53,17 +51,11 @@ name | String | - | \- | N
 required-mark | Boolean | undefined | \- | N
 rules | Array | - | Typescript：`Array<FormRule>` | N
 show-error-message | Boolean | undefined | \- | N
-status | String | - | Typescript：`'error' \| 'warning' \| 'success' \| 'validating'` | N
-status-icon | Boolean / Slot | undefined | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-success-border | Boolean | false | \- | N
-tips | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 
 ### FormRule
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 boolean | Boolean | - | \- | N
 date | Boolean / Object | - | Typescript：`boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/form/type.ts) | N
 email | Boolean / Object | - | Typescript：`boolean \| IsEmailOptions` `import { IsEmailOptions } from 'validator/es/lib/isEmail'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/form/type.ts) | N
@@ -87,8 +79,6 @@ whitespace | Boolean | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 boolean | String | - | \- | N
 date | String | - | \- | N
 enum | String | - | \- | N
@@ -102,3 +92,4 @@ required | String | - | \- | N
 telnumber | String | - | \- | N
 url | String | - | \- | N
 validator | String | - | \- | N
+whitespace | String | - | \- | N

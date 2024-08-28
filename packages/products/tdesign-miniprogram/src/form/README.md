@@ -11,10 +11,8 @@ custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场�
 colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 error-message | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
-form-controlled-components | Array | - | 允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TInputNumber、TCascader、TSelect、TOption、TSwitch、TCheckbox、TCheckboxGroup、TRadio、TRadioGroup、TTreeSelect、TDatePicker、TTimePicker、TUpload、TTransfer、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`。TS 类型：`Array<string>` | N
 label-align | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
-label-width | String / Number | '100px' | 可以整体设置label标签宽度，默认为100px | N
-layout | String | vertical | 表单布局，有两种方式：纵向布局 和 行内布局。可选项：vertical/inline | N
+label-width | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
 prevent-submit-default | Boolean | true | 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 | N
 required-mark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
 reset-type | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N
@@ -53,17 +51,11 @@ name | String | - | 表单字段名称 | N
 required-mark | Boolean | undefined | 是否显示必填符号（*），优先级高于 Form.requiredMark | N
 rules | Array | - | 表单字段校验规则。TS 类型：`Array<FormRule>` | N
 show-error-message | Boolean | undefined | 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage` | N
-status | String | - | 校验状态，可在需要完全自主控制校验状态时使用。TS 类型：`'error' \| 'warning' \| 'success' \| 'validating'` | N
-status-icon | Boolean / Slot | undefined | 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标。优先级高级 Form 的 statusIcon。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-success-border | Boolean | false | 是否显示校验成功的边框，默认不显示 | N
-tips | String / Slot | - | 自定义提示内容，样式跟随 `status` 变动，可在需要完全自主控制校验规则时使用。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 
 ### FormRule
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-style | Object | - | 样式 | N
-custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 boolean | Boolean | - | 内置校验方法，校验值类型是否为布尔类型，示例：`{ boolean: true, message: '数据类型必须是布尔类型' }` | N
 date | Boolean / Object | - | 内置校验方法，校验值是否为日期格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ date: { delimiters: '-' }, message: '日期分隔线必须是短横线（-）' }`。TS 类型：`boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/form/type.ts) | N
 email | Boolean / Object | - | 内置校验方法，校验值是否为邮件格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ email: { ignore_max_length: true }, message: '请输入正确的邮箱地址' }`。TS 类型：`boolean \| IsEmailOptions` `import { IsEmailOptions } from 'validator/es/lib/isEmail'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/form/type.ts) | N
@@ -87,8 +79,6 @@ whitespace | Boolean | - | 内置校验方法，校验值是否为空格。示�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-style | Object | - | 样式 | N
-custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 boolean | String | - | 布尔类型校验不通过时的表单项显示文案，全局配置默认是：`'${name}数据类型必须是布尔类型'` | N
 date | String | - | 日期校验规则不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'` | N
 enum | String | - | 枚举值校验规则不通过时的表单项显示文案，全局配置默认是：`${name}只能是${validate}等` | N
@@ -102,3 +92,4 @@ required | String | - | 没有填写必填项时的表单项显示文案，全�
 telnumber | String | - | 手机号号码校验不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'` | N
 url | String | - | 链接校验规则不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'` | N
 validator | String | - | 自定义校验规则校验不通过时的表单项显示文案，全局配置默认是：'${name}不符合要求' | N
+whitespace | String | - | 值为空格校验不通过时表单项显示文案，全局配置默认是：`'${name}不能为空` | N
