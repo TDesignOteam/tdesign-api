@@ -15,7 +15,7 @@ const props: TdCollapseProps = {
   disabled: {
     type: Boolean,
   },
-  /** 展开图标。值为 undefined 或 false 则不显示展开图标；值为 true 显示默认图标；值类型为函数，则表示完全自定义展开图标 */
+  /** 展开图标 */
   expandIcon: {
     type: Boolean,
     value: true,
@@ -25,10 +25,10 @@ const props: TdCollapseProps = {
     type: Boolean,
     value: false,
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 折叠面板风格 */
+  theme: {
     type: String,
-    value: '',
+    value: 'default',
   },
   /** 展开的面板集合 */
   value: {
