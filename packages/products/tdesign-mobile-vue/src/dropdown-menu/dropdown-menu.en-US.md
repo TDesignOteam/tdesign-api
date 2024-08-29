@@ -18,6 +18,7 @@ zIndex | Number | 11600 | \- | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 disabled | Boolean | false | \- | N
+footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N

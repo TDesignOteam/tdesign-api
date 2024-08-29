@@ -212,6 +212,9 @@ const MOBILE_COMPONENT_API_MD_MAP = {
     Grid: {
         list: ['Grid', 'GridItem'],
     },
+    DropdownMenu: {
+        list: ['DropdownMenu', 'DropdownItem'],
+    },
 };
 
 // 小程序 特殊组件
