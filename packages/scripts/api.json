@@ -44534,7 +44534,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "DropdownItem",
       "field_category": 1,
@@ -44564,46 +44568,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1702,
-      "platform_framework": [
-        "8",
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "DropdownItem",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-21 07:23:47",
-      "update_time": "2022-04-11 09:32:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
@@ -44694,7 +44659,10 @@
     {
       "id": 1724827990,
       "platform_framework": [
-        "16"
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "DropdownItem",
       "field_category": 1,
@@ -44722,7 +44690,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "TNode"
@@ -45114,6 +45085,9 @@
     {
       "id": 1700,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "DropdownItem",
@@ -45144,6 +45118,9 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -45154,11 +45131,7 @@
     },
     {
       "id": 3494,
-      "platform_framework": [
-        "8",
-        "16",
-        "32"
-      ],
+      "platform_framework": [],
       "component": "DropdownItem",
       "field_category": 1,
       "field_name": "value",
@@ -45186,11 +45159,7 @@
       "test_description": null,
       "support_default_value": 1,
       "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
+      "platform_framework_text": [],
       "field_type_text": [
         "String",
         "Number",
@@ -45736,7 +45705,8 @@
       "id": 1712718160,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "32"
       ],
       "component": "DropdownMenu",
       "field_category": 1,
@@ -45765,7 +45735,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
