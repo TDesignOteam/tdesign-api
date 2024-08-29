@@ -15,7 +15,7 @@ millisecond | Boolean | false | 是否开启毫秒级渲染 | N
 size | String | 'medium' | `0.5.1`。倒计时尺寸。可选项：small/medium/large | N
 split-with-unit | Boolean | false | `0.5.1`。使用时间单位分割 | N
 theme | String | 'default' | `0.5.1`。倒计时风格。可选项：default/round/square | N
-time | Number | - | 必需。倒计时时长，单位毫秒 | Y
+time | Number | 0 | 必需。倒计时时长，单位毫秒 | Y
 
 ### CountDown Events
 

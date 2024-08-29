@@ -23,7 +23,7 @@ click | `(value: number \| string, label: string)` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-badgeProps | Object | - | \- | N
+badgeProps | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/side-bar/type.ts) | N
 disabled | Boolean | false | \- | N
 icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | \- | N

@@ -34,3 +34,4 @@ collapseAvatar | TNode | - | Typescript：`string \| TNode`。[see more ts defin
 max | Number | - | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/avatar/type.ts) | N
 size | String | medium | size | N
+onCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N

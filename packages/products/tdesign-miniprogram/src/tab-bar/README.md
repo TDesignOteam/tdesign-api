@@ -14,7 +14,7 @@ safe-area-inset-bottom | Boolean | true | 是否为 iPhoneX 留出底部安全�
 shape | String | normal | 标签栏的形状。可选项：normal/round | N
 split | Boolean | true | 是否需要分割线 | N
 theme | String | normal | 选项风格。可选项：normal/tag | N
-value | String / Number / Array | null | 当前选中标签的索引。TS 类型：`string \| number \| Array<string \| number>` | N
+value | String / Number / Array | - | 当前选中标签的索引。TS 类型：`string \| number \| Array<string \| number>` | N
 default-value | String / Number / Array | undefined | 当前选中标签的索引。非受控属性。TS 类型：`string \| number \| Array<string \| number>` | N
 
 ### TabBar Events

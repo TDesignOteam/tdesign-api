@@ -25,15 +25,20 @@ const props: TdTabBarProps = {
     type: Boolean,
     value: true,
   },
+  /** 标签栏的形状 */
+  shape: {
+    type: String,
+    value: 'normal',
+  },
   /** 是否需要分割线 */
   split: {
     type: Boolean,
     value: true,
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 选项风格 */
+  theme: {
     type: String,
-    value: '',
+    value: 'normal',
   },
   /** 当前选中标签的索引 */
   value: {
@@ -43,7 +48,6 @@ const props: TdTabBarProps = {
   /** 当前选中标签的索引，非受控属性 */
   defaultValue: {
     type: null,
-    value: null,
   },
 };
 

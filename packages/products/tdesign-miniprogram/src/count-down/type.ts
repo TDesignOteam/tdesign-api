@@ -39,7 +39,7 @@ export interface TdCountDownProps {
   };
   /**
    * 倒计时尺寸
-   * @default 'small'
+   * @default 'medium'
    */
   size?: {
     type: StringConstructor;
@@ -71,6 +71,7 @@ export interface TdCountDownProps {
   };
   /**
    * 倒计时时长，单位毫秒
+   * @default 0
    */
   time: {
     type: NumberConstructor;

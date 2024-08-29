@@ -16,6 +16,7 @@ placement | String | top | options: top/left/right/bottom/center | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
 visible | Boolean | - | Typescript：`boolean` | N
+defaultVisible | Boolean | - | uncontrolled property。Typescript：`boolean` | N
 zIndex | Number | - | \- | N
 onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/> | N

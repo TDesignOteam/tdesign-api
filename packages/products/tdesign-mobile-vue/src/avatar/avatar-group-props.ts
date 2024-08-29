@@ -30,4 +30,6 @@ export default {
     type: String,
     default: 'medium',
   },
+  /** 点击头像折叠元素触发 */
+  onCollapsedItemClick: Function as PropType<TdAvatarGroupProps['onCollapsedItemClick']>,
 };

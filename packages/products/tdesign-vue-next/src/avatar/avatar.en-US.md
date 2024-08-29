@@ -39,3 +39,10 @@ collapseAvatar | String / Slot / Function | - | Typescript：`string \| TNode`�
 max | Number | - | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/avatar/type.ts) | N
 size | String | medium | size | N
+onCollapsedItemClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+
+### AvatarGroup Events
+
+name | params | description
+-- | -- | --
+collapsed-item-click | `(context: { e: MouseEvent })` | \-

@@ -6,6 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+attach | String / Function | 'body' | 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 className | String | - | 类名 | N
 direction | String | row | 图标排列方式。可选项：row/column | N
 duration | Number | 2000 | 弹窗显示毫秒数 | N
