@@ -355,6 +355,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
     { value: 'Row', label: '栅格-横向' },
     { value: 'Col', label: '栅格-纵向' },
     { value: 'Toast', label: '轻提示' },
+    { value: 'ToastOptions', label: '轻提示插件参数', type: 'TS' },
     { value: 'Message', label: '消息通知' },
     { value: 'NoticeBar', label: '公告栏' },
     { value: 'Progress', label: '进度条' },

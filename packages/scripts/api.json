@@ -40867,51 +40867,6 @@
       ]
     },
     {
-      "id": 599,
-      "platform_framework": [
-        "1",
-        "4",
-        "8",
-        "32"
-      ],
-      "component": "DialogOptions",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1",
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-01-07 02:52:19",
-      "update_time": "2022-03-13 09:37:47",
-      "event_output": null,
-      "custom_field_type": "string | Styles",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Object"
-      ]
-    },
-    {
       "id": 2409,
       "platform_framework": [
         "2",
@@ -125622,84 +125577,6 @@
       ]
     },
     {
-      "id": 1724760675,
-      "platform_framework": [
-        "8",
-        "16"
-      ],
-      "component": "Toast",
-      "field_category": 1,
-      "field_name": "attach",
-      "field_type": [
-        "1",
-        "32"
-      ],
-      "field_default_value": "'body'",
-      "field_enum": "",
-      "field_desc_zh": "指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-08-27 12:11:15",
-      "update_time": "2024-08-27 12:11:15",
-      "event_output": null,
-      "custom_field_type": "AttachNode",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Function"
-      ]
-    },
-    {
-      "id": 1717563519,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Toast",
-      "field_category": 1,
-      "field_name": "className",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-06-05 04:58:39",
-      "update_time": "2024-06-05 04:58:39",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1352,
       "platform_framework": [
         "8",
@@ -126282,6 +126159,197 @@
       "field_category_text": "External Classes",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1724847046,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ToastOptions",
+      "field_category": 1,
+      "field_name": "attach",
+      "field_type": [
+        "1",
+        "32"
+      ],
+      "field_default_value": "'body'",
+      "field_enum": "",
+      "field_desc_zh": "指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-28 12:10:46",
+      "update_time": "2024-08-28 12:10:46",
+      "event_output": null,
+      "custom_field_type": "AttachNode",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Function"
+      ]
+    },
+    {
+      "id": 1724844914,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ToastOptions",
+      "field_category": 1,
+      "field_name": "className",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "弹框类名，示例：'t-class-toast-first t-class-toast-second'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-28 11:35:14",
+      "update_time": "2024-08-28 11:35:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 599,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "ToastOptions",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-01-07 02:52:19",
+      "update_time": "2022-03-13 09:37:47",
+      "event_output": null,
+      "custom_field_type": "string | Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
+      ]
+    },
+    {
+      "id": 1724844802,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "ToastOptions",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-28 11:33:22",
+      "update_time": "2024-08-28 11:33:22",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1724844844,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ToastOptions",
+      "field_category": 16,
+      "field_name": "TdToastProps",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-08-28 11:34:04",
+      "update_time": "2024-08-28 11:34:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Extends",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },

@@ -37,7 +37,7 @@ const GLOBAL_COMPONENTS_CONFIG = [
     'GuideConfig',
     'RateConfig',
     'EmptyConfig',
-    'TypographyConfig'
+    'TypographyConfig',
 ].sort((a, b) => a.localeCompare(b) > 0);
 
 const MESSAGE_LIST = [
@@ -116,10 +116,12 @@ const COMPONENT_API_MD_MAP = {
         includes: ['Miniprogram'],
     },
     // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
-    Grid: [{
-        list: ['Grid', 'Row', 'Col'],
-        includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-    }],
+    Grid: [
+        {
+            list: ['Grid', 'Row', 'Col'],
+            includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+        },
+    ],
     Icon: ['IconSVG', 'Iconfont'],
     Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
     Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
@@ -196,6 +198,10 @@ const COMPONENT_API_MD_MAP = {
         'TypographyEllipsis',
         'TypographyCopyable',
     ],
+    Toast: {
+        list: ['Toast', 'ToastOptions'],
+        includes: ['Vue(Mobile)', 'React(Mobile)'],
+    },
 };
 
 // H5 特殊组件
@@ -217,7 +223,7 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
         list: ['Swiper', 'SwiperNav'],
         includes: ['Miniprogram'],
     },
-}
+};
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
 const TYPES_COMBINE_MAP = {
@@ -269,10 +275,12 @@ const TYPES_COMBINE_MAP = {
         excludes: ['Miniprogram'],
     },
     // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
-    Grid: [{
-        list: ['Grid', 'Row', 'Col'],
-        includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-    }],
+    Grid: [
+        {
+            list: ['Grid', 'Row', 'Col'],
+            includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+        },
+    ],
     // Web 侧是 Layout + Header + Aside + Content + Footer，移动端 Layout + Row + Col
     Layout: {
         list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
@@ -407,6 +415,10 @@ const TYPES_COMBINE_MAP = {
             'TypographyCopyable',
         ],
     },
+    Toast: {
+        list: ['Toast', 'ToastOptions'],
+        includes: ['Vue(Mobile)', 'React(Mobile)'],
+    },
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
@@ -426,7 +438,6 @@ const MINIPROGRAM_TYPES_COMBINE_MAP = {
         excludes: ['Miniprogram'],
     },
 };
-
 
 exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;
 exports.COMPONENT_API_MD_MAP = COMPONENT_API_MD_MAP;
