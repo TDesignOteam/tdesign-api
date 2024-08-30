@@ -24575,7 +24575,7 @@
       "field_desc_zh": "状态切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(checked: boolean, context: CheckTagChangeContext) 【interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }】",
+      "event_input": "(checked: boolean, context: CheckTagChangeContext)【interface CheckTagChangeContext { e: MouseEvent | KeyboardEvent; value: string | number }】",
       "create_time": "2021-02-20 12:58:23",
       "update_time": "2021-11-27 15:47:10",
       "event_output": null,
@@ -118012,7 +118012,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\"},\"attribute\":[{\"value\":\"150px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]}]}}",
+      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\"},\"attribute\":[{\"value\":\"150px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"toBeUndefined\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -118240,7 +118240,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\",\"maxWidth\":\"150px\"},\"attribute\":[{\"value\":\"This is a long long long long long tag\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
