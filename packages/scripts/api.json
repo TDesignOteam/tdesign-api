@@ -79818,7 +79818,7 @@
       "create_time": "2022-06-21 09:12:37",
       "update_time": "2022-06-24 06:22:10",
       "event_output": null,
-      "custom_field_type": "Array<PickerColumn> | ((item: Array<PickerValue>)  => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string}】",
+      "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>)  => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
