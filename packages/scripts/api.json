@@ -102306,7 +102306,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "false",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
@@ -102315,7 +102315,7 @@
       "create_time": "2021-04-23 06:03:13",
       "update_time": "2021-04-23 06:03:13",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -103287,6 +103287,7 @@
     {
       "id": 2001,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -103300,7 +103301,7 @@
       "field_desc_zh": "结束拖动时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(value: SliderValue, e: TouchEvent)",
       "create_time": "2021-12-02 09:03:45",
       "update_time": "2022-04-06 12:03:23",
       "event_output": null,
@@ -103315,6 +103316,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -103324,6 +103326,7 @@
     {
       "id": 2000,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -103337,7 +103340,7 @@
       "field_desc_zh": "开始拖动时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "",
+      "event_input": "(e: TouchEvent)",
       "create_time": "2021-12-02 09:03:26",
       "update_time": "2022-04-06 12:03:33",
       "event_output": null,
@@ -103352,6 +103355,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
