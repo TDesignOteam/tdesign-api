@@ -102306,7 +102306,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否禁用组件",
       "field_desc_en": null,
