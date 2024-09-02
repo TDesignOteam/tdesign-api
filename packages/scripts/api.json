@@ -13965,7 +13965,7 @@
       "create_time": "2022-03-14 07:32:55",
       "update_time": "2022-03-14 07:40:54",
       "event_output": null,
-      "custom_field_type": "`any`",
+      "custom_field_type": "any",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
