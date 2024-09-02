@@ -377,7 +377,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
     const fieldCategoryMap = groupByFieldCategory(componentMap[cmp]);
     Object.keys(fieldCategoryMap).forEach((category) => {
       const apiName = formatComponentName(cmp, category, framework);
-      const blankLine = /(Events|InstanceFunctions|Props|Button External Classes)/.test(apiName) ? '\n' : '';
+      const blankLine = /(Events|InstanceFunctions|Props|External Classes)/.test(apiName) ? '\n' : '';
       md[category] = {
         title: `${blankLine}### ${apiName}\n`,
         apis: [],
