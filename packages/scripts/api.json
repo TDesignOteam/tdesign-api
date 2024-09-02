@@ -22562,8 +22562,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Cell",
       "field_category": 1,
@@ -22593,11 +22592,49 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1725283679,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Cell",
+      "field_category": 1,
+      "field_name": "arrow",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示右侧箭头",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-02 13:27:59",
+      "update_time": "2024-09-02 13:27:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -22686,43 +22723,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 1364,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Cell",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、标题类名、下方描述内容类名、右侧说明文字类名、激活态类名、图片类名、左侧内容、左侧图标类名、右侧内容、右侧图标类名 等",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-25 07:57:03",
-      "update_time": "2021-07-25 16:58:24",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-title', 't-class-description', 't-class-note', 't-class-hover', 't-class-image', 't-class-left', 't-class-left-icon', 't-class-right', 't-class-right-icon']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -22901,6 +22901,7 @@
       "field_name": "leftIcon",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
@@ -22927,6 +22928,7 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
       ]
     },
@@ -23069,6 +23071,7 @@
       "field_name": "rightIcon",
       "field_type": [
         "1",
+        "8",
         "64"
       ],
       "field_default_value": "",
@@ -23095,44 +23098,8 @@
       ],
       "field_type_text": [
         "String",
+        "Object",
         "TNode"
-      ]
-    },
-    {
-      "id": 3046,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Cell",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:22:43",
-      "update_time": "2022-10-31 11:22:43",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
