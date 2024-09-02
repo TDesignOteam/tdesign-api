@@ -122,7 +122,7 @@ const COMPONENT_API_MD_MAP = {
             includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
         },
     ],
-    Icon: ['IconSVG', 'Iconfont'],
+    Icon: ['Icon', 'IconSVG', 'Iconfont'],
     Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
     Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
     Collapse: ['Collapse', 'CollapsePanel'],
@@ -369,7 +369,7 @@ const TYPES_COMBINE_MAP = {
         list: TABLE_LIST,
     },
     Icon: {
-        list: ['Iconfont', 'IconSVG'],
+        list: ['Icon', 'Iconfont', 'IconSVG'],
     },
     Anchor: {
         list: ['AnchorTarget', 'AnchorItem'],
