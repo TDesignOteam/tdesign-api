@@ -188,7 +188,6 @@ const COMPONENT_API_MD_MAP = {
     SideBar: ['SideBar', 'SideBarItem'],
     Indexes: {
         list: ['Indexes', 'IndexesAnchor'],
-        excludes: ['Miniprogram'],
     },
     Popup: ['Popup', '$Popup'],
     Typography: [
