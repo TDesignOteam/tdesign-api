@@ -103361,43 +103361,6 @@
       ]
     },
     {
-      "id": 1814,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "StepItem",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-30 03:11:59",
-      "update_time": "2021-09-30 03:31:01",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-content', 't-class-title', 't-class-description', 't-class-extra']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 620,
       "platform_framework": [
         "1",
@@ -103571,43 +103534,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3056,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "StepItem",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:46",
-      "update_time": "2022-10-31 11:30:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -105004,43 +104930,6 @@
       ]
     },
     {
-      "id": 1813,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Steps",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-30 03:11:37",
-      "update_time": "2021-09-30 03:11:37",
-      "event_output": null,
-      "custom_field_type": "['t-class']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 613,
       "platform_framework": [
         "1",
@@ -105226,43 +105115,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3055,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Steps",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:30:36",
-      "update_time": "2022-10-31 11:30:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [

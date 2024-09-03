@@ -20,10 +20,6 @@ const props: TdStepsProps = {
     type: String,
     value: 'process',
   },
-  /** 组件类名，用于设置组件外层元素元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 步骤条方向，有两种：横向和纵向 */
   layout: {
     type: String,
@@ -34,15 +30,10 @@ const props: TdStepsProps = {
     type: Boolean,
     value: false,
   },
-  /** 步骤条分割符 */
-  separator: {
+  /** 步骤条顺序 */
+  sequence: {
     type: String,
-    value: 'line',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
+    value: 'positive',
   },
   /** 步骤条风格 */
   theme: {
