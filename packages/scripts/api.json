@@ -87814,43 +87814,6 @@
       ]
     },
     {
-      "id": 1417,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层、单选图标、主文案、内容 等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-10 05:19:55",
-      "update_time": "2022-04-07 02:46:53",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-icon', 't-class-label', 't-class-content', 't-class-border']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1420,
       "platform_framework": [
         "8",
@@ -88242,43 +88205,6 @@
       ]
     },
     {
-      "id": 3069,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:00",
-      "update_time": "2022-10-31 11:37:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 504,
       "platform_framework": [
         "1",
@@ -88351,7 +88277,7 @@
       "create_time": "2024-04-09 08:23:08",
       "update_time": "2024-04-09 08:23:08",
       "event_output": null,
-      "custom_field_type": "RadioValue【type RadioValue = string | number | boolean】",
+      "custom_field_type": "T【type RadioValue = string | number | boolean】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -88511,6 +88437,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1725346019,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 64,
+      "field_name": "<T = RadioValue>",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-03 06:46:59",
+      "update_time": "2024-09-03 06:46:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "<T>",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -88935,14 +88898,14 @@
       ],
       "field_default_value": "'circle'",
       "field_enum": "",
-      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标；仅在使用 options 时生效。TS 类型：`'circle' | 'line' | 'dot' | Array<string>`",
+      "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标；仅在使用 options 时生效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-10-31 17:19:59",
       "update_time": "2022-10-31 17:19:59",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "'circle' | 'line' | 'dot' | Array<string>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -89162,7 +89125,7 @@
       "create_time": "2021-08-10 05:45:19",
       "update_time": "2021-08-10 05:53:08",
       "event_output": null,
-      "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string; value?: string | number; disabled?: boolean }】",
+      "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string; value?: string | number; readonly?: boolean; disabled?: boolean; allowUncheck?: boolean; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -89264,43 +89227,6 @@
       ]
     },
     {
-      "id": 3070,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:16",
-      "update_time": "2022-10-31 11:37:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 495,
       "platform_framework": [
         "1",
@@ -89308,7 +89234,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "RadioGroup",
       "field_category": 1,
@@ -89343,47 +89270,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number",
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712651171,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "RadioGroup",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1",
-        "2",
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "选中的值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 08:26:11",
-      "update_time": "2024-04-09 08:26:11",
-      "event_output": null,
-      "custom_field_type": "RadioValue",
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
