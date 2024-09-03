@@ -6,10 +6,6 @@
 
 import { TdMessageProps } from './type';
 const props: TdMessageProps = {
-  /** 已废弃。操作 */
-  action: {
-    type: String,
-  },
   /** 文本对齐方式 */
   align: {
     type: String,
@@ -29,9 +25,10 @@ const props: TdMessageProps = {
     type: Number,
     value: 3000,
   },
-  /** 样式类名，分别用于设置 组件外层、消息内容、左侧图标、操作按钮、关闭按钮等元素类名 */
-  externalClasses: {
-    type: Array,
+  /** 两条 `message` 之间的间距 */
+  gap: {
+    type: null,
+    value: 12,
   },
   /** 消息提醒前面的图标，可以自定义。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'info'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件 */
   icon: {
@@ -51,10 +48,10 @@ const props: TdMessageProps = {
   offset: {
     type: Array,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
+  /** 是否保持仅显示一条信息 */
+  single: {
+    type: Boolean,
+    value: true,
   },
   /** 消息组件风格 */
   theme: {

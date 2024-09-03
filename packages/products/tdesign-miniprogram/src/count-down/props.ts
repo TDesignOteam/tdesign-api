@@ -36,11 +36,6 @@ const props: TdCountDownProps = {
     type: Boolean,
     value: false,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
   /** 倒计时风格 */
   theme: {
     type: String,

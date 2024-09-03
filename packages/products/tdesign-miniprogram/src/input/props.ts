@@ -66,10 +66,6 @@ const props: TdInputProps = {
     type: Boolean,
     value: false,
   },
-  /** 组件类名，用于设置组件外层元素、输入框、占位符、错误信息等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 获取焦点 */
   focus: {
     type: Boolean,
@@ -168,11 +164,7 @@ const props: TdInputProps = {
   /** 输入框状态 */
   status: {
     type: String,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
+    value: 'default',
   },
   /** 后置图标前的后置内容 */
   suffix: {

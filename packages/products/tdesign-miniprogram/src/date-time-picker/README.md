@@ -21,6 +21,7 @@ show-week | Boolean | false | 【开发中】是否在日期旁边显示周几�
 start | String / Number | - | 选择器的最小可选时间，默认为当前时间-10年 | N
 steps | Object | - | 时间间隔步数，示例：`{ minute: 5 }` | N
 title | String | - | 标题 | N
+use-popup | Boolean | true | 是否使用弹出层包裹 | N
 value | String / Number | - | 选中值。TS 类型：`DateValue` `type DateValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N
 default-value | String / Number | undefined | 选中值。非受控属性。TS 类型：`DateValue` `type DateValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N
 visible | Boolean | false | 是否显示 | N

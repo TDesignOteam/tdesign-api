@@ -19,3 +19,19 @@ sticky-offset | Number | 0 | `1.0.0`。锚点吸顶时与顶部的距离	 | N
 -- | -- | --
 change | `(index: string \| number)` | `0.34.0`。索引发生变更时触发事件
 select | `(index: string \| number)` | 点击侧边栏时触发事件
+
+
+### IndexesAnchor Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+style | Object | - | 样式 | N
+custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
+index | String / Number | - | 索引字符 | N
+### IndexesAnchor External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
+t-class-sidebar | 侧边栏样式类
+t-class-sidebar-item | 侧边栏选项样式类

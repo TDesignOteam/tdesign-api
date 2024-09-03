@@ -21,7 +21,7 @@ disabled | Boolean | false | 是否禁用 | N
 focus | Boolean | false | 是否聚焦 | N
 hold-keyboard | Boolean | false | focus时，点击页面的时候不收起键盘 | N
 label | String | '' | 已废弃。左侧文本 | N
-left-icon | String / Slot | 'search' | 左侧图标。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+left-icon | String / Slot | 'search' | 左侧图标。如果需要使用 `Slot` 进行自定义，必须将该值设置为假值。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
 maxlength | Number | -1 | 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 | N
 placeholder | String | '' | 占位符 | N

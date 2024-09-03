@@ -11,11 +11,6 @@ const props: TdTransitionProps = {
     type: Boolean,
     value: false,
   },
-  /** 自定义容器类名 */
-  customClass: {
-    type: String,
-    value: '',
-  },
   /** 隐藏时是否销毁内容 */
   destoryOnHide: {
     type: Boolean,
@@ -29,11 +24,6 @@ const props: TdTransitionProps = {
   name: {
     type: String,
     value: 't-transition',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 是否显示 */
   visible: {

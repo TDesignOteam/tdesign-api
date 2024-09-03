@@ -108,9 +108,9 @@ function defaultValueIsUndefined(api) {
 function getDefaultWithType(api, dl, valueType) {
   const isMiniprogram = currentFramework === 'Miniprogram';
   // 小程序，默认值为中文的，使用 '' 替换
-  if (isMiniprogram && /[^\x00-\xff]/.test(dl)) {
-    dl = '\'\'';
-  }
+  // if (isMiniprogram && /[^\x00-\xff]/.test(dl)) {
+  //   dl = '\'\'';
+  // }
   // 小程序的默认值使用 `value` 表示；Vue 的默认值使用 `default` 表示
   const defaultField = isMiniprogram ? 'value:' : 'default:';
 
@@ -271,8 +271,8 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     const miniprogram = {};
     baseData[cmp].forEach((api) => {
       //废弃属性不放在 props 中
-      if(api.deprecated) return; 
-      
+      if(api.deprecated) return;
+
       // 小程序原生属性替代属性不放在 props 中
       const MP_PROPS = ['MP_PROPS', 'MP_EXCLUDE_PROPS'];
       MP_PROPS.forEach((prop) => {

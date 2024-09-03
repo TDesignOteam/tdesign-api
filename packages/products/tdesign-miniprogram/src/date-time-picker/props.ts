@@ -9,7 +9,7 @@ const props: TdDateTimePickerProps = {
   /** 取消按钮文字 */
   cancelBtn: {
     type: String,
-    value: '',
+    value: '取消',
   },
   /** 确定按钮文字 */
   confirmBtn: {
@@ -66,6 +66,11 @@ const props: TdDateTimePickerProps = {
   title: {
     type: String,
     value: '',
+  },
+  /** 是否使用弹出层包裹 */
+  usePopup: {
+    type: Boolean,
+    value: true,
   },
   /** 选中值 */
   value: {

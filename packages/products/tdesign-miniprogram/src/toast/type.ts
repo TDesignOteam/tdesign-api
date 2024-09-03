@@ -39,7 +39,6 @@ export interface TdToastProps {
   };
   /**
    * 遮罩层属性，透传至 Overlay
-   * @default {}
    */
   overlayProps?: {
     type: ObjectConstructor;

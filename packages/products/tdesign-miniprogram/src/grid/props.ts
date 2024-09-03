@@ -16,14 +16,10 @@ const props: TdGridProps = {
     type: null,
     value: false,
   },
-  /** 每一行的列数量 */
+  /** 每一行的列数量；为 0 时等于固定大小 */
   column: {
     type: Number,
     value: 4,
-  },
-  /** 组件类名，用于设置组件外层元素类名 */
-  externalClasses: {
-    type: Array,
   },
   /** 间隔大小 */
   gutter: {
@@ -34,10 +30,10 @@ const props: TdGridProps = {
     type: Boolean,
     value: false,
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 宫格的风格 */
+  theme: {
     type: String,
-    value: '',
+    value: 'default',
   },
 };
 

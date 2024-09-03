@@ -2,7 +2,7 @@ const shell = require('shelljs');
 const { camelCase } = require('lodash');
 
 // 小程序的 props 类型定义特殊
-function getMiniprogramType(type, tsType) {
+function getMiniprogramType(type, tsType, required) {
   const MP_PROP_TYPES = {
     string: 'StringConstructor',
     number: 'NumberConstructor',
@@ -18,9 +18,13 @@ function getMiniprogramType(type, tsType) {
     }
   });
   const valueStr = ['function', 'Function'].includes(tsType) ? 'null' : tsType;
+
+  const isRequired = required ? `required?: boolean;` : '';
+
   return `{
     ${`type: ${types.length > 1 ? 'null' : types[0]};`}
     value?: ${valueStr};
+    ${isRequired}
   }`;
 }
 

@@ -35,7 +35,7 @@ export interface TdButtonProps {
    */
   customDataset?: {
     type: ObjectConstructor;
-    value?: `any`;
+    value?: any;
   };
   /**
    * 禁用状态。优先级：Button.disabled > Form.disabled

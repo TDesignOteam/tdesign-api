@@ -83,17 +83,17 @@ const props: TdButtonProps = {
   /** 会话内消息卡片图片，open-type="contact"时有效 */
   sendMessageImg: {
     type: String,
-    value: '',
+    value: '截图',
   },
   /** 会话内消息卡片点击跳转小程序路径，open-type="contact"时有效 */
   sendMessagePath: {
     type: String,
-    value: '',
+    value: '当前分享路径',
   },
   /** 会话内消息卡片标题，open-type="contact"时有效 */
   sendMessageTitle: {
     type: String,
-    value: '',
+    value: '当前标题',
   },
   /** 会话来源，open-type="contact"时有效 */
   sessionFrom: {

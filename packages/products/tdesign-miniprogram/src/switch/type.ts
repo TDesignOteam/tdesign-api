@@ -14,7 +14,7 @@ export interface TdSwitchProps<T = SwitchValue> {
     value?: Array<SwitchValue>;
   };
   /**
-   * 是否禁用组件
+   * 是否禁用组件。优先级：Switch.disabled > Form.disabled
    */
   disabled?: {
     type: BooleanConstructor;
@@ -51,14 +51,6 @@ export interface TdSwitchProps<T = SwitchValue> {
   size?: {
     type: StringConstructor;
     value?: 'small' | 'medium' | 'large';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 开关值
