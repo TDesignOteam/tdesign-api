@@ -72099,7 +72099,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "已废弃。操作",
+      "field_desc_zh": "操作",
       "field_desc_en": "operation",
       "field_required": 0,
       "event_input": "",
@@ -72111,7 +72111,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": null,
       "test_description": null,
       "support_default_value": 0,
@@ -72358,32 +72358,34 @@
       ]
     },
     {
-      "id": 1397,
+      "id": 1725334222,
       "platform_framework": [
         "64"
       ],
       "component": "Message",
       "field_category": 1,
-      "field_name": "externalClasses",
+      "field_name": "gap",
       "field_type": [
-        "16"
+        "1",
+        "2",
+        "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "12",
       "field_enum": "",
-      "field_desc_zh": "样式类名，分别用于设置 组件外层、消息内容、左侧图标、操作按钮、关闭按钮等元素类名",
+      "field_desc_zh": "两条 `message` 之间的间距",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-08-03 14:08:15",
-      "update_time": "2021-08-03 14:09:44",
+      "create_time": "2024-09-03 03:30:22",
+      "update_time": "2024-09-03 03:30:22",
       "event_output": null,
-      "custom_field_type": "['t-class', 't-class-content', 't-class-icon', 't-class-link', 't-class-close-btn']",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -72391,7 +72393,9 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Array"
+        "String",
+        "Number",
+        "Boolean"
       ]
     },
     {
@@ -72657,24 +72661,24 @@
       ]
     },
     {
-      "id": 3100,
+      "id": 1725334169,
       "platform_framework": [
         "64"
       ],
       "component": "Message",
       "field_category": 1,
-      "field_name": "style",
+      "field_name": "single",
       "field_type": [
-        "1"
+        "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
+      "field_desc_zh": "是否保持仅显示一条信息",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2022-10-31 11:45:30",
-      "update_time": "2022-10-31 11:45:30",
+      "create_time": "2024-09-03 03:29:29",
+      "update_time": "2024-09-03 03:29:29",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -72690,7 +72694,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String"
+        "Boolean"
       ]
     },
     {
