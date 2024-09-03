@@ -39,7 +39,10 @@ module.exports = {
             value: '150px',
             expect: [
               { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              { dom: '.t-tag--text', attribute: { title: 'toBeUndefined' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { title: 'This is a long long long long long tag' },
+              },
             ],
           },
         ],
@@ -64,7 +67,23 @@ module.exports = {
         props: { content: 'This is a long long long long long tag', maxWidth: '150px' },
         attribute: [
           {
-            value: 'This is a long long long long long tag',
+            value: 'This is a long tag',
+            expect: [
+              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
+              { dom: '.t-tag--text', attribute: { title: 'This is a long tag' } },
+            ],
+          },
+          {
+            value: '',
+            expect: [
+              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { title: 'This is a long long long long long tag' },
+              },
+            ],
+          },
+          {
             expect: [
               { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
               {
