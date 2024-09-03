@@ -124452,7 +124452,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "{}",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "遮罩层属性，透传至 Overlay",
       "field_desc_en": null,
