@@ -21,13 +21,6 @@ export interface TdNoticeBarProps {
     value?: 'horizontal' | 'vertical';
   };
   /**
-   * 组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-content', 't-class-prefix-icon', 't-class-operation', 't-class-suffix-icon'];
-  };
-  /**
    * 间隔时间【仅在 direction='vertical' 有效】
    * @default 2000
    */
@@ -52,18 +45,11 @@ export interface TdNoticeBarProps {
   };
   /**
    * 前缀图标。值为字符串表示图标名称，值为 `false` 表示不显示前缀图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标
+   * @default true
    */
   prefixIcon?: {
     type: null;
     value?: string | boolean | object;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 后缀图标。值为字符串表示图标名称。值为 `Object` 类型，表示透传至 `icon`，不传表示不显示后缀图标

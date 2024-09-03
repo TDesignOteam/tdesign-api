@@ -30,20 +30,6 @@ export interface TdPopupProps {
     value?: string;
   };
   /**
-   * 是否显示浮层。非受控属性
-   */
-  defaultVisible?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 是否显示浮层。非受控属性，非受控属性
-   */
-  defaultDefaultVisible?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
    * 动画过渡时间
    * @default 240
    */
@@ -75,7 +61,7 @@ export interface TdPopupProps {
     value?: 'top' | 'left' | 'right' | 'bottom' | 'center';
   };
   /**
-   * 防止滚动穿透
+   * 是否阻止背景滚动
    * @default true
    */
   preventScrollThrough?: {
@@ -100,7 +86,6 @@ export interface TdPopupProps {
   };
   /**
    * 是否显示浮层
-   * @default false
    */
   visible?: {
     type: BooleanConstructor;
@@ -108,7 +93,6 @@ export interface TdPopupProps {
   };
   /**
    * 是否显示浮层，非受控属性
-   * @default false
    */
   defaultVisible?: {
     type: BooleanConstructor;
