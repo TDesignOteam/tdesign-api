@@ -101245,43 +101245,6 @@
       ]
     },
     {
-      "id": 1324,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Slider",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、滑道底部、滑道激活态、滑道禁用态、游标 等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 11:44:05",
-      "update_time": "2021-07-18 10:03:44",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-bar', 't-class-bar-active', 't-class-bar-disabled', 't-class-cursor']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1201,
       "platform_framework": [
         "1",
