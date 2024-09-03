@@ -21,6 +21,7 @@ show-week | Boolean | false | \- | N
 start | String / Number | - | \- | N
 steps | Object | - | \- | N
 title | String | - | title of picker | N
+use-popup | Boolean | true | \- | N
 value | String / Number | - | Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N
 default-value | String / Number | undefined | uncontrolled property。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N
 visible | Boolean | false | \- | N

@@ -12,7 +12,7 @@ adjust-position | Boolean | true | \- | N
 align | String | left | text align type。options: left/center/right | N
 always-embed | Boolean | false | \- | N
 auto-focus | Boolean | false | \- | N
-borderless | Boolean | false | \- | N
+borderless | Boolean | false | input without border | N
 clear-trigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean / Object | false | show clear icon, clicked to clear input value | N
 confirm-hold | Boolean | false | \- | N
@@ -43,7 +43,7 @@ safe-password-time-stamp | Number | - | \- | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N
 size | String | medium | `deprecated`。options: small/medium。Typescript：`'medium' \| 'small'` | N
-status | String | - | options: success/warning/error | N
+status | String | default | options: default/success/warning/error | N
 suffix | String / Slot | - | suffix content before suffixIcon。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 suffix-icon | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 tips | String / Slot | - | tips on the bottom of input, different `status` can make tips to be different color。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

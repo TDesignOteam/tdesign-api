@@ -19,4 +19,4 @@ default-value | String / Number / Array | undefined | uncontrolled property。Ty
 
 name | params | description
 -- | -- | --
-change | `(value: TreeSelectValue, level: TreeLevel) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/tree-select/type.ts)。<br/>`type TreeLevel: 0 \| 1 \| 2`<br/>
+change | `(value: TreeSelectValue, level: TreeLevel) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/tree-select/type.ts)。<br/>`type TreeLevel = 0 \| 1 \| 2`<br/>

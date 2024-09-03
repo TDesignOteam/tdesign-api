@@ -9,8 +9,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 appear | Boolean | false | \- | N
-custom-class | String | '' | \- | N
 destory-on-hide | Boolean | false | \- | N
 durations | Number / Array | - | \- | N
-name | String | 't-transition' | \- | N
+name | String | t-transition | \- | N
 visible | Boolean | false | \- | N

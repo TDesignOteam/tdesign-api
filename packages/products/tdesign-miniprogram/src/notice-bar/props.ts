@@ -15,10 +15,6 @@ const props: TdNoticeBarProps = {
     type: String,
     value: 'horizontal',
   },
-  /** 组件类名，分别用于设置 组件外层元素、文本内容、前缀图标、右侧额外信息、后缀图标 等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 间隔时间【仅在 direction='vertical' 有效】 */
   interval: {
     type: Number,
@@ -36,11 +32,7 @@ const props: TdNoticeBarProps = {
   /** 前缀图标。值为字符串表示图标名称，值为 `false` 表示不显示前缀图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标 */
   prefixIcon: {
     type: null,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
+    value: true,
   },
   /** 后缀图标。值为字符串表示图标名称。值为 `Object` 类型，表示透传至 `icon`，不传表示不显示后缀图标 */
   suffixIcon: {

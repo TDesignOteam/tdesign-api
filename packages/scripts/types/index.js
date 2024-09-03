@@ -518,7 +518,7 @@ function getTypeScriptDesc(componentMap, framework) {
                     const rType =
                         framework === 'Miniprogram' &&
                         !COMPONENTS_MAP[api.component].type
-                            ? getMiniprogramType(api.field_type_text, type)
+                            ? getMiniprogramType(api.field_type_text, type, api.field_required)
                             : type;
                     const apiContext = [
                         formatComment(comment, plugin),

@@ -8,14 +8,6 @@ import { KeysType } from '../common/common';
 
 export interface TdDropdownItemProps {
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  customStyle?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 是否禁用操作项
    * @default false
    */

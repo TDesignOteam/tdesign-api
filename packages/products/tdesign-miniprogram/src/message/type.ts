@@ -6,13 +6,6 @@
 
 export interface TdMessageProps {
   /**
-   * 已废弃。操作
-   */
-  action?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 文本对齐方式
    * @default left
    */
@@ -44,11 +37,12 @@ export interface TdMessageProps {
     value?: number;
   };
   /**
-   * 样式类名，分别用于设置 组件外层、消息内容、左侧图标、操作按钮、关闭按钮等元素类名
+   * 两条 `message` 之间的间距
+   * @default 12
    */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-content', 't-class-icon', 't-class-link', 't-class-close-btn'];
+  gap?: {
+    type: null;
+    value?: string | number | boolean;
   };
   /**
    * 消息提醒前面的图标，可以自定义。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'info'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件
@@ -81,12 +75,12 @@ export interface TdMessageProps {
     value?: Array<string | number>;
   };
   /**
-   * 自定义组件样式
-   * @default ''
+   * 是否保持仅显示一条信息
+   * @default true
    */
-  style?: {
-    type: StringConstructor;
-    value?: string;
+  single?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 消息组件风格

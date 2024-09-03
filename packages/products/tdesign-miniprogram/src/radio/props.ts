@@ -6,15 +6,15 @@
 
 import { TdRadioProps } from './type';
 const props: TdRadioProps = {
-  /** 复选框和内容相对位置 */
-  align: {
-    type: String,
-    value: 'left',
-  },
   /** 是否允许取消选中 */
   allowUncheck: {
     type: Boolean,
     value: false,
+  },
+  /** 是否为块级元素 */
+  block: {
+    type: Boolean,
+    value: true,
   },
   /** 是否选中 */
   checked: {
@@ -26,11 +26,6 @@ const props: TdRadioProps = {
     type: Boolean,
     value: false,
   },
-  /** 单选按钮颜色 */
-  color: {
-    type: String,
-    value: '#0052d9',
-  },
   /** 单选内容 */
   content: {
     type: String,
@@ -38,20 +33,17 @@ const props: TdRadioProps = {
   /** 是否禁用组件内容（content）触发选中 */
   contentDisabled: {
     type: Boolean,
+    value: false,
   },
   /** 是否为禁用态 */
   disabled: {
-    type: Boolean,
+    type: null,
     value: undefined,
   },
-  /** 组件类名，分别用于设置 组件外层、单选图标、主文案、内容 等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
-  /** 自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标 */
+  /** 自定义选中图标和非选中图标。使用 Array 时表示：`[选中态图标，非选中态图标]`。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标，值为 slot 时使用插槽 */
   icon: {
     type: null,
-    value: 'fill-circle',
+    value: 'circle',
   },
   /** 主文案 */
   label: {
@@ -72,10 +64,15 @@ const props: TdRadioProps = {
     type: String,
     value: '',
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 复选框和内容相对位置 */
+  placement: {
     type: String,
-    value: '',
+    value: 'left',
+  },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    value: false,
   },
   /** 单选按钮的值 */
   value: {

@@ -19,3 +19,19 @@ name | params | description
 -- | -- | --
 change | `(index: string \| number)` | `0.34.0`
 select | `(index: string \| number)` | \-
+
+
+### IndexesAnchor Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+index | String / Number | - | \- | N
+### IndexesAnchor External Classes
+
+className | Description
+-- | --
+t-class | class name of root node
+t-class-sidebar | \-
+t-class-sidebar-item | \-

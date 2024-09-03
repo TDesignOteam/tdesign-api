@@ -21,27 +21,12 @@ export interface TdStickyProps {
     value?: boolean;
   };
   /**
-   * 根结点外部样式
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class'];
-  };
-  /**
    * 吸顶时与顶部的距离，单位`px`
    * @default 0
    */
   offsetTop?: {
     type: null;
     value?: string | number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 吸顶时的 z-index
