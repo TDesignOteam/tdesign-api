@@ -19,6 +19,6 @@ export const inputDefaultProps: TdInputProps = {
   showLimitNumber: false,
   size: 'medium',
   spellCheck: false,
-  status: undefined,
+  status: 'default',
   type: 'text',
 };

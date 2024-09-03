@@ -63732,7 +63732,7 @@
       ],
       "component": "Input",
       "field_category": 1,
-      "field_name": "placeholderClass\t",
+      "field_name": "placeholderClass",
       "field_type": [
         "1"
       ],
@@ -64514,6 +64514,12 @@
     {
       "id": 822,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Input",
@@ -64522,8 +64528,8 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
-      "field_enum": "success/warning/error",
+      "field_default_value": "default",
+      "field_enum": "default/success/warning/error",
       "field_desc_zh": "输入框状态",
       "field_desc_en": null,
       "field_required": 0,
@@ -64542,54 +64548,13 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712580008,
-      "platform_framework": [
-        "1",
-        "2",
-        "4",
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Input",
-      "field_category": 1,
-      "field_name": "status",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "default/success/warning/error",
-      "field_desc_zh": "输入框状态。默认情况会由组件内部根据实际情况呈现，如果文本过长引起的状态变化",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:40:08",
-      "update_time": "2024-04-08 12:40:08",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
