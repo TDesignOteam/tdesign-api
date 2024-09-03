@@ -46052,7 +46052,8 @@
     {
       "id": 1712661364,
       "platform_framework": [
-        "8"
+        "8",
+        "64"
       ],
       "component": "Empty",
       "field_category": 1,
@@ -46081,45 +46082,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1712915383,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Empty",
-      "field_category": 1,
-      "field_name": "image",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图片地址",
-      "field_desc_en": "image url, or Image component props, or custom any node you need.",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-12 09:49:43",
-      "update_time": "2024-04-12 09:49:43",
-      "event_output": null,
-      "custom_field_type": "string | ImageProps | TNode 【import { ImageProps } from '@Image'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -46204,43 +46167,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3084,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Empty",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:40:40",
-      "update_time": "2022-10-31 11:40:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
