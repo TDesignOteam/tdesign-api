@@ -8,7 +8,7 @@ import { StickyProps } from '../sticky/index';
 
 export interface TdTabsProps {
   /**
-   * 动画效果设置。其中 duration 表示动画时长
+   * 动画效果设置。其中 duration 表示动画时长。（单位：秒）
    */
   animation?: {
     type: ObjectConstructor;
@@ -22,18 +22,26 @@ export interface TdTabsProps {
     value?: ['t-class', 't-class-item', 't-class-active', 't-class-track'];
   };
   /**
-   * 选项卡位置
-   * @default top
-   */
-  placement?: {
-    type: StringConstructor;
-    value?: 'left' | 'top';
-  };
-  /**
    * 是否展示底部激活线条
    * @default true
    */
   showBottomLine?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 选项卡头部空间是否均分
+   * @default true
+   */
+  spaceEvenly?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * `1.1.10`。是否展示分割线
+   * @default true
+   */
+  split?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -53,20 +61,20 @@ export interface TdTabsProps {
     value?: StickyProps;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 是否可以滑动切换
    * @default true
    */
   swipeable?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 标签的样式
+   * @default line
+   */
+  theme?: {
+    type: StringConstructor;
+    value?: 'line' | 'tag' | 'card';
   };
   /**
    * 激活的选项卡值
@@ -79,55 +87,6 @@ export interface TdTabsProps {
    * 激活的选项卡值，非受控属性
    */
   defaultValue?: {
-    type: null;
-    value?: TabValue;
-  };
-}
-
-export interface TdTabPanelProps {
-  /**
-   * 选项卡内容隐藏时是否销毁
-   * @default true
-   */
-  destroyOnHide?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 是否禁用当前选项卡
-   * @default false
-   */
-  disabled?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 选项卡名称
-   * @default ''
-   */
-  label?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 用于自定义选项卡面板内容
-   */
-  panel?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 选项卡的值，唯一标识
-   */
-  value?: {
     type: null;
     value?: TabValue;
   };
