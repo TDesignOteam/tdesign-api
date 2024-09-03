@@ -11,9 +11,10 @@ const props: TdSwitchProps = {
     type: Array,
     value: [true, false],
   },
-  /** 是否禁用组件 */
+  /** 是否禁用组件。优先级：Switch.disabled > Form.disabled */
   disabled: {
-    type: Boolean,
+    type: null,
+    value: undefined,
   },
   /** 开关的图标；[打开时的图标，关闭时的图标] */
   icon: {
@@ -34,11 +35,6 @@ const props: TdSwitchProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 开关值 */
   value: {
