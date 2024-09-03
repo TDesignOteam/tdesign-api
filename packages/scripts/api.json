@@ -119190,7 +119190,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -119221,7 +119224,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -119230,47 +119236,6 @@
     },
     {
       "id": 1723,
-      "platform_framework": [
-        "8",
-        "16",
-        "32"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "autosize",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否自动增高，值为 autosize 时，style.height 不生效",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-22 03:34:58",
-      "update_time": "2021-09-27 08:40:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712658886,
       "platform_framework": [
         "64"
       ],
@@ -119287,10 +119252,10 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-09 10:34:46",
-      "update_time": "2024-04-09 10:34:46",
+      "create_time": "2021-09-22 03:34:58",
+      "update_time": "2021-09-27 08:40:16",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean | { maxHeight?: number, minHeight?: number }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -119583,43 +119548,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 2067,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于表示组件外层元素、输入框、占位符、标签名等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-12-20 05:26:30",
-      "update_time": "2021-12-20 05:26:30",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-textarea', 't-class-label, 't-class-indicator]",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -119923,8 +119851,10 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -119956,85 +119886,13 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1712652934,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "maxlength",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "-1",
-      "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的字符个数。默认为 -1，不限制输入长度",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 08:55:34",
-      "update_time": "2024-04-09 08:55:34",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 1712659014,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "maxlength",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的字符个数",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:36:54",
-      "update_time": "2024-04-09 10:36:54",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -120186,7 +120044,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "指定 placeholder 的样式，目前仅支持 color ,font-size和font-weight",
       "field_desc_en": null,
@@ -120217,7 +120075,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -120247,44 +120108,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712659041,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "readonly",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "只读状态",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:37:21",
-      "update_time": "2024-04-09 10:37:21",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -120443,43 +120270,6 @@
       ]
     },
     {
-      "id": 3076,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:33",
-      "update_time": "2022-10-31 11:38:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2169,
       "platform_framework": [
         "1",
@@ -120530,7 +120320,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Textarea",
       "field_category": 1,
@@ -120564,48 +120355,12 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
         "Number"
-      ]
-    },
-    {
-      "id": 1736,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "value",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "null",
-      "field_enum": "",
-      "field_desc_zh": "文本框值",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-22 13:07:31",
-      "update_time": "2022-01-25 06:12:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {

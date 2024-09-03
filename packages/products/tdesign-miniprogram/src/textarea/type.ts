@@ -22,10 +22,18 @@ export interface TdTextareaProps {
     value?: boolean;
   };
   /**
-   * 是否自动增高，值为 autosize 时，style.height 不生效
+   * 是否自动增高，值为 true 时，style.height 不生效。支持传入对象，如 { maxHeight: 120, minHeight: 20 }
    * @default false
    */
   autosize?: {
+    type: null;
+    value?: boolean | { maxHeight?: number; minHeight?: number };
+  };
+  /**
+   * 是否显示外边框
+   * @default false
+   */
+  bordered?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -39,32 +47,80 @@ export interface TdTextareaProps {
   };
   /**
    * 设置键盘右下角按钮的文字，仅在 type='text'时生效
-   * @default done
+   * @default return
    */
   confirmType?: {
     type: StringConstructor;
-    value?: 'send' | 'search' | 'next' | 'go' | 'done';
+    value?: 'return' | 'send' | 'search' | 'next' | 'go' | 'done';
+  };
+  /**
+   * 指定 focus 时的光标位置
+   * @default -1
+   */
+  cursor?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离
+   * @default 0
+   */
+  cursorSpacing?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 是否去掉 iOS 下的默认内边距
+   * @default false
+   */
+  disableDefaultPadding?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 是否禁用文本框
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 组件类名，分别用于表示组件外层元素、输入框、占位符、标签名等元素类名
+   * 如果 textarea 是在一个 `position:fixed` 的区域，需要显示指定属性 fixed 为 true
+   * @default false
    */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-textarea', 't-class-placeholder', 't-class-name'];
+  fixed?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 如果 textarea 是在一个 `position:fixed` 的区域，需要显示指定属性 fixed 为 true，非受控属性
+   * @default false
+   */
+  defaultFixed?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 自动聚焦
    * @default false
    */
   focus?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * focus时，点击页面的时候不收起键盘
+   * @default false
+   */
+  holdKeyboard?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效
+   * @default false
+   */
+  indicator?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -86,8 +142,8 @@ export interface TdTextareaProps {
    * 用户最多可以输入的字符个数
    */
   maxlength?: {
-    type: NumberConstructor;
-    value?: number;
+    type: null;
+    value?: string | number;
   };
   /**
    * 占位符
@@ -97,27 +153,51 @@ export interface TdTextareaProps {
     value?: string;
   };
   /**
-   * 自定义组件样式
+   * 指定 placeholder 的样式，目前仅支持 color ,font-size和font-weight
    * @default ''
    */
-  style?: {
+  placeholderStyle?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用
+   * @default -1
+   */
+  selectionEnd?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用
+   * @default -1
+   */
+  selectionStart?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
+   * 是否显示键盘上方带有”完成“按钮那一栏
+   * @default true
+   */
+  showConfirmBar?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 文本框值
-   * @default ''
    */
   value?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: TextareaValue;
   };
   /**
    * 文本框值，非受控属性
-   * @default ''
    */
   defaultValue?: {
-    type: StringConstructor;
-    value?: string;
+    type: null;
+    value?: TextareaValue;
   };
 }
+
+export type TextareaValue = string | number;

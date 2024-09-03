@@ -10,27 +10,28 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 adjust-position | Boolean | true | \- | N
 autofocus | Boolean | false | \- | N
-autosize | Boolean / Object | false | \- | N
+autosize | Boolean / Object | false | Typescript：`boolean \| { maxHeight?: number, minHeight?: number }` | N
 bordered | Boolean | false | \- | N
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | return | options: return/send/search/next/go/done。Typescript：`'return' \| 'send' \| 'search' \| 'next' \| 'go' \| 'done'` | N
 cursor | Number | -1 | \- | N
 cursor-spacing | Number | 0 | \- | N
 disable-default-padding | Boolean | false | \- | N
-disabled | Boolean | false | \- | N
+disabled | Boolean | undefined | \- | N
 fixed | Boolean | false | \- | N
 focus | Boolean | false | \- | N
 hold-keyboard | Boolean | false | \- | N
 indicator | Boolean | false | \- | N
 label | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | -1 | \- | N
+maxlength | String / Number | - | \- | N
 placeholder | String | undefined | \- | N
-placeholder-style | String | '' | \- | N
+placeholder-style | String | - | \- | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N
 show-confirm-bar | Boolean | true | \- | N
-value | String | null | \- | N
+value | String / Number | - | Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/textarea/type.ts) | N
+default-value | String / Number | undefined | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/textarea/type.ts) | N
 
 ### Textarea Events
 
