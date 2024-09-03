@@ -11,7 +11,7 @@ custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场�
 content | String / Slot | - | 链接内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 disabled | Boolean | false | 是否为禁用态 | N
 hover | Boolean | - | 是否开启点击反馈 | N
-navigator-props | Object | - | 与 navigator 原生组件属性保持一致，具体使用参考：[微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)。使用时请将形如 `open-type` 风格的属性名改为 `openType` 风格。TS 类型：`NavigatorProps` `import { NavigatorProps } from '@Navigator'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/link/type.ts) | N
+navigator-props | Object | - | 与 navigator 原生组件属性保持一致，具体使用参考：[微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)。使用时请将形如 `open-type` 风格的属性名改为 `openType` 风格 | N
 prefix-icon | String / Object / Slot | - | 前置图标。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 status | String | normal | 已废弃。组件状态。可选项：normal/active/disabled | N

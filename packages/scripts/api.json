@@ -68258,7 +68258,7 @@
       "create_time": "2023-03-13 02:16:33",
       "update_time": "2023-03-13 02:16:33",
       "event_output": null,
-      "custom_field_type": "NavigatorProps【import { NavigatorProps } from '@Navigator'】",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
