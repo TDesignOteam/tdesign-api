@@ -399,6 +399,7 @@ const TYPES_COMBINE_MAP = {
     },
     SideBar: {
         list: ['SideBar', 'SideBarItem'],
+        excludes: ['Miniprogram'],
     },
     Indexes: {
         list: ['Indexes', 'IndexesAnchor'],
