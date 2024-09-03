@@ -83,6 +83,7 @@ export interface TdInputProps {
   cursor: {
     type: NumberConstructor;
     value?: number;
+    required?: boolean;
   };
   /**
    * 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离
@@ -99,13 +100,6 @@ export interface TdInputProps {
   disabled?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 组件类名，用于设置组件外层元素、输入框、占位符、错误信息等元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-input', 't-class-placeholder', 't-class-error-msg'];
   };
   /**
    * 获取焦点
@@ -182,6 +176,7 @@ export interface TdInputProps {
   placeholderStyle: {
     type: StringConstructor;
     value?: string;
+    required?: boolean;
   };
   /**
    * 组件前置图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`
@@ -266,14 +261,6 @@ export interface TdInputProps {
   status?: {
     type: StringConstructor;
     value?: 'success' | 'warning' | 'error';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 后置图标前的后置内容

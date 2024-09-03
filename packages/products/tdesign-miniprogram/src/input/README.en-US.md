@@ -12,7 +12,7 @@ adjust-position | Boolean | true | \- | N
 align | String | left | text align type。options: left/center/right | N
 always-embed | Boolean | false | \- | N
 auto-focus | Boolean | false | \- | N
-borderless | Boolean | false | \- | N
+borderless | Boolean | false | input without border | N
 clear-trigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean / Object | false | show clear icon, clicked to clear input value | N
 confirm-hold | Boolean | false | \- | N
