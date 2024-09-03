@@ -92342,43 +92342,6 @@
       ]
     },
     {
-      "id": 3128,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Result",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、文本描述类名、图片类名、操作按钮类名。`['t-class', 't-class-image', 't-class-title', 't-class-description']`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 17:49:29",
-      "update_time": "2022-10-31 17:49:29",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 3129,
       "platform_framework": [
         "64"
@@ -92499,43 +92462,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 3088,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Result",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:01",
-      "update_time": "2022-10-31 11:42:01",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -94002,8 +93928,6 @@
     {
       "id": 3387,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "Search",
@@ -94015,7 +93939,7 @@
       ],
       "field_default_value": "'search'",
       "field_enum": "",
-      "field_desc_zh": "左侧图标",
+      "field_desc_zh": "左侧图标。如果需要使用 `Slot` 进行自定义，必须将该值设置为假值",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -94033,8 +93957,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -94045,7 +93967,9 @@
     {
       "id": 1712657479,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Search",
       "field_category": 1,
@@ -94074,7 +93998,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
