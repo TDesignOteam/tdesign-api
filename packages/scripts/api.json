@@ -100798,7 +100798,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标，传对象则透传至 Icon",
+      "field_desc_zh": "`1.0.0-rc.1`。图标，传对象则透传至 Icon",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -135050,6 +135050,9 @@
     {
       "id": 1559,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Upload",
@@ -135079,6 +135082,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -135133,7 +135139,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -135156,7 +135163,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\"Miniprogram\":\"暂不支持\"}",
       "test_description": "{\"PC\":{\"event\":[{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\",\"allowUploadDuplicateFile\":false},\"description\":\"allowUploadDuplicateFile is equal to false\",\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input')\",\"event\":{\"validate\":[{\"type\":\"FILTER_FILE_SAME_NAME\",\"files[0].raw\":\"${fileList[0]}\"}]},\"delay\":true}]},{\"props\":{\"files\":[{\"name\":\"file-name.txt\",\"url\":\"https://tdesign.gtimg.com/site/source/figma-pc.png\"}],\"action\":\"https://tdesign.test.com/upload/file_success\",\"allowUploadDuplicateFile\":true},\"description\":\"allowUploadDuplicateFile is equal to true\",\"expect\":[{\"trigger\":\"simulateFileChange('input')\",\"event\":{\"validate\":\"not\"},\"delay\":true}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -135166,43 +135173,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712652424,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "allowUploadDuplicateFile",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】是否允许重复上传相同文件名的文件",
-      "field_desc_en": "allow to upload duplicate name files",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 08:47:04",
-      "update_time": "2024-04-09 08:47:04",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -135559,7 +135530,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -135569,7 +135541,7 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否禁用",
+      "field_desc_zh": "是否禁用组件",
       "field_desc_en": "make upload to be disabled",
       "field_required": 0,
       "event_input": "",
@@ -135592,43 +135564,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712045608,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "disabled",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否禁用组件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-02 08:13:28",
-      "update_time": "2024-04-02 08:13:28",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -135733,14 +135669,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否支持拖拽排序。长按时是否振动，碰撞时是否振动。示例一：`true`。示例二：`{ vibrate: true, collisionVibrate: true }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/upload/type.ts)",
+      "field_desc_zh": "是否支持拖拽排序。长按时是否振动，碰撞时是否振动。示例一：`true`。示例二：`{ vibrate: true, collisionVibrate: true }`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-02 08:20:36",
       "update_time": "2024-04-02 08:20:36",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "boolean | {vibrate?: boolean; collisionVibrate?: boolean}",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -135763,9 +135699,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -135795,83 +135729,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
-      "id": 1712045680,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "fileListDisplay",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】用于完全自定义文件列表内容。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/upload/type.ts)",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-02 08:14:40",
-      "update_time": "2024-04-02 08:14:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 1,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
-      "id": 1712660022,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "fileListDisplay",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效",
-      "field_desc_en": "used to render file list UI",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:53:42",
-      "update_time": "2024-04-09 10:53:42",
-      "event_output": null,
-      "custom_field_type": "TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "TNode"
@@ -136014,6 +135872,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -136046,45 +135905,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
-    },
-    {
-      "id": 1712660076,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "formatRequest",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于新增或修改文件上传请求参数。`action` 存在时有效。一个请求上传一个文件时，默认请求字段有 `file`；<br/>一个请求上传多个文件时，默认字段有 `file[0]/file[1]/file[2]/.../length`，其中 `length` 表示本次上传的文件数量。<br/>⚠️非常注意，此处的 `file[0]/file[1]` 仅仅是一个字段名，并非表示 `file` 是一个数组，接口获取字段时注意区分。<br/>可以使用 `name` 定义 `file` 字段的别名，也可以使用 `formatRequest` 自定义任意字段",
-      "field_desc_en": "redefine request data",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 10:54:36",
-      "update_time": "2024-04-09 10:54:36",
-      "event_output": null,
-      "custom_field_type": "(requestData: { [key: string]: any }) => { [key: string]: any }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -136095,9 +135918,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -136127,9 +135948,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Function"
@@ -136138,7 +135957,9 @@
     {
       "id": 1712660124,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -136166,7 +135987,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -136193,14 +136016,14 @@
       "update_time": "2024-04-02 08:16:17",
       "event_output": null,
       "custom_field_type": "{column?: number;  width?: number; height?: number;}",
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
@@ -136230,14 +136053,14 @@
       "update_time": "2024-04-02 08:16:52",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
@@ -137088,7 +136911,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -137122,45 +136946,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Number",
-        "Object"
-      ]
-    },
-    {
-      "id": 1712652495,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "sizeLimit",
-      "field_type": [
-        "2",
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图片文件大小限制，单位 KB。可选单位有：`'B' | 'KB' | 'MB' | 'GB'`。示例一：`1000`。示例二：`{ size: 2, unit: 'MB', message: '图片大小不超过 {sizeLimit} MB' }`",
-      "field_desc_en": "files size limit",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 08:48:15",
-      "update_time": "2024-04-09 08:48:15",
-      "event_output": null,
-      "custom_field_type": "number | SizeLimitObj【interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }】【type SizeUnitArray = ['B', 'KB', 'MB', 'GB']】【type SizeUnit = SizeUnitArray[number]】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -137241,43 +137027,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3077,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Upload",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:38:51",
-      "update_time": "2022-10-31 11:38:51",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -137378,16 +137127,16 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "`{ backTransition: true, duration: 300, timingFunction: 'ease' }`",
+      "field_default_value": "{ backTransition: true, duration: 300, timingFunction: 'ease' }",
       "field_enum": "",
-      "field_desc_zh": "拖拽位置移动时的过渡参数",
+      "field_desc_zh": "拖拽位置移动时的过渡参数,`duration`单位为ms",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-02 08:26:57",
       "update_time": "2024-04-02 08:26:57",
       "event_output": null,
-      "custom_field_type": "{ backTransition: boolean, duration: number, timingFunction: string }，`duration`单位为ms。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/upload/type.ts)",
+      "custom_field_type": "Transition【interface Transition { backTransition?: boolean, duration?: number, timingFunction?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -137893,7 +137642,9 @@
     {
       "id": 1712660309,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -137919,7 +137670,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -138078,10 +137831,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "拖拽结束后触发，包含所有上传的文件（拖拽后的文件顺序）；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size`选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/upload/type.ts)。<br/>`type MediaContext = VideoContext[] | ImageContext[]`<br/><br/>`interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }`<br/><br/>`interface ImageContext { name: string; type: string; url: string;  size: number; width: number; height: number; progress: number  }`<br/>",
+      "field_desc_zh": "拖拽结束后触发，包含所有上传的文件（拖拽后的文件顺序）；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size` 选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(files: MediaContext)",
+      "event_input": "(files: MediaContext) 【type MediaContext = VideoContext[] | ImageContext[]; interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }; interface ImageContext { name: string; type: string; url: string;  size: number; width: number; height: number; progress: number}】",
       "create_time": "2024-04-02 08:47:17",
       "update_time": "2024-04-02 08:47:17",
       "event_output": null,
