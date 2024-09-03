@@ -14,14 +14,6 @@ export interface TdTransitionProps {
     value?: boolean;
   };
   /**
-   * 自定义容器类名
-   * @default ''
-   */
-  customClass?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 隐藏时是否销毁内容
    * @default false
    */
@@ -38,17 +30,9 @@ export interface TdTransitionProps {
   };
   /**
    * 过渡类名
-   * @default 't-transition'
+   * @default t-transition
    */
   name?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
     type: StringConstructor;
     value?: string;
   };

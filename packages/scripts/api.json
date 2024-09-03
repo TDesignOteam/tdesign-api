@@ -127227,43 +127227,6 @@
       ]
     },
     {
-      "id": 1316,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Transition",
-      "field_category": 1,
-      "field_name": "customClass",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "''",
-      "field_enum": "",
-      "field_desc_zh": "自定义容器类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 05:49:46",
-      "update_time": "2021-07-16 05:51:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1317,
       "platform_framework": [
         "64"
@@ -127321,7 +127284,7 @@
       "create_time": "2021-07-16 05:51:57",
       "update_time": "2022-06-09 09:14:24",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "number | number[]",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -127350,7 +127313,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'t-transition'",
+      "field_default_value": "t-transition",
       "field_enum": "",
       "field_desc_zh": "过渡类名",
       "field_desc_en": null,
@@ -127366,43 +127329,6 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 3147,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Transition",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-01 03:50:40",
-      "update_time": "2022-11-01 03:50:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
