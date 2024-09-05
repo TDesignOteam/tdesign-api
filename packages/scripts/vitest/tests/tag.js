@@ -135,19 +135,13 @@ module.exports = {
             value: '',
             expect: [
               { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              {
-                dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
-              },
+              { dom: '.t-tag--text', attribute: { title: 'toBeUndefined' } },
             ],
           },
           {
             expect: [
               { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              {
-                dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
-              },
+              { dom: '.t-tag--text', attribute: { title: 'toBeUndefined' } },
             ],
           },
         ],
