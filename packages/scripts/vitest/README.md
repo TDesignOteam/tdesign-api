@@ -126,7 +126,7 @@ npm run api:docs Button 'VueNext(PC)'  vitest,finalProject
 | attributeDom | String | 子元素 DOM 选择器，当 `attribute` 字段存在时有意义。表示 `attribute` 所有规则应用到组件的子元素 `attributeDom` 上。<br/>若 `attributeDom` 不存在，则表示 `attribute` 规则应用到组件根元素。 示例：`"attributeDom": ".t-input"`<br/>如果元素不是子元素，而存在于文档中根元素（body）中，使用 `'document.t-popup'` 表示|
 | attribute | Object | API 存在枚举值，校验不同的枚举值对应的不同属性。示例：`{"attribute": { "type": ["submit", "reset", "button"] }}`|
 | attribute | Object | API 的值是多少，期望的属性值就是多少。示例：`{"attribute": { "href": "https://tdesign.tencent.com/" }}` |
-| attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }> }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"`。<br>1) `{ dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } }` 表示校验 `.t-guide__overlay` 元素 是否存在内联样式 `style.zIndex`，且值为 `4988`|
+| attribute | Array | `Array<{ value: string; expect: Array<{ dom: string; attribute: { [name: string]: string } }>; props?:{}, description?:string }>` 表示当 API 等于 `value` 时，期望 `dom` 包含 `attribute` 中的全部属性。其中 `value` 可以承载任何数据类型的字符串表达式，如函数 `value: "() => { 'data-level': 'level-1' }"`。<br>1) `{ dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } }` 表示校验 `.t-guide__overlay` 元素 是否存在内联样式 `style.zIndex`，且值为 `4988`|
 
 ---
 
@@ -337,7 +337,61 @@ API 的枚举值依次对应的类名为 `"className"`，其中 `t-button--shape
 当值为 `{ 'data-level': 'level-1' }` 一个对象时，校验元素 `tbody > tr` 是否存在属性 `"data-level": "level-1"`。
 
 
-#### 2.3.1 校验某一批属性是否存在
+#### 2.3.2 校验某一批属性是否存在
+
+```json
+{
+  "attribute": [
+    {
+      "value": "[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]",
+      "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1", "data-name": "tdesign" }}]
+    },
+  ]
+}
+```
+
+#### 2.3.3 校验某一个属性不同的props
+
+```json
+{
+  "attribute": [
+    {
+        "value": "#ff0000",
+        "props": {
+          "variant": "dark",
+          "theme": "primary"
+        },
+        "description": "expect variant='dark'",
+        "expect": [
+          {
+            "dom": "self",
+            "attribute": {
+              "style.backgroundColor": "rgb(255, 0, 0)",
+              "style.color": "white"
+            }
+          }
+        ]
+      },
+      {
+        "value": "#ff0000",
+        "props": {
+          "variant": "light"
+        },
+        "description": "expect variant='light'",
+        "expect": [
+          {
+            "dom": "self",
+            "attribute": {
+              "style.color": "rgb(255, 0, 0)",
+              "style.backgroundColor": "rgba(255, 0, 0, 0.1)"
+            }
+          }
+        ]
+      },
+  ]
+}
+
+```
 
 ```json
 {

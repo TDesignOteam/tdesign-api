@@ -116246,7 +116246,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"#ff0000\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.backgroundColor\":\"rgb(255, 0, 0)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"dark\",\"theme\":\"primary\"},\"description\":\"expect variant='dark'\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.backgroundColor\":\"rgb(255, 0, 0)\",\"style.color\":\"white\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"light\"},\"description\":\"expect variant='light'\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.color\":\"rgb(255, 0, 0)\",\"style.backgroundColor\":\"rgba(255, 0, 0, 0.1)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"outline\"},\"description\":\"expect variant='outline'\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.borderColor\":\"#ff0000\",\"style.color\":\"rgb(255, 0, 0)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"light-outline\"},\"description\":\"expect variant='light-outline'\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.borderColor\":\"#ff0000\",\"style.color\":\"rgb(255, 0, 0)\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [

@@ -33,6 +33,56 @@ describe('Tag Component', () => {
     expect(wrapper2.find('.t-tag__icon-close').exists()).toBeTruthy();
   });
 
+  it(`props.color is equal to #ff0000`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag color={'#ff0000'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.backgroundColor).toBe('rgb(255, 0, 0)');
+  });
+  it(`props.color expect variant='dark'`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag color={'#ff0000'} variant={'dark'} theme={'primary'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.backgroundColor).toBe('rgb(255, 0, 0)');
+    expect(domWrapper.element.style.color).toBe('white');
+  });
+  it(`props.color expect variant='light'`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag color={'#ff0000'} variant={'light'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.color).toBe('rgb(255, 0, 0)');
+    expect(domWrapper.element.style.backgroundColor).toBe('rgba(255, 0, 0, 0.1)');
+  });
+  it(`props.color expect variant='outline'`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag color={'#ff0000'} variant={'outline'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.borderColor).toBe('#ff0000');
+    expect(domWrapper.element.style.color).toBe('rgb(255, 0, 0)');
+  });
+  it(`props.color expect variant='light-outline'`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag color={'#ff0000'} variant={'light-outline'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.borderColor).toBe('#ff0000');
+    expect(domWrapper.element.style.color).toBe('rgb(255, 0, 0)');
+  });
+
   it('props.content works fine', () => {
     const wrapper = mount({
       render() {
@@ -109,7 +159,7 @@ describe('Tag Component', () => {
     const domWrapper = wrapper.findComponent(Tag);
     expect(domWrapper.element.style.maxWidth).toBe('150px');
     const domWrapper1 = wrapper.find('.t-tag--text');
-    expect(domWrapper1.attributes('title')).toBeUndefined();
+    expect(domWrapper1.attributes('title')).toBe('This is a long long long long long tag');
   });
 
   const shapeClassNameList = [{ 't-tag--square': false }, 't-tag--round', 't-tag--mark'];
@@ -157,16 +207,34 @@ describe('Tag Component', () => {
     });
   });
 
-  it(`props.title is equal to This is a long long long long long tag`, () => {
+  it(`props.title is equal to This is a long tag`, () => {
     const wrapper = mount({
       render() {
         return (
-          <Tag
-            title={'This is a long long long long long tag'}
-            content={'This is a long long long long long tag'}
-            maxWidth={'150px'}
-          ></Tag>
+          <Tag title={'This is a long tag'} content={'This is a long long long long long tag'} maxWidth={'150px'}></Tag>
         );
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.maxWidth).toBe('150px');
+    const domWrapper1 = wrapper.find('.t-tag--text');
+    expect(domWrapper1.attributes('title')).toBe('This is a long tag');
+  });
+  it(`props.title is equal to `, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag title={''} content={'This is a long long long long long tag'} maxWidth={'150px'}></Tag>;
+      },
+    });
+    const domWrapper = wrapper.findComponent(Tag);
+    expect(domWrapper.element.style.maxWidth).toBe('150px');
+    const domWrapper1 = wrapper.find('.t-tag--text');
+    expect(domWrapper1.attributes('title')).toBe('This is a long long long long long tag');
+  });
+  it(`props.title is equal to undefined`, () => {
+    const wrapper = mount({
+      render() {
+        return <Tag title={undefined} content={'This is a long long long long long tag'} maxWidth={'150px'}></Tag>;
       },
     });
     const domWrapper = wrapper.findComponent(Tag);
