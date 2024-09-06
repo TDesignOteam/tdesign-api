@@ -25,7 +25,7 @@ export default {
   /** 选中标签值 */
   value: {
     type: Array as PropType<TdCheckTagGroupProps['value']>,
-    default: (): TdCheckTagGroupProps['value'] => [],
+    default: undefined,
   },
   /** 选中标签值，非受控属性 */
   defaultValue: {

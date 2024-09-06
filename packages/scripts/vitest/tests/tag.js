@@ -15,7 +15,7 @@ module.exports = {
           {
             value: '#ff0000',
             props: { variant: 'dark', theme: 'primary' },
-            description: "expect variant='dark'",
+            description: 'expect variant=dark',
             expect: [
               {
                 dom: 'self',
@@ -26,7 +26,7 @@ module.exports = {
           {
             value: '#ff0000',
             props: { variant: 'light' },
-            description: "expect variant='light'",
+            description: 'expect variant=light',
             expect: [
               {
                 dom: 'self',
@@ -40,7 +40,7 @@ module.exports = {
           {
             value: '#ff0000',
             props: { variant: 'outline' },
-            description: "expect variant='outline'",
+            description: 'expect variant=outline',
             expect: [
               {
                 dom: 'self',
@@ -51,7 +51,7 @@ module.exports = {
           {
             value: '#ff0000',
             props: { variant: 'light-outline' },
-            description: "expect variant='light-outline'",
+            description: 'expect variant=light-outline',
             expect: [
               {
                 dom: 'self',
@@ -96,10 +96,24 @@ module.exports = {
           {
             value: '150px',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
               {
                 dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
+                attribute: {
+                  title: 'This is a long long long long long tag',
+                  'style.maxWidth': '150px',
+                },
+              },
+            ],
+          },
+          {
+            value: '150',
+            expect: [
+              {
+                dom: '.t-tag--text',
+                attribute: {
+                  title: 'This is a long long long long long tag',
+                  'style.maxWidth': '150px',
+                },
               },
             ],
           },
@@ -127,21 +141,27 @@ module.exports = {
           {
             value: 'This is a long tag',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              { dom: '.t-tag--text', attribute: { title: 'This is a long tag' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { 'style.maxWidth': '150px', title: 'This is a long tag' },
+              },
             ],
           },
           {
             value: '',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              { dom: '.t-tag--text', attribute: { title: 'toBeUndefined' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
+              },
             ],
           },
           {
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              { dom: '.t-tag--text', attribute: { title: 'toBeUndefined' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
+              },
             ],
           },
         ],
