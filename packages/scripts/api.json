@@ -14071,6 +14071,47 @@
       ]
     },
     {
+      "id": 1725604537,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "form",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "原生的form属性，支持用于通过form属性对于id的form的表单事件",
+      "field_desc_en": " native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-06 06:35:37",
+      "update_time": "2024-09-06 06:35:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 489,
       "platform_framework": [
         "1",
@@ -48371,6 +48412,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1725604435,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Form",
+      "field_category": 1,
+      "field_name": "id",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件",
+      "field_desc_en": " native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-06 06:33:55",
+      "update_time": "2024-09-06 06:33:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
