@@ -23,7 +23,7 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 原生的form属性，支持用于通过form属性对于id的form的表单事件 */
+  /** 原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件 */
   form: {
     type: String,
     default: undefined,
