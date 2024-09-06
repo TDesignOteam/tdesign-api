@@ -14085,7 +14085,7 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "原生的form属性，支持用于通过form属性对于id的form的表单事件",
+      "field_desc_zh": "原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件",
       "field_desc_en": " native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute.",
       "field_required": 0,
       "event_input": "",
