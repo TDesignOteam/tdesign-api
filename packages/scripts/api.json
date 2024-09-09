@@ -6269,10 +6269,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
         "8",
         "16",
-        "32",
         "64"
       ],
       "component": "Avatar",
@@ -6290,7 +6288,7 @@
       "create_time": "2021-08-20 07:33:48",
       "update_time": "2021-09-02 06:43:14",
       "event_output": null,
-      "custom_field_type": "ShapeEnum 【type ShapeEnum = 'circle' | 'round'】",
+      "custom_field_type": "AvatarShape【type AvatarShape = 'circle' | 'round'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -6303,10 +6301,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
