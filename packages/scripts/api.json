@@ -6032,43 +6032,6 @@
       ]
     },
     {
-      "id": 1657,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:47:56",
-      "update_time": "2021-11-10 05:14:17",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1683,
       "platform_framework": [
         "1",
@@ -6358,7 +6321,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Avatar",
       "field_category": 1,
@@ -6366,7 +6330,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定",
       "field_desc_en": "size",
@@ -6391,43 +6355,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1713174480,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "",
-      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等",
-      "field_desc_en": "size",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-15 09:48:00",
-      "update_time": "2024-04-15 09:48:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -6891,43 +6819,6 @@
       ]
     },
     {
-      "id": 1660,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "AvatarGroup",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:49:01",
-      "update_time": "2022-02-09 08:40:05",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-image', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1597,
       "platform_framework": [
         "1",
@@ -7034,7 +6925,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
       "field_desc_en": "size",
