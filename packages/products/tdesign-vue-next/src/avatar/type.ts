@@ -47,7 +47,7 @@ export interface TdAvatarProps {
   shape?: ShapeEnum;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定
-   * @default medium
+   * @default ''
    */
   size?: string;
   /**
@@ -88,7 +88,7 @@ export interface TdAvatarGroupProps {
   popupProps?: PopupProps;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
-   * @default medium
+   * @default ''
    */
   size?: string;
   /**
