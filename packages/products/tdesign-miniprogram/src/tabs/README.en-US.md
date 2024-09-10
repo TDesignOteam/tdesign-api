@@ -27,6 +27,7 @@ name | params | description
 change | `(value: TabValue, label: string)` | \-
 click | `(value: TabValue, label: string)` | \-
 scroll | `(scrollTop: number, isFixed: boolean)` | \-
+
 ### Tabs External Classes
 
 className | Description
@@ -45,7 +46,6 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 badge-props | Object | - | \- | N
-destroy-on-hide | Boolean | true | \- | N
 disabled | Boolean | false | \- | N
 icon | String / Object | - | \- | N
 label | String | - | \- | N

@@ -27,6 +27,7 @@ default-value | String / Number | undefined | 激活的选项卡值。非受控�
 change | `(value: TabValue, label: string)` | 激活的选项卡发生变化时触发
 click | `(value: TabValue, label: string)` | 点击选项卡时触发
 scroll | `(scrollTop: number, isFixed: boolean)` | 页面滚动时触发
+
 ### Tabs External Classes
 
 类名 | 描述
@@ -45,7 +46,6 @@ t-class-track | 滚动条样式类
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 badge-props | Object | - | 透传至 Badge 组件 | N
-destroy-on-hide | Boolean | true | 【实现有误，暂不支持】选项卡内容隐藏时是否销毁 | N
 disabled | Boolean | false | 是否禁用当前选项卡 | N
 icon | String / Object | - | `1.0.0-rc.1`。图标，传对象则透传至 Icon | N
 label | String | - | 选项卡名称 | N
