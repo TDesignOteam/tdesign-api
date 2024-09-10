@@ -66801,7 +66801,8 @@
       "field_category": 1,
       "field_name": "decimalPlaces",
       "field_type": [
-        "2"
+        "2",
+        "8"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -66812,7 +66813,7 @@
       "create_time": "2021-03-23 03:12:31",
       "update_time": "2021-03-26 08:52:46",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "InputNumberDecimalPlaces【type InputNumberDecimalPlaces = number | { enableRound: boolean; places: number } 】",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -66828,7 +66829,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Number"
+        "Number",
+        "Object"
       ]
     },
     {
