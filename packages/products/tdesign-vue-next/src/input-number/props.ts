@@ -25,11 +25,14 @@ export default {
   autoWidth: Boolean,
   /** [小数位数](https://en.wiktionary.org/wiki/decimal_place) */
   decimalPlaces: {
-    type: Number,
-    default: undefined,
+    type: [Number, Object] as PropType<TdInputNumberProps['decimalPlaces']>,
+    default: undefined as TdInputNumberProps['decimalPlaces'],
   },
   /** 禁用组件 */
-  disabled: Boolean,
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 格式化输入框展示值。第二个事件参数 `context.fixedNumber` 表示处理过小数位数 `decimalPlaces` 的数字 */
   format: {
     type: Function as PropType<TdInputNumberProps['format']>,

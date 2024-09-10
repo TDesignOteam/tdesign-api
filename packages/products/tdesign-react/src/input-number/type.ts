@@ -6,7 +6,7 @@
 
 import { InputProps } from '../input';
 import { TNode } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
+import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
 
 export interface TdInputNumberProps<T = InputNumberValue> {
   /**
@@ -26,7 +26,7 @@ export interface TdInputNumberProps<T = InputNumberValue> {
   /**
    * [小数位数](https://en.wiktionary.org/wiki/decimal_place)
    */
-  decimalPlaces?: number;
+  decimalPlaces?: InputNumberDecimalPlaces;
   /**
    * 禁用组件
    */
@@ -137,6 +137,8 @@ export interface TdInputNumberProps<T = InputNumberValue> {
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }
 
+export type InputNumberDecimalPlaces = number | { enableRound: boolean; places: number };
+
 export type InputNumberValue = number | string;
 
 export interface ChangeContext {
@@ -145,7 +147,8 @@ export interface ChangeContext {
     | FormEvent<HTMLInputElement>
     | MouseEvent<HTMLDivElement | SVGElement>
     | FocusEvent<HTMLDivElement>
-    | KeyboardEvent<HTMLDivElement>;
+    | KeyboardEvent<HTMLDivElement>
+    | CompositionEvent<HTMLDivElement>;
 }
 
 export type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props';

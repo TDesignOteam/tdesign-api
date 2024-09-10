@@ -25,7 +25,7 @@ export interface TdInputNumberProps<T = InputNumberValue> {
   /**
    * [小数位数](https://en.wiktionary.org/wiki/decimal_place)
    */
-  decimalPlaces?: number;
+  decimalPlaces?: InputNumberDecimalPlaces;
   /**
    * 禁用组件
    */
@@ -136,11 +136,13 @@ export interface TdInputNumberProps<T = InputNumberValue> {
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }
 
+export type InputNumberDecimalPlaces = number | { enableRound: boolean; places: number };
+
 export type InputNumberValue = number | string;
 
 export interface ChangeContext {
   type: ChangeSource;
-  e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent;
+  e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent;
 }
 
 export type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props';
