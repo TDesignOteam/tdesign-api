@@ -30,6 +30,8 @@ minCollapsedNum | Number | 0 | 最小折叠数量，用于多选情况下折叠�
 multiple | Boolean | false | 是否允许多选 | N
 option | TElement | - | 自定义单个级联选项。TS 类型：`TNode<{ item: CascaderOption; index: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
+panelBottomContent | TNode | - | 面板内的底部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+panelTopContent | TNode | - | 面板内的顶部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 placeholder | String | undefined | 占位符 | N
 popupProps | Object | - | 参考 popup 组件 API。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框 | N
