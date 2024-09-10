@@ -4,6 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { ShapeEnum } from '../common/common';
+
 export interface TdAvatarGroupProps {
   /**
    * 图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上
