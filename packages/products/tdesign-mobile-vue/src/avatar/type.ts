@@ -6,7 +6,7 @@
 
 import { BadgeProps } from '../badge';
 import { ImageProps } from '../image';
-import { TNode } from '../common';
+import { TNode, ShapeEnum } from '../common';
 
 export interface TdAvatarProps {
   /**
@@ -37,7 +37,7 @@ export interface TdAvatarProps {
    */
   imageProps?: ImageProps;
   /**
-   * 形状。优先级高于 AvatarGroup.shape 。Avatar 单独存在时，默认值为 circle。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.circle 决定
+   * 形状。优先级高于 AvatarGroup.shape 。Avatar 单独存在时，默认值为 circle。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.shape 决定
    */
   shape?: ShapeEnum;
   /**
