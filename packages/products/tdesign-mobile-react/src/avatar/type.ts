@@ -42,12 +42,11 @@ export interface TdAvatarProps {
    */
   imageProps?: ImageProps;
   /**
-   * 形状
-   * @default circle
+   * 形状。优先级高于 AvatarGroup.shape 。Avatar 单独存在时，默认值为 circle。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.circle 决定
    */
   shape?: ShapeEnum;
   /**
-   * 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定
+   * 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.size 决定
    * @default ''
    */
   size?: string;
@@ -72,6 +71,10 @@ export interface TdAvatarGroupProps {
    */
   max?: number;
   /**
+   * 形状。优先级低于 Avatar.shape
+   */
+  shape?: ShapeEnum;
+  /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
    * @default ''
    */
@@ -81,7 +84,5 @@ export interface TdAvatarGroupProps {
    */
   onCollapsedItemClick?: (context: { e: MouseEvent<HTMLSpanElement> }) => void;
 }
-
-export type ShapeEnum = 'circle' | 'round';
 
 export type CascadingValue = 'left-up' | 'right-up';

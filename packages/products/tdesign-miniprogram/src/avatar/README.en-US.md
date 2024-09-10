@@ -15,7 +15,7 @@ hide-on-load-failed | Boolean | false | hide image when loading image failed | N
 icon | String / Object | - | \- | N
 image | String | - | images url | N
 image-props | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
-shape | String | circle | shape。options: circle/round。Typescript：`ShapeEnum ` `type ShapeEnum = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar/type.ts) | N
+shape | String | - | shape。options: circle/round。Typescript：`ShapeEnum` | N
 size | String | - | size | N
 
 ### Avatar Events
@@ -44,6 +44,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 cascading | String | 'left-up' | multiple images cascading。options: left-up/right-up。Typescript：`CascadingValue` `type CascadingValue = 'left-up' \| 'right-up'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/avatar-group/type.ts) | N
 collapse-avatar | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 max | Number | - | \- | N
+shape | String | - | shape。options: circle/round。Typescript：`ShapeEnum` | N
 size | String | - | size | N
 
 ### AvatarGroup Events
