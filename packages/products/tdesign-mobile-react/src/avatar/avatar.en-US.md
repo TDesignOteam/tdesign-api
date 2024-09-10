@@ -15,7 +15,7 @@ hideOnLoadFailed | Boolean | false | hide image when loading image failed | N
 icon | TElement | - | use icon to fill。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 image | String | - | images url | N
 imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/avatar/type.ts) | N
-shape | String | circle | shape。options: circle/round。Typescript：`AvatarShape` `type AvatarShape = 'circle' \| 'round'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/avatar/type.ts) | N
+shape | String | circle | shape。options: circle/round。Typescript：`ShapeEnum` | N
 size | String | - | size | N
 onError | Function |  | Typescript：`(context: { e: Event }) => void`<br/>trigger on image load failed | N
 
