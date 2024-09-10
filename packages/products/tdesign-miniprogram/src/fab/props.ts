@@ -10,7 +10,7 @@ const props: TdFabProps = {
   buttonProps: {
     type: Object,
   },
-  /** `true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动 */
+  /** 是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动 */
   draggable: {
     type: null,
     value: false,
@@ -34,6 +34,10 @@ const props: TdFabProps = {
   usingCustomNavbar: {
     type: Boolean,
     value: false,
+  },
+  /** 设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80] */
+  yBounds: {
+    type: Array,
   },
 };
 

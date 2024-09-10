@@ -6032,43 +6032,6 @@
       ]
     },
     {
-      "id": 1657,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:47:56",
-      "update_time": "2021-11-10 05:14:17",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-image', 't-class-icon', 't-class-alt', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1683,
       "platform_framework": [
         "1",
@@ -6306,10 +6269,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
         "8",
         "16",
-        "32",
         "64"
       ],
       "component": "Avatar",
@@ -6318,32 +6279,30 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "circle",
+      "field_default_value": "",
       "field_enum": "circle/round",
-      "field_desc_zh": "形状",
+      "field_desc_zh": "形状。优先级高于 AvatarGroup.shape 。Avatar 单独存在时，默认值为 circle。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.shape 决定",
       "field_desc_en": "shape",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-08-20 07:33:48",
       "update_time": "2021-09-02 06:43:14",
       "event_output": null,
-      "custom_field_type": "ShapeEnum 【type ShapeEnum = 'circle' | 'round'】",
+      "custom_field_type": "ShapeEnum",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"snapshot\":true,\"className\":\"t-avatar--${item}\"}}",
+      "test_description": "",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -6358,7 +6317,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Avatar",
       "field_category": 1,
@@ -6366,9 +6326,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定",
+      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件 AvatarGroup 存在，默认值便由 AvatarGroup.size 决定",
       "field_desc_en": "size",
       "field_required": 0,
       "event_input": "",
@@ -6391,43 +6351,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1713174480,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Avatar",
-      "field_category": 1,
-      "field_name": "size",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "medium",
-      "field_enum": "",
-      "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等",
-      "field_desc_en": "size",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-15 09:48:00",
-      "update_time": "2024-04-15 09:48:00",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -6891,43 +6815,6 @@
       ]
     },
     {
-      "id": 1660,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "AvatarGroup",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置组件外层元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:49:01",
-      "update_time": "2022-02-09 08:40:05",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-image', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1597,
       "platform_framework": [
         "1",
@@ -7018,6 +6905,51 @@
       ]
     },
     {
+      "id": 1725940938,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "AvatarGroup",
+      "field_category": 1,
+      "field_name": "shape",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "circle/round",
+      "field_desc_zh": "形状。优先级低于 Avatar.shape",
+      "field_desc_en": "shape",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-10 04:02:18",
+      "update_time": "2024-09-10 04:02:18",
+      "event_output": null,
+      "custom_field_type": "ShapeEnum",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1655,
       "platform_framework": [
         "1",
@@ -7034,7 +6966,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "medium",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
       "field_desc_en": "size",
@@ -14071,6 +14003,47 @@
       ]
     },
     {
+      "id": 1725604537,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "form",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件",
+      "field_desc_en": " native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-06 06:35:37",
+      "update_time": "2024-09-06 06:35:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 489,
       "platform_framework": [
         "1",
@@ -20814,6 +20787,92 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1725941069,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "panelBottomContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板内的底部内容",
+      "field_desc_en": "bottom content of the cascader panel",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-10 04:04:29",
+      "update_time": "2024-09-10 04:04:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1725941091,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "panelTopContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板内的顶部内容",
+      "field_desc_en": "top content of the cascader panel",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-10 04:04:51",
+      "update_time": "2024-09-10 04:04:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -47359,14 +47418,14 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动",
+      "field_desc_zh": "是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-01 10:59:27",
       "update_time": "2024-04-01 10:59:27",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean | FabDirectionEnum 【type FabDirectionEnum = 'all' | 'vertical' | 'horizontal'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -47616,6 +47675,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1725534756,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "yBounds",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-05 11:12:36",
+      "update_time": "2024-09-05 11:12:36",
+      "event_output": null,
+      "custom_field_type": "Array<string | number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -48371,6 +48467,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1725604435,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Form",
+      "field_category": 1,
+      "field_name": "id",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件",
+      "field_desc_en": " native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-06 06:33:55",
+      "update_time": "2024-09-06 06:33:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -66701,7 +66838,8 @@
       "field_category": 1,
       "field_name": "decimalPlaces",
       "field_type": [
-        "2"
+        "2",
+        "8"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -66712,7 +66850,7 @@
       "create_time": "2021-03-23 03:12:31",
       "update_time": "2021-03-26 08:52:46",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "InputNumberDecimalPlaces【type InputNumberDecimalPlaces = number | { enableRound: boolean; places: number } 】",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -66728,7 +66866,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Number"
+        "Number",
+        "Object"
       ]
     },
     {
@@ -111293,43 +111432,6 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712917003,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabPanel",
-      "field_category": 1,
-      "field_name": "destroyOnHide",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "【实现有误，暂不支持】选项卡内容隐藏时是否销毁",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-12 10:16:43",
-      "update_time": "2024-04-12 10:16:43",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"

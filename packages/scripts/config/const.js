@@ -21,6 +21,7 @@ const GLOBAL_TYPES = [
     'TreeOptionData',
     'OptionData',
     'SizeEnum',
+    'ShapeEnum',
     'HorizontalAlignEnum',
     'VerticalAlignEnum',
     'ClassName',

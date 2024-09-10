@@ -8,6 +8,7 @@ export const inputNumberDefaultProps: TdInputNumberProps = {
   allowInputOverLimit: true,
   autoWidth: false,
   decimalPlaces: undefined,
+  disabled: undefined,
   largeNumber: false,
   max: Infinity,
   min: -Infinity,
