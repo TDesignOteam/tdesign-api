@@ -47418,14 +47418,14 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动",
+      "field_desc_zh": "是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-01 10:59:27",
       "update_time": "2024-04-01 10:59:27",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean | FabDirectionEnum 【type FabDirectionEnum = 'all' | 'vertical' | 'horizontal'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -47675,6 +47675,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1725534756,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "yBounds",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-05 11:12:36",
+      "update_time": "2024-09-05 11:12:36",
+      "event_output": null,
+      "custom_field_type": "Array<string | number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
