@@ -47425,7 +47425,7 @@
       "create_time": "2024-04-01 10:59:27",
       "update_time": "2024-04-01 10:59:27",
       "event_output": null,
-      "custom_field_type": "boolean | DirectionEnum 【type DirectionEnum = 'all' | 'vertical' | 'horizontal'】",
+      "custom_field_type": "boolean | FabDirectionEnum 【type FabDirectionEnum = 'all' | 'vertical' | 'horizontal'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -47684,7 +47684,7 @@
       ],
       "component": "Fab",
       "field_category": 1,
-      "field_name": "yEdge",
+      "field_name": "yBounds",
       "field_type": [
         "16"
       ],
