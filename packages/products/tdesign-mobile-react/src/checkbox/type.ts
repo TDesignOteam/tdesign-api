@@ -5,6 +5,7 @@
  * */
 
 import { TNode } from '../common';
+import { ChangeEvent } from 'react';
 
 export interface TdCheckboxProps {
   /**
@@ -12,6 +13,11 @@ export interface TdCheckboxProps {
    * @default true
    */
   block?: boolean;
+  /**
+   * 是否开启无边框模式
+   * @default false
+   */
+  borderless?: boolean;
   /**
    * 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用
    * @default false
@@ -28,22 +34,17 @@ export interface TdCheckboxProps {
    */
   defaultChecked?: boolean;
   /**
-   * 是否选中
-   * @default false
+   * 多选框内容，同 label
    */
-  modelValue?: boolean;
+  children?: TNode;
   /**
    * 多选框内容
    */
-  content?: string | TNode;
+  content?: TNode;
   /**
    * 是否禁用组件内容（content）触发选中
    */
   contentDisabled?: boolean;
-  /**
-   * 多选框内容，同 label
-   */
-  default?: string | TNode;
   /**
    * 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled
    */
@@ -61,7 +62,7 @@ export interface TdCheckboxProps {
   /**
    * 主文案
    */
-  label?: string | TNode;
+  label?: TNode;
   /**
    * 内容最大行数限制
    * @default 5
@@ -94,7 +95,7 @@ export interface TdCheckboxProps {
   /**
    * 值变化时触发
    */
-  onChange?: (checked: boolean, context: { e: Event }) => void;
+  onChange?: (checked: boolean, context: { e: ChangeEvent<HTMLInputElement> }) => void;
 }
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
@@ -125,11 +126,6 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    * @default []
    */
   defaultValue?: T;
-  /**
-   * 选中值
-   * @default []
-   */
-  modelValue?: T;
   /**
    * 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项
    */
