@@ -80879,9 +80879,49 @@
       ]
     },
     {
+      "id": 1726067019,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Popover",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "触发元素，同 triggerElement",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-11 15:03:39",
+      "update_time": "2024-09-11 15:03:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 3526,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -80909,7 +80949,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -80918,7 +80959,8 @@
     {
       "id": 942,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -80947,7 +80989,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -80996,7 +81039,8 @@
     {
       "id": 3514,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -81024,7 +81068,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -81033,7 +81078,8 @@
     {
       "id": 3513,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -81061,7 +81107,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -81070,7 +81117,8 @@
     {
       "id": 3516,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -81098,7 +81146,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -81107,7 +81156,8 @@
     {
       "id": 3517,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -81136,7 +81186,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -81146,7 +81197,8 @@
     {
       "id": 1160,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -81174,7 +81226,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -81183,7 +81236,8 @@
     {
       "id": 3519,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Popover",
       "field_category": 2,
@@ -81209,7 +81263,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
