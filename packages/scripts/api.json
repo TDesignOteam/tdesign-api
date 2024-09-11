@@ -62059,7 +62059,7 @@
       "create_time": "2022-12-22 09:18:18",
       "update_time": "2022-12-22 09:18:18",
       "event_output": null,
-      "custom_field_type": "string [] | number[]",
+      "custom_field_type": "Array<string | number>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
