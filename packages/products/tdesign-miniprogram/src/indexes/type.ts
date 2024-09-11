@@ -10,7 +10,7 @@ export interface TdIndexesProps {
    */
   indexList?: {
     type: ArrayConstructor;
-    value?: string[] | number[];
+    value?: Array<string | number>;
   };
   /**
    * 索引是否吸顶，默认为true
