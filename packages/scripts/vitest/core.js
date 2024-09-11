@@ -545,10 +545,14 @@ function getAttributeValue(attribute, attributeValue, framework = '') {
   const toBeOrNotToBe = isNotToBe ? 'not.' : '';
   // 如果是关键词，直接返回
   if (['toBeUndefined', 'toBeDefined'].includes(value)) {
+    if (value === 'toBeUndefined'){
+      return getAttributeNotExit(framework);
+    }
+    return 'toBeTruthy()';
     // if (value === 'toBeDefined' && attribute === 'autofocus') {
     //   return 'toBeTruthy()';
     // }
-    return `${attributeValue}()`;
+    // return `${attributeValue}()`;
   }
   const valueCode = /^\/.+\/$/.test(attributeValue) ? attributeValue.slice(1, -1) : `'${attributeValue}'`;
   return `${toBeOrNotToBe}toBe(${valueCode})`;
