@@ -25898,7 +25898,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32",
         "64"
       ],
@@ -25931,7 +25930,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -25942,7 +25940,8 @@
     {
       "id": 1712578906,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Checkbox",
       "field_category": 1,
@@ -25970,7 +25969,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -25982,7 +25982,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Checkbox",
@@ -26014,7 +26013,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -26382,7 +26380,6 @@
     {
       "id": 3521,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -26412,7 +26409,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -26779,8 +26775,7 @@
     {
       "id": 1233,
       "platform_framework": [
-        "2",
-        "16"
+        "2"
       ],
       "component": "CheckboxGroup",
       "field_category": 2,
@@ -26806,8 +26801,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": []
     },
@@ -26847,7 +26841,8 @@
     {
       "id": 1712648151,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "CheckboxGroup",
       "field_category": 2,
@@ -26873,7 +26868,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
