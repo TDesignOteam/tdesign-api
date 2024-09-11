@@ -71,11 +71,13 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
   const extraCode = { content, wrapper };
   const async = getItAsync(trigger, framework);
   const onlyDocumentDom = isOnlyDocumentDom(attribute);
-  return attribute.map(({ value, expect }) => {
-    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...props }, extraCode);
+  return attribute.map(({ value, expect, props: attrProps, description }) => {
+    const mProps={ ...attrProps, ...props }
+    const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...mProps }, extraCode);
     const propsCode = getCategoryDesc(oneApiData, component);
+    const itDescription = `${propsCode}.${oneApiData.field_name} ${description || `is equal to ${value}` }`;
     const arr = [
-      `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
+      `it${getSkipCode(skip)}(\`${itDescription}\`,${async} () => {`,
         getWrapper(framework, mountCode, attributeDom, '', { onlyDocumentDom }),
         trigger && getPresetsExpect(trigger, framework, component),
         getDomAttributeExpect(framework, expect, component),

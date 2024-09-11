@@ -23,6 +23,7 @@ name | params | description
 -- | -- | --
 click | - | \-
 close | - | \-
+
 ### Tag External Classes
 
 className | Description
@@ -36,7 +37,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-checked | Boolean | undefined | \- | N
+checked | Boolean | - | \- | N
 default-checked | Boolean | undefined | uncontrolled property | N
 closable | Boolean | false | \- | N
 content | String / Number / Array / Slot | - | Typescript：`string \| number \| string[]` | N
@@ -53,6 +54,7 @@ name | params | description
 change | `(checked: boolean)` | \-
 click | - | \-
 close | \- | \-
+
 ### CheckTag External Classes
 
 className | Description

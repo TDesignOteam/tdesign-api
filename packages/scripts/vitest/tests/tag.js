@@ -3,7 +3,65 @@ module.exports = {
     children_3310: { field_name: 'children', id: 3310, PC: { tnode: true } },
     closable_24: { field_name: 'closable', id: 24, PC: { dom: '.t-tag__icon-close' } },
     closable_1712653002: { field_name: 'closable', id: 1712653002 },
-    color_1710397655: { field_name: 'color', id: 1710397655 },
+    color_1710397655: {
+      field_name: 'color',
+      id: 1710397655,
+      PC: {
+        attribute: [
+          {
+            value: '#ff0000',
+            expect: [{ dom: 'self', attribute: { 'style.backgroundColor': 'rgb(255, 0, 0)' } }],
+          },
+          {
+            value: '#ff0000',
+            props: { variant: 'dark', theme: 'primary' },
+            description: 'expect variant=dark',
+            expect: [
+              {
+                dom: 'self',
+                attribute: { 'style.backgroundColor': 'rgb(255, 0, 0)', 'style.color': 'white' },
+              },
+            ],
+          },
+          {
+            value: '#ff0000',
+            props: { variant: 'light' },
+            description: 'expect variant=light',
+            expect: [
+              {
+                dom: 'self',
+                attribute: {
+                  'style.color': 'rgb(255, 0, 0)',
+                  'style.backgroundColor': 'rgba(255, 0, 0, 0.1)',
+                },
+              },
+            ],
+          },
+          {
+            value: '#ff0000',
+            props: { variant: 'outline' },
+            description: 'expect variant=outline',
+            expect: [
+              {
+                dom: 'self',
+                attribute: { 'style.borderColor': '#ff0000', 'style.color': 'rgb(255, 0, 0)' },
+              },
+            ],
+          },
+          {
+            value: '#ff0000',
+            props: { variant: 'light-outline' },
+            description: 'expect variant=light-outline',
+            expect: [
+              {
+                dom: 'self',
+                attribute: { 'style.borderColor': '#ff0000', 'style.color': 'rgb(255, 0, 0)' },
+              },
+            ],
+          },
+        ],
+      },
+    },
     content_733: { field_name: 'content', id: 733, PC: { tnode: true } },
     customStyle_3093: { field_name: 'customStyle', id: 3093 },
     default_3311: { field_name: 'default', id: 3311, PC: { tnode: true } },
@@ -38,10 +96,24 @@ module.exports = {
           {
             value: '150px',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
               {
                 dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
+                attribute: {
+                  title: 'This is a long long long long long tag',
+                  'style.maxWidth': '150px',
+                },
+              },
+            ],
+          },
+          {
+            value: '150',
+            expect: [
+              {
+                dom: '.t-tag--text',
+                attribute: {
+                  title: 'This is a long long long long long tag',
+                  'style.maxWidth': '150px',
+                },
               },
             ],
           },
@@ -69,26 +141,26 @@ module.exports = {
           {
             value: 'This is a long tag',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
-              { dom: '.t-tag--text', attribute: { title: 'This is a long tag' } },
+              {
+                dom: '.t-tag--text',
+                attribute: { 'style.maxWidth': '150px', title: 'This is a long tag' },
+              },
             ],
           },
           {
             value: '',
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
               {
                 dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
+                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
               },
             ],
           },
           {
             expect: [
-              { dom: 'self', attribute: { 'style.maxWidth': '150px' } },
               {
                 dom: '.t-tag--text',
-                attribute: { title: 'This is a long long long long long tag' },
+                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
               },
             ],
           },

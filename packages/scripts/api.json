@@ -23939,7 +23939,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "标签选中的状态，默认风格（theme=default）才有选中态",
       "field_desc_en": null,
@@ -116344,7 +116344,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": null,
+      "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"#ff0000\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.backgroundColor\":\"rgb(255, 0, 0)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"dark\",\"theme\":\"primary\"},\"description\":\"expect variant=dark\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.backgroundColor\":\"rgb(255, 0, 0)\",\"style.color\":\"white\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"light\"},\"description\":\"expect variant=light\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.color\":\"rgb(255, 0, 0)\",\"style.backgroundColor\":\"rgba(255, 0, 0, 0.1)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"outline\"},\"description\":\"expect variant=outline\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.borderColor\":\"#ff0000\",\"style.color\":\"rgb(255, 0, 0)\"}}]},{\"value\":\"#ff0000\",\"props\":{\"variant\":\"light-outline\"},\"description\":\"expect variant=light-outline\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.borderColor\":\"#ff0000\",\"style.color\":\"rgb(255, 0, 0)\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -116687,7 +116687,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
-      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\"},\"attribute\":[{\"value\":\"150px\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]}]}}",
+      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\"},\"attribute\":[{\"value\":\"150px\",\"expect\":[{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\",\"style.maxWidth\":\"150px\"}}]},{\"value\":\"150\",\"expect\":[{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\",\"style.maxWidth\":\"150px\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -116915,7 +116915,7 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": "",
-      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\",\"maxWidth\":\"150px\"},\"attribute\":[{\"value\":\"This is a long tag\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long tag\"}}]},{\"value\":\"\",\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]},{\"expect\":[{\"dom\":\"self\",\"attribute\":{\"style.maxWidth\":\"150px\"}},{\"dom\":\".t-tag--text\",\"attribute\":{\"title\":\"This is a long long long long long tag\"}}]}]}}",
+      "test_description": "{\"PC\":{\"props\":{\"content\":\"This is a long long long long long tag\",\"maxWidth\":\"150px\"},\"attribute\":[{\"value\":\"This is a long tag\",\"expect\":[{\"dom\":\".t-tag--text\",\"attribute\":{\"style.maxWidth\":\"150px\",\"title\":\"This is a long tag\"}}]},{\"value\":\"\",\"expect\":[{\"dom\":\".t-tag--text\",\"attribute\":{\"style.maxWidth\":\"150px\",\"title\":\"toBeUndefined\"}}]},{\"expect\":[{\"dom\":\".t-tag--text\",\"attribute\":{\"style.maxWidth\":\"150px\",\"title\":\"toBeUndefined\"}}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
