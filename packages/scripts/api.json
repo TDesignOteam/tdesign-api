@@ -45984,7 +45984,8 @@
     {
       "id": 1712661318,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Empty",
       "field_category": 1,
@@ -46013,7 +46014,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -46026,7 +46028,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Empty",
@@ -46059,7 +46060,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -46071,6 +46071,7 @@
       "id": 1712661364,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Empty",
@@ -46101,6 +46102,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -88801,7 +88803,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "RadioGroup",
       "field_category": 1,
@@ -88834,7 +88837,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -101488,7 +101492,6 @@
     {
       "id": 3120,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -101519,7 +101522,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -101531,7 +101533,8 @@
     {
       "id": 1712658209,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Slider",
       "field_category": 1,
@@ -101561,7 +101564,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -114912,7 +114916,6 @@
     {
       "id": 1313,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -114942,7 +114945,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -114953,7 +114955,8 @@
     {
       "id": 1712580430,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Tabs",
       "field_category": 1,
@@ -114981,7 +114984,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -114990,7 +114994,8 @@
     {
       "id": 1712570553,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Tabs",
       "field_category": 1,
@@ -115018,10 +115023,48 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1726036563,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件子元素",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-11 06:36:03",
+      "update_time": "2024-09-11 06:36:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -115439,7 +115482,8 @@
     {
       "id": 1712570594,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Tabs",
       "field_category": 1,
@@ -115467,7 +115511,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
