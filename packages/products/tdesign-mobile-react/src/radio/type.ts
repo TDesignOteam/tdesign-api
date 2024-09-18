@@ -5,8 +5,14 @@
  * */
 
 import { TNode, KeysType } from '../common';
+import { ChangeEvent } from 'react';
 
 export interface TdRadioProps<T = RadioValue> {
+  /**
+   * 已废弃。复选框和内容相对位置
+   * @default left
+   */
+  align?: 'left' | 'right';
   /**
    * 是否允许取消选中
    * @default false
@@ -32,22 +38,18 @@ export interface TdRadioProps<T = RadioValue> {
    */
   defaultChecked?: boolean;
   /**
-   * 是否选中
-   * @default false
+   * 单选内容，同 label
    */
-  modelValue?: boolean;
+  children?: TNode;
   /**
    * 单选内容
    */
-  content?: string | TNode;
+  content?: TNode;
   /**
    * 是否禁用组件内容（content）触发选中
+   * @default false
    */
   contentDisabled?: boolean;
-  /**
-   * 单选按钮内容，同 label
-   */
-  default?: string | TNode;
   /**
    * 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
@@ -60,7 +62,7 @@ export interface TdRadioProps<T = RadioValue> {
   /**
    * 主文案
    */
-  label?: string | TNode;
+  label?: TNode;
   /**
    * 内容最大行数限制
    * @default 5
@@ -93,7 +95,7 @@ export interface TdRadioProps<T = RadioValue> {
   /**
    * 选中状态变化时触发
    */
-  onChange?: (checked: boolean, context: { e: Event }) => void;
+  onChange?: (checked: boolean, context: { e: ChangeEvent<HTMLDivElement> }) => void;
 }
 
 export interface TdRadioGroupProps<T = RadioValue> {
@@ -143,13 +145,9 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   defaultValue?: T;
   /**
-   * 选中的值
-   */
-  modelValue?: T;
-  /**
    * 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性
    */
-  onChange?: (value: T, context: { e: Event; name?: string }) => void;
+  onChange?: (value: T, context: { e: ChangeEvent<HTMLDivElement>; name?: string }) => void;
 }
 
 export type RadioOption = string | number | RadioOptionObj;

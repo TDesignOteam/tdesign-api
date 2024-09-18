@@ -88251,7 +88251,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Radio",
       "field_category": 1,
@@ -88281,43 +88285,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712028468,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "readonly",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "只读状态",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-02 03:27:48",
-      "update_time": "2024-04-02 03:27:48",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -88351,7 +88322,7 @@
       "create_time": "2020-12-28 03:19:55",
       "update_time": "2022-02-15 17:07:07",
       "event_output": null,
-      "custom_field_type": "string | number | boolean",
+      "custom_field_type": "T",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -88563,8 +88534,12 @@
     {
       "id": 1725346019,
       "platform_framework": [
+        "1",
+        "2",
+        "4",
         "8",
         "16",
+        "32",
         "64"
       ],
       "component": "Radio",
@@ -88591,8 +88566,12 @@
       "support_default_value": 0,
       "field_category_text": "<T>",
       "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
