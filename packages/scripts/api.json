@@ -45984,7 +45984,8 @@
     {
       "id": 1712661318,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Empty",
       "field_category": 1,
@@ -46013,7 +46014,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -46026,7 +46028,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Empty",
@@ -46059,7 +46060,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -46071,6 +46071,7 @@
       "id": 1712661364,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Empty",
@@ -46101,6 +46102,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
