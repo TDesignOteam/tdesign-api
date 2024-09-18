@@ -131553,10 +131553,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -131586,10 +131583,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -133027,6 +133021,7 @@
       "id": 3232,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "TreeSelect",
@@ -133054,6 +133049,7 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
