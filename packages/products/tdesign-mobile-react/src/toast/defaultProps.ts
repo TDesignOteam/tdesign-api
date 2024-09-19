@@ -5,10 +5,8 @@
 import { TdToastProps } from './type';
 
 export const toastDefaultProps: TdToastProps = {
-  attach: 'body',
   direction: 'row',
   duration: 2000,
-  overlayProps: {},
   placement: 'middle',
   preventScrollThrough: false,
   showOverlay: false,

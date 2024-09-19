@@ -5,6 +5,7 @@
  * */
 
 import { TNode } from '../common';
+import { MouseEvent } from 'react';
 
 export interface TdSwitchProps<T = SwitchValue> {
   /**
@@ -44,13 +45,9 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   defaultValue?: T;
   /**
-   * 开关值
-   */
-  modelValue?: T;
-  /**
    * 数据发生变化时触发
    */
-  onChange?: (value: T, context: { e: MouseEvent }) => void;
+  onChange?: (value: T, context: { e: MouseEvent<HTMLButtonElement> }) => void;
 }
 
 export type SwitchValue = string | number | boolean;
