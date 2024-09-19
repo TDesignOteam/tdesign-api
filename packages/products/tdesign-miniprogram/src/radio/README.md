@@ -21,7 +21,7 @@ max-content-row | Number | 5 | 内容最大行数限制 | N
 max-label-row | Number | 3 | 主文案最大行数限制 | N
 name | String | - | HTML 元素原生属性 | N
 placement | String | left | 复选框和内容相对位置。可选项：left/right | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
 value | String / Number / Boolean | false | 单选按钮的值。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/radio/type.ts) | N
 
 ### Radio Events

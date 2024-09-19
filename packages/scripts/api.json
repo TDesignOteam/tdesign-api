@@ -88263,7 +88263,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,

@@ -71,8 +71,8 @@ const props: TdRadioProps = {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 单选按钮的值 */
   value: {
