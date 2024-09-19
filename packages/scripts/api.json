@@ -109994,6 +109994,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32"
       ],
@@ -110027,6 +110028,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
       ],
@@ -110038,8 +110040,6 @@
     {
       "id": 1538,
       "platform_framework": [
-        "8",
-        "16",
         "32",
         "64"
       ],
@@ -110051,7 +110051,7 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "开关的标签；[打开时的标签，关闭时的标签]",
+      "field_desc_zh": "开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] ",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -110069,8 +110069,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -124221,7 +124219,6 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1",
         "64"
       ],
       "field_default_value": "",
@@ -124249,7 +124246,6 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
-        "String",
         "TNode"
       ]
     },

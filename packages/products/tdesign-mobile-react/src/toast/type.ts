@@ -5,14 +5,9 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, AttachNode } from '../common';
+import { TNode, TElement, Styles, AttachNode } from '../common';
 
 export interface TdToastProps {
-  /**
-   * 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
-   * @default 'body'
-   */
-  attach?: AttachNode;
   /**
    * 图标排列方式
    * @default row
@@ -26,14 +21,13 @@ export interface TdToastProps {
   /**
    * 自定义图标
    */
-  icon?: TNode;
+  icon?: TElement;
   /**
    * 弹窗显示文字
    */
   message?: TNode;
   /**
    * 遮罩层属性，透传至 Overlay
-   * @default {}
    */
   overlayProps?: OverlayProps;
   /**
@@ -63,4 +57,21 @@ export interface TdToastProps {
    * 轻提示销毁的时候触发
    */
   onDestroy?: () => void;
+}
+
+export interface ToastOptions extends TdToastProps {
+  /**
+   * 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * @default 'body'
+   */
+  attach?: AttachNode;
+  /**
+   * 弹框类名，示例：'t-class-toast-first t-class-toast-second'
+   * @default ''
+   */
+  className?: string;
+  /**
+   * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
+   */
+  style?: Styles;
 }
