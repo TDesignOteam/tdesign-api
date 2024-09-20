@@ -164,7 +164,7 @@
           <t-input v-model="formData.descEn" :placeholder="currentApiCategory.placeholder.descEn"></t-input>
         </div>
       </div>
-      <div class="t-form-item" v-show="formData.apiCategory === API_CATEGORY_EVENTS">
+      <div class="t-form-item" v-show="Number(formData.apiCategory) === Number(API_CATEGORY_EVENTS)">
         <label>
           <span>触发元素(React)</span>
           <t-popup
