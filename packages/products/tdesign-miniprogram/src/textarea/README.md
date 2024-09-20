@@ -43,6 +43,7 @@ enter | `(value: TextareaValue)` | 点击完成时触发
 focus | `(value: TextareaValue)` | 获得焦点时触发
 keyboardheightchange | `(height: number, duration: number)` | 键盘高度发生变化的时候触发此事件
 line-change | `(value: TextareaValue)` | 行高发生变化时触发
+
 ### Textarea External Classes
 
 类名 | 描述

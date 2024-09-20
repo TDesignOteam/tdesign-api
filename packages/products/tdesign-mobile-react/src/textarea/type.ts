@@ -5,6 +5,7 @@
  * */
 
 import { TNode } from '../common';
+import { FocusEvent, FormEvent } from 'react';
 
 export interface TdTextareaProps {
   /**
@@ -39,7 +40,7 @@ export interface TdTextareaProps {
   /**
    * 左侧文本
    */
-  label?: string | TNode;
+  label?: TNode;
   /**
    * 标题输入框布局方式
    * @default horizontal
@@ -76,21 +77,17 @@ export interface TdTextareaProps {
    */
   defaultValue?: TextareaValue;
   /**
-   * 文本框值
-   */
-  modelValue?: TextareaValue;
-  /**
    * 失去焦点时触发
    */
-  onBlur?: (value: TextareaValue, context: { e: FocusEvent }) => void;
+  onBlur?: (value: TextareaValue, context: { e: FocusEvent<HTMLTextAreaElement> }) => void;
   /**
    * 输入内容变化时触发
    */
-  onChange?: (value: TextareaValue, context?: { e?: InputEvent }) => void;
+  onChange?: (value: TextareaValue, context?: { e?: FormEvent<HTMLTextAreaElement> }) => void;
   /**
    * 获得焦点时触发
    */
-  onFocus?: (value: TextareaValue, context: { e: FocusEvent }) => void;
+  onFocus?: (value: TextareaValue, context: { e: FocusEvent<HTMLTextAreaElement> }) => void;
 }
 
 export type TextareaValue = string | number;
