@@ -17,11 +17,6 @@ export interface TdSwitchProps<T = SwitchValue> {
    */
   disabled?: boolean;
   /**
-   * 开关的图标；[打开时的图标，关闭时的图标]
-   * @default []
-   */
-  icon?: TNode[];
-  /**
    * 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'
    * @default []
    */
@@ -47,7 +42,7 @@ export interface TdSwitchProps<T = SwitchValue> {
   /**
    * 数据发生变化时触发
    */
-  onChange?: (value: T, context: { e: MouseEvent<HTMLButtonElement> }) => void;
+  onChange?: (value: T, context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
 
 export type SwitchValue = string | number | boolean;
