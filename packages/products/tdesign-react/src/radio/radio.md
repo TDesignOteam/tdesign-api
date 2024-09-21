@@ -15,7 +15,7 @@ children | TNode | - | 单选内容，同 label。TS 类型：`string \| TNode`�
 disabled | Boolean | undefined | 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled | N
 label | TNode | - | 主文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 name | String | - | HTML 元素原生属性 | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
 value | String / Number / Boolean | undefined | 单选按钮的值。TS 类型：`T` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/>选中状态变化时触发 | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击时触发，一般用于外层阻止冒泡场景 | N

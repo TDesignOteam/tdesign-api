@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Radio Props
 
 name | type | default | description | required
@@ -25,7 +24,7 @@ maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
 placement | String | left | options: left/right | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | undefined | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/> | N
 
