@@ -12,8 +12,11 @@ export default {
   allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,
-  /** 是否自动增高，值为 autosize 时，style.height 不生效 */
-  autosize: Boolean,
+  /** 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度 */
+  autosize: {
+    type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
+    default: false,
+  },
   /** 是否显示外边框 */
   bordered: Boolean,
   /** 是否禁用文本框 */
