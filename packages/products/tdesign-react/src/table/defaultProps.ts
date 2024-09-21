@@ -37,7 +37,6 @@ export const primaryTableDefaultProps: Pick<
   | 'reserveSelectedRowOnPaginate'
   | 'defaultSelectedRowKeys'
   | 'showSortColumnBgColor'
-  | 'sortOnRowDraggable'
 > = {
   columnControllerVisible: undefined,
   columns: [],
@@ -47,7 +46,6 @@ export const primaryTableDefaultProps: Pick<
   reserveSelectedRowOnPaginate: true,
   defaultSelectedRowKeys: [],
   showSortColumnBgColor: false,
-  sortOnRowDraggable: false,
 };
 
 export const enhancedTableDefaultProps: TdEnhancedTableProps = { defaultExpandedTreeNodes: [] };
