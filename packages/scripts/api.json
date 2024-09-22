@@ -10605,7 +10605,7 @@
       "create_time": "2020-12-18 03:26:16",
       "update_time": "2022-03-04 14:57:28",
       "event_output": null,
-      "custom_field_type": "ClassName | ((params: RowClassNameParams<T>) => ClassName)【interface RowClassNameParams<T> { row: T; rowIndex: number; type?: 'body' | 'foot' }】",
+      "custom_field_type": "ClassName | ((params: RowClassNameParams<T>) => ClassName)【interface RowClassNameParams<T> { row: T; rowIndex: number; rowKey?: string; type?: 'body' | 'foot' }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
