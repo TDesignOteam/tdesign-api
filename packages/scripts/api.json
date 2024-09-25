@@ -91504,7 +91504,11 @@
     },
     {
       "id": 2075,
-      "platform_framework": [],
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
       "component": "Rate",
       "field_category": 1,
       "field_name": "clearable",
@@ -91513,7 +91517,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否允许取消选择",
+      "field_desc_zh": "是否允许清除评分，如果允许，重新点击当前评分清除",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -91525,12 +91529,16 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 1,
+      "deprecated": 0,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
-      "platform_framework_text": [],
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
       "field_type_text": [
         "Boolean"
       ]
