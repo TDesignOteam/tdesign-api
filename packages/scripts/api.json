@@ -103513,7 +103513,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -103544,7 +103546,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -103556,10 +103560,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -103590,10 +103591,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean",
@@ -103636,6 +103634,49 @@
       ],
       "field_type_text": [
         "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1727232179,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "StepItem",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-25 02:42:59",
+      "update_time": "2024-09-25 02:42:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean",
         "TNode"
       ]
     },
@@ -103783,7 +103824,8 @@
     {
       "id": 1712570381,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -103812,7 +103854,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -105132,7 +105175,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Steps",
@@ -105164,7 +105206,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
