@@ -71,10 +71,6 @@ const props: TdInputProps = {
     type: Boolean,
     value: false,
   },
-  /** 【开发中】指定输入框展示值的格式 */
-  format: {
-    type: null,
-  },
   /** focus时，点击页面的时候不收起键盘 */
   holdKeyboard: {
     type: Boolean,
@@ -104,7 +100,7 @@ const props: TdInputProps = {
     value: undefined,
   },
   /** 指定 placeholder 的样式类 */
-  placeholderClass	: {
+  placeholderClass: {
     type: String,
     value: 'input-placeholder',
   },

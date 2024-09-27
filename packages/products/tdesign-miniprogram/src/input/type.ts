@@ -110,13 +110,6 @@ export interface TdInputProps {
     value?: boolean;
   };
   /**
-   * 【开发中】指定输入框展示值的格式
-   */
-  format?: {
-    type: undefined;
-    value?: InputFormatType;
-  };
-  /**
    * focus时，点击页面的时候不收起键盘
    * @default false
    */
@@ -300,7 +293,5 @@ export interface TdInputProps {
     value?: InputValue;
   };
 }
-
-export type InputFormatType = (value: InputValue) => string;
 
 export type InputValue = string | number;
