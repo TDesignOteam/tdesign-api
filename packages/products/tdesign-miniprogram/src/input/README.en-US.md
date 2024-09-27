@@ -22,7 +22,6 @@ cursor-spacing | Number | 0 | \- | N
 disabled | Boolean | false | make input to be disabled | N
 error-message | String | - | `deprecated` | N
 focus | Boolean | false | \- | N
-format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
 hold-keyboard | Boolean | false | \- | N
 label | String / Slot | - | text on the left of input。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 layout | String | horizontal | options: vertical/horizontal | N
@@ -64,6 +63,7 @@ focus | `(value: InputValue)` | \-
 keyboardheightchange | `(height: number, duration: number)` | \-
 nicknamereview | `(pass: boolean, timeout: boolean)` | \-
 validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
+
 ### Input External Classes
 
 className | Description

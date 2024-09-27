@@ -63341,8 +63341,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -63352,7 +63351,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】指定输入框展示值的格式",
+      "field_desc_zh": "指定输入框展示值的格式",
       "field_desc_en": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better",
       "field_required": 0,
       "event_input": "",
@@ -63372,8 +63371,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Function"
