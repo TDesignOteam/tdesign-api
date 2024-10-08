@@ -9,15 +9,16 @@ function getMiniprogramType(type, tsType, required) {
     boolean: 'BooleanConstructor',
     Array: 'ArrayConstructor',
     Object: 'ObjectConstructor',
+    any: 'null',
   };
   const types = [];
-  ['string', 'number', 'boolean', 'Object', 'Array'].forEach((val) => {
+  ['string', 'number', 'boolean', 'Object', 'Array', 'any'].forEach((val) => {
     const reg = new RegExp(val, 'i');
     if (reg.test(type)) {
       types.push(MP_PROP_TYPES[val]);
     }
   });
-  const valueStr = ['function', 'Function'].includes(tsType) ? 'null' : tsType;
+  const valueStr = ['function', 'Function', 'any'].includes(tsType) ? 'null' : tsType;
 
   const isRequired = required ? `required?: boolean;` : '';
 
