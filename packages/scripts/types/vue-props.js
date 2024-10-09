@@ -170,10 +170,11 @@ function formatNormalProps(api, cmp, extraParams = {}) {
       //   && content.push(`optionalTypes: [${optionalTypes.join()}]`);
       content.push(`${indent}type: null`);
     } else {
-      let  tType = types
+      let tType = types
 
-      if (isMiniprogram){
-        if ('Function' === types ){
+      if (isMiniprogram) {
+        const SPECIAL_TYPE = ['Function', 'any'];
+        if (SPECIAL_TYPE.includes(types)) {
           tType = 'null'
         }
         if ('Boolean' === types && api.field_default_value === 'undefined'){
