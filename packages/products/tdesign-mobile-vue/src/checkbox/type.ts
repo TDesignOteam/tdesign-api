@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, KeysType } from '../common';
 
 export interface TdCheckboxProps {
   /**
@@ -102,6 +102,10 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
+  /**
+   * 用来定义 value / label 在 `options` 中对应的字段别名
+   */
+  keys?: KeysType;
   /**
    * 支持最多选中的数量
    */

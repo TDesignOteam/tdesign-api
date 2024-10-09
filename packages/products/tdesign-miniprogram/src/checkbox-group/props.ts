@@ -6,10 +6,19 @@
 
 import { TdCheckboxGroupProps } from './type';
 const props: TdCheckboxGroupProps = {
-  /** 是否禁用组件 */
-  disabled: {
+  /** 是否开启无边框模式 */
+  borderless: {
     type: Boolean,
     value: false,
+  },
+  /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
+  disabled: {
+    type: null,
+    value: undefined,
+  },
+  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  keys: {
+    type: Object,
   },
   /** 支持最多选中的数量 */
   max: {
@@ -25,11 +34,6 @@ const props: TdCheckboxGroupProps = {
   options: {
     type: Array,
     value: [],
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 选中值 */
   value: {
