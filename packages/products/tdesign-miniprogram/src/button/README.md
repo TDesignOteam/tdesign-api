@@ -11,7 +11,7 @@ custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场�
 app-parameter | String | - | 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 | N
 block | Boolean | false | 是否为块级元素 | N
 content | String / Slot | - | 按钮内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-custom-dataset | Object | - | 自定义 dataset，可通过 event.currentTarget.dataset.custom 获取。。TS 类型：`any` | N
+custom-dataset | any | - | 自定义 dataset，可通过 event.currentTarget.dataset.custom 获取 | N
 disabled | Boolean | undefined | 禁用状态。优先级：Button.disabled > Form.disabled | N
 ghost | Boolean | false | 是否为幽灵按钮（镂空按钮） | N
 hover-class | String | - | 指定按钮按下去的样式类，按钮不为加载或禁用状态时有效。当 `hover-class="none"` 时，没有点击态效果 | N

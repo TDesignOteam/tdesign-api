@@ -13886,18 +13886,18 @@
       "field_category": 1,
       "field_name": "customDataset",
       "field_type": [
-        "8"
+        "512"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "自定义 dataset，可通过 event.currentTarget.dataset.custom 获取。",
+      "field_desc_zh": "自定义 dataset，可通过 event.currentTarget.dataset.custom 获取",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-03-14 07:32:55",
       "update_time": "2022-03-14 07:40:54",
       "event_output": null,
-      "custom_field_type": "any",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -13911,7 +13911,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "Object"
+        "any"
       ]
     },
     {
