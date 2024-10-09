@@ -13,6 +13,10 @@ export default {
     type: Boolean,
     default: undefined,
   },
+  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  keys: {
+    type: Object as PropType<TdCheckboxGroupProps['keys']>,
+  },
   /** 支持最多选中的数量 */
   max: {
     type: Number,
