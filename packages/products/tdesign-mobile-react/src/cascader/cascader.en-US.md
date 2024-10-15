@@ -10,7 +10,7 @@ className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 checkStrictly | Boolean | false | \- | N
 closeBtn | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-keys | Object | - | Typescript：`CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts) | N
+keys | Object | - | Typescript：`CascaderKeysType` `type CascaderKeysType = KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts) | N
 lazy | Boolean | false | \- | N
 loadCompleted | Boolean | false | \- | N
 options | Array | [] | Typescript：`Array<CascaderOption>` | N
@@ -22,5 +22,5 @@ value | String / Number | - | \- | N
 defaultValue | String / Number | - | uncontrolled property | N
 visible | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: string \| number, selectedOptions: CascaderOption[]) => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
+onClose | Function |  | Typescript：`(trigger: CascaderTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
 onPick | Function |  | Typescript：`(value: string \| number, index: number) => void`<br/> | N

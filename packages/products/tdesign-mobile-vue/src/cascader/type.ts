@@ -16,21 +16,11 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * 关闭按钮
    * @default true
    */
-  closeBtn?: TNode;
+  closeBtn?: boolean | TNode;
   /**
    * 用来定义 value / label 在 `options` 中对应的字段别名
    */
   keys?: CascaderKeysType;
-  /**
-   * 是否异步加载
-   * @default false
-   */
-  lazy?: boolean;
-  /**
-   * 是否完成异步加载
-   * @default false
-   */
-  loadCompleted?: boolean;
   /**
    * 可选项数据源
    * @default []
@@ -38,9 +28,9 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   options?: Array<CascaderOption>;
   /**
    * 未选中时的提示文案
-   * @default 选择选项
+   * @default '选择选项'
    */
-  placeholder?: string;
+  placeholder?: string | TNode;
   /**
    * 每级展示的次标题
    * @default []
@@ -54,7 +44,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 标题
    */
-  title?: TNode;
+  title?: string | TNode;
   /**
    * 选项值
    */
@@ -63,6 +53,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * 选项值，非受控属性
    */
   defaultValue?: string | number;
+  /**
+   * 选项值
+   */
+  modelValue?: string | number;
   /**
    * 是否展示
    * @default false
@@ -79,7 +73,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 选择后触发
    */
-  onPick?: (value: string | number, index: number) => void;
+  onPick?: (context: { level: number; value: string | number; index: number }) => void;
 }
 
 export type CascaderKeysType = KeysType;
