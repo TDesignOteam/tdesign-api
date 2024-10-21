@@ -18,6 +18,7 @@ clearable | Boolean / Object | false | show clear icon, clicked to clear input v
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | done | options: send/search/next/go/done | N
 cursor | Number | - | required | Y
+cursor-color | String | - | \- | N
 cursor-spacing | Number | 0 | \- | N
 disabled | Boolean | false | make input to be disabled | N
 error-message | String | - | `deprecated` | N
