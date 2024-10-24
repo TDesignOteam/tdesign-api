@@ -4,6 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { PickerColumn } from '../picker';
+
 export interface TdDateTimePickerProps {
   /**
    * 取消按钮文字
@@ -22,7 +24,7 @@ export interface TdDateTimePickerProps {
   /**
    * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
-  filter?: Function;
+  filter?: (type: TimeModeValues, columns: PickerColumn) => PickerColumn;
   /**
    * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
    * @default 'YYYY-MM-DD HH:mm:ss'

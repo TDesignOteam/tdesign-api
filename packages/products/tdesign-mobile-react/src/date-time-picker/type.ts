@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { PickerColumn } from '../picker';
 import { TNode, TElement } from '../common';
 import { MouseEvent } from 'react';
 
@@ -25,7 +26,7 @@ export interface TdDateTimePickerProps {
   /**
    * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
-  filter?: function;
+  filter?: (type: TimeModeValues, columns: PickerColumn) => PickerColumn;
   /**
    * 底部内容
    * @default true
