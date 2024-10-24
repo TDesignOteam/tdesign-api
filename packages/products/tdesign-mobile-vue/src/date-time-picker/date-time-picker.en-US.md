@@ -9,7 +9,7 @@ name | type | default | description | required
 cancelBtn | String | 取消 | \- | N
 confirmBtn | String | - | \- | N
 end | String / Number | - | \- | N
-filter | Function | - | Typescript：`(type: TimeModeValues, columns: PickerColumn) => PickerColumn `，[Picker API Documents](./picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
+filter | Function | - | Typescript：`(type: TimeModeValues, option: PickerColumn) => PickerColumn `，[Picker API Documents](./picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
 mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTimePickerMode = TimeModeValues \| Array<TimeModeValues> ` `type TimeModeValues = 'year' \| 'month' \| 'date' \| 'hour' \| 'minute' \| 'second'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 renderLabel | Function | - | Typescript：`(type: string, value: number) => string` | N

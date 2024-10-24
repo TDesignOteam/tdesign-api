@@ -11,7 +11,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 cancelBtn | String | 取消 | \- | N
 confirmBtn | String | - | \- | N
 end | String / Number | - | \- | N
-filter | Function | - | Typescript：`(type: TimeModeValues, columns: PickerColumn) => PickerColumn `，[Picker API Documents](./picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/date-time-picker/type.ts) | N
+filter | Function | - | Typescript：`(type: TimeModeValues, option: PickerColumn) => PickerColumn `，[Picker API Documents](./picker?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/date-time-picker/type.ts) | N
 footer | TElement | true | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
 header | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

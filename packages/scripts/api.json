@@ -35483,7 +35483,7 @@
       "create_time": "2024-10-24 12:54:16",
       "update_time": "2024-10-24 12:54:16",
       "event_output": null,
-      "custom_field_type": "(type: TimeModeValues, columns: PickerColumn) => PickerColumn 【import { PickerColumn } from '@Picker'】",
+      "custom_field_type": "(type: TimeModeValues, option: PickerColumn) => PickerColumn 【import { PickerColumn } from '@Picker'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

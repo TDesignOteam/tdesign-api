@@ -51,7 +51,7 @@ export interface TdDateTimePickerProps {
    */
   filter?: {
     type: undefined;
-    value?: (type: TimeModeValues, columns: PickerColumn) => PickerColumn;
+    value?: (type: TimeModeValues, option: PickerColumn) => PickerColumn;
   };
   /**
    * 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)
