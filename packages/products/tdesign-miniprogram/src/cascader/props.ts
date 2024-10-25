@@ -11,15 +11,29 @@ const props: TdCascaderProps = {
     type: Boolean,
     value: true,
   },
+  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  keys: {
+    type: Object,
+  },
   /** 可选项数据源 */
   options: {
     type: Array,
     value: [],
   },
-  /** 自定义组件样式 */
-  style: {
+  /** 未选中时的提示文案 */
+  placeholder: {
     type: String,
-    value: '',
+    value: '选择选项',
+  },
+  /** 每级展示的次标题 */
+  subTitles: {
+    type: Array,
+    value: [],
+  },
+  /** 展示风格 */
+  theme: {
+    type: String,
+    value: 'step',
   },
   /** 标题 */
   title: {

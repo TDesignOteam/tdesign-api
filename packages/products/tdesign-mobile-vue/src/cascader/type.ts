@@ -73,7 +73,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 选择后触发
    */
-  onPick?: (context: { level: number; value: string | number; index: number }) => void;
+  onPick?: (context: { value: string | number; label: string; index: number; level: number }) => void;
 }
 
 export type CascaderKeysType = KeysType;

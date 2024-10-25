@@ -23,4 +23,4 @@ defaultValue | String / Number | - | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
 onChange | Function |  | TS 类型：`(value: string \| number, selectedOptions: CascaderOption[]) => void`<br/>值发生变更时触发 | N
 onClose | Function |  | TS 类型：`(trigger: CascaderTriggerSource) => void`<br/>关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/> | N
-onPick | Function |  | TS 类型：`(value: string \| number, index: number) => void`<br/>选择后触发 | N
+onPick | Function |  | TS 类型：`(context: { value: string \| number, label: string, index: number, level: number }) => void`<br/>选择后触发 | N

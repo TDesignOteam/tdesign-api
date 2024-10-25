@@ -22264,8 +22264,6 @@
     {
       "id": 3344,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "Cascader",
@@ -22277,7 +22275,7 @@
       "field_desc_zh": "选择后触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: string | number, index: number)",
+      "event_input": "(value: string | number, label: string, index: number, level: number)",
       "create_time": "2023-02-28 08:45:51",
       "update_time": "2023-02-28 08:45:51",
       "event_output": null,
@@ -22292,8 +22290,6 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -22301,7 +22297,8 @@
     {
       "id": 1712578704,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Cascader",
       "field_category": 2,
@@ -22312,7 +22309,7 @@
       "field_desc_zh": "选择后触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { level: number, value: string | number, index: number })",
+      "event_input": "(context: { value: string | number, label: string, index: number, level: number })",
       "create_time": "2024-04-08 12:18:24",
       "update_time": "2024-04-08 12:18:24",
       "event_output": null,
@@ -22327,7 +22324,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
