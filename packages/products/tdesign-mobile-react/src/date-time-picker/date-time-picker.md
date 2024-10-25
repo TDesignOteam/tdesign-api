@@ -11,7 +11,7 @@ style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 cancelBtn | String | 取消 | 取消按钮文字 | N
 confirmBtn | String | - | 确定按钮文字 | N
 end | String / Number | - | 选择器的最大可选时间，默认为当前时间+10年 | N
-filter | Function | - | 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)。TS 类型：`(type: TimeModeValues, option: PickerColumn) => PickerColumn `，[Picker API Documents](./picker?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/date-time-picker/type.ts) | N
+filter | Function | - | 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)。TS 类型：`(type: TimeModeValues, option: PickerColumn) => PickerColumn`，[Picker API Documents](./picker?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/date-time-picker/type.ts) | N
 footer | TElement | true | 底部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 format | String | 'YYYY-MM-DD HH:mm:ss' | 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format) | N
 header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
