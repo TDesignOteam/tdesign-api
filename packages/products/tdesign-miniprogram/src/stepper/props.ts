@@ -49,11 +49,6 @@ const props: TdStepperProps = {
     type: Number,
     value: 1,
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
   /** 组件风格 */
   theme: {
     type: String,

@@ -77,14 +77,6 @@ export interface TdStepperProps {
     value?: number;
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 组件风格
    * @default normal
    */
