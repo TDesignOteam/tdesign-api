@@ -11,6 +11,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 disable-input | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
 input-width | Number | - | \- | N
+integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
@@ -26,6 +27,7 @@ name | params | description
 blur | `({ type: string \| number })` | \-
 change | `({ value: string \| number })` | \-
 overlimit | `({type: 'minus' \| 'plus'})` | \-
+
 ### Stepper External Classes
 
 className | Description
