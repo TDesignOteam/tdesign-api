@@ -24,6 +24,11 @@ const props: TdStepperProps = {
   inputWidth: {
     type: Number,
   },
+  /** 是否整型 */
+  integer: {
+    type: Boolean,
+    value: true,
+  },
   /** 最大值 */
   max: {
     type: Number,
@@ -43,11 +48,6 @@ const props: TdStepperProps = {
   step: {
     type: Number,
     value: 1,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 组件风格 */
   theme: {

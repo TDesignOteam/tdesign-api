@@ -37,6 +37,14 @@ export interface TdStepperProps {
     value?: number;
   };
   /**
+   * 是否整型
+   * @default true
+   */
+  integer?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 最大值
    * @default 100
    */
@@ -67,14 +75,6 @@ export interface TdStepperProps {
   step?: {
     type: NumberConstructor;
     value?: number;
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
   };
   /**
    * 组件风格
