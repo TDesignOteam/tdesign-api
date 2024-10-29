@@ -109849,7 +109849,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "Switch 切换状态前的回调方法，常用于需要发起异步请求的场景，回到返回值支持布尔和 Promise 类型，返回`false`或 Promise reject不继续执行change，否则则继续执行。",
+      "field_desc_zh": "Switch 切换状态前的回调方法，常用于需要发起异步请求的场景，回调返回值支持布尔和 Promise 类型，返回`false`或 Promise reject不继续执行change，否则则继续执行。",
       "field_desc_en": "stop one of files to upload",
       "field_required": 0,
       "event_input": "",
