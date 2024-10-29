@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PickerColumn } from '../picker/index';
 import { PopupProps } from '../popup/index';
 
 export interface TdDateTimePickerProps {
@@ -51,7 +50,7 @@ export interface TdDateTimePickerProps {
    */
   filter?: {
     type: undefined;
-    value?: (type: TimeModeValues, option: PickerColumn) => PickerColumn;
+    value?: (type: TimeModeValues, colums: DateTimePickerColumn) => DateTimePickerColumn;
   };
   /**
    * 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)
@@ -145,6 +144,13 @@ export interface TdDateTimePickerProps {
     type: BooleanConstructor;
     value?: boolean;
   };
+}
+
+export type DateTimePickerColumn = DateTimePickerColumnItem[];
+
+export interface DateTimePickerColumnItem {
+  label: string;
+  value: string;
 }
 
 export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues>;
