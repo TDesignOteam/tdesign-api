@@ -22,7 +22,7 @@ export interface TdDateTimePickerProps {
   /**
    * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
-  filter?: (type: TimeModeValues, colums: DateTimePickerColumn) => DateTimePickerColumn;
+  filter?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
   /**
    * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
    * @default 'YYYY-MM-DD HH:mm:ss'

@@ -25,7 +25,7 @@ export interface TdDateTimePickerProps {
   /**
    * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
-  filter?: (type: TimeModeValues, colums: DateTimePickerColumn) => DateTimePickerColumn;
+  filter?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
   /**
    * 底部内容
    * @default true
