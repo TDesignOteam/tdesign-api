@@ -109835,6 +109835,47 @@
       ]
     },
     {
+      "id": 1730199095,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Switch",
+      "field_category": 1,
+      "field_name": "beforeChange",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "Switch 切换状态前的回调方法，常用于需要发起异步请求的场景，回到返回值支持布尔和 Promise 类型，返回`false`或 Promise reject不继续执行change，否则则继续执行。",
+      "field_desc_en": "stop one of files to upload",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-10-29 10:51:35",
+      "update_time": "2024-10-29 10:51:35",
+      "event_output": null,
+      "custom_field_type": "() => boolean | Promise<boolean>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 1537,
       "platform_framework": [
         "16",
