@@ -12,7 +12,7 @@ action | String / Slot | - | 已废弃。操作。[通用类型定义](https://g
 align | String | left | 文本对齐方式。可选项：left/center。TS 类型：`MessageAlignType` `type MessageAlignType = 'left' \| 'center'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/message/type.ts) | N
 close-btn | String / Boolean / Object / Slot | false | 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'user'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 content | String / Slot | - | 用于自定义消息弹出内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-duration | Number | 3000 | 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。 | N
+duration | Number | 3000 | 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器 | N
 gap | String / Number / Boolean | 12 | 两条 `message` 之间的间距 | N
 icon | String / Boolean / Object / Slot | true | 消息提醒前面的图标，可以自定义。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'info'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 link | String / Object / Slot | - | 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
@@ -32,6 +32,7 @@ action-btn-click | - | 已废弃。当操作按钮存在时，用户点击操作
 close-btn-click | - | 当关闭按钮存在时，用户点击关闭按钮触发
 duration-end | \- | 计时结束后触发
 link-click | - | 当`link`链接存在时，点击链接文本时触发
+
 ### Message External Classes
 
 类名 | 描述

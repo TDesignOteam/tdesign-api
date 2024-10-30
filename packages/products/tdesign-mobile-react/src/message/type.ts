@@ -5,21 +5,17 @@
  * */
 
 import { TNode } from '../common';
+import { MouseEvent } from 'react';
 
 export interface TdMessageProps {
   /**
-   * 文本对齐方式
-   * @default left
-   */
-  align?: MessageAlignType;
-  /**
    * 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮
    */
-  closeBtn?: string | boolean | TNode;
+  closeBtn?: TNode;
   /**
    * 用于自定义消息弹出内容
    */
-  content?: string | TNode;
+  content?: TNode;
   /**
    * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器
    * @default 3000
@@ -29,18 +25,18 @@ export interface TdMessageProps {
    * 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
    * @default true
    */
-  icon?: boolean | TNode;
+  icon?: TNode;
   /**
    * 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`
    */
-  link?: string | object | TNode;
+  link?: TNode;
   /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
   marquee?: boolean | MessageMarquee;
   /**
-   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
+   * 相对于 placement 的偏移量，默认单位 rpx。示例：[-10, 20] 或 ['10rpx', '8rpx']
    */
   offset?: Array<string | number>;
   /**
@@ -59,18 +55,13 @@ export interface TdMessageProps {
    */
   defaultVisible?: boolean;
   /**
-   * 是否显示，隐藏时默认销毁组件
-   * @default false
-   */
-  modelValue?: boolean;
-  /**
    * 元素层级，样式默认为 5000
    */
   zIndex?: number;
   /**
    * 当关闭按钮存在时，用户点击关闭按钮触发
    */
-  onCloseBtnClick?: (context: { e: MouseEvent }) => void;
+  onCloseBtnClick?: (context: { e: MouseEvent<SVGElement | HTMLElement> }) => void;
   /**
    * 计时结束后触发
    */
@@ -78,10 +69,8 @@ export interface TdMessageProps {
   /**
    * 当`link`链接存在时，点击链接文本时触发
    */
-  onLinkClick?: (context: { e: MouseEvent }) => void;
+  onLinkClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
-
-export type MessageAlignType = 'left' | 'center';
 
 export interface MessageMarquee {
   speed?: number;
