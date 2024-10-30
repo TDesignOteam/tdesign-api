@@ -10,11 +10,7 @@ export interface TdSwipeCellProps {
   /**
    * 操作项以外的内容
    */
-  content?: string | TNode;
-  /**
-   * 操作项以外的内容，同 content
-   */
-  default?: string | TNode;
+  content?: TNode;
   /**
    * 是否禁用滑动
    */
@@ -40,14 +36,6 @@ export interface TdSwipeCellProps {
    * 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）
    */
   onClick?: (action: SwipeActionItem, source: SwipeSource) => void;
-}
-
-/** 组件实例方法 */
-export interface SwipeCellInstanceFunctions {
-  /**
-   * 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content
-   */
-  showSure?: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
 }
 
 export interface SwipeActionItem {
