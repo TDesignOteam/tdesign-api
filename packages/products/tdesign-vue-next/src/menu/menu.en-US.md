@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Menu Props
 
 name | type | default | description | required
@@ -26,6 +27,7 @@ name | params | description
 change | `(value: MenuValue)` | \-
 expand | `(value: Array<MenuValue>)` | \-
 
+
 ### HeadMenu Props
 
 name | type | default | description | required
@@ -47,6 +49,7 @@ name | params | description
 change | `(value: MenuValue)` | \-
 expand | `(value: Array<MenuValue>)` | \-
 
+
 ### Submenu Props
 
 name | type | default | description | required
@@ -58,6 +61,7 @@ icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](htt
 popupProps | Object | - | Transparent all feature props of the Popup。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/menu/type.ts) | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 value | String / Number | - | Typescript：`MenuValue` | N
+
 
 ### MenuItem Props
 
@@ -81,6 +85,7 @@ onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>
 name | params | description
 -- | -- | --
 click | `(context: { e: MouseEvent })` | trigger on click
+
 
 ### MenuGroup Props
 
