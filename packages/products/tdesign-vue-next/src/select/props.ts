@@ -185,7 +185,7 @@ export default {
   valueDisplay: {
     type: [String, Function] as PropType<TdSelectProps['valueDisplay']>,
   },
-  /** 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。 */
+  /** 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据 */
   valueType: {
     type: String as PropType<TdSelectProps['valueType']>,
     default: 'value' as TdSelectProps['valueType'],
