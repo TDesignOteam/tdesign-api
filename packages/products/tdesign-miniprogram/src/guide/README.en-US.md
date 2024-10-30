@@ -31,6 +31,7 @@ change | `(current: number, context?: {  total: number })` | \-
 finish | `(detail: { current: number, total: number  })` | \-
 next-step-click | `(detail: { next: number, current: number, total: number  })` | \-
 skip | `(detail: { current: number, total: number  })` | \-
+
 ### Guide External Classes
 
 className | Description

@@ -18,7 +18,7 @@ mode | String | popover | 引导框的类型。可选项：popover/dialog | N
 next-button-props | Object | - | 透传 下一步按钮 的全部属性，示例：{ content: '下一步', theme: 'primary' }。TS 类型：`ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/guide/type.ts) | N
 show-overlay | Boolean | true | 是否出现遮罩层 | N
 skip-button-props | Object | - | 透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }。TS 类型：`ButtonProps` | N
-steps | Array | - | 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。。TS 类型：`Array<GuideStep>` | N
+steps | Array | - | 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。TS 类型：`Array<GuideStep>` | N
 using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 z-index | Number | 999999 | 提示框的层级 | N
 
@@ -31,6 +31,7 @@ change | `(current: number, context?: {  total: number })` | 当前步骤发生�
 finish | `(detail: { current: number, total: number  })` | 点击完成按钮时触发
 next-step-click | `(detail: { next: number, current: number, total: number  })` | 点击下一步时触发
 skip | `(detail: { current: number, total: number  })` | 点击跳过按钮时触发
+
 ### Guide External Classes
 
 类名 | 描述
