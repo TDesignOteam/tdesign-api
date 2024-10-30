@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Text Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 code | Boolean | false | 是否添加代码样式 | N
 content | String / Slot / Function | - | 文本内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
@@ -19,18 +20,20 @@ strong | Boolean | false | 文本是否加粗 | N
 theme | String | - | 主题。可选项：primary/secondary/success/warning/error | N
 underline | Boolean | false | 是否添加下划线样式 | N
 
+
 ### Title Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 标题内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 ellipsis | Boolean / Object | false | 是否省略展示，可通过配置参数自定义省略操作的具体功能和样式。TS 类型：`boolean \| TypographyEllipsis` | N
 level | String | h1 | 标题等级。可选项：h1/h2/h3/h4/h5/h6 | N
 
+
 ### Paragraph Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 content | String / Slot / Function | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 段落内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
@@ -38,7 +41,7 @@ ellipsis | Boolean / Object | false | 是否省略展示，可通过配置参数
 
 ### TypographyEllipsis
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 collapsible | Boolean | true | 展开后是否可以重新收起 | N
 expandable | Boolean | true | 是否可展开 | N
@@ -54,7 +57,7 @@ expand | `(expanded:boolean)` | 点击省略按钮的回调
 
 ### TypographyCopyable
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
  text | String | - | 复制的文本内容，默认为全部文本 | N
 suffix | Slot / Function | - | 自定义复制触发元素，一般用于自定义复制图标。TS 类型：`TNode<{ copied: boolean }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
