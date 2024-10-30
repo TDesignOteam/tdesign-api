@@ -60,6 +60,8 @@ export default {
       return ['year', 'quarter', 'month', 'week', 'date'].includes(val);
     },
   },
+  /** 支持多选日期，但不支持与rangepicker、showTime、allowInput */
+  multiple: Boolean,
   /** 决定在日期时间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为`true` */
   needConfirm: {
     type: Boolean,
