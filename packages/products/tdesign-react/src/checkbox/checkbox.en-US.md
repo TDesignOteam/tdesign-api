@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Checkbox Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 checkAll | Boolean | false | \- | N
 checked | Boolean | false | \- | N
 defaultChecked | Boolean | false | uncontrolled property | N
@@ -17,16 +18,18 @@ label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](ht
 lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 name | String | - | \- | N
 readonly | Boolean | false | \- | N
+title | String | - | html attribute | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>trigger on click | N
+
 
 ### CheckboxGroup Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 disabled | Boolean | undefined | \- | N
 lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 max | Number | undefined | \- | N

@@ -8,7 +8,7 @@ import { TdCheckboxGroupProps } from '../checkbox/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
+  /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
     type: Boolean,
     default: undefined,

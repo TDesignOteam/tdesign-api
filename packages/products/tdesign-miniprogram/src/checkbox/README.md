@@ -30,7 +30,7 @@ value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \|
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容。
+change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容
 
 ### Checkbox External Classes
 
@@ -62,4 +62,4 @@ default-value | Array | undefined | 选中值。非受控属性。TS 类型：`T
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: CheckboxGroupValue, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容。
+change | `(value: CheckboxGroupValue, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容
