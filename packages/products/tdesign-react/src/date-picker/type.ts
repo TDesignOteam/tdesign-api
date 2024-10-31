@@ -69,7 +69,7 @@ export interface TdDatePickerProps {
    */
   mode?: 'year' | 'quarter' | 'month' | 'week' | 'date';
   /**
-   * 支持多选日期，但不支持与rangepicker、showTime、allowInput
+   * 支持多选日期，但不支持在range-picker中，或与enableTimePicker、allowInput 一起使用
    * @default false
    */
   multiple?: boolean;

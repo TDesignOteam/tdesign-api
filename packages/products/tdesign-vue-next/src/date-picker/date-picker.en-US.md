@@ -18,7 +18,7 @@ format | String | 'YYYY-MM-DD' | \- | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/date-picker/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
-multiple | Boolean | false | support multiple date，but not support rangepicker、showTime、allowInput。Typescript：`boolean` | N
+multiple | Boolean | false | support multiple date，but not support being use together with range-picker、enableTimePicker and allowInput。Typescript：`boolean` | N
 needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time picker scenario, default is true | N
 placeholder | String / Array | undefined | Typescript：`string` | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/date-picker/type.ts) | N
