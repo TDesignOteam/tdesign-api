@@ -26,7 +26,7 @@ expandOnClickNode | Boolean | false | \- | N
 expandParent | Boolean | false | \- | N
 expanded | Array | [] | `.sync` is supported。Typescript：`Array<TreeNodeValue>` | N
 filter | Function | - | Typescript：`(node: TreeNodeModel<T>) => boolean` | N
-height | String / Number | - | The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight`. | N
+height | String / Number | - | The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight` | N
 hover | Boolean | - | \- | N
 icon | Boolean / Slot / Function | true | Typescript：`boolean \| TNode<TreeNodeModel<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 keys | Object | - | alias field name in data。Typescript：`TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N

@@ -66,7 +66,7 @@ export default {
   skipButtonProps: {
     type: Object as PropType<TdGuideProps['skipButtonProps']>,
   },
-  /** 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。 */
+  /** 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等 */
   steps: {
     type: Array as PropType<TdGuideProps['steps']>,
   },

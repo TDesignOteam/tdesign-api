@@ -25,11 +25,10 @@ export default {
   cancelBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['cancelBtn']>,
   },
+  /** 多按钮排列方式。可选项：true/false */
+  closeBtn: Boolean,
   /** 点击蒙层时是否触发关闭事件 */
-  closeOnOverlayClick: {
-    type: Boolean,
-    default: undefined,
-  },
+  closeOnOverlayClick: Boolean,
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['confirmBtn']>,
@@ -73,6 +72,8 @@ export default {
   onCancel: Function as PropType<TdDialogProps['onCancel']>,
   /** 关闭事件，点击 取消按钮 或 点击蒙层 时触发 */
   onClose: Function as PropType<TdDialogProps['onClose']>,
+  /** 对话框消失动画效果结束后触发 */
+  onClosed: Function as PropType<TdDialogProps['onClosed']>,
   /** 如果“确认”按钮存在，则点击“确认”按钮时触发 */
   onConfirm: Function as PropType<TdDialogProps['onConfirm']>,
   /** 如果蒙层存在，点击蒙层时触发 */

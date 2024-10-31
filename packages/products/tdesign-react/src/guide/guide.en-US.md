@@ -1,12 +1,13 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Guide Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，Typescript：`React.CSSProperties` | N
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 counter | TElement | - | Typescript：`TNode<{ current: number; total: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 current | Number | - | \- | N
 defaultCurrent | Number | - | uncontrolled property | N
@@ -40,7 +41,7 @@ highlightContent | TElement | - | Typescript：`TNode`。[see more ts definition
 highlightPadding | Number | - | \- | N
 mode | String | - | options: popup/dialog | N
 nextButtonProps | Object | - | Typescript：`ButtonProps` | N
-offset | Array | - | this api is in discussing. do not use it.。Typescript：`Array<string \| number>` | N
+offset | Array | - | this api is in discussing. do not use it。Typescript：`Array<string \| number>` | N
 placement | String | 'top' | Typescript：`StepPopupPlacement \| StepDialogPlacement` `type StepPopupPlacement = 'top'\|'left'\|'right'\|'bottom'\|'top-left'\|'top-right'\|'bottom-left'\|'bottom-right'\|'left-top'\|'left-bottom'\|'right-top'\|'right-bottom'` `type StepDialogPlacement = 'top'\|'center' `。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/guide/type.ts) | N
 popupProps | Object | - | Popup component props if `mode = popup`。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/guide/type.ts) | N
 prevButtonProps | Object | - | Typescript：`ButtonProps` | N

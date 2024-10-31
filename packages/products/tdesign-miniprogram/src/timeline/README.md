@@ -23,7 +23,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 content | String / Slot | - | 描述内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 dot | Slot | - | 用于自定义时间轴节点元素。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-dot-color | String | primary | 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.。TS 类型：`string` | N
+dot-color | String | primary | 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值。TS 类型：`string` | N
 label | String / Slot | - | 标签文本内容，可完全自定义。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 label-align | String | - | 标签信息相对于时间轴的位置，在 `mode='alternate'` 时生效，优先级高于 `Timeline.labelAlign`。可选项：left/right/top/bottom | N
 

@@ -10,7 +10,7 @@ actions | Array / Slot / Function | - | Typescript：`Array<ButtonProps>`，[But
 buttonLayout | String | horizontal | options: horizontal/vertical | N
 cancelBtn | String / Object / Slot / Function | - | Typescript：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 closeBtn | Boolean | false | \- | N
-closeOnOverlayClick | Boolean | undefined | \- | N
+closeOnOverlayClick | Boolean | false | \- | N
 confirmBtn | String / Object / Slot / Function | - | Typescript：`string \| ButtonProps \| TNode \| null`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | \- | N
@@ -33,7 +33,7 @@ name | params | description
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | \-
 close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/>
-closed | `()` | \-
+closed | \- | \-
 confirm | `(context: { e: MouseEvent })` | \-
 overlay-click | `(context: { e: MouseEvent })` | \-
 
@@ -42,7 +42,6 @@ overlay-click | `(context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | \- | N
-style | String / Object | - | Typescript：`string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 `Omit<DialogProps, 'attach'>` | \- | - | extends `Omit<DialogProps, 'attach'>` | N
 
 ### DialogInstance

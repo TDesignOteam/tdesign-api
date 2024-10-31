@@ -26,6 +26,7 @@ name | params | description
 -- | -- | --
 error | - | trigger on image load failed
 load | - | trigger on image loaded
+
 ### Image External Classes
 
 className | Description

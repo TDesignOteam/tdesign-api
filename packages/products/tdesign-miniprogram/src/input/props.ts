@@ -175,7 +175,7 @@ const props: TdInputProps = {
   suffix: {
     type: String,
   },
-  /** 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`。 */
+  /** 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon` */
   suffixIcon: {
     type: null,
   },
