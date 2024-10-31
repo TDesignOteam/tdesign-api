@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Guide Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 counter | Slot / Function | - | 用于自定义渲染计数部分。TS 类型：`TNode<{ current: number; total: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 current | Number | - | 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。支持语法糖 `v-model` 或 `v-model:current` | N
@@ -18,7 +19,7 @@ nextButtonProps | Object | - | 透传 下一步按钮 的全部属性，示例�
 prevButtonProps | Object | - | 透传 上一步按钮 的全部属性，示例：{ content: '上一步', theme: 'default' }。TS 类型：`ButtonProps` | N
 showOverlay | Boolean | true | 是否出现遮罩层 | N
 skipButtonProps | Object | - | 透传 跳过按钮 的全部属性，{ content: '跳过', theme: 'default' }。TS 类型：`ButtonProps` | N
-steps | Array | - | 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。。TS 类型：`Array<GuideStep>` | N
+steps | Array | - | 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。TS 类型：`Array<GuideStep>` | N
 zIndex | Number | 999999 | 提示框的层级 | N
 onChange | Function |  | TS 类型：`(current: number, context?: { e: MouseEvent,  total: number }) => void`<br/>当前步骤发生变化时触发 | N
 onFinish | Function |  | TS 类型：`(context: { e: MouseEvent, current: number, total: number  }) => void`<br/>点击完成按钮时触发 | N
@@ -38,7 +39,7 @@ skip | `(context: { e: MouseEvent, current: number, total: number  })` | 点击�
 
 ### GuideStep
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 body | String / Slot / Function | - | 当前步骤提示框的内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 content | Slot / Function | - | 用户自定义引导弹框的内容，一旦存在，此时除 `placement`、`offset`和`element` 外，其它属性全部失效）。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N

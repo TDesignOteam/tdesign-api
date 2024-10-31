@@ -44,7 +44,7 @@ export interface TdTimelineItemProps {
    */
   dot?: TNode;
   /**
-   * 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值.
+   * 时间轴颜色，内置 `primary/warning/error/default` 四种色值，可传入 16 进制颜色码或 RGB 颜色值
    * @default primary
    */
   dotColor?: string;

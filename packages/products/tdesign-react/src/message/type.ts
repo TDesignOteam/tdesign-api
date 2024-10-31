@@ -17,7 +17,7 @@ export interface TdMessageProps {
    */
   content?: TNode;
   /**
-   * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器。
+   * 消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器
    * @default 3000
    */
   duration?: number;

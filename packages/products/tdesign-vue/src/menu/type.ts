@@ -175,11 +175,11 @@ export interface TdMenuItemProps {
    */
   replace?: boolean;
   /**
-   * 路由对象。如果项目存在 Router，则默认使用 Router。
+   * 路由对象。如果项目存在 Router，则默认使用 Router
    */
   router?: Record<string, any>;
   /**
-   * 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签。
+   * 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签
    */
   routerLink?: boolean;
   /**

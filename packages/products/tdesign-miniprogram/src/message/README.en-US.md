@@ -32,6 +32,7 @@ action-btn-click | - | \-
 close-btn-click | - | \-
 duration-end | \- | \-
 link-click | - | \-
+
 ### Message External Classes
 
 className | Description

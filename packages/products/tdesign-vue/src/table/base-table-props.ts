@@ -81,7 +81,7 @@ export default {
   footerSummary: {
     type: [String, Function] as PropType<TdBaseTableProps['footerSummary']>,
   },
-  /** 表头吸顶。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，表示相对于整个窗口吸顶。如果表格滚动的父元素不是整个窗口，请通过 `headerAffixedTop.container` 调整吸顶的位置。基于 Affix 组件开发，透传全部 Affix 组件属性。 */
+  /** 表头吸顶。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，表示相对于整个窗口吸顶。如果表格滚动的父元素不是整个窗口，请通过 `headerAffixedTop.container` 调整吸顶的位置。基于 Affix 组件开发，透传全部 Affix 组件属性 */
   headerAffixedTop: {
     type: [Boolean, Object] as PropType<TdBaseTableProps['headerAffixedTop']>,
     default: false,

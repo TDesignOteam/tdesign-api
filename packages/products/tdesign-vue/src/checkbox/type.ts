@@ -55,6 +55,11 @@ export interface TdCheckboxProps {
    */
   readonly?: boolean;
   /**
+   * HTML 原生属性
+   * @default ''
+   */
+  title?: string;
+  /**
    * 多选框的值
    */
   value?: string | number | boolean;
@@ -66,7 +71,7 @@ export interface TdCheckboxProps {
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
-   * 是否禁用组件，默认为 false。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
+   * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
   /**

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Popover Props
 
 name | type | default | description | required

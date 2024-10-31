@@ -28,10 +28,8 @@ z-index | Number | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 font-color | String | rgba(0,0,0,0.1) | \- | N
-font-family | String | - | font-family configuration for watermark text. | N
+font-family | String | - | font-family configuration for watermark text | N
 font-size | Number | 16 | \- | N
 font-weight | String | normal | options: normal/lighter/bold/bolder | N
 text | String | - | \- | N
@@ -40,7 +38,5 @@ text | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 is-grayscale | Boolean | false | \- | N
 url | String | - | \- | N

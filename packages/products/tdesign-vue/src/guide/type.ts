@@ -68,7 +68,7 @@ export interface TdGuideProps {
    */
   skipButtonProps?: ButtonProps;
   /**
-   * 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。
+   * 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等
    */
   steps?: Array<GuideStep>;
   /**

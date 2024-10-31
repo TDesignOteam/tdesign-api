@@ -130,7 +130,7 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   icon?: boolean | TNode<TreeNodeModel<T>>;
   /**
-   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`。其中，disabled 待开发。
+   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`。其中，disabled 待开发
    */
   keys?: TreeKeysType;
   /**

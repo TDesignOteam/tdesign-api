@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Guide Props
 
 name | type | default | description | required
@@ -47,7 +48,7 @@ highlightContent | Slot / Function | - | Typescript：`TNode`。[see more ts def
 highlightPadding | Number | - | \- | N
 mode | String | - | options: popup/dialog | N
 nextButtonProps | Object | - | Typescript：`ButtonProps` | N
-offset | Array | - | this api is in discussing. do not use it.。Typescript：`Array<string \| number>` | N
+offset | Array | - | this api is in discussing. do not use it。Typescript：`Array<string \| number>` | N
 placement | String | 'top' | Typescript：`StepPopupPlacement \| StepDialogPlacement` `type StepPopupPlacement = 'top'\|'left'\|'right'\|'bottom'\|'top-left'\|'top-right'\|'bottom-left'\|'bottom-right'\|'left-top'\|'left-bottom'\|'right-top'\|'right-bottom'` `type StepDialogPlacement = 'top'\|'center' `。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/guide/type.ts) | N
 popupProps | Object | - | Popup component props if `mode = popup`。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/guide/type.ts) | N
 prevButtonProps | Object | - | Typescript：`ButtonProps` | N
