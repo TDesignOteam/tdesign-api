@@ -13,6 +13,7 @@ export const datePickerDefaultProps: TdDatePickerProps = {
   enableTimePicker: false,
   format: undefined,
   mode: 'date',
+  multiple: false,
   needConfirm: true,
   placeholder: undefined,
   presetsPlacement: 'bottom',

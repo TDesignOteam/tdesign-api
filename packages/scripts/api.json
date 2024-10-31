@@ -31251,6 +31251,47 @@
       ]
     },
     {
+      "id": 1730291580,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "multiple",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "支持多选日期，但不支持在range-picker中，或与enableTimePicker、allowInput 一起使用",
+      "field_desc_en": "support multiple date，but not support being use together with range-picker、enableTimePicker and allowInput",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-10-30 12:33:00",
+      "update_time": "2024-10-30 12:33:00",
+      "event_output": null,
+      "custom_field_type": "boolean",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1721207919,
       "platform_framework": [
         "1",
@@ -31771,7 +31812,7 @@
       "create_time": "2021-03-23 12:38:12",
       "update_time": "2022-06-08 11:07:20",
       "event_output": null,
-      "custom_field_type": "DateValue【type DateValue = string | number | Date】",
+      "custom_field_type": "DateValue【type DateValue = string | number | Date | Array<string | number | Date>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
