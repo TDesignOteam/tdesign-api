@@ -68,8 +68,8 @@ const props: TdInputProps = {
   },
   /** 是否禁用输入框 */
   disabled: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 获取焦点 */
   focus: {
@@ -123,10 +123,10 @@ const props: TdInputProps = {
   prefixIcon: {
     type: null,
   },
-  /** 【开发中】只读状态 */
+  /** 只读状态 */
   readonly: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 安全键盘加密公钥的路径，只支持包内路径 */
   safePasswordCertPath: {
