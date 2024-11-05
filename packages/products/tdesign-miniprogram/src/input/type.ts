@@ -103,7 +103,6 @@ export interface TdInputProps {
   };
   /**
    * 是否禁用输入框
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
@@ -194,8 +193,7 @@ export interface TdInputProps {
     value?: string | object;
   };
   /**
-   * 【开发中】只读状态
-   * @default false
+   * 只读状态
    */
   readonly?: {
     type: BooleanConstructor;
