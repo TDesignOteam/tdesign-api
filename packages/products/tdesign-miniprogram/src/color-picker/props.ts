@@ -6,6 +6,11 @@
 
 import { TdColorPickerProps } from './type';
 const props: TdColorPickerProps = {
+  /** 自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible */
+  autoClose: {
+    type: Boolean,
+    value: true,
+  },
   /** 是否开启透明通道 */
   enableAlpha: {
     type: Boolean,
@@ -25,6 +30,11 @@ const props: TdColorPickerProps = {
     type: String,
     value: 'base',
   },
+  /** 是否使用弹出层包裹颜色选择器 */
+  usePopup: {
+    type: Boolean,
+    value: false,
+  },
   /** 色值 */
   value: {
     type: String,
@@ -34,6 +44,11 @@ const props: TdColorPickerProps = {
   defaultValue: {
     type: String,
     value: '',
+  },
+  /** 是否显示颜色选择器。`usePopup` 为 true 时有效 */
+  visible: {
+    type: Boolean,
+    value: false,
   },
 };
 

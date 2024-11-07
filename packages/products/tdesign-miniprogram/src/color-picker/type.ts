@@ -6,6 +6,14 @@
 
 export interface TdColorPickerProps {
   /**
+   * 自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible
+   * @default true
+   */
+  autoClose?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 是否开启透明通道
    * @default false
    */
@@ -37,6 +45,14 @@ export interface TdColorPickerProps {
     value?: TypeEnum;
   };
   /**
+   * 是否使用弹出层包裹颜色选择器
+   * @default false
+   */
+  usePopup?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 色值
    * @default ''
    */
@@ -51,6 +67,14 @@ export interface TdColorPickerProps {
   defaultValue?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 是否显示颜色选择器。`usePopup` 为 true 时有效
+   * @default false
+   */
+  visible?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
 }
 
