@@ -28777,7 +28777,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.34.0\"}",
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
