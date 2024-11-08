@@ -31173,6 +31173,47 @@
       ]
     },
     {
+      "id": 1731052685,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "disableTime",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "禁用时间项的配置函数，仅在日期时间选择器中可用",
+      "field_desc_en": "disable time config function",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-08 07:58:05",
+      "update_time": "2024-11-08 07:58:05",
+      "event_output": null,
+      "custom_field_type": "(time: Date) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number> }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 1003,
       "platform_framework": [
         "1",
@@ -33679,7 +33720,7 @@
       ],
       "component": "DatePickerPanel",
       "field_category": 16,
-      "field_name": "Pick<TdDatePickerProps, 'value' | 'defaultValue' | 'disableDate' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps' | 'needConfirm'>",
+      "field_name": "Pick<TdDatePickerProps, 'value' | 'defaultValue' | 'disableDate' | 'disableTime' | 'enableTimePicker' | 'firstDayOfWeek' | 'format' | 'mode' | 'presets' | 'presetsPlacement' | 'timePickerProps' | 'needConfirm'>",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
@@ -33952,6 +33993,47 @@
       "field_type_text": [
         "Object",
         "Array",
+        "Function"
+      ]
+    },
+    {
+      "id": 1731055533,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "disableTime",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "禁用时间项的配置函数，仅在日期区间选择器中开启时间展示时可用",
+      "field_desc_en": "disable time config function",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-08 08:45:33",
+      "update_time": "2024-11-08 08:45:33",
+      "event_output": null,
+      "custom_field_type": "(times: Array<Date | null>, context: { partial: DateRangePickerPartial }) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
         "Function"
       ]
     },
