@@ -38,6 +38,12 @@ export interface TdDatePickerProps {
    */
   disableDate?: DisableDate;
   /**
+   * 禁用时间项的配置函数，仅在日期时间选择器中可用
+   */
+  disableTime?: (
+    time: Date,
+  ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number>; millisecond: Array<number> }>;
+  /**
    * 是否禁用组件
    */
   disabled?: boolean;
@@ -200,6 +206,13 @@ export interface TdDateRangePickerProps {
    */
   disableDate?: DisableRangeDate;
   /**
+   * 禁用时间项的配置函数，仅在日期区间选择器中开启时间展示时可用
+   */
+  disableTime?: (
+    times: Array<Date | null>,
+    context: { partial: DateRangePickerPartial },
+  ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number> }>;
+  /**
    * 是否禁用组件
    */
   disabled?: boolean;
@@ -347,6 +360,7 @@ export interface TdDatePickerPanelProps
     | 'value'
     | 'defaultValue'
     | 'disableDate'
+    | 'disableTime'
     | 'enableTimePicker'
     | 'firstDayOfWeek'
     | 'format'
