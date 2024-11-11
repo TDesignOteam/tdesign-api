@@ -123,6 +123,10 @@ export default {
   onClickUpload: Function as PropType<TdUploadProps['onClickUpload']>,
   /** 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response` */
   onFail: Function as PropType<TdUploadProps['onFail']>,
+  /** 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发 */
+  onOneFileFail: Function as PropType<TdUploadProps['onOneFileFail']>,
+  /** 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据 */
+  onOneFileSuccess: Function as PropType<TdUploadProps['onOneFileSuccess']>,
   /** 点击图片预览时触发，文件没有预览 */
   onPreview: Function as PropType<TdUploadProps['onPreview']>,
   /** 上传进度变化时触发，真实进度和模拟进度都会触发。<br/>⚠️ 原始上传请求，小文件的上传进度只有 0 和 100，故而不会触发 `progress` 事件；只有大文件才有真实的中间进度。如果你希望很小的文件也显示上传进度，保证 `useMockProgress=true` 的情况下，设置 `mockProgressDuration` 为更小的值。<br/>参数 `options.type=real` 表示真实上传进度，`options.type=mock` 表示模拟上传进度 */

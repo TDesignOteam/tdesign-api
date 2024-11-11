@@ -137517,7 +137517,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -137545,7 +137547,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -137554,7 +137558,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -137582,7 +137588,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
