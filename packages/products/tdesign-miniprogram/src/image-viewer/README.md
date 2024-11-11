@@ -22,6 +22,6 @@ default-visible | Boolean | undefined | 隐藏/显示预览。非受控属性 | 
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(index: Number)` | 翻页时回调
+change | `(index: number)` | 翻页时回调
 close | `(trigger: 'overlay' \| 'button', visible: Boolean, index: Number)` | 点击操作按钮button或者overlay时触发
-delete | `(index: Number)` | 点击删除操作按钮时触发
+delete | `(index: number)` | 点击删除操作按钮时触发

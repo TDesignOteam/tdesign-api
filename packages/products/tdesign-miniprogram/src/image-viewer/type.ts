@@ -7,27 +7,27 @@
 export interface TdImageViewerProps {
   /**
    * 遮罩的背景颜色
-   * @default rgba(0, 0, 0, .6)
+   * @default 'rgba(0, 0, 0, 1)'
    */
   backgroundColor?: {
-    type: null;
-    value?: string | number;
+    type: StringConstructor;
+    value?: string;
   };
   /**
-   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮
-   * @default true
+   * 是否显示关闭操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `close`，值为 `Object` 类型，表示透传至 `icon` ，不传表示不显示图标
+   * @default false
    */
   closeBtn?: {
-    type: BooleanConstructor;
-    value?: boolean;
+    type: null;
+    value?: string | boolean | object;
   };
   /**
-   * 是否显示删除操作
+   * 是否显示删除操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `delete`，值为 `Object` 类型，表示透传至 `icon`，不传表示不显示图标
    * @default false
    */
   deleteBtn?: {
-    type: BooleanConstructor;
-    value?: boolean;
+    type: null;
+    value?: string | boolean | object;
   };
   /**
    * 图片数组
@@ -46,14 +46,6 @@ export interface TdImageViewerProps {
     value?: Number;
   };
   /**
-   * 最大放大比例
-   * @default 3
-   */
-  maxZoom?: {
-    type: NumberConstructor;
-    value?: Number;
-  };
-  /**
    * 是否显示页码
    * @default false
    */
@@ -62,12 +54,12 @@ export interface TdImageViewerProps {
     value?: boolean;
   };
   /**
-   * 自定义组件样式
-   * @default ''
+   * 是否使用了自定义导航栏
+   * @default false
    */
-  style?: {
-    type: StringConstructor;
-    value?: string;
+  usingCustomNavbar?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 隐藏/显示预览

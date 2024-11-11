@@ -11,12 +11,12 @@ export interface TdImageViewerProps {
    * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮
    * @default true
    */
-  closeBtn?: boolean | TNode;
+  closeBtn?: TNode;
   /**
    * 是否显示删除操作，前提需要开启页码
    * @default false
    */
-  deleteBtn?: boolean | TNode;
+  deleteBtn?: TNode;
   /**
    * 图片数组
    * @default []
@@ -24,10 +24,12 @@ export interface TdImageViewerProps {
   images?: Array<string | ImageInfo>;
   /**
    * 当前预览图片所在的下标
+   * @default 0
    */
   index?: number;
   /**
    * 当前预览图片所在的下标，非受控属性
+   * @default 0
    */
   defaultIndex?: number;
   /**
@@ -51,11 +53,6 @@ export interface TdImageViewerProps {
    */
   defaultVisible?: boolean;
   /**
-   * 隐藏/显示预览
-   * @default false
-   */
-  modelValue?: boolean;
-  /**
    * 关闭时触发
    */
   onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: boolean; index: number }) => void;
@@ -66,7 +63,7 @@ export interface TdImageViewerProps {
   /**
    * 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片
    */
-  onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' }) => void;
+  onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' | 'current' }) => void;
 }
 
 export interface ImageInfo {
