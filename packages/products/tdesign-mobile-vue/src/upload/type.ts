@@ -135,6 +135,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   onFail?: (options: UploadFailContext) => void;
   /**
+   * 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发
+   */
+  onOneFileFail?: (options: UploadFailContext) => void;
+  /**
+   * 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据
+   */
+  onOneFileSuccess?: (context: Pick<SuccessContext, 'e' | 'file' | 'response' | 'XMLHttpRequest'>) => void;
+  /**
    * 点击图片预览时触发，文件没有预览
    */
   onPreview?: (options: { file: UploadFile; index: number; e: MouseEvent }) => void;
