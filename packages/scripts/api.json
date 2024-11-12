@@ -16363,6 +16363,43 @@
       ]
     },
     {
+      "id": 1731402896,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "localeText",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "国际化文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-12 09:14:56",
+      "update_time": "2024-11-12 09:14:56",
+      "event_output": null,
+      "custom_field_type": "CalendarLocaleText【interface CalendarLocaleText {title?: string; weekdays?: string[]; monthTitle?: string; months?: string[]; confirm?: string;}】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3142,
       "platform_framework": [
         "64"
@@ -16785,9 +16822,9 @@
         "1",
         "64"
       ],
-      "field_default_value": "'请选择日期'",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标题",
+      "field_desc_zh": "标题，不传默认为“请选择日期”",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
