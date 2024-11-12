@@ -5,18 +5,9 @@
 import { TdDrawerProps } from './type';
 
 export const drawerDefaultProps: TdDrawerProps = {
-  closeOnEscKeydown: undefined,
   closeOnOverlayClick: true,
   destroyOnClose: false,
-  footer: true,
-  forceRender: false,
-  header: true,
-  mode: 'overlay',
   placement: 'right',
-  preventScrollThrough: true,
-  showInAttachedElement: false,
   showOverlay: true,
-  size: undefined,
-  sizeDraggable: false,
   visible: false,
 };
