@@ -38250,7 +38250,8 @@
     {
       "id": 1712717514,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -38278,7 +38279,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -39008,6 +39010,45 @@
       ]
     },
     {
+      "id": 1731399010,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "middle",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-12 08:10:10",
+      "update_time": "2024-11-12 08:10:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 46,
       "platform_framework": [
         "1",
@@ -39438,6 +39479,45 @@
       ]
     },
     {
+      "id": 1731399069,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "top",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "顶部自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-12 08:11:09",
+      "update_time": "2024-11-12 08:11:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1719908441,
       "platform_framework": [
         "64"
@@ -39529,7 +39609,8 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -39561,7 +39642,8 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -39781,7 +39863,7 @@
       "field_desc_zh": "关闭事件，点击 取消按钮 或 点击蒙层 时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'cancel' | 'overlay'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }】",
+      "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'cancel' | 'overlay' | 'close-btn'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }】",
       "create_time": "2021-07-10 03:28:08",
       "update_time": "2022-04-06 08:54:27",
       "event_output": null,
