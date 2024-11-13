@@ -100,9 +100,9 @@ export default {
   zIndex: {
     type: Number,
   },
-  /** 对话框执行消失动画效果前触发 */
+  /** 抽屉执行关闭动画效果前触发 */
   onBeforeClose: Function as PropType<TdDrawerProps['onBeforeClose']>,
-  /** 对话框执行弹出动画效果前触发 */
+  /** 抽屉执行打开动画效果前触发 */
   onBeforeOpen: Function as PropType<TdDrawerProps['onBeforeOpen']>,
   /** 如果“取消”按钮存在，点击“取消”按钮时触发，同时触发关闭事件 */
   onCancel: Function as PropType<TdDrawerProps['onCancel']>,

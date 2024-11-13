@@ -106,11 +106,11 @@ export interface TdDrawerProps {
    */
   zIndex?: number;
   /**
-   * 对话框执行消失动画效果前触发
+   * 抽屉执行关闭动画效果前触发
    */
   onBeforeClose?: () => void;
   /**
-   * 对话框执行弹出动画效果前触发
+   * 抽屉执行打开动画效果前触发
    */
   onBeforeOpen?: () => void;
   /**
