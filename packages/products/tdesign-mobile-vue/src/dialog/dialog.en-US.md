@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Dialog Props
 
 name | type | default | description | required
@@ -21,6 +20,8 @@ title | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 visible | Boolean | - | \- | N
 width | String / Number | - | \- | N
 zIndex | Number | - | \- | N
+onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
+onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClose | Function |  | Typescript：`(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/> | N
@@ -31,6 +32,8 @@ onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => voi
 
 name | params | description
 -- | -- | --
+before-close | \- | \-
+before-open | \- | \-
 cancel | `(context: { e: MouseEvent })` | \-
 close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/>
 closed | \- | \-

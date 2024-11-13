@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### DialogCard Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -39,6 +38,8 @@ top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级�
 visible | Boolean | - | 控制对话框是否显示 | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
 zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
+onBeforeClose | Function |  | TS 类型：`() => void`<br/>对话框执行消失动画效果前触发 | N
+onBeforeOpen | Function |  | TS 类型：`() => void`<br/>对话框执行弹出动画效果前触发 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N
 onClose | Function |  | TS 类型：`(context: DialogCloseContext) => void`<br/>关闭事件，点击取消按钮、点击关闭按钮、点击蒙层、按下 ESC 等场景下触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'esc' \| 'close-btn' \| 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent \| KeyboardEvent }`<br/> | N
 onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击右上角关闭按钮时触发 | N
@@ -52,6 +53,8 @@ onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void
 
 名称 | 参数 | 描述
 -- | -- | --
+before-close | \- | 对话框执行消失动画效果前触发
+before-open | \- | 对话框执行弹出动画效果前触发
 cancel | `(context: { e: MouseEvent })` | 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件
 close | `(context: DialogCloseContext)` | 关闭事件，点击取消按钮、点击关闭按钮、点击蒙层、按下 ESC 等场景下触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'esc' \| 'close-btn' \| 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent \| KeyboardEvent }`<br/>
 close-btn-click | `(context: { e: MouseEvent })` | 点击右上角关闭按钮时触发
