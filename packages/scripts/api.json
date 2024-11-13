@@ -60189,9 +60189,9 @@
     {
       "id": 2207,
       "platform_framework": [
+        "1",
         "2",
-        "4",
-        "32"
+        "4"
       ],
       "component": "Image",
       "field_category": 1,
@@ -60220,9 +60220,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -60232,45 +60232,9 @@
     {
       "id": 1691226927,
       "platform_framework": [
-        "1"
-      ],
-      "component": "Image",
-      "field_category": 1,
-      "field_name": "src",
-      "field_type": [
-        "1",
-        "256"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用于显示图片的链接或原始图片文件对象",
-      "field_desc_en": "src attribute of `<img>`. image File can also be loaded",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-08-05 09:15:27",
-      "update_time": "2023-08-05 09:15:27",
-      "event_output": null,
-      "custom_field_type": "string | File",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "File"
-      ]
-    },
-    {
-      "id": 1712648704,
-      "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "Image",
@@ -60282,51 +60246,13 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "图片链接",
-      "field_desc_en": "src attribute of `<img>`. image File can also be loaded",
+      "field_desc_en": "",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-09 07:45:04",
-      "update_time": "2024-04-09 07:45:04",
+      "create_time": "2023-08-05 09:15:27",
+      "update_time": "2023-08-05 09:15:27",
       "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712661947,
-      "platform_framework": [
-        "8",
-        "16"
-      ],
-      "component": "Image",
-      "field_category": 1,
-      "field_name": "src",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "图片链接",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:25:47",
-      "update_time": "2024-04-09 11:25:47",
-      "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -60338,7 +60264,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
