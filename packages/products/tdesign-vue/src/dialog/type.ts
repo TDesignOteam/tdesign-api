@@ -193,6 +193,10 @@ export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
    * @default ''
    */
   className?: string;
+  /**
+   * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
+   */
+  style?: string | Styles;
 }
 
 export interface DialogInstance {
