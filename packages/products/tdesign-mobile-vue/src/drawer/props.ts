@@ -51,9 +51,9 @@ export default {
   zIndex: {
     type: Number,
   },
-  /** 对话框执行消失动画效果前触发 */
+  /** 抽屉执行关闭动画效果前触发 */
   onBeforeClose: Function as PropType<TdDrawerProps['onBeforeClose']>,
-  /** 对话框执行弹出动画效果前触发 */
+  /** 抽屉执行打开动画效果前触发 */
   onBeforeOpen: Function as PropType<TdDrawerProps['onBeforeOpen']>,
   /** 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/> */
   onClose: Function as PropType<TdDrawerProps['onClose']>,
