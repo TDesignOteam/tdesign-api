@@ -5,6 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
+import { OverlayProps } from '../overlay';
 import { TNode, Styles } from '../common';
 import { MouseEvent } from 'react';
 
@@ -24,12 +25,17 @@ export interface TdDialogProps {
   cancelBtn?: ButtonProps | TNode | null;
   /**
    * 点击蒙层时是否触发关闭事件
+   * @default false
    */
   closeOnOverlayClick?: boolean;
   /**
    * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
    */
   confirmBtn?: ButtonProps | TNode | null;
+  /**
+   * 确认按钮加载状态
+   */
+  confirmLoading?: boolean;
   /**
    * 内容
    */
@@ -43,7 +49,7 @@ export interface TdDialogProps {
    * 透传至 Overlay 组件
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 防止滚动穿透
    * @default true
@@ -60,13 +66,20 @@ export interface TdDialogProps {
   title?: TNode;
   /**
    * 控制对话框是否显示
-   * @default false
    */
   visible?: boolean;
   /**
    * 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500
    */
   zIndex?: number;
+  /**
+   * 对话框执行消失动画效果前触发
+   */
+  onBeforeClose?: () => void;
+  /**
+   * 对话框执行弹出动画效果前触发
+   */
+  onBeforeOpen?: () => void;
   /**
    * 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件
    */
@@ -105,19 +118,23 @@ export interface DialogInstance {
   /**
    * 销毁弹框
    */
-  destroy?: () => void;
+  destroy: () => void;
   /**
    * 隐藏弹框
    */
-  hide?: () => void;
+  hide: () => void;
+  /**
+   * 设置确认按钮加载状态
+   */
+  setConfirmLoading: (loading: boolean) => void;
   /**
    * 显示弹框
    */
-  show?: () => void;
+  show: () => void;
   /**
    * 更新弹框内容
    */
-  update?: (props: DialogOptions) => void;
+  update: (props: DialogOptions) => void;
 }
 
 export type DialogEventSource = 'cancel' | 'overlay';

@@ -123,6 +123,10 @@ export default {
   zIndex: {
     type: Number,
   },
+  /** 对话框执行消失动画效果前触发 */
+  onBeforeClose: Function as PropType<TdDialogProps['onBeforeClose']>,
+  /** 对话框执行弹出动画效果前触发 */
+  onBeforeOpen: Function as PropType<TdDialogProps['onBeforeOpen']>,
   /** 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 */
   onCancel: Function as PropType<TdDialogProps['onCancel']>,
   /** 关闭事件，点击取消按钮、点击关闭按钮、点击蒙层、按下 ESC 等场景下触发 */
