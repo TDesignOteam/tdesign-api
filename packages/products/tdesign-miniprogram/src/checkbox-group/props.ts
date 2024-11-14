@@ -35,6 +35,11 @@ const props: TdCheckboxGroupProps = {
     type: Array,
     value: [],
   },
+  /** 只读状态 */
+  readonly: {
+    type: null,
+    value: undefined,
+  },
   /** 选中值 */
   value: {
     type: Array,

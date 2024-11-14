@@ -92,6 +92,10 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   options?: Array<CheckboxOption>;
   /**
+   * 只读状态
+   */
+  readonly?: boolean;
+  /**
    * 选中值
    * @default []
    */

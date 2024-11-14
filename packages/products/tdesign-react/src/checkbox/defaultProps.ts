@@ -17,5 +17,6 @@ export const checkboxGroupDefaultProps: TdCheckboxGroupProps = {
   disabled: undefined,
   lazyLoad: false,
   max: undefined,
+  readonly: undefined,
   defaultValue: [],
 };
