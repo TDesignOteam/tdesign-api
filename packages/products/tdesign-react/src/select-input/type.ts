@@ -113,7 +113,6 @@ export interface TdSelectInputProps {
   prefixIcon?: TElement;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
-   * @default false
    */
   readonly?: boolean;
   /**

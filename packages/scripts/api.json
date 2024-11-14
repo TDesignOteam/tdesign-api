@@ -5168,7 +5168,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否只读",
       "field_desc_en": null,
@@ -21169,7 +21169,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
       "field_desc_en": null,
@@ -25907,7 +25907,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -67712,7 +67712,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -90640,7 +90640,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -91857,7 +91857,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
       "field_desc_en": null,
@@ -95175,7 +95175,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -97964,7 +97964,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
       "field_desc_en": null,
@@ -100016,7 +100016,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
       "field_desc_en": null,
@@ -105767,7 +105767,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -118430,7 +118430,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏标签移除按钮和输入框",
       "field_desc_en": null,
@@ -120920,7 +120920,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态",
       "field_desc_en": null,
@@ -133039,7 +133039,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
       "field_desc_en": null,

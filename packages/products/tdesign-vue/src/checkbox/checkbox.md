@@ -15,7 +15,7 @@ indeterminate | Boolean | false | 是否为半选 | N
 label | String / Slot / Function | - | 主文案。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 lazyLoad | Boolean | false | 是否启用懒加载。数据量大时建议开启；加载复杂内容或大量图片时建议开启 | N
 name | String | - | HTML 元素原生属性 | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
 title | String | - | HTML 原生属性 | N
 value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \| number \| boolean` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>值变化时触发 | N

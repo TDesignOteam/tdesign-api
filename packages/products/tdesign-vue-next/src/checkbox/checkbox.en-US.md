@@ -15,7 +15,7 @@ indeterminate | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 name | String | - | \- | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 title | String | - | html attribute | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N

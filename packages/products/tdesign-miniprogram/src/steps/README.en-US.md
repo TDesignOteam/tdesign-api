@@ -12,7 +12,7 @@ current | String / Number | - | \- | N
 default-current | String / Number | undefined | uncontrolled property | N
 current-status | String | process | options: default/process/finish/error | N
 layout | String | horizontal | options: horizontal/vertical | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 sequence | String | positive | options: positive/reverse | N
 theme | String | default | options: default/dot | N
 
@@ -21,6 +21,7 @@ theme | String | default | options: default/dot | N
 name | params | description
 -- | -- | --
 change | `({current: string \| number, previous: string \| number})` | \-
+
 ### Steps External Classes
 
 className | Description
@@ -39,6 +40,7 @@ icon | String / Slot | - | [see more ts definition](https://github.com/Tencent/t
 status | String | default | options: default/process/finish/error。Typescript：`StepStatus` `type StepStatus = 'default' \| 'process' \| 'finish' \| 'error'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N
 sub-step-items | Array | [] | `deprecated`。Typescript：`SubStepItem[]` `interface SubStepItem { status: StepStatus, title: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N
 title | String / Slot | '' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+
 ### StepItem External Classes
 
 className | Description

@@ -32,7 +32,7 @@ export default {
   },
   /** 用户最多可以输入的字符个数 */
   maxlength: {
-    type: [String, Number] as PropType<TdTextareaProps['maxlength']>,
+    type: Number,
   },
   /** 名称，HTML 元素原生属性 */
   name: {
@@ -49,7 +49,10 @@ export default {
     default: undefined,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 文本框状态 */
   status: {
     type: String as PropType<TdTextareaProps['status']>,

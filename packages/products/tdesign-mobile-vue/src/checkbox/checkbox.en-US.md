@@ -21,7 +21,7 @@ maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
 placement | String | left | options: left/right | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
 

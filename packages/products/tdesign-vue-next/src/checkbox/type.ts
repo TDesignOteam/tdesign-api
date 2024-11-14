@@ -56,7 +56,6 @@ export interface TdCheckboxProps {
   name?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**

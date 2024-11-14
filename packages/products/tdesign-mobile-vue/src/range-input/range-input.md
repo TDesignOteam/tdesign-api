@@ -8,13 +8,13 @@
 -- | -- | -- | -- | --
 activeIndex | Number | - | 输入框高亮状态序号 | N
 clearable | Boolean | false | 是否可清空 | N
-disabled | Boolean | - | 是否禁用范围输入框 | N
+disabled | Boolean | undefined | 是否禁用范围输入框 | N
 format | Array / Function | - | 指定输入框展示值的格式。TS 类型：`InputFormatType \| Array<InputFormatType>` | N
 inputProps | Object / Array | - | 透传 Input 输入框组件全部属性，数组第一项表示第一个输入框属性，第二项表示第二个输入框属性。示例：`[{ label: 'A', name: 'A-name' }, { label: 'B',  name: 'B-name' }]`。TS 类型：`InputProps \| Array<InputProps>`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/range-input/type.ts) | N
 label | String / Slot / Function | - | 左侧内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String / Array | - | 占位符，示例：'请输入' 或者 ['开始日期', '结束日期']。TS 类型：`string \| Array<string>` | N
 prefixIcon | Slot / Function | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
 separator | String / Slot / Function | '-' | 范围分隔符。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
 suffix | String / Slot / Function | - | 后置图标前的后置内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

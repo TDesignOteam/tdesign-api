@@ -38,7 +38,7 @@ export interface TdTextareaProps {
   /**
    * 用户最多可以输入的字符个数
    */
-  maxlength?: string | number;
+  maxlength?: number;
   /**
    * 名称，HTML 元素原生属性
    * @default ''
@@ -54,7 +54,6 @@ export interface TdTextareaProps {
   placeholder?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -100,4 +99,4 @@ export interface TdTextareaProps {
   onKeyup?: (value: TextareaValue, context: { e: KeyboardEvent<HTMLTextAreaElement> }) => void;
 }
 
-export type TextareaValue = string;
+export type TextareaValue = string | number;
