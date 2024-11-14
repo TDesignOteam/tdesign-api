@@ -48,6 +48,10 @@ export default {
   to: {
     type: [String, Object] as PropType<TdMenuItemProps['to']>,
   },
+  /** 透传 Tooltip 组件的特性，作用于一级菜单收起下聚焦时出现的节点 */
+  tooltipProps: {
+    type: Object as PropType<TdMenuItemProps['tooltipProps']>,
+  },
   /** 菜单项唯一标识 */
   value: {
     type: [String, Number] as PropType<TdMenuItemProps['value']>,
