@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Steps Props
 
 name | type | default | description | required
@@ -15,6 +14,7 @@ currentStatus | String | process | options: default/process/finish/error | N
 layout | String | horizontal | options: horizontal/vertical | N
 options | Array | - | Typescript：`Array<TdStepItemProps>` | N
 readonly | Boolean | undefined | \- | N
+separator | String | line | options: line/dashed/arrow | N
 sequence | String | positive | options: positive/reverse | N
 theme | String | default | options: default/dot | N
 onChange | Function |  | Typescript：`(current: string \| number, previous: string \| number, context?: { e?: MouseEvent }) => void`<br/> | N

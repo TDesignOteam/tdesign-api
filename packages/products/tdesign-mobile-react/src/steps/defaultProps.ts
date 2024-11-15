@@ -8,6 +8,7 @@ export const stepsDefaultProps: TdStepsProps = {
   currentStatus: 'process',
   layout: 'horizontal',
   readonly: undefined,
+  separator: 'line',
   sequence: 'positive',
   theme: 'default',
 };

@@ -13,6 +13,7 @@ default-current | String / Number | undefined | 当前步骤，即整个步骤�
 current-status | String | process | 用于控制 current 指向的步骤条的状态。可选项：default/process/finish/error | N
 layout | String | horizontal | 步骤条方向，有两种：横向和纵向。可选项：horizontal/vertical | N
 readonly | Boolean | undefined | 只读状态 | N
+separator | String | line | 步骤条分割符。可选项：line/dashed/arrow | N
 sequence | String | positive | 步骤条顺序。可选项：positive/reverse | N
 theme | String | default | 步骤条风格。可选项：default/dot | N
 

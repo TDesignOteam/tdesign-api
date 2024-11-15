@@ -34,6 +34,11 @@ export interface TdStepsProps {
    */
   readonly?: boolean;
   /**
+   * 步骤条分割符
+   * @default line
+   */
+  separator?: 'line' | 'dashed' | 'arrow';
+  /**
    * 步骤条顺序
    * @default positive
    */

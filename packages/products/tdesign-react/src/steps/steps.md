@@ -13,6 +13,7 @@ defaultCurrent | String / Number | - | 当前步骤，即整个步骤条进度�
 layout | String | horizontal | 步骤条方向，有两种：横向和纵向。可选项：horizontal/vertical | N
 options | Array | - | 步骤条数据列表（作用和 StepItem 效果一样）。TS 类型：`Array<TdStepItemProps>` | N
 readonly | Boolean | undefined | 只读状态 | N
+separator | String | line | 步骤条分割符。可选项：line/dashed/arrow | N
 sequence | String | positive | 步骤条顺序。可选项：positive/reverse | N
 theme | String | default | 步骤条风格。可选项：default/dot | N
 onChange | Function |  | TS 类型：`(current: string \| number, previous: string \| number, context?: { e?: MouseEvent }) => void`<br/>当前步骤发生变化时触发 | N

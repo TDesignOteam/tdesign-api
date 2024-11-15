@@ -7,6 +7,7 @@ import { TdStepsProps, TdStepItemProps } from './type';
 export const stepsDefaultProps: TdStepsProps = {
   layout: 'horizontal',
   readonly: undefined,
+  separator: 'line',
   sequence: 'positive',
   theme: 'default',
 };
