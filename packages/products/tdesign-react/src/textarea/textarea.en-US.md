@@ -12,7 +12,6 @@ allowInputOverMax | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: number; maxRows?: number }` | N
 disabled | Boolean | undefined | \- | N
-label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
 maxlength | String / Number | - | Typescript：`string \| number` | N
 name | String | - | \- | N
