@@ -32,16 +32,12 @@ export default {
   },
   /** 用户最多可以输入的字符个数 */
   maxlength: {
-    type: Number,
+    type: [String, Number] as PropType<TdTextareaProps['maxlength']>,
   },
   /** 名称，HTML 元素原生属性 */
   name: {
     type: String,
     default: '',
-  },
-  /** 字数超出限制时触发 */
-  onValidate: {
-    type: Function as PropType<TdTextareaProps['onValidate']>,
   },
   /** 占位符 */
   placeholder: {
@@ -86,4 +82,6 @@ export default {
   onKeypress: Function as PropType<TdTextareaProps['onKeypress']>,
   /** 释放键盘时触发 */
   onKeyup: Function as PropType<TdTextareaProps['onKeyup']>,
+  /** 字数超出限制时触发 */
+  onValidate: Function as PropType<TdTextareaProps['onValidate']>,
 };

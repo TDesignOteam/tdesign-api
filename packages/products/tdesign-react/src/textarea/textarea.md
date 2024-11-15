@@ -14,9 +14,8 @@ autosize | Boolean / Object | false | 高度自动撑开。 autosize = true 表�
 disabled | Boolean | undefined | 是否禁用文本框 | N
 label | TNode | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
-maxlength | Number | - | 用户最多可以输入的字符个数 | N
+maxlength | String / Number | - | 用户最多可以输入的字符个数。TS 类型：`string \| number` | N
 name | String | - | 名称，HTML 元素原生属性 | N
-onValidate | Function | - | 字数超出限制时触发。TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void` | N
 placeholder | String | undefined | 占位符 | N
 readonly | Boolean | undefined | 只读状态 | N
 status | String | default | 文本框状态。可选项：default/success/warning/error | N
@@ -29,3 +28,4 @@ onFocus | Function |  | TS 类型：`(value: TextareaValue, context : { e: Focus
 onKeydown | Function |  | TS 类型：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/>键盘按下时触发 | N
 onKeypress | Function |  | TS 类型：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/>按下字符键时触发（keydown -> keypress -> keyup） | N
 onKeyup | Function |  | TS 类型：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/>释放键盘时触发 | N
+onValidate | Function |  | TS 类型：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>字数超出限制时触发 | N

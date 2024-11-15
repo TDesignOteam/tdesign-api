@@ -120807,6 +120807,7 @@
       "field_category": 1,
       "field_name": "maxlength",
       "field_type": [
+        "1",
         "2"
       ],
       "field_default_value": "",
@@ -120818,7 +120819,7 @@
       "create_time": "2021-02-21 14:04:56",
       "update_time": "2021-09-22 14:17:06",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | number",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -120837,6 +120838,7 @@
         "Angular(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -120922,47 +120924,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1712560690,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "Textarea",
-      "field_category": 1,
-      "field_name": "onValidate",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "字数超出限制时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 07:18:10",
-      "update_time": "2024-04-08 07:18:10",
-      "event_output": null,
-      "custom_field_type": "(context: { error?: 'exceed-maximum' | 'below-minimum' }) => void",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Function"
       ]
     },
     {
@@ -121781,6 +121742,47 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1712560690,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Textarea",
+      "field_category": 2,
+      "field_name": "validate",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "字数超出限制时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { error?: 'exceed-maximum' | 'below-minimum' })",
+      "create_time": "2024-04-08 07:18:10",
+      "update_time": "2024-04-08 07:18:10",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
     },
     {
       "id": 1712045223,

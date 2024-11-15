@@ -37,16 +37,12 @@ export interface TdTextareaProps {
   /**
    * 用户最多可以输入的字符个数
    */
-  maxlength?: number;
+  maxlength?: string | number;
   /**
    * 名称，HTML 元素原生属性
    * @default ''
    */
   name?: string;
-  /**
-   * 字数超出限制时触发
-   */
-  onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
   /**
    * 占位符
    */
@@ -100,6 +96,10 @@ export interface TdTextareaProps {
    * 释放键盘时触发
    */
   onKeyup?: (value: TextareaValue, context: { e: KeyboardEvent }) => void;
+  /**
+   * 字数超出限制时触发
+   */
+  onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }
 
 export type TextareaValue = string | number;

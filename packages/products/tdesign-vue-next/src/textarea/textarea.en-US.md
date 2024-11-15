@@ -12,9 +12,8 @@ autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: numbe
 disabled | Boolean | undefined | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | \- | N
-maxlength | Number | - | \- | N
+maxlength | String / Number | - | Typescript：`string \| number` | N
 name | String | - | \- | N
-onValidate | Function | - | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void` | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | undefined | \- | N
 status | String | default | options: default/success/warning/error | N
@@ -27,6 +26,7 @@ onFocus | Function |  | Typescript：`(value: TextareaValue, context : { e: Focu
 onKeydown | Function |  | Typescript：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/> | N
 onKeypress | Function |  | Typescript：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/> | N
 onKeyup | Function |  | Typescript：`(value: TextareaValue, context: { e: KeyboardEvent }) => void`<br/> | N
+onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/> | N
 
 ### Textarea Events
 
@@ -38,3 +38,4 @@ focus | `(value: TextareaValue, context : { e: FocusEvent })` | \-
 keydown | `(value: TextareaValue, context: { e: KeyboardEvent })` | \-
 keypress | `(value: TextareaValue, context: { e: KeyboardEvent })` | \-
 keyup | `(value: TextareaValue, context: { e: KeyboardEvent })` | \-
+validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | \-
