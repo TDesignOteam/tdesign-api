@@ -14,6 +14,7 @@ addContent | TNode | - | Typescript：`string \| TNode`。[see more ts definitio
 allowUploadDuplicateFile | Boolean | false | allow to upload duplicate name files | N
 autoUpload | Boolean | true | post upload request automatically after files being selected | N
 beforeUpload | Function | - | stop one of files to upload。Typescript：`(file: UploadFile) => boolean \| Promise<boolean>` | N
+capture | String | - | \- | N
 children | TNode | - | to define upload trigger elements if `draggable=false`, to define drag elements if `draggable=true`。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript：`Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
@@ -27,6 +28,7 @@ imageProps | Object | - | Typescript：`ImageProps`，[Image API Documents](./im
 max | Number | 0 | max count of files limit | N
 method | String | POST | HTTP request method。options: POST/GET/PUT/OPTIONS/PATCH/post/get/put/options/patch | N
 multiple | Boolean | false | multiple files uploading | N
+preview | Boolean | true | \- | N
 requestMethod | Function | - | custom upload request method。Typescript：`(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | files size limit。Typescript：`number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts) | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N

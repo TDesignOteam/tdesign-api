@@ -12,6 +12,7 @@ export const uploadDefaultProps: TdUploadProps = {
   max: 0,
   method: 'POST',
   multiple: false,
+  preview: true,
   useMockProgress: true,
   withCredentials: false,
 };
