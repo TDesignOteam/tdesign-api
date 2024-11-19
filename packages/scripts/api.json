@@ -135382,6 +135382,45 @@
       ]
     },
     {
+      "id": 1732004595,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "capture",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图片选取模式，可选值为 camera (直接调起摄像头)",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-19 08:23:15",
+      "update_time": "2024-11-19 08:23:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1169,
       "platform_framework": [
         "2",
