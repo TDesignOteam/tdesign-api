@@ -16767,6 +16767,49 @@
       ]
     },
     {
+      "id": 1731498486,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "switchMode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "none",
+      "field_enum": "none/month/year-month",
+      "field_desc_zh": "【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-13 11:48:06",
+      "update_time": "2024-11-13 11:48:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 644,
       "platform_framework": [
         "1",
