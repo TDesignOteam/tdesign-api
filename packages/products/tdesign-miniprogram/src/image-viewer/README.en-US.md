@@ -22,6 +22,6 @@ default-visible | Boolean | undefined | hide or show image viewer。uncontrolled
 
 name | params | description
 -- | -- | --
-change | `(index: Number)` | \-
+change | `(index: number)` | \-
 close | `(trigger: 'overlay' \| 'button', visible: Boolean, index: Number)` | \-
-delete | `(index: Number)` | \-
+delete | `(index: number)` | \-
