@@ -10,7 +10,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 active-index | Number | - | 输入框高亮状态序号 | N
 clearable | Boolean | false | 是否可清空 | N
-disabled | Boolean | - | 是否禁用范围输入框 | N
+disabled | Boolean | undefined | 是否禁用范围输入框 | N
 format | Array / Function | - | 指定输入框展示值的格式。TS 类型：`InputFormatType \| Array<InputFormatType>` | N
 input-props | Object / Array | - | 透传 Input 输入框组件全部属性，数组第一项表示第一个输入框属性，第二项表示第二个输入框属性。示例：`[{ label: 'A', name: 'A-name' }, { label: 'B',  name: 'B-name' }]`。TS 类型：`InputProps \| Array<InputProps>`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/range-input/type.ts) | N
 label | String / Slot | - | 左侧内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

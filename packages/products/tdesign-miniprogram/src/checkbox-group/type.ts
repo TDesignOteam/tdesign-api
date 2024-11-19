@@ -53,6 +53,13 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
     value?: Array<CheckboxOption>;
   };
   /**
+   * 只读状态
+   */
+  readonly?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 选中值
    * @default []
    */

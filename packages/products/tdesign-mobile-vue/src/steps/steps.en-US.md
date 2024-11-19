@@ -10,7 +10,8 @@ current | String / Number | - | `v-model` and `v-model:current` is supported | N
 defaultCurrent | String / Number | - | uncontrolled property | N
 currentStatus | String | process | options: default/process/finish/error | N
 layout | String | horizontal | options: horizontal/vertical | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
+separator | String | line | options: line/dashed/arrow | N
 sequence | String | positive | options: positive/reverse | N
 theme | String | default | options: default/dot | N
 onChange | Function |  | Typescript：`(current: string \| number, previous: string \| number, context?: { e?: MouseEvent }) => void`<br/> | N

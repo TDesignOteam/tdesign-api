@@ -69,6 +69,13 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: 'left' | 'right';
   };
   /**
+   * 只读状态
+   */
+  readonly?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 选中的值
    */
   value?: {

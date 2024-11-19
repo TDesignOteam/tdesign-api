@@ -56,7 +56,6 @@ export interface TdCheckboxProps {
   name?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -97,6 +96,10 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    * 以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」
    */
   options?: Array<CheckboxOption>;
+  /**
+   * 只读状态
+   */
+  readonly?: boolean;
   /**
    * 选中值
    * @default []

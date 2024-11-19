@@ -26,4 +26,5 @@ export const radioGroupDefaultProps: TdRadioGroupProps = {
   disabled: undefined,
   icon: 'circle',
   placement: 'left',
+  readonly: undefined,
 };

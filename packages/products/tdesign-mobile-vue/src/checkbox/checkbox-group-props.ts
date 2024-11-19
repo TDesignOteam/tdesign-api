@@ -31,6 +31,11 @@ export default {
   options: {
     type: Array as PropType<TdCheckboxGroupProps['options']>,
   },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 选中值 */
   value: {
     type: Array as PropType<TdCheckboxGroupProps['value']>,

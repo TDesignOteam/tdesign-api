@@ -10,12 +10,13 @@ export const checkboxDefaultProps: TdCheckboxProps = {
   disabled: undefined,
   indeterminate: false,
   lazyLoad: false,
-  readonly: false,
+  readonly: undefined,
 };
 
 export const checkboxGroupDefaultProps: TdCheckboxGroupProps = {
   disabled: undefined,
   lazyLoad: false,
   max: undefined,
+  readonly: undefined,
   defaultValue: [],
 };
