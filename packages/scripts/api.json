@@ -4293,6 +4293,47 @@
       ]
     },
     {
+      "id": 1732006279,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AnchorItem",
+      "field_category": 1,
+      "field_name": "customScroll",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "自定义滚动效果，为true时点击锚点链接后不会使用js动画平滑滚动到锚点目标元素",
+      "field_desc_en": "custom scroll effect, when set to true, clicking on an anchor link will not use JavaScript animation to smoothly scroll to the anchor target element.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-19 08:51:19",
+      "update_time": "2024-11-19 08:51:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 196,
       "platform_framework": [
         "1",
