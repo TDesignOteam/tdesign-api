@@ -15,11 +15,12 @@ export const checkboxDefaultProps: TdCheckboxProps = {
   maxContentRow: 5,
   maxLabelRow: 3,
   placement: 'left',
-  readonly: false,
+  readonly: undefined,
 };
 
 export const checkboxGroupDefaultProps: TdCheckboxGroupProps = {
   disabled: undefined,
   max: undefined,
+  readonly: undefined,
   defaultValue: [],
 };

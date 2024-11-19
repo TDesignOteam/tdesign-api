@@ -10,7 +10,7 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 active-index | Number | - | \- | N
 clearable | Boolean | false | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 format | Array / Function | - | Typescript：`InputFormatType \| Array<InputFormatType>` | N
 input-props | Object / Array | - | Typescript：`InputProps \| Array<InputProps>`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/range-input/type.ts) | N
 label | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

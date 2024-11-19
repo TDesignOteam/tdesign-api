@@ -134,6 +134,10 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   placement?: 'left' | 'right';
   /**
+   * 只读状态
+   */
+  readonly?: boolean;
+  /**
    * 选中的值
    */
   value?: T;

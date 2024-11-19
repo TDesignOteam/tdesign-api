@@ -8,13 +8,13 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 activeIndex | Number | - | \- | N
 clearable | Boolean | false | \- | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 format | Array / Function | - | Typescript：`InputFormatType \| Array<InputFormatType>` | N
 inputProps | Object / Array | - | Typescript：`InputProps \| Array<InputProps>`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/range-input/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placeholder | String / Array | - | Typescript：`string \| Array<string>` | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 separator | String / Slot / Function | '-' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 status | String | default | options: default/success/warning/error | N
 suffix | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N

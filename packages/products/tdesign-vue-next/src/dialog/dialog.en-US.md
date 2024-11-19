@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### DialogCard Props
 
 name | type | default | description | required
@@ -29,7 +28,7 @@ dialogStyle | Object | - | Styles that apply to the dialog box itself。Typescri
 draggable | Boolean | false | \- | N
 footer | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 header | String / Boolean / Slot / Function | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-mode | String | modal | options: modal/modeless/full-screen | N
+mode | String | modal | options: modal/modeless/normal/full-screen | N
 placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
@@ -39,6 +38,8 @@ top | String / Number | - | \- | N
 visible | Boolean | - | \- | N
 width | String / Number | - | \- | N
 zIndex | Number | - | \- | N
+onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
+onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClose | Function |  | Typescript：`(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'esc' \| 'close-btn' \| 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent \| KeyboardEvent }`<br/> | N
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -52,6 +53,8 @@ onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => voi
 
 name | params | description
 -- | -- | --
+before-close | \- | \-
+before-open | \- | \-
 cancel | `(context: { e: MouseEvent })` | \-
 close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'esc' \| 'close-btn' \| 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent \| KeyboardEvent }`<br/>
 close-btn-click | `(context: { e: MouseEvent })` | \-

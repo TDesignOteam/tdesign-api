@@ -10,6 +10,7 @@ export const autoCompleteDefaultProps: TdAutoCompleteProps = {
   filterable: true,
   highlightKeyword: true,
   placeholder: undefined,
+  readonly: undefined,
   size: 'medium',
   status: 'default',
 };

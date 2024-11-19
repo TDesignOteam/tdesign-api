@@ -123,7 +123,6 @@ export interface TdCheckboxProps {
   };
   /**
    * 只读状态
-   * @default false
    */
   readonly?: {
     type: BooleanConstructor;

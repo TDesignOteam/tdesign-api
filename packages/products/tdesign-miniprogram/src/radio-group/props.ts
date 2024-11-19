@@ -44,6 +44,11 @@ const props: TdRadioGroupProps = {
     type: String,
     value: 'left',
   },
+  /** 只读状态 */
+  readonly: {
+    type: null,
+    value: undefined,
+  },
   /** 选中的值 */
   value: {
     type: null,
