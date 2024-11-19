@@ -5,6 +5,7 @@
  * */
 
 import { PopupProps } from '../popup';
+import { TooltipProps } from '../tooltip';
 import { TNode } from '../common';
 
 export interface TdMenuProps {
@@ -191,6 +192,10 @@ export interface TdMenuItemProps {
    * 路由跳转目标，当且仅当 Router 存在时，该 API 有效
    */
   to?: MenuRoute;
+  /**
+   * 透传 Tooltip 组件的特性，作用于一级菜单收起下聚焦时出现的节点
+   */
+  tooltipProps?: TooltipProps;
   /**
    * 菜单项唯一标识
    */

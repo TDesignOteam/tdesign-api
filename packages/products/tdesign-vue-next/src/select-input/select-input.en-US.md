@@ -27,7 +27,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 popupVisible | Boolean | - | `v-model:popupVisible` is supported | N
 defaultPopupVisible | Boolean | - | uncontrolled property | N
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 reserveKeyword | Boolean | false | \- | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
 status | String | default | options: default/success/warning/error | N

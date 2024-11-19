@@ -77,6 +77,10 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   options?: Array<RadioOption>;
   /**
+   * 只读状态
+   */
+  readonly?: boolean;
+  /**
    * 组件尺寸【讨论中】
    * @default medium
    */

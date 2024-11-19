@@ -44,6 +44,11 @@ export default {
       return ['left', 'right'].includes(val);
     },
   },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 选中的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,

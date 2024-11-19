@@ -43,6 +43,7 @@ keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段�
 name | String | - | HTML 元素原生属性 | N
 options | Array | - | 单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同。TS 类型：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string \| TNode; value?: string \| number \| boolean; disabled?: boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/radio/type.ts) | N
 placement | String | left | 复选框和内容相对位置。可选项：left/right | N
+readonly | Boolean | undefined | 只读状态 | N
 value | String / Number / Boolean | - | 选中的值。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | 选中的值。非受控属性。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/radio/type.ts) | N
 onChange | Function |  | TS 类型：`(value: T, context: { e: ChangeEvent; name?: string }) => void`<br/>选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性 | N

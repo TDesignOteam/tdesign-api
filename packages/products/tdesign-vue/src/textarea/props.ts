@@ -22,10 +22,6 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 左侧文本 */
-  label: {
-    type: [String, Function] as PropType<TdTextareaProps['label']>,
-  },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 */
   maxcharacter: {
     type: Number,
@@ -39,17 +35,16 @@ export default {
     type: String,
     default: '',
   },
-  /** 字数超出限制时触发 */
-  onValidate: {
-    type: Function as PropType<TdTextareaProps['onValidate']>,
-  },
   /** 占位符 */
   placeholder: {
     type: String,
     default: undefined,
   },
   /** 只读状态 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 文本框状态 */
   status: {
     type: String as PropType<TdTextareaProps['status']>,
@@ -66,7 +61,6 @@ export default {
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
-    default: undefined,
   },
   /** 文本框值，非受控属性 */
   defaultValue: {
@@ -84,4 +78,6 @@ export default {
   onKeypress: Function as PropType<TdTextareaProps['onKeypress']>,
   /** 释放键盘时触发 */
   onKeyup: Function as PropType<TdTextareaProps['onKeyup']>,
+  /** 字数超出限制时触发 */
+  onValidate: Function as PropType<TdTextareaProps['onValidate']>,
 };

@@ -17,7 +17,7 @@ export const selectDefaultProps: TdSelectProps = {
   multiple: false,
   optionsLayout: 'vertical',
   placeholder: undefined,
-  readonly: false,
+  readonly: undefined,
   reserveKeyword: false,
   showArrow: true,
   size: 'medium',

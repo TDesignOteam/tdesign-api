@@ -27,8 +27,13 @@ const props: TdStepsProps = {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
+  },
+  /** 步骤条分割符 */
+  separator: {
+    type: String,
+    value: 'line',
   },
   /** 步骤条顺序 */
   sequence: {

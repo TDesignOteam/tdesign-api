@@ -80,8 +80,8 @@ const props: TdCheckboxProps = {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 多选框的值 */
   value: {

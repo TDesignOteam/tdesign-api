@@ -24,7 +24,7 @@ maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
 placement | String | left | options: left/right | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: ChangeEvent }) => void`<br/> | N
 
@@ -40,6 +40,7 @@ keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://g
 max | Number | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/checkbox/type.ts) | N
+readonly | Boolean | undefined | \- | N
 value | Array | [] | Typescript：`T` `type CheckboxGroupValue = Array<string \| number \| boolean>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/checkbox/type.ts) | N
 defaultValue | Array | [] | uncontrolled property。Typescript：`T` `type CheckboxGroupValue = Array<string \| number \| boolean>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/checkbox/type.ts) | N
 onChange | Function |  | Typescript：`(value: T, context: CheckboxGroupChangeContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/checkbox/type.ts)。<br/>`interface CheckboxGroupChangeContext { e: Event; current: string \| number; option: CheckboxOption \| TdCheckboxProps; type: 'check' \| 'uncheck' }`<br/> | N

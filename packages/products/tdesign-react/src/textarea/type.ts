@@ -28,10 +28,6 @@ export interface TdTextareaProps {
    */
   disabled?: boolean;
   /**
-   * 左侧文本
-   */
-  label?: TNode;
-  /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度
    */
   maxcharacter?: number;
@@ -45,16 +41,11 @@ export interface TdTextareaProps {
    */
   name?: string;
   /**
-   * 字数超出限制时触发
-   */
-  onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
-  /**
    * 占位符
    */
   placeholder?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -98,6 +89,10 @@ export interface TdTextareaProps {
    * 释放键盘时触发
    */
   onKeyup?: (value: TextareaValue, context: { e: KeyboardEvent<HTMLTextAreaElement> }) => void;
+  /**
+   * 字数超出限制时触发
+   */
+  onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }
 
-export type TextareaValue = string;
+export type TextareaValue = string | number;

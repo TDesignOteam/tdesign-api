@@ -117,6 +117,7 @@ export interface FormInstanceFunctions {
   clearValidate: {
     type: undefined;
     value?: (fields?: Array<keyof FormData>) => void;
+    required?: boolean;
   };
   /**
    * 重置表单，表单里面没有重置按钮`<button type=\"reset\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`
@@ -124,6 +125,7 @@ export interface FormInstanceFunctions {
   reset: {
     type: undefined;
     value?: (params?: FormResetParams<FormData>) => void;
+    required?: boolean;
   };
 }
 

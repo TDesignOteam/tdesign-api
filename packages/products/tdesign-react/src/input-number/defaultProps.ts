@@ -13,7 +13,7 @@ export const inputNumberDefaultProps: TdInputNumberProps = {
   max: Infinity,
   min: -Infinity,
   placeholder: undefined,
-  readonly: false,
+  readonly: undefined,
   size: 'medium',
   status: 'default',
   step: 1,
