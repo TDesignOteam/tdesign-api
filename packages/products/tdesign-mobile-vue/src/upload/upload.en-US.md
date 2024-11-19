@@ -12,6 +12,7 @@ addContent | String / Slot / Function | - | Typescript：`string \| TNode`。[se
 allowUploadDuplicateFile | Boolean | false | allow to upload duplicate name files | N
 autoUpload | Boolean | true | post upload request automatically after files being selected | N
 beforeUpload | Function | - | stop one of files to upload。Typescript：`(file: UploadFile) => boolean \| Promise<boolean>` | N
+capture | String | - | \- | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript：`Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
 files | Array | [] | `v-model:files` is supported。Typescript：`Array<T>` | N
