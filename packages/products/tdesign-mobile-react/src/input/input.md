@@ -16,6 +16,7 @@ borderless | Boolean | false | 是否开启无边框模式 | N
 clearTrigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 clearable | Boolean | false | 是否可清空 | N
 disabled | Boolean | undefined | 是否禁用输入框 | N
+enterkeyhint | String | - | 用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)。可选项：enter/done/go/next/previous/search/send | N
 errorMessage | String | - | 已废弃。错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips） | N
 format | Function | - | 指定输入框展示值的格式。TS 类型：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/input/type.ts) | N
 label | TNode | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
