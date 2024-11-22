@@ -65280,7 +65280,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -65311,7 +65313,9 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
