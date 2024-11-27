@@ -63920,6 +63920,47 @@
       ]
     },
     {
+      "id": 1732163188,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "enterkeyhint",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "enter/done/go/next/previous/search/send",
+      "field_desc_zh": "用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)",
+      "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-21 04:26:28",
+      "update_time": "2024-11-21 04:26:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1710,
       "platform_framework": [
         "16",
@@ -65239,7 +65280,8 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "32"
       ],
       "component": "Input",
       "field_category": 1,
@@ -65270,7 +65312,45 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1732518837,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "spellcheck",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+      "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-25 07:13:57",
+      "update_time": "2024-11-25 07:13:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
