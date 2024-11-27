@@ -54,7 +54,7 @@ export interface TdInputProps {
     value?: 'always' | 'focus';
   };
   /**
-   * 是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`
+   * 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon`
    * @default false
    */
   clearable?: {
