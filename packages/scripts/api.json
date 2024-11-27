@@ -29261,6 +29261,47 @@
       ]
     },
     {
+      "id": 1732704565,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "底部插槽，仅在 `usePopup` 为 `true` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-27 10:49:25",
+      "update_time": "2024-11-27 10:49:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2120,
       "platform_framework": [
         "1",
@@ -29301,6 +29342,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1732704577,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "顶部插槽，仅在 `usePopup` 为 `true` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-11-27 10:49:37",
+      "update_time": "2024-11-27 10:49:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
