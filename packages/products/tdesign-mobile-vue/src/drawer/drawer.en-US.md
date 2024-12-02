@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 attach | String / Function | - | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-closeOnOverlayClick | Boolean | true | \- | N
+closeOnOverlayClick | Boolean | undefined | \- | N
 destroyOnClose | Boolean | false | \- | N
 footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N

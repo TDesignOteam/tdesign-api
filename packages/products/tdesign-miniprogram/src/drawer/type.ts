@@ -7,7 +7,6 @@
 export interface TdDrawerProps {
   /**
    * 点击蒙层时是否触发抽屉关闭事件
-   * @default true
    */
   closeOnOverlayClick?: {
     type: BooleanConstructor;

@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-close-on-overlay-click | Boolean | true | \- | N
+close-on-overlay-click | Boolean | undefined | \- | N
 destroy-on-close | Boolean | false | \- | N
 footer | Slot | - | `0.29.0`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 items | Array | - | Typescript：`DrawerItem[]` `interface DrawerItem { title: string; icon: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts) | N

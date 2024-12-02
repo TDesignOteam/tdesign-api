@@ -13,7 +13,6 @@ export interface TdDrawerProps {
   attach?: AttachNode;
   /**
    * 点击蒙层时是否触发抽屉关闭事件
-   * @default true
    */
   closeOnOverlayClick?: boolean;
   /**
