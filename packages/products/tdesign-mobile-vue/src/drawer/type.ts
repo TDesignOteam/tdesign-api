@@ -60,9 +60,9 @@ export interface TdDrawerProps {
    */
   onBeforeOpen?: () => void;
   /**
-   * 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/>
+   * 关闭时触发。
    */
-  onClose?: (trigger: TriggerSource) => void;
+  onClose?: (trigger: DrawerTriggerSource) => void;
   /**
    * 点击抽屉里的列表项
    */
@@ -106,7 +106,9 @@ export interface DrawerInstance {
 
 export interface DrawerItem {
   title: string;
-  icon: TNode;
+  icon?: TNode;
 }
+
+export type DrawerTriggerSource = 'overlay';
 
 export type DrawerMethod = (options?: DrawerOptions) => void;

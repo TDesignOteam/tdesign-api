@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Drawer Props
 
 name | type | default | description | required
@@ -8,10 +9,10 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 attach | String / Function | - | Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-closeOnOverlayClick | Boolean | true | \- | N
+closeOnOverlayClick | Boolean | undefined | \- | N
 destroyOnClose | Boolean | false | \- | N
 footer | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/drawer/type.ts) | N
+items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/drawer/type.ts) | N
 placement | String | right | options: left/right | N
 showOverlay | Boolean | true | \- | N
 title | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
@@ -19,7 +20,7 @@ visible | Boolean | false | \- | N
 zIndex | Number | - | \- | N
 onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
 onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
-onClose | Function |  | Typescript：`(trigger: TriggerSource) => void`<br/> | N
+onClose | Function |  | Typescript：`(trigger: DrawerTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/> | N
 onItemClick | Function |  | Typescript：`( index: number, item: DrawerItem, context: { e: MouseEvent }) => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 
