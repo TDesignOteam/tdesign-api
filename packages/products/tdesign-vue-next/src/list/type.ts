@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TScroll, InfinityScroll } from '../common';
+import { TNode, TScroll, InfinityScroll, ScrollToElementParams } from '../common';
 
 export interface TdListProps {
   /**
@@ -57,6 +57,14 @@ export interface TdListProps {
   onScroll?: (options: { e: Event | WheelEvent; scrollTop: number; scrollBottom: number }) => void;
 }
 
+/** 组件实例方法 */
+export interface ListInstanceFunctions {
+  /**
+   * 虚拟滚动场景下，支持指定滚动到具体的节点
+   */
+  scrollTo?: (scrollToParams: ScrollToElementParams) => void;
+}
+
 export interface TdListItemProps {
   /**
    * 操作栏
@@ -73,11 +81,6 @@ export interface TdListItemProps {
 }
 
 export interface TdListItemMetaProps {
-  /**
-   * 列表项图片
-   * @deprecated
-   */
-  avatar?: string | TNode;
   /**
    * 列表项内容
    */
