@@ -20,6 +20,7 @@ z-index | Number | 11600 | 菜单栏 z-index 层级 | N
 -- | -- | --
 close | \- | 菜单关闭时触发
 open | \- | 菜单展开时触发
+
 ### DropdownMenu External Classes
 
 类名 | 描述
@@ -44,6 +45,7 @@ multiple | Boolean | false | 是否多选 | N
 options | Array | [] | 选项数据。TS 类型：`Array<DropdownOption>` `interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dropdown-item/type.ts) | N
 options-columns | String / Number | 1 | 选项分栏（1-3） | N
 options-layout | String | columns | 已废弃。选项排列；不再支持 tree 布局，可与 treeSelect 配合使用 | N
+placement | String | left | 复选框和内容相对位置，仅单选菜单栏有效。可选项：left/right | N
 value | String / Number / Array | undefined | 选中值。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dropdown-item/type.ts) | N
 default-value | String / Number / Array | undefined | 选中值。非受控属性。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dropdown-item/type.ts) | N
 
@@ -55,6 +57,7 @@ change | `(value: DropdownValue)` | 值改变时触发
 close | \- | 关闭时触发
 confirm | `(value: DropdownValue)` | 点击确认时触发
 reset | \- | 点击重置时触发
+
 ### DropdownItem External Classes
 
 类名 | 描述
