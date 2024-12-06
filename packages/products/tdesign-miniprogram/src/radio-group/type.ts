@@ -61,7 +61,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: Array<RadioOption>;
   };
   /**
-   * 复选框和内容相对位置
+   * 复选框和内容相对位置。优先级低于 Radio.placement
    * @default left
    */
   placement?: {

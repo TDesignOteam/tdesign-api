@@ -20,7 +20,7 @@ label | String / Slot | - | [see more ts definition](https://github.com/Tencent/
 max-content-row | Number | 5 | \- | N
 max-label-row | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options: left/right | N
+placement | String | - | options: left/right | N
 readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | false | Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/radio/type.ts) | N
 

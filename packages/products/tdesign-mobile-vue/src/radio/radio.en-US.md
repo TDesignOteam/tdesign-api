@@ -20,7 +20,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options: left/right | N
+placement | String | - | options: left/right | N
 readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | undefined | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N

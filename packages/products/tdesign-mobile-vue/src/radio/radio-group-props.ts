@@ -35,7 +35,7 @@ export default {
   options: {
     type: Array as PropType<TdRadioGroupProps['options']>,
   },
-  /** 复选框和内容相对位置 */
+  /** 复选框和内容相对位置。优先级低于 Radio.placement */
   placement: {
     type: String as PropType<TdRadioGroupProps['placement']>,
     default: 'left' as TdRadioGroupProps['placement'],
