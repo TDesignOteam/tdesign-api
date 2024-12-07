@@ -53640,7 +53640,7 @@
       "create_time": "2024-07-19 08:36:21",
       "update_time": "2024-07-19 08:36:21",
       "event_output": null,
-      "custom_field_type": "AttachNode | { imageViewer?: AttachNode; message?: AttachNode; popup?: AttachNode; dialog?: AttachNode; }",
+      "custom_field_type": "AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
