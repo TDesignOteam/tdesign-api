@@ -18,6 +18,7 @@ export const formDefaultProps: TdFormProps = {
   showErrorMessage: true,
   statusIcon: undefined,
   submitWithWarningMessage: false,
+  supportNumberKey: true,
 };
 
 export const formItemDefaultProps: TdFormItemProps = {

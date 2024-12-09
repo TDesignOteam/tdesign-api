@@ -49988,6 +49988,43 @@
       ]
     },
     {
+      "id": 1733759742,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Form",
+      "field_category": 1,
+      "field_name": "supportNumberKey",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否支持使用数字作为表单键值，在1.9.3版本后表单组件支持数字作为键值，若仍需要保留数字作为数组下标，请关闭此API",
+      "field_desc_en": "support using numbers as form key values or not.  Form supports numbers as key values since 1.9.3, set supportNumberKey as false If you still need to retain numbers as array subscripts",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-09 15:55:42",
+      "update_time": "2024-12-09 15:55:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 177,
       "platform_framework": [
         "1",
