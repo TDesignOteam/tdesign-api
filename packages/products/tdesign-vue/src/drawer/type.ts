@@ -30,7 +30,6 @@ export interface TdDrawerProps {
   closeOnEscKeydown?: boolean;
   /**
    * 点击蒙层时是否触发抽屉关闭事件
-   * @default true
    */
   closeOnOverlayClick?: boolean;
   /**

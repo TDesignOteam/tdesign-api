@@ -42360,6 +42360,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -42370,7 +42371,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "true",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "点击蒙层时是否触发抽屉关闭事件",
       "field_desc_en": null,
@@ -42393,46 +42394,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712581243,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Drawer",
-      "field_category": 1,
-      "field_name": "closeOnOverlayClick",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "undefined",
-      "field_enum": "",
-      "field_desc_zh": "点击蒙层时是否触发抽屉关闭事件",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 13:00:43",
-      "update_time": "2024-04-08 13:00:43",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -42761,7 +42726,7 @@
       "create_time": "2022-03-31 03:39:31",
       "update_time": "2022-06-16 08:09:43",
       "event_output": null,
-      "custom_field_type": "DrawerItem[] 【interface DrawerItem { title: string; icon: TNode; }】",
+      "custom_field_type": "DrawerItem[] 【interface DrawerItem { title: string; icon?: TNode; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -42800,7 +42765,7 @@
       "create_time": "2023-02-28 12:04:36",
       "update_time": "2023-02-28 12:04:36",
       "event_output": null,
-      "custom_field_type": "DrawerItem[] 【interface DrawerItem { title: string; icon: string; }】。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts)",
+      "custom_field_type": "DrawerItem[]【interface DrawerItem { title: string; icon: string; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -43535,6 +43500,7 @@
     {
       "id": 2545,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -43545,10 +43511,10 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/>",
+      "field_desc_zh": "关闭时触发。",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: TriggerSource)",
+      "event_input": "(trigger: DrawerTriggerSource)【type DrawerTriggerSource = 'overlay'】",
       "create_time": "2022-04-06 08:50:33",
       "update_time": "2022-04-06 08:50:33",
       "event_output": null,
@@ -43563,42 +43529,10 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1712579200,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Drawer",
-      "field_category": 2,
-      "field_name": "close",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/>",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(trigger: TriggerSource)",
-      "create_time": "2024-04-08 12:26:40",
-      "update_time": "2024-04-08 12:26:40",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -45538,6 +45472,49 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1733309141,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "DropdownItem",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "复选框和内容相对位置，仅单选菜单栏有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-04 10:45:41",
+      "update_time": "2024-12-04 10:45:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -53665,7 +53642,7 @@
       "create_time": "2024-07-19 08:36:21",
       "update_time": "2024-07-19 08:36:21",
       "event_output": null,
-      "custom_field_type": "AttachNode | { imageViewer?: AttachNode; message?: AttachNode; popup?: AttachNode; dialog?: AttachNode; }",
+      "custom_field_type": "AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -70476,6 +70453,43 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1733196291,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "List",
+      "field_category": 4,
+      "field_name": "scrollTo",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "虚拟滚动场景下，支持指定滚动到具体的节点",
+      "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
+      "field_required": 0,
+      "event_input": "(scrollToParams: ScrollToElementParams)",
+      "create_time": "2024-12-03 03:24:51",
+      "update_time": "2024-12-03 03:24:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
