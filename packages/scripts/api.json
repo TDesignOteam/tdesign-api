@@ -95165,6 +95165,7 @@
     {
       "id": 1712030157,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Search",
@@ -95176,7 +95177,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用",
-      "field_desc_en": null,
+      "field_desc_en": "The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-02 03:55:57",
@@ -95193,44 +95194,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 1733883395,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "maxcharacter",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用",
-      "field_desc_en": "The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength`",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-12-11 02:16:35",
-      "update_time": "2024-12-11 02:16:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -95680,41 +95645,9 @@
       ]
     },
     {
-      "id": 1733887708,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "result-list",
-      "field_type": [],
-      "field_default_value": "[]",
-      "field_enum": "",
-      "field_desc_zh": "预览结果列表。TS 类型：Array<string>",
-      "field_desc_en": "Preview result list. TS type: Array<string>",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-12-11 03:28:28",
-      "update_time": "2024-12-11 03:28:28",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": []
-    },
-    {
       "id": 1719488506,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Search",
@@ -95743,6 +95676,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
