@@ -90494,7 +90494,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "ChangeEvent<HTMLInputElement>",
+      "trigger_elements": "",
       "deprecated": 0,
       "version": null,
       "test_description": null,
