@@ -39,7 +39,7 @@ const props: TdRadioGroupProps = {
   options: {
     type: Array,
   },
-  /** 复选框和内容相对位置 */
+  /** 复选框和内容相对位置。优先级低于 Radio.placement */
   placement: {
     type: String,
     value: 'left',
