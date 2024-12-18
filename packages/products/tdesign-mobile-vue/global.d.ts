@@ -17,14 +17,12 @@ declare module 'vue' {
     TCell: typeof import('tdesign-mobile-vue')['Cell'];
     TCellGroup: typeof import('tdesign-mobile-vue')['CellGroup'];
     TCheckTag: typeof import('tdesign-mobile-vue')['CheckTag'];
-    TCheckTagGroup: typeof import('tdesign-mobile-vue')['CheckTagGroup'];
     TCheckbox: typeof import('tdesign-mobile-vue')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-mobile-vue')['CheckboxGroup'];
     TCol: typeof import('tdesign-mobile-vue')['Col'];
     TCollapse: typeof import('tdesign-mobile-vue')['Collapse'];
     TCollapsePanel: typeof import('tdesign-mobile-vue')['CollapsePanel'];
     TColorPicker: typeof import('tdesign-mobile-vue')['ColorPicker'];
-    TComment: typeof import('tdesign-mobile-vue')['Comment'];
     TCountDown: typeof import('tdesign-mobile-vue')['CountDown'];
     TDateRangePicker: typeof import('tdesign-mobile-vue')['DateRangePicker'];
     TDateTimePicker: typeof import('tdesign-mobile-vue')['DateTimePicker'];
@@ -62,7 +60,6 @@ declare module 'vue' {
     TPopconfirm: typeof import('tdesign-mobile-vue')['Popconfirm'];
     TPopover: typeof import('tdesign-mobile-vue')['Popover'];
     TPopup: typeof import('tdesign-mobile-vue')['Popup'];
-    TPrimaryTable: typeof import('tdesign-mobile-vue')['PrimaryTable'];
     TProgress: typeof import('tdesign-mobile-vue')['Progress'];
     TPullDownRefresh: typeof import('tdesign-mobile-vue')['PullDownRefresh'];
     TRadio: typeof import('tdesign-mobile-vue')['Radio'];
