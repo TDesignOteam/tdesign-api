@@ -17,16 +17,13 @@ declare module 'vue' {
     TCell: typeof import('tdesign-mobile-vue')['Cell'];
     TCellGroup: typeof import('tdesign-mobile-vue')['CellGroup'];
     TCheckTag: typeof import('tdesign-mobile-vue')['CheckTag'];
-    TCheckTagGroup: typeof import('tdesign-mobile-vue')['CheckTagGroup'];
     TCheckbox: typeof import('tdesign-mobile-vue')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-mobile-vue')['CheckboxGroup'];
     TCol: typeof import('tdesign-mobile-vue')['Col'];
     TCollapse: typeof import('tdesign-mobile-vue')['Collapse'];
     TCollapsePanel: typeof import('tdesign-mobile-vue')['CollapsePanel'];
     TColorPicker: typeof import('tdesign-mobile-vue')['ColorPicker'];
-    TComment: typeof import('tdesign-mobile-vue')['Comment'];
     TCountDown: typeof import('tdesign-mobile-vue')['CountDown'];
-    TDateRangePicker: typeof import('tdesign-mobile-vue')['DateRangePicker'];
     TDateTimePicker: typeof import('tdesign-mobile-vue')['DateTimePicker'];
     TDialog: typeof import('tdesign-mobile-vue')['Dialog'];
     TDivider: typeof import('tdesign-mobile-vue')['Divider'];
@@ -56,13 +53,11 @@ declare module 'vue' {
     TNavbar: typeof import('tdesign-mobile-vue')['Navbar'];
     TNoticeBar: typeof import('tdesign-mobile-vue')['NoticeBar'];
     TOverlay: typeof import('tdesign-mobile-vue')['Overlay'];
-    TPagination: typeof import('tdesign-mobile-vue')['Pagination'];
     TPicker: typeof import('tdesign-mobile-vue')['Picker'];
     TPickerItem: typeof import('tdesign-mobile-vue')['PickerItem'];
     TPopconfirm: typeof import('tdesign-mobile-vue')['Popconfirm'];
     TPopover: typeof import('tdesign-mobile-vue')['Popover'];
     TPopup: typeof import('tdesign-mobile-vue')['Popup'];
-    TPrimaryTable: typeof import('tdesign-mobile-vue')['PrimaryTable'];
     TProgress: typeof import('tdesign-mobile-vue')['Progress'];
     TPullDownRefresh: typeof import('tdesign-mobile-vue')['PullDownRefresh'];
     TRadio: typeof import('tdesign-mobile-vue')['Radio'];
@@ -73,7 +68,6 @@ declare module 'vue' {
     TResult: typeof import('tdesign-mobile-vue')['Result'];
     TRow: typeof import('tdesign-mobile-vue')['Row'];
     TSearch: typeof import('tdesign-mobile-vue')['Search'];
-    TSegmentedControl: typeof import('tdesign-mobile-vue')['SegmentedControl'];
     TSelect: typeof import('tdesign-mobile-vue')['Select'];
     TSideBar: typeof import('tdesign-mobile-vue')['SideBar'];
     TSideBarItem: typeof import('tdesign-mobile-vue')['SideBarItem'];
@@ -85,7 +79,6 @@ declare module 'vue' {
     TStepper: typeof import('tdesign-mobile-vue')['Stepper'];
     TSteps: typeof import('tdesign-mobile-vue')['Steps'];
     TSticky: typeof import('tdesign-mobile-vue')['Sticky'];
-    TStickyTool: typeof import('tdesign-mobile-vue')['StickyTool'];
     TSwipeCell: typeof import('tdesign-mobile-vue')['SwipeCell'];
     TSwiper: typeof import('tdesign-mobile-vue')['Swiper'];
     TSwiperNav: typeof import('tdesign-mobile-vue')['SwiperNav'];
@@ -96,14 +89,9 @@ declare module 'vue' {
     TTabs: typeof import('tdesign-mobile-vue')['Tabs'];
     TTag: typeof import('tdesign-mobile-vue')['Tag'];
     TTextarea: typeof import('tdesign-mobile-vue')['Textarea'];
-    TTimeRangePicker: typeof import('tdesign-mobile-vue')['TimeRangePicker'];
-    TTimeline: typeof import('tdesign-mobile-vue')['Timeline'];
-    TTimelineItem: typeof import('tdesign-mobile-vue')['TimelineItem'];
     TToast: typeof import('tdesign-mobile-vue')['Toast'];
-    TTooltip: typeof import('tdesign-mobile-vue')['Tooltip'];
     TTreeSelect: typeof import('tdesign-mobile-vue')['TreeSelect'];
     TUpload: typeof import('tdesign-mobile-vue')['Upload'];
-    TWatermark: typeof import('tdesign-mobile-vue')['Watermark'];
   }
 }
 
