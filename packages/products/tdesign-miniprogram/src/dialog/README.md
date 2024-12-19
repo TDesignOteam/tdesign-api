@@ -31,6 +31,7 @@ cancel | - | 如果“取消”按钮存在，则点击“取消”按钮时触�
 close | `(trigger: DialogEventSource)` | 关闭事件，点击 取消按钮 或 点击蒙层 时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
 confirm | - | 如果“确认”按钮存在，则点击“确认”按钮时触发
 overlay-click | - | 如果蒙层存在，点击蒙层时触发
+
 ### Dialog External Classes
 
 类名 | 描述

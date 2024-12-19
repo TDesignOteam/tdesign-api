@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Dialog Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -21,8 +22,6 @@ showOverlay | Boolean | true | 是否显示遮罩层 | N
 title | TNode | - | 标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 visible | Boolean | - | 控制对话框是否显示 | N
 zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
-onBeforeClose | Function |  | TS 类型：`() => void`<br/>对话框执行消失动画效果前触发 | N
-onBeforeOpen | Function |  | TS 类型：`() => void`<br/>对话框执行弹出动画效果前触发 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N
 onClose | Function |  | TS 类型：`(context: DialogCloseContext) => void`<br/>关闭事件，点击 取消按钮 或 点击蒙层 时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | TS 类型：`() => void`<br/>对话框消失动画效果结束后触发 | N
