@@ -94958,6 +94958,7 @@
     {
       "id": 1712030157,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Search",
@@ -94969,7 +94970,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用",
-      "field_desc_en": null,
+      "field_desc_en": "The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-02 03:55:57",
@@ -94986,6 +94987,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -95026,6 +95028,45 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1733883439,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "maxlength",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+      "field_desc_en": "The maximum length of text that the user can enter. One Chinese character is equal to one count length. By default, it is empty, and the input length is not limited. Use either `maxcharacter` or `maxlength`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-11 02:17:19",
+      "update_time": "2024-12-11 02:17:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
         "Number"
       ]
     },
@@ -95399,6 +95440,7 @@
     {
       "id": 1719488506,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Search",
@@ -95427,6 +95469,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
