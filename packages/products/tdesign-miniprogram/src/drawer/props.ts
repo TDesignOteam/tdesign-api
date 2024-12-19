@@ -8,8 +8,8 @@ import { TdDrawerProps } from './type';
 const props: TdDrawerProps = {
   /** 点击蒙层时是否触发抽屉关闭事件 */
   closeOnOverlayClick: {
-    type: null,
-    value: undefined,
+    type: Boolean,
+    value: true,
   },
   /** 抽屉关闭时是否销毁节点 */
   destroyOnClose: {

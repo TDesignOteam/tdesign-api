@@ -9,7 +9,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 attach | String / Function | - | 抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-closeOnOverlayClick | Boolean | undefined | 点击蒙层时是否触发抽屉关闭事件 | N
+closeOnOverlayClick | Boolean | true | 点击蒙层时是否触发抽屉关闭事件 | N
 destroyOnClose | Boolean | false | 抽屉关闭时是否销毁节点 | N
 footer | TElement | - | 抽屉的底部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 items | Array | - | 抽屉里的列表项。TS 类型：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/drawer/type.ts) | N
@@ -18,8 +18,6 @@ showOverlay | Boolean | true | 是否显示遮罩层 | N
 title | TNode | - | 抽屉的标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 visible | Boolean | false | 组件是否可见 | N
 zIndex | Number | - | 抽屉层级，样式默认为 1500 | N
-onBeforeClose | Function |  | TS 类型：`() => void`<br/>抽屉执行关闭动画效果前触发 | N
-onBeforeOpen | Function |  | TS 类型：`() => void`<br/>抽屉执行打开动画效果前触发 | N
 onClose | Function |  | TS 类型：`(trigger: DrawerTriggerSource) => void`<br/>关闭时触发。。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/> | N
 onItemClick | Function |  | TS 类型：`( index: number, item: DrawerItem, context: { e: MouseEvent }) => void`<br/>点击抽屉里的列表项 | N
 onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果蒙层存在，点击蒙层时触发 | N
