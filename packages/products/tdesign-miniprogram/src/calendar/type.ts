@@ -60,7 +60,7 @@ export interface TdCalendarProps {
     value?: number;
   };
   /**
-   * 【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
+   * 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
    * @default none
    */
   switchMode?: {
@@ -99,14 +99,14 @@ export interface TdCalendarProps {
     value?: boolean;
   };
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组
    */
   value?: {
     type: null;
     value?: number | number[];
   };
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组，非受控属性
    */
   defaultValue?: {
     type: null;

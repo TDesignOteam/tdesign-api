@@ -16823,7 +16823,7 @@
       ],
       "field_default_value": "none",
       "field_enum": "none/month/year-month",
-      "field_desc_zh": "【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
+      "field_desc_zh": "切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -17118,7 +17118,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组",
+      "field_desc_zh": "当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -17715,6 +17715,43 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1734943734,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 2,
+      "field_name": "panelChange",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(year: number; month: number)",
+      "create_time": "2024-12-23 08:48:55",
+      "update_time": "2024-12-23 08:48:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.8.4\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
     },
     {
       "id": 1720685482,
