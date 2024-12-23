@@ -5,8 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TElement } from '../common';
-import { MouseEvent, TouchEvent } from 'react';
+import { TNode } from '../common';
 
 export interface TdFabProps {
   /**
@@ -16,7 +15,12 @@ export interface TdFabProps {
   /**
    * 图标
    */
-  icon?: TElement;
+  icon?: TNode;
+  /**
+   * 悬浮按钮的样式，常用于调整位置
+   * @default right: 16px; bottom: 32px;
+   */
+  style?: string;
   /**
    * 文本内容
    * @default ''
@@ -25,13 +29,13 @@ export interface TdFabProps {
   /**
    * 悬浮按钮点击事件
    */
-  onClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onClick?: (context: { e: MouseEvent }) => void;
   /**
    * 结束拖拽时触发
    */
-  onDragend?: (e: TouchEvent<HTMLDivElement>) => void;
+  onDragend?: (e: TouchEvent) => void;
   /**
    * 开始拖拽时触发
    */
-  onDragstart?: (e: TouchEvent<HTMLDivElement>) => void;
+  onDragstart?: (e: TouchEvent) => void;
 }
