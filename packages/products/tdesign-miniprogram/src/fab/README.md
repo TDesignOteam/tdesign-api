@@ -20,5 +20,5 @@ y-bounds | Array | - | 设置垂直方向边界限制，示例：[48, 48] 或 ['
 名称 | 参数 | 描述
 -- | -- | --
 click | `({e: Event})` | 悬浮按钮点击事件
-dragend | `(e: TouchEvent)` | 结束拖拽时触发
-dragstart | `(e: TouchEvent)` | 开始拖拽时触发
+drag-end | `(e: TouchEvent)` | 结束拖拽时触发
+drag-start | `(e: TouchEvent)` | 开始拖拽时触发

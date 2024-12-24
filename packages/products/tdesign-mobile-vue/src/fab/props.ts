@@ -29,7 +29,7 @@ export default {
   /** 悬浮按钮点击事件 */
   onClick: Function as PropType<TdFabProps['onClick']>,
   /** 结束拖拽时触发 */
-  onDragend: Function as PropType<TdFabProps['onDragend']>,
+  onDragEnd: Function as PropType<TdFabProps['onDragEnd']>,
   /** 开始拖拽时触发 */
-  onDragstart: Function as PropType<TdFabProps['onDragstart']>,
+  onDragStart: Function as PropType<TdFabProps['onDragStart']>,
 };
