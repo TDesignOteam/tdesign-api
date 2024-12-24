@@ -11,13 +11,13 @@ icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](htt
 style | String | right: 16px; bottom: 32px; | \- | N
 text | String | - | \- | N
 onClick | Function |  | Typescript：`(context: {e: MouseEvent}) => void`<br/> | N
-onDragend | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
-onDragstart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
+onDragEnd | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
+onDragStart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
 
 ### Fab Events
 
 name | params | description
 -- | -- | --
 click | `(context: {e: MouseEvent})` | \-
-dragend | `(e: TouchEvent)` | \-
-dragstart | `(e: TouchEvent)` | \-
+drag-end | `(e: TouchEvent)` | \-
+drag-start | `(e: TouchEvent)` | \-

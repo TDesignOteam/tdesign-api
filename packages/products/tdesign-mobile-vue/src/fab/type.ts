@@ -33,9 +33,9 @@ export interface TdFabProps {
   /**
    * 结束拖拽时触发
    */
-  onDragend?: (e: TouchEvent) => void;
+  onDragEnd?: (e: TouchEvent) => void;
   /**
    * 开始拖拽时触发
    */
-  onDragstart?: (e: TouchEvent) => void;
+  onDragStart?: (e: TouchEvent) => void;
 }
