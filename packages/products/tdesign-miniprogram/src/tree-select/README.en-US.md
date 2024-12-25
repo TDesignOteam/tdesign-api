@@ -20,3 +20,15 @@ default-value | String / Number / Array | undefined | uncontrolled property。Ty
 name | params | description
 -- | -- | --
 change | `(value: TreeSelectValue, level: TreeLevel) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/tree-select/type.ts)。<br/>`type TreeLevel = 0 \| 1 \| 2`<br/>
+
+### TreeSelect External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-left-column | \-
+t-class-left-item | \-
+t-class-middle-item | \-
+t-class-right-column | \-
+t-class-right-item | \-
+t-class-right-item-label | \-
