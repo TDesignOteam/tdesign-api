@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### DialogCard Props
 
 name | type | default | description | required
@@ -33,7 +34,7 @@ draggable | Boolean | false | \- | N
 footer | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 forceRender | Boolean | false | to force render Dialog | N
 header | TNode | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-mode | String | modal | options: modal/modeless/full-screen | N
+mode | String | modal | options: modal/modeless/normal/full-screen | N
 placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
