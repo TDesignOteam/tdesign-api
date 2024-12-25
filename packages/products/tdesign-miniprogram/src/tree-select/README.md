@@ -20,3 +20,15 @@ default-value | String / Number / Array | undefined | 选中值。非受控属�
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: TreeSelectValue, level: TreeLevel) ` | 点击任何节点均会触发；level 代表当前点击的层级，0 代表最左侧，依次递进。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/tree-select/type.ts)。<br/>`type TreeLevel = 0 \| 1 \| 2`<br/>
+
+### TreeSelect External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
+t-class-left-column | 左侧第一列样式类
+t-class-left-item | 左侧第一列子项样式类
+t-class-middle-item | 中间列子项样式类
+t-class-right-column | 右侧第一列样式类
+t-class-right-item | 右侧第一列子项样式类
+t-class-right-item-label | 右侧第一列子项标签样式类
