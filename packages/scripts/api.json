@@ -56002,6 +56002,7 @@
       "id": 1708481239,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56012,7 +56013,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`",
+      "field_desc_zh": "透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -56031,6 +56032,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56042,8 +56044,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8"
+        "4"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -56073,8 +56074,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "TNode"
@@ -56086,7 +56086,9 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -56117,43 +56119,8 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 1721620773,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Guide",
-      "field_category": 1,
-      "field_name": "current",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-07-22 03:59:33",
-      "update_time": "2024-07-22 03:59:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56167,6 +56134,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56177,7 +56145,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`",
+      "field_desc_zh": "透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -56199,10 +56167,52 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1735205360,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Guide",
+      "field_category": 1,
+      "field_name": "hideBack",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否隐藏返回按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-26 09:29:20",
+      "update_time": "2024-12-26 09:29:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -56212,6 +56222,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56244,6 +56255,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56298,6 +56310,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56330,6 +56343,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56342,7 +56356,8 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -56373,7 +56388,8 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -56461,6 +56477,7 @@
       "id": 1709177566,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56490,6 +56507,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56503,6 +56521,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56535,6 +56554,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56589,6 +56609,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56621,6 +56642,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56634,6 +56656,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56666,6 +56689,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56679,6 +56703,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56711,6 +56736,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56761,6 +56787,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56793,6 +56820,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -56803,6 +56831,7 @@
       "id": 1708481171,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56830,6 +56859,7 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -56841,6 +56871,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56871,6 +56902,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -56882,6 +56914,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56912,6 +56945,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -56923,6 +56957,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -56953,6 +56988,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -57001,6 +57037,7 @@
         "2",
         "4",
         "8",
+        "16",
         "64"
       ],
       "component": "Guide",
@@ -57031,6 +57068,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []

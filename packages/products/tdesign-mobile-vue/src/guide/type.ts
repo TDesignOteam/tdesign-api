@@ -10,13 +10,9 @@ import { TNode, AttachNode } from '../common';
 
 export interface TdGuideProps {
   /**
-   * 透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`
+   * 透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }`
    */
   backButtonProps?: ButtonProps;
-  /**
-   * 用于自定义渲染计数部分
-   */
-  counter?: TNode<{ current: number; total: number }>;
   /**
    * 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景
    */
@@ -30,9 +26,14 @@ export interface TdGuideProps {
    */
   modelValue?: number;
   /**
-   * 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`
+   * 透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }`
    */
   finishButtonProps?: ButtonProps;
+  /**
+   * 是否隐藏返回按钮
+   * @default false
+   */
+  hideBack?: boolean;
   /**
    * 是否隐藏计数
    * @default false

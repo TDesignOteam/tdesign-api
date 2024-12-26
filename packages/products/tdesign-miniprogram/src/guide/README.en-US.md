@@ -10,7 +10,9 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 back-button-props | Object | - | Typescript：`ButtonProps` | N
 current | Number | - | \- | N
+default-current | Number | undefined | uncontrolled property | N
 finish-button-props | Object | - | Typescript：`ButtonProps` | N
+hide-back | Boolean | false | \- | N
 hide-counter | Boolean | false | \- | N
 hide-skip | Boolean | false | \- | N
 highlight-padding | Number | 16 | \- | N
