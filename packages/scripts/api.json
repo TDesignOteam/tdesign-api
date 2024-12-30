@@ -90353,6 +90353,47 @@
       ]
     },
     {
+      "id": 1735405582,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "radio",
+      "field_enum": "radio/button",
+      "field_desc_zh": "组件风格",
+      "field_desc_en": "component Style",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-28 17:06:22",
+      "update_time": "2024-12-28 17:06:22",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 495,
       "platform_framework": [
         "1",
