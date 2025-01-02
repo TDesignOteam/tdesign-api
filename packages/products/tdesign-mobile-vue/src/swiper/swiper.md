@@ -26,3 +26,12 @@ onClick | Function |  | TS 类型：`(index: number) => void`<br/>点击轮播�
 -- | -- | --
 change | `(current: number, context: { source: SwiperChangeSource })` | 轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | 点击轮播项时触发
+
+### SwiperNavigation
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+minShowNum | Number | - | 小于这个数字不会显示导航器 | N
+paginationPosition | String | bottom | 页码信息展示位置。可选项：top-left/top/top-right/bottom-left/bottom/bottom-right | N
+showControls | Boolean | false | 是否显示两侧的控制按钮 | N
+type | String | - | 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等。TS 类型：`SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts) | N
