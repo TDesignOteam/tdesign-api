@@ -39,6 +39,11 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
+  /** null */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用输入框 */
   disabled: {
     type: Boolean,
