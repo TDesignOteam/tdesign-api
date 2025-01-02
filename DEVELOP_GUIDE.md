@@ -24,6 +24,6 @@
  npm run watch
  ```
 
- 访问 http://127.0.0.1:16001/api_design 查看修改效果
+ 访问 http://127.0.0.1:16009/api_design 查看修改效果
 
  开发完成后需要执行 `npm run build-front` 构建前端资源，并将 `packages/frontend/_site` 目录下的改动提交上来。

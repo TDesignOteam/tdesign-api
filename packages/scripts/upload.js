@@ -6,7 +6,7 @@ const axios = require('axios');
 const apiJSON = require('./api.json');
 const chalk = require('chalk');
 
-const url = '127.0.0.1:16001';
+const url = '127.0.0.1:16009';
 function syncCreate(record) {
   return new Promise((resolve, reject) => {
     console.log(`syncCreate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)

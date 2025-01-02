@@ -2,7 +2,7 @@
 
 ## 本地启动
 
-`npm i` 安装依赖后，执行 `npm run dev`，执行成功后本地访问 http://127.0.0.1:16001/api_design 查看 API 设计页面
+`npm i` 安装依赖后，执行 `npm run dev`，执行成功后本地访问 http://127.0.0.1:16009/api_design 查看 API 设计页面
 
 ## 功能说明
 
@@ -38,5 +38,3 @@ github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，
 组件仓库放在同级目录 然后执行脚本 如 npm run api:docs Button 'Vue(PC)' finalProject
 
 更多指令见 [命令行操作](./packages/scripts/README.md)
-
-

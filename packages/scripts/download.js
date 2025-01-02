@@ -21,7 +21,7 @@ function outputToFile(outputPath, res) {
 
 function download() {
   return new Promise((resolve, reject) => {
-    const url = '127.0.0.1:16001'
+    const url = '127.0.0.1:16009'
     Promise.all([
       // 请求 map
       axios.request({
