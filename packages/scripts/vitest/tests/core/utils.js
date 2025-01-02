@@ -35,7 +35,7 @@ function generateTestDescriptionToVitestFile(baseData, { component }) {
 }
 
 function uploadOneApi(id, testDescription) {
-  const url = '127.0.0.1:16001'
+  const url = '127.0.0.1:16009'
   return axios.request({
     method: 'put',
     url: `http://${url}/cmp/api`,
