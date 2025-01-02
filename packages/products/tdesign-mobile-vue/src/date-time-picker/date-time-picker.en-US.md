@@ -6,6 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+autoClose | Boolean | false | \- | N
 cancelBtn | String | 取消 | \- | N
 confirmBtn | String | - | \- | N
 end | String / Number | - | \- | N

@@ -6,6 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+autoClose | Boolean | false | 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible | N
 cancelBtn | String | 取消 | 取消按钮文字 | N
 confirmBtn | String | - | 确定按钮文字 | N
 end | String / Number | - | 选择器的最大可选时间，默认为当前时间+10年 | N
