@@ -94646,6 +94646,43 @@
       ]
     },
     {
+      "id": 1735917452,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "clearTrigger",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "'always'",
+      "field_enum": "always/focus",
+      "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效。",
+      "field_desc_en": "Clear icon trigger, effective only when the input has a value. ",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-03 15:17:32",
+      "update_time": "2025-01-03 15:17:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2780,
       "platform_framework": [
         "1",
@@ -95762,6 +95799,43 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1735917094,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "只读模式",
+      "field_desc_en": "If readonly the input",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-03 15:11:34",
+      "update_time": "2025-01-03 15:11:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
