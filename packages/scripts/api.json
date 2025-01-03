@@ -2199,8 +2199,6 @@
     {
       "id": 1608,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "ActionSheet",
@@ -2218,7 +2216,7 @@
       "create_time": "2021-09-02 12:06:15",
       "update_time": "2022-04-08 09:06:29",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean;icon?: string;suffixIcon?: string; }】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?; string}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -2229,8 +2227,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -2240,7 +2236,9 @@
     {
       "id": 1712717101,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "ActionSheet",
       "field_category": 1,
@@ -2252,12 +2250,12 @@
       "field_enum": "",
       "field_desc_zh": "菜单项",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2024-04-10 02:45:01",
       "update_time": "2024-04-10 02:45:01",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean }】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean; icon?: TNode; badge?: BadgeProps}】【import { BadgeProps } from '@Badge'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -2268,7 +2266,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -2586,10 +2586,7 @@
     },
     {
       "id": 1616,
-      "platform_framework": [
-        "16",
-        "32"
-      ],
+      "platform_framework": [],
       "component": "ActionSheet",
       "field_category": 2,
       "field_name": "close",
@@ -2613,10 +2610,7 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)"
-      ],
+      "platform_framework_text": [],
       "field_type_text": []
     },
     {
@@ -2636,7 +2630,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'command' | 'select' 】",
+      "event_input": "(trigger: ActionSheetTriggerSource)【type ActionSheetTriggerSource = 'overlay' | 'command' | 'select' 】",
       "create_time": "2022-04-08 09:07:06",
       "update_time": "2022-07-06 14:55:12",
       "event_output": null,
