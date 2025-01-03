@@ -2216,7 +2216,7 @@
       "create_time": "2021-09-02 12:06:15",
       "update_time": "2022-04-08 09:06:29",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?; string}】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem {label: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?: string}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

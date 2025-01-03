@@ -112,6 +112,5 @@ export interface ActionSheetItem {
   color?: string;
   disabled?: boolean;
   icon?: string;
-  suffixIcon?;
-  string;
+  suffixIcon?: string;
 }
