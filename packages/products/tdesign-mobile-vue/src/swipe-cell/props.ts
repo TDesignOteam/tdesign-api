@@ -35,4 +35,8 @@ export default {
   onChange: Function as PropType<TdSwipeCellProps['onChange']>,
   /** 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件） */
   onClick: Function as PropType<TdSwipeCellProps['onClick']>,
+  /** 滑动技术事件 */
+  onDragEnd: Function as PropType<TdSwipeCellProps['onDragEnd']>,
+  /** 滑动开始事件 */
+  onDragStart: Function as PropType<TdSwipeCellProps['onDragStart']>,
 };

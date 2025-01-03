@@ -14,6 +14,8 @@ opened | Boolean / Array | false | 操作项是否呈现为打开态，值为数
 right | Array / Slot / Function | - | 右侧滑动操作项。有两种定义方式，一种是使用数组，二种是使用插槽。`right.text` 表示操作文本，`right.className` 表示操作项类名，`right.style` 表示操作项样式，`right.onClick` 表示点击操作项后执行的回调函数。示例：`[{ text: '删除', style: 'background-color: red', onClick: () => {} }]`。TS 类型：`Array<SwipeActionItem> \| TNode` `interface SwipeActionItem {text: string; className?: string; style?: string; sure?: string \| TNode; onClick?: () => void; [key: string]: any }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts) | N
 onChange | Function |  | TS 类型：`(value: string) => void`<br/>菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态 | N
 onClick | Function |  | TS 类型：`(action: SwipeActionItem, source: SwipeSource) => void`<br/>操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/> | N
+onDragEnd | Function |  | TS 类型：`() => void`<br/>滑动技术事件 | N
+onDragStart | Function |  | TS 类型：`() => void`<br/>滑动开始事件 | N
 
 ### SwipeCell Events
 
@@ -21,6 +23,8 @@ onClick | Function |  | TS 类型：`(action: SwipeActionItem, source: SwipeSour
 -- | -- | --
 change | `(value: string)` | 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态
 click | `(action: SwipeActionItem, source: SwipeSource)` | 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/>
+drag-end | \- | 滑动技术事件
+drag-start | \- | 滑动开始事件
 
 ### SwipeCellInstanceFunctions 组件实例方法
 
