@@ -112756,7 +112756,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -112789,7 +112790,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -116103,6 +116105,43 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1736075541,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "bottomLineMode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "fixed",
+      "field_enum": "fixed/auto/full",
+      "field_desc_zh": "激活下划线的模式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-05 11:12:21",
+      "update_time": "2025-01-05 11:12:21",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
