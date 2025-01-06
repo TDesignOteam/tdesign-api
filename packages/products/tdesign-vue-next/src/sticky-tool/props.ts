@@ -26,7 +26,7 @@ export default {
       return ['right-top', 'right-center', 'right-bottom', 'left-top', 'left-center', 'left-bottom'].includes(val);
     },
   },
-  /** 透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps */
+  /** 透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps */
   popupProps: {
     type: Object as PropType<TdStickyToolProps['popupProps']>,
   },

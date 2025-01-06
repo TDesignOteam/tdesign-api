@@ -65,7 +65,7 @@ export default {
     type: String,
     default: '',
   },
-  /** 透传 Popup 浮层组件全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdSelectInputProps['popupProps']>,
   },

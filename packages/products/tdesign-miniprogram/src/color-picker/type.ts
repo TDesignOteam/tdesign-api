@@ -40,7 +40,7 @@ export interface TdColorPickerProps {
     value?: 'RGB' | 'RGBA' | 'HSL' | 'HSLA' | 'HSB' | 'HSV' | 'HSVA' | 'HEX' | 'CMYK' | 'CSS';
   };
   /**
-   * popupProps透传
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: {

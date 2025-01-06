@@ -20,7 +20,7 @@ export default {
   popup: {
     type: [String, Function] as PropType<TdStickyItemProps['popup']>,
   },
-  /** 透传浮层组件全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdStickyItemProps['popupProps']>,
   },

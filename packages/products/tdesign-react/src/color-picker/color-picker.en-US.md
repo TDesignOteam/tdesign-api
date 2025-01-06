@@ -12,7 +12,7 @@ borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
 closeBtn | TNode | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 colorModes | Array | ["monochrome", "linear-gradient"] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | \- | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
 format | String | RGB | options: RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N

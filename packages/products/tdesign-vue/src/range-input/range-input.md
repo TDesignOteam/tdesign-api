@@ -66,7 +66,7 @@ inputValue | Array | - | 输入框的值。支持语法糖 `.sync`。TS 类型�
 defaultInputValue | Array | - | 输入框的值。非受控属性。TS 类型：`RangeInputValue` | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 panel | String / Slot / Function | - | 下拉框内容，可完全自定义。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-popupProps | Object | - | 透传 Popup 浮层组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框 | N
 defaultPopupVisible | Boolean | - | 是否显示下拉框。非受控属性 | N
 rangeInputProps | Object | - | 透传 RangeInput 组件全部属性。TS 类型：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N

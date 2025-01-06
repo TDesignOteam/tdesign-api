@@ -27,7 +27,7 @@ export interface TdColorPickerProps {
    */
   header?: TNode;
   /**
-   * popupProps透传
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: PopupProps;

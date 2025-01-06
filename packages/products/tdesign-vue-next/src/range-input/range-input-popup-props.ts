@@ -29,7 +29,7 @@ export default {
   panel: {
     type: [String, Function] as PropType<TdRangeInputPopupProps['panel']>,
   },
-  /** 透传 Popup 浮层组件全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdRangeInputPopupProps['popupProps']>,
   },

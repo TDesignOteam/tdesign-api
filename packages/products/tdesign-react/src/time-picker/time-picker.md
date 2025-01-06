@@ -18,7 +18,7 @@ hideDisabledTime | Boolean | true | 是否隐藏禁用状态的时间项 | N
 inputProps | Object | - | 透传给输入框（Input）组件的参数。TS 类型：`InputProps`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 label | TNode | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 placeholder | String | undefined | 占位符 | N
-popupProps | Object | - | 透传给 popup 组件的参数。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 presets | Object | - | 预设快捷时间选择，示例：`{ '前一小时': '11:00:00' }`。TS 类型：`PresetTime` `interface PresetTime { [presetName: string]: TimePickerValue \| (() => TimePickerValue) }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 selectInputProps | Object | - | 透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
@@ -53,7 +53,7 @@ format | String | HH:mm:ss | 用于格式化时间，[详细文档](https://day.
 hideDisabledTime | Boolean | true | 是否隐藏禁用状态的时间项 | N
 label | TNode | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 placeholder | String / Array | undefined | 占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：`string \| Array<string>` | N
-popupProps | Object | - | 透传给 popup 组件的参数。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 presets | Object | - | 预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }。TS 类型：`PresetTimeRange` `interface PresetTimeRange { [presetRageName: string]: TimeRangeValue \| (() => TimeRangeValue)}`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 rangeInputProps | Object | - | 透传给范围输入框 RangeInput 组件的参数。TS 类型：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/time-picker/type.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large | N

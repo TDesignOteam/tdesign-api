@@ -91,7 +91,7 @@ export default {
     type: String,
     default: undefined,
   },
-  /** 透传给 popup 组件的全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdTreeSelectProps['popupProps']>,
   },
