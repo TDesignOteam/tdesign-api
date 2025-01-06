@@ -131,7 +131,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   placeholder?: string;
   /**
-   * 参考 popup 组件 API
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**

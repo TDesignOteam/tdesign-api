@@ -63,7 +63,7 @@ export interface TdTimePickerProps {
    */
   placeholder?: string;
   /**
-   * 透传给 popup 组件的参数
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -196,7 +196,7 @@ export interface TdTimeRangePickerProps {
    */
   placeholder?: string | Array<string>;
   /**
-   * 透传给 popup 组件的参数
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**

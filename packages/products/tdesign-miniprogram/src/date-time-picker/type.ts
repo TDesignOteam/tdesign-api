@@ -85,7 +85,7 @@ export interface TdDateTimePickerProps {
     value?: DateTimePickerMode;
   };
   /**
-   * 透传 `Popup` 组件全部属性
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: {

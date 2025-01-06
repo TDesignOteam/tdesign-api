@@ -44,6 +44,14 @@ export default {
     type: Array as PropType<TdDropdownProps['options']>,
     default: (): TdDropdownProps['options'] => [],
   },
+  /** 面板内的底部内容 */
+  panelBottomContent: {
+    type: [String, Function] as PropType<TdDropdownProps['panelBottomContent']>,
+  },
+  /** 面板内的顶部内容 */
+  panelTopContent: {
+    type: [String, Function] as PropType<TdDropdownProps['panelTopContent']>,
+  },
   /** 弹窗定位方式，可选值同 Popup 组件 */
   placement: {
     type: String as PropType<TdDropdownProps['placement']>,
@@ -53,7 +61,7 @@ export default {
       return ['top', 'left', 'right', 'bottom', 'top-left', 'top-right', 'bottom-left', 'bottom-right', 'left-top', 'left-bottom', 'right-top', 'right-bottom'].includes(val);
     },
   },
-  /** 透传  Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式 */
+  /** 透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式 */
   popupProps: {
     type: Object as PropType<TdDropdownProps['popupProps']>,
   },

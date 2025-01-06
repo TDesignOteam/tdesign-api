@@ -9,6 +9,7 @@ export const colorPickerDefaultProps: TdColorPickerProps = {
   clearable: false,
   closeBtn: true,
   colorModes: ['monochrome', 'linear-gradient'],
+  disabled: undefined,
   enableAlpha: false,
   enableMultipleGradient: true,
   format: 'RGB',

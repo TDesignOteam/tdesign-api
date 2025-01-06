@@ -26,7 +26,7 @@ const props: TdColorPickerProps = {
     type: String,
     value: 'RGB',
   },
-  /** popupProps透传 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object,
     value: {},

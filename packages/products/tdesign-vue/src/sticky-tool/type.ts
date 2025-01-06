@@ -23,7 +23,7 @@ export interface TdStickyToolProps {
    */
   placement?: 'right-top' | 'right-center' | 'right-bottom' | 'left-top' | 'left-center' | 'left-bottom';
   /**
-   * 透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps
+   * 透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps
    */
   popupProps?: PopupProps;
   /**
@@ -64,7 +64,7 @@ export interface TdStickyItemProps {
    */
   popup?: string | TNode;
   /**
-   * 透传浮层组件全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**

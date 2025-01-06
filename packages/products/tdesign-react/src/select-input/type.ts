@@ -96,7 +96,7 @@ export interface TdSelectInputProps {
    */
   placeholder?: string;
   /**
-   * 透传 Popup 浮层组件全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
