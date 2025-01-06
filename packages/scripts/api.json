@@ -90447,8 +90447,8 @@
       ],
       "field_default_value": "radio",
       "field_enum": "radio/button",
-      "field_desc_zh": "组件风格",
-      "field_desc_en": "component Style",
+      "field_desc_zh": "用于在使用 options 方式渲染时决定组件的风格",
+      "field_desc_en": "Determine the style of radio when using options API",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-12-28 17:06:22",
@@ -136603,6 +136603,47 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1736168020,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "imageProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于在上传图片场景下，透传属性配置至 Image 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-06 12:53:40",
+      "update_time": "2025-01-06 12:53:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
