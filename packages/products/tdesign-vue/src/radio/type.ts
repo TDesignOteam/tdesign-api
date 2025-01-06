@@ -86,7 +86,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   size?: SizeEnum;
   /**
-   * 组件风格
+   * 用于在使用 options 方式渲染时决定组件的风格
    * @default radio
    */
   theme?: 'radio' | 'button';
