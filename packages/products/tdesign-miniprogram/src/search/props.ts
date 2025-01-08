@@ -26,6 +26,11 @@ const props: TdSearchProps = {
     type: Boolean,
     value: false,
   },
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String,
+    value: 'always',
+  },
   /** 是否启用清除控件 */
   clearable: {
     type: Boolean,
@@ -95,6 +100,11 @@ const props: TdSearchProps = {
     type: String,
     value: '',
     required: true,
+  },
+  /** 只读状态 */
+  readonly: {
+    type: null,
+    value: undefined,
   },
   /** 预览结果列表 */
   resultList: {
