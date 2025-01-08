@@ -30,6 +30,10 @@ export interface GlobalConfigProvider {
    */
   attach?: AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode };
   /**
+   * 自动填充组件全局配置
+   */
+  autoComplete?: AutoCompleteConfig;
+  /**
    * 日历组件全局配置
    */
   calendar?: CalendarConfig;
