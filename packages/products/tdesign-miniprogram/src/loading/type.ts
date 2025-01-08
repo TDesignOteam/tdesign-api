@@ -29,6 +29,14 @@ export interface TdLoadingProps {
     value?: ['t-class', 't-class-text', 't-class-indicator'];
   };
   /**
+   * 是否显示为全屏加载
+   * @default false
+   */
+  fullscreen?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符
    * @default true
    */
