@@ -354,3 +354,9 @@ name | type | default | description | required
 collapseText | String | - | collapse text | N
 copiedText | String | - | copied text | N
 expandText | String | - | expand text | N
+
+### AutoCompleteConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+empty | String | - | \- | N

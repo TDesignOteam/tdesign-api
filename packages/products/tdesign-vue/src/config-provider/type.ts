@@ -960,6 +960,14 @@ export interface TypographyConfig {
   expandText?: string;
 }
 
+export interface AutoCompleteConfig {
+  /**
+   * 语言配置，“暂无数据”描述文本
+   * @default ''
+   */
+  empty?: string;
+}
+
 export type AnimationType = 'ripple' | 'expand' | 'fade';
 
 export type IconConfig = GlobalIconConfig;

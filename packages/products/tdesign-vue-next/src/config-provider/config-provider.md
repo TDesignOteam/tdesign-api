@@ -354,3 +354,9 @@ titleText | Object | - | 空状态组件各类型的标题文本配置。TS 类�
 collapseText | String | - | 语言配置，“收起”描述文本 | N
 copiedText | String | - | 语言配置，“复制成功”描述文本 | N
 expandText | String | - | 语言配置，“展开”描述文本 | N
+
+### AutoCompleteConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+empty | String | - | 语言配置，“暂无数据”描述文本 | N
