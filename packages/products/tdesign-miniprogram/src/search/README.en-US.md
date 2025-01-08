@@ -22,7 +22,7 @@ focus | Boolean | false | \- | N
 hold-keyboard | Boolean | false | \- | N
 label | String | '' | `deprecated` | N
 left-icon | String / Slot | 'search' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-maxcharacter | Number | - | \- | N
+maxcharacter | Number | - | The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength` | N
 maxlength | Number | -1 | \- | N
 placeholder | String | '' | \- | N
 placeholder-class | String | input-placeholder | \- | N
@@ -45,6 +45,7 @@ change | `({ value: string })` | \-
 clear | `({ value: string })` | \-
 focus | `({ value: string })` | \-
 submit | `({ value: string })` | \-
+
 ### Search External Classes
 
 className | Description

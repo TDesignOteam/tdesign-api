@@ -116,11 +116,6 @@ const props: TdSearchProps = {
     type: String,
     value: 'square',
   },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
-  },
   /** 拉起键盘的类型 */
   type: {
     type: String,

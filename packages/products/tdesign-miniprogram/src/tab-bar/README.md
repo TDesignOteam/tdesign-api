@@ -22,6 +22,7 @@ default-value | String / Number / Array | undefined | 当前选中标签的索�
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: string \| number)` | 选中标签切换时触发
+
 ### TabBar External Classes
 
 类名 | 描述

@@ -14,13 +14,6 @@ export interface TdTabBarProps {
     value?: boolean;
   };
   /**
-   * 组件类名，用于设置外层元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class'];
-  };
-  /**
    * 是否固定在底部
    * @default true
    */

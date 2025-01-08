@@ -47,13 +47,6 @@ export interface TdDateTimePickerProps {
     value?: string | number;
   };
   /**
-   * 组件类名，分别用于设置组件外层元素、确认按钮、取消按钮、标题等元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-confirm', 't-class-cancel', 't-class-title'];
-  };
-  /**
    * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
   filter?: {
