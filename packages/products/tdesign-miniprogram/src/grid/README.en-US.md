@@ -14,6 +14,7 @@ column | Number | 4 | \- | N
 gutter | Number | - | \- | N
 hover | Boolean | false | \- | N
 theme | String | default | options: default/card | N
+
 ### Grid External Classes
 
 className | Description
@@ -42,6 +43,7 @@ url | String | - | \- | N
 name | params | description
 -- | -- | --
 click | \- | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)
+
 ### GridItem External Classes
 
 className | Description

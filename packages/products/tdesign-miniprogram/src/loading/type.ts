@@ -22,13 +22,6 @@ export interface TdLoadingProps {
     value?: number;
   };
   /**
-   * 组件类名，分别用于设置加载组件外层元素，加载组件文本，加载组件指示符，加载指示符内侧同心圆等元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-text', 't-class-indicator'];
-  };
-  /**
    * 是否显示为全屏加载
    * @default false
    */

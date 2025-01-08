@@ -32,13 +32,6 @@ export interface TdPullDownRefreshProps {
     value?: boolean;
   };
   /**
-   * 加载loading样式
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-loading', 't-class-text', 't-class-indicator'];
-  };
-  /**
    * 加载中下拉高度，如果值为数字则单位是：'px'
    * @default 50
    */
@@ -108,6 +101,14 @@ export interface TdPullDownRefreshProps {
   upperThreshold?: {
     type: null;
     value?: string | number;
+  };
+  /**
+   * 是否使用了自定义导航栏
+   * @default false
+   */
+  usingCustomNavbar?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态

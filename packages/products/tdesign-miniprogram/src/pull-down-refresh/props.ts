@@ -21,10 +21,6 @@ const props: TdPullDownRefreshProps = {
     type: Boolean,
     value: false,
   },
-  /** 加载loading样式 */
-  externalClasses: {
-    type: Array,
-  },
   /** 加载中下拉高度，如果值为数字则单位是：'px' */
   loadingBarHeight: {
     type: null,
@@ -68,6 +64,11 @@ const props: TdPullDownRefreshProps = {
   upperThreshold: {
     type: null,
     value: 50,
+  },
+  /** 是否使用了自定义导航栏 */
+  usingCustomNavbar: {
+    type: Boolean,
+    value: false,
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {
