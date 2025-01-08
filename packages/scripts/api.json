@@ -71477,7 +71477,8 @@
         "2",
         "4",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Loading",
       "field_category": 1,
@@ -71500,7 +71501,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"1.8.5\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -71509,7 +71510,8 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
