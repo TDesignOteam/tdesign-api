@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Swiper Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -33,6 +32,7 @@ snap-to-edge | Boolean | false | `0.32.0`。当 swiper-item 的个数大于等�
 change | `(current: number, source: SwiperChangeSource)` | 轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | `0.34.0`。点击轮播项时触发
 image-load | `(index: number)` | `1.1.4`。图片加载时触发
+
 ### Swiper External Classes
 
 类名 | 描述
@@ -57,6 +57,7 @@ pagination-position | String | bottom | `0.34.0`。页码信息展示位置。�
 show-controls | Boolean | false | `0.32.0`。是否显示两侧的控制按钮 | N
 total | Number | 0 | `0.34.0`。总共的项数 | N
 type | String | dots | 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等。TS 类型：`SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper-nav/type.ts) | N
+
 ### SwiperNav External Classes
 
 类名 | 描述

@@ -23,7 +23,7 @@ export default {
   header: {
     type: Function as PropType<TdColorPickerProps['header']>,
   },
-  /** popupProps透传 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdColorPickerProps['popupProps']>,
     default: () => ({}),

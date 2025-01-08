@@ -30,10 +30,6 @@ const props: TdDateTimePickerProps = {
   end: {
     type: null,
   },
-  /** 组件类名，分别用于设置组件外层元素、确认按钮、取消按钮、标题等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second) */
   filter: {
     type: null,
@@ -53,7 +49,7 @@ const props: TdDateTimePickerProps = {
     type: null,
     value: 'date',
   },
-  /** 透传 `Popup` 组件全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object,
     value: {},

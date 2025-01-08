@@ -67,7 +67,7 @@ export interface TdAutoCompleteProps<T extends AutoCompleteOption = AutoComplete
    */
   placeholder?: string;
   /**
-   * 透传 Popup 组件全部特性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**

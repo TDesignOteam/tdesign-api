@@ -38,7 +38,7 @@ export default {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
-  /** 组件风格 */
+  /** 用于在使用 options 方式渲染时决定组件的风格 */
   theme: {
     type: String as PropType<TdRadioGroupProps['theme']>,
     default: 'radio' as TdRadioGroupProps['theme'],

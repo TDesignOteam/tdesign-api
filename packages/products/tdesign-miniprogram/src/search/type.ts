@@ -198,14 +198,6 @@ export interface TdSearchProps {
     value?: 'square' | 'round';
   };
   /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 拉起键盘的类型
    * @default 'text'
    */

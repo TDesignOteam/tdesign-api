@@ -37,6 +37,7 @@ header-left-icon | String / Slot | - | 面板头左侧图标。[通用类型定�
 header-right-content | String / Slot | - | 面板头的右侧区域，一般用于呈现面板操作。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 placement | String | bottom | `0.34.0`。选项卡内容的位置。可选项：bottom/top | N
 value | String / Number | - | 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识 | N
+
 ### CollapsePanel External Classes
 
 类名 | 描述

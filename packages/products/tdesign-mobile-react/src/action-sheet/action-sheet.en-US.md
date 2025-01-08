@@ -13,7 +13,9 @@ cancelText | String | - | \- | N
 count | Number | 8 | \- | N
 description | String | - | \- | N
 items | Array | - | Typescript：`Array<string \| ActionSheetItem>` `interface ActionSheetItem { label: string; color?: string; disabled?: boolean; icon?: TNode; badge?: BadgeProps }`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/action-sheet/type.ts) | N
+popupProps | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/action-sheet/type.ts) | N
 showCancel | Boolean | true | \- | N
+showOverlay | Boolean | true | \- | N
 theme | String | list | options: list/grid | N
 visible | Boolean | false | required | Y
 defaultVisible | Boolean | false | required。uncontrolled property | Y

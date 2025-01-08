@@ -38,13 +38,6 @@ export interface TdBadgeProps {
     value?: boolean;
   };
   /**
-   * 组件类名，分别用于设置外层元素、默认内容、右上角内容等元素类名
-   */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-content', 't-class-count'];
-  };
-  /**
    * 封顶的数字值
    * @default 99
    */
@@ -65,7 +58,7 @@ export interface TdBadgeProps {
    */
   shape?: {
     type: StringConstructor;
-    value?: 'circle' | 'square' | 'round' | 'ribbon';
+    value?: 'circle' | 'square' | 'bubble' | 'ribbon';
   };
   /**
    * 当数值为 0 时，是否展示徽标
@@ -81,14 +74,6 @@ export interface TdBadgeProps {
    */
   size?: {
     type: StringConstructor;
-    value?: 'small' | 'medium';
-  };
-  /**
-   * 自定义组件样式
-   * @default ''
-   */
-  style?: {
-    type: StringConstructor;
-    value?: string;
+    value?: 'medium' | 'large';
   };
 }

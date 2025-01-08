@@ -15,6 +15,7 @@ status | String | - | options: success/error/warning/active。Typescript：`Prog
 stroke-width | String / Number | - | \- | N
 theme | String | line | options: line/plump/circle。Typescript：`ProgressTheme` `type ProgressTheme = 'line' \| 'plump' \| 'circle'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/progress/type.ts) | N
 track-color | String | '' | \- | N
+
 ### Progress External Classes
 
 className | Description

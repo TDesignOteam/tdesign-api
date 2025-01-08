@@ -48,7 +48,7 @@ export interface TdActionSheetProps {
     required?: boolean;
   };
   /**
-   * popupProps透传
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: {

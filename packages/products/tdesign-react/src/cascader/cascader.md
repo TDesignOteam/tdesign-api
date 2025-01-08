@@ -33,7 +33,7 @@ options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` 
 panelBottomContent | TNode | - | 面板内的底部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 panelTopContent | TNode | - | 面板内的顶部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 placeholder | String | undefined | 占位符 | N
-popupProps | Object | - | 参考 popup 组件 API。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/cascader/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框 | N
 defaultPopupVisible | Boolean | - | 是否显示下拉框。非受控属性 | N
 prefixIcon | TElement | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N

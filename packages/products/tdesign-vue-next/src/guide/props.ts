@@ -25,7 +25,7 @@ export default {
   defaultCurrent: {
     type: Number,
   },
-  /** 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }` */
+  /** 透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }` */
   finishButtonProps: {
     type: Object as PropType<TdGuideProps['finishButtonProps']>,
   },

@@ -17,6 +17,7 @@ offset | Array | - | 设置状态点的位置偏移，示例：[-10, 20] 或 ['1
 shape | String | circle | 形状。可选项：circle/square/bubble/ribbon | N
 show-zero | Boolean | false | 当数值为 0 时，是否展示徽标 | N
 size | String | medium | 尺寸。可选项：medium/large | N
+
 ### Badge External Classes
 
 类名 | 描述

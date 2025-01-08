@@ -23,7 +23,7 @@ export interface TdGuideProps {
    */
   defaultCurrent?: number;
   /**
-   * 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`
+   * 透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }`
    */
   finishButtonProps?: ButtonProps;
   /**
@@ -142,7 +142,7 @@ export interface GuideStep {
    */
   placement?: StepPopupPlacement | StepDialogPlacement;
   /**
-   * 透传全部属性到 Popup 组件。`mode=popup` 时有效
+   * 透传 Popup 组件全部属性。`mode=popup` 时有效
    */
   popupProps?: PopupProps;
   /**

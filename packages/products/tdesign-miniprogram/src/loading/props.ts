@@ -16,9 +16,10 @@ const props: TdLoadingProps = {
     type: Number,
     value: 800,
   },
-  /** 组件类名，分别用于设置加载组件外层元素，加载组件文本，加载组件指示符，加载指示符内侧同心圆等元素类名 */
-  externalClasses: {
-    type: Array,
+  /** 是否显示为全屏加载 */
+  fullscreen: {
+    type: Boolean,
+    value: false,
   },
   /** 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符 */
   indicator: {

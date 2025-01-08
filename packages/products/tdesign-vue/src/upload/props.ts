@@ -49,7 +49,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdUploadProps['default']>,
   },
-  /** 是否禁用 */
+  /** 是否禁用组件 */
   disabled: {
     type: Boolean,
     default: undefined,
@@ -92,6 +92,10 @@ export default {
   /** 设置上传的请求头部，`action` 存在时有效 */
   headers: {
     type: Object as PropType<TdUploadProps['headers']>,
+  },
+  /** 用于在上传图片场景下，透传属性配置至 Image 组件 */
+  imageProps: {
+    type: Object as PropType<TdUploadProps['imageProps']>,
   },
   /** 透传图片预览组件全部属性 */
   imageViewerProps: {
@@ -197,7 +201,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 */
+  /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 */
   useMockProgress: {
     type: Boolean,
     default: true,

@@ -58,7 +58,7 @@ export default {
     type: String,
     default: undefined,
   },
-  /** 透传 Popup 组件全部特性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdAutoCompleteProps['popupProps']>,
   },

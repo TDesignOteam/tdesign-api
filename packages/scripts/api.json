@@ -2277,6 +2277,9 @@
     {
       "id": 1712054580,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "ActionSheet",
@@ -2287,7 +2290,7 @@
       ],
       "field_default_value": "{}",
       "field_enum": "",
-      "field_desc_zh": "popupProps透传",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -2305,6 +2308,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -2357,6 +2363,9 @@
     {
       "id": 1712054606,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "ActionSheet",
@@ -2385,6 +2394,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -3273,10 +3285,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3308,10 +3317,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -3404,10 +3410,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3437,10 +3440,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Number"
@@ -3451,10 +3451,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3485,10 +3482,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -3500,10 +3494,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3533,10 +3524,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "TNode"
@@ -3547,10 +3535,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3580,10 +3565,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -3594,10 +3576,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 1,
@@ -3628,10 +3607,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -3643,10 +3619,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 2,
@@ -3674,10 +3647,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -3686,10 +3656,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Alert",
       "field_category": 2,
@@ -3717,10 +3684,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -5164,7 +5128,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 组件全部特性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -7752,43 +7716,6 @@
       ]
     },
     {
-      "id": 3096,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "BackTop",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:44:26",
-      "update_time": "2022-10-31 11:44:26",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2336,
       "platform_framework": [
         "8",
@@ -8614,43 +8541,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 1797,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Badge",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置外层元素、默认内容、右上角内容等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-27 02:30:53",
-      "update_time": "2021-09-27 02:31:46",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-content', 't-class-count']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -14963,43 +14853,6 @@
       ]
     },
     {
-      "id": 3043,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:07:49",
-      "update_time": "2022-10-31 11:07:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2831,
       "platform_framework": [
         "1",
@@ -21165,7 +21018,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "参考 popup 组件 API",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -23846,80 +23699,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 1370,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CellGroup",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-25 09:20:51",
-      "update_time": "2021-07-25 09:20:51",
-      "event_output": null,
-      "custom_field_type": "['t-class']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 3047,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CellGroup",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:24:16",
-      "update_time": "2022-10-31 11:24:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -28540,43 +28319,6 @@
       ]
     },
     {
-      "id": 2725,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "CollapsePanel",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于组件外层元素、标题、内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-05-31 03:26:48",
-      "update_time": "2022-05-31 03:26:48",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-header', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1679,
       "platform_framework": [
         "1",
@@ -29594,7 +29336,7 @@
       ],
       "field_default_value": "{}",
       "field_enum": "",
-      "field_desc_zh": "popupProps透传",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -31908,7 +31650,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的参数",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -34691,7 +34433,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的参数",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -36052,43 +35794,6 @@
       ]
     },
     {
-      "id": 1658,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DateTimePicker",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置组件外层元素、确认按钮、取消按钮、标题等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:48:12",
-      "update_time": "2021-09-09 13:48:12",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-confirm', 't-class-cancel', 't-class-title']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1729774456,
       "platform_framework": [
         "8",
@@ -36380,7 +36085,7 @@
       ],
       "field_default_value": "{}",
       "field_enum": "",
-      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": "popup properties",
       "field_required": 0,
       "event_input": "",
@@ -37328,43 +37033,6 @@
         "Object",
         "Array",
         "Function"
-      ]
-    },
-    {
-      "id": 1659,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DateTimeRangePicker",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置组件外层元素、确认按钮、取消按钮、标题等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-09 13:48:22",
-      "update_time": "2021-09-09 13:48:22",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-confirm', 't-class-cancel', 't-class-title']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -39557,43 +39225,6 @@
       ]
     },
     {
-      "id": 1289,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、组件内容部分、确认按钮、取消按钮 等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-10 04:38:12",
-      "update_time": "2022-02-10 02:58:12",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-content', 't-class-confirm', 't-class-cancel']",
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 54,
       "platform_framework": [
         "1",
@@ -39980,43 +39611,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3097,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:44:38",
-      "update_time": "2022-10-31 11:44:38",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -44911,7 +44505,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传  Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
+      "field_desc_zh": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -45187,43 +44781,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 3179,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DropdownItem",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、菜单列、菜单列选项、菜单列选项标签、树形菜单、树形菜单列等类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-11-07 14:51:02",
-      "update_time": "2022-11-07 14:51:02",
-      "event_output": null,
-      "custom_field_type": "['t-class','t-class-content', 't-class-column', 't-class-column-item', 't-class-column-item-label',  't-class-footer']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -46782,43 +46339,6 @@
       "field_type_text": [
         "String",
         "TNode"
-      ]
-    },
-    {
-      "id": 1388,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Empty",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层类名、文本描述类名、图片类名、操作按钮类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-01 14:37:53",
-      "update_time": "2021-09-29 06:49:17",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-description', 't-class-image', 't-class-actions']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -58448,7 +57968,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传全部属性到 Popup 组件。`mode=popup` 时有效",
+      "field_desc_zh": "透传 Popup 组件全部属性。`mode=popup` 时有效",
       "field_desc_en": "Popup component props if `mode = popup`",
       "field_required": 0,
       "event_input": "",
@@ -71422,50 +70942,14 @@
       ]
     },
     {
-      "id": 1281,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Loading",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置加载组件外层元素，加载组件文本，加载组件指示符，加载指示符内侧同心圆等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-10 01:15:53",
-      "update_time": "2021-09-28 09:45:09",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-text', 't-class-indicator']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 952,
       "platform_framework": [
         "1",
         "2",
         "4",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Loading",
       "field_category": 1,
@@ -71488,7 +70972,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\"Miniprogram\": \"1.8.5\"}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -71497,7 +70981,8 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -80516,7 +80001,7 @@
       ],
       "field_default_value": "{}",
       "field_enum": "",
-      "field_desc_zh": "透传 `Popup` 组件全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": "popup properties",
       "field_required": 0,
       "event_input": "",
@@ -81267,10 +80752,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Popconfirm",
       "field_category": 1,
@@ -81302,10 +80784,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String",
@@ -81492,7 +80971,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 组件属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(options: { e: MouseEvent })",
@@ -81648,10 +81127,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Popconfirm",
       "field_category": 2,
@@ -81679,10 +81155,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -82775,43 +82248,6 @@
       ],
       "field_type_text": [
         "Number"
-      ]
-    },
-    {
-      "id": 1304,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popup",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、遮罩层、浮层内容 等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 04:28:10",
-      "update_time": "2021-07-16 04:32:18",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-overlay', 't-class-content']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -87160,43 +86596,6 @@
       ]
     },
     {
-      "id": 3107,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Progress",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:46:19",
-      "update_time": "2022-10-31 14:46:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 920,
       "platform_framework": [
         "1",
@@ -87520,43 +86919,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 1761,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "PullDownRefresh",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "加载loading样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-24 02:09:45",
-      "update_time": "2021-09-24 06:16:47",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-loading','t-class-text', 't-class-indicator']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -90435,8 +89797,8 @@
       ],
       "field_default_value": "radio",
       "field_enum": "radio/button",
-      "field_desc_zh": "组件风格",
-      "field_desc_en": "component Style",
+      "field_desc_zh": "用于在使用 options 方式渲染时决定组件的风格",
+      "field_desc_en": "Determine the style of radio when using options API",
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-12-28 17:06:22",
@@ -92256,7 +91618,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 浮层组件全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -96078,43 +95440,6 @@
       ]
     },
     {
-      "id": 3072,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:37:50",
-      "update_time": "2022-10-31 11:37:50",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2858,
       "platform_framework": [
         "1",
@@ -98357,7 +97682,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -100409,7 +99734,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 浮层组件全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -105238,43 +104563,6 @@
       ]
     },
     {
-      "id": 1804,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Stepper",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于表示组件外层元素、输入框、右侧递增号、左侧递减号等元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-28 03:54:10",
-      "update_time": "2021-11-10 05:56:48",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-input', 't-class-add', 't-class-minus']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1503,
       "platform_framework": [
         "64"
@@ -107148,7 +106436,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传浮层组件全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -107353,7 +106641,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps",
+      "field_desc_zh": "透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -107796,7 +107084,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传 Popup 组件全部特性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": "Transparent all feature props of the Popup",
       "field_required": 0,
       "event_input": "",
@@ -108240,43 +107528,6 @@
       "field_type_text": [
         "Array",
         "TNode"
-      ]
-    },
-    {
-      "id": 3109,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SwipeCell",
-      "field_category": 1,
-      "field_name": "style",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 14:53:18",
-      "update_time": "2022-10-31 14:53:18",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {
@@ -110426,43 +109677,6 @@
       ]
     },
     {
-      "id": 3092,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "SwiperNavigation",
-      "field_category": 1,
-      "field_name": "customStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义组件样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-10-31 11:42:57",
-      "update_time": "2022-10-31 11:42:57",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "{\"Miniprogram\": \"0.25.0\"}",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 3251,
       "platform_framework": [
         "64"
@@ -111889,43 +111103,6 @@
       ]
     },
     {
-      "id": 1434,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "TabBar",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置外层元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-12 03:10:09",
-      "update_time": "2021-08-12 03:10:09",
-      "event_output": null,
-      "custom_field_type": "['t-class']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1376,
       "platform_framework": [
         "8",
@@ -112861,7 +112038,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -112894,7 +112072,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -116178,7 +115357,8 @@
       "id": 1712570553,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Tabs",
       "field_category": 1,
@@ -116207,7 +115387,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -116330,43 +115511,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 1320,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，分别用于设置 组件外层元素、选项卡单项、选项卡激活态、滚动条样式类名 等类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-07-16 05:59:12",
-      "update_time": "2022-03-04 06:18:14",
-      "event_output": null,
-      "custom_field_type": "['t-class', 't-class-item', 't-class-active', 't-class-track']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -117772,43 +116916,6 @@
       ],
       "field_type_text": [
         "Boolean"
-      ]
-    },
-    {
-      "id": 2390,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Tag",
-      "field_category": 1,
-      "field_name": "externalClasses",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件类名，用于设置 组件外层元素元素类名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-03-08 03:16:23",
-      "update_time": "2022-03-08 03:16:23",
-      "event_output": null,
-      "custom_field_type": "['t-class']",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -122733,7 +121840,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的参数",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -123986,7 +123093,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的参数",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -133359,7 +132466,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "透传给 popup 组件的全部属性",
+      "field_desc_zh": "透传 Popup 组件全部属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -136665,6 +135772,47 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1736168020,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "imageProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于在上传图片场景下，透传属性配置至 Image 组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-06 12:53:40",
+      "update_time": "2025-01-06 12:53:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"

@@ -136,7 +136,7 @@ export interface TdSubmenuProps {
    */
   icon?: TElement;
   /**
-   * 透传 Popup 组件全部特性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**

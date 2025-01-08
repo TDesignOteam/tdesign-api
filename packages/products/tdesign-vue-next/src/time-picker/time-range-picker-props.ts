@@ -47,7 +47,7 @@ export default {
     type: [String, Array] as PropType<TdTimeRangePickerProps['placeholder']>,
     default: undefined as TdTimeRangePickerProps['placeholder'],
   },
-  /** 透传给 popup 组件的参数 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdTimeRangePickerProps['popupProps']>,
   },

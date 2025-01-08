@@ -130,7 +130,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   placeholder?: string;
   /**
-   * 透传给 popup 组件的全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
