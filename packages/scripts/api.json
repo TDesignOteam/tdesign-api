@@ -112799,7 +112799,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -112832,7 +112833,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -116116,7 +116118,8 @@
       "id": 1712570553,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Tabs",
       "field_category": 1,
@@ -116145,7 +116148,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
