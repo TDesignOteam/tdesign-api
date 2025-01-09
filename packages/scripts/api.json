@@ -76288,6 +76288,7 @@
     {
       "id": 1712057349,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "NoticeBar",
@@ -76306,7 +76307,7 @@
       "update_time": "2024-04-02 11:29:09",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
@@ -76316,6 +76317,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -76776,6 +76778,7 @@
     {
       "id": 1712057632,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "NoticeBar",
@@ -76792,7 +76795,7 @@
       "update_time": "2024-04-02 11:33:52",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
@@ -76802,6 +76805,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
