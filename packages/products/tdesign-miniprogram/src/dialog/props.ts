@@ -37,10 +37,6 @@ const props: TdDialogProps = {
   content: {
     type: String,
   },
-  /** 组件类名，分别用于设置 组件外层元素、组件内容部分、确认按钮、取消按钮 等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 透传至 Overlay 组件 */
   overlayProps: {
     type: Object,
@@ -55,11 +51,6 @@ const props: TdDialogProps = {
   showOverlay: {
     type: Boolean,
     value: true,
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
   /** 标题 */
   title: {

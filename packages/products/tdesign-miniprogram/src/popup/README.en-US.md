@@ -26,6 +26,7 @@ z-index | Number | 11500 | \- | N
 name | params | description
 -- | -- | --
 visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
+
 ### Popup External Classes
 
 className | Description

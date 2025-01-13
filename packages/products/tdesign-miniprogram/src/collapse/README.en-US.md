@@ -37,6 +37,7 @@ header-left-icon | String / Slot | - | [see more ts definition](https://github.c
 header-right-content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 placement | String | bottom | `0.34.0`。options: bottom/top | N
 value | String / Number | - | \- | N
+
 ### CollapsePanel External Classes
 
 className | Description

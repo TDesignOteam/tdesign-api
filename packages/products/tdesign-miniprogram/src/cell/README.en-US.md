@@ -27,6 +27,7 @@ url | String | - | \- | N
 name | params | description
 -- | -- | --
 click | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)
+
 ### Cell External Classes
 
 className | Description
@@ -41,4 +42,22 @@ t-class-left-icon | \-
 t-class-note | \-
 t-class-right | \-
 t-class-right-icon | \-
+t-class-title | \-
+
+
+### CellGroup Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+bordered | Boolean | false | \- | N
+theme | String | default | options: default/card | N
+title | String | - | \- | N
+
+### CellGroup External Classes
+
+className | Description
+-- | --
+t-class | \-
 t-class-title | \-

@@ -14,6 +14,7 @@ column | Number | 4 | 每一行的列数量；为 0 时等于固定大小 | N
 gutter | Number | - | 间隔大小 | N
 hover | Boolean | false | 是否开启点击反馈 | N
 theme | String | default | 宫格的风格。可选项：default/card | N
+
 ### Grid External Classes
 
 类名 | 描述
@@ -42,6 +43,7 @@ url | String | - | 点击后的跳转链接 | N
 名称 | 参数 | 描述
 -- | -- | --
 click | \- | 点击子项后触发。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)
+
 ### GridItem External Classes
 
 类名 | 描述

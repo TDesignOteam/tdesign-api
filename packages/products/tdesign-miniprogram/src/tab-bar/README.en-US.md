@@ -22,6 +22,7 @@ default-value | String / Number / Array | undefined | uncontrolled property。Ty
 name | params | description
 -- | -- | --
 change | `(value: string \| number)` | \-
+
 ### TabBar External Classes
 
 className | Description

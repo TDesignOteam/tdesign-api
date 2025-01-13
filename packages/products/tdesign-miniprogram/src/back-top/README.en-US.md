@@ -20,6 +20,7 @@ visibility-height | Number | 200 | \- | N
 name | params | description
 -- | -- | --
 to-top | \- | \-
+
 ### BackTop External Classes
 
 className | Description
