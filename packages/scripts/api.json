@@ -111957,6 +111957,43 @@
       ]
     },
     {
+      "id": 1736959232,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 16:40:32",
+      "update_time": "2025-01-15 16:40:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 162,
       "platform_framework": [
         "1",
@@ -115610,6 +115647,43 @@
       ]
     },
     {
+      "id": 1736958919,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "middle",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间内容，介于头部和内容之间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 16:35:19",
+      "update_time": "2025-01-15 16:35:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 158,
       "platform_framework": [
         "1",
@@ -115889,6 +115963,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1736957554,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "split",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否展示分割线",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 16:12:34",
+      "update_time": "2025-01-15 16:12:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
