@@ -77604,7 +77604,8 @@
       "field_name": "value",
       "field_type": [
         "1",
-        "2"
+        "2",
+        "4"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -77632,7 +77633,8 @@
       ],
       "field_type_text": [
         "String",
-        "Number"
+        "Number",
+        "Boolean"
       ]
     },
     {
