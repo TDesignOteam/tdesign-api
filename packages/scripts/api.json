@@ -98703,7 +98703,7 @@
       "field_desc_zh": "当选择新创建的条目时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: string | number)",
+      "event_input": "(value: string | number | boolean)",
       "create_time": "2020-12-18 05:54:48",
       "update_time": "2021-01-04 03:50:39",
       "event_output": null,
