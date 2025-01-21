@@ -22678,7 +22678,7 @@
       ],
       "field_default_value": "middle",
       "field_enum": "top/middle/bottom",
-      "field_desc_zh": "内容的对齐方式，默认居中对齐",
+      "field_desc_zh": "右侧内容的对齐方式，默认居中对齐",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
