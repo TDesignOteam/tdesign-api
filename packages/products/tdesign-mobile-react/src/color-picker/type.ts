@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PopupProps } from '../popup';
 import { TElement } from '../common';
 
 export interface TdColorPickerProps {
@@ -37,11 +36,6 @@ export interface TdColorPickerProps {
    */
   header?: TElement;
   /**
-   * 透传 Popup 组件全部属性
-   * @default {}
-   */
-  popupProps?: PopupProps;
-  /**
    * 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色
    */
   swatchColors?: Array<string> | null;
@@ -50,11 +44,6 @@ export interface TdColorPickerProps {
    * @default base
    */
   type?: TypeEnum;
-  /**
-   * 是否使用弹出层包裹颜色选择器
-   * @default false
-   */
-  usePopup?: boolean;
   /**
    * 色值
    * @default ''
