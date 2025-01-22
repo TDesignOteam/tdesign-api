@@ -11849,7 +11849,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
+      "field_desc_zh": "纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
       "field_desc_en": null,
       "field_required": 1,
       "event_input": "(params: ComponentScrollToElementParams)",
