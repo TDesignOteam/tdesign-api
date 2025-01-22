@@ -8,7 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-align | String | middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
+align | String | middle | 右侧内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
 arrow | Boolean / Object | false | 是否显示右侧箭头 | N
 bordered | Boolean | true | 是否显示下边框 | N
 description | String / Slot | - | 下方内容描述。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

@@ -23,6 +23,10 @@ export default {
     type: Boolean,
     default: undefined,
   },
+  /** 当下拉联想词列表为空时显示的内容 */
+  empty: {
+    type: [String, Function] as PropType<TdAutoCompleteProps['empty']>,
+  },
   /** 自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable` */
   filter: {
     type: Function as PropType<TdAutoCompleteProps['filter']>,

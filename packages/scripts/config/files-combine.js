@@ -38,6 +38,7 @@ const GLOBAL_COMPONENTS_CONFIG = [
     'RateConfig',
     'EmptyConfig',
     'TypographyConfig',
+    'AutoCompleteConfig',
 ].sort((a, b) => a.localeCompare(b) > 0);
 
 const MESSAGE_LIST = [
