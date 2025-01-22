@@ -29041,6 +29041,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29072,6 +29073,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29203,6 +29205,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29234,6 +29237,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29617,6 +29621,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29648,6 +29653,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29657,6 +29663,7 @@
     {
       "id": 1705294739,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29685,6 +29692,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29778,6 +29786,7 @@
     {
       "id": 1705294511,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29806,6 +29815,7 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29895,6 +29905,7 @@
     {
       "id": 1705294804,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29921,6 +29932,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -30004,6 +30016,7 @@
     {
       "id": 1705394290,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -30030,6 +30043,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
