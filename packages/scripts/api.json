@@ -4782,6 +4782,49 @@
       ]
     },
     {
+      "id": 1736344917,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoComplete",
+      "field_category": 1,
+      "field_name": "empty",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当下拉联想词列表为空时显示的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-08 14:01:57",
+      "update_time": "2025-01-08 14:01:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 3158,
       "platform_framework": [
         "1",
@@ -5777,6 +5820,47 @@
         "Angular(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1736330829,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "AutoCompleteConfig",
+      "field_category": 1,
+      "field_name": "empty",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“暂无数据”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-08 10:07:09",
+      "update_time": "2025-01-08 10:07:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 1466,
@@ -11765,7 +11849,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "虚拟滚动场景，纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
+      "field_desc_zh": "纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
       "field_desc_en": null,
       "field_required": 1,
       "event_input": "(params: ComponentScrollToElementParams)",
@@ -22594,7 +22678,7 @@
       ],
       "field_default_value": "middle",
       "field_enum": "top/middle/bottom",
-      "field_desc_zh": "内容的对齐方式，默认居中对齐",
+      "field_desc_zh": "右侧内容的对齐方式，默认居中对齐",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -53341,6 +53425,47 @@
       ]
     },
     {
+      "id": 1736340408,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "autoComplete",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自动填充组件全局配置",
+      "field_desc_en": "AutoComplete global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-08 12:46:48",
+      "update_time": "2025-01-08 12:46:48",
+      "event_output": null,
+      "custom_field_type": "AutoCompleteConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1873,
       "platform_framework": [
         "1",
@@ -54790,6 +54915,7 @@
     {
       "id": 1777,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Grid",
@@ -54818,6 +54944,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -55060,6 +55187,43 @@
       "field_type_text": [
         "String",
         "Object"
+      ]
+    },
+    {
+      "id": 1736954183,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "GridItem",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标名称。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 15:16:23",
+      "update_time": "2025-01-15 15:16:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -63622,7 +63786,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "#0052d9",
       "field_enum": "",
       "field_desc_zh": "光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制",
       "field_desc_en": null,
@@ -66848,7 +67012,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "标题样式类",
+      "field_desc_zh": "输入框样式类",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -77479,7 +77643,8 @@
       "field_name": "value",
       "field_type": [
         "1",
-        "2"
+        "2",
+        "4"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -77507,7 +77672,8 @@
       ],
       "field_type_text": [
         "String",
-        "Number"
+        "Number",
+        "Boolean"
       ]
     },
     {
@@ -98613,7 +98779,7 @@
       "field_desc_zh": "当选择新创建的条目时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: string | number)",
+      "event_input": "(value: string | number | boolean)",
       "create_time": "2020-12-18 05:54:48",
       "update_time": "2021-01-04 03:50:39",
       "event_output": null,
@@ -111994,6 +112160,43 @@
       ]
     },
     {
+      "id": 1736961692,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TabPanel",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 17:21:32",
+      "update_time": "2025-01-15 17:21:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 162,
       "platform_framework": [
         "1",
@@ -115647,6 +115850,43 @@
       ]
     },
     {
+      "id": 1736961674,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "middle",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间内容，介于头部和内容之间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 17:21:14",
+      "update_time": "2025-01-15 17:21:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 158,
       "platform_framework": [
         "1",
@@ -115926,6 +116166,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1736961649,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Tabs",
+      "field_category": 1,
+      "field_name": "split",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否展示分割线",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-15 17:20:49",
+      "update_time": "2025-01-15 17:20:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -120526,6 +120803,43 @@
       ]
     },
     {
+      "id": 1737451311,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "placeholderClass",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "textarea-placeholder",
+      "field_enum": "",
+      "field_desc_zh": "指定 placeholder 的样式类，目前仅支持color,font-size和font-weight",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-01-21 09:21:51",
+      "update_time": "2025-01-21 09:21:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1712044962,
       "platform_framework": [
         "64"
@@ -121440,7 +121754,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "占位符样式类",
+      "field_desc_zh": "多行文本框样式类",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
