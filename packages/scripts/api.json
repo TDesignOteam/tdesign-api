@@ -29041,6 +29041,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29072,6 +29073,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29122,6 +29124,7 @@
     {
       "id": 1735814342,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29150,6 +29153,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29203,6 +29207,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29234,6 +29239,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29408,7 +29414,6 @@
       "id": 1730984839,
       "platform_framework": [
         "8",
-        "16",
         "32",
         "64"
       ],
@@ -29439,7 +29444,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -29617,6 +29621,7 @@
         "1",
         "2",
         "4",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29648,6 +29653,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29657,6 +29663,7 @@
     {
       "id": 1705294739,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29685,6 +29692,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29695,7 +29703,6 @@
       "id": 1730970213,
       "platform_framework": [
         "8",
-        "16",
         "32",
         "64"
       ],
@@ -29726,7 +29733,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -29778,6 +29784,7 @@
     {
       "id": 1705294511,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29806,6 +29813,7 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29860,7 +29868,8 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "16"
       ],
       "component": "ColorPicker",
       "field_category": 2,
@@ -29888,7 +29897,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -30004,6 +30014,7 @@
     {
       "id": 1705394290,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -30030,6 +30041,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
