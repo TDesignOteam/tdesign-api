@@ -23,6 +23,11 @@ export interface TdColorPickerProps {
    */
   enableAlpha?: boolean;
   /**
+   * 如果 color-picker 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true
+   * @default false
+   */
+  fixed?: boolean;
+  /**
    * 底部插槽，仅在 `usePopup` 为 `true` 时有效
    */
   footer?: TElement;
@@ -75,7 +80,15 @@ export interface TdColorPickerProps {
 
 export type TypeEnum = 'base' | 'multiple';
 
-export type ColorPickerChangeTrigger = 'palette-hue-bar' | 'palette-alpha-bar' | 'preset';
+export type ColorPickerChangeTrigger =
+  | 'palette-saturation-brightness'
+  | 'palette-saturation'
+  | 'palette-brightness'
+  | 'palette-hue-bar'
+  | 'palette-alpha-bar'
+  | 'input'
+  | 'preset'
+  | 'recent';
 
 export type ColorPickerTrigger = 'overlay';
 
