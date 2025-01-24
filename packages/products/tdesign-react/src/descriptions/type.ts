@@ -35,7 +35,7 @@ export interface TdDescriptionsProps {
    */
   items?: Array<TdDescriptionItemProps>;
   /**
-   * 自定义描述项标签的样式
+   * 自定义描述项标签的样式，需要配合 `tableLayout` 为 `auto` 才可以生效
    */
   labelStyle?: Styles;
   /**
