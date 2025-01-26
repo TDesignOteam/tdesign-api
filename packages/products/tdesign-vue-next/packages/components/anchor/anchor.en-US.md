@@ -6,7 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-affixProps | Object | - | Typescript：`AffixProps`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/packages/components/anchor/type.ts) | N
+affixProps | Object | - | Typescript：`AffixProps`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/anchor/type.ts) | N
 bounds | Number | 5 | \- | N
 container | String / Function | () => (() => window) | Typescript：`ScrollContainer`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 cursor | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

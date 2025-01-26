@@ -6,7 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-affixProps | Object | - | 透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性。TS 类型：`AffixProps`，[Affix API Documents](./affix?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/tree/develop/packages/components/anchor/type.ts) | N
+affixProps | Object | - | 透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性。TS 类型：`AffixProps`，[Affix API Documents](./affix?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/anchor/type.ts) | N
 bounds | Number | 5 | 锚点区域边界 | N
 container | String / Function | () => (() => window) | 指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`ScrollContainer`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 cursor | Slot / Function | - | 用于自定义选中项左侧游标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

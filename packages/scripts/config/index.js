@@ -75,7 +75,7 @@ const FRAMEWORK_MAP = {
         commonTypePath:
             'https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts',
         componentPath:
-            'https://github.com/Tencent/tdesign-vue-next/tree/develop/packages/components/',
+            'https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/',
         commonRelativePath: '../common',
         componentRelativiePath: '../',
         getDocs: getVueApiDocs,
