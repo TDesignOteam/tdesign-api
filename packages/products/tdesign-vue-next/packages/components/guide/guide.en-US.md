@@ -6,7 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-counter | Slot / Function | - | Typescript：`TNode<{ current: number; total: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+counter | Slot / Function | - | Typescript：`TNode<{ current: number; total: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 current | Number | - | `v-model` and `v-model:current` is supported | N
 defaultCurrent | Number | - | uncontrolled property | N
 finishButtonProps | Object | - | Typescript：`ButtonProps` | N
@@ -41,10 +41,10 @@ skip | `(context: { e: MouseEvent, current: number, total: number  })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-body | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-content | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
-element | String / Function | - | required。Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | Y
-highlightContent | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+body | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+content | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+element | String / Function | - | required。Typescript：`AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | Y
+highlightContent | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 highlightPadding | Number | - | \- | N
 mode | String | - | options: popup/dialog | N
 nextButtonProps | Object | - | Typescript：`ButtonProps` | N
@@ -55,4 +55,4 @@ prevButtonProps | Object | - | Typescript：`ButtonProps` | N
 showOverlay | Boolean | true | \- | N
 skipButtonProps | Object | - | Typescript：`ButtonProps` | N
 stepOverlayClass | String | - | \- | N
-title | String / Slot / Function | - | title of current step。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+title | String / Slot / Function | - | title of current step。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

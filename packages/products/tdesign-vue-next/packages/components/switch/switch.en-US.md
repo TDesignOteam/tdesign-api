@@ -9,7 +9,7 @@ name | type | default | description | required
 beforeChange | Function | - | Typescript：`() => boolean \| Promise<boolean>` | N
 customValue | Array | - | Typescript：`Array<SwitchValue>` | N
 disabled | Boolean | undefined | \- | N
-label | Array / Slot / Function | [] | Typescript：`Array<string \| TNode> \| TNode<{ value: SwitchValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+label | Array / Slot / Function | [] | Typescript：`Array<string \| TNode> \| TNode<{ value: SwitchValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 loading | Boolean | false | \- | N
 size | String | medium | options: small/medium/large | N
 value | String / Number / Boolean | - | `v-model` and `v-model:value` is supported。Typescript：`T` `type SwitchValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/switch/type.ts) | N

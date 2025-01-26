@@ -9,10 +9,10 @@ name | type | default | description | required
 checkAll | Boolean | false | \- | N
 checked | Boolean | false | `v-model` and `v-model:checked` is supported | N
 defaultChecked | Boolean | false | uncontrolled property | N
-default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 disabled | Boolean | undefined | \- | N
 indeterminate | Boolean | false | \- | N
-label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 lazyLoad | Boolean | false | load checkbox content when it entering the visible area | N
 name | String | - | \- | N
 readonly | Boolean | undefined | \- | N

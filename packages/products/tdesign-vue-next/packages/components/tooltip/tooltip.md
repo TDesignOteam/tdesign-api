@@ -17,9 +17,9 @@ theme | String | default | 文字提示风格。可选项：default/primary/succ
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
-content | String / Slot / Function | - | 文字提示内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+content | String / Slot / Function | - | 文字提示内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 placement | String | top | 提示浮层出现的位置。可选项：top/bottom/mouse | N
 showArrow | Boolean | true | 是否显示箭头 | N
 showShadow | Boolean | true | 文字提示浮层是否需要阴影 | N
 theme | String | default | 组件风格，有亮色模式和暗色模式两种。可选项：light/default | N
-triggerElement | String / Slot / Function | - | 触发元素。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+triggerElement | String / Slot / Function | - | 触发元素。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

@@ -23,7 +23,7 @@ showPreviousAndNextBtn | Boolean | true | \- | N
 size | String | medium | options：small/medium | N
 theme | String | default | options：default/simple | N
 total | Number | 0 | \- | N
-totalContent | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+totalContent | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 onChange | Function |  | Typescript：`(pageInfo: PageInfo) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/pagination/type.ts)。<br/>`interface PageInfo { current: number; previous: number; pageSize: number }`<br/> | N
 onCurrentChange | Function |  | Typescript：`(current: number, pageInfo: PageInfo) => void`<br/> | N
 onPageSizeChange | Function |  | Typescript：`(pageSize: number, pageInfo: PageInfo) => void`<br/> | N
@@ -43,7 +43,7 @@ name | type | default | description | required
 disabled | Boolean / Object | - | Typescript：`boolean \| JumperDisabledConfig` `type JumperDisabledConfig = { prev?: boolean; current?: boolean; next?: boolean; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/pagination/type.ts) | N
 layout | String | horizontal | horizontal or vertical。options：horizontal/vertical | N
 showCurrent | Boolean | true | Typescript：`boolean` | N
-size | String | medium | Button size。options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/src/common.ts) | N
+size | String | medium | Button size。options：small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 tips | Object | - | Typescript：`boolean \| JumperTipsConfig` `type JumperTipsConfig = { prev?: string; current?: string; next?: string; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/pagination/type.ts) | N
 variant | String | text | options：text/outline | N
 onChange | Function |  | Typescript：`(context: {e: MouseEvent, trigger: JumperTrigger}) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/tree/develop/src/pagination/type.ts)。<br/>`type JumperTrigger = 'prev' \| 'current' \| 'next'`<br/> | N
