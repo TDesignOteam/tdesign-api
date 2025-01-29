@@ -8,12 +8,12 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
-affixProps | Object | - | Typescript：`Omit<AffixProps, 'children'>`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/anchor/type.ts) | N
+affixProps | Object | - | Typescript：`Omit<AffixProps, 'children'>`，[Affix API Documents](./affix?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/anchor/type.ts) | N
 bounds | Number | 5 | \- | N
-container | String / Function | () => (() => window) | Typescript：`ScrollContainer`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
-cursor | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+container | String / Function | () => (() => window) | Typescript：`ScrollContainer`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+cursor | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 getCurrentAnchor | Function | - | Custom Highlighted Anchor Points。Typescript：`(activeLink: string) => string` | N
-size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 targetOffset | Number | 0 | \- | N
 onChange | Function |  | Typescript：`(currentLink: string, prevLink: string) => void`<br/> | N
 onClick | Function |  | Typescript：`(link: { href: string; title: string; e: MouseEvent }) => void`<br/> | N
@@ -28,7 +28,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 customScroll | Boolean | false | custom scroll effect, when set to true, clicking on an anchor link will not use JavaScript animation to smoothly scroll to the anchor target element. | N
 href | String | - | required | Y
 target | String | _self | options: _self/_blank/_parent/_top | N
-title | TNode | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
+title | TNode | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 
 
 ### AnchorTarget Props
