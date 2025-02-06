@@ -40921,9 +40921,7 @@
       "field_category": 1,
       "field_name": "confirmLoading",
       "field_type": [
-        "1",
-        "8",
-        "64"
+        "4"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
