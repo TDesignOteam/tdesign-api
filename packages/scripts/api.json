@@ -41149,7 +41149,7 @@
       ],
       "component": "DialogCard",
       "field_category": 16,
-      "field_name": "Pick<TdDialogProps, 'body' | 'cancelBtn' | 'closeBtn' | 'confirmBtn' | 'footer' | 'header' | 'theme' | 'onCancel' | 'onCloseBtnClick' | 'onConfirm'>",
+      "field_name": "Pick<TdDialogProps, 'body' | 'cancelBtn' | 'closeBtn' | 'confirmBtn' | 'footer' | 'header' | 'theme' | 'onCancel' | 'onCloseBtnClick' | 'onConfirm' | 'confirmLoading'>",
       "field_type": [
         "1",
         "64"
