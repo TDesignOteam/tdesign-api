@@ -63837,7 +63837,7 @@
       ],
       "field_default_value": "#0052d9",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "光标颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
