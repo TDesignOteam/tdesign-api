@@ -63897,7 +63897,8 @@
     {
       "id": 1735811572,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Input",
       "field_category": 1,
@@ -63907,7 +63908,7 @@
       ],
       "field_default_value": "#0052d9",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "光标颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -63925,7 +63926,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
