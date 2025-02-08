@@ -17650,6 +17650,7 @@
     {
       "id": 1734943734,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Calendar",
@@ -17663,7 +17664,7 @@
       "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(year: number; month: number)",
+      "event_input": "(year: number, month: number)",
       "create_time": "2024-12-23 08:48:55",
       "update_time": "2024-12-23 08:48:55",
       "event_output": null,
@@ -17678,44 +17679,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 1738919109,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Calendar",
-      "field_category": 2,
-      "field_name": "panelChange",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(year: number, month: number)",
-      "create_time": "2025-02-07 09:05:09",
-      "update_time": "2025-02-07 09:05:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -17768,7 +17733,7 @@
       "field_desc_zh": "滚动时触发",
       "field_desc_en": "triggered when scrolling",
       "field_required": 0,
-      "event_input": "(e: Event)",
+      "event_input": "({e: Event})",
       "create_time": "2025-02-07 11:31:40",
       "update_time": "2025-02-07 11:31:40",
       "event_output": null,
@@ -102849,43 +102814,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1738983633,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Slider",
-      "field_category": 1,
-      "field_name": "vertical",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否是垂直的滑块（渲染垂直滑块时，默认高度为200px，可通过修改`--td-slider-bar-height`来自定义高度）",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-02-08 03:00:33",
-      "update_time": "2025-02-08 03:00:33",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"

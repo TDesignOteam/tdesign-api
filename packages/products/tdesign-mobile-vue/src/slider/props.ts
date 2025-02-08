@@ -66,4 +66,8 @@ export default {
   },
   /** 滑块值变化时触发 */
   onChange: Function as PropType<TdSliderProps['onChange']>,
+  /** 结束拖动时触发 */
+  onDragend: Function as PropType<TdSliderProps['onDragend']>,
+  /** 开始拖动时触发 */
+  onDragstart: Function as PropType<TdSliderProps['onDragstart']>,
 };

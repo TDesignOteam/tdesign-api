@@ -36,7 +36,7 @@ export interface TdCalendarProps {
    */
   minDate?: number | Date;
   /**
-   * 【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
+   * 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
    * @default none
    */
   switchMode?: 'none' | 'month' | 'year-month';
@@ -83,6 +83,14 @@ export interface TdCalendarProps {
    * 点击确认按钮时触发
    */
   onConfirm?: (value: Date) => void;
+  /**
+   * 切换月或年时触发（switch-mode 不为 none 时有效）
+   */
+  onPanelChange?: (year: number, month: number) => void;
+  /**
+   * 滚动时触发
+   */
+  onScroll?: ({ e: Event }) => void;
   /**
    * 点击日期时触发
    */
