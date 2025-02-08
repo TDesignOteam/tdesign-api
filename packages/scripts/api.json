@@ -17664,7 +17664,7 @@
       "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(year: number, month: number)",
+      "event_input": "(context: { year: number, month: number })",
       "create_time": "2024-12-23 08:48:55",
       "update_time": "2024-12-23 08:48:55",
       "event_output": null,
