@@ -90,7 +90,7 @@ export interface TdCalendarProps {
   /**
    * 滚动时触发
    */
-  onScroll?: ({ e: Event }) => void;
+  onScroll?: (context: { e: Event }) => void;
   /**
    * 点击日期时触发
    */
