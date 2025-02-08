@@ -17733,7 +17733,7 @@
       "field_desc_zh": "滚动时触发",
       "field_desc_en": "triggered when scrolling",
       "field_required": 0,
-      "event_input": "({e: Event})",
+      "event_input": "(context: {e: Event})",
       "create_time": "2025-02-07 11:31:40",
       "update_time": "2025-02-07 11:31:40",
       "event_output": null,
