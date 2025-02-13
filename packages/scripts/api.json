@@ -25147,6 +25147,7 @@
     {
       "id": 3522,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -25157,7 +25158,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否开启无边框模式",
       "field_desc_en": null,
@@ -25177,6 +25178,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -26356,6 +26358,8 @@
     {
       "id": 3521,
       "platform_framework": [
+        "8",
+        "16",
         "32",
         "64"
       ],
@@ -26367,7 +26371,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
+      "field_desc_zh": "是否开启无边框模式。优先级低于 Checkbox.borderless",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -26385,6 +26389,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],

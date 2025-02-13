@@ -9,7 +9,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 block | Boolean | true | 是否为块级元素 | N
-borderless | Boolean | false | 是否开启无边框模式 | N
+borderless | Boolean | undefined | 是否开启无边框模式 | N
 checkAll | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
 checked | Boolean | false | 是否选中 | N
 defaultChecked | Boolean | false | 是否选中。非受控属性 | N
@@ -35,6 +35,7 @@ onChange | Function |  | TS 类型：`(checked: boolean, context: { e: ChangeEve
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+borderless | Boolean | false | 是否开启无边框模式。优先级低于 Checkbox.borderless | N
 disabled | Boolean | undefined | 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled | N
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 max | Number | undefined | 支持最多选中的数量 | N
