@@ -26,6 +26,11 @@ export interface TdMessageProps {
    */
   duration?: number;
   /**
+   * 两条 `message` 之间的间距
+   * @default 12
+   */
+  gap?: string | number | boolean;
+  /**
    * 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
    * @default true
    */
@@ -43,6 +48,11 @@ export interface TdMessageProps {
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
    */
   offset?: Array<string | number>;
+  /**
+   * 是否保持仅显示一条信息
+   * @default true
+   */
+  single?: boolean;
   /**
    * 消息组件风格
    * @default info
