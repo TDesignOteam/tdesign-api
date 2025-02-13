@@ -36005,6 +36005,7 @@
     {
       "id": 1710844322,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "DateTimePicker",
@@ -36033,6 +36034,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -36155,6 +36157,43 @@
       ],
       "field_type_text": [
         "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739431044,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "顶部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 07:17:24",
+      "update_time": "2025-02-13 07:17:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
         "TNode"
       ]
     },
@@ -36372,6 +36411,7 @@
     {
       "id": 3482,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -36391,7 +36431,7 @@
       "create_time": "2023-05-05 06:12:50",
       "update_time": "2023-05-05 06:12:50",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "Record<TimeModeValues, number>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -36402,6 +36442,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -36491,7 +36532,6 @@
     {
       "id": 1725285145,
       "platform_framework": [
-        "8",
         "16",
         "32",
         "64"
@@ -36522,10 +36562,46 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1739431358,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "usePopup",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用弹出层包裹",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 07:22:38",
+      "update_time": "2025-02-13 07:22:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -36579,6 +36655,7 @@
     {
       "id": 1522,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -36609,6 +36686,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -36760,6 +36838,7 @@
     {
       "id": 3354,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -36788,6 +36867,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -79728,6 +79808,7 @@
     {
       "id": 2834,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Picker",
@@ -79756,6 +79837,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -79976,6 +80058,7 @@
     {
       "id": 1710843235,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Picker",
@@ -80004,6 +80087,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80403,6 +80487,43 @@
       ]
     },
     {
+      "id": 1739431490,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "usePopup",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否使用弹出层包裹",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 07:24:50",
+      "update_time": "2025-02-13 07:24:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1719908481,
       "platform_framework": [
         "64"
@@ -80485,6 +80606,7 @@
     {
       "id": 1471,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -80515,6 +80637,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -80647,6 +80770,7 @@
     {
       "id": 3353,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Picker",
@@ -80673,6 +80797,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
