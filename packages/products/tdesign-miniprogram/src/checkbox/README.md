@@ -9,7 +9,7 @@
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 block | Boolean | true | 是否为块级元素 | N
-borderless | Boolean | false | 是否开启无边框模式 | N
+borderless | Boolean | undefined | 是否开启无边框模式 | N
 check-all | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
 checked | Boolean | false | 是否选中 | N
 default-checked | Boolean | undefined | 是否选中。非受控属性 | N
@@ -49,7 +49,7 @@ t-class-label | 标签样式类
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-borderless | Boolean | false | 是否开启无边框模式 | N
+borderless | Boolean | false | 是否开启无边框模式。优先级低于 Checkbox.borderless | N
 disabled | Boolean | undefined | 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled | N
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 max | Number | undefined | 支持最多选中的数量 | N
