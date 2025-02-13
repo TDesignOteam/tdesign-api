@@ -36852,7 +36852,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn'】",
+      "event_input": "(trigger: TriggerSource【import { TriggerSource } from '@Picker'】)",
       "create_time": "2023-02-28 12:33:00",
       "update_time": "2023-02-28 12:33:00",
       "event_output": null,
