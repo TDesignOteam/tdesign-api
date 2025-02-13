@@ -80212,6 +80212,43 @@
       ]
     },
     {
+      "id": 1739442023,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `columns ` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 10:20:23",
+      "update_time": "2025-02-13 10:20:23",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1729074658,
       "platform_framework": [
         "8",
