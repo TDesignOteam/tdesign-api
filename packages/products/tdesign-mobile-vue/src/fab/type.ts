@@ -13,6 +13,11 @@ export interface TdFabProps {
    */
   buttonProps?: ButtonProps;
   /**
+   * 是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动
+   * @default false
+   */
+  draggable?: boolean | FabDirectionEnum;
+  /**
    * 图标
    */
   icon?: TNode;
@@ -27,6 +32,10 @@ export interface TdFabProps {
    */
   text?: string;
   /**
+   * 设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]
+   */
+  yBounds?: Array<string | number>;
+  /**
    * 悬浮按钮点击事件
    */
   onClick?: (context: { e: MouseEvent }) => void;
@@ -39,3 +48,5 @@ export interface TdFabProps {
    */
   onDragStart?: (e: TouchEvent) => void;
 }
+
+export type FabDirectionEnum = 'all' | 'vertical' | 'horizontal';
