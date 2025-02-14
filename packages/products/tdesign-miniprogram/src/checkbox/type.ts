@@ -15,7 +15,6 @@ export interface TdCheckboxProps {
   };
   /**
    * 是否开启无边框模式
-   * @default false
    */
   borderless?: {
     type: BooleanConstructor;
