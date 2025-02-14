@@ -29,9 +29,9 @@ export interface TdFabProps {
   /**
    * 结束拖拽时触发
    */
-  onDragEnd?: (e: TouchEvent<HTMLDivElement>) => void;
+  onDragEnd?: (context: { e: TouchEvent<HTMLDivElement> }) => void;
   /**
    * 开始拖拽时触发
    */
-  onDragStart?: (e: TouchEvent<HTMLDivElement>) => void;
+  onDragStart?: (context: { e: TouchEvent<HTMLDivElement> }) => void;
 }

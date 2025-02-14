@@ -11,5 +11,5 @@ buttonProps | Object | - | Typescript：`ButtonProps`，[Button API Documents](.
 icon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 text | String | - | \- | N
 onClick | Function |  | Typescript：`(context: {e: MouseEvent}) => void`<br/> | N
-onDragEnd | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
-onDragStart | Function |  | Typescript：`(e: TouchEvent) => void`<br/> | N
+onDragEnd | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
+onDragStart | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N

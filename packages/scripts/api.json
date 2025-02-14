@@ -48177,46 +48177,10 @@
       ]
     },
     {
-      "id": 1725534756,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Fab",
-      "field_category": 1,
-      "field_name": "yBounds",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-09-05 11:12:36",
-      "update_time": "2024-09-05 11:12:36",
-      "event_output": null,
-      "custom_field_type": "Array<string | number>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 1739415473,
       "platform_framework": [
-        "8"
+        "8",
+        "64"
       ],
       "component": "Fab",
       "field_category": 1,
@@ -48244,7 +48208,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -48264,7 +48229,7 @@
       "field_desc_zh": "悬浮按钮点击事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "({e: Event})",
+      "event_input": "(context: {e: Event})",
       "create_time": "2022-03-31 10:47:02",
       "update_time": "2022-07-06 02:09:20",
       "event_output": null,
@@ -48336,7 +48301,7 @@
       "field_desc_zh": "结束拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:34:14",
       "update_time": "2024-12-23 11:34:14",
       "event_output": null,
@@ -48373,7 +48338,7 @@
       "field_desc_zh": "开始拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:33:43",
       "update_time": "2024-12-23 11:33:43",
       "event_output": null,
