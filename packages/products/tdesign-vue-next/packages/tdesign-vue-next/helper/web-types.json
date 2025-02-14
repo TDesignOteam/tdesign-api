@@ -512,6 +512,15 @@
               "default": "undefined"
             },
             {
+              "name": "empty",
+              "description": "当下拉联想词列表为空时显示的内容",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/auto-complete?tab=api#autocomplete-props",
+              "type": [
+                "String",
+                "TNode"
+              ]
+            },
+            {
               "name": "filter",
               "description": "自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/auto-complete?tab=api#autocomplete-props",
@@ -582,7 +591,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传 Popup 组件全部特性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/auto-complete?tab=api#autocomplete-props",
               "type": [
                 "Object"
@@ -729,6 +738,11 @@
             {
               "name": "default",
               "description": "触发显示联想词下拉框的元素，同 `triggerElement`",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/auto-complete?tab=api#autocomplete-props"
+            },
+            {
+              "name": "empty",
+              "description": "当下拉联想词列表为空时显示的内容",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/auto-complete?tab=api#autocomplete-props"
             },
             {
@@ -3763,7 +3777,7 @@
             },
             {
               "name": "popup-props",
-              "description": "参考 popup 组件 API",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/cascader?tab=api#cascader-props",
               "type": [
                 "Object"
@@ -5420,7 +5434,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的参数",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#datepicker-props",
               "type": [
                 "Object"
@@ -5919,7 +5933,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的参数",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/date-range-picker?tab=api#daterangepicker-props",
               "type": [
                 "Object"
@@ -6422,7 +6436,7 @@
             },
             {
               "name": "label-style",
-              "description": "style of description item\n\n自定义描述项标签的样式",
+              "description": "style of description item, which takes effect when `tableLayout` is `auto`\n\n自定义描述项标签的样式，需要配合 `tableLayout` 为 `auto` 才可以生效",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props",
               "type": [
                 "Object"
@@ -7509,7 +7523,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传  Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
+              "description": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props",
               "type": [
                 "Object"
@@ -11391,7 +11405,8 @@
               "doc-url": "https://tdesign.tencent.com/vue-next/components/option?tab=api#option-props",
               "type": [
                 "String",
-                "Number"
+                "Number",
+                "Boolean"
               ]
             }
           ],
@@ -11929,7 +11944,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传 Popup 组件属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/popconfirm?tab=api#popconfirm-props",
               "type": [
                 "Object"
@@ -13536,7 +13551,7 @@
             },
             {
               "name": "theme",
-              "description": "component Style\n\n组件风格",
+              "description": "Determine the style of radio when using options API\n\n用于在使用 options 方式渲染时决定组件的风格",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/radio-group?tab=api#radiogroup-props",
               "type": [
                 "String"
@@ -13939,7 +13954,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传 Popup 浮层组件全部属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/range-input-popup?tab=api#rangeinputpopup-props",
               "type": [
                 "Object"
@@ -14721,7 +14736,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的全部属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/select?tab=api#select-props",
               "type": [
                 "Object"
@@ -15216,7 +15231,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传 Popup 浮层组件全部属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/select-input?tab=api#selectinput-props",
               "type": [
                 "Object"
@@ -16360,7 +16375,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传浮层组件全部属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/sticky-item?tab=api#stickyitem-props",
               "type": [
                 "Object"
@@ -16464,7 +16479,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps",
+              "description": "透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/sticky-tool?tab=api#stickytool-props",
               "type": [
                 "Object"
@@ -16580,7 +16595,7 @@
             },
             {
               "name": "popup-props",
-              "description": "Transparent all feature props of the Popup\n\n透传 Popup 组件全部特性",
+              "description": "Transparent all feature props of the Popup\n\n透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/submenu?tab=api#submenu-props",
               "type": [
                 "Object"
@@ -18269,7 +18284,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的参数",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/time-picker?tab=api#timepicker-props",
               "type": [
                 "Object"
@@ -18539,7 +18554,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的参数",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/time-range-picker?tab=api#timerangepicker-props",
               "type": [
                 "Object"
@@ -20050,7 +20065,7 @@
             },
             {
               "name": "popup-props",
-              "description": "透传给 popup 组件的全部属性",
+              "description": "透传 Popup 组件全部属性",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/tree-select?tab=api#treeselect-props",
               "type": [
                 "Object"
@@ -20535,6 +20550,14 @@
             {
               "name": "headers",
               "description": "HTTP Request Header\n\n设置上传的请求头部，`action` 存在时有效",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/upload?tab=api#upload-props",
+              "type": [
+                "Object"
+              ]
+            },
+            {
+              "name": "image-props",
+              "description": "用于在上传图片场景下，透传属性配置至 Image 组件",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/upload?tab=api#upload-props",
               "type": [
                 "Object"
