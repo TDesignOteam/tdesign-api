@@ -48331,6 +48331,7 @@
     {
       "id": 1711969167,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Fab",
@@ -48360,6 +48361,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -48602,8 +48604,9 @@
       ]
     },
     {
-      "id": 1725534756,
+      "id": 1739415473,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Fab",
@@ -48614,12 +48617,12 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]",
+      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-09-05 11:12:36",
-      "update_time": "2024-09-05 11:12:36",
+      "create_time": "2025-02-13 02:57:53",
+      "update_time": "2025-02-13 02:57:53",
       "event_output": null,
       "custom_field_type": "Array<string | number>",
       "syntactic_sugar": null,
@@ -48632,6 +48635,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -48652,7 +48656,7 @@
       "field_desc_zh": "悬浮按钮点击事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "({e: Event})",
+      "event_input": "(context: {e: Event})",
       "create_time": "2022-03-31 10:47:02",
       "update_time": "2022-07-06 02:09:20",
       "event_output": null,
@@ -48724,7 +48728,7 @@
       "field_desc_zh": "结束拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:34:14",
       "update_time": "2024-12-23 11:34:14",
       "event_output": null,
@@ -48761,7 +48765,7 @@
       "field_desc_zh": "开始拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:33:43",
       "update_time": "2024-12-23 11:33:43",
       "event_output": null,
@@ -103290,6 +103294,43 @@
       ]
     },
     {
+      "id": 1739007105,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Slider",
+      "field_category": 1,
+      "field_name": "vertical",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否是垂直的滑块（渲染垂直滑块时，默认高度为200px，可通过修改`--td-slider-bar-height`来自定义高度）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-08 09:31:45",
+      "update_time": "2025-02-08 09:31:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1203,
       "platform_framework": [
         "1",
@@ -103374,9 +103415,6 @@
     {
       "id": 2001,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Slider",
@@ -103403,19 +103441,48 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1739523132,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Slider",
+      "field_category": 2,
+      "field_name": "dragend",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "结束拖动时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: SliderValue, context: {e: TouchEvent})",
+      "create_time": "2025-02-14 08:52:12",
+      "update_time": "2025-02-14 08:52:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
     {
       "id": 2000,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Slider",
@@ -103442,10 +103509,42 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1739523112,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Slider",
+      "field_category": 2,
+      "field_name": "dragstart",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "开始拖动时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: {e: TouchEvent})",
+      "create_time": "2025-02-14 08:51:52",
+      "update_time": "2025-02-14 08:51:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
