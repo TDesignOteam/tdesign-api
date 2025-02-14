@@ -39,7 +39,7 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
-  /** null */
+  /** 光标颜色 */
   cursorColor: {
     type: String,
     default: '#0052d9',

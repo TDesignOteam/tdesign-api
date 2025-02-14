@@ -22,6 +22,8 @@ visible | Boolean | false | \- | N
 onChange | Function |  | Typescript：`(value: Date) => void`<br/> | N
 onClose | Function |  | Typescript：`(trigger: CalendarTrigger) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
 onConfirm | Function |  | Typescript：`(value: Date) => void`<br/> | N
+onPanelChange | Function |  | Typescript：`(context: { year: number, month: number }) => void`<br/> | N
+onScroll | Function |  | Typescript：`(context: {e: Event}) => void`<br/>triggered when scrolling | N
 onSelect | Function |  | Typescript：`(value: Date) => void`<br/> | N
 
 ### Calendar Events
@@ -31,4 +33,6 @@ name | params | description
 change | `(value: Date)` | \-
 close | `(trigger: CalendarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/>
 confirm | `(value: Date)` | \-
+panel-change | `(context: { year: number, month: number })` | \-
+scroll | `(context: {e: Event})` | triggered when scrolling
 select | `(value: Date)` | \-
