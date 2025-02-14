@@ -42,7 +42,7 @@ export interface TdInputProps {
    */
   clearable?: boolean;
   /**
-   * null
+   * 光标颜色
    * @default #0052d9
    */
   cursorColor?: string;

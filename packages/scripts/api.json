@@ -17650,6 +17650,7 @@
     {
       "id": 1734943734,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Calendar",
@@ -17663,7 +17664,7 @@
       "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(year: number; month: number)",
+      "event_input": "(context: { year: number, month: number })",
       "create_time": "2024-12-23 08:48:55",
       "update_time": "2024-12-23 08:48:55",
       "event_output": null,
@@ -17678,6 +17679,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -17714,6 +17716,39 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1738927900,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Calendar",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动时触发",
+      "field_desc_en": "triggered when scrolling",
+      "field_required": 0,
+      "event_input": "(context: {e: Event})",
+      "create_time": "2025-02-07 11:31:40",
+      "update_time": "2025-02-07 11:31:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -20355,14 +20390,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_zh": "用来定义 value / label / children / disabled 在 `options` 中对应的字段别名",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2024-08-16 10:40:37",
       "update_time": "2024-08-16 10:40:37",
       "event_output": null,
-      "custom_field_type": "CascaderKeysType【type CascaderKeysType = KeysType】",
+      "custom_field_type": "CascaderKeysType【type CascaderKeysType = TreeKeysType】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -25112,6 +25147,7 @@
     {
       "id": 3522,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -25122,7 +25158,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否开启无边框模式",
       "field_desc_en": null,
@@ -25142,6 +25178,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -26321,6 +26358,8 @@
     {
       "id": 3521,
       "platform_framework": [
+        "8",
+        "16",
         "32",
         "64"
       ],
@@ -26332,7 +26371,7 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否开启无边框模式",
+      "field_desc_zh": "是否开启无边框模式。优先级低于 Checkbox.borderless",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -26350,6 +26389,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -26422,7 +26463,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -45365,7 +45406,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -64264,7 +64305,7 @@
       ],
       "field_default_value": "#0052d9",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "光标颜色",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -80598,6 +80639,43 @@
       ]
     },
     {
+      "id": 1739442023,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `columns ` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 10:20:23",
+      "update_time": "2025-02-13 10:20:23",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1729074658,
       "platform_framework": [
         "8",
@@ -90137,7 +90215,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
