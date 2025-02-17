@@ -29082,6 +29082,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29114,6 +29115,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29248,6 +29250,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29280,6 +29283,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29662,6 +29666,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29694,6 +29699,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29704,6 +29710,7 @@
     {
       "id": 1705294739,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -29733,6 +29740,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29825,6 +29833,7 @@
     {
       "id": 1705294511,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -29854,6 +29863,7 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29910,6 +29920,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16"
       ],
       "component": "ColorPicker",
@@ -29939,6 +29950,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -30055,6 +30067,7 @@
     {
       "id": 1705394290,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -30082,6 +30095,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
