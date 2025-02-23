@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Drawer Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -17,6 +16,7 @@ closeOnEscKeydown | Boolean | true | 按下 ESC 时是否触发抽屉关闭事�
 closeOnOverlayClick | Boolean | true | 点击蒙层时是否触发抽屉关闭事件 | N
 confirmBtn | TNode | - | 确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：`FooterButton` `type FooterButton = string \| ButtonProps \| TNode`，[Button API Documents](./button?tab=api)。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/drawer/type.ts) | N
 destroyOnClose | Boolean | false | 抽屉关闭时是否销毁节点 | N
+drawerClassName | String | - | 抽屉元素类名。 | N
 footer | TNode | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 或 null 不显示任何内容，值类型为 TNode 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 forceRender | Boolean | false | 是否强制渲染Drawer | N
 header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示头部，值类型为 string 则直接显示值，值类型为 TNode 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
