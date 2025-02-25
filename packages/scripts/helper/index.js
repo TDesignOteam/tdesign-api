@@ -62,20 +62,18 @@ function getHelperData(baseData, framework) {
   
 
   for (const key in baseData) {
-    const name = key==='GlobalConfigProvider'? 'ConfigProvider': key;
-    
-    if (!isComponent(key) && name!=='ConfigProvider') {
+    if (!isComponent(key)) {
       continue;
     }
 
-    volar.push(name);
+    volar.push(key);
 
-    const componentName = `${PREFIX}-${kebabCase(name)}`;
+    const componentName = `${PREFIX}-${kebabCase(key)}`;
     const props = [];
     const propsList = [];
     const slotsList = [];
     const eventsList = [];
-    const componentDocs = `${current.docsPath}${kebabCase(name)}`;
+    const componentDocs = `${current.docsPath}${kebabCase(key)}`;
     const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
 
     for (let i = 0; i < baseData[key].length; i++) {
@@ -86,7 +84,7 @@ function getHelperData(baseData, framework) {
 
       const prop = kebabCase(api.field_name);
       const attributeKey = `${componentName}/${prop}`;
-      const apiDocs = `${componentDocs}?tab=api#${name.toLowerCase()}`;
+      const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
 
       switch (api.field_category_text) {
