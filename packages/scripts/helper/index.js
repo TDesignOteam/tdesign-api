@@ -13,6 +13,7 @@ const map = require('../map.json');
 const { data: ALL_API } = require('../api.json');
 const { FRAMEWORK_MAP } = require('../config');
 const kebabCase = require('lodash/kebabCase');
+const uniq = require('lodash/uniq');
 const chalk = require('chalk');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
@@ -25,9 +26,10 @@ const PREFIX = 't';
 
 // 支持同名组件，如 TTable 和 TPrimaryTable 等效
 const aliasComponents = {
-  [`${PREFIX}-primary-table`]: `${PREFIX}-table`,
-  [`${PREFIX}-base-table`]: `${PREFIX}-table`,
-  [`${PREFIX}-radio`]: `${PREFIX}-radio-button`,
+  ['PrimaryTable']: 'Table',
+  ['BaseTable']: 'Table',
+  ['Radio']: 'RadioButton',
+  ['IconSVG']: 'Icon',
 };
 
 start();
@@ -50,7 +52,7 @@ function generateHelper(baseData, framework) {
   write(framework, 'tags.json', tags);
   write(framework, 'attributes.json', attributes);
   write(framework, 'web-types.json', webTypes);
-  writeVolar(framework,volar)
+  writeVolar(framework, volar);
 }
 
 function getHelperData(baseData, framework) {
@@ -67,8 +69,12 @@ function getHelperData(baseData, framework) {
     }
 
     volar.push(key);
+    if (aliasComponents[key]) {
+      volar.push(aliasComponents[key]);
+    }
 
     const componentName = `${PREFIX}-${kebabCase(key)}`;
+    const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCase(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
     const slotsList = [];
@@ -96,8 +102,8 @@ function getHelperData(baseData, framework) {
             description: `${apiDescription}\n\n${api.field_default_value ? `default: ${api.field_default_value}\n\n` : ''}[docs](${apiDocs}-props)`,
           };
           attributes[attributeKey] = attributesData;
-          if (aliasComponents[componentName]) {
-            attributes[`${aliasComponents[componentName]}/${prop}`] = attributesData;
+          if (aliasComponentName) {
+            attributes[`${aliasComponentName}/${prop}`] = attributesData;
           }
           propsList.push({
             name: prop,
@@ -134,8 +140,8 @@ function getHelperData(baseData, framework) {
             description: `${apiDescription}\n\n[docs](${apiDocs}-events)`,
           };
           attributes[attributeKey] = attributesData1;
-          if (aliasComponents[componentName]) {
-            attributes[`${aliasComponents[componentName]}/${prop}`] = attributesData1;
+          if (aliasComponentName) {
+            attributes[`${aliasComponentName}/${prop}`] = attributesData1;
           }
           eventsList.push({
             name: prop,
@@ -164,7 +170,7 @@ function getHelperData(baseData, framework) {
     };
     vueComponents.push(componentWebTypesData);
 
-    const moreNewComponent = aliasComponents[componentName]
+    const moreNewComponent = aliasComponentName;
     if (moreNewComponent) {
       vueComponents.push({ ...componentWebTypesData, name: moreNewComponent });
       tags[moreNewComponent] = tags[componentName];
@@ -186,7 +192,7 @@ function getHelperData(baseData, framework) {
         },
       },
     },
-    volar
+    volar: uniq(volar).sort((a, b) => a.localeCompare(b))
   }
 }
 
@@ -200,7 +206,7 @@ function write(framework, name, data) {
 
 function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
-  const readerGlobalComponents=data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
+  const readerGlobalComponents= data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
   const volarTemplate=`
   /**

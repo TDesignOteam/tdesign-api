@@ -69,6 +69,7 @@
       "clearable",
       "default",
       "disabled",
+      "empty",
       "filter",
       "filterable",
       "highlight-keyword",
@@ -562,6 +563,12 @@
     ],
     "description": "Comment\n\n评论\n\n[docs](https://tdesign.tencent.com/vue/components/comment)"
   },
+  "t-config-provider": {
+    "attributes": [
+      "global-config"
+    ],
+    "description": "ConfigProvider\n\n全局特性配置\n\n[docs](https://tdesign.tencent.com/vue/components/config-provider)"
+  },
   "t-date-picker": {
     "attributes": [
       "allow-input",
@@ -740,7 +747,19 @@
     "description": "Dialog\n\n对话框\n\n[docs](https://tdesign.tencent.com/vue/components/dialog)"
   },
   "t-dialog-card": {
-    "attributes": [],
+    "attributes": [
+      "body",
+      "cancel-btn",
+      "close-btn",
+      "confirm-btn",
+      "confirm-loading",
+      "footer",
+      "header",
+      "theme",
+      "cancel",
+      "close-btn-click",
+      "confirm"
+    ],
     "description": "DialogCard\n\n对话框卡片\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card)"
   },
   "t-divider": {
@@ -765,6 +784,7 @@
       "confirm-btn",
       "default",
       "destroy-on-close",
+      "drawer-class-name",
       "footer",
       "header",
       "mode",
@@ -937,6 +957,17 @@
     "description": "Header\n\n布局-头部\n\n[docs](https://tdesign.tencent.com/vue/components/header)"
   },
   "t-icon-svg": {
+    "attributes": [
+      "load-default-icons",
+      "name",
+      "size",
+      "style",
+      "url",
+      "click"
+    ],
+    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg)"
+  },
+  "t-icon": {
     "attributes": [
       "load-default-icons",
       "name",
@@ -2218,6 +2249,7 @@
       "format-request",
       "format-response",
       "headers",
+      "image-props",
       "image-viewer-props",
       "input-attributes",
       "is-batch-upload",

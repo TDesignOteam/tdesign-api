@@ -6,7 +6,9 @@
       "count",
       "description",
       "items",
+      "popup-props",
       "show-cancel",
+      "show-overlay",
       "theme",
       "visible",
       "cancel",
@@ -151,6 +153,8 @@
       "change",
       "close",
       "confirm",
+      "panel-change",
+      "scroll",
       "select"
     ],
     "description": "Calendar\n\n日历\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/calendar)"
@@ -218,6 +222,7 @@
   "t-checkbox": {
     "attributes": [
       "block",
+      "borderless",
       "check-all",
       "checked",
       "content",
@@ -239,6 +244,7 @@
   },
   "t-checkbox-group": {
     "attributes": [
+      "borderless",
       "disabled",
       "keys",
       "max",
@@ -296,6 +302,12 @@
       "close"
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker)"
+  },
+  "t-config-provider": {
+    "attributes": [
+      "global-config"
+    ],
+    "description": "ConfigProvider\n\n全局特性配置\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/config-provider)"
   },
   "t-count-down": {
     "attributes": [
@@ -426,10 +438,14 @@
   "t-fab": {
     "attributes": [
       "button-props",
+      "draggable",
       "icon",
       "style",
       "text",
-      "click"
+      "y-bounds",
+      "click",
+      "drag-end",
+      "drag-start"
     ],
     "description": "Fab\n\n悬浮按钮\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/fab)"
   },
@@ -485,6 +501,7 @@
       "border",
       "column",
       "gutter",
+      "hover",
       "theme"
     ],
     "description": "Grid\n\n栅格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/grid)"
@@ -493,6 +510,7 @@
     "attributes": [
       "badge",
       "description",
+      "icon",
       "image",
       "layout",
       "text"
@@ -502,9 +520,9 @@
   "t-guide": {
     "attributes": [
       "back-button-props",
-      "counter",
       "current",
       "finish-button-props",
+      "hide-back",
       "hide-counter",
       "hide-skip",
       "highlight-padding",
@@ -523,6 +541,17 @@
     "description": "Guide\n\n引导\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide)"
   },
   "t-icon-svg": {
+    "attributes": [
+      "load-default-icons",
+      "name",
+      "size",
+      "style",
+      "url",
+      "click"
+    ],
+    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon-svg)"
+  },
+  "t-icon": {
     "attributes": [
       "load-default-icons",
       "name",
@@ -603,6 +632,7 @@
       "borderless",
       "clear-trigger",
       "clearable",
+      "cursor-color",
       "disabled",
       "enterkeyhint",
       "format",
@@ -723,12 +753,14 @@
     "attributes": [
       "content",
       "direction",
+      "interval",
       "marquee",
       "operation",
       "prefix-icon",
       "suffix-icon",
       "theme",
       "visible",
+      "change",
       "click"
     ],
     "description": "NoticeBar\n\n公告栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/notice-bar)"
@@ -751,6 +783,7 @@
       "columns",
       "confirm-btn",
       "header",
+      "keys",
       "option",
       "render-label",
       "title",
@@ -968,12 +1001,16 @@
       "action",
       "autocomplete-options",
       "center",
+      "clear-trigger",
       "clearable",
       "disabled",
       "focus",
       "left-icon",
+      "maxcharacter",
+      "maxlength",
       "placeholder",
       "readonly",
+      "result-list",
       "shape",
       "value",
       "action-click",
@@ -1034,6 +1071,7 @@
       "step",
       "theme",
       "value",
+      "vertical",
       "change",
       "dragend",
       "dragstart"
@@ -1190,6 +1228,7 @@
       "badge-props",
       "destroy-on-hide",
       "disabled",
+      "icon",
       "label",
       "lazy",
       "panel",
@@ -1202,9 +1241,11 @@
       "animation",
       "bottom-line-mode",
       "list",
+      "middle",
       "show-bottom-line",
       "size",
       "space-evenly",
+      "split",
       "sticky",
       "sticky-props",
       "swipeable",

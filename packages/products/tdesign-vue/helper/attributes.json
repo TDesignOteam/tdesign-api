@@ -164,6 +164,10 @@
     "type": "Boolean",
     "description": "是否禁用\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue/components/auto-complete?tab=api#autocomplete-props)"
   },
+  "t-auto-complete/empty": {
+    "type": "String|TNode",
+    "description": "当下拉联想词列表为空时显示的内容\n\n[docs](https://tdesign.tencent.com/vue/components/auto-complete?tab=api#autocomplete-props)"
+  },
   "t-auto-complete/filter": {
     "type": "Function",
     "description": "自定义过滤规则，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。参数 `filterWords` 表示搜索词，`option`表示单个选项内容，返回值为 `true` 保留该选项，返回值为 `false` 则隐藏该选项。使用该方法时无需设置 `filterable`\n\n[docs](https://tdesign.tencent.com/vue/components/auto-complete?tab=api#autocomplete-props)"
@@ -198,7 +202,7 @@
   },
   "t-auto-complete/popup-props": {
     "type": "Object",
-    "description": "透传 Popup 组件全部特性\n\n[docs](https://tdesign.tencent.com/vue/components/auto-complete?tab=api#autocomplete-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/auto-complete?tab=api#autocomplete-props)"
   },
   "t-auto-complete/readonly": {
     "type": "Boolean",
@@ -1443,7 +1447,7 @@
   },
   "t-cascader/popup-props": {
     "type": "Object",
-    "description": "参考 popup 组件 API\n\n[docs](https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props)"
   },
   "t-cascader/popup-visible": {
     "type": "Boolean",
@@ -1959,6 +1963,10 @@
     "type": "String|TNode",
     "description": "回复\n\n[docs](https://tdesign.tencent.com/vue/components/comment?tab=api#comment-props)"
   },
+  "t-config-provider/global-config": {
+    "type": "Object",
+    "description": "global config\n\n全局配置\n\n[docs](https://tdesign.tencent.com/vue/components/config-provider?tab=api#configprovider-props)"
+  },
   "t-date-picker/allow-input": {
     "type": "Boolean",
     "description": "是否允许输入日期\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-props)"
@@ -2041,7 +2049,7 @@
   },
   "t-date-picker/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的参数\n\n[docs](https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/date-picker?tab=api#datepicker-props)"
   },
   "t-date-picker/prefix-icon": {
     "type": "TNode",
@@ -2250,7 +2258,7 @@
   },
   "t-date-range-picker/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的参数\n\n[docs](https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/date-range-picker?tab=api#daterangepicker-props)"
   },
   "t-date-range-picker/prefix-icon": {
     "type": "TNode",
@@ -2456,7 +2464,7 @@
   },
   "t-descriptions/label-style": {
     "type": "Object",
-    "description": "style of description item\n\n自定义描述项标签的样式\n\n[docs](https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props)"
+    "description": "style of description item, which takes effect when `tableLayout` is `auto`\n\n自定义描述项标签的样式，需要配合 `tableLayout` 为 `auto` 才可以生效\n\n[docs](https://tdesign.tencent.com/vue/components/descriptions?tab=api#descriptions-props)"
   },
   "t-descriptions/layout": {
     "type": "String",
@@ -2648,6 +2656,57 @@
     "type": "event",
     "description": "如果蒙层存在，点击蒙层时触发\n\n[docs](https://tdesign.tencent.com/vue/components/dialog?tab=api#dialog-events)"
   },
+  "t-dialog-card/body": {
+    "type": "String|TNode",
+    "description": "对话框内容\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/cancel-btn": {
+    "type": "String|Object|TNode",
+    "description": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/close-btn": {
+    "type": "String|Boolean|TNode",
+    "description": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/confirm-btn": {
+    "type": "String|Object|TNode",
+    "description": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/confirm-loading": {
+    "type": "Boolean",
+    "description": "confirm button loading status\n\n确认按钮加载状态\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/footer": {
+    "type": "Boolean|TNode",
+    "description": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/header": {
+    "type": "String|Boolean|TNode",
+    "description": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/theme": {
+    "type": "String",
+    "options": [
+      "default",
+      "info",
+      "warning",
+      "danger",
+      "success"
+    ],
+    "description": "对话框风格\n\ndefault: default\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-props)"
+  },
+  "t-dialog-card/cancel": {
+    "type": "event",
+    "description": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-events)"
+  },
+  "t-dialog-card/close-btn-click": {
+    "type": "event",
+    "description": "点击右上角关闭按钮时触发\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-events)"
+  },
+  "t-dialog-card/confirm": {
+    "type": "event",
+    "description": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发\n\n[docs](https://tdesign.tencent.com/vue/components/dialog-card?tab=api#dialogcard-events)"
+  },
   "t-divider/align": {
     "type": "String",
     "options": [
@@ -2720,6 +2779,10 @@
   "t-drawer/destroy-on-close": {
     "type": "Boolean",
     "description": "抽屉关闭时是否销毁节点\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-props)"
+  },
+  "t-drawer/drawer-class-name": {
+    "type": "String",
+    "description": "抽屉元素类名。\n\n[docs](https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-props)"
   },
   "t-drawer/footer": {
     "type": "Boolean|TNode",
@@ -2871,7 +2934,7 @@
   },
   "t-dropdown/popup-props": {
     "type": "Object",
-    "description": "透传  Popup 组件属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props)"
+    "description": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props)"
   },
   "t-dropdown/trigger": {
     "type": "String",
@@ -3284,7 +3347,15 @@
     "type": "Boolean",
     "description": "是否加载组件库内置图标\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
   },
+  "t-icon/load-default-icons": {
+    "type": "Boolean",
+    "description": "是否加载组件库内置图标\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
+  },
   "t-icon-svg/name": {
+    "type": "String",
+    "description": "图标名称\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
+  },
+  "t-icon/name": {
     "type": "String",
     "description": "图标名称\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
   },
@@ -3292,7 +3363,15 @@
     "type": "String",
     "description": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
   },
+  "t-icon/size": {
+    "type": "String",
+    "description": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
+  },
   "t-icon-svg/style": {
+    "type": "String",
+    "description": "可用于设置图标颜色，如：style=\\\"color: red\\\"\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
+  },
+  "t-icon/style": {
     "type": "String",
     "description": "可用于设置图标颜色，如：style=\\\"color: red\\\"\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
   },
@@ -3300,7 +3379,15 @@
     "type": "String|Array",
     "description": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.js)\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
   },
+  "t-icon/url": {
+    "type": "String|Array",
+    "description": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.js)\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-props)"
+  },
   "t-icon-svg/click": {
+    "type": "event",
+    "description": "点击时触发\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-events)"
+  },
+  "t-icon/click": {
     "type": "event",
     "description": "点击时触发\n\n[docs](https://tdesign.tencent.com/vue/components/icon-svg?tab=api#iconsvg-events)"
   },
@@ -4283,7 +4370,7 @@
     "description": "选项标题，在选项过长时hover选项展示\n\n[docs](https://tdesign.tencent.com/vue/components/option?tab=api#option-props)"
   },
   "t-option/value": {
-    "type": "String|Number",
+    "type": "String|Number|Boolean",
     "description": "选项值\n\n[docs](https://tdesign.tencent.com/vue/components/option?tab=api#option-props)"
   },
   "t-option-group/divider": {
@@ -4479,7 +4566,7 @@
   },
   "t-popconfirm/popup-props": {
     "type": "Object",
-    "description": "透传 Popup 组件属性\n\n[docs](https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/popconfirm?tab=api#popconfirm-props)"
   },
   "t-popconfirm/show-arrow": {
     "type": "Boolean",
@@ -5099,7 +5186,7 @@
       "radio",
       "button"
     ],
-    "description": "component Style\n\n组件风格\n\ndefault: radio\n\n[docs](https://tdesign.tencent.com/vue/components/radio-group?tab=api#radiogroup-props)"
+    "description": "Determine the style of radio when using options API\n\n用于在使用 options 方式渲染时决定组件的风格\n\ndefault: radio\n\n[docs](https://tdesign.tencent.com/vue/components/radio-group?tab=api#radiogroup-props)"
   },
   "t-radio-group/value": {
     "type": "String|Number|Boolean",
@@ -5255,7 +5342,7 @@
   },
   "t-range-input-popup/popup-props": {
     "type": "Object",
-    "description": "透传 Popup 浮层组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/range-input-popup?tab=api#rangeinputpopup-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/range-input-popup?tab=api#rangeinputpopup-props)"
   },
   "t-range-input-popup/popup-visible": {
     "type": "Boolean",
@@ -5570,7 +5657,7 @@
   },
   "t-select/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/select?tab=api#select-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/select?tab=api#select-props)"
   },
   "t-select/popup-visible": {
     "type": "Boolean",
@@ -5761,7 +5848,7 @@
   },
   "t-select-input/popup-props": {
     "type": "Object",
-    "description": "透传 Popup 浮层组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/select-input?tab=api#selectinput-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/select-input?tab=api#selectinput-props)"
   },
   "t-select-input/popup-visible": {
     "type": "Boolean",
@@ -6173,7 +6260,7 @@
   },
   "t-sticky-item/popup-props": {
     "type": "Object",
-    "description": "透传浮层组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/sticky-item?tab=api#stickyitem-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/sticky-item?tab=api#stickyitem-props)"
   },
   "t-sticky-item/trigger": {
     "type": "String",
@@ -6205,7 +6292,7 @@
   },
   "t-sticky-tool/popup-props": {
     "type": "Object",
-    "description": "透传 Popup 组件全部特性，优先级低于 StickyItem.popupProps\n\n[docs](https://tdesign.tencent.com/vue/components/sticky-tool?tab=api#stickytool-props)"
+    "description": "透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps\n\n[docs](https://tdesign.tencent.com/vue/components/sticky-tool?tab=api#stickytool-props)"
   },
   "t-sticky-tool/shape": {
     "type": "String",
@@ -6253,7 +6340,7 @@
   },
   "t-submenu/popup-props": {
     "type": "Object",
-    "description": "Transparent all feature props of the Popup\n\n透传 Popup 组件全部特性\n\n[docs](https://tdesign.tencent.com/vue/components/submenu?tab=api#submenu-props)"
+    "description": "Transparent all feature props of the Popup\n\n透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/submenu?tab=api#submenu-props)"
   },
   "t-submenu/title": {
     "type": "String|TNode",
@@ -6905,7 +6992,7 @@
   },
   "t-time-picker/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的参数\n\n[docs](https://tdesign.tencent.com/vue/components/time-picker?tab=api#timepicker-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/time-picker?tab=api#timepicker-props)"
   },
   "t-time-picker/presets": {
     "type": "Object",
@@ -7020,7 +7107,7 @@
   },
   "t-time-range-picker/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的参数\n\n[docs](https://tdesign.tencent.com/vue/components/time-range-picker?tab=api#timerangepicker-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/time-range-picker?tab=api#timerangepicker-props)"
   },
   "t-time-range-picker/presets": {
     "type": "Object",
@@ -7608,7 +7695,7 @@
   },
   "t-tree-select/popup-props": {
     "type": "Object",
-    "description": "透传给 popup 组件的全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props)"
+    "description": "透传 Popup 组件全部属性\n\n[docs](https://tdesign.tencent.com/vue/components/tree-select?tab=api#treeselect-props)"
   },
   "t-tree-select/popup-visible": {
     "type": "Boolean",
@@ -7796,6 +7883,10 @@
   "t-upload/headers": {
     "type": "Object",
     "description": "HTTP Request Header\n\n设置上传的请求头部，`action` 存在时有效\n\n[docs](https://tdesign.tencent.com/vue/components/upload?tab=api#upload-props)"
+  },
+  "t-upload/image-props": {
+    "type": "Object",
+    "description": "用于在上传图片场景下，透传属性配置至 Image 组件\n\n[docs](https://tdesign.tencent.com/vue/components/upload?tab=api#upload-props)"
   },
   "t-upload/image-viewer-props": {
     "type": "Object",
