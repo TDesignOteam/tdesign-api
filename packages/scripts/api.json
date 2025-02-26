@@ -63132,6 +63132,43 @@
       "field_type_text": []
     },
     {
+      "id": 1740567887,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 2,
+      "field_name": "download",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义预览图片下载操作，url为图片链接",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(url: string | File)",
+      "create_time": "2025-02-26 11:04:47",
+      "update_time": "2025-02-26 11:04:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2714,
       "platform_framework": [
         "1",
