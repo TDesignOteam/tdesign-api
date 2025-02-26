@@ -2,13 +2,10 @@
 
 ## API
 
-
 ### ConfigProvider Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-className | String | - | 类名 | N
-style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 globalConfig | Object | - | 全局配置。TS 类型：`GlobalConfigProvider` | N
 
 ### GlobalConfigProvider
