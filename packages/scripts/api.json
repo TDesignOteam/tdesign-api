@@ -30549,6 +30549,174 @@
       ]
     },
     {
+      "id": 1740488877,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ConfigProvider",
+      "field_category": 1,
+      "field_name": "globalConfig",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局配置",
+      "field_desc_en": "global config",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-25 13:07:57",
+      "update_time": "2025-02-25 13:07:57",
+      "event_output": null,
+      "custom_field_type": "GlobalConfigProvider",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1740540293,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "Content",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-26 03:24:53",
+      "update_time": "2025-02-26 03:24:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1740540122,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Content",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-26 03:22:02",
+      "update_time": "2025-02-26 03:22:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1740540046,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Content",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-26 03:20:46",
+      "update_time": "2025-02-26 03:20:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1511,
       "platform_framework": [
         "8",
@@ -40792,6 +40960,433 @@
       "field_type_text": []
     },
     {
+      "id": 1739543304,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "body",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话框内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:28:24",
+      "update_time": "2025-02-14 14:28:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543335,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "cancelBtn",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:28:55",
+      "update_time": "2025-02-14 14:28:55",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543363,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:29:23",
+      "update_time": "2025-02-14 14:29:23",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543397,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "confirmBtn",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:29:57",
+      "update_time": "2025-02-14 14:29:57",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543439,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "confirmLoading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "确认按钮加载状态",
+      "field_desc_en": "confirm button loading status",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:30:39",
+      "update_time": "2025-02-14 14:30:39",
+      "event_output": null,
+      "custom_field_type": "string | ButtonProps | TNode | null",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1739543482,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:31:22",
+      "update_time": "2025-02-14 14:31:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543515,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "1",
+        "4",
+        "64"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:31:55",
+      "update_time": "2025-02-14 14:31:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1739543544,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 1,
+      "field_name": "theme",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/info/warning/danger/success",
+      "field_desc_zh": "对话框风格",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-14 14:32:24",
+      "update_time": "2025-02-14 14:32:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1739543594,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "cancel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/info/warning/danger/success",
+      "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-02-14 14:33:14",
+      "update_time": "2025-02-14 14:33:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLButtonElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1739543624,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "closeBtnClick",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/info/warning/danger/success",
+      "field_desc_zh": "点击右上角关闭按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-02-14 14:33:44",
+      "update_time": "2025-02-14 14:33:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1739543673,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DialogCard",
+      "field_category": 2,
+      "field_name": "confirm",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "default",
+      "field_enum": "default/info/warning/danger/success",
+      "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent | KeyboardEvent })",
+      "create_time": "2025-02-14 14:34:33",
+      "update_time": "2025-02-14 14:34:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLButtonElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3325,
       "platform_framework": [
         "1",
@@ -40800,7 +41395,7 @@
       ],
       "component": "DialogCard",
       "field_category": 16,
-      "field_name": "Pick<TdDialogProps, 'body' | 'cancelBtn' | 'closeBtn' | 'confirmBtn' | 'footer' | 'header' | 'theme' | 'onCancel' | 'onCloseBtnClick' | 'onConfirm'>",
+      "field_name": "Pick<TdDialogProps, 'body' | 'cancelBtn' | 'closeBtn' | 'confirmBtn' | 'footer' | 'header' | 'theme' | 'onCancel' | 'onCloseBtnClick' | 'onConfirm' | 'confirmLoading'>",
       "field_type": [
         "1",
         "64"
@@ -42323,6 +42918,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1740207527,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "drawerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉元素类名。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-22 06:58:47",
+      "update_time": "2025-02-22 06:58:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -47904,6 +48540,7 @@
     {
       "id": 1711969167,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Fab",
@@ -47933,6 +48570,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -48175,8 +48813,9 @@
       ]
     },
     {
-      "id": 1725534756,
+      "id": 1739415473,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Fab",
@@ -48187,12 +48826,12 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]",
+      "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-09-05 11:12:36",
-      "update_time": "2024-09-05 11:12:36",
+      "create_time": "2025-02-13 02:57:53",
+      "update_time": "2025-02-13 02:57:53",
       "event_output": null,
       "custom_field_type": "Array<string | number>",
       "syntactic_sugar": null,
@@ -48205,6 +48844,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -48225,7 +48865,7 @@
       "field_desc_zh": "悬浮按钮点击事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "({e: Event})",
+      "event_input": "(context: {e: Event})",
       "create_time": "2022-03-31 10:47:02",
       "update_time": "2022-07-06 02:09:20",
       "event_output": null,
@@ -48297,7 +48937,7 @@
       "field_desc_zh": "结束拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:34:14",
       "update_time": "2024-12-23 11:34:14",
       "event_output": null,
@@ -48334,7 +48974,7 @@
       "field_desc_zh": "开始拖拽时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(e: TouchEvent)",
+      "event_input": "(context: { e: TouchEvent })",
       "create_time": "2024-12-23 11:33:43",
       "update_time": "2024-12-23 11:33:43",
       "event_output": null,
@@ -62488,6 +63128,43 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1740567887,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ImageViewer",
+      "field_category": 2,
+      "field_name": "download",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义预览图片下载操作，url为图片链接",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(url: string | File)",
+      "create_time": "2025-02-26 11:04:47",
+      "update_time": "2025-02-26 11:04:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -80210,6 +80887,43 @@
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1739442023,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "keys",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用来定义 value / label / disabled 在 `columns ` 中对应的字段别名",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-13 10:20:23",
+      "update_time": "2025-02-13 10:20:23",
+      "event_output": null,
+      "custom_field_type": "KeysType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -102830,6 +103544,43 @@
       ]
     },
     {
+      "id": 1739007105,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Slider",
+      "field_category": 1,
+      "field_name": "vertical",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否是垂直的滑块（渲染垂直滑块时，默认高度为200px，可通过修改`--td-slider-bar-height`来自定义高度）",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-08 09:31:45",
+      "update_time": "2025-02-08 09:31:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1203,
       "platform_framework": [
         "1",
@@ -102914,9 +103665,6 @@
     {
       "id": 2001,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Slider",
@@ -102943,19 +103691,48 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1739523132,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Slider",
+      "field_category": 2,
+      "field_name": "dragend",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "结束拖动时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: SliderValue, context: {e: TouchEvent})",
+      "create_time": "2025-02-14 08:52:12",
+      "update_time": "2025-02-14 08:52:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
     {
       "id": 2000,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "Slider",
@@ -102982,10 +103759,42 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1739523112,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Slider",
+      "field_category": 2,
+      "field_name": "dragstart",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "开始拖动时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: {e: TouchEvent})",
+      "create_time": "2025-02-14 08:51:52",
+      "update_time": "2025-02-14 08:51:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },

@@ -12,6 +12,11 @@ export default {
   buttonProps: {
     type: Object as PropType<TdFabProps['buttonProps']>,
   },
+  /** 是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动 */
+  draggable: {
+    type: [String, Boolean] as PropType<TdFabProps['draggable']>,
+    default: false,
+  },
   /** 图标 */
   icon: {
     type: Function as PropType<TdFabProps['icon']>,
@@ -25,6 +30,10 @@ export default {
   text: {
     type: String,
     default: '',
+  },
+  /** 设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80] */
+  yBounds: {
+    type: Array as PropType<TdFabProps['yBounds']>,
   },
   /** 悬浮按钮点击事件 */
   onClick: Function as PropType<TdFabProps['onClick']>,
