@@ -40,7 +40,7 @@
       "size",
       "collapsed-item-click"
     ],
-    "description": "AvatarGroup\n\n头像组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/avatar-group)"
+    "description": "AvatarGroup\n\n头像组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/avatar)"
   },
   "t-back-top": {
     "attributes": [
@@ -91,7 +91,7 @@
       "row-click",
       "scroll"
     ],
-    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/base-table)"
+    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
   },
   "t-table": {
     "attributes": [
@@ -115,7 +115,7 @@
       "row-click",
       "scroll"
     ],
-    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/base-table)"
+    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
   },
   "t-button": {
     "attributes": [
@@ -200,7 +200,7 @@
       "theme",
       "title"
     ],
-    "description": "CellGroup\n\n单元格组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cell-group)"
+    "description": "CellGroup\n\n单元格组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cell)"
   },
   "t-check-tag": {
     "attributes": [
@@ -217,7 +217,7 @@
       "click",
       "close"
     ],
-    "description": "CheckTag\n\n可选标签\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/check-tag)"
+    "description": "CheckTag\n\n可选标签\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag)"
   },
   "t-checkbox": {
     "attributes": [
@@ -254,7 +254,7 @@
       "value",
       "change"
     ],
-    "description": "CheckboxGroup\n\n多选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox-group)"
+    "description": "CheckboxGroup\n\n多选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox)"
   },
   "t-col": {
     "attributes": [
@@ -288,7 +288,7 @@
       "placement",
       "value"
     ],
-    "description": "CollapsePanel\n\n折叠面板\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/collapse-panel)"
+    "description": "CollapsePanel\n\n折叠面板\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/collapse)"
   },
   "t-color-picker": {
     "attributes": [
@@ -414,7 +414,7 @@
       "confirm",
       "reset"
     ],
-    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item)"
+    "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu)"
   },
   "t-dropdown-menu": {
     "attributes": [
@@ -493,7 +493,7 @@
       "rules",
       "show-error-message"
     ],
-    "description": "FormItem\n\n表单元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form-item)"
+    "description": "FormItem\n\n表单元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form)"
   },
   "t-grid": {
     "attributes": [
@@ -549,7 +549,7 @@
       "url",
       "click"
     ],
-    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon-svg)"
+    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
   },
   "t-icon": {
     "attributes": [
@@ -560,7 +560,7 @@
       "url",
       "click"
     ],
-    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon-svg)"
+    "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
   },
   "t-iconfont": {
     "attributes": [
@@ -572,7 +572,7 @@
       "url",
       "click"
     ],
-    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/iconfont)"
+    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
   },
   "t-image": {
     "attributes": [
@@ -621,7 +621,7 @@
     "attributes": [
       "index"
     ],
-    "description": "IndexesAnchor\n\n索引锚点\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/indexes-anchor)"
+    "description": "IndexesAnchor\n\n索引锚点\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/indexes)"
   },
   "t-input": {
     "attributes": [
@@ -928,7 +928,7 @@
       "value",
       "change"
     ],
-    "description": "RadioGroup\n\n单选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio-group)"
+    "description": "RadioGroup\n\n单选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio)"
   },
   "t-range-input": {
     "attributes": [
@@ -961,7 +961,7 @@
       "status",
       "tips"
     ],
-    "description": "RangeInputPopup\n\n范围输入框触发器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/range-input-popup)"
+    "description": "RangeInputPopup\n\n范围输入框触发器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/range-input)"
   },
   "t-rate": {
     "attributes": [
@@ -1047,7 +1047,7 @@
       "label",
       "value"
     ],
-    "description": "SideBarItem\n\n侧边导航项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/side-bar-item)"
+    "description": "SideBarItem\n\n侧边导航项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/side-bar)"
   },
   "t-skeleton": {
     "attributes": [
@@ -1100,7 +1100,7 @@
       "title",
       "title-right"
     ],
-    "description": "StepItem\n\n步骤\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/step-item)"
+    "description": "StepItem\n\n步骤\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps)"
   },
   "t-stepper": {
     "attributes": [
@@ -1221,7 +1221,7 @@
       "sub-tab-bar",
       "value"
     ],
-    "description": "TabBarItem\n\n标签栏选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar-item)"
+    "description": "TabBarItem\n\n标签栏选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"
   },
   "t-tab-panel": {
     "attributes": [
@@ -1234,7 +1234,7 @@
       "panel",
       "value"
     ],
-    "description": "TabPanel\n\n选项卡面板\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-panel)"
+    "description": "TabPanel\n\n选项卡面板\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tabs)"
   },
   "t-tabs": {
     "attributes": [

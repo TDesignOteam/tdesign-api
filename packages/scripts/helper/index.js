@@ -8,10 +8,11 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { groupByComponent, formatArrayToMap, isComponent, componentsMap } = require('../common');
+const { groupByComponent, formatArrayToMap, isComponent, componentsMap, getApiComponentMapByFrameWork } = require('../common');
+const { getParentByChildComponent } = require('../vitest/utils');
 const map = require('../map.json');
 const { data: ALL_API } = require('../api.json');
-const { FRAMEWORK_MAP } = require('../config');
+const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
 const kebabCase = require('lodash/kebabCase');
 const uniq = require('lodash/uniq');
 const chalk = require('chalk');
@@ -57,6 +58,7 @@ function generateHelper(baseData, framework) {
 
 function getHelperData(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
+  const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
   const tags = {};
   const attributes = {};
   const vueComponents = [];
@@ -79,7 +81,9 @@ function getHelperData(baseData, framework) {
     const propsList = [];
     const slotsList = [];
     const eventsList = [];
-    const componentDocs = `${current.docsPath}${kebabCase(key)}`;
+    const parentComponent = getParentByChildComponent(cmpMap,key);
+    const componentDocsName = parentComponent || key;
+    const componentDocs = `${current.docsPath}${kebabCase(componentDocsName)}`;
     const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
 
     for (let i = 0; i < baseData[key].length; i++) {
@@ -89,7 +93,7 @@ function getHelperData(baseData, framework) {
       }
 
       const prop = kebabCase(api.field_name);
-      const attributeKey = `${componentName}/${prop}`;
+      const attributeKey = `${componentName}/${prop}`; 
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
 

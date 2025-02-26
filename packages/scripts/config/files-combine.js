@@ -186,6 +186,7 @@ const COMPONENT_API_MD_MAP = {
     },
     Popup: ['Popup', '$Popup'],
     Typography: [
+        'Typography',
         'Text',
         'Title',
         'Paragraph',

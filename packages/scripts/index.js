@@ -47,6 +47,7 @@ const {
 } = require('./vitest/tests/core/utils');
 const chalk = require('chalk');
 const pick = require('lodash/pick');
+const has = require('lodash/has');
 const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 
 /**
@@ -120,7 +121,13 @@ function generateComponentApi() {
         framework === 'Miniprogram' ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP): COMPONENT_API_MD_MAP),
         framework
     );
-    const baseData = pick(frameworkData, cmpMap[component] || [component]);
+    let baseData = pick(frameworkData, cmpMap[component] || [component]);
+    // baseData = cmpMap[component].reduce((acc, key) => {
+    //     if (!has(acc, key)) {
+    //         acc[key] = [];
+    //     }
+    //     return acc;
+    // }, baseData);
     const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
 
     if (!onlyDocs) {
