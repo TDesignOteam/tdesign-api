@@ -8,7 +8,7 @@ import { TdImageViewerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
+  /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdImageViewerProps['attach']>,
     default: 'body' as TdImageViewerProps['attach'],
@@ -105,6 +105,8 @@ export default {
   },
   /** 关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键 */
   onClose: Function as PropType<TdImageViewerProps['onClose']>,
+  /** 自定义预览图片下载操作，url为图片链接 */
+  onDownload: Function as PropType<TdImageViewerProps['onDownload']>,
   /** 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片 */
   onIndexChange: Function as PropType<TdImageViewerProps['onIndexChange']>,
 };

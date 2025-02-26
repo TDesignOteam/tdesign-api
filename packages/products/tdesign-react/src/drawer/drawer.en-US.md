@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Drawer Props
 
 name | type | default | description | required
@@ -17,6 +16,7 @@ closeOnEscKeydown | Boolean | true | trigger drawer close event on `ESC` keydown
 closeOnOverlayClick | Boolean | true | \- | N
 confirmBtn | TNode | - | Typescript：`FooterButton` `type FooterButton = string \| ButtonProps \| TNode`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/drawer/type.ts) | N
 destroyOnClose | Boolean | false | \- | N
+drawerClassName | String | - | \- | N
 footer | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
 forceRender | Boolean | false | to force render Drawer | N
 header | TNode | true | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/src/common.ts) | N
