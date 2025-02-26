@@ -33,6 +33,7 @@ declare module '@vue/runtime-core' {
     TColorPicker: typeof import('tdesign-vue')['ColorPicker'];
     TComment: typeof import('tdesign-vue')['Comment'];
     TConfigProvider: typeof import('tdesign-vue')['ConfigProvider'];
+    TContent: typeof import('tdesign-vue')['Content'];
     TDatePicker: typeof import('tdesign-vue')['DatePicker'];
     TDatePickerPanel: typeof import('tdesign-vue')['DatePickerPanel'];
     TDateRangePicker: typeof import('tdesign-vue')['DateRangePicker'];
