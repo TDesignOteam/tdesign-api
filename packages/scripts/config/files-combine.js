@@ -82,7 +82,7 @@ const TABLE_LIST = [
     'TableEditableCellConfig',
     'TableTreeConfig',
 ];
-const GLOBAL_CONFIG_PROVIDER = ['GlobalConfigProvider'].concat(
+const GLOBAL_CONFIG_PROVIDER = ['ConfigProvider','GlobalConfigProvider'].concat(
     GLOBAL_COMPONENTS_CONFIG
 );
 const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
@@ -186,6 +186,7 @@ const COMPONENT_API_MD_MAP = {
     },
     Popup: ['Popup', '$Popup'],
     Typography: [
+        'Typography',
         'Text',
         'Title',
         'Paragraph',

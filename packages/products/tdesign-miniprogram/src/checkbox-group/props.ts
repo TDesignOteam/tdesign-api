@@ -6,7 +6,7 @@
 
 import { TdCheckboxGroupProps } from './type';
 const props: TdCheckboxGroupProps = {
-  /** 是否开启无边框模式 */
+  /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: {
     type: Boolean,
     value: false,

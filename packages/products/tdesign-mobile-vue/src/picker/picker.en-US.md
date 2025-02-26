@@ -12,6 +12,7 @@ columns | Array / Function | [] | required。Typescript：`PickerColumn \| Array
 confirmBtn | String / Boolean | true | Typescript：`boolean \| string` | N
 footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 option | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 renderLabel | Function | - | Typescript：`(item: PickerColumnItem) => string` | N
 title | String | '' | \- | N

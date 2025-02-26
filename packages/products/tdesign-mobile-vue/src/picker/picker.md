@@ -12,6 +12,7 @@ columns | Array / Function | [] | 必需。配置每一列的选项。TS 类型�
 confirmBtn | String / Boolean | true | 确定按钮文字。TS 类型：`boolean \| string` | N
 footer | Slot / Function | - | 底部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 header | Slot / Function | - | 自定义头部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+keys | Object | - | 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 option | Slot / Function | - | 自定义选项内容。参数为 `option: PickerColumnItem, index: number`。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 renderLabel | Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
 title | String | '' | 标题 | N
