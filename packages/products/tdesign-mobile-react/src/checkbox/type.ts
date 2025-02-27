@@ -15,7 +15,6 @@ export interface TdCheckboxProps {
   block?: boolean;
   /**
    * 是否开启无边框模式
-   * @default false
    */
   borderless?: boolean;
   /**
@@ -99,11 +98,16 @@ export interface TdCheckboxProps {
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
+   * 是否开启无边框模式。优先级低于 Checkbox.borderless
+   * @default false
+   */
+  borderless?: boolean;
+  /**
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: KeysType;
   /**
