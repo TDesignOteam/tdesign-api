@@ -26,6 +26,7 @@ visible | Boolean | false | hide or show image viewer。`v-model` is supported |
 defaultVisible | Boolean | false | hide or show image viewer。uncontrolled property | N
 zIndex | Number | - | \- | N
 onClose | Function |  | Typescript：`(context: { trigger: 'close-btn' \| 'overlay' \| 'esc'; e: MouseEvent \| KeyboardEvent }) => void`<br/> | N
+onDownload | Function |  | Typescript：`(url: string \| File) => void`<br/> | N
 onIndexChange | Function |  | Typescript：`(index: number, context: { trigger: 'prev' \| 'next' \| 'current' }) => void`<br/> | N
 
 ### ImageViewer Events
@@ -33,4 +34,5 @@ onIndexChange | Function |  | Typescript：`(index: number, context: { trigger: 
 name | params | description
 -- | -- | --
 close | `(context: { trigger: 'close-btn' \| 'overlay' \| 'esc'; e: MouseEvent \| KeyboardEvent })` | \-
+download | `(url: string \| File)` | \-
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' \| 'current' })` | \-
