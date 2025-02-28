@@ -40,5 +40,5 @@ pick | `(value: Array<PickerValue>, label: string, column: number, index: number
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-format | Function | - | 格式化标签。TS 类型：`(option: PickerItemOption) => string` | N
+format | Function | - | 格式化标签。TS 类型：`(option: PickerItemOption, columnIndex: number) => PickerItemOption` | N
 options | Array | [] | 数据源。TS 类型：`PickerItemOption[]` `interface PickerItemOption { label: string; value: string \| number }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/picker-item/type.ts) | N

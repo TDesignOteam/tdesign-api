@@ -39,6 +39,10 @@ const props: TdDateTimePickerProps = {
     type: String,
     value: 'YYYY-MM-DD HH:mm:ss',
   },
+  /** 格式化标签 */
+  formatter: {
+    type: null,
+  },
   /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容 */
   header: {
     type: Boolean,
