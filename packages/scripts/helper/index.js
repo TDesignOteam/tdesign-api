@@ -18,6 +18,7 @@ const uniq = require('lodash/uniq');
 const chalk = require('chalk');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
+const { formatType } = require('../types');
  /**
   * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
   */
@@ -96,8 +97,9 @@ function getHelperData(baseData, framework) {
       const attributeKey = `${componentName}/${prop}`; 
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
-
+      const rType = formatType(api,framework);
       switch (api.field_category_text) {
+        
         case 'Props':
           props.push(prop);
           const attributesData = {
@@ -113,7 +115,7 @@ function getHelperData(baseData, framework) {
             name: prop,
             description: apiDescription,
             'doc-url': `${apiDocs}-props`,
-            type: api.field_type_text,
+            type: rType ? rType.type : api.field_type_text,
             default: api.field_default_value || undefined,
             'attribute-value': api.field_enum
               ? { type: /^string$/i.test(api.field_type_text.join('')) ? 'enum' : 'of-match' }
