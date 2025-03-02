@@ -32,7 +32,7 @@ export default {
   minDate: {
     type: [Number, Date] as PropType<TdCalendarProps['minDate']>,
   },
-  /** 【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换 */
+  /** 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换 */
   switchMode: {
     type: String as PropType<TdCalendarProps['switchMode']>,
     default: 'none' as TdCalendarProps['switchMode'],
@@ -80,6 +80,10 @@ export default {
   onClose: Function as PropType<TdCalendarProps['onClose']>,
   /** 点击确认按钮时触发 */
   onConfirm: Function as PropType<TdCalendarProps['onConfirm']>,
+  /** 切换月或年时触发（switch-mode 不为 none 时有效） */
+  onPanelChange: Function as PropType<TdCalendarProps['onPanelChange']>,
+  /** 滚动时触发 */
+  onScroll: Function as PropType<TdCalendarProps['onScroll']>,
   /** 点击日期时触发 */
   onSelect: Function as PropType<TdCalendarProps['onSelect']>,
 };

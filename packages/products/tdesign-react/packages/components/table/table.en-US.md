@@ -169,6 +169,7 @@ className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 clearValidateData | \- | \- | required。clear all validated errors
 validateRowData | `(rowValue: any)` | `Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>` | required。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/table/type.ts)。<br/>`type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }`<br/>
+validateTableCellData | \- | `Promise<{ result: TableErrorListMap }>` | required
 validateTableData | \- | `Promise<{ result: TableErrorListMap }>` | required
 
 ### PrimaryTableCol

@@ -337,7 +337,7 @@ function addCommonProperties({
   languageInfo,
 }) {
   // 部分组件无包裹元素不需要添加 className、style
-  const filterComponents = ['Popup', 'Tooltip'];
+  const filterComponents = ['Popup', 'Tooltip','ConfigProvider'];
   // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
   if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
     md[category].apis = md[category].apis.concat([
