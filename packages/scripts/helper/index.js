@@ -32,6 +32,9 @@ const aliasComponents = {
   ['BaseTable']: 'Table',
   ['Radio']: 'RadioButton',
   ['IconSVG']: 'Icon',
+  ['Text']: 'TypographyText',
+  ['Title']: 'TypographyTitle',
+  ['Paragraph']: 'TypographyParagraph',
 };
 
 start();
@@ -45,6 +48,10 @@ function start() {
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   // Vue2 和 Vue3 同为 Vue，API 相同
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  if (['Vue(PC)', 'VueNext(PC)'].includes(framework)) {
+    // Typography 是空定义组件，特殊处理
+   frameworkData['Typography'] = [];
+ }
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
