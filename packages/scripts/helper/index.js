@@ -32,9 +32,6 @@ const aliasComponents = {
   ['BaseTable']: 'Table',
   ['Radio']: 'RadioButton',
   ['IconSVG']: 'Icon',
-  ['Text']: 'TypographyText',
-  ['Title']: 'TypographyTitle',
-  ['Paragraph']: 'TypographyParagraph',
 };
 
 start();
@@ -82,8 +79,11 @@ function getHelperData(baseData, framework) {
     if (aliasComponents[key]) {
       volar.push(aliasComponents[key]);
     }
-
-    const componentName = `${PREFIX}-${kebabCase(key)}`;
+    let componentName = `${PREFIX}-${kebabCase(key)}`;
+    if (['Text', 'Title', 'Paragraph'].includes(key)){
+      componentName = `${PREFIX}-${kebabCase('Typography'+key)}`;
+    }
+    
     const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCase(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
@@ -219,7 +219,20 @@ function write(framework, name, data) {
 
 function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
-  const readerGlobalComponents= data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
+  const readerGlobalComponents= data.map((item)=> {
+    if (item === 'IconSVG'){
+      return `Icon: typeof import('${current.iconPath}')['Icon'];`
+    }
+    if (item === 'Iconfont'){
+      return `${item}: typeof import('${current.iconPath}')['${item}'];`
+    }
+    if (['Text', 'Title', 'Paragraph'].includes(item)){
+      return `TTypography${item}: typeof import('${current.name}')['${item}'];`
+    }
+    return `T${item}: typeof import('${current.name}')['${item}'];`
+    
+  }
+)
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
   const volarTemplate=`
   /**
