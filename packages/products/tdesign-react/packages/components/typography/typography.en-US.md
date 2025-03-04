@@ -52,7 +52,7 @@ collapsible | Boolean | true | collapsible after expanding | N
 expandable | Boolean | true | expandable | N
 row | Number | 1 | default row number of ellipsis  | N
 suffix | TElement | - | custom element configuration for ellipsis and collapse icon。Typescript：`TNode<{ expanded: boolean }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-tooltipProps | Object | - | Configuration of the tooltip that appears on the ellipsis icon when the cursor is over it。Typescript：`tooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/typography/type.ts) | N
+tooltipProps | Object | - | Configuration of the tooltip that appears on the ellipsis icon when the cursor is over it。Typescript：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/typography/type.ts) | N
 onExpand | Function |  | Typescript：`(expanded:boolean) => void`<br/> | N
 
 ### TypographyCopyable
@@ -61,5 +61,5 @@ name | type | default | description | required
 -- | -- | -- | -- | --
  text | String | - | copied content | N
 suffix | TElement | - | custom element configuration for copy icon。Typescript：`TNode<{ copied: boolean }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-tooltipProps | Object | - | Configuration of the tooltip that appears on the copy icon when the cursor is over it。Typescript：`tooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/typography/type.ts) | N
+tooltipProps | Object | - | Configuration of the tooltip that appears on the copy icon when the cursor is over it。Typescript：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/typography/type.ts) | N
 onCopy | Function |  | Typescript：`() => void`<br/> | N

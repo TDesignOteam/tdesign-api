@@ -47,7 +47,7 @@ collapsible | Boolean | true | 展开后是否可以重新收起 | N
 expandable | Boolean | true | 是否可展开 | N
 row | Number | 1 | 省略配置默认展示行数 | N
 suffix | Slot / Function | - | 自定义省略触发元素，一般用于自定义折叠图标。TS 类型：`TNode<{ expanded: boolean }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-tooltipProps | Object | - | 光标在省略图标上出现的tooltip的配置。TS 类型：`tooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/typography/type.ts) | N
+tooltipProps | Object | - | 光标在省略图标上出现的tooltip的配置。TS 类型：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/typography/type.ts) | N
 onExpand | Function |  | TS 类型：`(expanded:boolean) => void`<br/>点击省略按钮的回调 | N
 ### TypographyEllipsis
 
@@ -61,7 +61,7 @@ expand | `(expanded:boolean)` | 点击省略按钮的回调
 -- | -- | -- | -- | --
  text | String | - | 复制的文本内容，默认为全部文本 | N
 suffix | Slot / Function | - | 自定义复制触发元素，一般用于自定义复制图标。TS 类型：`TNode<{ copied: boolean }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-tooltipProps | Object | - | 光标在复制图标上出现的tooltip的配置。TS 类型：`tooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/typography/type.ts) | N
+tooltipProps | Object | - | 光标在复制图标上出现的tooltip的配置。TS 类型：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/typography/type.ts) | N
 onCopy | Function |  | TS 类型：`() => void`<br/>点击复制按钮的回调 | N
 ### TypographyCopyable
 
