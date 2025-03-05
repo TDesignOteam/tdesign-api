@@ -12,8 +12,20 @@ globalConfig | Object | - | global config。Typescript：`GlobalConfigProvider` 
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+actionSheet | Object | - | ActionSheet global configs。Typescript：`ActionSheetConfig` | N
 animation | Object | - | Typescript：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
+calendar | Object | - | Calendar global configs。Typescript：`CalendarConfig` | N
+cascader | Object | - | Cascader global configs。Typescript：`CascaderConfig` | N
 classPrefix | String | t | \- | N
+dateTimePicker | Object | - | DateTimePicker global configs。Typescript：`DateTimePickerConfig` | N
+dropdownMenu | Object | - | DropdownMenu global configs。Typescript：`DropdownMenuConfig` | N
+list | Object | - | List global configs。Typescript：`ListConfig` | N
+picker | Object | - | Picker global configs。Typescript：`PickerConfig` | N
+pullDownRefresh | Object | - | PullDownRefresh global configs。Typescript：`PullDownRefreshConfig` | N
+rate | Object | - | Rate global configs。Typescript：`RateConfig` | N
+tabBar | Object | - | TabBar global configs。Typescript：`TabBarConfig` | N
+table | Object | - | Table global configs。Typescript：`TableConfig` | N
+upload | Object | - | Upload global configs。Typescript：`UploadConfig` | N
 
 ### ActionSheetConfig
 

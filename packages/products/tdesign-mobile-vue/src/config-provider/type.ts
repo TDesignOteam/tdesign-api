@@ -15,14 +15,62 @@ export interface TdConfigProviderProps {
 
 export interface GlobalConfigProvider {
   /**
+   * 动作面板全局配置
+   */
+  actionSheet?: ActionSheetConfig;
+  /**
    * 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`
    */
   animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
+  /**
+   * 日历组件全局配置
+   */
+  calendar?: CalendarConfig;
+  /**
+   * 级联选择器全局配置
+   */
+  cascader?: CascaderConfig;
   /**
    * CSS 类名前缀
    * @default t
    */
   classPrefix?: string;
+  /**
+   * 时间选择器全局配置
+   */
+  dateTimePicker?: DateTimePickerConfig;
+  /**
+   * 下拉菜单全局配置
+   */
+  dropdownMenu?: DropdownMenuConfig;
+  /**
+   * 列表组件全局配置
+   */
+  list?: ListConfig;
+  /**
+   * 选择器全局配置
+   */
+  picker?: PickerConfig;
+  /**
+   * 下拉刷新全局配置
+   */
+  pullDownRefresh?: PullDownRefreshConfig;
+  /**
+   * 评分全局配置
+   */
+  rate?: RateConfig;
+  /**
+   * 标签栏全局配置
+   */
+  tabBar?: TabBarConfig;
+  /**
+   * 表格组件全局配置
+   */
+  table?: TableConfig;
+  /**
+   * 上传组件全局配置
+   */
+  upload?: UploadConfig;
 }
 
 export interface ActionSheetConfig {

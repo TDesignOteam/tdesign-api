@@ -54756,6 +54756,47 @@
       ]
     },
     {
+      "id": 1741187123,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "actionSheet",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "动作面板全局配置",
+      "field_desc_en": "ActionSheet global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:05:23",
+      "update_time": "2025-03-05 15:05:23",
+      "event_output": null,
+      "custom_field_type": "ActionSheetConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2400,
       "platform_framework": [
         "1",
@@ -54977,7 +55018,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55007,7 +55051,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55018,7 +55065,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55048,7 +55098,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55186,6 +55239,47 @@
       ]
     },
     {
+      "id": 1741187493,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "dateTimePicker",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器全局配置",
+      "field_desc_en": "DateTimePicker global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:11:33",
+      "update_time": "2025-03-05 15:11:33",
+      "event_output": null,
+      "custom_field_type": "DateTimePickerConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1723620343,
       "platform_framework": [
         "1",
@@ -55303,6 +55397,47 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1741187326,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "dropdownMenu",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下拉菜单全局配置",
+      "field_desc_en": "DropdownMenu global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:08:46",
+      "update_time": "2025-03-05 15:08:46",
+      "event_output": null,
+      "custom_field_type": "DropdownMenuConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55600,7 +55735,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55630,7 +55768,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55719,6 +55860,47 @@
       ]
     },
     {
+      "id": 1741187708,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "picker",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选择器全局配置",
+      "field_desc_en": "Picker global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:15:08",
+      "update_time": "2025-03-05 15:15:08",
+      "event_output": null,
+      "custom_field_type": "PickerConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1880,
       "platform_framework": [
         "1",
@@ -55760,11 +55942,55 @@
       ]
     },
     {
+      "id": 1741187753,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "pullDownRefresh",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下拉刷新全局配置",
+      "field_desc_en": "PullDownRefresh global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:15:53",
+      "update_time": "2025-03-05 15:15:53",
+      "event_output": null,
+      "custom_field_type": "PullDownRefreshConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1723455704,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55794,7 +56020,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55883,11 +56112,55 @@
       ]
     },
     {
+      "id": 1741187827,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "tabBar",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签栏全局配置",
+      "field_desc_en": "TabBar global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:17:07",
+      "update_time": "2025-03-05 15:17:07",
+      "event_output": null,
+      "custom_field_type": "TabBarConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1867,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55917,7 +56190,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -56174,7 +56450,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -56204,7 +56483,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
