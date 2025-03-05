@@ -62,6 +62,13 @@ export interface TdDateTimePickerProps {
     value?: string;
   };
   /**
+   * 格式化标签
+   */
+  formatter?: {
+    type: undefined;
+    value?: (option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem;
+  };
+  /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
    * @default true
    */

@@ -36290,6 +36290,43 @@
       ]
     },
     {
+      "id": 1740731296,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "formatter",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "格式化标签",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-28 08:28:16",
+      "update_time": "2025-02-28 08:28:16",
+      "event_output": null,
+      "custom_field_type": "(option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2509,
       "platform_framework": [
         "16",
@@ -81613,7 +81650,7 @@
       "create_time": "2023-01-09 06:35:32",
       "update_time": "2023-01-09 06:35:32",
       "event_output": null,
-      "custom_field_type": "(option: PickerItemOption) => string",
+      "custom_field_type": "(option: PickerItemOption, columnIndex: number) => PickerItemOption",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
