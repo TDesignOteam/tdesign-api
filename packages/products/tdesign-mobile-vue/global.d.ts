@@ -40,8 +40,8 @@ declare module 'vue' {
     TGridItem: typeof import('tdesign-mobile-vue')['GridItem'];
     TGuide: typeof import('tdesign-mobile-vue')['Guide'];
     TIcon: typeof import('tdesign-mobile-vue')['Icon'];
-    TIconfont: typeof import('tdesign-mobile-vue')['Iconfont'];
-    TIconSVG: typeof import('tdesign-mobile-vue')['IconSVG'];
+    Iconfont: typeof import('tdesign-icons-vue-next')['Iconfont'];
+    Icon: typeof import('tdesign-icons-vue-next')['Icon'];
     TImage: typeof import('tdesign-mobile-vue')['Image'];
     TImageViewer: typeof import('tdesign-mobile-vue')['ImageViewer'];
     TIndexes: typeof import('tdesign-mobile-vue')['Indexes'];
