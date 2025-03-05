@@ -63982,7 +63982,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64005,7 +64006,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello\",\"maxlength\":5},\"expect\":[{\"trigger\":\"simulateInputChange('input', \\\"Hello TDesign\\\")\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -64015,7 +64016,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -65520,7 +65522,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -68129,6 +68131,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1741165642,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "InputConfig",
+      "field_category": 1,
+      "field_name": "showClearIconWithValue",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "输入框内容不为空时，始终显示清空按钮，默认只在悬浮状态显示 ",
+      "field_desc_en": "The clear button should always be visible when the input is not empty. By default, it should only be displayed when hovering.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 09:07:22",
+      "update_time": "2025-03-05 09:07:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -86517,6 +86556,43 @@
       "field_type_text": []
     },
     {
+      "id": 1737484100,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 4,
+      "field_name": "validateTableCellData",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "校验表格可编辑单元格数据，校验完成后，会触发事件 `onValidate`",
+      "field_desc_en": null,
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2025-01-21 18:28:20",
+      "update_time": "2025-01-21 18:28:20",
+      "event_output": "Promise<{ result: TableErrorListMap }>",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2908,
       "platform_framework": [
         "1",
@@ -89674,7 +89750,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -90714,7 +90790,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -120780,7 +120856,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -121788,7 +121864,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -135440,7 +135516,7 @@
       "create_time": "2024-01-30 18:09:32",
       "update_time": "2024-01-30 18:09:32",
       "event_output": null,
-      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -135682,7 +135758,7 @@
       "create_time": "2024-01-30 17:55:02",
       "update_time": "2024-01-30 17:55:02",
       "event_output": null,
-      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
