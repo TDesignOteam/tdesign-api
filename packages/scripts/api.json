@@ -68106,6 +68106,43 @@
       ]
     },
     {
+      "id": 1741165642,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "InputConfig",
+      "field_category": 1,
+      "field_name": "clearTrigger",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "focus",
+      "field_enum": "always / focus",
+      "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效",
+      "field_desc_en": "Trigger to show a clear icon, valid when the input has a value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 09:07:22",
+      "update_time": "2025-03-05 09:07:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2077,
       "platform_framework": [
         "1",
@@ -68152,43 +68189,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1741165642,
-      "platform_framework": [
-        "2"
-      ],
-      "component": "InputConfig",
-      "field_category": 1,
-      "field_name": "showClearIconWithValue",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "输入框内容不为空时，始终显示清空按钮，默认只在悬浮状态显示 ",
-      "field_desc_en": "The clear button should always be visible when the input is not empty. By default, it should only be displayed when hovering.",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-03-05 09:07:22",
-      "update_time": "2025-03-05 09:07:22",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {

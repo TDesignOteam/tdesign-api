@@ -53,8 +53,8 @@ upload | Object | - | Upload global configs。Typescript：`UploadConfig` | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 autocomplete | String | - | \- | N
+clearTrigger | String | focus | Trigger to show a clear icon, valid when the input has a value。options: always / focus | N
 placeholder | String | - | \- | N
-showClearIconWithValue | Boolean | false | The clear button should always be visible when the input is not empty. By default, it should only be displayed when hovering. | N
 
 ### PaginationConfig
 
