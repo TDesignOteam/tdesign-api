@@ -19,6 +19,7 @@ cascader | Object | - | Cascader global configs。Typescript：`CascaderConfig` 
 classPrefix | String | t | \- | N
 dateTimePicker | Object | - | DateTimePicker global configs。Typescript：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | DropdownMenu global configs。Typescript：`DropdownMenuConfig` | N
+guide | Object | - | Guide global configs。Typescript：`GuideConfig` | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 picker | Object | - | Picker global configs。Typescript：`PickerConfig` | N
 pullDownRefresh | Object | - | PullDownRefresh global configs。Typescript：`PullDownRefreshConfig` | N
@@ -39,6 +40,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
 monthTitle | String | - | \- | N
+months | Array | - | Typescript：`string[]` | N
 title | String | - | \- | N
 weekdays | Array | - | Typescript：`string[]` | N
 
@@ -70,6 +72,15 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
 reset | String | - | reset text | N
+
+### GuideConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+back | String | - | \- | N
+finish | String | - | \- | N
+next | String | - | \- | N
+skip | String | - | \- | N
 
 ### ImageConfig
 
@@ -128,10 +139,19 @@ newsAriaLabel | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-empty | String | - | \- | N
+empty | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
 ### UploadConfig
 
 name | type | default | description | required
 -- | -- | -- | -- | --
 progress | Object | - | Typescript：`UploadConfigProgress` | N
+
+### UploadConfigProgress
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+failText | String | - | \- | N
+successText | String | - | \- | N
+uploadingText | String | - | \- | N
+waitingText | String | - | \- | N

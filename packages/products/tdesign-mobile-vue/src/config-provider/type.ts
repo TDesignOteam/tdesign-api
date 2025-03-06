@@ -5,6 +5,7 @@
  * */
 
 import { ImageProps } from '../image';
+import { TNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -43,6 +44,10 @@ export interface GlobalConfigProvider {
    * 下拉菜单全局配置
    */
   dropdownMenu?: DropdownMenuConfig;
+  /**
+   * 引导全局配置
+   */
+  guide?: GuideConfig;
   /**
    * 列表组件全局配置
    */
@@ -92,6 +97,10 @@ export interface CalendarConfig {
    * @default ''
    */
   monthTitle?: string;
+  /**
+   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
+   */
+  months?: string[];
   /**
    * 语言配置，组件标题“请选择日期”描述文本
    * @default ''
@@ -180,6 +189,29 @@ export interface DropdownMenuConfig {
    * @default ''
    */
   reset?: string;
+}
+
+export interface GuideConfig {
+  /**
+   * 语言配置， “返回” 描述文本
+   * @default ''
+   */
+  back?: string;
+  /**
+   * 语言配置， “完成” 描述文本
+   * @default ''
+   */
+  finish?: string;
+  /**
+   * 语言配置， “下一步” 描述文本
+   * @default ''
+   */
+  next?: string;
+  /**
+   * 语言配置， “跳过” 描述文本
+   * @default ''
+   */
+  skip?: string;
 }
 
 export interface ImageConfig {
@@ -294,9 +326,8 @@ export interface TabBarConfig {
 export interface TableConfig {
   /**
    * 语言配置，“暂无数据” 描述文本
-   * @default ''
    */
-  empty?: string;
+  empty?: string | TNode;
 }
 
 export interface UploadConfig {
@@ -304,6 +335,29 @@ export interface UploadConfig {
    * 语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }
    */
   progress?: UploadConfigProgress;
+}
+
+export interface UploadConfigProgress {
+  /**
+   * 语言配置，“上传失败”文本描述
+   * @default ''
+   */
+  failText?: string;
+  /**
+   * 语言配置，“上传成功”文本描述
+   * @default ''
+   */
+  successText?: string;
+  /**
+   * 语言配置，“上传中”文本描述
+   * @default ''
+   */
+  uploadingText?: string;
+  /**
+   * 语言配置，“待上传”文本描述
+   * @default ''
+   */
+  waitingText?: string;
 }
 
 export type AnimationType = 'ripple' | 'expand' | 'fade';
