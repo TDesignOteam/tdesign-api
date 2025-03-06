@@ -171,9 +171,9 @@ export interface InputConfig {
   autocomplete?: string;
   /**
    * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
+   * @default focus
    */
-  clearTrigger?: 'always' | 'foucs';
+  clearTrigger?: 'always' | 'focus';
   /**
    * 语言配置，“请输入”占位符描述文本
    * @default ''

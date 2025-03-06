@@ -68116,8 +68116,8 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "always",
-      "field_enum": "always / foucs",
+      "field_default_value": "focus",
+      "field_enum": "always / focus",
       "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效",
       "field_desc_en": "Trigger to show a clear icon, valid when the input has a value",
       "field_required": 0,
