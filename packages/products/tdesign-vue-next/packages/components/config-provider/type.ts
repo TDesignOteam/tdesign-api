@@ -228,7 +228,7 @@ export interface CalendarConfig {
    */
   monthRadio?: string;
   /**
-   * 语言配置，\"月\"选择描述文本。示例：`'{month} 月'`
+   * 语言配置，“月”选择描述文本。示例：`'{month} 月'`
    * @default ''
    */
   monthSelection?: string;
@@ -337,7 +337,7 @@ export interface DatePickerConfig {
    */
   monthAriaLabel?: string;
   /**
-   * 星期文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
+   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
    */
   months?: string[];
   /**

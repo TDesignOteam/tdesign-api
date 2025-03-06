@@ -13,12 +13,12 @@ globalConfig | Object | - | 全局配置。TS 类型：`GlobalConfigProvider` | 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 actionSheet | Object | - | 动作面板全局配置。TS 类型：`ActionSheetConfig` | N
-animation | Object | - | 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`。TS 类型：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/config-provider/type.ts) | N
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 classPrefix | String | t | CSS 类名前缀 | N
 dateTimePicker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
+guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 picker | Object | - | 选择器全局配置。TS 类型：`PickerConfig` | N
 pullDownRefresh | Object | - | 下拉刷新全局配置。TS 类型：`PullDownRefreshConfig` | N
@@ -39,6 +39,7 @@ cancel | String | - | 语言配置，“取消” 按钮描述文本 | N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
 monthTitle | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
+months | Array | - | 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
 title | String | - | 语言配置，组件标题“请选择日期”描述文本 | N
 weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']。TS 类型：`string[]` | N
 
@@ -70,6 +71,15 @@ yearLabel | String | - | 语言配置，“年” 描述文本 | N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
 reset | String | - | 语言配置，“重置” 按钮描述文本 | N
+
+### GuideConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+back | String | - | 语言配置， “返回” 描述文本 | N
+finish | String | - | 语言配置， “完成” 描述文本 | N
+next | String | - | 语言配置， “下一步” 描述文本 | N
+skip | String | - | 语言配置， “跳过” 描述文本 | N
 
 ### ImageConfig
 
@@ -128,10 +138,19 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-empty | String | - | 语言配置，“暂无数据” 描述文本 | N
+empty | TNode | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 
 ### UploadConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 progress | Object | - | 语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }。TS 类型：`UploadConfigProgress` | N
+
+### UploadConfigProgress
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+failText | String | - | 语言配置，“上传失败”文本描述 | N
+successText | String | - | 语言配置，“上传成功”文本描述 | N
+uploadingText | String | - | 语言配置，“上传中”文本描述 | N
+waitingText | String | - | 语言配置，“待上传”文本描述 | N

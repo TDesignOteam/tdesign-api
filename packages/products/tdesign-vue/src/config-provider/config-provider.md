@@ -78,7 +78,7 @@ fillWithZero | Boolean | true | 当日期数字小于 10 时，是否使用 '0' 
 firstDayOfWeek | Number | 1 | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
 hideWeekend | String | - | 语言配置，“隐藏周末”描述文本 | N
 monthRadio | String | - | 语言配置，模式切换时的“月”描述文本 | N
-monthSelection | String | - | 语言配置，\"月\"选择描述文本。示例：`'{month} 月'` | N
+monthSelection | String | - | 语言配置，“月”选择描述文本。示例：`'{month} 月'` | N
 showWeekend | String | - | 语言配置，“显示周末”描述文本 | N
 thisMonth | String | - | 语言配置，“本月”描述文本 | N
 today | String | - | 语言配置，“今天”描述文本 | N
@@ -113,7 +113,7 @@ direction | String | 'ltr' | 日期方向，'ltr' 表示从左往右 | N
 firstDayOfWeek | Number | 7 | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | 日期格式化规则 | N
 monthAriaLabel | String | - | 语言配置，“月” 描述文本 | N
-months | Array | - | 星期文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
+months | Array | - | 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
 nextDecade | String | - | 语言配置，“下个十年” 描述文本 | N
 nextMonth | String | - | 语言配置，“下个月” 描述文本 | N
 nextYear | String | - | 语言配置，“下一年” 描述文本 | N
