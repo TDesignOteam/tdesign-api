@@ -8,11 +8,6 @@ import { TdColorPickerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible */
-  autoClose: {
-    type: Boolean,
-    default: true,
-  },
   /** 是否可清空 */
   clearable: Boolean,
   /** 是否开启透明通道 */
@@ -41,8 +36,6 @@ export default {
       return ['base', 'multiple'].includes(val);
     },
   },
-  /** 是否使用弹出层包裹颜色选择器 */
-  usePopup: Boolean,
   /** 色值 */
   value: {
     type: String,
