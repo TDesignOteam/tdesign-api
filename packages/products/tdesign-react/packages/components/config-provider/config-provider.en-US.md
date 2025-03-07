@@ -64,6 +64,8 @@ itemsPerPage | String | - | \- | N
 jumpTo | String | - | \- | N
 page | String | - | \- | N
 total | String | - | \- | N
+onChange | Function |  | Typescript：`(pageInfo: PageInfo) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts)。<br/>`interface PageInfo { current: number; previous: number; pageSize: number }`<br/> | N
+onCurrentChange | Function |  | Typescript：`(current: number, pageInfo: PageInfo) => void`<br/> | N
 
 ### CalendarConfig
 

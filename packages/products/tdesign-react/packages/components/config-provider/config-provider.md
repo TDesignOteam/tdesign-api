@@ -64,6 +64,8 @@ itemsPerPage | String | - | 语言配置，每页条数文本，示例：`'{size
 jumpTo | String | - | 语言配置，页码跳转文本，示例：'跳至' | N
 page | String | - | 语言配置，“页”描述文本 | N
 total | String | - | 语言配置，数据总条数文本，示例：`'共 {total} 项数据'` | N
+onChange | Function |  | TS 类型：`(pageInfo: PageInfo) => void`<br/>当前页或分页大小发生变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts)。<br/>`interface PageInfo { current: number; previous: number; pageSize: number }`<br/> | N
+onCurrentChange | Function |  | TS 类型：`(current: number, pageInfo: PageInfo) => void`<br/>当前页发生变化时触发 | N
 
 ### CalendarConfig
 

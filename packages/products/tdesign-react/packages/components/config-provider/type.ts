@@ -202,6 +202,14 @@ export interface PaginationConfig {
    * @default ''
    */
   total?: string;
+  /**
+   * 当前页或分页大小发生变化时触发
+   */
+  onChange?: (pageInfo: PageInfo) => void;
+  /**
+   * 当前页发生变化时触发
+   */
+  onCurrentChange?: (current: number, pageInfo: PageInfo) => void;
 }
 
 export interface CalendarConfig {
@@ -987,6 +995,12 @@ export interface AutoCompleteConfig {
 export type AnimationType = 'ripple' | 'expand' | 'fade';
 
 export type IconConfig = GlobalIconConfig;
+
+export interface PageInfo {
+  current: number;
+  previous: number;
+  pageSize: number;
+}
 
 export interface ConfigPresetDate {
   [name: string]: DateConfigValue | (() => DateConfigValue);
