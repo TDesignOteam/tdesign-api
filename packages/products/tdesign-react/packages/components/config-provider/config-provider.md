@@ -203,8 +203,8 @@ rotateTipText | String | - | 全局语言配置，默认为 “旋转” | N
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 autocomplete | String | - | 是否开启自动填充功能 | N
+clearTrigger | String | focus | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 placeholder | String | - | 语言配置，“请输入”占位符描述文本 | N
-showClearIconWithValue | Boolean | false | 输入框内容不为空时，始终显示清空按钮，默认只在悬浮状态显示  | N
 
 ### ListConfig
 
