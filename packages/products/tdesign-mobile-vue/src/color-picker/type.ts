@@ -6,11 +6,6 @@
 
 export interface TdColorPickerProps {
   /**
-   * 自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible
-   * @default true
-   */
-  autoClose?: boolean;
-  /**
    * 是否可清空
    * @default false
    */
@@ -39,11 +34,6 @@ export interface TdColorPickerProps {
    * @default base
    */
   type?: TypeEnum;
-  /**
-   * 是否使用弹出层包裹颜色选择器
-   * @default false
-   */
-  usePopup?: boolean;
   /**
    * 色值
    * @default ''
