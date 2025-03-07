@@ -80030,6 +80030,43 @@
       ]
     },
     {
+      "id": 1741348869,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "PaginationConfig",
+      "field_category": 4,
+      "field_name": "jumper",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义输入跳转组件",
+      "field_desc_en": "",
+      "field_required": 0,
+      "event_input": "(jumperProps: JumperProps)【interface JumperProps { current: number; pageCount: number; onJump: (current: number) => void; }】",
+      "create_time": "2025-03-07 12:01:09",
+      "update_time": "2025-03-07 12:01:09",
+      "event_output": "TNode<JumperProps>",
+      "custom_field_type": "(jumperProps: JumperProps)【interface JumperProps { current: number; pageCount: number; onJump: (current: number) => void; }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2791,
       "platform_framework": [
         "1",

@@ -202,6 +202,10 @@ export interface PaginationConfig {
    * @default ''
    */
   total?: string;
+  /**
+   * 自定义输入跳转组件
+   */
+  jumper?: (jumperProps: JumperProps) => TNode<JumperProps>;
 }
 
 export interface CalendarConfig {
@@ -987,6 +991,12 @@ export interface AutoCompleteConfig {
 export type AnimationType = 'ripple' | 'expand' | 'fade';
 
 export type IconConfig = GlobalIconConfig;
+
+export interface JumperProps {
+  current: number;
+  pageCount: number;
+  onJump: (current: number) => void;
+}
 
 export interface ConfigPresetDate {
   [name: string]: DateConfigValue | (() => DateConfigValue);
