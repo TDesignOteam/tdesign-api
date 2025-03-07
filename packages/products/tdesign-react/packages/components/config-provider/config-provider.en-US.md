@@ -227,6 +227,11 @@ itemsPerPage | String | - | \- | N
 jumpTo | String | - | \- | N
 page | String | - | \- | N
 total | String | - | \- | N
+### PaginationConfig
+
+name | params | return | description
+-- | -- | -- | --
+jumper | `(jumperProps: JumperProps)` | `TNode<JumperProps>` | [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts)。<br/>`interface JumperProps { current: number; pageCount: number; onJump: (current: number) => void; }`<br/>
 
 ### PopconfirmConfig
 
