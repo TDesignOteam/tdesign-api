@@ -39,7 +39,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: 'circle' | 'line' | 'dot' | Array<string>;
   };
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: {
     type: ObjectConstructor;
@@ -61,7 +61,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: Array<RadioOption>;
   };
   /**
-   * 复选框和内容相对位置
+   * 复选框和内容相对位置。优先级低于 Radio.placement
    * @default left
    */
   placement?: {

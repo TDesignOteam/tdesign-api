@@ -9,15 +9,12 @@ const props: TdCellGroupProps = {
   /** 是否显示组边框 */
   bordered: {
     type: Boolean,
+    value: false,
   },
-  /** 组件类名 */
-  externalClasses: {
-    type: Array,
-  },
-  /** 自定义组件样式 */
-  style: {
+  /** 单元格组风格 */
+  theme: {
     type: String,
-    value: '',
+    value: 'default',
   },
   /** 单元格组标题 */
   title: {

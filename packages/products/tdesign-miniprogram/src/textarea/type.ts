@@ -14,6 +14,14 @@ export interface TdTextareaProps {
     value?: boolean;
   };
   /**
+   * 超出maxlength或maxcharacter之后是否还允许输入
+   * @default false
+   */
+  allowInputOverMax?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 自动聚焦，拉起键盘
    * @default false
    */
@@ -85,18 +93,10 @@ export interface TdTextareaProps {
     value?: boolean;
   };
   /**
-   * 如果 textarea 是在一个 `position:fixed` 的区域，需要显示指定属性 fixed 为 true
+   * 如果 textarea 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true
    * @default false
    */
   fixed?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 如果 textarea 是在一个 `position:fixed` 的区域，需要显示指定属性 fixed 为 true，非受控属性
-   * @default false
-   */
-  defaultFixed?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -154,12 +154,27 @@ export interface TdTextareaProps {
     value?: string;
   };
   /**
+   * 指定 placeholder 的样式类，目前仅支持color,font-size和font-weight
+   * @default textarea-placeholder
+   */
+  placeholderClass?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 指定 placeholder 的样式，目前仅支持 color ,font-size和font-weight
    * @default ''
    */
   placeholderStyle?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 只读状态
+   */
+  readonly?: {
+    type: BooleanConstructor;
+    value?: boolean;
   };
   /**
    * 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用

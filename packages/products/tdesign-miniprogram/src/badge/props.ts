@@ -26,10 +26,6 @@ const props: TdBadgeProps = {
     type: Boolean,
     value: false,
   },
-  /** 组件类名，分别用于设置外层元素、默认内容、右上角内容等元素类名 */
-  externalClasses: {
-    type: Array,
-  },
   /** 封顶的数字值 */
   maxCount: {
     type: Number,
@@ -53,11 +49,6 @@ const props: TdBadgeProps = {
   size: {
     type: String,
     value: 'medium',
-  },
-  /** 自定义组件样式 */
-  style: {
-    type: String,
-    value: '',
   },
 };
 

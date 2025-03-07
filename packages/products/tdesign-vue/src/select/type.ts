@@ -130,7 +130,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   placeholder?: string;
   /**
-   * 透传给 popup 组件的全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -234,7 +234,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 当选择新创建的条目时触发
    */
-  onCreate?: (value: string | number) => void;
+  onCreate?: (value: string | number | boolean) => void;
   /**
    * 回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值
    */
@@ -293,7 +293,7 @@ export interface TdOptionProps {
   /**
    * 选项值
    */
-  value?: string | number;
+  value?: string | number | boolean;
 }
 
 export interface TdOptionGroupProps {

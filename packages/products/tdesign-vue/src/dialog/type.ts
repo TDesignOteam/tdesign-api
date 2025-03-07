@@ -31,7 +31,6 @@ export interface TdDialogProps {
   closeOnEscKeydown?: boolean;
   /**
    * 点击蒙层时是否触发关闭事件
-   * @default false
    */
   closeOnOverlayClick?: boolean;
   /**
@@ -180,6 +179,7 @@ export interface TdDialogCardProps
     | 'onCancel'
     | 'onCloseBtnClick'
     | 'onConfirm'
+    | 'confirmLoading'
   > {}
 
 export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {

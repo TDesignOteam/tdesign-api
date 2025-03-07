@@ -300,6 +300,11 @@
         "label": "自动填充"
       },
       {
+        "value": "AutoCompleteConfig",
+        "label": "自动填充全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Avatar",
         "label": "头像"
       },

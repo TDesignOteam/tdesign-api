@@ -17,5 +17,6 @@ export const dropdownItemDefaultProps: TdDropdownItemProps = {
   multiple: false,
   options: [],
   optionsColumns: 1,
+  placement: 'left',
   defaultValue: undefined,
 };

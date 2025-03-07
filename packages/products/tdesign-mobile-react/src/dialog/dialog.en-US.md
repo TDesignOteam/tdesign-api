@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Dialog Props
 
 name | type | default | description | required
@@ -21,8 +22,6 @@ showOverlay | Boolean | true | \- | N
 title | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 visible | Boolean | - | \- | N
 zIndex | Number | - | \- | N
-onBeforeClose | Function |  | Typescript：`() => void`<br/> | N
-onBeforeOpen | Function |  | Typescript：`() => void`<br/> | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClose | Function |  | Typescript：`(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/> | N

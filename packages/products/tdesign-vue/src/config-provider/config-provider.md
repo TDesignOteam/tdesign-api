@@ -2,6 +2,12 @@
 
 ## API
 
+### ConfigProvider Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+globalConfig | Object | - | 全局配置。TS 类型：`GlobalConfigProvider` | N
+
 ### GlobalConfigProvider
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -9,7 +15,8 @@
 alert | Object | - | 警告全局配置。TS 类型：`AlertConfig` | N
 anchor | Object | - | 锚点全局配置。TS 类型：`AnchorConfig` | N
 animation | Object | - | 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`。TS 类型：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/config-provider/type.ts) | N
-attach | String / Object / Function | - | TS 类型：`AttachNode \| { imageViewer?: AttachNode; message?: AttachNode; popup?: AttachNode; dialog?: AttachNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+attach | String / Object / Function | - | TS 类型：`AttachNode \| { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+autoComplete | Object | - | 自动填充组件全局配置。TS 类型：`AutoCompleteConfig` | N
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 classPrefix | String | t | CSS 类名前缀 | N
@@ -355,3 +362,9 @@ titleText | Object | - | 空状态组件各类型的标题文本配置。TS 类�
 collapseText | String | - | 语言配置，“收起”描述文本 | N
 copiedText | String | - | 语言配置，“复制成功”描述文本 | N
 expandText | String | - | 语言配置，“展开”描述文本 | N
+
+### AutoCompleteConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+empty | String | - | 语言配置，“暂无数据”描述文本 | N

@@ -32,7 +32,7 @@ export default {
   /** 点击蒙层时是否触发抽屉关闭事件 */
   closeOnOverlayClick: {
     type: Boolean,
-    default: true,
+    default: undefined,
   },
   /** 确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
@@ -44,6 +44,11 @@ export default {
   },
   /** 抽屉关闭时是否销毁节点 */
   destroyOnClose: Boolean,
+  /** 抽屉元素类名。 */
+  drawerClassName: {
+    type: String,
+    default: '',
+  },
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 或 null 不显示任何内容，值类型为 TNode 表示自定义底部内容 */
   footer: {
     type: [Boolean, Function] as PropType<TdDrawerProps['footer']>,

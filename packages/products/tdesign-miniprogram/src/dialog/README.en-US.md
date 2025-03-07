@@ -31,6 +31,7 @@ cancel | - | \-
 close | `(trigger: DialogEventSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
 confirm | - | \-
 overlay-click | - | \-
+
 ### Dialog External Classes
 
 className | Description

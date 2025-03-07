@@ -15,6 +15,7 @@ autofocus | Boolean | false | autofocus on first rendered | N
 borderless | Boolean | false | input without border | N
 clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | false | show clear icon, clicked to clear input value | N
+cursorColor | String | #0052d9 | \- | N
 disabled | Boolean | undefined | make input to be disabled | N
 enterkeyhint | String | - | attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)。options: enter/done/go/next/previous/search/send | N
 errorMessage | String | - | `deprecated` | N

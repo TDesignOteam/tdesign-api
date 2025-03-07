@@ -54,17 +54,9 @@ export interface TdDrawerProps {
    */
   zIndex?: number;
   /**
-   * 抽屉执行关闭动画效果前触发
+   * 关闭时触发。
    */
-  onBeforeClose?: () => void;
-  /**
-   * 抽屉执行打开动画效果前触发
-   */
-  onBeforeOpen?: () => void;
-  /**
-   * 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts)。<br/>`type TriggerSource = 'overlay'`<br/>
-   */
-  onClose?: (trigger: TriggerSource) => void;
+  onClose?: (trigger: DrawerTriggerSource) => void;
   /**
    * 点击抽屉里的列表项
    */
@@ -108,7 +100,9 @@ export interface DrawerInstance {
 
 export interface DrawerItem {
   title: string;
-  icon: TNode;
+  icon?: TNode;
 }
+
+export type DrawerTriggerSource = 'overlay';
 
 export type DrawerMethod = (options?: DrawerOptions) => void;

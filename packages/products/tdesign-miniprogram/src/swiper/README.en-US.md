@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Swiper Props
 
 name | type | default | description | required
@@ -33,6 +32,7 @@ name | params | description
 change | `(current: number, source: SwiperChangeSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | `0.34.0`
 image-load | `(index: number)` | `1.1.4`
+
 ### Swiper External Classes
 
 className | Description
@@ -57,6 +57,7 @@ pagination-position | String | bottom | `0.34.0`。options: top-left/top/top-rig
 show-controls | Boolean | false | `0.32.0` | N
 total | Number | 0 | `0.34.0` | N
 type | String | dots | Typescript：`SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/swiper-nav/type.ts) | N
+
 ### SwiperNav External Classes
 
 className | Description

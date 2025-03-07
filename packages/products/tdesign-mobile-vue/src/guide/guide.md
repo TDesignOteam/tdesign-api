@@ -6,11 +6,11 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-backButtonProps | Object | - | 透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }`。TS 类型：`ButtonProps` | N
-counter | Slot / Function | - | 用于自定义渲染计数部分。TS 类型：`TNode<{ current: number; total: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+backButtonProps | Object | - | 透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }`。TS 类型：`ButtonProps` | N
 current | Number | - | 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。支持语法糖 `v-model` 或 `v-model:current` | N
 defaultCurrent | Number | - | 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景。非受控属性 | N
-finishButtonProps | Object | - | 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`。TS 类型：`ButtonProps` | N
+finishButtonProps | Object | - | 透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }`。TS 类型：`ButtonProps` | N
+hideBack | Boolean | false | 是否隐藏返回按钮 | N
 hideCounter | Boolean | false | 是否隐藏计数 | N
 hideSkip | Boolean | false | 是否隐藏跳过按钮 | N
 highlightPadding | Number | 8 | 高亮框的内边距 | N
