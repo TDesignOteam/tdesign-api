@@ -30291,9 +30291,11 @@
       "field_type_text": []
     },
     {
-      "id": 1740660169,
+      "id": 1741675522,
       "platform_framework": [
-        "1"
+        "1",
+        "2",
+        "4"
       ],
       "component": "ColorPicker",
       "field_category": 2,
@@ -30305,8 +30307,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2025-02-27 12:42:49",
-      "update_time": "2025-02-27 12:42:49",
+      "create_time": "2025-03-11 06:45:22",
+      "update_time": "2025-03-11 06:45:22",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -30319,7 +30321,9 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
