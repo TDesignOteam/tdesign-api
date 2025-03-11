@@ -760,6 +760,7 @@ function generateTypes(baseData, framework) {
 }
 
 module.exports = {
+    formatType,
     generateTypes,
     getTypesByComponent,
 };

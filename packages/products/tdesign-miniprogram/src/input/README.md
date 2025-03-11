@@ -10,6 +10,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 | N
 align | String | left | 文本内容位置，居左/居中/居右。可选项：left/center/right | N
+allow-input-over-max | Boolean | false | `1.8.6`。超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 | N
 always-embed | Boolean | false | 强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效) | N
 auto-focus | Boolean | false | (即将废弃，请直接使用 focus )自动聚焦，拉起键盘 | N
 borderless | Boolean | false | 是否开启无边框模式 | N
@@ -34,7 +35,7 @@ placeholder | String | undefined | 占位符 | N
 placeholder-class | String | input-placeholder | 指定 placeholder 的样式类 | N
 placeholder-style | String | - | 必需。指定 placeholder 的样式 | Y
 prefix-icon | String / Object / Slot | - | 组件前置图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-readonly | Boolean | undefined | 只读状态 | N
+readonly | Boolean | undefined | `1.8.6`。只读状态 | N
 safe-password-cert-path | String | - | 安全键盘加密公钥的路径，只支持包内路径 | N
 safe-password-custom-hash | String | - | 安全键盘计算 hash 的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))` | N
 safe-password-length | Number | - | 安全键盘输入密码长度 | N

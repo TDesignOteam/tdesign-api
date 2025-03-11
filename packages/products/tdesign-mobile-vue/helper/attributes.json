@@ -937,37 +937,61 @@
     "type": "String|Number",
     "description": "当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/collapse?tab=api#collapsepanel-props)"
   },
-  "t-color-picker/auto-close": {
-    "type": "Boolean",
-    "description": "自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
   "t-color-picker/clearable": {
     "type": "Boolean",
     "description": "是否可清空\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
   },
-  "t-color-picker/footer": {
-    "type": "TNode",
-    "description": "底部插槽，仅在 `usePopup` 为 `true` 时有效\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
-  "t-color-picker/header": {
-    "type": "TNode",
-    "description": "顶部插槽，仅在 `usePopup` 为 `true` 时有效\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
-  "t-color-picker/popup-props": {
-    "type": "Object",
-    "description": "透传 Popup 组件全部属性\n\ndefault: {}\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
-  "t-color-picker/use-popup": {
+  "t-color-picker/enable-alpha": {
     "type": "Boolean",
-    "description": "是否使用弹出层包裹颜色选择器\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+    "description": "是否开启透明通道\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
   },
-  "t-color-picker/visible": {
+  "t-color-picker/fixed": {
     "type": "Boolean",
-    "description": "是否显示颜色选择器。`usePopup` 为 true 时有效\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+    "description": "如果 color-picker 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/format": {
+    "type": "String",
+    "options": [
+      "RGB",
+      "RGBA",
+      "HSL",
+      "HSLA",
+      "HSB",
+      "HSV",
+      "HSVA",
+      "HEX",
+      "CMYK",
+      "CSS"
+    ],
+    "description": "格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效\n\ndefault: RGB\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/swatch-colors": {
+    "type": "Array",
+    "description": "swatch colors\n\n系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/type": {
+    "type": "String",
+    "options": [
+      "base",
+      "multiple"
+    ],
+    "description": "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容\n\ndefault: base\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/value": {
+    "type": "String",
+    "description": "color value\n\n色值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
+  },
+  "t-color-picker/change": {
+    "type": "event",
+    "description": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-events)"
   },
   "t-color-picker/close": {
     "type": "event",
     "description": "关闭按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-events)"
+  },
+  "t-color-picker/palette-bar-change": {
+    "type": "event",
+    "description": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-events)"
   },
   "t-config-provider/global-config": {
     "type": "Object",

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { tooltipProps } from '../tooltip';
+import { TooltipProps } from '../tooltip';
 import { TNode } from '../common';
 
 export interface TdTextProps {
@@ -132,7 +132,7 @@ export interface TypographyEllipsis {
   /**
    * 光标在省略图标上出现的tooltip的配置
    */
-  tooltipProps?: tooltipProps;
+  tooltipProps?: TooltipProps;
   /**
    * 点击省略按钮的回调
    */
@@ -152,7 +152,7 @@ export interface TypographyCopyable {
   /**
    * 光标在复制图标上出现的tooltip的配置
    */
-  tooltipProps?: tooltipProps;
+  tooltipProps?: TooltipProps;
   /**
    * 点击复制按钮的回调
    */

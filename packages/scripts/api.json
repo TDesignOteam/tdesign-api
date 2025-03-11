@@ -2834,6 +2834,47 @@
       "field_type_text": []
     },
     {
+      "id": 1741182503,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ActionSheetConfig",
+      "field_category": 1,
+      "field_name": "cancel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“取消” 按钮描述文本",
+      "field_desc_en": "cancel text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 13:48:23",
+      "update_time": "2025-03-05 13:48:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2024,
       "platform_framework": [
         "8",
@@ -18184,6 +18225,47 @@
       ]
     },
     {
+      "id": 1741183085,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CalendarConfig",
+      "field_category": 1,
+      "field_name": "confirm",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“确定” 按钮描述文本",
+      "field_desc_en": "confirm text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 13:58:05",
+      "update_time": "2025-03-05 13:58:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1964,
       "platform_framework": [
         "1",
@@ -18403,7 +18485,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "语言配置，\\\"月\\\"选择描述文本。示例：`'{month} 月'`",
+      "field_desc_zh": "语言配置，“月”选择描述文本。示例：`'{month} 月'`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -18427,6 +18509,88 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1741183537,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CalendarConfig",
+      "field_category": 1,
+      "field_name": "monthTitle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，日期月面板标题描述文本。示例：“{year} / {month}”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:05:37",
+      "update_time": "2025-03-05 14:05:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741190561,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CalendarConfig",
+      "field_category": 1,
+      "field_name": "months",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 16:02:41",
+      "update_time": "2025-03-05 16:02:41",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -18512,6 +18676,47 @@
       ]
     },
     {
+      "id": 1741183315,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CalendarConfig",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，组件标题“请选择日期”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:01:55",
+      "update_time": "2025-03-05 14:01:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1898,
       "platform_framework": [
         "1",
@@ -18591,6 +18796,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1741183385,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CalendarConfig",
+      "field_category": 1,
+      "field_name": "weekdays",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:03:05",
+      "update_time": "2025-03-05 14:03:05",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -22692,6 +22938,88 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741183832,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CascaderConfig",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，未选中时的提示文案“选择选项”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:10:32",
+      "update_time": "2025-03-05 14:10:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741183804,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "CascaderConfig",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，组件标题“选择地址”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:10:04",
+      "update_time": "2025-03-05 14:10:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -28821,9 +29149,6 @@
     {
       "id": 1730970180,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "ColorPicker",
@@ -28852,9 +29177,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29082,6 +29404,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29114,6 +29437,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29165,6 +29489,7 @@
     {
       "id": 1735814342,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -29194,6 +29519,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29204,8 +29530,6 @@
     {
       "id": 1732704565,
       "platform_framework": [
-        "8",
-        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29234,8 +29558,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29248,6 +29570,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29280,6 +29603,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29290,8 +29614,6 @@
     {
       "id": 1732704577,
       "platform_framework": [
-        "8",
-        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29320,8 +29642,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29454,8 +29774,6 @@
     {
       "id": 1730984839,
       "platform_framework": [
-        "8",
-        "32",
         "64"
       ],
       "component": "ColorPicker",
@@ -29484,8 +29802,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29662,6 +29978,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "64"
       ],
@@ -29694,6 +30011,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29704,6 +30022,7 @@
     {
       "id": 1705294739,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -29733,6 +30052,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29743,8 +30063,6 @@
     {
       "id": 1730970213,
       "platform_framework": [
-        "8",
-        "32",
         "64"
       ],
       "component": "ColorPicker",
@@ -29773,8 +30091,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29825,6 +30141,7 @@
     {
       "id": 1705294511,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -29854,6 +30171,7 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -29864,9 +30182,6 @@
     {
       "id": 1730970283,
       "platform_framework": [
-        "8",
-        "16",
-        "32",
         "64"
       ],
       "component": "ColorPicker",
@@ -29895,9 +30210,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -29909,8 +30221,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16"
+        "4"
       ],
       "component": "ColorPicker",
       "field_category": 2,
@@ -29938,14 +30249,15 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
     {
       "id": 1705294804,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "ColorPicker",
@@ -29972,6 +30284,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -30088,6 +30402,7 @@
     {
       "id": 1705394290,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -30115,6 +30430,7 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -30254,7 +30570,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "语言配置，\\\"系统预设颜色\\\" 区域标题文本",
+      "field_desc_zh": "语言配置，“系统预设颜色” 区域标题文本",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -33040,7 +33356,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "星期文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
+      "field_desc_zh": "月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -33651,7 +33967,7 @@
       "field_category": 1,
       "field_name": "weekdays",
       "field_type": [
-        "8"
+        "16"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -33678,7 +33994,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Array"
       ]
     },
     {
@@ -36325,6 +36641,43 @@
       ]
     },
     {
+      "id": 1740731296,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "formatter",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "格式化标签",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-02-28 08:28:16",
+      "update_time": "2025-02-28 08:28:16",
+      "event_output": null,
+      "custom_field_type": "(option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2509,
       "platform_framework": [
         "16",
@@ -37245,6 +37598,416 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1741184344,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "cancel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“取消”按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:19:04",
+      "update_time": "2025-03-05 14:19:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184367,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "confirm",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“确定”按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:19:27",
+      "update_time": "2025-03-05 14:19:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184498,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "dateLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“日” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:21:38",
+      "update_time": "2025-03-05 14:21:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184408,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "format",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "YYYY-MM-DD",
+      "field_enum": "",
+      "field_desc_zh": "日期格式化规则",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:20:08",
+      "update_time": "2025-03-05 14:20:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184520,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "hourLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“时” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:22:00",
+      "update_time": "2025-03-05 14:22:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184535,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "minuteLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“分” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:22:15",
+      "update_time": "2025-03-05 14:22:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184463,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "monthLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“月” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:21:03",
+      "update_time": "2025-03-05 14:21:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184543,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "secondLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“秒” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:22:23",
+      "update_time": "2025-03-05 14:22:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184308,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "title",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，组件标题“选择时间”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:18:28",
+      "update_time": "2025-03-05 14:18:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184432,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DateTimePickerConfig",
+      "field_category": 1,
+      "field_name": "yearLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“年” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:20:32",
+      "update_time": "2025-03-05 14:20:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 1526,
@@ -47048,6 +47811,88 @@
       "field_type_text": []
     },
     {
+      "id": 1741184034,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DropdownMenuConfig",
+      "field_category": 1,
+      "field_name": "confirm",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“确定” 按钮描述文本",
+      "field_desc_en": "confirm text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:13:54",
+      "update_time": "2025-03-05 14:13:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741184082,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "DropdownMenuConfig",
+      "field_category": 1,
+      "field_name": "reset",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“重置” 按钮描述文本",
+      "field_desc_en": "reset text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:14:42",
+      "update_time": "2025-03-05 14:14:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1387,
       "platform_framework": [
         "1",
@@ -53975,6 +54820,47 @@
       ]
     },
     {
+      "id": 1741187123,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "actionSheet",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "动作面板全局配置",
+      "field_desc_en": "ActionSheet global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:05:23",
+      "update_time": "2025-03-05 15:05:23",
+      "event_output": null,
+      "custom_field_type": "ActionSheetConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2400,
       "platform_framework": [
         "1",
@@ -54061,11 +54947,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -54095,11 +54977,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
@@ -54196,7 +55074,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -54226,7 +55107,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -54237,7 +55121,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -54267,7 +55154,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -54405,6 +55295,47 @@
       ]
     },
     {
+      "id": 1741187493,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "dateTimePicker",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "时间选择器全局配置",
+      "field_desc_en": "DateTimePicker global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:11:33",
+      "update_time": "2025-03-05 15:11:33",
+      "event_output": null,
+      "custom_field_type": "DateTimePickerConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1723620343,
       "platform_framework": [
         "1",
@@ -54528,6 +55459,47 @@
       ]
     },
     {
+      "id": 1741187326,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "dropdownMenu",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下拉菜单全局配置",
+      "field_desc_en": "DropdownMenu global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:08:46",
+      "update_time": "2025-03-05 15:08:46",
+      "event_output": null,
+      "custom_field_type": "DropdownMenuConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1723455728,
       "platform_framework": [
         "1",
@@ -54614,7 +55586,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -54644,7 +55619,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -54819,7 +55797,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -54849,7 +55830,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -54938,6 +55922,47 @@
       ]
     },
     {
+      "id": 1741187708,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "picker",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选择器全局配置",
+      "field_desc_en": "Picker global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:15:08",
+      "update_time": "2025-03-05 15:15:08",
+      "event_output": null,
+      "custom_field_type": "PickerConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1880,
       "platform_framework": [
         "1",
@@ -54979,11 +56004,55 @@
       ]
     },
     {
+      "id": 1741187753,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "pullDownRefresh",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "下拉刷新全局配置",
+      "field_desc_en": "PullDownRefresh global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:15:53",
+      "update_time": "2025-03-05 15:15:53",
+      "event_output": null,
+      "custom_field_type": "PullDownRefreshConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1723455704,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55013,7 +56082,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55102,11 +56174,55 @@
       ]
     },
     {
+      "id": 1741187827,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "tabBar",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签栏全局配置",
+      "field_desc_en": "TabBar global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 15:17:07",
+      "update_time": "2025-03-05 15:17:07",
+      "event_output": null,
+      "custom_field_type": "TabBarConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1867,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55136,7 +56252,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55393,7 +56512,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -55423,7 +56545,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -57917,6 +59042,88 @@
       "field_type_text": []
     },
     {
+      "id": 1741223709,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "back",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置， “返回” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-06 01:15:09",
+      "update_time": "2025-03-06 01:15:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741223681,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "finish",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置， “完成” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-06 01:14:41",
+      "update_time": "2025-03-06 01:14:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3212,
       "platform_framework": [
         "1",
@@ -57955,6 +59162,47 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1741223638,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "next",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置， “下一步” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-06 01:13:58",
+      "update_time": "2025-03-06 01:13:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -58037,6 +59285,47 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1741223667,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "GuideConfig",
+      "field_category": 1,
+      "field_name": "skip",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置， “跳过” 描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-06 01:14:27",
+      "update_time": "2025-03-06 01:14:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -64001,7 +65290,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Input",
       "field_category": 1,
@@ -64024,7 +65314,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello\",\"maxlength\":5},\"expect\":[{\"trigger\":\"simulateInputChange('input', \\\"Hello TDesign\\\")\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello\"}}}]}]}]}}",
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -64034,7 +65324,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -65539,7 +66830,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -68096,6 +69387,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741165642,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "InputConfig",
+      "field_category": 1,
+      "field_name": "clearTrigger",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "focus",
+      "field_enum": "always / focus",
+      "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效",
+      "field_desc_en": "Trigger to show a clear icon, valid when the input has a value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 09:07:22",
+      "update_time": "2025-03-05 09:07:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
       ],
       "field_type_text": [
         "String"
@@ -71212,11 +72540,55 @@
       "field_type_text": []
     },
     {
+      "id": 1741184846,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ListConfig",
+      "field_category": 1,
+      "field_name": "loading",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“加载中”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:27:26",
+      "update_time": "2025-03-05 14:27:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2252,
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "ListConfig",
       "field_category": 1,
@@ -71246,7 +72618,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -71288,6 +72663,129 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741185248,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ListConfig",
+      "field_category": 1,
+      "field_name": "loosing",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“释放即可刷新”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:34:08",
+      "update_time": "2025-03-05 14:34:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741185227,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ListConfig",
+      "field_category": 1,
+      "field_name": "pulling",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“下拉即可刷新”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:33:47",
+      "update_time": "2025-03-05 14:33:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741185269,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "ListConfig",
+      "field_category": 1,
+      "field_name": "success",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“刷新成功”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:34:29",
+      "update_time": "2025-03-05 14:34:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -81587,6 +83085,88 @@
       ]
     },
     {
+      "id": 1741185484,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "PickerConfig",
+      "field_category": 1,
+      "field_name": "cancel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“取消” 按钮描述文本",
+      "field_desc_en": "cancel text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:38:04",
+      "update_time": "2025-03-05 14:38:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741185505,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "PickerConfig",
+      "field_category": 1,
+      "field_name": "confirm",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“确认” 按钮描述文本",
+      "field_desc_en": "confirm text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:38:25",
+      "update_time": "2025-03-05 14:38:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3267,
       "platform_framework": [
         "8",
@@ -81609,7 +83189,7 @@
       "create_time": "2023-01-09 06:35:32",
       "update_time": "2023-01-09 06:35:32",
       "event_output": null,
-      "custom_field_type": "(option: PickerItemOption) => string",
+      "custom_field_type": "(option: PickerItemOption, columnIndex: number) => PickerItemOption",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -88097,8 +89677,7 @@
       "platform_framework": [
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "PullDownRefresh",
       "field_category": 1,
@@ -88128,8 +89707,7 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -88841,6 +90419,49 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1741186345,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "PullDownRefreshConfig",
+      "field_category": 1,
+      "field_name": "loadingTexts",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:52:25",
+      "update_time": "2025-03-05 14:52:25",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
     },
     {
       "id": 1419,
@@ -89730,7 +91351,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -90770,7 +92391,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -93942,6 +95563,47 @@
       "field_type_text": []
     },
     {
+      "id": 1741186556,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "RateConfig",
+      "field_category": 1,
+      "field_name": "noValueText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“未评分”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:55:56",
+      "update_time": "2025-03-05 14:55:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1723453113,
       "platform_framework": [
         "1",
@@ -93980,6 +95642,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1741186536,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "RateConfig",
+      "field_category": 1,
+      "field_name": "valueText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，评分值描述文本。示例：“{value} 分”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:55:36",
+      "update_time": "2025-03-05 14:55:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -112586,6 +114289,170 @@
       "field_type_text": []
     },
     {
+      "id": 1741186773,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "TabBarConfig",
+      "field_category": 1,
+      "field_name": "haveMoreNewsAriaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“有n+条新的消息”描述文本。示例：“有 {value}+ 条消息”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:59:33",
+      "update_time": "2025-03-05 14:59:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741186793,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "TabBarConfig",
+      "field_category": 1,
+      "field_name": "haveNewsAriaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“有n条新的消息”描述文本。示例：“有 {value} 条消息”",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:59:53",
+      "update_time": "2025-03-05 14:59:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741186744,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "TabBarConfig",
+      "field_category": 1,
+      "field_name": "moreNewsAriaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“有很多消息”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:59:04",
+      "update_time": "2025-03-05 14:59:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1741186722,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "TabBarConfig",
+      "field_category": 1,
+      "field_name": "newsAriaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“有新的消息”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-05 14:58:43",
+      "update_time": "2025-03-05 14:58:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1439,
       "platform_framework": [
         "8",
@@ -114674,7 +116541,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "TableConfig",
       "field_category": 1,
@@ -114705,7 +116575,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -120836,7 +122709,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -121844,7 +123717,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{ \"Miniprogram\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -135496,7 +137369,7 @@
       "create_time": "2024-01-30 18:09:32",
       "update_time": "2024-01-30 18:09:32",
       "event_output": null,
-      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -135738,7 +137611,7 @@
       "create_time": "2024-01-30 17:55:02",
       "update_time": "2024-01-30 17:55:02",
       "event_output": null,
-      "custom_field_type": "tooltipProps【import { tooltipProps } from '@Tooltip'】",
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -139680,7 +141553,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "UploadConfig",
       "field_category": 1,
@@ -139710,7 +141586,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -140131,7 +142010,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -140161,7 +142043,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -140172,7 +142057,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -140202,7 +142090,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -140213,7 +142104,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -140243,7 +142137,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -140254,7 +142151,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -140284,7 +142184,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
