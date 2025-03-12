@@ -111067,7 +111067,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Swiper",
@@ -111099,7 +111098,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -111178,6 +111176,45 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1734341911,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "height",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当使用垂直方向滚动时的高度",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-16 09:38:31",
+      "update_time": "2024-12-16 09:38:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -111867,7 +111904,7 @@
       "field_desc_zh": "轮播切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | ''】",
+      "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】",
       "create_time": "2021-07-03 08:59:23",
       "update_time": "2022-04-06 08:44:37",
       "event_output": null,
@@ -112798,6 +112835,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1734341852,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "inside",
+      "field_enum": "inside/outside",
+      "field_desc_zh": "导航器位置，位于主体的内侧或是外侧",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-16 09:37:32",
+      "update_time": "2024-12-16 09:37:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
