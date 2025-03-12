@@ -1100,20 +1100,182 @@
         "type": "TS"
       },
       {
+        "value": "ActionSheet",
+        "label": "动作面板"
+      },
+      {
+        "value": "ActionSheetConfig",
+        "label": "动作面板全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "Cell",
+        "label": "单元格"
+      },
+      {
+        "value": "CellGroup",
+        "label": "单元格组"
+      },
+      {
         "value": "CountDown",
         "label": "倒计时"
       },
       {
-        "value": "Textarea",
-        "label": "文本输入框"
+        "value": "DateTimePicker",
+        "label": "日期时间选择器"
+      },
+      {
+        "value": "DateTimePickerConfig",
+        "label": "时间选择器全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "DateTimeRangePicker",
+        "label": "日期时间范围选择器"
+      },
+      {
+        "value": "DialogCard",
+        "label": "对话框卡片"
+      },
+      {
+        "value": "DropdownMenu",
+        "label": "下拉菜单"
+      },
+      {
+        "value": "DropdownMenuConfig",
+        "label": "下拉菜单全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "Fab",
+        "label": "悬浮按钮"
+      },
+      {
+        "value": "GridItem",
+        "label": "宫格子项"
+      },
+      {
+        "value": "Image",
+        "label": "图片"
+      },
+      {
+        "value": "ImageViewer",
+        "label": "图片预览"
+      },
+      {
+        "value": "Indexes",
+        "label": "索引"
+      },
+      {
+        "value": "IndexesAnchor",
+        "label": "索引锚点"
+      },
+      {
+        "value": "ListItem",
+        "label": "列表项"
+      },
+      {
+        "value": "ListItemMeta",
+        "label": "带图片的列表项"
+      },
+      {
+        "value": "Navbar",
+        "label": "导航条"
+      },
+      {
+        "value": "NoticeBar",
+        "label": "公告栏"
+      },
+      {
+        "value": "Overlay",
+        "label": "遮罩层"
       },
       {
         "value": "PaginationMini",
         "label": "迷你分页"
       },
       {
-        "value": "DialogCard",
-        "label": "对话框卡片"
+        "value": "Picker",
+        "label": "选择器"
+      },
+      {
+        "value": "PickerConfig",
+        "label": "选择器全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "PickerItem",
+        "label": "选择器选项"
+      },
+      {
+        "value": "Popover",
+        "label": "气泡弹出框"
+      },
+      {
+        "value": "PullDownRefresh",
+        "label": "下拉刷新"
+      },
+      {
+        "value": "PullDownRefreshConfig",
+        "label": "下拉刷新全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "SearchField",
+        "label": "搜索框"
+      },
+      {
+        "value": "SegmentedControl",
+        "label": "分段器"
+      },
+      {
+        "value": "ScrollView",
+        "label": "滚动容器"
+      },
+      {
+        "value": "SideBar",
+        "label": "侧边导航"
+      },
+      {
+        "value": "SideBarItem",
+        "label": "侧边导航项"
+      },
+      {
+        "value": "SwipeCell",
+        "label": "滑动操作"
+      },
+      {
+        "value": "SwiperNav",
+        "label": "轮播导航"
+      },
+      {
+        "value": "Stepper",
+        "label": "步进器"
+      },
+      {
+        "value": "Sticky",
+        "label": "吸顶容器"
+      },
+      {
+        "value": "Tab",
+        "label": "选项卡"
+      },
+      {
+        "value": "TabBar",
+        "label": "标签栏"
+      },
+      {
+        "value": "TabBarConfig",
+        "label": "标签栏全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "TabBarItem",
+        "label": "标签栏选项"
+      },
+      {
+        "value": "Textarea",
+        "label": "文本输入框"
       },
       {
         "value": "Toast",
@@ -1125,140 +1287,8 @@
         "type": "TS"
       },
       {
-        "value": "NoticeBar",
-        "label": "公告栏"
-      },
-      {
-        "value": "Picker",
-        "label": "选择器"
-      },
-      {
-        "value": "PickerItem",
-        "label": "选择器选项"
-      },
-      {
-        "value": "DateTimePicker",
-        "label": "日期时间选择器"
-      },
-      {
-        "value": "DateTimeRangePicker",
-        "label": "日期时间范围选择器"
-      },
-      {
-        "value": "Image",
-        "label": "图片"
-      },
-      {
-        "value": "DropdownMenu",
-        "label": "下拉菜单"
-      },
-      {
-        "value": "Stepper",
-        "label": "步进器"
-      },
-      {
-        "value": "Cell",
-        "label": "单元格"
-      },
-      {
-        "value": "CellGroup",
-        "label": "单元格组"
-      },
-      {
-        "value": "ListItem",
-        "label": "列表项"
-      },
-      {
-        "value": "ListItemMeta",
-        "label": "带图片的列表项"
-      },
-      {
-        "value": "SwipeCell",
-        "label": "滑动操作"
-      },
-      {
-        "value": "PullDownRefresh",
-        "label": "下拉刷新"
-      },
-      {
-        "value": "ScrollView",
-        "label": "滚动容器"
-      },
-      {
-        "value": "Sticky",
-        "label": "吸顶容器"
-      },
-      {
-        "value": "GridItem",
-        "label": "宫格子项"
-      },
-      {
-        "value": "Indexes",
-        "label": "索引"
-      },
-      {
-        "value": "IndexesAnchor",
-        "label": "索引锚点"
-      },
-      {
-        "value": "Navbar",
-        "label": "导航条"
-      },
-      {
-        "value": "SegmentedControl",
-        "label": "分段器"
-      },
-      {
-        "value": "Tab",
-        "label": "选项卡"
-      },
-      {
-        "value": "TabBar",
-        "label": "标签栏"
-      },
-      {
-        "value": "TabBarItem",
-        "label": "标签栏选项"
-      },
-      {
-        "value": "Fab",
-        "label": "悬浮按钮"
-      },
-      {
-        "value": "SearchField",
-        "label": "搜索框"
-      },
-      {
-        "value": "ImageViewer",
-        "label": "图片预览"
-      },
-      {
-        "value": "ActionSheet",
-        "label": "动作面板"
-      },
-      {
-        "value": "Overlay",
-        "label": "遮罩层"
-      },
-      {
         "value": "Transition",
         "label": "动画"
-      },
-      {
-        "value": "SideBar",
-        "label": "侧边导航"
-      },
-      {
-        "value": "SideBarItem",
-        "label": "侧边导航项"
-      },
-      {
-        "value": "SwiperNav",
-        "label": "轮播导航"
-      },
-      {
-        "value": "Popover",
-        "label": "气泡弹出框"
       }
     ]
   }

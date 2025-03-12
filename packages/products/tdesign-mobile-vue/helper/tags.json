@@ -292,14 +292,16 @@
   },
   "t-color-picker": {
     "attributes": [
-      "auto-close",
       "clearable",
-      "footer",
-      "header",
-      "popup-props",
-      "use-popup",
-      "visible",
-      "close"
+      "enable-alpha",
+      "fixed",
+      "format",
+      "swatch-colors",
+      "type",
+      "value",
+      "change",
+      "close",
+      "palette-bar-change"
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker)"
   },
