@@ -30,11 +30,6 @@ const props: TdStepsProps = {
     type: null,
     value: undefined,
   },
-  /** 步骤条分割符 */
-  separator: {
-    type: String,
-    value: 'line',
-  },
   /** 步骤条顺序 */
   sequence: {
     type: String,

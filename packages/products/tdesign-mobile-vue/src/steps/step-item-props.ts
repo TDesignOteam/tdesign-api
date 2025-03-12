@@ -13,6 +13,10 @@ export default {
     type: [String, Function] as PropType<TdStepItemProps['content']>,
     default: '',
   },
+  /** 步骤条自定义内容 */
+  extra: {
+    type: [String, Function] as PropType<TdStepItemProps['extra']>,
+  },
   /** 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标 */
   icon: {
     type: [Boolean, Function] as PropType<TdStepItemProps['icon']>,

@@ -106902,7 +106902,9 @@
     {
       "id": 1727168992,
       "platform_framework": [
-        "16"
+        "8",
+        "16",
+        "64"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -106911,9 +106913,9 @@
         "1",
         "64"
       ],
-      "field_default_value": "''",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "步骤条自定义内容 仅支持 layout = 'vertical' 时",
+      "field_desc_zh": "步骤条自定义内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -106931,7 +106933,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -107078,8 +107082,6 @@
     {
       "id": 2475,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "StepItem",
@@ -107108,8 +107110,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -108487,9 +108487,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108519,9 +108517,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -108581,11 +108577,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108615,11 +108607,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
