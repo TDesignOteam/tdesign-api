@@ -45,9 +45,10 @@ export interface TdActionSheetProps {
   items: {
     type: ArrayConstructor;
     value?: Array<string | ActionSheetItem>;
+    required?: boolean;
   };
   /**
-   * popupProps透传
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: {
@@ -93,6 +94,7 @@ export interface TdActionSheetProps {
   visible: {
     type: BooleanConstructor;
     value?: boolean;
+    required?: boolean;
   };
   /**
    * 显示与隐藏，非受控属性
@@ -101,6 +103,7 @@ export interface TdActionSheetProps {
   defaultVisible: {
     type: BooleanConstructor;
     value?: boolean;
+    required?: boolean;
   };
 }
 

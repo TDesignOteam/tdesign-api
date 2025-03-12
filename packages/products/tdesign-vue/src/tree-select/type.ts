@@ -124,7 +124,7 @@ export interface TdTreeSelectProps<
    */
   placeholder?: string;
   /**
-   * 透传给 popup 组件的全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -141,7 +141,6 @@ export interface TdTreeSelectProps<
   prefixIcon?: TNode;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
-   * @default false
    */
   readonly?: boolean;
   /**

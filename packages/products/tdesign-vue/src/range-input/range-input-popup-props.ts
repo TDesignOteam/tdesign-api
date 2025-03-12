@@ -28,7 +28,7 @@ export default {
   panel: {
     type: [String, Function] as PropType<TdRangeInputPopupProps['panel']>,
   },
-  /** 透传 Popup 浮层组件全部属性 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdRangeInputPopupProps['popupProps']>,
   },
@@ -39,7 +39,10 @@ export default {
     type: Object as PropType<TdRangeInputPopupProps['rangeInputProps']>,
   },
   /** 只读状态，值为真会隐藏输入框，且无法打开下拉框 */
-  readonly: Boolean,
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 输入框状态 */
   status: {
     type: String as PropType<TdRangeInputPopupProps['status']>,

@@ -9,6 +9,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 actived | Array | - | Typescript：`Array<TreeNodeValue>` | N
+allow-drop | Function | - | Determine whether the node can execute the drop operation。Typescript：`(detail: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean` | N
 allow-fold-node-on-filter | Boolean | false | \- | N
 check-props | Object | - | Typescript：`CheckboxProps`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/tree/type.ts) | N
 check-strictly | Boolean | false | \- | N
@@ -67,8 +68,6 @@ set-item | `(value: TreeNodeValue, options: TreeNodeState)` | \- | required
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 activable | Boolean | false | \- | N
 actived | Boolean | false | \- | N
 checkable | Boolean | false | \- | N

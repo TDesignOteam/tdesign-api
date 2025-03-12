@@ -15,7 +15,7 @@ inputProps | Object / Array | - | 透传 Input 输入框组件全部属性，数
 label | String / Slot / Function | - | 左侧内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 placeholder | String / Array | - | 占位符，示例：'请输入' 或者 ['开始日期', '结束日期']。TS 类型：`string \| Array<string>` | N
 prefixIcon | Slot / Function | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-readonly | Boolean | false | 只读状态 | N
+readonly | Boolean | undefined | 只读状态 | N
 separator | String / Slot / Function | '-' | 范围分隔符。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 showClearIconOnEmpty | Boolean | false | 输入框内容为空时，悬浮状态是否显示清空按钮，默认不显示 | N
 size | String | medium | 输入框尺寸。可选项：small/medium/large | N
@@ -66,11 +66,11 @@ inputValue | Array | - | 输入框的值。支持语法糖 `.sync`。TS 类型�
 defaultInputValue | Array | - | 输入框的值。非受控属性。TS 类型：`RangeInputValue` | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 panel | String / Slot / Function | - | 下拉框内容，可完全自定义。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-popupProps | Object | - | 透传 Popup 浮层组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框 | N
 defaultPopupVisible | Boolean | - | 是否显示下拉框。非受控属性 | N
 rangeInputProps | Object | - | 透传 RangeInput 组件全部属性。TS 类型：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts) | N
-readonly | Boolean | false | 只读状态，值为真会隐藏输入框，且无法打开下拉框 | N
+readonly | Boolean | undefined | 只读状态，值为真会隐藏输入框，且无法打开下拉框 | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
 tips | String / Slot / Function | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onInputChange | Function |  | TS 类型：`(value: RangeInputValue, context?: RangeInputValueChangeContext)  => void`<br/>输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发等。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/range-input/type.ts)。<br/>`type RangeInputValueChangeContext = { e?: InputEvent \| MouseEvent; trigger?: 'input' \| 'clear', position?: RangeInputPosition }`<br/> | N

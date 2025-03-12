@@ -131,7 +131,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   placeholder?: string;
   /**
-   * 参考 popup 组件 API
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -144,7 +144,6 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   prefixIcon?: TNode;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
-   * @default false
    */
   readonly?: boolean;
   /**

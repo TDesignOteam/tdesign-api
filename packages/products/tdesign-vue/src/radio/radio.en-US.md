@@ -13,8 +13,8 @@ default | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 disabled | Boolean | undefined | \- | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 name | String | - | \- | N
-readonly | Boolean | false | \- | N
-value | String / Number / Boolean | undefined | Typescript：`string \| number \| boolean` | N
+readonly | Boolean | undefined | \- | N
+value | String / Number / Boolean | undefined | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
 onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>trigger on click | N
 
@@ -34,7 +34,9 @@ allowUncheck | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string \| TNode; value?: string \| number \| boolean; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/radio/type.ts) | N
+readonly | Boolean | undefined | \- | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+theme | String | radio | Determine the style of radio when using options API。options: radio/button | N
 value | String / Number / Boolean | - | `v-model` is supported。Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | uncontrolled property。Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/radio/type.ts) | N
 variant | String | outline | options: outline/primary-filled/default-filled | N

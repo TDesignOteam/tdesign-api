@@ -10,19 +10,21 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 | N
 align | String | left | 文本内容位置，居左/居中/居右。可选项：left/center/right | N
+allow-input-over-max | Boolean | false | `1.8.6`。超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 | N
 always-embed | Boolean | false | 强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效) | N
 auto-focus | Boolean | false | (即将废弃，请直接使用 focus )自动聚焦，拉起键盘 | N
 borderless | Boolean | false | 是否开启无边框模式 | N
 clear-trigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
-clearable | Boolean / Object | false | 是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon` | N
+clearable | Boolean / Object | false | 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon` | N
 confirm-hold | Boolean | false | 点击键盘右下角按钮时是否保持键盘不收起 | N
 confirm-type | String | done | 设置键盘右下角按钮的文字，仅在type='text'时生效。<br />具体释义：<br />`send` 右下角按钮为“发送”；<br />`search` 右下角按钮为“搜索”；<br />`next` 右下角按钮为“下一个”；<br />`go` 右下角按钮为“前往”；<br />`done` 右下角按钮为“完成”。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)。可选项：send/search/next/go/done | N
 cursor | Number | - | 必需。指定 focus 时的光标位置 | Y
+cursor-color | String | #0052d9 | 光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制 | N
 cursor-spacing | Number | 0 | 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 | N
-disabled | Boolean | false | 是否禁用输入框 | N
+disabled | Boolean | undefined | 是否禁用输入框 | N
 error-message | String | - | 已废弃。错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips） | N
 focus | Boolean | false | 获取焦点 | N
-format | Function | - | 【开发中】指定输入框展示值的格式。TS 类型：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
+format | Function | - | 指定输入框展示值的格式。TS 类型：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
 hold-keyboard | Boolean | false | focus时，点击页面的时候不收起键盘 | N
 label | String / Slot | - | 左侧文本。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 layout | String | horizontal | 标题输入框布局方式。可选项：vertical/horizontal | N
@@ -33,7 +35,7 @@ placeholder | String | undefined | 占位符 | N
 placeholder-class | String | input-placeholder | 指定 placeholder 的样式类 | N
 placeholder-style | String | - | 必需。指定 placeholder 的样式 | Y
 prefix-icon | String / Object / Slot | - | 组件前置图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-readonly | Boolean | false | 【开发中】只读状态 | N
+readonly | Boolean | undefined | `1.8.6`。只读状态 | N
 safe-password-cert-path | String | - | 安全键盘加密公钥的路径，只支持包内路径 | N
 safe-password-custom-hash | String | - | 安全键盘计算 hash 的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))` | N
 safe-password-length | Number | - | 安全键盘输入密码长度 | N
@@ -45,7 +47,7 @@ selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需
 size | String | medium | 已废弃。输入框尺寸。可选项：small/medium。TS 类型：`'medium' \| 'small'` | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
 suffix | String / Slot | - | 后置图标前的后置内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-suffix-icon | String / Object / Slot | - | 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`。。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+suffix-icon | String / Object / Slot | - | 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 tips | String / Slot | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 type | String | text | 输入框类型。可选项：text/number/idcard/digit/safe-password/password/nickname | N
 value | String / Number | - | 输入框的值。TS 类型：`InputValue` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
@@ -64,14 +66,15 @@ focus | `(value: InputValue)` | 获得焦点时触发
 keyboardheightchange | `(height: number, duration: number)` | 键盘高度发生变化的时候触发此事件
 nicknamereview | `(pass: boolean, timeout: boolean)` | 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效
 validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数超出限制时触发
+
 ### Input External Classes
 
 类名 | 描述
 -- | --
 t-class | 根节点样式类
-t-class-clearable | 标题样式类
-t-class-input | 标题样式类
-t-class-label | 标题样式类
+t-class-clearable | 清空按钮样式类
+t-class-input | 输入框样式类
+t-class-label | 标签样式类
 t-class-prefix-icon | 前置图标样式类
 t-class-suffix | 后置样式类
 t-class-suffix-icon | 后置图标样式类

@@ -5,7 +5,8 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles } from '../common';
+import { OverlayProps } from '../overlay';
+import { TNode } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -22,7 +23,13 @@ export interface TdDialogProps {
    */
   cancelBtn?: string | ButtonProps | TNode | null;
   /**
+   * 多按钮排列方式。可选项：true/false
+   * @default false
+   */
+  closeBtn?: boolean;
+  /**
    * 点击蒙层时是否触发关闭事件
+   * @default false
    */
   closeOnOverlayClick?: boolean;
   /**
@@ -39,10 +46,14 @@ export interface TdDialogProps {
    */
   destroyOnClose?: boolean;
   /**
+   * 中间自定义内容
+   */
+  middle?: TNode;
+  /**
    * 透传至 Overlay 组件
    * @default {}
    */
-  overlayProps?: object;
+  overlayProps?: OverlayProps;
   /**
    * 防止滚动穿透
    * @default true
@@ -58,8 +69,11 @@ export interface TdDialogProps {
    */
   title?: string | TNode;
   /**
+   * 顶部自定义内容
+   */
+  top?: TNode;
+  /**
    * 控制对话框是否显示
-   * @default false
    */
   visible?: boolean;
   /**
@@ -79,6 +93,10 @@ export interface TdDialogProps {
    */
   onClose?: (context: DialogCloseContext) => void;
   /**
+   * 对话框消失动画效果结束后触发
+   */
+  onClosed?: () => void;
+  /**
    * 如果“确认”按钮存在，则点击“确认”按钮时触发
    */
   onConfirm?: (context: { e: MouseEvent }) => void;
@@ -94,32 +112,28 @@ export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
    * @default ''
    */
   className?: string;
-  /**
-   * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
-   */
-  style?: string | Styles;
 }
 
 export interface DialogInstance {
   /**
    * 销毁弹框
    */
-  destroy?: () => void;
+  destroy: () => void;
   /**
    * 隐藏弹框
    */
-  hide?: () => void;
+  hide: () => void;
   /**
    * 显示弹框
    */
-  show?: () => void;
+  show: () => void;
   /**
    * 更新弹框内容
    */
-  update?: (props: DialogOptions) => void;
+  update: (props: DialogOptions) => void;
 }
 
-export type DialogEventSource = 'cancel' | 'overlay';
+export type DialogEventSource = 'cancel' | 'overlay' | 'close-btn';
 
 export interface DialogCloseContext {
   trigger: DialogEventSource;

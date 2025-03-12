@@ -20,8 +20,9 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options: left/right | N
-value | String / Number / Boolean | undefined | Typescript：`string \| number \| boolean` | N
+placement | String | - | options: left/right | N
+readonly | Boolean | undefined | \- | N
+value | String / Number / Boolean | undefined | Typescript：`T` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
 
 ### Radio Events
@@ -43,12 +44,13 @@ keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://g
 name | String | - | \- | N
 options | Array | - | Typescript：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string \| TNode; value?: string \| number \| boolean; disabled?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/radio/type.ts) | N
 placement | String | left | options: left/right | N
+readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | - | `v-model` and `v-model:value` is supported。Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/radio/type.ts) | N
 defaultValue | String / Number / Boolean | - | uncontrolled property。Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/radio/type.ts) | N
-onChange | Function |  | Typescript：`(value: T, context: { e: Event }) => void`<br/> | N
+onChange | Function |  | Typescript：`(value: T, context: { e: Event; name?:string }) => void`<br/> | N
 
 ### RadioGroup Events
 
 name | params | description
 -- | -- | --
-change | `(value: T, context: { e: Event })` | \-
+change | `(value: T, context: { e: Event; name?:string })` | \-

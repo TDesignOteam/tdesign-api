@@ -51,7 +51,6 @@ export interface TdRangeInputProps {
   prefixIcon?: TNode;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -180,7 +179,7 @@ export interface TdRangeInputPopupProps {
    */
   panel?: string | TNode;
   /**
-   * 透传 Popup 浮层组件全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -193,7 +192,6 @@ export interface TdRangeInputPopupProps {
   rangeInputProps?: RangeInputProps;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
-   * @default false
    */
   readonly?: boolean;
   /**

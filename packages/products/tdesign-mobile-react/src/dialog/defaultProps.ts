@@ -6,10 +6,10 @@ import { TdDialogProps } from './type';
 
 export const dialogDefaultProps: TdDialogProps = {
   buttonLayout: 'horizontal',
-  closeOnOverlayClick: undefined,
+  closeBtn: false,
+  closeOnOverlayClick: false,
   destroyOnClose: false,
   overlayProps: {},
   preventScrollThrough: true,
   showOverlay: true,
-  visible: false,
 };

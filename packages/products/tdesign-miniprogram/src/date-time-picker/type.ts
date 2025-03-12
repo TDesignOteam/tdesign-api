@@ -8,6 +8,14 @@ import { PopupProps } from '../popup/index';
 
 export interface TdDateTimePickerProps {
   /**
+   * 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible
+   * @default false
+   */
+  autoClose?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 取消按钮文字
    * @default 取消
    */
@@ -39,11 +47,11 @@ export interface TdDateTimePickerProps {
     value?: string | number;
   };
   /**
-   * 组件类名，分别用于设置组件外层元素、确认按钮、取消按钮、标题等元素类名
+   * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
    */
-  externalClasses?: {
-    type: ArrayConstructor;
-    value?: ['t-class', 't-class-confirm', 't-class-cancel', 't-class-title'];
+  filter?: {
+    type: undefined;
+    value?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
   };
   /**
    * 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)
@@ -52,6 +60,13 @@ export interface TdDateTimePickerProps {
   format?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 格式化标签
+   */
+  formatter?: {
+    type: undefined;
+    value?: (option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem;
   };
   /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
@@ -70,7 +85,7 @@ export interface TdDateTimePickerProps {
     value?: DateTimePickerMode;
   };
   /**
-   * 透传 `Popup` 组件全部属性
+   * 透传 Popup 组件全部属性
    * @default {}
    */
   popupProps?: {
@@ -137,6 +152,13 @@ export interface TdDateTimePickerProps {
     type: BooleanConstructor;
     value?: boolean;
   };
+}
+
+export type DateTimePickerColumn = DateTimePickerColumnItem[];
+
+export interface DateTimePickerColumnItem {
+  label: string;
+  value: string;
 }
 
 export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues>;

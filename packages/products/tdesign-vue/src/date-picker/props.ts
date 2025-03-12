@@ -23,6 +23,10 @@ export default {
   disableDate: {
     type: [Object, Array, Function] as PropType<TdDatePickerProps['disableDate']>,
   },
+  /** 禁用时间项的配置函数，仅在日期时间选择器中可用 */
+  disableTime: {
+    type: Function as PropType<TdDatePickerProps['disableTime']>,
+  },
   /** 是否禁用组件 */
   disabled: {
     type: Boolean,
@@ -60,6 +64,8 @@ export default {
       return ['year', 'quarter', 'month', 'week', 'date'].includes(val);
     },
   },
+  /** 支持多选日期，但不支持在range-picker中，或与enableTimePicker、allowInput 一起使用 */
+  multiple: Boolean,
   /** 决定在日期时间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为`true` */
   needConfirm: {
     type: Boolean,
@@ -70,7 +76,7 @@ export default {
     type: [String, Array] as PropType<TdDatePickerProps['placeholder']>,
     default: undefined,
   },
-  /** 透传给 popup 组件的参数 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdDatePickerProps['popupProps']>,
   },

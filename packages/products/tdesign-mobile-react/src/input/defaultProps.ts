@@ -12,10 +12,12 @@ export const inputDefaultProps: TdInputProps = {
   borderless: false,
   clearTrigger: 'always',
   clearable: false,
+  cursorColor: '#0052d9',
   disabled: undefined,
   layout: 'horizontal',
   placeholder: undefined,
   readonly: undefined,
+  spellcheck: false,
   status: 'default',
   type: 'text',
 };

@@ -130,7 +130,7 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   icon?: boolean | TNode<TreeNodeModel<T>>;
   /**
-   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`。其中，disabled 待开发。
+   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`。其中，disabled 待开发
    */
   keys?: TreeKeysType;
   /**
@@ -180,7 +180,7 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   defaultValue?: Array<TreeNodeValue>;
   /**
-   * 选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaft 表示无论什么情况，选中值仅呈现叶子节点
+   * 选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点
    * @default onlyLeaf
    */
   valueMode?: 'onlyLeaf' | 'parentFirst' | 'all';

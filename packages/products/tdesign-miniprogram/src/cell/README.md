@@ -8,7 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-align | String | middle | 内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
+align | String | middle | 右侧内容的对齐方式，默认居中对齐。可选项：top/middle/bottom | N
 arrow | Boolean / Object | false | 是否显示右侧箭头 | N
 bordered | Boolean | true | 是否显示下边框 | N
 description | String / Slot | - | 下方内容描述。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
@@ -27,6 +27,7 @@ url | String | - | 点击后跳转链接地址。如果值为空，则表示不�
 名称 | 参数 | 描述
 -- | -- | --
 click | - | 右侧内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)
+
 ### Cell External Classes
 
 类名 | 描述
@@ -41,4 +42,22 @@ t-class-left-icon | 左侧图标样式类
 t-class-note | 右侧说明文字样式类
 t-class-right | 右侧内容样式类
 t-class-right-icon | 右侧图标样式类
+t-class-title | 标题样式类
+
+
+### CellGroup Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+style | Object | - | 样式 | N
+custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
+bordered | Boolean | false | 是否显示组边框 | N
+theme | String | default | 单元格组风格。可选项：default/card | N
+title | String | - | 单元格组标题 | N
+
+### CellGroup External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
 t-class-title | 标题样式类

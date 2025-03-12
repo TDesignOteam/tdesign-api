@@ -9,12 +9,14 @@ name | type | default | description | required
 cancelBtn | String | 取消 | \- | N
 confirmBtn | String | - | \- | N
 end | String / Number | - | \- | N
+filter | Function | - | Typescript：`(type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn` `type DateTimePickerColumn = DateTimePickerColumnItem[]` `interface DateTimePickerColumnItem { label: string,value: string}`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
 mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTimePickerMode = TimeModeValues \| Array<TimeModeValues> ` `type TimeModeValues = 'year' \| 'month' \| 'date' \| 'hour' \| 'minute' \| 'second'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 renderLabel | Function | - | Typescript：`(type: string, value: number) => string` | N
 showWeek | Boolean | false | \- | N
 start | String / Number | - | \- | N
 title | String | '选择时间' | title of picker | N
+usePopup | Boolean | true | \- | N
 value | String / Number | - | `v-model` and `v-model:value` is supported。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N

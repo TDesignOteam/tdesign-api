@@ -5,6 +5,7 @@
  * */
 
 import { PopupProps } from '../popup';
+import { TooltipProps } from '../tooltip';
 import { TNode } from '../common';
 
 export interface TdMenuProps {
@@ -134,7 +135,7 @@ export interface TdSubmenuProps {
    */
   icon?: TNode;
   /**
-   * 透传 Popup 组件全部特性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -175,11 +176,11 @@ export interface TdMenuItemProps {
    */
   replace?: boolean;
   /**
-   * 路由对象。如果项目存在 Router，则默认使用 Router。
+   * 路由对象。如果项目存在 Router，则默认使用 Router
    */
   router?: Record<string, any>;
   /**
-   * 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签。
+   * 当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签
    */
   routerLink?: boolean;
   /**
@@ -191,6 +192,10 @@ export interface TdMenuItemProps {
    * 路由跳转目标，当且仅当 Router 存在时，该 API 有效
    */
   to?: MenuRoute;
+  /**
+   * 透传 Tooltip 组件的特性，作用于一级菜单收起下聚焦时出现的节点
+   */
+  tooltipProps?: TooltipProps;
   /**
    * 菜单项唯一标识
    */

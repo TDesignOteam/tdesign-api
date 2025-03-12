@@ -54,7 +54,7 @@ export interface TdInputProps {
     value?: 'always' | 'focus';
   };
   /**
-   * 是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon`
+   * 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon`
    * @default false
    */
   clearable?: {
@@ -86,6 +86,14 @@ export interface TdInputProps {
     required?: boolean;
   };
   /**
+   * 光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制
+   * @default #0052d9
+   */
+  cursorColor?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离
    * @default 0
    */
@@ -95,7 +103,6 @@ export interface TdInputProps {
   };
   /**
    * 是否禁用输入框
-   * @default false
    */
   disabled?: {
     type: BooleanConstructor;
@@ -110,7 +117,7 @@ export interface TdInputProps {
     value?: boolean;
   };
   /**
-   * 【开发中】指定输入框展示值的格式
+   * 指定输入框展示值的格式
    */
   format?: {
     type: undefined;
@@ -186,8 +193,7 @@ export interface TdInputProps {
     value?: string | object;
   };
   /**
-   * 【开发中】只读状态
-   * @default false
+   * 只读状态
    */
   readonly?: {
     type: BooleanConstructor;
@@ -271,7 +277,7 @@ export interface TdInputProps {
     value?: string;
   };
   /**
-   * 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`。
+   * 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`
    */
   suffixIcon?: {
     type: null;

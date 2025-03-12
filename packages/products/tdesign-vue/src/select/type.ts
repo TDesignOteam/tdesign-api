@@ -130,7 +130,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
    */
   placeholder?: string;
   /**
-   * 透传给 popup 组件的全部属性
+   * 透传 Popup 组件全部属性
    */
   popupProps?: PopupProps;
   /**
@@ -147,7 +147,6 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   prefixIcon?: TNode;
   /**
    * 只读状态，值为真会隐藏输入框，且无法打开下拉框
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -209,9 +208,11 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 自定义选中项呈现的内容
    */
-  valueDisplay?: string | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>;
+  valueDisplay?:
+    | string
+    | TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue; label?: string }>;
   /**
-   * 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。
+   * 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据
    * @default value
    */
   valueType?: 'value' | 'object';
@@ -233,7 +234,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 当选择新创建的条目时触发
    */
-  onCreate?: (value: string | number) => void;
+  onCreate?: (value: string | number | boolean) => void;
   /**
    * 回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值
    */
@@ -292,7 +293,7 @@ export interface TdOptionProps {
   /**
    * 选项值
    */
-  value?: string | number;
+  value?: string | number | boolean;
 }
 
 export interface TdOptionGroupProps {

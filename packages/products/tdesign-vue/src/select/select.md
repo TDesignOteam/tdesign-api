@@ -31,11 +31,11 @@ optionsLayout | String | vertical | 下拉选项布局方式，有纵向排列�
 panelBottomContent | String / Slot / Function | - | 面板内的底部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 panelTopContent | String / Slot / Function | - | 面板内的顶部内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 placeholder | String | undefined | 占位符 | N
-popupProps | Object | - | 透传给 popup 组件的全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
+popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
 popupVisible | Boolean | - | 是否显示下拉框。支持语法糖 `.sync` | N
 defaultPopupVisible | Boolean | - | 是否显示下拉框。非受控属性 | N
 prefixIcon | Slot / Function | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-readonly | Boolean | false | 只读状态，值为真会隐藏输入框，且无法打开下拉框 | N
+readonly | Boolean | undefined | 只读状态，值为真会隐藏输入框，且无法打开下拉框 | N
 reserveKeyword | Boolean | false | 多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词 | N
 scroll | Object | - | 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`。TS 类型：`InfinityScroll`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 selectInputProps | Object | - | 透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
@@ -49,12 +49,12 @@ tagProps | Object | - | 透传 Tag 标签组件全部属性。TS 类型：`TagPr
 tips | String / Slot / Function | - | 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String / Number / Boolean / Object / Array | - | 选中值。支持语法糖 `v-model`。TS 类型：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| boolean \| T \| Array<SelectValue<T>>`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
 defaultValue | String / Number / Boolean / Object / Array | - | 选中值。非受控属性。TS 类型：`SelectValue` `type SelectValue<T extends SelectOption = SelectOption> = string \| number \| boolean \| T \| Array<SelectValue<T>>`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts) | N
-valueDisplay | String / Slot / Function | - | 自定义选中项呈现的内容。TS 类型：`string \| TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-valueType | String | value | 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。。可选项：value/object | N
+valueDisplay | String / Slot / Function | - | 自定义选中项呈现的内容。TS 类型：`string \| TNode<{ value: SelectValue; onClose: (index: number) => void; displayValue?: SelectValue; label?: string }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+valueType | String | value | 用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据。可选项：value/object | N
 onBlur | Function |  | TS 类型：`(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent }) => void`<br/>输入框失去焦点时触发 | N
 onChange | Function |  | TS 类型：`(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent }) => void`<br/>选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck' \| 'default'`<br/> | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清除按钮时触发 | N
-onCreate | Function |  | TS 类型：`(value: string \| number) => void`<br/>当选择新创建的条目时触发 | N
+onCreate | Function |  | TS 类型：`(value: string \| number \| boolean) => void`<br/>当选择新创建的条目时触发 | N
 onEnter | Function |  | TS 类型：`(context: { inputValue: string; e: KeyboardEvent; value: SelectValue }) => void`<br/>回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值 | N
 onFocus | Function |  | TS 类型：`(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent }) => void`<br/>输入框获得焦点时触发 | N
 onInputChange | Function |  | TS 类型：`(value: string, context?: SelectInputValueChangeContext) => void`<br/>输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts)。<br/>`import { SelectInputValueChangeContext } from '@SelectInput'`<br/> | N
@@ -69,7 +69,7 @@ onSearch | Function |  | TS 类型：`(filterWords: string, context: { e: Keyboa
 blur | `(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent })` | 输入框失去焦点时触发
 change | `(value: SelectValue, context: { option?: T, selectedOptions: T[], trigger: SelectValueChangeTrigger; e?: MouseEvent \| KeyboardEvent })` | 选中值变化时触发。`context.trigger` 表示触发变化的来源；`context.selectedOptions` 表示选中值的完整对象，数组长度一定和 `value` 相同；`context.option` 表示当前操作的选项，不一定存在。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts)。<br/>`type SelectValueChangeTrigger = 'clear' \| 'tag-remove' \| 'backspace' \| 'check' \| 'uncheck' \| 'default'`<br/>
 clear | `(context: { e: MouseEvent })` | 点击清除按钮时触发
-create | `(value: string \| number)` | 当选择新创建的条目时触发
+create | `(value: string \| number \| boolean)` | 当选择新创建的条目时触发
 enter | `(context: { inputValue: string; e: KeyboardEvent; value: SelectValue })` | 回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值
 focus | `(context: { value: SelectValue; e: FocusEvent \| KeyboardEvent })` | 输入框获得焦点时触发
 input-change | `(value: string, context?: SelectInputValueChangeContext)` | 输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/select/type.ts)。<br/>`import { SelectInputValueChangeContext } from '@SelectInput'`<br/>
@@ -88,7 +88,7 @@ default | String / Slot / Function | - | 用于定义复杂的选项内容。同
 disabled | Boolean | false | 是否禁用该选项 | N
 label | String | - | 选项名称 | N
 title | String | - | 选项标题，在选项过长时hover选项展示 | N
-value | String / Number | - | 选项值 | N
+value | String / Number / Boolean | - | 选项值 | N
 
 
 ### OptionGroup Props

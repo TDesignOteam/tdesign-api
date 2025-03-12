@@ -18,7 +18,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   closeBtn?: TNode;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名
    */
   keys?: CascaderKeysType;
   /**
@@ -75,13 +75,13 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   /**
    * 关闭时触发
    */
-  onClose?: (trigger: TriggerSource) => void;
+  onClose?: (trigger: CascaderTriggerSource) => void;
   /**
    * 选择后触发
    */
-  onPick?: (value: string | number, index: number) => void;
+  onPick?: (context: { value: string | number; label: string; index: number; level: number }) => void;
 }
 
 export type CascaderKeysType = TreeKeysType;
 
-export type TriggerSource = 'overlay' | 'close-btn' | 'finish';
+export type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish';

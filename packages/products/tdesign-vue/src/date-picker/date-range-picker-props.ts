@@ -12,7 +12,7 @@ export default {
   allowInput: Boolean,
   /** 无边框模式 */
   borderless: Boolean,
-  /** 默认的日期选择交互是根据点击前后日期的顺序来决定并且会加以限制。比如：用户先点击开始时间输入框，选择了一个日期例如2020-05-15，紧接着交互会自动将焦点跳到结束日期输入框，等待用户选择结束时间。此时用户只能选择大于2020-05-15的日期（之前的日期会被灰态禁止点击，限制用户的点击）。当该值传递`true`时，则取消该限制。 */
+  /** 默认的日期选择交互是根据点击前后日期的顺序来决定并且会加以限制。比如：用户先点击开始时间输入框，选择了一个日期例如2020-05-15，紧接着交互会自动将焦点跳到结束日期输入框，等待用户选择结束时间。此时用户只能选择大于2020-05-15的日期（之前的日期会被灰态禁止点击，限制用户的点击）。当该值传递`true`时，则取消该限制 */
   cancelRangeSelectLimit: Boolean,
   /** 是否显示清除按钮 */
   clearable: Boolean,
@@ -24,6 +24,10 @@ export default {
   /** 禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用 */
   disableDate: {
     type: [Object, Array, Function] as PropType<TdDateRangePickerProps['disableDate']>,
+  },
+  /** 禁用时间项的配置函数，仅在日期区间选择器中开启时间展示时可用 */
+  disableTime: {
+    type: Function as PropType<TdDateRangePickerProps['disableTime']>,
   },
   /** 是否禁用组件 */
   disabled: {
@@ -72,7 +76,7 @@ export default {
   placeholder: {
     type: [String, Array] as PropType<TdDateRangePickerProps['placeholder']>,
   },
-  /** 透传给 popup 组件的参数 */
+  /** 透传 Popup 组件全部属性 */
   popupProps: {
     type: Object as PropType<TdDateRangePickerProps['popupProps']>,
   },

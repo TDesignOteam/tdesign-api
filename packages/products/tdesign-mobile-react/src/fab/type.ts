@@ -6,7 +6,7 @@
 
 import { ButtonProps } from '../button';
 import { TElement } from '../common';
-import { MouseEvent } from 'react';
+import { MouseEvent, TouchEvent } from 'react';
 
 export interface TdFabProps {
   /**
@@ -26,4 +26,12 @@ export interface TdFabProps {
    * 悬浮按钮点击事件
    */
   onClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
+  /**
+   * 结束拖拽时触发
+   */
+  onDragEnd?: (context: { e: TouchEvent<HTMLDivElement> }) => void;
+  /**
+   * 开始拖拽时触发
+   */
+  onDragStart?: (context: { e: TouchEvent<HTMLDivElement> }) => void;
 }

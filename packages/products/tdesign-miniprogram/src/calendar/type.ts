@@ -39,6 +39,13 @@ export interface TdCalendarProps {
     value?: CalendarFormatType;
   };
   /**
+   * 国际化文案
+   */
+  localeText?: {
+    type: ObjectConstructor;
+    value?: CalendarLocaleText;
+  };
+  /**
    * 最大可选的日期，不传则默认半年后
    */
   maxDate?: {
@@ -53,8 +60,15 @@ export interface TdCalendarProps {
     value?: number;
   };
   /**
-   * 标题
-   * @default '请选择日期'
+   * 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
+   * @default none
+   */
+  switchMode?: {
+    type: StringConstructor;
+    value?: 'none' | 'month' | 'year-month';
+  };
+  /**
+   * 标题，不传默认为“请选择日期”
    */
   title?: {
     type: StringConstructor;
@@ -85,14 +99,14 @@ export interface TdCalendarProps {
     value?: boolean;
   };
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组
    */
   value?: {
     type: null;
     value?: number | number[];
   };
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组，非受控属性
    */
   defaultValue?: {
     type: null;
@@ -119,4 +133,12 @@ export interface TDate {
   className?: string;
   prefix?: string;
   suffix?: string;
+}
+
+export interface CalendarLocaleText {
+  title?: string;
+  weekdays?: string[];
+  monthTitle?: string;
+  months?: string[];
+  confirm?: string;
 }

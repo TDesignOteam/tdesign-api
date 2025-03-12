@@ -3,42 +3,49 @@
  */
 
 const GLOBAL_COMPONENTS_CONFIG = [
-    'InputConfig',
-    'PaginationConfig',
+    'ActionSheetConfig',
+    'AlertConfig',
+    'AnchorConfig',
+    'AutoCompleteConfig',
     'CalendarConfig',
     'CascaderConfig',
     'ColorPickerConfig',
-    'TransferConfig',
-    'TimePickerConfig',
     'DatePickerConfig',
+    'DateTimePickerConfig',
+    'DescriptionsConfig',
     'DialogConfig',
     'DrawerConfig',
-    'PopconfirmConfig',
-    'TableConfig',
-    'SelectConfig',
-    'TreeConfig',
-    'TreeSelectConfig',
-    'ListConfig',
-    'UploadConfig',
-    'UploadConfigProgress',
-    'UploadConfigDragger',
-    'UploadConfigFileList',
-    'UploadConfigImage',
-    'UploadConfigFile',
+    'DropdownMenuConfig',
+    'EmptyConfig',
     'FormConfig',
-    'TagConfig',
-    'StepsConfig',
-    'AlertConfig',
-    'DescriptionsConfig',
-    'AnchorConfig',
-    'MessageConfig',
+    'GuideConfig',
     'ImageConfig',
     'ImageViewerConfig',
-    'GuideConfig',
+    'InputConfig',
+    'ListConfig',
+    'MessageConfig',
+    'PaginationConfig',
+    'PickerConfig',
+    'PopconfirmConfig',
+    'PullDownRefreshConfig',
     'RateConfig',
-    'EmptyConfig',
+    'SelectConfig',
+    'StepsConfig',
+    'TabBarConfig',
+    'TagConfig',
+    'TableConfig',
+    'TimePickerConfig',
+    'TreeConfig',
+    'TreeSelectConfig',
+    'TransferConfig',
     'TypographyConfig',
-].sort((a, b) => a.localeCompare(b) > 0);
+    'UploadConfig',
+    'UploadConfigDragger',
+    'UploadConfigFile',
+    'UploadConfigFileList',
+    'UploadConfigImage',
+    'UploadConfigProgress',
+].sort((a, b) => a.localeCompare(b));
 
 const MESSAGE_LIST = [
     'Message',
@@ -81,7 +88,7 @@ const TABLE_LIST = [
     'TableEditableCellConfig',
     'TableTreeConfig',
 ];
-const GLOBAL_CONFIG_PROVIDER = ['GlobalConfigProvider'].concat(
+const GLOBAL_CONFIG_PROVIDER = ['ConfigProvider','GlobalConfigProvider'].concat(
     GLOBAL_COMPONENTS_CONFIG
 );
 const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
@@ -90,10 +97,7 @@ const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
 const COMPONENT_API_MD_MAP = {
     Avatar: ['Avatar', 'AvatarGroup'],
     Checkbox: ['Checkbox', 'CheckboxGroup'],
-    Cell: {
-        list: ['Cell', 'CellGroup'],
-        excludes: ['Miniprogram'],
-    },
+    Cell: ['Cell', 'CellGroup'],
     Radio: ['Radio', 'RadioGroup'],
     Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
     Descriptions: ['Descriptions', 'DescriptionItem'],
@@ -130,10 +134,7 @@ const COMPONENT_API_MD_MAP = {
         list: ['Dropdown', 'DropdownItem'],
         includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
     },
-    DropdownMenu: {
-        list: ['DropdownMenu', 'DropdownItem'],
-        excludes: ['Miniprogram'],
-    },
+    DropdownMenu: ['DropdownMenu', 'DropdownItem'],
     Dialog: [
         'DialogCard',
         'Dialog',
@@ -191,6 +192,7 @@ const COMPONENT_API_MD_MAP = {
     },
     Popup: ['Popup', '$Popup'],
     Typography: [
+        'Typography',
         'Text',
         'Title',
         'Paragraph',
@@ -210,9 +212,6 @@ const MOBILE_COMPONENT_API_MD_MAP = {
     },
     Grid: {
         list: ['Grid', 'GridItem'],
-    },
-    DropdownMenu: {
-        list: ['DropdownMenu', 'DropdownItem'],
     },
 };
 

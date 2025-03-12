@@ -24,6 +24,11 @@ export default {
   options: {
     type: Array as PropType<TdRadioGroupProps['options']>,
   },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 组件尺寸【讨论中】 */
   size: {
     type: String as PropType<TdRadioGroupProps['size']>,
@@ -31,6 +36,15 @@ export default {
     validator(val: TdRadioGroupProps['size']): boolean {
       if (!val) return true;
       return ['small', 'medium', 'large'].includes(val);
+    },
+  },
+  /** 用于在使用 options 方式渲染时决定组件的风格 */
+  theme: {
+    type: String as PropType<TdRadioGroupProps['theme']>,
+    default: 'radio' as TdRadioGroupProps['theme'],
+    validator(val: TdRadioGroupProps['theme']): boolean {
+      if (!val) return true;
+      return ['radio', 'button'].includes(val);
     },
   },
   /** 选中的值 */

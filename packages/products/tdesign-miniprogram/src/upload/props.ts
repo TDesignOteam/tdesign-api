@@ -60,6 +60,11 @@ const props: TdUploadProps = {
     type: Array,
     value: ['image', 'video'],
   },
+  /** 是否支持图片预览，文件没有预览 */
+  preview: {
+    type: Boolean,
+    value: true,
+  },
   /** 自定义上传方法 */
   requestMethod: {
     type: null,

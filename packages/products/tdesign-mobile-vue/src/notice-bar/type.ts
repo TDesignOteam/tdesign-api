@@ -17,6 +17,11 @@ export interface TdNoticeBarProps {
    */
   direction?: 'horizontal' | 'vertical';
   /**
+   * 间隔时间【仅在 direction='vertical' 有效】
+   * @default 2000
+   */
+  interval?: number;
+  /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
@@ -54,6 +59,10 @@ export interface TdNoticeBarProps {
    * @default false
    */
   modelValue?: boolean;
+  /**
+   * 当 `direction="vertical"` 时轮播切换时触发
+   */
+  onChange?: (current: number, source: '' | 'autoplay' | 'touch') => void;
   /**
    * 点击事件
    */

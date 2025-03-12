@@ -6,7 +6,7 @@
 
 import { TNode, KeysType } from '../common';
 
-export interface TdRadioProps {
+export interface TdRadioProps<T = RadioValue> {
   /**
    * 是否允许取消选中
    * @default false
@@ -77,14 +77,17 @@ export interface TdRadioProps {
    */
   name?: string;
   /**
-   * 复选框和内容相对位置
-   * @default left
+   * 复选框和内容相对位置。优先级高于 RadioGroup.placement。Radio 单独存在时，默认值为 left。如果父组件存在 RadioGroup，默认值便由 RadioGroup.placement 决定
    */
   placement?: 'left' | 'right';
   /**
+   * 只读状态
+   */
+  readonly?: boolean;
+  /**
    * 单选按钮的值
    */
-  value?: string | number | boolean;
+  value?: T;
   /**
    * 选中状态变化时触发
    */
@@ -112,7 +115,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   icon?: 'circle' | 'line' | 'dot' | Array<TNode>;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: KeysType;
   /**
@@ -125,10 +128,14 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   options?: Array<RadioOption>;
   /**
-   * 复选框和内容相对位置
+   * 复选框和内容相对位置。优先级低于 Radio.placement
    * @default left
    */
   placement?: 'left' | 'right';
+  /**
+   * 只读状态
+   */
+  readonly?: boolean;
   /**
    * 选中的值
    */
@@ -142,9 +149,9 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   modelValue?: T;
   /**
-   * 选中值发生变化时触发
+   * 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性
    */
-  onChange?: (value: T, context: { e: Event }) => void;
+  onChange?: (value: T, context: { e: Event; name?: string }) => void;
 }
 
 export type RadioOption = string | number | RadioOptionObj;

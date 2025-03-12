@@ -4,9 +4,17 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TreeOptionData } from '../common/common';
+import { TreeOptionData, KeysType } from '../common/common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
+  /**
+   * 父子节点选中状态不再关联，可各自选中或取消
+   * @default false
+   */
+  checkStrictly?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
   /**
    * 关闭按钮
    * @default true
@@ -14,6 +22,13 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
   closeBtn?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 用来定义 value / label 在 `options` 中对应的字段别名
+   */
+  keys?: {
+    type: ObjectConstructor;
+    value?: KeysType;
   };
   /**
    * 可选项数据源
@@ -24,12 +39,28 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
     value?: Array<CascaderOption>;
   };
   /**
-   * 自定义组件样式
-   * @default ''
+   * 未选中时的提示文案
+   * @default 选择选项
    */
-  style?: {
+  placeholder?: {
     type: StringConstructor;
     value?: string;
+  };
+  /**
+   * 每级展示的次标题
+   * @default []
+   */
+  subTitles?: {
+    type: ArrayConstructor;
+    value?: Array<string>;
+  };
+  /**
+   * 展示风格
+   * @default step
+   */
+  theme?: {
+    type: StringConstructor;
+    value?: 'step' | 'tab';
   };
   /**
    * 标题
@@ -44,7 +75,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   value?: {
     type: null;
-    value?: null;
+    value?: string | number;
   };
   /**
    * 选项值，非受控属性
@@ -52,7 +83,7 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   defaultValue?: {
     type: null;
-    value?: null;
+    value?: string | number;
   };
   /**
    * 是否展示

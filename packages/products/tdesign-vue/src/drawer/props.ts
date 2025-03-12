@@ -44,6 +44,11 @@ export default {
   },
   /** 抽屉关闭时是否销毁节点 */
   destroyOnClose: Boolean,
+  /** 抽屉元素类名。 */
+  drawerClassName: {
+    type: String,
+    default: '',
+  },
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 或 null 不显示任何内容，值类型为 TNode 表示自定义底部内容 */
   footer: {
     type: [Boolean, Function] as PropType<TdDrawerProps['footer']>,
@@ -100,6 +105,10 @@ export default {
   zIndex: {
     type: Number,
   },
+  /** 抽屉执行关闭动画效果前触发 */
+  onBeforeClose: Function as PropType<TdDrawerProps['onBeforeClose']>,
+  /** 抽屉执行打开动画效果前触发 */
+  onBeforeOpen: Function as PropType<TdDrawerProps['onBeforeOpen']>,
   /** 如果“取消”按钮存在，点击“取消”按钮时触发，同时触发关闭事件 */
   onCancel: Function as PropType<TdDrawerProps['onCancel']>,
   /** 关闭事件，取消按钮点击时、关闭按钮点击时、ESC 按下时、点击蒙层时均会触发 */

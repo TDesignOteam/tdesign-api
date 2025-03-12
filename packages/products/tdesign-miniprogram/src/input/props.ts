@@ -36,7 +36,7 @@ const props: TdInputProps = {
     type: String,
     value: 'always',
   },
-  /** 是否可清空，默认不启动。值为 `true` 表示使用默认清除空按钮，值为 `Object` 表示透传至 `icon` */
+  /** 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon` */
   clearable: {
     type: null,
     value: false,
@@ -56,6 +56,11 @@ const props: TdInputProps = {
     type: Number,
     required: true,
   },
+  /** 光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制 */
+  cursorColor: {
+    type: String,
+    value: '#0052d9',
+  },
   /** 指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离 */
   cursorSpacing: {
     type: Number,
@@ -63,15 +68,15 @@ const props: TdInputProps = {
   },
   /** 是否禁用输入框 */
   disabled: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 获取焦点 */
   focus: {
     type: Boolean,
     value: false,
   },
-  /** 【开发中】指定输入框展示值的格式 */
+  /** 指定输入框展示值的格式 */
   format: {
     type: null,
   },
@@ -104,7 +109,7 @@ const props: TdInputProps = {
     value: undefined,
   },
   /** 指定 placeholder 的样式类 */
-  placeholderClass	: {
+  placeholderClass: {
     type: String,
     value: 'input-placeholder',
   },
@@ -118,10 +123,10 @@ const props: TdInputProps = {
   prefixIcon: {
     type: null,
   },
-  /** 【开发中】只读状态 */
+  /** 只读状态 */
   readonly: {
-    type: Boolean,
-    value: false,
+    type: null,
+    value: undefined,
   },
   /** 安全键盘加密公钥的路径，只支持包内路径 */
   safePasswordCertPath: {
@@ -170,7 +175,7 @@ const props: TdInputProps = {
   suffix: {
     type: String,
   },
-  /** 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`。 */
+  /** 后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon` */
   suffixIcon: {
     type: null,
   },

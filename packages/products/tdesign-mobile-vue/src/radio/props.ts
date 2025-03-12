@@ -70,14 +70,18 @@ export default {
     type: String,
     default: '',
   },
-  /** 复选框和内容相对位置 */
+  /** 复选框和内容相对位置。优先级高于 RadioGroup.placement。Radio 单独存在时，默认值为 left。如果父组件存在 RadioGroup，默认值便由 RadioGroup.placement 决定 */
   placement: {
     type: String as PropType<TdRadioProps['placement']>,
-    default: 'left' as TdRadioProps['placement'],
     validator(val: TdRadioProps['placement']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);
     },
+  },
+  /** 只读状态 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
   },
   /** 单选按钮的值 */
   value: {
