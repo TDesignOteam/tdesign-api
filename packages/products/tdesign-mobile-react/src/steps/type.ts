@@ -27,18 +27,9 @@ export interface TdStepsProps {
    */
   layout?: 'horizontal' | 'vertical';
   /**
-   * 步骤条数据列表（作用和 StepItem 效果一样）
-   */
-  options?: Array<TdStepItemProps>;
-  /**
    * 只读状态
    */
   readonly?: boolean;
-  /**
-   * 步骤条分割符
-   * @default line
-   */
-  separator?: 'line' | 'dashed' | 'arrow';
   /**
    * 步骤条顺序
    * @default positive
@@ -70,6 +61,10 @@ export interface TdStepItemProps {
    */
   content?: TNode;
   /**
+   * 步骤条自定义内容
+   */
+  extra?: TNode;
+  /**
    * 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标
    * @default true
    */
@@ -84,6 +79,11 @@ export interface TdStepItemProps {
    * @default ''
    */
   title?: TNode;
+  /**
+   * 标题右侧数据 仅支持 layout = 'vertical' 时
+   * @default ''
+   */
+  titleRight?: TNode;
 }
 
 export type StepStatus = 'default' | 'process' | 'finish' | 'error';

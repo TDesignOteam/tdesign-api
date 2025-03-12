@@ -8,9 +8,14 @@ export const stepsDefaultProps: TdStepsProps = {
   currentStatus: 'process',
   layout: 'horizontal',
   readonly: undefined,
-  separator: 'line',
   sequence: 'positive',
   theme: 'default',
 };
 
-export const stepItemDefaultProps: TdStepItemProps = { content: '', icon: true, status: 'default', title: '' };
+export const stepItemDefaultProps: TdStepItemProps = {
+  content: '',
+  icon: true,
+  status: 'default',
+  title: '',
+  titleRight: '',
+};

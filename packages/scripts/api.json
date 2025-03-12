@@ -106900,6 +106900,49 @@
       ]
     },
     {
+      "id": 1727168992,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 1,
+      "field_name": "extra",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "步骤条自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-24 09:09:52",
+      "update_time": "2024-09-24 09:09:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 617,
       "platform_framework": [
         "1",
@@ -107039,8 +107082,6 @@
     {
       "id": 2475,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "StepItem",
@@ -107069,8 +107110,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -107131,7 +107170,8 @@
     {
       "id": 1712570381,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -107160,7 +107200,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -108446,9 +108487,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108478,9 +108517,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -108540,11 +108577,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108574,11 +108607,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
