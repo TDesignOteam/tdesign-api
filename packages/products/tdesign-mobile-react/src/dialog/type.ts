@@ -6,7 +6,7 @@
 
 import { ButtonProps } from '../button';
 import { OverlayProps } from '../overlay';
-import { TNode, Styles } from '../common';
+import { TNode, TElement, Styles } from '../common';
 import { MouseEvent } from 'react';
 
 export interface TdDialogProps {
@@ -24,6 +24,11 @@ export interface TdDialogProps {
    */
   cancelBtn?: ButtonProps | TNode | null;
   /**
+   * 多按钮排列方式。可选项：true/false
+   * @default false
+   */
+  closeBtn?: boolean;
+  /**
    * 点击蒙层时是否触发关闭事件
    * @default false
    */
@@ -33,10 +38,6 @@ export interface TdDialogProps {
    */
   confirmBtn?: ButtonProps | TNode | null;
   /**
-   * 确认按钮加载状态
-   */
-  confirmLoading?: boolean;
-  /**
    * 内容
    */
   content?: TNode;
@@ -45,6 +46,10 @@ export interface TdDialogProps {
    * @default false
    */
   destroyOnClose?: boolean;
+  /**
+   * 中间自定义内容
+   */
+  middle?: TElement;
   /**
    * 透传至 Overlay 组件
    * @default {}
@@ -65,9 +70,17 @@ export interface TdDialogProps {
    */
   title?: TNode;
   /**
+   * 顶部自定义内容
+   */
+  top?: TElement;
+  /**
    * 控制对话框是否显示
    */
   visible?: boolean;
+  /**
+   * 对话框宽度，示例：320, '500px', '80%'
+   */
+  width?: string | number;
   /**
    * 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500
    */
@@ -116,10 +129,6 @@ export interface DialogInstance {
    */
   hide: () => void;
   /**
-   * 设置确认按钮加载状态
-   */
-  setConfirmLoading: (loading: boolean) => void;
-  /**
    * 显示弹框
    */
   show: () => void;
@@ -129,7 +138,7 @@ export interface DialogInstance {
   update: (props: DialogOptions) => void;
 }
 
-export type DialogEventSource = 'cancel' | 'overlay';
+export type DialogEventSource = 'cancel' | 'overlay' | 'close-btn';
 
 export interface DialogCloseContext {
   trigger: DialogEventSource;
