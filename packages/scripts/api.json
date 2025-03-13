@@ -128088,7 +128088,7 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "loading/success/error",
+      "field_enum": "loading/success/warning/error",
       "field_desc_zh": "提示类型",
       "field_desc_en": null,
       "field_required": 0,
