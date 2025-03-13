@@ -30291,6 +30291,43 @@
       "field_type_text": []
     },
     {
+      "id": 1741675522,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPicker",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-03-11 06:45:22",
+      "update_time": "2025-03-11 06:45:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1730970251,
       "platform_framework": [
         "8",
@@ -39662,7 +39699,8 @@
     {
       "id": 1712717514,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -39690,7 +39728,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -39957,9 +39996,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -39989,9 +40026,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Boolean"
@@ -40418,6 +40453,47 @@
       ]
     },
     {
+      "id": 1741766727,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "middle",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-12 08:05:27",
+      "update_time": "2025-03-12 08:05:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 46,
       "platform_framework": [
         "1",
@@ -40811,6 +40887,47 @@
       ]
     },
     {
+      "id": 1741766620,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "top",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "顶部自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-12 08:03:40",
+      "update_time": "2025-03-12 08:03:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 1719908441,
       "platform_framework": [
         "64"
@@ -40902,7 +41019,8 @@
         "1",
         "2",
         "4",
-        "8"
+        "8",
+        "16"
       ],
       "component": "Dialog",
       "field_category": 1,
@@ -40934,7 +41052,8 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -41228,7 +41347,7 @@
       "field_desc_zh": "关闭事件，点击 取消按钮 或 点击蒙层 时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'cancel' | 'overlay'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }】",
+      "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'cancel' | 'overlay' | 'close-btn'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }】",
       "create_time": "2021-07-10 03:28:08",
       "update_time": "2022-04-06 08:54:27",
       "event_output": null,
@@ -42488,9 +42607,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "DialogInstance",
       "field_category": 4,
@@ -42518,9 +42635,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -106818,6 +106933,49 @@
       ]
     },
     {
+      "id": 1727168992,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 1,
+      "field_name": "extra",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "步骤条自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-09-24 09:09:52",
+      "update_time": "2024-09-24 09:09:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 617,
       "platform_framework": [
         "1",
@@ -106957,8 +107115,6 @@
     {
       "id": 2475,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "StepItem",
@@ -106987,8 +107143,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -107049,7 +107203,8 @@
     {
       "id": 1712570381,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "StepItem",
       "field_category": 1,
@@ -107078,7 +107233,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -108364,9 +108520,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108396,9 +108550,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -108458,11 +108610,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "Steps",
       "field_category": 1,
@@ -108492,11 +108640,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "String"
@@ -110956,7 +111100,6 @@
         "1",
         "2",
         "4",
-        "16",
         "32"
       ],
       "component": "Swiper",
@@ -110988,7 +111131,6 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": [
@@ -111067,6 +111209,45 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1734341911,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Swiper",
+      "field_category": 1,
+      "field_name": "height",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当使用垂直方向滚动时的高度",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-16 09:38:31",
+      "update_time": "2024-12-16 09:38:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -111756,7 +111937,7 @@
       "field_desc_zh": "轮播切换时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | ''】",
+      "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】",
       "create_time": "2021-07-03 08:59:23",
       "update_time": "2022-04-06 08:44:37",
       "event_output": null,
@@ -112687,6 +112868,43 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1734341852,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "SwiperNavigation",
+      "field_category": 1,
+      "field_name": "placement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "inside",
+      "field_enum": "inside/outside",
+      "field_desc_zh": "导航器位置，位于主体的内侧或是外侧",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-12-16 09:37:32",
+      "update_time": "2024-12-16 09:37:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -127903,7 +128121,7 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "loading/success/error",
+      "field_enum": "loading/success/warning/error",
       "field_desc_zh": "提示类型",
       "field_desc_en": null,
       "field_required": 0,

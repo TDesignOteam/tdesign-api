@@ -13,7 +13,6 @@ default-current | String / Number | undefined | 当前步骤，即整个步骤�
 current-status | String | process | 用于控制 current 指向的步骤条的状态。可选项：default/process/finish/error | N
 layout | String | horizontal | 步骤条方向，有两种：横向和纵向。可选项：horizontal/vertical | N
 readonly | Boolean | undefined | 只读状态 | N
-separator | String | line | 步骤条分割符。可选项：line/dashed/arrow | N
 sequence | String | positive | 步骤条顺序。可选项：positive/reverse | N
 theme | String | default | 步骤条风格。可选项：default/dot | N
 
@@ -37,6 +36,7 @@ t-class | 根节点样式类
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 content | String / Slot | '' | 步骤描述。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+extra | String / Slot | - | 步骤条自定义内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 icon | String / Slot | - | 图标。传入 slot 代表使用插槽，其他字符串代表使用内置图标。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 status | String | default | 当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态。可选项：default/process/finish/error。TS 类型：`StepStatus` `type StepStatus = 'default' \| 'process' \| 'finish' \| 'error'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N
 sub-step-items | Array | [] | 已废弃。子步骤条，仅支持 layout  = 'vertical' 时。TS 类型：`SubStepItem[]` `interface SubStepItem { status: StepStatus, title: string }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/step-item/type.ts) | N

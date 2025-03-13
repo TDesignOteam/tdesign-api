@@ -39,6 +39,10 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
+  /** 中间自定义内容 */
+  middle: {
+    type: Function as PropType<TdDialogProps['middle']>,
+  },
   /** 透传至 Overlay 组件 */
   overlayProps: {
     type: Object as PropType<TdDialogProps['overlayProps']>,
@@ -57,6 +61,10 @@ export default {
   /** 标题 */
   title: {
     type: [String, Function] as PropType<TdDialogProps['title']>,
+  },
+  /** 顶部自定义内容 */
+  top: {
+    type: Function as PropType<TdDialogProps['top']>,
   },
   /** 控制对话框是否显示 */
   visible: Boolean,
