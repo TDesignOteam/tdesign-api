@@ -2412,15 +2412,6 @@
     "type": "event",
     "description": "年份切换发生变化时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker?tab=api#daterangepickerpanel-events)"
   },
-  "t-descriptions/align": {
-    "type": "String",
-    "options": [
-      "top",
-      "middle",
-      "bottom"
-    ],
-    "description": "content align type\n\n内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align\n\n[docs](https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props)"
-  },
   "t-descriptions/bordered": {
     "type": "Boolean",
     "description": "set description list with grey border\n\n是否带边框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props)"
@@ -2481,15 +2472,6 @@
   "t-descriptions/title": {
     "type": "String|TNode",
     "description": "title of descriptions\n\n描述列表的标题\n\n[docs](https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props)"
-  },
-  "t-descriptions-item/align": {
-    "type": "String",
-    "options": [
-      "top",
-      "middle",
-      "bottom"
-    ],
-    "description": "content align type\n\n内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align\n\n[docs](https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptionsitem-props)"
   },
   "t-descriptions-item/content": {
     "type": "String|TNode",

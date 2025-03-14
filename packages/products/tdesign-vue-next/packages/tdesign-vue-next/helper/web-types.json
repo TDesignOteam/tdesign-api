@@ -5308,26 +5308,6 @@
           "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions",
           "props": [
             {
-              "name": "align",
-              "description": "content align type\n\n内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props",
-              "type": "'top' | 'middle' | 'bottom'",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "top"
-                },
-                {
-                  "name": "middle"
-                },
-                {
-                  "name": "bottom"
-                }
-              ]
-            },
-            {
               "name": "bordered",
               "description": "set description list with grey border\n\n是否带边框",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptions-props",
@@ -5463,26 +5443,6 @@
           "description": "DescriptionsItem\n\n描述项",
           "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions",
           "props": [
-            {
-              "name": "align",
-              "description": "content align type\n\n内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/descriptions?tab=api#descriptionsitem-props",
-              "type": "'top' | 'middle' | 'bottom'",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "top"
-                },
-                {
-                  "name": "middle"
-                },
-                {
-                  "name": "bottom"
-                }
-              ]
-            },
             {
               "name": "content",
               "description": "content of description item\n\n描述项内容",
