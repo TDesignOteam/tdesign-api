@@ -81571,6 +81571,7 @@
     {
       "id": 1741350657,
       "platform_framework": [
+        "1",
         "2"
       ],
       "component": "PaginationConfig",
@@ -81582,7 +81583,7 @@
       "field_desc_zh": "自定义跳转组件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(jumperProps: JumperProps)【interface JumperProps { current: number; pageCount: number; onJump: (current: number) => void; }】",
+      "event_input": "(jumperProps: JumperProps)【interface JumperProps { current: number; pageCount: number; onChange: (current: number) => void; }】",
       "create_time": "2025-03-07 12:30:57",
       "update_time": "2025-03-07 12:30:57",
       "event_output": "TNode<JumperProps>",
@@ -81597,6 +81598,7 @@
       "support_default_value": 0,
       "field_category_text": "Functions",
       "platform_framework_text": [
+        "Vue(PC)",
         "React(PC)"
       ],
       "field_type_text": []
