@@ -6,7 +6,6 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-align | String | - | content align type | N
 bordered | Boolean | false | set description list with grey border | N
 colon | Boolean | - | set label with ":" on the right | N
 column | Number | 2 | count of DescriptionsItem in one row | N

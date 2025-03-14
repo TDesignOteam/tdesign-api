@@ -6,7 +6,6 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-align | String | - | 内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align | N
 bordered | Boolean | false | 是否带边框 | N
 colon | Boolean | - | 字段名右侧是否携带冒号“：” | N
 column | Number | 2 | 一行 `DescriptionsItem` 的数量 | N

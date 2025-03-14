@@ -38535,39 +38535,6 @@
       "field_type_text": []
     },
     {
-      "id": 1704432557,
-      "platform_framework": [],
-      "component": "Descriptions",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align",
-      "field_desc_en": "content align type",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-01-05 05:29:17",
-      "update_time": "2024-01-05 05:29:17",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 3503,
       "platform_framework": [
         "1",
@@ -39057,39 +39024,6 @@
         "React(PC)",
         "Angular(PC)"
       ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1704432526,
-      "platform_framework": [],
-      "component": "DescriptionsItem",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "top/middle/bottom",
-      "field_desc_zh": "内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align",
-      "field_desc_en": "content align type",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-01-05 05:28:46",
-      "update_time": "2024-01-05 05:28:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [],
       "field_type_text": [
         "String"
       ]

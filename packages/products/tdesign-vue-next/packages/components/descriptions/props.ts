@@ -8,11 +8,6 @@ import { TdDescriptionsProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align */
-  align: {
-    type: String,
-    default: '',
-  },
   /** 是否带边框 */
   bordered: Boolean,
   /** 字段名右侧是否携带冒号“：” */

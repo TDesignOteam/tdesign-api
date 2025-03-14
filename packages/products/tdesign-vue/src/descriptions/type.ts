@@ -8,11 +8,6 @@ import { TNode, SizeEnum, Styles } from '../common';
 
 export interface TdDescriptionsProps {
   /**
-   * 内容垂直对齐方式，DescriptionsItem.align 优先级高于 Descriptions.align
-   * @default ''
-   */
-  align?: string;
-  /**
    * 是否带边框
    * @default false
    */
