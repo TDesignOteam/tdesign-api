@@ -8,10 +8,6 @@ import { TNode, SizeEnum, Styles } from '../common';
 
 export interface TdDescriptionsProps {
   /**
-   * 内容垂直对齐方式，DescriptionItem.align 优先级高于 Descriptions.align
-   */
-  align?: 'top' | 'middle' | 'bottom';
-  /**
    * 是否带边框
    * @default false
    */
@@ -21,7 +17,7 @@ export interface TdDescriptionsProps {
    */
   colon?: boolean;
   /**
-   * 一行 `DescriptionItem` 的数量
+   * 一行 `DescriptionsItem` 的数量
    * @default 2
    */
   column?: number;
@@ -37,7 +33,7 @@ export interface TdDescriptionsProps {
   /**
    * 描述项的列表
    */
-  items?: Array<TdDescriptionItemProps>;
+  items?: Array<TdDescriptionsItemProps>;
   /**
    * 自定义描述项标签的样式，需要配合 `tableLayout` 为 `auto` 才可以生效
    */
@@ -63,11 +59,7 @@ export interface TdDescriptionsProps {
   title?: string | TNode;
 }
 
-export interface TdDescriptionItemProps {
-  /**
-   * 内容垂直对齐方式，DescriptionItem.align 优先级高于 Descriptions.align
-   */
-  align?: 'top' | 'middle' | 'bottom';
+export interface TdDescriptionsItemProps {
   /**
    * 描述项内容
    */

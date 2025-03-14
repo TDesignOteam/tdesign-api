@@ -100,7 +100,7 @@ const COMPONENT_API_MD_MAP = {
     Cell: ['Cell', 'CellGroup'],
     Radio: ['Radio', 'RadioGroup'],
     Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
-    Descriptions: ['Descriptions', 'DescriptionItem'],
+    Descriptions: ['Descriptions', 'DescriptionsItem'],
     Tabs: ['Tabs', 'TabPanel'],
     TabBar: ['TabBar', 'TabBarItem'],
     Pagination: ['Pagination', 'PaginationMini'],
@@ -322,7 +322,7 @@ const TYPES_COMBINE_MAP = {
         list: ['Calendar', 'CalendarController', 'CalendarCell'],
     },
     Descriptions: {
-        list: ['Descriptions', 'DescriptionItem'],
+        list: ['Descriptions', 'DescriptionsItem'],
     },
     Menu: {
         list: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],

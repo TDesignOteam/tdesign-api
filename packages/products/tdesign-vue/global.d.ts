@@ -38,8 +38,8 @@ declare module '@vue/runtime-core' {
     TDatePickerPanel: typeof import('tdesign-vue')['DatePickerPanel'];
     TDateRangePicker: typeof import('tdesign-vue')['DateRangePicker'];
     TDateRangePickerPanel: typeof import('tdesign-vue')['DateRangePickerPanel'];
-    TDescriptionItem: typeof import('tdesign-vue')['DescriptionItem'];
     TDescriptions: typeof import('tdesign-vue')['Descriptions'];
+    TDescriptionsItem: typeof import('tdesign-vue')['DescriptionsItem'];
     TDialog: typeof import('tdesign-vue')['Dialog'];
     TDialogCard: typeof import('tdesign-vue')['DialogCard'];
     TDivider: typeof import('tdesign-vue')['Divider'];
