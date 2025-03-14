@@ -452,10 +452,6 @@
         "label": "日期范围选择器面板"
       },
       {
-        "value": "DescriptionItem",
-        "label": "描述项"
-      },
-      {
         "value": "Descriptions",
         "label": "描述列表"
       },
@@ -463,6 +459,10 @@
         "value": "DescriptionsConfig",
         "label": "描述全局配置",
         "type": "TS"
+      },
+      {
+        "value": "DescriptionsItem",
+        "label": "描述项"
       },
       {
         "value": "Dialog",
