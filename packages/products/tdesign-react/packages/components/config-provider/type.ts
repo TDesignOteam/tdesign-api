@@ -620,6 +620,10 @@ export interface PaginationConfig {
    * @default ''
    */
   total?: string;
+  /**
+   * 自定义跳转组件
+   */
+  jumper?: (jumperProps: JumperProps) => TNode<JumperProps>;
 }
 
 export interface PopconfirmConfig {
@@ -993,6 +997,12 @@ export interface ConfigPresetDate {
 }
 
 export type DateConfigValue = string | Date | Array<DateConfigValue>;
+
+export interface JumperProps {
+  current: number;
+  pageCount: number;
+  onChange: (current: number) => void;
+}
 
 export interface UploadTriggerUploadText {
   image?: string;
