@@ -18481,7 +18481,8 @@
       "field_category": 1,
       "field_name": "monthSelection",
       "field_type": [
-        "1"
+        "1",
+        "32"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -18492,7 +18493,7 @@
       "create_time": "2021-11-21 05:13:38",
       "update_time": "2022-04-05 03:56:07",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | (( data: { month: number })=>string)",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -18508,7 +18509,8 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Function"
       ]
     },
     {
