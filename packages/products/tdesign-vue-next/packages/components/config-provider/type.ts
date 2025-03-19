@@ -229,9 +229,8 @@ export interface CalendarConfig {
   monthRadio?: string;
   /**
    * 语言配置，“月”选择描述文本。示例：`'{month} 月'`
-   * @default ''
    */
-  monthSelection?: string;
+  monthSelection?: string | ((data: { month: string | number }) => string);
   /**
    * 语言配置，“显示周末”描述文本
    * @default ''
