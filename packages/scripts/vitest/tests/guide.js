@@ -1,11 +1,12 @@
 module.exports = {
   Guide: {
+    backButtonProps_1708481239: { field_name: 'backButtonProps', id: 1708481239 },
     counter_2970: {
       field_name: 'counter',
       id: 2970,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: {
           dom: ['document.custom-node', 'document.t-guide__counter'],
           params: [{ total: 1, current: 0 }],
@@ -21,12 +22,13 @@ module.exports = {
         },
       },
     },
+    counter_1736410690: { field_name: 'counter', id: 1736410690 },
     current_2971: {
       field_name: 'current',
       id: 2971,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         dom: [
           {
             props: { current: 0 },
@@ -79,7 +81,7 @@ module.exports = {
       id: 2972,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 2 },
         className: [
           {
@@ -91,12 +93,13 @@ module.exports = {
         ],
       },
     },
+    hideBack_1735205360: { field_name: 'hideBack', id: 1735205360 },
     hideCounter_2976: {
       field_name: 'hideCounter',
       id: 2976,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { hideCounter: true },
         dom: [{ 'document.t-guide__counter': false }],
       },
@@ -106,7 +109,7 @@ module.exports = {
       id: 2977,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 1, hidePrev: true },
         dom: [{ 'document.t-guide__action .t-guide__prev': false }],
       },
@@ -116,7 +119,7 @@ module.exports = {
       id: 2978,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 1, hideSkip: true },
         dom: [{ 'document.t-guide__action .t-guide__skip': false }],
       },
@@ -126,7 +129,7 @@ module.exports = {
       id: 2981,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         attribute: [
           {
             value: 32,
@@ -154,13 +157,15 @@ module.exports = {
         ],
       },
     },
+    highlightPadding_1721620852: { field_name: 'highlightPadding', id: 1721620852 },
     mode_2968: { field_name: 'mode', id: 2968 },
+    mode_1709177566: { field_name: 'mode', id: 1709177566 },
     nextButtonProps_2969: {
       field_name: 'nextButtonProps',
       id: 2969,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 1 },
         className: [
           {
@@ -177,7 +182,7 @@ module.exports = {
       id: 2973,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 2 },
         className: [
           {
@@ -194,7 +199,7 @@ module.exports = {
       id: 2979,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         dom: [
           { props: { showOverlay: true }, dom: [{ 'document.t-guide__highlight--mask': 1 }] },
           { props: { showOverlay: false }, dom: [{ 'document.t-guide__highlight--mask': false }] },
@@ -206,7 +211,7 @@ module.exports = {
       id: 2974,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 0 },
         className: [
           {
@@ -223,7 +228,7 @@ module.exports = {
       id: 2975,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         dom: [
           {
             'document.t-guide__counter': { text: '1/1' },
@@ -237,12 +242,13 @@ module.exports = {
         ],
       },
     },
+    usingCustomNavbar_1721621026: { field_name: 'usingCustomNavbar', id: 1721621026 },
     zIndex_2980: {
       field_name: 'zIndex',
       id: 2980,
       PC: {
         wrapper: 'getGuideDefaultMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         attribute: [
           {
             value: 5000,
@@ -254,12 +260,13 @@ module.exports = {
         ],
       },
     },
+    back_1708481171: { field_name: 'back', id: 1708481171 },
     change_2948: {
       field_name: 'change',
       id: 2948,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         event: [
           {
             props: { current: 0 },
@@ -287,7 +294,7 @@ module.exports = {
       id: 2950,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         event: [
           {
             props: { current: 2 },
@@ -306,7 +313,7 @@ module.exports = {
       id: 2952,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         event: [
           {
             props: { current: 1 },
@@ -325,7 +332,7 @@ module.exports = {
       id: 2951,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         event: [
           {
             props: { current: 1 },
@@ -344,7 +351,7 @@ module.exports = {
       id: 2949,
       PC: {
         wrapper: 'getGuideMultipleStepsMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         event: [
           {
             props: { current: 0 },
@@ -358,14 +365,26 @@ module.exports = {
         ],
       },
     },
+    't-class_1721621122': { field_name: 't-class', id: 1721621122 },
+    't-class-back_1721621135': { field_name: 't-class-back', id: 1721621135 },
+    't-class-body_1721621146': { field_name: 't-class-body', id: 1721621146 },
+    't-class-finish_1721621157': { field_name: 't-class-finish', id: 1721621157 },
+    't-class-footer_1721621166': { field_name: 't-class-footer', id: 1721621166 },
+    't-class-next_1721621177': { field_name: 't-class-next', id: 1721621177 },
+    't-class-popover_1721621188': { field_name: 't-class-popover', id: 1721621188 },
+    't-class-reference_1721621198': { field_name: 't-class-reference', id: 1721621198 },
+    't-class-skip_1721621210': { field_name: 't-class-skip', id: 1721621210 },
+    't-class-title_1721621223': { field_name: 't-class-title', id: 1721621223 },
+    't-class-tooltip_1721621241': { field_name: 't-class-tooltip', id: 1721621241 },
   },
   GuideStep: {
+    backButtonProps_1708481323: { field_name: 'backButtonProps', id: 1708481323 },
     body_2955: {
       field_name: 'body',
       id: 2955,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
         global: {
@@ -379,12 +398,13 @@ module.exports = {
         },
       },
     },
+    body_1721621362: { field_name: 'body', id: 1721621362 },
     children_2953: {
       field_name: 'children',
       id: 2953,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
@@ -394,28 +414,31 @@ module.exports = {
       id: 2954,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
     },
     element_2956: { field_name: 'element', id: 2956, PC: {} },
+    element_1721621525: { field_name: 'element', id: 1721621525 },
+    finishButtonProps_1721621588: { field_name: 'finishButtonProps', id: 1721621588 },
     highlightContent_2966: {
       field_name: 'highlightContent',
       id: 2966,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
     },
+    highlightContent_1709178118: { field_name: 'highlightContent', id: 1709178118 },
     highlightPadding_2965: {
       field_name: 'highlightPadding',
       id: 2965,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         attribute: [
           {
             value: 32,
@@ -443,16 +466,18 @@ module.exports = {
         ],
       },
     },
+    highlightPadding_1721621705: { field_name: 'highlightPadding', id: 1721621705 },
     mode_2967: {
       field_name: 'mode',
       id: 2967,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         dom: ['document.t-popup', 'document.t-guide__dialog'],
         snapshot: true,
       },
     },
+    mode_1709178151: { field_name: 'mode', id: 1709178151 },
     nextButtonProps_2957: {
       field_name: 'nextButtonProps',
       id: 2957,
@@ -471,6 +496,7 @@ module.exports = {
       },
     },
     offset_2958: { field_name: 'offset', id: 2958 },
+    offset_1721621784: { field_name: 'offset', id: 1721621784 },
     placement_2959: {
       field_name: 'placement',
       id: 2959,
@@ -488,12 +514,14 @@ module.exports = {
         snapshot: true,
       },
     },
+    placement_1709197181: { field_name: 'placement', id: 1709197181 },
+    popoverProps_1709178092: { field_name: 'popoverProps', id: 1709178092 },
     popupProps_3307: {
       field_name: 'popupProps',
       id: 3307,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         attribute: [
           {
             value: "{placement: 'top-left'}",
@@ -509,7 +537,7 @@ module.exports = {
       id: 2960,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 2 },
         className: [
           {
@@ -526,7 +554,7 @@ module.exports = {
       id: 2964,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         dom: [
           {
             description: '.t-guide__highlight--mask should exit if showOverlay=true',
@@ -546,7 +574,7 @@ module.exports = {
       id: 2961,
       PC: {
         wrapper: 'getCustomMultipleGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         props: { current: 1 },
         className: [
           {
@@ -563,7 +591,7 @@ module.exports = {
       id: 2963,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         className: [
           {
             value: 't-test-guide-step-overlay',
@@ -578,10 +606,11 @@ module.exports = {
       id: 2962,
       PC: {
         wrapper: 'getCustomGuideStepMount',
-        trigger: 'delay(60)',
+        trigger: 'delay(200)',
         tnode: { dom: ['document.custom-node'] },
         snapshot: true,
       },
     },
+    title_1721621896: { field_name: 'title', id: 1721621896 },
   },
 };
