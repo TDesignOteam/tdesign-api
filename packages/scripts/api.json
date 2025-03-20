@@ -19392,7 +19392,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全最定义封面图",
+      "field_desc_zh": "卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全自定义封面图",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
