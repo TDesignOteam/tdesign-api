@@ -82020,54 +82020,11 @@
       ]
     },
     {
-      "id": 1474,
-      "platform_framework": [
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Picker",
-      "field_category": 1,
-      "field_name": "cancelBtn",
-      "field_type": [
-        "1",
-        "4",
-        "8"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "取消按钮文字",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-23 08:25:49",
-      "update_time": "2022-07-14 11:39:09",
-      "event_output": null,
-      "custom_field_type": "boolean | string | ButtonProps",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Boolean",
-        "Object"
-      ]
-    },
-    {
       "id": 1712580223,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -82096,7 +82053,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -82147,54 +82106,11 @@
       ]
     },
     {
-      "id": 1473,
-      "platform_framework": [
-        "16",
-        "32",
-        "64"
-      ],
-      "component": "Picker",
-      "field_category": 1,
-      "field_name": "confirmBtn",
-      "field_type": [
-        "1",
-        "4",
-        "8"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "确定按钮文字",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-23 08:24:52",
-      "update_time": "2022-07-14 11:39:01",
-      "event_output": null,
-      "custom_field_type": "boolean | string | ButtonProps【import { ButtonProps } from '@Button'】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Boolean",
-        "Object"
-      ]
-    },
-    {
       "id": 1712577316,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "64"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -82223,7 +82139,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
