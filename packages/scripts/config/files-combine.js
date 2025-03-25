@@ -203,6 +203,10 @@ const COMPONENT_API_MD_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+    // 高阶组件
+    Chat:  {
+        list: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatContent'],
+    },
 };
 
 // H5 特殊组件
