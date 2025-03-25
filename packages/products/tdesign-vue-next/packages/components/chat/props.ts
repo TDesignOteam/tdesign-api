@@ -30,6 +30,10 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 自定义 markdown 的渲染效果 */
+  content: {
+    type: Function as PropType<TdChatProps['content']>,
+  },
   /** 对话列表的数据 */
   data: {
     type: Array as PropType<TdChatProps['data']>,

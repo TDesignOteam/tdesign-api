@@ -10,6 +10,7 @@ actions | Slot / Function | - | Typescript：`TNode`。[see more ts definition](
 animation | String | skeleton | options: skeleton/moving/gradient | N
 avatar | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 clearHistory | Boolean | true | \- | N
+content | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 data | Array | - | Typescript：`Array<TdChatItemProps>` | N
 datetime | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | \- | N

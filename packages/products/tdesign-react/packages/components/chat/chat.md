@@ -12,6 +12,7 @@ actions | TElement | - | 自定义操作按钮的插槽。TS 类型：`TNode`。
 animation | String | skeleton | 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种。可选项：skeleton/moving/gradient | N
 avatar | TElement | - | 自定义头像的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 clearHistory | Boolean | true | 是否显示清空历史 | N
+content | TElement | - | 自定义 markdown 的渲染效果。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 data | Array | - | 对话列表的数据。TS 类型：`Array<TdChatItemProps>` | N
 datetime | TElement | - | 自定义时间的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | 流式加载是否结束 | N

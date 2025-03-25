@@ -12,6 +12,7 @@ actions | TElement | - | Typescript：`TNode`。[see more ts definition](https:/
 animation | String | skeleton | options: skeleton/moving/gradient | N
 avatar | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 clearHistory | Boolean | true | \- | N
+content | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 data | Array | - | Typescript：`Array<TdChatItemProps>` | N
 datetime | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | \- | N
