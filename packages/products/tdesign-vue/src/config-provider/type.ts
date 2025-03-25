@@ -229,9 +229,8 @@ export interface CalendarConfig {
   monthRadio?: string;
   /**
    * 语言配置，“月”选择描述文本。示例：`'{month} 月'`
-   * @default ''
    */
-  monthSelection?: string;
+  monthSelection?: string | ((data: { month: number }) => string);
   /**
    * 语言配置，“显示周末”描述文本
    * @default ''
@@ -615,6 +614,10 @@ export interface PaginationConfig {
    * @default ''
    */
   total?: string;
+  /**
+   * 自定义跳转组件
+   */
+  jumper?: (jumperProps: JumperProps) => TNode<JumperProps>;
 }
 
 export interface PopconfirmConfig {
@@ -988,6 +991,12 @@ export interface ConfigPresetDate {
 }
 
 export type DateConfigValue = string | Date | Array<DateConfigValue>;
+
+export interface JumperProps {
+  current: number;
+  pageCount: number;
+  onChange: (current: number) => void;
+}
 
 export interface UploadTriggerUploadText {
   image?: string;
