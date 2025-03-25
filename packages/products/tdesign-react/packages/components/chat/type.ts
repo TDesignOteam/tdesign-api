@@ -5,6 +5,8 @@
  * */
 
 import { AvatarProps } from '../avatar';
+import { CollapsePanelProps } from '../collapse';
+import { CollapseValue } from '../collapse';
 import { TNode, TElement } from '../common';
 import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
 
@@ -253,6 +255,34 @@ export interface TdChatSenderProps {
    * 点击消息终止的回调方法
    */
   onStop?: (value: string, context: { e: MouseEvent<HTMLDivElement> }) => void;
+}
+
+export interface TdChatReasoningProps {
+  /**
+   * 透传给 CollapsePanel 组件的全部属性
+   */
+  collapsePanelProps?: CollapsePanelProps;
+  /**
+   * 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon
+   */
+  expandIcon?: TElement;
+  /**
+   * 展开图标位置，可选项：left/right
+   * @default right
+   */
+  expandIconPlacement?: 'left' | 'right';
+  /**
+   * 折叠面板头内容。优先级低于collapsePanelProps.header
+   */
+  header?: TElement;
+  /**
+   * 折叠面板尾内容。优先级低于collapsePanelProps.headerRightContent
+   */
+  headerRightContent?: TElement;
+  /**
+   * 展开图标点击事件
+   */
+  onExpandChange?: (value: CollapseValue) => void;
 }
 
 export interface TdChatReasoning {

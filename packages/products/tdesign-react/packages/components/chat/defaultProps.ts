@@ -9,6 +9,7 @@ import {
   TdChatActionProps,
   TdChatInputProps,
   TdChatSenderProps,
+  TdChatReasoningProps,
 } from './type';
 
 export const chatDefaultProps: TdChatProps = {
@@ -39,3 +40,5 @@ export const chatInputDefaultProps: TdChatInputProps = {
 };
 
 export const chatSenderDefaultProps: TdChatSenderProps = { stopDisabled: false };
+
+export const chatReasoningDefaultProps: TdChatReasoningProps = { expandIconPlacement: 'right' };

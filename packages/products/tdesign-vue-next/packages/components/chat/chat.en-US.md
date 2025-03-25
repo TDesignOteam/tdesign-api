@@ -128,9 +128,19 @@ send | `(value:string, context: { e: MouseEvent \| KeyboardEvent })` | \-
 stop | `(value:string, context: { e: MouseEvent })` | \-
 
 
-### ChatContent Props
+### ChatReasoning Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-content | String | - | \- | N
-role | String | - | options: user/assistant/error/model-change/system | N
+collapsePanelProps | Object | - | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+expandIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+expandIconPlacement | String | right | options: left/right | N
+header | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+headerRightContent | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+onExpandChange | Function |  | Typescript：`(value: CollapseValue) => void`<br/>Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts)。<br/>`import { CollapseValue } from '@Collapse'`<br/> | N
+
+### ChatReasoning Events
+
+name | params | description
+-- | -- | --
+expand-change | `(value: CollapseValue)` | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts)。<br/>`import { CollapseValue } from '@Collapse'`<br/>
