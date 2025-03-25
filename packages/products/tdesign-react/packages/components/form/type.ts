@@ -68,7 +68,6 @@ export interface TdFormProps<FormData extends Data = Data> {
   requiredMark?: boolean;
   /**
    * 表单必填符号（*）显示位置
-   * @default left
    */
   requiredMarkPosition?: 'left' | 'right';
   /**

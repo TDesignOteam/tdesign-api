@@ -50976,7 +50976,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "undefined",
       "field_enum": "left/right",
       "field_desc_zh": "表单必填符号（*）显示位置",
       "field_desc_en": "Display position of required symbols",
@@ -52213,6 +52213,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1742873938,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "FormConfig",
+      "field_category": 1,
+      "field_name": "requiredMarkPosition",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "表单必填符号（*）显示位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 03:38:58",
+      "update_time": "2025-03-25 03:38:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {

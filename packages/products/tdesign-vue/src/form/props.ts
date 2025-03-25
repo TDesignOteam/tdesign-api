@@ -74,7 +74,7 @@ export default {
   /** 表单必填符号（*）显示位置 */
   requiredMarkPosition: {
     type: String as PropType<TdFormProps['requiredMarkPosition']>,
-    default: 'left' as TdFormProps['requiredMarkPosition'],
+    default: undefined as TdFormProps['requiredMarkPosition'],
     validator(val: TdFormProps['requiredMarkPosition']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);
