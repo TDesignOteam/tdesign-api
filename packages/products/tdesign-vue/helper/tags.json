@@ -978,6 +978,7 @@
       "prevent-submit-default",
       "readonly",
       "required-mark",
+      "required-mark-position",
       "reset-type",
       "rules",
       "scroll-to-first-error",

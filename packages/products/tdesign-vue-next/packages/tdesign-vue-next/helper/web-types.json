@@ -7315,6 +7315,24 @@
               "default": "undefined"
             },
             {
+              "name": "required-mark-position",
+              "description": "Display position of required symbols\n\n表单必填符号（*）显示位置",
+              "doc-url": "https://tdesign.tencent.com/vue-next/components/form?tab=api#form-props",
+              "type": "'left' | 'right'",
+              "default": "left",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "left"
+                },
+                {
+                  "name": "right"
+                }
+              ]
+            },
+            {
               "name": "reset-type",
               "description": "重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/form?tab=api#form-props",

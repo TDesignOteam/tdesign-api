@@ -3239,6 +3239,14 @@
     "type": "Boolean",
     "description": "是否显示必填符号（*），默认显示\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/vue-next/components/form?tab=api#form-props)"
   },
+  "t-form/required-mark-position": {
+    "type": "String",
+    "options": [
+      "left",
+      "right"
+    ],
+    "description": "Display position of required symbols\n\n表单必填符号（*）显示位置\n\ndefault: left\n\n[docs](https://tdesign.tencent.com/vue-next/components/form?tab=api#form-props)"
+  },
   "t-form/reset-type": {
     "type": "String",
     "options": [
