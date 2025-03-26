@@ -117247,7 +117247,7 @@
       "create_time": "2022-05-10 10:03:51",
       "update_time": "2022-05-10 18:29:12",
       "event_output": null,
-      "custom_field_type": "TNode<{ type: 'expand' | 'fold' }>",
+      "custom_field_type": "TNode<{ type: 'expand' | 'fold', row: T }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

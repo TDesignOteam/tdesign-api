@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### ConfigProvider Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -287,7 +286,7 @@ sortAscendingOperationText | String | - | 语言配置，'点击升序' 描述�
 sortCancelOperationText | String | - | 语言配置，'点击取消排序' 描述文本 | N
 sortDescendingOperationText | String | - | 语言配置，'点击降序' 描述文本 | N
 sortIcon | Slot / Function | undefined | 排序图标（配置传入降序图标即可），如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-treeExpandAndFoldIcon | Function | undefined | 树形结构，展开和折叠图标。如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode<{ type: 'expand' \| 'fold' }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+treeExpandAndFoldIcon | Function | undefined | 树形结构，展开和折叠图标。如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode<{ type: 'expand' \| 'fold', row: T }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 
 ### TagConfig
 

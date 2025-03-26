@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### ConfigProvider Props
 
 name | type | default | description | required
@@ -287,7 +286,7 @@ sortAscendingOperationText | String | - | \- | N
 sortCancelOperationText | String | - | \- | N
 sortDescendingOperationText | String | - | \- | N
 sortIcon | Slot / Function | undefined | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-treeExpandAndFoldIcon | Function | undefined | Typescript：`TNode<{ type: 'expand' \| 'fold' }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+treeExpandAndFoldIcon | Function | undefined | Typescript：`TNode<{ type: 'expand' \| 'fold', row: T }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 
 ### TagConfig
 

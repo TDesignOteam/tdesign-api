@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### BaseTable Props
 
 name | type | default | description | required

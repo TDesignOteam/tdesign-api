@@ -780,7 +780,7 @@ export interface TableConfig {
   /**
    * 树形结构，展开和折叠图标。如果没有配置，会使用组件内置的默认图标
    */
-  treeExpandAndFoldIcon?: TNode<{ type: 'expand' | 'fold' }>;
+  treeExpandAndFoldIcon?: TNode<{ type: 'expand' | 'fold'; row: T }>;
 }
 
 export interface TagConfig {
