@@ -30,6 +30,7 @@ function groupByComponent(allApi, framework) {
       result[api.component] = [api];
     }
   });
+
   // API 默认顺序为字母顺序，但是插件 API 的顺序应当为创建顺序。插件 API 形如：$Message.info(theme, duration)
   Object.keys(result).forEach((componentName) => {
     if (componentName[0]==='$') {

@@ -12,7 +12,7 @@ duration | Number | - | \- | N
 placement | String | top | Typescript：`PopupPlacement`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tooltip/type.ts) | N
 showArrow | Boolean | true | \- | N
 theme | String | default | options: default/primary/success/danger/warning/light | N
-`PopupProps` | \- | - | extends `PopupProps` | N
+`Omit<PopupProps, 'placement'> ` | \- | - | extends `Omit<PopupProps, 'placement'> ` | N
 
 
 ### TooltipLite Props
