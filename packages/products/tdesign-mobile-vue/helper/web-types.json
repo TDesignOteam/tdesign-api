@@ -2617,6 +2617,12 @@
               "default": "false"
             },
             {
+              "name": "middle",
+              "description": "中间自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
+              "type": "TNode"
+            },
+            {
               "name": "overlay-props",
               "description": "透传至 Overlay 组件",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
@@ -2642,6 +2648,12 @@
               "description": "标题",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
               "type": "string | TNode"
+            },
+            {
+              "name": "top",
+              "description": "顶部自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
+              "type": "TNode"
             },
             {
               "name": "visible",
@@ -2723,8 +2735,18 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
             },
             {
+              "name": "middle",
+              "description": "中间自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
+            },
+            {
               "name": "title",
               "description": "标题",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
+            },
+            {
+              "name": "top",
+              "description": "顶部自定义内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
             }
           ]
@@ -7661,6 +7683,12 @@
               "default": "''"
             },
             {
+              "name": "extra",
+              "description": "步骤条自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props",
+              "type": "string | TNode"
+            },
+            {
               "name": "icon",
               "description": "图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props",
@@ -7710,6 +7738,11 @@
             {
               "name": "content",
               "description": "步骤描述",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props"
+            },
+            {
+              "name": "extra",
+              "description": "步骤条自定义内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props"
             },
             {
@@ -7928,27 +7961,6 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props",
               "type": "boolean",
               "default": "undefined"
-            },
-            {
-              "name": "separator",
-              "description": "步骤条分割符",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props",
-              "type": "'line' | 'dashed' | 'arrow'",
-              "default": "line",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "line"
-                },
-                {
-                  "name": "dashed"
-                },
-                {
-                  "name": "arrow"
-                }
-              ]
             },
             {
               "name": "sequence",
@@ -9228,7 +9240,7 @@
               "name": "theme",
               "description": "提示类型",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/toast?tab=api#toast-props",
-              "type": "'loading' | 'success' | 'error'",
+              "type": "'loading' | 'success' | 'warning' | 'error'",
               "attribute-value": {
                 "type": "enum"
               },
@@ -9238,6 +9250,9 @@
                 },
                 {
                   "name": "success"
+                },
+                {
+                  "name": "warning"
                 },
                 {
                   "name": "error"

@@ -358,10 +358,12 @@
       "confirm-btn",
       "content",
       "destroy-on-close",
+      "middle",
       "overlay-props",
       "prevent-scroll-through",
       "show-overlay",
       "title",
+      "top",
       "visible",
       "width",
       "z-index",
@@ -1097,6 +1099,7 @@
   "t-step-item": {
     "attributes": [
       "content",
+      "extra",
       "icon",
       "status",
       "title",
@@ -1129,7 +1132,6 @@
       "current-status",
       "layout",
       "readonly",
-      "separator",
       "sequence",
       "theme",
       "change"

@@ -128599,7 +128599,7 @@
       ],
       "component": "Tooltip",
       "field_category": 16,
-      "field_name": "TdPopupProps【import { TdPopupProps } from '@Popup'】",
+      "field_name": "Omit<TdPopupProps, 'placement'> 【import { TdPopupProps } from '@Popup'】",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",

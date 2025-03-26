@@ -30,42 +30,6 @@ function groupByComponent(allApi, framework) {
       result[api.component] = [api];
     }
   });
-  // API field_category_text 等于 Extends，提取Pick，Omit 类型的 API
-  Object.keys(result).forEach((componentName) => {
-    result[componentName].forEach((api,index) => {
-      if (api.field_category_text !== 'Extends') return;
-      if(api.field_name.indexOf('Pick') !== -1) {
-        const pickRegex = /Pick<([^,]+),\s*([^>]+)>/;;
-        const pickMatch = api.field_name.match(pickRegex);
-        if (pickMatch) {
-          const pickComponentName = pickMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
-          const pickList= pickMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
-          result[pickComponentName].forEach((item)=>{
-            if (pickList.includes(item.field_name)){
-              result[api.component].push(item);
-            }
-          })
-          delete result[componentName][index];
-          // result[api.component]= result[api.component].sort((a, b) => a.field_name.localeCompare(b.field_name));
-        }
-      }
-      if(api.field_name.indexOf('Omit') !== -1) {
-        const omitRegex = /Omit<([^,]+),\s*([^>]+)>/;;
-        const omitMatch = api.field_name.match(omitRegex);
-        if (omitMatch) {
-          const omitComponentName = omitMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
-          const omitList= omitMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
-          result[omitComponentName].forEach((item)=>{
-            if (!omitList.includes(item.field_name)){
-              result[api.component].push(item);
-            }
-          })
-          delete result[componentName][index];
-          // result[api.component]= result[api.component].sort((a, b) => a.field_name.localeCompare(b.field_name));
-        }
-      }
-    })
-  })
 
   // API 默认顺序为字母顺序，但是插件 API 的顺序应当为创建顺序。插件 API 形如：$Message.info(theme, duration)
   Object.keys(result).forEach((componentName) => {

@@ -1151,6 +1151,10 @@
     "type": "Boolean",
     "description": "是否在关闭弹框的时候销毁子元素\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
   },
+  "t-dialog/middle": {
+    "type": "TNode",
+    "description": "中间自定义内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
+  },
   "t-dialog/overlay-props": {
     "type": "Object",
     "description": "透传至 Overlay 组件\n\ndefault: {}\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
@@ -1166,6 +1170,10 @@
   "t-dialog/title": {
     "type": "String|TNode",
     "description": "标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
+  },
+  "t-dialog/top": {
+    "type": "TNode",
+    "description": "顶部自定义内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
   },
   "t-dialog/visible": {
     "type": "Boolean",
@@ -3340,6 +3348,10 @@
     "type": "String|TNode",
     "description": "步骤描述\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props)"
   },
+  "t-step-item/extra": {
+    "type": "String|TNode",
+    "description": "步骤条自定义内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props)"
+  },
   "t-step-item/icon": {
     "type": "Boolean|TNode",
     "description": "图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props)"
@@ -3453,15 +3465,6 @@
   "t-steps/readonly": {
     "type": "Boolean",
     "description": "只读状态\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props)"
-  },
-  "t-steps/separator": {
-    "type": "String",
-    "options": [
-      "line",
-      "dashed",
-      "arrow"
-    ],
-    "description": "步骤条分割符\n\ndefault: line\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props)"
   },
   "t-steps/sequence": {
     "type": "String",
@@ -4035,6 +4038,7 @@
     "options": [
       "loading",
       "success",
+      "warning",
       "error"
     ],
     "description": "提示类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/toast?tab=api#toast-props)"

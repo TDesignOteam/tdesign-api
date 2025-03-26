@@ -48,7 +48,41 @@ function start() {
   if (['Vue(PC)', 'VueNext(PC)'].includes(framework)) {
     // Typography 是空定义组件，特殊处理
    frameworkData['Typography'] = [];
- }
+  }
+  // API field_category_text 等于 Extends, 提取 Pick, Omit 类型的 API
+  Object.keys(frameworkData).forEach((componentName) => {
+    frameworkData[componentName].forEach((api,index) => {
+      if (api.field_category_text !== 'Extends') return;
+      // 提取 Pick 类型的 API
+      if(api.field_name.indexOf('Pick') !== -1) {
+        const pickRegex = /Pick<([^,]+),\s*([^>]+)>/;;
+        const pickMatch = api.field_name.match(pickRegex);
+        if (pickMatch) {
+          const pickComponentName = pickMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
+          const pickList= pickMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
+          frameworkData[pickComponentName].forEach((item)=>{
+            if (pickList.includes(item.field_name)){
+              frameworkData[api.component].push(item);
+            }
+          })
+        }
+      }
+      // 提取 Omit 类型的 API
+      if(api.field_name.indexOf('Omit') !== -1) {
+        const omitRegex = /Omit<([^,]+),\s*([^>]+)>/;;
+        const omitMatch = api.field_name.match(omitRegex);
+        if (omitMatch) {
+          const omitComponentName = omitMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
+          const omitList= omitMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
+          frameworkData[omitComponentName].forEach((item)=>{
+            if (!omitList.includes(item.field_name)){
+              frameworkData[api.component].push(item);
+            }
+          })
+        }
+      }
+    })
+  })
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
