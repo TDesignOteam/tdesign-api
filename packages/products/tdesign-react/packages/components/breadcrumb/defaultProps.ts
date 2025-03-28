@@ -4,7 +4,12 @@
 
 import { TdBreadcrumbProps, TdBreadcrumbItemProps } from './type';
 
-export const breadcrumbDefaultProps: TdBreadcrumbProps = { maxItemWidth: undefined };
+export const breadcrumbDefaultProps: TdBreadcrumbProps = {
+  itemsAfterCollapse: undefined,
+  itemsBeforeCollapse: undefined,
+  maxItemWidth: undefined,
+  maxItems: undefined,
+};
 
 export const breadcrumbItemDefaultProps: TdBreadcrumbItemProps = {
   maxWidth: undefined,
