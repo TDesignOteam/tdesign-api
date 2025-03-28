@@ -6,6 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+ellipsis | String / Slot / Function | - | Typescript：`string \| TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 itemsAfterCollapse | Number | undefined | \- | N
 itemsBeforeCollapse | Number | undefined | \- | N
 maxItemWidth | Number | undefined | \- | N

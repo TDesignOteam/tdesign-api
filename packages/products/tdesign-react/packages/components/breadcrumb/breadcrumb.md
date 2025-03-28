@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+ellipsis | TNode | - | 自定义折叠时省略号的内容。TS 类型：`string \| TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 itemsAfterCollapse | Number | undefined | 超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效 | N
 itemsBeforeCollapse | Number | undefined | 超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效 | N
 maxItemWidth | Number | undefined | 单项最大宽度，超出后会以省略号形式呈现 | N

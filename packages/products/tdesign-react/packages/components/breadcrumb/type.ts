@@ -10,6 +10,10 @@ import { MouseEvent } from 'react';
 
 export interface TdBreadcrumbProps {
   /**
+   * 自定义折叠时省略号的内容
+   */
+  ellipsis?: string | TNode<{ items: Array<TdBreadcrumbItemProps>; separator: TdBreadcrumbProps['separator'] }>;
+  /**
    * 超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效
    */
   itemsAfterCollapse?: number;
