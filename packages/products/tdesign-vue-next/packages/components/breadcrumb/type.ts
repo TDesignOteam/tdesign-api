@@ -8,9 +8,21 @@ import { TNode } from '../common';
 
 export interface TdBreadcrumbProps {
   /**
+   * 超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效
+   */
+  itemsAfterCollapse?: number;
+  /**
+   * 超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效
+   */
+  itemsBeforeCollapse?: number;
+  /**
    * 单项最大宽度，超出后会以省略号形式呈现
    */
-  maxItemWidth?: string;
+  maxItemWidth?: number;
+  /**
+   * 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值为`0`或`负值`代表不限制
+   */
+  maxItems?: number;
   /**
    * 面包屑项，功能同 BreadcrumbItem
    */

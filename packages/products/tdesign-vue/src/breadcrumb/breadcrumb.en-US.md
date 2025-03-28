@@ -6,7 +6,10 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-maxItemWidth | String | undefined | \- | N
+itemsAfterCollapse | Number | - | \- | N
+itemsBeforeCollapse | Number | - | \- | N
+maxItemWidth | Number | undefined | \- | N
+maxItems | Number | - | \- | N
 options | Array | - | Typescript：`Array<TdBreadcrumbItemProps>` | N
 separator | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | light | options: light | N
