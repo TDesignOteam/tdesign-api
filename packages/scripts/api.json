@@ -13077,7 +13077,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效",
       "field_desc_en": null,
@@ -13118,7 +13118,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效",
       "field_desc_en": null,
@@ -13200,7 +13200,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值为`0`或`负值`代表不限制",
       "field_desc_en": null,

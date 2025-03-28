@@ -11,10 +11,12 @@ export default {
   /** 超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效 */
   itemsAfterCollapse: {
     type: Number,
+    default: undefined,
   },
   /** 超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效 */
   itemsBeforeCollapse: {
     type: Number,
+    default: undefined,
   },
   /** 单项最大宽度，超出后会以省略号形式呈现 */
   maxItemWidth: {
@@ -24,6 +26,7 @@ export default {
   /** 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值为`0`或`负值`代表不限制 */
   maxItems: {
     type: Number,
+    default: undefined,
   },
   /** 面包屑项，功能同 BreadcrumbItem */
   options: {
