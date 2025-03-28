@@ -20,7 +20,7 @@ export interface TdBreadcrumbProps {
    */
   maxItemWidth?: number;
   /**
-   * 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值为`0`或`负值`代表不限制
+   * 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值`<= 0`代表不限制
    */
   maxItems?: number;
   /**

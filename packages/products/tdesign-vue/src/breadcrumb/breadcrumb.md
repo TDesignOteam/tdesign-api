@@ -9,7 +9,7 @@
 itemsAfterCollapse | Number | undefined | 超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效 | N
 itemsBeforeCollapse | Number | undefined | 超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效 | N
 maxItemWidth | Number | undefined | 单项最大宽度，超出后会以省略号形式呈现 | N
-maxItems | Number | undefined | 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值为`0`或`负值`代表不限制 | N
+maxItems | Number | undefined | 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值`<= 0`代表不限制 | N
 options | Array | - | 面包屑项，功能同 BreadcrumbItem。TS 类型：`Array<TdBreadcrumbItemProps>` | N
 separator | String / Slot / Function | - | 自定义分隔符。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | light | 组件风格。可选项：light | N
