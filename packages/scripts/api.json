@@ -13065,6 +13065,131 @@
       "field_type_text": []
     },
     {
+      "id": 1743170896,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Breadcrumb",
+      "field_category": 1,
+      "field_name": "ellipsis",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义折叠时省略号的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-28 14:08:16",
+      "update_time": "2025-03-28 14:08:16",
+      "event_output": null,
+      "custom_field_type": "string | TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1743167580,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Breadcrumb",
+      "field_category": 1,
+      "field_name": "itemsAfterCollapse",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-28 13:13:00",
+      "update_time": "2025-03-28 13:13:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1743167627,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Breadcrumb",
+      "field_category": 1,
+      "field_name": "itemsBeforeCollapse",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-28 13:13:47",
+      "update_time": "2025-03-28 13:13:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 605,
       "platform_framework": [
         "1",
@@ -13075,7 +13200,7 @@
       "field_category": 1,
       "field_name": "maxItemWidth",
       "field_type": [
-        "1"
+        "2"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -13102,7 +13227,48 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Number"
+      ]
+    },
+    {
+      "id": 1743167656,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Breadcrumb",
+      "field_category": 1,
+      "field_name": "maxItems",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值`<= 0`代表不限制",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-28 13:14:16",
+      "update_time": "2025-03-28 13:14:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
