@@ -10,14 +10,14 @@ className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 actions | TElement | - | 自定义操作按钮的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 animation | String | skeleton | 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种。可选项：skeleton/moving/gradient | N
-avatar | TElement | - | 自定义头像的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+avatar | TElement | - | 自定义每个对话单元的头像插槽。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 clearHistory | Boolean | true | 是否显示清空历史 | N
-content | TElement | - | 自定义 markdown 的渲染效果。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+content | TElement | - | 自定义每个对话单独的聊天内容。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 data | Array | - | 对话列表的数据。TS 类型：`Array<TdChatItemProps>` | N
-datetime | TElement | - | 自定义时间的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+datetime | TElement | - | 自定义每个对话单元的时间。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | 流式加载是否结束 | N
 layout | String | both | 对话布局形式，支持两侧对齐与左对齐。可选项：both/single | N
-name | TElement | - | 自定义昵称的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+name | TElement | - | 自定义每个对话单元的昵称。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 reverse | Boolean | true | 是否表现为倒序 | N
 textLoading | Boolean | false | 新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清空历史按钮回调。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
@@ -80,7 +80,7 @@ content | String | - | 被复制的内容 | N
 disabled | Boolean | false | 操作按钮是否可点击 | N
 isBad | Boolean | false | 是否点踩 | N
 isGood | Boolean | false | 是否点赞 | N
-operationBtn | Array | - | 操作按钮配置项，可配置操作按钮选项和顺序 | N
+operationBtn | Array | ["replay", "copy", "good", "bad"] | 操作按钮配置项，可配置操作按钮选项和顺序 | N
 onOperation | Function |  | TS 类型：`(value:string, context: { e: MouseEvent }) => void`<br/>点击点赞，点踩，复制，重新生成按钮时触发 | N
 
 
@@ -95,6 +95,9 @@ autosize | Boolean / Object | { minRows: 1, maxRows: 5 } | 高度自动撑开。
 disabled | Boolean | false | 是否禁用输入框 | N
 placeholder | String | - | 输入框默认文案 | N
 stopDisabled | Boolean | false | 中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个 | N
+suffixIcon | TElement | - | 发送按钮的自定义扩展。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+value | String / Number | - | 输入框的值。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
+defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
 onBlur | Function |  | TS 类型：`(value:string, context: { e: FocusEvent }) => void`<br/>输入框聚焦时触发 | N
 onChange | Function |  | TS 类型：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
 onFocus | Function |  | TS 类型：`(value:string, context: { e: FocusEvent })  => void`<br/>输入框聚焦时触发 | N
@@ -108,9 +111,17 @@ onStop | Function |  | TS 类型：`(value:string, context: { e: MouseEvent }) =
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+disabled | Boolean | false | 是否禁用输入框 | N
+placeholder | String | - | 输入框默认文案 | N
 prefix | TNode | - | 输入框左下角区域扩展。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 stopDisabled | Boolean | false | 中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个 | N
 suffix | TNode | - | 输入框右下角区域扩展。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+textareaProps | Object | - | 透传给  Textarea 组件的全部属性。TS 类型：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
+value | String / Number | - | 输入框的值。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
+defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
+onBlur | Function |  | TS 类型：`(value:string, context: { e: FocusEvent }) => void`<br/>输入框聚焦时触发 | N
+onChange | Function |  | TS 类型：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
+onFocus | Function |  | TS 类型：`(value:string, context: { e: FocusEvent })  => void`<br/>输入框聚焦时触发 | N
 onSend | Function |  | TS 类型：`(value:string, context: { e: MouseEvent \| KeyboardEvent }) => void`<br/>点击消息发送的回调方法 | N
 onStop | Function |  | TS 类型：`(value:string, context: { e: MouseEvent }) => void`<br/>点击消息终止的回调方法 | N
 

@@ -30,7 +30,12 @@ export const chatItemDefaultProps: TdChatItemProps = {
   variant: 'text',
 };
 
-export const chatActionDefaultProps: TdChatActionProps = { disabled: false, isBad: false, isGood: false };
+export const chatActionDefaultProps: TdChatActionProps = {
+  disabled: false,
+  isBad: false,
+  isGood: false,
+  operationBtn: ['replay', 'copy', 'good', 'bad'],
+};
 
 export const chatInputDefaultProps: TdChatInputProps = {
   autofocus: false,
@@ -39,6 +44,6 @@ export const chatInputDefaultProps: TdChatInputProps = {
   stopDisabled: false,
 };
 
-export const chatSenderDefaultProps: TdChatSenderProps = { stopDisabled: false };
+export const chatSenderDefaultProps: TdChatSenderProps = { disabled: false, stopDisabled: false };
 
 export const chatReasoningDefaultProps: TdChatReasoningProps = { expandIconPlacement: 'right' };
