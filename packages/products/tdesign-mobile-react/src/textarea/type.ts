@@ -5,7 +5,7 @@
  * */
 
 import { TNode } from '../common';
-import { FocusEvent, FormEvent } from 'react';
+import { FocusEvent, FormEvent, CompositionEvent } from 'react';
 
 export interface TdTextareaProps {
   /**
@@ -83,6 +83,14 @@ export interface TdTextareaProps {
    * 输入内容变化时触发
    */
   onChange?: (value: TextareaValue, context?: { e?: FormEvent<HTMLTextAreaElement> }) => void;
+  /**
+   * 中文输入结束时触发
+   */
+  onCompositionend?: (value: string, context: { e: CompositionEvent<HTMLDivElement> }) => void;
+  /**
+   * 中文输入开始时触发
+   */
+  onCompositionstart?: (value: string, context: { e: CompositionEvent<HTMLDivElement> }) => void;
   /**
    * 获得焦点时触发
    */
