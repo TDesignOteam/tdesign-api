@@ -7534,9 +7534,9 @@
         {
           "name": "t-iconfont",
           "source": {
-            "symbol": "Iconfont"
+            "symbol": "IconFont"
           },
-          "description": "Iconfont\n\n图标（Iconfont）",
+          "description": "IconFont\n\n图标（IconFont）",
           "doc-url": "https://tdesign.tencent.com/vue-next/components/icon",
           "props": [
             {

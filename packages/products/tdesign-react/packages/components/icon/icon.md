@@ -4,7 +4,7 @@
 
 ### IconSVG Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -15,9 +15,10 @@ style | String | - | HTML 原生属性。可用于设置图标颜色，如：sty
 url | String / Array | - | 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.js)。TS 类型：`string \| Array<string>` | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击时触发 | N
 
-### Iconfont Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+### IconFont Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N

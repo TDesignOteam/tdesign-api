@@ -994,7 +994,7 @@
       "url",
       "click"
     ],
-    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/vue/components/icon)"
+    "description": "IconFont\n\n图标（IconFont）\n\n[docs](https://tdesign.tencent.com/vue/components/icon)"
   },
   "t-image": {
     "attributes": [

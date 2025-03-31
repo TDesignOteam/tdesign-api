@@ -55,7 +55,7 @@ declare module 'vue' {
     THeader: typeof import('tdesign-vue-next')['Header'];
     THeadMenu: typeof import('tdesign-vue-next')['HeadMenu'];
     TIcon: typeof import('tdesign-vue-next')['Icon'];
-    Iconfont: typeof import('tdesign-icons-vue-next')['Iconfont'];
+    IconFont: typeof import('tdesign-icons-vue-next')['IconFont'];
     Icon: typeof import('tdesign-icons-vue-next')['Icon'];
     TImage: typeof import('tdesign-vue-next')['Image'];
     TImageViewer: typeof import('tdesign-vue-next')['ImageViewer'];

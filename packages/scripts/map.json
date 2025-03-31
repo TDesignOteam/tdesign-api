@@ -640,8 +640,8 @@
         "label": "图标"
       },
       {
-        "value": "Iconfont",
-        "label": "图标（Iconfont）"
+        "value": "IconFont",
+        "label": "图标（IconFont）"
       },
       {
         "value": "IconSVG",

@@ -55,7 +55,7 @@ declare module '@vue/runtime-core' {
     THeader: typeof import('tdesign-vue')['Header'];
     THeadMenu: typeof import('tdesign-vue')['HeadMenu'];
     TIcon: typeof import('tdesign-vue')['Icon'];
-    Iconfont: typeof import('tdesign-icons-vue')['Iconfont'];
+    IconFont: typeof import('tdesign-icons-vue')['IconFont'];
     Icon: typeof import('tdesign-icons-vue')['Icon'];
     TImage: typeof import('tdesign-vue')['Image'];
     TImageViewer: typeof import('tdesign-vue')['ImageViewer'];

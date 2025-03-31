@@ -223,7 +223,7 @@ function writeVolar(framework, data) {
     if (item === 'IconSVG'){
       return `Icon: typeof import('${current.iconPath}')['Icon'];`
     }
-    if (item === 'Iconfont'){
+    if (item === 'IconFont'){
       return `${item}: typeof import('${current.iconPath}')['${item}'];`
     }
     if (['Text', 'Title', 'Paragraph'].includes(item)){
