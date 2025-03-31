@@ -13200,7 +13200,7 @@
       "field_category": 1,
       "field_name": "maxItemWidth",
       "field_type": [
-        "2"
+        "1"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -13227,7 +13227,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "Number"
+        "String"
       ]
     },
     {
