@@ -24469,6 +24469,2647 @@
       "field_type_text": []
     },
     {
+      "id": 1742888318,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "actions",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义操作按钮的插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:38:38",
+      "update_time": "2025-03-25 07:38:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888278,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "animation",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "skeleton",
+      "field_enum": "skeleton/moving/gradient",
+      "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:37:58",
+      "update_time": "2025-03-25 07:37:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742888347,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "avatar",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义每个对话单元的头像插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:39:07",
+      "update_time": "2025-03-25 07:39:07",
+      "event_output": null,
+      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888047,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "clearHistory",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否显示清空历史",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:34:07",
+      "update_time": "2025-03-25 07:34:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742896202,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义每个对话单独的聊天内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 09:50:02",
+      "update_time": "2025-03-25 09:50:02",
+      "event_output": null,
+      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888253,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "data",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话列表的数据",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:37:33",
+      "update_time": "2025-03-25 07:37:33",
+      "event_output": null,
+      "custom_field_type": "Array<TdChatItemProps>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1742888357,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "datetime",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义每个对话单元的时间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:39:17",
+      "update_time": "2025-03-25 07:39:17",
+      "event_output": null,
+      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888120,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "isStreamLoad",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "流式加载是否结束",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:35:20",
+      "update_time": "2025-03-25 07:35:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742882517,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "layout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "both",
+      "field_enum": "both/single",
+      "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:01:57",
+      "update_time": "2025-03-25 06:01:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742888334,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "name",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义每个对话单元的昵称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:38:54",
+      "update_time": "2025-03-25 07:38:54",
+      "event_output": null,
+      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888069,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "reverse",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否表现为倒序",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:34:29",
+      "update_time": "2025-03-25 07:34:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742888094,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "textLoading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:34:54",
+      "update_time": "2025-03-25 07:34:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742888379,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击清空历史按钮回调",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-03-25 07:39:39",
+      "update_time": "2025-03-25 07:39:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888419,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动事件的回调",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-03-25 07:40:19",
+      "update_time": "2025-03-25 07:40:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742888518,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 4,
+      "field_name": "scrollToBottom",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话列表过长时，支持对话列表重新滚动回底部的方法",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(params: { behavior: 'auto' | 'smooth'})",
+      "create_time": "2025-03-25 07:41:58",
+      "update_time": "2025-03-25 07:41:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742882297,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "被复制的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:58:17",
+      "update_time": "2025-03-25 05:58:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742882320,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "操作按钮是否可点击",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:58:40",
+      "update_time": "2025-03-25 05:58:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742882276,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 1,
+      "field_name": "isBad",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否点踩",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:57:56",
+      "update_time": "2025-03-25 05:57:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742882227,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 1,
+      "field_name": "isGood",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否点赞",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:57:07",
+      "update_time": "2025-03-25 05:57:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742882371,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 1,
+      "field_name": "operationBtn",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[\"replay\", \"copy\", \"good\", \"bad\"]",
+      "field_enum": "",
+      "field_desc_zh": "操作按钮配置项，可配置操作按钮选项和顺序",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:59:31",
+      "update_time": "2025-03-25 05:59:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1742882448,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatAction",
+      "field_category": 2,
+      "field_name": "operation",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击点赞，点踩，复制，重新生成按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: MouseEvent })",
+      "create_time": "2025-03-25 06:00:48",
+      "update_time": "2025-03-25 06:00:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742883575,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatContent",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "聊天内容，支持 markdown 格式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:19:35",
+      "update_time": "2025-03-25 06:19:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742883540,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatContent",
+      "field_category": 1,
+      "field_name": "role",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "user/assistant/error/model-change/system",
+      "field_desc_zh": "角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:19:00",
+      "update_time": "2025-03-25 06:19:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742884968,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "autofocus",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "输入框是否自动聚焦",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:42:48",
+      "update_time": "2025-03-25 06:42:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742885300,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "autosize",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "{ minRows: 1, maxRows: 5 }",
+      "field_enum": "",
+      "field_desc_zh": "高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:48:20",
+      "update_time": "2025-03-25 06:48:20",
+      "event_output": null,
+      "custom_field_type": "boolean | { minRows?: number; maxRows?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
+      "id": 1742884930,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用输入框",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:42:10",
+      "update_time": "2025-03-25 06:42:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742884754,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框默认文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:39:14",
+      "update_time": "2025-03-25 06:39:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742883827,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "stopDisabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 06:23:47",
+      "update_time": "2025-03-25 06:23:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1743345588,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "suffixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "发送按钮的自定义扩展",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:39:48",
+      "update_time": "2025-03-30 14:39:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1743345240,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框的值",
+      "field_desc_en": "input value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:34:00",
+      "update_time": "2025-03-30 14:34:00",
+      "event_output": null,
+      "custom_field_type": "T【type InputValue = string | number】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1742885940,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 2,
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框聚焦时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: FocusEvent })",
+      "create_time": "2025-03-25 06:59:00",
+      "update_time": "2025-03-25 06:59:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742885911,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框值发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: InputEvent | MouseEvent | KeyboardEvent })",
+      "create_time": "2025-03-25 06:58:31",
+      "update_time": "2025-03-25 06:58:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742885930,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 2,
+      "field_name": "focus",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框聚焦时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: FocusEvent }) ",
+      "create_time": "2025-03-25 06:58:50",
+      "update_time": "2025-03-25 06:58:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742885865,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 2,
+      "field_name": "send",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击消息发送的回调方法",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: MouseEvent | KeyboardEvent })",
+      "create_time": "2025-03-25 06:57:45",
+      "update_time": "2025-03-25 06:57:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742885891,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatInput",
+      "field_category": 2,
+      "field_name": "stop",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击消息终止的回调方法",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: MouseEvent })",
+      "create_time": "2025-03-25 06:58:11",
+      "update_time": "2025-03-25 06:58:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742886989,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "actions",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义的操作内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:16:29",
+      "update_time": "2025-03-25 07:16:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742887762,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "animation",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "skeleton",
+      "field_enum": "skeleton/moving/gradient",
+      "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:29:22",
+      "update_time": "2025-03-25 07:29:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742887213,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "avatar",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义的头像配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:20:13",
+      "update_time": "2025-03-25 07:20:13",
+      "event_output": null,
+      "custom_field_type": "String | AvatarProps | TNode 【import { AvatarProps } from '@Avatar'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742887477,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话单元的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:24:37",
+      "update_time": "2025-03-25 07:24:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742887654,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "datetime",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "对话单元的时间配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:27:34",
+      "update_time": "2025-03-25 07:27:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742887067,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "name",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义的昵称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:17:47",
+      "update_time": "2025-03-25 07:17:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742887828,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "reasoning",
+      "field_type": [
+        "1",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "值为false不显示思维链，为对象则单独配置思维链内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:30:28",
+      "update_time": "2025-03-25 07:30:28",
+      "event_output": null,
+      "custom_field_type": "boolean | TdChatReasoning 【 interface TdChatReasoning { expandIconPlacement?: 'left' | 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } 】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object"
+      ]
+    },
+    {
+      "id": 1742887703,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "role",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "user/assistant/error/model-change/system",
+      "field_desc_zh": "角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:28:23",
+      "update_time": "2025-03-25 07:28:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742886870,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "textLoading",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:14:30",
+      "update_time": "2025-03-25 07:14:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742887448,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatItem",
+      "field_category": 1,
+      "field_name": "variant",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "text",
+      "field_enum": "base/outline/text",
+      "field_desc_zh": "气泡框样式，支持基础、线框、文字三种类型",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:24:08",
+      "update_time": "2025-03-25 07:24:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742882111,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatLoading",
+      "field_category": 1,
+      "field_name": "animation",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "moving",
+      "field_enum": "moving/gradient",
+      "field_desc_zh": "加载的状态形式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:55:11",
+      "update_time": "2025-03-25 05:55:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742882019,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatLoading",
+      "field_category": 1,
+      "field_name": "text",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "加载过程展示的文字内容",
+      "field_desc_en": "text of chat loading",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 05:53:39",
+      "update_time": "2025-03-25 05:53:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742886437,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "collapsePanelProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传给 CollapsePanel 组件的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:07:17",
+      "update_time": "2025-03-25 07:07:17",
+      "event_output": null,
+      "custom_field_type": "CollapsePanelProps【import { CollapsePanelProps } from '@Collapse'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1742886498,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "expandIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:08:18",
+      "update_time": "2025-03-25 07:08:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742886303,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "expandIconPlacement",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "right",
+      "field_enum": "left/right",
+      "field_desc_zh": "展开图标位置，可选项：left/right",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:05:03",
+      "update_time": "2025-03-25 07:05:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742886466,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "折叠面板头内容。优先级低于collapsePanelProps.header",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:07:46",
+      "update_time": "2025-03-25 07:07:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742886481,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "headerRightContent",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "折叠面板尾内容。优先级低于collapsePanelProps.headerRightContent",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:08:01",
+      "update_time": "2025-03-25 07:08:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742886536,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 2,
+      "field_name": "expandChange",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "展开图标点击事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: CollapseValue)【import { CollapseValue } from '@Collapse'】",
+      "create_time": "2025-03-25 07:08:56",
+      "update_time": "2025-03-25 07:08:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1743345130,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用输入框",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:32:10",
+      "update_time": "2025-03-30 14:32:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1743345147,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框默认文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:32:27",
+      "update_time": "2025-03-30 14:32:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1742886190,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "prefix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框左下角区域扩展",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:03:10",
+      "update_time": "2025-03-25 07:03:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1742886100,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "stopDisabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:01:40",
+      "update_time": "2025-03-25 07:01:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1742886164,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "suffix",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框右下角区域扩展",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-25 07:02:44",
+      "update_time": "2025-03-25 07:02:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1743345474,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "textareaProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传给  Textarea 组件的全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:37:54",
+      "update_time": "2025-03-30 14:37:54",
+      "event_output": null,
+      "custom_field_type": "TextareaProps【import { TextareaProps } from '@Textarea'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1743345258,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框的值",
+      "field_desc_en": "input value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-03-30 14:34:18",
+      "update_time": "2025-03-30 14:34:18",
+      "event_output": null,
+      "custom_field_type": "T【type InputValue = string | number】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1743345176,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 2,
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框聚焦时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: FocusEvent })",
+      "create_time": "2025-03-30 14:32:56",
+      "update_time": "2025-03-30 14:32:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1743345163,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框值发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: InputEvent | MouseEvent | KeyboardEvent })",
+      "create_time": "2025-03-30 14:32:43",
+      "update_time": "2025-03-30 14:32:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1743345186,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 2,
+      "field_name": "focus",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框聚焦时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: FocusEvent }) ",
+      "create_time": "2025-03-30 14:33:06",
+      "update_time": "2025-03-30 14:33:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742886045,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 2,
+      "field_name": "send",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击消息发送的回调方法",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: MouseEvent | KeyboardEvent })",
+      "create_time": "2025-03-25 07:00:45",
+      "update_time": "2025-03-25 07:00:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1742886073,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatSender",
+      "field_category": 2,
+      "field_name": "stop",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击消息终止的回调方法",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value:string, context: { e: MouseEvent })",
+      "create_time": "2025-03-25 07:01:13",
+      "update_time": "2025-03-25 07:01:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 418,
       "platform_framework": [
         "1",

@@ -203,6 +203,8 @@ const COMPONENT_API_MD_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+    // 高阶组件
+    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
 };
 
 // H5 特殊组件
@@ -418,6 +420,8 @@ const TYPES_COMBINE_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+     // 高阶组件
+    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
