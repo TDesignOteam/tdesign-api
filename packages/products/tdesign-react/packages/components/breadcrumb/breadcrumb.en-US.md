@@ -11,7 +11,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 ellipsis | TNode | - | Typescript：`string \| TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 itemsAfterCollapse | Number | undefined | \- | N
 itemsBeforeCollapse | Number | undefined | \- | N
-maxItemWidth | Number | undefined | \- | N
+maxItemWidth | String | undefined | \- | N
 maxItems | Number | undefined | \- | N
 options | Array | - | Typescript：`Array<TdBreadcrumbItemProps>` | N
 separator | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
