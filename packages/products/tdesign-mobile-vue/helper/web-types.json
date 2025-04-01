@@ -2617,6 +2617,12 @@
               "default": "false"
             },
             {
+              "name": "middle",
+              "description": "中间自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
+              "type": "TNode"
+            },
+            {
               "name": "overlay-props",
               "description": "透传至 Overlay 组件",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
@@ -2642,6 +2648,12 @@
               "description": "标题",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
               "type": "string | TNode"
+            },
+            {
+              "name": "top",
+              "description": "顶部自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props",
+              "type": "TNode"
             },
             {
               "name": "visible",
@@ -2723,8 +2735,18 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
             },
             {
+              "name": "middle",
+              "description": "中间自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
+            },
+            {
               "name": "title",
               "description": "标题",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
+            },
+            {
+              "name": "top",
+              "description": "顶部自定义内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props"
             }
           ]
@@ -3836,7 +3858,66 @@
           "slots": []
         },
         {
-          "name": "t-icon-svg",
+          "name": "icon-font",
+          "source": {
+            "symbol": "IconFont"
+          },
+          "description": "IconFont\n\n图标（IconFont）",
+          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon",
+          "props": [
+            {
+              "name": "load-default-icons",
+              "description": "是否加载组件库内置图标",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "name",
+              "description": "图标名称",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "description": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "string",
+              "default": "undefined"
+            },
+            {
+              "name": "style",
+              "description": "可用于设置图标颜色，如：style=\\\"color: red\\\"",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "description": "图标 DOM 元素，可选值：i/span/div/...",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "string",
+              "default": "i"
+            },
+            {
+              "name": "url",
+              "description": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.css)。也可以在 index.html 中引入图标地址",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
+              "type": "string | Array<string>"
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "click",
+                "description": "点击时触发",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-events"
+              }
+            ]
+          },
+          "slots": []
+        },
+        {
+          "name": "icon",
           "source": {
             "symbol": "IconSVG"
           },
@@ -3934,65 +4015,6 @@
                 "name": "click",
                 "description": "点击时触发",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconsvg-events"
-              }
-            ]
-          },
-          "slots": []
-        },
-        {
-          "name": "t-iconfont",
-          "source": {
-            "symbol": "IconFont"
-          },
-          "description": "IconFont\n\n图标（IconFont）",
-          "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon",
-          "props": [
-            {
-              "name": "load-default-icons",
-              "description": "是否加载组件库内置图标",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "boolean",
-              "default": "true"
-            },
-            {
-              "name": "name",
-              "description": "图标名称",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "string"
-            },
-            {
-              "name": "size",
-              "description": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "string",
-              "default": "undefined"
-            },
-            {
-              "name": "style",
-              "description": "可用于设置图标颜色，如：style=\\\"color: red\\\"",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "string"
-            },
-            {
-              "name": "tag",
-              "description": "图标 DOM 元素，可选值：i/span/div/...",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "string",
-              "default": "i"
-            },
-            {
-              "name": "url",
-              "description": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.css)。也可以在 index.html 中引入图标地址",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-props",
-              "type": "string | Array<string>"
-            }
-          ],
-          "js": {
-            "events": [
-              {
-                "name": "click",
-                "description": "点击时触发",
-                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/icon?tab=api#iconfont-events"
               }
             ]
           },
@@ -7661,6 +7683,12 @@
               "default": "''"
             },
             {
+              "name": "extra",
+              "description": "步骤条自定义内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props",
+              "type": "string | TNode"
+            },
+            {
               "name": "icon",
               "description": "图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props",
@@ -7710,6 +7738,11 @@
             {
               "name": "content",
               "description": "步骤描述",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props"
+            },
+            {
+              "name": "extra",
+              "description": "步骤条自定义内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props"
             },
             {
@@ -7928,27 +7961,6 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props",
               "type": "boolean",
               "default": "undefined"
-            },
-            {
-              "name": "separator",
-              "description": "步骤条分割符",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#steps-props",
-              "type": "'line' | 'dashed' | 'arrow'",
-              "default": "line",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "line"
-                },
-                {
-                  "name": "dashed"
-                },
-                {
-                  "name": "arrow"
-                }
-              ]
             },
             {
               "name": "sequence",
@@ -9228,7 +9240,7 @@
               "name": "theme",
               "description": "提示类型",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/toast?tab=api#toast-props",
-              "type": "'loading' | 'success' | 'error'",
+              "type": "'loading' | 'success' | 'warning' | 'error'",
               "attribute-value": {
                 "type": "enum"
               },
@@ -9238,6 +9250,9 @@
                 },
                 {
                   "name": "success"
+                },
+                {
+                  "name": "warning"
                 },
                 {
                   "name": "error"

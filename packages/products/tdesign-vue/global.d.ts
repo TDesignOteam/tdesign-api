@@ -23,6 +23,14 @@ declare module '@vue/runtime-core' {
     TCalendar: typeof import('tdesign-vue')['Calendar'];
     TCard: typeof import('tdesign-vue')['Card'];
     TCascader: typeof import('tdesign-vue')['Cascader'];
+    TChat: typeof import('tdesign-vue')['Chat'];
+    TChatAction: typeof import('tdesign-vue')['ChatAction'];
+    TChatContent: typeof import('tdesign-vue')['ChatContent'];
+    TChatInput: typeof import('tdesign-vue')['ChatInput'];
+    TChatItem: typeof import('tdesign-vue')['ChatItem'];
+    TChatLoading: typeof import('tdesign-vue')['ChatLoading'];
+    TChatReasoning: typeof import('tdesign-vue')['ChatReasoning'];
+    TChatSender: typeof import('tdesign-vue')['ChatSender'];
     TCheckbox: typeof import('tdesign-vue')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-vue')['CheckboxGroup'];
     TCheckTag: typeof import('tdesign-vue')['CheckTag'];

@@ -23,6 +23,14 @@ declare module 'vue' {
     TCalendar: typeof import('tdesign-vue-next')['Calendar'];
     TCard: typeof import('tdesign-vue-next')['Card'];
     TCascader: typeof import('tdesign-vue-next')['Cascader'];
+    TChat: typeof import('tdesign-vue-next')['Chat'];
+    TChatAction: typeof import('tdesign-vue-next')['ChatAction'];
+    TChatContent: typeof import('tdesign-vue-next')['ChatContent'];
+    TChatInput: typeof import('tdesign-vue-next')['ChatInput'];
+    TChatItem: typeof import('tdesign-vue-next')['ChatItem'];
+    TChatLoading: typeof import('tdesign-vue-next')['ChatLoading'];
+    TChatReasoning: typeof import('tdesign-vue-next')['ChatReasoning'];
+    TChatSender: typeof import('tdesign-vue-next')['ChatSender'];
     TCheckbox: typeof import('tdesign-vue-next')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-vue-next')['CheckboxGroup'];
     TCheckTag: typeof import('tdesign-vue-next')['CheckTag'];

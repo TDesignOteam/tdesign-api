@@ -83,7 +83,13 @@ function getHelperData(baseData, framework) {
     if (['Text', 'Title', 'Paragraph'].includes(key)){
       componentName = `${PREFIX}-${kebabCase('Typography'+key)}`;
     }
-    
+    if ('IconSVG' === key) {
+      componentName = kebabCase('Icon');
+    }
+    if ('IconFont' === key) {
+      componentName = kebabCase(key);
+    }
+
     const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCase(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
