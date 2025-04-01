@@ -37,9 +37,9 @@ export default {
   name: {
     type: [String, Function] as PropType<TdChatItemProps['name']>,
   },
-  /** 值为false不显示思维链，为对象则单独配置思维链内容 */
+  /** 值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容 */
   reasoning: {
-    type: [String, Object] as PropType<TdChatItemProps['reasoning']>,
+    type: [String, Boolean, Object] as PropType<TdChatItemProps['reasoning']>,
     default: false as TdChatItemProps['reasoning'],
   },
   /** 角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息 */
