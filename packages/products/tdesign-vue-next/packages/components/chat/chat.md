@@ -8,14 +8,15 @@
 -- | -- | -- | -- | --
 actions | Slot / Function | - | 自定义操作按钮的插槽。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 animation | String | skeleton | 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种。可选项：skeleton/moving/gradient | N
-avatar | Slot / Function | - | 自定义每个对话单元的头像插槽。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+avatar | Slot / Function | - | 自定义每个对话单元的头像插槽。TS 类型：`TNode<{ item: TdChatItemMeta }>` ` interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; reasoning?: string }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
 clearHistory | Boolean | true | 是否显示清空历史 | N
-content | Slot / Function | - | 自定义每个对话单独的聊天内容。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+content | Slot / Function | - | 自定义每个对话单独的聊天内容。TS 类型：`TNode<{ item: TdChatItemMeta }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 data | Array | - | 对话列表的数据。TS 类型：`Array<TdChatItemProps>` | N
-datetime | Slot / Function | - | 自定义每个对话单元的时间。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+datetime | Slot / Function | - | 自定义每个对话单元的时间。TS 类型：`TNode<{ item: TdChatItemMeta }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | 流式加载是否结束 | N
 layout | String | both | 对话布局形式，支持两侧对齐与左对齐。可选项：both/single | N
-name | Slot / Function | - | 自定义每个对话单元的昵称。TS 类型：`TNode<{ item: TdChatItemProps }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+name | Slot / Function | - | 自定义每个对话单元的昵称。TS 类型：`TNode<{ item: TdChatItemMeta }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+reasoning | Slot / Function | - | 自定义每个对话单元的思考过程的插槽。TS 类型：`TNode<{ item: TdChatItemMeta }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 reverse | Boolean | true | 是否表现为倒序 | N
 textLoading | Boolean | false | 新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清空历史按钮回调。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
@@ -32,7 +33,7 @@ scroll | `(context: { e: MouseEvent })` | 滚动事件的回调。TS 类型：`T
 
 名称 | 参数 | 返回值 | 描述
 -- | -- | -- | --
-scrollToBottom | `(params: { behavior: 'auto' \| 'smooth'})` | \- | 对话列表过长时，支持对话列表重新滚动回底部的方法
+scrollToBottom | `(params: ScrollToBottomParams)` | \- | 对话列表过长时，支持对话列表重新滚动回底部的方法。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts)。<br/>` type ScrollToBottomParams = { behavior: 'auto' \| 'smooth'} `<br/>
 
 
 ### ChatLoading Props
@@ -53,7 +54,7 @@ avatar | String / Object / Slot / Function | - | 自定义的头像配置。TS �
 content | String / Slot / Function | - | 对话单元的内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 datetime | String / Slot / Function | - | 对话单元的时间配置。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 name | String / Slot / Function | - | 自定义的昵称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-reasoning | String / Object | false | 值为false不显示思维链，为对象则单独配置思维链内容。TS 类型：`boolean \| TdChatReasoning ` ` interface TdChatReasoning { expandIconPlacement?: 'left' \| 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } `。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+reasoning | String / Boolean / Object | false | 值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容。TS 类型：`boolean \| TdChatReasoning ` ` interface TdChatReasoning { expandIconPlacement?: 'left' \| 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } `。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
 role | String | - | 角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息。可选项：user/assistant/error/model-change/system | N
 textLoading | Boolean | false | 新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false | N
 variant | String | text | 气泡框样式，支持基础、线框、文字三种类型。可选项：base/outline/text | N
@@ -75,7 +76,7 @@ content | String | - | 被复制的内容 | N
 disabled | Boolean | false | 操作按钮是否可点击 | N
 isBad | Boolean | false | 是否点踩 | N
 isGood | Boolean | false | 是否点赞 | N
-operationBtn | Array | ["replay", "copy", "good", "bad"] | 操作按钮配置项，可配置操作按钮选项和顺序 | N
+operationBtn | Array | ["replay", "copy", "good", "bad"] | 操作按钮配置项，可配置操作按钮选项和顺序。TS 类型：`Array<'replay'\|'copy'\|'good'\|'bad'>` | N
 onOperation | Function |  | TS 类型：`(value:string, context: { e: MouseEvent }) => void`<br/>点击点赞，点踩，复制，重新生成按钮时触发 | N
 
 ### ChatAction Events
@@ -95,8 +96,8 @@ disabled | Boolean | false | 是否禁用输入框 | N
 placeholder | String | - | 输入框默认文案 | N
 stopDisabled | Boolean | false | 中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个 | N
 suffixIcon | Slot / Function | - | 发送按钮的自定义扩展。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-value | String / Number | - | 输入框的值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+value | String | - | 输入框的值。支持语法糖 `v-model` 或 `v-model:value` | N
+defaultValue | String | - | 输入框的值。非受控属性 | N
 onBlur | Function |  | TS 类型：`(value:string, context: { e: FocusEvent }) => void`<br/>输入框聚焦时触发 | N
 onChange | Function |  | TS 类型：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
 onFocus | Function |  | TS 类型：`(value:string, context: { e: FocusEvent })  => void`<br/>输入框聚焦时触发 | N
@@ -124,8 +125,8 @@ prefix | String / Slot / Function | - | 输入框左下角区域扩展。TS 类�
 stopDisabled | Boolean | false | 中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个 | N
 suffix | String / Slot / Function | - | 输入框右下角区域扩展。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 textareaProps | Object | - | 透传给  Textarea 组件的全部属性。TS 类型：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-value | String / Number | - | 输入框的值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`T` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+value | String | - | 输入框的值。支持语法糖 `v-model` 或 `v-model:value` | N
+defaultValue | String | - | 输入框的值。非受控属性 | N
 onBlur | Function |  | TS 类型：`(value:string, context: { e: FocusEvent }) => void`<br/>输入框聚焦时触发 | N
 onChange | Function |  | TS 类型：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/>输入框值发生变化时触发 | N
 onFocus | Function |  | TS 类型：`(value:string, context: { e: FocusEvent })  => void`<br/>输入框聚焦时触发 | N

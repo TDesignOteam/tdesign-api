@@ -24,7 +24,7 @@ export interface TdChatProps {
   /**
    * 自定义每个对话单元的头像插槽
    */
-  avatar?: TNode<{ item: TdChatItemProps }>;
+  avatar?: TNode<{ item: TdChatItemMeta }>;
   /**
    * 是否显示清空历史
    * @default true
@@ -33,7 +33,7 @@ export interface TdChatProps {
   /**
    * 自定义每个对话单独的聊天内容
    */
-  content?: TNode<{ item: TdChatItemProps }>;
+  content?: TNode<{ item: TdChatItemMeta }>;
   /**
    * 对话列表的数据
    */
@@ -41,7 +41,7 @@ export interface TdChatProps {
   /**
    * 自定义每个对话单元的时间
    */
-  datetime?: TNode<{ item: TdChatItemProps }>;
+  datetime?: TNode<{ item: TdChatItemMeta }>;
   /**
    * 流式加载是否结束
    * @default false
@@ -55,7 +55,11 @@ export interface TdChatProps {
   /**
    * 自定义每个对话单元的昵称
    */
-  name?: TNode<{ item: TdChatItemProps }>;
+  name?: TNode<{ item: TdChatItemMeta }>;
+  /**
+   * 自定义每个对话单元的思考过程的插槽
+   */
+  reasoning?: TNode<{ item: TdChatItemMeta }>;
   /**
    * 是否表现为倒序
    * @default true
@@ -81,7 +85,7 @@ export interface ChatInstanceFunctions {
   /**
    * 对话列表过长时，支持对话列表重新滚动回底部的方法
    */
-  scrollToBottom?: (params: { behavior: 'auto' | 'smooth' }) => void;
+  scrollToBottom?: (params: ScrollToBottomParams) => void;
 }
 
 export interface TdChatLoadingProps {
@@ -124,7 +128,7 @@ export interface TdChatItemProps {
    */
   name?: TNode;
   /**
-   * 值为false不显示思维链，为对象则单独配置思维链内容
+   * 值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容
    * @default false
    */
   reasoning?: boolean | TdChatReasoning;
@@ -181,7 +185,7 @@ export interface TdChatActionProps {
    * 操作按钮配置项，可配置操作按钮选项和顺序
    * @default ["replay", "copy", "good", "bad"]
    */
-  operationBtn?: array;
+  operationBtn?: Array<'replay' | 'copy' | 'good' | 'bad'>;
   /**
    * 点击点赞，点踩，复制，重新生成按钮时触发
    */
@@ -220,12 +224,14 @@ export interface TdChatInputProps {
   suffixIcon?: TElement;
   /**
    * 输入框的值
+   * @default ''
    */
-  value?: T;
+  value?: string;
   /**
    * 输入框的值，非受控属性
+   * @default ''
    */
-  defaultValue?: T;
+  defaultValue?: string;
   /**
    * 输入框聚焦时触发
    */
@@ -281,12 +287,14 @@ export interface TdChatSenderProps {
   textareaProps?: TextareaProps;
   /**
    * 输入框的值
+   * @default ''
    */
-  value?: T;
+  value?: string;
   /**
    * 输入框的值，非受控属性
+   * @default ''
    */
-  defaultValue?: T;
+  defaultValue?: string;
   /**
    * 输入框聚焦时触发
    */
@@ -340,10 +348,19 @@ export interface TdChatReasoningProps {
   onExpandChange?: (value: CollapseValue) => void;
 }
 
+export interface TdChatItemMeta {
+  avatar?: string;
+  name?: string;
+  role?: string;
+  datetime?: string;
+  content?: string;
+  reasoning?: string;
+}
+
+export type ScrollToBottomParams = { behavior: 'auto' | 'smooth' };
+
 export interface TdChatReasoning {
   expandIconPlacement?: 'left' | 'right';
   onExpandChange?: (isExpand: boolean) => void;
   collapsePanelProps?: Object;
 }
-
-export type InputValue = string | number;

@@ -24572,7 +24572,7 @@
       "create_time": "2025-03-25 07:39:07",
       "update_time": "2025-03-25 07:39:07",
       "event_output": null,
-      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "custom_field_type": "TNode<{ item: TdChatItemMeta }>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; reasoning?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24654,7 +24654,7 @@
       "create_time": "2025-03-25 09:50:02",
       "update_time": "2025-03-25 09:50:02",
       "event_output": null,
-      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "custom_field_type": "TNode<{ item: TdChatItemMeta }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24736,7 +24736,7 @@
       "create_time": "2025-03-25 07:39:17",
       "update_time": "2025-03-25 07:39:17",
       "event_output": null,
-      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "custom_field_type": "TNode<{ item: TdChatItemMeta }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -24859,7 +24859,48 @@
       "create_time": "2025-03-25 07:38:54",
       "update_time": "2025-03-25 07:38:54",
       "event_output": null,
-      "custom_field_type": "TNode<{ item: TdChatItemProps }>",
+      "custom_field_type": "TNode<{ item: TdChatItemMeta }>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1743493366,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Chat",
+      "field_category": 1,
+      "field_name": "reasoning",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义每个对话单元的思考过程的插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-01 07:42:46",
+      "update_time": "2025-04-01 07:42:46",
+      "event_output": null,
+      "custom_field_type": "TNode<{ item: TdChatItemMeta }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -25058,7 +25099,7 @@
       "field_desc_zh": "对话列表过长时，支持对话列表重新滚动回底部的方法",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(params: { behavior: 'auto' | 'smooth'})",
+      "event_input": "(params: ScrollToBottomParams)【 type ScrollToBottomParams = { behavior: 'auto' | 'smooth'} 】",
       "create_time": "2025-03-25 07:41:58",
       "update_time": "2025-03-25 07:41:58",
       "event_output": null,
@@ -25265,7 +25306,7 @@
       "create_time": "2025-03-25 05:59:31",
       "update_time": "2025-03-25 05:59:31",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "Array<'replay'|'copy'|'good'|'bad'>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -25662,8 +25703,7 @@
       "field_category": 1,
       "field_name": "value",
       "field_type": [
-        "1",
-        "2"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -25674,7 +25714,7 @@
       "create_time": "2025-03-30 14:34:00",
       "update_time": "2025-03-30 14:34:00",
       "event_output": null,
-      "custom_field_type": "T【type InputValue = string | number】",
+      "custom_field_type": "",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -25690,8 +25730,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
-        "Number"
+        "String"
       ]
     },
     {
@@ -26149,11 +26188,12 @@
       "field_name": "reasoning",
       "field_type": [
         "1",
+        "4",
         "8"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "值为false不显示思维链，为对象则单独配置思维链内容",
+      "field_desc_zh": "值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -26177,6 +26217,7 @@
       ],
       "field_type_text": [
         "String",
+        "Boolean",
         "Object"
       ]
     },
@@ -26892,8 +26933,7 @@
       "field_category": 1,
       "field_name": "value",
       "field_type": [
-        "1",
-        "2"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -26904,7 +26944,7 @@
       "create_time": "2025-03-30 14:34:18",
       "update_time": "2025-03-30 14:34:18",
       "event_output": null,
-      "custom_field_type": "T【type InputValue = string | number】",
+      "custom_field_type": "",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -26920,8 +26960,7 @@
         "Angular(PC)"
       ],
       "field_type_text": [
-        "String",
-        "Number"
+        "String"
       ]
     },
     {
