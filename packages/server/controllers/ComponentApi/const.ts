@@ -119,7 +119,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: '$Popup', label: '全局气泡框插件', type: 'plugin' },
     { value: 'Icon', label: '图标' },
     { value: 'IconSVG', label: '图标（IconSVG）' },
-    { value: 'Iconfont', label: '图标（Iconfont）' },
+    { value: 'IconFont', label: '图标（IconFont）' },
     { value: 'Dropdown', label: '下拉菜单' },
     { value: 'DropdownItem', label: '下拉菜单选项' },
     { value: 'Popup', label: '气泡框' },
