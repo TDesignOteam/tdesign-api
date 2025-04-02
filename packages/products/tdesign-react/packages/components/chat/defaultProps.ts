@@ -21,7 +21,7 @@ export const chatDefaultProps: TdChatProps = {
   textLoading: false,
 };
 
-export const chatLoadingDefaultProps: TdChatLoadingProps = { animation: 'moving' };
+export const chatLoadingDefaultProps: TdChatLoadingProps = { animation: 'gradient' };
 
 export const chatItemDefaultProps: TdChatItemProps = {
   animation: 'skeleton',
@@ -46,4 +46,7 @@ export const chatInputDefaultProps: TdChatInputProps = {
 
 export const chatSenderDefaultProps: TdChatSenderProps = { disabled: false, stopDisabled: false };
 
-export const chatReasoningDefaultProps: TdChatReasoningProps = { expandIconPlacement: 'right' };
+export const chatReasoningDefaultProps: TdChatReasoningProps = {
+  collapsePanelProps: '{ destroyOnCollapse: false }',
+  expandIconPlacement: 'right',
+};

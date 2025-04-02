@@ -90,7 +90,7 @@ export interface ChatInstanceFunctions {
 export interface TdChatLoadingProps {
   /**
    * 加载的状态形式
-   * @default moving
+   * @default gradient
    */
   animation?: 'moving' | 'gradient';
   /**
@@ -326,6 +326,7 @@ export interface TdChatSenderProps {
 export interface TdChatReasoningProps {
   /**
    * 透传给 CollapsePanel 组件的全部属性
+   * @default { destroyOnCollapse: false }
    */
   collapsePanelProps?: CollapsePanelProps;
   /**
