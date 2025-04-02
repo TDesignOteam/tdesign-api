@@ -8,14 +8,15 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 actions | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 animation | String | skeleton | options: skeleton/moving/gradient | N
-avatar | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+avatar | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps, index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 clearHistory | Boolean | true | \- | N
-content | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-data | Array | - | Typescript：`Array<TdChatItemProps>` | N
-datetime | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+content | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps, index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+data | Array | - | Typescript：`Array<TdChatItemMeta>` ` interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; reasoning?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+datetime | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps, index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 isStreamLoad | Boolean | false | \- | N
 layout | String | both | options: both/single | N
-name | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+name | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps, index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+reasoning | Slot / Function | - | Typescript：`TNode<{ item: TdChatItemProps, index: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 reverse | Boolean | true | \- | N
 textLoading | Boolean | false | \- | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
@@ -32,7 +33,7 @@ scroll | `(context: { e: MouseEvent })` | Typescript：`TNode`。[see more ts de
 
 name | params | return | description
 -- | -- | -- | --
-scrollToBottom | `(params: { behavior: 'auto' \| 'smooth'})` | \- | \-
+scrollToBottom | `(params: ScrollToBottomParams)` | \- | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts)。<br/>` type ScrollToBottomParams = { behavior: 'auto' \| 'smooth'} `<br/>
 
 
 ### ChatLoading Props
@@ -53,7 +54,7 @@ avatar | String / Object / Slot / Function | - | Typescript：`String \| AvatarP
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 datetime | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 name | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-reasoning | String / Object | false | Typescript：`boolean \| TdChatReasoning ` ` interface TdChatReasoning { expandIconPlacement?: 'left' \| 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } `。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+reasoning | String / Boolean / Object | false | Typescript：`boolean \| TdChatReasoning ` ` interface TdChatReasoning { expandIconPlacement?: 'left' \| 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } `。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
 role | String | - | options: user/assistant/error/model-change/system | N
 textLoading | Boolean | false | \- | N
 variant | String | text | options: base/outline/text | N
@@ -75,7 +76,7 @@ content | String | - | \- | N
 disabled | Boolean | false | \- | N
 isBad | Boolean | false | \- | N
 isGood | Boolean | false | \- | N
-operationBtn | Array | ["replay", "copy", "good", "bad"] | \- | N
+operationBtn | Array | ["replay", "copy", "good", "bad"] | Typescript：`Array<'replay'\|'copy'\|'good'\|'bad'>` | N
 onOperation | Function |  | Typescript：`(value:string, context: { e: MouseEvent }) => void`<br/> | N
 
 ### ChatAction Events
@@ -95,8 +96,8 @@ disabled | Boolean | false | \- | N
 placeholder | String | - | \- | N
 stopDisabled | Boolean | false | \- | N
 suffixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-value | String / Number | - | input value。`v-model` and `v-model:value` is supported。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-defaultValue | String / Number | - | input value。uncontrolled property。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+value | String | - | input value。`v-model` and `v-model:value` is supported | N
+defaultValue | String | - | input value。uncontrolled property | N
 onBlur | Function |  | Typescript：`(value:string, context: { e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(value:string, context: { e: FocusEvent })  => void`<br/> | N
@@ -124,8 +125,8 @@ prefix | String / Slot / Function | - | Typescript：`string \| TNode`。[see mo
 stopDisabled | Boolean | false | \- | N
 suffix | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 textareaProps | Object | - | Typescript：`TextareaProps`，[Textarea API Documents](./textarea?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-value | String / Number | - | input value。`v-model` and `v-model:value` is supported。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-defaultValue | String / Number | - | input value。uncontrolled property。Typescript：`T` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+value | String | - | input value。`v-model` and `v-model:value` is supported | N
+defaultValue | String | - | input value。uncontrolled property | N
 onBlur | Function |  | Typescript：`(value:string, context: { e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value:string, context: { e: InputEvent \| MouseEvent \| KeyboardEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(value:string, context: { e: FocusEvent })  => void`<br/> | N
