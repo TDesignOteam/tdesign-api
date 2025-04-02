@@ -26357,7 +26357,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "moving",
+      "field_default_value": "gradient",
       "field_enum": "moving/gradient",
       "field_desc_zh": "加载的状态形式",
       "field_desc_en": null,
@@ -26439,7 +26439,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "",
+      "field_default_value": "{ destroyOnCollapse: false }",
       "field_enum": "",
       "field_desc_zh": "透传给 CollapsePanel 组件的全部属性",
       "field_desc_en": null,

@@ -40,7 +40,7 @@ scrollToBottom | `(params: ScrollToBottomParams)` | \- | [see more ts definition
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-animation | String | moving | options: moving/gradient | N
+animation | String | gradient | options: moving/gradient | N
 text | String | - | text of chat loading | N
 
 
@@ -148,7 +148,7 @@ stop | `(value:string, context: { e: MouseEvent })` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-collapsePanelProps | Object | - | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+collapsePanelProps | Object | { destroyOnCollapse: false } | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
 expandIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 expandIconPlacement | String | right | options: left/right | N
 header | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

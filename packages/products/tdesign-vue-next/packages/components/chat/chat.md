@@ -40,7 +40,7 @@ scrollToBottom | `(params: ScrollToBottomParams)` | \- | 对话列表过长时�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-animation | String | moving | 加载的状态形式。可选项：moving/gradient | N
+animation | String | gradient | 加载的状态形式。可选项：moving/gradient | N
 text | String | - | 加载过程展示的文字内容 | N
 
 
@@ -148,7 +148,7 @@ stop | `(value:string, context: { e: MouseEvent })` | 点击消息终止的回�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-collapsePanelProps | Object | - | 透传给 CollapsePanel 组件的全部属性。TS 类型：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
+collapsePanelProps | Object | { destroyOnCollapse: false } | 透传给 CollapsePanel 组件的全部属性。TS 类型：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
 expandIcon | Slot / Function | - | 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 expandIconPlacement | String | right | 展开图标位置，可选项：left/right。可选项：left/right | N
 header | Slot / Function | - | 折叠面板头内容。优先级低于collapsePanelProps.header。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

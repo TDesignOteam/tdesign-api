@@ -39,7 +39,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
-animation | String | moving | options: moving/gradient | N
+animation | String | gradient | options: moving/gradient | N
 text | String | - | text of chat loading | N
 
 
@@ -133,7 +133,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
-collapsePanelProps | Object | - | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
+collapsePanelProps | Object | { destroyOnCollapse: false } | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/chat/type.ts) | N
 expandIcon | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 expandIconPlacement | String | right | options: left/right | N
 header | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
