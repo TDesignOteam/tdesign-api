@@ -58690,6 +58690,43 @@
       ]
     },
     {
+      "id": 1744010077,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "isSyncContextPlugin",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "全局上下文透传给函数式调用的组件",
+      "field_desc_en": "The global context is synchronized to the component that is called functionally",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-07 07:14:37",
+      "update_time": "2025-04-07 07:14:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2254,
       "platform_framework": [
         "1",
