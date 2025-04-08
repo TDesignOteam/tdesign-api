@@ -23,6 +23,6 @@ z-index | Number | 11500 | 抽屉层级，样式默认为 11500 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-close | `(trigger: DrawerTriggerSource)` | 关闭时触发。。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/>
+close | `(trigger: DrawerTriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/drawer/type.ts)。<br/>`type DrawerTriggerSource = 'overlay'`<br/>
 item-click | `(index: number; item: DrawerItem)` | 点击抽屉里的列表项
 overlay-click | \- | 如果蒙层存在，点击蒙层时触发
