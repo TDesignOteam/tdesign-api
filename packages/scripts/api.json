@@ -58696,7 +58696,7 @@
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
-      "field_name": "isSyncContextPlugin",
+      "field_name": "isContextEffectPlugin",
       "field_type": [
         "4"
       ],
