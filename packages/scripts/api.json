@@ -52275,6 +52275,7 @@
       "id": 1711969167,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Fab",
@@ -52305,6 +52306,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -52550,6 +52552,7 @@
       "id": 1739415473,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Fab",
@@ -52579,6 +52582,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
