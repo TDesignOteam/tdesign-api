@@ -378,6 +378,38 @@
         "type": "TS"
       },
       {
+        "value": "Chat",
+        "label": "对话"
+      },
+      {
+        "value": "ChatAction",
+        "label": "对话操作"
+      },
+      {
+        "value": "ChatContent",
+        "label": "对话内容"
+      },
+      {
+        "value": "ChatInput",
+        "label": "对话输入框"
+      },
+      {
+        "value": "ChatItem",
+        "label": "对话单元"
+      },
+      {
+        "value": "ChatLoading",
+        "label": "对话加载"
+      },
+      {
+        "value": "ChatReasoning",
+        "label": "对话思考过程"
+      },
+      {
+        "value": "ChatSender",
+        "label": "对话输入框"
+      },
+      {
         "value": "Checkbox",
         "label": "多选框"
       },
@@ -608,8 +640,8 @@
         "label": "图标"
       },
       {
-        "value": "Iconfont",
-        "label": "图标（Iconfont）"
+        "value": "IconFont",
+        "label": "图标（IconFont）"
       },
       {
         "value": "IconSVG",

@@ -126,7 +126,7 @@ const COMPONENT_API_MD_MAP = {
             includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
         },
     ],
-    Icon: ['Icon', 'IconSVG', 'Iconfont'],
+    Icon: ['Icon', 'IconSVG', 'IconFont'],
     Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
     Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
     Collapse: ['Collapse', 'CollapsePanel'],
@@ -203,6 +203,8 @@ const COMPONENT_API_MD_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+    // 高阶组件
+    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
 };
 
 // H5 特殊组件
@@ -367,7 +369,7 @@ const TYPES_COMBINE_MAP = {
         list: TABLE_LIST,
     },
     Icon: {
-        list: ['Icon', 'Iconfont', 'IconSVG'],
+        list: ['Icon', 'IconFont', 'IconSVG'],
     },
     Anchor: {
         list: ['AnchorTarget', 'AnchorItem'],
@@ -418,6 +420,8 @@ const TYPES_COMBINE_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+     // 高阶组件
+    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {

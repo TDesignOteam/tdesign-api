@@ -23,6 +23,14 @@ declare module 'vue' {
     TCalendar: typeof import('tdesign-vue-next')['Calendar'];
     TCard: typeof import('tdesign-vue-next')['Card'];
     TCascader: typeof import('tdesign-vue-next')['Cascader'];
+    TChat: typeof import('tdesign-vue-next')['Chat'];
+    TChatAction: typeof import('tdesign-vue-next')['ChatAction'];
+    TChatContent: typeof import('tdesign-vue-next')['ChatContent'];
+    TChatInput: typeof import('tdesign-vue-next')['ChatInput'];
+    TChatItem: typeof import('tdesign-vue-next')['ChatItem'];
+    TChatLoading: typeof import('tdesign-vue-next')['ChatLoading'];
+    TChatReasoning: typeof import('tdesign-vue-next')['ChatReasoning'];
+    TChatSender: typeof import('tdesign-vue-next')['ChatSender'];
     TCheckbox: typeof import('tdesign-vue-next')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-vue-next')['CheckboxGroup'];
     TCheckTag: typeof import('tdesign-vue-next')['CheckTag'];
@@ -55,7 +63,7 @@ declare module 'vue' {
     THeader: typeof import('tdesign-vue-next')['Header'];
     THeadMenu: typeof import('tdesign-vue-next')['HeadMenu'];
     TIcon: typeof import('tdesign-vue-next')['Icon'];
-    Iconfont: typeof import('tdesign-icons-vue-next')['Iconfont'];
+    IconFont: typeof import('tdesign-icons-vue-next')['IconFont'];
     Icon: typeof import('tdesign-icons-vue-next')['Icon'];
     TImage: typeof import('tdesign-vue-next')['Image'];
     TImageViewer: typeof import('tdesign-vue-next')['ImageViewer'];
