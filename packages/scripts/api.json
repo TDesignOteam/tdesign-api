@@ -75293,10 +75293,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "List",
       "field_category": 2,
@@ -75324,17 +75321,15 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
     {
       "id": 1119,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "List",
       "field_category": 2,
@@ -75360,7 +75355,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -75369,10 +75365,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "4"
       ],
       "component": "List",
       "field_category": 2,
@@ -75400,17 +75393,15 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
     {
       "id": 1118,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "List",
       "field_category": 2,
@@ -75436,7 +75427,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
