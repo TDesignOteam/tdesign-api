@@ -88,9 +88,10 @@ const TABLE_LIST = [
     'TableEditableCellConfig',
     'TableTreeConfig',
 ];
-const GLOBAL_CONFIG_PROVIDER = ['ConfigProvider','GlobalConfigProvider'].concat(
-    GLOBAL_COMPONENTS_CONFIG
-);
+const GLOBAL_CONFIG_PROVIDER = [
+    'ConfigProvider',
+    'GlobalConfigProvider',
+].concat(GLOBAL_COMPONENTS_CONFIG);
 const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
 
 // 输出 API 文档时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -204,7 +205,16 @@ const COMPONENT_API_MD_MAP = {
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
     // 高阶组件
-    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
+    Chat: [
+        'Chat',
+        'ChatLoading',
+        'ChatItem',
+        'ChatContent',
+        'ChatAction',
+        'ChatInput',
+        'ChatSender',
+        'ChatReasoning',
+    ],
 };
 
 // H5 特殊组件
@@ -215,6 +225,7 @@ const MOBILE_COMPONENT_API_MD_MAP = {
     Grid: {
         list: ['Grid', 'GridItem'],
     },
+    List: ['List'],
 };
 
 // 小程序 特殊组件
@@ -420,8 +431,17 @@ const TYPES_COMBINE_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
-     // 高阶组件
-    Chat: ['Chat', 'ChatLoading','ChatItem','ChatContent','ChatAction','ChatInput','ChatSender','ChatReasoning'],
+    // 高阶组件
+    Chat: [
+        'Chat',
+        'ChatLoading',
+        'ChatItem',
+        'ChatContent',
+        'ChatAction',
+        'ChatInput',
+        'ChatSender',
+        'ChatReasoning',
+    ],
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
@@ -433,6 +453,7 @@ const MOBILE_TYPES_COMBINE_MAP = {
         list: ['Grid', 'GridItem'],
         excludes: ['Miniprogram'],
     },
+    List: ['List'],
 };
 
 const MINIPROGRAM_TYPES_COMBINE_MAP = {
