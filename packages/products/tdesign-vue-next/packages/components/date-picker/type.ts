@@ -106,7 +106,6 @@ export interface TdDatePickerProps {
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
   /**
    * 是否只读，优先级大于 allowInput
-   * @default false
    */
   readonly?: boolean;
   /**

@@ -35316,7 +35316,7 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "false",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "是否只读，优先级大于 allowInput",
       "field_desc_en": "Whether it is read only, the priority is greater than allowInput",
