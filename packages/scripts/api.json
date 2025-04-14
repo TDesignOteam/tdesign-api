@@ -133598,17 +133598,14 @@
       "id": 526,
       "platform_framework": [
         "1",
-        "2",
-        "4",
-        "16",
-        "32",
-        "64"
+        "2"
       ],
       "component": "Tree",
       "field_category": 1,
       "field_name": "checkProps",
       "field_type": [
-        "8"
+        "8",
+        "32"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -133619,7 +133616,7 @@
       "create_time": "2020-12-28 06:11:52",
       "update_time": "2021-03-15 15:33:12",
       "event_output": null,
-      "custom_field_type": "CheckboxProps【import { CheckboxProps } from '@Checkbox'】",
+      "custom_field_type": "CheckboxProps | ((node: TreeNodeModel<T>) => CheckboxProps)【import { CheckboxProps } from '@Checkbox'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -133631,14 +133628,11 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "React(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Object",
+        "Function"
       ]
     },
     {
