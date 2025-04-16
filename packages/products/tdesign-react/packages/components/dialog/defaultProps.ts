@@ -14,6 +14,7 @@ export const dialogDefaultProps: TdDialogProps = {
   footer: true,
   forceRender: false,
   header: true,
+  lazy: false,
   mode: 'modal',
   placement: 'top',
   preventScrollThrough: true,
