@@ -154,6 +154,8 @@ export default {
   onBlur: Function as PropType<TdDatePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdDatePickerProps['onChange']>,
+  /** 清空按钮点击时触发 */
+  onClear: Function as PropType<TdDatePickerProps['onClear']>,
   /** 如果存在“确定”按钮，则点击“确定”按钮时触发 */
   onConfirm: Function as PropType<TdDatePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发 */
