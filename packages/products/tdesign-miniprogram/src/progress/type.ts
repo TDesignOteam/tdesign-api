@@ -30,6 +30,14 @@ export interface TdProgressProps {
     value?: number;
   };
   /**
+   * 进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24
+   * @default 'default'
+   */
+  size?: {
+    type: null;
+    value?: string | number;
+  };
+  /**
    * 进度条状态
    */
   status?: {
