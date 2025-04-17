@@ -2501,7 +2501,7 @@
       "field_enum": "",
       "field_desc_zh": "显示与隐藏",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-02 12:01:55",
       "update_time": "2022-04-08 09:10:44",
