@@ -14,14 +14,7 @@ export default {
     default: { destroyOnCollapse: false },
   },
   /** null */
-  expand: {
-    type: Boolean,
-    default: undefined,
-  },
-  modelValue: {
-    type: Boolean,
-    default: undefined,
-  },
+  expand: Boolean,
   /** null，非受控属性 */
   defaultExpand: Boolean,
   /** 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon */

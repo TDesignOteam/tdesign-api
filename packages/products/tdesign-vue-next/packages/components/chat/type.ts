@@ -7,7 +7,6 @@
 import { AvatarProps } from '../avatar';
 import { TextareaProps } from '../textarea';
 import { CollapsePanelProps } from '../collapse';
-import { CollapseValue } from '../collapse';
 import { TNode } from '../common';
 
 export interface TdChatProps {
@@ -330,6 +329,18 @@ export interface TdChatReasoningProps {
    */
   collapsePanelProps?: CollapsePanelProps;
   /**
+   * null
+   */
+  expand?: boolean;
+  /**
+   * null，非受控属性
+   */
+  defaultExpand?: boolean;
+  /**
+   * null
+   */
+  modelValue?: boolean;
+  /**
    * 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon
    */
   expandIcon?: TNode;
@@ -349,7 +360,7 @@ export interface TdChatReasoningProps {
   /**
    * 展开图标点击事件
    */
-  onExpandChange?: (value: CollapseValue) => void;
+  onExpandChange?: (value: boolean) => void;
 }
 
 export interface TdChatItemMeta {
