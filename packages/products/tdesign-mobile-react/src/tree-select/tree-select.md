@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+customValue | String / Number / Array | - | 自定义选中值，优先级高于 `value`。TS 类型：`TreeSelectValue` | N
 height | String / Number | 336 | 高度，默认单位为 px | N
 keys | Object | - | 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`。TS 类型：`TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 multiple | Boolean | false | 是否允许多选 | N
