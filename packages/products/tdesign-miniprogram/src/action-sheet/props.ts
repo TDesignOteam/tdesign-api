@@ -60,13 +60,11 @@ const props: TdActionSheetProps = {
   visible: {
     type: Boolean,
     value: null,
-    required: true,
   },
   /** 显示与隐藏，非受控属性 */
   defaultVisible: {
     type: Boolean,
     value: false,
-    required: true,
   },
 };
 
