@@ -7,14 +7,13 @@
 import { AvatarProps } from '../avatar';
 import { TextareaProps } from '../textarea';
 import { CollapsePanelProps } from '../collapse';
-import { TNode, TElement } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
+import { TNode } from '../common';
 
 export interface TdChatProps {
   /**
    * 自定义操作按钮的插槽
    */
-  actions?: TElement;
+  actions?: TNode;
   /**
    * 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种
    * @default skeleton
@@ -72,11 +71,11 @@ export interface TdChatProps {
   /**
    * 点击清空历史按钮回调
    */
-  onClear?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onClear?: (context: { e: MouseEvent }) => void;
   /**
    * 滚动事件的回调
    */
-  onScroll?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onScroll?: (context: { e: MouseEvent }) => void;
 }
 
 /** 组件实例方法 */
@@ -104,7 +103,7 @@ export interface TdChatItemProps {
   /**
    * 自定义的操作内容
    */
-  actions?: TNode;
+  actions?: string | TNode;
   /**
    * 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种
    * @default skeleton
@@ -117,15 +116,15 @@ export interface TdChatItemProps {
   /**
    * 对话单元的内容
    */
-  content?: TNode;
+  content?: string | TNode;
   /**
    * 对话单元的时间配置
    */
-  datetime?: TNode;
+  datetime?: string | TNode;
   /**
    * 自定义的昵称
    */
-  name?: TNode;
+  name?: string | TNode;
   /**
    * 值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容
    * @default false
@@ -188,7 +187,7 @@ export interface TdChatActionProps {
   /**
    * 点击点赞，点踩，复制，重新生成按钮时触发
    */
-  onOperation?: (value: string, context: { e: MouseEvent<HTMLElement> }) => void;
+  onOperation?: (value: string, context: { e: MouseEvent }) => void;
 }
 
 export interface TdChatInputProps {
@@ -220,7 +219,7 @@ export interface TdChatInputProps {
   /**
    * 发送按钮的自定义扩展
    */
-  suffixIcon?: TElement;
+  suffixIcon?: TNode;
   /**
    * 输入框的值
    * @default ''
@@ -234,26 +233,23 @@ export interface TdChatInputProps {
   /**
    * 输入框聚焦时触发
    */
-  onBlur?: (value: string, context: { e: FocusEvent<HTMLDivElement> }) => void;
+  onBlur?: (value: string, context: { e: FocusEvent }) => void;
   /**
    * 输入框值发生变化时触发
    */
-  onChange?: (
-    value: string,
-    context: { e: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> },
-  ) => void;
+  onChange?: (value: string, context: { e: InputEvent | MouseEvent | KeyboardEvent }) => void;
   /**
    * 输入框聚焦时触发
    */
-  onFocus?: (value: string, context: { e: FocusEvent<HTMLDivElement> }) => void;
+  onFocus?: (value: string, context: { e: FocusEvent }) => void;
   /**
    * 点击消息发送的回调方法
    */
-  onSend?: (value: string, context: { e: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> }) => void;
+  onSend?: (value: string, context: { e: MouseEvent | KeyboardEvent }) => void;
   /**
    * 点击消息终止的回调方法
    */
-  onStop?: (value: string, context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onStop?: (value: string, context: { e: MouseEvent }) => void;
 }
 
 export interface TdChatSenderProps {
@@ -270,7 +266,7 @@ export interface TdChatSenderProps {
   /**
    * 输入框左下角区域扩展
    */
-  prefix?: TNode;
+  prefix?: string | TNode;
   /**
    * 中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个
    * @default false
@@ -279,7 +275,7 @@ export interface TdChatSenderProps {
   /**
    * 输入框右下角区域扩展
    */
-  suffix?: TNode;
+  suffix?: string | TNode;
   /**
    * 透传给  Textarea 组件的全部属性
    */
@@ -297,26 +293,23 @@ export interface TdChatSenderProps {
   /**
    * 输入框聚焦时触发
    */
-  onBlur?: (value: string, context: { e: FocusEvent<HTMLDivElement> }) => void;
+  onBlur?: (value: string, context: { e: FocusEvent }) => void;
   /**
    * 输入框值发生变化时触发
    */
-  onChange?: (
-    value: string,
-    context: { e: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> },
-  ) => void;
+  onChange?: (value: string, context: { e: InputEvent | MouseEvent | KeyboardEvent }) => void;
   /**
    * 输入框聚焦时触发
    */
-  onFocus?: (value: string, context: { e: FocusEvent<HTMLDivElement> }) => void;
+  onFocus?: (value: string, context: { e: FocusEvent }) => void;
   /**
    * 点击消息发送的回调方法
    */
-  onSend?: (value: string, context: { e: MouseEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement> }) => void;
+  onSend?: (value: string, context: { e: MouseEvent | KeyboardEvent }) => void;
   /**
    * 点击消息终止的回调方法
    */
-  onStop?: (value: string, context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onStop?: (value: string, context: { e: MouseEvent }) => void;
 }
 
 export interface TdChatReasoningProps {
@@ -336,7 +329,7 @@ export interface TdChatReasoningProps {
   /**
    * 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon
    */
-  expandIcon?: TElement;
+  expandIcon?: TNode;
   /**
    * 展开图标位置，可选项：left/right
    * @default right
@@ -345,11 +338,11 @@ export interface TdChatReasoningProps {
   /**
    * 折叠面板头内容。优先级低于collapsePanelProps.header
    */
-  header?: TElement;
+  header?: TNode;
   /**
    * 折叠面板尾内容。优先级低于collapsePanelProps.headerRightContent
    */
-  headerRightContent?: TElement;
+  headerRightContent?: TNode;
   /**
    * 展开图标点击事件
    */

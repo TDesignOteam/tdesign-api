@@ -26505,6 +26505,47 @@
       ]
     },
     {
+      "id": 1744966447,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ChatReasoning",
+      "field_category": 1,
+      "field_name": "expand",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-18 08:54:07",
+      "update_time": "2025-04-18 08:54:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1742886498,
       "platform_framework": [
         "1",
@@ -26686,7 +26727,7 @@
       "field_desc_zh": "展开图标点击事件",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: CollapseValue)【import { CollapseValue } from '@Collapse'】",
+      "event_input": "(value: boolean)",
       "create_time": "2025-03-25 07:08:56",
       "update_time": "2025-03-25 07:08:56",
       "event_output": null,
