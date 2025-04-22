@@ -128344,7 +128344,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "只读状态",
-      "field_desc_en": null,
+      "field_desc_en": "Whether it is read only, the priority is greater than `allowInput`",
       "field_required": 0,
       "event_input": "(context: { value: TimePickerValue } & SelectInputBlurContext)【import { SelectInputBlurContext } from '@SelectInput'】",
       "create_time": "2025-04-22 15:52:01",
