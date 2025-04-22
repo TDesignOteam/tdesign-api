@@ -18,6 +18,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 presets | Object | - | Typescript：`PresetTime` `interface PresetTime { [presetName: string]: TimePickerValue \| (() => TimePickerValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
+readonly | Boolean | - | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`import { SelectInputBlurContext } from '@SelectInput'`<br/> | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 size | String | medium | options: small/medium/large | N
 status | String | default | options: default/success/warning/error | N
@@ -30,6 +31,7 @@ onBlur | Function |  | Typescript：`(context: { value: TimePickerValue } & Sele
 onChange | Function |  | Typescript：`(value: TimePickerValue) => void`<br/> | N
 onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Triggered when the clear button is clicked | N
 onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onConfirm | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: TimePickerValue; e: FocusEvent }) => void`<br/> | N
 onInput | Function |  | Typescript：`(context: { value: TimePickerValue; e: InputEvent }) => void`<br/> | N
 onOpen | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -43,6 +45,7 @@ blur | `(context: { value: TimePickerValue } & SelectInputBlurContext)` | [see m
 change | `(value: TimePickerValue)` | \-
 clear | `(context: { e: MouseEvent })` | Triggered when the clear button is clicked
 close | `(context: { e: MouseEvent })` | \-
+confirm | `(context: { e: MouseEvent })` | \-
 focus | `(context: { value: TimePickerValue; e: FocusEvent })` | \-
 input | `(context: { value: TimePickerValue; e: InputEvent })` | \-
 open | `(context: { e: MouseEvent })` | \-

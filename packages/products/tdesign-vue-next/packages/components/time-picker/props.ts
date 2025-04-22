@@ -54,6 +54,8 @@ export default {
   presets: {
     type: Object as PropType<TdTimePickerProps['presets']>,
   },
+  /** 只读状态 */
+  readonly: Boolean,
   /** 透传 SelectInput 筛选器输入框组件的全部属性 */
   selectInputProps: {
     type: Object as PropType<TdTimePickerProps['selectInputProps']>,
@@ -111,6 +113,8 @@ export default {
   onClear: Function as PropType<TdTimePickerProps['onClear']>,
   /** 面板关闭时触发 */
   onClose: Function as PropType<TdTimePickerProps['onClose']>,
+  /** 点击确认按钮时触发 */
+  onConfirm: Function as PropType<TdTimePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发，value 表示组件当前有效值 */
   onFocus: Function as PropType<TdTimePickerProps['onFocus']>,
   /** 当输入框内容发生变化时触发，参数 value 表示组件当前有效值 */
