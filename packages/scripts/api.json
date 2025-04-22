@@ -141128,6 +141128,47 @@
       ]
     },
     {
+      "id": 1745310368,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "addBtn",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "添加按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-22 08:26:08",
+      "update_time": "2025-04-22 08:26:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1559,
       "platform_framework": [
         "8",
@@ -142875,6 +142916,47 @@
       "event_input": "",
       "create_time": "2024-11-19 10:57:14",
       "update_time": "2024-11-19 10:57:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1745310417,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "removeBtn",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "移除按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-22 08:26:57",
+      "update_time": "2025-04-22 08:26:57",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
