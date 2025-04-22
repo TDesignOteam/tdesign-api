@@ -5,6 +5,7 @@
 import { TdUploadProps } from './type';
 
 export const uploadDefaultProps: TdUploadProps = {
+  addBtn: true,
   allowUploadDuplicateFile: false,
   autoUpload: true,
   disabled: undefined,
@@ -13,6 +14,7 @@ export const uploadDefaultProps: TdUploadProps = {
   method: 'POST',
   multiple: false,
   preview: true,
+  removeBtn: true,
   useMockProgress: true,
   withCredentials: false,
 };
