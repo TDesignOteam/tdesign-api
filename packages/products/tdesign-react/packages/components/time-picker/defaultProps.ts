@@ -12,6 +12,7 @@ export const timePickerDefaultProps: TdTimePickerProps = {
   format: 'HH:mm:ss',
   hideDisabledTime: true,
   placeholder: undefined,
+  readonly: undefined,
   size: 'medium',
   status: 'default',
   steps: [1, 1, 1],
