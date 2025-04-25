@@ -34,13 +34,13 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效 */
+  /** 格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效 */
   format: {
     type: String as PropType<TdColorPickerProps['format']>,
     default: 'RGB' as TdColorPickerProps['format'],
     validator(val: TdColorPickerProps['format']): boolean {
       if (!val) return true;
-      return ['RGB', 'RGBA', 'HSL', 'HSLA', 'HSB', 'HSV', 'HSVA', 'HEX', 'CMYK', 'CSS'].includes(val);
+      return ['HEX', 'HEX8', 'RGB', 'RGBA', 'HSL', 'HSLA', 'HSV', 'HSVA', 'CMYK', 'CSS'].includes(val);
     },
   },
   /** 透传 Input 输入框组件全部属性 */
