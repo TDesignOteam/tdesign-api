@@ -11,7 +11,7 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 clearable | Boolean | false | \- | N
 enableAlpha | Boolean | false | \- | N
 fixed | Boolean | false | \- | N
-format | String | RGB | options: RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N
+format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
 swatchColors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
 type | String | base | options: base/multiple。Typescript：`TypeEnum ` `type TypeEnum = 'base' \| 'multiple'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/color-picker/type.ts) | N
 value | String | - | color value | N
