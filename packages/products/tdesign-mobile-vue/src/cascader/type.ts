@@ -18,6 +18,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   closeBtn?: boolean | TNode;
   /**
+   * 头部
+   */
+  header?: TNode;
+  /**
    * 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名
    */
   keys?: CascaderKeysType;

@@ -57,6 +57,10 @@ export default {
       return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
     },
   },
+  /** 右侧额外内容 */
+  extra: {
+    type: Function as PropType<TdInputProps['extra']>,
+  },
   /** 指定输入框展示值的格式 */
   format: {
     type: Function as PropType<TdInputProps['format']>,
