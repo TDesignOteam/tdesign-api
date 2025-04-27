@@ -23,6 +23,7 @@ cursor-color | String | #0052d9 | \- | N
 cursor-spacing | Number | 0 | \- | N
 disabled | Boolean | undefined | make input to be disabled | N
 error-message | String | - | `deprecated` | N
+extra | Slot | - | `1.9.1`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 focus | Boolean | false | \- | N
 format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
 hold-keyboard | Boolean | false | \- | N

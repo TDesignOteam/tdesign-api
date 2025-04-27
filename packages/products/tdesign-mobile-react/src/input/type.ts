@@ -56,6 +56,10 @@ export interface TdInputProps {
    */
   enterkeyhint?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
   /**
+   * 右侧额外内容
+   */
+  extra?: TElement;
+  /**
    * 指定输入框展示值的格式
    */
   format?: InputFormatType;
