@@ -47012,6 +47012,47 @@
       ]
     },
     {
+      "id": 1745545785,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用抽屉懒加载，启用时抽屉的内容不渲染",
+      "field_desc_en": "Enable Drawer lazy loading, the contents of the Drawer are not rendered when enable",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-25 01:49:45",
+      "update_time": "2025-04-25 01:49:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 686,
       "platform_framework": [
         "1",
