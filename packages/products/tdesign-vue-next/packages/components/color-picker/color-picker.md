@@ -13,7 +13,7 @@ colorModes | Array | ["monochrome", "linear-gradient"] | 颜色模式选择。�
 disabled | Boolean | undefined | 是否禁用组件 | N
 enableAlpha | Boolean | false | 是否开启透明通道 | N
 enableMultipleGradient | Boolean | true | 是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色 | N
-format | String | RGB | 格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N
+format | String | RGB | 格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效。可选项：HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
 inputProps | Object | - | 透传 Input 输入框组件全部属性。TS 类型：`InputProps`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/color-picker/type.ts) | N
 multiple | Boolean | false | 【开发中】是否允许选中多个颜色 | N
 popupProps | Object | - | 透传 Popup 组件全部属性，如 `placement` `overlayStyle` `overlayClassName` `trigger`等。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/color-picker/type.ts) | N

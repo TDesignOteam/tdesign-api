@@ -103,6 +103,8 @@ export default {
   onBlur: Function as PropType<TdTimePickerProps['onBlur']>,
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdTimePickerProps['onChange']>,
+  /** 清空按钮点击时触发 */
+  onClear: Function as PropType<TdTimePickerProps['onClear']>,
   /** 面板关闭时触发 */
   onClose: Function as PropType<TdTimePickerProps['onClose']>,
   /** 输入框获得焦点时触发，value 表示组件当前有效值 */

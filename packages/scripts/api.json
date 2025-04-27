@@ -2501,7 +2501,7 @@
       "field_enum": "",
       "field_desc_zh": "显示与隐藏",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2021-09-02 12:01:55",
       "update_time": "2022-04-08 09:10:44",
@@ -20670,6 +20670,47 @@
       ]
     },
     {
+      "id": 1745737040,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "头部",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-27 06:57:20",
+      "update_time": "2025-04-27 06:57:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.9.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2805,
       "platform_framework": [
         "1",
@@ -22722,6 +22763,43 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1744870803,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Cascader",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_en": "Triggered when the clear button is clicked",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-04-17 06:20:03",
+      "update_time": "2025-04-17 06:20:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "SVGElement",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
       ],
       "field_type_text": []
     },
@@ -32429,9 +32507,9 @@
         "1"
       ],
       "field_default_value": "RGB",
-      "field_enum": "RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
-      "field_desc_zh": "格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效",
-      "field_desc_en": null,
+      "field_enum": "HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS",
+      "field_desc_zh": "格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效",
+      "field_desc_en": "When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-01-11 11:18:32",
@@ -33152,7 +33230,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "清空按钮点击时触发",
-      "field_desc_en": null,
+      "field_desc_en": "",
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
       "create_time": "2025-03-11 06:45:22",
@@ -33162,7 +33240,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "",
+      "trigger_elements": "SVGElement",
       "deprecated": 0,
       "version": "",
       "test_description": null,
@@ -35785,6 +35863,43 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1744819556,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "DatePicker",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_en": "Triggered when the clear button is clicked",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-04-16 16:05:56",
+      "update_time": "2025-04-16 16:05:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "SVGElement",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -46933,6 +47048,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1745545785,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用抽屉懒加载，启用时抽屉的内容不渲染",
+      "field_desc_en": "Enable Drawer lazy loading, the contents of the Drawer are not rendered when enable",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-25 01:49:45",
+      "update_time": "2025-04-25 01:49:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -68883,7 +69039,8 @@
     {
       "id": 1735811572,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Input",
       "field_category": 1,
@@ -68911,7 +69068,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -69083,6 +69241,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1745737076,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 1,
+      "field_name": "extra",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "右侧额外内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-27 06:57:56",
+      "update_time": "2025-04-27 06:57:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.9.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -92044,6 +92243,49 @@
       ]
     },
     {
+      "id": 1744881020,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Progress",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "'default'",
+      "field_enum": "",
+      "field_desc_zh": "进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-17 09:10:20",
+      "update_time": "2025-04-17 09:10:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 924,
       "platform_framework": [
         "1",
@@ -92519,7 +92761,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": null,
+      "field_desc_zh": "头部",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -128616,6 +128858,43 @@
       "field_type_text": []
     },
     {
+      "id": 1744870559,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 2,
+      "field_name": "clear",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_en": "Triggered when the clear button is clicked",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-04-17 06:15:59",
+      "update_time": "2025-04-17 06:15:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "SVGElement",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 641,
       "platform_framework": [
         "1",
@@ -137941,6 +138220,53 @@
       ]
     },
     {
+      "id": 1745217452,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "TreeSelect",
+      "field_category": 1,
+      "field_name": "customValue",
+      "field_type": [
+        "1",
+        "2",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义选中值，优先级高于 `value`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-21 06:37:32",
+      "update_time": "2025-04-21 06:37:32",
+      "event_output": null,
+      "custom_field_type": "TreeSelectValue",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number",
+        "Array"
+      ]
+    },
+    {
       "id": 1149,
       "platform_framework": [
         "1",
@@ -140966,6 +141292,47 @@
       ]
     },
     {
+      "id": 1745310368,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "addBtn",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "添加按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-22 08:26:08",
+      "update_time": "2025-04-22 08:26:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1559,
       "platform_framework": [
         "8",
@@ -142713,6 +143080,47 @@
       "event_input": "",
       "create_time": "2024-11-19 10:57:14",
       "update_time": "2024-11-19 10:57:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1745310417,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Upload",
+      "field_category": 1,
+      "field_name": "removeBtn",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "移除按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-22 08:26:57",
+      "update_time": "2025-04-22 08:26:57",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,

@@ -21,6 +21,11 @@ const props: TdProgressProps = {
     type: Number,
     value: 0,
   },
+  /** 进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24 */
+  size: {
+    type: null,
+    value: 'default',
+  },
   /** 进度条状态 */
   status: {
     type: String,
