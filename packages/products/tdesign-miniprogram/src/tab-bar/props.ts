@@ -16,7 +16,7 @@ const props: TdTabBarProps = {
     type: Boolean,
     value: true,
   },
-  /** 是否为 iPhoneX 留出底部安全距离 */
+  /** 是否开启底部安全区适配 */
   safeAreaInsetBottom: {
     type: Boolean,
     value: true,
