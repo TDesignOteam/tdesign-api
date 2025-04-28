@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, TElement } from '../common';
 
 export interface TdNavbarProps {
   /**
@@ -15,14 +15,14 @@ export interface TdNavbarProps {
   /**
    * 左侧胶囊区域
    */
-  capsule?: TNode;
+  capsule?: TElement;
   /**
    * 是否固定在顶部
    * @default true
    */
   fixed?: boolean;
   /**
-   * 左侧区域
+   * 左侧区域。值为 `string` 表示文本，为其他表示自定义内容
    */
   left?: TNode;
   /**
@@ -31,7 +31,7 @@ export interface TdNavbarProps {
    */
   leftArrow?: boolean;
   /**
-   * 右侧区域
+   * 右侧区域。值为 `string` 表示文本，为其他表示自定义内容
    */
   right?: TNode;
   /**
@@ -42,7 +42,7 @@ export interface TdNavbarProps {
   /**
    * 页面标题
    */
-  title?: string | TNode;
+  title?: TNode;
   /**
    * 标题文字最大长度，超出的范围使用 `...` 表示
    */
@@ -53,11 +53,11 @@ export interface TdNavbarProps {
    */
   visible?: boolean;
   /**
-   * 点击左侧按钮时触发
+   * 点击左侧区域时触发
    */
   onLeftClick?: () => void;
   /**
-   * 点击右侧图标时触发
+   * 点击右侧区域时触发
    */
   onRightClick?: () => void;
 }

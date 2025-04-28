@@ -80515,6 +80515,47 @@
       ]
     },
     {
+      "id": 1745829536,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "safeAreaInsetTop",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否开启顶部安全区适配",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-28 08:38:56",
+      "update_time": "2025-04-28 08:38:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1622,
       "platform_framework": [
         "8",
@@ -117233,7 +117274,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否为 iPhoneX 留出底部安全距离",
+      "field_desc_zh": "是否开启底部安全区适配",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
