@@ -17,6 +17,7 @@ home-icon | String | - | 已废弃。首页图标地址。值为 '' 或者 undef
 left | Slot | - | `0.26.0`。左侧内容区域。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 left-arrow | Boolean | false | `0.26.0`。是否展示左侧箭头 | N
 left-icon | String | - | 已废弃。左侧图标地址，值为 '' 或者 undefined 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址 | N
+safe-area-inset-top | Boolean | true | 是否开启顶部安全区适配 | N
 title | String / Slot | - | 页面标题。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 title-max-length | Number | - | 标题文字最大长度，超出的范围使用 `...` 表示 | N
 visible | Boolean | true | 是否显示 | N
@@ -30,6 +31,7 @@ fail | \- | navigateBack 执行失败后触发
 go-back | \- | 点击左侧箭头时触发
 go-home | \- | 已废弃。点击 Home 触发
 success | \- | navigateBack 执行成功后触发
+
 ### Navbar External Classes
 
 类名 | 描述
