@@ -337,10 +337,6 @@ export interface TdChatReasoningProps {
    */
   defaultExpand?: boolean;
   /**
-   * null
-   */
-  modelValue?: boolean;
-  /**
    * 当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon
    */
   expandIcon?: TNode;

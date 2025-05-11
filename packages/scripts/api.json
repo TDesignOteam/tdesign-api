@@ -26527,7 +26527,7 @@
       "update_time": "2025-04-18 08:54:07",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": "v-model",
+      "syntactic_sugar": "sync",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",

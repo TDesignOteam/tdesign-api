@@ -149,7 +149,7 @@ stop | `(value:string, context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 collapsePanelProps | Object | { destroyOnCollapse: false } | Typescript：`CollapsePanelProps`，[Collapse API Documents](./collapse?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/chat/type.ts) | N
-expand | Boolean | - | `v-model` and `v-model:expand` is supported | N
+expand | Boolean | - | `v-model:expand` is supported | N
 defaultExpand | Boolean | - | uncontrolled property | N
 expandIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 expandIconPlacement | String | right | options: left/right | N
