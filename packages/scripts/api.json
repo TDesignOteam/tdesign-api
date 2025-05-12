@@ -38196,6 +38196,43 @@
       ]
     },
     {
+      "id": 1746803786,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否只读，优先级大于 `allowInput`",
+      "field_desc_en": "Whether it is read only, the priority is greater than allowInput",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-09 15:16:26",
+      "update_time": "2025-05-09 15:16:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1224,
       "platform_framework": [
         "1",
