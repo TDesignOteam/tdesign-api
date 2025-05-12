@@ -9,5 +9,6 @@ export const colorPickerDefaultProps: TdColorPickerProps = {
   enableAlpha: false,
   fixed: false,
   format: 'RGB',
+  swatchColors: undefined,
   type: 'base',
 };

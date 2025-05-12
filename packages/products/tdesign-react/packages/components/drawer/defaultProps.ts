@@ -11,6 +11,7 @@ export const drawerDefaultProps: TdDrawerProps = {
   footer: true,
   forceRender: false,
   header: true,
+  lazy: false,
   mode: 'overlay',
   placement: 'right',
   preventScrollThrough: true,

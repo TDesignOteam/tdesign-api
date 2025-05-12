@@ -21,14 +21,14 @@ export interface TdColorPickerProps {
    */
   fixed?: boolean;
   /**
-   * 格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效
+   * 格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效
    * @default RGB
    */
-  format?: 'RGB' | 'RGBA' | 'HSL' | 'HSLA' | 'HSB' | 'HSV' | 'HSVA' | 'HEX' | 'CMYK' | 'CSS';
+  format?: 'HEX' | 'HEX8' | 'RGB' | 'RGBA' | 'HSL' | 'HSLA' | 'HSV' | 'HSVA' | 'CMYK' | 'CSS';
   /**
    * 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色
    */
-  swatchColors?: Array<string> | null;
+  swatchColors?: Array<string> | null | undefined;
   /**
    * 颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容
    * @default base

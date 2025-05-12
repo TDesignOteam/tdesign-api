@@ -9,8 +9,8 @@ name | type | default | description | required
 clearable | Boolean | false | \- | N
 enableAlpha | Boolean | false | \- | N
 fixed | Boolean | false | \- | N
-format | String | RGB | options: RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N
-swatchColors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
+format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
+swatchColors | Array | undefined | swatch colors。Typescript：`Array<string> \| null \| undefined` | N
 type | String | base | options: base/multiple。Typescript：`TypeEnum ` `type TypeEnum = 'base' \| 'multiple'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts) | N
 value | String | - | color value。`v-model` and `v-model:value` is supported | N
 defaultValue | String | - | color value。uncontrolled property | N
