@@ -32198,51 +32198,6 @@
       ]
     },
     {
-      "id": 2340,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "ColorPicker",
-      "field_category": 1,
-      "field_name": "closeBtn",
-      "field_type": [
-        "1",
-        "4",
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 或 `undefined` 则不显示关闭按钮；值类型为函数，则表示自定义关闭按钮",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-02-23 10:17:20",
-      "update_time": "2022-02-23 10:17:20",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Boolean",
-        "TNode"
-      ]
-    },
-    {
       "id": 2341,
       "platform_framework": [
         "1",
@@ -32616,47 +32571,6 @@
       ]
     },
     {
-      "id": 2123,
-      "platform_framework": [
-        "1",
-        "2",
-        "4"
-      ],
-      "component": "ColorPicker",
-      "field_category": 1,
-      "field_name": "multiple",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "【开发中】是否允许选中多个颜色",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-01-11 11:23:12",
-      "update_time": "2022-03-04 05:55:34",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 2122,
       "platform_framework": [
         "1",
@@ -32749,14 +32663,14 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 null 则完全不显示“最近使用颜色”",
+      "field_desc_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色”",
       "field_desc_en": "used color recently",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-02-23 11:06:05",
       "update_time": "2022-03-20 14:28:27",
       "event_output": null,
-      "custom_field_type": "boolean | Array<string> | null",
+      "custom_field_type": "Array<string> | boolean | null",
       "syntactic_sugar": "sync",
       "readonly": 1,
       "html_attribute": 0,
@@ -32914,7 +32828,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色",
       "field_desc_en": "swatch colors",
@@ -32923,7 +32837,7 @@
       "create_time": "2022-01-11 11:30:41",
       "update_time": "2022-03-04 06:05:18",
       "event_output": null,
-      "custom_field_type": "Array<string> | null",
+      "custom_field_type": "Array<string> | null | undefined",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -38279,6 +38193,43 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1746803786,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否只读，优先级大于 `allowInput`",
+      "field_desc_en": "Whether it is read only, the priority is greater than allowInput",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-09 15:16:26",
+      "update_time": "2025-05-09 15:16:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
@@ -60311,7 +60262,7 @@
       "create_time": "2024-04-09 11:23:49",
       "update_time": "2024-04-09 11:23:49",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "String | TNode  | ImageProps【import { ImageProps } from '@Image'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -65671,7 +65622,7 @@
       "create_time": "2022-01-23 08:00:45",
       "update_time": "2022-07-21 10:18:20",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -80640,6 +80591,47 @@
       ]
     },
     {
+      "id": 1745829536,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "safeAreaInsetTop",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否开启顶部安全区适配",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-28 08:38:56",
+      "update_time": "2025-04-28 08:38:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1622,
       "platform_framework": [
         "8",
@@ -83702,6 +83694,146 @@
       "event_input": "(context: { e: MouseEvent })",
       "create_time": "2024-04-10 03:20:33",
       "update_time": "2024-04-10 03:20:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694169,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩执行消失动画效果前触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:29",
+      "update_time": "2025-05-08 08:49:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694152,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "closed",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩消失动画效果结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:12",
+      "update_time": "2025-05-08 08:49:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694183,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "open",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩执行弹出动画效果前触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:43",
+      "update_time": "2025-05-08 08:49:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694194,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "opened",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩弹出动画效果结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:54",
+      "update_time": "2025-05-08 08:49:54",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -92640,6 +92772,8 @@
     {
       "id": 1718962073,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "PullDownRefresh",
@@ -92668,6 +92802,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -113592,7 +113728,7 @@
       "create_time": "2024-04-10 03:29:22",
       "update_time": "2024-04-10 03:29:22",
       "event_output": null,
-      "custom_field_type": "Array<SwipeActionItem> | TNode【interface SwipeActionItem {text: string; className?: string; style?: string; sure?: string | TNode; onClick?: () => void; [key: string]: any }】",
+      "custom_field_type": "Array<SwipeActionItem> | TNode【interface SwipeActionItem {text: string; className?: string; style?: Styles; sure?: Sure; onClick?: () => void; [key: string]: any }】【type Sure = string | TNode】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -115931,7 +116067,7 @@
         "1"
       ],
       "field_default_value": "bottom",
-      "field_enum": "top-left/top/top-right/bottom-left/bottom/bottom-right",
+      "field_enum": "top-left/top/top-right/bottom-left/bottom/bottom-right/left/right",
       "field_desc_zh": "页码信息展示位置",
       "field_desc_en": null,
       "field_required": 0,
@@ -117358,7 +117494,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否为 iPhoneX 留出底部安全距离",
+      "field_desc_zh": "是否开启底部安全区适配",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

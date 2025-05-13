@@ -291,6 +291,10 @@ export interface TdDateRangePickerProps {
    */
   rangeInputProps?: RangeInputProps;
   /**
+   * 是否只读，优先级大于 `allowInput`
+   */
+  readonly?: boolean;
+  /**
    * 日期分隔符，支持全局配置，默认为 '-'
    * @default ''
    */
