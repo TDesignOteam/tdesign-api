@@ -71,6 +71,10 @@ export interface TdTimePickerProps {
    */
   presets?: PresetTime;
   /**
+   * 只读状态，优先级大于 `allowInput`
+   */
+  readonly?: boolean;
+  /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */
   selectInputProps?: SelectInputProps;
@@ -116,13 +120,17 @@ export interface TdTimePickerProps {
    */
   onChange?: (value: TimePickerValue) => void;
   /**
-   * 清空按钮点击时触发
+   * 点击清空按钮时触发
    */
   onClear?: (context: { e: MouseEvent }) => void;
   /**
    * 面板关闭时触发
    */
   onClose?: (context: { e: MouseEvent }) => void;
+  /**
+   * 点击确认按钮时触发
+   */
+  onConfirm?: (context: { e: MouseEvent }) => void;
   /**
    * 输入框获得焦点时触发，value 表示组件当前有效值
    */
