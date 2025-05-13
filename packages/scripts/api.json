@@ -130038,6 +130038,47 @@
       ]
     },
     {
+      "id": 1747148631,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimeRangePicker",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "只读状态，优先级大于 `allowInput`",
+      "field_desc_en": "Whether it is read only, the priority is greater than `allowInput`",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-05-13 15:03:51",
+      "update_time": "2025-05-13 15:03:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1052,
       "platform_framework": [
         "1",

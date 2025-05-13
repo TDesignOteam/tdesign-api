@@ -69,6 +69,7 @@ placeholder | String / Array | undefined | Typescript：`string \| Array<string>
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 presets | Object | - | Typescript：`PresetTimeRange` `interface PresetTimeRange { [presetRageName: string]: TimeRangeValue \| (() => TimeRangeValue)}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
+readonly | Boolean | undefined | Whether it is read only, the priority is greater than `allowInput` | N
 size | String | medium | options: small/medium/large | N
 status | String | default | options: default/success/warning/error | N
 steps | Array | [1, 1, 1] | Typescript：`Array<string \| number>` | N

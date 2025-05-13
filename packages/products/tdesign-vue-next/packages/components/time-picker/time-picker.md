@@ -69,6 +69,7 @@ placeholder | String / Array | undefined | 占位符，值为数组表示可分�
 popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 presets | Object | - | 预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }。TS 类型：`PresetTimeRange` `interface PresetTimeRange { [presetRageName: string]: TimeRangeValue \| (() => TimeRangeValue)}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 rangeInputProps | Object | - | 透传给范围输入框 RangeInput 组件的参数。TS 类型：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
+readonly | Boolean | undefined | 只读状态，优先级大于 `allowInput` | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
 steps | Array | [1, 1, 1] | 时间间隔步数，数组排列 [小时, 分钟, 秒]，示例：[2, 1, 1] 或者 ['2', '1', '1']。TS 类型：`Array<string \| number>` | N
