@@ -43330,6 +43330,45 @@
       ]
     },
     {
+      "id": 1744620271,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否启用对话框懒加载，启用时对话框内的内容不渲染",
+      "field_desc_en": "Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-04-14 08:44:31",
+      "update_time": "2025-04-14 08:44:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1741766727,
       "platform_framework": [
         "8",
@@ -83673,6 +83712,146 @@
       "field_type_text": []
     },
     {
+      "id": 1746694169,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩执行消失动画效果前触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:29",
+      "update_time": "2025-05-08 08:49:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694152,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "closed",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩消失动画效果结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:12",
+      "update_time": "2025-05-08 08:49:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694183,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "open",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩执行弹出动画效果前触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:43",
+      "update_time": "2025-05-08 08:49:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1746694194,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Overlay",
+      "field_category": 2,
+      "field_name": "opened",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "遮罩弹出动画效果结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-08 08:49:54",
+      "update_time": "2025-05-08 08:49:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 76,
       "platform_framework": [
         "1",
@@ -92593,6 +92772,8 @@
     {
       "id": 1718962073,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "PullDownRefresh",
@@ -92621,6 +92802,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -128446,6 +128629,47 @@
       ]
     },
     {
+      "id": 1747148051,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "只读状态，优先级大于 `allowInput`",
+      "field_desc_en": "Whether it is read only, the priority is greater than `allowInput`",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-05-13 14:54:11",
+      "update_time": "2025-05-13 14:54:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1710847014,
       "platform_framework": [
         "1",
@@ -128823,7 +129047,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "清空按钮点击时触发",
+      "field_desc_zh": "点击清空按钮时触发",
       "field_desc_en": "Triggered when the clear button is clicked",
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
@@ -128874,6 +129098,43 @@
       "trigger_elements": "",
       "deprecated": 0,
       "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1747147791,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimePicker",
+      "field_category": 2,
+      "field_name": "confirm",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击确认按钮时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-05-13 14:49:51",
+      "update_time": "2025-05-13 14:49:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -129774,6 +130035,47 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1747148631,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "TimeRangePicker",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "undefined",
+      "field_enum": "",
+      "field_desc_zh": "只读状态，优先级大于 `allowInput`",
+      "field_desc_en": "Whether it is read only, the priority is greater than `allowInput`",
+      "field_required": 0,
+      "event_input": "(context: { e: MouseEvent })",
+      "create_time": "2025-05-13 15:03:51",
+      "update_time": "2025-05-13 15:03:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
       ]
     },
     {
