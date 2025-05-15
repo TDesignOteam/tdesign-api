@@ -69994,7 +69994,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{ \"Miniprogram\": \"1.8.6\" }",
+      "version": "{ \"Miniprogram\": \"1.7.1\" }",
       "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}",
       "support_default_value": 0,
       "field_category_text": "Props",
