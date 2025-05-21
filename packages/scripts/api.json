@@ -39887,6 +39887,7 @@
     {
       "id": 3482,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -39897,7 +39898,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "",
+      "field_default_value": "{}",
       "field_enum": "",
       "field_desc_zh": "时间间隔步数，示例：`{ minute: 5 }`",
       "field_desc_en": null,
@@ -39906,17 +39907,18 @@
       "create_time": "2023-05-05 06:12:50",
       "update_time": "2023-05-05 06:12:50",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "{ [key in TimeModeValues]?: number }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Vue(Mobile)\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
