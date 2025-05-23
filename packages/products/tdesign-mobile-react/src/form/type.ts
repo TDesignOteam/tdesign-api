@@ -23,6 +23,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
+   * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
+   */
+  id?: string;
+  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -41,6 +45,11 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 是否显示必填符号（*），默认显示
    */
   requiredMark?: boolean;
+  /**
+   * 表单必填符号（*）显示位置
+   * @default left
+   */
+  requiredMarkPosition?: 'left' | 'right';
   /**
    * 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值
    * @default empty
