@@ -11,6 +11,7 @@ export const dateTimePickerDefaultProps: TdDateTimePickerProps = {
   header: true,
   mode: 'date',
   showWeek: false,
+  steps: {},
   usePopup: true,
   visible: false,
 };

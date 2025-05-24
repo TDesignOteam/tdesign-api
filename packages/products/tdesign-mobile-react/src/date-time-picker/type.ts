@@ -51,7 +51,7 @@ export interface TdDateTimePickerProps {
    */
   renderLabel?: (type: string, value: number) => string;
   /**
-   * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
+   * 是否在日期旁边显示周几（如周一，周二，周日等）
    * @default false
    */
   showWeek?: boolean;
@@ -61,8 +61,9 @@ export interface TdDateTimePickerProps {
   start?: string | number;
   /**
    * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
    */
-  steps?: object;
+  steps?: { [key in TimeModeValues]?: number };
   /**
    * 标题
    * @default ''

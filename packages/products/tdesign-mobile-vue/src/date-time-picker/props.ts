@@ -8,6 +8,8 @@ import { TdDateTimePickerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible */
+  autoClose: Boolean,
   /** 取消按钮文字 */
   cancelBtn: {
     type: String,
@@ -40,7 +42,7 @@ export default {
   renderLabel: {
     type: Function as PropType<TdDateTimePickerProps['renderLabel']>,
   },
-  /** 【开发中】是否在日期旁边显示周几（如周一，周二，周日等） */
+  /** 是否在日期旁边显示周几（如周一，周二，周日等） */
   showWeek: Boolean,
   /** 选择器的最小可选时间，默认为当前时间-10年 */
   start: {
