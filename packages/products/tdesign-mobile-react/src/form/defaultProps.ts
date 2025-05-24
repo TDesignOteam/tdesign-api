@@ -7,10 +7,12 @@ import { TdFormProps, TdFormItemProps } from './type';
 export const formDefaultProps: TdFormProps = {
   colon: false,
   disabled: undefined,
+  id: undefined,
   labelAlign: 'right',
   labelWidth: '81px',
   preventSubmitDefault: true,
   requiredMark: undefined,
+  requiredMarkPosition: 'left',
   resetType: 'empty',
   showErrorMessage: true,
   statusIcon: undefined,
