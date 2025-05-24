@@ -15,7 +15,7 @@ export default {
   },
   /** 进度百分比，可自定义 */
   label: {
-    type: [String, Boolean, Function] as PropType<TdProgressProps['label']>,
+    type: [Boolean, String, Function] as PropType<TdProgressProps['label']>,
     default: true,
   },
   /** 进度条百分比 */

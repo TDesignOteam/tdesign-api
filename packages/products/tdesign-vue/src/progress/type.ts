@@ -16,7 +16,7 @@ export interface TdProgressProps {
    * 进度百分比，可自定义
    * @default true
    */
-  label?: string | boolean | TNode;
+  label?: boolean | string | TNode;
   /**
    * 进度条百分比
    * @default 0
