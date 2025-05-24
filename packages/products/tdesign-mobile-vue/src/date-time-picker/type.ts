@@ -29,8 +29,7 @@ export interface TdDateTimePickerProps {
    */
   filter?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
   /**
-   * 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)
-   * @default 'YYYY-MM-DD HH:mm:ss'
+   * 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)
    */
   format?: string;
   /**

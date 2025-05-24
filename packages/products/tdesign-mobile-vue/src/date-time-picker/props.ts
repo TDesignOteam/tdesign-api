@@ -28,10 +28,10 @@ export default {
   filter: {
     type: Function as PropType<TdDateTimePickerProps['filter']>,
   },
-  /** 用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format) */
+  /** 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format) */
   format: {
     type: String,
-    default: 'YYYY-MM-DD HH:mm:ss',
+    default: undefined,
   },
   /** year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒 */
   mode: {
