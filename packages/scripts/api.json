@@ -68932,7 +68932,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
@@ -100311,7 +100311,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
