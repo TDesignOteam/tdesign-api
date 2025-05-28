@@ -53354,7 +53354,8 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -53382,7 +53383,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -54509,6 +54511,7 @@
         "1",
         "4",
         "8",
+        "16",
         "32"
       ],
       "component": "Form",
@@ -54538,6 +54541,7 @@
         "Vue(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": []
@@ -66943,6 +66947,43 @@
       ]
     },
     {
+      "id": 1748404966,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否开启图片懒加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-28 04:02:46",
+      "update_time": "2025-05-28 04:02:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.9.4\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2803,
       "platform_framework": [
         "8",
@@ -68934,7 +68975,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
@@ -100313,7 +100354,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
@@ -138872,10 +138913,7 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
-        "8",
-        "16",
-        "32"
+        "4"
       ],
       "component": "TreeSelect",
       "field_category": 1,
@@ -138905,18 +138943,18 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(PC)"
       ],
       "field_type_text": [
         "Object"
       ]
     },
     {
-      "id": 1712652164,
+      "id": 1748334587,
       "platform_framework": [
+        "8",
+        "16",
+        "32",
         "64"
       ],
       "component": "TreeSelect",
@@ -138927,14 +138965,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
-      "field_desc_en": "alias filed name in data",
+      "field_desc_zh": "用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`",
+      "field_desc_en": "alias filed name in options",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-09 08:42:44",
-      "update_time": "2024-04-09 08:42:44",
+      "create_time": "2025-05-27 08:29:47",
+      "update_time": "2025-05-27 08:29:47",
       "event_output": null,
-      "custom_field_type": "KeysType",
+      "custom_field_type": "TreeKeysType",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -138945,6 +138983,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
