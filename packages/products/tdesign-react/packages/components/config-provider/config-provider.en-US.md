@@ -32,6 +32,7 @@ icon | Object | - | icon config。Typescript：`IconConfig` `type IconConfig = G
 image | Object | - | image global configs。Typescript：`ImageConfig` | N
 imageViewer | Object | - | imageViewer global configs。Typescript：`ImageViewerConfig` | N
 input | Object | - | Input global configs。Typescript：`InputConfig` | N
+isContextEffectPlugin | Boolean | false | Whether the global configuration affects the components used by the functional invocation method | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 message | Object | - | Message Component global configs。Typescript：`MessageConfig` | N
 pagination | Object | - | Pagination global configs。Typescript：`PaginationConfig` | N
@@ -171,6 +172,7 @@ name | type | default | description | required
 colonText | String | - | colon on the right of label ":" | N
 errorMessage | Object | - | Typescript：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts) | N
 requiredMark | Boolean | true | \- | N
+requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 
 ### GuideConfig
 
