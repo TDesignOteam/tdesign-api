@@ -506,6 +506,7 @@ export interface FormConfig {
   requiredMark?: boolean;
   /**
    * 表单必填符号（*）显示位置
+   * @default left
    */
   requiredMarkPosition?: 'left' | 'right';
 }
