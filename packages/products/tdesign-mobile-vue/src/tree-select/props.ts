@@ -17,7 +17,7 @@ export default {
     type: [String, Number] as PropType<TdTreeSelectProps['height']>,
     default: 336,
   },
-  /** 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
+  /** 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
   keys: {
     type: Object as PropType<TdTreeSelectProps['keys']>,
   },
