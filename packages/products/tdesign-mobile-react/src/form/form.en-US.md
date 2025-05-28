@@ -9,6 +9,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 colon | Boolean | false | \- | N
+contentAlign | String | left | options: left/right | N
 disabled | Boolean | undefined | \- | N
 errorMessage | Object | - | Typescript：`FormErrorMessage` | N
 id | String | undefined |  native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events | N
@@ -25,6 +26,7 @@ statusIcon | TNode | undefined | Typescript：`boolean \| TNode<TdFormItemProps>
 submitWithWarningMessage | Boolean | false | \- | N
 onReset | Function |  | Typescript：`(context: { e?: FormResetEvent }) => void`<br/> | N
 onSubmit | Function |  | Typescript：`(context: SubmitContext<FormData>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`interface SubmitContext<T extends Data = Data> { e?: FormSubmitEvent; validateResult: FormValidateResult<T>; firstError?: string; fields?: any }`<br/><br/>`type FormValidateResult<T> = boolean \| ValidateResultObj<T>`<br/><br/>`type ValidateResultObj<T> = { [key in keyof T]: boolean \| ValidateResultList }`<br/><br/>`type ValidateResultList = Array<AllValidateResult>`<br/><br/>`type AllValidateResult = CustomValidateObj \| ValidateResultType`<br/><br/>`interface ValidateResultType extends FormRule { result: boolean }`<br/><br/>`type ValidateResult<T> = { [key in keyof T]: boolean \| ErrorList }`<br/><br/>`type ErrorList = Array<FormRule>`<br/> | N
+onValidate | Function |  | Typescript：`(result: ValidateResultContext<FormData>) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`type ValidateResultContext<T extends Data> = Omit<SubmitContext<T>, 'e'>`<br/> | N
 onValuesChange | Function |  | Typescript：`(changedValues: Record<string, unknown>, allValues: Record<string, unknown>) => void`<br/> | N
 
 ### FormInstanceFunctions 组件实例方法
