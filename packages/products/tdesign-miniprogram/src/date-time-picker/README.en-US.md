@@ -22,7 +22,7 @@ mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTim
 popup-props | Object | {} | popup properties。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N
 show-week | Boolean | false | `1.9.0` | N
 start | String / Number | - | \- | N
-steps | Object | - | \- | N
+steps | Object | {} | Typescript：`{ [key in TimeModeValues]?: number }` | N
 title | String | - | title of picker | N
 use-popup | Boolean | true | \- | N
 value | String / Number | - | Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/date-time-picker/type.ts) | N

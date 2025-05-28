@@ -19,7 +19,7 @@ mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTim
 renderLabel | Function | - | Typescript：`(type: string, value: number) => string` | N
 showWeek | Boolean | false | \- | N
 start | String / Number | - | \- | N
-steps | Object | - | \- | N
+steps | Object | {} | Typescript：`{ [key in TimeModeValues]?: number }` | N
 title | String | - | title of picker | N
 usePopup | Boolean | true | \- | N
 value | String / Number | - | Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/date-time-picker/type.ts) | N

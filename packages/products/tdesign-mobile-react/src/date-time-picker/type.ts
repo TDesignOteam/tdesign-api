@@ -32,8 +32,7 @@ export interface TdDateTimePickerProps {
    */
   footer?: TElement;
   /**
-   * 用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)
-   * @default 'YYYY-MM-DD HH:mm:ss'
+   * 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)
    */
   format?: string;
   /**
@@ -51,7 +50,7 @@ export interface TdDateTimePickerProps {
    */
   renderLabel?: (type: string, value: number) => string;
   /**
-   * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
+   * 是否在日期旁边显示周几（如周一，周二，周日等）
    * @default false
    */
   showWeek?: boolean;
@@ -61,8 +60,9 @@ export interface TdDateTimePickerProps {
   start?: string | number;
   /**
    * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
    */
-  steps?: object;
+  steps?: { [key in TimeModeValues]?: number };
   /**
    * 标题
    * @default ''
