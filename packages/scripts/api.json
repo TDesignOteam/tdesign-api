@@ -53352,7 +53352,8 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -53380,7 +53381,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -54507,6 +54509,7 @@
         "1",
         "4",
         "8",
+        "16",
         "32"
       ],
       "component": "Form",
@@ -54536,6 +54539,7 @@
         "Vue(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": []
@@ -66941,6 +66945,43 @@
       ]
     },
     {
+      "id": 1748404966,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否开启图片懒加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-28 04:02:46",
+      "update_time": "2025-05-28 04:02:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.9.4\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2803,
       "platform_framework": [
         "8",
@@ -68932,7 +68973,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
@@ -100311,7 +100352,7 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "",
+      "field_default_value": "-1",
       "field_enum": "",
       "field_desc_zh": "指定 focus 时的光标位置",
       "field_desc_en": null,
