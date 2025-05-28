@@ -55273,7 +55273,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "",
       "field_enum": "left/right",
       "field_desc_zh": "表单必填符号（*）显示位置",
       "field_desc_en": "Display position of required symbols",
