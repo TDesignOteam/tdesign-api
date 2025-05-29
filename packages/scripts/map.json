@@ -795,6 +795,10 @@
         "label": "进度条"
       },
       {
+        "value": "QrCode",
+        "label": "二维码"
+      },
+      {
         "value": "Radio",
         "label": "单选框"
       },

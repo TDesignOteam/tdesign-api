@@ -350,6 +350,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'WatermarkImage', label: '水印图片配置', type: 'TS' },
     { value: 'TypographyConfig', label: '排版全局配置', type: 'TS' },
     { value: 'AutoCompleteConfig', label: '自动填充全局配置', type: 'TS' },
+    { value: 'QrCode', label: '二维码' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [
@@ -434,6 +435,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
     { value: 'ToastOptions', label: '轻提示插件参数', type: 'TS' },
     { value: 'Transition', label: '动画' },
     { value: 'Upload', label: '上传' },
+    { value: 'QrCode', label: '二维码' },
 ];
 
 export default {
