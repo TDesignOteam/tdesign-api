@@ -55265,7 +55265,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -55295,7 +55297,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
