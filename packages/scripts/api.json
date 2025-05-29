@@ -93895,6 +93895,548 @@
       ]
     },
     {
+      "id": 1748524112,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "bgColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "transparent",
+      "field_enum": "",
+      "field_desc_zh": "二维码背景颜色",
+      "field_desc_en": "QR code background color",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:08:32",
+      "update_time": "2025-05-29 13:08:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748524307,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "borderless",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否有边框",
+      "field_desc_en": "Is there a border",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:11:47",
+      "update_time": "2025-05-29 13:11:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1748524032,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "color",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#000000",
+      "field_enum": "",
+      "field_desc_zh": "二维码颜色",
+      "field_desc_en": "QR code color",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:07:12",
+      "update_time": "2025-05-29 13:07:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748523781,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "icon",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "二维码中图片的地址或自定义icon",
+      "field_desc_en": "The address or custom icon of the picture in the QR code",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:03:01",
+      "update_time": "2025-05-29 13:03:01",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1748523969,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "iconSize",
+      "field_type": [
+        "2",
+        "8"
+      ],
+      "field_default_value": "40",
+      "field_enum": "",
+      "field_desc_zh": "二维码中图片的大小",
+      "field_desc_en": "The size of the picture in the QR code",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:06:09",
+      "update_time": "2025-05-29 13:06:09",
+      "event_output": null,
+      "custom_field_type": "number | { width: number; height: number }",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number",
+        "Object"
+      ]
+    },
+    {
+      "id": 1748524385,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "level",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "M",
+      "field_enum": "L/M/Q/H",
+      "field_desc_zh": "二维码纠错等级",
+      "field_desc_en": "QR code error correction level",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:13:05",
+      "update_time": "2025-05-29 13:13:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748523868,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "160",
+      "field_enum": "",
+      "field_desc_zh": "二维码大小",
+      "field_desc_en": "QR code size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:04:28",
+      "update_time": "2025-05-29 13:04:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1748524526,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "active",
+      "field_enum": "active/expired/loading/scanned",
+      "field_desc_zh": "二维码状态",
+      "field_desc_en": "QR code status",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:15:26",
+      "update_time": "2025-05-29 13:15:26",
+      "event_output": null,
+      "custom_field_type": "QRStatus【type QRStatus = \"active\" | \"expired\" | \"loading\" | \"scanned\"】",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748524815,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "statusRender",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义状态渲染器",
+      "field_desc_en": "Custom state renderer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:20:15",
+      "update_time": "2025-05-29 13:20:15",
+      "event_output": null,
+      "custom_field_type": "(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;locale:string;onRefresh?: () => void;}】",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1748523474,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "type",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "canvas",
+      "field_enum": "canvas/svg",
+      "field_desc_zh": "渲染类型",
+      "field_desc_en": "render type",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 12:57:54",
+      "update_time": "2025-05-29 12:57:54",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748523228,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "扫描后的文本",
+      "field_desc_en": "scanned text",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2025-05-29 12:53:48",
+      "update_time": "2025-05-29 12:53:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748524684,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QrCode",
+      "field_category": 2,
+      "field_name": "refresh",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击\"点击刷新\"的回调",
+      "field_desc_en": "Click the \"Click to refresh\" callback",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-29 13:18:04",
+      "update_time": "2025-05-29 13:18:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 1419,
       "platform_framework": [
         "16",
