@@ -6,6 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+actionOnNodeClick | String | click | `1.13.2`。点击节点的时候触发的动作。可选项：click/expand | N
 activable | Boolean | false | 节点是否可高亮 | N
 activeMultiple | Boolean | false | 是否允许多个节点同时高亮 | N
 actived | Array | - | 高亮的节点值。支持语法糖 `v-model:actived`。TS 类型：`Array<TreeNodeValue>` | N

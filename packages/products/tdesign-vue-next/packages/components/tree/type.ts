@@ -9,6 +9,11 @@ import { TNode, TreeOptionData, TreeKeysType, TScroll, ScrollToElementParams } f
 
 export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
   /**
+   * 点击节点的时候触发的动作
+   * @default click
+   */
+  actionOnNodeClick?: 'click' | 'expand';
+  /**
    * 节点是否可高亮
    * @default false
    */

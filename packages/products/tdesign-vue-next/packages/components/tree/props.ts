@@ -8,6 +8,15 @@ import { TdTreeProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 点击节点的时候触发的动作 */
+  actionOnNodeClick: {
+    type: String as PropType<TdTreeProps['actionOnNodeClick']>,
+    default: 'click' as TdTreeProps['actionOnNodeClick'],
+    validator(val: TdTreeProps['actionOnNodeClick']): boolean {
+      if (!val) return true;
+      return ['click', 'expand'].includes(val);
+    },
+  },
   /** 节点是否可高亮 */
   activable: Boolean,
   /** 是否允许多个节点同时高亮 */

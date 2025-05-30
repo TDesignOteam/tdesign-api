@@ -6,6 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+actionOnNodeClick | String | click | `1.13.2`。The action that is triggered when the node is clicked。options: click/expand | N
 activable | Boolean | false | make nodes can be highlight | N
 activeMultiple | Boolean | false | \- | N
 actived | Array | - | `v-model:actived` is supported。Typescript：`Array<TreeNodeValue>` | N

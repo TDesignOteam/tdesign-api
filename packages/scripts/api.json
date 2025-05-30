@@ -134080,6 +134080,43 @@
       ]
     },
     {
+      "id": 1748567294,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "actionOnNodeClick",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "click",
+      "field_enum": "click/expand",
+      "field_desc_zh": "点击节点的时候触发的动作",
+      "field_desc_en": "The action that is triggered when the node is clicked",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-30 01:08:14",
+      "update_time": "2025-05-30 01:08:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"VueNext(PC)\": \"1.13.2\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 536,
       "platform_framework": [
         "1",
