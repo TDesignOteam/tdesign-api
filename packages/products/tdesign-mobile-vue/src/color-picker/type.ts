@@ -54,10 +54,6 @@ export interface TdColorPickerProps {
    */
   onChange?: (value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger }) => void;
   /**
-   * 关闭按钮时触发
-   */
-  onClose?: (trigger: ColorPickerTrigger) => void;
-  /**
    * 调色板控制器的值变化时触发，`context.color` 指调色板控制器的值
    */
   onPaletteBarChange?: (context: { color: ColorObject }) => void;
@@ -66,8 +62,6 @@ export interface TdColorPickerProps {
 export type TypeEnum = 'base' | 'multiple';
 
 export type ColorPickerChangeTrigger = 'palette-hue-bar' | 'palette-alpha-bar' | 'preset';
-
-export type ColorPickerTrigger = 'overlay';
 
 export interface ColorObject {
   alpha: number;
