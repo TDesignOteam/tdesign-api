@@ -43,14 +43,6 @@ export interface TdStepsProps {
     value?: boolean;
   };
   /**
-   * 步骤条分割符
-   * @default line
-   */
-  separator?: {
-    type: StringConstructor;
-    value?: 'line' | 'dashed' | 'arrow';
-  };
-  /**
    * 步骤条顺序
    * @default positive
    */

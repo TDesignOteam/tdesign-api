@@ -11,19 +11,22 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 actions | TNode | - | Typescript：`Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts) | N
 buttonLayout | String | horizontal | options: horizontal/vertical | N
 cancelBtn | TNode | - | Typescript：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts) | N
+closeBtn | Boolean | false | \- | N
 closeOnOverlayClick | Boolean | false | \- | N
 confirmBtn | TNode | - | Typescript：`string \| ButtonProps \| TNode \| null`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-confirmLoading | Boolean | undefined | confirm button loading status | N
 content | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | \- | N
+middle | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts) | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
 title | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+top | TElement | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 visible | Boolean | - | \- | N
+width | String / Number | - | \- | N
 zIndex | Number | - | \- | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
-onClose | Function |  | Typescript：`(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
+onClose | Function |  | Typescript：`(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/> | N
 onConfirm | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -42,7 +45,6 @@ name | params | return | description
 -- | -- | -- | --
 destroy | \- | \- | required
 hide | \- | \- | required
-setConfirmLoading | `(loading: boolean)` | \- | required。set confirm button loading status
 show | \- | \- | required
 update | `(props: DialogOptions)` | \- | required
 

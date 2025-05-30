@@ -91,19 +91,17 @@ export interface TdActionSheetProps {
    * 显示与隐藏
    * @default false
    */
-  visible: {
+  visible?: {
     type: BooleanConstructor;
     value?: boolean;
-    required?: boolean;
   };
   /**
    * 显示与隐藏，非受控属性
    * @default false
    */
-  defaultVisible: {
+  defaultVisible?: {
     type: BooleanConstructor;
     value?: boolean;
-    required?: boolean;
   };
 }
 

@@ -39,7 +39,7 @@ export default {
   },
   /** 是否可清空 */
   clearable: Boolean,
-  /** null */
+  /** 光标颜色 */
   cursorColor: {
     type: String,
     default: '#0052d9',
@@ -56,6 +56,10 @@ export default {
       if (!val) return true;
       return ['enter', 'done', 'go', 'next', 'previous', 'search', 'send'].includes(val);
     },
+  },
+  /** 右侧额外内容 */
+  extra: {
+    type: Function as PropType<TdInputProps['extra']>,
   },
   /** 指定输入框展示值的格式 */
   format: {

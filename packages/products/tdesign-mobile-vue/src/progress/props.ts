@@ -23,6 +23,11 @@ export default {
     type: Number,
     default: 0,
   },
+  /** 进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24 */
+  size: {
+    type: [String, Number] as PropType<TdProgressProps['size']>,
+    default: 'default',
+  },
   /** 进度条状态 */
   status: {
     type: String as PropType<TdProgressProps['status']>,

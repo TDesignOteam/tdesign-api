@@ -5,9 +5,10 @@
 import { TdColorPickerProps } from './type';
 
 export const colorPickerDefaultProps: TdColorPickerProps = {
-  autoClose: true,
   clearable: false,
-  popupProps: {},
-  usePopup: false,
-  visible: false,
+  enableAlpha: false,
+  fixed: false,
+  format: 'RGB',
+  swatchColors: undefined,
+  type: 'base',
 };
