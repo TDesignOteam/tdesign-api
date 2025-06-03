@@ -40,6 +40,39 @@
       ]
     },
     {
+      "id": 1747311239,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-15 12:13:59",
+      "update_time": "2025-05-15 12:13:59",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 364,
       "platform_framework": [
         "1",
@@ -122,6 +155,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949577,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog.alert",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:19:37",
+      "update_time": "2025-06-03 11:19:37",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -216,6 +282,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949556,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog.confirm",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:19:16",
+      "update_time": "2025-06-03 11:19:16",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 369,
       "platform_framework": [
         "1",
@@ -302,6 +401,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949679,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Drawer",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:21:19",
+      "update_time": "2025-06-03 11:21:19",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3040,
       "platform_framework": [
         "1",
@@ -341,6 +473,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950232,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Loading",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:30:32",
+      "update_time": "2025-06-03 11:30:32",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -431,6 +596,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950099,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:19",
+      "update_time": "2025-06-03 11:28:19",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -714,6 +912,39 @@
       ]
     },
     {
+      "id": 1748950105,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.error",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:25",
+      "update_time": "2025-06-03 11:28:25",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 446,
       "platform_framework": [
         "1",
@@ -831,6 +1062,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950110,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.info",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:30",
+      "update_time": "2025-06-03 11:28:30",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -956,6 +1220,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950114,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.loading",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:34",
+      "update_time": "2025-06-03 11:28:34",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 445,
       "platform_framework": [
         "1",
@@ -1073,6 +1370,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950119,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.question",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:39",
+      "update_time": "2025-06-03 11:28:39",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1198,6 +1528,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950123,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.success",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:43",
+      "update_time": "2025-06-03 11:28:43",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 443,
       "platform_framework": [
         "1",
@@ -1319,6 +1682,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950127,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.warning",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:47",
+      "update_time": "2025-06-03 11:28:47",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 442,
       "platform_framework": [
         "1",
@@ -1436,6 +1832,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949851,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:11",
+      "update_time": "2025-06-03 11:24:11",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1713,6 +2142,39 @@
       ]
     },
     {
+      "id": 1748949870,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.error",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:30",
+      "update_time": "2025-06-03 11:24:30",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 478,
       "platform_framework": [
         "1",
@@ -1787,6 +2249,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949875,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.info",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:35",
+      "update_time": "2025-06-03 11:24:35",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1869,6 +2364,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949879,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.success",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:39",
+      "update_time": "2025-06-03 11:24:39",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 479,
       "platform_framework": [
         "1",
@@ -1943,6 +2471,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949883,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.warning",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:43",
+      "update_time": "2025-06-03 11:24:43",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },

@@ -111,6 +111,7 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 插件返回值：`DialogInstance`
 
@@ -121,6 +122,7 @@ options | \- | - | TS 类型：`DialogOptions`
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
+context | \- | - | TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### DialogPlugin.alert
 
@@ -129,3 +131,4 @@ options | \- | - | TS 类型：`DialogOptions`
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | TS 类型：`Omit<DialogOptions, 'cancelBtn'>`
+context | \- | - | TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
