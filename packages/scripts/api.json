@@ -85954,6 +85954,45 @@
       ]
     },
     {
+      "id": 1748926310,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "swipeDuration",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "1000",
+      "field_enum": "",
+      "field_desc_zh": "快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动",
+      "field_desc_en": "The duration of inertial scrolling during fast swiping, in milliseconds (ms). When set to 0, it disables inertial scrolling.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 04:51:50",
+      "update_time": "2025-06-03 04:51:50",
+      "event_output": null,
+      "custom_field_type": "string | number",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 1472,
       "platform_framework": [
         "8",
