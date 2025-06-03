@@ -447,6 +447,10 @@
         "type": "TS"
       },
       {
+        "value": "ColorPickerPanel",
+        "label": "颜色选择器面板"
+      },
+      {
         "value": "Comment",
         "label": "评论"
       },
