@@ -14,7 +14,6 @@ export const formDefaultProps: TdFormProps = {
   preventSubmitDefault: true,
   readonly: undefined,
   requiredMark: undefined,
-  requiredMarkPosition: 'left',
   resetType: 'empty',
   showErrorMessage: true,
   statusIcon: undefined,
