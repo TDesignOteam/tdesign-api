@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
+import { TNode, AttachNode, AppContext } from '../common';
 
 export interface TdMessageProps {
   /**
@@ -96,32 +96,45 @@ export type MessageMethod = (
   theme: MessageThemeList,
   message: string | MessageOptions,
   duration?: number,
+  context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageInfoOptions = Omit<MessageOptions, 'theme'>;
 
-export type MessageInfoMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageInfoMethod = (
+  message: string | MessageInfoOptions,
+  duration?: number,
+  context?: AppContext,
+) => Promise<MessageInstance>;
 
-export type MessageErrorMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageErrorMethod = (
+  message: string | MessageInfoOptions,
+  duration?: number,
+  context?: AppContext,
+) => Promise<MessageInstance>;
 
 export type MessageWarningMethod = (
   message: string | MessageInfoOptions,
   duration?: number,
+  context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageSuccessMethod = (
   message: string | MessageInfoOptions,
   duration?: number,
+  context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageLoadingMethod = (
   message: string | MessageInfoOptions,
   duration?: number,
+  context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageQuestionMethod = (
   message: string | MessageInfoOptions,
   duration?: number,
+  context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageCloseMethod = (options: Promise<MessageInstance>) => void;
