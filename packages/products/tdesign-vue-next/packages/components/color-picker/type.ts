@@ -115,16 +115,6 @@ export interface TdColorPickerProps {
 
 export interface TdColorPickerPanelProps {
   /**
-   * 无边框模式
-   * @default false
-   */
-  borderless?: boolean;
-  /**
-   * 是否可清空
-   * @default false
-   */
-  clearable?: boolean;
-  /**
    * 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色
    * @default ["monochrome", "linear-gradient"]
    */
@@ -163,11 +153,6 @@ export interface TdColorPickerPanelProps {
    * @default true
    */
   showPrimaryColorPreview?: boolean;
-  /**
-   * 组件尺寸
-   * @default medium
-   */
-  size?: SizeEnum;
   /**
    * 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色
    */

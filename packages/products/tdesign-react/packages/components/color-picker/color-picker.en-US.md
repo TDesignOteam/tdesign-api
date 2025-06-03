@@ -37,8 +37,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
-borderless | Boolean | false | \- | N
-clearable | Boolean | false | \- | N
 colorModes | Array | ["monochrome", "linear-gradient"] | Typescript：`Array<'monochrome' \| 'linear-gradient'>` | N
 disabled | Boolean | - | \- | N
 enableAlpha | Boolean | false | \- | N
@@ -47,7 +45,6 @@ format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are va
 recentColors | Array | [] | used color recently。Typescript：`Array<string> \| boolean \| null` | N
 defaultRecentColors | Array | [] | used color recently。uncontrolled property。Typescript：`Array<string> \| boolean \| null` | N
 showPrimaryColorPreview | Boolean | true | \- | N
-size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 swatchColors | Array | - | swatch colors。Typescript：`Array<string> \| null \| undefined` | N
 value | String | - | color value | N
 defaultValue | String | - | color value。uncontrolled property | N

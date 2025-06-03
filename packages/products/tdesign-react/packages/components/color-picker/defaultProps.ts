@@ -20,13 +20,10 @@ export const colorPickerDefaultProps: TdColorPickerProps = {
 };
 
 export const colorPickerPanelDefaultProps: TdColorPickerPanelProps = {
-  borderless: false,
-  clearable: false,
   colorModes: ['monochrome', 'linear-gradient'],
   enableAlpha: false,
   enableMultipleGradient: true,
   format: 'RGB',
   defaultRecentColors: [],
   showPrimaryColorPreview: true,
-  size: 'medium',
 };
