@@ -215,6 +215,10 @@ const COMPONENT_API_MD_MAP = {
         'ChatSender',
         'ChatReasoning',
     ],
+    ColorPicker: {
+        list: ['ColorPicker', 'ColorPickerPanel'],
+        includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+    },
 };
 
 // H5 特殊组件
