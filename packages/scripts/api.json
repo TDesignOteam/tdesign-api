@@ -33435,7 +33435,7 @@
       ]
     },
     {
-      "id": 1748924765,
+      "id": 1748927748,
       "platform_framework": [
         "1",
         "2",
@@ -33453,8 +33453,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:26:05",
-      "update_time": "2025-06-03 04:26:05",
+      "create_time": "2025-06-03 05:15:48",
+      "update_time": "2025-06-03 05:15:48",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33476,7 +33476,7 @@
       ]
     },
     {
-      "id": 1748924777,
+      "id": 1748927760,
       "platform_framework": [
         "1",
         "2",
@@ -33494,8 +33494,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:26:17",
-      "update_time": "2025-06-03 04:26:17",
+      "create_time": "2025-06-03 05:16:00",
+      "update_time": "2025-06-03 05:16:00",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33517,7 +33517,7 @@
       ]
     },
     {
-      "id": 1748924787,
+      "id": 1748927769,
       "platform_framework": [
         "1",
         "2",
@@ -33535,8 +33535,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:26:27",
-      "update_time": "2025-06-03 04:26:27",
+      "create_time": "2025-06-03 05:16:09",
+      "update_time": "2025-06-03 05:16:09",
       "event_output": null,
       "custom_field_type": "Array<'monochrome' | 'linear-gradient'>",
       "syntactic_sugar": null,
@@ -33558,7 +33558,7 @@
       ]
     },
     {
-      "id": 1748924797,
+      "id": 1748927779,
       "platform_framework": [
         "1",
         "2",
@@ -33576,8 +33576,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:26:37",
-      "update_time": "2025-06-03 04:26:37",
+      "create_time": "2025-06-03 05:16:19",
+      "update_time": "2025-06-03 05:16:19",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33599,7 +33599,7 @@
       ]
     },
     {
-      "id": 1748924814,
+      "id": 1748927789,
       "platform_framework": [
         "1",
         "2",
@@ -33617,8 +33617,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:26:54",
-      "update_time": "2025-06-03 04:26:54",
+      "create_time": "2025-06-03 05:16:29",
+      "update_time": "2025-06-03 05:16:29",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33640,7 +33640,7 @@
       ]
     },
     {
-      "id": 1748924835,
+      "id": 1748927798,
       "platform_framework": [
         "1",
         "2",
@@ -33658,8 +33658,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:27:15",
-      "update_time": "2025-06-03 04:27:15",
+      "create_time": "2025-06-03 05:16:38",
+      "update_time": "2025-06-03 05:16:38",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33681,7 +33681,7 @@
       ]
     },
     {
-      "id": 1748924861,
+      "id": 1748927813,
       "platform_framework": [
         "1",
         "2",
@@ -33699,8 +33699,8 @@
       "field_desc_en": "When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:27:41",
-      "update_time": "2025-06-03 04:27:41",
+      "create_time": "2025-06-03 05:16:53",
+      "update_time": "2025-06-03 05:16:53",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33722,7 +33722,7 @@
       ]
     },
     {
-      "id": 1748924890,
+      "id": 1748927824,
       "platform_framework": [
         "1",
         "2",
@@ -33740,8 +33740,8 @@
       "field_desc_en": "used color recently",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:28:10",
-      "update_time": "2025-06-03 04:28:10",
+      "create_time": "2025-06-03 05:17:04",
+      "update_time": "2025-06-03 05:17:04",
       "event_output": null,
       "custom_field_type": "Array<string> | boolean | null",
       "syntactic_sugar": "sync",
@@ -33763,7 +33763,7 @@
       ]
     },
     {
-      "id": 1748924911,
+      "id": 1748927833,
       "platform_framework": [
         "1",
         "2",
@@ -33781,8 +33781,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:28:31",
-      "update_time": "2025-06-03 04:28:31",
+      "create_time": "2025-06-03 05:17:13",
+      "update_time": "2025-06-03 05:17:13",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33804,7 +33804,7 @@
       ]
     },
     {
-      "id": 1748924924,
+      "id": 1748927845,
       "platform_framework": [
         "1",
         "2",
@@ -33822,8 +33822,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:28:44",
-      "update_time": "2025-06-03 04:28:44",
+      "create_time": "2025-06-03 05:17:25",
+      "update_time": "2025-06-03 05:17:25",
       "event_output": null,
       "custom_field_type": "SizeEnum",
       "syntactic_sugar": null,
@@ -33845,7 +33845,7 @@
       ]
     },
     {
-      "id": 1748924945,
+      "id": 1748927987,
       "platform_framework": [
         "1",
         "2",
@@ -33863,8 +33863,8 @@
       "field_desc_en": "swatch colors",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:29:05",
-      "update_time": "2025-06-03 04:29:05",
+      "create_time": "2025-06-03 05:19:47",
+      "update_time": "2025-06-03 05:19:47",
       "event_output": null,
       "custom_field_type": "Array<string> | null | undefined",
       "syntactic_sugar": null,
@@ -33886,7 +33886,7 @@
       ]
     },
     {
-      "id": 1748924961,
+      "id": 1748927871,
       "platform_framework": [
         "1",
         "2",
@@ -33904,8 +33904,8 @@
       "field_desc_en": "color value",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-03 04:29:21",
-      "update_time": "2025-06-03 04:29:21",
+      "create_time": "2025-06-03 05:17:51",
+      "update_time": "2025-06-03 05:17:51",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": "v-model",
@@ -33927,7 +33927,7 @@
       ]
     },
     {
-      "id": 1748924975,
+      "id": 1748927879,
       "platform_framework": [
         "1",
         "2",
@@ -33943,8 +33943,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' 】",
-      "create_time": "2025-06-03 04:29:35",
-      "update_time": "2025-06-03 04:29:35",
+      "create_time": "2025-06-03 05:17:59",
+      "update_time": "2025-06-03 05:17:59",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -33964,7 +33964,7 @@
       "field_type_text": []
     },
     {
-      "id": 1748924986,
+      "id": 1748927888,
       "platform_framework": [
         "1",
         "2",
@@ -33980,8 +33980,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2025-06-03 04:29:46",
-      "update_time": "2025-06-03 04:29:46",
+      "create_time": "2025-06-03 05:18:08",
+      "update_time": "2025-06-03 05:18:08",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -34001,7 +34001,7 @@
       "field_type_text": []
     },
     {
-      "id": 1748925021,
+      "id": 1748927896,
       "platform_framework": [
         "1",
         "2",
@@ -34017,8 +34017,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { color: ColorObject })【interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }】",
-      "create_time": "2025-06-03 04:30:21",
-      "update_time": "2025-06-03 04:30:21",
+      "create_time": "2025-06-03 05:18:16",
+      "update_time": "2025-06-03 05:18:16",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -34038,7 +34038,7 @@
       "field_type_text": []
     },
     {
-      "id": 1748925031,
+      "id": 1748927906,
       "platform_framework": [
         "1",
         "2",
@@ -34054,8 +34054,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(value: Array<string>)",
-      "create_time": "2025-06-03 04:30:31",
-      "update_time": "2025-06-03 04:30:31",
+      "create_time": "2025-06-03 05:18:26",
+      "update_time": "2025-06-03 05:18:26",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
