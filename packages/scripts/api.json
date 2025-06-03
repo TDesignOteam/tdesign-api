@@ -39514,9 +39514,9 @@
     {
       "id": 1572,
       "platform_framework": [
+        "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
@@ -39524,9 +39524,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -39544,9 +39544,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -39555,7 +39555,7 @@
     {
       "id": 1712579026,
       "platform_framework": [
-        "8"
+        "64"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
@@ -39565,7 +39565,7 @@
       ],
       "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
       "field_enum": "",
-      "field_desc_zh": "用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -39583,7 +39583,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -39881,6 +39881,7 @@
     {
       "id": 3482,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -39891,7 +39892,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "",
+      "field_default_value": "{}",
       "field_enum": "",
       "field_desc_zh": "时间间隔步数，示例：`{ minute: 5 }`",
       "field_desc_en": null,
@@ -39900,17 +39901,18 @@
       "create_time": "2023-05-05 06:12:50",
       "update_time": "2023-05-05 06:12:50",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "{ [key in TimeModeValues]?: number }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Vue(Mobile)\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -40684,7 +40686,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "YYYY-MM-DD",
+      "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
       "field_enum": "",
       "field_desc_zh": "日期格式化规则",
       "field_desc_en": null,
