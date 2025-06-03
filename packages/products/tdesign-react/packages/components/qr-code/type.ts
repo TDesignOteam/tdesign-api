@@ -19,7 +19,7 @@ export interface TdQrCodeProps {
   borderless?: boolean;
   /**
    * 二维码颜色
-   * @default #000000
+   * @default ''
    */
   color?: string;
   /**
@@ -59,7 +59,7 @@ export interface TdQrCodeProps {
    * 扫描后的文本
    * @default ''
    */
-  value: string;
+  value?: string;
   /**
    * 点击"点击刷新"的回调
    */

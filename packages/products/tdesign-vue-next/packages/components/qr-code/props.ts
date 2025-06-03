@@ -18,7 +18,7 @@ export default {
   /** 二维码颜色 */
   color: {
     type: String,
-    default: '#000000',
+    default: '',
   },
   /** 二维码中图片的地址或自定义icon */
   icon: {
@@ -69,7 +69,6 @@ export default {
   value: {
     type: String,
     default: '',
-    required: true,
   },
   /** 点击"点击刷新"的回调 */
   onRefresh: Function as PropType<TdQrCodeProps['onRefresh']>,

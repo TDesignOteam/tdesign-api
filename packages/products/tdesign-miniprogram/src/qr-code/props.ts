@@ -19,7 +19,7 @@ const props: TdQrCodeProps = {
   /** 二维码颜色 */
   color: {
     type: String,
-    value: '#000000',
+    value: '',
   },
   /** 二维码中图片的地址或自定义icon */
   icon: {
@@ -49,7 +49,6 @@ const props: TdQrCodeProps = {
   value: {
     type: String,
     value: '',
-    required: true,
   },
 };
 

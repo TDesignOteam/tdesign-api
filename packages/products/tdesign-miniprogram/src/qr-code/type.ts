@@ -25,7 +25,7 @@ export interface TdQrCodeProps {
   };
   /**
    * 二维码颜色
-   * @default #000000
+   * @default ''
    */
   color?: {
     type: StringConstructor;
@@ -81,10 +81,9 @@ export interface TdQrCodeProps {
    * 扫描后的文本
    * @default ''
    */
-  value: {
+  value?: {
     type: StringConstructor;
     value?: string;
-    required?: boolean;
   };
 }
 
