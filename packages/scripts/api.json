@@ -85965,7 +85965,7 @@
         "1",
         "2"
       ],
-      "field_default_value": "1000",
+      "field_default_value": "300",
       "field_enum": "",
       "field_desc_zh": "快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动",
       "field_desc_en": "The duration of inertial scrolling during fast swiping, in milliseconds (ms). When set to 0, it disables inertial scrolling.",

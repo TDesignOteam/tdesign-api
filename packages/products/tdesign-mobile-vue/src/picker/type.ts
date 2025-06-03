@@ -40,7 +40,7 @@ export interface TdPickerProps {
   renderLabel?: (item: PickerColumnItem) => string;
   /**
    * 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动
-   * @default 1000
+   * @default 300
    */
   swipeDuration?: string | number;
   /**
