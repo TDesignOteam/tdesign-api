@@ -114403,6 +114403,8 @@
     {
       "id": 1719280157,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "SwipeCell",
@@ -114429,6 +114431,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -114436,6 +114440,8 @@
     {
       "id": 1719280112,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "SwipeCell",
@@ -114462,6 +114468,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
