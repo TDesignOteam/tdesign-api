@@ -115077,7 +115077,8 @@
     {
       "id": 1712719889,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "SwipeCell",
       "field_category": 4,
@@ -115106,7 +115107,8 @@
       "support_default_value": 0,
       "field_category_text": "Functions",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
