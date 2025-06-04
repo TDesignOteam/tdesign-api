@@ -40559,6 +40559,8 @@
     {
       "id": 1710844322,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "DateTimePicker",
@@ -40587,6 +40589,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -40711,6 +40715,7 @@
     {
       "id": 2509,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -40741,6 +40746,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -86652,6 +86658,7 @@
     {
       "id": 1710843235,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Picker",
@@ -86680,6 +86687,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -87375,7 +87383,7 @@
       "field_desc_zh": "选中变化时候触发，即确认变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number }> )",
+      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )",
       "create_time": "2022-05-18 02:13:50",
       "update_time": "2022-06-04 02:00:46",
       "event_output": null,
@@ -87486,7 +87494,7 @@
       "field_desc_zh": "点击确认按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number }> )",
+      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )",
       "create_time": "2023-01-09 07:05:56",
       "update_time": "2023-01-09 07:05:56",
       "event_output": null,
