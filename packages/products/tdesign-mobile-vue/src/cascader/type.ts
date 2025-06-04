@@ -26,6 +26,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   keys?: CascaderKeysType;
   /**
+   * 中间内容
+   */
+  middleContent?: TNode;
+  /**
    * 可选项数据源
    * @default []
    */
