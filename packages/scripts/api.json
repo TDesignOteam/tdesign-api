@@ -53707,9 +53707,10 @@
       "field_category": 1,
       "field_name": "style",
       "field_type": [
+        "1",
         "8"
       ],
-      "field_default_value": "{ right: '16px', bottom: '32px' }",
+      "field_default_value": "'right: 16px; bottom: 32px;'",
       "field_enum": "",
       "field_desc_zh": "悬浮按钮的样式，常用于调整位置",
       "field_desc_en": null,
@@ -53718,7 +53719,7 @@
       "create_time": "2024-04-09 07:40:53",
       "update_time": "2024-04-09 07:40:53",
       "event_output": null,
-      "custom_field_type": "CSSProperties",
+      "custom_field_type": "string | Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -53732,6 +53733,7 @@
         "Vue(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
