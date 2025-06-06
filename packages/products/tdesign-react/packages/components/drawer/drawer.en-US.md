@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Drawer Props
 
 name | type | default | description | required
@@ -14,7 +15,7 @@ children | TNode | - | Typescript：`string \| TNode`。[see more ts definition]
 closeBtn | TNode | - | Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 closeOnEscKeydown | Boolean | true | trigger drawer close event on `ESC` keydown | N
 closeOnOverlayClick | Boolean | true | \- | N
-confirmBtn | TNode | - | Typescript：`FooterButton` `type FooterButton = string \| ButtonProps \| TNode`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/drawer/type.ts) | N
+confirmBtn | TNode | - | Typescript：`FooterButton` `type FooterButton = string \| ButtonProps \| TNode \| null `，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/drawer/type.ts) | N
 destroyOnClose | Boolean | false | \- | N
 drawerClassName | String | - | \- | N
 footer | TNode | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N

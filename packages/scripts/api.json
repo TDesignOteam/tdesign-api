@@ -40,6 +40,39 @@
       ]
     },
     {
+      "id": 1747311239,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-05-15 12:13:59",
+      "update_time": "2025-05-15 12:13:59",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 364,
       "platform_framework": [
         "1",
@@ -122,6 +155,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949577,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog.alert",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:19:37",
+      "update_time": "2025-06-03 11:19:37",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -216,6 +282,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949556,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Dialog.confirm",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:19:16",
+      "update_time": "2025-06-03 11:19:16",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 369,
       "platform_framework": [
         "1",
@@ -302,6 +401,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949679,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Drawer",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": null,
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:21:19",
+      "update_time": "2025-06-03 11:21:19",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3040,
       "platform_framework": [
         "1",
@@ -341,6 +473,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950232,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Loading",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:30:32",
+      "update_time": "2025-06-03 11:30:32",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -431,6 +596,39 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950099,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:19",
+      "update_time": "2025-06-03 11:28:19",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -714,6 +912,39 @@
       ]
     },
     {
+      "id": 1748950105,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.error",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:25",
+      "update_time": "2025-06-03 11:28:25",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 446,
       "platform_framework": [
         "1",
@@ -831,6 +1062,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950110,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.info",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:30",
+      "update_time": "2025-06-03 11:28:30",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -956,6 +1220,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950114,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.loading",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:34",
+      "update_time": "2025-06-03 11:28:34",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 445,
       "platform_framework": [
         "1",
@@ -1073,6 +1370,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748950119,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.question",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:39",
+      "update_time": "2025-06-03 11:28:39",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1198,6 +1528,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950123,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.success",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:43",
+      "update_time": "2025-06-03 11:28:43",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 443,
       "platform_framework": [
         "1",
@@ -1319,6 +1682,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748950127,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Message.warning",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:28:47",
+      "update_time": "2025-06-03 11:28:47",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 442,
       "platform_framework": [
         "1",
@@ -1436,6 +1832,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949851,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:11",
+      "update_time": "2025-06-03 11:24:11",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1713,6 +2142,39 @@
       ]
     },
     {
+      "id": 1748949870,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.error",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:30",
+      "update_time": "2025-06-03 11:24:30",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 478,
       "platform_framework": [
         "1",
@@ -1787,6 +2249,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949875,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.info",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:35",
+      "update_time": "2025-06-03 11:24:35",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -1869,6 +2364,39 @@
       "field_type_text": []
     },
     {
+      "id": 1748949879,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.success",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:39",
+      "update_time": "2025-06-03 11:24:39",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 479,
       "platform_framework": [
         "1",
@@ -1943,6 +2471,39 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748949883,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "$Notification.warning",
+      "field_category": 1,
+      "field_name": "context",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "要继承的应用的上下文。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 11:24:43",
+      "update_time": "2025-06-03 11:24:43",
+      "event_output": null,
+      "custom_field_type": "AppContext",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
       ],
       "field_type_text": []
     },
@@ -21199,6 +21760,47 @@
       ]
     },
     {
+      "id": 1749021449,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "middleContent",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-04 07:17:29",
+      "update_time": "2025-06-04 07:17:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 1824,
       "platform_framework": [
         "1",
@@ -33435,6 +34037,486 @@
       ]
     },
     {
+      "id": 1748927769,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "colorModes",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[\"monochrome\", \"linear-gradient\"]",
+      "field_enum": "",
+      "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:16:09",
+      "update_time": "2025-06-03 05:16:09",
+      "event_output": null,
+      "custom_field_type": "Array<'monochrome' | 'linear-gradient'>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1748927779,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否禁用组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:16:19",
+      "update_time": "2025-06-03 05:16:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1748927789,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "enableAlpha",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否开启透明通道",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:16:29",
+      "update_time": "2025-06-03 05:16:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1748927798,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "enableMultipleGradient",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:16:38",
+      "update_time": "2025-06-03 05:16:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1748927813,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "format",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "RGB",
+      "field_enum": "HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS",
+      "field_desc_zh": "格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效",
+      "field_desc_en": "When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:16:53",
+      "update_time": "2025-06-03 05:16:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748927824,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "recentColors",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色”",
+      "field_desc_en": "used color recently",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:17:04",
+      "update_time": "2025-06-03 05:17:04",
+      "event_output": null,
+      "custom_field_type": "Array<string> | boolean | null",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1748927833,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "showPrimaryColorPreview",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否展示颜色选择条右侧的颜色预览区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:17:13",
+      "update_time": "2025-06-03 05:17:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1748927987,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "swatchColors",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色",
+      "field_desc_en": "swatch colors",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:19:47",
+      "update_time": "2025-06-03 05:19:47",
+      "event_output": null,
+      "custom_field_type": "Array<string> | null | undefined",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1748927871,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "色值",
+      "field_desc_en": "color value",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 05:17:51",
+      "update_time": "2025-06-03 05:17:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1748927879,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' 】",
+      "create_time": "2025-06-03 05:17:59",
+      "update_time": "2025-06-03 05:17:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748927896,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 2,
+      "field_name": "paletteBarChange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { color: ColorObject })【interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }】",
+      "create_time": "2025-06-03 05:18:16",
+      "update_time": "2025-06-03 05:18:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1748927906,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 2,
+      "field_name": "recentColorsChange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "最近使用颜色发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: Array<string>)",
+      "create_time": "2025-06-03 05:18:26",
+      "update_time": "2025-06-03 05:18:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1640,
       "platform_framework": [
         "1",
@@ -39477,6 +40559,8 @@
     {
       "id": 1710844322,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "DateTimePicker",
@@ -39505,6 +40589,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -39514,9 +40600,9 @@
     {
       "id": 1572,
       "platform_framework": [
+        "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
@@ -39524,9 +40610,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
+      "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -39544,9 +40630,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -39555,7 +40641,7 @@
     {
       "id": 1712579026,
       "platform_framework": [
-        "8"
+        "64"
       ],
       "component": "DateTimePicker",
       "field_category": 1,
@@ -39565,7 +40651,7 @@
       ],
       "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
       "field_enum": "",
-      "field_desc_zh": "用于pick、change、confirm事件参数格式化[详细文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -39583,7 +40669,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -39629,6 +40715,7 @@
     {
       "id": 2509,
       "platform_framework": [
+        "8",
         "16",
         "64"
       ],
@@ -39659,6 +40746,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
       ],
@@ -39881,6 +40969,7 @@
     {
       "id": 3482,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -39891,7 +40980,7 @@
       "field_type": [
         "8"
       ],
-      "field_default_value": "",
+      "field_default_value": "{}",
       "field_enum": "",
       "field_desc_zh": "时间间隔步数，示例：`{ minute: 5 }`",
       "field_desc_en": null,
@@ -39900,17 +40989,18 @@
       "create_time": "2023-05-05 06:12:50",
       "update_time": "2023-05-05 06:12:50",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "{ [key in TimeModeValues]?: number }",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{ \"Vue(Mobile)\": \"1.8.6\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
@@ -40684,7 +41774,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "YYYY-MM-DD",
+      "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
       "field_enum": "",
       "field_desc_zh": "日期格式化规则",
       "field_desc_en": null,
@@ -46592,14 +47682,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+      "field_desc_zh": "确认按钮，可自定义。值为 null 则不显示确认按钮。类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-03-30 08:20:07",
       "update_time": "2022-03-31 03:32:31",
       "event_output": null,
-      "custom_field_type": "FooterButton【type FooterButton = string | ButtonProps | TNode】【import { ButtonProps } from '@Button'】",
+      "custom_field_type": "FooterButton【type FooterButton = string | ButtonProps | TNode | null 】【import { ButtonProps } from '@Button'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -52617,9 +53707,10 @@
       "field_category": 1,
       "field_name": "style",
       "field_type": [
-        "1"
+        "1",
+        "8"
       ],
-      "field_default_value": "right: 16px; bottom: 32px;",
+      "field_default_value": "'right: 16px; bottom: 32px;'",
       "field_enum": "",
       "field_desc_zh": "悬浮按钮的样式，常用于调整位置",
       "field_desc_en": null,
@@ -52628,7 +53719,7 @@
       "create_time": "2024-04-09 07:40:53",
       "update_time": "2024-04-09 07:40:53",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -52642,7 +53733,8 @@
         "Vue(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Object"
       ]
     },
     {
@@ -85568,6 +86660,7 @@
     {
       "id": 1710843235,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Picker",
@@ -85596,6 +86689,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -85952,6 +87046,45 @@
       ]
     },
     {
+      "id": 1748926310,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "swipeDuration",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "300",
+      "field_enum": "",
+      "field_desc_zh": "快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动",
+      "field_desc_en": "The duration of inertial scrolling during fast swiping, in milliseconds (ms). When set to 0, it disables inertial scrolling.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-03 04:51:50",
+      "update_time": "2025-06-03 04:51:50",
+      "event_output": null,
+      "custom_field_type": "string | number",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 1472,
       "platform_framework": [
         "8",
@@ -86252,7 +87385,7 @@
       "field_desc_zh": "选中变化时候触发，即确认变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number }> )",
+      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )",
       "create_time": "2022-05-18 02:13:50",
       "update_time": "2022-06-04 02:00:46",
       "event_output": null,
@@ -86363,7 +87496,7 @@
       "field_desc_zh": "点击确认按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number }> )",
+      "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )",
       "create_time": "2023-01-09 07:05:56",
       "update_time": "2023-01-09 07:05:56",
       "event_output": null,
@@ -114463,6 +115596,8 @@
     {
       "id": 1719280157,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "SwipeCell",
@@ -114489,6 +115624,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []
@@ -114496,6 +115633,8 @@
     {
       "id": 1719280112,
       "platform_framework": [
+        "8",
+        "16",
         "64"
       ],
       "component": "SwipeCell",
@@ -114522,6 +115661,8 @@
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": []

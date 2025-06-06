@@ -288,6 +288,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'BackTop', label: '回到顶部' },
     { value: 'Container', label: '布局容器' },
     { value: 'ColorPicker', label: '颜色选择器' },
+    { value: 'ColorPickerPanel', label: '颜色选择器面板' },
     { value: 'InputAdornment', label: '输入装饰器' },
     { value: 'ConfigProvider', label: '全局配置', type: 'TS' },
     {

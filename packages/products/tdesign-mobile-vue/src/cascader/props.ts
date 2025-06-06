@@ -23,6 +23,10 @@ export default {
   keys: {
     type: Object as PropType<TdCascaderProps['keys']>,
   },
+  /** 中间内容 */
+  middleContent: {
+    type: Function as PropType<TdCascaderProps['middleContent']>,
+  },
   /** 可选项数据源 */
   options: {
     type: Array as PropType<TdCascaderProps['options']>,
