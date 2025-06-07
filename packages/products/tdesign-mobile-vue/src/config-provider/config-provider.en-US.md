@@ -22,6 +22,7 @@ guide | Object | - | Guide global configs。Typescript：`GuideConfig` | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 picker | Object | - | Picker global configs。Typescript：`PickerConfig` | N
 pullDownRefresh | Object | - | PullDownRefresh global configs。Typescript：`PullDownRefreshConfig` | N
+qrCode | Object | - | QRCode global configs。Typescript：`QrCodeConfig` | N
 rate | Object | - | Rate global configs。Typescript：`RateConfig` | N
 tabBar | Object | - | TabBar global configs。Typescript：`TabBarConfig` | N
 table | Object | - | Table global configs。Typescript：`TableConfig` | N
@@ -57,7 +58,7 @@ name | type | default | description | required
 cancel | String | - | \- | N
 confirm | String | - | \- | N
 dateLabel | String | - | \- | N
-format | String | YYYY-MM-DD | \- | N
+format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
 hourLabel | String | - | \- | N
 minuteLabel | String | - | \- | N
 monthLabel | String | - | \- | N
@@ -71,6 +72,12 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
 reset | String | - | reset text | N
+
+### FormConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
 
 ### GuideConfig
 
