@@ -118,6 +118,10 @@ export interface GlobalConfigProvider {
    */
   popconfirm?: PopconfirmConfig;
   /**
+   * 二维码全局配置
+   */
+  qrCode?: QrCodeConfig;
+  /**
    * 评分全局配置
    */
   rate?: RateConfig;

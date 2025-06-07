@@ -32,10 +32,12 @@ icon | Object | - | icon config。Typescript：`IconConfig` `type IconConfig = G
 image | Object | - | image global configs。Typescript：`ImageConfig` | N
 imageViewer | Object | - | imageViewer global configs。Typescript：`ImageViewerConfig` | N
 input | Object | - | Input global configs。Typescript：`InputConfig` | N
+isContextEffectPlugin | Boolean | false | Whether the global configuration affects the components used by the functional invocation method | N
 list | Object | - | List global configs。Typescript：`ListConfig` | N
 message | Object | - | Message Component global configs。Typescript：`MessageConfig` | N
 pagination | Object | - | Pagination global configs。Typescript：`PaginationConfig` | N
 popconfirm | Object | - | Popconfirm global configs。Typescript：`PopconfirmConfig` | N
+qrCode | Object | - | QRCode global configs。Typescript：`QrCodeConfig` | N
 rate | Object | - | Rate global configs。Typescript：`RateConfig` | N
 select | Object | - | Select global configs。Typescript：`SelectConfig` | N
 steps | Object | - | Steps global configs。Typescript：`StepsConfig` | N

@@ -57,6 +57,10 @@ export interface GlobalConfigProvider {
    */
   pullDownRefresh?: PullDownRefreshConfig;
   /**
+   * 二维码全局配置
+   */
+  qrCode?: QrCodeConfig;
+  /**
    * 评分全局配置
    */
   rate?: RateConfig;
@@ -139,7 +143,7 @@ export interface DateTimePickerConfig {
   dateLabel?: string;
   /**
    * 日期格式化规则
-   * @default YYYY-MM-DD
+   * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: string;
   /**
@@ -185,6 +189,14 @@ export interface DropdownMenuConfig {
    * @default ''
    */
   reset?: string;
+}
+
+export interface FormConfig {
+  /**
+   * 表单必填符号（*）显示位置
+   * @default left
+   */
+  requiredMarkPosition?: 'left' | 'right';
 }
 
 export interface GuideConfig {

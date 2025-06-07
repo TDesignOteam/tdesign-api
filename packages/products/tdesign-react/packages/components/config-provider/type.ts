@@ -102,6 +102,11 @@ export interface GlobalConfigProvider {
    */
   input?: InputConfig;
   /**
+   * 全局配置是否影响函数式调用方法使用的组件
+   * @default false
+   */
+  isContextEffectPlugin?: boolean;
+  /**
    * 列表组件全局配置
    */
   list?: ListConfig;
@@ -117,6 +122,10 @@ export interface GlobalConfigProvider {
    * 气泡确认框全局配置
    */
   popconfirm?: PopconfirmConfig;
+  /**
+   * 二维码全局配置
+   */
+  qrCode?: QrCodeConfig;
   /**
    * 评分全局配置
    */

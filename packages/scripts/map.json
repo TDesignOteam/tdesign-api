@@ -803,6 +803,11 @@
         "label": "二维码"
       },
       {
+        "value": "QrCodeConfig",
+        "label": "二维码全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Radio",
         "label": "单选框"
       },

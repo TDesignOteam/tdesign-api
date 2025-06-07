@@ -32,10 +32,12 @@ icon | Object | - | 图标全局配置。TS 类型：`IconConfig` `type IconConf
 image | Object | - | 图片全局配置。TS 类型：`ImageConfig` | N
 imageViewer | Object | - | 图片预览器全局配置。TS 类型：`ImageViewerConfig` | N
 input | Object | - | 输入框组件全局配置。TS 类型：`InputConfig` | N
+isContextEffectPlugin | Boolean | false | 全局配置是否影响函数式调用方法使用的组件  | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 message | Object | - | 消息组件全局配置。TS 类型：`MessageConfig` | N
 pagination | Object | - | 分页组件全局配置。TS 类型：`PaginationConfig` | N
 popconfirm | Object | - | 气泡确认框全局配置。TS 类型：`PopconfirmConfig` | N
+qrCode | Object | - | 二维码全局配置。TS 类型：`QrCodeConfig` | N
 rate | Object | - | 评分全局配置。TS 类型：`RateConfig` | N
 select | Object | - | 选择器组件全局配置。TS 类型：`SelectConfig` | N
 steps | Object | - | 步骤条组件全局配置。TS 类型：`StepsConfig` | N
