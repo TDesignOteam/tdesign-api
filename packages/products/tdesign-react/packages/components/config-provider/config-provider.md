@@ -244,6 +244,14 @@ cancel | String / Object | - | 语言配置，“取消”描述文本。TS 类�
 confirm | String / Object | - | 语言配置，“确定”描述文本。TS 类型：`string \| ButtonProps` | N
 confirmBtnTheme | Object | - | 确认按钮主题色，即 Popconfirm 的 `theme` 和 确认按钮的 `theme` 映射关系。示例：{ danger: 'danger' }。TS 类型：`{ default: string; warning: string; danger: string; }` | N
 
+### QrCodeConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+expired | String | - | 语言配置，“二维码过期”描述文本 | N
+refresh | String | - | 语言配置，“点击刷新”描述文本 | N
+scanned | String | - | 语言配置，“已扫描”描述文本 | N
+
 ### RateConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传

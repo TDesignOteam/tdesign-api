@@ -242,6 +242,14 @@ cancel | String / Object | - | Typescript：`string \| ButtonProps`，[Button AP
 confirm | String / Object | - | Typescript：`string \| ButtonProps` | N
 confirmBtnTheme | Object | - | Typescript：`{ default: string; warning: string; danger: string; }` | N
 
+### QrCodeConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+expired | String | - | Language configuration, "QR code expired" description text | N
+refresh | String | - | Language configuration, "QR code refresh" description text | N
+scanned | String | - | Language configuration, "QR code scanned" description text | N
+
 ### RateConfig
 
 name | type | default | description | required

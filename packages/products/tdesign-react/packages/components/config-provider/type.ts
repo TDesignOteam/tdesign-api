@@ -654,6 +654,24 @@ export interface PopconfirmConfig {
   confirmBtnTheme?: { default: string; warning: string; danger: string };
 }
 
+export interface QrCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expired?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refresh?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scanned?: string;
+}
+
 export interface RateConfig {
   /**
    * 评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']
