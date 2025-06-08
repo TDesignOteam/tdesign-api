@@ -649,17 +649,17 @@ export interface QrCodeConfig {
    * 语言配置，“二维码过期”描述文本
    * @default ''
    */
-  expired?: string;
+  expiredText?: string;
   /**
    * 语言配置，“点击刷新”描述文本
    * @default ''
    */
-  refresh?: string;
+  refreshText?: string;
   /**
    * 语言配置，“已扫描”描述文本
    * @default ''
    */
-  scanned?: string;
+  scannedText?: string;
 }
 
 export interface RateConfig {

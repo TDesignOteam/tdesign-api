@@ -68,4 +68,4 @@ export interface TdQrCodeProps {
 
 export type QRStatus = 'active' | 'expired' | 'loading' | 'scanned';
 
-export type StatusRenderInfo = { status: QRStatus; locale: GlobalConfigProvider['qrCode']; onRefresh?: () => void };
+export type StatusRenderInfo = { status: QRStatus; onRefresh?: () => void };

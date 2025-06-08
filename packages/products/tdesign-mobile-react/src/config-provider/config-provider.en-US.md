@@ -125,6 +125,14 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 loadingTexts | Array | - | Typescript：`string[]` | N
 
+### QrCodeConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+expiredText | String | - | Language configuration, "QR code expired" description text | N
+refreshText | String | - | Language configuration, "QR code refresh" description text | N
+scannedText | String | - | Language configuration, "QR code scanned" description text | N
+
 ### RateConfig
 
 name | type | default | description | required

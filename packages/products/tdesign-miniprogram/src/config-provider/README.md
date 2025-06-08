@@ -27,3 +27,11 @@ placeholder | String | - | 语言配置，“请输入”占位符描述文本 |
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 loading-texts | Array | - | 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。TS 类型：`string[]` | N
+
+### QrCodeConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+expired-text | String | - | 语言配置，“二维码过期”描述文本 | N
+refresh-text | String | - | 语言配置，“点击刷新”描述文本 | N
+scanned-text | String | - | 语言配置，“已扫描”描述文本 | N

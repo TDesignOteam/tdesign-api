@@ -125,6 +125,14 @@ confirm | String | - | 语言配置，“确认” 按钮描述文本 | N
 -- | -- | -- | -- | --
 loadingTexts | Array | - | 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。TS 类型：`string[]` | N
 
+### QrCodeConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+expiredText | String | - | 语言配置，“二维码过期”描述文本 | N
+refreshText | String | - | 语言配置，“点击刷新”描述文本 | N
+scannedText | String | - | 语言配置，“已扫描”描述文本 | N
+
 ### RateConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传

@@ -95460,7 +95460,7 @@
       "create_time": "2025-05-29 13:20:15",
       "update_time": "2025-05-29 13:20:15",
       "event_output": null,
-      "custom_field_type": "(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;locale:GlobalConfigProvider['qrCode'];onRefresh?: () => void;}】",
+      "custom_field_type": "(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95625,7 +95625,7 @@
       ],
       "component": "QrCodeConfig",
       "field_category": 1,
-      "field_name": "expired",
+      "field_name": "expiredText",
       "field_type": [
         "1"
       ],
@@ -95670,7 +95670,7 @@
       ],
       "component": "QrCodeConfig",
       "field_category": 1,
-      "field_name": "refresh",
+      "field_name": "refreshText",
       "field_type": [
         "1"
       ],
@@ -95715,7 +95715,7 @@
       ],
       "component": "QrCodeConfig",
       "field_category": 1,
-      "field_name": "scanned",
+      "field_name": "scannedText",
       "field_type": [
         "1"
       ],

@@ -295,6 +295,24 @@ export interface PullDownRefreshConfig {
   loadingTexts?: string[];
 }
 
+export interface QrCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expiredText?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refreshText?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scannedText?: string;
+}
+
 export interface RateConfig {
   /**
    * 语言配置，“未评分”描述文本

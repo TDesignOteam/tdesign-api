@@ -246,9 +246,9 @@ confirmBtnTheme | Object | - | 确认按钮主题色，即 Popconfirm 的 `theme
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-expired | String | - | 语言配置，“二维码过期”描述文本 | N
-refresh | String | - | 语言配置，“点击刷新”描述文本 | N
-scanned | String | - | 语言配置，“已扫描”描述文本 | N
+expiredText | String | - | 语言配置，“二维码过期”描述文本 | N
+refreshText | String | - | 语言配置，“点击刷新”描述文本 | N
+scannedText | String | - | 语言配置，“已扫描”描述文本 | N
 
 ### RateConfig
 

@@ -27,3 +27,11 @@ placeholder | String | - | \- | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 loading-texts | Array | - | Typescript：`string[]` | N
+
+### QrCodeConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+expired-text | String | - | Language configuration, "QR code expired" description text | N
+refresh-text | String | - | Language configuration, "QR code refresh" description text | N
+scanned-text | String | - | Language configuration, "QR code scanned" description text | N

@@ -248,9 +248,9 @@ confirmBtnTheme | Object | - | Typescript：`{ default: string; warning: string;
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-expired | String | - | Language configuration, "QR code expired" description text | N
-refresh | String | - | Language configuration, "QR code refresh" description text | N
-scanned | String | - | Language configuration, "QR code scanned" description text | N
+expiredText | String | - | Language configuration, "QR code expired" description text | N
+refreshText | String | - | Language configuration, "QR code refresh" description text | N
+scannedText | String | - | Language configuration, "QR code scanned" description text | N
 
 ### RateConfig
 
