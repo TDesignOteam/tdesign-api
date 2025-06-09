@@ -79828,6 +79828,7 @@
     {
       "id": 1725334222,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Message",
@@ -79858,6 +79859,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80131,6 +80133,7 @@
     {
       "id": 1725334169,
       "platform_framework": [
+        "8",
         "64"
       ],
       "component": "Message",
@@ -80159,6 +80162,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
