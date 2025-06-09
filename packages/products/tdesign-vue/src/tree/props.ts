@@ -28,7 +28,7 @@ export default {
   allowFoldNodeOnFilter: Boolean,
   /** 透传属性到 checkbox 组件。参考 checkbox 组件 API */
   checkProps: {
-    type: Object as PropType<TdTreeProps['checkProps']>,
+    type: [Object, Function] as PropType<TdTreeProps['checkProps']>,
   },
   /** 父子节点选中状态不再关联，可各自选中或取消 */
   checkStrictly: Boolean,

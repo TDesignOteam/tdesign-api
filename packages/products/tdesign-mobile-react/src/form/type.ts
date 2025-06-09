@@ -15,6 +15,11 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   colon?: boolean;
   /**
+   * 表单内容对齐方式：左对齐、右对齐
+   * @default left
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * 是否禁用整个表单
    */
   disabled?: boolean;
@@ -22,6 +27,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`
    */
   errorMessage?: FormErrorMessage;
+  /**
+   * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
+   */
+  id?: string;
   /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
@@ -41,6 +50,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 是否显示必填符号（*），默认显示
    */
   requiredMark?: boolean;
+  /**
+   * 表单必填符号（*）显示位置
+   */
+  requiredMarkPosition?: 'left' | 'right';
   /**
    * 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值
    * @default empty
@@ -76,6 +89,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 表单提交时触发。其中 `context.validateResult` 表示校验结果，`context.firstError` 表示校验不通过的第一个规则提醒。`context.validateResult` 值为 `true` 表示校验通过；如果校验不通过，`context.validateResult` 值为校验结果列表。<br />【注意】⚠️ 默认情况，输入框按下 Enter 键会自动触发提交事件，如果希望禁用这个默认行为，可以给输入框添加  enter 事件，并在事件中设置 `e.preventDefault()`
    */
   onSubmit?: (context: SubmitContext<FormData>) => void;
+  /**
+   * 校验结束后触发，result 值为 true 表示校验通过；如果校验不通过，result 值为校验结果列表
+   */
+  onValidate?: (result: ValidateResultContext<FormData>) => void;
   /**
    * 字段值更新时触发的回调事件
    */
@@ -332,6 +349,8 @@ export interface ValidateResultType extends FormRule {
 export type ValidateResult<T> = { [key in keyof T]: boolean | ErrorList };
 
 export type ErrorList = Array<FormRule>;
+
+export type ValidateResultContext<T extends Data> = Omit<SubmitContext<T>, 'e'>;
 
 export interface FormResetParams<FormData> {
   type?: 'initial' | 'empty';

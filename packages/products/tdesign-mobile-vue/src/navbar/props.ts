@@ -32,6 +32,11 @@ export default {
   right: {
     type: Function as PropType<TdNavbarProps['right']>,
   },
+  /** 是否开启顶部安全区适配 */
+  safeAreaInsetTop: {
+    type: Boolean,
+    default: true,
+  },
   /** 页面标题 */
   title: {
     type: [String, Function] as PropType<TdNavbarProps['title']>,

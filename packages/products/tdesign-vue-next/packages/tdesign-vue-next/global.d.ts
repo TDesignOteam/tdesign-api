@@ -23,6 +23,14 @@ declare module 'vue' {
     TCalendar: typeof import('tdesign-vue-next')['Calendar'];
     TCard: typeof import('tdesign-vue-next')['Card'];
     TCascader: typeof import('tdesign-vue-next')['Cascader'];
+    TChat: typeof import('tdesign-vue-next')['Chat'];
+    TChatAction: typeof import('tdesign-vue-next')['ChatAction'];
+    TChatContent: typeof import('tdesign-vue-next')['ChatContent'];
+    TChatInput: typeof import('tdesign-vue-next')['ChatInput'];
+    TChatItem: typeof import('tdesign-vue-next')['ChatItem'];
+    TChatLoading: typeof import('tdesign-vue-next')['ChatLoading'];
+    TChatReasoning: typeof import('tdesign-vue-next')['ChatReasoning'];
+    TChatSender: typeof import('tdesign-vue-next')['ChatSender'];
     TCheckbox: typeof import('tdesign-vue-next')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-vue-next')['CheckboxGroup'];
     TCheckTag: typeof import('tdesign-vue-next')['CheckTag'];
@@ -38,8 +46,8 @@ declare module 'vue' {
     TDatePickerPanel: typeof import('tdesign-vue-next')['DatePickerPanel'];
     TDateRangePicker: typeof import('tdesign-vue-next')['DateRangePicker'];
     TDateRangePickerPanel: typeof import('tdesign-vue-next')['DateRangePickerPanel'];
-    TDescriptionItem: typeof import('tdesign-vue-next')['DescriptionItem'];
     TDescriptions: typeof import('tdesign-vue-next')['Descriptions'];
+    TDescriptionsItem: typeof import('tdesign-vue-next')['DescriptionsItem'];
     TDialog: typeof import('tdesign-vue-next')['Dialog'];
     TDialogCard: typeof import('tdesign-vue-next')['DialogCard'];
     TDivider: typeof import('tdesign-vue-next')['Divider'];
@@ -55,8 +63,8 @@ declare module 'vue' {
     THeader: typeof import('tdesign-vue-next')['Header'];
     THeadMenu: typeof import('tdesign-vue-next')['HeadMenu'];
     TIcon: typeof import('tdesign-vue-next')['Icon'];
-    TIconfont: typeof import('tdesign-vue-next')['Iconfont'];
-    TIconSVG: typeof import('tdesign-vue-next')['IconSVG'];
+    IconFont: typeof import('tdesign-icons-vue-next')['IconFont'];
+    Icon: typeof import('tdesign-icons-vue-next')['Icon'];
     TImage: typeof import('tdesign-vue-next')['Image'];
     TImageViewer: typeof import('tdesign-vue-next')['ImageViewer'];
     TInput: typeof import('tdesign-vue-next')['Input'];
@@ -78,7 +86,7 @@ declare module 'vue' {
     TOptionGroup: typeof import('tdesign-vue-next')['OptionGroup'];
     TPagination: typeof import('tdesign-vue-next')['Pagination'];
     TPaginationMini: typeof import('tdesign-vue-next')['PaginationMini'];
-    TParagraph: typeof import('tdesign-vue-next')['Paragraph'];
+    TTypographyParagraph: typeof import('tdesign-vue-next')['Paragraph'];
     TPopconfirm: typeof import('tdesign-vue-next')['Popconfirm'];
     TPopup: typeof import('tdesign-vue-next')['Popup'];
     TPrimaryTable: typeof import('tdesign-vue-next')['PrimaryTable'];
@@ -109,18 +117,19 @@ declare module 'vue' {
     TTabs: typeof import('tdesign-vue-next')['Tabs'];
     TTag: typeof import('tdesign-vue-next')['Tag'];
     TTagInput: typeof import('tdesign-vue-next')['TagInput'];
-    TText: typeof import('tdesign-vue-next')['Text'];
+    TTypographyText: typeof import('tdesign-vue-next')['Text'];
     TTextarea: typeof import('tdesign-vue-next')['Textarea'];
     TTimeline: typeof import('tdesign-vue-next')['Timeline'];
     TTimelineItem: typeof import('tdesign-vue-next')['TimelineItem'];
     TTimePicker: typeof import('tdesign-vue-next')['TimePicker'];
     TTimeRangePicker: typeof import('tdesign-vue-next')['TimeRangePicker'];
-    TTitle: typeof import('tdesign-vue-next')['Title'];
+    TTypographyTitle: typeof import('tdesign-vue-next')['Title'];
     TTooltip: typeof import('tdesign-vue-next')['Tooltip'];
     TTooltipLite: typeof import('tdesign-vue-next')['TooltipLite'];
     TTransfer: typeof import('tdesign-vue-next')['Transfer'];
     TTree: typeof import('tdesign-vue-next')['Tree'];
     TTreeSelect: typeof import('tdesign-vue-next')['TreeSelect'];
+    TTypography: typeof import('tdesign-vue-next')['Typography'];
     TUpload: typeof import('tdesign-vue-next')['Upload'];
     TWatermark: typeof import('tdesign-vue-next')['Watermark'];
   }

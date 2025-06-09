@@ -18,6 +18,7 @@ const uniq = require('lodash/uniq');
 const chalk = require('chalk');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
+const { formatType } = require('../types');
  /**
   * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
   */
@@ -44,6 +45,10 @@ function start() {
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   // Vue2 和 Vue3 同为 Vue，API 相同
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  if (['Vue(PC)', 'VueNext(PC)'].includes(framework)) {
+    // Typography 是空定义组件，特殊处理
+   frameworkData['Typography'] = [];
+ }
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
@@ -74,8 +79,17 @@ function getHelperData(baseData, framework) {
     if (aliasComponents[key]) {
       volar.push(aliasComponents[key]);
     }
+    let componentName = `${PREFIX}-${kebabCase(key)}`;
+    if (['Text', 'Title', 'Paragraph'].includes(key)){
+      componentName = `${PREFIX}-${kebabCase('Typography'+key)}`;
+    }
+    if ('IconSVG' === key) {
+      componentName = kebabCase('Icon');
+    }
+    if ('IconFont' === key) {
+      componentName = kebabCase(key);
+    }
 
-    const componentName = `${PREFIX}-${kebabCase(key)}`;
     const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCase(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
@@ -96,8 +110,9 @@ function getHelperData(baseData, framework) {
       const attributeKey = `${componentName}/${prop}`; 
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
-
+      const rType = formatType(api,framework);
       switch (api.field_category_text) {
+        
         case 'Props':
           props.push(prop);
           const attributesData = {
@@ -113,7 +128,7 @@ function getHelperData(baseData, framework) {
             name: prop,
             description: apiDescription,
             'doc-url': `${apiDocs}-props`,
-            type: api.field_type_text,
+            type: rType ? rType.type : api.field_type_text,
             default: api.field_default_value || undefined,
             'attribute-value': api.field_enum
               ? { type: /^string$/i.test(api.field_type_text.join('')) ? 'enum' : 'of-match' }
@@ -210,7 +225,20 @@ function write(framework, name, data) {
 
 function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
-  const readerGlobalComponents= data.map((item)=> `T${item}: typeof import('${current.name}')['${item}'];`)
+  const readerGlobalComponents= data.map((item)=> {
+    if (item === 'IconSVG'){
+      return `Icon: typeof import('${current.iconPath}')['Icon'];`
+    }
+    if (item === 'IconFont'){
+      return `${item}: typeof import('${current.iconPath}')['${item}'];`
+    }
+    if (['Text', 'Title', 'Paragraph'].includes(item)){
+      return `TTypography${item}: typeof import('${current.name}')['${item}'];`
+    }
+    return `T${item}: typeof import('${current.name}')['${item}'];`
+    
+  }
+)
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
   const volarTemplate=`
   /**

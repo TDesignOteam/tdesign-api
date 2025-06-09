@@ -23,6 +23,14 @@ declare module '@vue/runtime-core' {
     TCalendar: typeof import('tdesign-vue')['Calendar'];
     TCard: typeof import('tdesign-vue')['Card'];
     TCascader: typeof import('tdesign-vue')['Cascader'];
+    TChat: typeof import('tdesign-vue')['Chat'];
+    TChatAction: typeof import('tdesign-vue')['ChatAction'];
+    TChatContent: typeof import('tdesign-vue')['ChatContent'];
+    TChatInput: typeof import('tdesign-vue')['ChatInput'];
+    TChatItem: typeof import('tdesign-vue')['ChatItem'];
+    TChatLoading: typeof import('tdesign-vue')['ChatLoading'];
+    TChatReasoning: typeof import('tdesign-vue')['ChatReasoning'];
+    TChatSender: typeof import('tdesign-vue')['ChatSender'];
     TCheckbox: typeof import('tdesign-vue')['Checkbox'];
     TCheckboxGroup: typeof import('tdesign-vue')['CheckboxGroup'];
     TCheckTag: typeof import('tdesign-vue')['CheckTag'];
@@ -38,8 +46,8 @@ declare module '@vue/runtime-core' {
     TDatePickerPanel: typeof import('tdesign-vue')['DatePickerPanel'];
     TDateRangePicker: typeof import('tdesign-vue')['DateRangePicker'];
     TDateRangePickerPanel: typeof import('tdesign-vue')['DateRangePickerPanel'];
-    TDescriptionItem: typeof import('tdesign-vue')['DescriptionItem'];
     TDescriptions: typeof import('tdesign-vue')['Descriptions'];
+    TDescriptionsItem: typeof import('tdesign-vue')['DescriptionsItem'];
     TDialog: typeof import('tdesign-vue')['Dialog'];
     TDialogCard: typeof import('tdesign-vue')['DialogCard'];
     TDivider: typeof import('tdesign-vue')['Divider'];
@@ -55,8 +63,8 @@ declare module '@vue/runtime-core' {
     THeader: typeof import('tdesign-vue')['Header'];
     THeadMenu: typeof import('tdesign-vue')['HeadMenu'];
     TIcon: typeof import('tdesign-vue')['Icon'];
-    TIconfont: typeof import('tdesign-vue')['Iconfont'];
-    TIconSVG: typeof import('tdesign-vue')['IconSVG'];
+    IconFont: typeof import('tdesign-icons-vue')['IconFont'];
+    Icon: typeof import('tdesign-icons-vue')['Icon'];
     TImage: typeof import('tdesign-vue')['Image'];
     TImageViewer: typeof import('tdesign-vue')['ImageViewer'];
     TInput: typeof import('tdesign-vue')['Input'];
@@ -78,7 +86,7 @@ declare module '@vue/runtime-core' {
     TOptionGroup: typeof import('tdesign-vue')['OptionGroup'];
     TPagination: typeof import('tdesign-vue')['Pagination'];
     TPaginationMini: typeof import('tdesign-vue')['PaginationMini'];
-    TParagraph: typeof import('tdesign-vue')['Paragraph'];
+    TTypographyParagraph: typeof import('tdesign-vue')['Paragraph'];
     TPopconfirm: typeof import('tdesign-vue')['Popconfirm'];
     TPopup: typeof import('tdesign-vue')['Popup'];
     TPrimaryTable: typeof import('tdesign-vue')['PrimaryTable'];
@@ -109,18 +117,19 @@ declare module '@vue/runtime-core' {
     TTabs: typeof import('tdesign-vue')['Tabs'];
     TTag: typeof import('tdesign-vue')['Tag'];
     TTagInput: typeof import('tdesign-vue')['TagInput'];
-    TText: typeof import('tdesign-vue')['Text'];
+    TTypographyText: typeof import('tdesign-vue')['Text'];
     TTextarea: typeof import('tdesign-vue')['Textarea'];
     TTimeline: typeof import('tdesign-vue')['Timeline'];
     TTimelineItem: typeof import('tdesign-vue')['TimelineItem'];
     TTimePicker: typeof import('tdesign-vue')['TimePicker'];
     TTimeRangePicker: typeof import('tdesign-vue')['TimeRangePicker'];
-    TTitle: typeof import('tdesign-vue')['Title'];
+    TTypographyTitle: typeof import('tdesign-vue')['Title'];
     TTooltip: typeof import('tdesign-vue')['Tooltip'];
     TTooltipLite: typeof import('tdesign-vue')['TooltipLite'];
     TTransfer: typeof import('tdesign-vue')['Transfer'];
     TTree: typeof import('tdesign-vue')['Tree'];
     TTreeSelect: typeof import('tdesign-vue')['TreeSelect'];
+    TTypography: typeof import('tdesign-vue')['Typography'];
     TUpload: typeof import('tdesign-vue')['Upload'];
     TWatermark: typeof import('tdesign-vue')['Watermark'];
   }

@@ -62,6 +62,13 @@ export interface TdDateTimePickerProps {
     value?: string;
   };
   /**
+   * 格式化标签
+   */
+  formatter?: {
+    type: undefined;
+    value?: (option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem;
+  };
+  /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
    * @default true
    */
@@ -86,7 +93,7 @@ export interface TdDateTimePickerProps {
     value?: PopupProps;
   };
   /**
-   * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
+   * 是否在日期旁边显示周几（如周一，周二，周日等）
    * @default false
    */
   showWeek?: {
@@ -102,10 +109,11 @@ export interface TdDateTimePickerProps {
   };
   /**
    * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
    */
   steps?: {
     type: ObjectConstructor;
-    value?: object;
+    value?: { [key in TimeModeValues]?: number };
   };
   /**
    * 标题

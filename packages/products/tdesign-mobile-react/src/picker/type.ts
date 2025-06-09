@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
 import { TNode, TElement, KeysType } from '../common';
 import { MouseEvent } from 'react';
 
@@ -13,7 +12,7 @@ export interface TdPickerProps {
    * 取消按钮文字
    * @default true
    */
-  cancelBtn?: boolean | string | ButtonProps;
+  cancelBtn?: boolean | string;
   /**
    * 配置每一列的选项
    * @default []
@@ -23,7 +22,7 @@ export interface TdPickerProps {
    * 确定按钮文字
    * @default true
    */
-  confirmBtn?: boolean | string | ButtonProps;
+  confirmBtn?: boolean | string;
   /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
    * @default true

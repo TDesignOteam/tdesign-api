@@ -3,43 +3,49 @@
  */
 
 const GLOBAL_COMPONENTS_CONFIG = [
-    'InputConfig',
-    'PaginationConfig',
+    'ActionSheetConfig',
+    'AlertConfig',
+    'AnchorConfig',
+    'AutoCompleteConfig',
     'CalendarConfig',
     'CascaderConfig',
     'ColorPickerConfig',
-    'TransferConfig',
-    'TimePickerConfig',
     'DatePickerConfig',
+    'DateTimePickerConfig',
+    'DescriptionsConfig',
     'DialogConfig',
     'DrawerConfig',
-    'PopconfirmConfig',
-    'TableConfig',
-    'SelectConfig',
-    'TreeConfig',
-    'TreeSelectConfig',
-    'ListConfig',
-    'UploadConfig',
-    'UploadConfigProgress',
-    'UploadConfigDragger',
-    'UploadConfigFileList',
-    'UploadConfigImage',
-    'UploadConfigFile',
+    'DropdownMenuConfig',
+    'EmptyConfig',
     'FormConfig',
-    'TagConfig',
-    'StepsConfig',
-    'AlertConfig',
-    'DescriptionsConfig',
-    'AnchorConfig',
-    'MessageConfig',
+    'GuideConfig',
     'ImageConfig',
     'ImageViewerConfig',
-    'GuideConfig',
+    'InputConfig',
+    'ListConfig',
+    'MessageConfig',
+    'PaginationConfig',
+    'PickerConfig',
+    'PopconfirmConfig',
+    'PullDownRefreshConfig',
     'RateConfig',
-    'EmptyConfig',
+    'SelectConfig',
+    'StepsConfig',
+    'TabBarConfig',
+    'TagConfig',
+    'TableConfig',
+    'TimePickerConfig',
+    'TreeConfig',
+    'TreeSelectConfig',
+    'TransferConfig',
     'TypographyConfig',
-    'AutoCompleteConfig',
-].sort((a, b) => a.localeCompare(b) > 0);
+    'UploadConfig',
+    'UploadConfigDragger',
+    'UploadConfigFile',
+    'UploadConfigFileList',
+    'UploadConfigImage',
+    'UploadConfigProgress',
+].sort((a, b) => a.localeCompare(b));
 
 const MESSAGE_LIST = [
     'Message',
@@ -82,9 +88,10 @@ const TABLE_LIST = [
     'TableEditableCellConfig',
     'TableTreeConfig',
 ];
-const GLOBAL_CONFIG_PROVIDER = ['ConfigProvider','GlobalConfigProvider'].concat(
-    GLOBAL_COMPONENTS_CONFIG
-);
+const GLOBAL_CONFIG_PROVIDER = [
+    'ConfigProvider',
+    'GlobalConfigProvider',
+].concat(GLOBAL_COMPONENTS_CONFIG);
 const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
 
 // 输出 API 文档时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -94,7 +101,7 @@ const COMPONENT_API_MD_MAP = {
     Cell: ['Cell', 'CellGroup'],
     Radio: ['Radio', 'RadioGroup'],
     Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
-    Descriptions: ['Descriptions', 'DescriptionItem'],
+    Descriptions: ['Descriptions', 'DescriptionsItem'],
     Tabs: ['Tabs', 'TabPanel'],
     TabBar: ['TabBar', 'TabBarItem'],
     Pagination: ['Pagination', 'PaginationMini'],
@@ -120,7 +127,7 @@ const COMPONENT_API_MD_MAP = {
             includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
         },
     ],
-    Icon: ['Icon', 'IconSVG', 'Iconfont'],
+    Icon: ['Icon', 'IconSVG', 'IconFont'],
     Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
     Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
     Collapse: ['Collapse', 'CollapsePanel'],
@@ -197,6 +204,21 @@ const COMPONENT_API_MD_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+    // 高阶组件
+    Chat: [
+        'Chat',
+        'ChatLoading',
+        'ChatItem',
+        'ChatContent',
+        'ChatAction',
+        'ChatInput',
+        'ChatSender',
+        'ChatReasoning',
+    ],
+    ColorPicker: {
+        list: ['ColorPicker', 'ColorPickerPanel'],
+        includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+    },
 };
 
 // H5 特殊组件
@@ -207,6 +229,7 @@ const MOBILE_COMPONENT_API_MD_MAP = {
     Grid: {
         list: ['Grid', 'GridItem'],
     },
+    List: ['List'],
 };
 
 // 小程序 特殊组件
@@ -316,7 +339,7 @@ const TYPES_COMBINE_MAP = {
         list: ['Calendar', 'CalendarController', 'CalendarCell'],
     },
     Descriptions: {
-        list: ['Descriptions', 'DescriptionItem'],
+        list: ['Descriptions', 'DescriptionsItem'],
     },
     Menu: {
         list: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
@@ -361,7 +384,7 @@ const TYPES_COMBINE_MAP = {
         list: TABLE_LIST,
     },
     Icon: {
-        list: ['Icon', 'Iconfont', 'IconSVG'],
+        list: ['Icon', 'IconFont', 'IconSVG'],
     },
     Anchor: {
         list: ['AnchorTarget', 'AnchorItem'],
@@ -412,6 +435,17 @@ const TYPES_COMBINE_MAP = {
         list: ['Toast', 'ToastOptions'],
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
+    // 高阶组件
+    Chat: [
+        'Chat',
+        'ChatLoading',
+        'ChatItem',
+        'ChatContent',
+        'ChatAction',
+        'ChatInput',
+        'ChatSender',
+        'ChatReasoning',
+    ],
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
@@ -423,6 +457,7 @@ const MOBILE_TYPES_COMBINE_MAP = {
         list: ['Grid', 'GridItem'],
         excludes: ['Miniprogram'],
     },
+    List: ['List'],
 };
 
 const MINIPROGRAM_TYPES_COMBINE_MAP = {

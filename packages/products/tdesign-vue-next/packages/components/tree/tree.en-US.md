@@ -11,7 +11,7 @@ activeMultiple | Boolean | false | \- | N
 actived | Array | - | `v-model:actived` is supported。Typescript：`Array<TreeNodeValue>` | N
 allowDrop | Function | - | Determine whether the node can execute the drop operation。Typescript：`(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean` | N
 allowFoldNodeOnFilter | Boolean | false | \- | N
-checkProps | Object | - | Typescript：`CheckboxProps`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tree/type.ts) | N
+checkProps | Object / Function | - | Typescript：`CheckboxProps \| ((node: TreeNodeModel<T>) => CheckboxProps)`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tree/type.ts) | N
 checkStrictly | Boolean | false | \- | N
 checkable | Boolean | false | \- | N
 data | Array | [] | Typescript：`Array<T>` | N

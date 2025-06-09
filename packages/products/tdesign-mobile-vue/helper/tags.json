@@ -292,14 +292,16 @@
   },
   "t-color-picker": {
     "attributes": [
-      "auto-close",
       "clearable",
-      "footer",
-      "header",
-      "popup-props",
-      "use-popup",
-      "visible",
-      "close"
+      "enable-alpha",
+      "fixed",
+      "format",
+      "swatch-colors",
+      "type",
+      "value",
+      "change",
+      "close",
+      "palette-bar-change"
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker)"
   },
@@ -356,10 +358,12 @@
       "confirm-btn",
       "content",
       "destroy-on-close",
+      "middle",
       "overlay-props",
       "prevent-scroll-through",
       "show-overlay",
       "title",
+      "top",
       "visible",
       "width",
       "z-index",
@@ -540,7 +544,19 @@
     ],
     "description": "Guide\n\n引导\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide)"
   },
-  "t-icon-svg": {
+  "icon-font": {
+    "attributes": [
+      "load-default-icons",
+      "name",
+      "size",
+      "style",
+      "tag",
+      "url",
+      "click"
+    ],
+    "description": "IconFont\n\n图标（IconFont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
+  },
+  "icon": {
     "attributes": [
       "load-default-icons",
       "name",
@@ -561,18 +577,6 @@
       "click"
     ],
     "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
-  },
-  "t-iconfont": {
-    "attributes": [
-      "load-default-icons",
-      "name",
-      "size",
-      "style",
-      "tag",
-      "url",
-      "click"
-    ],
-    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/icon)"
   },
   "t-image": {
     "attributes": [
@@ -1095,6 +1099,7 @@
   "t-step-item": {
     "attributes": [
       "content",
+      "extra",
       "icon",
       "status",
       "title",
@@ -1127,7 +1132,6 @@
       "current-status",
       "layout",
       "readonly",
-      "separator",
       "sequence",
       "theme",
       "change"

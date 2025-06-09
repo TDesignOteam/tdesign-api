@@ -44,15 +44,6 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 步骤条分割符 */
-  separator: {
-    type: String as PropType<TdStepsProps['separator']>,
-    default: 'line' as TdStepsProps['separator'],
-    validator(val: TdStepsProps['separator']): boolean {
-      if (!val) return true;
-      return ['line', 'dashed', 'arrow'].includes(val);
-    },
-  },
   /** 步骤条顺序 */
   sequence: {
     type: String as PropType<TdStepsProps['sequence']>,

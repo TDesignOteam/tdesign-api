@@ -12,6 +12,7 @@ fixed | Boolean | true | 是否固定在顶部 | N
 left | Slot / Function | - | 左侧区域。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 leftArrow | Boolean | false | 是否展示左侧箭头 | N
 right | Slot / Function | - | 右侧区域。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+safeAreaInsetTop | Boolean | true | 是否开启顶部安全区适配 | N
 title | String / Slot / Function | - | 页面标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 titleMaxLength | Number | - | 标题文字最大长度，超出的范围使用 `...` 表示 | N
 visible | Boolean | true | 是否显示 | N

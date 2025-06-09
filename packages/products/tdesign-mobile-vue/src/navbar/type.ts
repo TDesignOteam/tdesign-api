@@ -35,6 +35,11 @@ export interface TdNavbarProps {
    */
   right?: TNode;
   /**
+   * 是否开启顶部安全区适配
+   * @default true
+   */
+  safeAreaInsetTop?: boolean;
+  /**
    * 页面标题
    */
   title?: string | TNode;
