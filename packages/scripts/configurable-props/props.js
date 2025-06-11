@@ -151,6 +151,7 @@ function getCmpName(cmpName) {
   ];
   const targetCmp = comps.find(({ components }) => components.includes(cmpName));
   if (targetCmp) {
+   
     return {
       cmpStr: targetCmp.name,
       fileNameStr: `${kebabCase(cmpName)}-props.json`,
@@ -173,7 +174,7 @@ function generateProps(baseData, framework) {
     const folder = getFolderPath(basePath, kebabCase(cmp));
     // 如果组件不存在不进行输出
     if (!fs.existsSync(folder) && !getCmpName(cmp).cmpStr) return;
-    const cmpStr = getCmpName(cmp).cmpStr ? getCmpName(cmp).cmpStr : kebabCase(cmp);
+    const cmpStr = getCmpName(cmp).cmpStr ? getCmpName(cmp).cmpStr : cmp==='QRCode' ? 'qrcode': kebabCase(cmp);
     const fileNameStr = getCmpName(cmp).cmpStr ? `${kebabCase(cmp)}-props.json` : 'props.json';
     const usage = path.resolve(outputPath.replace('$compName', cmpStr));
     const jsonPath = path.resolve(usage, fileNameStr);

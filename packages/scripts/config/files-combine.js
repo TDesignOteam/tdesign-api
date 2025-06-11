@@ -20,7 +20,7 @@ const GLOBAL_COMPONENTS_CONFIG = [
     'FormConfig',
     'GuideConfig',
     'ImageConfig',
-    'QrCodeConfig',
+    'QRCodeConfig',
     'ImageViewerConfig',
     'InputConfig',
     'ListConfig',

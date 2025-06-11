@@ -351,8 +351,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'WatermarkImage', label: '水印图片配置', type: 'TS' },
     { value: 'TypographyConfig', label: '排版全局配置', type: 'TS' },
     { value: 'AutoCompleteConfig', label: '自动填充全局配置', type: 'TS' },
-    { value: 'QrCode', label: '二维码' },
-    { value: 'QrCodeConfig', label: '二维码全局配置', type: 'TS' },
+    { value: 'QRCode', label: '二维码' },
+    { value: 'QRCodeConfig', label: '二维码全局配置', type: 'TS' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [
@@ -407,8 +407,8 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
     { value: 'Progress', label: '进度条' },
     { value: 'PullDownRefresh', label: '下拉刷新' },
     { value: 'PullDownRefreshConfig', label: '下拉刷新全局配置', type: 'TS' },
-    { value: 'QrCode', label: '二维码' },
-    { value: 'QrCodeConfig', label: '二维码全局配置', type: 'TS' },
+    { value: 'QRCode', label: '二维码' },
+    { value: 'QRCodeConfig', label: '二维码全局配置', type: 'TS' },
     { value: 'Radio', label: '单选框' },
     { value: 'RadioGroup', label: '单选框组' },
     { value: 'Rate', label: '评分' },
