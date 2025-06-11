@@ -59,7 +59,7 @@ export interface GlobalConfigProvider {
   /**
    * 二维码全局配置
    */
-  qrCode?: QrCodeConfig;
+  qrcode?: QRCodeConfig;
   /**
    * 评分全局配置
    */
@@ -295,7 +295,7 @@ export interface PullDownRefreshConfig {
   loadingTexts?: string[];
 }
 
-export interface QrCodeConfig {
+export interface QRCodeConfig {
   /**
    * 语言配置，“二维码过期”描述文本
    * @default ''

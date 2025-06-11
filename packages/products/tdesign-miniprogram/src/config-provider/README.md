@@ -6,7 +6,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 class-prefix | String | t | CSS 类名前缀 | N
-qr-code | Object | - | 二维码全局配置。TS 类型：`QrCodeConfig` | N
+qrcode | Object | - | 二维码全局配置。TS 类型：`QRCodeConfig` | N
 
 ### ImageConfig
 
@@ -28,7 +28,7 @@ placeholder | String | - | 语言配置，“请输入”占位符描述文本 |
 -- | -- | -- | -- | --
 loading-texts | Array | - | 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。TS 类型：`string[]` | N
 
-### QrCodeConfig
+### QRCodeConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --

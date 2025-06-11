@@ -6,7 +6,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 class-prefix | String | t | \- | N
-qr-code | Object | - | QRCode global configs。Typescript：`QrCodeConfig` | N
+qrcode | Object | - | QRCode global configs。Typescript：`QRCodeConfig` | N
 
 ### ImageConfig
 
@@ -28,7 +28,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 loading-texts | Array | - | Typescript：`string[]` | N
 
-### QrCodeConfig
+### QRCodeConfig
 
 name | type | default | description | required
 -- | -- | -- | -- | --
