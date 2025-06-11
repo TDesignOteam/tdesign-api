@@ -60319,7 +60319,7 @@
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
-      "field_name": "qrCode",
+      "field_name": "qrcode",
       "field_type": [
         "8"
       ],
@@ -60332,7 +60332,7 @@
       "create_time": "2025-06-07 03:17:02",
       "update_time": "2025-06-07 03:17:02",
       "event_output": null,
-      "custom_field_type": "QrCodeConfig",
+      "custom_field_type": "QRCodeConfig",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95073,7 +95073,7 @@
       ]
     },
     {
-      "id": 1748524112,
+      "id": 1749615249,
       "platform_framework": [
         "1",
         "2",
@@ -95081,7 +95081,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "bgColor",
       "field_type": [
@@ -95093,8 +95093,8 @@
       "field_desc_en": "QR code background color",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:08:32",
-      "update_time": "2025-05-29 13:08:32",
+      "create_time": "2025-06-11 04:14:09",
+      "update_time": "2025-06-11 04:14:09",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95118,7 +95118,7 @@
       ]
     },
     {
-      "id": 1748524307,
+      "id": 1749615258,
       "platform_framework": [
         "1",
         "2",
@@ -95126,7 +95126,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "borderless",
       "field_type": [
@@ -95138,8 +95138,8 @@
       "field_desc_en": "Is there a border",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:11:47",
-      "update_time": "2025-05-29 13:11:47",
+      "create_time": "2025-06-11 04:14:18",
+      "update_time": "2025-06-11 04:14:18",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95163,7 +95163,7 @@
       ]
     },
     {
-      "id": 1748524032,
+      "id": 1749615266,
       "platform_framework": [
         "1",
         "2",
@@ -95171,7 +95171,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "color",
       "field_type": [
@@ -95183,8 +95183,8 @@
       "field_desc_en": "QR code color",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:07:12",
-      "update_time": "2025-05-29 13:07:12",
+      "create_time": "2025-06-11 04:14:26",
+      "update_time": "2025-06-11 04:14:26",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95208,7 +95208,7 @@
       ]
     },
     {
-      "id": 1748523781,
+      "id": 1749615404,
       "platform_framework": [
         "1",
         "2",
@@ -95216,7 +95216,52 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
+      "field_category": 1,
+      "field_name": "expiredText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“二维码过期”描述文本",
+      "field_desc_en": "Language configuration, \"QR code expired\" description text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-11 04:16:44",
+      "update_time": "2025-06-11 04:16:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1749615274,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
@@ -95229,8 +95274,8 @@
       "field_desc_en": "The address or custom icon of the picture in the QR code",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:03:01",
-      "update_time": "2025-05-29 13:03:01",
+      "create_time": "2025-06-11 04:14:34",
+      "update_time": "2025-06-11 04:14:34",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95255,7 +95300,7 @@
       ]
     },
     {
-      "id": 1748523969,
+      "id": 1749615281,
       "platform_framework": [
         "1",
         "2",
@@ -95263,7 +95308,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "iconSize",
       "field_type": [
@@ -95276,8 +95321,8 @@
       "field_desc_en": "The size of the picture in the QR code",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:06:09",
-      "update_time": "2025-05-29 13:06:09",
+      "create_time": "2025-06-11 04:14:41",
+      "update_time": "2025-06-11 04:14:41",
       "event_output": null,
       "custom_field_type": "number | { width: number; height: number }",
       "syntactic_sugar": null,
@@ -95302,7 +95347,7 @@
       ]
     },
     {
-      "id": 1748524385,
+      "id": 1749615287,
       "platform_framework": [
         "1",
         "2",
@@ -95310,7 +95355,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "level",
       "field_type": [
@@ -95322,8 +95367,8 @@
       "field_desc_en": "QR code error correction level",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:13:05",
-      "update_time": "2025-05-29 13:13:05",
+      "create_time": "2025-06-11 04:14:47",
+      "update_time": "2025-06-11 04:14:47",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95347,7 +95392,7 @@
       ]
     },
     {
-      "id": 1748523868,
+      "id": 1749615299,
       "platform_framework": [
         "1",
         "2",
@@ -95355,7 +95400,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "size",
       "field_type": [
@@ -95367,8 +95412,8 @@
       "field_desc_en": "QR code size",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:04:28",
-      "update_time": "2025-05-29 13:04:28",
+      "create_time": "2025-06-11 04:14:59",
+      "update_time": "2025-06-11 04:14:59",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95392,7 +95437,7 @@
       ]
     },
     {
-      "id": 1748524526,
+      "id": 1749615308,
       "platform_framework": [
         "1",
         "2",
@@ -95400,7 +95445,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "status",
       "field_type": [
@@ -95412,8 +95457,8 @@
       "field_desc_en": "QR code status",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:15:26",
-      "update_time": "2025-05-29 13:15:26",
+      "create_time": "2025-06-11 04:15:08",
+      "update_time": "2025-06-11 04:15:08",
       "event_output": null,
       "custom_field_type": "QRStatus【type QRStatus = \"active\" | \"expired\" | \"loading\" | \"scanned\"】",
       "syntactic_sugar": null,
@@ -95437,7 +95482,7 @@
       ]
     },
     {
-      "id": 1748524815,
+      "id": 1749615330,
       "platform_framework": [
         "1",
         "2",
@@ -95445,7 +95490,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "statusRender",
       "field_type": [
@@ -95457,8 +95502,8 @@
       "field_desc_en": "Custom state renderer",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:20:15",
-      "update_time": "2025-05-29 13:20:15",
+      "create_time": "2025-06-11 04:15:30",
+      "update_time": "2025-06-11 04:15:30",
       "event_output": null,
       "custom_field_type": "(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}】",
       "syntactic_sugar": null,
@@ -95482,14 +95527,14 @@
       ]
     },
     {
-      "id": 1748523474,
+      "id": 1749615337,
       "platform_framework": [
         "1",
         "2",
         "8",
         "16"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "type",
       "field_type": [
@@ -95501,8 +95546,8 @@
       "field_desc_en": "render type",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 12:57:54",
-      "update_time": "2025-05-29 12:57:54",
+      "create_time": "2025-06-11 04:15:37",
+      "update_time": "2025-06-11 04:15:37",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95525,7 +95570,7 @@
       ]
     },
     {
-      "id": 1748523228,
+      "id": 1749615344,
       "platform_framework": [
         "1",
         "2",
@@ -95533,7 +95578,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 1,
       "field_name": "value",
       "field_type": [
@@ -95545,8 +95590,8 @@
       "field_desc_en": "scanned text",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 12:53:48",
-      "update_time": "2025-05-29 12:53:48",
+      "create_time": "2025-06-11 04:15:44",
+      "update_time": "2025-06-11 04:15:44",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95570,7 +95615,7 @@
       ]
     },
     {
-      "id": 1748524684,
+      "id": 1749615350,
       "platform_framework": [
         "1",
         "2",
@@ -95578,7 +95623,7 @@
         "16",
         "64"
       ],
-      "component": "QrCode",
+      "component": "QRCode",
       "field_category": 2,
       "field_name": "refresh",
       "field_type": [
@@ -95590,8 +95635,8 @@
       "field_desc_en": "Click the \"Click to refresh\" callback",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-05-29 13:18:04",
-      "update_time": "2025-05-29 13:18:04",
+      "create_time": "2025-06-11 04:15:50",
+      "update_time": "2025-06-11 04:15:50",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95615,7 +95660,7 @@
       ]
     },
     {
-      "id": 1749265958,
+      "id": 1749615440,
       "platform_framework": [
         "1",
         "2",
@@ -95623,7 +95668,7 @@
         "16",
         "64"
       ],
-      "component": "QrCodeConfig",
+      "component": "QRCodeConfig",
       "field_category": 1,
       "field_name": "expiredText",
       "field_type": [
@@ -95635,8 +95680,8 @@
       "field_desc_en": "Language configuration, \"QR code expired\" description text",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-07 03:12:38",
-      "update_time": "2025-06-07 03:12:38",
+      "create_time": "2025-06-11 04:17:20",
+      "update_time": "2025-06-11 04:17:20",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95660,7 +95705,7 @@
       ]
     },
     {
-      "id": 1749265997,
+      "id": 1749615415,
       "platform_framework": [
         "1",
         "2",
@@ -95668,7 +95713,7 @@
         "16",
         "64"
       ],
-      "component": "QrCodeConfig",
+      "component": "QRCodeConfig",
       "field_category": 1,
       "field_name": "refreshText",
       "field_type": [
@@ -95680,8 +95725,8 @@
       "field_desc_en": "Language configuration, \"QR code refresh\" description text",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-07 03:13:17",
-      "update_time": "2025-06-07 03:13:17",
+      "create_time": "2025-06-11 04:16:55",
+      "update_time": "2025-06-11 04:16:55",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -95705,7 +95750,7 @@
       ]
     },
     {
-      "id": 1749266029,
+      "id": 1749615421,
       "platform_framework": [
         "1",
         "2",
@@ -95713,7 +95758,7 @@
         "16",
         "64"
       ],
-      "component": "QrCodeConfig",
+      "component": "QRCodeConfig",
       "field_category": 1,
       "field_name": "scannedText",
       "field_type": [
@@ -95725,8 +95770,8 @@
       "field_desc_en": "Language configuration, \"QR code scanned\" description text",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-07 03:13:49",
-      "update_time": "2025-06-07 03:13:49",
+      "create_time": "2025-06-11 04:17:01",
+      "update_time": "2025-06-11 04:17:01",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,

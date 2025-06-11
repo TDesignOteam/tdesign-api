@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const { isPlugin, getCmpTypeCombineMap, getFolderName } = require('../common');
 const map = require('../map.json');
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
 
 let FRAMEWORK_TYPES_COMPONENT_RELATION = {};
 
@@ -154,7 +154,7 @@ function getCmpName(cmpName) {
    
     return {
       cmpStr: targetCmp.name,
-      fileNameStr: `${kebabCase(cmpName)}-props.json`,
+      fileNameStr: `${kebabCaseComponent(cmpName)}-props.json`,
     };
   }
   return {};
@@ -171,11 +171,11 @@ function generateProps(baseData, framework) {
   // 输出至 examples 目录
   const outputPath = path.resolve(current.usageDemoBasePath);
   Object.keys(apiInfos).forEach((cmp) => {
-    const folder = getFolderPath(basePath, kebabCase(cmp));
+    const folder = getFolderPath(basePath, kebabCaseComponent(cmp));
     // 如果组件不存在不进行输出
     if (!fs.existsSync(folder) && !getCmpName(cmp).cmpStr) return;
-    const cmpStr = getCmpName(cmp).cmpStr ? getCmpName(cmp).cmpStr : cmp==='QRCode' ? 'qrcode': kebabCase(cmp);
-    const fileNameStr = getCmpName(cmp).cmpStr ? `${kebabCase(cmp)}-props.json` : 'props.json';
+    const cmpStr = getCmpName(cmp).cmpStr ? getCmpName(cmp).cmpStr : kebabCaseComponent(cmp);
+    const fileNameStr = getCmpName(cmp).cmpStr ? `${kebabCaseComponent(cmp)}-props.json` : 'props.json';
     const usage = path.resolve(outputPath.replace('$compName', cmpStr));
     const jsonPath = path.resolve(usage, fileNameStr);
     if (!fs.existsSync(usage)) {

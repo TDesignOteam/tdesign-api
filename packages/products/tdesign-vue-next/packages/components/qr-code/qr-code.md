@@ -2,13 +2,14 @@
 
 ## API
 
-### QrCode Props
+### QRCode Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 bgColor | String | transparent | 二维码背景颜色 | N
 borderless | Boolean | false | 是否有边框 | N
 color | String | - | 二维码颜色 | N
+expiredText | String | - | 语言配置，“二维码过期”描述文本 | N
 icon | String / Slot / Function | - | 二维码中图片的地址或自定义icon。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 iconSize | Number / Object | 40 | 二维码中图片的大小。TS 类型：`number \| { width: number; height: number }` | N
 level | String | M | 二维码纠错等级。可选项：L/M/Q/H | N
@@ -19,7 +20,7 @@ type | String | canvas | 渲染类型。可选项：canvas/svg | N
 value | String | - | 扫描后的文本 | N
 onRefresh | Function |  | TS 类型：`() => void`<br/>点击"点击刷新"的回调 | N
 
-### QrCode Events
+### QRCode Events
 
 名称 | 参数 | 描述
 -- | -- | --

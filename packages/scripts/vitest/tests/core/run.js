@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../../../utils');
 const { uploadVitestFileDataToDB } = require('./utils');
 const chalk = require('chalk');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('../../const/vue2-use-default');
@@ -33,7 +33,7 @@ function generateToFinalProject() {
 }
 
 if (isWatch) {
-  const filePath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
+  const filePath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
   console.log(`start to listen ${filePath}`);
   fs.watchFile(filePath, { interval: 1000 }, (current, previous) => {
     console.log('---- starting to generate -----');

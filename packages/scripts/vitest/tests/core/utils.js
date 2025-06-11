@@ -4,7 +4,8 @@ const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../../../utils');
+
 const { parseJSON } = require('../../utils');
 
 // 将 api.json 中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
@@ -23,7 +24,7 @@ function generateTestDescriptionToVitestFile(baseData, { component }) {
       };
     });
   });
-  const outputPath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
+  const outputPath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
   const data = 'module.exports=' + JSON.stringify(tests);
   const codeData = prettier.format(data, {...prettierConfig, printWidth: 100});
   fs.writeFile(outputPath, codeData, (err) => {
@@ -48,7 +49,7 @@ function uploadOneApi(id, testDescription) {
 
 function readTestsFile(component) {
   return new Promise((resolve) => {
-    const filePath = path.resolve(__dirname, `../${kebabCase(component)}.js`);
+    const filePath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
     fs.readFile(filePath, (error, data) => {
       if (error) {
         throw Error(error);
