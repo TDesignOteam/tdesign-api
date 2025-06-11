@@ -1,4 +1,4 @@
-name: Check DB
+name: check-db
 
 on:
   push:

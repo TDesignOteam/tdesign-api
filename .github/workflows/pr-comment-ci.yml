@@ -1,4 +1,4 @@
-name: PR_COMMENT_CI
+name: pr-comment-ci
 
 on:
   issue_comment:
