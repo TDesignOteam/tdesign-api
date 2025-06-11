@@ -799,6 +799,15 @@
         "label": "进度条"
       },
       {
+        "value": "QRCode",
+        "label": "二维码"
+      },
+      {
+        "value": "QRCodeConfig",
+        "label": "二维码全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Radio",
         "label": "单选框"
       },
