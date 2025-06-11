@@ -34,11 +34,6 @@ export interface TdStepsProps {
    */
   readonly?: boolean;
   /**
-   * 步骤条分割符
-   * @default line
-   */
-  separator?: 'line' | 'dashed' | 'arrow';
-  /**
    * 步骤条顺序
    * @default positive
    */
@@ -60,6 +55,10 @@ export interface TdStepItemProps {
    * @default ''
    */
   content?: string | TNode;
+  /**
+   * 步骤条自定义内容
+   */
+  extra?: string | TNode;
   /**
    * 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标
    * @default true

@@ -1,7 +1,7 @@
 const upperFirst = require('lodash/upperFirst');
 const camelcase = require('lodash/camelCase');
-const kebabCase = require('lodash/kebabCase');
 const { data } = require('./map.json');
+const { kebabCaseComponent} = require('./utils');
 const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 const { groupByComponent, getApiComponentMapByFrameWork } = require('./vitest/utils');
 
@@ -50,7 +50,7 @@ function getEventName(name) {
 }
 
 function getVueEventEmitName(name) {
-  return kebabCase(name);
+  return kebabCaseComponent(name);
 }
 
 function getTdCmpName(cmp) {
@@ -58,7 +58,7 @@ function getTdCmpName(cmp) {
 }
 
 function getFolderName(cmp) {
-  return kebabCase(cmp);
+  return kebabCaseComponent(cmp);
 }
 
 function getDefaultValueName(cmp) {

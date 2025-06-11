@@ -47,6 +47,8 @@ const {
 } = require('./vitest/tests/core/utils');
 const chalk = require('chalk');
 const pick = require('lodash/pick');
+const has = require('lodash/has');
+
 const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
 
 /**

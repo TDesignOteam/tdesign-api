@@ -209,6 +209,8 @@ export default {
   onBlur: Function as PropType<TdCascaderProps['onBlur']>,
   /** 选中值发生变化时触发。TreeNodeModel 从树组件中导出。`context.node` 表示触发事件的节点，`context.source` 表示触发事件的来源 */
   onChange: Function as PropType<TdCascaderProps['onChange']>,
+  /** 清空按钮点击时触发 */
+  onClear: Function as PropType<TdCascaderProps['onClear']>,
   /** 获得焦点时触发 */
   onFocus: Function as PropType<TdCascaderProps['onFocus']>,
   /** 下拉框显示或隐藏时触发 */

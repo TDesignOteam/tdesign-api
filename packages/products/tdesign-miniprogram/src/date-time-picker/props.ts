@@ -39,6 +39,10 @@ const props: TdDateTimePickerProps = {
     type: String,
     value: 'YYYY-MM-DD HH:mm:ss',
   },
+  /** 格式化标签 */
+  formatter: {
+    type: null,
+  },
   /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容 */
   header: {
     type: Boolean,
@@ -54,7 +58,7 @@ const props: TdDateTimePickerProps = {
     type: Object,
     value: {},
   },
-  /** 【开发中】是否在日期旁边显示周几（如周一，周二，周日等） */
+  /** 是否在日期旁边显示周几（如周一，周二，周日等） */
   showWeek: {
     type: Boolean,
     value: false,
@@ -66,6 +70,7 @@ const props: TdDateTimePickerProps = {
   /** 时间间隔步数，示例：`{ minute: 5 }` */
   steps: {
     type: Object,
+    value: {},
   },
   /** 标题 */
   title: {

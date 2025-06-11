@@ -10,6 +10,7 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 adjust-position | Boolean | true | \- | N
 align | String | left | text align type。options: left/center/right | N
+allow-input-over-max | Boolean | false | `1.8.6`。allow to continue input on value length is over `maxlength` or `maxcharacter` | N
 always-embed | Boolean | false | \- | N
 auto-focus | Boolean | false | \- | N
 borderless | Boolean | false | input without border | N
@@ -17,11 +18,12 @@ clear-trigger | String | always | show clear icon, clicked to clear input value�
 clearable | Boolean / Object | false | show clear icon, clicked to clear input value | N
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | done | options: send/search/next/go/done | N
-cursor | Number | - | required | Y
+cursor | Number | -1 | required | Y
 cursor-color | String | #0052d9 | \- | N
 cursor-spacing | Number | 0 | \- | N
 disabled | Boolean | undefined | make input to be disabled | N
 error-message | String | - | `deprecated` | N
+extra | Slot | - | `1.9.1`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 focus | Boolean | false | \- | N
 format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts) | N
 hold-keyboard | Boolean | false | \- | N
@@ -34,7 +36,7 @@ placeholder | String | undefined | \- | N
 placeholder-class | String | input-placeholder | \- | N
 placeholder-style | String | - | required | Y
 prefix-icon | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-readonly | Boolean | undefined | \- | N
+readonly | Boolean | undefined | `1.7.1` | N
 safe-password-cert-path | String | - | \- | N
 safe-password-custom-hash | String | - | \- | N
 safe-password-length | Number | - | \- | N

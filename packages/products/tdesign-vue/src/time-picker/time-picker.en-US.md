@@ -18,6 +18,7 @@ label | String / Slot / Function | - | Typescript：`string \| TNode`。[see mor
 placeholder | String | undefined | \- | N
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 presets | Object | - | Typescript：`PresetTime` `interface PresetTime { [presetName: string]: TimePickerValue \| (() => TimePickerValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
+readonly | Boolean | undefined | Whether it is read only, the priority is greater than `allowInput` | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 size | String | medium | options: small/medium/large | N
 status | String | default | options: default/success/warning/error | N
@@ -28,7 +29,9 @@ defaultValue | String | - | uncontrolled property。Typescript：`TimePickerValu
 valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescript：`string \| TNode<{ value: TimePickerValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onBlur | Function |  | Typescript：`(context: { value: TimePickerValue } & SelectInputBlurContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`import { SelectInputBlurContext } from '@SelectInput'`<br/> | N
 onChange | Function |  | Typescript：`(value: TimePickerValue) => void`<br/> | N
+onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Triggered when the clear button is clicked | N
 onClose | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onConfirm | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: TimePickerValue; e: FocusEvent }) => void`<br/> | N
 onInput | Function |  | Typescript：`(context: { value: TimePickerValue; e: InputEvent }) => void`<br/> | N
 onOpen | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
@@ -40,7 +43,9 @@ name | params | description
 -- | -- | --
 blur | `(context: { value: TimePickerValue } & SelectInputBlurContext)` | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`import { SelectInputBlurContext } from '@SelectInput'`<br/>
 change | `(value: TimePickerValue)` | \-
+clear | `(context: { e: MouseEvent })` | Triggered when the clear button is clicked
 close | `(context: { e: MouseEvent })` | \-
+confirm | `(context: { e: MouseEvent })` | \-
 focus | `(context: { value: TimePickerValue; e: FocusEvent })` | \-
 input | `(context: { value: TimePickerValue; e: InputEvent })` | \-
 open | `(context: { e: MouseEvent })` | \-
@@ -64,6 +69,7 @@ placeholder | String / Array | undefined | Typescript：`string \| Array<string>
 popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 presets | Object | - | Typescript：`PresetTimeRange` `interface PresetTimeRange { [presetRageName: string]: TimeRangeValue \| (() => TimeRangeValue)}`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
+readonly | Boolean | undefined | Whether it is read only, the priority is greater than `allowInput` | N
 size | String | medium | options: small/medium/large | N
 status | String | default | options: default/success/warning/error | N
 steps | Array | [1, 1, 1] | Typescript：`Array<string \| number>` | N

@@ -12,10 +12,10 @@ auto-close | Boolean | true | \- | N
 enable-alpha | Boolean | false | \- | N
 fixed | Boolean | false | `1.8.5` | N
 footer | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
-format | String | RGB | options: RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS | N
+format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
 header | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 popup-props | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/color-picker/type.ts) | N
-swatch-colors | Array | - | swatch colors。Typescript：`Array<string> \| null` | N
+swatch-colors | Array | undefined | swatch colors。Typescript：`Array<string> \| null \| undefined` | N
 type | String | base | options: base/multiple。Typescript：`TypeEnum ` `type TypeEnum = 'base' \| 'multiple'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/color-picker/type.ts) | N
 use-popup | Boolean | false | \- | N
 value | String | - | color value | N

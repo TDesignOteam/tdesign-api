@@ -6,7 +6,7 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-attach | String / Function | 'body' | 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+attach | String / Function | 'body' | 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body。TS 类型：`AttachNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 closeBtn | Boolean / Slot / Function | true | 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 closeOnEscKeydown | Boolean | true | 按下 ESC 时是否触发图片预览器关闭事件 | N
 closeOnOverlay | Boolean | - | 是否在点击遮罩层时，触发预览关闭 | N
@@ -26,6 +26,7 @@ visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model` 或 
 defaultVisible | Boolean | false | 隐藏/显示预览。非受控属性 | N
 zIndex | Number | - | 层级，默认为 2000 | N
 onClose | Function |  | TS 类型：`(context: { trigger: 'close-btn' \| 'overlay' \| 'esc'; e: MouseEvent \| KeyboardEvent }) => void`<br/>关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键 | N
+onDownload | Function |  | TS 类型：`(url: string \| File) => void`<br/>自定义预览图片下载操作，url为图片链接 | N
 onIndexChange | Function |  | TS 类型：`(index: number, context: { trigger: 'prev' \| 'next' \| 'current' }) => void`<br/>预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片 | N
 
 ### ImageViewer Events
@@ -33,4 +34,5 @@ onIndexChange | Function |  | TS 类型：`(index: number, context: { trigger: '
 名称 | 参数 | 描述
 -- | -- | --
 close | `(context: { trigger: 'close-btn' \| 'overlay' \| 'esc'; e: MouseEvent \| KeyboardEvent })` | 关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键
+download | `(url: string \| File)` | 自定义预览图片下载操作，url为图片链接
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' \| 'current' })` | 预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片

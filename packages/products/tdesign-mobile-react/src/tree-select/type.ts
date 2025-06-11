@@ -8,12 +8,16 @@ import { TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdTreeSelectProps<DataOption extends TreeOptionData = TreeOptionData> {
   /**
+   * 自定义选中值，优先级高于 `value`
+   */
+  customValue?: TreeSelectValue;
+  /**
    * 高度，默认单位为 px
    * @default 336
    */
   height?: string | number;
   /**
-   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`
+   * 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`
    */
   keys?: TreeKeysType;
   /**

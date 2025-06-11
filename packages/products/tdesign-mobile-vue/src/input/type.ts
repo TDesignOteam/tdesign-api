@@ -42,7 +42,7 @@ export interface TdInputProps {
    */
   clearable?: boolean;
   /**
-   * null
+   * 光标颜色
    * @default #0052d9
    */
   cursorColor?: string;
@@ -54,6 +54,10 @@ export interface TdInputProps {
    * 用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
    */
   enterkeyhint?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+  /**
+   * 右侧额外内容
+   */
+  extra?: TNode;
   /**
    * 指定输入框展示值的格式
    */

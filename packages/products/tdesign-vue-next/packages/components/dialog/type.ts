@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode } from '../common';
+import { TNode, Styles, AttachNode, AppContext } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -78,6 +78,11 @@ export interface TdDialogProps {
    * @default true
    */
   header?: string | boolean | TNode;
+  /**
+   * 是否启用对话框懒加载，启用时对话框内的内容不渲染
+   * @default false
+   */
+  lazy?: boolean;
   /**
    * 对话框类型，有 4 种：模态对话框、非模态对话框、普通对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件
    * @default modal
@@ -179,7 +184,58 @@ export interface TdDialogCardProps
     | 'onCancel'
     | 'onCloseBtnClick'
     | 'onConfirm'
-  > {}
+    | 'confirmLoading'
+  > {
+  /**
+   * 对话框内容
+   */
+  body?: string | TNode;
+  /**
+   * 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件
+   */
+  cancelBtn?: string | ButtonProps | TNode | null;
+  /**
+   * 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例
+   * @default true
+   */
+  closeBtn?: string | ButtonProps | TNode | null;
+  /**
+   * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
+   * @default true
+   */
+  confirmBtn?: string | ButtonProps | TNode | null;
+  /**
+   * 确认按钮加载状态
+   */
+  confirmLoading?: string | ButtonProps | TNode | null;
+  /**
+   * 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容
+   * @default true
+   */
+  footer?: boolean | TNode;
+  /**
+   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容
+   * @default true
+   */
+  header?: string | boolean | TNode;
+  /**
+   * 对话框风格
+   * @default default
+   */
+  theme?: 'default' | 'info' | 'warning' | 'danger' | 'success';
+  /**
+   * 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件
+   */
+  onCancel?: (context: { e: MouseEvent }) => void;
+  /**
+   * 点击右上角关闭按钮时触发
+   */
+  onCloseBtnClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发
+   */
+  onConfirm?: (context: { e: MouseEvent | KeyboardEvent }) => void;
+}
 
 export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
   /**
@@ -228,8 +284,8 @@ export interface DialogCloseContext {
   e: MouseEvent | KeyboardEvent;
 }
 
-export type DialogMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogConfirmMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogConfirmMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>) => DialogInstance;
+export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>, context?: AppContext) => DialogInstance;

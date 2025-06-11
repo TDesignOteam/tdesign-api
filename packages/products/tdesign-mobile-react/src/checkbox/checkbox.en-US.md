@@ -9,7 +9,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 block | Boolean | true | \- | N
-borderless | Boolean | false | \- | N
+borderless | Boolean | undefined | \- | N
 checkAll | Boolean | false | \- | N
 checked | Boolean | false | \- | N
 defaultChecked | Boolean | false | uncontrolled property | N
@@ -35,6 +35,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
+borderless | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 max | Number | undefined | \- | N

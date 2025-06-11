@@ -62,11 +62,12 @@
     "api:upload": "node packages/scripts/upload.js",
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
     "api:pure": "node packages/scripts/index.js",
-    "api:docs": "git checkout main && git pull && node packages/scripts/index.js",
+    "api:docs": "node packages/scripts/index.js",
     "api:vscode": "git checkout main && git pull && node packages/scripts/vscode",
-    "api:helper": "git checkout main && git pull && node packages/scripts/helper",
+    "api:helper": "node packages/scripts/helper",
     "api:configurable": "node packages/scripts/configurable-props"
   },
   "author": "TDesign",
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.4+sha512.da3d715bfd22a9a105e6e8088cfc7826699332ded60c423b14ec613a185f1602206702ff0fe4c438cb15c979081ce4cb02568e364b15174503a63c7a8e2a5f6c"
 }

@@ -10,7 +10,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 bordered | Boolean | true | 是否显示外边框 | N
 fixed | Boolean | true | 是否固定在底部 | N
-safe-area-inset-bottom | Boolean | true | 是否为 iPhoneX 留出底部安全距离 | N
+safe-area-inset-bottom | Boolean | true | 是否开启底部安全区适配 | N
 shape | String | normal | 标签栏的形状。可选项：normal/round | N
 split | Boolean | true | 是否需要分割线 | N
 theme | String | normal | 选项风格。可选项：normal/tag | N

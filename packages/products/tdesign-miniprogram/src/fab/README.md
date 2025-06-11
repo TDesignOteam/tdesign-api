@@ -13,12 +13,12 @@ draggable | String / Boolean | false | 是否可拖拽。`true` / `'all'`可拖�
 icon | String | - | 图标 | N
 text | String | - | 文本内容 | N
 using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
-y-bounds | Array | - | 设置垂直方向边界限制，示例：[48, 48] 或 ['96rpx', 80]。TS 类型：`Array<string \| number>` | N
+y-bounds | Array | - | 设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]。TS 类型：`Array<string \| number>` | N
 
 ### Fab Events
 
 名称 | 参数 | 描述
 -- | -- | --
-click | `({e: Event})` | 悬浮按钮点击事件
-drag-end | `(e: TouchEvent)` | 结束拖拽时触发
-drag-start | `(e: TouchEvent)` | 开始拖拽时触发
+click | `(detail: {e: Event})` | 悬浮按钮点击事件
+drag-end | `(detail: { e: TouchEvent })` | 结束拖拽时触发
+drag-start | `(detail: { e: TouchEvent })` | 开始拖拽时触发

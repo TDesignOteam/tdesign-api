@@ -26,6 +26,7 @@ popupProps | Object | - | Typescript：`PopupProps`，[Popup API Documents](./po
 prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object | - | Typescript：`PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+readonly | Boolean | undefined | Whether it is read only, the priority is greater than allowInput | N
 selectInputProps | Object | - | Typescript：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 status | String | default | options: default/success/warning/error | N
@@ -38,6 +39,7 @@ valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescr
 valueType | String | - | Typescript：`DatePickerValueType` `type DatePickerValueType = 'time-stamp' \| 'Date' \| 'YYYY' \| 'YYYY-MM' \| 'YYYY-MM-DD' \| 'YYYY-MM-DD HH' \| 'YYYY-MM-DD HH:mm' \| 'YYYY-MM-DD HH:mm:ss' \| 'YYYY-MM-DD HH:mm:ss:SSS'` `type ValueTypeEnum = DatePickerValueType`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 onBlur | Function |  | Typescript：`(context: { value: DateValue \| DateMultipleValue; e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateValue\| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' \| 'pick' \| 'enter' \| 'preset' \| 'clear'`<br/> | N
+onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Triggered when the clear button is clicked | N
 onConfirm | Function |  | Typescript：`(context: { date: Date, e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: DateValue \| DateMultipleValue; e: FocusEvent }) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
@@ -49,6 +51,7 @@ name | params | description
 -- | -- | --
 blur | `(context: { value: DateValue \| DateMultipleValue; e: FocusEvent })` | \-
 change | `(value: DateValue\| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource })` | [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' \| 'pick' \| 'enter' \| 'preset' \| 'clear'`<br/>
+clear | `(context: { e: MouseEvent })` | Triggered when the clear button is clicked
 confirm | `(context: { date: Date, e: MouseEvent })` | \-
 focus | `(context: { value: DateValue \| DateMultipleValue; e: FocusEvent })` | \-
 pick | `(value: DateValue)` | \-

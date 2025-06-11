@@ -27,5 +27,6 @@ zIndex | Number | - | \- | N
 name | params | default | description
 -- | -- | -- | --
 options | Function | - | required。Typescript：`boolean \| TdLoadingProps`
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 插件返回值：`LoadingInstance【interface LoadingInstance { hide: () => void }】`

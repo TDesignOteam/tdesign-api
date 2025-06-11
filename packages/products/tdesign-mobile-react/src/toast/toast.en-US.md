@@ -16,7 +16,7 @@ overlayProps | Object | - | Typescript：`OverlayProps `，[Overlay API Document
 placement | String | middle | options:  top/middle/bottom | N
 preventScrollThrough | Boolean | false | \- | N
 showOverlay | Boolean | false | \- | N
-theme | String | - | options: loading/success/error | N
+theme | String | - | options: loading/success/warning/error | N
 onClose | Function |  | Typescript：`() => void`<br/> | N
 onDestroy | Function |  | Typescript：`() => void`<br/> | N
 

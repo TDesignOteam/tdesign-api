@@ -6,7 +6,11 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+ellipsis | String / Slot / Function | - | Typescript：`string \| TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+itemsAfterCollapse | Number | undefined | \- | N
+itemsBeforeCollapse | Number | undefined | \- | N
 maxItemWidth | String | undefined | \- | N
+maxItems | Number | undefined | \- | N
 options | Array | - | Typescript：`Array<TdBreadcrumbItemProps>` | N
 separator | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | light | options: light | N

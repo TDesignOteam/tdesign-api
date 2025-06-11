@@ -9,7 +9,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 block | Boolean | true | \- | N
-borderless | Boolean | false | \- | N
+borderless | Boolean | undefined | \- | N
 check-all | Boolean | false | \- | N
 checked | Boolean | false | \- | N
 default-checked | Boolean | undefined | uncontrolled property | N

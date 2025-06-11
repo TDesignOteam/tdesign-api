@@ -44,6 +44,7 @@ name | params | default | description
 theme | String | - | required。Typescript：`MessageThemeList`
 message | String / Object | - | required。Typescript：`string \| MessageOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.info
 
@@ -53,6 +54,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/message/type.ts)
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.error
 
@@ -62,6 +64,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.warning
 
@@ -71,6 +74,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.success
 
@@ -80,6 +84,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.loading
 
@@ -89,6 +94,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.question
 
@@ -98,6 +104,7 @@ name | params | default | description
 -- | -- | -- | --
 message | String / Object | - | required。Typescript：`string \| MessageInfoOptions`
 duration | Number | 3000 | \-
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
 ### MessagePlugin.close
 

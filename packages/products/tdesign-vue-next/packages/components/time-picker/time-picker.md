@@ -18,6 +18,7 @@ label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNo
 placeholder | String | undefined | 占位符 | N
 popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 presets | Object | - | 预设快捷时间选择，示例：`{ '前一小时': '11:00:00' }`。TS 类型：`PresetTime` `interface PresetTime { [presetName: string]: TimePickerValue \| (() => TimePickerValue) }`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
+readonly | Boolean | undefined | 只读状态，优先级大于 `allowInput` | N
 selectInputProps | Object | - | 透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
@@ -28,7 +29,9 @@ defaultValue | String | - | 选中值。非受控属性。TS 类型：`TimePicke
 valueDisplay | String / Slot / Function | - | 自定义选中项呈现的内容。TS 类型：`string \| TNode<{ value: TimePickerValue }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 onBlur | Function |  | TS 类型：`(context: { value: TimePickerValue } & SelectInputBlurContext) => void`<br/>当输入框失去焦点时触发，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts)。<br/>`import { SelectInputBlurContext } from '@SelectInput'`<br/> | N
 onChange | Function |  | TS 类型：`(value: TimePickerValue) => void`<br/>选中值发生变化时触发 | N
+onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清空按钮时触发 | N
 onClose | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>面板关闭时触发 | N
+onConfirm | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击确认按钮时触发 | N
 onFocus | Function |  | TS 类型：`(context: { value: TimePickerValue; e: FocusEvent }) => void`<br/>输入框获得焦点时触发，value 表示组件当前有效值 | N
 onInput | Function |  | TS 类型：`(context: { value: TimePickerValue; e: InputEvent }) => void`<br/>当输入框内容发生变化时触发，参数 value 表示组件当前有效值 | N
 onOpen | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>面板打开时触发 | N
@@ -40,7 +43,9 @@ onPick | Function |  | TS 类型：`(value: TimePickerValue, context: { e: Mouse
 -- | -- | --
 blur | `(context: { value: TimePickerValue } & SelectInputBlurContext)` | 当输入框失去焦点时触发，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts)。<br/>`import { SelectInputBlurContext } from '@SelectInput'`<br/>
 change | `(value: TimePickerValue)` | 选中值发生变化时触发
+clear | `(context: { e: MouseEvent })` | 点击清空按钮时触发
 close | `(context: { e: MouseEvent })` | 面板关闭时触发
+confirm | `(context: { e: MouseEvent })` | 点击确认按钮时触发
 focus | `(context: { value: TimePickerValue; e: FocusEvent })` | 输入框获得焦点时触发，value 表示组件当前有效值
 input | `(context: { value: TimePickerValue; e: InputEvent })` | 当输入框内容发生变化时触发，参数 value 表示组件当前有效值
 open | `(context: { e: MouseEvent })` | 面板打开时触发
@@ -64,6 +69,7 @@ placeholder | String / Array | undefined | 占位符，值为数组表示可分�
 popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 presets | Object | - | 预设快捷时间范围选择，示例：{ '下午': ['13:00:00', '18:00:00'] }。TS 类型：`PresetTimeRange` `interface PresetTimeRange { [presetRageName: string]: TimeRangeValue \| (() => TimeRangeValue)}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
 rangeInputProps | Object | - | 透传给范围输入框 RangeInput 组件的参数。TS 类型：`RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/time-picker/type.ts) | N
+readonly | Boolean | undefined | 只读状态，优先级大于 `allowInput` | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
 steps | Array | [1, 1, 1] | 时间间隔步数，数组排列 [小时, 分钟, 秒]，示例：[2, 1, 1] 或者 ['2', '1', '1']。TS 类型：`Array<string \| number>` | N

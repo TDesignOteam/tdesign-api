@@ -38,6 +38,7 @@ valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescr
 valueType | String | - | Typescript：`DatePickerValueType` `type DatePickerValueType = 'time-stamp' \| 'Date' \| 'YYYY' \| 'YYYY-MM' \| 'YYYY-MM-DD' \| 'YYYY-MM-DD HH' \| 'YYYY-MM-DD HH:mm' \| 'YYYY-MM-DD HH:mm:ss' \| 'YYYY-MM-DD HH:mm:ss:SSS'` `type ValueTypeEnum = DatePickerValueType`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 onBlur | Function |  | Typescript：`(context: { value: DateValue \| DateMultipleValue; e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript：`(value: DateValue\| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' \| 'pick' \| 'enter' \| 'preset' \| 'clear'`<br/> | N
+onClear | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Triggered when the clear button is clicked | N
 onConfirm | Function |  | Typescript：`(context: { date: Date, e: MouseEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(context: { value: DateValue \| DateMultipleValue; e: FocusEvent }) => void`<br/> | N
 onPick | Function |  | Typescript：`(value: DateValue) => void`<br/> | N
@@ -49,6 +50,7 @@ name | params | description
 -- | -- | --
 blur | `(context: { value: DateValue \| DateMultipleValue; e: FocusEvent })` | \-
 change | `(value: DateValue\| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource })` | [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts)。<br/>`import { Dayjs } from 'dayjs'`<br/><br/>`type DatePickerTriggerSource = 'confirm' \| 'pick' \| 'enter' \| 'preset' \| 'clear'`<br/>
+clear | `(context: { e: MouseEvent })` | Triggered when the clear button is clicked
 confirm | `(context: { date: Date, e: MouseEvent })` | \-
 focus | `(context: { value: DateValue \| DateMultipleValue; e: FocusEvent })` | \-
 pick | `(value: DateValue)` | \-
