@@ -145393,7 +145393,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n    \"Miniprogram\": \"1.9.5\",\"Vue(Mobile)\": \"1.6.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
