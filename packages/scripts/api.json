@@ -32841,6 +32841,49 @@
       ]
     },
     {
+      "id": 1749698394,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "ColorPicker",
+      "field_category": 1,
+      "field_name": "colorModes",
+      "field_type": [
+        "1",
+        "16"
+      ],
+      "field_default_value": "\"monochrome\"",
+      "field_enum": "",
+      "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-12 03:19:54",
+      "update_time": "2025-06-12 03:19:54",
+      "event_output": null,
+      "custom_field_type": "colorModesEnum | colorModesEnum[] 【type colorModesEnum = 'monochrome' | 'linear-gradient'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Array"
+      ]
+    },
+    {
       "id": 2119,
       "platform_framework": [
         "1",
@@ -32933,7 +32976,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "ColorPicker",
       "field_category": 1,
@@ -32963,7 +33009,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
