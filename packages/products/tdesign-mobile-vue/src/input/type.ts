@@ -155,7 +155,7 @@ export interface TdInputProps {
    */
   onFocus?: (value: InputValue, context: { e: FocusEvent }) => void;
   /**
-   * 【暂不支持】字数超出限制时触发
+   * 字数超出限制时触发
    */
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }
