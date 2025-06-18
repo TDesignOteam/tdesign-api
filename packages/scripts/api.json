@@ -3895,12 +3895,13 @@
       "field_type": [
         "1",
         "4",
+        "32",
         "64"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮",
-      "field_desc_en": null,
+      "field_desc_zh": "即将废弃，请使用 closeBtn 属性。关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮",
+      "field_desc_en": "Deprecated, use closeBtn instead.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-21 03:37:15",
@@ -3924,6 +3925,54 @@
       "field_type_text": [
         "String",
         "Boolean",
+        "Function",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1750247844,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Alert",
+      "field_category": 1,
+      "field_name": "closeBtn",
+      "field_type": [
+        "1",
+        "4",
+        "32",
+        "64"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮",
+      "field_desc_en": "Close button. Value \"true\" show the close button. Value \"False\" hide close button. Value type string display as is. Use TNode to custom the close trigger.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-18 11:57:24",
+      "update_time": "2025-06-18 11:57:24",
+      "event_output": null,
+      "custom_field_type": "string | boolean | TNode",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "1.41",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean",
+        "Function",
         "TNode"
       ]
     },
