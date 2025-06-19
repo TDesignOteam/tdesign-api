@@ -10,12 +10,12 @@ import { PropType } from 'vue';
 export default {
   /** 即将废弃，请使用 closeBtn 属性。关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮 */
   close: {
-    type: [String, Boolean, Function, Function] as PropType<TdAlertProps['close']>,
+    type: [String, Boolean, Function] as PropType<TdAlertProps['close']>,
     default: false,
   },
   /** 关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮 */
   closeBtn: {
-    type: [String, Boolean, Function, Function] as PropType<TdAlertProps['closeBtn']>,
+    type: [String, Boolean, Function] as PropType<TdAlertProps['closeBtn']>,
     default: false,
   },
   /** 内容，同 message */

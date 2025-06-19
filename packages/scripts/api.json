@@ -3895,7 +3895,6 @@
       "field_type": [
         "1",
         "4",
-        "32",
         "64"
       ],
       "field_default_value": "false",
@@ -3925,7 +3924,6 @@
       "field_type_text": [
         "String",
         "Boolean",
-        "Function",
         "TNode"
       ]
     },
@@ -3942,7 +3940,6 @@
       "field_type": [
         "1",
         "4",
-        "32",
         "64"
       ],
       "field_default_value": "false",
@@ -3972,7 +3969,6 @@
       "field_type_text": [
         "String",
         "Boolean",
-        "Function",
         "TNode"
       ]
     },
