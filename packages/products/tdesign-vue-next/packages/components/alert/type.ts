@@ -11,7 +11,7 @@ export interface TdAlertProps {
    * 即将废弃，请使用 closeBtn 属性。关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮
    * @default false
    */
-  close?: string | boolean | function | TNode;
+  close?: string | boolean | TNode;
   /**
    * 关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮
    * @default false

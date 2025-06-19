@@ -2,13 +2,12 @@
 
 ## API
 
-
 ### Alert Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-close | String / Boolean / Function / Slot / Function | false | Deprecated, use closeBtn instead.。Typescript：`string \| boolean \| function \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-closeBtn | String / Boolean / Function / Slot / Function | false | Close button. Value "true" show the close button. Value "False" hide close button. Value type string display as is. Use TNode to custom the close trigger.。Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+close | String / Boolean / Slot / Function | false | Deprecated, use closeBtn instead.。Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+closeBtn | String / Boolean / Slot / Function | false | Close button. Value "true" show the close button. Value "False" hide close button. Value type string display as is. Use TNode to custom the close trigger.。Typescript：`string \| boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 maxLine | Number | 0 | \- | N
