@@ -9,7 +9,6 @@
 bgColor | String | transparent | 二维码背景颜色 | N
 borderless | Boolean | false | 是否有边框 | N
 color | String | - | 二维码颜色 | N
-expiredText | String | - | 语言配置，“二维码过期”描述文本 | N
 icon | String / Slot / Function | - | 二维码中图片的地址或自定义icon。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 iconSize | Number / Object | 40 | 二维码中图片的大小。TS 类型：`number \| { width: number; height: number }` | N
 level | String | M | 二维码纠错等级。可选项：L/M/Q/H | N
