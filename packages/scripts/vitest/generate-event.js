@@ -1,4 +1,5 @@
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const camelCase = require('lodash/camelCase');
 const {
   getWrapper,
@@ -164,7 +165,7 @@ function getEventsCode(framework, events) {
   if (framework === 'Vue(PC)') {
     const arr = [];
     Object.entries(events).forEach(([event, fn]) => {
-      arr.push(`'${kebabCase(event)}': ${fn},`);
+      arr.push(`'${kebabCaseComponent(event)}': ${fn},`);
     });
     return `on={{ ${arr.join(' ')} }}`;
   }

@@ -3,7 +3,8 @@ const prettierConfig = require('../config/prettier');
 const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const { FRAMEWORK_MAP } = require('../config');
 const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
 const { getUnitTestCode } = require('./main');
@@ -15,7 +16,7 @@ function generateVitestUnitCase(baseData, framework, { component }) {
     // console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
     const codeData = prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;
-    const fileName = kebabCase(component);
+    const fileName = kebabCaseComponent(component);
     const outputFolder = path.resolve(basePath, `${fileName}/__tests__`);
     const outputPath = path.resolve(outputFolder, `vitest-${fileName}.test.jsx`);
 

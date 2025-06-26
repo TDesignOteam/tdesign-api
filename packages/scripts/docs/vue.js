@@ -2,7 +2,8 @@ const pick = require('lodash/pick');
 const find = require('lodash/find');
 const camelCase = require('lodash/camelCase');
 const lowerFirst = require('lodash/lowerFirst');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const map = require('../map.json');
 const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
 const { fetchApiDataFromOfficialWebsite } = require('../types/miniprogram');
@@ -150,7 +151,7 @@ function formatDesc(
         const name = importComponent[0].slice(1, -1);
         if (IMPORT_COMPONENT_PATH.includes(name)) {
           const component = name.slice(1);
-          importDocPath = `，[${component} API Documents](./${kebabCase(component)}?tab=api)`;
+          importDocPath = `，[${component} API Documents](./${kebabCaseComponent(component)}?tab=api)`;
           importIndex = index;
         }
       });
@@ -256,7 +257,7 @@ function formatToVueApi(api, params) {
   r.field_desc_zh = desc.filter(v => !!v).join('。');
   // 小程序的属性一般显示为中划线
   if (['Miniprogram'].includes(params.framework)) {
-    r.field_name = kebabCase(r.field_name);
+    r.field_name = kebabCaseComponent(r.field_name);
   }
   return r;
 }

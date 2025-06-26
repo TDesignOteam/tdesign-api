@@ -7,7 +7,9 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 clearable | Boolean | false | \- | N
+colorModes | String / Array | "monochrome" | Typescript：`colorModesEnum \| colorModesEnum[] ` `type colorModesEnum = 'monochrome' \| 'linear-gradient'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts) | N
 enableAlpha | Boolean | false | \- | N
+enableMultipleGradient | Boolean | true | \- | N
 fixed | Boolean | false | \- | N
 format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
 swatchColors | Array | undefined | swatch colors。Typescript：`Array<string> \| null \| undefined` | N

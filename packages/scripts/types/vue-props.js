@@ -1,5 +1,6 @@
 const fs = require('fs');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const path = require('path');
 const chalk = require('chalk');
 const {
@@ -352,7 +353,7 @@ function getFolderPath(basePath, cmp) {
 
 function getPropsFileName(folder, cmp) {
   const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-  const fileName = cmp === parentCmp || !parentCmp ? 'props.ts' : `${kebabCase(cmp)}-props.ts`;
+  const fileName = cmp === parentCmp || !parentCmp ? 'props.ts' : `${kebabCaseComponent(cmp)}-props.ts`;
   return path.resolve(folder, fileName);
 }
 
