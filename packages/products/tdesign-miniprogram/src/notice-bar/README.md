@@ -25,6 +25,7 @@ default-visible | Boolean | undefined | 显示/隐藏。非受控属性 | N
 -- | -- | --
 change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | 当 `direction="vertical"` 时轮播切换时触发
 click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+
 ### NoticeBar External Classes
 
 类名 | 描述
