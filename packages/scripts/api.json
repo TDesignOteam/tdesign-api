@@ -16818,43 +16818,6 @@
       ]
     },
     {
-      "id": 1712655226,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "defaultVisible",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否显示日历；`usePopup` 为 true 时有效。非受控属性",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 09:33:46",
-      "update_time": "2024-04-09 09:33:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1840,
       "platform_framework": [
         "1",
@@ -17935,6 +17898,7 @@
     {
       "id": 3146,
       "platform_framework": [
+        "8",
         "16",
         "32",
         "64"
@@ -17955,7 +17919,7 @@
       "update_time": "2022-11-01 02:50:05",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
@@ -17965,46 +17929,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1712578516,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Calendar",
-      "field_category": 1,
-      "field_name": "visible",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否显示日历；`usePopup` 为 true 时有效。支持语法糖 `v-model:visible`",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:15:16",
-      "update_time": "2024-04-08 12:15:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
