@@ -2,7 +2,8 @@
  * Vue2 unit test
  */
 
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../../utils');
+
 const {
   getUnitTestDescription,
 } = require('../utils');
@@ -17,7 +18,7 @@ function getTestImportSegment(componentName) {
 * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
 * */
 import { mount } from '@vue/test-utils';
-import ${componentName} from '../../../src/${kebabCase(componentName)}';
+import ${componentName} from '../../../src/${kebabCaseComponent(componentName)}';
  `;
 };
 

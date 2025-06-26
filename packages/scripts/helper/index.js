@@ -13,7 +13,8 @@ const { getParentByChildComponent } = require('../vitest/utils');
 const map = require('../map.json');
 const { data: ALL_API } = require('../api.json');
 const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const uniq = require('lodash/uniq');
 const chalk = require('chalk');
 const prettier = require('prettier');
@@ -79,25 +80,25 @@ function getHelperData(baseData, framework) {
     if (aliasComponents[key]) {
       volar.push(aliasComponents[key]);
     }
-    let componentName = `${PREFIX}-${kebabCase(key)}`;
+    let componentName = `${PREFIX}-${kebabCaseComponent(key)}`;
     if (['Text', 'Title', 'Paragraph'].includes(key)){
-      componentName = `${PREFIX}-${kebabCase('Typography'+key)}`;
+      componentName = `${PREFIX}-${kebabCaseComponent('Typography'+key)}`;
     }
     if ('IconSVG' === key) {
-      componentName = kebabCase('Icon');
+      componentName = kebabCaseComponent('Icon');
     }
     if ('IconFont' === key) {
-      componentName = kebabCase(key);
+      componentName = kebabCaseComponent(key);
     }
 
-    const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCase(aliasComponents[key])}` : '';
+    const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCaseComponent(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
     const slotsList = [];
     const eventsList = [];
     const parentComponent = getParentByChildComponent(cmpMap,key);
     const componentDocsName = parentComponent || key;
-    const componentDocs = `${current.docsPath}${kebabCase(componentDocsName)}`;
+    const componentDocs = `${current.docsPath}${kebabCaseComponent(componentDocsName)}`;
     const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
 
     for (let i = 0; i < baseData[key].length; i++) {
@@ -106,7 +107,7 @@ function getHelperData(baseData, framework) {
         continue;
       }
 
-      const prop = kebabCase(api.field_name);
+      const prop = kebabCaseComponent(api.field_name);
       const attributeKey = `${componentName}/${prop}`; 
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;

@@ -119,9 +119,9 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       framework, component, snapshot, tnode, skip, variables,
     });
 
-    if (kebabCase(oneApiData.field_name) !== oneApiData.field_name) {
+    if (kebabCaseComponent(oneApiData.field_name) !== oneApiData.field_name) {
       const slotCodeProps2 = {
-        [slotsText]: `{ '${kebabCase(oneApiData.field_name)}': (${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
+        [slotsText]: `{ '${kebabCaseComponent(oneApiData.field_name)}': (${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span> }`,
         ...props,
       };
       if (isBothBooleanAndTNode) {
@@ -129,7 +129,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       }
       const slotCode2 = getMountComponent(framework, component, slotCodeProps2, extraCode);
       arr.push(`\n`);
-      const slotTtDesc2 = `'slots.${kebabCase(oneApiData.field_name)} works fine'`;
+      const slotTtDesc2 = `'slots.${kebabCaseComponent(oneApiData.field_name)} works fine'`;
       thirdArr = getTestCaseByComponentCode({
         itDesc: slotTtDesc2,
         componentCode: slotCode2,

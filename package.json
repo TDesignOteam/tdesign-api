@@ -1,5 +1,6 @@
 {
   "name": "tdesign-api",
+  "packageManager": "pnpm@10.12.1",
   "version": "0.0.1",
   "description": "a tool for manage API",
   "main": "index.js",

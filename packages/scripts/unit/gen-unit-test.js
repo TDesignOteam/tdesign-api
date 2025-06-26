@@ -1,7 +1,8 @@
 const yaml = require('js-yaml');
 const path = require('path');
 const { FRAMEWORK_MAP } = require('../config');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
+
 const includes = require('lodash/includes');
 const {
   getTestImportSegment: getVueTestImportSegment,
@@ -38,12 +39,12 @@ function getUnitTestFilePath(
   if (['React(PC)'].includes(framework)) {
     return path.resolve(
       FRAMEWORK_MAP[framework].apiBasePath,
-      `../src/${kebabCase(componentName)}/__tests__/${testName}.tsx`,
+      `../src/${kebabCaseComponent(componentName)}/__tests__/${testName}.tsx`,
     );
   }
   return path.resolve(
     FRAMEWORK_MAP[framework].apiBasePath,
-    `../test/unit/${kebabCase(componentName)}/${testName}.js`,
+    `../test/unit/${kebabCaseComponent(componentName)}/${testName}.js`,
   );
 };
 

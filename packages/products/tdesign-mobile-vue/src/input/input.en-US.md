@@ -39,7 +39,7 @@ onBlur | Function |  | Typescript：`(value: InputValue, context: { e: FocusEven
 onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>trigger on input value changed | N
 onClear | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
-onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>trigger on text length being over max length or max character | N
+onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>`1.9.1`。trigger on text length being over max length or max character | N
 
 ### Input Events
 
@@ -49,4 +49,4 @@ blur | `(value: InputValue, context: { e: FocusEvent })` | \-
 change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | trigger on input value changed
 clear | `(context: { e: TouchEvent })` | \-
 focus | `(value: InputValue, context: { e: FocusEvent })` | \-
-validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
+validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | `1.9.1`。trigger on text length being over max length or max character

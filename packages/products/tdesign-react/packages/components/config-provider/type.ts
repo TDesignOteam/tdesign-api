@@ -102,6 +102,11 @@ export interface GlobalConfigProvider {
    */
   input?: InputConfig;
   /**
+   * 全局配置是否影响函数式调用方法使用的组件
+   * @default false
+   */
+  isContextEffectPlugin?: boolean;
+  /**
    * 列表组件全局配置
    */
   list?: ListConfig;
@@ -117,6 +122,10 @@ export interface GlobalConfigProvider {
    * 气泡确认框全局配置
    */
   popconfirm?: PopconfirmConfig;
+  /**
+   * 二维码全局配置
+   */
+  qrcode?: QRCodeConfig;
   /**
    * 评分全局配置
    */
@@ -643,6 +652,24 @@ export interface PopconfirmConfig {
    * 确认按钮主题色，即 Popconfirm 的 `theme` 和 确认按钮的 `theme` 映射关系。示例：{ danger: 'danger' }
    */
   confirmBtnTheme?: { default: string; warning: string; danger: string };
+}
+
+export interface QRCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expiredText?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refreshText?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scannedText?: string;
 }
 
 export interface RateConfig {

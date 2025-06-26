@@ -10,8 +10,18 @@ import { PropType } from 'vue';
 export default {
   /** 是否可清空 */
   clearable: Boolean,
+  /** 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色 */
+  colorModes: {
+    type: [String, Array] as PropType<TdColorPickerProps['colorModes']>,
+    default: "monochrome",
+  },
   /** 是否开启透明通道 */
   enableAlpha: Boolean,
+  /** 是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色 */
+  enableMultipleGradient: {
+    type: Boolean,
+    default: true,
+  },
   /** 如果 color-picker 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true */
   fixed: Boolean,
   /** 格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效 */
