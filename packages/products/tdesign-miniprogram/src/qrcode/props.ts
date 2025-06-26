@@ -21,11 +21,6 @@ const props: TdQRCodeProps = {
     type: String,
     value: '',
   },
-  /** 语言配置，“二维码过期”描述文本 */
-  expiredText: {
-    type: String,
-    value: '',
-  },
   /** 二维码中图片的地址或自定义icon */
   icon: {
     type: String,

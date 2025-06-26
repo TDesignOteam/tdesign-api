@@ -32,14 +32,6 @@ export interface TdQRCodeProps {
     value?: string;
   };
   /**
-   * 语言配置，“二维码过期”描述文本
-   * @default ''
-   */
-  expiredText?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 二维码中图片的地址或自定义icon
    */
   icon?: {

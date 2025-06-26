@@ -20,11 +20,6 @@ export default {
     type: String,
     default: '',
   },
-  /** 语言配置，“二维码过期”描述文本 */
-  expiredText: {
-    type: String,
-    default: '',
-  },
   /** 二维码中图片的地址或自定义icon */
   icon: {
     type: [String, Function] as PropType<TdQRCodeProps['icon']>,
