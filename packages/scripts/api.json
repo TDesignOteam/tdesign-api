@@ -9946,7 +9946,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "64"
       ],
@@ -9974,6 +9973,54 @@
       "deprecated": 0,
       "version": "",
       "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}",
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1751043802,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "cellEmptyContent",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "单元格数据为空时呈现的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-27 17:03:22",
+      "update_time": "2025-06-27 17:03:22",
+      "event_output": null,
+      "custom_field_type": "string | TNode<BaseTableCellParams<T>>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
@@ -10313,7 +10360,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "【开发中】固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
+      "field_desc_zh": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -12298,7 +12345,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "64"
       ],
@@ -12329,9 +12375,41 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1751043827,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表格内容滚动时触发",
+      "field_desc_en": "trigger on table content scroll",
+      "field_required": 0,
+      "event_input": "(params: { e: Event })",
+      "create_time": "2025-06-27 17:03:47",
+      "update_time": "2025-06-27 17:03:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -12966,7 +13044,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "32",
         "64"
@@ -13002,10 +13079,50 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1751043545,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTableCol",
+      "field_category": 1,
+      "field_name": "ellipsis",
+      "field_type": [
+        "4",
+        "8",
+        "64"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "单元格和表头内容超出时，是否显示省略号。如果仅希望单元格超出省略，可设置 `ellipsisTitle = false`。<br/> 值为 `true`，则超出省略浮层默认显示单元格内容；<br/>值类型为 `Function` 则自定义超出省略浮中层显示的内容。<br /> 请注意单元格超出省略的两个基本点：1. 内容元素是内联元素或样式（自定义单元格内容时需特别注意）；2. 内容超出父元素",
+      "field_desc_en": "ellipsis cell content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-27 16:59:05",
+      "update_time": "2025-06-27 16:59:05",
+      "event_output": null,
+      "custom_field_type": "boolean | TNode<BaseTableCellParams<T>>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -13019,7 +13136,6 @@
         "1",
         "2",
         "4",
-        "8",
         "16",
         "32",
         "64"
@@ -13055,10 +13171,50 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1751043513,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTableCol",
+      "field_category": 1,
+      "field_name": "ellipsisTitle",
+      "field_type": [
+        "4",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表头内容超出时，是否显示省略号。优先级高于 `ellipsis`。<br/>值为 `true`，则超出省略的浮层默认显示表头全部内容；<br/>值类型为 `Function` 用于自定义超出省略浮层显示的表头内容",
+      "field_desc_en": "ellipsis title content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-27 16:58:33",
+      "update_time": "2025-06-27 16:58:33",
+      "event_output": null,
+      "custom_field_type": "boolean | TNode<BaseTableColParams<T>>【interface BaseTableColParams<T> { col: BaseTableCol<T>; colIndex: number }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -13125,7 +13281,7 @@
       ],
       "field_default_value": "left",
       "field_enum": "left/right",
-      "field_desc_zh": "【开发中】固定列显示位置",
+      "field_desc_zh": "固定列显示位置",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -13637,6 +13793,7 @@
         "1",
         "2",
         "4",
+        "8",
         "32"
       ],
       "component": "BaseTableCol",
@@ -13666,6 +13823,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "Angular(Mobile)"
       ],
       "field_type_text": []
