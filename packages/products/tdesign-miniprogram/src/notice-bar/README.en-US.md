@@ -25,6 +25,7 @@ name | params | description
 -- | -- | --
 change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
 click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+
 ### NoticeBar External Classes
 
 className | Description
