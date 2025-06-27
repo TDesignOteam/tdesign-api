@@ -20,9 +20,9 @@ const chalk = require('chalk');
 const prettier = require('prettier');
 const prettierConfig = require('../config/prettier');
 const { formatType } = require('../types');
- /**
-  * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
-  */
+/**
+ * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
+ */
 const [framework] = process.argv.slice(2);
 
 const PREFIX = 't';
@@ -30,7 +30,6 @@ const PREFIX = 't';
 // 支持同名组件，如 TTable 和 TPrimaryTable 等效
 const aliasComponents = {
   ['PrimaryTable']: 'Table',
-  ['BaseTable']: 'Table',
   ['Radio']: 'RadioButton',
   ['IconSVG']: 'Icon',
 };
@@ -41,6 +40,10 @@ function start() {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
     return console.log(chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'）`));
   }
+  if ('Vue(Mobile)' === framework) {
+    delete aliasComponents['Radio'];
+  }
+
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
@@ -48,8 +51,8 @@ function start() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   if (['Vue(PC)', 'VueNext(PC)'].includes(framework)) {
     // Typography 是空定义组件，特殊处理
-   frameworkData['Typography'] = [];
- }
+    frameworkData['Typography'] = [];
+  }
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
@@ -69,7 +72,7 @@ function getHelperData(baseData, framework) {
   const attributes = {};
   const vueComponents = [];
   const volar = [];
-  
+
 
   for (const key in baseData) {
     if (!isComponent(key)) {
@@ -81,8 +84,8 @@ function getHelperData(baseData, framework) {
       volar.push(aliasComponents[key]);
     }
     let componentName = `${PREFIX}-${kebabCaseComponent(key)}`;
-    if (['Text', 'Title', 'Paragraph'].includes(key)){
-      componentName = `${PREFIX}-${kebabCaseComponent('Typography'+key)}`;
+    if (['Text', 'Title', 'Paragraph'].includes(key)) {
+      componentName = `${PREFIX}-${kebabCaseComponent('Typography' + key)}`;
     }
     if ('IconSVG' === key) {
       componentName = kebabCaseComponent('Icon');
@@ -90,13 +93,16 @@ function getHelperData(baseData, framework) {
     if ('IconFont' === key) {
       componentName = kebabCaseComponent(key);
     }
+    if ('BaseTable' === key && 'Vue(Mobile)' === framework) {
+      componentName = `${PREFIX}-${kebabCaseComponent('Table')}`;
+    }
 
     const aliasComponentName = aliasComponents[key] ? `${PREFIX}-${kebabCaseComponent(aliasComponents[key])}` : '';
     const props = [];
     const propsList = [];
     const slotsList = [];
     const eventsList = [];
-    const parentComponent = getParentByChildComponent(cmpMap,key);
+    const parentComponent = getParentByChildComponent(cmpMap, key);
     const componentDocsName = parentComponent || key;
     const componentDocs = `${current.docsPath}${kebabCaseComponent(componentDocsName)}`;
     const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
@@ -108,12 +114,12 @@ function getHelperData(baseData, framework) {
       }
 
       const prop = kebabCaseComponent(api.field_name);
-      const attributeKey = `${componentName}/${prop}`; 
+      const attributeKey = `${componentName}/${prop}`;
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
-      const rType = formatType(api,framework);
+      const rType = formatType(api, framework);
       switch (api.field_category_text) {
-        
+
         case 'Props':
           props.push(prop);
           const attributesData = {
@@ -226,22 +232,25 @@ function write(framework, name, data) {
 
 function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
-  const readerGlobalComponents= data.map((item)=> {
-    if (item === 'IconSVG'){
+  const readerGlobalComponents = data.map((item) => {
+    if (item === 'IconSVG') {
       return `Icon: typeof import('${current.iconPath}')['Icon'];`
     }
-    if (item === 'IconFont'){
+    if (item === 'IconFont') {
       return `${item}: typeof import('${current.iconPath}')['${item}'];`
     }
-    if (['Text', 'Title', 'Paragraph'].includes(item)){
+    if (['Text', 'Title', 'Paragraph'].includes(item)) {
       return `TTypography${item}: typeof import('${current.name}')['${item}'];`
     }
+    if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
+      return `TTable: typeof import('${current.name}')['Table'];`
+    }
     return `T${item}: typeof import('${current.name}')['${item}'];`
-    
+
   }
-)
-  const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core': 'vue';
-  const volarTemplate=`
+  )
+  const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
+  const volarTemplate = `
   /**
    * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
    * https://github.com/TDesignOteam/tdesign-api
