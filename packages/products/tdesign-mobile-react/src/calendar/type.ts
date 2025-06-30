@@ -84,6 +84,10 @@ export interface TdCalendarProps {
    */
   onConfirm?: (value: Date) => void;
   /**
+   * 切换月或年时触发（switch-mode 不为 none 时有效）
+   */
+  onPanelChange?: (context: { year: number; month: number }) => void;
+  /**
    * 点击日期时触发
    */
   onSelect?: (value: Date) => void;

@@ -18591,6 +18591,7 @@
       "id": 1734943734,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Calendar",
@@ -18614,12 +18615,13 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"1.8.4\"}",
+      "version": "{\n\"Miniprogram\": \"1.8.4\",\n\"Vue(Mobile)\": \"1.8.1\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
