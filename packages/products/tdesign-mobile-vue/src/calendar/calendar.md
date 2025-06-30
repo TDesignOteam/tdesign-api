@@ -12,7 +12,7 @@ format | Function | - | 用于格式化日期的函数。TS 类型：`CalendarFo
 maxDate | Number / Date | - | 最大可选的日期，不传则默认半年后。TS 类型：` number \| Date` | N
 minDate | Number / Date | - | 最小可选的日期，不传则默认今天。TS 类型：` number \| Date` | N
 readonly | Boolean | - | `1.9.3`。是否只读，只读状态下不能选择日期 | N
-switchMode | String | none | 切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换。可选项：none/month/year-month | N
+switchMode | String | none | 切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换。可选项：none/month/year-month | N
 title | String / Slot / Function | - | 标题，不传默认为“请选择日期”。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | 'single' | 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择。可选项：single/multiple/range | N
 usePopup | Boolean | true | 是否使用弹出层包裹日历 | N
