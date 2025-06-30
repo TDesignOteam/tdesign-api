@@ -12,7 +12,7 @@ format | Function | - | Typescript：`CalendarFormatType ` `type CalendarFormatT
 maxDate | Number / Date | - | Typescript：` number \| Date` | N
 minDate | Number / Date | - | Typescript：` number \| Date` | N
 readonly | Boolean | - | `1.9.3` | N
-switchMode | String | none | options: none/month/year-month | N
+switchMode | String | none | `1.8.1`。options: none/month/year-month | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | 'single' | options: single/multiple/range | N
 usePopup | Boolean | true | \- | N

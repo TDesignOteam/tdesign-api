@@ -17742,7 +17742,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Miniprogram\": \"1.8.2\",\n\"Vue(Mobile)\": \"1.8.1\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",

@@ -15,7 +15,7 @@ format | Function | - | Typescript：`CalendarFormatType ` `type CalendarFormatT
 maxDate | Number / Date | - | Typescript：` number \| Date` | N
 minDate | Number / Date | - | Typescript：` number \| Date` | N
 readonly | Boolean | - | `0.16.0` | N
-switchMode | String | none | options: none/month/year-month | N
+switchMode | String | none | `0.16.0`。options: none/month/year-month | N
 title | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 type | String | 'single' | options: single/multiple/range | N
 usePopup | Boolean | true | \- | N
