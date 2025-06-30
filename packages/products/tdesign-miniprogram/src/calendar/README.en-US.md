@@ -15,6 +15,7 @@ format | Function | - | Typescript：`CalendarFormatType ` `type CalendarFormatT
 locale-text | Object | - | Typescript：`CalendarLocaleText` `interface CalendarLocaleText {title?: string; weekdays?: string[]; monthTitle?: string; months?: string[]; confirm?: string;}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts) | N
 max-date | Number | - | \- | N
 min-date | Number | - | \- | N
+readonly | Boolean | - | `1.9.7` | N
 switch-mode | String | none | options: none/month/year-month | N
 title | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
 type | String | 'single' | options: single/multiple/range | N
