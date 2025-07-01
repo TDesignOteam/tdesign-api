@@ -88,6 +88,10 @@ export interface TdCalendarProps {
    */
   onPanelChange?: (context: { year: number; month: number }) => void;
   /**
+   * 滚动时触发
+   */
+  onScroll?: (context: { e: Event }) => void;
+  /**
    * 点击日期时触发
    */
   onSelect?: (value: Date) => void;

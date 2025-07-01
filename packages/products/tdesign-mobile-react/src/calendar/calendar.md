@@ -26,4 +26,5 @@ onChange | Function |  | TS 类型：`(value: Date) => void`<br/>不显示 confi
 onClose | Function |  | TS 类型：`(trigger: CalendarTrigger) => void`<br/>关闭按钮时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/calendar/type.ts)。<br/>`type CalendarTrigger = 'close-btn' \| 'confirm-btn' \| 'overlay'`<br/> | N
 onConfirm | Function |  | TS 类型：`(value: Date) => void`<br/>点击确认按钮时触发 | N
 onPanelChange | Function |  | TS 类型：`(context: { year: number, month: number }) => void`<br/>`0.16.0`。切换月或年时触发（switch-mode 不为 none 时有效） | N
+onScroll | Function |  | TS 类型：`(context: {e: Event}) => void`<br/>`0.16.0`。滚动时触发 | N
 onSelect | Function |  | TS 类型：`(value: Date) => void`<br/>点击日期时触发 | N
