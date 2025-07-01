@@ -17706,6 +17706,47 @@
       ]
     },
     {
+      "id": 1751268445,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "readonly",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否只读，只读状态下不能选择日期",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-06-30 07:27:25",
+      "update_time": "2025-06-30 07:27:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.9.7\",\n\"Vue(Mobile)\": \"1.9.3\",\n\"React(Mobile)\": \"0.16.0\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1731498486,
       "platform_framework": [
         "8",
@@ -17721,7 +17762,7 @@
       ],
       "field_default_value": "none",
       "field_enum": "none/month/year-month",
-      "field_desc_zh": "切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
+      "field_desc_zh": "切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -17734,7 +17775,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Miniprogram\": \"1.8.2\",\n\"Vue(Mobile)\": \"1.8.1\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -18583,6 +18624,7 @@
       "id": 1734943734,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Calendar",
@@ -18606,12 +18648,13 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\"Miniprogram\": \"1.8.4\"}",
+      "version": "{\n\"Miniprogram\": \"1.8.4\",\n\"Vue(Mobile)\": \"1.8.1\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -18654,7 +18697,8 @@
     {
       "id": 1738927900,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Calendar",
       "field_category": 2,
@@ -18675,12 +18719,13 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Vue(Mobile)\": \"1.8.1\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
