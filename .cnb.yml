@@ -18,8 +18,7 @@ $:
         volumes:
           - node_modules:cow
       env:
-        CNB_WELCOME_CMD: |
-          pnpm dev  
+        CNB_WELCOME_CMD: pnpm dev
       services:
         - vscode
         - docker
