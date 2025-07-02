@@ -15,7 +15,8 @@ $:
   vscode:
     - docker:
         build: .cnb/Dockerfile
-
+        volumes:
+          - node_modules:cow
       env:
         CNB_WELCOME_CMD: |
           pnpm install
