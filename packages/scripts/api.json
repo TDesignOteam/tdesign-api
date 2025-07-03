@@ -69364,6 +69364,49 @@
       ]
     },
     {
+      "id": 1751448238,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Indexes",
+      "field_category": 1,
+      "field_name": "current",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "索引列表的激活项，默认首项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-07-02 09:23:58",
+      "update_time": "2025-07-02 09:23:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.9.7\"}",
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
       "id": 3234,
       "platform_framework": [
         "8",

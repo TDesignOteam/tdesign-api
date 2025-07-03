@@ -2,13 +2,14 @@
 
 ## API
 
-
 ### Indexes Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+current | String / Number | - | 索引列表的激活项，默认首项 | N
+defaultCurrent | String / Number | - | 索引列表的激活项，默认首项。非受控属性 | N
 indexList | Array | - | 索引字符列表。不传默认 `A-Z`。TS 类型：`Array<string \| number>` | N
 list | Array | [] | 已废弃。索引列表的列表数据。每个元素包含三个子元素，index(string)：索引值，例如1，2，3，...或A，B，C等；title(string): 索引标题，可不填将默认设为索引值；children(Array<{title: string}>): 子元素列表，title为子元素的展示文案。TS 类型：`ListItem[] ` `interface ListItem { title: string;  index: string;  children: { title: string; [key: string]: any} [] }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/indexes/type.ts) | N
 sticky | Boolean | true | 索引是否吸顶，默认为true。TS 类型：`Boolean` | N
