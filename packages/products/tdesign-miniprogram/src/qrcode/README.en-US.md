@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-bg-color | String | transparent | QR code background color | N
+bg-color | String | - | QR code background color | N
 borderless | Boolean | false | Is there a border | N
 color | String | - | QR code color | N
 icon | String / Slot | - | The address or custom icon of the picture in the QR code。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
