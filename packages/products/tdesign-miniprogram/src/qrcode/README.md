@@ -8,7 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-bg-color | String | transparent | 二维码背景颜色 | N
+bg-color | String | - | 二维码背景颜色 | N
 borderless | Boolean | false | 是否有边框 | N
 color | String | - | 二维码颜色 | N
 icon | String / Slot | - | 二维码中图片的地址或自定义icon。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N

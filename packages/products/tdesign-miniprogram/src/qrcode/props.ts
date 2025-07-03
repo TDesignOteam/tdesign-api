@@ -9,7 +9,7 @@ const props: TdQRCodeProps = {
   /** 二维码背景颜色 */
   bgColor: {
     type: String,
-    value: 'transparent',
+    value: '',
   },
   /** 是否有边框 */
   borderless: {

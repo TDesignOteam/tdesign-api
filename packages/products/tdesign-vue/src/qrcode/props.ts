@@ -11,7 +11,7 @@ export default {
   /** 二维码背景颜色 */
   bgColor: {
     type: String,
-    default: 'transparent',
+    default: '',
   },
   /** 是否有边框 */
   borderless: Boolean,
