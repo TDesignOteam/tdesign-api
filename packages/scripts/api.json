@@ -95364,7 +95364,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "transparent",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "二维码背景颜色",
       "field_desc_en": "QR code background color",
