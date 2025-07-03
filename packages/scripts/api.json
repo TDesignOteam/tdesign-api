@@ -10342,7 +10342,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -10365,52 +10368,14 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Vue(Mobile)\": \"1.9.3\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": "{\"PC\":{ \"dom\": { \"[3, 1]\": { \".t-table__row--fixed-top\": 3, \".t-table__row--fixed-bottom\": 1 } }, \"wrapper\":\"getNormalTableMount\" }}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
-      "id": 1712663155,
-      "platform_framework": [
-        "8",
-        "16",
-        "64"
-      ],
-      "component": "BaseTable",
-      "field_category": 1,
-      "field_name": "fixedRows",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 11:45:55",
-      "update_time": "2024-04-09 11:45:55",
-      "event_output": null,
-      "custom_field_type": "Array<number>",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
+        "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram"
@@ -11276,7 +11241,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -11301,14 +11268,16 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Vue(Mobile)\": \"1.9.3\"\n}",
       "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getNormalTableMount\",\n        \"attribute\": [\n            {\n                \"value\": \"{ 'data-level': 'level-1' }\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"[() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object",
@@ -11321,7 +11290,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "BaseTable",
       "field_category": 1,
@@ -11347,14 +11318,16 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\n\"Vue(Mobile)\": \"1.9.3\"\n}",
       "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getNormalTableMount\",\n        \"className\": [\n            {\n                \"value\": \"'tdesign-class'\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"{ 'tdesign-class': true, 'tdesign-class-next': false }\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"['tdesign-class-default', { 'tdesign-class': true, 'tdesign-class-next': false }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class-default\": true,\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"() => ({ 'tdesign-class': true, 'tdesign-class-next': false })\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -12525,7 +12498,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "BaseTable",
       "field_category": 4,
@@ -12553,7 +12528,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
@@ -12938,6 +12915,8 @@
         "1",
         "2",
         "4",
+        "8",
+        "16",
         "32",
         "64"
       ],
@@ -12973,6 +12952,8 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -13261,6 +13242,8 @@
         "1",
         "2",
         "4",
+        "8",
+        "16",
         "32",
         "64"
       ],
@@ -13285,7 +13268,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\n\"Vue(Mobile)\": \"1.9.3\",\n\"React(Mobile)\": \"0.16.0\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -13293,47 +13276,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712664063,
-      "platform_framework": [
-        "8",
-        "16"
-      ],
-      "component": "BaseTableCol",
-      "field_category": 1,
-      "field_name": "fixed",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right",
-      "field_desc_zh": "固定列显示位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-09 12:01:03",
-      "update_time": "2024-04-09 12:01:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLTableRowElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
