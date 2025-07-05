@@ -68,6 +68,15 @@ export default {
   /** 扫描后的文本 */
   value: {
     type: String,
+    default: undefined,
+  },
+  modelValue: {
+    type: String,
+    default: undefined,
+  },
+  /** 扫描后的文本，非受控属性 */
+  defaultValue: {
+    type: String,
     default: '',
   },
   /** 点击"点击刷新"的回调 */

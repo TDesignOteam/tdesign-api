@@ -95644,7 +95644,7 @@
       "update_time": "2025-06-11 04:15:44",
       "event_output": null,
       "custom_field_type": null,
-      "syntactic_sugar": null,
+      "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",

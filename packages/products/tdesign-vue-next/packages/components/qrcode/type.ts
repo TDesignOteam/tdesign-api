@@ -61,6 +61,16 @@ export interface TdQRCodeProps {
    */
   value?: string;
   /**
+   * 扫描后的文本，非受控属性
+   * @default ''
+   */
+  defaultValue?: string;
+  /**
+   * 扫描后的文本
+   * @default ''
+   */
+  modelValue?: string;
+  /**
    * 点击"点击刷新"的回调
    */
   onRefresh?: () => void;

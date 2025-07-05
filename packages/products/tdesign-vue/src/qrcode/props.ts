@@ -70,6 +70,11 @@ export default {
     type: String,
     default: '',
   },
+  /** 扫描后的文本，非受控属性 */
+  defaultValue: {
+    type: String,
+    default: '',
+  },
   /** 点击"点击刷新"的回调 */
   onRefresh: Function as PropType<TdQRCodeProps['onRefresh']>,
 };
