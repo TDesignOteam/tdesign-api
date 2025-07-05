@@ -16,7 +16,7 @@ size | Number | 160 | 二维码大小 | N
 status | String | active | 二维码状态。可选项：active/expired/loading/scanned。TS 类型：`QRStatus` `type QRStatus = "active" \| "expired" \| "loading" \| "scanned"`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/qrcode/type.ts) | N
 statusRender | Slot / Function | - | 自定义状态渲染器。TS 类型：`(info:StatusRenderInfo) => TNode` `type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/qrcode/type.ts) | N
 type | String | canvas | 渲染类型。可选项：canvas/svg | N
-value | String | - | 扫描后的文本 | N
+value | String | - | 扫描后的文本。支持语法糖 `v-model` 或 `v-model:value` | N
 onRefresh | Function |  | TS 类型：`() => void`<br/>点击"点击刷新"的回调 | N
 
 ### QRCode Events

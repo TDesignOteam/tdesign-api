@@ -16,7 +16,7 @@ size | Number | 160 | QR code size | N
 status | String | active | QR code status。options: active/expired/loading/scanned。Typescript：`QRStatus` `type QRStatus = "active" \| "expired" \| "loading" \| "scanned"`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/qrcode/type.ts) | N
 statusRender | Slot / Function | - | Custom state renderer。Typescript：`(info:StatusRenderInfo) => TNode` `type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/qrcode/type.ts) | N
 type | String | canvas | render type。options: canvas/svg | N
-value | String | - | scanned text | N
+value | String | - | scanned text。`v-model` and `v-model:value` is supported | N
 onRefresh | Function |  | Typescript：`() => void`<br/>Click the "Click to refresh" callback | N
 
 ### QRCode Events
