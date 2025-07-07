@@ -11,10 +11,12 @@ style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 cancelBtn | String / Boolean | true | 取消按钮文字。TS 类型：`boolean \| string` | N
 columns | Array / Function | [] | 必需。配置每一列的选项。TS 类型：`PickerColumn \| Array<PickerColumn> \| ((item: Array<PickerValue>)  => Array<PickerColumn>)` `type PickerColumn = PickerColumnItem[]` `interface PickerColumnItem { label: string,value: string}`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/picker/type.ts) | Y
 confirmBtn | String / Boolean | true | 确定按钮文字。TS 类型：`boolean \| string` | N
-header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-keys | Object | - | 用来定义 value / label 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+footer | TElement | - | 底部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+header | TElement | - | 自定义头部内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+keys | Object | - | 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 option | TElement | - | 自定义选项内容。参数为 `option: PickerColumnItem, index: number`。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 renderLabel | Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
+swipeDuration | String / Number | 300 | 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动。TS 类型：`string \| number` | N
 title | String | '' | 标题 | N
 value | Array | - | 选中值。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/picker/type.ts) | N
 defaultValue | Array | - | 选中值。非受控属性。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/picker/type.ts) | N
