@@ -182,7 +182,7 @@ export default {
   tips: {
     type: [String, Function] as PropType<TdUploadProps['tips']>,
   },
-  /** 触发上传的元素，`files` 指本次显示的全部文件 */
+  /** 触发上传的元素，`files` 指本次显示的全部文件; `triggerUpload` 用于触发上传文件的选择，在图片上传风格中有效 */
   trigger: {
     type: Function as PropType<TdUploadProps['trigger']>,
   },
