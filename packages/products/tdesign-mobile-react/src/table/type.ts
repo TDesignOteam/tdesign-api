@@ -6,7 +6,7 @@
 
 import { LoadingProps } from '../loading';
 import { TNode, ClassName, HTMLElementAttributes } from '../common';
-import { MouseEvent } from 'react';
+import { MouseEvent, UIEvent } from 'react';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -102,7 +102,7 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
    * 表格内容滚动时触发
    */
-  onScroll?: (params: { e: Event }) => void;
+  onScroll?: (params: { e: UIEvent<HTMLDivElement> }) => void;
 }
 
 /** 组件实例方法 */
