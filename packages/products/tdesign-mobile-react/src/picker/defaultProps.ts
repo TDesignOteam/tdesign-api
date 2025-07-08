@@ -8,7 +8,7 @@ export const pickerDefaultProps: TdPickerProps = {
   cancelBtn: true,
   columns: [],
   confirmBtn: true,
-  header: true,
+  swipeDuration: 300,
   title: '',
   visible: false,
 };
