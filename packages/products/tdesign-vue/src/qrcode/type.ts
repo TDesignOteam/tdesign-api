@@ -23,9 +23,10 @@ export interface TdQRCodeProps {
    */
   color?: string;
   /**
-   * 二维码中图片的地址或自定义icon
+   * 二维码中图片的地址
+   * @default ''
    */
-  icon?: string | TNode;
+  icon?: string;
   /**
    * 二维码中图片的大小
    * @default 40
