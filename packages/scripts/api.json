@@ -95350,8 +95350,7 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -95380,8 +95379,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {

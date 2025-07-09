@@ -11,7 +11,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 bg-color | String | - | QR code background color | N
 borderless | Boolean | false | Is there a border | N
 color | String | - | QR code color | N
-icon | String / Slot | - | The address or custom icon of the picture in the QR code。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts) | N
+icon | String | - | The address or custom icon of the picture in the QR code | N
 icon-size | Number / Object | 40 | The size of the picture in the QR code。Typescript：`number \| { width: number; height: number }` | N
 level | String | M | QR code error correction level。options: L/M/Q/H | N
 size | Number | 160 | QR code size | N

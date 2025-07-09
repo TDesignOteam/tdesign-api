@@ -33,6 +33,7 @@ export interface TdQRCodeProps {
   };
   /**
    * 二维码中图片的地址或自定义icon
+   * @default ''
    */
   icon?: {
     type: StringConstructor;
