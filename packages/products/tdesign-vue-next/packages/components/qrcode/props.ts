@@ -20,9 +20,10 @@ export default {
     type: String,
     default: '',
   },
-  /** 二维码中图片的地址或自定义icon */
+  /** 二维码中图片的地址 */
   icon: {
-    type: [String, Function] as PropType<TdQRCodeProps['icon']>,
+    type: String,
+    default: '',
   },
   /** 二维码中图片的大小 */
   iconSize: {

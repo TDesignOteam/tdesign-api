@@ -95348,13 +95348,12 @@
       "field_category": 1,
       "field_name": "icon",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "二维码中图片的地址或自定义icon",
-      "field_desc_en": "The address or custom icon of the picture in the QR code",
+      "field_desc_zh": "二维码中图片的地址",
+      "field_desc_en": "The address of the picture in the QR code",
       "field_required": 0,
       "event_input": "",
       "create_time": "2025-06-11 04:14:34",
@@ -95378,8 +95377,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {
