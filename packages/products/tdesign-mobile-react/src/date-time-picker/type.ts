@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TElement } from '../common';
+import { TElement } from '../common';
 import { MouseEvent } from 'react';
 
 export interface TdDateTimePickerProps {
@@ -28,7 +28,6 @@ export interface TdDateTimePickerProps {
   filter?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
   /**
    * 底部内容
-   * @default true
    */
   footer?: TElement;
   /**
@@ -36,10 +35,9 @@ export interface TdDateTimePickerProps {
    */
   format?: string;
   /**
-   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
-   * @default true
+   * 头部内容
    */
-  header?: TNode;
+  header?: TElement;
   /**
    * year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒
    * @default 'date'

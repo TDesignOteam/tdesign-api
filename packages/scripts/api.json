@@ -40694,43 +40694,6 @@
       ]
     },
     {
-      "id": 2510,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "DateTimePicker",
-      "field_category": 1,
-      "field_name": "footer",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "底部内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2022-04-02 09:42:07",
-      "update_time": "2022-07-15 08:25:11",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
       "id": 1710844322,
       "platform_framework": [
         "8",
@@ -40890,7 +40853,6 @@
       "id": 2509,
       "platform_framework": [
         "8",
-        "16",
         "64"
       ],
       "component": "DateTimePicker",
@@ -40921,11 +40883,47 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
         "Boolean",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1752045453,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "DateTimePicker",
+      "field_category": 1,
+      "field_name": "header",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "头部内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-07-09 07:17:33",
+      "update_time": "2025-07-09 07:17:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
         "TNode"
       ]
     },
