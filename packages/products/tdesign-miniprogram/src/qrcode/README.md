@@ -11,7 +11,7 @@ custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场�
 bg-color | String | - | 二维码背景颜色 | N
 borderless | Boolean | false | 是否有边框 | N
 color | String | - | 二维码颜色 | N
-icon | String | - | 二维码中图片的地址或自定义icon | N
+icon | String | - | 二维码中图片的地址 | N
 icon-size | Number / Object | 40 | 二维码中图片的大小。TS 类型：`number \| { width: number; height: number }` | N
 level | String | M | 二维码纠错等级。可选项：L/M/Q/H | N
 size | Number | 160 | 二维码大小 | N

@@ -21,7 +21,7 @@ const props: TdQRCodeProps = {
     type: String,
     value: '',
   },
-  /** 二维码中图片的地址或自定义icon */
+  /** 二维码中图片的地址 */
   icon: {
     type: String,
     value: '',
