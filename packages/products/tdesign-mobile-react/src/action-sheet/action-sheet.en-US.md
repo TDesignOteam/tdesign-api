@@ -17,8 +17,8 @@ popupProps | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./p
 showCancel | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
 theme | String | list | options: list/grid | N
-visible | Boolean | false | required | Y
-defaultVisible | Boolean | false | required。uncontrolled property | Y
+visible | Boolean | false | \- | N
+defaultVisible | Boolean | false | uncontrolled property | N
 onCancel | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClose | Function |  | Typescript：`(trigger: ActionSheetTriggerSource) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/> | N
 onSelected | Function |  | Typescript：`(selected: ActionSheetItem \| string, index: number) => void`<br/> | N

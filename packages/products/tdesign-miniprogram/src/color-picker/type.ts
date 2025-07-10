@@ -16,10 +16,26 @@ export interface TdColorPickerProps {
     value?: boolean;
   };
   /**
+   * 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色
+   * @default "monochrome"
+   */
+  colorModes?: {
+    type: null;
+    value?: colorModesEnum | colorModesEnum[];
+  };
+  /**
    * 是否开启透明通道
    * @default false
    */
   enableAlpha?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色
+   * @default true
+   */
+  enableMultipleGradient?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -32,12 +48,12 @@ export interface TdColorPickerProps {
     value?: boolean;
   };
   /**
-   * 格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效
+   * 格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效
    * @default RGB
    */
   format?: {
     type: StringConstructor;
-    value?: 'RGB' | 'RGBA' | 'HSL' | 'HSLA' | 'HSB' | 'HSV' | 'HSVA' | 'HEX' | 'CMYK' | 'CSS';
+    value?: 'HEX' | 'HEX8' | 'RGB' | 'RGBA' | 'HSL' | 'HSLA' | 'HSV' | 'HSVA' | 'CMYK' | 'CSS';
   };
   /**
    * 透传 Popup 组件全部属性
@@ -52,7 +68,7 @@ export interface TdColorPickerProps {
    */
   swatchColors?: {
     type: ArrayConstructor;
-    value?: Array<string> | null;
+    value?: Array<string> | null | undefined;
   };
   /**
    * 颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容
@@ -95,5 +111,7 @@ export interface TdColorPickerProps {
     value?: boolean;
   };
 }
+
+export type colorModesEnum = 'monochrome' | 'linear-gradient';
 
 export type TypeEnum = 'base' | 'multiple';

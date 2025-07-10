@@ -105,6 +105,10 @@ export interface TdDatePickerProps {
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
   /**
+   * 是否只读，优先级大于 allowInput
+   */
+  readonly?: boolean;
+  /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */
   selectInputProps?: SelectInputProps;
@@ -165,6 +169,10 @@ export interface TdDatePickerProps {
     value: DateValue | DateMultipleValue,
     context: { dayjsValue?: Dayjs; trigger?: DatePickerTriggerSource },
   ) => void;
+  /**
+   * 清空按钮点击时触发
+   */
+  onClear?: (context: { e: MouseEvent }) => void;
   /**
    * 如果存在“确定”按钮，则点击“确定”按钮时触发
    */
@@ -282,6 +290,10 @@ export interface TdDateRangePickerProps {
    * 透传给范围输入框 RangeInput 组件的参数
    */
   rangeInputProps?: RangeInputProps;
+  /**
+   * 是否只读，优先级大于 `allowInput`
+   */
+  readonly?: boolean;
   /**
    * 日期分隔符，支持全局配置，默认为 '-'
    * @default ''

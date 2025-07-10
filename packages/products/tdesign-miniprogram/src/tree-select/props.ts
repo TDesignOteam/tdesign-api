@@ -6,12 +6,16 @@
 
 import { TdTreeSelectProps } from './type';
 const props: TdTreeSelectProps = {
+  /** 自定义选中值，优先级高于 `value` */
+  customValue: {
+    type: null,
+  },
   /** 高度，默认单位为 px */
   height: {
     type: null,
     value: 336,
   },
-  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  /** 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
   keys: {
     type: Object,
   },

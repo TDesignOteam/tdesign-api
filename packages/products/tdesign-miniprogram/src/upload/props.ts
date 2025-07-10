@@ -6,6 +6,11 @@
 
 import { TdUploadProps } from './type';
 const props: TdUploadProps = {
+  /** 添加按钮 */
+  addBtn: {
+    type: Boolean,
+    value: true,
+  },
   /** 添加按钮内容 */
   addContent: {
     type: String,
@@ -62,6 +67,11 @@ const props: TdUploadProps = {
   },
   /** 是否支持图片预览，文件没有预览 */
   preview: {
+    type: Boolean,
+    value: true,
+  },
+  /** 移除按钮 */
+  removeBtn: {
     type: Boolean,
     value: true,
   },

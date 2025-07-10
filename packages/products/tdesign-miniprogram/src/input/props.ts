@@ -16,6 +16,11 @@ const props: TdInputProps = {
     type: String,
     value: 'left',
   },
+  /** 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 */
+  allowInputOverMax: {
+    type: Boolean,
+    value: false,
+  },
   /** 强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效) */
   alwaysEmbed: {
     type: Boolean,
@@ -54,6 +59,7 @@ const props: TdInputProps = {
   /** 指定 focus 时的光标位置 */
   cursor: {
     type: Number,
+    value: -1,
     required: true,
   },
   /** 光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制 */

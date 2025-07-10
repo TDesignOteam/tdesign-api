@@ -23,6 +23,10 @@ export interface TdPickerProps {
    */
   confirmBtn?: boolean | string;
   /**
+   * 底部内容
+   */
+  footer?: TNode;
+  /**
    * 自定义头部内容
    */
   header?: TNode;
@@ -33,11 +37,16 @@ export interface TdPickerProps {
   /**
    * 自定义选项内容。参数为 `option: PickerColumnItem, index: number`
    */
-  option?: TNode;
+  option?: (option: PickerColumnItem, index: number) => string | Record<string, string | boolean>;
   /**
    * 自定义label
    */
-  renderLabel?: (item: PickerColumnItem) => string;
+  renderLabel?: (item: PickerColumnItem, index: number) => string;
+  /**
+   * 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动
+   * @default 300
+   */
+  swipeDuration?: string | number;
   /**
    * 标题
    * @default ''
@@ -82,6 +91,7 @@ export type PickerColumn = PickerColumnItem[];
 export interface PickerColumnItem {
   label: string;
   value: string;
+  disabled?: boolean;
 }
 
 export type PickerValue = string | number;

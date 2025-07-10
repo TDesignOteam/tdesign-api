@@ -93,7 +93,7 @@ export interface TdDateTimePickerProps {
     value?: PopupProps;
   };
   /**
-   * 【开发中】是否在日期旁边显示周几（如周一，周二，周日等）
+   * 是否在日期旁边显示周几（如周一，周二，周日等）
    * @default false
    */
   showWeek?: {
@@ -109,10 +109,11 @@ export interface TdDateTimePickerProps {
   };
   /**
    * 时间间隔步数，示例：`{ minute: 5 }`
+   * @default {}
    */
   steps?: {
     type: ObjectConstructor;
-    value?: object;
+    value?: { [key in TimeModeValues]?: number };
   };
   /**
    * 标题

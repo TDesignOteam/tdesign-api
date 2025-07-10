@@ -14,6 +14,7 @@
   "t-alert": {
     "attributes": [
       "close",
+      "close-btn",
       "default",
       "icon",
       "max-line",
@@ -334,7 +335,11 @@
   },
   "t-breadcrumb": {
     "attributes": [
+      "ellipsis",
+      "items-after-collapse",
+      "items-before-collapse",
       "max-item-width",
+      "max-items",
       "options",
       "separator",
       "theme"
@@ -479,11 +484,117 @@
       "value-type",
       "blur",
       "change",
+      "clear",
       "focus",
       "popup-visible-change",
       "remove"
     ],
     "description": "Cascader\n\n级联选择\n\n[docs](https://tdesign.tencent.com/vue-next/components/cascader)"
+  },
+  "t-chat": {
+    "attributes": [
+      "actions",
+      "animation",
+      "avatar",
+      "clear-history",
+      "content",
+      "data",
+      "datetime",
+      "is-stream-load",
+      "layout",
+      "name",
+      "reasoning",
+      "reverse",
+      "text-loading",
+      "clear",
+      "scroll"
+    ],
+    "description": "Chat\n\n对话\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-action": {
+    "attributes": [
+      "content",
+      "disabled",
+      "is-bad",
+      "is-good",
+      "operation-btn",
+      "operation"
+    ],
+    "description": "ChatAction\n\n对话操作\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-content": {
+    "attributes": [
+      "content",
+      "role"
+    ],
+    "description": "ChatContent\n\n对话内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-input": {
+    "attributes": [
+      "autofocus",
+      "autosize",
+      "disabled",
+      "placeholder",
+      "stop-disabled",
+      "suffix-icon",
+      "value",
+      "blur",
+      "change",
+      "focus",
+      "send",
+      "stop"
+    ],
+    "description": "ChatInput\n\n对话输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-item": {
+    "attributes": [
+      "actions",
+      "animation",
+      "avatar",
+      "content",
+      "datetime",
+      "name",
+      "reasoning",
+      "role",
+      "text-loading",
+      "variant"
+    ],
+    "description": "ChatItem\n\n对话单元\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-loading": {
+    "attributes": [
+      "animation",
+      "text"
+    ],
+    "description": "ChatLoading\n\n对话加载\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-reasoning": {
+    "attributes": [
+      "collapse-panel-props",
+      "expand-icon",
+      "expand-icon-placement",
+      "header",
+      "header-right-content",
+      "expand-change"
+    ],
+    "description": "ChatReasoning\n\n对话思考过程\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+  },
+  "t-chat-sender": {
+    "attributes": [
+      "disabled",
+      "placeholder",
+      "prefix",
+      "stop-disabled",
+      "suffix",
+      "textarea-props",
+      "value",
+      "blur",
+      "change",
+      "focus",
+      "send",
+      "stop"
+    ],
+    "description": "ChatSender\n\n对话输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
   },
   "t-check-tag": {
     "attributes": [
@@ -590,14 +701,12 @@
     "attributes": [
       "borderless",
       "clearable",
-      "close-btn",
       "color-modes",
       "disabled",
       "enable-alpha",
       "enable-multiple-gradient",
       "format",
       "input-props",
-      "multiple",
       "popup-props",
       "recent-colors",
       "select-input-props",
@@ -611,6 +720,23 @@
       "recent-colors-change"
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/color-picker)"
+  },
+  "t-color-picker-panel": {
+    "attributes": [
+      "color-modes",
+      "disabled",
+      "enable-alpha",
+      "enable-multiple-gradient",
+      "format",
+      "recent-colors",
+      "show-primary-color-preview",
+      "swatch-colors",
+      "value",
+      "change",
+      "palette-bar-change",
+      "recent-colors-change"
+    ],
+    "description": "ColorPickerPanel\n\n颜色选择器面板\n\n[docs](https://tdesign.tencent.com/vue-next/components/color-picker)"
   },
   "t-comment": {
     "attributes": [
@@ -659,6 +785,7 @@
       "prefix-icon",
       "presets",
       "presets-placement",
+      "readonly",
       "select-input-props",
       "size",
       "status",
@@ -670,6 +797,7 @@
       "value-type",
       "blur",
       "change",
+      "clear",
       "confirm",
       "focus",
       "pick",
@@ -725,6 +853,7 @@
       "presets",
       "presets-placement",
       "range-input-props",
+      "readonly",
       "separator",
       "size",
       "status",
@@ -810,6 +939,7 @@
       "draggable",
       "footer",
       "header",
+      "lazy",
       "mode",
       "placement",
       "prevent-scroll-through",
@@ -882,6 +1012,7 @@
       "drawer-class-name",
       "footer",
       "header",
+      "lazy",
       "mode",
       "placement",
       "prevent-scroll-through",
@@ -1052,7 +1183,19 @@
     ],
     "description": "Header\n\n布局-头部\n\n[docs](https://tdesign.tencent.com/vue-next/components/layout)"
   },
-  "t-icon-svg": {
+  "icon-font": {
+    "attributes": [
+      "load-default-icons",
+      "name",
+      "size",
+      "style",
+      "tag",
+      "url",
+      "click"
+    ],
+    "description": "IconFont\n\n图标（IconFont）\n\n[docs](https://tdesign.tencent.com/vue-next/components/icon)"
+  },
+  "icon": {
     "attributes": [
       "load-default-icons",
       "name",
@@ -1073,18 +1216,6 @@
       "click"
     ],
     "description": "IconSVG\n\n图标（IconSVG）\n\n[docs](https://tdesign.tencent.com/vue-next/components/icon)"
-  },
-  "t-iconfont": {
-    "attributes": [
-      "load-default-icons",
-      "name",
-      "size",
-      "style",
-      "tag",
-      "url",
-      "click"
-    ],
-    "description": "Iconfont\n\n图标（Iconfont）\n\n[docs](https://tdesign.tencent.com/vue-next/components/icon)"
   },
   "t-image": {
     "attributes": [
@@ -1587,6 +1718,54 @@
     ],
     "description": "PrimaryTable\n\n主表格\n\n[docs](https://tdesign.tencent.com/vue-next/components/table)"
   },
+  "t-table": {
+    "attributes": [
+      "async-loading",
+      "column-controller",
+      "column-controller-visible",
+      "columns",
+      "display-columns",
+      "drag-sort",
+      "drag-sort-options",
+      "editable-cell-state",
+      "editable-row-keys",
+      "expand-icon",
+      "expand-on-row-click",
+      "expanded-row",
+      "expanded-row-keys",
+      "filter-icon",
+      "filter-row",
+      "filter-value",
+      "hide-sort-tips",
+      "indeterminate-selected-row-keys",
+      "multiple-sort",
+      "reserve-selected-row-on-paginate",
+      "row-selection-allow-uncheck",
+      "row-selection-type",
+      "select-on-row-click",
+      "selected-row-keys",
+      "show-sort-column-bg-color",
+      "sort",
+      "sort-icon",
+      "sort-on-row-draggable",
+      "async-loading-click",
+      "cell-click",
+      "change",
+      "column-change",
+      "column-controller-visible-change",
+      "data-change",
+      "display-columns-change",
+      "drag-sort",
+      "expand-change",
+      "filter-change",
+      "row-edit",
+      "row-validate",
+      "select-change",
+      "sort-change",
+      "validate"
+    ],
+    "description": "PrimaryTable\n\n主表格\n\n[docs](https://tdesign.tencent.com/vue-next/components/table)"
+  },
   "t-progress": {
     "attributes": [
       "color",
@@ -1599,6 +1778,23 @@
       "track-color"
     ],
     "description": "Progress\n\n进度条\n\n[docs](https://tdesign.tencent.com/vue-next/components/progress)"
+  },
+  "t-qrcode": {
+    "attributes": [
+      "bg-color",
+      "borderless",
+      "color",
+      "icon",
+      "icon-size",
+      "level",
+      "size",
+      "status",
+      "status-render",
+      "type",
+      "value",
+      "refresh"
+    ],
+    "description": "QRCode\n\n二维码\n\n[docs](https://tdesign.tencent.com/vue-next/components/qrcode)"
   },
   "t-radio": {
     "attributes": [
@@ -1979,6 +2175,27 @@
     "attributes": [
       "animation",
       "autoplay",
+      "card-scale",
+      "current",
+      "direction",
+      "duration",
+      "height",
+      "interval",
+      "loop",
+      "navigation",
+      "stop-on-hover",
+      "theme",
+      "trigger",
+      "type",
+      "change"
+    ],
+    "description": "Swiper\n\n轮播\n\n[docs](https://tdesign.tencent.com/vue-next/components/swiper)"
+  },
+  "t-swiper-item": {
+    "attributes": [
+      "animation",
+      "autoplay",
+      "card-scale",
       "current",
       "direction",
       "duration",
@@ -2157,6 +2374,7 @@
       "placeholder",
       "popup-props",
       "presets",
+      "readonly",
       "select-input-props",
       "size",
       "status",
@@ -2166,7 +2384,9 @@
       "value-display",
       "blur",
       "change",
+      "clear",
       "close",
+      "confirm",
       "focus",
       "input",
       "open",
@@ -2189,6 +2409,7 @@
       "popup-props",
       "presets",
       "range-input-props",
+      "readonly",
       "size",
       "status",
       "steps",

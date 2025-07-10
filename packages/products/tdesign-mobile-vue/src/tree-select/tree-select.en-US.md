@@ -6,8 +6,9 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+customValue | String / Number / Array | - | Typescript：`TreeSelectValue` | N
 height | String / Number | 336 | \- | N
-keys | Object | - | alias filed name in data。Typescript：`TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+keys | Object | - | alias filed name in options。Typescript：`TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 multiple | Boolean | false | \- | N
 options | Array | [] | Typescript：`Array<DataOption>` | N
 value | String / Number / Array | - | `v-model` and `v-model:value` is supported。Typescript：`TreeSelectValue` `type TreeSelectValue = string \| number \| Array<TreeSelectValue>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tree-select/type.ts) | N

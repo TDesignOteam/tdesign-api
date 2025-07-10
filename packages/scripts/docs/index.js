@@ -2,9 +2,9 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const chalk = require('chalk');
-const kebabCase = require('lodash/kebabCase');
 const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
 const { getApiComponentMapByFrameWork } = require('../common');
+const { kebabCaseComponent } = require('../utils');
 
 let currentFramework = '';
 
@@ -75,7 +75,7 @@ function outputComponentMD(file, apiData, isVscode) {
 
 function getDocFileName(cmp, framework) {
   if (framework === 'Miniprogram') return 'README';
-  return kebabCase(cmp);
+  return kebabCaseComponent(cmp);
 }
 
 // 根据组件获取 API 类型数据
@@ -101,7 +101,7 @@ function generateDocs(baseData, framework, extra) {
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath
-      : path.resolve(current.apiBasePath, kebabCase(cmp));
+      : path.resolve(current.apiBasePath, cmp==='QRCode'?'qrcode':kebabCaseComponent(cmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
         return console.error(err);
@@ -117,7 +117,7 @@ function generateDocs(baseData, framework, extra) {
       // const basePath = `${folder}/${getDocFileName(cmp, framework)}`;
       const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
       const mdfile = isVscode
-        ? path.resolve(folder, `t-${kebabCase(cmp)}.js`)
+        ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`)
         : apiDocsFilePath;
 
       if (isVscode) {

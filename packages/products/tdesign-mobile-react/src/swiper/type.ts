@@ -40,7 +40,7 @@ export interface TdSwiperProps {
   /**
    * 当使用垂直方向滚动时的高度
    */
-  height?: number;
+  height?: string | number;
   /**
    * 轮播间隔时间
    * @default 5000
@@ -89,7 +89,12 @@ export interface SwiperNavigation {
    * 页码信息展示位置
    * @default bottom
    */
-  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
+  /**
+   * 导航器位置，位于主体的内侧或是外侧
+   * @default inside
+   */
+  placement?: 'inside' | 'outside';
   /**
    * 是否显示两侧的控制按钮
    * @default false
@@ -102,6 +107,6 @@ export interface SwiperNavigation {
   type?: SwiperNavigationType;
 }
 
-export type SwiperChangeSource = 'autoplay' | 'touch' | '';
+export type SwiperChangeSource = 'autoplay' | 'touch' | 'nav';
 
 export type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction';

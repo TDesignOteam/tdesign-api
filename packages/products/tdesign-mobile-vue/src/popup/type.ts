@@ -9,7 +9,7 @@ import { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**
-   * 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
    * @default 'body'
    */
   attach?: AttachNode;
@@ -27,6 +27,11 @@ export interface TdPopupProps {
    * @default false
    */
   destroyOnClose?: boolean;
+  /**
+   * 动画过渡时间
+   * @default 240
+   */
+  duration?: number;
   /**
    * 遮罩层的属性，透传至 overlay
    * @default {}

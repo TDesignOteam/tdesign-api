@@ -8,6 +8,14 @@ import { ImageProps } from '../image/index';
 
 export interface TdUploadProps {
   /**
+   * 添加按钮
+   * @default true
+   */
+  addBtn?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
    * 添加按钮内容
    */
   addContent?: {
@@ -100,6 +108,14 @@ export interface TdUploadProps {
    * @default true
    */
   preview?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 移除按钮
+   * @default true
+   */
+  removeBtn?: {
     type: BooleanConstructor;
     value?: boolean;
   };

@@ -58,7 +58,7 @@ const props: TdDateTimePickerProps = {
     type: Object,
     value: {},
   },
-  /** 【开发中】是否在日期旁边显示周几（如周一，周二，周日等） */
+  /** 是否在日期旁边显示周几（如周一，周二，周日等） */
   showWeek: {
     type: Boolean,
     value: false,
@@ -70,6 +70,7 @@ const props: TdDateTimePickerProps = {
   /** 时间间隔步数，示例：`{ minute: 5 }` */
   steps: {
     type: Object,
+    value: {},
   },
   /** 标题 */
   title: {

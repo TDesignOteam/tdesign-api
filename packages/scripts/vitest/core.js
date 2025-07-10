@@ -1,5 +1,5 @@
 const camelCase = require('lodash/camelCase');
-const kebabCase = require('lodash/kebabCase');
+const { kebabCaseComponent } = require('../utils');
 const upperFirst = require('lodash/upperFirst');
 const { UNIT_TEST_EVENTS_MAP } = require('./const/events-map');
 const { reactNeedMockDelayEvents } = require('./const/react-need-mock-delay');
@@ -112,7 +112,7 @@ function getEventFunctions(expect, framework, extraCode) {
 
 function getEventNameByFramework(eventName, framework) {
   if (framework === 'Vue(PC)') {
-    return `'${kebabCase(eventName)}'`;
+    return `'${kebabCaseComponent(eventName)}'`;
   }
   return getEventName(eventName);
 }

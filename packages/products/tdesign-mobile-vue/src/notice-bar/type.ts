@@ -62,7 +62,7 @@ export interface TdNoticeBarProps {
   /**
    * 当 `direction="vertical"` 时轮播切换时触发
    */
-  onChange?: (current: number, source: '' | 'autoplay' | 'touch') => void;
+  onChange?: (current: number, context: { source: NoticeBarChangeSource }) => void;
   /**
    * 点击事件
    */
@@ -74,5 +74,7 @@ export interface NoticeBarMarquee {
   loop?: number;
   delay?: number;
 }
+
+export type NoticeBarChangeSource = '' | 'autoplay' | 'touch';
 
 export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';
