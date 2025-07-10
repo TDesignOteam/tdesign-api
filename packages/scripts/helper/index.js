@@ -31,6 +31,7 @@ const PREFIX = 't';
 const aliasComponents = {
   ['PrimaryTable']: 'Table',
   ['Radio']: 'RadioButton',
+  ['Swiper']: 'SwiperItem',
   ['IconSVG']: 'Icon',
 };
 
