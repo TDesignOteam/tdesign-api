@@ -43,6 +43,7 @@ function start() {
   }
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
+    delete aliasComponents['Swiper'];
   }
 
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
@@ -52,39 +53,20 @@ function start() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   if (['Vue(PC)', 'VueNext(PC)'].includes(framework)) {
     // Typography 是空定义组件，特殊处理
-   frameworkData['Typography'] = [];
+    frameworkData['Typography'] = [];
   }
   // API field_category_text 等于 Extends, 提取 Pick, Omit 类型的 API
   Object.keys(frameworkData).forEach((componentName) => {
-    frameworkData[componentName].forEach((api,index) => {
+    frameworkData[componentName].forEach((api, index) => {
       if (api.field_category_text !== 'Extends') return;
+
       // 提取 Pick 类型的 API
-      if(api.field_name.indexOf('Pick') !== -1) {
-        const pickRegex = /Pick<([^,]+),\s*([^>]+)>/;;
-        const pickMatch = api.field_name.match(pickRegex);
-        if (pickMatch) {
-          const pickComponentName = pickMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
-          const pickList= pickMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
-          frameworkData[pickComponentName].forEach((item)=>{
-            if (pickList.includes(item.field_name)){
-              frameworkData[api.component].push(item);
-            }
-          })
-        }
+      if (api.field_name.includes('Pick')) {
+        processPickOmitApi(frameworkData, api, true);
       }
       // 提取 Omit 类型的 API
-      if(api.field_name.indexOf('Omit') !== -1) {
-        const omitRegex = /Omit<([^,]+),\s*([^>]+)>/;;
-        const omitMatch = api.field_name.match(omitRegex);
-        if (omitMatch) {
-          const omitComponentName = omitMatch[1].replace('Td', '').replace('Props', '').replace('<T>', '');
-          const omitList= omitMatch[2].replaceAll("'",'').replaceAll(' ','').split('|')
-          frameworkData[omitComponentName].forEach((item)=>{
-            if (!omitList.includes(item.field_name)){
-              frameworkData[api.component].push(item);
-            }
-          })
-        }
+      if (api.field_name.includes('Omit')) {
+        processPickOmitApi(frameworkData, api, false);
       }
     })
   })
@@ -92,6 +74,27 @@ function start() {
   generateHelper(frameworkData, framework);
 }
 
+function processPickOmitApi(frameworkData, api, isPick) {
+  let regex, match;
+  if (isPick) {
+    regex = /Pick<([^,]+),\s*([^>]+)>/;
+    match = api.field_name.match(regex);
+  } else {
+    regex = /Omit<([^,]+),\s*([^>]+)>/;
+    match = api.field_name.match(regex);
+  }
+
+  if (match) {
+    const componentName = match[1].replace('Td', '').replace('Props', '').replace('<T>', '');
+    const list = match[2].replaceAll("'", '').replaceAll(' ', '').split('|');
+
+    frameworkData[componentName]?.forEach((item) => {
+      if (isPick ? list.includes(item.field_name) : !list.includes(item.field_name)) {
+        frameworkData[api.component].push(item);
+      }
+    });
+  }
+}
 function generateHelper(baseData, framework) {
   const { webTypes, tags, attributes, volar } = getHelperData(baseData, framework);
   write(framework, 'tags.json', tags);
