@@ -30,6 +30,7 @@ jobs:
     steps:
       - uses: TDesignOteam//tdesign-pr-trigger-action@develop
         with:
+          repo: 'tencent/tdesign/tdesign-api'
           token: ${{ secrets.CNB_TOKEN }}
           branch: ${{ github.event.ref }}
           trigger: '/delete-cnb-branch'          
