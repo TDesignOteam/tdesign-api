@@ -23,7 +23,7 @@ export default {
   },
   /** 浮层出现位置 */
   placement: {
-    type: String,
+    type: String as PropType<TdTooltipProps['placement']>,
     default: 'top',
   },
   /** 是否显示浮层箭头 */
