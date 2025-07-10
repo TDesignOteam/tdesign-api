@@ -7736,7 +7736,6 @@
               "description": "Display position of required symbols\n\n表单必填符号（*）显示位置",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/form?tab=api#form-props",
               "type": "'left' | 'right'",
-              "default": "left",
               "attribute-value": {
                 "type": "enum"
               },
