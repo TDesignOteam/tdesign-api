@@ -1,8 +1,11 @@
 name: sync-to-cnb
-on: [push]
+on: 
+ - push
+ - delete
 
 jobs:
-  sync:
+  sync-push:
+    if: ${{ github.repository == 'TDesignOteam/tdesign-api' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,3 +23,14 @@ jobs:
             -e PLUGIN_PASSWORD=${{ secrets.CNB_TOKEN }} \
             -e PLUGIN_FORCE="true" \
             tencentcom/git-sync
+
+  sync-delete-branch:
+    if: ${{ github.repository == 'TDesignOteam/tdesign-api' && github.event_name == 'delete' && github.event.ref_type == 'branch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam//tdesign-pr-trigger-action@develop
+        with:
+          token: ${{ secrets.CNB_TOKEN }}
+          branch: ${{ github.event.ref }}
+          trigger: '/delete-cnb-branch'          
+            
