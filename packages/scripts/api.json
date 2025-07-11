@@ -41263,7 +41263,6 @@
       "id": 1725285145,
       "platform_framework": [
         "8",
-        "16",
         "32",
         "64"
       ],
@@ -41294,7 +41293,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -41350,7 +41348,6 @@
     {
       "id": 1522,
       "platform_framework": [
-        "16",
         "32",
         "64"
       ],
@@ -41380,7 +41377,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
