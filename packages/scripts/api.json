@@ -94379,7 +94379,8 @@
       "platform_framework": [
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "PullDownRefresh",
       "field_category": 1,
@@ -94409,7 +94410,8 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -94614,6 +94616,51 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1752227984,
+      "platform_framework": [
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 1,
+      "field_name": "successDuration",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "500",
+      "field_enum": "",
+      "field_desc_zh": "刷新成功提示展示时长，单位 'ms'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-07-11 09:59:44",
+      "update_time": "2025-07-11 09:59:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
       ]
     },
     {
