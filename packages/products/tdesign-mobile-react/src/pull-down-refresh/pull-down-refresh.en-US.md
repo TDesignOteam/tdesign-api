@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### PullDownRefresh Props
 
 name | type | default | description | required
@@ -15,6 +14,7 @@ loadingProps | Object | - | Typescript：`LoadingProps`，[Loading API Documents
 loadingTexts | Array | [] | Typescript：`string[]` | N
 maxBarHeight | String / Number | 80 | \- | N
 refreshTimeout | Number | 3000 | \- | N
+successDuration | String / Number | 500 | \- | N
 value | Boolean | false | \- | N
 defaultValue | Boolean | false | uncontrolled property | N
 onChange | Function |  | Typescript：`(value: boolean) => void`<br/> | N
