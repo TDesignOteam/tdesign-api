@@ -134010,7 +134010,7 @@
       ],
       "component": "Tooltip",
       "field_category": 16,
-      "field_name": "TdPopupProps【import { TdPopupProps } from '@Popup'】",
+      "field_name": "Omit<TdPopupProps, 'delay' | 'destroyOnClose' | 'duration' | 'placement' | 'showArrow' | 'theme'> 【import { TdPopupProps } from '@Popup'】",
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
