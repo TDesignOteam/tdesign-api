@@ -54575,8 +54575,7 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "Form",
       "field_category": 1,
@@ -54604,8 +54603,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -54615,7 +54613,8 @@
       "id": 166,
       "platform_framework": [
         "1",
-        "8"
+        "8",
+        "64"
       ],
       "component": "Form",
       "field_category": 1,
@@ -54644,7 +54643,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -55094,8 +55094,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55128,8 +55127,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -55140,7 +55138,10 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "64"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55170,7 +55171,10 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -55232,7 +55236,8 @@
         "2",
         "4",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55264,7 +55269,8 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -55325,6 +55331,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -55358,46 +55365,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1712579381,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Form",
-      "field_category": 1,
-      "field_name": "rules",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "表单字段校验规则",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:29:41",
-      "update_time": "2024-04-08 12:29:41",
-      "event_output": null,
-      "custom_field_type": "FormRules<FormData>【type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> }】",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55507,9 +55478,7 @@
         "1",
         "2",
         "4",
-        "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55541,9 +55510,7 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
-        "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean",
@@ -55733,7 +55700,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 2,
@@ -55763,7 +55731,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -56122,7 +56091,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56153,7 +56123,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -56165,7 +56136,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56196,7 +56168,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -56206,8 +56179,10 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56236,41 +56211,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1712655654,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Form",
-      "field_category": 4,
-      "field_name": "validate",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表",
-      "field_desc_en": null,
-      "field_required": 1,
-      "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'all'】",
-      "create_time": "2024-04-09 09:40:54",
-      "update_time": "2024-04-09 09:40:54",
-      "event_output": "Promise<FormValidateResult<FormData>>",
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Functions",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -56325,7 +56269,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "Form",
       "field_category": 64,
@@ -56356,7 +56301,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -57219,7 +57165,8 @@
       "platform_framework": [
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57249,7 +57196,8 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -57443,7 +57391,8 @@
         "4",
         "8",
         "16",
-        "32"
+        "32",
+        "64"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57477,7 +57426,8 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)"
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -57589,7 +57539,7 @@
       "platform_framework": [
         "1",
         "4",
-        "16",
+        "8",
         "32",
         "64"
       ],
@@ -57621,7 +57571,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "Angular(PC)",
-        "React(Mobile)",
+        "Vue(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
       ],
@@ -57632,7 +57582,8 @@
     {
       "id": 1706508590,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57662,51 +57613,13 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
         "Number",
         "Array"
-      ]
-    },
-    {
-      "id": 1712579678,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "FormItem",
-      "field_category": 1,
-      "field_name": "name",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "表单字段名称",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:34:38",
-      "update_time": "2024-04-08 12:34:38",
-      "event_output": null,
-      "custom_field_type": "string | number",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
       ]
     },
     {
@@ -58907,6 +58820,7 @@
         "1",
         "2",
         "4",
+        "8",
         "16",
         "32",
         "64"
@@ -58940,46 +58854,10 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)",
+        "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
         "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712579727,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "FormRule",
-      "field_category": 1,
-      "field_name": "trigger",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "change",
-      "field_enum": "change/blur",
-      "field_desc_zh": "校验触发方式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:35:27",
-      "update_time": "2024-04-08 12:35:27",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
