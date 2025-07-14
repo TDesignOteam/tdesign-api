@@ -6,6 +6,11 @@
 
 import { TdFormItemProps } from './type';
 const props: TdFormItemProps = {
+  /** 是否显示右侧箭头 */
+  arrow: {
+    type: Boolean,
+    value: false,
+  },
   /** label 原生属性 */
   for: {
     type: String,
@@ -14,6 +19,11 @@ const props: TdFormItemProps = {
   /** 表单项说明内容 */
   help: {
     type: String,
+  },
+  /** 字段标签名称 */
+  label: {
+    type: String,
+    value: '',
   },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign */
   labelAlign: {

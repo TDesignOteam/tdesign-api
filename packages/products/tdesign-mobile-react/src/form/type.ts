@@ -15,11 +15,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   colon?: boolean;
   /**
-   * 表单内容对齐方式：左对齐、右对齐
-   * @default left
-   */
-  contentAlign?: 'left' | 'right';
-  /**
    * 是否禁用整个表单
    */
   disabled?: boolean;
@@ -47,6 +42,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   preventSubmitDefault?: boolean;
   /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
+  /**
    * 是否显示必填符号（*），默认显示
    */
   requiredMark?: boolean;
@@ -72,10 +71,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default true
    */
   showErrorMessage?: boolean;
-  /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标
-   */
-  statusIcon?: boolean | TNode<TdFormItemProps>;
   /**
    * 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件
    * @default false
@@ -157,9 +152,8 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
-   * @default ''
    */
-  name?: string;
+  name?: NamePath;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -373,6 +367,8 @@ export interface FormValidateParams {
 export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
+
+export type NamePath = string | number | Array<string | number>;
 
 export interface IsDateOptions {
   format: string;

@@ -267,6 +267,7 @@ const TYPES_COMBINE_MAP = {
     },
     Form: {
         list: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
+        excludes: ['Miniprogram'],
     },
     Select: {
         list: ['Select', 'Option', 'OptionGroup'],
@@ -465,6 +466,10 @@ const MINIPROGRAM_TYPES_COMBINE_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
         excludes: ['Miniprogram'],
+    },
+    Form: {
+        list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
+        includes: ['Miniprogram'],
     },
 };
 

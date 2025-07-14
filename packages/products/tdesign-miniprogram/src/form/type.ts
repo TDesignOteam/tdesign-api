@@ -6,9 +6,8 @@
 
 import { IsEmailOptions } from 'validator/es/lib/isEmail';
 import { IsURLOptions } from 'validator/es/lib/isURL';
-import { TNode } from '../common/common';
 
-export interface TdFormProps {
+export interface TdFormProps<FormData extends Data = Data> {
   /**
    * 是否在表单标签字段右侧显示冒号
    * @default false
@@ -16,6 +15,14 @@ export interface TdFormProps {
   colon?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 表单数据
+   * @default {}
+   */
+  data?: {
+    type: ObjectConstructor;
+    value?: FormData;
   };
   /**
    * 是否禁用整个表单
@@ -48,10 +55,9 @@ export interface TdFormProps {
     value?: string | number;
   };
   /**
-   * 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新
-   * @default true
+   * 是否整个表单只读
    */
-  preventSubmitDefault?: {
+  readonly?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -61,6 +67,13 @@ export interface TdFormProps {
   requiredMark?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 表单必填符号（*）显示位置
+   */
+  requiredMarkPosition?: {
+    type: StringConstructor;
+    value?: 'left' | 'right';
   };
   /**
    * 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值
@@ -93,13 +106,6 @@ export interface TdFormProps {
     value?: boolean;
   };
   /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标
-   */
-  statusIcon?: {
-    type: BooleanConstructor;
-    value?: boolean | TNode<TdFormItemProps>;
-  };
-  /**
    * 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件
    * @default false
    */
@@ -110,7 +116,7 @@ export interface TdFormProps {
 }
 
 /** 组件实例方法 */
-export interface FormInstanceFunctions {
+export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 清空校验结果。可使用 fields 指定清除部分字段的校验结果，fields 值为空则表示清除所有字段校验结果。清除邮箱校验结果示例：`clearValidate(['email'])`
    */
@@ -127,66 +133,29 @@ export interface FormInstanceFunctions {
     value?: (params?: FormResetParams<FormData>) => void;
     required?: boolean;
   };
-}
-
-export interface TdFormItemProps {
   /**
-   * label 原生属性
-   * @default ''
+   * 设置自定义校验结果，如远程校验信息直接呈现。注意需要在组件挂载结束后使用该方法。`FormData` 指表单数据泛型
    */
-  for?: {
-    type: StringConstructor;
-    value?: string;
+  setValidateMessage: {
+    type: undefined;
+    value?: (message: FormValidateMessage<FormData>) => void;
+    required?: boolean;
   };
   /**
-   * 表单项说明内容
+   * 提交表单，表单里面没有提交按钮`<button type=\"submit\" />`时可以使用该方法。`showErrorMessage` 表示是否在提交校验不通过时显示校验不通过的原因，默认显示。该方法会触发 `submit` 事件
    */
-  help?: {
-    type: StringConstructor;
-    value?: string;
+  submit: {
+    type: undefined;
+    value?: (params?: { showErrorMessage?: boolean }) => void;
+    required?: boolean;
   };
   /**
-   * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign
+   * 校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表
    */
-  labelAlign?: {
-    type: StringConstructor;
-    value?: 'left' | 'right' | 'top';
-  };
-  /**
-   * 可以整体设置标签宽度，优先级高于 Form.labelWidth
-   */
-  labelWidth?: {
-    type: null;
-    value?: string | number;
-  };
-  /**
-   * 表单字段名称
-   * @default ''
-   */
-  name?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
-   * 是否显示必填符号（*），优先级高于 Form.requiredMark
-   */
-  requiredMark?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
-   * 表单字段校验规则
-   */
-  rules?: {
-    type: ArrayConstructor;
-    value?: Array<FormRule>;
-  };
-  /**
-   * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
-   */
-  showErrorMessage?: {
-    type: BooleanConstructor;
-    value?: boolean;
+  validate: {
+    type: undefined;
+    value?: (params?: FormValidateParams) => Promise<FormValidateResult<FormData>>;
+    required?: boolean;
   };
 }
 
@@ -347,6 +316,23 @@ export interface FormResetParams<FormData> {
   type?: 'initial' | 'empty';
   fields?: Array<keyof FormData>;
 }
+
+export type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] };
+
+export interface FormItemValidateMessage {
+  type: 'warning' | 'error';
+  message: string;
+}
+
+export interface FormValidateParams {
+  fields?: Array<string>;
+  showErrorMessage?: boolean;
+  trigger?: ValidateTriggerType;
+}
+
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
+
+export type Data = { [key: string]: any };
 
 export interface IsDateOptions {
   format: string;
