@@ -8,8 +8,7 @@ function getVueTNodeType(type, customType) {
 
 function getMiniprogramTNodeType(type, customType) {
   let t = customType ? customType.split('|') : type;
-  if (t.length === 1 && t.join().trim() === 'TNode') return '';
-  t = t.filter(v => v.trim() !== 'TNode');
+  t = t.filter(v => !v.trim().includes('TNode'));
   return customType ? t.join('|') : formatBaseType(t);
 }
 
