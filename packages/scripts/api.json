@@ -37016,7 +37016,7 @@
       "field_desc_zh": "选中值发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: DateValue| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource })【import { Dayjs } from 'dayjs'】【type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear'】",
+      "event_input": "(value: DateValue| DateMultipleValue, context: { dayjsValue?: Dayjs, trigger?: DatePickerTriggerSource })【import { Dayjs } from 'dayjs'】【type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove'】",
       "create_time": "2021-03-23 12:48:47",
       "update_time": "2022-05-19 09:09:17",
       "event_output": null,
