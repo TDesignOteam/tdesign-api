@@ -17,6 +17,7 @@ app.use(logger());
 app.use(bodyParser());
 app.use(errorParser());
 app.use(cors({
+  origin: '*', 
   credentials: true,
   allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'Access-Control-Allow-Origin'],
 }));
