@@ -283,6 +283,9 @@ function writeVolar(framework, data) {
     if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
       return `TTable: typeof import('${current.name}')['Table'];`
     }
+    if (item === 'QRCode') {
+      return `TQrcode: typeof import('${current.name}')['${item}'];`
+    }
     return `T${item}: typeof import('${current.name}')['${item}'];`
 
   }
