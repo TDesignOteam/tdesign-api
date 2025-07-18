@@ -456,6 +456,7 @@
       "label-align",
       "label-width",
       "prevent-submit-default",
+      "readonly",
       "required-mark",
       "required-mark-position",
       "reset-type",

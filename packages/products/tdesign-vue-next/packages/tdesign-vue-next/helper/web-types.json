@@ -18456,19 +18456,6 @@
               "type": "string | TNode"
             },
             {
-              "name": "delay",
-              "description": "delay to show or hide popover\n\n延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/tooltip?tab=api#tooltip-props",
-              "type": "number | Array<number>"
-            },
-            {
-              "name": "destroy-on-close",
-              "description": "是否在关闭浮层时销毁浮层",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/tooltip?tab=api#tooltip-props",
-              "type": "boolean",
-              "default": "false"
-            },
-            {
               "name": "disabled",
               "description": "是否禁用组件",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/tooltip?tab=api#tooltip-props",
@@ -18510,13 +18497,6 @@
               "description": "popper initial options，details refer to https://popper.js.org/docs\n\npopper 初始化配置，详情参考 https://popper.js.org/docs/",
               "doc-url": "https://tdesign.tencent.com/vue-next/components/tooltip?tab=api#tooltip-props",
               "type": "object"
-            },
-            {
-              "name": "show-arrow",
-              "description": "是否显示浮层箭头",
-              "doc-url": "https://tdesign.tencent.com/vue-next/components/tooltip?tab=api#tooltip-props",
-              "type": "boolean",
-              "default": "false"
             },
             {
               "name": "trigger",
