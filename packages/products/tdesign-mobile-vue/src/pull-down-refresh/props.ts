@@ -34,6 +34,11 @@ export default {
     type: Number,
     default: 3000,
   },
+  /** 刷新成功提示展示时长，单位 'ms' */
+  successDuration: {
+    type: [String, Number] as PropType<TdPullDownRefreshProps['successDuration']>,
+    default: 500,
+  },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {
     type: Boolean,
