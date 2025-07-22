@@ -92,7 +92,7 @@ declare module 'vue' {
     TPopup: typeof import('tdesign-vue-next')['Popup'];
     TPrimaryTable: typeof import('tdesign-vue-next')['PrimaryTable'];
     TProgress: typeof import('tdesign-vue-next')['Progress'];
-    TQRCode: typeof import('tdesign-vue-next')['QRCode'];
+    TQrcode: typeof import('tdesign-vue-next')['QRCode'];
     TRadio: typeof import('tdesign-vue-next')['Radio'];
     TRadioButton: typeof import('tdesign-vue-next')['RadioButton'];
     TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup'];

@@ -52,6 +52,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   preventSubmitDefault?: boolean;
   /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
+  /**
    * 是否显示必填符号（*），默认显示
    */
   requiredMark?: boolean;
@@ -159,8 +163,9 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
+   * @default ''
    */
-  name?: string | number;
+  name?: string;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -233,7 +238,7 @@ export interface FormRule {
    * 校验触发方式
    * @default change
    */
-  trigger?: 'change' | 'blur';
+  trigger?: ValidateTriggerType;
   /**
    * 校验未通过时呈现的错误信息类型，有 告警信息提示 和 错误信息提示 等两种
    * @default error
@@ -326,7 +331,7 @@ export interface FormErrorMessage {
   whitespace?: string;
 }
 
-export type FormRules<T extends Data> = { [field in keyof T]?: Array<FormRule> };
+export type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> };
 
 export interface SubmitContext<T extends Data = Data> {
   e?: FormSubmitEvent;
@@ -371,7 +376,7 @@ export interface FormValidateParams {
   trigger?: ValidateTriggerType;
 }
 
-export type ValidateTriggerType = 'blur' | 'change' | 'all';
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
 

@@ -661,10 +661,11 @@ function combineTsFile(componentMap, framework) {
             delete ts[item];
         });
         // 不在列表中的配置也不输出，如通用配置：InfinityScroll/TScroll 等
+        // 特殊处理小程序端 Form 组件，确保 FormItem 子组件的 type.ts 单独输出
         Object.keys(ts).forEach((key) => {
             if (
                 !list.find((item) => item === key) &&
-                !['ConfigProvider'].includes(key)
+                !['ConfigProvider'].includes(key) && ( framework === 'Miniprogram' && key !== 'FormItem' )
             ) {
                 delete ts[key];
             }
