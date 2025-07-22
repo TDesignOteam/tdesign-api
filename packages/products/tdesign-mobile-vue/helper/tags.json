@@ -81,6 +81,8 @@
       "loading",
       "loading-props",
       "max-height",
+      "row-attributes",
+      "row-class-name",
       "row-key",
       "show-header",
       "stripe",
@@ -119,6 +121,7 @@
       "format",
       "max-date",
       "min-date",
+      "readonly",
       "switch-mode",
       "title",
       "type",
@@ -453,6 +456,7 @@
       "label-align",
       "label-width",
       "prevent-submit-default",
+      "readonly",
       "required-mark",
       "required-mark-position",
       "reset-type",
@@ -596,6 +600,7 @@
   },
   "t-indexes": {
     "attributes": [
+      "current",
       "index-list",
       "sticky",
       "sticky-offset",

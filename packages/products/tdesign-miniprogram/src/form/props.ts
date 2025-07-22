@@ -11,6 +11,11 @@ const props: TdFormProps = {
     type: Boolean,
     value: false,
   },
+  /** 表单数据 */
+  data: {
+    type: Object,
+    value: {},
+  },
   /** 是否禁用整个表单 */
   disabled: {
     type: null,
@@ -30,15 +35,19 @@ const props: TdFormProps = {
     type: null,
     value: '81px',
   },
-  /** 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 */
-  preventSubmitDefault: {
-    type: Boolean,
-    value: true,
+  /** 是否整个表单只读 */
+  readonly: {
+    type: null,
+    value: undefined,
   },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {
     type: null,
     value: undefined,
+  },
+  /** 表单必填符号（*）显示位置 */
+  requiredMarkPosition: {
+    type: String,
   },
   /** 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值 */
   resetType: {
@@ -57,11 +66,6 @@ const props: TdFormProps = {
   showErrorMessage: {
     type: Boolean,
     value: true,
-  },
-  /** 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标 */
-  statusIcon: {
-    type: null,
-    value: undefined,
   },
   /** 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件 */
   submitWithWarningMessage: {

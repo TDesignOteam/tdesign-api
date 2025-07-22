@@ -6,16 +6,15 @@ import { TdFormProps, TdFormItemProps } from './type';
 
 export const formDefaultProps: TdFormProps = {
   colon: false,
-  contentAlign: 'left',
   disabled: undefined,
   id: undefined,
   labelAlign: 'right',
   labelWidth: '81px',
   preventSubmitDefault: true,
+  readonly: undefined,
   requiredMark: undefined,
   resetType: 'empty',
   showErrorMessage: true,
-  statusIcon: undefined,
   submitWithWarningMessage: false,
 };
 

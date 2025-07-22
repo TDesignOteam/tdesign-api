@@ -43,6 +43,7 @@ function start() {
   }
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
+    delete aliasComponents['Swiper'];
   }
 
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
@@ -54,10 +55,46 @@ function start() {
     // Typography 是空定义组件，特殊处理
     frameworkData['Typography'] = [];
   }
+  // API field_category_text 等于 Extends, 提取 Pick, Omit 类型的 API
+  Object.keys(frameworkData).forEach((componentName) => {
+    frameworkData[componentName].forEach((api, index) => {
+      if (api.field_category_text !== 'Extends') return;
+
+      // 提取 Pick 类型的 API
+      if (api.field_name.includes('Pick')) {
+        processPickOmitApi(frameworkData, api, true);
+      }
+      // 提取 Omit 类型的 API
+      if (api.field_name.includes('Omit')) {
+        processPickOmitApi(frameworkData, api, false);
+      }
+    })
+  })
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
 
+function processPickOmitApi(frameworkData, api, isPick) {
+  let regex, match;
+  if (isPick) {
+    regex = /Pick<([^,]+),\s*([^>]+)>/;
+    match = api.field_name.match(regex);
+  } else {
+    regex = /Omit<([^,]+),\s*([^>]+)>/;
+    match = api.field_name.match(regex);
+  }
+
+  if (match) {
+    const componentName = match[1].replace('Td', '').replace('Props', '').replace('<T>', '');
+    const list = match[2].replaceAll("'", '').replaceAll(' ', '').split('|');
+
+    frameworkData[componentName]?.forEach((item) => {
+      if (isPick ? list.includes(item.field_name) : !list.includes(item.field_name)) {
+        frameworkData[api.component].push(item);
+      }
+    });
+  }
+}
 function generateHelper(baseData, framework) {
   const { webTypes, tags, attributes, volar } = getHelperData(baseData, framework);
   write(framework, 'tags.json', tags);
@@ -245,6 +282,9 @@ function writeVolar(framework, data) {
     }
     if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
       return `TTable: typeof import('${current.name}')['Table'];`
+    }
+    if (item === 'QRCode') {
+      return `TQrcode: typeof import('${current.name}')['${item}'];`
     }
     return `T${item}: typeof import('${current.name}')['${item}'];`
 
