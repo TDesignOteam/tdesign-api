@@ -55,6 +55,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
+   * 是否开启拖拽排序
+   * @default false
+   */
+  draggable?: boolean;
+  /**
    * 已上传文件列表，同 `value`。TS 类型：`UploadFile`
    * @default []
    */

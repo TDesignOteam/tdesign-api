@@ -52,6 +52,8 @@ export default {
     type: Boolean,
     default: undefined,
   },
+  /** 是否开启拖拽排序 */
+  draggable: Boolean,
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
