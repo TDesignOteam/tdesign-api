@@ -31,7 +31,7 @@ const props: TdSearchProps = {
     type: String,
     value: 'always',
   },
-  /** 是否启用清除控件 */
+  /** 是否可清空 */
   clearable: {
     type: Boolean,
     value: true,

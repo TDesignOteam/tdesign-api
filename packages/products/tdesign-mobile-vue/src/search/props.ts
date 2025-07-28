@@ -8,7 +8,7 @@ import { TdSearchProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 自定义右侧操作按钮文字，如：“取消” */
+  /** 自定义右侧操作按钮文字 */
   action: {
     type: [String, Function] as PropType<TdSearchProps['action']>,
     default: '',
@@ -19,6 +19,15 @@ export default {
   },
   /** 是否居中 */
   center: Boolean,
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String as PropType<TdSearchProps['clearTrigger']>,
+    default: 'always' as TdSearchProps['clearTrigger'],
+    validator(val: TdSearchProps['clearTrigger']): boolean {
+      if (!val) return true;
+      return ['always', 'focus'].includes(val);
+    },
+  },
   /** 是否可清空 */
   clearable: {
     type: Boolean,
@@ -65,7 +74,7 @@ export default {
       return ['square', 'round'].includes(val);
     },
   },
-  /** 值，搜索关键词 */
+  /** 值 */
   value: {
     type: String,
     default: undefined,
@@ -74,7 +83,7 @@ export default {
     type: String,
     default: undefined,
   },
-  /** 值，搜索关键词，非受控属性 */
+  /** 值，非受控属性 */
   defaultValue: {
     type: String,
     default: '',
