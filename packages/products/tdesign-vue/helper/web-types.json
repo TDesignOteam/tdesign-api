@@ -14172,25 +14172,6 @@
           "slots": []
         },
         {
-          "name": "t-search",
-          "source": {
-            "symbol": "Search"
-          },
-          "description": "Search\n\n搜索",
-          "doc-url": "https://tdesign.tencent.com/vue/components/search",
-          "props": [],
-          "js": {
-            "events": [
-              {
-                "name": "blur",
-                "description": "失去焦点时触发",
-                "doc-url": "https://tdesign.tencent.com/vue/components/search?tab=api#search-events"
-              }
-            ]
-          },
-          "slots": []
-        },
-        {
           "name": "t-select",
           "source": {
             "symbol": "Select"

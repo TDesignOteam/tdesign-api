@@ -1868,12 +1868,6 @@
     ],
     "description": "Row\n\n栅格-横向\n\n[docs](https://tdesign.tencent.com/vue/components/row)"
   },
-  "t-search": {
-    "attributes": [
-      "blur"
-    ],
-    "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/vue/components/search)"
-  },
   "t-select": {
     "attributes": [
       "auto-width",

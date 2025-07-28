@@ -6300,10 +6300,6 @@
     "type": "String",
     "description": "自定义元素标签\n\ndefault: div\n\n[docs](https://tdesign.tencent.com/vue/components/row?tab=api#row-props)"
   },
-  "t-search/blur": {
-    "type": "event",
-    "description": "失去焦点时触发\n\n[docs](https://tdesign.tencent.com/vue/components/search?tab=api#search-events)"
-  },
   "t-select/auto-width": {
     "type": "Boolean",
     "description": "宽度随内容自适应\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue/components/select?tab=api#select-props)"
