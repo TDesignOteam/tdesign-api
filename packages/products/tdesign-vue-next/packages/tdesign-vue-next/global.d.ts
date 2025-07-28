@@ -100,7 +100,6 @@ declare module 'vue' {
     TRangeInputPopup: typeof import('tdesign-vue-next')['RangeInputPopup'];
     TRate: typeof import('tdesign-vue-next')['Rate'];
     TRow: typeof import('tdesign-vue-next')['Row'];
-    TSearch: typeof import('tdesign-vue-next')['Search'];
     TSelect: typeof import('tdesign-vue-next')['Select'];
     TSelectInput: typeof import('tdesign-vue-next')['SelectInput'];
     TSkeleton: typeof import('tdesign-vue-next')['Skeleton'];

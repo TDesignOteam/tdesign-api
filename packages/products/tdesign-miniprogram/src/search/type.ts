@@ -46,7 +46,7 @@ export interface TdSearchProps {
     value?: 'always' | 'focus';
   };
   /**
-   * 是否启用清除控件
+   * 是否可清空
    * @default true
    */
   clearable?: {

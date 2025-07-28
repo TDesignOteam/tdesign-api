@@ -847,6 +847,7 @@
       "loading-texts",
       "max-bar-height",
       "refresh-timeout",
+      "success-duration",
       "value",
       "change",
       "refresh",

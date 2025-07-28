@@ -2687,6 +2687,10 @@
     "type": "Number",
     "description": "刷新超时时间\n\ndefault: 3000\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props)"
   },
+  "t-pull-down-refresh/success-duration": {
+    "type": "String|Number",
+    "description": "刷新成功提示展示时长，单位 'ms'\n\ndefault: 500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props)"
+  },
   "t-pull-down-refresh/value": {
     "type": "Boolean",
     "description": "组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props)"
@@ -2976,7 +2980,7 @@
   },
   "t-search/action": {
     "type": "String|TNode",
-    "description": "自定义右侧操作按钮文字，如：“取消”\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
+    "description": "自定义右侧操作按钮文字\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
   },
   "t-search/autocomplete-options": {
     "type": "Array",
@@ -3040,7 +3044,7 @@
   },
   "t-search/value": {
     "type": "String",
-    "description": "值，搜索关键词\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
+    "description": "值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
   },
   "t-search/action-click": {
     "type": "event",

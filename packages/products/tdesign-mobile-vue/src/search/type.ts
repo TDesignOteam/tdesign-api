@@ -8,7 +8,7 @@ import { TNode } from '../common';
 
 export interface TdSearchProps {
   /**
-   * 自定义右侧操作按钮文字，如：“取消”
+   * 自定义右侧操作按钮文字
    * @default ''
    */
   action?: string | TNode;
@@ -21,6 +21,11 @@ export interface TdSearchProps {
    * @default false
    */
   center?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 是否可清空
    * @default true
@@ -68,17 +73,17 @@ export interface TdSearchProps {
    */
   shape?: 'square' | 'round';
   /**
-   * 值，搜索关键词
+   * 值
    * @default ''
    */
   value?: string;
   /**
-   * 值，搜索关键词，非受控属性
+   * 值，非受控属性
    * @default ''
    */
   defaultValue?: string;
   /**
-   * 值，搜索关键词
+   * 值
    * @default ''
    */
   modelValue?: string;

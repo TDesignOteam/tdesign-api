@@ -23,7 +23,12 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
-   * 是否启用清除控件
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
+   * 是否可清空
    * @default true
    */
   clearable?: boolean;
@@ -49,7 +54,6 @@ export interface TdSearchProps {
   placeholder?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
   /**
@@ -68,10 +72,10 @@ export interface TdSearchProps {
    */
   defaultValue?: string;
   /**
-   * 点击右侧操作按钮文字时触发
+   * 点击搜索框右侧操作内容时触发
    * @default ''
    */
-  onActionClick?: ({}) => void;
+  onActionClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
    * 失去焦点时触发
    * @default ''
@@ -81,10 +85,7 @@ export interface TdSearchProps {
    * 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
    * @default ''
    */
-  onChange?: (
-    value: string,
-    context: { trigger: 'input-change' | 'option-click'; e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> },
-  ) => void;
+  onChange?: (value: string, context: { e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> }) => void;
   /**
    * 点击清除时触发
    * @default ''

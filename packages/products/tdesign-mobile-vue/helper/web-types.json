@@ -6132,6 +6132,13 @@
               "default": "3000"
             },
             {
+              "name": "success-duration",
+              "description": "刷新成功提示展示时长，单位 'ms'",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props",
+              "type": "string | number",
+              "default": "500"
+            },
+            {
               "name": "value",
               "description": "组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/pull-down-refresh?tab=api#pulldownrefresh-props",
@@ -6787,7 +6794,7 @@
           "props": [
             {
               "name": "action",
-              "description": "自定义右侧操作按钮文字，如：“取消”",
+              "description": "自定义右侧操作按钮文字",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props",
               "type": "string | TNode",
               "default": "''"
@@ -6903,7 +6910,7 @@
             },
             {
               "name": "value",
-              "description": "值，搜索关键词",
+              "description": "值",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props",
               "type": "string"
             }
@@ -6950,7 +6957,7 @@
           "slots": [
             {
               "name": "action",
-              "description": "自定义右侧操作按钮文字，如：“取消”",
+              "description": "自定义右侧操作按钮文字",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props"
             },
             {
