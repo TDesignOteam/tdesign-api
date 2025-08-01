@@ -13,6 +13,10 @@ export interface TdSkeletonProps {
    */
   animation?: 'gradient' | 'flashed' | 'none';
   /**
+   * 加载完成的内容，同 content
+   */
+  children?: TNode;
+  /**
    * 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0
    */
