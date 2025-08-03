@@ -137,6 +137,10 @@ export interface TdDrawerProps {
    */
   onEscKeydown?: (context: { e: KeyboardEvent }) => void;
   /**
+   * 抽屉打开时触发
+   */
+  onOpen?: () => void;
+  /**
    * 如果蒙层存在，点击蒙层时触发
    */
   onOverlayClick?: (context: { e: MouseEvent }) => void;
@@ -196,4 +200,4 @@ export interface DrawerCloseContext {
   e: MouseEvent | KeyboardEvent;
 }
 
-export type DrawerMethod = (options?: DrawerOptions, context?: AppContext) => void;
+export type DrawerMethod = (options?: DrawerOptions, context?: AppContext) => DrawerInstance;
