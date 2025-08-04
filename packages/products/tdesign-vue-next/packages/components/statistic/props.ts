@@ -14,13 +14,10 @@ export default {
   },
   /** 是否开始动画 */
   animationStart: Boolean,
-  /** 颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值 */
+  /** 可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的颜色值。 */
   color: {
-    type: String as PropType<TdStatisticProps['color']>,
-    validator(val: TdStatisticProps['color']): boolean {
-      if (!val) return true;
-      return ['black', 'blue', 'red', 'orange', 'green'].includes(val);
-    },
+    type: String,
+    default: '',
   },
   /** 小数保留位数 */
   decimalPlaces: {

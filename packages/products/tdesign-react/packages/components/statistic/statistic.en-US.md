@@ -10,7 +10,7 @@ className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 animation | Object | - | Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`。Typescript：`animation` `interface animation { duration: number; valueFrom: number;  }`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/statistic/type.ts) | N
 animationStart | Boolean | false | Whether to start animation | N
-color | String | - | Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)。options: black/blue/red/orange/green | N
+color | String | - | Can be any color equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) | N
 decimalPlaces | Number | - |  Decimal places | N
 extra | TNode | - |  Additional display content。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 format | Function | - | Format numeric display value。Typescript：`(value: number) => number` | N
