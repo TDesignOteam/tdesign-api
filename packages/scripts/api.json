@@ -111149,9 +111149,9 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "black/blue/red/orange/green",
-      "field_desc_zh": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
-      "field_desc_en": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)",
+      "field_enum": "",
+      "field_desc_zh": "可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的颜色值。",
+      "field_desc_en": "Can be any color equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-04-20 11:27:29",
