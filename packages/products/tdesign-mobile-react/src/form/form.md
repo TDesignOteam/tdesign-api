@@ -9,6 +9,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
+contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
 id | String | undefined | 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件 | N
@@ -49,6 +50,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
+contentAlign | String | - | 表单内容对齐方式，优先级高于 Form.contentAlign。可选项：left/right | N
 for | String | - | label 原生属性 | N
 help | TNode | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 label | TNode | '' | 字段标签名称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
