@@ -52,7 +52,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 name | type | default | description | required
 -- | -- | -- | -- | --
 arrow | Boolean | false | \- | N
-contentAlign | String | left | options: left/right | N
+contentAlign | String | - | options: left/right | N
 for | String | - | \- | N
 help | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
