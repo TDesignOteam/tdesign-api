@@ -19,6 +19,11 @@ export default {
   },
   /** 是否显示外边框 */
   bordered: Boolean,
+  /** 光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 是否禁用文本框 */
   disabled: {
     type: Boolean,

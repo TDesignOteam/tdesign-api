@@ -10,6 +10,7 @@ allowInputOverMax | Boolean | false | 超出maxlength或maxcharacter之后是否
 autofocus | Boolean | false | 自动聚焦，拉起键盘 | N
 autosize | Boolean / Object | false | 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度。TS 类型：`boolean \| { minRows?: number; maxRows?: number }` | N
 bordered | Boolean | false | 是否显示外边框 | N
+cursorColor | String | #0052d9 | 光标颜色 | N
 disabled | Boolean | undefined | 是否禁用文本框 | N
 indicator | Boolean | false | 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效 | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
