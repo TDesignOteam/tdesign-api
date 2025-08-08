@@ -67878,7 +67878,7 @@
       "create_time": "2022-05-30 13:20:02",
       "update_time": "2022-05-30 13:20:02",
       "event_output": null,
-      "custom_field_type": "ImageScale【interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }】",
+      "custom_field_type": "Partial<ImageScale>【interface ImageScale { max: number; min: number; step: number; defaultScale: number; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
