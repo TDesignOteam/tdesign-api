@@ -54571,7 +54571,8 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -54599,7 +54600,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -57202,7 +57204,8 @@
     {
       "id": 1712574874,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57210,9 +57213,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "",
       "field_enum": "left/right",
-      "field_desc_zh": "表单内容对齐方式：左对齐、右对齐",
+      "field_desc_zh": "表单内容对齐方式，优先级高于 Form.contentAlign",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -57230,7 +57233,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -67874,7 +67878,7 @@
       "create_time": "2022-05-30 13:20:02",
       "update_time": "2022-05-30 13:20:02",
       "event_output": null,
-      "custom_field_type": "ImageScale【interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }】",
+      "custom_field_type": "Partial<ImageScale>【interface ImageScale { max: number; min: number; step: number; defaultScale: number; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

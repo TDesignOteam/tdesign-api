@@ -52,7 +52,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 arrow | Boolean | false | 是否显示右侧箭头 | N
-contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
+contentAlign | String | - | 表单内容对齐方式，优先级高于 Form.contentAlign。可选项：left/right | N
 for | String | - | label 原生属性 | N
 help | String / Slot / Function | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | '' | 字段标签名称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
