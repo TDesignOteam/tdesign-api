@@ -54571,7 +54571,8 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -54599,7 +54600,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -57202,7 +57204,8 @@
     {
       "id": 1712574874,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57210,9 +57213,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "",
       "field_enum": "left/right",
-      "field_desc_zh": "表单内容对齐方式：左对齐、右对齐",
+      "field_desc_zh": "表单内容对齐方式，优先级高于 Form.contentAlign",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -57230,7 +57233,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -58689,7 +58693,7 @@
       "create_time": "2020-12-17 05:38:27",
       "update_time": "2022-01-17 09:57:16",
       "event_output": null,
-      "custom_field_type": "RegExp",
+      "custom_field_type": "RegExp | string",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -67874,7 +67878,7 @@
       "create_time": "2022-05-30 13:20:02",
       "update_time": "2022-05-30 13:20:02",
       "event_output": null,
-      "custom_field_type": "ImageScale【interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }】",
+      "custom_field_type": "Partial<ImageScale>【interface ImageScale { max: number; min: number; step: number; defaultScale: number; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -111149,9 +111153,9 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "black/blue/red/orange/green",
-      "field_desc_zh": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
-      "field_desc_en": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)",
+      "field_enum": "",
+      "field_desc_zh": "颜色风格，预设五个 TDesign 颜色风格：黑色（black）、蓝色（blue）、红色（red）、橙色（orange）、绿色（green）支持深浅色模式切换。也可以自定义任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持颜色值，深浅色模式切换需自行适配",
+      "field_desc_en": "The color style can support TDesign's light and dark modes with the following options: black, blue, red, orange, and green. Alternatively, it can be any [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) value, but in this case, TDesign's light and dark modes will not be supported.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-04-20 11:27:29",
@@ -128189,6 +128193,82 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 1754468710,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "【试验性】光标颜色，仅在 Skyline 下有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-06 08:25:10",
+      "update_time": "2025-08-06 08:25:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1754469037,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "光标颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-06 08:30:37",
+      "update_time": "2025-08-06 08:30:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {

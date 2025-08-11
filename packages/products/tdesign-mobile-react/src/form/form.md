@@ -9,6 +9,7 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
+contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
 id | String | undefined | 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件 | N
@@ -49,6 +50,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
+contentAlign | String | - | 表单内容对齐方式，优先级高于 Form.contentAlign。可选项：left/right | N
 for | String | - | label 原生属性 | N
 help | TNode | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 label | TNode | '' | 字段标签名称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
@@ -73,7 +75,7 @@ max | Number / Boolean | - | 内置校验方法，校验值最大长度，如：
 message | String | - | 校验未通过时呈现的错误信息，值为空则不显示 | N
 min | Number / Boolean | - | 内置校验方法，校验值最小长度，如：min: 10 表示值最多不能少于 10 个字符，中文表示 2 个字符，英文为 1 个字符。示例：`{ min: 10, message: '内容长度不够' }`。<br />如果希望字母和中文都是同样的长度，示例：`{ validator: (val) => val.length >= 10, message: '内容文本长度至少为 10 个字' }`。<br />如果数据类型数字（Number），则自动变为数字大小的比对 | N
 number | Boolean | - | 内置校验方法，校验值是否为数字（1.2 、 1e5  都算数字），示例：`{ number: true, message: '请输入数字' }` | N
-pattern | Object | - | 内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`。TS 类型：`RegExp` | N
+pattern | Object | - | 内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`。TS 类型：`RegExp \| string` | N
 required | Boolean | - | 内置校验方法，校验值是否已经填写。该值为 true，默认显示必填标记，可通过设置 `requiredMark: false` 隐藏必填标记 | N
 telnumber | Boolean | - | 内置校验方法，校验值是否为手机号码，校验正则为 `/^1[3-9]\d{9}$/`，示例：`{ telnumber: true, message: '请输入正确的手机号码' }` | N
 trigger | String | change | 校验触发方式。TS 类型：`ValidateTriggerType` | N

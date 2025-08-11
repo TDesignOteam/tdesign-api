@@ -9,6 +9,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 colon | Boolean | false | \- | N
+contentAlign | String | left | options: left/right | N
 disabled | Boolean | undefined | \- | N
 errorMessage | Object | - | Typescript：`FormErrorMessage` | N
 id | String | undefined |  native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events | N
@@ -49,6 +50,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 arrow | Boolean | false | \- | N
+contentAlign | String | - | options: left/right | N
 for | String | - | \- | N
 help | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 label | TNode | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
@@ -73,7 +75,7 @@ max | Number / Boolean | - | \- | N
 message | String | - | \- | N
 min | Number / Boolean | - | \- | N
 number | Boolean | - | \- | N
-pattern | Object | - | Typescript：`RegExp` | N
+pattern | Object | - | Typescript：`RegExp \| string` | N
 required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
 trigger | String | change | Typescript：`ValidateTriggerType` | N
