@@ -58682,6 +58682,7 @@
       "field_category": 1,
       "field_name": "pattern",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -58713,6 +58714,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
