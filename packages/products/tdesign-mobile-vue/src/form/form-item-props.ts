@@ -10,10 +10,9 @@ import { PropType } from 'vue';
 export default {
   /** 是否显示右侧箭头 */
   arrow: Boolean,
-  /** 表单内容对齐方式：左对齐、右对齐 */
+  /** 表单内容对齐方式，优先级高于 Form.contentAlign */
   contentAlign: {
     type: String as PropType<TdFormItemProps['contentAlign']>,
-    default: 'left' as TdFormItemProps['contentAlign'],
     validator(val: TdFormItemProps['contentAlign']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);

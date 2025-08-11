@@ -15,5 +15,6 @@ module.exports = {
     trendPlacement_3461: { field_name: 'trendPlacement', id: 3461 },
     unit_3465: { field_name: 'unit', id: 3465 },
     value_3451: { field_name: 'value', id: 3451 },
+    start_1700880500: { field_name: 'start', id: 1700880500 },
   },
 };
