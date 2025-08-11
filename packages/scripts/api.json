@@ -58693,7 +58693,7 @@
       "create_time": "2020-12-17 05:38:27",
       "update_time": "2022-01-17 09:57:16",
       "event_output": null,
-      "custom_field_type": "RegExp",
+      "custom_field_type": "RegExp | string",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
