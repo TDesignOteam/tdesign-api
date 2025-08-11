@@ -38,6 +38,7 @@ onClose | Function |  | Typescript：`(context: DrawerCloseContext) => void`<br/
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onConfirm | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onEscKeydown | Function |  | Typescript：`(context: { e: KeyboardEvent }) => void`<br/> | N
+onOpen | Function |  | Typescript：`() => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onSizeDragEnd | Function |  | Typescript：`(context: { e: MouseEvent; size: number  }) => void`<br/>trigger on size drag end | N
 

@@ -35,6 +35,7 @@ onClose | Function |  | Typescript：`(context: DrawerCloseContext) => void`<br/
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onConfirm | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onEscKeydown | Function |  | Typescript：`(context: { e: KeyboardEvent }) => void`<br/> | N
+onOpen | Function |  | Typescript：`() => void`<br/> | N
 onOverlayClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onSizeDragEnd | Function |  | Typescript：`(context: { e: MouseEvent; size: number  }) => void`<br/>trigger on size drag end | N
 
@@ -49,6 +50,7 @@ close | `(context: DrawerCloseContext)` | [see more ts definition](https://githu
 close-btn-click | `(context: { e: MouseEvent })` | \-
 confirm | `(context: { e: MouseEvent })` | \-
 esc-keydown | `(context: { e: KeyboardEvent })` | \-
+open | \- | \-
 overlay-click | `(context: { e: MouseEvent })` | \-
 size-drag-end | `(context: { e: MouseEvent; size: number  })` | trigger on size drag end
 
@@ -78,3 +80,5 @@ name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DrawerOptions`
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+
+插件返回值：`DrawerInstance`
