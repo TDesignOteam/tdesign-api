@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Form Props
 
 name | type | default | description | required
@@ -74,7 +73,7 @@ max | Number / Boolean | - | \- | N
 message | String | - | \- | N
 min | Number / Boolean | - | \- | N
 number | Boolean | - | \- | N
-pattern | Object | - | Typescript：`RegExp` | N
+pattern | Object | - | Typescript：`RegExp \| string` | N
 required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
 trigger | String | change | Typescript：`ValidateTriggerType` | N
