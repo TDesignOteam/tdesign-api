@@ -67488,7 +67488,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'rgba(0, 0, 0, 1)'",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "遮罩的背景颜色",
       "field_desc_en": null,
@@ -68148,7 +68148,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否开启图片懒加载",
+      "field_desc_zh": "是否开启图片懒加载。开启后会预加载当前图片、相邻图片",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
