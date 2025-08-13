@@ -20108,6 +20108,88 @@
       ]
     },
     {
+      "id": 1755079195,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片内容的类名，示例：'t-class-body'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:59:55",
+      "update_time": "2025-08-13 09:59:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079040,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片内容的样式",
+      "field_desc_en": "Styles that apply to the card body content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:20",
+      "update_time": "2025-08-13 09:57:20",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2028,
       "platform_framework": [
         "1",
@@ -20399,6 +20481,88 @@
       ]
     },
     {
+      "id": 1755079220,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片底部的类名，示例：'t-class-footer'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:20",
+      "update_time": "2025-08-13 10:00:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079064,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片底部的样式",
+      "field_desc_en": "Styles that apply to the card footer content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:44",
+      "update_time": "2025-08-13 09:57:44",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2176,
       "platform_framework": [
         "1",
@@ -20480,6 +20644,88 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1755079231,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片头部的类名，示例：'t-class-header'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:31",
+      "update_time": "2025-08-13 10:00:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079135,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片头部的样式",
+      "field_desc_en": "Styles that apply to the card header content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:58:55",
+      "update_time": "2025-08-13 09:58:55",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
