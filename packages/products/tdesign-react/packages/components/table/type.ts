@@ -296,7 +296,7 @@ export interface BaseTableInstanceFunctions<T extends TableRowData = TableRowDat
    */
   scrollColumnIntoView: (colKey: string) => void;
   /**
-   * 纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
+   * [通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts#L125)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/table/type.ts#L325C3-L325C18)
    */
   scrollToElement: (params: ComponentScrollToElementParams) => void;
 }
