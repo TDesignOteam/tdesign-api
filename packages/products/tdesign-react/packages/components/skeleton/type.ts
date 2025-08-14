@@ -13,6 +13,14 @@ export interface TdSkeletonProps {
    */
   animation?: 'gradient' | 'flashed' | 'none';
   /**
+   * 加载完成的内容，同 content
+   */
+  children?: TNode;
+  /**
+   * 加载完成的内容
+   */
+  content?: TNode;
+  /**
    * 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0
    */
@@ -27,10 +35,10 @@ export interface TdSkeletonProps {
    */
   rowCol?: SkeletonRowCol;
   /**
-   * 骨架图风格，有基础、头像组合等两大类
+   * 快捷定义骨架图风格，有基础、头像组合等，具体参看代码示例
    * @default text
    */
-  theme?: 'avatar' | 'image' | 'text' | 'paragraph';
+  theme?: 'text' | 'avatar' | 'paragraph' | 'avatar-text' | 'tab' | 'article';
 }
 
 export type SkeletonRowCol = Array<number | SkeletonRowColObj | Array<SkeletonRowColObj>>;
