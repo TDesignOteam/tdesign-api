@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Tabs Props
 
 name | type | default | description | required
