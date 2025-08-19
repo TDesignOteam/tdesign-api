@@ -28,6 +28,11 @@ export interface TdTextareaProps {
    */
   bordered?: boolean;
   /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
+  /**
    * 是否禁用文本框
    */
   disabled?: boolean;

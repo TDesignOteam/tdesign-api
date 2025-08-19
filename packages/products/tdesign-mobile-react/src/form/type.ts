@@ -15,6 +15,11 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   colon?: boolean;
   /**
+   * 表单内容对齐方式：左对齐、右对齐
+   * @default left
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * 是否禁用整个表单
    */
   disabled?: boolean;
@@ -129,6 +134,10 @@ export interface TdFormItemProps {
    */
   arrow?: boolean;
   /**
+   * 表单内容对齐方式，优先级高于 Form.contentAlign
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * label 原生属性
    * @default ''
    */
@@ -213,7 +222,7 @@ export interface FormRule {
   /**
    * 内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`
    */
-  pattern?: RegExp;
+  pattern?: RegExp | string;
   /**
    * 内置校验方法，校验值是否已经填写。该值为 true，默认显示必填标记，可通过设置 `requiredMark: false` 隐藏必填标记
    */

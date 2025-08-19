@@ -16,6 +16,15 @@ export default {
   avatar: {
     type: [String, Function] as PropType<TdCardProps['avatar']>,
   },
+  /** 卡片内容的类名，示例：'t-class-body' */
+  bodyClassName: {
+    type: String,
+    default: '',
+  },
+  /** 作用于卡片内容的样式 */
+  bodyStyle: {
+    type: Object as PropType<TdCardProps['bodyStyle']>,
+  },
   /** 是否有边框 */
   bordered: {
     type: Boolean,
@@ -25,7 +34,7 @@ export default {
   content: {
     type: [String, Function] as PropType<TdCardProps['content']>,
   },
-  /** 卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全最定义封面图 */
+  /** 卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全自定义封面图 */
   cover: {
     type: [String, Function] as PropType<TdCardProps['cover']>,
   },
@@ -41,15 +50,33 @@ export default {
   footer: {
     type: [String, Function] as PropType<TdCardProps['footer']>,
   },
+  /** 卡片底部的类名，示例：'t-class-footer' */
+  footerClassName: {
+    type: String,
+    default: '',
+  },
+  /** 作用于卡片底部的样式 */
+  footerStyle: {
+    type: Object as PropType<TdCardProps['footerStyle']>,
+  },
   /** 卡片顶部内容，优先级高于其他所有元素 */
   header: {
     type: [String, Function] as PropType<TdCardProps['header']>,
   },
   /** 头部是否带分割线，仅在有header时有效 */
   headerBordered: Boolean,
+  /** 卡片头部的类名，示例：'t-class-header' */
+  headerClassName: {
+    type: String,
+    default: '',
+  },
+  /** 作用于卡片头部的样式 */
+  headerStyle: {
+    type: Object as PropType<TdCardProps['headerStyle']>,
+  },
   /** hover时是否有阴影 */
   hoverShadow: Boolean,
-  /** 加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Sketon 组件完全自定义加载态呈现内容 */
+  /** 加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Skeleton 组件完全自定义加载态呈现内容 */
   loading: {
     type: [Boolean, Function] as PropType<TdCardProps['loading']>,
     default: false as TdCardProps['loading'],

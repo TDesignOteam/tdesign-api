@@ -12,6 +12,7 @@ allowInputOverMax | Boolean | false | \- | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: number; maxRows?: number }` | N
 bordered | Boolean | false | \- | N
+cursorColor | String | #0052d9 | \- | N
 disabled | Boolean | undefined | \- | N
 indicator | Boolean | false | \- | N
 label | TNode | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

@@ -15446,7 +15446,7 @@
       ],
       "field_default_value": "",
       "field_enum": "contact/share/getPhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization",
-      "field_desc_zh": "微信开放能力。<br />具体释义：<br />`contact` 打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/customer-message.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`share` 触发用户转发，使用前建议先阅读<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引\">使用指引</a>；<br />`getPhoneNumber` 获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getUserInfo` 获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息 （*小程序插件中不能使用*）；<br />`launchApp` 打开APP，可以通过 app-parameter 属性设定向 APP 传的参数<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html\">具体说明</a>；<br />`openSetting` 打开授权设置页；<br />`feedback` 打开“意见反馈”页面，用户可提交反馈内容并上传<a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html\">日志</a>，开发者可以登录<a href=\"https://mp.weixin.qq.com/\">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容；<br />`chooseAvatar` 获取用户头像，可以从 bindchooseavatar 回调中获取到头像信息；<br />`agreePrivacyAuthorization`用户同意隐私协议按钮。用户点击一次此按钮后，所有隐私接口可以正常调用。可通过`bindagreeprivacyauthorization`监听用户同意隐私协议事件。隐私合规开发指南详情可见《<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/PrivacyAuthorize.html\">小程序隐私协议开发指南</a>》。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+      "field_desc_zh": "微信开放能力。<br />具体释义：<br />`contact` 打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/customer-message.html\">具体说明</a> （*鸿蒙 OS 暂不支持*）；<br />`liveActivity` 通过前端获取<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html\">新的一次性订阅消息下发机制</a>使用的 code；<br />`share` 触发用户转发，使用前建议先阅读<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引\">使用指引</a>；<br />`getPhoneNumber` 获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getUserInfo` 获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息 （*小程序插件中不能使用*）；<br />`launchApp` 打开APP，可以通过 app-parameter 属性设定向 APP 传的参数<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html\">具体说明</a>；<br />`openSetting` 打开授权设置页；<br />`feedback` 打开“意见反馈”页面，用户可提交反馈内容并上传<a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html\">日志</a>，开发者可以登录<a href=\"https://mp.weixin.qq.com/\">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容；<br />`chooseAvatar` 获取用户头像，可以从 bindchooseavatar 回调中获取到头像信息；<br />`agreePrivacyAuthorization`用户同意隐私协议按钮。用户点击一次此按钮后，所有隐私接口可以正常调用。可通过`bindagreeprivacyauthorization`监听用户同意隐私协议事件。隐私合规开发指南详情可见《<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/PrivacyAuthorize.html\">小程序隐私协议开发指南</a>》。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
       "field_desc_en": "open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
       "field_required": 0,
       "event_input": "",
@@ -20108,6 +20108,88 @@
       ]
     },
     {
+      "id": 1755079195,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片内容的类名，示例：'t-class-body'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:59:55",
+      "update_time": "2025-08-13 09:59:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079040,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片内容的样式",
+      "field_desc_en": "Styles that apply to the card body content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:20",
+      "update_time": "2025-08-13 09:57:20",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2028,
       "platform_framework": [
         "1",
@@ -20399,6 +20481,88 @@
       ]
     },
     {
+      "id": 1755079220,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片底部的类名，示例：'t-class-footer'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:20",
+      "update_time": "2025-08-13 10:00:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079064,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片底部的样式",
+      "field_desc_en": "Styles that apply to the card footer content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:44",
+      "update_time": "2025-08-13 09:57:44",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2176,
       "platform_framework": [
         "1",
@@ -20480,6 +20644,88 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1755079231,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片头部的类名，示例：'t-class-header'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:31",
+      "update_time": "2025-08-13 10:00:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079135,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片头部的样式",
+      "field_desc_en": "Styles that apply to the card header content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:58:55",
+      "update_time": "2025-08-13 09:58:55",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -49074,6 +49320,43 @@
       "field_type_text": []
     },
     {
+      "id": 1755087499,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 2,
+      "field_name": "closed",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉关闭后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 12:18:19",
+      "update_time": "2025-08-13 12:18:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 706,
       "platform_framework": [
         "1",
@@ -49224,6 +49507,43 @@
       "field_type_text": [
         "Array"
       ]
+    },
+    {
+      "id": 1754230138,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 2,
+      "field_name": "opened",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉打开后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-03 14:08:58",
+      "update_time": "2025-08-03 14:08:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 703,
@@ -54571,7 +54891,8 @@
     {
       "id": 1712574615,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -54599,7 +54920,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -56307,7 +56629,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56337,7 +56661,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -56348,7 +56674,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56378,7 +56706,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -56389,7 +56719,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56419,7 +56751,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -57202,7 +57536,8 @@
     {
       "id": 1712574874,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57210,9 +57545,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "left",
+      "field_default_value": "",
       "field_enum": "left/right",
-      "field_desc_zh": "表单内容对齐方式：左对齐、右对齐",
+      "field_desc_zh": "表单内容对齐方式，优先级高于 Form.contentAlign",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -57230,7 +57565,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -58678,6 +59014,7 @@
       "field_category": 1,
       "field_name": "pattern",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -58689,7 +59026,7 @@
       "create_time": "2020-12-17 05:38:27",
       "update_time": "2022-01-17 09:57:16",
       "event_output": null,
-      "custom_field_type": "RegExp",
+      "custom_field_type": "RegExp | string",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -58709,6 +59046,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -59783,7 +60121,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -59813,7 +60153,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -67484,7 +67826,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'rgba(0, 0, 0, 1)'",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "遮罩的背景颜色",
       "field_desc_en": null,
@@ -67874,7 +68216,7 @@
       "create_time": "2022-05-30 13:20:02",
       "update_time": "2022-05-30 13:20:02",
       "event_output": null,
-      "custom_field_type": "ImageScale【interface ImageScale { max: number; min: number; step: number; defaultScale?: number; }】",
+      "custom_field_type": "Partial<ImageScale>【interface ImageScale { max: number; min: number; step: number; defaultScale: number; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -68144,7 +68486,7 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "是否开启图片懒加载",
+      "field_desc_zh": "是否开启图片懒加载。开启后会预加载当前图片、相邻图片",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -109341,7 +109683,7 @@
       "create_time": "2021-11-15 12:19:33",
       "update_time": "2021-12-27 07:12:33",
       "event_output": null,
-      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; height?: string; size?: string; marginRight?: string; marginLeft?: string; margin?: string; content?: string | TNode; type?: 'rect' | 'circle' | 'text' }】",
+      "custom_field_type": "SkeletonRowCol【type SkeletonRowCol = Array<number | SkeletonRowColObj | Array<SkeletonRowColObj>>】【interface SkeletonRowColObj { width?: string; height?: string; size?: string; marginRight?: string; marginLeft?: string; margin?: string; content?: string | TNode; type?: 'rect' | 'circle' | 'text' }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -111149,9 +111491,9 @@
         "1"
       ],
       "field_default_value": "",
-      "field_enum": "black/blue/red/orange/green",
-      "field_desc_zh": "颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
-      "field_desc_en": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)",
+      "field_enum": "",
+      "field_desc_zh": "颜色风格，预设五个 TDesign 颜色风格：黑色（black）、蓝色（blue）、红色（red）、橙色（orange）、绿色（green）支持深浅色模式切换。也可以自定义任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持颜色值，深浅色模式切换需自行适配",
+      "field_desc_en": "The color style can support TDesign's light and dark modes with the following options: black, blue, red, orange, and green. Alternatively, it can be any [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) value, but in this case, TDesign's light and dark modes will not be supported.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-04-20 11:27:29",
@@ -128192,6 +128534,82 @@
       ]
     },
     {
+      "id": 1754468710,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "【试验性】光标颜色，仅在 Skyline 下有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-06 08:25:10",
+      "update_time": "2025-08-06 08:25:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1754469037,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "光标颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-06 08:30:37",
+      "update_time": "2025-08-06 08:30:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3393,
       "platform_framework": [
         "64"
@@ -137426,7 +137844,7 @@
       "field_desc_zh": "节点拖拽时离开目标元素时触发，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })",
       "create_time": "2022-11-08 08:31:59",
       "update_time": "2022-11-08 08:31:59",
       "event_output": null,
@@ -137463,7 +137881,7 @@
       "field_desc_zh": "节点拖拽到目标元素时触发，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })",
       "create_time": "2022-11-08 08:31:32",
       "update_time": "2022-11-08 08:31:32",
       "event_output": null,

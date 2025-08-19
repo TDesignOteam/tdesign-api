@@ -16,6 +16,7 @@ bordered | Boolean | false | 是否显示外边框 | N
 confirm-hold | Boolean | false | 点击键盘右下角按钮时是否保持键盘不收起点 | N
 confirm-type | String | return | 设置键盘右下角按钮的文字，仅在 type='text'时生效。可选项：return/send/search/next/go/done。TS 类型：`'return' \| 'send' \| 'search' \| 'next' \| 'go' \| 'done'` | N
 cursor | Number | -1 | 指定 focus 时的光标位置 | N
+cursor-color | String | #0052d9 | 【试验性】光标颜色，仅在 Skyline 下有效 | N
 cursor-spacing | Number | 0 | 指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离 | N
 disable-default-padding | Boolean | false | 是否去掉 iOS 下的默认内边距 | N
 disabled | Boolean | undefined | 是否禁用文本框 | N
