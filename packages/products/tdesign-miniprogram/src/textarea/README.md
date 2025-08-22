@@ -9,7 +9,7 @@
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 | N
-allow-input-over-max | Boolean | false | `1.8.6`。超出maxlength或maxcharacter之后是否还允许输入 | N
+allow-input-over-max | Boolean | false | `1.8.6`。超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入 | N
 autofocus | Boolean | false | 自动聚焦，拉起键盘 | N
 autosize | Boolean / Object | false | 是否自动增高，值为 true 时，style.height 不生效。支持传入对象，如 { maxHeight: 120, minHeight: 20 }。TS 类型：`boolean \| { maxHeight?: number, minHeight?: number }` | N
 bordered | Boolean | false | 是否显示外边框 | N

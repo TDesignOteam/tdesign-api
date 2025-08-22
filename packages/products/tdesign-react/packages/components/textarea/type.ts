@@ -9,7 +9,7 @@ import { KeyboardEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdTextareaProps {
   /**
-   * 超出maxlength或maxcharacter之后是否还允许输入
+   * 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入
    * @default false
    */
   allowInputOverMax?: boolean;

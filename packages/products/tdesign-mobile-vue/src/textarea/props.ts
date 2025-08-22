@@ -8,14 +8,14 @@ import { TdTextareaProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 超出maxlength或maxcharacter之后是否还允许输入 */
+  /** 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入 */
   allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,
   /** 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度 */
   autosize: {
     type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
-    default: false,
+    default: false as TdTextareaProps['autosize'],
   },
   /** 是否显示外边框 */
   bordered: Boolean,
@@ -70,11 +70,11 @@ export default {
   /** 文本框值 */
   value: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
-    default: undefined,
+    default: undefined as TdTextareaProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdTextareaProps['value']>,
-    default: undefined,
+    default: undefined as TdTextareaProps['value'],
   },
   /** 文本框值，非受控属性 */
   defaultValue: {
