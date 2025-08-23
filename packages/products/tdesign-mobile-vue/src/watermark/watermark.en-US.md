@@ -11,6 +11,7 @@ content | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 height | Number | - | \- | N
 isRepeat | Boolean | true | \- | N
+layout | String | rectangular | options: rectangular/hexagonal | N
 lineSpace | Number | 16 | \- | N
 movable | Boolean | false | \- | N
 moveInterval | Number | 3000 | \- | N
