@@ -8,7 +8,7 @@ import { TNode } from '../common';
 
 export interface TdTextareaProps {
   /**
-   * 超出maxlength或maxcharacter之后是否还允许输入
+   * 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入
    * @default false
    */
   allowInputOverMax?: boolean;

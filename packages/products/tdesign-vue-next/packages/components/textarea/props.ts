@@ -8,7 +8,7 @@ import { TdTextareaProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 超出maxlength或maxcharacter之后是否还允许输入 */
+  /** 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入 */
   allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,

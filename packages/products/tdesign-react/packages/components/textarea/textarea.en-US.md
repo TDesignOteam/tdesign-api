@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
-allowInputOverMax | Boolean | false | \- | N
+allowInputOverMax | Boolean | false | Allow input after exceeding `maxlength` or `maxcharacter` | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript：`boolean \| { minRows?: number; maxRows?: number }` | N
 disabled | Boolean | undefined | \- | N
