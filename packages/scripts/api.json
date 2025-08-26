@@ -68785,7 +68785,7 @@
       "create_time": "2022-05-30 12:51:14",
       "update_time": "2022-07-04 12:02:41",
       "event_output": null,
-      "custom_field_type": "TNode | TNode<{ open: () => void }>",
+      "custom_field_type": "TNode | TNode<{ open: (index?: number) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
