@@ -44053,7 +44053,7 @@
       "create_time": "2023-03-13 02:16:48",
       "update_time": "2023-03-13 02:16:48",
       "event_output": null,
-      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "custom_field_type": "boolean | ButtonProps | null【import { ButtonProps } from '@Button'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

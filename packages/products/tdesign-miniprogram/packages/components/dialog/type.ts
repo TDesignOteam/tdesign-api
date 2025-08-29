@@ -6,7 +6,6 @@
 
 import { ButtonProps } from '../button/index';
 import { OverlayProps } from '../overlay/index';
-import { TNode } from '../common/common';
 
 export interface TdDialogProps {
   /**
@@ -37,7 +36,7 @@ export interface TdDialogProps {
    */
   closeBtn?: {
     type: null;
-    value?: string | ButtonProps | TNode | null;
+    value?: boolean | ButtonProps | null;
   };
   /**
    * 点击蒙层时是否触发关闭事件
