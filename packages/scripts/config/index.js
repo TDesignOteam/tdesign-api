@@ -170,21 +170,21 @@ const FRAMEWORK_MAP = {
     },
     Miniprogram: {
         iconPath: 'tdesign-icons-miniprogram',
-        apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
+        apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components`,
         apiEnglishBasePath: '',
-        tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
-        propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/src`,
+        tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components`,
+        propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components`,
         tsBaseFileName: 'USE_TYPE_NAME',
-        globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/src/common/common.ts`,
+        globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components/common/common.ts`,
         globalTplPath: path.resolve(
             __dirname,
             '../types/global/miniprogram.tpl'
         ),
         unitBasePath: '',
         commonTypePath:
-            'https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts',
+            'https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts',
         componentPath:
-            'https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/',
+            'https://github.com/Tencent/tdesign-miniprogram/tree/develop/packages/components/',
         commonRelativePath: '../common/common',
         componentRelativiePath: '../',
         vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/miniprogram`,
