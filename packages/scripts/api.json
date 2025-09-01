@@ -72875,7 +72875,6 @@
       "id": 1712649727,
       "platform_framework": [
         "8",
-        "16",
         "32"
       ],
       "component": "Input",
@@ -72903,8 +72902,40 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Angular(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1756694810,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Input",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
+      "field_desc_en": "trigger on input value changed",
+      "field_required": 0,
+      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' | 'blur' })",
+      "create_time": "2025-09-01 02:46:50",
+      "update_time": "2025-09-01 02:46:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<any>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": []
     },
