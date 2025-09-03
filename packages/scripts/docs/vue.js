@@ -205,6 +205,9 @@ function formatToVueApi(api, params) {
     r.event_input = baseName ? `\`${baseName}\`` : '';
     interfaceDescription = interfaceDescription.concat(interfaceDesc);
     interfaceDesc.length && (hasComplicatedType = true);
+    // 记录 event 输入类型的基本字符串，后面用于检测是否包含通用全局类型
+    if (!r._eventTypeBases) r._eventTypeBases = [];
+    r._eventTypeBases.push(baseName || api.event_input);
   }
   // 格式化 event_output
   if (api.event_output) {
@@ -212,6 +215,9 @@ function formatToVueApi(api, params) {
     r.event_output = baseName ? `\`${baseName}\`` : '';
     interfaceDescription = interfaceDescription.concat(interfaceDesc);
     interfaceDesc.length && (hasComplicatedType = true);
+    // 记录 event 输出类型的基本字符串
+    if (!r._eventTypeBases) r._eventTypeBases = [];
+    r._eventTypeBases.push(baseName || api.event_output);
   }
   // 如果有复杂类型定义就添加超链接指向具体的 TS 类型定义链接地址
   if (hasComplicatedType) {
@@ -219,6 +225,15 @@ function formatToVueApi(api, params) {
     // TS 类型定义
     const text = languageConfig[LANGUAGE];
     desc = desc.concat(`[${text.detailDefineText}]${v}`);
+  }
+  // 如果事件的输入/输出中包含通用类型，则也显示「查看通用类型定义」链接
+  if (r._eventTypeBases && r._eventTypeBases.length) {
+    const eventBasesStr = r._eventTypeBases.join(' ');
+    const filters = TDESIGN_GLOBALS.filter(global => eventBasesStr.indexOf(global) !== -1);
+    if (filters.length) {
+      const text = languageConfig[LANGUAGE].commonDefineText;
+      desc.push(`[${text}](${config.commonTypePath})`);
+    }
   }
   r.field_required = r.field_required ? 'Y' : 'N';
   r.field_default_value = r.field_default_value || '-';
