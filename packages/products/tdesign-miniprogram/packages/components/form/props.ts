@@ -28,8 +28,8 @@ const props: TdFormProps = {
   },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {
-    type: null,
-    value: undefined,
+    type: Boolean,
+    value: true,
   },
   /** 表单必填符号（*）显示位置 */
   requiredMarkPosition: {

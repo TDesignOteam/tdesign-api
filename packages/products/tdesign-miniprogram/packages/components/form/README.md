@@ -12,7 +12,7 @@ colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
 data | Object | {} | 表单数据。TS 类型：`FormData` | N
 label-align | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N
 label-width | String / Number | '81px' | 可以整体设置label标签宽度，默认为81px | N
-required-mark | Boolean | undefined | 是否显示必填符号（*），默认显示 | N
+required-mark | Boolean | true | 是否显示必填符号（*），默认显示 | N
 required-mark-position | String | - | 表单必填符号（*）显示位置。可选项：left/right | N
 reset-type | String | empty | 重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值。可选项：empty/initial | N
 rules | Object | - | 表单字段校验规则。TS 类型：`FormRules<FormData>` `type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/packages/components/form/type.ts) | N
@@ -38,8 +38,8 @@ label | String | '' | 字段标签名称 | N
 label-align | String | - | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign。可选项：left/right/top | N
 label-width | String / Number | - | 可以整体设置标签宽度，优先级高于 Form.labelWidth | N
 name | String | - | 表单字段名称 | N
-required-mark | Boolean | undefined | 是否显示必填符号（*），优先级高于 Form.requiredMark | N
-show-error-message | Boolean | undefined | 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage` | N
+required-mark | Boolean | true | 是否显示必填符号（*），优先级高于 Form.requiredMark | N
+show-error-message | Boolean | true | 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage` | N
 
 ### FormRule
 

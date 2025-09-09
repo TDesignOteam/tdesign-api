@@ -55509,10 +55509,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），默认显示",
-      "field_desc_en": null,
+      "field_desc_en": "Whether to display the required symbol (*), which is displayed by default",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-02 05:49:31",
@@ -57943,10 +57943,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），优先级高于 Form.requiredMark",
-      "field_desc_en": null,
+      "field_desc_en": "Whether to display the required symbol (*), which has a higher priority than Form.requiredMark",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-11-03 12:00:38",
@@ -58078,10 +58078,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`",
-      "field_desc_en": null,
+      "field_desc_en": "When the validation fails, whether to display the error message, which has a higher priority than `Form.showErrorMessage`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-03-07 13:32:13",
