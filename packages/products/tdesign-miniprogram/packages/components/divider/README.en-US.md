@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Divider Props
 
 name | type | default | description | required
