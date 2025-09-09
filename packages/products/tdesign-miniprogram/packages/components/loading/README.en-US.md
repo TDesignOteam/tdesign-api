@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Loading Props
 
 name | type | default | description | required

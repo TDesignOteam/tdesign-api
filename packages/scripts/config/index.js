@@ -184,7 +184,7 @@ const FRAMEWORK_MAP = {
         commonTypePath:
             'https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts',
         componentPath:
-            'https://github.com/Tencent/tdesign-miniprogram/tree/develop/packages/components/',
+            'https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/',
         commonRelativePath: '../common/common',
         componentRelativiePath: '../',
         vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/miniprogram`,
