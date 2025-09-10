@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Badge Props
 
 name | type | default | description | required
