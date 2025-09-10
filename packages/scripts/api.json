@@ -54976,8 +54976,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55010,8 +55009,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -55025,8 +55023,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55059,8 +55056,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -55458,8 +55454,7 @@
         "2",
         "4",
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55491,8 +55486,7 @@
         "React(PC)",
         "Angular(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -55515,10 +55509,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），默认显示",
-      "field_desc_en": null,
+      "field_desc_en": "Whether to display the required symbol (*), which is displayed by default",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-02 05:49:31",
@@ -55700,8 +55694,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55734,8 +55727,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -55843,8 +55835,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 1,
@@ -55877,8 +55868,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -56018,8 +56008,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 2,
@@ -56049,8 +56038,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -56097,8 +56085,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56129,8 +56116,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -56290,8 +56276,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56322,8 +56307,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -56409,8 +56393,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56441,8 +56424,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -56454,8 +56436,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56486,8 +56467,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -56499,8 +56479,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "Form",
       "field_category": 4,
@@ -56531,8 +56510,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": []
     },
@@ -57580,8 +57558,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -57614,8 +57591,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -57636,8 +57612,7 @@
       "field_category": 1,
       "field_name": "help",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -57668,8 +57643,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {
@@ -57730,8 +57704,7 @@
       "field_category": 1,
       "field_name": "label",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "''",
       "field_enum": "",
@@ -57762,8 +57735,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {
@@ -57971,10 +57943,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "是否显示必填符号（*），优先级高于 Form.requiredMark",
-      "field_desc_en": null,
+      "field_desc_en": "Whether to display the required symbol (*), which has a higher priority than Form.requiredMark",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-11-03 12:00:38",
@@ -58011,8 +57983,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -58045,8 +58016,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -58108,10 +58078,10 @@
       "field_type": [
         "4"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`",
-      "field_desc_en": null,
+      "field_desc_en": "When the validation fails, whether to display the error message, which has a higher priority than `Form.showErrorMessage`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-03-07 13:32:13",
@@ -59156,8 +59126,7 @@
         "4",
         "8",
         "16",
-        "32",
-        "64"
+        "32"
       ],
       "component": "FormRule",
       "field_category": 1,
@@ -59190,8 +59159,7 @@
         "Angular(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
-        "Angular(Mobile)",
-        "Miniprogram"
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "String"
