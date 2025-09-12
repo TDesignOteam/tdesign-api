@@ -9,6 +9,11 @@ import { MouseEvent } from 'react';
 
 export interface TdMessageProps {
   /**
+   * 文本对齐方式
+   * @default left
+   */
+  align?: MessageAlignType;
+  /**
    * 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮
    */
   closeBtn?: TNode;
@@ -29,14 +34,14 @@ export interface TdMessageProps {
   /**
    * 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`
    */
-  link?: TNode;
+  link?: object | TNode;
   /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
   marquee?: boolean | MessageMarquee;
   /**
-   * 相对于 placement 的偏移量，默认单位 rpx。示例：[-10, 20] 或 ['10rpx', '8rpx']
+   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']
    */
   offset?: Array<string | number>;
   /**
@@ -71,6 +76,8 @@ export interface TdMessageProps {
    */
   onLinkClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
+
+export type MessageAlignType = 'left' | 'center';
 
 export interface MessageMarquee {
   speed?: number;

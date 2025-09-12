@@ -79994,6 +79994,7 @@
       "id": 1617,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Message",
@@ -80023,6 +80024,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80383,7 +80385,7 @@
       "create_time": "2023-03-13 02:16:49",
       "update_time": "2023-03-13 02:16:49",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | object | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -80453,8 +80455,6 @@
     {
       "id": 1449,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "Message",
@@ -80483,8 +80483,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80494,7 +80492,9 @@
     {
       "id": 1712718531,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Message",
       "field_category": 1,
@@ -80504,7 +80504,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']",
+      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -80522,7 +80522,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
