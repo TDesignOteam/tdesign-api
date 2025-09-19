@@ -110112,7 +110112,8 @@
       "field_name": "label",
       "field_type": [
         "1",
-        "4"
+        "4",
+        "32"
       ],
       "field_default_value": "false",
       "field_enum": "",
@@ -110139,7 +110140,8 @@
       ],
       "field_type_text": [
         "String",
-        "Boolean"
+        "Boolean",
+        "Function"
       ]
     },
     {
