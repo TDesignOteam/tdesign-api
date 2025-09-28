@@ -76694,6 +76694,43 @@
       "field_type_text": []
     },
     {
+      "id": 1759059499,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 11:38:19",
+      "update_time": "2025-09-28 11:38:19",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 904,
       "platform_framework": [
         "1",
