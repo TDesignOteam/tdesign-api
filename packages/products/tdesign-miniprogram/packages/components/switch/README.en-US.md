@@ -22,3 +22,12 @@ default-value | String / Number / Boolean | undefined | uncontrolled property。
 name | params | description
 -- | -- | --
 change | `(value: SwitchValue)` | \-
+
+### Switch External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-body | \-
+t-class-dot | \-
+t-class-label | \-
