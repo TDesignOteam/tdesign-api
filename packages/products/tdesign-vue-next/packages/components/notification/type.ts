@@ -43,6 +43,10 @@ export interface TdNotificationProps {
    */
   title?: string | TNode;
   /**
+   * 调用 NotificationPlugin.close 的事件回调
+   */
+  onClose?: () => void;
+  /**
    * 点击关闭按钮时触发
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;

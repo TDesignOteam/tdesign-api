@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
+import { TNode, AttachNode, AppContext } from '../common';
 
 export interface TdNotificationProps {
   /**
@@ -42,6 +42,10 @@ export interface TdNotificationProps {
    * 标题
    */
   title?: string | TNode;
+  /**
+   * 调用 NotificationPlugin.close 的事件回调
+   */
+  onClose?: () => void;
   /**
    * 点击关闭按钮时触发
    */
@@ -85,17 +89,30 @@ export interface NotificationInstance {
 export type NotificationMethod = (
   theme: NotificationThemeList,
   options: NotificationOptions,
+  context?: AppContext,
 ) => Promise<NotificationInstance>;
 
 export type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>;
 
-export type NotificationInfoMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationInfoMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationWarningMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationWarningMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationErrorMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationErrorMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationSuccessMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationSuccessMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
 export type NotificationCloseMethod = (options: Promise<NotificationInstance>) => void;
 
