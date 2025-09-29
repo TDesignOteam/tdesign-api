@@ -22,3 +22,12 @@ default-value | String / Number / Boolean | undefined | 开关值。非受控属
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: SwitchValue)` | 数据发生变化时触发
+
+### Switch External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
+t-class-body | 描述文本样式类
+t-class-dot | 滑块样式类
+t-class-label | 开关内容样式类
