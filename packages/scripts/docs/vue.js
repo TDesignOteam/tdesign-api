@@ -340,8 +340,8 @@ function formatEventToProps(api) {
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
-function getOneApi(newApi, current, docTitleType) {
-  if (!current) return;
+function getOneApi(newApi, current, docTitleType, framework) {
+  if (!current || (framework === 'Miniprogram' && docTitleType === 'Props' && newApi.field_type_text === '')) return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
   // eslint-disable-next-line no-useless-escape
   const oneApi = Object.values(f).map(item => item || '\\-')
@@ -362,7 +362,7 @@ function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
   const apiArr = [];
   apis.forEach((apiData) => {
     const newApi = formatToVueApi(apiData, { current, framework });
-    const oneApi = getOneApi(newApi, current, docTitleType);
+    const oneApi = getOneApi(newApi, current, docTitleType, framework);
     apiArr.push(oneApi);
   });
   return apiArr;
@@ -468,7 +468,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
 
         // start
         const newApi = formatToVueApi(api, { current, framework, category });
-        const oneApi = getOneApi(newApi, current, docTitleType);
+        const oneApi = getOneApi(newApi, current, docTitleType, framework);
         const isMiniprogram = framework === 'Miniprogram';
         if (isMiniprogram && !COMMON_PROPS.includes(api.field_name) || !isMiniprogram) {
           md[category].apis.push(oneApi);
@@ -476,7 +476,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         // 添加非受控属性 API 文档
         if (api.support_default_value && api.field_category_text !== 'Events') {
           const newSugarApi = formatToVueApi(api, { current, framework, category, isUncontrol: 'uncontrol' });
-          const oneSugarApi = getOneApi(newSugarApi, current, docTitleType);
+          const oneSugarApi = getOneApi(newSugarApi, current, docTitleType, framework);
           md[category].apis.push(oneSugarApi);
         }
         // API 规范：事件同时也需要作为 props
