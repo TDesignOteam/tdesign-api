@@ -10,7 +10,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 app-parameter | String | - | 打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效 | N
 block | Boolean | false | 是否为块级元素 | N
-content | String / Slot | - | 按钮内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+content | String | - | 按钮内容 | N
 custom-dataset | any | - | 自定义 dataset，可通过 event.currentTarget.dataset.custom 获取 | N
 disabled | Boolean | undefined | 禁用状态。优先级：Button.disabled > Form.disabled | N
 ghost | Boolean | false | 是否为幽灵按钮（镂空按钮） | N
@@ -31,11 +31,19 @@ session-from | String | - | 会话来源，open-type="contact"时有效 | N
 shape | String | rectangle | 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形。可选项：rectangle/square/round/circle | N
 show-message-card | Boolean | false | 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示"可能要发送的小程序"提示，用户点击后可以快速发送小程序消息，open-type="contact"时有效 | N
 size | String | medium | 组件尺寸。可选项：extra-small/small/medium/large | N
-suffix | Slot | - | 右侧内容，可用于定义右侧图标。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 t-id | String | - | 按钮标签id | N
 theme | String | default | 组件风格，依次为品牌色、危险色。可选项：default/primary/danger/light | N
 type | String | - | 同小程序的 formType。可选项：submit/reset | N
 variant | String | base | 按钮形式，基础、线框、虚线、文字。可选项：base/outline/dashed/text | N
+
+### Button Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，作用同 `content` 插槽
+content | 按钮内容
+suffix | 右侧内容，可用于定义右侧图标
 
 ### Button Events
 
