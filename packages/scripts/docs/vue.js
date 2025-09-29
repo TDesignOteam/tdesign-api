@@ -86,12 +86,21 @@ function groupByFieldCategory(framework, componentApi) {
   return result;
 }
 
-function sortArrayExceptFirst(arr) {
+function sortSlotsArrExceptFirst(arr) {
   if (arr.length <= 1) {
       return arr;
   }
-  const firstItem = arr[0];
-  const restItems = arr.slice(1).sort();
+
+  // 去重：以 | 之前的内容为 key，后者覆盖前者
+  const uniqueMap = new Map();
+  for (const item of arr) {
+    const [key] = item.split('|').map(part => part.trim());
+    uniqueMap.set(key, item);
+  }
+  const uniqueArr = Array.from(uniqueMap.values());
+
+  const firstItem = uniqueArr[0];
+  const restItems = uniqueArr.slice(1).sort();
   return [firstItem, ...restItems];
 }
 
@@ -498,7 +507,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
       if (API_DOC_BLOCKS[framework].includes(category)) {
         docs = docs.concat(
           item.title,
-          category === 'Slots' ? sortArrayExceptFirst(item.apis) : item.apis
+          category === 'Slots' ? sortSlotsArrExceptFirst(item.apis) : item.apis
         );
       }
     });

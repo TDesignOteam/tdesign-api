@@ -3428,6 +3428,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759130478,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:21:18",
+      "update_time": "2025-09-29 07:21:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1741182503,
       "platform_framework": [
         "8",
@@ -7443,6 +7476,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759130533,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:22:13",
+      "update_time": "2025-09-29 07:22:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1600,
       "platform_framework": [
         "64"
@@ -7900,6 +7966,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759130576,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AvatarGroup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:22:56",
+      "update_time": "2025-09-29 07:22:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -8952,6 +9051,72 @@
       "field_type_text": []
     },
     {
+      "id": 1759130738,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "BackTop",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:25:38",
+      "update_time": "2025-09-29 07:25:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759130814,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "BackTop",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:26:54",
+      "update_time": "2025-09-29 07:26:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1083,
       "platform_framework": [
         "2",
@@ -9716,6 +9881,72 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759131915,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Badge",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:45:15",
+      "update_time": "2025-09-29 07:45:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759131947,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Badge",
+      "field_category": 512,
+      "field_name": "count",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "徽标右上角内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:45:47",
+      "update_time": "2025-09-29 07:45:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -16677,6 +16908,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759130366,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:19:26",
+      "update_time": "2025-09-29 07:19:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3263,
       "platform_framework": [
         "16",
@@ -18749,6 +19013,72 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759132103,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 512,
+      "field_name": "confirm-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "确认按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:48:23",
+      "update_time": "2025-09-29 07:48:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759132116,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 512,
+      "field_name": "title",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:48:36",
+      "update_time": "2025-09-29 07:48:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
