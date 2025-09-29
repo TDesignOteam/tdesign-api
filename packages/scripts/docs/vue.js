@@ -104,8 +104,14 @@ function sortSlotsArrExceptFirst(arr) {
   return [firstItem, ...restItems];
 }
 
-function shouldShowLink(arr, isSlots) {
-  return arr.length > 0 && (arr.length !== 1 || arr[0] !== 'TNode') && !isSlots;
+function shouldShowLink(arr, isMini, isSlots) {
+  const isNonEmpty = arr.length > 0;
+  const isNotSingleTNode = arr.length !== 1 || arr[0] !== 'TNode';
+
+  if (!isMini) {
+    return isNonEmpty;
+  }
+  return isNonEmpty && isNotSingleTNode && !isSlots;
 }
 
 function parseJSON(json) {
@@ -198,7 +204,7 @@ function formatDesc(
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
-    if (shouldShowLink(filters, category === 'Slots')) {
+    if (shouldShowLink(filters, isMiniprogram, category === 'Slots')) {
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
     }
