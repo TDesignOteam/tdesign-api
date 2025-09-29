@@ -37,17 +37,19 @@ const API_DOC_BLOCKS = {
   'React(PC)': ['Props', 'Functions'],
   'Vue(Mobile)': ['Props', 'Events', 'Functions'],
   'React(Mobile)': ['Props', 'Functions'],
-  Miniprogram: ['Props', 'Events', 'Functions', 'External Classes', 'CSS Variables'],
+  Miniprogram: ['Props', 'Events', 'Functions', 'Slots', 'External Classes', 'CSS Variables'],
 };
 
 // 通用属性
 const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
 // category: props / events / functions / extends / return
-function groupByFieldCategory(componentApi) {
+function groupByFieldCategory(framework, componentApi) {
   const result = {};
+  const isMini = framework === 'Miniprogram';
   componentApi.forEach((apiOriginal) => {
     const api = { ...apiOriginal };
+    const isSlot = isMini ? api.field_type_text.includes('TNode') : false;
     const isExtend = api.field_category_text === 'Extends';
     const isFunction = (isPlugin(api.component)) && api.field_category_text === 'Functions';
     if (isExtend) {
@@ -72,8 +74,44 @@ function groupByFieldCategory(componentApi) {
     } else {
       result[category] = [api];
     }
+    // 支持属性同名插槽输出到小程序端组件 API 文档
+    if (isSlot) {
+      if (result['Slots']) {
+          result['Slots'].push(api);
+      } else {
+          result['Slots'] = [api];
+      }
+    }
   });
   return result;
+}
+
+function sortSlotsArrExceptFirst(arr) {
+  if (arr.length <= 1) {
+      return arr;
+  }
+
+  // 去重：以 | 之前的内容为 key，后者覆盖前者
+  const uniqueMap = new Map();
+  for (const item of arr) {
+    const [key] = item.split('|').map(part => part.trim());
+    uniqueMap.set(key, item);
+  }
+  const uniqueArr = Array.from(uniqueMap.values());
+
+  const firstItem = uniqueArr[0];
+  const restItems = uniqueArr.slice(1).sort();
+  return [firstItem, ...restItems];
+}
+
+function shouldShowLink(arr, isMini, isSlots) {
+  const isNonEmpty = arr.length > 0;
+  const isNotSingleTNode = arr.length !== 1 || arr[0] !== 'TNode';
+
+  if (!isMini) {
+    return isNonEmpty;
+  }
+  return isNonEmpty && isNotSingleTNode && !isSlots;
 }
 
 function parseJSON(json) {
@@ -86,7 +124,7 @@ function parseJSON(json) {
 
 function formatDesc(
   api,
-  { isUncontrol, current: config, framework },
+  { isUncontrol, current: config, framework, category },
 ) {
   const desc = [];
   const isMiniprogram = framework === 'Miniprogram';
@@ -166,7 +204,7 @@ function formatDesc(
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
-    if (filters.length) {
+    if (shouldShowLink(filters, isMiniprogram, category === 'Slots')) {
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
     }
@@ -256,7 +294,7 @@ function formatToVueApi(api, params) {
     if (['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(params.framework))  {
       tmp.splice(i, 1, 'Slot', 'Function');
     } else if (isMiniprogram) {
-      tmp.splice(i, 1, 'Slot');
+      tmp.splice(i, 1); // 小程序端插槽部分独立输出
     } else if (params.framework.indexOf('React') !== -1) {
       tmp = type.join() === 'TNode' ? ['TElement'] : ['TNode'];
     }
@@ -317,8 +355,8 @@ function formatEventToProps(api) {
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
-function getOneApi(newApi, current, docTitleType) {
-  if (!current) return;
+function getOneApi(newApi, current, docTitleType, framework) {
+  if (!current || (framework === 'Miniprogram' && docTitleType === 'Props' && newApi.field_type_text === '')) return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
   // eslint-disable-next-line no-useless-escape
   const oneApi = Object.values(f).map(item => item || '\\-')
@@ -339,7 +377,7 @@ function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
   const apiArr = [];
   apis.forEach((apiData) => {
     const newApi = formatToVueApi(apiData, { current, framework });
-    const oneApi = getOneApi(newApi, current, docTitleType);
+    const oneApi = getOneApi(newApi, current, docTitleType, framework);
     apiArr.push(oneApi);
   });
   return apiArr;
@@ -390,10 +428,10 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
       componentConfig = globalConfigData[getGlobalConfigName(cmp)];
     }
     // API 分类：Props / Events / Functions
-    const fieldCategoryMap = groupByFieldCategory(componentMap[cmp]);
+    const fieldCategoryMap = groupByFieldCategory(framework, componentMap[cmp]);
     Object.keys(fieldCategoryMap).forEach((category) => {
       const apiName = formatComponentName(cmp, category, framework);
-      const blankLine = /(Events|InstanceFunctions|Props|External Classes)/.test(apiName) ? '\n' : '';
+      const blankLine = /(Events|InstanceFunctions|Props|Slots|External Classes)/.test(apiName) ? '\n' : '';
       md[category] = {
         title: `${blankLine}### ${apiName}\n`,
         apis: [],
@@ -434,7 +472,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
           }
         });
         if (MP_PROPS.includes(api.field_name)) return;
-        
+
         // 存在对应的组件全局配置，则使用对应 xxxConfig 中对应 API 的默认值，代替原有默认值
         if (componentConfig) {
           const configAPI = find(componentConfig, item => item.field_name === api.field_name);
@@ -444,16 +482,16 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         }
 
         // start
-        const newApi = formatToVueApi(api, { current, framework });
-        const oneApi = getOneApi(newApi, current, docTitleType);
+        const newApi = formatToVueApi(api, { current, framework, category });
+        const oneApi = getOneApi(newApi, current, docTitleType, framework);
         const isMiniprogram = framework === 'Miniprogram';
         if (isMiniprogram && !COMMON_PROPS.includes(api.field_name) || !isMiniprogram) {
           md[category].apis.push(oneApi);
         }
         // 添加非受控属性 API 文档
         if (api.support_default_value && api.field_category_text !== 'Events') {
-          const newSugarApi = formatToVueApi(api, { current, framework, isUncontrol: 'uncontrol' });
-          const oneSugarApi = getOneApi(newSugarApi, current, docTitleType);
+          const newSugarApi = formatToVueApi(api, { current, framework, category, isUncontrol: 'uncontrol' });
+          const oneSugarApi = getOneApi(newSugarApi, current, docTitleType, framework);
           md[category].apis.push(oneSugarApi);
         }
         // API 规范：事件同时也需要作为 props
@@ -471,9 +509,12 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
     // 整理数据到一个数组
     let docs = [];
     Object.keys(md).forEach((category) => {
-      const item = md[category];
+    const item = md[category];
       if (API_DOC_BLOCKS[framework].includes(category)) {
-        docs = docs.concat(item.title, item.apis);
+        docs = docs.concat(
+          item.title,
+          category === 'Slots' ? sortSlotsArrExceptFirst(item.apis) : item.apis
+        );
       }
     });
     result[cmp] = docs.join('\n').replace(/`[^`]+`/g, (str) => str.replace(/\|/g, '\\|'));

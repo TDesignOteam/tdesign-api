@@ -36,3 +36,9 @@ className | Description
 t-class | \-
 t-class-cancel | \-
 t-class-content | \-
+
+### ActionSheet Slots
+
+name | Description
+-- | --
+\- | \-

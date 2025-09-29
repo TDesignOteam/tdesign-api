@@ -36,3 +36,9 @@ selected | `(selected: ActionSheetItem \| string, index: number)` | 选择菜单
 t-class | 根节点样式类
 t-class-cancel | 取消样式类
 t-class-content | 内容样式类
+
+### ActionSheet Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容

@@ -131,7 +131,7 @@ function generateComponentApi() {
         if (['VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
             selfUseDefault = true;
         }
-        console.log('selfUseDefault', selfUseDefault);
+
         // 生成 props 文件
         generateVueProps(baseData, framework, selfUseDefault);
         // 生成 React defaultProps 文件
