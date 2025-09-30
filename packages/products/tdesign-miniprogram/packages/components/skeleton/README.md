@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Skeleton Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -21,3 +20,9 @@ theme | String | text | 骨架图风格，有基础、头像组合等两大类�
 t-class | 根节点样式类
 t-class-col | 行样式类
 t-class-row | 列样式类
+
+### Skeleton Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容

@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### Overlay Props
 
 name | type | default | description | required
@@ -20,3 +21,9 @@ z-index | Number | 11000 | \- | N
 name | params | description
 -- | -- | --
 click | `({ visible: boolean })` | \-
+
+### Overlay Slots
+
+name | Description
+-- | --
+\- | \-

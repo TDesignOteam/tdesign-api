@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### PullDownRefresh Props
 
 name | type | default | description | required
@@ -11,7 +12,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 disabled | Boolean | false | disabled pull down refresh | N
 enable-back-to-top | Boolean | true | `1.1.5` | N
 enable-passive | Boolean | false | `1.1.5` | N
-header | Slot | - | `1.2.10`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 loading-bar-height | String / Number | 50 | \- | N
 loading-props | Object | - | Typescript：`LoadingProps`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/pull-down-refresh/type.ts) | N
 loading-texts | Array | [] | Typescript：`string[]` | N
@@ -25,6 +26,13 @@ upper-threshold | String / Number | 50 | `1.1.5` | N
 using-custom-navbar | Boolean | false | \- | N
 value | Boolean | false | \- | N
 default-value | Boolean | undefined | uncontrolled property | N
+
+### PullDownRefresh Slots
+
+name | Description
+-- | --
+\- | \-
+header | `1.2.10`
 
 ### PullDownRefresh Events
 

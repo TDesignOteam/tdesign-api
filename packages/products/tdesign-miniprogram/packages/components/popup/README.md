@@ -2,15 +2,16 @@
 
 ## API
 
+
 ### Popup Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-close-btn | Boolean / Slot | - | 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+close-btn | Boolean | - | 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮 | N
 close-on-overlay-click | Boolean | true | 点击遮罩层是否关闭 | N
-content | String / Slot | - | 浮层里面的内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+content | String | - | 浮层里面的内容 | N
 duration | Number | 240 | 动画过渡时间 | N
 overlay-props | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts) | N
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
@@ -20,6 +21,14 @@ using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | - | 是否显示浮层。TS 类型：`boolean` | N
 default-visible | Boolean | undefined | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
 z-index | Number | 11500 | 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500 | N
+
+### Popup Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，作用同 `content` 插槽
+close-btn | 自定义关闭按钮
+content | 浮层里面的内容
 
 ### Popup Events
 

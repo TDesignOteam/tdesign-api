@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### Sticky Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -17,7 +18,13 @@ z-index | Number | 99 | 吸顶时的 z-index | N
 
 名称 | 参数 | 描述
 -- | -- | --
-scroll | `(detail: { scrollTop: number, isFixed: boolean })` | 滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+scroll | `(detail: { scrollTop: number, isFixed: boolean })` | 滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶
+
+### Sticky Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
 
 ### Sticky External Classes
 

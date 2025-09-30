@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### Cell Props
 
 name | type | default | description | required
@@ -11,22 +12,34 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 align | String | middle | options: top/middle/bottom | N
 arrow | Boolean / Object | false | \- | N
 bordered | Boolean | true | \- | N
-description | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+description | String | - | \- | N
 hover | Boolean | - | \- | N
-image | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+image | String | - | \- | N
 jump-type | String | navigateTo | options: switchTab/reLaunch/redirectTo/navigateTo | N
-left-icon | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-note | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+left-icon | String / Object | - | \- | N
+note | String | - | \- | N
 required | Boolean | false | \- | N
-right-icon | String / Object / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-title | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+right-icon | String / Object | - | \- | N
+title | String | - | \- | N
 url | String | - | \- | N
+
+### Cell Slots
+
+name | Description
+-- | --
+click | \-
+description | \-
+image | \-
+left-icon | \-
+note | \-
+right-icon | \-
+title | \-
 
 ### Cell Events
 
 name | params | description
 -- | -- | --
-click | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+click | - | \-
 
 ### Cell External Classes
 
@@ -61,3 +74,9 @@ className | Description
 -- | --
 t-class | \-
 t-class-title | \-
+
+### CellGroup Slots
+
+name | Description
+-- | --
+\- | \-

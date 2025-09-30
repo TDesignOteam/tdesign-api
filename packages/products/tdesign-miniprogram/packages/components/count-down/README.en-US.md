@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### CountDown Props
 
 name | type | default | description | required
@@ -9,13 +10,20 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 auto-start | Boolean | true | \- | N
-content | String / Slot | 'default' | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+content | String | 'default' | \- | N
 format | String | HH:mm:ss | \- | N
 millisecond | Boolean | false | \- | N
 size | String | 'medium' | `0.5.1`。options: small/medium/large | N
 split-with-unit | Boolean | false | `0.5.1` | N
 theme | String | 'default' | `0.5.1`。options: default/round/square | N
 time | Number | 0 | required | Y
+
+### CountDown Slots
+
+name | Description
+-- | --
+\- | \-
+content | \-
 
 ### CountDown Events
 

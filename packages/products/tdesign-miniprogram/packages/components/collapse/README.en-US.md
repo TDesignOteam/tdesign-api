@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Collapse Props
 
 name | type | default | description | required
@@ -22,6 +21,12 @@ name | params | description
 -- | -- | --
 change | `(value: CollapseValue)` | \-
 
+### Collapse Slots
+
+name | Description
+-- | --
+\- | \-
+
 
 ### CollapsePanel Props
 
@@ -29,14 +34,25 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+content | String | - | \- | N
 disabled | Boolean | undefined | \- | N
-expand-icon | Boolean / Slot | undefined | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-header | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-header-left-icon | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-header-right-content | String / Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+expand-icon | Boolean | undefined | \- | N
+header | String | - | \- | N
+header-left-icon | String | - | \- | N
+header-right-content | String | - | \- | N
 placement | String | bottom | `0.34.0`。options: bottom/top | N
 value | String / Number | - | \- | N
+
+### CollapsePanel Slots
+
+name | Description
+-- | --
+\- | \-
+content | \-
+expand-icon | \-
+header | \-
+header-left-icon | \-
+header-right-content | \-
 
 ### CollapsePanel External Classes
 

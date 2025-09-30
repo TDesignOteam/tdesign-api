@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### QRCode Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -16,8 +17,14 @@ icon-size | Number / Object | 40 | 二维码中图片的大小。TS 类型：`nu
 level | String | M | 二维码纠错等级。可选项：L/M/Q/H | N
 size | Number | 160 | 二维码大小 | N
 status | String | active | 二维码状态。可选项：active/expired/loading/scanned。TS 类型：`QRStatus` `type QRStatus = "active" \| "expired" \| "loading" \| "scanned"`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/qrcode/type.ts) | N
-status-render | Slot | - | 自定义状态渲染器。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/qrcode/type.ts) | N
+
 value | String | - | 扫描后的文本 | N
+
+### QRCode Slots
+
+名称 | 描述
+-- | --
+status-render | 自定义状态渲染器
 
 ### QRCode Events
 

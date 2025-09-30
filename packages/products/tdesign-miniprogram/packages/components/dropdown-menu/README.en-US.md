@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### DropdownMenu Props
 
 name | type | default | description | required
@@ -30,6 +31,12 @@ t-class-icon | \-
 t-class-item | \-
 t-class-label | \-
 
+### DropdownMenu Slots
+
+name | Description
+-- | --
+\- | \-
+
 
 ### DropdownItem Props
 
@@ -38,7 +45,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 disabled | Boolean | false | \- | N
-footer | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N
@@ -48,6 +55,13 @@ options-layout | String | columns | `deprecated` | N
 placement | String | left | options: left/right | N
 value | String / Number / Array | undefined | Typescript：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 default-value | String / Number / Array | undefined | uncontrolled property。Typescript：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
+
+### DropdownItem Slots
+
+name | Description
+-- | --
+\- | \-
+footer | \-
 
 ### DropdownItem Events
 

@@ -2,6 +2,7 @@
 
 ## API
 
+
 ### DropdownMenu Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -30,6 +31,12 @@ t-class-icon | 图标样式类
 t-class-item | 选项样式类
 t-class-label | 标签样式类
 
+### DropdownMenu Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+
 
 ### DropdownItem Props
 
@@ -38,7 +45,7 @@ t-class-label | 标签样式类
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 disabled | Boolean | false | 是否禁用操作项 | N
-footer | Slot | - | 底部。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 label | String | - | 标题 | N
 multiple | Boolean | false | 是否多选 | N
@@ -48,6 +55,13 @@ options-layout | String | columns | 已废弃。选项排列；不再支持 tree
 placement | String | left | 复选框和内容相对位置，仅单选菜单栏有效。可选项：left/right | N
 value | String / Number / Array | undefined | 选中值。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 default-value | String / Number / Array | undefined | 选中值。非受控属性。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
+
+### DropdownItem Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+footer | 底部
 
 ### DropdownItem Events
 

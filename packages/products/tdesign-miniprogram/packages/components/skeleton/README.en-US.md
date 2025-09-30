@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Skeleton Props
 
 name | type | default | description | required
@@ -21,3 +20,9 @@ className | Description
 t-class | \-
 t-class-col | \-
 t-class-row | \-
+
+### Skeleton Slots
+
+name | Description
+-- | --
+\- | \-
