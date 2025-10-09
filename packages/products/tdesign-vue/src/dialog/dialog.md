@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### DialogCard Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -54,6 +53,7 @@ placement | String | top | 对话框位置，内置两种：垂直水平居中�
 preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
+sizeDraggable | Boolean / Object | false | 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。。TS 类型：`boolean \| SizeDragLimit` `interface SizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
 theme | String | default | 对话框风格。可选项：default/info/warning/danger/success | N
 top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级大于 placement | N
 visible | Boolean | - | 控制对话框是否显示 | N
@@ -111,6 +111,7 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 插件返回值：`DialogInstance`
 
@@ -121,6 +122,7 @@ options | \- | - | TS 类型：`DialogOptions`
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
+context | \- | - | TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### DialogPlugin.alert
 
@@ -129,3 +131,4 @@ options | \- | - | TS 类型：`DialogOptions`
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | TS 类型：`Omit<DialogOptions, 'cancelBtn'>`
+context | \- | - | TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)

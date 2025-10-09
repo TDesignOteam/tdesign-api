@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### DialogCard Props
 
 name | type | default | description | required
@@ -54,6 +53,7 @@ placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
 showOverlay | Boolean | true | \- | N
+sizeDraggable | Boolean / Object | false | allow resizing drawer width/height, set max or min to limit size.。Typescript：`boolean \| SizeDragLimit` `interface SizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
 theme | String | default | options: default/info/warning/danger/success | N
 top | String / Number | - | \- | N
 visible | Boolean | - | \- | N
@@ -111,6 +111,7 @@ update | `(props: DialogOptions)` | \- | required
 name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DialogOptions`
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 插件返回值：`DialogInstance`
 
@@ -121,6 +122,7 @@ options | \- | - | Typescript：`DialogOptions`
 name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DialogOptions`
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### DialogPlugin.alert
 
@@ -129,3 +131,4 @@ options | \- | - | Typescript：`DialogOptions`
 name | params | default | description
 -- | -- | -- | --
 options | Object | - | Typescript：`Omit<DialogOptions, 'cancelBtn'>`
+context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)

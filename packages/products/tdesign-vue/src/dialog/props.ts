@@ -105,6 +105,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。 */
+  sizeDraggable: {
+    type: [Boolean, Object] as PropType<TdDialogProps['sizeDraggable']>,
+    default: false,
+  },
   /** 对话框风格 */
   theme: {
     type: String as PropType<TdDialogProps['theme']>,

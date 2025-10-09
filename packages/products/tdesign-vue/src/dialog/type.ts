@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode } from '../common';
+import { TNode, Styles, AttachNode, AppContext } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -108,6 +108,11 @@ export interface TdDialogProps {
    * @default true
    */
   showOverlay?: boolean;
+  /**
+   * 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。
+   * @default false
+   */
+  sizeDraggable?: boolean | SizeDragLimit;
   /**
    * 对话框风格
    * @default default
@@ -277,6 +282,13 @@ export interface DialogInstance {
   update: (props: DialogOptions) => void;
 }
 
+export interface SizeDragLimit {
+  maxWidth: number | undefined;
+  minWidth: number | undefined;
+  maxHeight: number | undefined;
+  minHeight: number | undefined;
+}
+
 export type DialogEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay';
 
 export interface DialogCloseContext {
@@ -284,8 +296,8 @@ export interface DialogCloseContext {
   e: MouseEvent | KeyboardEvent;
 }
 
-export type DialogMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogConfirmMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogConfirmMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>) => DialogInstance;
+export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>, context?: AppContext) => DialogInstance;
