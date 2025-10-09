@@ -111,7 +111,6 @@ update | `(props: DialogOptions)` | \- | required
 name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DialogOptions`
-context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 插件返回值：`DialogInstance`
 
@@ -122,7 +121,6 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript：`DialogOptions`
-context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### DialogPlugin.alert
 
@@ -131,4 +129,3 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 name | params | default | description
 -- | -- | -- | --
 options | Object | - | Typescript：`Omit<DialogOptions, 'cancelBtn'>`
-context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)

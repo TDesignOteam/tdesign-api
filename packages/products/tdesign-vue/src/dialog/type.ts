@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode, AppContext } from '../common';
+import { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -296,8 +296,8 @@ export interface DialogCloseContext {
   e: MouseEvent | KeyboardEvent;
 }
 
-export type DialogMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
+export type DialogMethod = (options?: DialogOptions) => DialogInstance;
 
-export type DialogConfirmMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
+export type DialogConfirmMethod = (options?: DialogOptions) => DialogInstance;
 
-export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>, context?: AppContext) => DialogInstance;
+export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>) => DialogInstance;
