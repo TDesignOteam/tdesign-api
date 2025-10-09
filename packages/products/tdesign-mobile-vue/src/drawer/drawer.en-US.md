@@ -11,6 +11,7 @@ closeOnOverlayClick | Boolean | true | \- | N
 destroyOnClose | Boolean | false | \- | N
 footer | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 items | Array | - | Typescript：`DrawerItem[] ` `interface DrawerItem { title: string; icon?: TNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
+overlayProps | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/drawer/type.ts) | N
 placement | String | right | options: left/right | N
 showOverlay | Boolean | true | \- | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
