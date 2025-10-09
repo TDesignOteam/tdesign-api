@@ -45543,6 +45543,47 @@
       ]
     },
     {
+      "id": 1760007814,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "sizeDraggable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。",
+      "field_desc_en": "allow resizing drawer width/height, set max or min to limit size.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-09 11:03:34",
+      "update_time": "2025-10-09 11:03:34",
+      "event_output": null,
+      "custom_field_type": "boolean | SizeDragLimit【interface SizeDragLimit { maxWidth: number|undefined, minWidth: number|undefined, maxHeight: number|undefined, minHeight: number|undefined }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
       "id": 715,
       "platform_framework": [
         "1",
