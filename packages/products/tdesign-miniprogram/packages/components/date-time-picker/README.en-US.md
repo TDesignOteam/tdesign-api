@@ -14,10 +14,10 @@ confirm-btn | String | - | \- | N
 custom-locale | String | zh | \- | N
 end | String / Number | - | \- | N
 filter | Function | - | Typescript：`(type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn` `type DateTimePickerColumn = DateTimePickerColumnItem[]` `interface DateTimePickerColumnItem { label: string,value: string}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
-footer | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 format | String | 'YYYY-MM-DD HH:mm:ss' | \- | N
 formatter | Function | - | Typescript：`(option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem` | N
-header | Boolean / Slot | true | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+header | Boolean | true | \- | N
 mode | String / Array | 'date' | Typescript：`DateTimePickerMode` `type DateTimePickerMode = TimeModeValues \| Array<TimeModeValues> ` `type TimeModeValues = 'year' \| 'month' \| 'date' \| 'hour' \| 'minute' \| 'second'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 popup-props | Object | {} | popup properties。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 show-week | Boolean | false | `1.9.0` | N
@@ -28,6 +28,13 @@ use-popup | Boolean | true | \- | N
 value | String / Number | - | Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 default-value | String / Number | undefined | uncontrolled property。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 visible | Boolean | false | \- | N
+
+### DateTimePicker Slots
+
+name | Description
+-- | --
+footer | \-
+header | \-
 
 ### DateTimePicker Events
 

@@ -13,9 +13,9 @@ color-modes | String / Array | "monochrome" | Typescript：`colorModesEnum \| co
 enable-alpha | Boolean | false | \- | N
 enable-multiple-gradient | Boolean | true | \- | N
 fixed | Boolean | false | `1.8.5` | N
-footer | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
-header | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
 popup-props | Object | {} | Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/color-picker/type.ts) | N
 swatch-colors | Array | undefined | swatch colors。Typescript：`Array<string> \| null \| undefined` | N
 type | String | base | options: base/multiple。Typescript：`TypeEnum ` `type TypeEnum = 'base' \| 'multiple'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/color-picker/type.ts) | N
@@ -23,6 +23,13 @@ use-popup | Boolean | false | \- | N
 value | String | - | color value | N
 default-value | String | undefined | color value。uncontrolled property | N
 visible | Boolean | false | \- | N
+
+### ColorPicker Slots
+
+name | Description
+-- | --
+footer | \-
+header | \-
 
 ### ColorPicker Events
 

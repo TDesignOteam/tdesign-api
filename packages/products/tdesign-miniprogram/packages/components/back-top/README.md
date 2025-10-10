@@ -20,7 +20,7 @@ visibility-height | Number | 200 | 滚动高度达到此参数值才出现 | N
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-icon | 图标
+icon |  自定义图标内容
 
 ### BackTop Events
 

@@ -13,18 +13,26 @@ borderless | Boolean | undefined | 是否开启无边框模式 | N
 check-all | Boolean | false | 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 | N
 checked | Boolean | false | 是否选中 | N
 default-checked | Boolean | undefined | 是否选中。非受控属性 | N
-content | String / Slot | - | 多选框内容。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+content | String | - | 多选框内容 | N
 content-disabled | Boolean | - | 是否禁用组件内容（content）触发选中 | N
 disabled | Boolean | undefined | 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled | N
 icon | String / Array | 'circle' | 自定义选中图标和非选中图标。使用 Array 时表示：`[选中态图标，非选中态图标，半选中态图标]`。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。TS 类型：`'circle' \| 'line' \| 'rectangle' \| string[]` | N
 indeterminate | Boolean | false | 是否为半选 | N
-label | String / Slot | - | 主文案。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+label | String | - | 主文案 | N
 max-content-row | Number | 5 | 内容最大行数限制 | N
 max-label-row | Number | 3 | 主文案最大行数限制 | N
 name | String | - | HTML 元素原生属性 | N
 placement | String | left | 多选框和内容相对位置。可选项：left/right | N
 readonly | Boolean | undefined | 只读状态 | N
 value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \| number \| boolean` | N
+
+### Checkbox Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，主文案
+content | 多选框内容
+label | 主文案
 
 ### Checkbox Events
 
@@ -64,3 +72,9 @@ default-value | Array | undefined | 选中值。非受控属性。TS 类型：`T
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: CheckboxGroupValue, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容
+
+### CheckboxGroup Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，多选框组内容

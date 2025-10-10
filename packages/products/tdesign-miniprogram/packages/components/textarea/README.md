@@ -24,7 +24,7 @@ fixed | Boolean | false | 如果 textarea 是在一个 `position:fixed` 的区�
 focus | Boolean | false | 自动聚焦 | N
 hold-keyboard | Boolean | false | focus时，点击页面的时候不收起键盘 | N
 indicator | Boolean | false | 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效 | N
-label | String / Slot | - | 左侧文本。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+label | String | - | 左侧文本 | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
 maxlength | Number | -1 | 用户最多可以输入的字符个数，值为 -1 的时候不限制最大长度 | N
 placeholder | String | undefined | 占位符 | N
@@ -36,6 +36,12 @@ selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需
 show-confirm-bar | Boolean | true | 是否显示键盘上方带有”完成“按钮那一栏 | N
 value | String / Number | - | 文本框值。TS 类型：`TextareaValue` `type TextareaValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 default-value | String / Number | undefined | 文本框值。非受控属性。TS 类型：`TextareaValue` `type TextareaValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
+
+### Textarea Slots
+
+名称 | 描述
+-- | --
+label | 左侧文本
 
 ### Textarea Events
 

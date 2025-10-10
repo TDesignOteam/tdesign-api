@@ -11,8 +11,8 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 auto-close | Boolean | true | \- | N
 cancel-btn | String / Boolean | true | Typescript：`boolean \| string` | N
 confirm-btn | String / Boolean | true | Typescript：`boolean \| string` | N
-footer | Slot | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
-header | Boolean / Slot | true | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+
+header | Boolean | true | \- | N
 item-height | Number | 80 | \- | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 popup-props | Object | {} | popup properties。Typescript：`PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker/type.ts) | N
@@ -22,6 +22,15 @@ using-custom-navbar | Boolean | false | \- | N
 value | Array | - | Typescript：`Array<PickerValue>` `type PickerValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker/type.ts) | N
 default-value | Array | undefined | uncontrolled property。Typescript：`Array<PickerValue>` `type PickerValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker/type.ts) | N
 visible | Boolean | false | \- | N
+
+### Picker Slots
+
+name | Description
+-- | --
+\- | \-
+content | \-
+footer | \-
+header | \-
 
 ### Picker Events
 
@@ -42,3 +51,9 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 format | Function | - | Typescript：`(option: PickerItemOption, columnIndex: number) => PickerItemOption` | N
 options | Array | [] | Typescript：`PickerItemOption[]` `interface PickerItemOption { label: string; value: string \| number; icon?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker-item/type.ts) | N
+
+### PickerItem Slots
+
+name | Description
+-- | --
+label-suffix-index | \-

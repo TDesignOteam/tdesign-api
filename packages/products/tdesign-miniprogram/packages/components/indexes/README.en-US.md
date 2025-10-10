@@ -22,6 +22,12 @@ name | params | description
 change | `(index: string \| number)` | `0.34.0`
 select | `(index: string \| number)` | \-
 
+### Indexes Slots
+
+name | Description
+-- | --
+\- | \-
+
 
 ### IndexesAnchor Props
 
@@ -38,3 +44,9 @@ className | Description
 t-class | class name of root node
 t-class-sidebar | \-
 t-class-sidebar-item | \-
+
+### IndexesAnchor Slots
+
+name | Description
+-- | --
+\- | \-
