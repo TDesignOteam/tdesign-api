@@ -12,7 +12,6 @@ asyncLoading | TNode | - | 自定义加载中。值为空不显示加载中，�
 footer | TNode | - | 底部。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 header | TNode | - | 头部。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 layout | String | horizontal | 排列方式（待设计稿输出）。可选项：horizontal/vertical | N
-scroll | Object | - | 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`。TS 类型：`InfinityScroll`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 scroll | Object | - | 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`。TS 类型：`TScroll`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 size | String | medium | 尺寸。可选项：small/medium/large | N
 split | Boolean | false | 是否展示分割线 | N
@@ -26,7 +25,7 @@ onScroll | Function |  | TS 类型：`(options: { e: Event \| WheelEvent; scroll
 -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-scrollTo | `(scrollToParams: ScrollToElementParams)` | \- | 虚拟滚动场景下，支持指定滚动到具体的节点
+scrollTo | `(scrollToParams: ScrollToElementParams)` | \- | 虚拟滚动场景下，支持指定滚动到具体的节点。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)
 
 
 ### ListItem Props
