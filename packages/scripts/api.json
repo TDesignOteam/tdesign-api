@@ -48043,6 +48043,49 @@
       ]
     },
     {
+      "id": 1760451356,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16"
+      ],
+      "component": "Divider",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "间距大小",
+      "field_desc_en": "Spacing size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-14 14:15:56",
+      "update_time": "2025-10-14 14:15:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1974,
       "platform_framework": [
         "1"
