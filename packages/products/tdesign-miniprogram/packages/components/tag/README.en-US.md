@@ -60,7 +60,8 @@ variant | String | dark | `0.26.0`。options: dark/light/outline/light-outline |
 
 name | Description
 -- | --
-content | Typescript：`string \| number \| string[]`
+\- | \-
+content | \-
 icon | \-
 
 ### CheckTag Events

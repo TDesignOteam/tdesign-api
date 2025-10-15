@@ -60,8 +60,9 @@ variant | String | dark | `0.26.0`。标签风格变体。可选项：dark/light
 
 名称 | 描述
 -- | --
-content | 组件子元素；传入数组时：[选中内容，非选中内容]。TS 类型：`string \| number \| string[]`
-icon | 标签图标
+\- | 默认插槽，作用同 `content` 插槽
+content | 自定义内容区域
+icon | 标签区域
 
 ### CheckTag Events
 

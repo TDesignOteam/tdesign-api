@@ -12,6 +12,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 align | String | middle | options: top/middle/bottom | N
 arrow | Boolean / Object | false | \- | N
 bordered | Boolean | true | \- | N
+click | String | - | \- | N
 description | String | - | \- | N
 hover | Boolean | - | \- | N
 image | String | - | \- | N
@@ -27,19 +28,12 @@ url | String | - | \- | N
 
 name | Description
 -- | --
-click | \-
 description | \-
 image | \-
 left-icon | \-
 note | \-
 right-icon | \-
 title | \-
-
-### Cell Events
-
-name | params | description
--- | -- | --
-click | - | \-
 
 ### Cell External Classes
 

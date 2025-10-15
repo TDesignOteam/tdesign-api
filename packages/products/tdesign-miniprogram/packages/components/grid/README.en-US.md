@@ -36,6 +36,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 badge-props | Object | null | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/grid-item/type.ts) | N
+click | String | - | \- | N
 description | String | - | \- | N
 icon | String / Object | - | \- | N
 image | String | - | \- | N
@@ -50,16 +51,9 @@ url | String | - | \- | N
 name | Description
 -- | --
 \- | \-
-click | \-
 description | \-
 image | \-
 text | \-
-
-### GridItem Events
-
-name | params | description
--- | -- | --
-click | \- | \-
 
 ### GridItem External Classes
 
