@@ -22674,6 +22674,47 @@
       ]
     },
     {
+      "id": 1759199384,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "overlayProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "遮罩层的属性，透传至 overlay",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:29:44",
+      "update_time": "2025-09-30 02:29:44",
+      "event_output": null,
+      "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1725941069,
       "platform_framework": [
         "1",
@@ -45830,6 +45871,47 @@
       ]
     },
     {
+      "id": 1760007814,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "sizeDraggable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。",
+      "field_desc_en": "allow resizing dialog width/height, set max or min to limit size.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-09 11:03:34",
+      "update_time": "2025-10-09 11:03:34",
+      "event_output": null,
+      "custom_field_type": "boolean | DialogSizeDragLimit【interface DialogSizeDragLimit { maxWidth: number|undefined, minWidth: number|undefined, maxHeight: number|undefined, minHeight: number|undefined }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
+      ]
+    },
+    {
       "id": 715,
       "platform_framework": [
         "1",
@@ -48454,6 +48536,49 @@
       ]
     },
     {
+      "id": 1760451356,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16"
+      ],
+      "component": "Divider",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "间距大小",
+      "field_desc_en": "Spacing size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-14 14:15:56",
+      "update_time": "2025-10-14 14:15:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1974,
       "platform_framework": [
         "1"
@@ -49402,6 +49527,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1759993379,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "overlayProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "遮罩层的属性，透传至 overlay",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-09 07:02:59",
+      "update_time": "2025-10-09 07:02:59",
+      "event_output": null,
+      "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n  \"miniprogram\": \"1.11.0\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -69716,7 +69882,7 @@
       "create_time": "2022-07-04 12:06:31",
       "update_time": "2022-07-04 12:06:31",
       "event_output": null,
-      "custom_field_type": "Number",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -70276,7 +70442,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { trigger: 'overlay' | 'close-btn', visible: boolean, index: number })",
+      "event_input": "(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })【type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn'】",
       "create_time": "2023-05-18 02:56:23",
       "update_time": "2023-05-18 02:56:23",
       "event_output": null,
@@ -121761,6 +121927,138 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061475,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:11:15",
+      "update_time": "2025-09-28 12:11:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061554,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-body",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述文本样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:34",
+      "update_time": "2025-09-28 12:12:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061567,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-dot",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滑块样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:47",
+      "update_time": "2025-09-28 12:12:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061533,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-label",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "开关内容样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:13",
+      "update_time": "2025-09-28 12:12:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []

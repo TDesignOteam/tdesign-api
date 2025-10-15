@@ -12,6 +12,7 @@ close-on-overlay-click | Boolean | true | 点击蒙层时是否触发抽屉关�
 destroy-on-close | Boolean | false | 抽屉关闭时是否销毁节点 | N
 
 items | Array | - | 抽屉里的列表项。TS 类型：`DrawerItem[]` `interface DrawerItem { title: string; icon: string; }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/drawer/type.ts) | N
+overlay-props | Object | {} | 遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/drawer/type.ts) | N
 placement | String | right | 抽屉方向。可选项：left/right | N
 show-overlay | Boolean | true | 是否显示遮罩层 | N
 title | String | - | `0.29.0`。抽屉的标题 | N
