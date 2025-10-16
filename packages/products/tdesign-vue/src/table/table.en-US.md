@@ -95,7 +95,7 @@ name | params | return | description
 -- | -- | -- | --
 refreshTable | \- | \- | required
 scrollColumnIntoView | `(colKey: string)` | \- | required
-scrollToElement | `(params: ComponentScrollToElementParams)` | \- | required。Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`. [Common type definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts#L125). [Detailed type definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/table/type.ts#L325C3-L325C18)
+scrollToElement | `(params: ComponentScrollToElementParams)` | \- | Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })` 。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### BaseTableCol
 

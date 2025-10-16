@@ -294,9 +294,9 @@ export interface BaseTableInstanceFunctions<T extends TableRowData = TableRowDat
    */
   scrollColumnIntoView: (colKey: string) => void;
   /**
-   * [通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts#L125)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/table/type.ts#L325C3-L325C18)
+   * 纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`
    */
-  scrollToElement: (params: ComponentScrollToElementParams) => void;
+  scrollToElement?: (params: ComponentScrollToElementParams) => void;
 }
 
 export interface BaseTableCol<T extends TableRowData = TableRowData> {
@@ -394,7 +394,7 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
 export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
   extends Omit<TdBaseTableProps<T>, 'columns' | 'onCellClick'> {
   /**
-   * 异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `load-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容
+   * 异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `loading-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容
    */
   asyncLoading?: 'loading' | 'load-more' | TNode;
   /**
