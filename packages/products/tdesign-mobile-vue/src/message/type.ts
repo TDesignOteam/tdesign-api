@@ -45,7 +45,7 @@ export interface TdMessageProps {
    */
   marquee?: boolean | MessageMarquee;
   /**
-   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
+   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']
    */
   offset?: Array<string | number>;
   /**

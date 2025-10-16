@@ -116,7 +116,7 @@ function getDefaultWithType(api, dl, valueType) {
   const defaultField = isMiniprogram ? 'value:' : 'default:';
 
   // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
-  const isVue3NeedDefaultTsType = currentFramework === 'VueNext(PC)'
+  const isVue3NeedDefaultTsType = ['Vue(Mobile)', 'VueNext(PC)'].includes(currentFramework)
     && (
       api.field_type_text?.length > 1
       || (api.custom_field_type && ['\'\'', 'undefined'].includes(dl))

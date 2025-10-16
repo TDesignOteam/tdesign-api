@@ -33,6 +33,10 @@
       {
         "label": "CSS Variables",
         "value": "256"
+      },
+      {
+        "label": "Slots",
+        "value": "512"
       }
     ],
     "platform": [

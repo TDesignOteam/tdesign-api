@@ -35,6 +35,7 @@ const API_CATEGORY_RETURN_API = 32;
 const API_CATEGORY_T_API = 64;
 const API_CATEGORY_CLASS_API = 128;
 const API_CATEGORY_CSS_VAR_API = 256;
+const API_CATEGORY_SLOT_API = 512;
 
 export const API_CATEGORY: MapOptions = {
     [API_CATEGORY_PROPS]: 'Props',
@@ -46,6 +47,7 @@ export const API_CATEGORY: MapOptions = {
     [API_CATEGORY_T_API]: '<T>',
     [API_CATEGORY_CLASS_API]: 'External Classes',
     [API_CATEGORY_CSS_VAR_API]: 'CSS Variables',
+    [API_CATEGORY_SLOT_API]: 'Slots',
 };
 
 export const PLATFORM_MAP: MapOptions = {
@@ -241,7 +243,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'ChatAction', label: '对话操作' },
     { value: 'ChatContent', label: '对话内容' },
     { value: 'ChatItem', label: '对话单元' },
-    { value: 'ChatInput', label: '对话输入框' }, 
+    { value: 'ChatInput', label: '对话输入框' },
     { value: 'ChatLoading', label: '对话加载' },
     { value: 'ChatReasoning', label: '对话思考过程' },
     { value: 'ChatSender', label: '对话输入框' },
