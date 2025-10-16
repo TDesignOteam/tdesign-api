@@ -3428,6 +3428,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759130478,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ActionSheet",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:21:18",
+      "update_time": "2025-09-29 07:21:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1741182503,
       "platform_framework": [
         "8",
@@ -7443,6 +7476,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759130533,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Avatar",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:22:13",
+      "update_time": "2025-09-29 07:22:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1600,
       "platform_framework": [
         "64"
@@ -7900,6 +7966,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759130576,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AvatarGroup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:22:56",
+      "update_time": "2025-09-29 07:22:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -8952,6 +9051,72 @@
       "field_type_text": []
     },
     {
+      "id": 1759130738,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "BackTop",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:25:38",
+      "update_time": "2025-09-29 07:25:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759130814,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "BackTop",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:26:54",
+      "update_time": "2025-09-29 07:26:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1083,
       "platform_framework": [
         "2",
@@ -9716,6 +9881,72 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759131915,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Badge",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:45:15",
+      "update_time": "2025-09-29 07:45:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759131947,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Badge",
+      "field_category": 512,
+      "field_name": "count",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "徽标右上角内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:45:47",
+      "update_time": "2025-09-29 07:45:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -12566,9 +12797,9 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
-      "field_desc_en": "Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })` ",
-      "field_required": 0,
+      "field_desc_zh": "[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts#L125)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/table/type.ts#L325C3-L325C18)",
+      "field_desc_en": "Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`. [Common type definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts#L125). [Detailed type definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/table/type.ts#L325C3-L325C18)",
+      "field_required": 1,
       "event_input": "(params: ComponentScrollToElementParams)",
       "create_time": "2023-03-26 11:06:32",
       "update_time": "2023-03-26 11:06:32",
@@ -15446,7 +15677,7 @@
       ],
       "field_default_value": "",
       "field_enum": "contact/share/getPhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization",
-      "field_desc_zh": "微信开放能力。<br />具体释义：<br />`contact` 打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/customer-message.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`share` 触发用户转发，使用前建议先阅读<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引\">使用指引</a>；<br />`getPhoneNumber` 获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getUserInfo` 获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息 （*小程序插件中不能使用*）；<br />`launchApp` 打开APP，可以通过 app-parameter 属性设定向 APP 传的参数<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html\">具体说明</a>；<br />`openSetting` 打开授权设置页；<br />`feedback` 打开“意见反馈”页面，用户可提交反馈内容并上传<a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html\">日志</a>，开发者可以登录<a href=\"https://mp.weixin.qq.com/\">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容；<br />`chooseAvatar` 获取用户头像，可以从 bindchooseavatar 回调中获取到头像信息；<br />`agreePrivacyAuthorization`用户同意隐私协议按钮。用户点击一次此按钮后，所有隐私接口可以正常调用。可通过`bindagreeprivacyauthorization`监听用户同意隐私协议事件。隐私合规开发指南详情可见《<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/PrivacyAuthorize.html\">小程序隐私协议开发指南</a>》。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+      "field_desc_zh": "微信开放能力。<br />具体释义：<br />`contact` 打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/customer-message.html\">具体说明</a> （*鸿蒙 OS 暂不支持*）；<br />`liveActivity` 通过前端获取<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html\">新的一次性订阅消息下发机制</a>使用的 code；<br />`share` 触发用户转发，使用前建议先阅读<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引\">使用指引</a>；<br />`getPhoneNumber` 获取用户手机号，可以从 bindgetphonenumber 回调中获取到用户信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getUserInfo` 获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息 （*小程序插件中不能使用*）；<br />`launchApp` 打开APP，可以通过 app-parameter 属性设定向 APP 传的参数<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html\">具体说明</a>；<br />`openSetting` 打开授权设置页；<br />`feedback` 打开“意见反馈”页面，用户可提交反馈内容并上传<a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html\">日志</a>，开发者可以登录<a href=\"https://mp.weixin.qq.com/\">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容；<br />`chooseAvatar` 获取用户头像，可以从 bindchooseavatar 回调中获取到头像信息；<br />`agreePrivacyAuthorization`用户同意隐私协议按钮。用户点击一次此按钮后，所有隐私接口可以正常调用。可通过`bindagreeprivacyauthorization`监听用户同意隐私协议事件。隐私合规开发指南详情可见《<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/PrivacyAuthorize.html\">小程序隐私协议开发指南</a>》。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
       "field_desc_en": "open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
       "field_required": 0,
       "event_input": "",
@@ -16671,6 +16902,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759130366,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:19:26",
+      "update_time": "2025-09-29 07:19:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -17991,7 +18255,7 @@
       "create_time": "2023-04-11 06:13:30",
       "update_time": "2023-04-11 06:13:30",
       "event_output": null,
-      "custom_field_type": "number | Date | TCalendarValue[]【type TCalendarValue = number | Date】",
+      "custom_field_type": "CalendarValue【type CalendarValue = TCalendarValue | TCalendarValue[]】【type TCalendarValue = number | Date】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -18301,7 +18565,7 @@
       "field_desc_zh": "不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Date)",
+      "event_input": "(value: CalendarValue)",
       "create_time": "2023-04-11 06:13:30",
       "update_time": "2023-04-11 06:13:30",
       "event_output": null,
@@ -18339,7 +18603,7 @@
       "field_desc_zh": "关闭按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(trigger: CalendarTrigger)【type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay'】",
+      "event_input": "(trigger: CalendarTrigger)【type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay' | 'auto-close'】",
       "create_time": "2023-01-09 02:08:31",
       "update_time": "2023-01-09 02:08:31",
       "event_output": null,
@@ -18410,7 +18674,7 @@
       "field_desc_zh": "点击确认按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Date)",
+      "event_input": "(value: CalendarValue)",
       "create_time": "2023-04-11 06:13:30",
       "update_time": "2023-04-11 06:13:30",
       "event_output": null,
@@ -18749,6 +19013,72 @@
         "Vue(PC)",
         "React(PC)",
         "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759132103,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 512,
+      "field_name": "confirm-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "确认按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:48:23",
+      "update_time": "2025-09-29 07:48:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759132116,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 512,
+      "field_name": "title",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标题",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 07:48:36",
+      "update_time": "2025-09-29 07:48:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -20108,6 +20438,88 @@
       ]
     },
     {
+      "id": 1755079195,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片内容的类名，示例：'t-class-body'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:59:55",
+      "update_time": "2025-08-13 09:59:55",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079040,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "bodyStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片内容的样式",
+      "field_desc_en": "Styles that apply to the card body content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:20",
+      "update_time": "2025-08-13 09:57:20",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2028,
       "platform_framework": [
         "1",
@@ -20399,6 +20811,88 @@
       ]
     },
     {
+      "id": 1755079220,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片底部的类名，示例：'t-class-footer'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:20",
+      "update_time": "2025-08-13 10:00:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079064,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "footerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片底部的样式",
+      "field_desc_en": "Styles that apply to the card footer content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:57:44",
+      "update_time": "2025-08-13 09:57:44",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2176,
       "platform_framework": [
         "1",
@@ -20480,6 +20974,88 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1755079231,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片头部的类名，示例：'t-class-header'",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 10:00:31",
+      "update_time": "2025-08-13 10:00:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1755079135,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Card",
+      "field_category": 1,
+      "field_name": "headerStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作用于卡片头部的样式",
+      "field_desc_en": "Styles that apply to the card header content",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 09:58:55",
+      "update_time": "2025-08-13 09:58:55",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -22095,6 +22671,47 @@
       ],
       "field_type_text": [
         "Array"
+      ]
+    },
+    {
+      "id": 1759199384,
+      "platform_framework": [
+        "8",
+        "16",
+        "32"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "overlayProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "遮罩层的属性，透传至 overlay",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:29:44",
+      "update_time": "2025-09-30 02:29:44",
+      "event_output": null,
+      "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -43807,7 +44424,7 @@
       "create_time": "2023-03-13 02:16:48",
       "update_time": "2023-03-13 02:16:48",
       "event_output": null,
-      "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】",
+      "custom_field_type": "boolean | ButtonProps | null【import { ButtonProps } from '@Button'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -44923,6 +45540,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1760007814,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "sizeDraggable",
+      "field_type": [
+        "4",
+        "8"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。",
+      "field_desc_en": "allow resizing dialog width/height, set max or min to limit size.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-09 11:03:34",
+      "update_time": "2025-10-09 11:03:34",
+      "event_output": null,
+      "custom_field_type": "boolean | DialogSizeDragLimit【interface DialogSizeDragLimit { maxWidth: number|undefined, minWidth: number|undefined, maxHeight: number|undefined, minHeight: number|undefined }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -47385,6 +48043,49 @@
       ]
     },
     {
+      "id": 1760451356,
+      "platform_framework": [
+        "1",
+        "2",
+        "8",
+        "16"
+      ],
+      "component": "Divider",
+      "field_category": 1,
+      "field_name": "size",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "间距大小",
+      "field_desc_en": "Spacing size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-14 14:15:56",
+      "update_time": "2025-10-14 14:15:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1974,
       "platform_framework": [
         "1"
@@ -48336,6 +49037,47 @@
       ]
     },
     {
+      "id": 1759993379,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 1,
+      "field_name": "overlayProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "{}",
+      "field_enum": "",
+      "field_desc_zh": "遮罩层的属性，透传至 overlay",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-09 07:02:59",
+      "update_time": "2025-10-09 07:02:59",
+      "event_output": null,
+      "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n  \"miniprogram\": \"1.11.0\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 689,
       "platform_framework": [
         "1",
@@ -49074,6 +49816,43 @@
       "field_type_text": []
     },
     {
+      "id": 1755087499,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 2,
+      "field_name": "closed",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉关闭后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-13 12:18:19",
+      "update_time": "2025-08-13 12:18:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 706,
       "platform_framework": [
         "1",
@@ -49224,6 +50003,43 @@
       "field_type_text": [
         "Array"
       ]
+    },
+    {
+      "id": 1754230138,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Drawer",
+      "field_category": 2,
+      "field_name": "opened",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "抽屉打开后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-03 14:08:58",
+      "update_time": "2025-08-03 14:08:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 703,
@@ -56309,7 +57125,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56339,7 +57157,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -56350,7 +57170,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56380,7 +57202,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -56391,7 +57215,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "FormConfig",
       "field_category": 1,
@@ -56421,7 +57247,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -58682,6 +59510,7 @@
       "field_category": 1,
       "field_name": "pattern",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -58713,6 +59542,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -59787,7 +60617,9 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -59817,7 +60649,9 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -68194,7 +69028,7 @@
       "create_time": "2022-07-04 12:06:31",
       "update_time": "2022-07-04 12:06:31",
       "event_output": null,
-      "custom_field_type": "Number",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -68447,7 +69281,7 @@
       "create_time": "2022-05-30 12:51:14",
       "update_time": "2022-07-04 12:02:41",
       "event_output": null,
-      "custom_field_type": "TNode | TNode<{ open: () => void }>",
+      "custom_field_type": "TNode | TNode<{ open: (index?: number) => void }>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -68754,7 +69588,7 @@
       "field_desc_zh": "关闭时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { trigger: 'overlay' | 'close-btn', visible: boolean, index: number })",
+      "event_input": "(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })【type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn'】",
       "create_time": "2023-05-18 02:56:23",
       "update_time": "2023-05-18 02:56:23",
       "event_output": null,
@@ -76356,6 +77190,43 @@
       "field_type_text": []
     },
     {
+      "id": 1759059499,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Link",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 11:38:19",
+      "update_time": "2025-09-28 11:38:19",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 904,
       "platform_framework": [
         "1",
@@ -79656,6 +80527,7 @@
       "id": 1617,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Message",
@@ -79685,6 +80557,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80045,7 +80918,7 @@
       "create_time": "2023-03-13 02:16:49",
       "update_time": "2023-03-13 02:16:49",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "string | object | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -80115,8 +80988,6 @@
     {
       "id": 1449,
       "platform_framework": [
-        "16",
-        "32",
         "64"
       ],
       "component": "Message",
@@ -80145,8 +81016,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
-        "Angular(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -80156,7 +81025,9 @@
     {
       "id": 1712718531,
       "platform_framework": [
-        "8"
+        "8",
+        "16",
+        "32"
       ],
       "component": "Message",
       "field_category": 1,
@@ -80166,7 +81037,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']",
+      "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -80184,7 +81055,9 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -83770,6 +84643,43 @@
       ]
     },
     {
+      "id": 1758783866,
+      "platform_framework": [
+        "1",
+        "2",
+        "4"
+      ],
+      "component": "Notification",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "调用 NotificationPlugin.close 的事件回调",
+      "field_desc_en": "the callback event of NotificationPlugin.close",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-25 07:04:26",
+      "update_time": "2025-09-25 07:04:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 455,
       "platform_framework": [
         "1",
@@ -86928,7 +87838,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
+      "field_desc_zh": "用来定义 value / label / icon 在 `options` 中对应的字段别名",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -87800,7 +88710,7 @@
       "create_time": "2023-01-09 06:42:06",
       "update_time": "2023-01-09 06:42:06",
       "event_output": null,
-      "custom_field_type": "PickerItemOption[]【interface PickerItemOption { label: string; value: string | number }】",
+      "custom_field_type": "PickerItemOption[]【interface PickerItemOption { label: string; value: string | number; icon?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -90858,7 +91768,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `loading-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容",
+      "field_desc_zh": "异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `load-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容",
       "field_desc_en": "async loading state",
       "field_required": 0,
       "event_input": "",
@@ -109772,7 +110682,8 @@
       "field_name": "label",
       "field_type": [
         "1",
-        "4"
+        "4",
+        "32"
       ],
       "field_default_value": "false",
       "field_enum": "",
@@ -109799,7 +110710,8 @@
       ],
       "field_type_text": [
         "String",
-        "Boolean"
+        "Boolean",
+        "Function"
       ]
     },
     {
@@ -116933,6 +117845,39 @@
       ]
     },
     {
+      "id": 1756450656,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 2,
+      "field_name": "animationfinish",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "轮播切换时触发",
+      "field_desc_en": "动画结束时会触发 animationfinish 事件",
+      "field_required": 0,
+      "event_input": "(current: number, source: SwiperChangeSource)",
+      "create_time": "2025-08-29 06:57:36",
+      "update_time": "2025-08-29 06:57:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.11.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1276,
       "platform_framework": [
         "16",
@@ -118841,6 +119786,138 @@
         "Vue(Mobile)",
         "React(Mobile)",
         "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061475,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:11:15",
+      "update_time": "2025-09-28 12:11:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061554,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-body",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "描述文本样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:34",
+      "update_time": "2025-09-28 12:12:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061567,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-dot",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滑块样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:47",
+      "update_time": "2025-09-28 12:12:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759061533,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 128,
+      "field_name": "t-class-label",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "开关内容样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-28 12:12:13",
+      "update_time": "2025-09-28 12:12:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -124670,7 +125747,7 @@
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
-      "trigger_elements": "MouseEvent<SVGSVGElement>",
+      "trigger_elements": "MouseEvent<HTMLSpanElement>",
       "deprecated": 0,
       "version": null,
       "test_description": null,
@@ -127874,8 +128951,8 @@
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "超出maxlength或maxcharacter之后是否还允许输入",
-      "field_desc_en": null,
+      "field_desc_zh": "超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入",
+      "field_desc_en": "Allow input after exceeding `maxlength` or `maxcharacter`",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-06-02 02:16:33",
@@ -137506,7 +138583,7 @@
       "field_desc_zh": "节点拖拽时离开目标元素时触发，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })",
       "create_time": "2022-11-08 08:31:59",
       "update_time": "2022-11-08 08:31:59",
       "event_output": null,
@@ -137543,7 +138620,7 @@
       "field_desc_zh": "节点拖拽到目标元素时触发，泛型 `T` 表示树节点 TS 类型",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })",
+      "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })",
       "create_time": "2022-11-08 08:31:32",
       "update_time": "2022-11-08 08:31:32",
       "event_output": null,
@@ -146093,7 +147170,7 @@
       "field_desc_zh": "点击已选文件时触发；常用于重新上传",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(file: VideoContext | ImageContext)",
+      "event_input": "(index: number; file: VideoContext | ImageContext)",
       "create_time": "2024-04-02 08:46:44",
       "update_time": "2024-04-02 08:46:44",
       "event_output": null,
@@ -148332,7 +149409,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148362,7 +149443,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148371,7 +149456,8 @@
     {
       "id": 2557,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148400,7 +149486,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -148412,7 +149499,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148443,7 +149534,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -148453,7 +149548,8 @@
     {
       "id": 2647,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148482,7 +149578,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -148494,7 +149591,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148524,7 +149625,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148535,7 +149640,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148565,10 +149674,63 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1755968308,
+      "platform_framework": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "component": "Watermark",
+      "field_category": 1,
+      "field_name": "layout",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "rectangular",
+      "field_enum": "rectangular/hexagonal",
+      "field_desc_zh": "水印的布局方式，rectangular：矩形，即横平竖直的水印；hexagonal：六边形，即错位的水印",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-08-23 16:58:28",
+      "update_time": "2025-08-23 16:58:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -148576,7 +149738,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148606,7 +149772,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148617,7 +149787,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148647,7 +149821,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -148658,7 +149836,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148688,7 +149870,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148699,7 +149885,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148729,7 +149919,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -148740,7 +149934,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148770,7 +149968,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -148781,7 +149983,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148811,7 +150017,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148822,7 +150032,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148853,7 +150067,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object",
@@ -148865,7 +150083,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148895,7 +150117,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148906,7 +150132,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148936,7 +150166,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148947,7 +150181,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -148977,7 +150215,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -148988,7 +150230,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "Watermark",
       "field_category": 1,
@@ -149018,7 +150264,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -149029,7 +150279,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkImage",
       "field_category": 1,
@@ -149059,7 +150313,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -149070,7 +150328,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkImage",
       "field_category": 1,
@@ -149100,7 +150362,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -149111,7 +150377,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkText",
       "field_category": 1,
@@ -149141,7 +150411,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -149152,7 +150426,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkText",
       "field_category": 1,
@@ -149182,7 +150460,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -149193,7 +150475,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkText",
       "field_category": 1,
@@ -149223,7 +150509,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Number"
@@ -149234,7 +150524,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkText",
       "field_category": 1,
@@ -149264,7 +150558,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -149275,7 +150573,11 @@
       "platform_framework": [
         "1",
         "2",
-        "4"
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
       ],
       "component": "WatermarkText",
       "field_category": 1,
@@ -149305,7 +150607,11 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)"
+        "Angular(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Angular(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
