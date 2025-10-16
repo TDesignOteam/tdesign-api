@@ -117362,19 +117362,18 @@
       "field_type": [
         "4",
         "8",
-        "32",
         "64"
       ],
       "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "导航器全部配置",
-      "field_desc_en": null,
+      "field_desc_en": "navigation config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-12-15 12:58:51",
       "update_time": "2022-01-25 11:57:28",
       "event_output": null,
-      "custom_field_type": "SwiperNavigation | TNode | Function | Boolean ",
+      "custom_field_type": "SwiperNavigation | TNode | Boolean ",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -117393,7 +117392,6 @@
       "field_type_text": [
         "Boolean",
         "Object",
-        "Function",
         "TNode"
       ]
     },

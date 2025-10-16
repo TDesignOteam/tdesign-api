@@ -38,7 +38,6 @@ type | String | - | 导航器类型，点状(dots)、点条状(dots-bar)、条�
 
 ## API
 
-
 ### Swiper Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -52,7 +51,7 @@ duration | Number | 300 | 滑动动画时长 | N
 height | Number | - | 当使用垂直方向滚动时的高度 | N
 interval | Number | 5000 | 轮播间隔时间 | N
 loop | Boolean | true | 是否循环播放 | N
-navigation | Boolean / Object / Function / Slot / Function | true | 导航器全部配置。TS 类型：`SwiperNavigation \| TNode \| Function \| Boolean `。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+navigation | Boolean / Object / Slot / Function | true | 导航器全部配置。TS 类型：`SwiperNavigation \| TNode \| Boolean `。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 stopOnHover | Boolean | true | 是否悬浮时停止轮播 | N
 theme | String | light | 深色模式和浅色模式。可选项：light/dark | N
 trigger | String | hover | 触发切换的方式：悬浮、点击等。可选项：hover/click | N

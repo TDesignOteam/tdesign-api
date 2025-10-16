@@ -34,7 +34,6 @@ type | String | - | Typescript：`SwiperNavigationType` `type SwiperNavigationTy
 
 ## API
 
-
 ### Swiper Props
 
 name | type | default | description | required
@@ -50,7 +49,7 @@ duration | Number | 300 | \- | N
 height | Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | TNode | true | Typescript：`SwiperNavigation \| TNode \| Function \| Boolean `。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+navigation | TNode | true | navigation config。Typescript：`SwiperNavigation \| TNode \| Boolean `。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 stopOnHover | Boolean | true | \- | N
 theme | String | light | options: light/dark | N
 trigger | String | hover | options: hover/click | N
