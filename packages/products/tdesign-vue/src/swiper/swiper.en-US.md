@@ -1,8 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
-
 ### Swiper Props
 
 name | type | default | description | required
@@ -16,7 +14,7 @@ duration | Number | 300 | \- | N
 height | Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | Object / Slot / Function | - | Typescript：`SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+navigation | Boolean / Object / Function / Slot / Function | true | Typescript：`SwiperNavigation \| TNode \| Function \| Boolean `。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 stopOnHover | Boolean | true | \- | N
 theme | String | light | options: light/dark | N
 trigger | String | hover | options: hover/click | N

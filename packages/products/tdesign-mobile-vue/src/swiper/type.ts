@@ -8,20 +8,15 @@ import { TNode } from '../common';
 
 export interface TdSwiperProps {
   /**
-   * 轮播切换动画效果类型：滑动、淡入淡出等
+   * 轮播切换动画效果类型
    * @default slide
    */
-  animation?: 'slide' | 'fade';
+  animation?: 'slide';
   /**
    * 是否自动播放
    * @default true
    */
   autoplay?: boolean;
-  /**
-   * 卡片模式下非当前展示轮播图的缩放比例
-   * @default 210/332
-   */
-  cardScale?: number;
   /**
    * 当前轮播在哪一项（下标）
    * @default 0
@@ -33,6 +28,11 @@ export interface TdSwiperProps {
    */
   defaultCurrent?: number;
   /**
+   * 当前轮播在哪一项（下标）
+   * @default 0
+   */
+  modelValue?: number;
+  /**
    * 轮播滑动方向，包括横向滑动和纵向滑动两个方向
    * @default horizontal
    */
@@ -43,9 +43,9 @@ export interface TdSwiperProps {
    */
   duration?: number;
   /**
-   * 当使用垂直方向滚动时的高度
+   * 轮播的高度
    */
-  height?: number;
+  height?: string | number;
   /**
    * 轮播间隔时间
    * @default 5000
@@ -62,54 +62,47 @@ export interface TdSwiperProps {
    */
   navigation?: SwiperNavigation | TNode | Function | Boolean;
   /**
-   * 是否悬浮时停止轮播
-   * @default true
+   * 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px`
+   * @default 0
    */
-  stopOnHover?: boolean;
+  nextMargin?: string | number;
   /**
-   * 深色模式和浅色模式
-   * @default light
+   * 【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px`
+   * @default 0
    */
-  theme?: 'light' | 'dark';
-  /**
-   * 触发切换的方式：悬浮、点击等
-   * @default hover
-   */
-  trigger?: 'hover' | 'click';
-  /**
-   * 样式类型：默认样式、卡片样式
-   * @default default
-   */
-  type?: 'default' | 'card';
+  previousMargin?: string | number;
   /**
    * 轮播切换时触发
    */
   onChange?: (current: number, context: { source: SwiperChangeSource }) => void;
+  /**
+   * 点击轮播项时触发
+   */
+  onClick?: (index: number) => void;
 }
 
 export interface SwiperNavigation {
   /**
-   * 导航器位置，位于主体的内侧或是外侧
-   * @default inside
+   * 小于这个数字不会显示导航器
    */
-  placement?: 'inside' | 'outside';
+  minShowNum?: number;
   /**
-   * 何时显示导航器的翻页按钮：始终显示、悬浮显示、永不显示
-   * @default always
+   * 页码信息展示位置
+   * @default bottom
    */
-  showSlideBtn?: 'always' | 'hover' | 'never';
+  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
   /**
-   * 导航器尺寸
-   * @default medium
+   * 是否显示两侧的控制按钮
+   * @default false
    */
-  size?: 'small' | 'medium' | 'large';
+  showControls?: boolean;
   /**
-   * 导航器类型，点状(dots)、点条状(dots-bar)、条状(bars)、分式(fraction)等
+   * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
    * @default ''
    */
   type?: SwiperNavigationType;
 }
 
-export type SwiperChangeSource = 'autoplay' | 'click' | 'hover';
+export type SwiperChangeSource = 'autoplay' | 'touch' | 'nav';
 
-export type SwiperNavigationType = 'dots' | 'dots-bar' | 'bars' | 'fraction';
+export type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction';

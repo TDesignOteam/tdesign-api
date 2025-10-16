@@ -117353,19 +117353,19 @@
       "platform_framework": [
         "1",
         "2",
-        "4",
         "8",
-        "16",
-        "32"
+        "16"
       ],
       "component": "Swiper",
       "field_category": 1,
       "field_name": "navigation",
       "field_type": [
+        "4",
         "8",
+        "32",
         "64"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "导航器全部配置",
       "field_desc_en": null,
@@ -117374,7 +117374,7 @@
       "create_time": "2021-12-15 12:58:51",
       "update_time": "2022-01-25 11:57:28",
       "event_output": null,
-      "custom_field_type": "SwiperNavigation | TNode",
+      "custom_field_type": "SwiperNavigation | TNode | Function | Boolean ",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -117387,13 +117387,13 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Angular(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Angular(Mobile)"
+        "React(Mobile)"
       ],
       "field_type_text": [
+        "Boolean",
         "Object",
+        "Function",
         "TNode"
       ]
     },
