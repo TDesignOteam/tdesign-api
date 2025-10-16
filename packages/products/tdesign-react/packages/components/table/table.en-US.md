@@ -78,7 +78,7 @@ className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProperties` | N
 refreshTable | \- | \- | required
 scrollColumnIntoView | `(colKey: string)` | \- | required
-scrollToElement | `(params: ComponentScrollToElementParams)` | \- | Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })` 。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)
+scrollToElement | `(params: ComponentScrollToElementParams)` | \- | Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)
 
 ### BaseTableCol
 
