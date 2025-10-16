@@ -55,7 +55,7 @@ title | String | '' | 标题 | N
 \- | 默认插槽，自定义步骤内容
 content | 步骤描述
 extra | 步骤条自定义内容
-icon | 图标。传入 slot 代表使用插槽，其他字符串代表使用内置图标
+icon | 图标
 title | 标题
 
 ### StepItem External Classes
