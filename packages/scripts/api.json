@@ -74113,45 +74113,6 @@
       "create_time": "2023-05-18 08:57:25",
       "update_time": "2023-05-18 08:57:25",
       "event_output": null,
-      "custom_field_type": "InfinityScroll",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1691561020,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "List",
-      "field_category": 1,
-      "field_name": "scroll",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
-      "field_desc_en": "lazy load and virtual scroll",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-08-09 06:03:40",
-      "update_time": "2023-08-09 06:03:40",
-      "event_output": null,
       "custom_field_type": "TScroll",
       "syntactic_sugar": null,
       "readonly": 1,
@@ -101887,7 +101848,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "vertical",
+      "field_default_value": "'vertical'",
       "field_enum": "",
       "field_desc_zh": "下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列",
       "field_desc_en": "layout of options in popup",
@@ -101896,7 +101857,7 @@
       "create_time": "2023-11-12 10:47:28",
       "update_time": "2023-11-12 10:47:28",
       "event_output": null,
-      "custom_field_type": "vertical | horizontal",
+      "custom_field_type": "'vertical' | 'horizontal'",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -102251,7 +102212,7 @@
       "create_time": "2022-06-09 06:46:36",
       "update_time": "2022-06-09 06:46:36",
       "event_output": null,
-      "custom_field_type": "InfinityScroll",
+      "custom_field_type": "TScroll",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
