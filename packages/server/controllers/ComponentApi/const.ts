@@ -80,8 +80,9 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
     [P_REACT_PC]: 'React(PC)',
     [P_VUE_MOBILE]: 'Vue(Mobile)',
     [P_REACT_MOBILE]: 'React(Mobile)',
-    [P_ANGULAR_PC]: 'Angular(PC)',
-    [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
+    // Angular 暂未有开发计划
+    // [P_ANGULAR_PC]: 'Angular(PC)',
+    // [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
     [P_MINIPROGRAM]: 'Miniprogram',
 };
 
