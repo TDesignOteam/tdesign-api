@@ -46992,10 +46992,10 @@
       "field_category": 2,
       "field_name": "cancel",
       "field_type": [
-        "1"
+        "32"
       ],
-      "field_default_value": "default",
-      "field_enum": "default/info/warning/danger/success",
+      "field_default_value": "",
+      "field_enum": "",
       "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
       "field_desc_en": null,
       "field_required": 0,
@@ -47017,7 +47017,7 @@
         "Vue(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Function"
       ]
     },
     {
@@ -47031,8 +47031,8 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "default",
-      "field_enum": "default/info/warning/danger/success",
+      "field_default_value": "",
+      "field_enum": "",
       "field_desc_zh": "点击右上角关闭按钮时触发",
       "field_desc_en": null,
       "field_required": 0,
@@ -47066,10 +47066,10 @@
       "field_category": 2,
       "field_name": "confirm",
       "field_type": [
-        "1"
+        "32"
       ],
-      "field_default_value": "default",
-      "field_enum": "default/info/warning/danger/success",
+      "field_default_value": "",
+      "field_enum": "",
       "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
       "field_desc_en": null,
       "field_required": 0,
@@ -47091,7 +47091,7 @@
         "Vue(PC)"
       ],
       "field_type_text": [
-        "String"
+        "Function"
       ]
     },
     {
