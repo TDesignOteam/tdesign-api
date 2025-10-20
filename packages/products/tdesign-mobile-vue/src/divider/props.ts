@@ -38,6 +38,6 @@ export default {
   },
   /** 间距大小 */
   size: {
-    type: Number,
+    type: [String, Number] as PropType<TdDividerProps['size']>,
   },
 };

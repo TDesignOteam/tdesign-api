@@ -46053,6 +46053,7 @@
       "field_category": 1,
       "field_name": "size",
       "field_type": [
+        "1",
         "2"
       ],
       "field_default_value": "",
@@ -46081,6 +46082,7 @@
         "React(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Number"
       ]
     },
