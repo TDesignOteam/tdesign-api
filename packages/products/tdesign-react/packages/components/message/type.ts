@@ -95,33 +95,24 @@ export interface MessageInstance {
 
 export type MessageMethod = (
   theme: MessageThemeList,
-  message: string | MessageOptions,
+  message: TNode | MessageOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
 export type MessageInfoOptions = Omit<MessageOptions, 'theme'>;
 
-export type MessageInfoMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageInfoMethod = (message: TNode | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
 
-export type MessageErrorMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageErrorMethod = (message: TNode | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
 
-export type MessageWarningMethod = (
-  message: string | MessageInfoOptions,
-  duration?: number,
-) => Promise<MessageInstance>;
+export type MessageWarningMethod = (message: TNode | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
 
-export type MessageSuccessMethod = (
-  message: string | MessageInfoOptions,
-  duration?: number,
-) => Promise<MessageInstance>;
+export type MessageSuccessMethod = (message: TNode | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
 
-export type MessageLoadingMethod = (
-  message: string | MessageInfoOptions,
-  duration?: number,
-) => Promise<MessageInstance>;
+export type MessageLoadingMethod = (message: TNode | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
 
 export type MessageQuestionMethod = (
-  message: string | MessageInfoOptions,
+  message: TNode | MessageInfoOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
