@@ -678,6 +678,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -689,7 +690,7 @@
       "create_time": "2020-12-25 02:42:40",
       "update_time": "2021-11-28 10:31:03",
       "event_output": null,
-      "custom_field_type": "TNode | MessageOptions",
+      "custom_field_type": "String | TNode | MessageOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -704,6 +705,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -974,6 +976,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -985,7 +988,7 @@
       "create_time": "2020-12-25 02:51:01",
       "update_time": "2021-11-28 10:31:42",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions",
+      "custom_field_type": "String | TNode | MessageInfoOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1000,6 +1003,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -1120,6 +1124,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -1131,7 +1136,7 @@
       "create_time": "2020-12-25 02:46:12",
       "update_time": "2021-11-28 10:32:33",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions【type MessageInfoOptions = Omit<MessageOptions, 'theme'>】",
+      "custom_field_type": "String | TNode | MessageInfoOptions【type MessageInfoOptions = Omit<MessageOptions, 'theme'>】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1146,6 +1151,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -1266,6 +1272,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -1277,7 +1284,7 @@
       "create_time": "2020-12-25 02:51:33",
       "update_time": "2021-11-28 10:32:50",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions",
+      "custom_field_type": "String | TNode | MessageInfoOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1292,6 +1299,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -1412,6 +1420,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -1423,7 +1432,7 @@
       "create_time": "2020-12-25 02:51:41",
       "update_time": "2021-11-28 10:33:05",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions",
+      "custom_field_type": "String | TNode | MessageInfoOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1438,6 +1447,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -1558,6 +1568,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -1569,7 +1580,7 @@
       "create_time": "2020-12-25 02:51:46",
       "update_time": "2021-11-28 10:33:23",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions",
+      "custom_field_type": "String | TNode | MessageInfoOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1584,6 +1595,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
@@ -1704,6 +1716,7 @@
       "field_category": 1,
       "field_name": "message",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -1715,7 +1728,7 @@
       "create_time": "2020-12-25 02:51:50",
       "update_time": "2021-11-28 10:33:39",
       "event_output": null,
-      "custom_field_type": "TNode | MessageInfoOptions",
+      "custom_field_type": "String | TNode | MessageInfoOptions",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -1730,6 +1743,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
