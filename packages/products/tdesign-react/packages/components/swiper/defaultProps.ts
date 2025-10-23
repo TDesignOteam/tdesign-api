@@ -9,6 +9,7 @@ export const swiperDefaultProps: TdSwiperProps = {
   autoplay: true,
   cardScale: '210/332',
   current: 0,
+  defaultCurrent: 0,
   direction: 'horizontal',
   duration: 300,
   interval: 5000,

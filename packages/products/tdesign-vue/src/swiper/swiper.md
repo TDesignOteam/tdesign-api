@@ -1,8 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
-
 ### Swiper Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -11,6 +9,7 @@ animation | String | slide | 轮播切换动画效果类型：滑动、淡入淡
 autoplay | Boolean | true | 是否自动播放 | N
 cardScale | Number | 210/332 | 卡片模式下非当前展示轮播图的缩放比例 | N
 current | Number | 0 | 当前轮播在哪一项（下标）。支持语法糖 `v-model` | N
+defaultCurrent | Number | 0 | 当前轮播在哪一项（下标）。非受控属性。TS 类型：`Number` | N
 direction | String | horizontal | 轮播滑动方向，包括横向滑动和纵向滑动两个方向。可选项：horizontal/vertical | N
 duration | Number | 300 | 滑动动画时长 | N
 height | Number | - | 当使用垂直方向滚动时的高度 | N
