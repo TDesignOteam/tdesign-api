@@ -42,7 +42,7 @@ zIndex | Number | 5000 | \- | N
 name | params | default | description
 -- | -- | -- | --
 theme | String | - | required。Typescript：`MessageThemeList`
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -52,7 +52,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -62,7 +62,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -72,7 +72,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -82,7 +82,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -92,7 +92,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
@@ -102,7 +102,7 @@ context | \- | - | Typescript：`AppContext`。[see more ts definition](https://
 
 name | params | default | description
 -- | -- | -- | --
-message | String / Object | - | required。Typescript：`String \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+message | String / Object | - | required。Typescript：`string \| TNode \| MessageInfoOptions`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | \-
 context | \- | - | Typescript：`AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
