@@ -42,8 +42,9 @@ zIndex | Number | 5000 | 消息层级 | N
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 theme | String | - | 必需。消息类型。TS 类型：`MessageThemeList`
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.info
 
@@ -51,8 +52,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts)
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.error
 
@@ -60,8 +62,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.warning
 
@@ -69,8 +72,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.success
 
@@ -78,8 +82,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.loading
 
@@ -87,8 +92,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息提醒内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息提醒内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.question
 
@@ -96,8 +102,9 @@ duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
+context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.close
 

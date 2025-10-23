@@ -94,7 +94,7 @@ export interface MessageInstance {
 
 export type MessageMethod = (
   theme: MessageThemeList,
-  message: string | MessageOptions,
+  message: string | TNode | MessageOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
@@ -102,37 +102,37 @@ export type MessageMethod = (
 export type MessageInfoOptions = Omit<MessageOptions, 'theme'>;
 
 export type MessageInfoMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageErrorMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageWarningMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageSuccessMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageLoadingMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
 
 export type MessageQuestionMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
   context?: AppContext,
 ) => Promise<MessageInstance>;
