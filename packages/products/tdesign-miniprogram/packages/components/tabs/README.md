@@ -34,7 +34,7 @@ scroll | `(scrollTop: number, isFixed: boolean)` | 页面滚动时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义选项卡内容
-middle | 自定义 `middle` 显示内容
+middle | 中间内容，介于头部和内容之间
 
 ### Tabs External Classes
 

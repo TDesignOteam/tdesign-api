@@ -36,5 +36,5 @@ palette-bar-change | `(detail: { color: ColorObject })` | 调色板控制器的�
 
 名称 | 描述
 -- | --
-footer | 自定义 `footer` 显示内容
-header | 自定义 `header` 显示内容
+footer | 底部插槽，仅在 `usePopup` 为 `true` 时有效
+header | 顶部插槽，仅在 `usePopup` 为 `true` 时有效

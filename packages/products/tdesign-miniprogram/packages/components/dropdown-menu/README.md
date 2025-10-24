@@ -69,7 +69,7 @@ reset | \- | 点击重置时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-footer | 自定义 `footer` 显示内容
+footer | 底部
 
 ### DropdownItem External Classes
 

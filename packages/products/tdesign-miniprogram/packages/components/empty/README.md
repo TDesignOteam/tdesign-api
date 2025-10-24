@@ -17,7 +17,7 @@ image | String | - | 图片地址 | N
 
 名称 | 描述
 -- | --
-action | 自定义 `action` 显示内容
+action | 操作按钮
 description | 自定义 `description` 显示内容
 image | 自定义 `image` 显示内容
 

@@ -42,9 +42,9 @@ actions | 自定义 `actions` 显示内容
 cancel-btn | 自定义 `cancel-btn` 显示内容
 confirm-btn | 自定义 `confirm-btn` 显示内容
 content | 自定义 `content` 显示内容
-middle | 自定义 `middle` 显示内容
+middle | 中间自定义内容
 title | 自定义 `title` 显示内容
-top | 自定义 `top` 显示内容
+top | 顶部自定义内容
 
 ### Dialog External Classes
 

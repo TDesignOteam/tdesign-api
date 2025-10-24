@@ -39,7 +39,7 @@ pick | `(value: Array<PickerValue>, label: string, column: number, index: number
 -- | --
 \- | 默认插槽，自定义内容
 content | 中间内容，介于头部跟内容之间
-footer | 自定义 `footer` 显示内容
+footer | 底部内容
 header | 自定义 `header` 显示内容
 
 
