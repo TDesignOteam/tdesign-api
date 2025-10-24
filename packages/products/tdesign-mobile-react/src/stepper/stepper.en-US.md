@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Stepper Props
 
 name | type | default | description | required

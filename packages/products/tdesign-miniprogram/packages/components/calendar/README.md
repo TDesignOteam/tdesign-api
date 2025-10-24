@@ -25,13 +25,6 @@ value | Number / Array | - | 当前选择的日期，不传则选用 minDate 属
 default-value | Number / Array | undefined | 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组。非受控属性。TS 类型：`number \| number[]` | N
 visible | Boolean | false | 是否显示日历；`usePopup` 为 true 时有效 | N
 
-### Calendar Slots
-
-名称 | 描述
--- | --
-confirm-btn | 确认按钮
-title | 标题
-
 ### Calendar Events
 
 名称 | 参数 | 描述
@@ -42,3 +35,10 @@ confirm | `(value: timestamp)` | 点击确认按钮时触发
 panel-change | `(detail: { year: number, month: number })` | `1.8.4`。切换月或年时触发（switch-mode 不为 none 时有效）
 scroll | `({scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY})` | `1.4.6`。滚动时触发
 select | `(value: timestamp)` | `0.28.0`。点击日期时触发
+
+### Calendar Slots
+
+名称 | 描述
+-- | --
+confirm-btn | 确认按钮
+title | 标题
