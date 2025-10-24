@@ -64,7 +64,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 导航器全部配置 */
+  /** 导航器全部配置，`true` 的话使用默认配置 */
   navigation: {
     type: [Boolean, Object, Function] as PropType<TdSwiperProps['navigation']>,
     default: true as TdSwiperProps['navigation'],

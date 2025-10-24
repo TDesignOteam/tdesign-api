@@ -16,7 +16,7 @@ duration | Number | 300 | \- | N
 height | String / Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | TNode | true | navigation config。Typescript：`SwiperNavigation \| TNode \| Boolean `。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+navigation | TNode | true | navigation all config, `true` for using default config。Typescript：`SwiperNavigation \| TNode \| Boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 nextMargin | String / Number | 0 | \- | N
 previousMargin | String / Number | 0 | \- | N
 type | String | default | options: default/card | N

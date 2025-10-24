@@ -112512,14 +112512,13 @@
       "field_category": 1,
       "field_name": "navigation",
       "field_type": [
-        "4",
         "8",
         "64"
       ],
       "field_default_value": "true",
       "field_enum": "",
       "field_desc_zh": "导航器全部配置",
-      "field_desc_en": "navigation config",
+      "field_desc_en": "navigation all config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-12-15 12:58:51",
@@ -112540,7 +112539,6 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean",
         "Object",
         "TNode"
       ]
@@ -112560,8 +112558,8 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "导航器全部配置，true 的话使用默认配置",
-      "field_desc_en": null,
+      "field_desc_zh": "导航器全部配置，`true` 的话使用默认配置",
+      "field_desc_en": "navigation all config, `true` for using default config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2023-01-05 02:11:32",
@@ -112602,8 +112600,8 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "导航器全部配置",
-      "field_desc_en": "navigation config",
+      "field_desc_zh": "导航器全部配置，`true` 的话使用默认配置",
+      "field_desc_en": "navigation all config, `true` for using default config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2025-10-24 08:51:52",

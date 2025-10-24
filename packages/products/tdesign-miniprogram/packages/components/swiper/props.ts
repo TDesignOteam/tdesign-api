@@ -59,7 +59,7 @@ const props: TdSwiperProps = {
     type: Boolean,
     value: true,
   },
-  /** 导航器全部配置，true 的话使用默认配置 */
+  /** 导航器全部配置，`true` 的话使用默认配置 */
   navigation: {
     type: null,
     value: true,
