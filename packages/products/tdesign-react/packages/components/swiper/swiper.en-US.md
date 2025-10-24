@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Swiper Props
 
 name | type | default | description | required
@@ -12,6 +11,7 @@ animation | String | slide | options: slide/fade | N
 autoplay | Boolean | true | \- | N
 cardScale | Number | 210/332 | \- | N
 current | Number | 0 | \- | N
+defaultCurrent | Number | 0 | Which item is currently in the carousel (subscript). Uncontrolled property。Typescript：`Number` | N
 direction | String | horizontal | options: horizontal/vertical | N
 duration | Number | 300 | \- | N
 height | Number | - | \- | N

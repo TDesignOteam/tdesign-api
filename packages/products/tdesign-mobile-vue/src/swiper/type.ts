@@ -28,6 +28,11 @@ export interface TdSwiperProps {
    */
   defaultCurrent?: number;
   /**
+   * 当前轮播在哪一项（下标）
+   * @default 0
+   */
+  modelValue?: number;
+  /**
    * 当前轮播在哪一项（下标）。非受控属性
    * @default 0
    */
@@ -43,7 +48,7 @@ export interface TdSwiperProps {
    */
   duration?: number;
   /**
-   * 当使用垂直方向滚动时的高度
+   * 轮播的高度
    */
   height?: string | number;
   /**
@@ -61,20 +66,15 @@ export interface TdSwiperProps {
    */
   navigation?: SwiperNavigation | TNode;
   /**
-   * 后边距，可用于露出后一项的一小部分。默认单位 `px`
+   * 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px`
    * @default 0
    */
   nextMargin?: string | number;
   /**
-   * 前边距，可用于露出前一项的一小部分。默认单位 `px`
+   * 【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px`
    * @default 0
    */
   previousMargin?: string | number;
-  /**
-   * 样式类型：默认样式、卡片样式
-   * @default default
-   */
-  type?: 'default' | 'card';
   /**
    * 轮播切换时触发
    */
@@ -95,11 +95,6 @@ export interface SwiperNavigation {
    * @default bottom
    */
   paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
-  /**
-   * 导航器位置，位于主体的内侧或是外侧
-   * @default inside
-   */
-  placement?: 'inside' | 'outside';
   /**
    * 是否显示两侧的控制按钮
    * @default false

@@ -33,6 +33,11 @@ export interface TdSwiperProps {
    */
   defaultCurrent?: number;
   /**
+   * 当前轮播在哪一项（下标）。非受控属性
+   * @default 0
+   */
+  defaultCurrent?: Number;
+  /**
    * 轮播滑动方向，包括横向滑动和纵向滑动两个方向
    * @default horizontal
    */
