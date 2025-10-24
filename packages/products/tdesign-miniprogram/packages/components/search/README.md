@@ -37,14 +37,6 @@ shape | String | 'square' | 搜索框形状。可选项：square/round | N
 type | String | 'text' | 拉起键盘的类型。可选项：text/number/idcard/digit/nickname | N
 value | String | '' | 值 | N
 
-### Search Slots
-
-名称 | 描述
--- | --
-action | 自定义右侧操作按钮文字
-left-icon | 左侧图标
-right-icon | 已废弃。右侧图标
-
 ### Search Events
 
 名称 | 参数 | 描述
@@ -55,6 +47,14 @@ change | `({ value: string })` | 值发生变化时触发
 clear | `({ value: string })` | 点击清除时触发
 focus | `({ value: string })` | 聚焦时触发
 submit | `({ value: string })` | 提交时触发
+
+### Search Slots
+
+名称 | 描述
+-- | --
+action | 自定义右侧操作按钮文字
+left-icon | 左侧图标
+right-icon | 已废弃。右侧图标
 
 ### Search External Classes
 

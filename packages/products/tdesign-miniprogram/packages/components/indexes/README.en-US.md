@@ -37,6 +37,12 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 index | String / Number | - | \- | N
 
+### IndexesAnchor Slots
+
+name | Description
+-- | --
+\- | \-
+
 ### IndexesAnchor External Classes
 
 className | Description
@@ -44,9 +50,3 @@ className | Description
 t-class | class name of root node
 t-class-sidebar | \-
 t-class-sidebar-item | \-
-
-### IndexesAnchor Slots
-
-name | Description
--- | --
-\- | \-

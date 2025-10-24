@@ -37,6 +37,12 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 index | String / Number | - | 索引字符 | N
 
+### IndexesAnchor Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+
 ### IndexesAnchor External Classes
 
 类名 | 描述
@@ -44,9 +50,3 @@ index | String / Number | - | 索引字符 | N
 t-class | 根节点样式类
 t-class-sidebar | 侧边栏样式类
 t-class-sidebar-item | 侧边栏选项样式类
-
-### IndexesAnchor Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容

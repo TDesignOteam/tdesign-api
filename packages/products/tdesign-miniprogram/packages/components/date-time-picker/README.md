@@ -29,13 +29,6 @@ value | String / Number | - | 选中值。TS 类型：`DateValue` `type DateValu
 default-value | String / Number | undefined | 选中值。非受控属性。TS 类型：`DateValue` `type DateValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 visible | Boolean | false | 是否显示 | N
 
-### DateTimePicker Slots
-
-名称 | 描述
--- | --
-footer | 底部内容
-header | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
-
 ### DateTimePicker Events
 
 名称 | 参数 | 描述
@@ -45,6 +38,13 @@ change | `(value: DateValue)` | 确认按钮点击时触发
 close | `(trigger: TriggerSource)` | `1.0.1`。关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/>
 confirm | `(value: DateValue)` | `1.0.1`。确认按钮点击时触发
 pick | `(value: DateValue)` | 选中值发生变化时触发
+
+### DateTimePicker Slots
+
+名称 | 描述
+-- | --
+footer | 底部内容
+header | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
 
 ### DateTimePicker External Classes
 

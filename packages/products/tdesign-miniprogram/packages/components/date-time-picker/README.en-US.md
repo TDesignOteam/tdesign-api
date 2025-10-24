@@ -29,13 +29,6 @@ value | String / Number | - | Typescript：`DateValue` `type DateValue = string 
 default-value | String / Number | undefined | uncontrolled property。Typescript：`DateValue` `type DateValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts) | N
 visible | Boolean | false | \- | N
 
-### DateTimePicker Slots
-
-name | Description
--- | --
-footer | \-
-header | \-
-
 ### DateTimePicker Events
 
 name | params | description
@@ -45,6 +38,13 @@ change | `(value: DateValue)` | \-
 close | `(trigger: TriggerSource)` | `1.0.1`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/date-time-picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/>
 confirm | `(value: DateValue)` | `1.0.1`
 pick | `(value: DateValue)` | \-
+
+### DateTimePicker Slots
+
+name | Description
+-- | --
+footer | \-
+header | \-
 
 ### DateTimePicker External Classes
 

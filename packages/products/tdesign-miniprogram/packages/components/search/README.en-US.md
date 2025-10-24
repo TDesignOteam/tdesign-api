@@ -37,14 +37,6 @@ shape | String | 'square' | options: square/round | N
 type | String | 'text' | options: text/number/idcard/digit/nickname | N
 value | String | '' | \- | N
 
-### Search Slots
-
-name | Description
--- | --
-action | \-
-left-icon | \-
-right-icon | `deprecated`
-
 ### Search Events
 
 name | params | description
@@ -55,6 +47,14 @@ change | `({ value: string })` | \-
 clear | `({ value: string })` | \-
 focus | `({ value: string })` | \-
 submit | `({ value: string })` | \-
+
+### Search Slots
+
+name | Description
+-- | --
+action | \-
+left-icon | \-
+right-icon | `deprecated`
 
 ### Search External Classes
 
