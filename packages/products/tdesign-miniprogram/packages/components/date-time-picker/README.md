@@ -43,7 +43,7 @@ pick | `(value: DateValue)` | 选中值发生变化时触发
 
 名称 | 描述
 -- | --
-footer | 自定义 `footer` 显示内容
+footer | 底部内容
 header | 自定义 `header` 显示内容
 
 ### DateTimePicker External Classes
