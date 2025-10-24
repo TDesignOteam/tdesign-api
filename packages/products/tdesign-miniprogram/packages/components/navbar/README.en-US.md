@@ -22,14 +22,6 @@ title | String | - | page title | N
 title-max-length | Number | - | \- | N
 visible | Boolean | true | \- | N
 
-### Navbar Slots
-
-name | Description
--- | --
-capsule | \-
-left | `0.26.0`
-title | page title
-
 ### Navbar Events
 
 name | params | description
@@ -39,6 +31,14 @@ fail | \- | \-
 go-back | \- | \-
 go-home | \- | `deprecated`
 success | \- | \-
+
+### Navbar Slots
+
+name | Description
+-- | --
+capsule | \-
+left | `0.26.0`
+title | page title
 
 ### Navbar External Classes
 

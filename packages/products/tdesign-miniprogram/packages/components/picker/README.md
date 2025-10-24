@@ -23,15 +23,6 @@ value | Array | - | 选中值。TS 类型：`Array<PickerValue>` `type PickerVal
 default-value | Array | undefined | 选中值。非受控属性。TS 类型：`Array<PickerValue>` `type PickerValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker/type.ts) | N
 visible | Boolean | false | 是否显示 | N
 
-### Picker Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容
-content | 中间内容，介于头部跟内容之间
-footer | 底部内容
-header | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
-
 ### Picker Events
 
 名称 | 参数 | 描述
@@ -41,6 +32,15 @@ change | `(value: Array<PickerValue>, label: string, columns: Array<{ column: nu
 close | `(trigger: TriggerSource)` | `1.0.1`。关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker/type.ts)。<br/>`type TriggerSource = 'overlay' \| 'cancel-btn' \| 'confirm-btn'`<br/>
 confirm | `(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )` | 点击确认按钮时触发
 pick | `(value: Array<PickerValue>, label: string, column: number, index: number)` | 任何一列选中都会触发，不同的列参数不同。`column` 表示第几列变化，`index` 表示变化那一列的选中项下标
+
+### Picker Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容
+content | 中间内容，介于头部跟内容之间
+footer | 底部内容
+header | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
 
 
 ### PickerItem Props

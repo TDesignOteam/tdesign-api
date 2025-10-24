@@ -21,13 +21,6 @@ theme | String | line | options: line/tag/card | N
 value | String / Number | - | Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tabs/type.ts) | N
 default-value | String / Number | undefined | uncontrolled property。Typescript：`TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tabs/type.ts) | N
 
-### Tabs Slots
-
-name | Description
--- | --
-\- | \-
-middle | \-
-
 ### Tabs Events
 
 name | params | description
@@ -35,6 +28,13 @@ name | params | description
 change | `(value: TabValue, label: string)` | \-
 click | `(value: TabValue, label: string)` | \-
 scroll | `(scrollTop: number, isFixed: boolean)` | \-
+
+### Tabs Slots
+
+name | Description
+-- | --
+\- | \-
+middle | \-
 
 ### Tabs External Classes
 

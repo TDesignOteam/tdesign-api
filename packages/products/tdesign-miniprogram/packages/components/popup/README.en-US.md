@@ -22,6 +22,12 @@ visible | Boolean | - | Typescript：`boolean` | N
 default-visible | Boolean | undefined | uncontrolled property。Typescript：`boolean` | N
 z-index | Number | 11500 | \- | N
 
+### Popup Events
+
+name | params | description
+-- | -- | --
+visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
+
 ### Popup Slots
 
 name | Description
@@ -29,12 +35,6 @@ name | Description
 \- | \-
 close-btn | \-
 content | \-
-
-### Popup Events
-
-name | params | description
--- | -- | --
-visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
 
 ### Popup External Classes
 

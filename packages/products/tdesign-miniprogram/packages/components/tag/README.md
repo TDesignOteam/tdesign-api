@@ -18,6 +18,13 @@ size | String | medium | 标签尺寸。可选项：small/medium/large/extra-lar
 theme | String | default | 组件风格，用于描述组件不同的应用场景。可选项：default/primary/warning/danger/success | N
 variant | String | dark | 标签风格变体。可选项：dark/light/outline/light-outline | N
 
+### Tag Events
+
+名称 | 参数 | 描述
+-- | -- | --
+click | - | 点击时触发
+close | - | 如果关闭按钮存在，点击关闭按钮时触发
+
 ### Tag Slots
 
 名称 | 描述
@@ -25,13 +32,6 @@ variant | String | dark | 标签风格变体。可选项：dark/light/outline/li
 \- | 默认插槽，自定义内容区域内容
 closable | 标签可关闭内容区域
 icon | 标签中的图标
-
-### Tag Events
-
-名称 | 参数 | 描述
--- | -- | --
-click | - | 点击时触发
-close | - | 如果关闭按钮存在，点击关闭按钮时触发
 
 ### Tag External Classes
 
@@ -56,14 +56,6 @@ shape | String | square | 标签类型，有三种：方形、圆角方形、标
 size | String | medium | 标签尺寸。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 variant | String | dark | `0.26.0`。标签风格变体。可选项：dark/light/outline/light-outline | N
 
-### CheckTag Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，作用同 `content` 插槽
-content | 自定义内容区域
-icon | 标签区域
-
 ### CheckTag Events
 
 名称 | 参数 | 描述
@@ -71,6 +63,14 @@ icon | 标签区域
 change | `(checked: boolean)` | 状态切换时触发
 click | - | 点击标签时触发
 close | \- | 如果关闭按钮存在，点击关闭按钮时触发
+
+### CheckTag Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，作用同 `content` 插槽
+content | 自定义内容区域
+icon | 标签区域
 
 ### CheckTag External Classes
 

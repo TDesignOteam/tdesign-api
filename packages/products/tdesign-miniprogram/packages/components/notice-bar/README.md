@@ -20,6 +20,13 @@ theme | String | info | 内置主题。可选项：info/success/warning/error | 
 visible | Boolean | false | 显示/隐藏 | N
 default-visible | Boolean | undefined | 显示/隐藏。非受控属性 | N
 
+### NoticeBar Events
+
+名称 | 参数 | 描述
+-- | -- | --
+change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | 当 `direction="vertical"` 时轮播切换时触发
+click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+
 ### NoticeBar Slots
 
 名称 | 描述
@@ -28,13 +35,6 @@ content | 文本内容
 operation | 右侧额外信息
 prefix-icon | 前缀图标
 suffix-icon | 后缀图标
-
-### NoticeBar Events
-
-名称 | 参数 | 描述
--- | -- | --
-change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | 当 `direction="vertical"` 时轮播切换时触发
-click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
 
 ### NoticeBar External Classes
 

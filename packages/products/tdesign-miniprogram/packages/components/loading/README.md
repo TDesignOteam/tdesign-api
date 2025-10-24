@@ -28,7 +28,7 @@ theme | String | circular | 加载组件类型。可选项：circular/spinner/do
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `text` 插槽
-indicator | 加载指示符
+indicator | 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符
 text | 加载提示文案
 
 ### Loading External Classes

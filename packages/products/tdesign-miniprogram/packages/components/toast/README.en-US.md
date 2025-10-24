@@ -20,19 +20,19 @@ show-overlay | Boolean | false | \- | N
 theme | String | - | options: loading/success/warning/error | N
 using-custom-navbar | Boolean | false | \- | N
 
-### Toast Slots
-
-name | Description
--- | --
-icon | \-
-message | \-
-
 ### Toast Events
 
 name | params | description
 -- | -- | --
 close | \- | \-
 destroy | \- | \-
+
+### Toast Slots
+
+name | Description
+-- | --
+icon | \-
+message | \-
 
 ### Toast External Classes
 

@@ -22,14 +22,6 @@ title | String | - | 页面标题 | N
 title-max-length | Number | - | 标题文字最大长度，超出的范围使用 `...` 表示 | N
 visible | Boolean | true | 是否显示 | N
 
-### Navbar Slots
-
-名称 | 描述
--- | --
-capsule | 左侧胶囊区域
-left | `0.26.0`。左侧内容区域
-title | 页面标题
-
 ### Navbar Events
 
 名称 | 参数 | 描述
@@ -39,6 +31,14 @@ fail | \- | navigateBack 执行失败后触发
 go-back | \- | 点击左侧箭头时触发
 go-home | \- | 已废弃。点击 Home 触发
 success | \- | navigateBack 执行成功后触发
+
+### Navbar Slots
+
+名称 | 描述
+-- | --
+capsule | 左侧胶囊区域
+left | `0.26.0`。左侧内容区域
+title | 页面标题
 
 ### Navbar External Classes
 

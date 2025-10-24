@@ -26,6 +26,15 @@ using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | - | 控制对话框是否显示 | N
 z-index | Number | 11500 | 对话框层级，Web 侧样式默认为 2500，移动端样式默认 2500，小程序样式默认为 11500 | N
 
+### Dialog Events
+
+名称 | 参数 | 描述
+-- | -- | --
+cancel | - | 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件
+close | `(trigger: DialogEventSource)` | 关闭事件，点击 取消按钮 或 点击蒙层 时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
+confirm | - | 如果“确认”按钮存在，则点击“确认”按钮时触发
+overlay-click | - | 如果蒙层存在，点击蒙层时触发
+
 ### Dialog Slots
 
 名称 | 描述
@@ -37,15 +46,6 @@ content | 内容
 middle | 中间自定义内容
 title | 标题
 top | 顶部自定义内容
-
-### Dialog Events
-
-名称 | 参数 | 描述
--- | -- | --
-cancel | - | 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件
-close | `(trigger: DialogEventSource)` | 关闭事件，点击 取消按钮 或 点击蒙层 时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
-confirm | - | 如果“确认”按钮存在，则点击“确认”按钮时触发
-overlay-click | - | 如果蒙层存在，点击蒙层时触发
 
 ### Dialog External Classes
 

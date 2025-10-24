@@ -54,17 +54,6 @@ type | String | text | options: text/number/idcard/digit/safe-password/password/
 value | String / Number | - | input value。Typescript：`InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/input/type.ts) | N
 default-value | String / Number | undefined | input value。uncontrolled property。Typescript：`InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/input/type.ts) | N
 
-### Input Slots
-
-name | Description
--- | --
-extra | `1.9.1`
-label | text on the left of input
-prefix-icon | \-
-suffix | suffix content before suffixIcon
-suffix-icon | \-
-tips | \-
-
 ### Input Events
 
 name | params | description
@@ -78,6 +67,17 @@ focus | `(value: InputValue)` | \-
 keyboardheightchange | `(height: number, duration: number)` | \-
 nicknamereview | `(pass: boolean, timeout: boolean)` | \-
 validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | trigger on text length being over max length or max character
+
+### Input Slots
+
+name | Description
+-- | --
+extra | `1.9.1`
+label | text on the left of input
+prefix-icon | \-
+suffix | suffix content before suffixIcon
+suffix-icon | \-
+tips | \-
 
 ### Input External Classes
 

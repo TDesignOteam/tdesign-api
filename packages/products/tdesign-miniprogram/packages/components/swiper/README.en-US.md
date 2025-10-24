@@ -26,12 +26,6 @@ pagination-position | String | bottom | options: top-left/top/top-right/bottom-l
 previous-margin | String / Number | 0 | `0.32.0` | N
 snap-to-edge | Boolean | false | `0.32.0` | N
 
-### Swiper Slots
-
-name | Description
--- | --
-navigation | \-
-
 ### Swiper Events
 
 name | params | description
@@ -40,6 +34,12 @@ animationfinish | `(current: number, source: SwiperChangeSource)` | `1.11.0`。�
 change | `(current: number, source: SwiperChangeSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | `0.34.0`
 image-load | `(index: number)` | `1.1.4`
+
+### Swiper Slots
+
+name | Description
+-- | --
+navigation | \-
 
 ### Swiper External Classes
 

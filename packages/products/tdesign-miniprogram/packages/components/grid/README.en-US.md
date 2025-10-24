@@ -16,17 +16,17 @@ gutter | Number | - | \- | N
 hover | Boolean | false | \- | N
 theme | String | default | options: default/card | N
 
-### Grid External Classes
-
-className | Description
--- | --
-t-class | \-
-
 ### Grid Slots
 
 name | Description
 -- | --
 \- | \-
+
+### Grid External Classes
+
+className | Description
+-- | --
+t-class | \-
 
 
 ### GridItem Props
@@ -36,7 +36,6 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 badge-props | Object | null | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/grid-item/type.ts) | N
-click | String | - | \- | N
 description | String | - | \- | N
 icon | String / Object | - | \- | N
 image | String | - | \- | N
@@ -45,6 +44,12 @@ jump-type | String | navigate-to | options: redirect-to/switch-tab/relaunch/navi
 layout | String | vertical | options: vertical/horizontal | N
 text | String | - | \- | N
 url | String | - | \- | N
+
+### GridItem Events
+
+name | params | description
+-- | -- | --
+click | \- | \-
 
 ### GridItem Slots
 

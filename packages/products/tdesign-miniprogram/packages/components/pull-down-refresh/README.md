@@ -27,13 +27,6 @@ using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 value | Boolean | false | 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 | N
 default-value | Boolean | undefined | 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态。非受控属性 | N
 
-### PullDownRefresh Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容
-header | `1.2.10`。头部
-
 ### PullDownRefresh Events
 
 名称 | 参数 | 描述
@@ -45,6 +38,13 @@ dragstart | `(scrollTop: number, scrollLeft: number)` | `1.2.10`。滑动开始�
 refresh | \- | 结束下拉时触发
 scrolltolower | \- | 滚动到页面底部时触发
 timeout | \- | 刷新超时触发
+
+### PullDownRefresh Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+header | `1.2.10`。头部
 
 ### PullDownRefresh External Classes
 

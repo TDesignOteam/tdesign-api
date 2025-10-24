@@ -26,6 +26,12 @@ placement | String | left | options: left/right | N
 readonly | Boolean | undefined | \- | N
 value | String / Number / Boolean | - | value of checkbox。Typescript：`string \| number \| boolean` | N
 
+### Checkbox Events
+
+name | params | description
+-- | -- | --
+change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | \-
+
 ### Checkbox Slots
 
 name | Description
@@ -33,12 +39,6 @@ name | Description
 \- | \-
 content | \-
 label | \-
-
-### Checkbox Events
-
-name | params | description
--- | -- | --
-change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | \-
 
 ### Checkbox External Classes
 

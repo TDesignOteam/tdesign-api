@@ -37,14 +37,6 @@ theme | String | default | button theme。options: default/primary/danger/light 
 type | String | - | type of button element, same as formType of Miniprogram。options: submit/reset | N
 variant | String | base | variant of button。options: base/outline/dashed/text | N
 
-### Button Slots
-
-name | Description
--- | --
-\- | \-
-content | button's children elements
-suffix | \-
-
 ### Button Events
 
 name | params | description
@@ -61,6 +53,14 @@ getuserinfo | \- | \-
 launchapp | \- | \-
 opensetting | \- | \-
 tap | `event` | \-
+
+### Button Slots
+
+name | Description
+-- | --
+\- | \-
+content | button's children elements
+suffix | \-
 
 ### Button External Classes
 

@@ -22,17 +22,17 @@ name | params | description
 -- | -- | --
 change | `({current: string \| number, previous: string \| number})` | \-
 
-### Steps External Classes
-
-className | Description
--- | --
-t-class | \-
-
 ### Steps Slots
 
 name | Description
 -- | --
 \- | \-
+
+### Steps External Classes
+
+className | Description
+-- | --
+t-class | \-
 
 
 ### StepItem Props

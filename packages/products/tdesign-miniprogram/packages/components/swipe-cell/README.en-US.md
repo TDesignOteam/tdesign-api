@@ -14,14 +14,6 @@ left | Array | - | Typescript：`Array<SwipeActionItem>` | N
 opened | Boolean / Array | false | Typescript：`boolean \| Array<boolean>` | N
 right | Array | - | Typescript：`Array<SwipeActionItem>` `interface SwipeActionItem {text?: string; icon?: string \| object, className?: string; style?: string; onClick?: () => void; [key: string]: any }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swipe-cell/type.ts) | N
 
-### SwipeCell Slots
-
-name | Description
--- | --
-\- | \-
-left | \-
-right | \-
-
 ### SwipeCell Events
 
 name | params | description
@@ -29,3 +21,11 @@ name | params | description
 click | `(action: SwipeActionItem, source: SwipeSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swipe-cell/type.ts)。<br/>`type SwipeSource = 'left' \| 'right'`<br/>
 dragend | \- | \-
 dragstart | \- | \-
+
+### SwipeCell Slots
+
+name | Description
+-- | --
+\- | \-
+left | \-
+right | \-

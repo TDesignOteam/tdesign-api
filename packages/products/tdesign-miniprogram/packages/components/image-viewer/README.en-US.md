@@ -20,13 +20,6 @@ using-custom-navbar | Boolean | false | `v1.1.4` | N
 visible | Boolean | false | hide or show image viewer | N
 default-visible | Boolean | undefined | hide or show image viewer。uncontrolled property | N
 
-### ImageViewer Slots
-
-name | Description
--- | --
-close-btn | \-
-delete-btn | \-
-
 ### ImageViewer Events
 
 name | params | description
@@ -34,3 +27,10 @@ name | params | description
 change | `(index: number)` | \-
 close | `(trigger: 'overlay' \| 'button', visible: Boolean, index: Number)` | \-
 delete | `(index: number)` | \-
+
+### ImageViewer Slots
+
+name | Description
+-- | --
+close-btn | \-
+delete-btn | \-

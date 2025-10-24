@@ -54,17 +54,6 @@ type | String | text | 输入框类型。可选项：text/number/idcard/digit/sa
 value | String / Number | - | 输入框的值。TS 类型：`InputValue` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/input/type.ts) | N
 default-value | String / Number | undefined | 输入框的值。非受控属性。TS 类型：`InputValue` `type InputValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/input/type.ts) | N
 
-### Input Slots
-
-名称 | 描述
--- | --
-extra | `1.9.1`。右侧额外内容
-label | 左侧文本
-prefix-icon | 组件前置图标
-suffix | 后置图标前的后置内容
-suffix-icon | 后置文本图标
-tips | 输入框下方提示内容
-
 ### Input Events
 
 名称 | 参数 | 描述
@@ -78,6 +67,17 @@ focus | `(value: InputValue)` | 获得焦点时触发
 keyboardheightchange | `(height: number, duration: number)` | 键盘高度发生变化的时候触发此事件
 nicknamereview | `(pass: boolean, timeout: boolean)` | 用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效
 validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数超出限制时触发
+
+### Input Slots
+
+名称 | 描述
+-- | --
+extra | `1.9.1`。右侧额外内容
+label | 左侧文本
+prefix-icon | 组件前置图标
+suffix | 后置图标前的后置内容
+suffix-icon | 后置文本图标
+tips | 输入框下方提示内容
 
 ### Input External Classes
 

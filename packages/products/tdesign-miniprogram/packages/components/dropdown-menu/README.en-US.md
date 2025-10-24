@@ -22,6 +22,12 @@ name | params | description
 close | \- | \-
 open | \- | \-
 
+### DropdownMenu Slots
+
+name | Description
+-- | --
+\- | \-
+
 ### DropdownMenu External Classes
 
 className | Description
@@ -30,12 +36,6 @@ t-class | \-
 t-class-icon | \-
 t-class-item | \-
 t-class-label | \-
-
-### DropdownMenu Slots
-
-name | Description
--- | --
-\- | \-
 
 
 ### DropdownItem Props
@@ -56,13 +56,6 @@ placement | String | left | options: left/right | N
 value | String / Number / Array | undefined | Typescript：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 default-value | String / Number / Array | undefined | uncontrolled property。Typescript：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 
-### DropdownItem Slots
-
-name | Description
--- | --
-\- | \-
-footer | \-
-
 ### DropdownItem Events
 
 name | params | description
@@ -71,6 +64,13 @@ change | `(value: DropdownValue)` | \-
 close | \- | \-
 confirm | `(value: DropdownValue)` | \-
 reset | \- | \-
+
+### DropdownItem Slots
+
+name | Description
+-- | --
+\- | \-
+footer | \-
 
 ### DropdownItem External Classes
 

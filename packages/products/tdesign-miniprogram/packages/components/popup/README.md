@@ -22,19 +22,19 @@ visible | Boolean | - | 是否显示浮层。TS 类型：`boolean` | N
 default-visible | Boolean | undefined | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
 z-index | Number | 11500 | 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500 | N
 
-### Popup Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，作用同 `content` 插槽
-close-btn | 自定义关闭按钮
-content | 浮层里面的内容
-
 ### Popup Events
 
 名称 | 参数 | 描述
 -- | -- | --
 visible-change | `(visible: boolean, trigger: PopupSource) ` | 当浮层隐藏或显示时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
+
+### Popup Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，作用同 `content` 插槽
+close-btn | 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮
+content | 浮层里面的内容
 
 ### Popup External Classes
 

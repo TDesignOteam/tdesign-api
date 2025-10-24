@@ -20,13 +20,6 @@ using-custom-navbar | Boolean | false | `v1.1.4`。是否使用了自定义导�
 visible | Boolean | false | 隐藏/显示预览 | N
 default-visible | Boolean | undefined | 隐藏/显示预览。非受控属性 | N
 
-### ImageViewer Slots
-
-名称 | 描述
--- | --
-close-btn | 关闭操作
-delete-btn | 删除操作
-
 ### ImageViewer Events
 
 名称 | 参数 | 描述
@@ -34,3 +27,10 @@ delete-btn | 删除操作
 change | `(index: number)` | 翻页时回调
 close | `(trigger: 'overlay' \| 'button', visible: Boolean, index: Number)` | 点击操作按钮button或者overlay时触发
 delete | `(index: number)` | 点击删除操作按钮时触发
+
+### ImageViewer Slots
+
+名称 | 描述
+-- | --
+close-btn | 关闭操作
+delete-btn | 删除操作

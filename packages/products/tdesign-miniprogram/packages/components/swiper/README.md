@@ -26,12 +26,6 @@ pagination-position | String | bottom | 页码信息展示位置。可选项：t
 previous-margin | String / Number | 0 | `0.32.0`。前边距，可用于露出前一项的一小部分。默认单位 `px` | N
 snap-to-edge | Boolean | false | `0.32.0`。当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素 | N
 
-### Swiper Slots
-
-名称 | 描述
--- | --
-navigation | 导航器全部配置
-
 ### Swiper Events
 
 名称 | 参数 | 描述
@@ -40,6 +34,12 @@ animationfinish | `(current: number, source: SwiperChangeSource)` | `1.11.0`。�
 change | `(current: number, source: SwiperChangeSource)` | 轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | `0.34.0`。点击轮播项时触发
 image-load | `(index: number)` | `1.1.4`。图片加载时触发
+
+### Swiper Slots
+
+名称 | 描述
+-- | --
+navigation | 导航器全部配置
 
 ### Swiper External Classes
 

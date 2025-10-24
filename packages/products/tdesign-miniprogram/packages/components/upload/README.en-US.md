@@ -28,12 +28,6 @@ size-limit | Number / Object | - | files size limit。Typescript：`number \| Si
 source | String | media | options: media/messageFile | N
 transition | Object | { backTransition: true, duration: 300, timingFunction: 'ease' } | Typescript：`Transition` `interface Transition { backTransition?: boolean, duration?: number, timingFunction?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/upload/type.ts) | N
 
-### Upload Slots
-
-name | Description
--- | --
-add-content | \-
-
 ### Upload Events
 
 name | params | description
@@ -46,3 +40,9 @@ fail | \- | \-
 remove | `(index: number; file: UploadFile)` | \-
 select-change | `(files: MediaContext[]; currentSelectedFiles: MediaContext[])` | \-
 success | `(files: MediaContext)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/upload/type.ts)。<br/>`type MediaContext = VideoContext[] \| ImageContext[]`<br/><br/>`interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }`<br/><br/>`interface ImageContext { name: string; type: string; url: string;  size: number; width: number; height: number; progress: number  }`<br/>
+
+### Upload Slots
+
+name | Description
+-- | --
+add-content | \-

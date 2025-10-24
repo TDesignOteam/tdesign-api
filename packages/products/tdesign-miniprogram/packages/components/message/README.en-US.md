@@ -25,6 +25,15 @@ visible | Boolean | false | \- | N
 default-visible | Boolean | undefined | uncontrolled property | N
 z-index | Number | 15000 | \- | N
 
+### Message Events
+
+name | params | description
+-- | -- | --
+action-btn-click | - | \-
+close-btn-click | - | \-
+duration-end | \- | \-
+link-click | - | \-
+
 ### Message Slots
 
 name | Description
@@ -35,15 +44,6 @@ close-btn | \-
 content | \-
 icon | \-
 link | \-
-
-### Message Events
-
-name | params | description
--- | -- | --
-action-btn-click | - | \-
-close-btn-click | - | \-
-duration-end | \- | \-
-link-click | - | \-
 
 ### Message External Classes
 

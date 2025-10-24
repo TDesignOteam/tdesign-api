@@ -18,19 +18,19 @@ split-with-unit | Boolean | false | `0.5.1`。使用时间单位分割 | N
 theme | String | 'default' | `0.5.1`。倒计时风格。可选项：default/round/square | N
 time | Number | 0 | 必需。倒计时时长，单位毫秒 | Y
 
-### CountDown Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，作用同 `content` 插槽
-content | 最终倒计时的展示内容，值为'default'时使用默认的格式，否则使用自定义样式插槽
-
 ### CountDown Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(time: TimeData)` | 时间变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
 finish | \- | 倒计时结束时触发
+
+### CountDown Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，作用同 `content` 插槽
+content | 最终倒计时的展示内容，值为'default'时使用默认的格式，否则使用自定义样式插槽
 
 ### CountDown External Classes
 

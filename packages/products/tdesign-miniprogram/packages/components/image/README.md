@@ -21,19 +21,19 @@ t-id | String | - | `1.2.10`。图片标签id | N
 webp | Boolean | false | 默认不解析 webP 格式，只支持网络资源 | N
 width | String / Number | - | 宽度，默认单位为`px` | N
 
-### Image Slots
-
-名称 | 描述
--- | --
-error | 加载失败时显示的内容
-loading | 加载态内容
-
 ### Image Events
 
 名称 | 参数 | 描述
 -- | -- | --
 error | - | 图片加载失败时触发。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
 load | - | 图片加载完成时触发。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+
+### Image Slots
+
+名称 | 描述
+-- | --
+error | 自定义 `error` 显示内容
+loading | 自定义 `loading` 显示内容
 
 ### Image External Classes
 

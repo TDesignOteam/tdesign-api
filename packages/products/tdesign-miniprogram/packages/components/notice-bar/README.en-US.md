@@ -20,6 +20,13 @@ theme | String | info | options: info/success/warning/error | N
 visible | Boolean | false | \- | N
 default-visible | Boolean | undefined | uncontrolled property | N
 
+### NoticeBar Events
+
+name | params | description
+-- | -- | --
+change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
+click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+
 ### NoticeBar Slots
 
 name | Description
@@ -28,13 +35,6 @@ content | \-
 operation | \-
 prefix-icon | \-
 suffix-icon | \-
-
-### NoticeBar Events
-
-name | params | description
--- | -- | --
-change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
-click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
 
 ### NoticeBar External Classes
 

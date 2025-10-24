@@ -24,6 +24,12 @@ placement | String | - | 复选框和内容相对位置。优先级高于 RadioG
 readonly | Boolean | undefined | `1.8.6`。只读状态 | N
 value | String / Number / Boolean | false | 单选按钮的值。TS 类型：`T` `type RadioValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/radio/type.ts) | N
 
+### Radio Events
+
+名称 | 参数 | 描述
+-- | -- | --
+change | `(checked: boolean)` | 值变化时触发
+
 ### Radio Slots
 
 名称 | 描述
@@ -32,12 +38,6 @@ value | String / Number / Boolean | false | 单选按钮的值。TS 类型：`T`
 content | 单选内容
 icon | 自定义选中图标和非选中图标
 label | 主文案
-
-### Radio Events
-
-名称 | 参数 | 描述
--- | -- | --
-change | `(checked: boolean)` | 值变化时触发
 
 ### Radio External Classes
 

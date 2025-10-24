@@ -21,19 +21,19 @@ t-id | String | - | `1.2.10`。image tag id | N
 webp | Boolean | false | \- | N
 width | String / Number | - | \- | N
 
-### Image Slots
-
-name | Description
--- | --
-error | \-
-loading | \-
-
 ### Image Events
 
 name | params | description
 -- | -- | --
 error | - | trigger on image load failed。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
 load | - | trigger on image loaded。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+
+### Image Slots
+
+name | Description
+-- | --
+error | \-
+loading | \-
 
 ### Image External Classes
 

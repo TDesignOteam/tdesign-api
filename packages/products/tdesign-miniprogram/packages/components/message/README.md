@@ -25,6 +25,15 @@ visible | Boolean | false | 是否显示，隐藏时默认销毁组件 | N
 default-visible | Boolean | undefined | 是否显示，隐藏时默认销毁组件。非受控属性 | N
 z-index | Number | 15000 | 元素层级，样式默认为 15000 | N
 
+### Message Events
+
+名称 | 参数 | 描述
+-- | -- | --
+action-btn-click | - | 已废弃。当操作按钮存在时，用户点击操作按钮时触发
+close-btn-click | - | 当关闭按钮存在时，用户点击关闭按钮触发
+duration-end | \- | 计时结束后触发
+link-click | - | 当`link`链接存在时，点击链接文本时触发
+
 ### Message Slots
 
 名称 | 描述
@@ -35,15 +44,6 @@ close-btn | 关闭按钮
 content | 自定义消息弹出内容
 icon | 消息提醒前面的图标
 link | 链接名称
-
-### Message Events
-
-名称 | 参数 | 描述
--- | -- | --
-action-btn-click | - | 已废弃。当操作按钮存在时，用户点击操作按钮时触发
-close-btn-click | - | 当关闭按钮存在时，用户点击关闭按钮触发
-duration-end | \- | 计时结束后触发
-link-click | - | 当`link`链接存在时，点击链接文本时触发
 
 ### Message External Classes
 

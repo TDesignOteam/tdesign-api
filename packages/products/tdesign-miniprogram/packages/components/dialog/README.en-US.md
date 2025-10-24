@@ -26,6 +26,15 @@ using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | - | \- | N
 z-index | Number | 11500 | \- | N
 
+### Dialog Events
+
+name | params | description
+-- | -- | --
+cancel | - | \-
+close | `(trigger: DialogEventSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
+confirm | - | \-
+overlay-click | - | \-
+
 ### Dialog Slots
 
 name | Description
@@ -37,15 +46,6 @@ content | \-
 middle | \-
 title | \-
 top | \-
-
-### Dialog Events
-
-name | params | description
--- | -- | --
-cancel | - | \-
-close | `(trigger: DialogEventSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/>
-confirm | - | \-
-overlay-click | - | \-
 
 ### Dialog External Classes
 

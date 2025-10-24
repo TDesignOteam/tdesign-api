@@ -22,6 +22,14 @@ value | String / Number | null | \- | N
 default-value | String / Number | undefined | uncontrolled property | N
 visible | Boolean | false | \- | N
 
+### Cascader Events
+
+name | params | description
+-- | -- | --
+change | `(value: string \| number, selectedOptions: string[])` | `1.0.1`
+close | `(trigger: CascaderTriggerSource)` | `1.0.1`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
+pick | `(value: string \| number, label: string, index: number, level: number)` | `1.0.1`
+
 ### Cascader Slots
 
 name | Description
@@ -30,11 +38,3 @@ close-btn | \-
 header | `1.9.1`
 middle-content | \-
 title | \-
-
-### Cascader Events
-
-name | params | description
--- | -- | --
-change | `(value: string \| number, selectedOptions: string[])` | `1.0.1`
-close | `(trigger: CascaderTriggerSource)` | `1.0.1`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
-pick | `(value: string \| number, label: string, index: number, level: number)` | `1.0.1`

@@ -22,17 +22,17 @@ theme | String | default | 步骤条风格。可选项：default/dot | N
 -- | -- | --
 change | `({current: string \| number, previous: string \| number})` | 当前步骤发生变化时触发
 
-### Steps External Classes
-
-类名 | 描述
--- | --
-t-class | 根节点样式类
-
 ### Steps Slots
 
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义步骤条内容
+
+### Steps External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
 
 
 ### StepItem Props
@@ -55,7 +55,7 @@ title | String | '' | 标题 | N
 \- | 默认插槽，自定义步骤内容
 content | 步骤描述
 extra | 步骤条自定义内容
-icon | 图标
+icon | 自定义 `icon` 显示内容
 title | 标题
 
 ### StepItem External Classes

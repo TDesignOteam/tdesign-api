@@ -18,19 +18,19 @@ split-with-unit | Boolean | false | `0.5.1` | N
 theme | String | 'default' | `0.5.1`。options: default/round/square | N
 time | Number | 0 | required | Y
 
-### CountDown Slots
-
-name | Description
--- | --
-\- | \-
-content | \-
-
 ### CountDown Events
 
 name | params | description
 -- | -- | --
 change | `(time: TimeData)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
 finish | \- | \-
+
+### CountDown Slots
+
+name | Description
+-- | --
+\- | \-
+content | \-
 
 ### CountDown External Classes
 

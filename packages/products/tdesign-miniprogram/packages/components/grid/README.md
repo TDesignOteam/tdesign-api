@@ -16,17 +16,17 @@ gutter | Number | - | 间隔大小 | N
 hover | Boolean | false | 是否开启点击反馈 | N
 theme | String | default | 宫格的风格。可选项：default/card | N
 
-### Grid External Classes
-
-类名 | 描述
--- | --
-t-class | 根节点样式类
-
 ### Grid Slots
 
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
+
+### Grid External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
 
 
 ### GridItem Props
@@ -36,7 +36,6 @@ t-class | 根节点样式类
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 badge-props | Object | null | 透传至 Badge 属性。TS 类型：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/grid-item/type.ts) | N
-click | String | - | 点击子项后触发 | N
 description | String | - | 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点 | N
 icon | String / Object | - | 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon` | N
 image | String | - | 图片，可以是图片地址，也可以自定义图片节点，值为 slot 的时候才能使用插槽 | N
@@ -46,14 +45,20 @@ layout | String | vertical | 内容布局方式。可选项：vertical/horizonta
 text | String | - | 文本，可以通过 Props 传入文本，也可以自定义标题节点 | N
 url | String | - | 点击后的跳转链接 | N
 
+### GridItem Events
+
+名称 | 参数 | 描述
+-- | -- | --
+click | \- | 点击子项后触发
+
 ### GridItem Slots
 
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-description | 文本以外的更多描述
-image | 图片，可以是图片地址
-text | 文本
+description | 自定义 `description` 模块内容
+image | 自定义 `image` 模块内容
+text | 自定义 `text` 模块内容
 
 ### GridItem External Classes
 

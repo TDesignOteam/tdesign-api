@@ -26,6 +26,12 @@ placement | String | left | 多选框和内容相对位置。可选项：left/ri
 readonly | Boolean | undefined | 只读状态 | N
 value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \| number \| boolean` | N
 
+### Checkbox Events
+
+名称 | 参数 | 描述
+-- | -- | --
+change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容
+
 ### Checkbox Slots
 
 名称 | 描述
@@ -33,12 +39,6 @@ value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \|
 \- | 默认插槽，主文案
 content | 多选框内容
 label | 主文案
-
-### Checkbox Events
-
-名称 | 参数 | 描述
--- | -- | --
-change | `(checked: boolean, context: { value: boolean\|number\|string, label: boolean\|number\|string })` | 值变化时触发。`context` 表示当前点击项内容
 
 ### Checkbox External Classes
 

@@ -21,13 +21,6 @@ theme | String | line | 标签的样式。可选项：line/tag/card | N
 value | String / Number | - | 激活的选项卡值。TS 类型：`TabValue` `type TabValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tabs/type.ts) | N
 default-value | String / Number | undefined | 激活的选项卡值。非受控属性。TS 类型：`TabValue` `type TabValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tabs/type.ts) | N
 
-### Tabs Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义选项卡内容
-middle | 中间内容，介于头部和内容之间
-
 ### Tabs Events
 
 名称 | 参数 | 描述
@@ -35,6 +28,13 @@ middle | 中间内容，介于头部和内容之间
 change | `(value: TabValue, label: string)` | 激活的选项卡发生变化时触发
 click | `(value: TabValue, label: string)` | 点击选项卡时触发
 scroll | `(scrollTop: number, isFixed: boolean)` | 页面滚动时触发
+
+### Tabs Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义选项卡内容
+middle | 中间内容，介于头部和内容之间
 
 ### Tabs External Classes
 

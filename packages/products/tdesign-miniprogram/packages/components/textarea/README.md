@@ -37,12 +37,6 @@ show-confirm-bar | Boolean | true | 是否显示键盘上方带有”完成“�
 value | String / Number | - | 文本框值。TS 类型：`TextareaValue` `type TextareaValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 default-value | String / Number | undefined | 文本框值。非受控属性。TS 类型：`TextareaValue` `type TextareaValue = string \| number`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 
-### Textarea Slots
-
-名称 | 描述
--- | --
-label | 左侧文本
-
 ### Textarea Events
 
 名称 | 参数 | 描述
@@ -53,6 +47,12 @@ enter | `(value: TextareaValue)` | 点击完成时触发
 focus | `(value: TextareaValue)` | 获得焦点时触发
 keyboardheightchange | `(height: number, duration: number)` | 键盘高度发生变化的时候触发此事件
 line-change | `(value: TextareaValue)` | 行高发生变化时触发
+
+### Textarea Slots
+
+名称 | 描述
+-- | --
+label | 左侧文本
 
 ### Textarea External Classes
 

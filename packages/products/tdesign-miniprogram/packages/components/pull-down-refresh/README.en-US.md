@@ -27,13 +27,6 @@ using-custom-navbar | Boolean | false | \- | N
 value | Boolean | false | \- | N
 default-value | Boolean | undefined | uncontrolled property | N
 
-### PullDownRefresh Slots
-
-name | Description
--- | --
-\- | \-
-header | `1.2.10`
-
 ### PullDownRefresh Events
 
 name | params | description
@@ -45,6 +38,13 @@ dragstart | `(scrollTop: number, scrollLeft: number)` | `1.2.10`
 refresh | \- | \-
 scrolltolower | \- | \-
 timeout | \- | \-
+
+### PullDownRefresh Slots
+
+name | Description
+-- | --
+\- | \-
+header | `1.2.10`
 
 ### PullDownRefresh External Classes
 

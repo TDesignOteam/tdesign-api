@@ -22,6 +22,12 @@ z-index | Number | 11600 | 菜单栏 z-index 层级 | N
 close | \- | 菜单关闭时触发
 open | \- | 菜单展开时触发
 
+### DropdownMenu Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+
 ### DropdownMenu External Classes
 
 类名 | 描述
@@ -30,12 +36,6 @@ t-class | 根节点样式类
 t-class-icon | 图标样式类
 t-class-item | 选项样式类
 t-class-label | 标签样式类
-
-### DropdownMenu Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容
 
 
 ### DropdownItem Props
@@ -56,13 +56,6 @@ placement | String | left | 复选框和内容相对位置，仅单选菜单栏�
 value | String / Number / Array | undefined | 选中值。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 default-value | String / Number / Array | undefined | 选中值。非受控属性。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 
-### DropdownItem Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容
-footer | 底部
-
 ### DropdownItem Events
 
 名称 | 参数 | 描述
@@ -71,6 +64,13 @@ change | `(value: DropdownValue)` | 值改变时触发
 close | \- | 关闭时触发
 confirm | `(value: DropdownValue)` | 点击确认时触发
 reset | \- | 点击重置时触发
+
+### DropdownItem Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+footer | 底部
 
 ### DropdownItem External Classes
 

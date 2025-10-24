@@ -37,12 +37,6 @@ show-confirm-bar | Boolean | true | \- | N
 value | String / Number | - | Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 default-value | String / Number | undefined | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 
-### Textarea Slots
-
-name | Description
--- | --
-label | \-
-
 ### Textarea Events
 
 name | params | description
@@ -53,6 +47,12 @@ enter | `(value: TextareaValue)` | \-
 focus | `(value: TextareaValue)` | \-
 keyboardheightchange | `(height: number, duration: number)` | \-
 line-change | `(value: TextareaValue)` | \-
+
+### Textarea Slots
+
+name | Description
+-- | --
+label | \-
 
 ### Textarea External Classes
 

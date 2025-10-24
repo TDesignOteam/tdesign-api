@@ -24,6 +24,12 @@ placement | String | - | options: left/right | N
 readonly | Boolean | undefined | `1.8.6` | N
 value | String / Number / Boolean | false | Typescript：`T` `type RadioValue = string \| number \| boolean`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/radio/type.ts) | N
 
+### Radio Events
+
+name | params | description
+-- | -- | --
+change | `(checked: boolean)` | \-
+
 ### Radio Slots
 
 name | Description
@@ -32,12 +38,6 @@ name | Description
 content | \-
 icon | \-
 label | \-
-
-### Radio Events
-
-name | params | description
--- | -- | --
-change | `(checked: boolean)` | \-
 
 ### Radio External Classes
 
