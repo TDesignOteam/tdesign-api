@@ -10,6 +10,7 @@ export const cascaderDefaultProps: TdCascaderProps = {
   lazy: false,
   loadCompleted: false,
   options: [],
+  overlayProps: {},
   placeholder: '选择选项',
   subTitles: [],
   theme: 'step',

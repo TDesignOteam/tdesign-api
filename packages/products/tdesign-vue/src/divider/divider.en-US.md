@@ -11,5 +11,5 @@ content | String / Slot / Function | - | Typescript：`string \| TNode`。[see m
 dashed | Boolean | false | \- | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options: horizontal/vertical | N
-size | Number | - | Spacing size | N
+size | String / Number | - | Spacing size | N
 theme | String | - | `deprecated`。options: horizontal/vertical | N

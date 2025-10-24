@@ -77,20 +77,12 @@
         "value": "2"
       },
       {
-        "label": "Angular(PC)",
-        "value": "4"
-      },
-      {
         "label": "Vue(Mobile)",
         "value": "8"
       },
       {
         "label": "React(Mobile)",
         "value": "16"
-      },
-      {
-        "label": "Angular(Mobile)",
-        "value": "32"
       },
       {
         "label": "Miniprogram",
