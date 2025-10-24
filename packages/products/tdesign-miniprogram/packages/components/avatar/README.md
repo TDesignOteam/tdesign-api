@@ -64,7 +64,7 @@ collapsed-item-click | - | 点击头像折叠元素触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-collapse-avatar | 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`
+collapse-avatar | 自定义 `collapse-avatar` 显示内容
 
 ### AvatarGroup External Classes
 

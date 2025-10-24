@@ -80,10 +80,21 @@ function groupByFieldCategory(framework, componentApi) {
     const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
     (result[category] ??= []).push(api);
     // 支持属性同名插槽输出到小程序端组件 API 文档
-    if (isSlot) (result['Slots'] ??= []).push(api);
-  });
+    if (isSlot) {
+      const newAPi = { ...api };
+      newAPi.field_desc_zh =
+          '自定义' +
+          ' `' +
+          kebabCaseComponent(newAPi.field_name) +
+          '` ' +
+          '显示内容';
+      newAPi.field_category = 512;
+      newAPi.field_category_text = 'Slots';
+      (result['Slots'] ??= []).push(newAPi);
+    };
+  })
   return categoryOrder(result);
-}
+};
 
 function sortSlotsArrExceptFirst(arr) {
   if (arr.length <= 1) {

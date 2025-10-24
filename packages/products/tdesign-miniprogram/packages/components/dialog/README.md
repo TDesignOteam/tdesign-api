@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Dialog Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -39,13 +38,13 @@ overlay-click | - | 如果蒙层存在，点击蒙层时触发
 
 名称 | 描述
 -- | --
-actions | 操作栏
-cancel-btn | 取消按钮
-confirm-btn | 确认按钮
-content | 内容
-middle | 中间自定义内容
-title | 标题
-top | 顶部自定义内容
+actions | 自定义 `actions` 显示内容
+cancel-btn | 自定义 `cancel-btn` 显示内容
+confirm-btn | 自定义 `confirm-btn` 显示内容
+content | 自定义 `content` 显示内容
+middle | 自定义 `middle` 显示内容
+title | 自定义 `title` 显示内容
+top | 自定义 `top` 显示内容
 
 ### Dialog External Classes
 

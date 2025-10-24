@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Cell Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -33,12 +32,12 @@ click | - | 右侧内容
 
 名称 | 描述
 -- | --
-description | 下方内容描述
-image | 主图
-left-icon | 左侧图标，出现在单元格标题的左侧
-note | 和标题同行的说明文字
-right-icon | 最右侧图标
-title | 标题
+description | 自定义 `description` 显示内容
+image | 自定义 `image` 显示内容
+left-icon | 自定义 `left-icon` 显示内容
+note | 自定义 `note` 显示内容
+right-icon | 自定义 `right-icon` 显示内容
+title | 自定义 `title` 显示内容
 
 ### Cell External Classes
 

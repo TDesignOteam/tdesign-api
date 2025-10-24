@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Collapse Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -48,11 +49,11 @@ value | String / Number | - | 当前面板唯一标识，如果值为空则取�
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-content | 折叠面板内容
-expand-icon | 当前折叠面板展开图标，优先级大于 Collapse 的同名属性
-header | 面板头内容
-header-left-icon | 面板头左侧图标
-header-right-content | 面板头的右侧区域，一般用于呈现面板操作
+content | 自定义 `content` 显示内容
+expand-icon | 自定义 `expand-icon` 显示内容
+header | 自定义 `header` 显示内容
+header-left-icon | 自定义 `header-left-icon` 显示内容
+header-right-content | 自定义 `header-right-content` 显示内容
 
 ### CollapsePanel External Classes
 

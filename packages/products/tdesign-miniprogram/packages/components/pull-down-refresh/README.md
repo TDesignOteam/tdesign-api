@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### PullDownRefresh Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -44,7 +43,7 @@ timeout | \- | 刷新超时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-header | `1.2.10`。头部
+header | `1.2.10`。自定义 `header` 显示内容
 
 ### PullDownRefresh External Classes
 

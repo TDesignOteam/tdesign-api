@@ -52,9 +52,9 @@ submit | `({ value: string })` | 提交时触发
 
 名称 | 描述
 -- | --
-action | 自定义右侧操作按钮文字
+action | 自定义 `action` 显示内容
 left-icon | 左侧图标
-right-icon | 已废弃。右侧图标
+right-icon | 已废弃。自定义 `right-icon` 显示内容
 
 ### Search External Classes
 

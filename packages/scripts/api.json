@@ -45043,7 +45043,7 @@
       "field_type_text": []
     },
     {
-      "id": 1759216954,
+      "id": 1761308802,
       "platform_framework": [
         "64"
       ],
@@ -45053,12 +45053,12 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "操作栏",
+      "field_desc_zh": "自定义 `actions` 显示内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-09-30 07:22:34",
-      "update_time": "2025-09-30 07:22:34",
+      "create_time": "2025-10-24 12:26:42",
+      "update_time": "2025-10-24 12:26:42",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -45076,7 +45076,7 @@
       "field_type_text": []
     },
     {
-      "id": 1759216970,
+      "id": 1761308223,
       "platform_framework": [
         "64"
       ],
@@ -45086,111 +45086,12 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "取消按钮",
+      "field_desc_zh": "自定义 `cancel-btn` 显示内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-09-30 07:22:50",
-      "update_time": "2025-09-30 07:22:50",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Slots",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1759216987,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 512,
-      "field_name": "confirm-btn",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "确认按钮",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-09-30 07:23:07",
-      "update_time": "2025-09-30 07:23:07",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Slots",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1759217016,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 512,
-      "field_name": "content",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "内容",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-09-30 07:23:36",
-      "update_time": "2025-09-30 07:23:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Slots",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": []
-    },
-    {
-      "id": 1759217037,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Dialog",
-      "field_category": 512,
-      "field_name": "title",
-      "field_type": [],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "标题",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-09-30 07:23:57",
-      "update_time": "2025-09-30 07:23:57",
+      "create_time": "2025-10-24 12:17:03",
+      "update_time": "2025-10-24 12:17:03",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,

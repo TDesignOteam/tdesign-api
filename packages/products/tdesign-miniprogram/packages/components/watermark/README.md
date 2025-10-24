@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Watermark Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -31,7 +30,7 @@ z-index | Number | - | 水印元素的 `z-index`，默认值写在 CSS 中 | N
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-content | 水印所覆盖的内容节点
+content | 自定义 `content` 显示内容
 
 ### WatermarkText
 

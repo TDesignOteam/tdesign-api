@@ -36,9 +36,9 @@ success | \- | navigateBack 执行成功后触发
 
 名称 | 描述
 -- | --
-capsule | 左侧胶囊区域
-left | `0.26.0`。左侧内容区域
-title | 页面标题
+capsule | 自定义 `capsule` 显示内容
+left | `0.26.0`。自定义 `left` 显示内容
+title | 自定义 `title` 显示内容
 
 ### Navbar External Classes
 

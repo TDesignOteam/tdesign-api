@@ -32,9 +32,9 @@ success | \- | 页面链接跳转成功后触发
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-content | 链接内容
-prefix-icon | 前置图标
-suffix-icon | 后置图标
+content | 自定义 `content` 显示内容
+prefix-icon | 自定义 `prefix-icon` 显示内容
+suffix-icon | 自定义 `suffix-icon` 显示内容
 
 ### Link External Classes
 

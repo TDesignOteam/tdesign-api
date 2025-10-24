@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Message Props
 
 name | type | default | description | required

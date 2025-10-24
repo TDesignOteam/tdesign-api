@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### DateTimePicker Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -44,8 +43,8 @@ pick | `(value: DateValue)` | 选中值发生变化时触发
 
 名称 | 描述
 -- | --
-footer | 底部内容
-header | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
+footer | 自定义 `footer` 显示内容
+header | 自定义 `header` 显示内容
 
 ### DateTimePicker External Classes
 

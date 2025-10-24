@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### CountDown Props
 
 name | type | default | description | required

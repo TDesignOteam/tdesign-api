@@ -72,10 +72,10 @@ validate | `(detail: { error?: 'exceed-maximum' \| 'below-minimum' })` | 字数�
 
 名称 | 描述
 -- | --
-extra | `1.9.1`。右侧额外内容
-label | 左侧文本
+extra | `1.9.1`。自定义 `extra` 显示内容
+label | 自定义 `label` 显示内容
 prefix-icon | 组件前置图标
-suffix | 后置图标前的后置内容
+suffix | 自定义 `suffix` 显示内容
 suffix-icon | 后置文本图标
 tips | 输入框下方提示内容
 

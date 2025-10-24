@@ -34,7 +34,7 @@ scroll | `(scrollTop: number, isFixed: boolean)` | 页面滚动时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义选项卡内容
-middle | 中间内容，介于头部和内容之间
+middle | 自定义 `middle` 显示内容
 
 ### Tabs External Classes
 
@@ -66,4 +66,4 @@ value | String / Number | - | 选项卡的值，唯一标识。TS 类型：`TabV
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义选项卡面板内容
-panel | 用于自定义选项卡面板内容
+panel | 自定义 `panel` 显示内容

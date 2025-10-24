@@ -45,4 +45,4 @@ success | `(files: MediaContext)` | 上传成功后触发，包含所有上传�
 
 名称 | 描述
 -- | --
-add-content | 添加按钮内容
+add-content | 自定义 `add-content` 显示内容

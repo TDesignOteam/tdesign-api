@@ -59,8 +59,8 @@ tap | `event` | 点击按钮，当按钮不为加载或禁用状态时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-content | 按钮内容
-suffix | 右侧内容，可用于定义右侧图标
+content | 自定义 `content` 显示内容
+suffix | 自定义 `suffix` 显示内容
 
 ### Button External Classes
 

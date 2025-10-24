@@ -52,7 +52,7 @@ line-change | `(value: TextareaValue)` | 行高发生变化时触发
 
 名称 | 描述
 -- | --
-label | 左侧文本
+label | 自定义 `label` 显示内容
 
 ### Textarea External Classes
 

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Result Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -19,9 +18,9 @@ title | String | '' | 标题 | N
 
 名称 | 描述
 -- | --
-description | 描述文字
-image | 图片地址
-title | 标题
+description | 自定义 `description` 显示内容
+image | 自定义 `image` 显示内容
+title | 自定义 `title` 显示内容
 
 ### Result External Classes
 

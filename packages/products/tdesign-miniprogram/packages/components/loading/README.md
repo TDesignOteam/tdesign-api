@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Loading Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -28,8 +27,8 @@ theme | String | circular | 加载组件类型。可选项：circular/spinner/do
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `text` 插槽
-indicator | 加载指示符，值为 true 显示默认指示符，值为 false 则不显示，也可以自定义指示符
-text | 加载提示文案
+indicator | 自定义 `indicator` 显示内容
+text | 自定义 `text` 显示内容
 
 ### Loading External Classes
 

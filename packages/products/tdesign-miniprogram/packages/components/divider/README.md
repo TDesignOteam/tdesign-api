@@ -17,7 +17,7 @@ layout | String | horizontal | 分隔线类型有两种：水平和垂直。可�
 
 名称 | 描述
 -- | --
-content | 子元素
+content | 自定义 `content` 显示内容
 
 ### Divider External Classes
 

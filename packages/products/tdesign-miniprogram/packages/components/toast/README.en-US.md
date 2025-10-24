@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Toast Props
 
 name | type | default | description | required

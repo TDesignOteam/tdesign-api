@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### CountDown Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -30,7 +29,7 @@ finish | \- | 倒计时结束时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-content | 最终倒计时的展示内容，值为'default'时使用默认的格式，否则使用自定义样式插槽
+content | 自定义 `content` 显示内容
 
 ### CountDown External Classes
 

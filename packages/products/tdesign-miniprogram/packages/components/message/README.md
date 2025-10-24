@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Message Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -39,7 +38,7 @@ link-click | - | 当`link`链接存在时，点击链接文本时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，作用同 `content` 插槽
-action | 已废弃。操作
+action | 已废弃。自定义 `action` 显示内容
 close-btn | 关闭按钮
 content | 自定义消息弹出内容
 icon | 消息提醒前面的图标

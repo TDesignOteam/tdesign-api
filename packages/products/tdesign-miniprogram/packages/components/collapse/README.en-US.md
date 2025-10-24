@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Collapse Props
 
 name | type | default | description | required

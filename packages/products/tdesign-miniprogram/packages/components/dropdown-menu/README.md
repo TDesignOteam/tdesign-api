@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### DropdownMenu Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -70,7 +69,7 @@ reset | \- | 点击重置时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义内容区域内容
-footer | 底部
+footer | 自定义 `footer` 显示内容
 
 ### DropdownItem External Classes
 

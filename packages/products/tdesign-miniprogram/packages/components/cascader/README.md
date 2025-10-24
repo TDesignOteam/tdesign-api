@@ -34,7 +34,7 @@ pick | `(value: string \| number, label: string, index: number, level: number)` 
 
 名称 | 描述
 -- | --
-close-btn | 关闭按钮
-header | `1.9.1`。头部
-middle-content | 中间内容
-title | 标题
+close-btn | 自定义 `close-btn` 显示内容
+header | `1.9.1`。自定义 `header` 显示内容
+middle-content | 自定义 `middle-content` 显示内容
+title | 自定义 `title` 显示内容

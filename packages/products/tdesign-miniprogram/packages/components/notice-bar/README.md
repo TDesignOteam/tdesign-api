@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### NoticeBar Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -32,7 +31,7 @@ click | `(trigger: NoticeBarTrigger)` | 点击事件。[详细类型定义](http
 名称 | 描述
 -- | --
 content | 文本内容
-operation | 右侧额外信息
+operation | 自定义 `operation` 显示内容
 prefix-icon | 前缀图标
 suffix-icon | 后缀图标
 

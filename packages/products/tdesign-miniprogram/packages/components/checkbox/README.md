@@ -37,8 +37,8 @@ change | `(checked: boolean, context: { value: boolean\|number\|string, label: b
 名称 | 描述
 -- | --
 \- | 默认插槽，主文案
-content | 多选框内容
-label | 主文案
+content | 自定义 `content` 显示内容
+label | 自定义 `label` 显示内容
 
 ### Checkbox External Classes
 

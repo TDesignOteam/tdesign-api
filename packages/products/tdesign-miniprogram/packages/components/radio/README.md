@@ -35,9 +35,9 @@ change | `(checked: boolean)` | 值变化时触发
 名称 | 描述
 -- | --
 \- | 默认插槽，主文案
-content | 单选内容
+content | 自定义 `content` 显示内容
 icon | 自定义选中图标和非选中图标
-label | 主文案
+label | 自定义 `label` 显示内容
 
 ### Radio External Classes
 

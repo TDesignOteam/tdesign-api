@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Empty Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -18,9 +17,9 @@ image | String | - | 图片地址 | N
 
 名称 | 描述
 -- | --
-action | 操作按钮
-description | 描述文字
-image | 图片地址
+action | 自定义 `action` 显示内容
+description | 自定义 `description` 显示内容
+image | 自定义 `image` 显示内容
 
 ### Empty External Classes
 

@@ -53,10 +53,10 @@ title | String | '' | 标题 | N
 名称 | 描述
 -- | --
 \- | 默认插槽，自定义步骤内容
-content | 步骤描述
-extra | 步骤条自定义内容
+content | 自定义 `content` 显示内容
+extra | 自定义 `extra` 显示内容
 icon | 自定义 `icon` 显示内容
-title | 标题
+title | 自定义 `title` 显示内容
 
 ### StepItem External Classes
 
