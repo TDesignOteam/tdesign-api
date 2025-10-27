@@ -78,7 +78,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
                 /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
             );
             if (frac) {
-                dl = value;
+                dl = defaultValue;
             } else {
                 // 其它数字类型，按数值处理
                 dl = Number(defaultValue);
