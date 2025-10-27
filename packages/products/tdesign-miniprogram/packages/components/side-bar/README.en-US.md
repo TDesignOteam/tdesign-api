@@ -18,6 +18,12 @@ name | params | description
 change | `(value: number \| string, label: string)` | \-
 click | `(value: number \| string, label: string)` | \-
 
+### SideBar Slots
+
+name | Description
+-- | --
+\- | \-
+
 
 ### SideBarItem Props
 
@@ -30,3 +36,9 @@ disabled | Boolean | false | \- | N
 icon | String / Object | - | \- | N
 label | String | - | \- | N
 value | String / Number | - | \- | N
+
+### SideBarItem Slots
+
+name | Description
+-- | --
+\- | \-

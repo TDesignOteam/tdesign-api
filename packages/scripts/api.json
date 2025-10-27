@@ -8712,7 +8712,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "图标",
+      "field_desc_zh": " 自定义图标内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -24279,7 +24279,7 @@
       ]
     },
     {
-      "id": 1340,
+      "id": 1761300404,
       "platform_framework": [
         "8",
         "16",
@@ -24288,18 +24288,15 @@
       "component": "Cell",
       "field_category": 2,
       "field_name": "click",
-      "field_type": [
-        "1",
-        "64"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "右侧内容",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { e: MouseEvent })",
-      "create_time": "2021-07-20 12:06:28",
-      "update_time": "2021-07-25 07:23:04",
+      "create_time": "2025-10-24 10:06:44",
+      "update_time": "2025-10-24 10:06:44",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -24307,7 +24304,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -24316,10 +24313,7 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712048545,
@@ -24868,6 +24862,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759139151,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CellGroup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 09:45:51",
+      "update_time": "2025-09-29 09:45:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -28267,6 +28294,105 @@
       "field_type_text": []
     },
     {
+      "id": 1759203336,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:35:36",
+      "update_time": "2025-09-30 03:35:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759203386,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 512,
+      "field_name": "content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义内容区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:36:26",
+      "update_time": "2025-09-30 03:36:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759203403,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckTag",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:36:43",
+      "update_time": "2025-09-30 03:36:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1695565419,
       "platform_framework": [
         "1",
@@ -29695,6 +29821,39 @@
       "field_type_text": []
     },
     {
+      "id": 1760085356,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Checkbox",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，主文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:35:56",
+      "update_time": "2025-10-10 08:35:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3521,
       "platform_framework": [
         "8",
@@ -30291,6 +30450,39 @@
         "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085403,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，多选框组内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:36:43",
+      "update_time": "2025-10-10 08:36:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -30903,6 +31095,39 @@
       ]
     },
     {
+      "id": 1760085916,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Col",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，列内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:45:16",
+      "update_time": "2025-10-10 08:45:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2384,
       "platform_framework": [
         "1",
@@ -31398,6 +31623,39 @@
         "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759139739,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Collapse",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 09:55:39",
+      "update_time": "2025-09-29 09:55:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -32020,6 +32278,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759140436,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CollapsePanel",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 10:07:16",
+      "update_time": "2025-09-29 10:07:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -34832,6 +35123,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759140794,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "CountDown",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-29 10:13:14",
+      "update_time": "2025-09-29 10:13:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -40420,7 +40744,7 @@
       "field_type_text": []
     },
     {
-      "id": 2796,
+      "id": 1761300877,
       "platform_framework": [
         "8",
         "16",
@@ -40429,17 +40753,15 @@
       "component": "DateTimePicker",
       "field_category": 2,
       "field_name": "confirm",
-      "field_type": [
-        "32"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "确认按钮点击时触发",
-      "field_desc_en": "",
+      "field_desc_en": null,
       "field_required": 0,
       "event_input": "(value: DateValue)",
-      "create_time": "2022-06-29 12:36:29",
-      "update_time": "2022-06-29 12:39:31",
+      "create_time": "2025-10-24 10:14:37",
+      "update_time": "2025-10-24 10:14:37",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -40456,9 +40778,7 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Function"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1575,
@@ -44723,6 +45043,72 @@
       "field_type_text": []
     },
     {
+      "id": 1761308802,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 512,
+      "field_name": "actions",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `actions` 显示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-24 12:26:42",
+      "update_time": "2025-10-24 12:26:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1761308223,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Dialog",
+      "field_category": 512,
+      "field_name": "cancel-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `cancel-btn` 显示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-24 12:17:03",
+      "update_time": "2025-10-24 12:17:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1739543304,
       "platform_framework": [
         "1"
@@ -47848,43 +48234,6 @@
       "field_type_text": []
     },
     {
-      "id": 2495,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Drawer",
-      "field_category": 2,
-      "field_name": "itemClick",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "点击抽屉里的列表项",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(index: number; item: DrawerItem)",
-      "create_time": "2022-03-31 03:41:24",
-      "update_time": "2022-04-06 08:51:44",
-      "event_output": null,
-      "custom_field_type": "",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Array"
-      ]
-    },
-    {
       "id": 2546,
       "platform_framework": [
         "8",
@@ -47922,6 +48271,39 @@
       "field_type_text": [
         "Array"
       ]
+    },
+    {
+      "id": 1761300989,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 2,
+      "field_name": "itemClick",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击抽屉里的列表项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(index: number; item: DrawerItem)",
+      "create_time": "2025-10-24 10:16:29",
+      "update_time": "2025-10-24 10:16:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1754230138,
@@ -48063,6 +48445,68 @@
         "Vue(PC)",
         "React(PC)"
       ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085602,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Drawer",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义抽屉的底部",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:40:02",
+      "update_time": "2025-10-10 08:40:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760584285,
+      "platform_framework": [],
+      "component": "Drawer",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 footer 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-16 03:11:25",
+      "update_time": "2025-10-16 03:11:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [],
       "field_type_text": []
     },
     {
@@ -50265,6 +50709,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759214633,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownItem",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:43:53",
+      "update_time": "2025-09-30 06:43:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1690896981,
       "platform_framework": [
         "64"
@@ -50701,6 +51178,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759214561,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:42:41",
+      "update_time": "2025-09-30 06:42:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -52689,6 +53199,39 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085630,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，按钮内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:40:30",
+      "update_time": "2025-10-10 08:40:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -59346,6 +59889,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759198100,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Grid",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:08:20",
+      "update_time": "2025-09-30 02:08:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1712661731,
       "platform_framework": [
         "8",
@@ -59818,25 +60394,22 @@
       ]
     },
     {
-      "id": 1712051111,
+      "id": 1761302509,
       "platform_framework": [
         "64"
       ],
       "component": "GridItem",
       "field_category": 2,
       "field_name": "click",
-      "field_type": [
-        "1",
-        "64"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "点击子项后触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2024-04-02 09:45:11",
-      "update_time": "2024-04-02 09:45:11",
+      "create_time": "2025-10-24 10:41:49",
+      "update_time": "2025-10-24 10:41:49",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -59851,10 +60424,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712050904,
@@ -60016,6 +60586,138 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759198395,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "GridItem",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:13:15",
+      "update_time": "2025-09-30 02:13:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760520132,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "GridItem",
+      "field_category": 512,
+      "field_name": "description",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `description` 模块内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-15 09:22:12",
+      "update_time": "2025-10-15 09:22:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760520176,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "GridItem",
+      "field_category": 512,
+      "field_name": "image",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `image` 模块内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-15 09:22:56",
+      "update_time": "2025-10-15 09:22:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760520202,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "GridItem",
+      "field_category": 512,
+      "field_name": "text",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `text` 模块内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-15 09:23:22",
+      "update_time": "2025-10-15 09:23:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -63335,25 +64037,22 @@
       ]
     },
     {
-      "id": 3366,
+      "id": 1761301048,
       "platform_framework": [
         "64"
       ],
       "component": "Icon",
       "field_category": 2,
       "field_name": "click",
-      "field_type": [
-        "1",
-        "64"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "点击图标时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-09 03:10:46",
-      "update_time": "2023-03-09 03:10:46",
+      "create_time": "2025-10-24 10:17:28",
+      "update_time": "2025-10-24 10:17:28",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -63368,10 +64067,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1711969401,
@@ -65207,6 +65903,72 @@
       "field_type_text": []
     },
     {
+      "id": 1760519299,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 512,
+      "field_name": "error",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `error` 显示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-15 09:08:19",
+      "update_time": "2025-10-15 09:08:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760519330,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Image",
+      "field_category": 512,
+      "field_name": "loading",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `loading` 显示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-15 09:08:50",
+      "update_time": "2025-10-15 09:08:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3289,
       "platform_framework": [
         "1",
@@ -66773,6 +67535,72 @@
       "field_type_text": []
     },
     {
+      "id": 1759199178,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 512,
+      "field_name": "close-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭操作",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:26:18",
+      "update_time": "2025-09-30 02:26:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759199206,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ImageViewer",
+      "field_category": 512,
+      "field_name": "delete-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "删除操作",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:26:46",
+      "update_time": "2025-09-30 02:26:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3301,
       "platform_framework": [
         "1",
@@ -67134,7 +67962,7 @@
       ]
     },
     {
-      "id": 3292,
+      "id": 1761301156,
       "platform_framework": [
         "8",
         "16",
@@ -67143,17 +67971,15 @@
       "component": "Indexes",
       "field_category": 2,
       "field_name": "change",
-      "field_type": [
-        "2"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "索引发生变更时触发事件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(index: string | number)",
-      "create_time": "2023-01-11 07:44:14",
-      "update_time": "2023-01-11 07:44:14",
+      "create_time": "2025-10-24 10:19:16",
+      "update_time": "2025-10-24 10:19:16",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67170,12 +67996,10 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Number"
-      ]
+      "field_type_text": []
     },
     {
-      "id": 1460,
+      "id": 1761301170,
       "platform_framework": [
         "8",
         "16",
@@ -67184,17 +68008,15 @@
       "component": "Indexes",
       "field_category": 2,
       "field_name": "select",
-      "field_type": [
-        "2"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "点击侧边栏时触发事件",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(index: string | number)",
-      "create_time": "2021-08-20 07:25:49",
-      "update_time": "2022-04-06 08:05:31",
+      "create_time": "2025-10-24 10:19:30",
+      "update_time": "2025-10-24 10:19:30",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -67202,7 +68024,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -67211,9 +68033,40 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Number"
-      ]
+      "field_type_text": []
+    },
+    {
+      "id": 1760085666,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Indexes",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:41:06",
+      "update_time": "2025-10-10 08:41:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 3233,
@@ -67352,6 +68205,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085682,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "IndexesAnchor",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:41:22",
+      "update_time": "2025-10-10 08:41:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -71349,6 +72235,105 @@
       "field_type_text": []
     },
     {
+      "id": 1760085774,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 512,
+      "field_name": "prefix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "组件前置图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:42:54",
+      "update_time": "2025-10-10 08:42:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085808,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 512,
+      "field_name": "suffix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后置文本图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:43:28",
+      "update_time": "2025-10-10 08:43:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760085837,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Input",
+      "field_category": 512,
+      "field_name": "tips",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "输入框下方提示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:43:57",
+      "update_time": "2025-10-10 08:43:57",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2735,
       "platform_framework": [
         "1",
@@ -73645,24 +74630,22 @@
       "field_type_text": []
     },
     {
-      "id": 3373,
+      "id": 1761301096,
       "platform_framework": [
         "64"
       ],
       "component": "Link",
       "field_category": 2,
       "field_name": "complete",
-      "field_type": [
-        "16"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "页面链接执行完成后触发（失败或成功均会触发）",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-13 02:16:34",
-      "update_time": "2023-03-13 02:16:34",
+      "create_time": "2025-10-24 10:18:16",
+      "update_time": "2025-10-24 10:18:16",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -73677,29 +74660,25 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Array"
-      ]
+      "field_type_text": []
     },
     {
-      "id": 3374,
+      "id": 1761301108,
       "platform_framework": [
         "64"
       ],
       "component": "Link",
       "field_category": 2,
       "field_name": "fail",
-      "field_type": [
-        "16"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "页面链接跳转失败后触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-13 02:16:34",
-      "update_time": "2023-03-13 02:16:34",
+      "create_time": "2025-10-24 10:18:28",
+      "update_time": "2025-10-24 10:18:28",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -73714,9 +74693,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Array"
-      ]
+      "field_type_text": []
     },
     {
       "id": 3375,
@@ -76013,6 +76990,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759214967,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Loading",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `text` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:49:27",
+      "update_time": "2025-09-30 06:49:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -78359,6 +79369,171 @@
       "field_type_text": []
     },
     {
+      "id": 1759215134,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:52:14",
+      "update_time": "2025-09-30 06:52:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215151,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 512,
+      "field_name": "close-btn",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭按钮",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:52:31",
+      "update_time": "2025-09-30 06:52:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215212,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 512,
+      "field_name": "content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义消息弹出内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:53:32",
+      "update_time": "2025-09-30 06:53:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215173,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "消息提醒前面的图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:52:53",
+      "update_time": "2025-09-30 06:52:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215192,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Message",
+      "field_category": 512,
+      "field_name": "link",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "链接名称",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:53:12",
+      "update_time": "2025-09-30 06:53:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3218,
       "platform_framework": [
         "1",
@@ -80694,6 +81869,105 @@
       "field_type_text": []
     },
     {
+      "id": 1759215434,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 512,
+      "field_name": "content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文本内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:57:14",
+      "update_time": "2025-09-30 06:57:14",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215447,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 512,
+      "field_name": "prefix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前缀图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:57:27",
+      "update_time": "2025-09-30 06:57:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215465,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "NoticeBar",
+      "field_category": 512,
+      "field_name": "suffix-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "后缀图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 06:57:45",
+      "update_time": "2025-09-30 06:57:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1165,
       "platform_framework": [
         "2"
@@ -82378,6 +83652,39 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215712,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Overlay",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:01:52",
+      "update_time": "2025-09-30 07:01:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -84862,6 +86169,72 @@
       ]
     },
     {
+      "id": 1760085971,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:46:11",
+      "update_time": "2025-10-10 08:46:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760086010,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 512,
+      "field_name": "content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "中间内容，介于头部跟内容之间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:46:50",
+      "update_time": "2025-10-10 08:46:50",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1741185484,
       "platform_framework": [
         "8",
@@ -85012,6 +86385,39 @@
       "field_type_text": [
         "Array"
       ]
+    },
+    {
+      "id": 1760086147,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PickerItem",
+      "field_category": 512,
+      "field_name": "label-suffix--[index]",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "列表子项后置插槽，用于自定义标签文本之后的内容。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:49:07",
+      "update_time": "2025-10-10 08:49:07",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 940,
@@ -87933,6 +89339,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759215938,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:05:38",
+      "update_time": "2025-09-30 07:05:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -90953,6 +92392,39 @@
       ]
     },
     {
+      "id": 1759199823,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Progress",
+      "field_category": 512,
+      "field_name": "label",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "进度百分比",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:37:03",
+      "update_time": "2025-09-30 02:37:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1718962073,
       "platform_framework": [
         "8",
@@ -91966,6 +93438,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759216042,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "PullDownRefresh",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:07:22",
+      "update_time": "2025-09-30 07:07:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1741186345,
       "platform_framework": [
         "8",
@@ -92502,7 +94007,7 @@
       ]
     },
     {
-      "id": 1749615350,
+      "id": 1761301615,
       "platform_framework": [
         "1",
         "2",
@@ -92513,17 +94018,15 @@
       "component": "QRCode",
       "field_category": 2,
       "field_name": "refresh",
-      "field_type": [
-        "32"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "点击\"点击刷新\"的回调",
       "field_desc_en": "Click the \"Click to refresh\" callback",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-06-11 04:15:50",
-      "update_time": "2025-06-11 04:15:50",
+      "create_time": "2025-10-24 10:26:55",
+      "update_time": "2025-10-24 10:26:55",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -92542,9 +94045,40 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Function"
-      ]
+      "field_type_text": []
+    },
+    {
+      "id": 1759200062,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "QRCode",
+      "field_category": 512,
+      "field_name": "status-render",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义状态渲染器",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:41:02",
+      "update_time": "2025-09-30 02:41:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1749615440,
@@ -93977,6 +95511,72 @@
       "field_type_text": []
     },
     {
+      "id": 1760086304,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，主文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:51:44",
+      "update_time": "2025-10-10 08:51:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760086320,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Radio",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义选中图标和非选中图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:52:00",
+      "update_time": "2025-10-10 08:52:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3118,
       "platform_framework": [],
       "component": "RadioGroup",
@@ -94848,6 +96448,39 @@
         "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760086270,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "RadioGroup",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，单选框组内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:51:10",
+      "update_time": "2025-10-10 08:51:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": []
@@ -97233,7 +98866,7 @@
       ]
     },
     {
-      "id": 1117,
+      "id": 1761301677,
       "platform_framework": [
         "1",
         "2",
@@ -97244,25 +98877,23 @@
       "component": "Rate",
       "field_category": 2,
       "field_name": "change",
-      "field_type": [
-        "32"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "评分数改变时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(value: number)",
-      "create_time": "2021-04-12 08:30:34",
-      "update_time": "2021-09-26 12:14:47",
+      "create_time": "2025-10-24 10:27:57",
+      "update_time": "2025-10-24 10:27:57",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -97273,9 +98904,7 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Function"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712029768,
@@ -98075,6 +99704,39 @@
       "field_type_text": [
         "String"
       ]
+    },
+    {
+      "id": 1760085899,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Row",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，行内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:44:59",
+      "update_time": "2025-10-10 08:44:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1542,
@@ -100239,45 +101901,6 @@
       ]
     },
     {
-      "id": 2617,
-      "platform_framework": [
-        "16",
-        "64"
-      ],
-      "component": "Search",
-      "field_category": 2,
-      "field_name": "actionClick",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "点击右侧操作按钮文字时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "({})",
-      "create_time": "2022-04-20 03:50:04",
-      "update_time": "2022-07-20 15:28:46",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)",
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 1712657706,
       "platform_framework": [
         "8"
@@ -100313,6 +101936,41 @@
       "field_type_text": [
         "String"
       ]
+    },
+    {
+      "id": 1761301722,
+      "platform_framework": [
+        "16",
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 2,
+      "field_name": "actionClick",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击右侧操作按钮文字时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "({})",
+      "create_time": "2025-10-24 10:28:42",
+      "update_time": "2025-10-24 10:28:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2616,
@@ -100358,24 +102016,22 @@
       ]
     },
     {
-      "id": 2852,
+      "id": 1761301730,
       "platform_framework": [
         "64"
       ],
       "component": "Search",
       "field_category": 2,
       "field_name": "blur",
-      "field_type": [
-        "1"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "失去焦点时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "({ value: string })",
-      "create_time": "2022-07-19 10:24:24",
-      "update_time": "2022-07-19 10:24:24",
+      "create_time": "2025-10-24 10:28:50",
+      "update_time": "2025-10-24 10:28:50",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -100390,46 +102046,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1549,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Search",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "值发生变化时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "({ value: string })",
-      "create_time": "2021-09-01 08:19:14",
-      "update_time": "2022-07-20 14:55:19",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
+      "field_type_text": []
     },
     {
       "id": 2615,
@@ -100510,6 +102127,39 @@
       ]
     },
     {
+      "id": 1761301744,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "值发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "({ value: string })",
+      "create_time": "2025-10-24 10:29:04",
+      "update_time": "2025-10-24 10:29:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2614,
       "platform_framework": [
         "1",
@@ -100553,24 +102203,22 @@
       ]
     },
     {
-      "id": 1712653823,
+      "id": 1761301756,
       "platform_framework": [
         "64"
       ],
       "component": "Search",
       "field_category": 2,
       "field_name": "clear",
-      "field_type": [
-        "1"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "点击清除时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "({ value: string })",
-      "create_time": "2024-04-09 09:10:23",
-      "update_time": "2024-04-09 09:10:23",
+      "create_time": "2025-10-24 10:29:16",
+      "update_time": "2025-10-24 10:29:16",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -100585,9 +102233,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String"
-      ]
+      "field_type_text": []
     },
     {
       "id": 2850,
@@ -100668,24 +102314,22 @@
       ]
     },
     {
-      "id": 2851,
+      "id": 1761301768,
       "platform_framework": [
         "64"
       ],
       "component": "Search",
       "field_category": 2,
       "field_name": "focus",
-      "field_type": [
-        "1"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "聚焦时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "({ value: string })",
-      "create_time": "2022-07-19 10:22:29",
-      "update_time": "2022-07-20 14:51:37",
+      "create_time": "2025-10-24 10:29:28",
+      "update_time": "2025-10-24 10:29:28",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -100700,9 +102344,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String"
-      ]
+      "field_type_text": []
     },
     {
       "id": 2848,
@@ -100855,24 +102497,22 @@
       ]
     },
     {
-      "id": 1712031757,
+      "id": 1761301778,
       "platform_framework": [
         "64"
       ],
       "component": "Search",
       "field_category": 2,
       "field_name": "submit",
-      "field_type": [
-        "1"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "提交时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "({ value: string })",
-      "create_time": "2024-04-02 04:22:37",
-      "update_time": "2024-04-02 04:22:37",
+      "create_time": "2025-10-24 10:29:38",
+      "update_time": "2025-10-24 10:29:38",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -100887,9 +102527,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712043309,
@@ -101084,6 +102722,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760086411,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 512,
+      "field_name": "left-icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:53:31",
+      "update_time": "2025-10-10 08:53:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -105124,6 +106795,39 @@
       ]
     },
     {
+      "id": 1760086453,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBar",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义侧边导航栏内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:54:13",
+      "update_time": "2025-10-10 08:54:13",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3533,
       "platform_framework": [
         "8",
@@ -105366,6 +107070,39 @@
         "String",
         "Number"
       ]
+    },
+    {
+      "id": 1760086476,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SideBarItem",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义侧边导航项内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:54:36",
+      "update_time": "2025-10-10 08:54:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1774,
@@ -105877,6 +107614,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759200293,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Skeleton",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:44:53",
+      "update_time": "2025-09-30 02:44:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -108633,6 +110403,72 @@
       "field_type_text": []
     },
     {
+      "id": 1760086531,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义步骤内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:55:31",
+      "update_time": "2025-10-10 08:55:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760585732,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "StepItem",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义 `icon` 显示内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-16 03:35:32",
+      "update_time": "2025-10-16 03:35:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1502,
       "platform_framework": [
         "8",
@@ -109080,45 +110916,6 @@
       ]
     },
     {
-      "id": 2066,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Stepper",
-      "field_category": 2,
-      "field_name": "blur",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "0",
-      "field_enum": "",
-      "field_desc_zh": "输入框失去焦点时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "({ type: string | number })",
-      "create_time": "2021-12-20 05:08:21",
-      "update_time": "2022-02-21 03:47:59",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "v-model",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
       "id": 2326,
       "platform_framework": [
         "8",
@@ -109160,25 +110957,22 @@
       ]
     },
     {
-      "id": 2064,
+      "id": 1761301868,
       "platform_framework": [
         "64"
       ],
       "component": "Stepper",
       "field_category": 2,
-      "field_name": "change",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "0",
+      "field_name": "blur",
+      "field_type": [],
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "数值发生变更时触发",
+      "field_desc_zh": "输入框失去焦点时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "({ value: string | number })",
-      "create_time": "2021-12-20 05:06:11",
-      "update_time": "2022-02-21 03:48:21",
+      "event_input": "({ type: string | number })",
+      "create_time": "2025-10-24 10:31:08",
+      "update_time": "2025-10-24 10:31:08",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": "v-model",
@@ -109193,10 +110987,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
+      "field_type_text": []
     },
     {
       "id": 2327,
@@ -109240,6 +111031,39 @@
       ]
     },
     {
+      "id": 1761301878,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Stepper",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数值发生变更时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "({ value: string | number })",
+      "create_time": "2025-10-24 10:31:18",
+      "update_time": "2025-10-24 10:31:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1712658600,
       "platform_framework": [
         "8",
@@ -109281,25 +111105,22 @@
       ]
     },
     {
-      "id": 1737687732,
+      "id": 1761301896,
       "platform_framework": [
         "64"
       ],
       "component": "Stepper",
       "field_category": 2,
       "field_name": "focus",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "0",
+      "field_type": [],
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "输入框聚焦时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "({ value: string | number }))",
-      "create_time": "2025-01-24 03:02:12",
-      "update_time": "2025-01-24 03:02:12",
+      "create_time": "2025-10-24 10:31:36",
+      "update_time": "2025-10-24 10:31:36",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -109314,49 +111135,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 2065,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Stepper",
-      "field_category": 2,
-      "field_name": "overlimit",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "0",
-      "field_enum": "",
-      "field_desc_zh": "数值超出限制时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "({type: 'minus' | 'plus'})",
-      "create_time": "2021-12-20 05:07:45",
-      "update_time": "2022-02-21 03:49:23",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": "",
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
+      "field_type_text": []
     },
     {
       "id": 2328,
@@ -109398,6 +111177,39 @@
         "String",
         "Number"
       ]
+    },
+    {
+      "id": 1761301983,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Stepper",
+      "field_category": 2,
+      "field_name": "overlimit",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数值超出限制时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "({type: 'minus' | 'plus'})",
+      "create_time": "2025-10-24 10:33:03",
+      "update_time": "2025-10-24 10:33:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1712043997,
@@ -109983,6 +111795,39 @@
       "field_type_text": []
     },
     {
+      "id": 1760086510,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Steps",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义步骤条内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:55:10",
+      "update_time": "2025-10-10 08:55:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1723520866,
       "platform_framework": [
         "1",
@@ -110299,7 +112144,7 @@
       ]
     },
     {
-      "id": 1733,
+      "id": 1761302045,
       "platform_framework": [
         "8",
         "16",
@@ -110308,17 +112153,15 @@
       "component": "Sticky",
       "field_category": 2,
       "field_name": "scroll",
-      "field_type": [
-        "64"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(context: { scrollTop: number, isFixed: boolean })",
-      "create_time": "2021-09-22 09:38:56",
-      "update_time": "2022-01-27 01:41:32",
+      "create_time": "2025-10-24 10:34:05",
+      "update_time": "2025-10-24 10:34:05",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -110335,9 +112178,7 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "TNode"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712053525,
@@ -110400,6 +112241,39 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759200405,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Sticky",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:46:45",
+      "update_time": "2025-09-30 02:46:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -111777,6 +113651,105 @@
       ]
     },
     {
+      "id": 1759216167,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:09:27",
+      "update_time": "2025-09-30 07:09:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759216541,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 512,
+      "field_name": "left",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "左侧滑动操作项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:15:41",
+      "update_time": "2025-09-30 07:15:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759216525,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "SwipeCell",
+      "field_category": 512,
+      "field_name": "right",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "右侧滑动操作项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:15:25",
+      "update_time": "2025-09-30 07:15:25",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1277,
       "platform_framework": [
         "8",
@@ -111969,7 +113942,7 @@
       "deprecated": 0,
       "version": null,
       "test_description": null,
-      "support_default_value": 0,
+      "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
@@ -113383,6 +115356,39 @@
       "field_type_text": []
     },
     {
+      "id": 1759200637,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Swiper",
+      "field_category": 512,
+      "field_name": "navigation",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "导航器全部配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 02:50:37",
+      "update_time": "2025-09-30 02:50:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3271,
       "platform_framework": [
         "64"
@@ -114750,43 +116756,6 @@
       ]
     },
     {
-      "id": 1712653432,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Switch",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "数据发生变化时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: SwitchValue, context: { e: MouseEvent })",
-      "create_time": "2024-04-09 09:03:52",
-      "update_time": "2024-04-09 09:03:52",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "MouseEvent<HTMLButtonElement>",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 1726808201,
       "platform_framework": [
         "8",
@@ -114824,6 +116793,39 @@
       "field_type_text": [
         "Boolean"
       ]
+    },
+    {
+      "id": 1761301398,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Switch",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "数据发生变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: SwitchValue, context: { e: MouseEvent })",
+      "create_time": "2025-10-24 10:23:18",
+      "update_time": "2025-10-24 10:23:18",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "MouseEvent<HTMLButtonElement>",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 3341,
@@ -115524,7 +117526,7 @@
       ]
     },
     {
-      "id": 1441,
+      "id": 1761301442,
       "platform_framework": [
         "8",
         "16",
@@ -115534,14 +117536,14 @@
       "field_category": 2,
       "field_name": "change",
       "field_type": [],
-      "field_default_value": "0",
+      "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "选中标签切换时触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(value: string | number)",
-      "create_time": "2021-08-12 07:43:08",
-      "update_time": "2021-08-12 07:43:08",
+      "create_time": "2025-10-24 10:24:02",
+      "update_time": "2025-10-24 10:24:02",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -115549,7 +117551,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Events",
@@ -115992,6 +117994,39 @@
         "String",
         "Number"
       ]
+    },
+    {
+      "id": 1761301553,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabBarItem",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "图标插槽，用于自定义图标区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-24 10:25:53",
+      "update_time": "2025-10-24 10:25:53",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 3286,
@@ -116603,6 +118638,39 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1760086671,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "TabPanel",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义选项卡面板内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:57:51",
+      "update_time": "2025-10-10 08:57:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
@@ -120771,6 +122839,39 @@
       "field_type_text": []
     },
     {
+      "id": 1760086647,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tabs",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义选项卡内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-10 08:57:27",
+      "update_time": "2025-10-10 08:57:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 3310,
       "platform_framework": [
         "2",
@@ -121593,6 +123694,105 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759203058,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tag",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，自定义内容区域内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:30:58",
+      "update_time": "2025-09-30 03:30:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759203160,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tag",
+      "field_category": 512,
+      "field_name": "closable",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签可关闭内容区域",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:32:40",
+      "update_time": "2025-09-30 03:32:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759203180,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Tag",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "标签中的图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:33:00",
+      "update_time": "2025-09-30 03:33:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -128948,7 +131148,7 @@
       ]
     },
     {
-      "id": 3434,
+      "id": 1761301312,
       "platform_framework": [
         "8",
         "16",
@@ -128957,17 +131157,15 @@
       "component": "Toast",
       "field_category": 2,
       "field_name": "close",
-      "field_type": [
-        "32"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "轻提示隐藏的时候触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-28 02:23:51",
-      "update_time": "2023-03-28 02:23:51",
+      "create_time": "2025-10-24 10:21:52",
+      "update_time": "2025-10-24 10:21:52",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -128984,12 +131182,10 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Function"
-      ]
+      "field_type_text": []
     },
     {
-      "id": 3435,
+      "id": 1761301320,
       "platform_framework": [
         "8",
         "16",
@@ -128998,17 +131194,15 @@
       "component": "Toast",
       "field_category": 2,
       "field_name": "destroy",
-      "field_type": [
-        "32"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "轻提示销毁的时候触发",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-03-28 02:24:05",
-      "update_time": "2023-03-28 02:24:05",
+      "create_time": "2025-10-24 10:22:00",
+      "update_time": "2025-10-24 10:22:00",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -129025,9 +131219,7 @@
         "React(Mobile)",
         "Miniprogram"
       ],
-      "field_type_text": [
-        "Function"
-      ]
+      "field_type_text": []
     },
     {
       "id": 1712058581,
@@ -129057,6 +131249,72 @@
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759216343,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 512,
+      "field_name": "icon",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义图标",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:12:23",
+      "update_time": "2025-09-30 07:12:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1759216358,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Toast",
+      "field_category": 512,
+      "field_name": "message",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "弹窗显示文字",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 07:12:38",
+      "update_time": "2025-09-30 07:12:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
       "platform_framework_text": [
         "Miniprogram"
       ],
@@ -143779,6 +146037,39 @@
       "field_type_text": [
         "Number"
       ]
+    },
+    {
+      "id": 1759203528,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Watermark",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-09-30 03:38:48",
+      "update_time": "2025-09-30 03:38:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
     },
     {
       "id": 2593,

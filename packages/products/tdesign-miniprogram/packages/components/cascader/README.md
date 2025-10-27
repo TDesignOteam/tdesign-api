@@ -22,15 +22,6 @@ value | String / Number | null | 选项值 | N
 default-value | String / Number | undefined | 选项值。非受控属性 | N
 visible | Boolean | false | 是否展示 | N
 
-### Cascader Slots
-
-名称 | 描述
--- | --
-close-btn | 关闭按钮
-header | `1.9.1`。头部
-middle-content | 中间内容
-title | 标题
-
 ### Cascader Events
 
 名称 | 参数 | 描述
@@ -38,3 +29,12 @@ title | 标题
 change | `(value: string \| number, selectedOptions: string[])` | `1.0.1`。值发生变更时触发
 close | `(trigger: CascaderTriggerSource)` | `1.0.1`。关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/cascader/type.ts)。<br/>`type CascaderTriggerSource = 'overlay' \| 'close-btn' \| 'finish'`<br/>
 pick | `(value: string \| number, label: string, index: number, level: number)` | `1.0.1`。选择后触发
+
+### Cascader Slots
+
+名称 | 描述
+-- | --
+close-btn | 自定义 `close-btn` 显示内容
+header | `1.9.1`。头部
+middle-content | 中间内容
+title | 自定义 `title` 显示内容

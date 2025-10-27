@@ -49,11 +49,11 @@ export default {
   /** 当前选中标签的索引 */
   value: {
     type: [String, Number, Array] as PropType<TdTabBarProps['value']>,
-    default: undefined,
+    default: undefined as TdTabBarProps['value'],
   },
   modelValue: {
     type: [String, Number, Array] as PropType<TdTabBarProps['value']>,
-    default: undefined,
+    default: undefined as TdTabBarProps['value'],
   },
   /** 当前选中标签的索引，非受控属性 */
   defaultValue: {

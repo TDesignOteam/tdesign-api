@@ -17,13 +17,13 @@ note | String / Slot / Function | - | Typescript：`string \| TNode`。[see more
 required | Boolean | false | \- | N
 rightIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 title | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/>Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+onClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 
 ### Cell Events
 
 name | params | description
 -- | -- | --
-click | `(context: { e: MouseEvent })` | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
+click | `(context: { e: MouseEvent })` | \-
 
 
 ### CellGroup Props

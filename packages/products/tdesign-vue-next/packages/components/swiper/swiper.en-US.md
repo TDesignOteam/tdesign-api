@@ -10,6 +10,7 @@ animation | String | slide | options: slide/fade | N
 autoplay | Boolean | true | \- | N
 cardScale | Number | 210/332 | \- | N
 current | Number | 0 | `v-model` and `v-model:current` is supported | N
+defaultCurrent | Number | 0 | uncontrolled property | N
 direction | String | horizontal | options: horizontal/vertical | N
 duration | Number | 300 | \- | N
 height | Number | - | \- | N
