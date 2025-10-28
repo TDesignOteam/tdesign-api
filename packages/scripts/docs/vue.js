@@ -44,7 +44,7 @@ const API_DOC_BLOCKS = {
 const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
 function categoryOrder(res) {
-  const CATEGORY_ORDER = ['Props', 'Events', 'Slots', 'External Classes'];
+  const CATEGORY_ORDER = ['Props', 'Events', 'Functions', 'Slots', 'External Classes'];
   return Object.fromEntries(
     CATEGORY_ORDER.filter((key) => key in res).map((key) => [
       key,
