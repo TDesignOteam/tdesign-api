@@ -828,6 +828,10 @@ export interface TableColumnFilter {
    */
   confirmEvents?: string[];
   /**
+   * 自定义筛选后的文本内容。泛型 T 指表格数据类型
+   */
+  filterDisplay?: string | TNode<PrimaryTableFilterDisplay<T>>;
+  /**
    * 过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于表头标题和过滤文本行中的列标题不一样的场景
    */
   label?: string | TNode;
@@ -1222,6 +1226,11 @@ export interface SwapParams<T> {
   target: T;
   currentIndex: number;
   targetIndex: number;
+}
+
+export interface PrimaryTableFilterDisplay<T> {
+  row: T;
+  value: any;
 }
 
 export interface ListFilterConfig {
