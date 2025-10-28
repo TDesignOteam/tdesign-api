@@ -89244,6 +89244,41 @@
       "field_type_text": []
     },
     {
+      "id": 1761621205,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Popup",
+      "field_category": 4,
+      "field_name": "getPopper",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取当前组件 popper 实例",
+      "field_desc_en": "get the popup component popper instance",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-10-28 03:13:25",
+      "update_time": "2025-10-28 03:13:25",
+      "event_output": "typeof createPopper【import { createPopper } from '@popperjs/core'】",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1695463043,
       "platform_framework": [
         "1",
