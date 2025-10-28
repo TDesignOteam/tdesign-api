@@ -72,20 +72,20 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
       }
     }
     if (type === 'Number') {
-        if (defaultValue) {
-            // 支持诸如 210/332 的分数形式默认值配置原样返回
-            const frac = defaultValue.match(
-                /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
-            );
-            if (frac) {
-                dl = defaultValue;
-            } else {
-                // 其它数字类型，按数值处理
-                dl = Number(defaultValue);
-            }
+      if (defaultValue) {
+        // 支持诸如 210/332 的分数形式默认值配置原样返回
+        const frac = defaultValue.match(
+          /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
+        );
+        if (frac) {
+          dl = defaultValue;
         } else {
-            dl = defaultValue;
+          // 其它数字类型，按数值处理
+          dl = Number(defaultValue);
         }
+      } else {
+        dl = defaultValue;
+      }
     } else if (type === 'String') {
       // 为字符串添加单引号
       dl = `'${defaultValue}'`;
