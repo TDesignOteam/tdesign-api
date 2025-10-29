@@ -89261,7 +89261,7 @@
       "event_input": "",
       "create_time": "2025-10-28 03:13:25",
       "update_time": "2025-10-28 03:13:25",
-      "event_output": "typeof createPopper【import { createPopper } from '@popperjs/core'】",
+      "event_output": "Instance【import { Instance } from '@popperjs/core'】",
       "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
