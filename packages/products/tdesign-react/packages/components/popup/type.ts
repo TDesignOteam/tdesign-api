@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { createPopper } from '@popperjs/core';
+import { Instance } from '@popperjs/core';
 import { TNode, ClassName, Styles, AttachNode } from '../common';
 import { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
 
@@ -122,7 +122,7 @@ export interface PopupInstanceFunctions {
   /**
    * 获取当前组件 popper 实例
    */
-  getPopper?: () => typeof createPopper;
+  getPopper?: () => Instance;
   /**
    * 更新浮层内容
    */
