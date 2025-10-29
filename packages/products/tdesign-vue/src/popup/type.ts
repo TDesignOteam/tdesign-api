@@ -113,7 +113,7 @@ export interface PopupInstanceFunctions {
   /**
    * 获取浮层元素
    */
-  getOverlay?: () => HTMLElement;
+  getOverlay?: () => HTMLElement | null;
   /**
    * 获取浮层悬浮状态
    */
@@ -121,7 +121,7 @@ export interface PopupInstanceFunctions {
   /**
    * 获取当前组件 popper 实例
    */
-  getPopper?: () => Instance;
+  getPopper?: () => Instance | null;
   /**
    * 更新浮层内容
    */
