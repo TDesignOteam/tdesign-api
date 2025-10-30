@@ -19,7 +19,7 @@ image-props | Object | - | `0.34.0` | N
 interval | Number | 5000 | \- | N
 list | Array | - | `0.32.0`。Typescript：`string[] \| SwiperList[]` `interface SwiperList { value: string, ariaLabel: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts) | N
 loop | Boolean | true | \- | N
-navigation | Boolean / Object | true | Typescript：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts) | N
+navigation | Boolean / Object | true | navigation all config, `true` for using default config。Typescript：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts) | N
 next-margin | String / Number | 0 | `0.32.0` | N
 pagination-position | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right | N
 previous-margin | String / Number | 0 | `0.32.0` | N
@@ -38,7 +38,7 @@ image-load | `(index: number)` | `1.1.4`
 
 name | Description
 -- | --
-navigation | \-
+navigation | navigation all config, `true` for using default config。Typescript：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)
 
 ### Swiper External Classes
 

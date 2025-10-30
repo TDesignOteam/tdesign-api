@@ -58,6 +58,7 @@ export interface TdSwiperProps {
   loop?: boolean;
   /**
    * 导航器全部配置
+   * @default true
    */
   navigation?: SwiperNavigation | TNode;
   /**

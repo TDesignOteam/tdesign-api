@@ -11,13 +11,12 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 animation | String | slide | options: slide | N
 autoplay | Boolean | true | \- | N
 current | Number | 0 | \- | N
-defaultCurrent | Number | 0 | uncontrolled property | N
 direction | String | horizontal | options: horizontal/vertical | N
 duration | Number | 300 | \- | N
 height | String / Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | TNode | - | Typescript：`SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+navigation | TNode | true | navigation all config, `true` for using default config。Typescript：`SwiperNavigation \| TNode \| Boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 nextMargin | String / Number | 0 | \- | N
 previousMargin | String / Number | 0 | \- | N
 type | String | default | options: default/card | N
