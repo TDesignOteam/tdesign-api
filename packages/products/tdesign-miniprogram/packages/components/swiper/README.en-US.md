@@ -25,12 +25,6 @@ pagination-position | String | bottom | options: top-left/top/top-right/bottom-l
 previous-margin | String / Number | 0 | `0.32.0` | N
 snap-to-edge | Boolean | false | `0.32.0` | N
 
-### Swiper Slots
-
-name | Description
--- | --
-navigation | navigation all config, `true` for using default config。Typescript：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)
-
 ### Swiper Events
 
 name | params | description
@@ -44,13 +38,7 @@ image-load | `(index: number)` | `1.1.4`
 
 name | Description
 -- | --
-navigation | \-
-
-### Swiper Slots
-
-name | Description
--- | --
-navigation | \-
+navigation | navigation all config, `true` for using default config。Typescript：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)
 
 ### Swiper External Classes
 

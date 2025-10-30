@@ -11,7 +11,6 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 animation | String | slide | options: slide | N
 autoplay | Boolean | true | \- | N
 current | Number | 0 | \- | N
-defaultCurrent | Number | 0 | uncontrolled property | N
 direction | String | horizontal | options: horizontal/vertical | N
 duration | Number | 300 | \- | N
 height | String / Number | - | \- | N

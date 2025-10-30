@@ -25,12 +25,6 @@ pagination-position | String | bottom | 页码信息展示位置。可选项：t
 previous-margin | String / Number | 0 | `0.32.0`。前边距，可用于露出前一项的一小部分。默认单位 `px` | N
 snap-to-edge | Boolean | false | `0.32.0`。当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素 | N
 
-### Swiper Slots
-
-名称 | 描述
--- | --
-navigation | 导航器全部配置，`true` 的话使用默认配置。TS 类型：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)
-
 ### Swiper Events
 
 名称 | 参数 | 描述
@@ -44,13 +38,7 @@ image-load | `(index: number)` | `1.1.4`。图片加载时触发
 
 名称 | 描述
 -- | --
-navigation | 导航器全部配置
-
-### Swiper Slots
-
-名称 | 描述
--- | --
-navigation | 导航器全部配置
+navigation | 自定义 `navigation` 显示内容。TS 类型：`SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/swiper/type.ts)
 
 ### Swiper External Classes
 
