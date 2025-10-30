@@ -103,7 +103,7 @@ export interface TdImageViewerProps {
    */
   modelValue?: boolean;
   /**
-   * 层级，默认为 2000
+   * 层级，默认为 3500
    */
   zIndex?: number;
   /**
