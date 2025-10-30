@@ -67231,7 +67231,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "层级，默认为 3500",
+      "field_desc_zh": "层级，默认为 3000",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

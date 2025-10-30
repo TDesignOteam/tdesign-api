@@ -98,7 +98,7 @@ export interface TdImageViewerProps {
    */
   defaultVisible?: boolean;
   /**
-   * 层级，默认为 3500
+   * 层级，默认为 3000
    */
   zIndex?: number;
   /**
