@@ -7,11 +7,12 @@ import { TdSearchProps } from './type';
 export const searchDefaultProps: TdSearchProps = {
   action: '',
   center: false,
+  clearTrigger: 'always',
   clearable: true,
   disabled: false,
   focus: false,
   leftIcon: 'search',
   placeholder: '',
-  readonly: false,
+  readonly: undefined,
   shape: 'square',
 };

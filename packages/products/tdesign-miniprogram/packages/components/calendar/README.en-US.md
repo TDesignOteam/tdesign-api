@@ -25,13 +25,6 @@ value | Number / Array | - | Typescript：`number \| number[]` | N
 default-value | Number / Array | undefined | uncontrolled property。Typescript：`number \| number[]` | N
 visible | Boolean | false | \- | N
 
-### Calendar Slots
-
-name | Description
--- | --
-confirm-btn | \-
-title | \-
-
 ### Calendar Events
 
 name | params | description
@@ -42,3 +35,10 @@ confirm | `(value: timestamp)` | \-
 panel-change | `(detail: { year: number, month: number })` | `1.8.4`
 scroll | `({scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY})` | `1.4.6`。triggered when scrolling
 select | `(value: timestamp)` | `0.28.0`
+
+### Calendar Slots
+
+name | Description
+-- | --
+confirm-btn | \-
+title | \-

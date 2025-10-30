@@ -9,6 +9,7 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh \
   && code-server --install-extension donjayamanne.githistory \
   && code-server --install-extension tencent-cloud.coding-copilot \
   && code-server --install-extension vue.volar \
+  && code-server --install-extension qwtel.sqlite-viewer \
   && echo done
 
 # 安装 ssh 服务，用于支持 VSCode 等客户端通过 Remote-SSH 访问开发环境

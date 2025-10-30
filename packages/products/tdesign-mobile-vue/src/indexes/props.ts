@@ -11,11 +11,11 @@ export default {
   /** 索引列表的激活项，默认首项 */
   current: {
     type: [String, Number] as PropType<TdIndexesProps['current']>,
-    default: undefined,
+    default: undefined as TdIndexesProps['current'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdIndexesProps['current']>,
-    default: undefined,
+    default: undefined as TdIndexesProps['current'],
   },
   /** 索引列表的激活项，默认首项，非受控属性 */
   defaultCurrent: {

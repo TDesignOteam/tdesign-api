@@ -38,7 +38,19 @@ function getDefaultValue(api) {
   if (defaultValue === '') return;
   if (defaultValue === '\'\'') return defaultValue;
   // 输出 Number 类型的默认值
-  if (api.field_type_text.includes('Number') && !isNaN(defaultValue)) return Number(defaultValue);
+  if (api.field_type_text.includes('Number')) {
+    if (defaultValue) {
+      // 支持诸如 210/332 的分数形式默认值配置原样返回
+      const frac = defaultValue.match(
+        /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
+      );
+      if (frac) {
+        return defaultValue;
+      } else if (!isNaN(defaultValue)) {
+        return Number(defaultValue);
+      }
+    }
+  }
   // 处理字符串类型
   if (typeof defaultValue === 'string') {
     try {

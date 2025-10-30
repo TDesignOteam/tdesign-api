@@ -40,6 +40,12 @@ change | `(current: number, source: SwiperChangeSource)` | 轮播切换时触发
 click | `(index: number)` | `0.34.0`。点击轮播项时触发
 image-load | `(index: number)` | `1.1.4`。图片加载时触发
 
+### Swiper Slots
+
+名称 | 描述
+-- | --
+navigation | 导航器全部配置
+
 ### Swiper External Classes
 
 类名 | 描述

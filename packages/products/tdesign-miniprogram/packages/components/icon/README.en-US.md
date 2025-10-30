@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Icon Props
 
 name | type | default | description | required
@@ -18,7 +17,7 @@ size | String / Number | - | \- | N
 
 name | params | description
 -- | -- | --
-click | \- | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+click | \- | \-
 
 ### Icon External Classes
 

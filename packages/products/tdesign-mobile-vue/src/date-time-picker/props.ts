@@ -40,12 +40,12 @@ export default {
   /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容 */
   header: {
     type: [Boolean, Function] as PropType<TdDateTimePickerProps['header']>,
-    default: true,
+    default: true as TdDateTimePickerProps['header'],
   },
   /** year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒 */
   mode: {
     type: [String, Array] as PropType<TdDateTimePickerProps['mode']>,
-    default: 'date',
+    default: 'date' as TdDateTimePickerProps['mode'],
   },
   /** 自定义label */
   renderLabel: {
@@ -75,11 +75,11 @@ export default {
   /** 选中值 */
   value: {
     type: [String, Number] as PropType<TdDateTimePickerProps['value']>,
-    default: undefined,
+    default: undefined as TdDateTimePickerProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdDateTimePickerProps['value']>,
-    default: undefined,
+    default: undefined as TdDateTimePickerProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

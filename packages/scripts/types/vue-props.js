@@ -49,8 +49,8 @@ function getType(cmp, api, name) {
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
   const type = api.field_type_text.join();
-  const value = api.field_default_value;
-  let dl = value;
+  const defaultValue = api.field_default_value;
+  let dl = defaultValue;
   // 如果 API 显示指明 undefined，则一定返回 default: undefined
   if (dl === 'undefined') return dl;
   if (defaultValueIsUndefined(api)) {
@@ -65,17 +65,30 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
           const type = `: ${getPropType(cmp, name)}`;
           dl = `()${type} => ${dl}`;
         } else {
-          dl = value;
+          dl = defaultValue;
         }
       } catch (e) {
-        dl = value;
+        dl = defaultValue;
       }
     }
     if (type === 'Number') {
-      dl = value ? Number(value) : value;
+      if (defaultValue) {
+        // 支持诸如 210/332 的分数形式默认值配置原样返回
+        const frac = defaultValue.match(
+          /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
+        );
+        if (frac) {
+          dl = defaultValue;
+        } else {
+          // 其它数字类型，按数值处理
+          dl = Number(defaultValue);
+        }
+      } else {
+        dl = defaultValue;
+      }
     } else if (type === 'String') {
       // 为字符串添加单引号
-      dl = `'${value}'`;
+      dl = `'${defaultValue}'`;
       // 值不为 '' 时，避免连续两个单引号出现
       dl.length !== 2 && (dl = dl.replace(/''/g, '\''));
     }

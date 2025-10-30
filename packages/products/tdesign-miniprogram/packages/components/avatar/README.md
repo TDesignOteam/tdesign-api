@@ -24,6 +24,12 @@ size | String | - | 尺寸，示例值：small/medium/large/24px/38px 等。优�
 -- | -- | --
 error | - | 图片加载失败时触发
 
+### Avatar Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+
 ### Avatar External Classes
 
 类名 | 描述
@@ -33,12 +39,6 @@ t-class-alt | 替代文本样式类
 t-class-content | 内容样式类
 t-class-icon | 图标样式类
 t-class-image | 图片样式类
-
-### Avatar Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容
 
 
 ### AvatarGroup Props
@@ -53,18 +53,18 @@ max | Number | - | 能够同时显示的最多头像数量 | N
 shape | String | - | 形状。优先级低于 Avatar.shape。可选项：circle/round。TS 类型：`ShapeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 size | String | - | 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size | N
 
-### AvatarGroup Slots
-
-名称 | 描述
--- | --
-\- | 默认插槽，自定义内容区域内容
-collapse-avatar | 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`
-
 ### AvatarGroup Events
 
 名称 | 参数 | 描述
 -- | -- | --
 collapsed-item-click | - | 点击头像折叠元素触发
+
+### AvatarGroup Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容
+collapse-avatar | 自定义 `collapse-avatar` 显示内容
 
 ### AvatarGroup External Classes
 

@@ -19,6 +19,14 @@ suffix-icon | String / Object | - | \- | N
 theme | String | default | options: default/primary/danger/warning/success | N
 underline | Boolean | - | \- | N
 
+### Link Events
+
+name | params | description
+-- | -- | --
+complete | \- | \-
+fail | \- | \-
+success | \- | \-
+
 ### Link Slots
 
 name | Description
@@ -27,14 +35,6 @@ name | Description
 content | \-
 prefix-icon | \-
 suffix-icon | \-
-
-### Link Events
-
-name | params | description
--- | -- | --
-complete | \- | \-
-fail | \- | \-
-success | \- | \-
 
 ### Link External Classes
 

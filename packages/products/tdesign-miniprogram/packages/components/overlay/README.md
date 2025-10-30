@@ -20,3 +20,9 @@ z-index | Number | 11000 | 遮罩层级 | N
 名称 | 参数 | 描述
 -- | -- | --
 click | `({ visible: boolean })` | 点击遮罩时触发
+
+### Overlay Slots
+
+名称 | 描述
+-- | --
+\- | 默认插槽，自定义内容区域内容

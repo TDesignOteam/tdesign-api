@@ -43,6 +43,15 @@ const API_DOC_BLOCKS = {
 // 通用属性
 const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
+function categoryOrder(res) {
+  const CATEGORY_ORDER = ['Props', 'Events', 'Functions', 'Slots', 'External Classes'];
+  return Object.fromEntries(
+    CATEGORY_ORDER.filter((key) => key in res).map((key) => [
+      key,
+      res[key],
+    ])
+  );;
+}
 // category: props / events / functions / extends / return
 function groupByFieldCategory(framework, componentApi) {
   const result = {};
@@ -69,22 +78,20 @@ function groupByFieldCategory(framework, componentApi) {
       }
     }
     const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
-    if (result[category]) {
-      result[category].push(api);
-    } else {
-      result[category] = [api];
-    }
+    (result[category] ??= []).push(api);
     // 支持属性同名插槽输出到小程序端组件 API 文档
     if (isSlot) {
-      if (result['Slots']) {
-          result['Slots'].push(api);
-      } else {
-          result['Slots'] = [api];
-      }
-    }
-  });
-  return result;
-}
+      const newAPi = { ...api };
+      const desc = '自定义' + ' `' + kebabCaseComponent(newAPi.field_name) +'` ' + '显示内容';
+      const onlyTNode = newAPi.field_type_text.length === 1 && newAPi.field_type_text[0] === 'TNode';
+      newAPi.field_desc_zh = onlyTNode ? newAPi.field_desc_zh : desc
+      newAPi.field_category = 512;
+      newAPi.field_category_text = 'Slots';
+      (result['Slots'] ??= []).push(newAPi);
+    };
+  })
+  return categoryOrder(result);
+};
 
 function sortSlotsArrExceptFirst(arr) {
   if (arr.length <= 1) {
@@ -485,7 +492,8 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         const newApi = formatToVueApi(api, { current, framework, category });
         const oneApi = getOneApi(newApi, current, docTitleType, framework);
         const isMiniprogram = framework === 'Miniprogram';
-        if (isMiniprogram && !COMMON_PROPS.includes(api.field_name) || !isMiniprogram) {
+        const shouldPushApi = !isMiniprogram || (isMiniprogram && !COMMON_PROPS.includes(api.field_name));
+        if (oneApi && shouldPushApi) {
           md[category].apis.push(oneApi);
         }
         // 添加非受控属性 API 文档
@@ -530,3 +538,4 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
 }
 
 module.exports = getVueApiDocs;
+

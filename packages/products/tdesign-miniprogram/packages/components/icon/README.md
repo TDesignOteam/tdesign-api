@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Icon Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -18,7 +17,7 @@ size | String / Number | - | 图标大小, 如 `20`, `20px`, `48rpx`, 默认单�
 
 名称 | 参数 | 描述
 -- | -- | --
-click | \- | 点击图标时触发。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts)
+click | \- | 点击图标时触发
 
 ### Icon External Classes
 

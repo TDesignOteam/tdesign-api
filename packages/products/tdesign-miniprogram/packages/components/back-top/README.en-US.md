@@ -15,18 +15,18 @@ text | String | '' | \- | N
 theme | String | round | options: round/half-round/round-dark/half-round-dark | N
 visibility-height | Number | 200 | \- | N
 
+### BackTop Events
+
+name | params | description
+-- | -- | --
+to-top | \- | \-
+
 ### BackTop Slots
 
 name | Description
 -- | --
 \- | \-
 icon | \-
-
-### BackTop Events
-
-name | params | description
--- | -- | --
-to-top | \- | \-
 
 ### BackTop External Classes
 

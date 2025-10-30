@@ -29,6 +29,12 @@ cancel | \- | \-
 close | `(trigger: ActionSheetTriggerSource)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/>
 selected | `(selected: ActionSheetItem \| string, index: number)` | \-
 
+### ActionSheet Slots
+
+name | Description
+-- | --
+\- | \-
+
 ### ActionSheet External Classes
 
 className | Description
@@ -36,9 +42,3 @@ className | Description
 t-class | \-
 t-class-cancel | \-
 t-class-content | \-
-
-### ActionSheet Slots
-
-name | Description
--- | --
-\- | \-
