@@ -35526,12 +35526,13 @@
       "field_category": 1,
       "field_name": "format",
       "field_type": [
-        "1"
+        "1",
+        "32"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
       "field_desc_zh": "仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format)",
-      "field_desc_en": null,
+      "field_desc_en": "Used only for formatting the display of the date, without affecting the actual date value. Note the difference from valueType: valueTypedirectly determines the data format of the date value value. The global default configuration is 'YYYY-MM-DD'. [see more ts definition](https://day.js.org/docs/en/display/format)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-03-23 12:35:54",
@@ -35552,7 +35553,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Function"
       ]
     },
     {
