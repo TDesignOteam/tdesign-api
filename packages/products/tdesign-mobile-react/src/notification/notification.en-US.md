@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Notification Props
 
 name | type | default | description | required

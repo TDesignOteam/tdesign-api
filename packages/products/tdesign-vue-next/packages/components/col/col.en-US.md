@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Col Props
 
 name | type | default | description | required

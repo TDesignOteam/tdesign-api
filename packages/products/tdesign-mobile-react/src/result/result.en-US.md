@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Result Props
 
 name | type | default | description | required

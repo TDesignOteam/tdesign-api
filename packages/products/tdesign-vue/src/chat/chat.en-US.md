@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Chat Props
 
 name | type | default | description | required

@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Comment Props
 
 name | type | default | description | required

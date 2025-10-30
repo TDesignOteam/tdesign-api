@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### GridItem Props
 
 name | type | default | description | required

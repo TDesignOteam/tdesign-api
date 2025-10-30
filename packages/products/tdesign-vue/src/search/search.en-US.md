@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Search Props
 
 name | type | default | description | required
