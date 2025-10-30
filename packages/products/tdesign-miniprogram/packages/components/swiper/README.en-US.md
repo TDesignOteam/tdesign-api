@@ -46,6 +46,12 @@ name | Description
 -- | --
 navigation | \-
 
+### Swiper Slots
+
+name | Description
+-- | --
+navigation | \-
+
 ### Swiper External Classes
 
 className | Description

@@ -46,6 +46,12 @@ image-load | `(index: number)` | `1.1.4`。图片加载时触发
 -- | --
 navigation | 导航器全部配置
 
+### Swiper Slots
+
+名称 | 描述
+-- | --
+navigation | 导航器全部配置
+
 ### Swiper External Classes
 
 类名 | 描述
