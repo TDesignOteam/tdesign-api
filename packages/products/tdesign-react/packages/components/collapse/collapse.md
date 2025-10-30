@@ -1,13 +1,14 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Collapse Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-borderless | Boolean | false | 是否为无边框模式 | N
+borderless | Boolean | false | 无边框模式 | N
 defaultExpandAll | Boolean | false | 默认是否展开全部 | N
 disabled | Boolean | - | 是否禁用面板展开/收起操作 | N
 expandIcon | TNode | true | 展开图标。值为 undefined 或 false 则不显示展开图标；值为 true 显示默认图标；值类型为函数，则表示完全自定义展开图标。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
@@ -18,9 +19,10 @@ value | Array | [] | 展开的面板集合。TS 类型：`CollapseValue` `type C
 defaultValue | Array | [] | 展开的面板集合。非受控属性。TS 类型：`CollapseValue` `type CollapseValue = Array<string \| number>`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/collapse/type.ts) | N
 onChange | Function |  | TS 类型：`(value: CollapseValue, context: { e: MouseEvent }) => void`<br/>切换面板时触发，返回变化的值 | N
 
+
 ### CollapsePanel Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N

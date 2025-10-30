@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Calendar Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -30,9 +31,17 @@ onCellRightClick | Function |  | TS 类型：`(options: { cell: CalendarCell; e:
 onControllerChange | Function |  | TS 类型：`(options: ControllerOptions) => void`<br/>右上角控件组选中值有变化的时候触发。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/calendar/type.ts)。<br/>`interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }`<br/> | N
 onMonthChange | Function |  | TS 类型：`(options: { month: string; year: string }) => void`<br/>月份切换时触发 | N
 
+### CalendarInstanceFunctions 组件实例方法
+
+名称 | 参数 | 返回值 | 描述
+-- | -- | -- | --
+className | String | - | 类名 | N
+style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+toCurrent | \- | \- | 跳转到今天
+
 ### CalendarController
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 current | Object | - | “今天(本月)”按钮控制器。TS 类型：`{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/calendar/type.ts) | N
 disabled | Boolean | false | 是否禁用右上角控制器 | N
@@ -43,7 +52,7 @@ year | Object | - | 日历年份控制器。TS 类型：`{ visible?: boolean; se
 
 ### CalendarCell
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 belongTo | Number | - | 用于表示日期单元格属于哪一个月份。值为 0 表示是当前日历显示的月份中的日期，值为 -1 表示是上个月的，值为 1 表示是下个月的（日历展示维度是“月”时有值） | N
 date | Object | - | 日历单元格日期。TS 类型：`Date` | N
@@ -51,4 +60,4 @@ day | Number | - | 日期单元格对应的星期，值为 1~7，表示周一到
 formattedDate | String | - | 日历单元格日期字符串（输出日期的格式和 format 有关） | N
 isCurrent | Boolean | - | 日期单元格是否为当前高亮日期或高亮月份 | N
 weekOrder | Number | - | 日期在本月的第几周（日历展示维度是“月”时有值） | N
-`ControllerOptions` | \- | - | 继承 `ControllerOptions` 中的全部 API | N
+`ControllerOptions` | \- | - | 继承 `ControllerOptions` 中的全部属性 | N

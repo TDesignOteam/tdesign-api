@@ -63,8 +63,6 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
 
-插件返回值：`DialogInstance`
-
 ### DialogPlugin.confirm
 
 同时也支持 `this.$dialog.confirm`。
