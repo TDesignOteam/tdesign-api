@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### DialogCard Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -80,8 +81,6 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
-
-插件返回值：`DialogInstance`
 
 ### dialog.confirm 或 DialogPlugin.confirm
 

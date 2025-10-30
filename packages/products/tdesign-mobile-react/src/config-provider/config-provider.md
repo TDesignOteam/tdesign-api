@@ -18,6 +18,7 @@ cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfi
 classPrefix | String | t | CSS 类名前缀 | N
 dateTimePicker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
+form | Object | - | 表单组件全局配置。TS 类型：`FormConfig` | N
 guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 picker | Object | - | 选择器全局配置。TS 类型：`PickerConfig` | N

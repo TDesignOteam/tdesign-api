@@ -43,15 +43,11 @@ options | Object | - | 必需。消息通知内容。TS 类型：`NotificationOp
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts)
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.warning 或 NotificationPlugin.warning
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### notification.error 或 NotificationPlugin.error
 
@@ -59,15 +55,11 @@ options | Object | - | 必需。消息通知内容。TS 类型：`NotificationIn
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.success 或 NotificationPlugin.success
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### notification.close 或 NotificationPlugin.close
 

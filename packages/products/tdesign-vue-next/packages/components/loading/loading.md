@@ -28,5 +28,3 @@ zIndex | Number | - | 消息通知层级，样式默认为 3500 | N
 -- | -- | -- | --
 options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
-
-插件返回值：`LoadingInstance【interface LoadingInstance { hide: () => void }】`

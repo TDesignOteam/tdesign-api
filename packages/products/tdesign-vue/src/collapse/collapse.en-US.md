@@ -9,13 +9,13 @@ name | type | default | description | required
 borderless | Boolean | false | \- | N
 defaultExpandAll | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
-expandIcon | Boolean / Slot / Function | true | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-expandIconPlacement | String | left | options：left/right | N
+expandIcon | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+expandIconPlacement | String | left | options: left/right | N
 expandMutex | Boolean | false | \- | N
 expandOnRowClick | Boolean | true | \- | N
-value | Array | [] | `v-model` is supported。Typescript：`CollapseValue` `type CollapseValue = Array<string \| number>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/collapse/type.ts) | N
-defaultValue | Array | [] | uncontrolled property。Typescript：`CollapseValue` `type CollapseValue = Array<string \| number>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/collapse/type.ts) | N
-onChange | Function |  | Typescript：`(value: CollapseValue, context: { e: MouseEvent }) => void`<br/> | N
+value | Array | [] | `v-model` is supported。Typescript: `CollapseValue` `type CollapseValue = Array<string \| number>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/collapse/type.ts) | N
+defaultValue | Array | [] | uncontrolled property。Typescript: `CollapseValue` `type CollapseValue = Array<string \| number>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/collapse/type.ts) | N
+onChange | Function |  | Typescript: `(value: CollapseValue, context: { e: MouseEvent }) => void`<br/> | N
 
 ### Collapse Events
 
@@ -23,15 +23,16 @@ name | params | description
 -- | -- | --
 change | `(value: CollapseValue, context: { e: MouseEvent })` | \-
 
+
 ### CollapsePanel Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+content | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+default | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 destroyOnCollapse | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
-expandIcon | Boolean / Slot / Function | undefined | Typescript：`boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-header | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-headerRightContent | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+expandIcon | Boolean / Slot / Function | undefined | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+header | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+headerRightContent | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | \- | N
