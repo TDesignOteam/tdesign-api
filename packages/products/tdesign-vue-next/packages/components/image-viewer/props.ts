@@ -99,7 +99,7 @@ export default {
   },
   /** 隐藏/显示预览，非受控属性 */
   defaultVisible: Boolean,
-  /** 层级，默认为 2000 */
+  /** 层级，默认为 3000 */
   zIndex: {
     type: Number,
   },
