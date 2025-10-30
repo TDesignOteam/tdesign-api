@@ -207,7 +207,7 @@ function formatDesc(
     if ((isMiniprogram && customFieldType.indexOf('TNode') === -1) || !isMiniprogram) {
       // tsTypeText 中文"TS 类型"
       const language = languageConfig[LANGUAGE];
-      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}：`;
+      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}`;
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
@@ -358,7 +358,7 @@ function formatEventToProps(api) {
   baseName = baseName.replace(/`/g, '');
   // tsTypeText 中文"TS 类型"
   const language = languageConfig[LANGUAGE];
-  const desc = [`${language.tsTypeText}：\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
+  const desc = [`${language.tsTypeText}\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
@@ -403,7 +403,7 @@ function addCommonProperties({
   if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
-      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
+      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}\`React.CSSProperties\` | N`,
     ]);
   } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[
