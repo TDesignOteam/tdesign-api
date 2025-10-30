@@ -4,18 +4,15 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { Instance } from '@popperjs/core';
 import { TNode, ClassName, Styles, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**
-   * 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
    * @default 'body'
    */
   attach?: AttachNode;
-  /**
-   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮
-   */
-  closeBtn?: boolean | TNode;
   /**
    * 浮层里面的内容
    */
@@ -98,6 +95,10 @@ export interface TdPopupProps {
    */
   zIndex?: number;
   /**
+   * 内容面板点击时触发
+   */
+  onOverlayClick?: (context: { e: MouseEvent }) => void;
+  /**
    * 下拉选项滚动事件
    */
   onScroll?: (context: { e: WheelEvent }) => void;
@@ -109,6 +110,26 @@ export interface TdPopupProps {
    * 当浮层隐藏或显示时触发，`trigger=document` 表示点击非浮层元素触发；`trigger=context-menu` 表示右击触发
    */
   onVisibleChange?: (visible: boolean, context: PopupVisibleChangeContext) => void;
+}
+
+/** 组件实例方法 */
+export interface PopupInstanceFunctions {
+  /**
+   * 获取浮层元素
+   */
+  getOverlay?: () => HTMLElement | null;
+  /**
+   * 获取浮层悬浮状态
+   */
+  getOverlayState?: () => { hover: boolean };
+  /**
+   * 获取当前组件 popper 实例
+   */
+  getPopper?: () => Instance | null;
+  /**
+   * 更新浮层内容
+   */
+  update?: () => void;
 }
 
 export type PopupPlacement =
