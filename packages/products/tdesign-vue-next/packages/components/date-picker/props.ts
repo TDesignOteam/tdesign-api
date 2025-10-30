@@ -44,8 +44,8 @@ export default {
   },
   /** 仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format) */
   format: {
-    type: String,
-    default: undefined,
+    type: [String, Function] as PropType<TdDatePickerProps['format']>,
+    default: undefined as TdDatePickerProps['format'],
   },
   /** 透传给输入框（Input）组件的参数 */
   inputProps: {

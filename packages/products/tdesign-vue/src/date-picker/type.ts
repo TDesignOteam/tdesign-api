@@ -59,7 +59,7 @@ export interface TdDatePickerProps {
   /**
    * 仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format)
    */
-  format?: string;
+  format?: string | function;
   /**
    * 透传给输入框（Input）组件的参数
    */
@@ -104,6 +104,10 @@ export interface TdDatePickerProps {
    * @default bottom
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
+  /**
+   * 是否只读，优先级大于 allowInput
+   */
+  readonly?: boolean;
   /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */
@@ -281,6 +285,10 @@ export interface TdDateRangePickerProps {
    * 透传给范围输入框 RangeInput 组件的参数
    */
   rangeInputProps?: RangeInputProps;
+  /**
+   * 是否只读，优先级大于 `allowInput`
+   */
+  readonly?: boolean;
   /**
    * 日期分隔符，支持全局配置，默认为 '-'
    * @default ''
@@ -534,7 +542,7 @@ export type DatePickerValueType =
 
 export type ValueTypeEnum = DatePickerValueType;
 
-export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear';
+export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
 
 export type DisableRangeDate =
   | Array<DateValue>

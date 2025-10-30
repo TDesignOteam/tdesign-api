@@ -15,7 +15,7 @@ disableTime | Function | - | disable time config function。Typescript：`(time:
 disabled | Boolean | undefined | make DatePicker to be disabled | N
 enableTimePicker | Boolean | false | \- | N
 firstDayOfWeek | Number | 7 | options: 1/2/3/4/5/6/7 | N
-format | String | 'YYYY-MM-DD' | \- | N
+format | String / Function | 'YYYY-MM-DD' | Used only for formatting the display of the date, without affecting the actual date value. Note the difference from valueType: valueTypedirectly determines the data format of the date value value. The global default configuration is 'YYYY-MM-DD'. [see more ts definition](https://day.js.org/docs/en/display/format) | N
 inputProps | Object | - | Typescript：`InputProps`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
