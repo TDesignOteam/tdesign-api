@@ -4,8 +4,6 @@ export interface Styles {
   [css: string]: string | number;
 }
 
-type TNode = never;
-
 export type ImageEvent = any;
 
 export type PlainObject = { [key: string]: any };
