@@ -263,24 +263,24 @@ function getImportPath(body, cmp, framework) {
  * @param {Object} miniprogram.MP_PROPS.custom_field_type 继承的原生小程序组件名称，如：button / picker-view
  * @param {Object} miniprogram.MP_EXCLUDE_PROPS.custom_field_type 需要排除的小程序原生属性
  */
-// function getMiniprogramOriginalApi(miniprogram, cmp) {
-//   const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
-//   const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
-//   const apis = fetchApiDataFromOfficialWebsite(
-//     MP_PROPS.custom_field_type,
-//     exclude,
-//   );
-//   const apiArr = [];
-//   apis.forEach((api) => {
-//     if (!['Props'].includes(api.field_category_text)) return;
-//     const propsCode = formatNormalProps(api, cmp);
-//     propsCode
-//       && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
-//         api.field_desc_zh
-//       } */\n${propsCode}`);
-//   });
-//   return apiArr;
-// }
+function getMiniprogramOriginalApi(miniprogram, cmp) {
+  const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
+  const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
+  const apis = fetchApiDataFromOfficialWebsite(
+    MP_PROPS.custom_field_type,
+    exclude,
+  );
+  const apiArr = [];
+  apis.forEach((api) => {
+    if (!['Props'].includes(api.field_category_text)) return;
+    const propsCode = formatNormalProps(api, cmp);
+    propsCode
+      && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
+        api.field_desc_zh
+      } */\n${propsCode}`);
+  });
+  return apiArr;
+}
 
 function formatApiToProps(baseData, framework, isUseDefault) {
   const r = {};
