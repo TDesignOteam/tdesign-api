@@ -75,3 +75,4 @@ export const P_VUE_MOBILE = 8
 export const P_REACT_MOBILE = 16
 export const P_ANGULAR_MOBILE = 32
 export const P_MINIPROGRAM = 64
+export const P_UNIAPP = 128

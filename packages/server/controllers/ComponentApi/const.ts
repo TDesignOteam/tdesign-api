@@ -25,6 +25,7 @@ const P_VUE_MOBILE = 8;
 const P_REACT_MOBILE = 16;
 const P_ANGULAR_MOBILE = 32;
 const P_MINIPROGRAM = 64;
+const P_UNI_APP = 128;
 
 const API_CATEGORY_PROPS = 1;
 const API_CATEGORY_EVENTS = 2;
@@ -84,6 +85,7 @@ export const PLATFORM_FRAMEWORK: MapOptions = {
     // [P_ANGULAR_PC]: 'Angular(PC)',
     // [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
     [P_MINIPROGRAM]: 'Miniprogram',
+    [P_UNI_APP]: 'UniApp',
 };
 
 /**

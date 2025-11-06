@@ -25,7 +25,7 @@ function getPropType(cmp, name) {
 }
 
 function isNeedPropType(typeName, api) {
-  if (currentFramework === 'Miniprogram') return false;
+  if (['Miniprogram', 'UniApp'].includes(currentFramework)) return false;
   const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
   const complicatedApi =    ['Function', 'Object', 'Array'].includes(typeName)
     || api.field_type_text.length > 1;
@@ -37,7 +37,7 @@ function getType(cmp, api, name) {
   type = type
     .map((t) => {
       // 小程序只需要支持插槽，不需要支持 function
-      const nodeType = currentFramework === 'Miniprogram' ? '' : 'Function';
+      const nodeType = ['Miniprogram', 'UniApp'].includes(currentFramework) ? '' : 'Function';
       return t === 'TNode' ? nodeType : t;
     })
     .filter(v => !!v);
@@ -129,7 +129,7 @@ function getDefaultWithType(api, dl, valueType) {
   const defaultField = isMiniprogram ? 'value:' : 'default:';
 
   // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
-  const isVue3NeedDefaultTsType = ['Vue(Mobile)', 'VueNext(PC)'].includes(currentFramework)
+  const isVue3NeedDefaultTsType = ['Vue(Mobile)', 'VueNext(PC)', 'UniApp'].includes(currentFramework)
     && (
       api.field_type_text?.length > 1
       || (api.custom_field_type && ['\'\'', 'undefined'].includes(dl))
@@ -148,6 +148,7 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     name = getDefaultValueName(api.field_name);
   }
   const isMiniprogram = currentFramework === 'Miniprogram';
+  const isUniApp = currentFramework === 'UniApp';
   // Boolean 类型，且默认值为 false，则不需要过多的处理（小程序 prop 只能是 Object，不能是 block: Boolean
   if (
     !isMiniprogram
@@ -160,7 +161,7 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     const dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
     const isVueMobile = currentFramework === 'Vue(Mobile)';
     const isVueWeb = ['Vue(PC)', 'VueNext(PC)'].includes(currentFramework);
-    if (dl && !isUncontrolApi && api.syntactic_sugar && (isVueMobile || (isVueWeb && useDefault))) {
+    if (dl && !isUncontrolApi && api.syntactic_sugar && (isVueMobile || isUniApp || (isVueWeb && useDefault))) {
       const content = ['type: Boolean', 'default: undefined'].map(t => `    ${t},\n`).join('');
       oneApiStr = [`  ${name}: {\n${content}  }`];
     } else {
@@ -228,14 +229,18 @@ function formatNormalProps(api, cmp, extraParams = {}) {
   return oneApiStr;
 }
 
-function formatEventProps(api, cmp) {
+function formatEventProps(api, cmp, framework) {
   const name = getEventName(api.field_name);
+  if (framework === 'UniApp') {
+    return `  ${name}: {\n    type: Function,\n    default: () => ({}),\n  }`;
+  }
   return `  ${name}: Function as PropType<${getPropType(cmp, name)}>`;
 }
 
 // 类型定义可能来自组件基础文件，比如：ForItemProps 类型定义来源于 Form 目录
 function getImportPath(body, cmp, framework) {
   let r = '';
+  const isUniApp = framework === 'UniApp';
   const tdName = getTdCmpName(cmp);
   if (body.indexOf(tdName) !== -1) {
     const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
@@ -243,10 +248,11 @@ function getImportPath(body, cmp, framework) {
       framework === 'Vue(PC)'
       || framework === 'VueNext(PC)'
       || framework === 'Vue(Mobile)'
+      || isUniApp
     ) {
       r =        parentCmp && parentCmp !== cmp
-        ? `import { ${tdName} } from '../${getFolderName(parentCmp)}/type';\n`
-        : `import { ${tdName} } from './type';\n`;
+        ? `import ${isUniApp ? 'type ': ''}{ ${tdName} } from '../${getFolderName(parentCmp)}/type';\n`
+        : `import ${isUniApp ? 'type ': ''}{ ${tdName} } from './type';\n`;
     }
   }
   return r;
@@ -257,24 +263,24 @@ function getImportPath(body, cmp, framework) {
  * @param {Object} miniprogram.MP_PROPS.custom_field_type 继承的原生小程序组件名称，如：button / picker-view
  * @param {Object} miniprogram.MP_EXCLUDE_PROPS.custom_field_type 需要排除的小程序原生属性
  */
-function getMiniprogramOriginalApi(miniprogram, cmp) {
-  const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
-  const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
-  const apis = fetchApiDataFromOfficialWebsite(
-    MP_PROPS.custom_field_type,
-    exclude,
-  );
-  const apiArr = [];
-  apis.forEach((api) => {
-    if (!['Props'].includes(api.field_category_text)) return;
-    const propsCode = formatNormalProps(api, cmp);
-    propsCode
-      && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
-        api.field_desc_zh
-      } */\n${propsCode}`);
-  });
-  return apiArr;
-}
+// function getMiniprogramOriginalApi(miniprogram, cmp) {
+//   const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
+//   const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
+//   const apis = fetchApiDataFromOfficialWebsite(
+//     MP_PROPS.custom_field_type,
+//     exclude,
+//   );
+//   const apiArr = [];
+//   apis.forEach((api) => {
+//     if (!['Props'].includes(api.field_category_text)) return;
+//     const propsCode = formatNormalProps(api, cmp);
+//     propsCode
+//       && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
+//         api.field_desc_zh
+//       } */\n${propsCode}`);
+//   });
+//   return apiArr;
+// }
 
 function formatApiToProps(baseData, framework, isUseDefault) {
   const r = {};
@@ -283,6 +289,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     if (isTypeApi(cmp)) return;
     let propStrs = [];
     const isMiniprogram = currentFramework === 'Miniprogram';
+    const isUniApp = currentFramework === 'UniApp';
     const miniprogram = {};
     baseData[cmp].forEach((api) => {
       //废弃属性不放在 props 中
@@ -300,10 +307,10 @@ function formatApiToProps(baseData, framework, isUseDefault) {
       if (api.html_attribute) return;
       const category = api.field_category_text;
       if (!['Props', 'Events'].includes(category)) return;
-      if (isMiniprogram && !['Props'].includes(category)) return;
-      const propsCode =        category === 'Props'
+      if ((isMiniprogram) && !['Props'].includes(category)) return;
+      const propsCode = category === 'Props'
         ? formatNormalProps(api, cmp)
-        : formatEventProps(api, cmp);
+        : formatEventProps(api, cmp, framework);
       let desc = api.field_desc_zh;
       if (api.html_attribute) {
         desc = `HTML 原生属性。${desc}`;
@@ -381,7 +388,7 @@ function getPropsByComponent(baseData, framework, component, isUseDefault) {
 
 function generateVueProps(baseData, framework, isUseDefault) {
   if (
-    !['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram'].includes(framework)
+    !['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)
   ) return;
   currentFramework = framework;
   useDefault = isUseDefault;

@@ -9,11 +9,13 @@ module.exports = {
       'Vue(PC)': '支持语法糖 `v-model`',
       'VueNext(PC)': '支持语法糖 `v-model` 或 `v-model:name`',
       'Vue(Mobile)': '支持语法糖 `v-model` 或 `v-model:name`',
+      'UniApp': '支持语法糖 `v-model:name`',
     },
     syntaxSugarText: {
       'Vue(PC)': '支持语法糖 `.sync`',
       'VueNext(PC)': '支持语法糖 `v-model:name`',
       'Vue(Mobile)': '支持语法糖 `v-model:name`',
+      'UniApp': '支持语法糖 `v-model:name`',
     },
     uncontrolledText: '非受控属性',
     optionsText: '可选项：',
@@ -25,6 +27,7 @@ module.exports = {
     classNameText: '类名',
     styleText: '样式',
     customStyleText: '一般用于开启虚拟化组件节点场景',
+    customStyleTextInUniApp: '自定义样式',
   },
   en: {
     descriptionField: 'field_desc_en',
@@ -35,12 +38,14 @@ module.exports = {
       'Vue(PC)': '`v-model` is supported',
       'VueNext(PC)': '`v-model` and `v-model:name` is supported',
       'Vue(Mobile)': '`v-model` and `v-model:name` is supported',
+      UniApp: '`v-model:name` is supported',
     },
     // syntaxSugarText: 'support syntax sugar',
     syntaxSugarText: {
       'Vue(PC)': '`.sync` is supported',
       'VueNext(PC)': '`v-model:name` is supported',
       'Vue(Mobile)': '`v-model:name` is supported',
+      UniApp: '`v-model:name` is supported',
     },
     uncontrolledText: 'uncontrolled property',
     optionsText: 'options: ',
@@ -52,5 +57,6 @@ module.exports = {
     classNameText: 'className of component',
     styleText: 'CSS(Cascading Style Sheets)',
     customStyleText: 'used to set style on virtual component',
+    customStyleTextInUniApp: 'CSS(Cascading Style Sheets)',
   },
 };

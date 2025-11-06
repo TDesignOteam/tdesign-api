@@ -93,7 +93,7 @@ const GLOBAL_CONFIG_PROVIDER = [
     'ConfigProvider',
     'GlobalConfigProvider',
 ].concat(GLOBAL_COMPONENTS_CONFIG);
-const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram'];
+const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'];
 
 // 输出 API 文档时，哪些需要文件需要合并输出，数据内容为组件/插件名称
 const COMPONENT_API_MD_MAP = {
@@ -119,7 +119,7 @@ const COMPONENT_API_MD_MAP = {
     },
     Col: {
         list: ['Col', 'Row'],
-        includes: ['Miniprogram'],
+        includes: ['Miniprogram', 'UniApp'],
     },
     // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
     Grid: [
@@ -157,12 +157,12 @@ const COMPONENT_API_MD_MAP = {
     Loading: ['Loading', '$Loading'],
     Upload: {
         list: ['Upload', 'UploadFile'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     List: ['List', 'ListItem', 'ListItemMeta'],
     Picker: {
         list: ['Picker', 'PickerItem'],
-        includes: ['Miniprogram'],
+        includes: ['Miniprogram', 'UniApp'],
     },
     TimePicker: [
         'TimePicker',
@@ -237,7 +237,7 @@ const MOBILE_COMPONENT_API_MD_MAP = {
 const MINIPROGRAM_COMPONENT_API_MD_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
-        includes: ['Miniprogram'],
+        includes: ['Miniprogram', 'UniApp'],
     },
 };
 
@@ -245,19 +245,19 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
 const TYPES_COMBINE_MAP = {
     Avatar: {
         list: ['Avatar', 'AvatarGroup'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Checkbox: {
         list: ['Checkbox', 'CheckboxGroup'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Cell: {
         list: ['Cell', 'CellGroup'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Radio: {
         list: ['Radio', 'RadioGroup'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Message: {
         list: MESSAGE_LIST,
@@ -267,29 +267,29 @@ const TYPES_COMBINE_MAP = {
     },
     Form: {
         list: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Select: {
         list: ['Select', 'Option', 'OptionGroup'],
     },
     Tabs: {
         list: ['Tabs', 'TabPanel'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     TabBar: {
         list: ['TabBar', 'TabBarItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Pagination: {
         list: ['Pagination', 'PaginationMini'],
     },
     Tag: {
         list: ['Tag', 'CheckTag', 'CheckTagGroup'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Collapse: {
         list: ['Collapse', 'CollapsePanel'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
     Grid: [
@@ -311,7 +311,7 @@ const TYPES_COMBINE_MAP = {
     },
     DropdownMenu: {
         list: ['DropdownMenu', 'DropdownItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Dialog: {
         list: [
@@ -335,7 +335,7 @@ const TYPES_COMBINE_MAP = {
     },
     Steps: {
         list: ['Steps', 'StepItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Calendar: {
         list: ['Calendar', 'CalendarController', 'CalendarCell'],
@@ -351,14 +351,14 @@ const TYPES_COMBINE_MAP = {
     },
     Upload: {
         list: ['Upload', 'UploadFile'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     List: {
         list: ['List', 'ListItem', 'ListItemMeta'],
     },
     Picker: {
         list: ['Picker', 'PickerItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     TimePicker: {
         list: [
@@ -417,11 +417,11 @@ const TYPES_COMBINE_MAP = {
     },
     SideBar: {
         list: ['SideBar', 'SideBarItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Indexes: {
         list: ['Indexes', 'IndexesAnchor'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Typography: {
         list: [
@@ -453,11 +453,11 @@ const TYPES_COMBINE_MAP = {
 const MOBILE_TYPES_COMBINE_MAP = {
     Layout: {
         list: ['Layout', 'Row', 'Col'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Grid: {
         list: ['Grid', 'GridItem'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     List: ['List'],
 };
@@ -465,11 +465,11 @@ const MOBILE_TYPES_COMBINE_MAP = {
 const MINIPROGRAM_TYPES_COMBINE_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
-        excludes: ['Miniprogram'],
+        excludes: ['Miniprogram', ],
     },
     Form: {
         list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
-        includes: ['Miniprogram'],
+        includes: ['Miniprogram', 'UniApp'],
     },
 };
 
