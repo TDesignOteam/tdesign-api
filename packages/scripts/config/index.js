@@ -201,7 +201,7 @@ const FRAMEWORK_MAP = {
         globalPath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign/common/common.ts`,
         globalTplPath: path.resolve(
             __dirname,
-            '../types/global/miniprogram.tpl'
+            '../types/global/uniapp.tpl'
         ),
         unitBasePath: '',
         commonTypePath:

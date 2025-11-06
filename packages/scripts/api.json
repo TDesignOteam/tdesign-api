@@ -2769,7 +2769,7 @@
       "field_enum": "",
       "field_desc_zh": "菜单项",
       "field_desc_en": null,
-      "field_required": 1,
+      "field_required": 0,
       "event_input": "",
       "create_time": "2025-11-05 08:16:18",
       "update_time": "2025-11-05 08:16:18",
