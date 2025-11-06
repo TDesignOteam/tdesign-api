@@ -15,7 +15,7 @@ disableTime | Function | - | 禁用时间项的配置函数，仅在日期时间
 disabled | Boolean | undefined | 是否禁用组件 | N
 enableTimePicker | Boolean | false | 是否显示时间选择 | N
 firstDayOfWeek | Number | 7 | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
-format | String | 'YYYY-MM-DD' | 仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format) | N
+format | String | 'YYYY-MM-DD' | `format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)。 | N
 inputProps | Object | - | 透传给输入框（Input）组件的参数。TS 类型：`InputProps`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 mode | String | date | 选择器模式。可选项：year/quarter/month/week/date | N
@@ -72,7 +72,7 @@ disableTime | Function | - | 禁用时间项的配置函数，仅在日期区间
 disabled | Boolean | undefined | 是否禁用组件 | N
 enableTimePicker | Boolean | false | 是否显示时间选择 | N
 firstDayOfWeek | Number | - | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
-format | String | - | 用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format) | N
+format | String | 'YYYY-MM-DD' | `format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format) | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 mode | String | date | 选择器模式。可选项：year/quarter/month/week/date | N
 needConfirm | Boolean | true | 决定在日期时间区间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为 `true` | N

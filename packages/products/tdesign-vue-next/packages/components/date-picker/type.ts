@@ -57,7 +57,8 @@ export interface TdDatePickerProps {
    */
   firstDayOfWeek?: number;
   /**
-   * 仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format)
+   * `format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)。
+   * @default 'YYYY-MM-DD'
    */
   format?: string;
   /**
@@ -242,8 +243,8 @@ export interface TdDateRangePickerProps {
    */
   firstDayOfWeek?: number;
   /**
-   * 用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format)
-   * @default ''
+   * `format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)
+   * @default 'YYYY-MM-DD'
    */
   format?: string;
   /**
@@ -552,7 +553,7 @@ export type DatePickerValueType =
 
 export type ValueTypeEnum = DatePickerValueType;
 
-export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear';
+export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
 
 export type DisableRangeDate =
   | Array<DateValue>
