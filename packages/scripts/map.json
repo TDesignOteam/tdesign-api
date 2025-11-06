@@ -87,6 +87,10 @@
       {
         "label": "Miniprogram",
         "value": "64"
+      },
+      {
+        "label": "UniApp",
+        "value": "128"
       }
     ],
     "field_type": [

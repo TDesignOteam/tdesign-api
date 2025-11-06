@@ -1,0 +1,51 @@
+
+const props = `
+
+### SideBar Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+children | String / TNode | - | 侧边导航内容。TS 类型：\`TNode\`。[通用类型定义](https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/common/common.ts) | N
+value | String / Number | - | 选项值 | N
+defaultValue | String / Number | - | 选项值。非受控属性 | N
+onChange | Function |  | TS 类型：\`(value: number \| string, label: string) => void\`<br/>选项值发生变化时触发 | N
+onChange | Function |  | TS 类型：\`(value: number \| string) => void\`<br/>选项值发生变化时触发 | N
+onClick | Function |  | TS 类型：\`(value: number \| string, label: string) => void\`<br/>点击选项时触发 | N
+
+### SideBar Events
+
+名称 | 参数 | 描述
+-- | -- | --
+change | \`(value: number \| string, label: string)\` | 选项值发生变化时触发
+change | \`(value: number \| string)\` | 选项值发生变化时触发
+click | \`(value: number \| string, label: string)\` | 点击选项时触发
+
+### SideBar Slots
+
+名称 | 描述
+-- | --
+- | 默认插槽，自定义侧边导航栏内容
+
+
+### SideBarItem Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+badgeProps | Object | - | 透传至 Badge 组件。TS 类型：\`BadgeProps\`，[Badge API Documents](./badge?tab=api)。[详细类型定义](https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/side-bar/type.ts) | N
+disabled | Boolean | false | 是否禁用 | N
+icon | String / Object | - | 图标，传对象则透传至 Icon | N
+icon | TNode | - | 图标。TS 类型：\`TNode\`。[通用类型定义](https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/common/common.ts) | N
+label | String | - | 展示的标签 | N
+value | String / Number | - | 当前选项的值 | N
+
+### SideBarItem Slots
+
+名称 | 描述
+-- | --
+- | 默认插槽，自定义侧边导航项内容
+
+`;
+module.exports = {
+  props,
+};
+

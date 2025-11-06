@@ -38,6 +38,7 @@ const API_DOC_BLOCKS = {
   'Vue(Mobile)': ['Props', 'Events', 'Functions'],
   'React(Mobile)': ['Props', 'Functions'],
   Miniprogram: ['Props', 'Events', 'Functions', 'Slots', 'External Classes', 'CSS Variables'],
+  UniApp: ['Props', 'Events', 'Functions', 'Slots', 'External Classes', 'CSS Variables'],
 };
 
 // 通用属性
@@ -56,9 +57,10 @@ function categoryOrder(res) {
 function groupByFieldCategory(framework, componentApi) {
   const result = {};
   const isMini = framework === 'Miniprogram';
+  const isUniApp = framework === 'UniApp';
   componentApi.forEach((apiOriginal) => {
     const api = { ...apiOriginal };
-    const isSlot = isMini ? api.field_type_text.includes('TNode') : false;
+    const isSlot = (isMini || isUniApp) ? api.field_type_text.includes('TNode') : false;
     const isExtend = api.field_category_text === 'Extends';
     const isFunction = (isPlugin(api.component)) && api.field_category_text === 'Functions';
     if (isExtend) {
@@ -111,11 +113,11 @@ function sortSlotsArrExceptFirst(arr) {
   return [firstItem, ...restItems];
 }
 
-function shouldShowLink(arr, isMini, isSlots) {
+function shouldShowLink(arr, isMiniOrUni, isSlots) {
   const isNonEmpty = arr.length > 0;
   const isNotSingleTNode = arr.length !== 1 || arr[0] !== 'TNode';
 
-  if (!isMini) {
+  if (!isMiniOrUni) {
     return isNonEmpty;
   }
   return isNonEmpty && isNotSingleTNode && !isSlots;
@@ -135,6 +137,7 @@ function formatDesc(
 ) {
   const desc = [];
   const isMiniprogram = framework === 'Miniprogram';
+  const isUniApp = framework === 'UniApp';
   const curLanguage = languageConfig[LANGUAGE];
   // 是否已废弃
   if (api.deprecated) {
@@ -158,7 +161,7 @@ function formatDesc(
     desc.push(api[curLanguage.descriptionField]);
   }
   // 语法糖
-  if (framework.indexOf('Vue') !== -1 && api.syntactic_sugar && !isUncontrol) {
+  if ((framework.indexOf('Vue') !== -1 ||  framework === 'UniApp') && api.syntactic_sugar && !isUncontrol) {
     if (api.syntactic_sugar === 'v-model') {
       desc.push(curLanguage.vmodelSugarText[framework].replace('name', api.field_name));
     } else if (api.syntactic_sugar === 'sync') {
@@ -204,14 +207,14 @@ function formatDesc(
       importIndex >= 0 && customFieldType.splice(importIndex, 1);
       customFieldType = customFieldType.join('` `');
     }
-    if ((isMiniprogram && customFieldType.indexOf('TNode') === -1) || !isMiniprogram) {
+    if (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp)) {
       // tsTypeText 中文"TS 类型"
       const language = languageConfig[LANGUAGE];
       const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}：`;
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
-    if (shouldShowLink(filters, isMiniprogram, category === 'Slots')) {
+    if (shouldShowLink(filters, isMiniprogram || isUniApp, category === 'Slots')) {
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
     }
@@ -237,6 +240,7 @@ function formatToVueApi(api, params) {
   const { isUncontrol, framework, current: config } = params;
   const r = { ...api };
   const isMiniprogram = ['Miniprogram'].includes(params.framework);
+  const isUniApp = ['UniApp'].includes(params.framework);
   let desc = [];
   let interfaceDescription = [];
   // 是否存在复杂的类型定义
@@ -300,7 +304,7 @@ function formatToVueApi(api, params) {
     let tmp = type.concat();
     if (['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(params.framework))  {
       tmp.splice(i, 1, 'Slot', 'Function');
-    } else if (isMiniprogram) {
+    } else if (isMiniprogram || isUniApp) {
       tmp.splice(i, 1); // 小程序端插槽部分独立输出
     } else if (params.framework.indexOf('React') !== -1) {
       tmp = type.join() === 'TNode' ? ['TElement'] : ['TNode'];
@@ -316,7 +320,7 @@ function formatToVueApi(api, params) {
   desc = desc.concat(tmp);
   r.field_desc_zh = desc.filter(v => !!v).join('。');
   // 小程序的属性一般显示为中划线
-  if (['Miniprogram'].includes(params.framework)) {
+  if (['Miniprogram', 'UniApp'].includes(params.framework)) {
     r.field_name = kebabCaseComponent(r.field_name);
   }
   return r;
@@ -363,7 +367,7 @@ function formatEventToProps(api) {
 }
 
 function getOneApi(newApi, current, docTitleType, framework) {
-  if (!current || (framework === 'Miniprogram' && docTitleType === 'Props' && newApi.field_type_text === '')) return;
+  if (!current || (['Miniprogram', 'UniApp'].includes(framework) && docTitleType === 'Props' && newApi.field_type_text === '')) return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
   // eslint-disable-next-line no-useless-escape
   const oneApi = Object.values(f).map(item => item || '\\-')
@@ -376,19 +380,19 @@ function getOneApi(newApi, current, docTitleType, framework) {
  * @param {Object} miniprogram.MP_PROPS.custom_field_type 继承的原生小程序组件名称，如：button / picker-view
  * @param {Object} miniprogram.MP_EXCLUDE_PROPS.custom_field_type 需要排除的小程序原生属性
  */
-function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
-  const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
-  const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
-  const apis = fetchApiDataFromOfficialWebsite(MP_PROPS.custom_field_type, exclude);
-  const framework = 'Miniprogram';
-  const apiArr = [];
-  apis.forEach((apiData) => {
-    const newApi = formatToVueApi(apiData, { current, framework });
-    const oneApi = getOneApi(newApi, current, docTitleType, framework);
-    apiArr.push(oneApi);
-  });
-  return apiArr;
-}
+// function getMiniprogramOriginalApi(miniprogram, current, docTitleType) {
+//   const { MP_PROPS, MP_EXCLUDE_PROPS } = miniprogram;
+//   const exclude = MP_EXCLUDE_PROPS && MP_EXCLUDE_PROPS.custom_field_type;
+//   const apis = fetchApiDataFromOfficialWebsite(MP_PROPS.custom_field_type, exclude);
+//   const framework = 'Miniprogram';
+//   const apiArr = [];
+//   apis.forEach((apiData) => {
+//     const newApi = formatToVueApi(apiData, { current, framework });
+//     const oneApi = getOneApi(newApi, current, docTitleType, framework);
+//     apiArr.push(oneApi);
+//   });
+//   return apiArr;
+// }
 
 function addCommonProperties({
   framework,
@@ -410,6 +414,10 @@ function addCommonProperties({
       `style | Object | - | ${languageInfo.styleText} | N`,
       `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
     ]);
+  } else if (framework === 'UniApp' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
+    md[category].apis.push(...[
+      `custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`,
+    ]);
   }
 }
 
@@ -423,6 +431,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
   currentFramework = framework;
   const result = {};
   const isMiniprogram = framework === 'Miniprogram';
+  const UniApp = framework === 'UniApp';
   if (language) {
     LANGUAGE = language;
   }
@@ -503,7 +512,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
           md[category].apis.push(oneSugarApi);
         }
         // API 规范：事件同时也需要作为 props
-        if (category === 'Events' && !isMiniprogram) {
+        if (category === 'Events' && !isMiniprogram && !UniApp) {
           const eventApi = formatEventToProps(newApi);
           md.Props && md.Props.apis.push(eventApi);
         }

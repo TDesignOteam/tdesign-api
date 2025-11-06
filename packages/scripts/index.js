@@ -76,9 +76,9 @@ if (isAll(component) && onlyDocs) {
     generateDocuments();
 }
 
-if (component && !isAll(component)) {
+// if (component && !isAll(component)) {
     generateComponentApi();
-}
+// }
 
 /**
  * 解析参数字符串
@@ -119,7 +119,11 @@ function generateComponentApi() {
         frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]
     );
     const cmpMap = getApiComponentMapByFrameWork(
-        framework === 'Miniprogram' ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP): COMPONENT_API_MD_MAP),
+        framework === 'Miniprogram'
+         ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP) 
+         : (MOBILE_FRAMES.includes(framework) 
+           ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP) 
+           : COMPONENT_API_MD_MAP),
         framework
     );
     const baseData = pick(frameworkData, cmpMap[component] || [component]);
@@ -236,6 +240,7 @@ function validateParams(components) {
         'React(Mobile)',
         'Angular(Mobile)',
         'Miniprogram',
+        'UniApp'
     ];
     if (!keys.includes(framework)) {
         console.error(
