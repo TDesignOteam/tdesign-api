@@ -35528,10 +35528,10 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "undefined",
+      "field_default_value": "'YYYY-MM-DD'",
       "field_enum": "",
-      "field_desc_zh": "仅用于格式化日期显示的格式，不影响日期值。注意和 `valueType` 的区别，`valueType`会直接决定日期值 `value` 的格式。全局配置默认为：'YYYY-MM-DD'，[详细文档](https://day.js.org/docs/en/display/format)",
-      "field_desc_en": null,
+      "field_desc_zh": "`format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)。",
+      "field_desc_en": "The `format` parameter is used solely for formatting the date display and does not affect the actual date value. Note the distinction from `valueType`: `valueType` directly determines the data format of the date value `value`. The global default configuration is `'YYYY-MM-DD'`. [Refer to the Day.js formatting documentation for details](https://day.js.org/docs/en/display/format)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-03-23 12:35:54",
@@ -36801,8 +36801,8 @@
       ],
       "field_default_value": "'YYYY-MM-DD'",
       "field_enum": "",
-      "field_desc_zh": "日期格式化规则",
-      "field_desc_en": "date format rules",
+      "field_desc_zh": "全局日期格式化规则，`format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)。",
+      "field_desc_en": "The golab date format rules, the `format` parameter is used solely for formatting the date display and does not affect the actual date value. Note the distinction from `valueType`: `valueType` directly determines the data format of the date value `value`. The global default configuration is `'YYYY-MM-DD'`. [Refer to the Day.js formatting documentation for details](https://day.js.org/docs/en/display/format)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-11-21 06:09:17",
@@ -38288,10 +38288,10 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "'YYYY-MM-DD'",
       "field_enum": "",
-      "field_desc_zh": "用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format)",
-      "field_desc_en": null,
+      "field_desc_zh": "`format` 参数仅用于格式化日期显示样式，不会影响实际的日期值。请注意与 `valueType` 的区别：`valueType` 将直接决定日期值 `value` 的数据格式。全局默认配置为 `'YYYY-MM-DD'`，[详见 Day.js 格式化文档](https://day.js.org/docs/en/display/format)",
+      "field_desc_en": "The `format` parameter is used solely for formatting the date display and does not affect the actual date value. Note the distinction from `valueType`: `valueType` directly determines the data format of the date value `value`. The global default configuration is `'YYYY-MM-DD'`. [Refer to the Day.js formatting documentation for details](https://day.js.org/docs/en/display/format).",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-03-24 02:44:57",
