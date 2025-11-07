@@ -383,6 +383,9 @@ function formatAliasImportsPath(imports, framework) {
             }
             const reg =/import\s+\{\s+(\w+)/
             return item.replace(reg, (a, b) => {
+                if (!b.endsWith('Props')) {
+                    return `import type { ${b}`
+                }
                 return `import type { Td${b} as ${b}`
             })
         })
