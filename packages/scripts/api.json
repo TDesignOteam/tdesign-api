@@ -89470,6 +89470,45 @@
       ]
     },
     {
+      "id": 1762616616,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 1,
+      "field_name": "-",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:43:36",
+      "update_time": "2025-11-08 15:43:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1726067019,
       "platform_framework": [
         "16"
@@ -89512,7 +89551,8 @@
       "id": 3526,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89541,7 +89581,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89551,7 +89592,8 @@
       "id": 942,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89581,7 +89623,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -89631,7 +89674,8 @@
       "id": 3514,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89660,7 +89704,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89670,7 +89715,8 @@
       "id": 3513,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89699,7 +89745,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89709,7 +89756,8 @@
       "id": 3516,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89738,7 +89786,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89789,7 +89838,8 @@
       "id": 1160,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89818,7 +89868,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89828,7 +89879,8 @@
       "id": 3519,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 2,
@@ -89855,7 +89907,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": []
     },
