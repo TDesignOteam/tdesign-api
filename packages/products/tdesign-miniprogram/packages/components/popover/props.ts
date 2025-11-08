@@ -6,10 +6,6 @@
 
 import { TdPopoverProps } from './type';
 const props: TdPopoverProps = {
-  /** 默认插槽，作用同 `content` 插槽 */
-  -: {
-    type: String,
-  },
   /** 是否在点击外部元素后关闭菜单  */
   closeOnClickOutside: {
     type: Boolean,

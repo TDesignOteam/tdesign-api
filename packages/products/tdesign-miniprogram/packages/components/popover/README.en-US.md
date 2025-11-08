@@ -8,7 +8,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-\- | String | - | \- | N
 close-on-click-outside | Boolean | true | \- | N
 content | String | - | \- | N
 placement | String | top | options: top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom | N
@@ -28,3 +27,10 @@ name | Description
 -- | --
 \- | \-
 content | \-
+
+### Popover External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-content | \-

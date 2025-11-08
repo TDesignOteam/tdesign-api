@@ -89470,45 +89470,6 @@
       ]
     },
     {
-      "id": 1762616616,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Popover",
-      "field_category": 1,
-      "field_name": "-",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-11-08 15:43:36",
-      "update_time": "2025-11-08 15:43:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
       "id": 1726067019,
       "platform_framework": [
         "16"
@@ -89911,6 +89872,111 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1762617354,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:55:54",
+      "update_time": "2025-11-08 15:55:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1762617306,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 128,
+      "field_name": "t-class-content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:55:06",
+      "update_time": "2025-11-08 15:55:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1762616616,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:43:36",
+      "update_time": "2025-11-08 15:43:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
     },
     {
       "id": 423,
