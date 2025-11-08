@@ -101,7 +101,7 @@ function generateDocs(baseData, framework, extra) {
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath
-      : path.resolve(current.apiBasePath, cmp==='QRCode'?'qrcode':kebabCaseComponent(cmp));
+      : path.resolve(current.apiBasePath, kebabCaseComponent(cmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
         return console.error(err);
