@@ -2,7 +2,7 @@ const pick = require('lodash/pick');
 const find = require('lodash/find');
 const camelCase = require('lodash/camelCase');
 const lowerFirst = require('lodash/lowerFirst');
-const { kebabCaseComponent } = require('../utils');
+const { kebabCaseComponent, getComponentBasePath } = require('../utils');
 
 const map = require('../map.json');
 const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
@@ -217,7 +217,7 @@ function formatDesc(
     }
     if (isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
-      desc.push(`[${text}](${config.componentPath}${getTsTypeFileName(api.component, config)})`);
+      desc.push(`[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`);
     }
   }
   return desc;
