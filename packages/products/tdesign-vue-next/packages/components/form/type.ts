@@ -382,7 +382,7 @@ export interface FormResetParams<FormData> {
 export type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] };
 
 export interface FormItemValidateMessage {
-  type: 'warning' | 'error';
+  type: 'warning' | 'error' | 'success';
   message: string;
 }
 
