@@ -16506,6 +16506,47 @@
       "field_type_text": []
     },
     {
+      "id": 1762761101,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Calendar",
+      "field_category": 1,
+      "field_name": "allowSameDay",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-10 07:51:41",
+      "update_time": "2025-11-10 07:51:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.11.2\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3263,
       "platform_framework": [
         "16",
@@ -17558,7 +17599,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "'single'",
+      "field_default_value": "single",
       "field_enum": "single/multiple/range",
       "field_desc_zh": "日历的选择类型，single = 单选；multiple = 多选; range = 区间选择",
       "field_desc_en": null,
