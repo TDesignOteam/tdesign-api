@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### DialogCard Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -29,7 +30,7 @@ confirmOnEnter | Boolean | - | 是否在按下回车键时，触发确认事件 
 destroyOnClose | Boolean | false | 是否在关闭弹框的时候销毁子元素 | N
 dialogClassName | String | - | 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' | N
 dialogStyle | Object | - | 作用于对话框本身的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-draggable | Boolean | false | 对话框是否可以拖拽（仅在非模态对话框时有效） | N
+draggable | Boolean | false | 是否可以拖拽（对全屏对话框无效） | N
 footer | TNode | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 forceRender | Boolean | false | 是否强制渲染Dialog | N
 header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
@@ -80,8 +81,6 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
-
-插件返回值：`DialogInstance`
 
 ### dialog.confirm 或 DialogPlugin.confirm
 

@@ -61,7 +61,7 @@ export default {
   dialogStyle: {
     type: Object as PropType<TdDialogProps['dialogStyle']>,
   },
-  /** 对话框是否可以拖拽（仅在非模态对话框时有效） */
+  /** 是否可以拖拽（对全屏对话框无效） */
   draggable: Boolean,
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容 */
   footer: {
