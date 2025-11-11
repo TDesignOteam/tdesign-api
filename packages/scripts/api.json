@@ -116863,27 +116863,26 @@
     {
       "id": 2044,
       "platform_framework": [
-        "8",
-        "16"
+        "1",
+        "2"
       ],
       "component": "Swiper",
       "field_category": 1,
       "field_name": "navigation",
       "field_type": [
-        "4",
         "8",
         "64"
       ],
-      "field_default_value": "true",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "导航器全部配置，true 的话使用默认配置",
-      "field_desc_en": "navigation all config, `true` for using default config",
+      "field_desc_zh": "导航器全部配置",
+      "field_desc_en": "navigation all config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-12-15 12:58:51",
       "update_time": "2022-01-25 11:57:28",
       "event_output": null,
-      "custom_field_type": "SwiperNavigation | TNode | Boolean",
+      "custom_field_type": "SwiperNavigation | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -116894,11 +116893,10 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(PC)",
+        "React(PC)"
       ],
       "field_type_text": [
-        "Boolean",
         "Object",
         "TNode"
       ]
@@ -116947,26 +116945,27 @@
     {
       "id": 1762847746,
       "platform_framework": [
-        "1",
-        "2"
+        "8",
+        "16"
       ],
       "component": "Swiper",
       "field_category": 1,
       "field_name": "navigation",
       "field_type": [
+        "4",
         "8",
         "64"
       ],
-      "field_default_value": "",
+      "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "导航器全部配置",
-      "field_desc_en": "navigation all config",
+      "field_desc_zh": "导航器全部配置，true 的话使用默认配置",
+      "field_desc_en": "navigation all config, `true` for using default config",
       "field_required": 0,
       "event_input": "",
       "create_time": "2025-11-11 07:55:46",
       "update_time": "2025-11-11 07:55:46",
       "event_output": null,
-      "custom_field_type": "SwiperNavigation | TNode",
+      "custom_field_type": "SwiperNavigation | TNode | Boolean",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -116977,10 +116976,11 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
+        "Boolean",
         "Object",
         "TNode"
       ]
