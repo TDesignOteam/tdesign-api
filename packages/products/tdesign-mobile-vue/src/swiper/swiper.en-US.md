@@ -44,6 +44,7 @@ name | type | default | description | required
 animation | String | slide | options: slide | N
 autoplay | Boolean | true | \- | N
 current | Number | 0 | `v-model` and `v-model:current` is supported | N
+defaultCurrent | Number | 0 | uncontrolled property | N
 direction | String | horizontal | options: horizontal/vertical | N
 duration | Number | 300 | \- | N
 height | String / Number | - | \- | N

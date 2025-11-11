@@ -7,8 +7,8 @@ import { TdSwiperProps } from './type';
 export const swiperDefaultProps: TdSwiperProps = {
   animation: 'slide',
   autoplay: true,
-  cardScale: '210/332',
-  current: 0,
+  cardScale: 210 / 332,
+  defaultCurrent: 0,
   direction: 'horizontal',
   duration: 300,
   interval: 5000,

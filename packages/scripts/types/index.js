@@ -39,6 +39,7 @@ const {
     getInstanceName,
     getApiComponentMapByFrameWork,
 } = require('../common');
+const { getComponentBasePath } = require('../utils');
 
 const components = map.data.components
     .filter((item) => !item.type)
@@ -734,7 +735,7 @@ function generateTypes(baseData, framework) {
     Object.keys(apiTypes).forEach((cmp) => {
         let folder = '';
         const folderName = getFolderName(cmp);
-        folder = path.resolve(basePath, folderName);
+        folder = path.resolve(getComponentBasePath(cmp, basePath), folderName);
         fs.mkdir(folder, { recursive: true }, (err) => {
             if (err) {
                 return console.error(err);

@@ -11,13 +11,14 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript：`React.CSSProper
 action | TNode | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 autocompleteOptions | Array | - | autocomplete words list。Typescript：`Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/search/type.ts) | N
 center | Boolean | false | \- | N
+clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
 disabled | Boolean | false | \- | N
 focus | Boolean | false | \- | N
 leftIcon | TNode | 'search' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 placeholder | String | '' | \- | N
 prefixIcon | TElement | - | `deprecated`。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-readonly | Boolean | false | \- | N
+readonly | Boolean | undefined | \- | N
 shape | String | 'square' | options: square/round | N
 suffixIcon | TElement | - | `deprecated`。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 value | String | - | \- | N

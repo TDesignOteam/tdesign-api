@@ -20,3 +20,9 @@ z-index | Number | 11000 | \- | N
 name | params | description
 -- | -- | --
 click | `({ visible: boolean })` | \-
+
+### Overlay Slots
+
+name | Description
+-- | --
+\- | \-

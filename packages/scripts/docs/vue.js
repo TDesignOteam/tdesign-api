@@ -2,7 +2,7 @@ const pick = require('lodash/pick');
 const find = require('lodash/find');
 const camelCase = require('lodash/camelCase');
 const lowerFirst = require('lodash/lowerFirst');
-const { kebabCaseComponent } = require('../utils');
+const { kebabCaseComponent, getComponentBasePath } = require('../utils');
 
 const map = require('../map.json');
 const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
@@ -43,6 +43,15 @@ const API_DOC_BLOCKS = {
 // 通用属性
 const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
+function categoryOrder(res) {
+  const CATEGORY_ORDER = ['Props', 'Events', 'Functions', 'Slots', 'External Classes'];
+  return Object.fromEntries(
+    CATEGORY_ORDER.filter((key) => key in res).map((key) => [
+      key,
+      res[key],
+    ])
+  );;
+}
 // category: props / events / functions / extends / return
 function groupByFieldCategory(framework, componentApi) {
   const result = {};
@@ -69,22 +78,20 @@ function groupByFieldCategory(framework, componentApi) {
       }
     }
     const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
-    if (result[category]) {
-      result[category].push(api);
-    } else {
-      result[category] = [api];
-    }
+    (result[category] ??= []).push(api);
     // 支持属性同名插槽输出到小程序端组件 API 文档
     if (isSlot) {
-      if (result['Slots']) {
-          result['Slots'].push(api);
-      } else {
-          result['Slots'] = [api];
-      }
-    }
-  });
-  return result;
-}
+      const newAPi = { ...api };
+      const desc = '自定义' + ' `' + kebabCaseComponent(newAPi.field_name) +'` ' + '显示内容';
+      const onlyTNode = newAPi.field_type_text.length === 1 && newAPi.field_type_text[0] === 'TNode';
+      newAPi.field_desc_zh = onlyTNode ? newAPi.field_desc_zh : desc
+      newAPi.field_category = 512;
+      newAPi.field_category_text = 'Slots';
+      (result['Slots'] ??= []).push(newAPi);
+    };
+  })
+  return categoryOrder(result);
+};
 
 function sortSlotsArrExceptFirst(arr) {
   if (arr.length <= 1) {
@@ -200,7 +207,7 @@ function formatDesc(
     if ((isMiniprogram && customFieldType.indexOf('TNode') === -1) || !isMiniprogram) {
       // tsTypeText 中文"TS 类型"
       const language = languageConfig[LANGUAGE];
-      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}：`;
+      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}`;
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
@@ -210,7 +217,7 @@ function formatDesc(
     }
     if (isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
-      desc.push(`[${text}](${config.componentPath}${getTsTypeFileName(api.component, config)})`);
+      desc.push(`[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`);
     }
   }
   return desc;
@@ -351,7 +358,7 @@ function formatEventToProps(api) {
   baseName = baseName.replace(/`/g, '');
   // tsTypeText 中文"TS 类型"
   const language = languageConfig[LANGUAGE];
-  const desc = [`${language.tsTypeText}：\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
+  const desc = [`${language.tsTypeText}\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
@@ -396,7 +403,7 @@ function addCommonProperties({
   if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
-      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
+      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}\`React.CSSProperties\` | N`,
     ]);
   } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[
@@ -485,7 +492,8 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         const newApi = formatToVueApi(api, { current, framework, category });
         const oneApi = getOneApi(newApi, current, docTitleType, framework);
         const isMiniprogram = framework === 'Miniprogram';
-        if (isMiniprogram && !COMMON_PROPS.includes(api.field_name) || !isMiniprogram) {
+        const shouldPushApi = !isMiniprogram || (isMiniprogram && !COMMON_PROPS.includes(api.field_name));
+        if (oneApi && shouldPushApi) {
           md[category].apis.push(oneApi);
         }
         // 添加非受控属性 API 文档
@@ -530,3 +538,4 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
 }
 
 module.exports = getVueApiDocs;
+

@@ -40,6 +40,12 @@ change | `(current: number, source: SwiperChangeSource)` | [see more ts definiti
 click | `(index: number)` | `0.34.0`
 image-load | `(index: number)` | `1.1.4`
 
+### Swiper Slots
+
+name | Description
+-- | --
+navigation | \-
+
 ### Swiper External Classes
 
 className | Description

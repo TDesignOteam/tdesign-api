@@ -18,20 +18,22 @@ function combineGlobals(framework) {
   // 通用全局变量
   const baseGlobalData = fs.readFileSync(baseGlobalPath);
   // 框架特有全局变量
-  const moreGlobalData = fs.readFileSync(path.resolve(__dirname, current.globalTplPath));
+  const moreGlobalData = fs.readFileSync(
+    path.resolve(__dirname, current.globalTplPath)
+  );
   const outputPath = path.resolve(current.globalPath);
   let data = moreGlobalData.toString() + baseGlobalData.toString();
   if (['React(PC)', 'React(Mobile)'].includes(framework)) {
     data = formatType(data);
   }
-  fs.writeFile(
-    outputPath,
-    data,
-    (err) => {
-      if (err) return console.error(err);
-      console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
-    },
-  );
+  const callback = (err) => {
+    if (err) return console.error(err);
+    // eslint-disable-next-line no-console
+    console.log(
+      chalk.green(`globals: ${outputPath} has been created successfully!`)
+    );
+  };
+  fs.writeFile(outputPath, data, callback);
 }
 
 module.exports = combineGlobals;

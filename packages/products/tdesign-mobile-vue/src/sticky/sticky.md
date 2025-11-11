@@ -10,10 +10,10 @@ container | Object | - | 指定容器对应的NodesRef节点为组件的外部�
 disabled | Boolean | false | 是否禁用组件 | N
 offsetTop | String / Number | 0 | 吸顶时与顶部的距离，单位`px` | N
 zIndex | Number | 99 | 吸顶时的 z-index | N
-onScroll | Function |  | TS 类型：`(context: { scrollTop: number, isFixed: boolean }) => void`<br/>滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+onScroll | Function |  | TS 类型：`(context: { scrollTop: number, isFixed: boolean }) => void`<br/>滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶 | N
 
 ### Sticky Events
 
 名称 | 参数 | 描述
 -- | -- | --
-scroll | `(context: { scrollTop: number, isFixed: boolean })` | 滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
+scroll | `(context: { scrollTop: number, isFixed: boolean })` | 滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶

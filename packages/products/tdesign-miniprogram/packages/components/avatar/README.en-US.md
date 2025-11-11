@@ -24,6 +24,12 @@ name | params | description
 -- | -- | --
 error | - | trigger on image load failed
 
+### Avatar Slots
+
+name | Description
+-- | --
+\- | \-
+
 ### Avatar External Classes
 
 className | Description
@@ -33,12 +39,6 @@ t-class-alt | \-
 t-class-content | \-
 t-class-icon | \-
 t-class-image | \-
-
-### Avatar Slots
-
-name | Description
--- | --
-\- | \-
 
 
 ### AvatarGroup Props
@@ -53,18 +53,18 @@ max | Number | - | \- | N
 shape | String | - | shape。options: circle/round。Typescript：`ShapeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 size | String | - | size | N
 
+### AvatarGroup Events
+
+name | params | description
+-- | -- | --
+collapsed-item-click | - | \-
+
 ### AvatarGroup Slots
 
 name | Description
 -- | --
 \- | \-
 collapse-avatar | \-
-
-### AvatarGroup Events
-
-name | params | description
--- | -- | --
-collapsed-item-click | - | \-
 
 ### AvatarGroup External Classes
 
