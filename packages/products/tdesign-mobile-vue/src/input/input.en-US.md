@@ -16,37 +16,37 @@ clearable | Boolean | false | show clear icon, clicked to clear input value | N
 cursorColor | String | #0052d9 | \- | N
 disabled | Boolean | undefined | make input to be disabled | N
 enterkeyhint | String | - | attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)。options: enter/done/go/next/previous/search/send | N
-extra | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript：`InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
-label | String / Slot / Function | - | text on the left of input。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+extra | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript: `InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+label | String / Slot / Function | - | text on the left of input。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | options: vertical/horizontal | N
 maxcharacter | Number | - | \- | N
 maxlength | String / Number | - | \- | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
-prefixIcon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 readonly | Boolean | undefined | \- | N
-size | String | small | `deprecated`。options: small/medium。Typescript：`'medium' \| 'small'` | N
+size | String | small | `deprecated`。options: small/medium。Typescript: `'medium' \| 'small'` | N
 spellCheck | Boolean | false | attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck) | N
 status | String | default | options: default/success/warning/error | N
-suffix | String / Slot / Function | - | suffix content before suffixIcon。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-suffixIcon | Slot / Function | - | suffix icon of input。Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-tips | String / Slot / Function | - | tips on the bottom of input, different `status` can make tips to be different color。Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+suffix | String / Slot / Function | - | suffix content before suffixIcon。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+suffixIcon | Slot / Function | - | suffix icon of input。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+tips | String / Slot / Function | - | tips on the bottom of input, different `status` can make tips to be different color。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | text | type attribute of input element. if you are using `type=number`, `InputNumber` Component might be better。options: text/number/url/tel/password/search/submit/hidden | N
-value | String / Number | - | input value。`v-model` and `v-model:value` is supported。Typescript：`InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
-defaultValue | String / Number | - | input value。uncontrolled property。Typescript：`InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
-onBlur | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
-onChange | Function |  | Typescript：`(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' }) => void`<br/>trigger on input value changed | N
-onClear | Function |  | Typescript：`(context: { e: TouchEvent }) => void`<br/> | N
-onFocus | Function |  | Typescript：`(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
-onValidate | Function |  | Typescript：`(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>`1.9.1`。trigger on text length being over max length or max character | N
+value | String / Number | - | input value。`v-model` and `v-model:value` is supported。Typescript: `InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+defaultValue | String / Number | - | input value。uncontrolled property。Typescript: `InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+onBlur | Function |  | Typescript: `(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
+onChange | Function |  | Typescript: `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' \| 'blur'}) => void`<br/>trigger on input value changed | N
+onClear | Function |  | Typescript: `(context: { e: TouchEvent }) => void`<br/> | N
+onFocus | Function |  | Typescript: `(value: InputValue, context: { e: FocusEvent }) => void`<br/> | N
+onValidate | Function |  | Typescript: `(context: { error?: 'exceed-maximum' \| 'below-minimum' }) => void`<br/>`1.9.1`。trigger on text length being over max length or max character | N
 
 ### Input Events
 
 name | params | description
 -- | -- | --
 blur | `(value: InputValue, context: { e: FocusEvent })` | \-
-change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' })` | trigger on input value changed
+change | `(value: InputValue, context?: { e?: InputEvent \| MouseEvent \| CompositionEvent; trigger: 'input' \| 'initial' \| 'clear' \| 'blur'})` | trigger on input value changed
 clear | `(context: { e: TouchEvent })` | \-
 focus | `(value: InputValue, context: { e: FocusEvent })` | \-
 validate | `(context: { error?: 'exceed-maximum' \| 'below-minimum' })` | `1.9.1`。trigger on text length being over max length or max character
