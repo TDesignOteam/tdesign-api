@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode } from '../common';
+import { TNode, Styles, AttachNode, AppContext } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -64,7 +64,7 @@ export interface TdDialogProps {
    */
   dialogStyle?: Styles;
   /**
-   * 对话框是否可以拖拽（仅在非模态对话框时有效）
+   * 是否可以拖拽（对全屏对话框无效）
    * @default false
    */
   draggable?: boolean;
@@ -234,6 +234,7 @@ export interface TdDialogCardProps
   onCancel?: (context: { e: MouseEvent }) => void;
   /**
    * 点击右上角关闭按钮时触发
+   * @default ''
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;
   /**
@@ -296,8 +297,8 @@ export interface DialogCloseContext {
   e: MouseEvent | KeyboardEvent;
 }
 
-export type DialogMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogConfirmMethod = (options?: DialogOptions) => DialogInstance;
+export type DialogConfirmMethod = (options?: DialogOptions, context?: AppContext) => DialogInstance;
 
-export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>) => DialogInstance;
+export type DialogAlertMethod = (options?: Omit<DialogOptions, 'cancelBtn'>, context?: AppContext) => DialogInstance;
