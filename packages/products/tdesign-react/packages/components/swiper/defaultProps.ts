@@ -13,7 +13,6 @@ export const swiperDefaultProps: TdSwiperProps = {
   duration: 300,
   interval: 5000,
   loop: true,
-  navigation: true,
   stopOnHover: true,
   theme: 'light',
   trigger: 'hover',

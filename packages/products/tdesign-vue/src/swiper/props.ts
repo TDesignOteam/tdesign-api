@@ -68,7 +68,6 @@ export default {
   /** 导航器全部配置 */
   navigation: {
     type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
-    default: true,
   },
   /** 是否悬浮时停止轮播 */
   stopOnHover: {

@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PropType } from 'vue';
 import { TdSwiperProps } from './type';
+import { PropType } from 'vue';
 
 export default {
   /** 轮播切换动画效果类型 */
@@ -64,7 +64,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 导航器全部配置，`true` 的话使用默认配置 */
+  /** 导航器全部配置，true 的话使用默认配置 */
   navigation: {
     type: [Boolean, Object, Function] as PropType<TdSwiperProps['navigation']>,
     default: true as TdSwiperProps['navigation'],
