@@ -5119,9 +5119,9 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "【实验】附件列表",
+      "field_desc_zh": "附件列表",
       "field_desc_en": null,
-      "field_required": 0,
+      "field_required": 1,
       "event_input": "",
       "create_time": "2025-11-06 09:26:24",
       "update_time": "2025-11-06 09:26:24",
@@ -27397,7 +27397,7 @@
         "1"
       ],
       "field_default_value": "skeleton",
-      "field_enum": "skeleton/moving/gradient",
+      "field_enum": "skeleton/moving/gradient/dot",
       "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种",
       "field_desc_en": null,
       "field_required": 0,
@@ -27442,7 +27442,7 @@
       "create_time": "2025-11-06 07:26:46",
       "update_time": "2025-11-06 07:26:46",
       "event_output": null,
-      "custom_field_type": "Array<TdChatItemMeta>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; reasoning?: string }】",
+      "custom_field_type": "Array<TdChatItemMeta>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; status?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -27472,7 +27472,7 @@
       ],
       "field_default_value": "both",
       "field_enum": "both/single",
-      "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐。使用插槽自定义对话内容时不生效，得用`t-chat-message`的`placement`属性。",
+      "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐。使用插槽自定义对话内容时不生效，得用`t-chat-message`的`placement`属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -27789,43 +27789,6 @@
         "Miniprogram"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 1762417502,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "ChatMessage",
-      "field_category": 1,
-      "field_name": "allowContentSegmentCustom",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "【实验】 是否允许自定义局部消息内容，其他消息内容实用默认样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-11-06 08:25:02",
-      "update_time": "2025-11-06 08:25:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
     },
     {
       "id": 1762417465,
@@ -29081,7 +29044,7 @@
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
@@ -29555,7 +29518,7 @@
         "1"
       ],
       "field_default_value": "moving",
-      "field_enum": "circle/moving/gradient",
+      "field_enum": "skeleton/moving/gradient/dot",
       "field_desc_zh": "内容区域最大高度，超出会自动滚动",
       "field_desc_en": null,
       "field_required": 0,
