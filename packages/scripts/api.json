@@ -87763,9 +87763,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "80",
+      "field_default_value": "40",
       "field_enum": "",
-      "field_desc_zh": "PickerItem 的子项高度，单位 rpx",
+      "field_desc_zh": "PickerItem 的子项高度，单位 `px`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -88214,6 +88214,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1762917807,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "visibleItemCount",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "5",
+      "field_enum": "",
+      "field_desc_zh": "可视区域 PickerItem 的子项个数",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-12 03:23:27",
+      "update_time": "2025-11-12 03:23:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
