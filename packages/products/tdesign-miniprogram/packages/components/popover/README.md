@@ -25,8 +25,8 @@ visible-change | `(visible: boolean)` | 确认框显示或隐藏时触发
 
 名称 | 描述
 -- | --
-\- | 自定义 `` 显示内容
-content \| 自定义 `content` 显示内容
+\- | 默认插槽，作用同 `content` 插槽
+content | 自定义 `content` 显示内容
 
 ### Popover External Classes
 

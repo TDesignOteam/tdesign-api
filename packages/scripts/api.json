@@ -89940,25 +89940,22 @@
       "field_type_text": []
     },
     {
-      "id": 1762616616,
+      "id": 1762944284,
       "platform_framework": [
         "64"
       ],
       "component": "Popover",
       "field_category": 512,
       "field_name": "-",
-      "field_type": [
-        "1",
-        "64"
-      ],
+      "field_type": [],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "默认插槽，作用同 `content` 插槽",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-11-08 15:43:36",
-      "update_time": "2025-11-08 15:43:36",
+      "create_time": "2025-11-12 10:44:44",
+      "update_time": "2025-11-12 10:44:44",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -89973,10 +89970,7 @@
       "platform_framework_text": [
         "Miniprogram"
       ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
+      "field_type_text": []
     },
     {
       "id": 423,
