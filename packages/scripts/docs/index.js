@@ -4,7 +4,7 @@ const path = require('path');
 const chalk = require('chalk');
 const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
 const { getApiComponentMapByFrameWork } = require('../common');
-const { kebabCaseComponent } = require('../utils');
+const { kebabCaseComponent,getComponentBasePath } = require('../utils');
 
 let currentFramework = '';
 
@@ -101,7 +101,7 @@ function generateDocs(baseData, framework, extra) {
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath
-      : path.resolve(current.apiBasePath, cmp==='QRCode'?'qrcode':kebabCaseComponent(cmp));
+      : path.resolve(getComponentBasePath(cmp, current.apiBasePath), kebabCaseComponent(cmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
         return console.error(err);

@@ -296,6 +296,10 @@
         "label": "布局-侧边栏"
       },
       {
+        "value": "Attachments",
+        "label": "文件附件"
+      },
+      {
         "value": "AutoComplete",
         "label": "自动填充"
       },
@@ -386,8 +390,12 @@
         "label": "对话操作"
       },
       {
+        "value": "ChatActionbar",
+        "label": "对话操作"
+      },
+      {
         "value": "ChatContent",
-        "label": "对话内容"
+        "label": "对话正文"
       },
       {
         "value": "ChatInput",
@@ -398,8 +406,20 @@
         "label": "对话单元"
       },
       {
+        "value": "ChatList",
+        "label": "对话列表"
+      },
+      {
         "value": "ChatLoading",
         "label": "对话加载"
+      },
+      {
+        "value": "ChatMarkdown",
+        "label": "Markdown内容"
+      },
+      {
+        "value": "ChatMessage",
+        "label": "对话消息体"
       },
       {
         "value": "ChatReasoning",
@@ -407,7 +427,11 @@
       },
       {
         "value": "ChatSender",
-        "label": "对话输入框"
+        "label": "对话输入"
+      },
+      {
+        "value": "ChatThinking",
+        "label": "思考过程"
       },
       {
         "value": "Checkbox",

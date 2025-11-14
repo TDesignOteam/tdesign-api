@@ -239,6 +239,7 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
         list: ['Swiper', 'SwiperNav'],
         includes: ['Miniprogram', 'UniApp'],
     },
+    Chat: [],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -471,6 +472,7 @@ const MINIPROGRAM_TYPES_COMBINE_MAP = {
         list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
         includes: ['Miniprogram', 'UniApp'],
     },
+    Chat: [],
 };
 
 exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;
