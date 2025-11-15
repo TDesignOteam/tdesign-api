@@ -645,7 +645,11 @@ function getTypeScriptDesc(componentMap, framework) {
 function combineTsFile(componentMap, framework) {
     const ts = getTypeScriptDesc(componentMap, framework);
     const rMap = getApiComponentMapByFrameWork(
-        framework === 'Miniprogram' ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
+        framework === 'Miniprogram'|| framework === 'UniApp'
+          ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) 
+          : (MOBILE_FRAMES.includes(framework) 
+            ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP)
+            : TYPES_COMBINE_MAP),
         framework
     );
     Object.keys(rMap).forEach((cmp) => {
