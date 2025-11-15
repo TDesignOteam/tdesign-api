@@ -7,7 +7,10 @@ function kebabCaseComponent(cmp) {
 
 function getComponentBasePath(cmp, apiBasePath){
   if(cmp.startsWith('Chat') || cmp === 'Attachments'){
-    return apiBasePath.replace('packages/components','packages/pro-components/chat')
+    if (apiBasePath.includes('packages/tdesign')) {
+      return apiBasePath.replace('packages/tdesign','packages/tdesign-uniapp-chat');
+    }
+    return apiBasePath.replace('packages/components','packages/pro-components/chat');
   }
   return apiBasePath
 }

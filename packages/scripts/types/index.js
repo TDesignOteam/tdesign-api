@@ -142,7 +142,7 @@ function getEventsApiType(api) {
             api.event_input
         );
         r = {
-            type: baseName ? `${baseName}` : '()',
+            type: baseName ?(baseName.startsWith('(') ? `${baseName}`: `(${baseName})`) : '()',
             exports,
             imports,
         };
@@ -312,7 +312,7 @@ function getGlobalsImports(str, framework) {
         .filter((key) => map[key].types.length)
         .map(
             (key) =>
-                `import { ${map[key].types.join(', ')} } from '${
+                `import type { ${map[key].types.join(', ')} } from '${
                     map[key].path
                 }';`
         );
@@ -375,8 +375,21 @@ function handleApiByFramework(api, framework) {
  */
 function formatAliasImportsPath(imports, framework) {
     const current = FRAMEWORK_MAP[framework];
+    const isUniApp = framework === 'UniApp';
     return imports
         .filter((v) => !!v)
+        .map(item => {
+            if (!isUniApp) {
+                return item;
+            }
+            const reg =/import\s+\{\s+(\w+)/
+            return item.replace(reg, (a, b) => {
+                if (!b.endsWith('Props')) {
+                    return `import type { ${b}`
+                }
+                return `import type { Td${b} as ${b}`
+            })
+        })
         .map((item) => {
             if (item.indexOf('@icon') !== -1) {
                 return item.replace('@icon', current.iconPath);
@@ -389,6 +402,9 @@ function formatAliasImportsPath(imports, framework) {
                     let relativePath = current.componentRelativiePath + name;
                     if (framework === 'Miniprogram') {
                         relativePath = `${relativePath}/index`;
+                    }
+                    if (isUniApp) {
+                        relativePath = `${relativePath}/type`;
                     }
                     return `'${relativePath}'`;
                 });
@@ -408,6 +424,7 @@ function formatImportsPath(imports, framework) {
             'Vue(Mobile)',
             'React(Mobile)',
             'Miniprogram',
+            'UniApp',
         ].includes(framework)
     ) {
         newImports = formatAliasImportsPath(imports, framework);
@@ -628,7 +645,11 @@ function getTypeScriptDesc(componentMap, framework) {
 function combineTsFile(componentMap, framework) {
     const ts = getTypeScriptDesc(componentMap, framework);
     const rMap = getApiComponentMapByFrameWork(
-        framework === 'Miniprogram' ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
+        framework === 'Miniprogram'|| framework === 'UniApp'
+          ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) 
+          : (MOBILE_FRAMES.includes(framework) 
+            ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP)
+            : TYPES_COMBINE_MAP),
         framework
     );
     Object.keys(rMap).forEach((cmp) => {
@@ -687,6 +708,7 @@ function combineTsFile(componentMap, framework) {
                 'Vue(Mobile)',
                 'Miniprogram',
                 'React(Mobile)',
+                'UniApp'
             ].includes(framework)
         ) {
             ts[cmp].imports = ts[cmp].imports.concat(
