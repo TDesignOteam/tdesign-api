@@ -143,7 +143,7 @@ export interface TdInputProps {
     value: InputValue,
     context?: {
       e?: FormEvent<HTMLInputElement> | MouseEvent<any> | CompositionEvent<HTMLDivElement>;
-      trigger: 'input' | 'initial' | 'clear';
+      trigger: 'input' | 'initial' | 'clear' | 'blur';
     },
   ) => void;
   /**

@@ -5119,9 +5119,9 @@
       ],
       "field_default_value": "[]",
       "field_enum": "",
-      "field_desc_zh": "【实验】附件列表",
+      "field_desc_zh": "附件列表",
       "field_desc_en": null,
-      "field_required": 0,
+      "field_required": 1,
       "event_input": "",
       "create_time": "2025-11-06 09:26:24",
       "update_time": "2025-11-06 09:26:24",
@@ -21447,47 +21447,11 @@
       ]
     },
     {
-      "id": 3347,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "Cascader",
-      "field_category": 1,
-      "field_name": "keys",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "用来定义 value / label 在 `options` 中对应的字段别名",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-02-28 10:15:01",
-      "update_time": "2023-02-28 10:15:01",
-      "event_output": null,
-      "custom_field_type": "KeysType",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
       "id": 1723804837,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -21516,7 +21480,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -27473,7 +27438,7 @@
         "1"
       ],
       "field_default_value": "skeleton",
-      "field_enum": "skeleton/moving/gradient",
+      "field_enum": "skeleton/moving/gradient/dot",
       "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种",
       "field_desc_en": null,
       "field_required": 0,
@@ -27518,7 +27483,7 @@
       "create_time": "2025-11-06 07:26:46",
       "update_time": "2025-11-06 07:26:46",
       "event_output": null,
-      "custom_field_type": "Array<TdChatItemMeta>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; reasoning?: string }】",
+      "custom_field_type": "Array<TdChatItemMeta>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; status?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -27548,7 +27513,7 @@
       ],
       "field_default_value": "both",
       "field_enum": "both/single",
-      "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐。使用插槽自定义对话内容时不生效，得用`t-chat-message`的`placement`属性。",
+      "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐。使用插槽自定义对话内容时不生效，得用`t-chat-message`的`placement`属性",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -27865,43 +27830,6 @@
         "Miniprogram"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 1762417502,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "ChatMessage",
-      "field_category": 1,
-      "field_name": "allowContentSegmentCustom",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "【实验】 是否允许自定义局部消息内容，其他消息内容实用默认样式",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2025-11-06 08:25:02",
-      "update_time": "2025-11-06 08:25:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
     },
     {
       "id": 1762417465,
@@ -29157,7 +29085,7 @@
       "deprecated": 0,
       "version": "",
       "test_description": null,
-      "support_default_value": 1,
+      "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
@@ -29631,7 +29559,7 @@
         "1"
       ],
       "field_default_value": "moving",
-      "field_enum": "circle/moving/gradient",
+      "field_enum": "skeleton/moving/gradient/dot",
       "field_desc_zh": "内容区域最大高度，超出会自动滚动",
       "field_desc_en": null,
       "field_required": 0,
@@ -73577,7 +73505,7 @@
       "field_desc_zh": "输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
       "field_desc_en": "trigger on input value changed",
       "field_required": 0,
-      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' })",
+      "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' | 'blur'})",
       "create_time": "2024-04-09 08:02:07",
       "update_time": "2024-04-09 08:02:07",
       "event_output": null,
@@ -87839,9 +87767,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "80",
+      "field_default_value": "40",
       "field_enum": "",
-      "field_desc_zh": "PickerItem 的子项高度，单位 rpx",
+      "field_desc_zh": "PickerItem 的子项高度，单位 `px`",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -88290,6 +88218,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1762917807,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Picker",
+      "field_category": 1,
+      "field_name": "visibleItemCount",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "5",
+      "field_enum": "",
+      "field_desc_zh": "可视区域 PickerItem 的子项个数",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-12 03:23:27",
+      "update_time": "2025-11-12 03:23:27",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -89553,7 +89518,8 @@
       "id": 3526,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89582,7 +89548,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89592,7 +89559,8 @@
       "id": 942,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89622,7 +89590,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -89672,7 +89641,8 @@
       "id": 3514,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89701,7 +89671,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89711,7 +89682,8 @@
       "id": 3513,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89740,7 +89712,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89750,7 +89723,8 @@
       "id": 3516,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89779,7 +89753,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89830,7 +89805,8 @@
       "id": 1160,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 1,
@@ -89859,7 +89835,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Boolean"
@@ -89869,7 +89846,8 @@
       "id": 3519,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "Popover",
       "field_category": 2,
@@ -89896,7 +89874,107 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1762617354,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 128,
+      "field_name": "t-class",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "根节点样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:55:54",
+      "update_time": "2025-11-08 15:55:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1762617306,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 128,
+      "field_name": "t-class-content",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容样式类",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-08 15:55:06",
+      "update_time": "2025-11-08 15:55:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "External Classes",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1762944284,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 512,
+      "field_name": "-",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-12 10:44:44",
+      "update_time": "2025-11-12 10:44:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
