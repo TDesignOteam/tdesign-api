@@ -16933,7 +16933,7 @@
       "create_time": "2022-11-01 02:31:29",
       "update_time": "2022-11-01 02:31:29",
       "event_output": null,
-      "custom_field_type": "CalendarFormatType 【type CalendarFormatType = (day: TDate) => TDate】【type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | ''】【interface TDate { date: Date; day: number; type: TDateType; className?: string; prefix?: string; suffix?: string;}】",
+      "custom_field_type": "CalendarFormatType 【type CalendarFormatType = (day: TDate) => TDate】【type TDateType = 'selected' | 'disabled' | 'start' | 'start-end' |'centre' | 'end' | ''】【interface TDate { date: Date; day: number; type: TDateType; className?: string; prefix?: string; suffix?: string;}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
