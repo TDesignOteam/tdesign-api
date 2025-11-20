@@ -17803,7 +17803,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组",
+      "field_desc_zh": "当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
