@@ -50,7 +50,6 @@ header | 自定义 `header` 显示内容
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 format | Function | - | 格式化标签。TS 类型：`(option: PickerItemOption, columnIndex: number) => PickerItemOption` | N
-<<<<<<< Updated upstream:packages/products/tdesign-miniprogram/packages/components/picker/README.md
 options | Array | [] | 数据源。TS 类型：`PickerItemOption[]` `interface PickerItemOption { label: string; value: string \| number; icon?: string }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/picker-item/type.ts) | N
 
 ### PickerItem Slots
@@ -58,6 +57,3 @@ options | Array | [] | 数据源。TS 类型：`PickerItemOption[]` `interface P
 名称 | 描述
 -- | --
 label-suffix-index | 列表子项后置插槽，用于自定义标签文本之后的内容。
-=======
-options | Array | [] | 数据源。TS 类型：`PickerItemOption[]` `interface PickerItemOption { label: string; value: string \| number }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/picker-item/type.ts) | N
->>>>>>> Stashed changes:packages/products/tdesign-miniprogram/src/picker/README.md
