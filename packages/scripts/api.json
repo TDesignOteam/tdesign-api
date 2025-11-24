@@ -21608,7 +21608,9 @@
       "id": 394,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -21619,7 +21621,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "加载子树数据的方法（仅当节点 children 为 true 时生效）",
-      "field_desc_en": null,
+      "field_desc_en": "loading subtree data (only effective when the node's children value is true)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-21 06:40:57",
@@ -21637,7 +21639,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"

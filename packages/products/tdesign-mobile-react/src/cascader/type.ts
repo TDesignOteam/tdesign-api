@@ -32,6 +32,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   lazy?: boolean;
   /**
+   * 加载子树数据的方法（仅当节点 children 为 true 时生效）
+   */
+  load?: (node: TreeNodeModel<CascaderOption>) => Promise<Array<CascaderOption>>;
+  /**
    * 是否完成异步加载
    * @default false
    */
