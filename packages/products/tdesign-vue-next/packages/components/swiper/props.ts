@@ -78,15 +78,6 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 深色模式和浅色模式 */
-  theme: {
-    type: String as PropType<TdSwiperProps['theme']>,
-    default: 'light' as TdSwiperProps['theme'],
-    validator(val: TdSwiperProps['theme']): boolean {
-      if (!val) return true;
-      return ['light', 'dark'].includes(val);
-    },
-  },
   /** 触发切换的方式：悬浮、点击等 */
   trigger: {
     type: String as PropType<TdSwiperProps['trigger']>,

@@ -14,7 +14,6 @@ export const swiperDefaultProps: TdSwiperProps = {
   interval: 5000,
   loop: true,
   stopOnHover: true,
-  theme: 'light',
   trigger: 'hover',
   type: 'default',
 };
