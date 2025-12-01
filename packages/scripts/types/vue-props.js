@@ -60,6 +60,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
     if (currentFramework !== 'Miniprogram') {
       try {
         const tmp = JSON.parse(dl);
+        // TODO: uniapp
         if (['object', 'function'].includes(typeof tmp) && !(tmp instanceof Array)) {
           dl = `() => (${dl})`;
         } else if (tmp instanceof Array) {
