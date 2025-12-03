@@ -28027,8 +28027,7 @@
       "field_category": 1,
       "field_name": "datetime",
       "field_type": [
-        "1",
-        "64"
+        "1"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -28053,8 +28052,7 @@
         "Miniprogram"
       ],
       "field_type_text": [
-        "String",
-        "TNode"
+        "String"
       ]
     },
     {
@@ -28276,6 +28274,43 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1764755920,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatMessage",
+      "field_category": 512,
+      "field_name": "content",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义消息内容",
+      "field_desc_en": "",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-03 09:58:40",
+      "update_time": "2025-12-03 09:58:40",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Slots",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
     },
     {
       "id": 1742886437,

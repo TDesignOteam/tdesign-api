@@ -30,4 +30,4 @@ longpress | `(detail: { id: string })` | \-
 
 name | \-
 avatar | \-
-datetime | \-
+content | \-
