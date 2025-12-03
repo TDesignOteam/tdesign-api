@@ -54,9 +54,10 @@ context | \- | - | Typescript: `AppContext`。[see more ts definition](https://g
 
 name | params | default | description
 -- | -- | -- | --
-插件返回值：`Promise<NotificationInstance>`
 options | Object | - | required。Typescript: `NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/notification/type.ts)
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+
+插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.warning
 
@@ -64,9 +65,10 @@ context | \- | - | Typescript: `AppContext`。[see more ts definition](https://g
 
 name | params | default | description
 -- | -- | -- | --
-插件返回值：`Promise<NotificationInstance>`
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+
+插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.error
 
@@ -74,9 +76,10 @@ context | \- | - | Typescript: `AppContext`。[see more ts definition](https://g
 
 name | params | default | description
 -- | -- | -- | --
-插件返回值：`Promise<NotificationInstance>`
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+
+插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.success
 
@@ -84,9 +87,10 @@ context | \- | - | Typescript: `AppContext`。[see more ts definition](https://g
 
 name | params | default | description
 -- | -- | -- | --
-插件返回值：`Promise<NotificationInstance>`
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+
+插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.close
 
