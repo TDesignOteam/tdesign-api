@@ -124,6 +124,17 @@ export interface TdDropdownItemProps {
   onClick?: (dropdownItem: DropdownOption, context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
 
+export interface TdDropdownMenuProps {
+  /**
+   * 内容，同 content
+   */
+  children?: TNode;
+  /**
+   * 内容
+   */
+  content?: TNode;
+}
+
 export type DropdownOption = { children?: DropdownOption[] } & TdDropdownItemProps & Record<string, any>;
 
 export type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error';

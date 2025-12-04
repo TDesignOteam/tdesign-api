@@ -55,6 +55,7 @@ declare module '@vue/runtime-core' {
     TDrawer: typeof import('tdesign-vue')['Drawer'];
     TDropdown: typeof import('tdesign-vue')['Dropdown'];
     TDropdownItem: typeof import('tdesign-vue')['DropdownItem'];
+    TDropdownMenu: typeof import('tdesign-vue')['DropdownMenu'];
     TEmpty: typeof import('tdesign-vue')['Empty'];
     TEnhancedTable: typeof import('tdesign-vue')['EnhancedTable'];
     TFooter: typeof import('tdesign-vue')['Footer'];
