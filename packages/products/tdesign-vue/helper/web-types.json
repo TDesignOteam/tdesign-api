@@ -7408,197 +7408,6 @@
           ]
         },
         {
-          "name": "t-dropdown-menu",
-          "source": {
-            "symbol": "Dropdown"
-          },
-          "description": "Dropdown\n\n下拉菜单",
-          "doc-url": "https://tdesign.tencent.com/vue/components/dropdown",
-          "props": [
-            {
-              "name": "direction",
-              "description": "多层级操作时，子层级展开方向",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "'left' | 'right'",
-              "default": "right",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "left"
-                },
-                {
-                  "name": "right"
-                }
-              ]
-            },
-            {
-              "name": "disabled",
-              "description": "是否禁用组件",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "boolean",
-              "default": "false"
-            },
-            {
-              "name": "hide-after-item-click",
-              "description": "点击选项后是否自动隐藏弹窗",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "boolean",
-              "default": "true"
-            },
-            {
-              "name": "max-column-width",
-              "description": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "string | number",
-              "default": "100"
-            },
-            {
-              "name": "max-height",
-              "description": "弹窗最大高度，单位：px 。统一控制每一列的高度",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "number",
-              "default": "300"
-            },
-            {
-              "name": "min-column-width",
-              "description": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "string | number",
-              "default": "10"
-            },
-            {
-              "name": "options",
-              "description": "下拉操作项",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "Array<DropdownOption>",
-              "default": "[]"
-            },
-            {
-              "name": "panel-bottom-content",
-              "description": "bottom content of the dropdown panel\n\n面板内的底部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "string | TNode"
-            },
-            {
-              "name": "panel-top-content",
-              "description": "top content of the dropdown panel\n\n面板内的顶部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "string | TNode"
-            },
-            {
-              "name": "placement",
-              "description": "弹窗定位方式，可选值同 Popup 组件",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "'top' | 'left' | 'right' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'left-top' | 'left-bottom' | 'right-top' | 'right-bottom'",
-              "default": "bottom-left",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "top"
-                },
-                {
-                  "name": "left"
-                },
-                {
-                  "name": "right"
-                },
-                {
-                  "name": "bottom"
-                },
-                {
-                  "name": "top-left"
-                },
-                {
-                  "name": "top-right"
-                },
-                {
-                  "name": "bottom-left"
-                },
-                {
-                  "name": "bottom-right"
-                },
-                {
-                  "name": "left-top"
-                },
-                {
-                  "name": "left-bottom"
-                },
-                {
-                  "name": "right-top"
-                },
-                {
-                  "name": "right-bottom"
-                }
-              ]
-            },
-            {
-              "name": "popup-props",
-              "description": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "PopupProps"
-            },
-            {
-              "name": "trigger",
-              "description": "触发下拉显示的方式",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props",
-              "type": "'hover' | 'click' | 'focus' | 'context-menu'",
-              "default": "hover",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "hover"
-                },
-                {
-                  "name": "click"
-                },
-                {
-                  "name": "focus"
-                },
-                {
-                  "name": "context-menu"
-                }
-              ]
-            }
-          ],
-          "js": {
-            "events": [
-              {
-                "name": "click",
-                "description": "下拉操作项点击时触发",
-                "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-events"
-              }
-            ]
-          },
-          "slots": [
-            {
-              "name": "panelBottomContent",
-              "description": "bottom content of the dropdown panel\n\n面板内的底部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props"
-            },
-            {
-              "name": "panel-bottom-content",
-              "description": "bottom content of the dropdown panel\n\n面板内的底部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props"
-            },
-            {
-              "name": "panelTopContent",
-              "description": "top content of the dropdown panel\n\n面板内的顶部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props"
-            },
-            {
-              "name": "panel-top-content",
-              "description": "top content of the dropdown panel\n\n面板内的顶部内容",
-              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdown-props"
-            }
-          ]
-        },
-        {
           "name": "t-dropdown-item",
           "source": {
             "symbol": "DropdownItem"
@@ -7695,6 +7504,40 @@
               "name": "prefix-icon",
               "description": "组件前置图标",
               "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownitem-props"
+            }
+          ]
+        },
+        {
+          "name": "t-dropdown-menu",
+          "source": {
+            "symbol": "DropdownMenu"
+          },
+          "description": "DropdownMenu\n\n下拉菜单",
+          "doc-url": "https://tdesign.tencent.com/vue/components/dropdown",
+          "props": [
+            {
+              "name": "content",
+              "description": "内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props",
+              "type": "string | TNode"
+            },
+            {
+              "name": "default",
+              "description": "内容，同 content",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props",
+              "type": "string | TNode"
+            }
+          ],
+          "slots": [
+            {
+              "name": "content",
+              "description": "内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props"
+            },
+            {
+              "name": "default",
+              "description": "内容，同 content",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props"
             }
           ]
         },

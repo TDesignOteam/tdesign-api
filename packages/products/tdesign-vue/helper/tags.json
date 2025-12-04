@@ -956,24 +956,6 @@
     ],
     "description": "Dropdown\n\n下拉菜单\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown)"
   },
-  "t-dropdown-menu": {
-    "attributes": [
-      "direction",
-      "disabled",
-      "hide-after-item-click",
-      "max-column-width",
-      "max-height",
-      "min-column-width",
-      "options",
-      "panel-bottom-content",
-      "panel-top-content",
-      "placement",
-      "popup-props",
-      "trigger",
-      "click"
-    ],
-    "description": "Dropdown\n\n下拉菜单\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown)"
-  },
   "t-dropdown-item": {
     "attributes": [
       "active",
@@ -986,6 +968,13 @@
       "click"
     ],
     "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown)"
+  },
+  "t-dropdown-menu": {
+    "attributes": [
+      "content",
+      "default"
+    ],
+    "description": "DropdownMenu\n\n下拉菜单\n\n[docs](https://tdesign.tencent.com/vue/components/dropdown)"
   },
   "t-empty": {
     "attributes": [

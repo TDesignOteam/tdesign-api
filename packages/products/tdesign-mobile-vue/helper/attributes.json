@@ -1260,35 +1260,35 @@
   },
   "t-dropdown-item/disabled": {
     "type": "Boolean",
-    "description": "是否禁用操作项\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "是否禁用操作项\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/footer": {
     "type": "TNode",
-    "description": "底部\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "底部\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/icon": {
     "type": "Array|TNode",
-    "description": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/keys": {
     "type": "Object",
-    "description": "用来定义 value / label / disabled 在 `options` 中对应的字段别名\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "用来定义 value / label / disabled 在 `options` 中对应的字段别名\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/label": {
     "type": "String",
-    "description": "标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/multiple": {
     "type": "Boolean",
-    "description": "是否多选\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "是否多选\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/options": {
     "type": "Array",
-    "description": "选项数据\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "选项数据\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/options-columns": {
     "type": "String|Number",
-    "description": "选项分栏（1-3）\n\ndefault: 1\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "选项分栏（1-3）\n\ndefault: 1\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/placement": {
     "type": "String",
@@ -1296,23 +1296,23 @@
       "left",
       "right"
     ],
-    "description": "复选框和内容相对位置，仅单选菜单栏有效\n\ndefault: left\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "复选框和内容相对位置，仅单选菜单栏有效\n\ndefault: left\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/value": {
     "type": "String|Number|Array",
-    "description": "选中值\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-props)"
+    "description": "选中值\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/change": {
     "type": "event",
-    "description": "值改变时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-events)"
+    "description": "值改变时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-events)"
   },
   "t-dropdown-item/confirm": {
     "type": "event",
-    "description": "点击确认时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-events)"
+    "description": "点击确认时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-events)"
   },
   "t-dropdown-item/reset": {
     "type": "event",
-    "description": "点击重置时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownitem-events)"
+    "description": "点击重置时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-events)"
   },
   "t-dropdown-menu/close-on-click-overlay": {
     "type": "Boolean",

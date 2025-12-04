@@ -3194,19 +3194,7 @@
     ],
     "description": "多层级操作时，子层级展开方向\n\ndefault: right\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/direction": {
-    "type": "String",
-    "options": [
-      "left",
-      "right"
-    ],
-    "description": "多层级操作时，子层级展开方向\n\ndefault: right\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/disabled": {
-    "type": "Boolean",
-    "description": "是否禁用组件\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
-  "t-dropdown-menu/disabled": {
     "type": "Boolean",
     "description": "是否禁用组件\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
@@ -3214,15 +3202,7 @@
     "type": "Boolean",
     "description": "点击选项后是否自动隐藏弹窗\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/hide-after-item-click": {
-    "type": "Boolean",
-    "description": "点击选项后是否自动隐藏弹窗\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/max-column-width": {
-    "type": "String|Number",
-    "description": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px\n\ndefault: 100\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
-  "t-dropdown-menu/max-column-width": {
     "type": "String|Number",
     "description": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px\n\ndefault: 100\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
@@ -3230,15 +3210,7 @@
     "type": "Number",
     "description": "弹窗最大高度，单位：px 。统一控制每一列的高度\n\ndefault: 300\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/max-height": {
-    "type": "Number",
-    "description": "弹窗最大高度，单位：px 。统一控制每一列的高度\n\ndefault: 300\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/min-column-width": {
-    "type": "String|Number",
-    "description": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px\n\ndefault: 10\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
-  "t-dropdown-menu/min-column-width": {
     "type": "String|Number",
     "description": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px\n\ndefault: 10\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
@@ -3246,23 +3218,11 @@
     "type": "Array",
     "description": "下拉操作项\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/options": {
-    "type": "Array",
-    "description": "下拉操作项\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/panel-bottom-content": {
     "type": "String|TNode",
     "description": "bottom content of the dropdown panel\n\n面板内的底部内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/panel-bottom-content": {
-    "type": "String|TNode",
-    "description": "bottom content of the dropdown panel\n\n面板内的底部内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/panel-top-content": {
-    "type": "String|TNode",
-    "description": "top content of the dropdown panel\n\n面板内的顶部内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
-  "t-dropdown-menu/panel-top-content": {
     "type": "String|TNode",
     "description": "top content of the dropdown panel\n\n面板内的顶部内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
@@ -3284,29 +3244,7 @@
     ],
     "description": "弹窗定位方式，可选值同 Popup 组件\n\ndefault: bottom-left\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/placement": {
-    "type": "String",
-    "options": [
-      "top",
-      "left",
-      "right",
-      "bottom",
-      "top-left",
-      "top-right",
-      "bottom-left",
-      "bottom-right",
-      "left-top",
-      "left-bottom",
-      "right-top",
-      "right-bottom"
-    ],
-    "description": "弹窗定位方式，可选值同 Popup 组件\n\ndefault: bottom-left\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/popup-props": {
-    "type": "Object",
-    "description": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
-  "t-dropdown-menu/popup-props": {
     "type": "Object",
     "description": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
@@ -3320,21 +3258,7 @@
     ],
     "description": "触发下拉显示的方式\n\ndefault: hover\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
   },
-  "t-dropdown-menu/trigger": {
-    "type": "String",
-    "options": [
-      "hover",
-      "click",
-      "focus",
-      "context-menu"
-    ],
-    "description": "触发下拉显示的方式\n\ndefault: hover\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-props)"
-  },
   "t-dropdown/click": {
-    "type": "event",
-    "description": "下拉操作项点击时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-events)"
-  },
-  "t-dropdown-menu/click": {
     "type": "event",
     "description": "下拉操作项点击时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdown-events)"
   },
@@ -3375,6 +3299,14 @@
   "t-dropdown-item/click": {
     "type": "event",
     "description": "点击时触发\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdownitem-events)"
+  },
+  "t-dropdown-menu/content": {
+    "type": "String|TNode",
+    "description": "内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdownmenu-props)"
+  },
+  "t-dropdown-menu/default": {
+    "type": "String|TNode",
+    "description": "内容，同 content\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown?tab=api#dropdownmenu-props)"
   },
   "t-empty/action": {
     "type": "TNode",

@@ -32,7 +32,6 @@ const aliasComponents = {
   ['PrimaryTable']: 'Table',
   ['Radio']: 'RadioButton',
   ['Swiper']: 'SwiperItem',
-  ['Dropdown']: 'DropdownMenu',
   ['IconSVG']: 'Icon',
 };
 
