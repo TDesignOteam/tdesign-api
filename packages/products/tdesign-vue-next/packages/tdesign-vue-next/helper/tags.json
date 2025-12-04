@@ -308,14 +308,20 @@
     "attributes": [
       "actions",
       "avatar",
+      "body-class-name",
+      "body-style",
       "bordered",
       "content",
       "cover",
       "default",
       "description",
       "footer",
+      "footer-class-name",
+      "footer-style",
       "header",
       "header-bordered",
+      "header-class-name",
+      "header-style",
       "hover-shadow",
       "loading",
       "loading-props",
@@ -360,6 +366,7 @@
       "prefix-icon",
       "readonly",
       "reserve-keyword",
+      "scroll",
       "select-input-props",
       "show-all-levels",
       "size",
@@ -419,7 +426,7 @@
       "content",
       "role"
     ],
-    "description": "ChatContent\n\n对话内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatContent\n\n对话正文\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
   },
   "t-chat-input": {
     "attributes": [
@@ -474,6 +481,7 @@
   "t-chat-sender": {
     "attributes": [
       "disabled",
+      "loading",
       "placeholder",
       "prefix",
       "stop-disabled",
@@ -486,7 +494,7 @@
       "send",
       "stop"
     ],
-    "description": "ChatSender\n\n对话输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatSender\n\n对话输入\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
   },
   "t-check-tag": {
     "attributes": [
@@ -837,6 +845,7 @@
       "prevent-scroll-through",
       "show-in-attached-element",
       "show-overlay",
+      "size-draggable",
       "theme",
       "top",
       "visible",
@@ -886,6 +895,7 @@
       "dashed",
       "default",
       "layout",
+      "size",
       "theme"
     ],
     "description": "Divider\n\n分割线\n\n[docs](https://tdesign.tencent.com/vue-next/components/divider)"
@@ -919,14 +929,34 @@
       "cancel",
       "close",
       "close-btn-click",
+      "closed",
       "confirm",
       "esc-keydown",
+      "opened",
       "overlay-click",
       "size-drag-end"
     ],
     "description": "Drawer\n\n模态抽屉\n\n[docs](https://tdesign.tencent.com/vue-next/components/drawer)"
   },
   "t-dropdown": {
+    "attributes": [
+      "direction",
+      "disabled",
+      "hide-after-item-click",
+      "max-column-width",
+      "max-height",
+      "min-column-width",
+      "options",
+      "panel-bottom-content",
+      "panel-top-content",
+      "placement",
+      "popup-props",
+      "trigger",
+      "click"
+    ],
+    "description": "Dropdown\n\n下拉菜单\n\n[docs](https://tdesign.tencent.com/vue-next/components/dropdown)"
+  },
+  "t-dropdown-menu": {
     "attributes": [
       "direction",
       "disabled",
@@ -1281,7 +1311,6 @@
       "header",
       "layout",
       "scroll",
-      "scroll",
       "size",
       "split",
       "stripe",
@@ -1388,6 +1417,7 @@
       "icon",
       "theme",
       "title",
+      "close",
       "close-btn-click",
       "duration-end"
     ],
@@ -2136,7 +2166,6 @@
       "loop",
       "navigation",
       "stop-on-hover",
-      "theme",
       "trigger",
       "type",
       "change"
@@ -2156,7 +2185,6 @@
       "loop",
       "navigation",
       "stop-on-hover",
-      "theme",
       "trigger",
       "type",
       "change"
@@ -2649,6 +2677,7 @@
       "default",
       "height",
       "is-repeat",
+      "layout",
       "line-space",
       "movable",
       "move-interval",
