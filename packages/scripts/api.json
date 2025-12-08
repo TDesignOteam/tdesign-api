@@ -128697,6 +128697,47 @@
       ]
     },
     {
+      "id": 1765200398,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "count",
+      "field_type": [
+        "4",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true",
+      "field_desc_en": "Character counter. It is enabled by default when `maxLength` or `maxCharacter` is set.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-08 13:26:38",
+      "update_time": "2025-12-08 13:26:38",
+      "event_output": null,
+      "custom_field_type": "boolean | ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode)",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Function"
+      ]
+    },
+    {
       "id": 3392,
       "platform_framework": [
         "64"

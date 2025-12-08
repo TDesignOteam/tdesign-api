@@ -24,6 +24,10 @@ export interface TdTextareaProps {
    */
   autosize?: boolean | { minRows?: number; maxRows?: number };
   /**
+   * 文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true
+   */
+  count?: boolean | ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode);
+  /**
    * 是否禁用文本框
    */
   disabled?: boolean;
