@@ -129660,7 +129660,7 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "default",
+      "field_default_value": "'default'",
       "field_enum": "default/success/warning/error",
       "field_desc_zh": "文本框状态",
       "field_desc_en": null,

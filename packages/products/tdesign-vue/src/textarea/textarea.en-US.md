@@ -16,7 +16,7 @@ maxlength | String / Number | - | Typescript: `string \| number` | N
 name | String | - | \- | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | undefined | \- | N
-status | String | default | options: default/success/warning/error | N
+status | String | 'default' | options: default/success/warning/error | N
 tips | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 value | String / Number | - | `v-model` is supported。Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
 defaultValue | String / Number | - | uncontrolled property。Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N

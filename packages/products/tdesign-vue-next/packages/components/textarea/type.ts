@@ -53,7 +53,7 @@ export interface TdTextareaProps {
   readonly?: boolean;
   /**
    * 文本框状态
-   * @default default
+   * @default 'default'
    */
   status?: 'default' | 'success' | 'warning' | 'error';
   /**
