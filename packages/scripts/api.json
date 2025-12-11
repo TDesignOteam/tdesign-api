@@ -89870,6 +89870,43 @@
       ]
     },
     {
+      "id": 1765425274,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 1,
+      "field_name": "fixed",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "如果 popover 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-11 03:54:34",
+      "update_time": "2025-12-11 03:54:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3514,
       "platform_framework": [
         "8",

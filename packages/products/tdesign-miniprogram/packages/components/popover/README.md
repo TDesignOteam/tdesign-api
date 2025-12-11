@@ -10,6 +10,7 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 close-on-click-outside | Boolean | true | 是否在点击外部元素后关闭菜单  | N
 content | String | - | 确认框内容 | N
+fixed | Boolean | false | 如果 popover 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true | N
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom | N
 show-arrow | Boolean | true | 是否显示浮层箭头 | N
 theme | String | dark | 弹出气泡主题。可选项：dark/light/brand/success/warning/error | N
