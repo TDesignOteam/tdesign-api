@@ -2688,7 +2688,7 @@
       "create_time": "2021-09-02 12:06:15",
       "update_time": "2022-04-08 09:06:29",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?: string }】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?: string }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -2726,7 +2726,7 @@
       "create_time": "2024-04-10 02:45:01",
       "update_time": "2024-04-10 02:45:01",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; color?: string; disabled?: boolean; icon?: TNode; badge?: BadgeProps }】【import { BadgeProps } from '@Badge'】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: TNode; suffixIcon?: TNode; badge?: BadgeProps }】【import { BadgeProps } from '@Badge'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -53211,6 +53211,45 @@
       ]
     },
     {
+      "id": 1764862297,
+      "platform_framework": [
+        "2"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-04 15:31:38",
+      "update_time": "2025-12-04 15:31:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1698,
       "platform_framework": [
         "8",
@@ -53249,6 +53288,86 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1764862309,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-04 15:31:49",
+      "update_time": "2025-12-04 15:31:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1764862362,
+      "platform_framework": [
+        "1"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "default",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容，同 content",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-04 15:32:42",
+      "update_time": "2025-12-04 15:32:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -128780,6 +128899,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1765200398,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Textarea",
+      "field_category": 1,
+      "field_name": "count",
+      "field_type": [
+        "4",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true",
+      "field_desc_en": "Character counter. It is enabled by default when `maxLength` or `maxCharacter` is set.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-08 13:26:38",
+      "update_time": "2025-12-08 13:26:38",
+      "event_output": null,
+      "custom_field_type": "boolean | ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode)",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean",
+        "Function"
       ]
     },
     {
