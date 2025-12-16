@@ -21631,7 +21631,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{ \"Vue(Mobile)\": \"1.11.2\", \"React(Mobile)\": \"0.21.1\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -22478,9 +22478,7 @@
       "id": 1760882689,
       "platform_framework": [
         "1",
-        "2",
-        "8",
-        "16"
+        "2"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -22507,9 +22505,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": []
     },
