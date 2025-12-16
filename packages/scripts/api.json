@@ -68936,6 +68936,45 @@
       ]
     },
     {
+      "id": 1765908904,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "cover",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "支持自定义覆盖在图片预览最上方的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-16 18:15:04",
+      "update_time": "2025-12-16 18:15:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 3125,
       "platform_framework": [
         "64"
@@ -69056,6 +69095,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1765908976,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "image",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义图片内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-16 18:16:16",
+      "update_time": "2025-12-16 18:16:16",
+      "event_output": null,
+      "custom_field_type": "TNode<ImageSlotParams>【interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
