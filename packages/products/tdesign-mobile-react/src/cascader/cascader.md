@@ -13,7 +13,7 @@ closeBtn | TNode | true | 关闭按钮。TS 类型：`boolean \| TNode`。[通�
 header | TElement | - | 头部。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 keys | Object | - | 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名。TS 类型：`CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts) | N
 lazy | Boolean | false | 是否异步加载 | N
-load | Function | - | 加载子树数据的方法（仅当节点 children 为 true 时生效）。TS 类型：`(node: CascaderOption) => Promise<Array<CascaderOption>>` | N
+load | Function | - | `0.21.1`。加载子树数据的方法（仅当节点 children 为 true 时生效）。TS 类型：`(node: CascaderOption) => Promise<Array<CascaderOption>>` | N
 loadCompleted | Boolean | false | 是否完成异步加载 | N
 middleContent | TElement | - | 中间内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
