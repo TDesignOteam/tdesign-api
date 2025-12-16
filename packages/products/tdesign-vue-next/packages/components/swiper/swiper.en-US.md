@@ -16,7 +16,7 @@ duration | Number | 300 | \- | N
 height | Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | Object / Slot / Function | - | Typescript: `SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+navigation | Object / Slot / Function | - | navigation all config。Typescript: `SwiperNavigation \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 stopOnHover | Boolean | true | \- | N
 trigger | String | hover | options: hover/click | N
 type | String | default | options: default/card | N
