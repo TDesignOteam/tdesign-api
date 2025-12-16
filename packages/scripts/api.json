@@ -13271,7 +13271,9 @@
       "id": 986,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -13294,13 +13296,15 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
