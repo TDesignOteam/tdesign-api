@@ -9,14 +9,6 @@ import { FileItem } from '../attachments/index';
 
 export interface TdChatMessageProps {
   /**
-   * 【实验】 是否允许自定义局部消息内容，其他消息内容实用默认样式
-   * @default false
-   */
-  allowContentSegmentCustom?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
    * 动画效果
    * @default skeleton
    */
@@ -55,6 +47,7 @@ export interface TdChatMessageProps {
   };
   /**
    * 对话单元的时间配置
+   * @default ''
    */
   datetime?: {
     type: StringConstructor;

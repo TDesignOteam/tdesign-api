@@ -6,11 +6,6 @@
 
 import { TdChatMessageProps } from './type';
 const props: TdChatMessageProps = {
-  /** 【实验】 是否允许自定义局部消息内容，其他消息内容实用默认样式 */
-  allowContentSegmentCustom: {
-    type: Boolean,
-    value: false,
-  },
   /** 动画效果 */
   animation: {
     type: String,
@@ -36,6 +31,7 @@ const props: TdChatMessageProps = {
   /** 对话单元的时间配置 */
   datetime: {
     type: String,
+    value: '',
   },
   /** 自定义的昵称 */
   name: {
