@@ -82853,6 +82853,47 @@
       ]
     },
     {
+      "id": 1765337621,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "固定在顶部时是否开启占位",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 03:33:41",
+      "update_time": "2025-12-10 03:33:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.11.2\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1629,
       "platform_framework": [
         "16"
@@ -83092,6 +83133,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1765356641,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "导航条层级",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 08:50:41",
+      "update_time": "2025-12-10 08:50:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -120049,6 +120131,47 @@
       ]
     },
     {
+      "id": 1765337747,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "固定在底部时是否开启占位",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 03:35:47",
+      "update_time": "2025-12-10 03:35:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.11.2\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1380,
       "platform_framework": [
         "8",
@@ -120255,6 +120378,47 @@
         "String",
         "Number",
         "Array"
+      ]
+    },
+    {
+      "id": 1765356622,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "标签栏层级",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 08:50:22",
+      "update_time": "2025-12-10 08:50:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
