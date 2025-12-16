@@ -18,7 +18,7 @@ split | Boolean | true | \- | N
 theme | String | normal | options: normal/tag | N
 value | String / Number / Array | - | Typescript: `string \| number \| Array<string \| number>` | N
 defaultValue | String / Number / Array | - | uncontrolled property。Typescript: `string \| number \| Array<string \| number>` | N
-zIndex | Number | 1 | \- | N
+zIndex | Number | 1 | `0.21.1` | N
 onChange | Function |  | Typescript: `(value: string \| number) => void`<br/> | N
 
 
