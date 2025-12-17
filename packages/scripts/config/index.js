@@ -191,6 +191,30 @@ const FRAMEWORK_MAP = {
         getDocs: getVueApiDocs,
         titleMap: VUE_TITLE_MAP,
     },
+     UniApp: {
+        iconPath: 'tdesign-icons-uniapp',
+        apiBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
+        apiEnglishBasePath: '',
+        tsBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
+        propsBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
+        tsBaseFileName: 'USE_TYPE_NAME',
+        globalPath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign/common/common.ts`,
+        globalTplPath: path.resolve(
+            __dirname,
+            '../types/global/uniapp.tpl'
+        ),
+        unitBasePath: '',
+        commonTypePath:
+            'https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/common/common.ts',
+        componentPath:
+            'https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/',
+        commonRelativePath: '../common/common',
+        componentRelativiePath: '../',
+        vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/uniapp`,
+        getDocs: getVueApiDocs,
+        titleMap: VUE_TITLE_MAP,
+        volarPath: `${BASE_PATH_URL}/tdesign-vue-next/packages/tdesign-vue-next/global.d.ts`,
+    },
 };
 
 module.exports = {

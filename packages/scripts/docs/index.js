@@ -74,7 +74,7 @@ function outputComponentMD(file, apiData, isVscode) {
 }
 
 function getDocFileName(cmp, framework) {
-  if (framework === 'Miniprogram') return 'README';
+  if (['Miniprogram', 'UniApp'].includes(framework)) return 'README';
   return kebabCaseComponent(cmp);
 }
 
