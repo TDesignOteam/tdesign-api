@@ -27,7 +27,7 @@ export default {
   addContent: {
     type: [String, Function] as PropType<TdUploadProps['addContent']>,
   },
-  /** 是否允许重复上传相同文件名的文件 */
+  /** 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤 */
   allowUploadDuplicateFile: Boolean,
   /** 是否在选择文件后自动发起请求上传文件 */
   autoUpload: {
@@ -55,7 +55,7 @@ export default {
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
-    default: undefined,
+    default: undefined as TdUploadProps['files'],
   },
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile`，非受控属性 */
   defaultFiles: {
@@ -124,11 +124,11 @@ export default {
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
   value: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性 */
   defaultValue: {

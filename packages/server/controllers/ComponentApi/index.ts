@@ -47,7 +47,7 @@ function removeRepeat(array: Array<MapItem>) {
 function filterParams(params: BaseObject) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
-    if (!['', 'NaN', 'undefined', 'null'].includes(String(params[key]))) {
+    if (!['', 'NaN', 'null'].includes(String(params[key]))) {
       r[key] = params[key];
     }
   });
