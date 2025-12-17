@@ -19,7 +19,7 @@ export default {
   /** 右上角控制器配置。支持全局配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置 */
   controllerConfig: {
     type: [Boolean, Object] as PropType<TdCalendarProps['controllerConfig']>,
-    default: undefined,
+    default: undefined as TdCalendarProps['controllerConfig'],
   },
   /** 小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9` */
   fillWithZero: {
@@ -65,7 +65,7 @@ export default {
   multiple: Boolean,
   /** 是否禁用单元格右键默认系统菜单 */
   preventCellContextmenu: Boolean,
-  /** 用于设置日历的年月份显示范围，[范围开始，范围结束] */
+  /** 用于设置日历的年月份显示范围，[范围开始，范围结束]。示例一：`['2018-08', '2028-04']`。示例二：`[new Date(2018, 8), new Date(2028, 4)]`。传入列表的两项均能被`dayjs`正常解析时才能使指定的日历范围生效，仅有一项正常解析时则为仅指定日历范围上限或下限 */
   range: {
     type: Array as PropType<TdCalendarProps['range']>,
   },
