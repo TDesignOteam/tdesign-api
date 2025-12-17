@@ -17,7 +17,7 @@ mode | String | month | 日历展示维度。可选项：month/year | N
 month | String / Number | - | 控制当前面板展示月份，优先级高于 `controllerConfig.month` | N
 multiple | Boolean | - | 是否高亮多个日期单元格 | N
 preventCellContextmenu | Boolean | false | 是否禁用单元格右键默认系统菜单 | N
-range | Array | - | 用于设置日历的年月份显示范围，[范围开始，范围结束]。示例一：`['2018-08', '2028-04']`。示例二：`[new Date(2018, 8), new Date(2028, 4)]`。传入列表的两项均能被`dayjs`正常解析时才能使指定的日历范围生效，仅有一项正常解析时则为仅指定日历范围上限或下限。TS 类型：`Array<CalendarValue>` | N
+range | Array | - | 用于设置日历的年月份显示范围，[范围开始，范围结束]。示例一：`['2018-08', '2028-04']`。示例二：`[new Date(2018, 8), new Date(2028, 4)]`。传入列表的两项均能被`dayjs`正常解析时才能使指定的日历范围生效，仅有一项正常解析时则为仅指定日历范围上限或下限。TS 类型：`Array<CalendarValue>` `type CalendarValue = string \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/calendar/type.ts) | N
 theme | String | full | 日历风格。可选项：full/card | N
 value | String / Array / Date | - | 当前高亮的日期。TS 类型：`CalendarValue \| CalendarValue[]` `type CalendarValue = string \| Date`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/calendar/type.ts) | N
 week | Array / Slot / Function | - | 用于自定义日历星期呈现方式。CalendarWeek.day 表示当前是星期几。示例一：['周一', '周二', '周三', '周四', '周五', '星期六', '星期天']。示例二：`({ day }) => '周' + day`。TS 类型：`Array<string> \| TNode<CalendarWeek>` `interface CalendarWeek { day: WeekDay }` `type WeekDay = 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/calendar/type.ts) | N
