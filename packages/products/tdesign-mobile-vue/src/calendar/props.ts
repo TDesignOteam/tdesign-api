@@ -8,6 +8,8 @@ import { TdCalendarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效 */
+  allowSameDay: Boolean,
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
@@ -59,7 +61,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
+  /** 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组 */
   value: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
     default: undefined as TdCalendarProps['value'],
@@ -68,7 +70,7 @@ export default {
     type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
     default: undefined as TdCalendarProps['value'],
   },
-  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性 */
+  /** 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组，非受控属性 */
   defaultValue: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['defaultValue']>,
   },

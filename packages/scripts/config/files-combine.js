@@ -133,10 +133,9 @@ const COMPONENT_API_MD_MAP = {
     Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
     Collapse: ['Collapse', 'CollapsePanel'],
     Dropdown: {
-        list: ['Dropdown', 'DropdownItem'],
+        list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
         includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
     },
-    DropdownMenu: ['DropdownMenu', 'DropdownItem'],
     Dialog: [
         'DialogCard',
         'Dialog',
@@ -224,6 +223,9 @@ const COMPONENT_API_MD_MAP = {
 
 // H5 特殊组件
 const MOBILE_COMPONENT_API_MD_MAP = {
+    DropdownMenu: {
+        list:['DropdownMenu', 'DropdownItem'],
+    },
     Layout: {
         list: ['Layout', 'Row', 'Col'],
     },
@@ -239,6 +241,7 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
         list: ['Swiper', 'SwiperNav'],
         includes: ['Miniprogram'],
     },
+    Chat: [],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -306,12 +309,8 @@ const TYPES_COMBINE_MAP = {
         includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
     },
     Dropdown: {
-        list: ['Dropdown', 'DropdownItem'],
+        list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
         includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-    },
-    DropdownMenu: {
-        list: ['DropdownMenu', 'DropdownItem'],
-        excludes: ['Miniprogram'],
     },
     Dialog: {
         list: [
@@ -463,6 +462,10 @@ const MOBILE_TYPES_COMBINE_MAP = {
 };
 
 const MINIPROGRAM_TYPES_COMBINE_MAP = {
+    DropdownMenu: {
+        list: ['DropdownMenu', 'DropdownItem'],
+        excludes: ['Miniprogram'],
+    },
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
         excludes: ['Miniprogram'],
@@ -471,6 +474,7 @@ const MINIPROGRAM_TYPES_COMBINE_MAP = {
         list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
         includes: ['Miniprogram'],
     },
+    Chat: [],
 };
 
 exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;

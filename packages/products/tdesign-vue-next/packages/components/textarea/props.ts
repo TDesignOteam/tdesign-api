@@ -17,6 +17,10 @@ export default {
     type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
     default: false as TdTextareaProps['autosize'],
   },
+  /** 文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true */
+  count: {
+    type: [Boolean, Function] as PropType<TdTextareaProps['count']>,
+  },
   /** 是否禁用文本框 */
   disabled: {
     type: Boolean,

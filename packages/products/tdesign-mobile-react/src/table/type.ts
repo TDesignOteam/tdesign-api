@@ -151,6 +151,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   minWidth?: string | number;
   /**
+   * 自定义表头或单元格，泛型 T 指表格数据类型
+   */
+  render?: TNode<BaseTableRenderParams<T>>;
+  /**
    * 自定义表头渲染，优先级高于 render
    */
   title?: string | TNode | TNode<{ col: BaseTableCol; colIndex: number }>;
@@ -208,5 +212,11 @@ export interface BaseTableColParams<T> {
   col: BaseTableCol<T>;
   colIndex: number;
 }
+
+export interface BaseTableRenderParams<T> extends BaseTableCellParams<T> {
+  type: RenderType;
+}
+
+export type RenderType = 'cell' | 'title';
 
 export type DataType = TableRowData;
