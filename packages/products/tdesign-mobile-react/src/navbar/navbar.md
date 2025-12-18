@@ -20,6 +20,6 @@ safeAreaInsetTop | Boolean | true | 是否开启顶部安全区适配 | N
 title | TNode | - | 页面标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 titleMaxLength | Number | - | 标题文字最大长度，超出的范围使用 `...` 表示 | N
 visible | Boolean | true | 是否显示 | N
-zIndex | Number | 1 | 导航条层级 | N
+zIndex | Number | 1 | `0.21.1`。导航条层级 | N
 onLeftClick | Function |  | TS 类型：`() => void`<br/>点击左侧区域时触发 | N
 onRightClick | Function |  | TS 类型：`() => void`<br/>点击右侧区域时触发 | N
