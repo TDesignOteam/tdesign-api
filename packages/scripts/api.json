@@ -9437,8 +9437,8 @@
         "1"
       ],
       "field_default_value": "circle",
-      "field_enum": "circle/square/bubble/ribbon",
-      "field_desc_zh": "形状",
+      "field_enum": "circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left",
+      "field_desc_zh": "徽标形状，其中 ribbon 和 ribbon-right 等价",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
