@@ -144,11 +144,11 @@
       "close-btn",
       "header",
       "keys",
+      "load",
       "middle-content",
       "options",
       "overlay-props",
       "placeholder",
-      "scroll",
       "sub-titles",
       "theme",
       "title",
@@ -592,7 +592,9 @@
   "t-image-viewer": {
     "attributes": [
       "close-btn",
+      "cover",
       "delete-btn",
+      "image",
       "images",
       "index",
       "max-zoom",
@@ -734,11 +736,13 @@
       "fixed",
       "left",
       "left-arrow",
+      "placeholder",
       "right",
       "safe-area-inset-top",
       "title",
       "title-max-length",
       "visible",
+      "z-index",
       "left-click",
       "right-click"
     ],
@@ -1126,11 +1130,13 @@
     "attributes": [
       "bordered",
       "fixed",
+      "placeholder",
       "safe-area-inset-bottom",
       "shape",
       "split",
       "theme",
       "value",
+      "z-index",
       "change"
     ],
     "description": "TabBar\n\n标签栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"

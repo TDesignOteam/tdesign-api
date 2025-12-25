@@ -495,6 +495,10 @@
     "type": "Object",
     "description": "用来定义 value / label / children / disabled 在 `options` 中对应的字段别名\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
+  "t-cascader/load": {
+    "type": "Function",
+    "description": "loading subtree data (only effective when the node's children value is true)\n\n加载子树数据的方法（仅当节点 children 为 true 时生效）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+  },
   "t-cascader/middle-content": {
     "type": "TNode",
     "description": "中间内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
@@ -510,9 +514,6 @@
   "t-cascader/placeholder": {
     "type": "String|TNode",
     "description": "未选中时的提示文案\n\ndefault: '选择选项'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
-  },
-  "t-cascader/scroll": {
-    "description": "Lazy loading and virtual scrolling. To maximize the benefits of the component, when the amount of data is less than the threshold `scroll.threshold`, regardless of whether the virtual scrolling configuration exists, virtual scrolling will not be enabled within the component. `scroll.threshold` defaults to `100`\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
   "t-cascader/sub-titles": {
     "type": "Array",
@@ -1843,9 +1844,17 @@
     "type": "Boolean|TNode",
     "description": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
   },
+  "t-image-viewer/cover": {
+    "type": "TNode",
+    "description": "支持自定义覆盖在图片预览最上方的内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
+  },
   "t-image-viewer/delete-btn": {
     "type": "Boolean|TNode",
     "description": "是否显示删除操作，前提需要开启页码\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
+  },
+  "t-image-viewer/image": {
+    "type": "TNode",
+    "description": "自定义图片内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
   },
   "t-image-viewer/images": {
     "type": "Array",
@@ -2324,6 +2333,10 @@
     "type": "Boolean",
     "description": "是否展示左侧箭头\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props)"
   },
+  "t-navbar/placeholder": {
+    "type": "Boolean",
+    "description": "固定在顶部时是否开启占位\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props)"
+  },
   "t-navbar/right": {
     "type": "TNode",
     "description": "右侧区域\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props)"
@@ -2343,6 +2356,10 @@
   "t-navbar/visible": {
     "type": "Boolean",
     "description": "是否显示\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props)"
+  },
+  "t-navbar/z-index": {
+    "type": "Number",
+    "description": "导航条层级\n\ndefault: 1\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props)"
   },
   "t-navbar/left-click": {
     "type": "event",
@@ -3522,6 +3539,10 @@
     "type": "Boolean",
     "description": "是否固定在底部\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props)"
   },
+  "t-tab-bar/placeholder": {
+    "type": "Boolean",
+    "description": "固定在底部时是否开启占位\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props)"
+  },
   "t-tab-bar/safe-area-inset-bottom": {
     "type": "Boolean",
     "description": "是否开启底部安全区适配\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props)"
@@ -3549,6 +3570,10 @@
   "t-tab-bar/value": {
     "type": "String|Number|Array",
     "description": "当前选中标签的索引\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props)"
+  },
+  "t-tab-bar/z-index": {
+    "type": "Number",
+    "description": "标签栏层级\n\ndefault: 1\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props)"
   },
   "t-tab-bar/change": {
     "type": "event",

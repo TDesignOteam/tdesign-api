@@ -573,6 +573,11 @@ export interface ImageViewerConfig {
    */
   originalSizeTipText?: string;
   /**
+   * 全局语言配置，默认为 “预览”
+   * @default ''
+   */
+  previewText?: string;
+  /**
    * 全局语言配置，默认为 “旋转”
    * @default ''
    */
