@@ -9,6 +9,7 @@ export const searchDefaultProps: TdSearchProps = {
   center: false,
   clearTrigger: 'always',
   clearable: true,
+  cursorColor: '#0052d9',
   disabled: false,
   focus: false,
   leftIcon: 'search',
