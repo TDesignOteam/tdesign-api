@@ -13,7 +13,7 @@ autocompleteOptions | Array | - | autocomplete words list。Typescript: `Array<A
 center | Boolean | false | \- | N
 clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
-cursorColor | String | #0052d9 | \- | N
+cursorColor | String | #0052d9 | `0.21.2` | N
 disabled | Boolean | false | \- | N
 focus | Boolean | false | \- | N
 leftIcon | TNode | 'search' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

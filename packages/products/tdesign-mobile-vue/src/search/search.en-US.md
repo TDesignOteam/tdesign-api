@@ -11,7 +11,7 @@ autocompleteOptions | Array | - | autocomplete words list。Typescript: `Array<A
 center | Boolean | false | \- | N
 clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
-cursorColor | String | #0052d9 | \- | N
+cursorColor | String | #0052d9 | `1.12.2` | N
 disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
 leftIcon | String / Slot / Function | 'search' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
