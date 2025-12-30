@@ -304,9 +304,8 @@ export interface TdOptionGroupProps {
   divider?: boolean;
   /**
    * 分组别名
-   * @default ''
    */
-  label?: string;
+  label?: string | TNode;
 }
 
 export interface SelectKeysType {
