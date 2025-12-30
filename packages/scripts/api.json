@@ -85195,9 +85195,7 @@
       "field_category": 1,
       "field_name": "style",
       "field_type": [
-        "1",
-        "8",
-        "16"
+        "8"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -85223,9 +85221,7 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "String",
-        "Object",
-        "Array"
+        "Object"
       ]
     },
     {

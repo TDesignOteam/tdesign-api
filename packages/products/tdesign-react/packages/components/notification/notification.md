@@ -28,7 +28,7 @@ attach | String / Function | 'body' | 指定消息通知挂载的父节点。数
 className | String / Object / Array | - | 通知框类名。TS 类型：`ClassName`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 offset | Array | - | 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：`Array<string \| number>` | N
 placement | String | top-right | 消息弹出位置。可选项：top-left/top-right/bottom-left/bottom-right。TS 类型：`NotificationPlacementList` `type NotificationPlacementList = 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts) | N
-style | String / Object / Array | - | 通知框 style 内敛样式属性。TS 类型：`CSSProperties` | N
+style | Object | - | 通知框 style 内敛样式属性。TS 类型：`CSSProperties` | N
 zIndex | Number | 6000 | 消息通知层级 | N
 `NotificationProps` | \- | - | 继承 `NotificationProps` 中的全部属性 | N
 
@@ -45,15 +45,11 @@ options | Object | - | 必需。消息通知内容。TS 类型：`NotificationOp
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts)
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.warning 或 NotificationPlugin.warning
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### notification.error 或 NotificationPlugin.error
 
@@ -61,15 +57,11 @@ options | Object | - | 必需。消息通知内容。TS 类型：`NotificationIn
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.success 或 NotificationPlugin.success
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Object | - | 必需。消息通知内容。TS 类型：`NotificationInfoOptions`
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### notification.close 或 NotificationPlugin.close
 

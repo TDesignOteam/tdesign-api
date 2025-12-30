@@ -34,7 +34,7 @@ attach | String / Function | 'body' | Typescript: `AttachNode`。[see more ts de
 className | String / Object / Array | - | Typescript: `ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 offset | Array | - | Typescript: `Array<string \| number>` | N
 placement | String | top-right | options: top-left/top-right/bottom-left/bottom-right。Typescript: `NotificationPlacementList` `type NotificationPlacementList = 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/notification/type.ts) | N
-style | String / Object / Array | - | Typescript: `CSSProperties` | N
+style | Object | - | Typescript: `CSSProperties` | N
 zIndex | Number | 6000 | \- | N
 `NotificationProps` | \- | - | extends `NotificationProps` | N
 
@@ -57,8 +57,6 @@ name | params | default | description
 options | Object | - | required。Typescript: `NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/notification/type.ts)
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### NotificationPlugin.warning
 
 同时也支持 `this.$notification.warning`。
@@ -67,8 +65,6 @@ name | params | default | description
 -- | -- | -- | --
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.error
 
@@ -79,8 +75,6 @@ name | params | default | description
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### NotificationPlugin.success
 
 同时也支持 `this.$notification.success`。
@@ -89,8 +83,6 @@ name | params | default | description
 -- | -- | -- | --
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 context | \- | - | Typescript: `AppContext`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### NotificationPlugin.close
 

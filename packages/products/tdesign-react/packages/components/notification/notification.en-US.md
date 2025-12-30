@@ -28,7 +28,7 @@ attach | String / Function | 'body' | Typescript: `AttachNode`。[see more ts de
 className | String / Object / Array | - | Typescript: `ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 offset | Array | - | Typescript: `Array<string \| number>` | N
 placement | String | top-right | options: top-left/top-right/bottom-left/bottom-right。Typescript: `NotificationPlacementList` `type NotificationPlacementList = 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts) | N
-style | String / Object / Array | - | Typescript: `CSSProperties` | N
+style | Object | - | Typescript: `CSSProperties` | N
 zIndex | Number | 6000 | \- | N
 `NotificationProps` | \- | - | extends `NotificationProps` | N
 
@@ -43,9 +43,7 @@ options | Object | - | required。Typescript: `NotificationOptions`
 
 name | params | default | description
 -- | -- | -- | --
-options | Object | - | required。Typescript: `NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts
-
-插件返回值：`Promise<NotificationInstance>`
+options | Object | - | required。Typescript: `NotificationInfoOptions` `type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts)
 
 ### notification.warning 或 NotificationPlugin.warning
 
@@ -53,23 +51,17 @@ name | params | default | description
 -- | -- | -- | --
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.error 或 NotificationPlugin.error
 
 name | params | default | description
 -- | -- | -- | --
 options | Object | - | required。Typescript: `NotificationInfoOptions`
 
-插件返回值：`Promise<NotificationInstance>`
-
 ### notification.success 或 NotificationPlugin.success
 
 name | params | default | description
 -- | -- | -- | --
 options | Object | - | required。Typescript: `NotificationInfoOptions`
-
-插件返回值：`Promise<NotificationInstance>`
 
 ### notification.close 或 NotificationPlugin.close
 
