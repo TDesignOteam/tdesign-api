@@ -85821,12 +85821,13 @@
       "field_category": 1,
       "field_name": "label",
       "field_type": [
-        "1"
+        "1",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "分组别名",
-      "field_desc_en": null,
+      "field_desc_en": "Group alias",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-18 06:09:53",
@@ -85847,7 +85848,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "TNode"
       ]
     },
     {
