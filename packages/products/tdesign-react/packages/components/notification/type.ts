@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, ClassName, AttachNode } from '../common';
+import { TNode, AttachNode } from '../common';
 import { CSSProperties, MouseEvent } from 'react';
 
 export interface TdNotificationProps {
@@ -67,7 +67,7 @@ export interface NotificationOptions extends TdNotificationProps {
    * 通知框类名
    * @default ''
    */
-  className?: ClassName;
+  className?: string;
   /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']
    */

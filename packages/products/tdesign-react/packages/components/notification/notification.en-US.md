@@ -25,7 +25,7 @@ onDurationEnd | Function |  | Typescript: `() => void`<br/> | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 attach | String / Function | 'body' | Typescript: `AttachNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-className | String | - | Typescript: `ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+className | String | - | \- | N
 offset | Array | - | Typescript: `Array<string \| number>` | N
 placement | String | top-right | options: top-left/top-right/bottom-left/bottom-right。Typescript: `NotificationPlacementList` `type NotificationPlacementList = 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/notification/type.ts) | N
 style | Object | - | Typescript: `CSSProperties` | N

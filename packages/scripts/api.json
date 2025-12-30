@@ -85085,7 +85085,7 @@
       "create_time": "2025-12-03 14:01:03",
       "update_time": "2025-12-03 14:01:03",
       "event_output": null,
-      "custom_field_type": "ClassName",
+      "custom_field_type": "",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
