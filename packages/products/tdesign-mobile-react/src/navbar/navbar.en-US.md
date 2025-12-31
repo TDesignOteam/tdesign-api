@@ -20,6 +20,6 @@ safeAreaInsetTop | Boolean | true | \- | N
 title | TNode | - | page title。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 titleMaxLength | Number | - | \- | N
 visible | Boolean | true | \- | N
-zIndex | Number | 1 | \- | N
+zIndex | Number | 1 | `0.21.1` | N
 onLeftClick | Function |  | Typescript: `() => void`<br/> | N
 onRightClick | Function |  | Typescript: `() => void`<br/> | N
