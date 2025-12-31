@@ -1104,6 +1104,12 @@
               "type": "CascaderKeysType"
             },
             {
+              "name": "load",
+              "description": "loading subtree data (only effective when the node's children value is true)\n\n加载子树数据的方法（仅当节点 children 为 true 时生效）",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
+              "type": "(node: CascaderOption) => Promise<Array<CascaderOption>>"
+            },
+            {
               "name": "middle-content",
               "description": "中间内容",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
@@ -1129,12 +1135,6 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
               "type": "string | TNode",
               "default": "'选择选项'"
-            },
-            {
-              "name": "scroll",
-              "description": "Lazy loading and virtual scrolling. To maximize the benefits of the component, when the amount of data is less than the threshold `scroll.threshold`, regardless of whether the virtual scrolling configuration exists, virtual scrolling will not be enabled within the component. `scroll.threshold` defaults to `100`\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
-              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props",
-              "type": "TScroll"
             },
             {
               "name": "sub-titles",
@@ -4177,11 +4177,23 @@
               "default": "true"
             },
             {
+              "name": "cover",
+              "description": "支持自定义覆盖在图片预览最上方的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
+              "type": "TNode"
+            },
+            {
               "name": "delete-btn",
               "description": "是否显示删除操作，前提需要开启页码",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
               "type": "boolean | TNode",
               "default": "false"
+            },
+            {
+              "name": "image",
+              "description": "自定义图片内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props",
+              "type": "TNode<ImageSlotParams>"
             },
             {
               "name": "images",
@@ -4249,6 +4261,11 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
             },
             {
+              "name": "cover",
+              "description": "支持自定义覆盖在图片预览最上方的内容",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
+            },
+            {
               "name": "deleteBtn",
               "description": "是否显示删除操作，前提需要开启页码",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
@@ -4256,6 +4273,11 @@
             {
               "name": "delete-btn",
               "description": "是否显示删除操作，前提需要开启页码",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
+            },
+            {
+              "name": "image",
+              "description": "自定义图片内容类型和参数：TNode<ImageSlotParams>【interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props"
             }
           ]
@@ -5301,6 +5323,13 @@
               "default": "false"
             },
             {
+              "name": "placeholder",
+              "description": "固定在顶部时是否开启占位",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "right",
               "description": "右侧区域",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
@@ -5331,6 +5360,13 @@
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
               "type": "boolean",
               "default": "true"
+            },
+            {
+              "name": "z-index",
+              "description": "导航条层级",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/navbar?tab=api#navbar-props",
+              "type": "number",
+              "default": "1"
             }
           ],
           "js": {
@@ -8012,6 +8048,13 @@
               "default": "true"
             },
             {
+              "name": "placeholder",
+              "description": "固定在底部时是否开启占位",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "safe-area-inset-bottom",
               "description": "是否开启底部安全区适配",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props",
@@ -8066,6 +8109,13 @@
               "description": "当前选中标签的索引",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props",
               "type": "string | number | Array<string | number>"
+            },
+            {
+              "name": "z-index",
+              "description": "标签栏层级",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tab-bar?tab=api#tabbar-props",
+              "type": "number",
+              "default": "1"
             }
           ],
           "js": {

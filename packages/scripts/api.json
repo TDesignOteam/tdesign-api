@@ -9437,8 +9437,8 @@
         "1"
       ],
       "field_default_value": "circle",
-      "field_enum": "circle/square/bubble/ribbon",
-      "field_desc_zh": "形状",
+      "field_enum": "circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left",
+      "field_desc_zh": "徽标形状，其中 ribbon 和 ribbon-right 等效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -13271,7 +13271,9 @@
       "id": 986,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "BaseTableCol",
       "field_category": 1,
@@ -13294,13 +13296,15 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "{\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -17397,14 +17401,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "用于设置日历的年月份显示范围，[范围开始，范围结束]",
-      "field_desc_en": null,
+      "field_desc_zh": "用于设置日历的年月份显示范围，[范围开始，范围结束]。示例一：`['2018-08', '2028-04']`。示例二：`[new Date(2018, 8), new Date(2028, 4)]`。传入列表的两项均能被`dayjs`正常解析时才能使指定的日历范围生效，仅有一项正常解析时则为仅指定日历范围上限或下限",
+      "field_desc_en": "Set the year and month display range of calendar, [start, end]. Example 1: `['2018-08', '2028-04']`. Example 2: `[new Date(2018, 8), new Date(2028, 4)]`. Only when both items from the input list can be parsed normally by `dayjs` can the specified calendar range take effect, while you can set the start or end of the range separately by inputting a list with only one item that can be parsed normally",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-01-15 11:04:51",
       "update_time": "2021-01-16 12:15:06",
       "event_output": null,
-      "custom_field_type": "Array<CalendarValue>",
+      "custom_field_type": "Array<CalendarValue>【type CalendarValue = string | Date】",
       "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
@@ -21619,7 +21623,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "加载子树数据的方法（仅当节点 children 为 true 时生效）",
-      "field_desc_en": null,
+      "field_desc_en": "loading subtree data (only effective when the node's children value is true)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-21 06:40:57",
@@ -21631,13 +21635,52 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": null,
+      "version": "",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1764036186,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "load",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "加载子树数据的方法（仅当节点 children 为 true 时生效）",
+      "field_desc_en": "loading subtree data (only effective when the node's children value is true)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-11-25 02:03:06",
+      "update_time": "2025-11-25 02:03:06",
+      "event_output": null,
+      "custom_field_type": "(node: CascaderOption) => Promise<Array<CascaderOption>>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -22439,9 +22482,7 @@
       "id": 1760882689,
       "platform_framework": [
         "1",
-        "2",
-        "8",
-        "16"
+        "2"
       ],
       "component": "Cascader",
       "field_category": 1,
@@ -22468,9 +22509,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": []
     },
@@ -68897,6 +68936,45 @@
       ]
     },
     {
+      "id": 1765908904,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "cover",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "支持自定义覆盖在图片预览最上方的内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-16 18:15:04",
+      "update_time": "2025-12-16 18:15:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 3125,
       "platform_framework": [
         "64"
@@ -69017,6 +69095,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1765908976,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "image",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义图片内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-16 18:16:16",
+      "update_time": "2025-12-16 18:16:16",
+      "event_output": null,
+      "custom_field_type": "TNode<ImageSlotParams>【interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -69656,7 +69773,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义",
+      "field_desc_zh": "触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义，默认为预览图片的缩略图",
       "field_desc_en": "trigger element",
       "field_required": 0,
       "event_input": "",
@@ -70284,6 +70401,45 @@
       "event_input": "",
       "create_time": "2023-01-18 07:32:35",
       "update_time": "2023-01-18 07:32:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1766063951,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ImageViewerConfig",
+      "field_category": 1,
+      "field_name": "previewText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局语言配置，默认为 “预览”",
+      "field_desc_en": "preview text",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-18 13:19:11",
+      "update_time": "2025-12-18 13:19:11",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -82853,6 +83009,47 @@
       ]
     },
     {
+      "id": 1765337621,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "固定在顶部时是否开启占位",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 03:33:41",
+      "update_time": "2025-12-10 03:33:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1629,
       "platform_framework": [
         "16"
@@ -83092,6 +83289,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1765356641,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Navbar",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "导航条层级",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 08:50:41",
+      "update_time": "2025-12-10 08:50:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -89948,6 +90186,43 @@
       ]
     },
     {
+      "id": 1765425274,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Popover",
+      "field_category": 1,
+      "field_name": "fixed",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "如果触发元素为 `fixed` 场景，需要显示指定 `fixed` 属性为 `true`，同时需在触发元素层添加 `t-popover-wrapper--fixed` 类，用于定位触发元素 ",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-11 03:54:34",
+      "update_time": "2025-12-11 03:54:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.12.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 3514,
       "platform_framework": [
         "8",
@@ -90266,7 +90541,7 @@
       "field_type": [],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "默认插槽，作用同 `content` 插槽",
+      "field_desc_zh": "默认插槽，用于自定义触发元素",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -103273,6 +103548,82 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 1767007591,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-29 11:26:31",
+      "update_time": "2025-12-29 11:26:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Miniprogram\": \"1.12.1\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1767007611,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "cursorColor",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "#0052d9",
+      "field_enum": "",
+      "field_desc_zh": "光标颜色",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-29 11:26:51",
+      "update_time": "2025-12-29 11:26:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"Vue(Mobile)\": \"1.12.2\", \"React(Mobile)\": \"0.21.2\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -120127,6 +120478,47 @@
       ]
     },
     {
+      "id": 1765337747,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "固定在底部时是否开启占位",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 03:35:47",
+      "update_time": "2025-12-10 03:35:47",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1380,
       "platform_framework": [
         "8",
@@ -120333,6 +120725,47 @@
         "String",
         "Number",
         "Array"
+      ]
+    },
+    {
+      "id": 1765356622,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "TabBar",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "1",
+      "field_enum": "",
+      "field_desc_zh": "标签栏层级",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2025-12-10 08:50:22",
+      "update_time": "2025-12-10 08:50:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.1\",\n\"Vue(Mobile)\": \"1.12.0\",\n\"React(Mobile)\": \"0.21.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
       ]
     },
     {
@@ -128984,7 +129417,7 @@
       ],
       "field_default_value": "#0052d9",
       "field_enum": "",
-      "field_desc_zh": "【试验性】光标颜色，仅在 Skyline 下有效",
+      "field_desc_zh": "【实验】光标颜色，仅在 Skyline 下有效",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
