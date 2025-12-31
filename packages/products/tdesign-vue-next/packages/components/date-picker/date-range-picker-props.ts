@@ -102,10 +102,7 @@ export default {
     type: Object as PropType<TdDateRangePickerProps['rangeInputProps']>,
   },
   /** 是否只读，优先级大于 `allowInput` */
-  readonly: {
-    type: Boolean,
-    default: undefined,
-  },
+  readonly: Boolean,
   /** 日期分隔符，支持全局配置，默认为 '-' */
   separator: {
     type: String,
@@ -173,8 +170,12 @@ export default {
   onFocus: Function as PropType<TdDateRangePickerProps['onFocus']>,
   /** 输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值 */
   onInput: Function as PropType<TdDateRangePickerProps['onInput']>,
+  /** 月份切换发生变化时触发 */
+  onMonthChange: Function as PropType<TdDateRangePickerProps['onMonthChange']>,
   /** 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期 */
   onPick: Function as PropType<TdDateRangePickerProps['onPick']>,
   /** 点击预设按钮后触发 */
   onPresetClick: Function as PropType<TdDateRangePickerProps['onPresetClick']>,
+  /** 年份切换发生变化时触发 */
+  onYearChange: Function as PropType<TdDateRangePickerProps['onYearChange']>,
 };
