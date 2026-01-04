@@ -85443,7 +85443,7 @@
       ]
     },
     {
-      "id": 1764770462,
+      "id": 1767535545,
       "platform_framework": [
         "1",
         "2"
@@ -85460,10 +85460,10 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-12-03 14:01:03",
-      "update_time": "2025-12-03 14:01:03",
+      "create_time": "2026-01-04 14:05:45",
+      "update_time": "2026-01-04 14:05:45",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": null,
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -85560,7 +85560,7 @@
       ]
     },
     {
-      "id": 1764770557,
+      "id": 1767535578,
       "platform_framework": [
         "1",
         "2"
@@ -85577,8 +85577,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2025-12-03 14:02:37",
-      "update_time": "2025-12-03 14:02:37",
+      "create_time": "2026-01-04 14:06:18",
+      "update_time": "2026-01-04 14:06:18",
       "event_output": null,
       "custom_field_type": "CSSProperties",
       "syntactic_sugar": null,
