@@ -5,7 +5,7 @@
  * */
 
 import { TNode, AttachNode } from '../common';
-import { MouseEvent } from 'react';
+import { CSSProperties, MouseEvent } from 'react';
 
 export interface TdNotificationProps {
   /**
@@ -64,6 +64,11 @@ export interface NotificationOptions extends TdNotificationProps {
    */
   attach?: AttachNode;
   /**
+   * 通知框类名
+   * @default ''
+   */
+  className?: string;
+  /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']
    */
   offset?: Array<string | number>;
@@ -72,6 +77,10 @@ export interface NotificationOptions extends TdNotificationProps {
    * @default top-right
    */
   placement?: NotificationPlacementList;
+  /**
+   * 通知框 style 内敛样式属性
+   */
+  style?: CSSProperties;
   /**
    * 消息通知层级
    * @default 6000
