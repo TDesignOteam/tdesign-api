@@ -182,6 +182,15 @@ export interface TdDatePickerProps {
    */
   onFocus?: (context: { value: DateValue | DateMultipleValue; e: FocusEvent }) => void;
   /**
+   * 月份切换发生变化时触发
+   */
+  onMonthChange?: (context: {
+    month: number;
+    date: Date;
+    e?: MouseEvent;
+    trigger: DatePickerMonthChangeTrigger;
+  }) => void;
+  /**
    * 面板选中值后触发
    */
   onPick?: (value: DateValue) => void;
@@ -189,6 +198,10 @@ export interface TdDatePickerProps {
    * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  /**
+   * 年份切换发生变化时触发
+   */
+  onYearChange?: (context: { year: number; date: Date; trigger: DatePickerYearChangeTrigger; e?: MouseEvent }) => void;
 }
 
 export interface TdDateRangePickerProps {
@@ -370,6 +383,16 @@ export interface TdDateRangePickerProps {
    */
   onInput?: (context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void;
   /**
+   * 月份切换发生变化时触发
+   */
+  onMonthChange?: (context: {
+    month: number;
+    date: Date[];
+    partial: DateRangePickerPartial;
+    e?: MouseEvent;
+    trigger: DatePickerMonthChangeTrigger;
+  }) => void;
+  /**
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
   onPick?: (value: DateValue, context: PickContext) => void;
@@ -377,6 +400,16 @@ export interface TdDateRangePickerProps {
    * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  /**
+   * 年份切换发生变化时触发
+   */
+  onYearChange?: (context: {
+    year: number;
+    date: Date[];
+    partial: DateRangePickerPartial;
+    trigger: DatePickerYearChangeTrigger;
+    e?: MouseEvent;
+  }) => void;
 }
 
 export interface TdDatePickerPanelProps
@@ -552,7 +585,11 @@ export type DatePickerValueType =
 
 export type ValueTypeEnum = DatePickerValueType;
 
-export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear';
+export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
+
+export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
+
+export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
 
 export type DisableRangeDate =
   | Array<DateValue>
@@ -574,8 +611,4 @@ export interface PickContext {
   partial: DateRangePickerPartial;
 }
 
-export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
-
 export type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second';
-
-export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
