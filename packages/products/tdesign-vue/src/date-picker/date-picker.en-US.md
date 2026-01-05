@@ -27,7 +27,7 @@ popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./pop
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 presets | Object | - | Typescript: `PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
-range | Array / Function | - | Typescript: `PickerDateRange` `type PickerDateRange = [DateValue, DateValue] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
+range | Array / Function | - | Typescript: `PickerDateRange` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 readonly | Boolean | undefined | Whether it is read only, the priority is greater than allowInput | N
 selectInputProps | Object | - | Typescript: `SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
@@ -91,7 +91,7 @@ popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./pop
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 presets | Object | - | Typescript: `PresetRange` `interface PresetRange { [range: string]: DateRange \| (() => DateRange)}` `type DateRange = [DateValue, DateValue]`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
-range | Array / Function | - | Typescript: `PickerDateRange \| [PickerDateRange, PickerDateRange]` `type PickerDateRange = [DateValue, DateValue] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
+range | Array / Function | - | Typescript: `PickerDateRange \| PickerDateRange[]` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript: `RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/date-picker/type.ts) | N
 readonly | Boolean | - | Whether it is read only, the priority is greater than allowInput | N
 separator | String | - | \- | N
