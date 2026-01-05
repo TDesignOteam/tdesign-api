@@ -76,6 +76,7 @@ popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./pop
 prefixIcon | TElement | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 presets | Object | - | Typescript: `PresetRange` `interface PresetRange { [range: string]: DateRange \| (() => DateRange)}` `type DateRange = [DateValue, DateValue]`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `DateRange \| [DateRange,DateRange]` `type DateRange = [DateValue,DateValue] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript: `RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 separator | String | - | \- | N
 size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N

@@ -106,7 +106,7 @@ export interface TdDatePickerProps {
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
   /**
-   * 日期可选择范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期，值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束日期。值类型为 Function 则表示返回值为 true 的日期可选。与`disableDate`共用时，`disableDate`优先级更高。
+   * 日期可选择范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。
    */
   range?: DateRange;
   /**
@@ -300,6 +300,10 @@ export interface TdDateRangePickerProps {
    * @default bottom
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
+  /**
+   * 日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。
+   */
+  range?: DateRange | [DateRange, DateRange];
   /**
    * 透传给范围输入框 RangeInput 组件的参数
    */

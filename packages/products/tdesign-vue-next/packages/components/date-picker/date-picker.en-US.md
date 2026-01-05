@@ -87,6 +87,7 @@ popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./pop
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object | - | Typescript: `PresetRange` `interface PresetRange { [range: string]: DateRange \| (() => DateRange)}` `type DateRange = [DateValue, DateValue]`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `DateRange \| [DateRange,DateRange]` `type DateRange = [DateValue,DateValue] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript: `RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 readonly | Boolean | - | Whether it is read only, the priority is greater than allowInput | N
 separator | String | - | \- | N
