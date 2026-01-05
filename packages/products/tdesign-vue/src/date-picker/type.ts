@@ -84,6 +84,10 @@ export interface TdDatePickerProps {
    */
   needConfirm?: boolean;
   /**
+   * 日期选择器中年月下拉框的选中值
+   */
+  panelActiveDate?: PanelActiveDate;
+  /**
    * 占位符
    */
   placeholder?: string;
@@ -272,6 +276,10 @@ export interface TdDateRangePickerProps {
    * @default true
    */
   needConfirm?: boolean;
+  /**
+   * 日期选择器中年月下拉框的选中值
+   */
+  panelActiveDate?: PanelActiveDate | [PanelActiveDate, PanelActiveDate];
   /**
    * 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期
    * @default true
@@ -560,6 +568,11 @@ export interface DisableDateObj {
   to?: string;
   before?: string;
   after?: string;
+}
+
+export interface PanelActiveDate {
+  year?: DateValue;
+  month?: DateValue;
 }
 
 export interface PresetDate {
