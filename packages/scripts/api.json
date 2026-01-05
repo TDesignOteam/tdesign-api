@@ -38181,6 +38181,45 @@
       ]
     },
     {
+      "id": 1767605339,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:28:59",
+      "update_time": "2026-01-05 09:28:59",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1007,
       "platform_framework": [
         "1",
@@ -38375,6 +38414,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767592971,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 06:02:51",
+      "update_time": "2026-01-05 06:02:51",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -38968,6 +39048,41 @@
       "event_input": "(context: { month: number, date: Date, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger })【type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today'】",
       "create_time": "2025-12-31 09:40:29",
       "update_time": "2025-12-31 09:40:29",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1767606777,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 2,
+      "field_name": "panelActiveDate",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "年月下拉框选中值变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: number | Date, context: { trigger: DatePickerPanelActiveDate, e?: MouseEvent })【type DatePickerPanelActiveDate = DatePickerMonthChangeTrigger | DatePickerYearChangeTrigger】",
+      "create_time": "2026-01-05 09:52:57",
+      "update_time": "2026-01-05 09:52:57",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -40933,6 +41048,45 @@
       ]
     },
     {
+      "id": 1767605471,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:31:11",
+      "update_time": "2026-01-05 09:31:11",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate | [PanelActiveDate, PanelActiveDate]【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2801,
       "platform_framework": [
         "1",
@@ -41166,6 +41320,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767604073,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:07:53",
+      "update_time": "2026-01-05 09:07:53",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange | PickerDateRange[]【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -41751,6 +41946,41 @@
       "event_input": "(context: { month: number, date: Date[], partial: DateRangePickerPartial, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger })",
       "create_time": "2025-12-31 09:40:51",
       "update_time": "2025-12-31 09:40:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1767606980,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 2,
+      "field_name": "panelActiveDate",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "年月下拉框选中值变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: number | Date, context: { partial: DateRangePickerPartial, trigger: DatePickerPanelActiveDate, e?: MouseEvent })【type DatePickerPanelActiveDate = DatePickerMonthChangeTrigger | DatePickerYearChangeTrigger】",
+      "create_time": "2026-01-05 09:56:20",
+      "update_time": "2026-01-05 09:56:20",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,

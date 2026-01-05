@@ -84,6 +84,14 @@ export interface TdDatePickerProps {
    */
   needConfirm?: boolean;
   /**
+   * 日期选择器中年月下拉框的选中值
+   */
+  panelActiveDate?: PanelActiveDate;
+  /**
+   * 日期选择器中年月下拉框的选中值，非受控属性
+   */
+  defaultPanelActiveDate?: PanelActiveDate;
+  /**
    * 占位符
    */
   placeholder?: string;
@@ -104,6 +112,10 @@ export interface TdDatePickerProps {
    * @default bottom
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
+  /**
+   * 日期可选择范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。
+   */
+  range?: PickerDateRange;
   /**
    * 是否只读，优先级大于 allowInput
    */
@@ -191,6 +203,10 @@ export interface TdDatePickerProps {
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
   /**
+   * 年月下拉框选中值变化时触发
+   */
+  onPanelActiveDate?: (value: number | Date, context: { trigger: DatePickerPanelActiveDate; e?: MouseEvent }) => void;
+  /**
    * 面板选中值后触发
    */
   onPick?: (value: DateValue) => void;
@@ -274,6 +290,14 @@ export interface TdDateRangePickerProps {
    */
   needConfirm?: boolean;
   /**
+   * 日期选择器中年月下拉框的选中值
+   */
+  panelActiveDate?: PanelActiveDate | [PanelActiveDate, PanelActiveDate];
+  /**
+   * 日期选择器中年月下拉框的选中值，非受控属性
+   */
+  defaultPanelActiveDate?: PanelActiveDate | [PanelActiveDate, PanelActiveDate];
+  /**
    * 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期
    * @default true
    */
@@ -299,6 +323,10 @@ export interface TdDateRangePickerProps {
    * @default bottom
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
+  /**
+   * 日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束。值类型为 Function 则表示返回值为 true 的日期为可选。 与`disableDate`共用时，`disableDate`优先级更高。
+   */
+  range?: PickerDateRange | PickerDateRange[];
   /**
    * 透传给范围输入框 RangeInput 组件的参数
    */
@@ -392,6 +420,13 @@ export interface TdDateRangePickerProps {
     e?: MouseEvent;
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
+  /**
+   * 年月下拉框选中值变化时触发
+   */
+  onPanelActiveDate?: (
+    value: number | Date,
+    context: { partial: DateRangePickerPartial; trigger: DatePickerPanelActiveDate; e?: MouseEvent },
+  ) => void;
   /**
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
@@ -564,9 +599,16 @@ export interface DisableDateObj {
   after?: string;
 }
 
+export interface PanelActiveDate {
+  year?: DateValue;
+  month?: DateValue;
+}
+
 export interface PresetDate {
   [name: string]: DateValue | (() => DateValue);
 }
+
+export type PickerDateRange = DateValue[] | ((date: DateValue) => boolean);
 
 export type DateValue = string | number | Date;
 
@@ -588,6 +630,8 @@ export type ValueTypeEnum = DatePickerValueType;
 export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
 
 export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
+
+export type DatePickerPanelActiveDate = DatePickerMonthChangeTrigger | DatePickerYearChangeTrigger;
 
 export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
 
