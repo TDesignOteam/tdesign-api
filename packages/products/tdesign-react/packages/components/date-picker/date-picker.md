@@ -28,6 +28,7 @@ popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupPr
 prefixIcon | TElement | - | 用于自定义组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 presets | Object | - | 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }`。TS 类型：`PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | 预设面板展示区域（包含确定按钮）。可选项：left/top/right/bottom | N
+range | Array / Function | - | 日期可选择范围。示例：['2025-01-01', '2025-12-31'] 表示'2025-01-01'至'2025-12-31'为可选日期，值为`null`表示不限制，例如['2025-01-01', null]表示可选日期从'2025-01-01'开始，不限制结束日期。值类型为 Function 则表示返回值为 true 的日期可选。与`disableDate`共用时，`disableDate`优先级更高。。TS 类型：`DateRange` `type DateRange = [DateValue,DateValue] \| ((date: DateValue) => boolean)`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 selectInputProps | Object | - | 透传 SelectInput 筛选器输入框组件的全部属性。TS 类型：`SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/date-picker/type.ts) | N
 size | String | medium | 输入框尺寸。可选项：small/medium/large。TS 类型：`SizeEnum`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 status | String | default | 输入框状态。可选项：default/success/warning/error | N
