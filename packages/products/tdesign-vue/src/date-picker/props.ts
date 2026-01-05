@@ -75,6 +75,10 @@ export default {
   panelActiveDate: {
     type: Object as PropType<TdDatePickerProps['panelActiveDate']>,
   },
+  /** 日期选择器中年月下拉框的选中值，非受控属性 */
+  defaultPanelActiveDate: {
+    type: Object as PropType<TdDatePickerProps['defaultPanelActiveDate']>,
+  },
   /** 占位符 */
   placeholder: {
     type: [String, Array] as PropType<TdDatePickerProps['placeholder']>,
@@ -175,6 +179,8 @@ export default {
   onFocus: Function as PropType<TdDatePickerProps['onFocus']>,
   /** 月份切换发生变化时触发 */
   onMonthChange: Function as PropType<TdDatePickerProps['onMonthChange']>,
+  /** 年月下拉框选中值变化时触发 */
+  onPanelActiveDate: Function as PropType<TdDatePickerProps['onPanelActiveDate']>,
   /** 面板选中值后触发 */
   onPick: Function as PropType<TdDatePickerProps['onPick']>,
   /** 点击预设按钮后触发 */
