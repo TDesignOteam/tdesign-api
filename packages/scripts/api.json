@@ -85569,18 +85569,19 @@
       "field_category": 1,
       "field_name": "style",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "通知框 style 内敛样式属性",
+      "field_desc_zh": "通知框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2026-01-04 14:06:18",
       "update_time": "2026-01-04 14:06:18",
       "event_output": null,
-      "custom_field_type": "CSSProperties",
+      "custom_field_type": "string | Styles",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -85595,6 +85596,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },

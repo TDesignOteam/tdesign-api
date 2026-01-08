@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
-import { CSSProperties, MouseEvent } from 'react';
+import { TNode, Styles, AttachNode } from '../common';
+import { MouseEvent } from 'react';
 
 export interface TdNotificationProps {
   /**
@@ -78,9 +78,9 @@ export interface NotificationOptions extends TdNotificationProps {
    */
   placement?: NotificationPlacementList;
   /**
-   * 通知框 style 内敛样式属性
+   * 通知框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
    */
-  style?: CSSProperties;
+  style?: string | Styles;
   /**
    * 消息通知层级
    * @default 6000
