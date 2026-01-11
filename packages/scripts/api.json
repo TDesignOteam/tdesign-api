@@ -118568,8 +118568,7 @@
       "id": 2041,
       "platform_framework": [
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "SwiperNavigation",
       "field_category": 1,
@@ -118577,10 +118576,10 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "",
+      "field_default_value": "dots",
       "field_enum": "",
       "field_desc_zh": "导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等",
-      "field_desc_en": null,
+      "field_desc_en": "Navigator types include dots, dots-bar, fraction, etc.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-12-15 12:55:56",
@@ -118598,8 +118597,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
