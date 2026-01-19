@@ -43,7 +43,7 @@ confirmLoading | Boolean | undefined | confirm button loading status | N
 confirmOnEnter | Boolean | - | confirm on enter | N
 default | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | \- | N
-dialogClassName | String | - | \- | N
+dialogClassName | String / Object / Array | - | The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`)。Typescript: `ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 dialogStyle | Object | - | Styles that apply to the dialog box itself。Typescript: `Styles`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 draggable | Boolean | false | not effective in `full-screen` mode | N
 footer | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
