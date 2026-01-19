@@ -69626,6 +69626,49 @@
       ]
     },
     {
+      "id": 1768792174,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "innerClassName",
+      "field_type": [
+        "1",
+        "8",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）",
+      "field_desc_en": "The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`).",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-19 03:09:34",
+      "update_time": "2026-01-19 03:09:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"React(PC)\": \"1.17.0\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "Array"
+      ]
+    },
+    {
       "id": 1748404966,
       "platform_framework": [
         "64"
