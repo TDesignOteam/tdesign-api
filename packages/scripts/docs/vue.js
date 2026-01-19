@@ -2,7 +2,7 @@ const pick = require('lodash/pick');
 const find = require('lodash/find');
 const camelCase = require('lodash/camelCase');
 const lowerFirst = require('lodash/lowerFirst');
-const { kebabCaseComponent } = require('../utils');
+const { kebabCaseComponent, getComponentBasePath } = require('../utils');
 
 const map = require('../map.json');
 const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
@@ -210,7 +210,7 @@ function formatDesc(
     if (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp)) {
       // tsTypeText 中文"TS 类型"
       const language = languageConfig[LANGUAGE];
-      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}：`;
+      const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}`;
       desc.push(`${tsLabel}\`${customFieldType}\`${importDocPath}`);
     }
     // 有使用了通用类型，就显示定义链接
@@ -220,7 +220,7 @@ function formatDesc(
     }
     if (isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
-      desc.push(`[${text}](${config.componentPath}${getTsTypeFileName(api.component, config)})`);
+      desc.push(`[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`);
     }
   }
   return desc;
@@ -362,7 +362,7 @@ function formatEventToProps(api) {
   baseName = baseName.replace(/`/g, '');
   // tsTypeText 中文"TS 类型"
   const language = languageConfig[LANGUAGE];
-  const desc = [`${language.tsTypeText}：\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
+  const desc = [`${language.tsTypeText}\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
@@ -407,7 +407,7 @@ function addCommonProperties({
   if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
-      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}：\`React.CSSProperties\` | N`,
+      `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}\`React.CSSProperties\` | N`,
     ]);
   } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[

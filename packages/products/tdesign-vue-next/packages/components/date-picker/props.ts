@@ -86,7 +86,7 @@ export default {
   },
   /** 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }` */
   presets: {
-    type: Object as PropType<TdDatePickerProps['presets']>,
+    type: [Object, Function] as PropType<TdDatePickerProps['presets']>,
   },
   /** 预设面板展示区域（包含确定按钮） */
   presetsPlacement: {
@@ -169,8 +169,12 @@ export default {
   onConfirm: Function as PropType<TdDatePickerProps['onConfirm']>,
   /** 输入框获得焦点时触发 */
   onFocus: Function as PropType<TdDatePickerProps['onFocus']>,
+  /** 月份切换发生变化时触发 */
+  onMonthChange: Function as PropType<TdDatePickerProps['onMonthChange']>,
   /** 面板选中值后触发 */
   onPick: Function as PropType<TdDatePickerProps['onPick']>,
   /** 点击预设按钮后触发 */
   onPresetClick: Function as PropType<TdDatePickerProps['onPresetClick']>,
+  /** 年份切换发生变化时触发 */
+  onYearChange: Function as PropType<TdDatePickerProps['onYearChange']>,
 };

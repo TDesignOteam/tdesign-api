@@ -98,12 +98,16 @@ export interface TdDatePickerProps {
   /**
    * 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }`
    */
-  presets?: PresetDate;
+  presets?: TNode | PresetDate;
   /**
    * 预设面板展示区域（包含确定按钮）
    * @default bottom
    */
   presetsPlacement?: 'left' | 'top' | 'right' | 'bottom';
+  /**
+   * 是否只读，优先级大于 allowInput
+   */
+  readonly?: boolean;
   /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */
@@ -173,6 +177,15 @@ export interface TdDatePickerProps {
    */
   onFocus?: (context: { value: DateValue | DateMultipleValue; e: FocusEvent }) => void;
   /**
+   * 月份切换发生变化时触发
+   */
+  onMonthChange?: (context: {
+    month: number;
+    date: Date;
+    e?: MouseEvent;
+    trigger: DatePickerMonthChangeTrigger;
+  }) => void;
+  /**
    * 面板选中值后触发
    */
   onPick?: (value: DateValue) => void;
@@ -180,6 +193,10 @@ export interface TdDatePickerProps {
    * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  /**
+   * 年份切换发生变化时触发
+   */
+  onYearChange?: (context: { year: number; date: Date; trigger: DatePickerYearChangeTrigger; e?: MouseEvent }) => void;
 }
 
 export interface TdDateRangePickerProps {
@@ -271,7 +288,7 @@ export interface TdDateRangePickerProps {
   /**
    * 预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }
    */
-  presets?: PresetRange;
+  presets?: TNode | PresetRange;
   /**
    * 预设面板展示区域（包含确定按钮）
    * @default bottom
@@ -281,6 +298,10 @@ export interface TdDateRangePickerProps {
    * 透传给范围输入框 RangeInput 组件的参数
    */
   rangeInputProps?: RangeInputProps;
+  /**
+   * 是否只读，优先级大于 `allowInput`
+   */
+  readonly?: boolean;
   /**
    * 日期分隔符，支持全局配置，默认为 '-'
    * @default ''
@@ -352,6 +373,16 @@ export interface TdDateRangePickerProps {
    */
   onInput?: (context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent }) => void;
   /**
+   * 月份切换发生变化时触发
+   */
+  onMonthChange?: (context: {
+    month: number;
+    date: Date[];
+    partial: DateRangePickerPartial;
+    e?: MouseEvent;
+    trigger: DatePickerMonthChangeTrigger;
+  }) => void;
+  /**
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
   onPick?: (value: DateValue, context: PickContext) => void;
@@ -359,6 +390,16 @@ export interface TdDateRangePickerProps {
    * 点击预设按钮后触发
    */
   onPresetClick?: (context: { preset: PresetDate; e: MouseEvent }) => void;
+  /**
+   * 年份切换发生变化时触发
+   */
+  onYearChange?: (context: {
+    year: number;
+    date: Date[];
+    partial: DateRangePickerPartial;
+    trigger: DatePickerYearChangeTrigger;
+    e?: MouseEvent;
+  }) => void;
 }
 
 export interface TdDatePickerPanelProps
@@ -534,7 +575,11 @@ export type DatePickerValueType =
 
 export type ValueTypeEnum = DatePickerValueType;
 
-export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear';
+export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
+
+export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
+
+export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
 
 export type DisableRangeDate =
   | Array<DateValue>
@@ -556,8 +601,4 @@ export interface PickContext {
   partial: DateRangePickerPartial;
 }
 
-export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
-
 export type DatePickerTimeChangeTrigger = 'time-hour' | 'time-minute' | 'time-second';
-
-export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';

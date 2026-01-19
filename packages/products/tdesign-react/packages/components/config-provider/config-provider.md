@@ -199,6 +199,7 @@ replaceImageSrc | Function | - | 统一替换图片 `src` 地址，参数为组�
 errorText | String | - | 全局语言配置，默认为 “图片加载失败，可尝试重新加载” | N
 mirrorTipText | String | - | 全局语言配置，默认为 “镜像” | N
 originalSizeTipText | String | - | 全局语言配置，默认为 “原始大小” | N
+previewText | String | - | 全局语言配置，默认为 “预览” | N
 rotateTipText | String | - | 全局语言配置，默认为 “旋转” | N
 
 ### InputConfig
@@ -234,7 +235,7 @@ total | String | - | 语言配置，数据总条数文本，示例：`'共 {tota
 
 名称 | 参数 | 返回值 | 描述
 -- | -- | -- | --
-jumper | `(jumperProps: JumperProps)` | `TNode<JumperProps>` | 自定义跳转组件。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts)。<br/>`interface JumperProps { current: number; pageCount: number; onChange: (current: number) => void; }`<br/>
+jumper | `(jumperProps: JumperProps)` | `TNode<JumperProps>` | 自定义跳转组件。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/config-provider/type.ts)。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。<br/>`interface JumperProps { current: number; pageCount: number; onChange: (current: number) => void; }`<br/>
 
 ### PopconfirmConfig
 

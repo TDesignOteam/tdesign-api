@@ -33,6 +33,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 光标颜色 */
+  cursorColor: {
+    type: String,
+    default: '#0052d9',
+  },
   /** 禁用状态 */
   disabled: Boolean,
   /** 是否聚焦 */

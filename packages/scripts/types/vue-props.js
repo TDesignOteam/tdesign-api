@@ -15,6 +15,7 @@ const {
 const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
 const { FILE_RIGHTS_DESC } = require('../config/const');
 const { fetchApiDataFromOfficialWebsite } = require('./miniprogram');
+const { getComponentBasePath } = require('../utils');
 
 let currentFramework = '';
 let useDefault = '';
@@ -370,7 +371,7 @@ function getFolderPath(basePath, cmp) {
   const folderName =    cmp === parentCmp || !parentCmp
     ? getFolderName(cmp)
     : getFolderName(parentCmp);
-  return path.resolve(basePath, folderName);
+  return path.resolve(getComponentBasePath(cmp, basePath), folderName);
 }
 
 function getPropsFileName(folder, cmp) {

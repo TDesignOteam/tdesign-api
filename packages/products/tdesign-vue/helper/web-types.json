@@ -2328,6 +2328,18 @@
               "type": "string | TNode"
             },
             {
+              "name": "body-class-name",
+              "description": "卡片内容的类名，示例：'t-class-body'",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "string"
+            },
+            {
+              "name": "body-style",
+              "description": "Styles that apply to the card body content\n\n作用于卡片内容的样式",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "Styles"
+            },
+            {
               "name": "bordered",
               "description": "是否有边框",
               "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
@@ -2365,6 +2377,18 @@
               "type": "string | TNode"
             },
             {
+              "name": "footer-class-name",
+              "description": "卡片底部的类名，示例：'t-class-footer'",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "string"
+            },
+            {
+              "name": "footer-style",
+              "description": "Styles that apply to the card footer content\n\n作用于卡片底部的样式",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "Styles"
+            },
+            {
               "name": "header",
               "description": "卡片顶部内容，优先级高于其他所有元素",
               "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
@@ -2376,6 +2400,18 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "header-class-name",
+              "description": "卡片头部的类名，示例：'t-class-header'",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "string"
+            },
+            {
+              "name": "header-style",
+              "description": "Styles that apply to the card header content\n\n作用于卡片头部的样式",
+              "doc-url": "https://tdesign.tencent.com/vue/components/card?tab=api#card-props",
+              "type": "Styles"
             },
             {
               "name": "hover-shadow",
@@ -2660,9 +2696,9 @@
             },
             {
               "name": "option",
-              "description": "customize one option\n\n自定义单个级联选项",
+              "description": "customize one option\n\n自定义单个级联选项, item 是选项本身的值，index 是下标，onChange 用于触发当前节点选中，onExpand 用于触发当前节点展开",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props",
-              "type": "TNode<{ item: CascaderOption; index: number }>"
+              "type": "TNode<{ item: CascaderOption; index: number, onChange: ()=> void, onExpand: ()=> void }>"
             },
             {
               "name": "options",
@@ -2721,6 +2757,12 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props",
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "scroll",
+              "description": "Lazy loading and virtual scrolling. To maximize the benefits of the component, when the amount of data is less than the threshold `scroll.threshold`, regardless of whether the virtual scrolling configuration exists, virtual scrolling will not be enabled within the component. `scroll.threshold` defaults to `100`\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+              "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props",
+              "type": "TScroll"
             },
             {
               "name": "select-input-props",
@@ -2948,7 +2990,7 @@
             },
             {
               "name": "option",
-              "description": "customize one option\n\n自定义单个级联选项类型和参数：TNode<{ item: CascaderOption; index: number }>",
+              "description": "customize one option\n\n自定义单个级联选项, item 是选项本身的值，index 是下标，onChange 用于触发当前节点选中，onExpand 用于触发当前节点展开类型和参数：TNode<{ item: CascaderOption; index: number, onChange: ()=> void, onExpand: ()=> void }>",
               "doc-url": "https://tdesign.tencent.com/vue/components/cascader?tab=api#cascader-props"
             },
             {
@@ -3237,7 +3279,7 @@
           "source": {
             "symbol": "ChatContent"
           },
-          "description": "ChatContent\n\n对话内容",
+          "description": "ChatContent\n\n对话正文",
           "doc-url": "https://tdesign.tencent.com/vue/components/chat",
           "props": [
             {
@@ -3650,7 +3692,7 @@
           "source": {
             "symbol": "ChatSender"
           },
-          "description": "ChatSender\n\n对话输入框",
+          "description": "ChatSender\n\n对话输入",
           "doc-url": "https://tdesign.tencent.com/vue/components/chat",
           "props": [
             {
@@ -3661,10 +3703,18 @@
               "default": "false"
             },
             {
+              "name": "loading",
+              "description": "发送按钮是否处于加载状态",
+              "doc-url": "https://tdesign.tencent.com/vue/components/chat?tab=api#chatsender-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "placeholder",
               "description": "输入框默认文案",
               "doc-url": "https://tdesign.tencent.com/vue/components/chat?tab=api#chatsender-props",
-              "type": "string"
+              "type": "string",
+              "default": "请输入消息..."
             },
             {
               "name": "prefix",
@@ -6246,7 +6296,7 @@
             },
             {
               "name": "draggable",
-              "description": "对话框是否可以拖拽（仅在非模态对话框时有效）",
+              "description": "not effective in `full-screen` mode\n\n是否可以拖拽（对全屏对话框无效）",
               "doc-url": "https://tdesign.tencent.com/vue/components/dialog?tab=api#dialog-props",
               "type": "boolean",
               "default": "false"
@@ -6334,6 +6384,13 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/dialog?tab=api#dialog-props",
               "type": "boolean",
               "default": "true"
+            },
+            {
+              "name": "size-draggable",
+              "description": "allow resizing dialog width/height, set max or min to limit size.\n\n弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dialog?tab=api#dialog-props",
+              "type": "boolean | DialogSizeDragLimit",
+              "default": "false"
             },
             {
               "name": "theme",
@@ -6828,6 +6885,12 @@
               ]
             },
             {
+              "name": "size",
+              "description": "Spacing size\n\n间距大小",
+              "doc-url": "https://tdesign.tencent.com/vue/components/divider?tab=api#divider-props",
+              "type": "string | number"
+            },
+            {
               "name": "theme",
               "description": "请更为使用 `layout`。分隔线类型有两种：水平和垂直",
               "doc-url": "https://tdesign.tencent.com/vue/components/divider?tab=api#divider-props",
@@ -7069,6 +7132,11 @@
                 "doc-url": "https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-events"
               },
               {
+                "name": "closed",
+                "description": "抽屉关闭后触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-events"
+              },
+              {
                 "name": "confirm",
                 "description": "如果“确认”按钮存在，则点击“确认”按钮时触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-events"
@@ -7076,6 +7144,11 @@
               {
                 "name": "esc-keydown",
                 "description": "按下 ESC 键时触发",
+                "doc-url": "https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-events"
+              },
+              {
+                "name": "opened",
+                "description": "抽屉打开后触发",
                 "doc-url": "https://tdesign.tencent.com/vue/components/drawer?tab=api#drawer-events"
               },
               {
@@ -7431,6 +7504,40 @@
               "name": "prefix-icon",
               "description": "组件前置图标",
               "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownitem-props"
+            }
+          ]
+        },
+        {
+          "name": "t-dropdown-menu",
+          "source": {
+            "symbol": "DropdownMenu"
+          },
+          "description": "DropdownMenu\n\n下拉菜单",
+          "doc-url": "https://tdesign.tencent.com/vue/components/dropdown",
+          "props": [
+            {
+              "name": "content",
+              "description": "内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props",
+              "type": "string | TNode"
+            },
+            {
+              "name": "default",
+              "description": "内容，同 content",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props",
+              "type": "string | TNode"
+            }
+          ],
+          "slots": [
+            {
+              "name": "content",
+              "description": "内容",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props"
+            },
+            {
+              "name": "default",
+              "description": "内容，同 content",
+              "doc-url": "https://tdesign.tencent.com/vue/components/dropdown?tab=api#dropdownmenu-props"
             }
           ]
         },
@@ -8707,7 +8814,7 @@
               "name": "image-scale",
               "description": " 图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例",
               "doc-url": "https://tdesign.tencent.com/vue/components/image-viewer?tab=api#imageviewer-props",
-              "type": "ImageScale"
+              "type": "Partial<ImageScale>"
             },
             {
               "name": "images",
@@ -8765,7 +8872,7 @@
               "name": "trigger",
               "description": "trigger element\n\n触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义",
               "doc-url": "https://tdesign.tencent.com/vue/components/image-viewer?tab=api#imageviewer-props",
-              "type": "TNode | TNode<{ open: () => void }>"
+              "type": "TNode | TNode<{ open: (index?: number) => void }>"
             },
             {
               "name": "viewer-scale",
@@ -8782,7 +8889,7 @@
             },
             {
               "name": "z-index",
-              "description": "层级，默认为 2000",
+              "description": "层级，默认为 3000",
               "doc-url": "https://tdesign.tencent.com/vue/components/image-viewer?tab=api#imageviewer-props",
               "type": "number"
             }
@@ -8834,7 +8941,7 @@
             },
             {
               "name": "trigger",
-              "description": "trigger element\n\n触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义类型和参数：TNode | TNode<{ open: () => void }>",
+              "description": "trigger element\n\n触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义类型和参数：TNode | TNode<{ open: (index?: number) => void }>",
               "doc-url": "https://tdesign.tencent.com/vue/components/image-viewer?tab=api#imageviewer-props"
             }
           ]
@@ -9784,12 +9891,6 @@
               "name": "scroll",
               "description": "lazy load and virtual scroll\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
               "doc-url": "https://tdesign.tencent.com/vue/components/list?tab=api#list-props",
-              "type": "InfinityScroll"
-            },
-            {
-              "name": "scroll",
-              "description": "lazy load and virtual scroll\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
-              "doc-url": "https://tdesign.tencent.com/vue/components/list?tab=api#list-props",
               "type": "TScroll"
             },
             {
@@ -10547,6 +10648,11 @@
           ],
           "js": {
             "events": [
+              {
+                "name": "close",
+                "description": "the callback event of NotificationPlugin.close\n\n调用 NotificationPlugin.close 的事件回调",
+                "doc-url": "https://tdesign.tencent.com/vue/components/notification?tab=api#notification-events"
+              },
               {
                 "name": "close-btn-click",
                 "description": "点击关闭按钮时触发",
@@ -14513,8 +14619,8 @@
               "name": "options-layout",
               "description": "layout of options in popup\n\n下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列",
               "doc-url": "https://tdesign.tencent.com/vue/components/select?tab=api#select-props",
-              "type": "vertical | horizontal",
-              "default": "vertical"
+              "type": "'vertical' | 'horizontal'",
+              "default": "'vertical'"
             },
             {
               "name": "panel-bottom-content",
@@ -14571,7 +14677,7 @@
               "name": "scroll",
               "description": "lazy load and virtual scroll\n\n懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
               "doc-url": "https://tdesign.tencent.com/vue/components/select?tab=api#select-props",
-              "type": "InfinityScroll"
+              "type": "TScroll"
             },
             {
               "name": "select-input-props",
@@ -15531,29 +15637,9 @@
             },
             {
               "name": "color",
-              "description": "Color style, followed by TDesign style black, blue, red, orange, green.Can also be any RGB equivalent supported by [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)\n\n颜色风格，依次为 TDesign 风格的黑色、蓝色、红色、橙色、绿色。也可以为任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持的 RGB 等值",
+              "description": "The color style can support TDesign's light and dark modes with the following options: black, blue, red, orange, and green. Alternatively, it can be any [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) value, but in this case, TDesign's light and dark modes will not be supported.\n\n颜色风格，预设五个 TDesign 颜色风格：黑色（black）、蓝色（blue）、红色（red）、橙色（orange）、绿色（green）支持深浅色模式切换。也可以自定义任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持颜色值，深浅色模式切换需自行适配",
               "doc-url": "https://tdesign.tencent.com/vue/components/statistic?tab=api#statistic-props",
-              "type": "'black' | 'blue' | 'red' | 'orange' | 'green'",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "black"
-                },
-                {
-                  "name": "blue"
-                },
-                {
-                  "name": "red"
-                },
-                {
-                  "name": "orange"
-                },
-                {
-                  "name": "green"
-                }
-              ]
+              "type": "string"
             },
             {
               "name": "decimal-places",
@@ -16260,24 +16346,6 @@
               "default": "true"
             },
             {
-              "name": "theme",
-              "description": "深色模式和浅色模式",
-              "doc-url": "https://tdesign.tencent.com/vue/components/swiper?tab=api#swiper-props",
-              "type": "'light' | 'dark'",
-              "default": "light",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "light"
-                },
-                {
-                  "name": "dark"
-                }
-              ]
-            },
-            {
               "name": "trigger",
               "description": "触发切换的方式：悬浮、点击等",
               "doc-url": "https://tdesign.tencent.com/vue/components/swiper?tab=api#swiper-props",
@@ -16435,24 +16503,6 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/swiper?tab=api#swiper-props",
               "type": "boolean",
               "default": "true"
-            },
-            {
-              "name": "theme",
-              "description": "深色模式和浅色模式",
-              "doc-url": "https://tdesign.tencent.com/vue/components/swiper?tab=api#swiper-props",
-              "type": "'light' | 'dark'",
-              "default": "light",
-              "attribute-value": {
-                "type": "enum"
-              },
-              "values": [
-                {
-                  "name": "light"
-                },
-                {
-                  "name": "dark"
-                }
-              ]
             },
             {
               "name": "trigger",
@@ -17512,7 +17562,7 @@
           "props": [
             {
               "name": "allow-input-over-max",
-              "description": "超出maxlength或maxcharacter之后是否还允许输入",
+              "description": "Allow input after exceeding `maxlength` or `maxcharacter`\n\n超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入",
               "doc-url": "https://tdesign.tencent.com/vue/components/textarea?tab=api#textarea-props",
               "type": "boolean",
               "default": "false"
@@ -20234,6 +20284,24 @@
               "doc-url": "https://tdesign.tencent.com/vue/components/watermark?tab=api#watermark-props",
               "type": "boolean",
               "default": "true"
+            },
+            {
+              "name": "layout",
+              "description": "水印的布局方式，rectangular：矩形，即横平竖直的水印；hexagonal：六边形，即错位的水印",
+              "doc-url": "https://tdesign.tencent.com/vue/components/watermark?tab=api#watermark-props",
+              "type": "'rectangular' | 'hexagonal'",
+              "default": "rectangular",
+              "attribute-value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "rectangular"
+                },
+                {
+                  "name": "hexagonal"
+                }
+              ]
             },
             {
               "name": "line-space",
