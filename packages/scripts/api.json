@@ -38309,7 +38309,8 @@
       "field_category": 1,
       "field_name": "presets",
       "field_type": [
-        "8"
+        "8",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -38320,7 +38321,7 @@
       "create_time": "2021-03-23 12:45:18",
       "update_time": "2021-12-11 18:13:44",
       "event_output": null,
-      "custom_field_type": "PresetDate【interface PresetDate { [name: string]: DateValue | (() => DateValue) }】",
+      "custom_field_type": "TNode | PresetDate【interface PresetDate { [name: string]: DateValue | (() => DateValue) }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -38335,7 +38336,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Object",
+        "TNode"
       ]
     },
     {
@@ -41100,7 +41102,8 @@
       "field_category": 1,
       "field_name": "presets",
       "field_type": [
-        "8"
+        "8",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -41111,7 +41114,7 @@
       "create_time": "2021-03-24 02:23:22",
       "update_time": "2021-03-24 03:09:30",
       "event_output": null,
-      "custom_field_type": "PresetRange【interface PresetRange { [range: string]: DateRange | (() => DateRange)}】【type DateRange = [DateValue, DateValue]】",
+      "custom_field_type": "TNode | PresetRange【interface PresetRange { [range: string]: DateRange | (() => DateRange)}】【type DateRange = [DateValue, DateValue]】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -41126,7 +41129,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Object"
+        "Object",
+        "TNode"
       ]
     },
     {
@@ -93406,8 +93410,8 @@
       ],
       "field_default_value": "true",
       "field_enum": "",
-      "field_desc_zh": "行选中功能，是否在分页时保留上一页选中结果不清空，本地数据分页场景下，会全选所有页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页；本地数据分页场景下，全选仅选中当前页",
-      "field_desc_en": null,
+      "field_desc_zh": "行选中功能，是否在分页时保留上一页选中结果不清空。分页场景下，会全选所有页数据，保留跨分页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页。",
+      "field_desc_en": "Controls whether selected rows are retained across pagination. When enabled, selections persist across all pages, allowing batch operations on multi-page data. If set to `false`, selections are confined to the current page and do not extend to other pages.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-11-27 08:07:58",
