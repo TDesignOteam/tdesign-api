@@ -69642,7 +69642,7 @@
       "field_default_value": "",
       "field_enum": "",
       "field_desc_zh": "内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）",
-      "field_desc_en": "The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`).",
+      "field_desc_en": "The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`)",
       "field_required": 0,
       "event_input": "",
       "create_time": "2026-01-19 03:09:34",
