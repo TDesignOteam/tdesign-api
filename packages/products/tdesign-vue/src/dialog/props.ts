@@ -52,10 +52,9 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
-  /** 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' */
+  /** 内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`） */
   dialogClassName: {
-    type: String,
-    default: '',
+    type: [String, Object, Array] as PropType<TdDialogProps['dialogClassName']>,
   },
   /** 作用于对话框本身的样式 */
   dialogStyle: {
