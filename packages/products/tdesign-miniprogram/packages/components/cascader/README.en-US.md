@@ -34,5 +34,5 @@ name | Description
 -- | --
 close-btn | \-
 header | `1.9.1`
-middle-content | \-
+middle-content | `1.12.2`
 title | \-
