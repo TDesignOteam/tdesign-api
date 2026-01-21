@@ -224,7 +224,7 @@ const COMPONENT_API_MD_MAP = {
 // H5 特殊组件
 const MOBILE_COMPONENT_API_MD_MAP = {
     DropdownMenu: {
-        list:['DropdownMenu', 'DropdownItem'],
+        list: ['DropdownMenu', 'DropdownItem'],
     },
     Layout: {
         list: ['Layout', 'Row', 'Col'],
@@ -450,6 +450,10 @@ const TYPES_COMBINE_MAP = {
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
+    DropdownMenu: {
+        list: ['DropdownMenu', 'DropdownItem'],
+        excludes: ['Miniprogram'],
+    },
     Layout: {
         list: ['Layout', 'Row', 'Col'],
         excludes: ['Miniprogram'],
@@ -462,10 +466,6 @@ const MOBILE_TYPES_COMBINE_MAP = {
 };
 
 const MINIPROGRAM_TYPES_COMBINE_MAP = {
-    DropdownMenu: {
-        list: ['DropdownMenu', 'DropdownItem'],
-        excludes: ['Miniprogram'],
-    },
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
         excludes: ['Miniprogram'],
