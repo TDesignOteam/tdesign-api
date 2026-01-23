@@ -115451,6 +115451,7 @@
       "field_category": 1,
       "field_name": "container",
       "field_type": [
+        "1",
         "8"
       ],
       "field_default_value": "",
@@ -115476,6 +115477,7 @@
         "Vue(Mobile)"
       ],
       "field_type_text": [
+        "String",
         "Object"
       ]
     },
