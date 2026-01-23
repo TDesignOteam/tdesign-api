@@ -144416,7 +144416,8 @@
       "field_category": 1,
       "field_name": "capture",
       "field_type": [
-        "1"
+        "1",
+        "4"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -144442,7 +144443,8 @@
         "React(Mobile)"
       ],
       "field_type_text": [
-        "String"
+        "String",
+        "Boolean"
       ]
     },
     {
