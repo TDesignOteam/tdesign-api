@@ -193,21 +193,21 @@ const FRAMEWORK_MAP = {
     },
      UniApp: {
         iconPath: 'tdesign-icons-uniapp',
-        apiBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
+        apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
         apiEnglishBasePath: '',
-        tsBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
-        propsBasePath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign`,
+        tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
+        propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
         tsBaseFileName: 'USE_TYPE_NAME',
-        globalPath: `${BASE_PATH_URL}/tdesign-uniapp/packages/tdesign/common/common.ts`,
+        globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components/common/common.ts`,
         globalTplPath: path.resolve(
             __dirname,
             '../types/global/miniprogram.tpl'
         ),
         unitBasePath: '',
         commonTypePath:
-            'https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/common/common.ts',
+            'https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts',
         componentPath:
-            'https://github.com/novlan1/tdesign-uniapp/blob/develop/packages/tdesign/',
+            'https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/',
         commonRelativePath: '../common/common',
         componentRelativiePath: '../',
         vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/uniapp`,
