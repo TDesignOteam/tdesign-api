@@ -55714,6 +55714,49 @@
       ]
     },
     {
+      "id": 1769484024,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "magnet",
+      "field_type": [
+        "1",
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-27 03:20:24",
+      "update_time": "2026-01-27 03:20:24",
+      "event_output": null,
+      "custom_field_type": "boolean | MagnetEnum 【type MagnetEnum = 'left' | 'right'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"0.21.2\"\n\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Boolean"
+      ]
+    },
+    {
       "id": 2503,
       "platform_framework": [
         "64"
@@ -55865,6 +55908,47 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1769481764,
+      "platform_framework": [
+        "8",
+        "16",
+        "64"
+      ],
+      "component": "Fab",
+      "field_category": 1,
+      "field_name": "xBounds",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置水平方向边界限制，示例：[16, 16] 或 ['16px', 16]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-27 02:42:44",
+      "update_time": "2026-01-27 02:42:44",
+      "event_output": null,
+      "custom_field_type": "Array<string | number>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"0.21.2\"\n\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
