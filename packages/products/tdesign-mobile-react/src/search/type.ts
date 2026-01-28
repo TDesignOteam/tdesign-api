@@ -62,6 +62,11 @@ export interface TdSearchProps {
    */
   readonly?: boolean;
   /**
+   * 预览结果列表
+   * @default []
+   */
+  resultList?: Array<string>;
+  /**
    * 搜索框形状
    * @default 'square'
    */

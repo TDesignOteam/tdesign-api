@@ -20,6 +20,7 @@ leftIcon | TNode | 'search' | 左侧图标。TS 类型：`string \| TNode`。[�
 placeholder | String | '' | 占位符 | N
 prefixIcon | TElement | - | 已废弃。前置图标，默认为搜索图标。值为 `null` 时则不显示。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 readonly | Boolean | undefined | 只读状态 | N
+resultList | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
 suffixIcon | TElement | - | 已废弃。后置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 value | String | - | 值 | N

@@ -104790,6 +104790,7 @@
       "id": 1719488506,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Search",
@@ -104819,6 +104820,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [

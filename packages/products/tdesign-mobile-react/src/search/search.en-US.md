@@ -20,6 +20,7 @@ leftIcon | TNode | 'search' | Typescript: `string \| TNode`。[see more ts defin
 placeholder | String | '' | \- | N
 prefixIcon | TElement | - | `deprecated`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 readonly | Boolean | undefined | \- | N
+resultList | Array | [] | Typescript: `Array<string>` | N
 shape | String | 'square' | options: square/round | N
 suffixIcon | TElement | - | `deprecated`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 value | String | - | \- | N
