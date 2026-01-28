@@ -14460,6 +14460,43 @@
       "field_type_text": []
     },
     {
+      "id": 1769581756,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "activityType",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片id。 `open-type` 的值设置为 `liveActivity` ，设置 `activity-type` 参数为 [notify_type](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html)。当用户点击 `button` 后，可以通过 `bindcreateliveactivity` 事件回调获取到 `code`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:29:16",
+      "update_time": "2026-01-28 06:29:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1709459753,
       "platform_framework": [
         "64"
@@ -14748,6 +14785,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1769581302,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "entrancePath",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "从消息小程序入口打开小程序的路径，默认为聊天工具启动路径",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:21:42",
+      "update_time": "2026-01-28 06:21:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -15264,6 +15338,43 @@
       ]
     },
     {
+      "id": 1769581268,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "needShowEntrance",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "转发的文本消息是否要带小程序入口",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:21:08",
+      "update_time": "2026-01-28 06:21:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1709458728,
       "platform_framework": [
         "64"
@@ -15461,7 +15572,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "会话来源，open-type=\"contact\"时有效",
+      "field_desc_zh": "会话来源，open-type=\"contact\"时有效，长度不超过 1024 个字符",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
