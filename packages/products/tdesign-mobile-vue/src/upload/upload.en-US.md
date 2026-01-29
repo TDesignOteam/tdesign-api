@@ -16,6 +16,7 @@ beforeUpload | Function | - | stop one of files to upload。Typescript: `(file: 
 capture | String / Boolean | - | \- | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript: `Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
+draggable | Boolean | undefined | \- | N
 files | Array | [] | `v-model:files` is supported。Typescript: `Array<T>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript: `Array<T>` | N
 format | Function | - | to redefine  `UploadFile` data structure。Typescript: `(file: File) => UploadFile` | N
