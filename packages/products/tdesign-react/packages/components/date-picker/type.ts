@@ -47,7 +47,7 @@ export interface TdDatePickerProps {
   /**
    * 是否禁用组件
    */
-  disabled?: boolean;
+  disabled?: boolean | Array<boolean>;
   /**
    * 是否显示时间选择
    * @default false

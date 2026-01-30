@@ -29,7 +29,7 @@ export default {
   },
   /** 是否禁用组件 */
   disabled: {
-    type: Boolean,
+    type: [Boolean, Array] as PropType<TdDatePickerProps['disabled']>,
     default: undefined,
   },
   /** 是否显示时间选择 */
