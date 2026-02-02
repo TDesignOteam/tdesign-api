@@ -59,6 +59,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
+   * 是否启用拖拽上传
+   */
+  draggable?: boolean;
+  /**
    * 已上传文件列表，同 `value`。TS 类型：`UploadFile`
    * @default []
    */
@@ -249,7 +253,14 @@ export interface UploadChangeContext {
   files?: UploadFile[];
 }
 
-export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
+export type UploadChangeTrigger =
+  | 'add'
+  | 'remove'
+  | 'abort'
+  | 'progress-success'
+  | 'progress'
+  | 'progress-fail'
+  | 'sort';
 
 export interface UploadFailContext {
   e?: ProgressEvent;

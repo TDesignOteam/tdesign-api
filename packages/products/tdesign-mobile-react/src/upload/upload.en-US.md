@@ -19,6 +19,7 @@ capture | String / Boolean | - | \- | N
 children | TNode | - | to define upload trigger elements if `draggable=false`, to define drag elements if `draggable=true`。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 data | Object | - | extra request data of uploading. `formatRequest` can redefine all request data。Typescript: `Record<string, any> \| ((files: UploadFile[]) => Record<string, any>)` | N
 disabled | Boolean | undefined | make upload to be disabled | N
+draggable | Boolean | undefined | \- | N
 files | Array | [] | Typescript: `Array<T>` | N
 defaultFiles | Array | [] | uncontrolled property。Typescript: `Array<T>` | N
 format | Function | - | to redefine  `UploadFile` data structure。Typescript: `(file: File) => UploadFile` | N
@@ -35,7 +36,7 @@ requestMethod | Function | - | custom upload request method。Typescript: `(file
 sizeLimit | Number / Object | - | files size limit。Typescript: `number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts) | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N
 withCredentials | Boolean | false | uploading request with cookie | N
-onChange | Function |  | Typescript: `(value: Array<T>, context: UploadChangeContext) => void`<br/>trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/> | N
+onChange | Function |  | Typescript: `(value: Array<T>, context: UploadChangeContext) => void`<br/>trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/> | N
 onClickUpload | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onFail | Function |  | Typescript: `(options: UploadFailContext) => void`<br/>`response.error` used for error tips, `formatResponse` can format `response`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e?: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest}`<br/> | N
 onPreview | Function |  | Typescript: `(options: { file: UploadFile; index: number; e: MouseEvent }) => void`<br/>trigger on preview elements click | N

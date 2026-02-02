@@ -9,6 +9,7 @@ export const uploadDefaultProps: TdUploadProps = {
   allowUploadDuplicateFile: false,
   autoUpload: true,
   disabled: undefined,
+  draggable: undefined,
   defaultFiles: [],
   max: 0,
   method: 'POST',
