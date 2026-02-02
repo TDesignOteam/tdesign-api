@@ -37948,8 +37948,7 @@
       "field_category": 1,
       "field_name": "disabled",
       "field_type": [
-        "4",
-        "16"
+        "4"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -37960,7 +37959,7 @@
       "create_time": "2021-03-23 12:16:04",
       "update_time": "2022-06-07 12:31:58",
       "event_output": null,
-      "custom_field_type": "boolean | Array<boolean>",
+      "custom_field_type": "boolean",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -37975,8 +37974,7 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean",
-        "Array"
+        "Boolean"
       ]
     },
     {
@@ -40782,7 +40780,8 @@
       "field_category": 1,
       "field_name": "disabled",
       "field_type": [
-        "4"
+        "4",
+        "16"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -40793,7 +40792,7 @@
       "create_time": "2021-03-24 02:43:48",
       "update_time": "2022-06-07 08:14:15",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "boolean | Array<boolean>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -40808,7 +40807,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Array"
       ]
     },
     {
