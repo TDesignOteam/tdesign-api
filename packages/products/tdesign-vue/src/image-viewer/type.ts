@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
+import { TNode, ClassName, AttachNode } from '../common';
 
 export interface TdImageViewerProps {
   /**
@@ -61,6 +61,10 @@ export interface TdImageViewerProps {
    * @default 0
    */
   defaultIndex?: number;
+  /**
+   * 内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）
+   */
+  innerClassName?: ClassName;
   /**
    * 模态预览（modal）和非模态预览（modeless)
    * @default modal
