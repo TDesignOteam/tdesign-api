@@ -31,7 +31,7 @@ export default {
   },
   /** 是否禁用组件 */
   disabled: {
-    type: Boolean,
+    type: [Boolean, Array] as PropType<TdDateRangePickerProps['disabled']>,
     default: undefined,
   },
   /** 是否显示时间选择 */
@@ -94,7 +94,7 @@ export default {
   },
   /** 预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] } */
   presets: {
-    type: Object as PropType<TdDateRangePickerProps['presets']>,
+    type: [Object, Function] as PropType<TdDateRangePickerProps['presets']>,
   },
   /** 预设面板展示区域（包含确定按钮） */
   presetsPlacement: {

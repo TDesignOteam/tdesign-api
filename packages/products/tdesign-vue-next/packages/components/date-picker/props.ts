@@ -30,7 +30,7 @@ export default {
   /** 是否禁用组件 */
   disabled: {
     type: Boolean,
-    default: undefined,
+    default: undefined as TdDatePickerProps['disabled'],
   },
   /** 是否显示时间选择 */
   enableTimePicker: Boolean,
@@ -95,7 +95,7 @@ export default {
   },
   /** 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }` */
   presets: {
-    type: Object as PropType<TdDatePickerProps['presets']>,
+    type: [Object, Function] as PropType<TdDatePickerProps['presets']>,
   },
   /** 预设面板展示区域（包含确定按钮） */
   presetsPlacement: {

@@ -106,7 +106,7 @@ export interface TdDatePickerProps {
   /**
    * 预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }`
    */
-  presets?: PresetDate;
+  presets?: TNode | PresetDate;
   /**
    * 预设面板展示区域（包含确定按钮）
    * @default bottom
@@ -260,7 +260,7 @@ export interface TdDateRangePickerProps {
   /**
    * 是否禁用组件
    */
-  disabled?: boolean;
+  disabled?: boolean | Array<boolean>;
   /**
    * 是否显示时间选择
    * @default false
@@ -317,7 +317,7 @@ export interface TdDateRangePickerProps {
   /**
    * 预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }
    */
-  presets?: PresetRange;
+  presets?: TNode | PresetRange;
   /**
    * 预设面板展示区域（包含确定按钮）
    * @default bottom
