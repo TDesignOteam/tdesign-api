@@ -42,8 +42,10 @@ value | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFi
 defaultValue | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFile`。非受控属性。TS 类型：`Array<T>` | N
 withCredentials | Boolean | false | 上传请求时是否携带 cookie | N
 onCancelUpload | Function |  | TS 类型：`() => void`<br/>点击「取消上传」时触发 | N
-onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/> | N
+onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/> | N
 onClickUpload | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击上传区域时触发 | N
+onDrag | Function |  | TS 类型：`() => void`<br/>拖拽开始时触发 | N
+onDrop | Function |  | TS 类型：`(value: Array<T>) => void`<br/>拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序） | N
 onFail | Function |  | TS 类型：`(options: UploadFailContext) => void`<br/>上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e?: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest}`<br/> | N
 onOneFileFail | Function |  | TS 类型：`(options: UploadFailContext) => void`<br/>多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发 | N
 onOneFileSuccess | Function |  | TS 类型：`(context: Pick<SuccessContext, 'e' \| 'file' \| 'response' \| 'XMLHttpRequest'>) => void`<br/>单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据 | N
@@ -60,8 +62,10 @@ onWaitingUploadFilesChange | Function |  | TS 类型：`(context: { files: Array
 名称 | 参数 | 描述
 -- | -- | --
 cancel-upload | \- | 点击「取消上传」时触发
-change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/>
+change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/>
 click-upload | `(context: { e: MouseEvent })` | 点击上传区域时触发
+drag | \- | 拖拽开始时触发
+drop | `(value: Array<T>)` | 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
 fail | `(options: UploadFailContext)` | 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadFailContext { e?: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest}`<br/>
 one-file-fail | `(options: UploadFailContext)` | 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发
 one-file-success | `(context: Pick<SuccessContext, 'e' \| 'file' \| 'response' \| 'XMLHttpRequest'>)` | 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据

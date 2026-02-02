@@ -185,6 +185,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   onClickUpload?: (context: { e: MouseEvent }) => void;
   /**
+   * 拖拽开始时触发
+   */
+  onDrag?: () => void;
+  /**
+   * 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
+   */
+  onDrop?: (value: Array<T>) => void;
+  /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
   onFail?: (options: UploadFailContext) => void;
@@ -309,14 +317,7 @@ export interface UploadChangeContext {
   files?: UploadFile[];
 }
 
-export type UploadChangeTrigger =
-  | 'add'
-  | 'remove'
-  | 'abort'
-  | 'progress-success'
-  | 'progress'
-  | 'progress-fail'
-  | 'sort';
+export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
 
 export interface UploadFailContext {
   e?: ProgressEvent;
