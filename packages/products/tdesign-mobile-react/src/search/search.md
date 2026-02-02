@@ -20,13 +20,14 @@ leftIcon | TNode | 'search' | 左侧图标。TS 类型：`string \| TNode`。[�
 placeholder | String | '' | 占位符 | N
 prefixIcon | TElement | - | 已废弃。前置图标，默认为搜索图标。值为 `null` 时则不显示。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 readonly | Boolean | undefined | 只读状态 | N
+resultList | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 shape | String | 'square' | 搜索框形状。可选项：square/round | N
 suffixIcon | TElement | - | 已废弃。后置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 value | String | - | 值 | N
 defaultValue | String | - | 值。非受控属性 | N
 onActionClick | Function |  | TS 类型：`({}) => void`<br/>点击右侧操作按钮文字时触发 | N
 onBlur | Function |  | TS 类型：`(context: { value: string; e: FocusEvent }) => void`<br/>失去焦点时触发 | N
-onChange | Function |  | TS 类型：`(value: string, context: { trigger: 'input-change' \| 'option-click'; e?: InputEvent \| MouseEvent }) => void`<br/>搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词 | N
+onChange | Function |  | TS 类型：`(value: string, context: { trigger: 'input-change' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/>搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词 | N
 onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清除时触发 | N
 onFocus | Function |  | TS 类型：`(context: { value: string; e: FocusEvent }) => void`<br/>获得焦点时触发 | N
 onSearch | Function |  | TS 类型：`(context?: { value: string; trigger: 'submit' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/>【讨论中】搜索触发，包含：手机键盘提交健、联想关键词点击、清空按钮点击等 | N

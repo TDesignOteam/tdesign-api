@@ -12,7 +12,7 @@ clearable | Boolean | false | \- | N
 defaultTime | String | '00:00:00' | Time selector default value | N
 disableDate | Object / Array / Function | - | Typescript: `DisableDate` `type DisableDate = Array<DateValue> \| DisableDateObj \| ((date: DateValue) => boolean)` `interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 disableTime | Function | - | disable time config function。Typescript: `(time: Date) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number> }>` | N
-disabled | Boolean | undefined | make DatePicker to be disabled | N
+disabled | Boolean | undefined | make DatePicker to be disabled。Typescript: `boolean` | N
 enableTimePicker | Boolean | false | \- | N
 firstDayOfWeek | Number | 7 | options: 1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | \- | N
@@ -73,7 +73,7 @@ clearable | Boolean | false | \- | N
 defaultTime | Array | ["00:00:00", "23:59:59"] | Time selector default value。Typescript: `string[]` | N
 disableDate | Object / Array / Function | - | Typescript: `DisableRangeDate` `type DisableRangeDate = Array<DateValue> \| DisableDateObj \| ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean)` `interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }` `type DateRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 disableTime | Function | - | disable time config function。Typescript: `(times: Array<Date \| null>, context: { partial: DateRangePickerPartial }) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` | N
-disabled | Boolean | undefined | \- | N
+disabled | Boolean / Array | undefined | Typescript: `boolean \| Array<boolean>` | N
 enableTimePicker | Boolean | false | \- | N
 firstDayOfWeek | Number | - | options: 1/2/3/4/5/6/7 | N
 format | String | - | \- | N
