@@ -42,7 +42,7 @@ value | Array | [] | file list。`v-model` and `v-model:value` is supported。Ty
 defaultValue | Array | [] | file list。uncontrolled property。Typescript: `Array<T>` | N
 withCredentials | Boolean | false | uploading request with cookie | N
 onCancelUpload | Function |  | Typescript: `() => void`<br/>trigger on cancel button click | N
-onChange | Function |  | Typescript: `(value: Array<T>, context: UploadChangeContext) => void`<br/>trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/> | N
+onChange | Function |  | Typescript: `(value: Array<T>, context: UploadChangeContext) => void`<br/>trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/> | N
 onClickUpload | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onDrag | Function |  | Typescript: `() => void`<br/> | N
 onDrop | Function |  | Typescript: `(value: Array<T>) => void`<br/> | N
@@ -62,7 +62,7 @@ onWaitingUploadFilesChange | Function |  | Typescript: `(context: { files: Array
 name | params | description
 -- | -- | --
 cancel-upload | \- | trigger on cancel button click
-change | `(value: Array<T>, context: UploadChangeContext)` | trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/>
+change | `(value: Array<T>, context: UploadChangeContext)` | trigger on uploaded files change。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/>
 click-upload | `(context: { e: MouseEvent })` | \-
 drag | \- | \-
 drop | `(value: Array<T>)` | \-

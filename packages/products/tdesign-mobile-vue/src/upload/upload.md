@@ -42,7 +42,7 @@ value | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFi
 defaultValue | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFile`。非受控属性。TS 类型：`Array<T>` | N
 withCredentials | Boolean | false | 上传请求时是否携带 cookie | N
 onCancelUpload | Function |  | TS 类型：`() => void`<br/>点击「取消上传」时触发 | N
-onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/> | N
+onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/> | N
 onClickUpload | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击上传区域时触发 | N
 onDrag | Function |  | TS 类型：`() => void`<br/>拖拽开始时触发 | N
 onDrop | Function |  | TS 类型：`(value: Array<T>) => void`<br/>拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序） | N
@@ -62,7 +62,7 @@ onWaitingUploadFilesChange | Function |  | TS 类型：`(context: { files: Array
 名称 | 参数 | 描述
 -- | -- | --
 cancel-upload | \- | 点击「取消上传」时触发
-change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/>
+change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/>
 click-upload | `(context: { e: MouseEvent })` | 点击上传区域时触发
 drag | \- | 拖拽开始时触发
 drop | `(value: Array<T>)` | 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
