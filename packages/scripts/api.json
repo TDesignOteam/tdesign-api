@@ -144400,7 +144400,8 @@
       "id": 2928,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -144429,7 +144430,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Function"
@@ -144927,7 +144929,8 @@
       "id": 2383,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -144956,7 +144959,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -145485,7 +145489,8 @@
       "id": 2363,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -145514,7 +145519,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -145758,7 +145764,8 @@
       "id": 3253,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -145787,7 +145794,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -145840,7 +145848,8 @@
       "id": 881,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -145869,7 +145878,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -146515,7 +146525,8 @@
       "id": 2362,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -146544,7 +146555,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -146792,7 +146804,8 @@
       "id": 1791,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -146819,7 +146832,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -147177,7 +147191,8 @@
       "id": 2984,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -147204,7 +147219,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -147212,7 +147228,8 @@
       "id": 2945,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -147239,7 +147256,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -147580,7 +147598,8 @@
       "id": 2947,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8"
       ],
       "component": "Upload",
       "field_category": 2,
@@ -147607,7 +147626,8 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
