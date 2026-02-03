@@ -21,11 +21,13 @@ label | String / Slot / Function | - | Typescript: `string \| TNode`。[see more
 mode | String | date | options: year/quarter/month/week/date | N
 multiple | Boolean | false | support multiple date，but not support being use together with range-picker、enableTimePicker and allowInput。Typescript: `boolean` | N
 needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time picker scenario, default is true | N
+panelActiveDate | Object | - | `v-model:panelActiveDate` is supported。Typescript: `PanelActiveDate` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 placeholder | String / Array | undefined | Typescript: `string` | N
 popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object / Slot / Function | - | Typescript: `TNode \| PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `PickerDateRange` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 readonly | Boolean | undefined | Whether it is read only, the priority is greater than allowInput | N
 selectInputProps | Object | - | Typescript: `SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
@@ -80,12 +82,14 @@ format | String | - | \- | N
 label | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
 needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time range picker scenario, default is true | N
+panelActiveDate | Object | - | `v-model:panelActiveDate` is supported。Typescript: `PanelActiveDate \| [PanelActiveDate, PanelActiveDate]` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 panelPreselection | Boolean | true | \- | N
 placeholder | String / Array | - | Typescript: `string \| Array<string>` | N
 popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object / Slot / Function | - | Typescript: `TNode \| PresetRange` `interface PresetRange { [range: string]: DateRange \| (() => DateRange)}` `type DateRange = [DateValue, DateValue]`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `PickerDateRange \| PickerDateRange[]` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript: `RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 readonly | Boolean | - | Whether it is read only, the priority is greater than allowInput | N
 separator | String | - | \- | N

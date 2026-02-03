@@ -67,6 +67,14 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 日期选择器中年月下拉框的选中值 */
+  panelActiveDate: {
+    type: Object as PropType<TdDateRangePickerProps['panelActiveDate']>,
+  },
+  /** 日期选择器中年月下拉框的选中值，非受控属性 */
+  defaultPanelActiveDate: {
+    type: Object as PropType<TdDateRangePickerProps['defaultPanelActiveDate']>,
+  },
   /** 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期 */
   panelPreselection: {
     type: Boolean,
@@ -96,6 +104,10 @@ export default {
       if (!val) return true;
       return ['left', 'top', 'right', 'bottom'].includes(val);
     },
+  },
+  /** 日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。`[['2025-01-01', '2025-02-01'], ['2025-12-31', '2026-01-01']]` 表示开始面板的'2025-01-01'至'2025-02-01'为可选日期，结束面板的'2025-12-31'至'2026-01-01'为可选日期。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此API应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。 */
+  range: {
+    type: [Array, Function] as PropType<TdDateRangePickerProps['range']>,
   },
   /** 透传给范围输入框 RangeInput 组件的参数 */
   rangeInputProps: {
