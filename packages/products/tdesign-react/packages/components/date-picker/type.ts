@@ -195,13 +195,6 @@ export interface TdDatePickerProps {
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
   /**
-   * 年月下拉框选中值变化时触发
-   */
-  onPanelActiveDate?: (
-    value: number | Date,
-    context: { trigger: DatePickerPanelActiveDate; e?: MouseEvent<HTMLDivElement> },
-  ) => void;
-  /**
    * 面板选中值后触发
    */
   onPick?: (value: DateValue) => void;
@@ -421,13 +414,6 @@ export interface TdDateRangePickerProps {
     trigger: DatePickerMonthChangeTrigger;
   }) => void;
   /**
-   * 年月下拉框选中值变化时触发
-   */
-  onPanelActiveDate?: (
-    value: number | Date,
-    context: { partial: DateRangePickerPartial; trigger: DatePickerPanelActiveDate; e?: MouseEvent<HTMLDivElement> },
-  ) => void;
-  /**
    * 选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期
    */
   onPick?: (value: DateValue, context: PickContext) => void;
@@ -640,8 +626,6 @@ export type ValueTypeEnum = DatePickerValueType;
 export type DatePickerTriggerSource = 'confirm' | 'pick' | 'enter' | 'preset' | 'clear' | 'tag-remove';
 
 export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' | 'month-arrow-previous' | 'today';
-
-export type DatePickerPanelActiveDate = DatePickerMonthChangeTrigger | DatePickerYearChangeTrigger;
 
 export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
 

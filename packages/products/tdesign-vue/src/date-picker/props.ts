@@ -179,8 +179,6 @@ export default {
   onFocus: Function as PropType<TdDatePickerProps['onFocus']>,
   /** 月份切换发生变化时触发 */
   onMonthChange: Function as PropType<TdDatePickerProps['onMonthChange']>,
-  /** 年月下拉框选中值变化时触发 */
-  onPanelActiveDate: Function as PropType<TdDatePickerProps['onPanelActiveDate']>,
   /** 面板选中值后触发 */
   onPick: Function as PropType<TdDatePickerProps['onPick']>,
   /** 点击预设按钮后触发 */
