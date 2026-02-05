@@ -3324,7 +3324,8 @@
       "id": 1741182503,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "ActionSheetConfig",
       "field_category": 1,
@@ -3353,7 +3354,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19037,7 +19039,8 @@
       "id": 1741183085,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19066,7 +19069,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19312,7 +19316,8 @@
       "id": 1741183537,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19341,7 +19346,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19351,7 +19357,8 @@
       "id": 1741190561,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19380,7 +19387,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -19468,7 +19476,8 @@
       "id": 1741183315,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19497,7 +19506,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19585,7 +19595,8 @@
       "id": 1741183385,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19614,7 +19625,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -22328,9 +22340,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "选择选项",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "未选中时的提示文案",
+      "field_desc_zh": "未选中时的提示文案。组件内置默认值为：'选择选项'",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -23971,7 +23983,8 @@
       "id": 1741183832,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CascaderConfig",
       "field_category": 1,
@@ -24000,7 +24013,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -24010,7 +24024,8 @@
       "id": 1741183804,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CascaderConfig",
       "field_category": 1,
@@ -24039,7 +24054,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -28939,9 +28955,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "请输入消息...",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "输入框默认文案",
+      "field_desc_zh": "输入框默认文案。组件内置默认值为：'请输入消息...'",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -36969,7 +36985,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "ConfigProvider",
       "field_category": 1,
@@ -37000,7 +37017,45 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1770278274,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ConfigProvider",
+      "field_category": 1,
+      "field_name": "themeVars",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局配置",
+      "field_desc_en": "theme Variables",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-05 07:57:54",
+      "update_time": "2026-02-05 07:57:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -42650,7 +42705,7 @@
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
-      "deprecated": 0,
+      "deprecated": 1,
       "version": "",
       "test_description": null,
       "support_default_value": 0,
@@ -43829,7 +43884,8 @@
       "id": 1741184344,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43858,7 +43914,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43868,7 +43925,8 @@
       "id": 1741184367,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43897,7 +43955,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43907,7 +43966,8 @@
       "id": 1741184498,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43936,7 +43996,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43946,7 +44007,8 @@
       "id": 1741184408,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43975,7 +44037,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43985,7 +44048,8 @@
       "id": 1741184520,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44014,7 +44078,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -44024,7 +44089,8 @@
       "id": 1741184535,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44053,7 +44119,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -44063,7 +44130,8 @@
       "id": 1741184463,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44092,7 +44160,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -44102,7 +44171,8 @@
       "id": 1741184543,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44131,7 +44201,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -44141,7 +44212,8 @@
       "id": 1741184308,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44170,7 +44242,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -44180,7 +44253,8 @@
       "id": 1741184432,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -44209,7 +44283,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -54340,7 +54415,8 @@
       "id": 1741184034,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DropdownMenuConfig",
       "field_category": 1,
@@ -54369,7 +54445,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -54379,7 +54456,8 @@
       "id": 1741184082,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DropdownMenuConfig",
       "field_category": 1,
@@ -54408,7 +54486,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -60975,7 +61054,8 @@
       "id": 1741187123,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61004,7 +61084,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61215,7 +61296,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61246,7 +61328,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61258,7 +61341,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61289,7 +61373,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61422,7 +61507,8 @@
       "id": 1741187493,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61451,7 +61537,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61578,7 +61665,8 @@
       "id": 1741187326,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61607,7 +61695,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61701,7 +61790,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61732,7 +61822,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62056,7 +62147,8 @@
       "id": 1741187708,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62085,7 +62177,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62134,7 +62227,8 @@
       "id": 1741187753,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62163,7 +62257,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62220,7 +62315,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62251,7 +62347,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62339,7 +62436,8 @@
       "id": 1741187827,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62368,7 +62466,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62657,7 +62756,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62688,7 +62788,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -65286,7 +65387,8 @@
       "id": 1741223709,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65315,7 +65417,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65325,7 +65428,8 @@
       "id": 1741223681,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65354,7 +65458,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65403,7 +65508,8 @@
       "id": 1741223638,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65432,7 +65538,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65520,7 +65627,8 @@
       "id": 1741223667,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65549,7 +65657,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89754,7 +89863,8 @@
       "id": 1741185484,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "PickerConfig",
       "field_category": 1,
@@ -89783,7 +89893,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89793,7 +89904,8 @@
       "id": 1741185505,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "PickerConfig",
       "field_category": 1,
@@ -89822,7 +89934,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -102712,7 +102825,8 @@
       "id": 1741186556,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "RateConfig",
       "field_category": 1,
@@ -102741,7 +102855,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -102790,7 +102905,8 @@
       "id": 1741186536,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "RateConfig",
       "field_category": 1,
@@ -102819,7 +102935,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121425,7 +121542,8 @@
       "id": 1741186773,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121454,7 +121572,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121464,7 +121583,8 @@
       "id": 1741186793,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121493,7 +121613,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121503,7 +121624,8 @@
       "id": 1741186744,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121532,7 +121654,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121542,7 +121665,8 @@
       "id": 1741186722,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121571,7 +121695,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148046,7 +148171,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfig",
       "field_category": 1,
@@ -148077,7 +148203,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -148479,7 +148606,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148510,7 +148638,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148522,7 +148651,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148553,7 +148683,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148565,7 +148696,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148596,7 +148728,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148608,7 +148741,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148639,7 +148773,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
