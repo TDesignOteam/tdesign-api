@@ -160,14 +160,12 @@ function formatNormalProps(api, cmp, extraParams = {}) {
       name = 'modelValue';
     }
     const dl = getDefaultValue(cmp, api, name, isUncontrolApi, useDefault);
-    console.log('dl', dl)
     const isVueMobile = currentFramework === 'Vue(Mobile)';
     const isVueWeb = ['Vue(PC)', 'VueNext(PC)'].includes(currentFramework);
     if (dl && !isUncontrolApi && api.syntactic_sugar && (isVueMobile || isUniApp || (isVueWeb && useDefault))) {
       const content = ['type: Boolean', 'default: undefined'].map(t => `    ${t},\n`).join('');
       oneApiStr = [`  ${name}: {\n${content}  }`];
     } else {
-      console.log('123123123123')
       oneApiStr = `  ${name}: Boolean`;
     }
   } else {

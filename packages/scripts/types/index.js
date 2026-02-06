@@ -714,7 +714,6 @@ function combineTsFile(componentMap, framework) {
             exportDesc,
         ].filter((v) => !!v);
         const str = `${r.join('\n\n')}\n`;
-        console.log('str', str)
         // ts[cmp] = str;
         try {
             ts[cmp] = prettier.format(str, prettierConfig);
