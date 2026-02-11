@@ -38292,6 +38292,45 @@
       ]
     },
     {
+      "id": 1767605339,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:28:59",
+      "update_time": "2026-01-05 09:28:59",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1007,
       "platform_framework": [
         "1",
@@ -38488,6 +38527,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767592971,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此参数应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 06:02:51",
+      "update_time": "2026-01-05 06:02:51",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -41048,6 +41128,45 @@
       ]
     },
     {
+      "id": 1767605471,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:31:11",
+      "update_time": "2026-01-05 09:31:11",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate | [PanelActiveDate, PanelActiveDate]【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2801,
       "platform_framework": [
         "1",
@@ -41283,6 +41402,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767604073,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。`[['2025-01-01', '2025-02-01'], ['2025-12-31', '2026-01-01']]` 表示开始面板的'2025-01-01'至'2025-02-01'为可选日期，结束面板的'2025-12-31'至'2026-01-01'为可选日期。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此API应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:07:53",
+      "update_time": "2026-01-05 09:07:53",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange | PickerDateRange[]【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -121941,7 +122101,8 @@
     {
       "id": 1736961692,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -121969,7 +122130,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -125292,43 +125454,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1726036563,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "children",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件子元素",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-09-11 06:36:03",
-      "update_time": "2024-09-11 06:36:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
       ]
     },
     {
