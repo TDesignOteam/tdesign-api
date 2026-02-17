@@ -10,6 +10,7 @@ alpha | Number | 1 | 水印整体透明度，取值范围 [0-1] | N
 content | String / Slot / Function | - | 水印所覆盖的内容节点。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 default | String / Slot / Function | - | 水印所覆盖的内容节点，同 `content`。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 height | Number | - | 水印高度 | N
+innerStyle | Object | - | 水印层的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 isRepeat | Boolean | true | 水印是否重复出现 | N
 layout | String | rectangular | 水印的布局方式，rectangular：矩形，即横平竖直的水印；hexagonal：六边形，即错位的水印。可选项：rectangular/hexagonal | N
 lineSpace | Number | 16 | 行间距，只作用在多行（`content` 配置为数组）情况下 | N
