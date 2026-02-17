@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, Styles } from '../common';
 
 export interface TdWatermarkProps {
   /**
@@ -24,6 +24,10 @@ export interface TdWatermarkProps {
    * 水印高度
    */
   height?: number;
+  /**
+   * 水印层的样式
+   */
+  innerStyle?: Styles;
   /**
    * 水印是否重复出现
    * @default true

@@ -25,6 +25,10 @@ export default {
   height: {
     type: Number,
   },
+  /** 水印层的样式 */
+  innerStyle: {
+    type: Object as PropType<TdWatermarkProps['innerStyle']>,
+  },
   /** 水印是否重复出现 */
   isRepeat: {
     type: Boolean,
