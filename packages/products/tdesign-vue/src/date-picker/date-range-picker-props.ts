@@ -34,8 +34,11 @@ export default {
     type: [Boolean, Array] as PropType<TdDateRangePickerProps['disabled']>,
     default: undefined,
   },
-  /** 是否显示时间选择 */
-  enableTimePicker: Boolean,
+  /** 是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式 */
+  enableTimePicker: {
+    type: [Boolean, Object] as PropType<TdDateRangePickerProps['enableTimePicker']>,
+    default: false,
+  },
   /** 第一天从星期几开始 */
   firstDayOfWeek: {
     type: Number,
@@ -70,10 +73,6 @@ export default {
   /** 日期选择器中年月下拉框的选中值 */
   panelActiveDate: {
     type: Object as PropType<TdDateRangePickerProps['panelActiveDate']>,
-  },
-  /** 日期选择器中年月下拉框的选中值，非受控属性 */
-  defaultPanelActiveDate: {
-    type: Object as PropType<TdDateRangePickerProps['defaultPanelActiveDate']>,
   },
   /** 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期 */
   panelPreselection: {

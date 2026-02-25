@@ -88,10 +88,6 @@ export interface TdDatePickerProps {
    */
   panelActiveDate?: PanelActiveDate;
   /**
-   * 日期选择器中年月下拉框的选中值，非受控属性
-   */
-  defaultPanelActiveDate?: PanelActiveDate;
-  /**
    * 占位符
    */
   placeholder?: string;
@@ -253,10 +249,10 @@ export interface TdDateRangePickerProps {
    */
   disabled?: boolean | Array<boolean>;
   /**
-   * 是否显示时间选择
+   * 是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式
    * @default false
    */
-  enableTimePicker?: boolean;
+  enableTimePicker?: boolean | TimePanelConfig;
   /**
    * 第一天从星期几开始
    */
@@ -284,10 +280,6 @@ export interface TdDateRangePickerProps {
    * 日期选择器中年月下拉框的选中值
    */
   panelActiveDate?: PanelActiveDate | [PanelActiveDate, PanelActiveDate];
-  /**
-   * 日期选择器中年月下拉框的选中值，非受控属性
-   */
-  defaultPanelActiveDate?: PanelActiveDate | [PanelActiveDate, PanelActiveDate];
   /**
    * 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期
    * @default true
@@ -618,6 +610,12 @@ export type DisableRangeDate =
   | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean);
 
 export type DateRangePickerPartial = 'start' | 'end';
+
+export interface TimePanelConfig {
+  mode?: TimePanelMode;
+}
+
+export type TimePanelMode = 'parallel' | 'switch';
 
 export interface PresetRange {
   [range: string]: DateRange | (() => DateRange);
