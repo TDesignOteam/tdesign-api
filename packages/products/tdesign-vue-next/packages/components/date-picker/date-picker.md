@@ -21,7 +21,7 @@ label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNo
 mode | String | date | 选择器模式。可选项：year/quarter/month/week/date | N
 multiple | Boolean | false | 支持多选日期，但不支持在range-picker中，或与enableTimePicker、allowInput 一起使用。TS 类型：`boolean` | N
 needConfirm | Boolean | true | 决定在日期时间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为`true` | N
-panelActiveDate | Object | - | 日期选择器中年月下拉框的选中值。支持语法糖 `v-model:panelActiveDate`。TS 类型：`PanelActiveDate` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
+panelActiveDate | Object | - | 日期选择器中年月下拉框的选中值。TS 类型：`PanelActiveDate` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 placeholder | String / Array | undefined | 占位符。TS 类型：`string` | N
 popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | 用于自定义组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
@@ -76,13 +76,13 @@ defaultTime | Array | ["00:00:00", "23:59:59"] | 时间选择器默认值，当 
 disableDate | Object / Array / Function | - | 禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用。TS 类型：`DisableRangeDate` `type DisableRangeDate = Array<DateValue> \| DisableDateObj \| ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean)` `interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }` `type DateRangePickerPartial = 'start' \| 'end'`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 disableTime | Function | - | 禁用时间项的配置函数，仅在日期区间选择器中开启时间展示时可用。TS 类型：`(times: Array<Date \| null>, context: { partial: DateRangePickerPartial }) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` | N
 disabled | Boolean / Array | undefined | 是否禁用组件。TS 类型：`boolean \| Array<boolean>` | N
-enableTimePicker | Boolean | false | 是否显示时间选择 | N
+enableTimePicker | Boolean / Object | false | 是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式。TS 类型：`boolean \| TimePanelConfig` `interface TimePanelConfig { mode?: TimePanelMode }` `type TimePanelMode = 'parallel' \| 'switch' `。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 firstDayOfWeek | Number | - | 第一天从星期几开始。可选项：1/2/3/4/5/6/7 | N
 format | String | - | 用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format) | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 mode | String | date | 选择器模式。可选项：year/quarter/month/week/date | N
 needConfirm | Boolean | true | 决定在日期时间区间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为 `true` | N
-panelActiveDate | Object | - | 日期选择器中年月下拉框的选中值。支持语法糖 `v-model:panelActiveDate`。TS 类型：`PanelActiveDate \| [PanelActiveDate, PanelActiveDate]` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
+panelActiveDate | Object | - | 日期选择器中年月下拉框的选中值。TS 类型：`PanelActiveDate \| [PanelActiveDate, PanelActiveDate]` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 panelPreselection | Boolean | true | 在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期 | N
 placeholder | String / Array | - | 占位符，值为数组表示可分别为开始日期和结束日期设置占位符。TS 类型：`string \| Array<string>` | N
 popupProps | Object | - | 透传 Popup 组件全部属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N

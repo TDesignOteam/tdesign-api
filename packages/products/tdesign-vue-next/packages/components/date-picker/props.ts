@@ -74,11 +74,6 @@ export default {
   /** 日期选择器中年月下拉框的选中值 */
   panelActiveDate: {
     type: Object as PropType<TdDatePickerProps['panelActiveDate']>,
-    default: undefined as TdDatePickerProps['panelActiveDate'],
-  },
-  /** 日期选择器中年月下拉框的选中值，非受控属性 */
-  defaultPanelActiveDate: {
-    type: Object as PropType<TdDatePickerProps['defaultPanelActiveDate']>,
   },
   /** 占位符 */
   placeholder: {

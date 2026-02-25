@@ -38313,7 +38313,7 @@
       "update_time": "2026-01-05 09:28:59",
       "event_output": null,
       "custom_field_type": "PanelActiveDate【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
-      "syntactic_sugar": "sync",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
@@ -40901,18 +40901,19 @@
       "field_category": 1,
       "field_name": "enableTimePicker",
       "field_type": [
-        "4"
+        "4",
+        "8"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否显示时间选择",
+      "field_desc_zh": "是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-03-29 07:40:53",
       "update_time": "2022-03-29 07:40:53",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean | TimePanelConfig【interface TimePanelConfig { mode?: TimePanelMode }】【type TimePanelMode = 'parallel' | 'switch' 】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -40927,7 +40928,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -41149,7 +41151,7 @@
       "update_time": "2026-01-05 09:31:11",
       "event_output": null,
       "custom_field_type": "PanelActiveDate | [PanelActiveDate, PanelActiveDate]【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
-      "syntactic_sugar": "sync",
+      "syntactic_sugar": "",
       "readonly": 1,
       "html_attribute": 0,
       "trigger_elements": "",
