@@ -5294,6 +5294,43 @@
       ]
     },
     {
+      "id": 1772102998,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AttachmentsConfig",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，附件上传状态描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:49:58",
+      "update_time": "2026-02-26 10:49:58",
+      "event_output": null,
+      "custom_field_type": "{ pending: string; fail: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 3152,
       "platform_framework": [
         "1",
@@ -26474,6 +26511,43 @@
       "field_type_text": []
     },
     {
+      "id": 1772103301,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatActionbarConfig",
+      "field_category": 1,
+      "field_name": "actionBar",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，对话操作栏描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:01",
+      "update_time": "2026-02-26 10:55:01",
+      "event_output": null,
+      "custom_field_type": "{ replay: string; copy: string; good: string; bad: string; share: string; quote: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1742883575,
       "platform_framework": [
         "1",
@@ -29749,6 +29823,117 @@
       "field_type_text": []
     },
     {
+      "id": 1772103332,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，占位符描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:32",
+      "update_time": "2026-02-26 10:55:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1772103359,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "sendText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，发送按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:59",
+      "update_time": "2026-02-26 10:55:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1772103371,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "stopText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，停止发送按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:56:11",
+      "update_time": "2026-02-26 10:56:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1762424283,
       "platform_framework": [
         "64"
@@ -30002,6 +30187,43 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1772103456,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatThinkingConfig",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，思考状态描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:57:36",
+      "update_time": "2026-02-26 10:57:36",
+      "event_output": null,
+      "custom_field_type": "{ pending: string; complete: string; stop: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
     },
     {
       "id": 418,
@@ -42695,7 +42917,7 @@
       ],
       "field_default_value": "zh",
       "field_enum": "",
-      "field_desc_zh": " 组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言",
+      "field_desc_zh": "组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种。请使用 `ConfigProvider` 实现多语言",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

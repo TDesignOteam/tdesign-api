@@ -448,7 +448,11 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
     { value: 'ToastOptions', label: '轻提示插件参数', type: 'TS' },
     { value: 'Transition', label: '动画' },
     { value: 'Upload', label: '上传' },
-];
+    { value: 'AttachmentsConfig', label: '文件附件全局配置', type: 'TS' },
+    { value: 'ChatActionbarConfig', label: '对话操作全局配置', type: 'TS' },
+    { value: 'ChatSenderConfig', label: '对话输入全局配置', type: 'TS' },
+    { value: 'ChatThinkingConfig', label: '思考过程全局配置', type: 'TS' },
+].sort((a, b) => a.value.localeCompare(b.value));
 
 export default {
     PLATFORM_MAP,
