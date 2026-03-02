@@ -15,5 +15,6 @@ export const searchDefaultProps: TdSearchProps = {
   leftIcon: 'search',
   placeholder: '',
   readonly: undefined,
+  resultList: [],
   shape: 'square',
 };

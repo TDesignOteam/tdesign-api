@@ -126,13 +126,13 @@
       <div class="t-form-item">
         <label>属性描述：</label>
         <div class="t-form-content">
-          <t-input v-model="formData.descZh" placeholder="请输入属性描述（中文），字段为多类型时，需要描述各个类型的含义"></t-input>
+          <t-textarea v-model="formData.descZh" placeholder="请输入属性描述（中文），字段为多类型时，需要描述各个类型的含义"></t-textarea>
         </div>
       </div>
       <div class="t-form-item">
         <label>英文描述：</label>
         <div class="t-form-content">
-          <t-input v-model="formData.descEn" placeholder="type API description in English"></t-input>
+          <t-textarea v-model="formData.descEn" placeholder="type API description in English"></t-textarea>
         </div>
       </div>
     </template>
