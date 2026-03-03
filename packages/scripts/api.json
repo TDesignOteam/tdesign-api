@@ -86692,7 +86692,8 @@
       "field_type": [
         "1",
         "2",
-        "4"
+        "4",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -86720,7 +86721,8 @@
       "field_type_text": [
         "String",
         "Number",
-        "Boolean"
+        "Boolean",
+        "BigInt"
       ]
     },
     {
@@ -108396,7 +108398,8 @@
         "2",
         "4",
         "8",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -108407,7 +108410,7 @@
       "create_time": "2020-12-17 10:48:27",
       "update_time": "2022-01-21 04:21:17",
       "event_output": null,
-      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>】",
+      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | bigint | boolean | T | Array<SelectValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -108426,7 +108429,8 @@
         "Number",
         "Boolean",
         "Object",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {
