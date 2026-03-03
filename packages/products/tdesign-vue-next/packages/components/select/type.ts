@@ -297,7 +297,7 @@ export interface TdOptionProps {
   /**
    * 选项值
    */
-  value?: string | number | boolean;
+  value?: string | number | boolean | bigint;
 }
 
 export interface TdOptionGroupProps {

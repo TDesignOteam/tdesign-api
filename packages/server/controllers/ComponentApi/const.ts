@@ -17,6 +17,7 @@ const TNODE = 64;
 const Date = 128;
 const FILE = 256;
 const ANY = 512;
+const BIGINT = 1024;
 
 const P_VUE_PC = 1;
 const P_REACT_PC = 2;
@@ -73,6 +74,7 @@ export const FIELD_TYPE_MAP: MapOptions = {
     [Date]: 'Date',
     [FILE]: 'File',
     [ANY]: 'any',
+    [BIGINT]: 'BigInt',
 };
 
 export const PLATFORM_FRAMEWORK: MapOptions = {

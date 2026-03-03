@@ -129,6 +129,10 @@
       {
         "label": "any",
         "value": "512"
+      },
+      {
+        "label": "BigInt",
+        "value": "1024"
       }
     ],
     "components": [

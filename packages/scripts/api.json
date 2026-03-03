@@ -86692,7 +86692,8 @@
       "field_type": [
         "1",
         "2",
-        "4"
+        "4",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -86720,7 +86721,8 @@
       "field_type_text": [
         "String",
         "Number",
-        "Boolean"
+        "Boolean",
+        "BigInt"
       ]
     },
     {

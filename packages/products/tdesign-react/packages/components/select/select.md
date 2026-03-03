@@ -77,7 +77,7 @@ content | TNode | - | 用于定义复杂的选项内容。TS 类型：`string \|
 disabled | Boolean | false | 是否禁用该选项 | N
 label | String | - | 选项名称 | N
 title | String | - | 选项标题，在选项过长时hover选项展示 | N
-value | String / Number / Boolean | - | 选项值 | N
+value | String / Number / Boolean / BigInt | - | 选项值 | N
 
 
 ### OptionGroup Props
