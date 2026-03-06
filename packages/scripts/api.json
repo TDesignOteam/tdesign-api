@@ -56832,8 +56832,7 @@
         "1",
         "2",
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -56864,8 +56863,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -57289,8 +57287,7 @@
         "1",
         "2",
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -57321,8 +57318,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -57379,8 +57375,7 @@
         "1",
         "2",
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "Form",
       "field_category": 1,
@@ -57411,7 +57406,43 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1772071314,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Form",
+      "field_category": 1,
+      "field_name": "requiredMarkPosition",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "表单必填符号（*）显示位置",
+      "field_desc_en": "Display position of required symbols",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 02:01:54",
+      "update_time": "2026-02-26 02:01:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram"
       ],
       "field_type_text": [
@@ -59272,8 +59303,7 @@
         "1",
         "2",
         "8",
-        "16",
-        "64"
+        "16"
       ],
       "component": "FormItem",
       "field_category": 1,
@@ -59304,8 +59334,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
-        "Miniprogram"
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
