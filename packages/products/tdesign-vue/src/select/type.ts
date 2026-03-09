@@ -293,7 +293,7 @@ export interface TdOptionProps {
   /**
    * 选项值
    */
-  value?: string | number | boolean;
+  value?: string | number | boolean | bigint;
 }
 
 export interface TdOptionGroupProps {
@@ -315,7 +315,13 @@ export interface SelectKeysType {
   disabled?: string;
 }
 
-export type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>;
+export type SelectValue<T extends SelectOption = SelectOption> =
+  | string
+  | number
+  | bigint
+  | boolean
+  | T
+  | Array<SelectValue<T>>;
 
 export type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default';
 

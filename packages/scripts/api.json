@@ -2688,7 +2688,7 @@
       "create_time": "2021-09-02 12:06:15",
       "update_time": "2022-04-08 09:06:29",
       "event_output": null,
-      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string; suffixIcon?: string }】",
+      "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string | object; suffixIcon?: string | object }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -3324,7 +3324,8 @@
       "id": 1741182503,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "ActionSheetConfig",
       "field_category": 1,
@@ -3353,7 +3354,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -5289,6 +5291,43 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1772102998,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "AttachmentsConfig",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，附件上传状态描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:49:58",
+      "update_time": "2026-02-26 10:49:58",
+      "event_output": null,
+      "custom_field_type": "{ pending: string; fail: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -14460,6 +14499,43 @@
       "field_type_text": []
     },
     {
+      "id": 1769581756,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "activityType",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "卡片id。 `open-type` 的值设置为 `liveActivity` ，设置 `activity-type` 参数为 [notify_type](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html)。当用户点击 `button` 后，可以通过 `bindcreateliveactivity` 事件回调获取到 `code`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:29:16",
+      "update_time": "2026-01-28 06:29:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 1709459753,
       "platform_framework": [
         "64"
@@ -14748,6 +14824,43 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1769581302,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "entrancePath",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "从消息小程序入口打开小程序的路径，默认为聊天工具启动路径",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:21:42",
+      "update_time": "2026-01-28 06:21:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
       ]
     },
     {
@@ -15264,6 +15377,43 @@
       ]
     },
     {
+      "id": 1769581268,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Button",
+      "field_category": 1,
+      "field_name": "needShowEntrance",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "转发的文本消息是否要带小程序入口",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-28 06:21:08",
+      "update_time": "2026-01-28 06:21:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1709458728,
       "platform_framework": [
         "64"
@@ -15461,7 +15611,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "会话来源，open-type=\"contact\"时有效",
+      "field_desc_zh": "会话来源，open-type=\"contact\"时有效，长度不超过 1024 个字符",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -18926,7 +19076,8 @@
       "id": 1741183085,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -18955,7 +19106,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19201,7 +19353,8 @@
       "id": 1741183537,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19230,7 +19383,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19240,7 +19394,8 @@
       "id": 1741190561,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19269,7 +19424,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -19357,7 +19513,8 @@
       "id": 1741183315,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19386,7 +19543,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -19474,7 +19632,8 @@
       "id": 1741183385,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CalendarConfig",
       "field_category": 1,
@@ -19503,7 +19662,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Array"
@@ -22217,9 +22377,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "选择选项",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "未选中时的提示文案",
+      "field_desc_zh": "未选中时的提示文案。组件内置默认值为：'选择选项'",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -23860,7 +24020,8 @@
       "id": 1741183832,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CascaderConfig",
       "field_category": 1,
@@ -23889,7 +24050,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -23899,7 +24061,8 @@
       "id": 1741183804,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "CascaderConfig",
       "field_category": 1,
@@ -23928,7 +24091,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -26345,6 +26509,43 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1772103301,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatActionbarConfig",
+      "field_category": 1,
+      "field_name": "actionBar",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，对话操作栏描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:01",
+      "update_time": "2026-02-26 10:55:01",
+      "event_output": null,
+      "custom_field_type": "{ replay: string; copy: string; good: string; bad: string; share: string; quote: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
     },
     {
       "id": 1742883575,
@@ -28828,9 +29029,9 @@
       "field_type": [
         "1"
       ],
-      "field_default_value": "请输入消息...",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "输入框默认文案",
+      "field_desc_zh": "输入框默认文案。组件内置默认值为：'请输入消息...'",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -29622,6 +29823,117 @@
       "field_type_text": []
     },
     {
+      "id": 1772103332,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，占位符描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:32",
+      "update_time": "2026-02-26 10:55:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1772103359,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "sendText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，发送按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:55:59",
+      "update_time": "2026-02-26 10:55:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1772103371,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatSenderConfig",
+      "field_category": 1,
+      "field_name": "stopText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，停止发送按钮描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:56:11",
+      "update_time": "2026-02-26 10:56:11",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1762424283,
       "platform_framework": [
         "64"
@@ -29875,6 +30187,43 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1772103456,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ChatThinkingConfig",
+      "field_category": 1,
+      "field_name": "status",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，思考状态描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-26 10:57:36",
+      "update_time": "2026-02-26 10:57:36",
+      "event_output": null,
+      "custom_field_type": "{ pending: string; complete: string; stop: string; }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
     },
     {
       "id": 418,
@@ -31454,7 +31803,7 @@
       "create_time": "2021-08-06 05:47:50",
       "update_time": "2021-08-10 05:29:00",
       "event_output": null,
-      "custom_field_type": "'circle' | 'line' | 'rectangle' | string[]",
+      "custom_field_type": "CheckboxIconType 【type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[] 】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -32600,7 +32949,7 @@
       "create_time": "2021-08-06 09:20:24",
       "update_time": "2021-12-11 18:09:44",
       "event_output": null,
-      "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj { label?: string; value?: string | number; disabled?: boolean; checkAll?: true }】",
+      "custom_field_type": "Array<CheckboxOption>【import { CheckboxIconType } from '@Checkbox'】【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj { label?: string; value?: string | number; disabled?: boolean; icon?: CheckboxIconType; checkAll?: true }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -36858,7 +37207,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "ConfigProvider",
       "field_category": 1,
@@ -36889,7 +37239,45 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1770278274,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "ConfigProvider",
+      "field_category": 1,
+      "field_name": "themeVars",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "全局配置",
+      "field_desc_en": "theme Variables",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-02-05 07:57:54",
+      "update_time": "2026-02-05 07:57:54",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -37848,7 +38236,7 @@
       "create_time": "2021-03-23 12:16:04",
       "update_time": "2022-06-07 12:31:58",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -38181,6 +38569,45 @@
       ]
     },
     {
+      "id": 1767605339,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:28:59",
+      "update_time": "2026-01-05 09:28:59",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1007,
       "platform_framework": [
         "1",
@@ -38377,6 +38804,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767592971,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DatePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此参数应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 06:02:51",
+      "update_time": "2026-01-05 06:02:51",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -40669,7 +41137,8 @@
       "field_category": 1,
       "field_name": "disabled",
       "field_type": [
-        "4"
+        "4",
+        "16"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -40680,7 +41149,7 @@
       "create_time": "2021-03-24 02:43:48",
       "update_time": "2022-06-07 08:14:15",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "boolean | Array<boolean>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -40695,7 +41164,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Array"
       ]
     },
     {
@@ -40708,18 +41178,19 @@
       "field_category": 1,
       "field_name": "enableTimePicker",
       "field_type": [
-        "4"
+        "4",
+        "8"
       ],
       "field_default_value": "false",
       "field_enum": "",
-      "field_desc_zh": "是否显示时间选择",
+      "field_desc_zh": "是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2022-03-29 07:40:53",
       "update_time": "2022-03-29 07:40:53",
       "event_output": null,
-      "custom_field_type": null,
+      "custom_field_type": "boolean | TimePanelConfig【interface TimePanelConfig { mode?: TimePanelMode }】【type TimePanelMode = 'parallel' | 'switch' 】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -40734,7 +41205,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Object"
       ]
     },
     {
@@ -40932,6 +41404,45 @@
       ],
       "field_type_text": [
         "Boolean"
+      ]
+    },
+    {
+      "id": 1767605471,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "panelActiveDate",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期选择器中年月下拉框的选中值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:31:11",
+      "update_time": "2026-01-05 09:31:11",
+      "event_output": null,
+      "custom_field_type": "PanelActiveDate | [PanelActiveDate, PanelActiveDate]【interface PanelActiveDate {year?: DateValue, month?: DateValue}】",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -41170,6 +41681,47 @@
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1767604073,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "DateRangePicker",
+      "field_category": 1,
+      "field_name": "range",
+      "field_type": [
+        "16",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。`[['2025-01-01', '2025-02-01'], ['2025-12-31', '2026-01-01']]` 表示开始面板的'2025-01-01'至'2025-02-01'为可选日期，结束面板的'2025-12-31'至'2026-01-01'为可选日期。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此API应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-05 09:07:53",
+      "update_time": "2026-01-05 09:07:53",
+      "event_output": null,
+      "custom_field_type": "PickerDateRange | PickerDateRange[]【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Array",
+        "Function"
       ]
     },
     {
@@ -42353,43 +42905,6 @@
       ]
     },
     {
-      "id": 1710844467,
-      "platform_framework": [
-        "64"
-      ],
-      "component": "DateTimePicker",
-      "field_category": 1,
-      "field_name": "customLocale",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "zh",
-      "field_enum": "",
-      "field_desc_zh": " 组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-03-19 10:34:27",
-      "update_time": "2024-03-19 10:34:27",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Miniprogram"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2678,
       "platform_framework": [
         "8",
@@ -43556,7 +44071,8 @@
       "id": 1741184344,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43585,7 +44101,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43595,7 +44112,8 @@
       "id": 1741184367,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43624,7 +44142,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43634,7 +44153,8 @@
       "id": 1741184498,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43663,7 +44183,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43673,7 +44194,8 @@
       "id": 1741184408,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43702,7 +44224,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43712,7 +44235,8 @@
       "id": 1741184520,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43741,7 +44265,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43751,7 +44276,8 @@
       "id": 1741184535,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43780,7 +44306,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43790,7 +44317,8 @@
       "id": 1741184463,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43819,7 +44347,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43829,7 +44358,8 @@
       "id": 1741184543,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43858,7 +44388,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43868,7 +44399,8 @@
       "id": 1741184308,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43897,7 +44429,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -43907,7 +44440,8 @@
       "id": 1741184432,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DateTimePickerConfig",
       "field_category": 1,
@@ -43936,7 +44470,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -54067,7 +54602,8 @@
       "id": 1741184034,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DropdownMenuConfig",
       "field_category": 1,
@@ -54096,7 +54632,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -54106,7 +54643,8 @@
       "id": 1741184082,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "DropdownMenuConfig",
       "field_category": 1,
@@ -54135,7 +54673,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -60786,7 +61325,8 @@
       "id": 1741187123,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -60815,7 +61355,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61026,7 +61567,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61057,7 +61599,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61069,7 +61612,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61100,7 +61644,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61233,7 +61778,8 @@
       "id": 1741187493,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61262,7 +61808,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61389,7 +61936,8 @@
       "id": 1741187326,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61418,7 +61966,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61512,7 +62061,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61543,7 +62093,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61867,7 +62418,8 @@
       "id": 1741187708,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61896,7 +62448,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -61945,7 +62498,8 @@
       "id": 1741187753,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -61974,7 +62528,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62031,7 +62586,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62062,7 +62618,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62150,7 +62707,8 @@
       "id": 1741187827,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62179,7 +62737,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -62468,7 +63027,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GlobalConfigProvider",
       "field_category": 1,
@@ -62499,7 +63059,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -65097,7 +65658,8 @@
       "id": 1741223709,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65126,7 +65688,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65136,7 +65699,8 @@
       "id": 1741223681,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65165,7 +65729,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65214,7 +65779,8 @@
       "id": 1741223638,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65243,7 +65809,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -65331,7 +65898,8 @@
       "id": 1741223667,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "GuideConfig",
       "field_category": 1,
@@ -65360,7 +65928,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -69822,6 +70391,49 @@
       ],
       "field_type_text": [
         "Number"
+      ]
+    },
+    {
+      "id": 1768792174,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ImageViewer",
+      "field_category": 1,
+      "field_name": "innerClassName",
+      "field_type": [
+        "1",
+        "8",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）",
+      "field_desc_en": "The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-01-19 03:09:34",
+      "update_time": "2026-01-19 03:09:34",
+      "event_output": null,
+      "custom_field_type": "ClassName",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\"React(PC)\": \"1.16.5\"}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "Array"
       ]
     },
     {
@@ -86164,7 +86776,8 @@
       "field_type": [
         "1",
         "2",
-        "4"
+        "4",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -86192,7 +86805,8 @@
       "field_type_text": [
         "String",
         "Number",
-        "Boolean"
+        "Boolean",
+        "BigInt"
       ]
     },
     {
@@ -89139,7 +89753,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Miniprogram\": \"1.11.2\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -89522,7 +90136,8 @@
       "id": 1741185484,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "PickerConfig",
       "field_category": 1,
@@ -89551,7 +90166,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -89561,7 +90177,8 @@
       "id": 1741185505,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "PickerConfig",
       "field_category": 1,
@@ -89590,7 +90207,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -95455,7 +96073,7 @@
       ],
       "field_default_value": "'medium'",
       "field_enum": "",
-      "field_desc_zh": "进度条尺寸，示例：small/medium/large/240。small 值为 72； medium 值为 112；large 值为 160",
+      "field_desc_zh": "进度条尺寸，示例：small/medium/large/240。line 和 plump 主题只支持 small/medium。circle 主题尺寸映射 small(72)、medium(112)、large(160)并支持自定义数值",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -100081,7 +100699,8 @@
       "field_category": 1,
       "field_name": "disabled",
       "field_type": [
-        "4"
+        "4",
+        "16"
       ],
       "field_default_value": "undefined",
       "field_enum": "",
@@ -100092,7 +100711,7 @@
       "create_time": "2022-03-24 05:41:03",
       "update_time": "2022-06-07 08:15:05",
       "event_output": null,
-      "custom_field_type": "",
+      "custom_field_type": "boolean | Array<boolean>",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -100107,7 +100726,8 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Boolean"
+        "Boolean",
+        "Array"
       ]
     },
     {
@@ -102478,7 +103098,8 @@
       "id": 1741186556,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "RateConfig",
       "field_category": 1,
@@ -102507,7 +103128,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -102556,7 +103178,8 @@
       "id": 1741186536,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "RateConfig",
       "field_category": 1,
@@ -102585,7 +103208,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -104874,6 +105498,7 @@
       "id": 1719488506,
       "platform_framework": [
         "8",
+        "16",
         "64"
       ],
       "component": "Search",
@@ -104903,6 +105528,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -105597,8 +106223,7 @@
       "id": 2615,
       "platform_framework": [
         "1",
-        "2",
-        "16"
+        "2"
       ],
       "component": "Search",
       "field_category": 2,
@@ -105627,45 +106252,7 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1712657796,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Search",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(value: string, context: { e?: InputEvent | MouseEvent })",
-      "create_time": "2024-04-09 10:16:36",
-      "update_time": "2024-04-09 10:16:36",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String"
@@ -105685,7 +106272,7 @@
       "field_desc_zh": "值发生变化时触发",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "({ value: string })",
+      "event_input": "({ value: string, trigger: 'input-change' | 'option-click' | 'clear' })",
       "create_time": "2025-10-24 10:29:04",
       "update_time": "2025-10-24 10:29:04",
       "event_output": null,
@@ -105703,6 +106290,45 @@
         "Miniprogram"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1769597322,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Search",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(value: string, context: { trigger: 'input-change' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent })",
+      "create_time": "2026-01-28 10:48:42",
+      "update_time": "2026-01-28 10:48:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 2614,
@@ -107856,7 +108482,8 @@
         "2",
         "4",
         "8",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -107867,7 +108494,7 @@
       "create_time": "2020-12-17 10:48:27",
       "update_time": "2022-01-21 04:21:17",
       "event_output": null,
-      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>】",
+      "custom_field_type": "SelectValue【type SelectValue<T extends SelectOption = SelectOption> = string | number | bigint | boolean | T | Array<SelectValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -107886,7 +108513,8 @@
         "Number",
         "Boolean",
         "Object",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {
@@ -121189,7 +121817,8 @@
       "id": 1741186773,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121218,7 +121847,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121228,7 +121858,8 @@
       "id": 1741186793,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121257,7 +121888,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121267,7 +121899,8 @@
       "id": 1741186744,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121296,7 +121929,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121306,7 +121940,8 @@
       "id": 1741186722,
       "platform_framework": [
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "TabBarConfig",
       "field_category": 1,
@@ -121335,7 +121970,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -121865,7 +122501,8 @@
     {
       "id": 1736961692,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "TabPanel",
       "field_category": 1,
@@ -121893,7 +122530,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -125216,43 +125854,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1726036563,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Tabs",
-      "field_category": 1,
-      "field_name": "children",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "组件子元素",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-09-11 06:36:03",
-      "update_time": "2024-09-11 06:36:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
       ]
     },
     {
@@ -147810,7 +148411,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfig",
       "field_category": 1,
@@ -147841,7 +148443,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -148243,7 +148846,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148274,7 +148878,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148286,7 +148891,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148317,7 +148923,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148329,7 +148936,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148360,7 +148968,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"
@@ -148372,7 +148981,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "64"
       ],
       "component": "UploadConfigProgress",
       "field_category": 1,
@@ -148403,7 +149013,8 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)"
+        "React(Mobile)",
+        "Miniprogram"
       ],
       "field_type_text": [
         "String"

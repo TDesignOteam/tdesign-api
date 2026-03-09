@@ -12,7 +12,7 @@ clearable | Boolean | false | \- | N
 defaultTime | String | '00:00:00' | Time selector default value | N
 disableDate | Object / Array / Function | - | Typescript: `DisableDate` `type DisableDate = Array<DateValue> \| DisableDateObj \| ((date: DateValue) => boolean)` `interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 disableTime | Function | - | disable time config function。Typescript: `(time: Date) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number> }>` | N
-disabled | Boolean | undefined | make DatePicker to be disabled | N
+disabled | Boolean | undefined | make DatePicker to be disabled。Typescript: `boolean` | N
 enableTimePicker | Boolean | false | \- | N
 firstDayOfWeek | Number | 7 | options: 1/2/3/4/5/6/7 | N
 format | String | 'YYYY-MM-DD' | \- | N
@@ -21,11 +21,13 @@ label | String / Slot / Function | - | Typescript: `string \| TNode`。[see more
 mode | String | date | options: year/quarter/month/week/date | N
 multiple | Boolean | false | support multiple date，but not support being use together with range-picker、enableTimePicker and allowInput。Typescript: `boolean` | N
 needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time picker scenario, default is true | N
+panelActiveDate | Object | - | Typescript: `PanelActiveDate` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 placeholder | String / Array | undefined | Typescript: `string` | N
 popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object / Slot / Function | - | Typescript: `TNode \| PresetDate` `interface PresetDate { [name: string]: DateValue \| (() => DateValue) }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `PickerDateRange` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 readonly | Boolean | undefined | Whether it is read only, the priority is greater than allowInput | N
 selectInputProps | Object | - | Typescript: `SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
@@ -73,19 +75,21 @@ clearable | Boolean | false | \- | N
 defaultTime | Array | ["00:00:00", "23:59:59"] | Time selector default value。Typescript: `string[]` | N
 disableDate | Object / Array / Function | - | Typescript: `DisableRangeDate` `type DisableRangeDate = Array<DateValue> \| DisableDateObj \| ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean)` `interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }` `type DateRangePickerPartial = 'start' \| 'end'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 disableTime | Function | - | disable time config function。Typescript: `(times: Array<Date \| null>, context: { partial: DateRangePickerPartial }) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` | N
-disabled | Boolean | undefined | \- | N
-enableTimePicker | Boolean | false | \- | N
+disabled | Boolean / Array | undefined | Typescript: `boolean \| Array<boolean>` | N
+enableTimePicker | Boolean / Object | false | Typescript: `boolean \| TimePanelConfig` `interface TimePanelConfig { mode?: TimePanelMode }` `type TimePanelMode = 'parallel' \| 'switch' `。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 firstDayOfWeek | Number | - | options: 1/2/3/4/5/6/7 | N
 format | String | - | \- | N
 label | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 mode | String | date | options: year/quarter/month/week/date | N
 needConfirm | Boolean | true | whether a confirmation button needs to be clicked to complete the action in the date-time range picker scenario, default is true | N
+panelActiveDate | Object | - | Typescript: `PanelActiveDate \| [PanelActiveDate, PanelActiveDate]` `interface PanelActiveDate {year?: DateValue, month?: DateValue}`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 panelPreselection | Boolean | true | \- | N
 placeholder | String / Array | - | Typescript: `string \| Array<string>` | N
 popupProps | Object | - | Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 prefixIcon | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 presets | Object / Slot / Function | - | Typescript: `TNode \| PresetRange` `interface PresetRange { [range: string]: DateRange \| (() => DateRange)}` `type DateRange = [DateValue, DateValue]`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 presetsPlacement | String | bottom | options: left/top/right/bottom | N
+range | Array / Function | - | Typescript: `PickerDateRange \| PickerDateRange[]` `type PickerDateRange = DateValue[] \| ((date: DateValue) => boolean)`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 rangeInputProps | Object | - | Typescript: `RangeInputProps`，[RangeInput API Documents](./range-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/date-picker/type.ts) | N
 readonly | Boolean | - | Whether it is read only, the priority is greater than allowInput | N
 separator | String | - | \- | N
