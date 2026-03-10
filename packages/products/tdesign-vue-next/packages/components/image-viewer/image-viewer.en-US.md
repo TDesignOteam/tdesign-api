@@ -16,6 +16,7 @@ imageScale | Object | - | Typescript: `Partial<ImageScale>` `interface ImageScal
 images | Array | [] | Typescript: `Array<string \| File \| ImageInfo>` `interface ImageInfo { mainImage: string \| File; thumbnail?: string \| File; download?: boolean; isSvg?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/image-viewer/type.ts) | N
 index | Number | 0 | `v-model:index` is supported | N
 defaultIndex | Number | 0 | uncontrolled property | N
+innerClassName | String / Object / Array | - | The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`).。Typescript: `ClassName`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 mode | String | modal | options: modal/modeless | N
 navigationArrow | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 showOverlay | Boolean | undefined | \- | N

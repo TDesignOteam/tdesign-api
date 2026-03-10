@@ -133,6 +133,10 @@
       {
         "label": "any",
         "value": "512"
+      },
+      {
+        "label": "BigInt",
+        "value": "1024"
       }
     ],
     "components": [
@@ -1178,12 +1182,32 @@
         "type": "TS"
       },
       {
+        "value": "AttachmentsConfig",
+        "label": "文件附件全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Cell",
         "label": "单元格"
       },
       {
         "value": "CellGroup",
         "label": "单元格组"
+      },
+      {
+        "value": "ChatActionbarConfig",
+        "label": "对话操作全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "ChatSenderConfig",
+        "label": "对话输入全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "ChatThinkingConfig",
+        "label": "思考过程全局配置",
+        "type": "TS"
       },
       {
         "value": "CountDown",
@@ -1290,16 +1314,16 @@
         "type": "TS"
       },
       {
+        "value": "ScrollView",
+        "label": "滚动容器"
+      },
+      {
         "value": "SearchField",
         "label": "搜索框"
       },
       {
         "value": "SegmentedControl",
         "label": "分段器"
-      },
-      {
-        "value": "ScrollView",
-        "label": "滚动容器"
       },
       {
         "value": "SideBar",
@@ -1310,20 +1334,20 @@
         "label": "侧边导航项"
       },
       {
-        "value": "SwipeCell",
-        "label": "滑动操作"
-      },
-      {
-        "value": "SwiperNav",
-        "label": "轮播导航"
-      },
-      {
         "value": "Stepper",
         "label": "步进器"
       },
       {
         "value": "Sticky",
         "label": "吸顶容器"
+      },
+      {
+        "value": "SwipeCell",
+        "label": "滑动操作"
+      },
+      {
+        "value": "SwiperNav",
+        "label": "轮播导航"
       },
       {
         "value": "Tab",

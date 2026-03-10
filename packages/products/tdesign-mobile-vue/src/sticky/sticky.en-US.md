@@ -6,11 +6,11 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-container | Object | - | Typescript：`Element` | N
+container | String / Object | - | Typescript: `Element` | N
 disabled | Boolean | false | \- | N
 offsetTop | String / Number | 0 | \- | N
 zIndex | Number | 99 | \- | N
-onScroll | Function |  | Typescript：`(context: { scrollTop: number, isFixed: boolean }) => void`<br/> | N
+onScroll | Function |  | Typescript: `(context: { scrollTop: number, isFixed: boolean }) => void`<br/> | N
 
 ### Sticky Events
 
