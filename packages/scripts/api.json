@@ -45687,6 +45687,43 @@
       ]
     },
     {
+      "id": 1773193359,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Dialog",
+      "field_category": 1,
+      "field_name": "beforeClose",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭前的拦截钩子，支持异步。返回 Promise 时，确认按钮显示加载状态，Promise resolve 后关闭对话框，reject 则不关闭",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-03-11 01:42:39",
+      "update_time": "2026-03-11 01:42:39",
+      "event_output": null,
+      "custom_field_type": "(trigger: 'confirm' | 'cancel' | 'overlay' | 'close-btn', context: { e: MouseEvent }) => void | Promise<void>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 53,
       "platform_framework": [
         "1",
