@@ -11421,6 +11421,47 @@
       ]
     },
     {
+      "id": 1773203795,
+      "platform_framework": [
+        "1",
+        "2",
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "rowspanAndColspan",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`",
+      "field_desc_en": "rowspan and colspan",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-03-11 04:36:35",
+      "update_time": "2026-03-11 04:36:35",
+      "event_output": null,
+      "custom_field_type": "TableRowspanAndColspanFunc<T>【type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan】【interface RowspanColspan { colspan?: number; rowspan?: number }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)",
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 2879,
       "platform_framework": [
         "1",
