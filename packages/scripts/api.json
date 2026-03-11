@@ -10462,6 +10462,45 @@
       ]
     },
     {
+      "id": 1773210392,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "footer",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "表格底部内容，可用于显示「加载更多」、「没有更多了」等状态",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-03-11 06:26:32",
+      "update_time": "2026-03-11 06:26:32",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 2633,
       "platform_framework": [
         "1",
@@ -11499,6 +11538,43 @@
       ]
     },
     {
+      "id": 1773210426,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "scrollBottomThreshold",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "50",
+      "field_enum": "",
+      "field_desc_zh": "触发 `onScrollToBottom` 事件的距离阈值，单位 px",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-03-11 06:27:06",
+      "update_time": "2026-03-11 06:27:06",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
       "id": 3010,
       "platform_framework": [
         "1",
@@ -12401,6 +12477,43 @@
         "React(Mobile)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1773210471,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 2,
+      "field_name": "scrollToBottom",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "50",
+      "field_enum": "",
+      "field_desc_zh": "表格内容滚动到底部时触发，可用于实现滚动加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-03-11 06:27:51",
+      "update_time": "2026-03-11 06:27:51",
+      "event_output": null,
+      "custom_field_type": "Partial<AffixProps>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
     },
     {
       "id": 591,
