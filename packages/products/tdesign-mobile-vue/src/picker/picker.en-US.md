@@ -18,6 +18,7 @@ swipeDuration | String / Number | 300 | The duration of inertial scrolling durin
 title | String | '' | \- | N
 value | Array | - | `v-model` and `v-model:value` is supported。Typescript: `Array<PickerValue>` `type PickerValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
 defaultValue | Array | - | uncontrolled property。Typescript: `Array<PickerValue>` `type PickerValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
+wheelConfig | Object | - | Typescript: `PickerWheelConfig ` `interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
 onCancel | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onChange | Function |  | Typescript: `(value: Array<PickerValue>, context: { columns: Array<PickerContext>, e: MouseEvent })  => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts)。<br/>`interface PickerContext{ column: number,index: number }`<br/> | N
 onConfirm | Function |  | Typescript: `(value: Array<PickerValue>, context: { index: number[], e: MouseEvent, label: string[] }) => void`<br/> | N
