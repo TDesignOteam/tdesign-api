@@ -176,10 +176,7 @@ const FRAMEWORK_MAP = {
         propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components`,
         tsBaseFileName: 'USE_TYPE_NAME',
         globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components/common/common.ts`,
-        globalTplPath: path.resolve(
-            __dirname,
-            '../types/global/miniprogram.tpl'
-        ),
+        globalTplPath: path.resolve(__dirname,'../types/global/miniprogram.tpl'),
         unitBasePath: '',
         commonTypePath:
             'https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts',
@@ -199,10 +196,7 @@ const FRAMEWORK_MAP = {
         propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
         tsBaseFileName: 'USE_TYPE_NAME',
         globalPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components/common/common.ts`,
-        globalTplPath: path.resolve(
-            __dirname,
-            '../types/global/miniprogram.tpl'
-        ),
+        globalTplPath: path.resolve(__dirname,'../types/global/uniapp.tpl'),
         unitBasePath: '',
         commonTypePath:
             'https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts',

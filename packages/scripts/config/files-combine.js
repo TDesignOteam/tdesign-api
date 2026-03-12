@@ -441,16 +441,16 @@ const TYPES_COMBINE_MAP = {
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
     // 高阶组件
-    Chat: [
-        'Chat',
-        'ChatLoading',
-        'ChatItem',
-        'ChatContent',
-        'ChatAction',
-        'ChatInput',
-        'ChatSender',
-        'ChatReasoning',
-    ],
+    // Chat: [
+    //     'Chat',
+    //     'ChatLoading',
+    //     'ChatItem',
+    //     'ChatContent',
+    //     'ChatAction',
+    //     'ChatInput',
+    //     'ChatSender',
+    //     'ChatReasoning',
+    // ],
 };
 
 const MOBILE_TYPES_COMBINE_MAP = {
