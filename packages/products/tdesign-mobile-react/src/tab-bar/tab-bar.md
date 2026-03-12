@@ -20,6 +20,7 @@ value | String / Number / Array | - | 当前选中标签的索引。TS 类型：
 defaultValue | String / Number / Array | - | 当前选中标签的索引。非受控属性。TS 类型：`string \| number \| Array<string \| number>` | N
 zIndex | Number | 1 | `0.21.1`。标签栏层级 | N
 onChange | Function |  | TS 类型：`(value: string \| number) => void`<br/>选中标签切换时触发 | N
+onChange | Function |  | TS 类型：`(context: { value: string \| number }) => void`<br/>选中标签切换时触发 | N
 
 
 ### TabBarItem Props

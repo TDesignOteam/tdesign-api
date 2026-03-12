@@ -70,7 +70,7 @@ export interface TdTextareaProps {
     value?: number;
   };
   /**
-   * 【试验性】光标颜色，仅在 Skyline 下有效
+   * 【实验】光标颜色，仅在 Skyline 下有效
    * @default #0052d9
    */
   cursorColor?: {

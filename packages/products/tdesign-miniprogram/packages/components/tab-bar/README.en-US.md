@@ -17,13 +17,14 @@ split | Boolean | true | \- | N
 theme | String | normal | options: normal/tag | N
 value | String / Number / Array | - | Typescript: `string \| number \| Array<string \| number>` | N
 default-value | String / Number / Array | undefined | uncontrolled property。Typescript: `string \| number \| Array<string \| number>` | N
-z-index | Number | 1 | \- | N
+z-index | Number | 1 | `1.12.1` | N
 
 ### TabBar Events
 
 name | params | description
 -- | -- | --
 change | `(value: string \| number)` | \-
+change | `(detail: { value: string \| number })` | \-
 
 ### TabBar External Classes
 

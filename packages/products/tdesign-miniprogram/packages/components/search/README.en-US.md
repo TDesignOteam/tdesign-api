@@ -30,7 +30,6 @@ placeholder | String | '' | \- | N
 placeholder-class | String | input-placeholder | \- | N
 placeholder-style | String | - | required | Y
 readonly | Boolean | undefined | \- | N
-result-list | Array | [] | Typescript: `Array<string>` | N
 right-icon | String | 'close-circle-filled' | `deprecated` | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N

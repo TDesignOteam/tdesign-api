@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, Styles, AttachNode } from '../common';
+import type { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDrawerProps {
   /**

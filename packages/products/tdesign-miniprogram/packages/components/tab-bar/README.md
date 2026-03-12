@@ -17,13 +17,14 @@ split | Boolean | true | 是否需要分割线 | N
 theme | String | normal | 选项风格。可选项：normal/tag | N
 value | String / Number / Array | - | 当前选中标签的索引。TS 类型：`string \| number \| Array<string \| number>` | N
 default-value | String / Number / Array | undefined | 当前选中标签的索引。非受控属性。TS 类型：`string \| number \| Array<string \| number>` | N
-z-index | Number | 1 | 标签栏层级 | N
+z-index | Number | 1 | `1.12.1`。标签栏层级 | N
 
 ### TabBar Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: string \| number)` | 选中标签切换时触发
+change | `(detail: { value: string \| number })` | 选中标签切换时触发
 
 ### TabBar External Classes
 

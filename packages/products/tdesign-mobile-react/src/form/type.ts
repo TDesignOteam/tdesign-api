@@ -6,7 +6,7 @@
 
 import { IsEmailOptions } from 'validator/es/lib/isEmail';
 import { IsURLOptions } from 'validator/es/lib/isURL';
-import { TNode, FormResetEvent, FormSubmitEvent } from '../common';
+import type { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
 export interface TdFormProps<FormData extends Data = Data> {
   /**
@@ -246,7 +246,7 @@ export interface FormRule {
    */
   url?: boolean | IsURLOptions;
   /**
-   * 自定义校验规则，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
+   * 自定义校验规则，context 中 formData 为当前完整表单值，name为该字段的标识，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
    */
   validator?: CustomValidator;
   /**
@@ -385,7 +385,10 @@ export interface IsDateOptions {
   delimiters: string[];
 }
 
-export type CustomValidator = (val: ValueType) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
+export type CustomValidator = (
+  val: ValueType,
+  context?: { formData: Data; name: string },
+) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
 
 export type CustomValidateResolveType = boolean | CustomValidateObj;
 

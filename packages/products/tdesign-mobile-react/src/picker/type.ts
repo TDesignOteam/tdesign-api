@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TElement, KeysType } from '../common';
-import { MouseEvent } from 'react';
+import type { TElement, KeysType } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdPickerProps {
   /**
@@ -38,11 +38,11 @@ export interface TdPickerProps {
   /**
    * 自定义选项内容。参数为 `option: PickerColumnItem, index: number`
    */
-  option?: TElement;
+  option?: (option: PickerColumnItem, index: number) => string | Record<string, string | boolean>;
   /**
    * 自定义label
    */
-  renderLabel?: (item: PickerColumnItem) => string;
+  renderLabel?: (item: PickerColumnItem, index: number) => string;
   /**
    * 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动
    * @default 300
@@ -99,6 +99,7 @@ export type PickerColumn = PickerColumnItem[];
 export interface PickerColumnItem {
   label: string;
   value: string;
+  disabled?: boolean;
 }
 
 export type PickerValue = string | number;

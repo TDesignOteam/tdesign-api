@@ -5,8 +5,8 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TElement } from '../common';
-import { MouseEvent, TouchEvent } from 'react';
+import type { TElement } from '../common';
+import type { MouseEvent, TouchEvent } from 'react';
 
 export interface TdFabProps {
   /**
