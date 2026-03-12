@@ -30,7 +30,6 @@ placeholder | String | '' | 占位符 | N
 placeholder-class | String | input-placeholder | 指定 placeholder 的样式类 | N
 placeholder-style | String | - | 必需。指定 placeholder 的样式 | Y
 readonly | Boolean | undefined | 只读状态 | N
-result-list | Array | [] | 预览结果列表。TS 类型：`Array<string>` | N
 right-icon | String | 'close-circle-filled' | 已废弃。右侧图标 | N
 selection-end | Number | -1 | 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 | N
 selection-start | Number | -1 | 光标起始位置，自动聚集时有效，需与 selection-end 搭配使用 | N

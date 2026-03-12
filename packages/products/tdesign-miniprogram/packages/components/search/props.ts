@@ -112,11 +112,6 @@ const props: TdSearchProps = {
     type: null,
     value: undefined,
   },
-  /** 预览结果列表 */
-  resultList: {
-    type: Array,
-    value: [],
-  },
   /** 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 */
   selectionEnd: {
     type: Number,

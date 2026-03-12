@@ -174,14 +174,6 @@ export interface TdSearchProps {
     value?: boolean;
   };
   /**
-   * 预览结果列表
-   * @default []
-   */
-  resultList?: {
-    type: ArrayConstructor;
-    value?: Array<string>;
-  };
-  /**
    * 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用
    * @default -1
    */
