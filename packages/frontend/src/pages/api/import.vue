@@ -272,6 +272,7 @@ import {
   NUMBER,
   P_VUE_PC,
   P_VUE_MOBILE,
+  P_UNIAPP,
   API_CATEGORY_EXTENDS,
   API_CATEGORY_RETURN,
   API_CATEGORY_T
@@ -357,7 +358,7 @@ export default {
       return API_CATEGORY_MAP[this.formData.apiCategory] || { placeholder: {} }
     },
     isShowSugar () {
-      const intersection = this.formData.platform.filter(item => [P_VUE_PC, P_VUE_MOBILE].includes(Number(item)))
+      const intersection = this.formData.platform.filter(item => [P_VUE_PC, P_VUE_MOBILE, P_UNIAPP].includes(Number(item)))
       const platformAllow = !!intersection.length
       const categoryAllow = [
         API_CATEGORY_EVENTS,

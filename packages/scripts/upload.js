@@ -97,8 +97,8 @@ function uploadApiToDB() {
 
     Promise.all([...createPromises, ...updatePromises, ...deletePromises]).then(() => {
       console.log(chalk.green(`Upload API to DB successfully!\n`));
-    }, () => {
-      console.log(chalk.red(`Upload API to DB failed!\n`));
+    }, (error) => {
+      console.log(chalk.red(`Upload API to DB failed!\n`, error));
     });
 
   }).catch(function (error) {
