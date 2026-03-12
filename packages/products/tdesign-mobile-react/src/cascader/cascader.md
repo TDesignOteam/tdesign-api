@@ -18,7 +18,7 @@ loadCompleted | Boolean | false | 是否完成异步加载 | N
 middleContent | TElement | - | `0.21.2`。中间内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 options | Array | [] | 可选项数据源。TS 类型：`Array<CascaderOption>` | N
 overlayProps | Object | {} | `0.21.2`。遮罩层的属性，透传至 overlay。TS 类型：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts) | N
-placeholder | String | 选择选项 | 未选中时的提示文案 | N
+placeholder | String | - | 未选中时的提示文案。组件内置默认值为：'选择选项' | N
 subTitles | Array | [] | 每级展示的次标题。TS 类型：`Array<string>` | N
 theme | String | step | 展示风格。可选项：step/tab | N
 title | TNode | - | 标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

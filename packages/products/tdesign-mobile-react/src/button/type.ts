@@ -5,8 +5,8 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode, TElement } from '../common';
-import { MouseEvent } from 'react';
+import type { TNode, TElement } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdButtonProps {
   /**

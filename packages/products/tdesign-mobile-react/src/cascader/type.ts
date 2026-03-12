@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
+import type { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
@@ -55,8 +55,8 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   overlayProps?: OverlayProps;
   /**
-   * 未选中时的提示文案
-   * @default 选择选项
+   * 未选中时的提示文案。组件内置默认值为：'选择选项'
+   * @default ''
    */
   placeholder?: string;
   /**
