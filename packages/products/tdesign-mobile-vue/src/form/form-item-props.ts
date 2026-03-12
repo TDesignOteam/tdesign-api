@@ -30,7 +30,7 @@ export default {
   /** 字段标签名称 */
   label: {
     type: [String, Function] as PropType<TdFormItemProps['label']>,
-    default: '',
+    default: '' as TdFormItemProps['label'],
   },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign */
   labelAlign: {

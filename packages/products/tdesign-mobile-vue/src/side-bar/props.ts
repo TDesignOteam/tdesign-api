@@ -11,11 +11,11 @@ export default {
   /** 选项值 */
   value: {
     type: [String, Number] as PropType<TdSideBarProps['value']>,
-    default: undefined,
+    default: undefined as TdSideBarProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdSideBarProps['value']>,
-    default: undefined,
+    default: undefined as TdSideBarProps['value'],
   },
   /** 选项值，非受控属性 */
   defaultValue: {

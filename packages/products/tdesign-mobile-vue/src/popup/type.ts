@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, AttachNode } from '../common';
+import type { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**

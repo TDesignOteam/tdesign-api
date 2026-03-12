@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdButtonProps {
   /**

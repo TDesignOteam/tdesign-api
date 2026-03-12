@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, TreeOptionData, TreeKeysType } from '../common';
+import type { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**

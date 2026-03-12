@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode, ClassName, HTMLElementAttributes } from '../common';
+import type { TNode, ClassName, HTMLElementAttributes } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
