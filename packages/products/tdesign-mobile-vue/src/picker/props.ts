@@ -11,18 +11,18 @@ export default {
   /** 取消按钮文字 */
   cancelBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['cancelBtn']>,
-    default: true,
+    default: true as TdPickerProps['cancelBtn'],
   },
   /** 配置每一列的选项 */
   columns: {
     type: [Array, Function] as PropType<TdPickerProps['columns']>,
-    default: (): TdPickerProps['columns'] => [],
+    default: (): TdPickerProps['columns'] => [] as TdPickerProps['columns'],
     required: true,
   },
   /** 确定按钮文字 */
   confirmBtn: {
     type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
-    default: true,
+    default: true as TdPickerProps['confirmBtn'],
   },
   /** 底部内容 */
   footer: {
@@ -44,10 +44,10 @@ export default {
   renderLabel: {
     type: Function as PropType<TdPickerProps['renderLabel']>,
   },
-  /** 快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
+  /** ⚠️ 即将废弃，请使用 `wheelConfig.inertiaDuration` 代替。快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动 */
   swipeDuration: {
     type: [String, Number] as PropType<TdPickerProps['swipeDuration']>,
-    default: 300,
+    default: 300 as TdPickerProps['swipeDuration'],
   },
   /** 标题 */
   title: {
@@ -57,15 +57,19 @@ export default {
   /** 选中值 */
   value: {
     type: Array as PropType<TdPickerProps['value']>,
-    default: undefined,
+    default: undefined as TdPickerProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdPickerProps['value']>,
-    default: undefined,
+    default: undefined as TdPickerProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {
     type: Array as PropType<TdPickerProps['defaultValue']>,
+  },
+  /** 【实验】滚轮滑动相关配置，用于自定义滚轮的动画和交互行为。`inertiaDuration` 表示惯性滚动的持续时长；`bounceDuration` 表示边界归位动画时长；`transitionDuration` 表示切换选项时的过渡动画时长； `inertiaTimeThreshold` 表示惯性触发的时间阈值； `inertiaDistanceThreshold` 表示惯性触发的距离阈值； `boundOffset` 表示边界偏移量；`clickDistanceThreshold` 表示点击操作的距离阈值；`clickTimeThreshold` 表示点击操作的时间阈值 */
+  wheelConfig: {
+    type: Object as PropType<TdPickerProps['wheelConfig']>,
   },
   /** 点击取消按钮时触发 */
   onCancel: Function as PropType<TdPickerProps['onCancel']>,
