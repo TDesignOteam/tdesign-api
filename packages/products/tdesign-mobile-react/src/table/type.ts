@@ -5,8 +5,8 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode, ClassName, HTMLElementAttributes } from '../common';
-import { MouseEvent, UIEvent } from 'react';
+import type { TNode, ClassName, HTMLElementAttributes } from '../common';
+import type { MouseEvent, UIEvent } from 'react';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
