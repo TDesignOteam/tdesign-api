@@ -67,7 +67,7 @@
         </t-loading>
       </div>
       <t-drawer
-        :header="mode === 'create' ? '新增1' : '编辑1'"
+        :header="mode === 'create' ? '新增' : '编辑'"
         width="830"
         :visible.sync="createApiVisible"
         size="60%"
