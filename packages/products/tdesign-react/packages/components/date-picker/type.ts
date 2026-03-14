@@ -10,8 +10,8 @@ import { SelectInputProps } from '../select-input';
 import { TimePickerProps } from '../time-picker';
 import { Dayjs } from 'dayjs';
 import { RangeInputProps } from '../range-input';
-import { TNode, TElement, SizeEnum } from '../common';
-import { MouseEvent, FocusEvent, FormEvent } from 'react';
+import type { TNode, TElement, SizeEnum } from '../common';
+import type { MouseEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdDatePickerProps {
   /**
@@ -24,6 +24,10 @@ export interface TdDatePickerProps {
    * @default false
    */
   borderless?: boolean;
+  /**
+   * 用于自定义日期单元格的内容
+   */
+  cell?: TNode<{ value: DateValue }>;
   /**
    * 是否显示清除按钮
    * @default false
