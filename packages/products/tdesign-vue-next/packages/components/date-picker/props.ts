@@ -16,6 +16,10 @@ export default {
   cell: {
     type: Function as PropType<TdDatePickerProps['cell']>,
   },
+  /** 用于自定义日期单元格的内容 */
+  cell: {
+    type: Function as PropType<TdDatePickerProps['cell']>,
+  },
   /** 是否显示清除按钮 */
   clearable: Boolean,
   /** 时间选择器默认值，当 value/defaultValue 未设置值时有效 */
