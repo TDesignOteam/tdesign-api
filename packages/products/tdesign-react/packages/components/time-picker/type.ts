@@ -9,8 +9,8 @@ import { PopupProps } from '../popup';
 import { SelectInputProps } from '../select-input';
 import { SelectInputBlurContext } from '../select-input';
 import { RangeInputProps } from '../range-input';
-import { TNode } from '../common';
-import { MouseEvent, FocusEvent, FormEvent } from 'react';
+import type { TNode, TElement } from '../common';
+import type { MouseEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdTimePickerProps {
   /**
@@ -68,6 +68,10 @@ export interface TdTimePickerProps {
    */
   popupProps?: PopupProps;
   /**
+   * 用于自定义组件前置图标
+   */
+  prefixIcon?: TElement;
+  /**
    * 预设快捷时间选择，示例：`{ '前一小时': '11:00:00' }`
    */
   presets?: PresetTime;
@@ -94,6 +98,10 @@ export interface TdTimePickerProps {
    * @default [1, 1, 1]
    */
   steps?: Array<string | number>;
+  /**
+   * 用于自定义组件后置图标
+   */
+  suffixIcon?: TElement;
   /**
    * 输入框下方提示文本，会根据不同的 `status` 呈现不同的样式
    */
