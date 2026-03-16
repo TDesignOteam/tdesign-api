@@ -8,6 +8,15 @@ name | type | default | description | required
 class-prefix | String | t | \- | N
 qrcode | Object | - | QRCode global configs。Typescript: `QRCodeConfig` | N
 
+### FormConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+colon-text | String | - | colon on the right of label ":" | N
+error-message | Object | - | Typescript: `FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
+required-mark | Boolean | true | \- | N
+required-mark-position | String | left | Display position of required symbols。options: left/right | N
+
 ### ImageConfig
 
 name | type | default | description | required

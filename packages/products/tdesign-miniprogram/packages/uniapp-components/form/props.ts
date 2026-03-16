@@ -13,11 +13,6 @@ export default {
     type: Object,
     default: () => ({}),
   },
-  /** 是否禁用整个表单 */
-  disabled: {
-    type: Boolean,
-    default: undefined,
-  },
   /** 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }` */
   errorMessage: {
     type: Object,
@@ -35,11 +30,6 @@ export default {
   labelWidth: {
     type: [String, Number],
     default: '81px' as TdFormProps['labelWidth'],
-  },
-  /** 是否整个表单只读 */
-  readonly: {
-    type: Boolean,
-    default: undefined,
   },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {

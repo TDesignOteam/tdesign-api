@@ -18,10 +18,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   data?: FormData;
   /**
-   * 是否禁用整个表单
-   */
-  disabled?: boolean;
-  /**
    * 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`
    */
   errorMessage?: FormErrorMessage;
@@ -35,10 +31,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default '81px'
    */
   labelWidth?: string | number;
-  /**
-   * 是否整个表单只读
-   */
-  readonly?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */

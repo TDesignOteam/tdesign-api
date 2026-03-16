@@ -2,7 +2,6 @@
 
 ## API
 
-
 ### Form Props
 
 name | type | default | description | required
@@ -14,7 +13,7 @@ data | Object | {} | Typescript: `FormData` | N
 error-message | Object | - | Typescript: `FormErrorMessage` | N
 label-align | String | right | options: left/right/top | N
 label-width | String / Number | '81px' | \- | N
-required-mark | Boolean | undefined | \- | N
+required-mark | Boolean | true | \- | N
 required-mark-position | String | left | Display position of required symbols。options: left/right | N
 reset-type | String | empty | options: empty/initial | N
 rules | Object | - | Typescript: `FormRules<FormData>` `type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form/type.ts) | N
@@ -48,6 +47,7 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 arrow | Boolean | false | \- | N
+for | String | - | \- | N
 help | String | - | \- | N
 label | String | '' | \- | N
 label-align | String | - | options: left/right/top | N
@@ -69,8 +69,8 @@ label | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 boolean | Boolean | - | \- | N
-date | Boolean / Object | - | Typescript: `boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form-rule/type.ts) | N
-email | Boolean / Object | - | Typescript: `boolean \| IsEmailOptions` `import { IsEmailOptions } from 'validator/es/lib/isEmail'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form-rule/type.ts) | N
+date | Boolean / Object | - | Typescript: `boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form/type.ts) | N
+email | Boolean / Object | - | Typescript: `boolean \| IsEmailOptions` `import { IsEmailOptions } from 'validator/es/lib/isEmail'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form/type.ts) | N
 enum | Array | - | Typescript: `Array<string>` | N
 idcard | Boolean | - | \- | N
 len | Number / Boolean | - | \- | N
@@ -83,8 +83,8 @@ required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
 trigger | String | change | Typescript: `ValidateTriggerType` | N
 type | String | error | options: error/warning | N
-url | Boolean / Object | - | Typescript: `boolean \| IsURLOptions` `import { IsURLOptions } from 'validator/es/lib/isURL'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form-rule/type.ts) | N
-validator | Function | - | Typescript: `CustomValidator` `type CustomValidator = (val: ValueType, context?: { formData: Data , name: string }) => CustomValidateResolveType \| Promise<CustomValidateResolveType>` `type CustomValidateResolveType = boolean \| CustomValidateObj` `interface CustomValidateObj { result: boolean; message: string; type?: 'error' \| 'warning' \| 'success' }` `type ValueType = any`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form-rule/type.ts) | N
+url | Boolean / Object | - | Typescript: `boolean \| IsURLOptions` `import { IsURLOptions } from 'validator/es/lib/isURL'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form/type.ts) | N
+validator | Function | - | Typescript: `CustomValidator` `type CustomValidator = (val: ValueType, context?: { formData: Data , name: string }) => CustomValidateResolveType \| Promise<CustomValidateResolveType>` `type CustomValidateResolveType = boolean \| CustomValidateObj` `interface CustomValidateObj { result: boolean; message: string; type?: 'error' \| 'warning' \| 'success' }` `type ValueType = any`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/form/type.ts) | N
 whitespace | Boolean | - | \- | N
 
 ### FormErrorMessage
