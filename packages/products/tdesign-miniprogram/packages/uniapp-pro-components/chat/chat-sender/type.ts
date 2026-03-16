@@ -37,8 +37,8 @@ export interface TdChatSenderProps {
    */
   loading?: boolean;
   /**
-   * 输入框默认文案。组件内置默认值为：'请输入消息...'
-   * @default ''
+   * 输入框默认文案
+   * @default 请输入消息...
    */
   placeholder?: string;
   /**
@@ -102,6 +102,14 @@ export interface TdChatSenderProps {
    */
   onStop?: (value: string, context: { e: MouseEvent }) => void;
   /**
+   * 输入框值发生变化时触发
+   */
+  onUpdateValue?: (value: boolean) => void;
+  /**
+   * 上传面板可见性发生变化时触发
+   */
+  onUpdateVisible?: (value: boolean) => void;
+  /**
    * 【实验】点击上传按钮时触发
    */
   onUploadClick?: () => void;
@@ -121,3 +129,5 @@ export interface SendButton {
   name: 'send';
   type: 'icon' | 'text';
 }
+
+export type UploadActionType = 'uploadAttachment' | 'uploadImage';

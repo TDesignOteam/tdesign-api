@@ -23,10 +23,10 @@ export default {
   },
   /** 发送按钮是否处于加载状态 */
   loading: Boolean,
-  /** 输入框默认文案。组件内置默认值为：'请输入消息...' */
+  /** 输入框默认文案 */
   placeholder: {
     type: String,
-    default: '',
+    default: '请输入消息...',
   },
   /** 预设发送区渲染配置，用于灵活配置发送区的上传入口和发送按钮，支持自定义类型、顺序、样式 */
   renderPresets: {
@@ -92,6 +92,16 @@ export default {
   },
   /** 点击消息终止的回调方法 */
   onStop: {
+    type: Function,
+    default: () => ({}),
+  },
+  /** 输入框值发生变化时触发 */
+  onUpdateValue: {
+    type: Function,
+    default: () => ({}),
+  },
+  /** 上传面板可见性发生变化时触发 */
+  onUpdateVisible: {
     type: Function,
     default: () => ({}),
   },
