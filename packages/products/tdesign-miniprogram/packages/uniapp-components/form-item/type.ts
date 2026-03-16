@@ -11,11 +11,6 @@ export interface TdFormItemProps {
    */
   arrow?: boolean;
   /**
-   * label 原生属性
-   * @default ''
-   */
-  for?: string;
-  /**
    * 表单项说明内容
    */
   help?: string;

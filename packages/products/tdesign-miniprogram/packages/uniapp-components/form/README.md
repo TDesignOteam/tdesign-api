@@ -45,7 +45,6 @@ validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormDat
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
 arrow | Boolean | false | 是否显示右侧箭头 | N
-for | String | - | label 原生属性 | N
 help | String | - | 表单项说明内容 | N
 label | String | '' | 字段标签名称 | N
 label-align | String | - | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign。可选项：left/right/top | N

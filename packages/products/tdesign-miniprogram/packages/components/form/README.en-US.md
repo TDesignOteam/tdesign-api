@@ -47,7 +47,6 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 arrow | Boolean | false | \- | N
-for | String | - | \- | N
 help | String | - | \- | N
 label | String | '' | \- | N
 label-align | String | - | options: left/right/top | N

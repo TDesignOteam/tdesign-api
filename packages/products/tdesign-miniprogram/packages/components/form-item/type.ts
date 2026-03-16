@@ -14,14 +14,6 @@ export interface TdFormItemProps {
     value?: boolean;
   };
   /**
-   * label 原生属性
-   * @default ''
-   */
-  for?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 表单项说明内容
    */
   help?: {

@@ -45,7 +45,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 arrow | Boolean | false | \- | N
-for | String | - | \- | N
 help | String | - | \- | N
 label | String | '' | \- | N
 label-align | String | - | options: left/right/top | N
