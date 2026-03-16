@@ -5,8 +5,8 @@
  * */
 
 import { ImageProps } from '../image';
-import { PlainObject, TNode } from '../common';
-import { MouseEvent } from 'react';
+import type { PlainObject, TNode } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**

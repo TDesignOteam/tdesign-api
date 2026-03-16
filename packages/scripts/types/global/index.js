@@ -33,6 +33,7 @@ function combineGlobals(framework) {
       chalk.green(`globals: ${outputPath} has been created successfully!`)
     );
   };
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFile(outputPath, data, callback);
 }
 

@@ -6,7 +6,7 @@
 
 import { BadgeProps } from '../badge';
 import { ImageProps } from '../image';
-import { TNode, ShapeEnum } from '../common';
+import type { TNode, ShapeEnum } from '../common';
 
 export interface TdAvatarProps {
   /**

@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 export interface TdGuideProps {
   /**

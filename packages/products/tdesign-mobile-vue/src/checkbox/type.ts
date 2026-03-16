@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, KeysType } from '../common';
+import type { TNode, KeysType } from '../common';
 
 export interface TdCheckboxProps {
   /**
@@ -56,7 +56,7 @@ export interface TdCheckboxProps {
    * 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标
    * @default 'circle'
    */
-  icon?: 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;
+  icon?: CheckboxIconType;
   /**
    * 是否为半选
    * @default false
@@ -151,6 +151,8 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   onChange?: (value: T, context: CheckboxGroupChangeContext) => void;
 }
+
+export type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[];
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
 

@@ -64,7 +64,7 @@
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
     "api:pure": "node packages/scripts/index.js",
     "api:docs": "node packages/scripts/index.js",
-    "api:vscode": "git checkout main && git pull && node packages/scripts/vscode",
+    "api:vscode": "node packages/scripts/vscode",
     "api:helper": "node packages/scripts/helper",
     "api:configurable": "node packages/scripts/configurable-props"
   },

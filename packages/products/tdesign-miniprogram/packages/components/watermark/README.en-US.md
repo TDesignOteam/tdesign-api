@@ -16,10 +16,10 @@ layout | String | rectangular | options: rectangular/hexagonal | N
 line-space | Number | 16 | \- | N
 movable | Boolean | false | \- | N
 move-interval | Number | 3000 | \- | N
-offset | Array | - | Typescript：`Array<number>` | N
+offset | Array | - | Typescript: `Array<number>` | N
 removable | Boolean | true | \- | N
 rotate | Number | -22 | \- | N
-watermark-content | Object / Array | - | Typescript：`WatermarkText\|WatermarkImage\|Array<WatermarkText\|WatermarkImage>` | N
+watermark-content | Object / Array | - | Typescript: `WatermarkText\|WatermarkImage\|Array<WatermarkText\|WatermarkImage>` | N
 width | Number | - | \- | N
 x | Number | - | \- | N
 y | Number | - | \- | N

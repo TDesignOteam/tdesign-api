@@ -17,12 +17,14 @@ value | String / Number / Array | - | `v-model` and `v-model:value` is supported
 defaultValue | String / Number / Array | - | uncontrolled property。Typescript: `string \| number \| Array<string \| number>` | N
 zIndex | Number | 1 | `1.12.0` | N
 onChange | Function |  | Typescript: `(value: string \| number) => void`<br/> | N
+onChange | Function |  | Typescript: `(context: { value: string \| number }) => void`<br/> | N
 
 ### TabBar Events
 
 name | params | description
 -- | -- | --
 change | `(value: string \| number)` | \-
+change | `(context: { value: string \| number })` | \-
 
 
 ### TabBarItem Props

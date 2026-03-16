@@ -13,7 +13,7 @@ export default {
   /** 加载中下拉高度，如果值为数字则单位是：'px' */
   loadingBarHeight: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['loadingBarHeight']>,
-    default: 50,
+    default: 50 as TdPullDownRefreshProps['loadingBarHeight'],
   },
   /** 加载loading样式 */
   loadingProps: {
@@ -27,7 +27,7 @@ export default {
   /** 最大下拉高度，如果值为数字则单位是：'px' */
   maxBarHeight: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['maxBarHeight']>,
-    default: 80,
+    default: 80 as TdPullDownRefreshProps['maxBarHeight'],
   },
   /** 刷新超时时间 */
   refreshTimeout: {
@@ -37,7 +37,7 @@ export default {
   /** 刷新成功提示展示时长，单位 'ms' */
   successDuration: {
     type: [String, Number] as PropType<TdPullDownRefreshProps['successDuration']>,
-    default: 500,
+    default: 500 as TdPullDownRefreshProps['successDuration'],
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {
