@@ -8,6 +8,15 @@
 class-prefix | String | t | CSS 类名前缀 | N
 qrcode | Object | - | 二维码全局配置。TS 类型：`QRCodeConfig` | N
 
+### FormConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+colon-text | String | - | 字段旁边的冒号，中文为“：” | N
+error-message | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
+required-mark | Boolean | true | 是否显示必填符号（*），默认显示 | N
+required-mark-position | String | left | 表单必填符号（*）显示位置。可选项：left/right | N
+
 ### ImageConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传

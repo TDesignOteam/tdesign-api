@@ -8,11 +8,6 @@ import type { TdFormItemProps } from './type';
 export default {
   /** 是否显示右侧箭头 */
   arrow: Boolean,
-  /** label 原生属性 */
-  for: {
-    type: String,
-    default: '',
-  },
   /** 表单项说明内容 */
   help: {
     type: String,

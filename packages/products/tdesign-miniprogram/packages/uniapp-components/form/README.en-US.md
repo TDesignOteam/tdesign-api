@@ -9,13 +9,11 @@ name | type | default | description | required
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 colon | Boolean | false | \- | N
 data | Object | {} | Typescript: `FormData` | N
-disabled | Boolean | undefined | \- | N
 error-message | Object | - | Typescript: `FormErrorMessage` | N
 label-align | String | right | options: left/right/top | N
 label-width | String / Number | '81px' | \- | N
-readonly | Boolean | undefined | \- | N
-required-mark | Boolean | undefined | \- | N
-required-mark-position | String | - | Display position of required symbols。options: left/right | N
+required-mark | Boolean | true | \- | N
+required-mark-position | String | left | Display position of required symbols。options: left/right | N
 reset-type | String | empty | options: empty/initial | N
 rules | Object | - | Typescript: `FormRules<FormData>` `type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts) | N
 scroll-to-first-error | String | - | options: ''/smooth/auto | N
@@ -47,7 +45,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 arrow | Boolean | false | \- | N
-for | String | - | \- | N
 help | String | - | \- | N
 label | String | '' | \- | N
 label-align | String | - | options: left/right/top | N
