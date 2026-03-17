@@ -318,6 +318,18 @@ export interface FormValidateParams {
 
 export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
+export type FormValidateResult<T> = boolean | ValidateResultObj<T>;
+
+export type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList };
+
+export type ValidateResultList = Array<AllValidateResult>;
+
+export type AllValidateResult = CustomValidateObj | ValidateResultType;
+
+export interface ValidateResultType extends FormRule {
+  result: boolean;
+}
+
 export type Data = { [key: string]: any };
 
 export interface IsDateOptions {
