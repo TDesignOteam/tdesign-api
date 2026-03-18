@@ -7,7 +7,7 @@
 export interface TdChatActionbarProps {
   /**
    * 操作栏配置
-   * @default ['replay', 'copy', 'good', 'bad', 'share']
+   * @default ['replay', 'copy', 'good', 'bad', 'share', 'quote']
    */
   actionBar?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share'>;
   /**
@@ -16,10 +16,9 @@ export interface TdChatActionbarProps {
    */
   chatId?: string;
   /**
-   * 评价内容
-   * @default ''
+   * 评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空
    */
-  comment?: string;
+  comment?: 'good' | 'bad';
   /**
    * 被复制的内容
    * @default ''
