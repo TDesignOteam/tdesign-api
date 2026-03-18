@@ -58,6 +58,6 @@ export interface TdChatActionbarProps {
    */
   placement?: {
     type: StringConstructor;
-    value?: 'start' | 'end' | 'space-around' | 'space-between';
+    value?: 'start' | 'end' | 'space-around' | 'space-between' | 'longpress';
   };
 }
