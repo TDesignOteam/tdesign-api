@@ -11,7 +11,7 @@ export interface TdChatActionbarProps {
    */
   actionBar?: {
     type: ArrayConstructor;
-    value?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share'>;
+    value?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share' | 'quote'>;
   };
   /**
    * 【实验】聊天消息的唯一标识

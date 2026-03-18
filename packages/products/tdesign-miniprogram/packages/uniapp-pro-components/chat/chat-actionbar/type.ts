@@ -9,7 +9,7 @@ export interface TdChatActionbarProps {
    * 操作栏配置
    * @default ['replay', 'copy', 'good', 'bad', 'share', 'quote']
    */
-  actionBar?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share'>;
+  actionBar?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share' | 'quote'>;
   /**
    * 【实验】聊天消息的唯一标识
    * @default ''
