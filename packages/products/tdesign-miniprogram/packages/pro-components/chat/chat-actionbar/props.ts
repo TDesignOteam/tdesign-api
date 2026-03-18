@@ -35,6 +35,10 @@ const props: TdChatActionbarProps = {
     type: Boolean,
     value: false,
   },
+  /** 【实验】长按操作栏位置 */
+  longPressPosition: {
+    type: Object,
+  },
   /** 【实验】操作栏位置 */
   placement: {
     type: String,

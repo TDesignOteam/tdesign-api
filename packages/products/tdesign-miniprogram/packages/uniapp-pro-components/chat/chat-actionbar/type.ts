@@ -35,6 +35,10 @@ export interface TdChatActionbarProps {
    */
   disabled?: boolean;
   /**
+   * 【实验】长按操作栏位置
+   */
+  longPressPosition?: ChatActionbarLongPressPosition;
+  /**
    * 【实验】操作栏位置
    * @default start
    */
@@ -43,4 +47,18 @@ export interface TdChatActionbarProps {
    * 点击点赞，点踩，复制，分享，重新生成按钮时触发发
    */
   onActions?: (context: { name: string; active: boolean; chatId: string }) => void;
+}
+
+export interface ChatActionbarLongPressPosition {
+  type?: object;
+  value?: LongPressPositionValue;
+}
+
+export interface LongPressPositionValue {
+  pageX?: number;
+  pageY?: number;
+  clientX?: number;
+  clientY?: number;
+  x?: number;
+  y?: number;
 }

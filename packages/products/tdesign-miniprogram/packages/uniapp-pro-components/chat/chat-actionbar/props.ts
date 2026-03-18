@@ -40,6 +40,10 @@ export default {
   },
   /** 【讨论中】操作按钮是否可点击 */
   disabled: Boolean,
+  /** 【实验】长按操作栏位置 */
+  longPressPosition: {
+    type: Object,
+  },
   /** 【实验】操作栏位置 */
   placement: {
     type: String,
