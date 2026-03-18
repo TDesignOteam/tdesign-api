@@ -8,9 +8,9 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-action-bar | Array | ['replay', 'copy', 'good', 'bad', 'share'] | 操作栏配置。TS 类型：`Array<'replay'\|'copy'\|'good'\|'bad'\|'share'>` | N
+action-bar | Array | ['replay', 'copy', 'good', 'bad', 'share', 'quote'] | 操作栏配置。TS 类型：`Array<'replay'\|'copy'\|'good'\|'bad'\|'share'>` | N
 chat-id | String | - | 【实验】聊天消息的唯一标识 | N
-comment | String | - | 评价内容 | N
+comment | String | - | 评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空。可选项：good/bad | N
 content | String | - | 被复制的内容 | N
 copy-mode | String | markdown | 【实验】复制内容的模式，可选 'markdown'（复制markdown原文）或 'text'（复制纯文本）。可选项：markdown/text | N
 disabled | Boolean | false | 【讨论中】操作按钮是否可点击 | N
