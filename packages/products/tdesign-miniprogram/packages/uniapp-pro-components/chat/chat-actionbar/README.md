@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
-action-bar | Array | ['replay', 'copy', 'good', 'bad', 'share', 'quote'] | 操作栏配置。TS 类型：`Array<'replay'\|'copy'\|'good'\|'bad'\|'share'\|'quote'>` | N
+action-bar | Array | ['replay', 'copy', 'good', 'bad', 'share'] | 操作栏配置。TS 类型：`Array<'replay'\|'copy'\|'good'\|'bad'\|'share'\|'quote'>` | N
 chat-id | String | - | 【实验】聊天消息的唯一标识 | N
 comment | String | - | 评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空。可选项：good/bad | N
 content | String | - | 被复制的内容 | N

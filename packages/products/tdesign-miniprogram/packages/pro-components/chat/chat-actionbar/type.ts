@@ -7,7 +7,7 @@
 export interface TdChatActionbarProps {
   /**
    * 操作栏配置
-   * @default ['replay', 'copy', 'good', 'bad', 'share', 'quote']
+   * @default ['replay', 'copy', 'good', 'bad', 'share']
    */
   actionBar?: {
     type: ArrayConstructor;

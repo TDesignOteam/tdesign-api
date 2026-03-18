@@ -9,7 +9,7 @@ export default {
   /** 操作栏配置 */
   actionBar: {
     type: Array,
-    default: ['replay', 'copy', 'good', 'bad', 'share', 'quote'],
+    default: ['replay', 'copy', 'good', 'bad', 'share'],
   },
   /** 【实验】聊天消息的唯一标识 */
   chatId: {
