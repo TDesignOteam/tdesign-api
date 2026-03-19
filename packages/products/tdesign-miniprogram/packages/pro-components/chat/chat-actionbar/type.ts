@@ -7,7 +7,7 @@
 export interface TdChatActionbarProps {
   /**
    * 操作栏配置
-   * @default ['replay', 'copy', 'good', 'bad', 'share', 'quote']
+   * @default ['replay', 'copy', 'good', 'bad', 'share']
    */
   actionBar?: {
     type: ArrayConstructor;
@@ -53,6 +53,13 @@ export interface TdChatActionbarProps {
     value?: boolean;
   };
   /**
+   * 【实验】长按操作栏位置
+   */
+  longPressPosition?: {
+    type: ObjectConstructor;
+    value?: ChatActionbarLongPressPosition;
+  };
+  /**
    * 【实验】操作栏位置
    * @default start
    */
@@ -60,4 +67,18 @@ export interface TdChatActionbarProps {
     type: StringConstructor;
     value?: 'start' | 'end' | 'space-around' | 'space-between' | 'longpress';
   };
+}
+
+export interface ChatActionbarLongPressPosition {
+  type?: object;
+  value?: LongPressPositionValue;
+}
+
+export interface LongPressPositionValue {
+  pageX?: number;
+  pageY?: number;
+  clientX?: number;
+  clientY?: number;
+  x?: number;
+  y?: number;
 }

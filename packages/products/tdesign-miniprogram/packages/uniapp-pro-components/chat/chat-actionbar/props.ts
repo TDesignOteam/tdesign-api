@@ -9,7 +9,7 @@ export default {
   /** 操作栏配置 */
   actionBar: {
     type: Array,
-    default: ['replay', 'copy', 'good', 'bad', 'share', 'quote'],
+    default: ['replay', 'copy', 'good', 'bad', 'share'],
   },
   /** 【实验】聊天消息的唯一标识 */
   chatId: {
@@ -40,6 +40,10 @@ export default {
   },
   /** 【讨论中】操作按钮是否可点击 */
   disabled: Boolean,
+  /** 【实验】长按操作栏位置 */
+  longPressPosition: {
+    type: Object,
+  },
   /** 【实验】操作栏位置 */
   placement: {
     type: String,
