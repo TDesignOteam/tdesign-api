@@ -20,7 +20,7 @@ hover-stop-propagation | Boolean | false | \- | N
 icon | String / Object | - | icon name | N
 lang | String | - | message language。options: en/zh_CN/zh_TW | N
 loading | Boolean | false | set button to be loading state | N
-open-type | String | - | open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)。options: contact/share/getPhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization | N
+open-type | String | - | open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)。options: contact/liveActivity/share/getPhoneNumber/getRealtimePhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization/phoneOneClickLogin | N
 phone-number-no-quota-toast | Boolean | true | \- | N
 send-message-img | String | 截图 | \- | N
 send-message-path | String | 当前分享路径 | \- | N
@@ -49,6 +49,7 @@ getrealtimephonenumber | \- | \-
 getuserinfo | \- | \-
 launchapp | \- | \-
 opensetting | \- | \-
+phoneoneclicklogin | \- | \-
 tap | `event` | \-
 
 ### Button Slots
