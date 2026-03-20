@@ -16,10 +16,13 @@ export default {
     type: String,
     default: '',
   },
-  /** 评价内容 */
+  /** 评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空 */
   comment: {
     type: String,
-    default: '',
+    validator(val: TdChatActionbarProps['comment']): boolean {
+      if (!val) return true;
+      return ['good', 'bad'].includes(val);
+    },
   },
   /** 被复制的内容 */
   content: {
@@ -37,13 +40,17 @@ export default {
   },
   /** 【讨论中】操作按钮是否可点击 */
   disabled: Boolean,
+  /** 【实验】长按操作栏位置 */
+  longPressPosition: {
+    type: Object,
+  },
   /** 【实验】操作栏位置 */
   placement: {
     type: String,
     default: 'start' as TdChatActionbarProps['placement'],
     validator(val: TdChatActionbarProps['placement']): boolean {
       if (!val) return true;
-      return ['start', 'end', 'space-around', 'space-between'].includes(val);
+      return ['start', 'end', 'space-around', 'space-between', 'longpress'].includes(val);
     },
   },
   /** 点击点赞，点踩，复制，分享，重新生成按钮时触发发 */
