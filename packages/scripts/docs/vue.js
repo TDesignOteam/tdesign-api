@@ -190,6 +190,8 @@ function formatDesc(
         .map(item => item.replace('】', ''));
       // 处理：import { PopupProps } from '@Popup' 等引用，更为相关组件文档链接
       let importIndex = -1;
+      // 收集需要移除的 @common import 索引
+      const commonImportIndexes = [];
       customFieldType.forEach((item, index) => {
         // if (item.indexOf('@Popup') !== -1) {
         //   console.log(`${item} 更为相关组件文档跳转路径`);
@@ -202,9 +204,22 @@ function formatDesc(
           importDocPath = `，[${component} API Documents](./${kebabCaseComponent(component)}?tab=api)`;
           importIndex = index;
         }
+        // 过滤掉 from '@common' 的 import，文档中只保留类型名称
+        if (name === '@common') {
+          commonImportIndexes.push(index);
+        }
       });
       // importIndex 引入放在最后
       importIndex >= 0 && customFieldType.splice(importIndex, 1);
+      // 移除 @common 的 import 语句（从后往前删，避免索引偏移）
+      commonImportIndexes.sort((a, b) => b - a).forEach((i) => {
+        // 如果前面已经 splice 了 importIndex，需要调整索引
+        if (importIndex >= 0 && i > importIndex) {
+          customFieldType.splice(i - 1, 1);
+        } else {
+          customFieldType.splice(i, 1);
+        }
+      });
       customFieldType = customFieldType.join('` `');
     }
     if (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp)) {
