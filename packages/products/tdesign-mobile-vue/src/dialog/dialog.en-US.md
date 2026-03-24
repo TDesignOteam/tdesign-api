@@ -7,6 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 actions | Array / Slot / Function | - | Typescript: `Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+beforeClose | Function | - | Typescript: `(trigger: 'confirm' \| 'cancel' \| 'overlay' \| 'close-btn', context: { e: MouseEvent }) => void \| Promise<void>` | N
 buttonLayout | String | horizontal | options: horizontal/vertical | N
 cancelBtn | String / Object / Slot / Function | - | Typescript: `string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 closeBtn | Boolean | false | \- | N
