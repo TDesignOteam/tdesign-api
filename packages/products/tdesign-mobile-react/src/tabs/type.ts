@@ -37,6 +37,11 @@ export interface TdTabsProps {
    */
   spaceEvenly?: boolean;
   /**
+   * 是否展示分割线
+   * @default true
+   */
+  split?: boolean;
+  /**
    * 是否开启粘性布局
    * @default false
    */

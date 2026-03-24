@@ -12,7 +12,7 @@ animation | Object | - | Typescript: `TabAnimation` `type TabAnimation = { durat
 bottom-line-mode | String | fixed | options: fixed/auto/full | N
 show-bottom-line | Boolean | true | \- | N
 space-evenly | Boolean | true | \- | N
-split | Boolean | true | \- | N
+split | Boolean | true | `1.1.10` | N
 sticky | Boolean | false | \- | N
 sticky-props | Object | - | Typescript: `StickyProps`，[Sticky API Documents](./sticky?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tabs/type.ts) | N
 swipeable | Boolean | true | \- | N
