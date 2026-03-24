@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode, Styles } from '../common';
+import type { TNode, Styles } from '../common';
 
 export interface TdFabProps {
   /**

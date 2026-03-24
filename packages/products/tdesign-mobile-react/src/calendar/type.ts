@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**

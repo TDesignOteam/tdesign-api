@@ -6,7 +6,7 @@
 
 import { ButtonProps } from '../button';
 import { OverlayProps } from '../overlay';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdDialogProps {
   /**

@@ -68,4 +68,6 @@ export default {
   },
   /** 选中标签切换时触发 */
   onChange: Function as PropType<TdTabBarProps['onChange']>,
+  /** 选中标签切换时触发 */
+  onChange: Function as PropType<TdTabBarProps['onChange']>,
 };

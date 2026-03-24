@@ -5,7 +5,7 @@
  * */
 
 import { StickyProps } from '../sticky';
-import { TNode, TElement } from '../common';
+import type { TNode, TElement } from '../common';
 
 export interface TdTabsProps {
   /**

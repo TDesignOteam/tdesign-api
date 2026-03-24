@@ -5,7 +5,7 @@
  * */
 
 import { ImageProps } from '../image';
-import { PlainObject, TNode } from '../common';
+import type { PlainObject, TNode } from '../common';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**

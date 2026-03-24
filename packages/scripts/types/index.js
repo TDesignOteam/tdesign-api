@@ -47,6 +47,20 @@ const components = map.data.components
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
+// 构建需要 Td 前缀的类型名集合（即 getTdCmpName 返回的名称以 Td 开头的组件，对应的 getCmpName 值）
+// 例如：ButtonProps（对应 TdButtonProps）、MessageOptions（对应 TdMessageOptions）
+const tdPrefixedTypeNames = new Set(
+    map.data.components
+        .filter((item) => item.type !== 'TS') // TS 类型不需要 Td 前缀
+        .map((item) => {
+            const cmp = item.value;
+            if (item.type === 'plugin') {
+                return `${upperFirst(camelcase(cmp.substr(1)))}Options`;
+            }
+            return `${cmp}Props`;
+        })
+);
+
 const indent = '  ';
 
 function getComponentsMap(components) {
@@ -138,11 +152,13 @@ function getEventsApiType(api) {
         imports: [],
     };
     if (api.event_input) {
-        const { baseName, exports, imports } = formatTsTypeDesc(
+        const { baseName: rawBaseName, exports, imports } = formatTsTypeDesc(
             api.event_input
         );
+        // 容错处理：event_input 中可能误用分号分隔参数，需替换为逗号
+        const baseName = rawBaseName ? rawBaseName.replace(/;/g, ',') : rawBaseName;
         r = {
-            type: baseName ? `${baseName}` : '()',
+            type: baseName ?(baseName.startsWith('(') ? `${baseName}`: `(${baseName})`) : '()',
             exports,
             imports,
         };
@@ -225,12 +241,23 @@ function formatApi(api, framework, plugin) {
 
     exportsApi = uniq(exportsApi);
 
+    // UniApp 中默认值为 undefined 的 Props 属性，TS 类型需加上 | null
+    let finalType = type;
+    if (
+        framework === 'UniApp'
+        && api.field_default_value === 'undefined'
+        && api.field_category_text === 'Props'
+        && finalType
+    ) {
+        finalType = `${finalType} | null`;
+    }
+
     return {
         exports: exportsApi.filter((k) => !!k),
         imports: importsApi.filter((k) => !!k),
         desc: plugin
             ? getPluginDesc(api, r.baseName)
-            : [comment, indent, name, required, type],
+            : [comment, indent, name, required, finalType],
     };
 }
 
@@ -312,7 +339,7 @@ function getGlobalsImports(str, framework) {
         .filter((key) => map[key].types.length)
         .map(
             (key) =>
-                `import { ${map[key].types.join(', ')} } from '${
+                `import type { ${map[key].types.join(', ')} } from '${
                     map[key].path
                 }';`
         );
@@ -375,8 +402,29 @@ function handleApiByFramework(api, framework) {
  */
 function formatAliasImportsPath(imports, framework) {
     const current = FRAMEWORK_MAP[framework];
+    const isUniApp = framework === 'UniApp';
     return imports
         .filter((v) => !!v)
+        .map(item => {
+            if (!isUniApp) {
+                return item;
+            }
+            // 只对组件间引用（'@组件名' 格式路径）进行 Td 前缀转换，外部依赖导入不处理
+            const cmpMatch = item.match(/'@(\w+)'/);
+            if (!cmpMatch || !cmpMatch[1] || !components.includes(cmpMatch[1])) {
+                // 非组件引用，仅添加 type 关键字
+                return item.replace(/^import\s+\{/, 'import type {');
+            }
+            const reg =/import\s+\{\s+(\w+)/
+            return item.replace(reg, (a, b) => {
+                // 只有组件主类型（如 ButtonProps、MessageOptions）才需要加 Td 前缀
+                // TS 类型（如 FormRule）和组件内部辅助类型（如 CheckboxIconType、TabValue）不需要
+                if (!tdPrefixedTypeNames.has(b)) {
+                    return `import type { ${b}`;
+                }
+                return `import type { Td${b} as ${b}`
+            })
+        })
         .map((item) => {
             if (item.indexOf('@icon') !== -1) {
                 return item.replace('@icon', current.iconPath);
@@ -389,6 +437,9 @@ function formatAliasImportsPath(imports, framework) {
                     let relativePath = current.componentRelativiePath + name;
                     if (framework === 'Miniprogram') {
                         relativePath = `${relativePath}/index`;
+                    }
+                    if (isUniApp) {
+                        relativePath = `${relativePath}/type`;
                     }
                     return `'${relativePath}'`;
                 });
@@ -408,6 +459,7 @@ function formatImportsPath(imports, framework) {
             'Vue(Mobile)',
             'React(Mobile)',
             'Miniprogram',
+            'UniApp',
         ].includes(framework)
     ) {
         newImports = formatAliasImportsPath(imports, framework);
@@ -628,7 +680,7 @@ function getTypeScriptDesc(componentMap, framework) {
 function combineTsFile(componentMap, framework) {
     const ts = getTypeScriptDesc(componentMap, framework);
     const rMap = getApiComponentMapByFrameWork(
-        framework === 'Miniprogram' ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
+        ['Miniprogram', 'UniApp'].includes(framework) ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
         framework
     );
     Object.keys(rMap).forEach((cmp) => {
@@ -666,7 +718,7 @@ function combineTsFile(componentMap, framework) {
         Object.keys(ts).forEach((key) => {
             if (
                 !list.find((item) => item === key) &&
-                !['ConfigProvider'].includes(key) && ( framework === 'Miniprogram' && key !== 'FormItem' )
+                !['ConfigProvider'].includes(key) && ( ['Miniprogram', 'UniApp'].includes(framework) && key !== 'FormItem' )
             ) {
                 delete ts[key];
             }
@@ -687,6 +739,7 @@ function combineTsFile(componentMap, framework) {
                 'Vue(Mobile)',
                 'Miniprogram',
                 'React(Mobile)',
+                'UniApp'
             ].includes(framework)
         ) {
             ts[cmp].imports = ts[cmp].imports.concat(
@@ -707,6 +760,8 @@ function combineTsFile(componentMap, framework) {
                 chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n')
             );
             console.warn(e);
+            // 格式化失败时，使用原始字符串作为 fallback，避免输出 [object Object]
+            ts[cmp] = str;
         }
     });
     return ts;

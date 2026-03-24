@@ -46,7 +46,7 @@ const props: TdTextareaProps = {
     type: Number,
     value: -1,
   },
-  /** 【试验性】光标颜色，仅在 Skyline 下有效 */
+  /** 【实验】光标颜色，仅在 Skyline 下有效 */
   cursorColor: {
     type: String,
     value: '#0052d9',

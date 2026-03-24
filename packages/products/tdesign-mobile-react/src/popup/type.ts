@@ -5,8 +5,8 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, AttachNode } from '../common';
-import { MouseEvent } from 'react';
+import type { TNode, AttachNode } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdPopupProps {
   /**
