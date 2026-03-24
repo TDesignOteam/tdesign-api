@@ -98,6 +98,10 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
    * 校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表
    */
   validate: (params?: FormValidateParams) => Promise<FormValidateResult<FormData>>;
+  /**
+   * 校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表
+   */
+  validate: (params?: FormValidateParams) => Promise<FormValidateResult<FormData>>;
 }
 
 export type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> };
@@ -137,6 +141,26 @@ export type FormValidateMessage<FormData> = { [field in keyof FormData]: FormIte
 export interface FormItemValidateMessage {
   type: 'warning' | 'error';
   message: string;
+}
+
+export interface FormValidateParams {
+  fields?: Array<string>;
+  showErrorMessage?: boolean;
+  trigger?: ValidateTriggerType;
+}
+
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
+
+export type FormValidateResult<T> = boolean | ValidateResultObj<T>;
+
+export type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList };
+
+export type ValidateResultList = Array<AllValidateResult>;
+
+export type AllValidateResult = CustomValidateObj | ValidateResultType;
+
+export interface ValidateResultType extends FormRule {
+  result: boolean;
 }
 
 export interface FormValidateParams {

@@ -53,7 +53,8 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
   const defaultValue = api.field_default_value;
   let dl = defaultValue;
   // 如果 API 显示指明 undefined，则一定返回 default: undefined
-  if (dl === 'undefined') return dl;
+  // UniApp 中 undefined 替换为 null
+  if (dl === 'undefined') return currentFramework === 'UniApp' ? 'null' : dl;
   if (defaultValueIsUndefined(api)) {
     dl = undefined;
   } else {
@@ -136,7 +137,10 @@ function getDefaultWithType(api, dl, valueType) {
       || (api.custom_field_type && ['\'\'', 'undefined'].includes(dl))
     );
 
-  return api.field_enum && !isMiniprogram || isVue3NeedDefaultTsType
+  // UniApp 中 null 默认值也需要 as 类型断言
+  const isUniAppNullDefault = currentFramework === 'UniApp' && dl === 'null';
+
+  return api.field_enum && !isMiniprogram || isVue3NeedDefaultTsType || isUniAppNullDefault
     ? `${defaultField} ${dl} as ${valueType}`
     : `${defaultField} ${dl}`;
 }
@@ -163,7 +167,11 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     const isVueMobile = currentFramework === 'Vue(Mobile)';
     const isVueWeb = ['Vue(PC)', 'VueNext(PC)'].includes(currentFramework);
     if (dl && !isUncontrolApi && api.syntactic_sugar && (isVueMobile || isUniApp || (isVueWeb && useDefault))) {
-      const content = ['type: Boolean', 'default: undefined'].map(t => `    ${t},\n`).join('');
+      const uniAppDefaultValue = isUniApp
+        ? `default: null as ${getPropType(cmp, name)}`
+        : 'default: undefined';
+      const uniAppType = isUniApp ? 'type: [Boolean, null]' : 'type: Boolean';
+      const content = [uniAppType, uniAppDefaultValue].map(t => `    ${t},\n`).join('');
       oneApiStr = [`  ${name}: {\n${content}  }`];
     } else {
       oneApiStr = `  ${name}: Boolean`;
@@ -195,6 +203,15 @@ function formatNormalProps(api, cmp, extraParams = {}) {
         }
         if ('Boolean' === types && api.field_default_value === 'undefined'){
           tType = 'null'
+        }
+      }
+      // UniApp 中默认值为 undefined 的属性，type 需要加上 null 类型
+      if (isUniApp && api.field_default_value === 'undefined') {
+        // 如果 types 已经是数组形式 [A, B]，需要去掉外层方括号再添加 null
+        if (types.startsWith('[')) {
+          tType = `${types.slice(0, -1)}, null]`;
+        } else {
+          tType = `[${types}, null]`;
         }
       }
       content.push(`${indent}type: ${tType}`);
