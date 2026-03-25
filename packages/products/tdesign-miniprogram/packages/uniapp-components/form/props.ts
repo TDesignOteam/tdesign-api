@@ -33,8 +33,8 @@ export default {
   },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdFormProps['requiredMark'],
   },
   /** 表单必填符号（*）显示位置 */
   requiredMarkPosition: {
