@@ -4,6 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import type { FormRule } from '../form/type';
+
 export interface TdFormItemProps {
   /**
    * 是否显示右侧箭头
@@ -35,7 +37,7 @@ export interface TdFormItemProps {
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
-  requiredMark?: boolean;
+  requiredMark?: boolean | null;
   /**
    * 表单字段校验规则
    */
@@ -43,5 +45,5 @@ export interface TdFormItemProps {
   /**
    * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
    */
-  showErrorMessage?: boolean;
+  showErrorMessage?: boolean | null;
 }

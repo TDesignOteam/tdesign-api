@@ -464,6 +464,7 @@ function formatImportsPath(imports, framework) {
     ) {
         newImports = formatAliasImportsPath(imports, framework);
     }
+    const current = FRAMEWORK_MAP[framework];
     newImports = newImports.map(
         (item) =>
             item &&
@@ -473,6 +474,8 @@ function formatImportsPath(imports, framework) {
                     return `${cmp}/${getFileName(framework, name)}`;
                 })
                 .replace(/@TdTypes\//, '../')
+                // 将 from 'common.ts' 替换为框架对应的 commonRelativePath
+                .replace(/from '@common'/, `from '${current.commonRelativePath}'`)
     );
     return newImports;
 }

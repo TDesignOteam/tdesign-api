@@ -37,7 +37,6 @@ reset | `(params?: FormResetParams<FormData>)` | \- | required。[see more ts de
 set-validate-message | `(message: FormValidateMessage<FormData>)` | \- | required。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts)。<br/>`type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] }`<br/><br/>`interface FormItemValidateMessage { type: 'warning' \| 'error'; message: string }`<br/>
 submit | `(params?: { showErrorMessage?: boolean })` | \- | required
 validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>> ` | required。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'submit' \| 'all'`<br/><br/>`type FormValidateResult<T> = boolean \| ValidateResultObj<T>`<br/><br/>`type ValidateResultObj<T> = { [key in keyof T]: boolean \| ValidateResultList }`<br/><br/>`type ValidateResultList = Array<AllValidateResult>`<br/><br/>`type AllValidateResult = CustomValidateObj \| ValidateResultType`<br/><br/>`interface ValidateResultType extends FormRule { result: boolean }`<br/>
-validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>>` | required。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'submit' \| 'all'`<br/>
 
 
 ### FormItem Props
@@ -52,7 +51,7 @@ label-align | String | - | options: left/right/top | N
 label-width | String / Number | - | \- | N
 name | String | - | \- | N
 required-mark | Boolean | undefined | \- | N
-rules | Array | - | Typescript: `Array<FormRule>` | N
+rules | Array | - | Typescript: `Array<FormRule> `，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form-item/type.ts) | N
 show-error-message | Boolean | undefined | \- | N
 
 ### FormItem Slots
@@ -67,8 +66,8 @@ label | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 boolean | Boolean | - | \- | N
-date | Boolean / Object | - | Typescript: `boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form-rule/type.ts) | N
-email | Boolean / Object | - | Typescript: `boolean \| IsEmailOptions` `import { IsEmailOptions } from 'validator/es/lib/isEmail'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form-rule/type.ts) | N
+date | Boolean / Object | - | Typescript: `boolean \| IsDateOptions` `interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts) | N
+email | Boolean / Object | - | Typescript: `boolean \| IsEmailOptions`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts) | N
 enum | Array | - | Typescript: `Array<string>` | N
 idcard | Boolean | - | \- | N
 len | Number / Boolean | - | \- | N
@@ -81,8 +80,8 @@ required | Boolean | - | \- | N
 telnumber | Boolean | - | \- | N
 trigger | String | change | Typescript: `ValidateTriggerType` | N
 type | String | error | options: error/warning | N
-url | Boolean / Object | - | Typescript: `boolean \| IsURLOptions` `import { IsURLOptions } from 'validator/es/lib/isURL'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form-rule/type.ts) | N
-validator | Function | - | Typescript: `CustomValidator` `type CustomValidator = (val: ValueType, context?: { formData: Data , name: string }) => CustomValidateResolveType \| Promise<CustomValidateResolveType>` `type CustomValidateResolveType = boolean \| CustomValidateObj` `interface CustomValidateObj { result: boolean; message: string; type?: 'error' \| 'warning' \| 'success' }` `type ValueType = any`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form-rule/type.ts) | N
+url | Boolean / Object | - | Typescript: `boolean \| IsURLOptions`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts) | N
+validator | Function | - | Typescript: `CustomValidator` `type CustomValidator = (val: ValueType, context?: { formData: Data , name: string }) => CustomValidateResolveType \| Promise<CustomValidateResolveType>` `type CustomValidateResolveType = boolean \| CustomValidateObj` `interface CustomValidateObj { result: boolean; message: string; type?: 'error' \| 'warning' \| 'success' }` `type ValueType = any`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/form/type.ts) | N
 whitespace | Boolean | - | \- | N
 
 ### FormErrorMessage
