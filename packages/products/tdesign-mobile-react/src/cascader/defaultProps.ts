@@ -11,7 +11,6 @@ export const cascaderDefaultProps: TdCascaderProps = {
   loadCompleted: false,
   options: [],
   overlayProps: {},
-  placeholder: '选择选项',
   subTitles: [],
   theme: 'step',
   visible: false,

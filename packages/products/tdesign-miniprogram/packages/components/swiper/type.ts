@@ -115,7 +115,7 @@ export interface TdSwiperProps {
    */
   paginationPosition?: {
     type: StringConstructor;
-    value?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+    value?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
   };
   /**
    * 前边距，可用于露出前一项的一小部分。默认单位 `px`

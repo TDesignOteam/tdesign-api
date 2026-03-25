@@ -5,7 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdTabBarProps {
   /**
@@ -64,6 +64,10 @@ export interface TdTabBarProps {
    * 选中标签切换时触发
    */
   onChange?: (value: string | number) => void;
+  /**
+   * 选中标签切换时触发
+   */
+  onChange?: (context: { value: string | number }) => void;
 }
 
 export interface TdTabBarItemProps {

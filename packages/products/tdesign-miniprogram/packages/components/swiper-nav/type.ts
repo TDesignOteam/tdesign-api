@@ -35,7 +35,7 @@ export interface TdSwiperNavProps {
    */
   paginationPosition?: {
     type: StringConstructor;
-    value?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
+    value?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
   };
   /**
    * 是否显示两侧的控制按钮

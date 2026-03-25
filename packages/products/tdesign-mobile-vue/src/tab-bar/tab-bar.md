@@ -17,12 +17,14 @@ value | String / Number / Array | - | 当前选中标签的索引。支持语法
 defaultValue | String / Number / Array | - | 当前选中标签的索引。非受控属性。TS 类型：`string \| number \| Array<string \| number>` | N
 zIndex | Number | 1 | `1.12.0`。标签栏层级 | N
 onChange | Function |  | TS 类型：`(value: string \| number) => void`<br/>选中标签切换时触发 | N
+onChange | Function |  | TS 类型：`(context: { value: string \| number }) => void`<br/>选中标签切换时触发 | N
 
 ### TabBar Events
 
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: string \| number)` | 选中标签切换时触发
+change | `(context: { value: string \| number })` | 选中标签切换时触发
 
 
 ### TabBarItem Props

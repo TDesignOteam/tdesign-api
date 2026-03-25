@@ -14,7 +14,7 @@ input-width | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
-size | String | medium | options: small/medium/large。Typescript：`SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 step | Number | 1 | \- | N
 theme | String | normal | stylish。options: normal/filled/outline | N
 value | String / Number | 0 | \- | N

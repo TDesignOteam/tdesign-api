@@ -11,10 +11,10 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 adjust-position | Boolean | true | \- | N
 allow-input-over-max | Boolean | false | `1.8.6`。Allow input after exceeding `maxlength` or `maxcharacter` | N
 autofocus | Boolean | false | \- | N
-autosize | Boolean / Object | false | Typescript：`boolean \| { maxHeight?: number, minHeight?: number }` | N
+autosize | Boolean / Object | false | Typescript: `boolean \| { maxHeight?: number, minHeight?: number }` | N
 bordered | Boolean | false | \- | N
 confirm-hold | Boolean | false | \- | N
-confirm-type | String | return | options: return/send/search/next/go/done。Typescript：`'return' \| 'send' \| 'search' \| 'next' \| 'go' \| 'done'` | N
+confirm-type | String | return | options: return/send/search/next/go/done。Typescript: `'return' \| 'send' \| 'search' \| 'next' \| 'go' \| 'done'` | N
 cursor | Number | -1 | \- | N
 cursor-color | String | #0052d9 | \- | N
 cursor-spacing | Number | 0 | \- | N
@@ -34,8 +34,8 @@ readonly | Boolean | undefined | `1.8.6` | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N
 show-confirm-bar | Boolean | true | \- | N
-value | String / Number | - | Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
-default-value | String / Number | undefined | uncontrolled property。Typescript：`TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
+value | String / Number | - | Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
+default-value | String / Number | undefined | uncontrolled property。Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/textarea/type.ts) | N
 
 ### Textarea Events
 

@@ -16,7 +16,7 @@ export default {
   /** 最终倒计时的展示内容，值为'default'时使用默认的格式，否则使用自定义样式插槽 */
   content: {
     type: [String, Function] as PropType<TdCountDownProps['content']>,
-    default: 'default',
+    default: 'default' as TdCountDownProps['content'],
   },
   /** 时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒 */
   format: {

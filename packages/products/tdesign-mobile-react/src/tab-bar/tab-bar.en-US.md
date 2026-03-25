@@ -20,6 +20,7 @@ value | String / Number / Array | - | Typescript: `string \| number \| Array<str
 defaultValue | String / Number / Array | - | uncontrolled property。Typescript: `string \| number \| Array<string \| number>` | N
 zIndex | Number | 1 | `0.21.1` | N
 onChange | Function |  | Typescript: `(value: string \| number) => void`<br/> | N
+onChange | Function |  | Typescript: `(context: { value: string \| number }) => void`<br/> | N
 
 
 ### TabBarItem Props

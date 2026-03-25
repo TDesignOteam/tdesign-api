@@ -50,7 +50,7 @@ export default {
   /** 可以整体设置label标签宽度，默认为81px */
   labelWidth: {
     type: [String, Number] as PropType<TdFormProps['labelWidth']>,
-    default: '81px',
+    default: '81px' as TdFormProps['labelWidth'],
   },
   /** 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 */
   preventSubmitDefault: {
