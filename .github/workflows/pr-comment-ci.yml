@@ -1,106 +1,106 @@
 name: pr-comment-ci
 
 on:
-  issue_comment:
-    types: [created]
+    issue_comment:
+        types: [created]
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    outputs:
-      next_action: ${{ steps.get-action.outputs.next_action }}
-    if: ${{ github.event.issue.pull_request }}
-    steps:
-       - uses: actions/checkout@v4
-         with:
-          sparse-checkout: |
-            .github/CODEOWNERS
-          sparse-checkout-cone-mode: false 
-       - uses: actions/github-script@v7
-         id: get-action
-         with:
-          script: |
-            const user = context.payload.comment.user.login
-            core.debug(`user: ${user}`)
+    check:
+        runs-on: ubuntu-latest
+        outputs:
+            next_action: ${{ steps.get-action.outputs.next_action }}
+        if: ${{ github.event.issue.pull_request }}
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  sparse-checkout: |
+                      .github/CODEOWNERS
+                  sparse-checkout-cone-mode: false
+            - uses: actions/github-script@v8
+              id: get-action
+              with:
+                  script: |
+                      const user = context.payload.comment.user.login
+                      core.debug(`user: ${user}`)
 
-            const fs = require('fs')
-            const CODEOWNERS = fs.readFileSync('.github/CODEOWNERS', 'utf8')
-            core.debug(`CODEOWNERS: ${CODEOWNERS}`)
+                      const fs = require('fs')
+                      const CODEOWNERS = fs.readFileSync('.github/CODEOWNERS', 'utf8')
+                      core.debug(`CODEOWNERS: ${CODEOWNERS}`)
 
-            let isReviewer = false;
-            CODEOWNERS.match(/@\w+/g).forEach((owner) => {
-              if (owner === `@${user}`) {
-                isReviewer = true
-              }
-            })
+                      let isReviewer = false;
+                      CODEOWNERS.match(/@\w+/g).forEach((owner) => {
+                        if (owner === `@${user}`) {
+                          isReviewer = true
+                        }
+                      })
 
-            let next_action = ''  
-            if (isReviewer) {
-              const body = context.payload.comment.body
-              core.info(`body: ${body}`)
-              if (body.startsWith('/resolve-conflict')) {
-                next_action='resolve-conflict'
-              }
-              if(next_action){
-                await github.rest.reactions.createForIssueComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  comment_id: context.payload.comment.id,
-                  content: 'rocket',
-                })
-              }
-            } else {
-               core.warning('You are not collaborator');
-            }
-            core.info(`next_action: ${next_action}`)
-            core.setOutput('next_action', next_action)
-  
-  resolve-conflict:
-    needs: check
-    runs-on: ubuntu-latest
-    if: ${{ needs.check.outputs.next_action == 'resolve-conflict' }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          fetch-depth: 0
-      - name: gh checkout pr
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: gh pr checkout ${{ github.event.issue.number }}
+                      let next_action = ''  
+                      if (isReviewer) {
+                        const body = context.payload.comment.body
+                        core.info(`body: ${body}`)
+                        if (body.startsWith('/resolve-conflict')) {
+                          next_action='resolve-conflict'
+                        }
+                        if(next_action){
+                          await github.rest.reactions.createForIssueComment({
+                            owner: context.repo.owner,
+                            repo: context.repo.repo,
+                            comment_id: context.payload.comment.id,
+                            content: 'rocket',
+                          })
+                        }
+                      } else {
+                         core.warning('You are not collaborator');
+                      }
+                      core.info(`next_action: ${next_action}`)
+                      core.setOutput('next_action', next_action)
 
-      - uses: pnpm/action-setup@v4
+    resolve-conflict:
+        needs: check
+        runs-on: ubuntu-latest
+        if: ${{ needs.check.outputs.next_action == 'resolve-conflict' }}
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  token: ${{ secrets.PERSONAL_TOKEN }}
+                  fetch-depth: 0
+            - name: gh checkout pr
+              env:
+                  GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+              run: gh pr checkout ${{ github.event.issue.number }}
 
-      - uses: actions/setup-node@v4
-        with:
-          cache: 'pnpm'  
+            - uses: pnpm/action-setup@v5
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+            - uses: actions/setup-node@v6
+              with:
+                  cache: 'pnpm'
 
-      - name: Merge main
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git merge main --no-commit || true
-      
-      - name: Resolve conflict
-        run: |
-          git status
-          conflict_count=$(git status | grep -c 'both modified:') || true
-          db_conflict=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db') || true
-          echo "conflict_count $conflict_count"
-          echo "db_conflict $db_conflict"
+            - name: Install Dependencies
+              run: pnpm install --frozen-lockfile
 
-          if [ "$conflict_count" -eq "$db_conflict" ]&&[ "$conflict_count" -eq "1" ]; then
-              git checkout --theirs db/TDesign.db
-              git add db/TDesign.db
-              git status
-              nohup pnpm run dev &
-              sleep 10
-              pnpm api:upload
-              git commit -am "chore: resolve conflict"
-              git push
-          else
-            echo "Condition not established."
-          fi
+            - name: Merge main
+              run: |
+                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  git merge main --no-commit || true
+
+            - name: Resolve conflict
+              run: |
+                  git status
+                  conflict_count=$(git status | grep -c 'both modified:') || true
+                  db_conflict=$(git status | grep 'both modified:' | grep -c 'db/TDesign.db') || true
+                  echo "conflict_count $conflict_count"
+                  echo "db_conflict $db_conflict"
+
+                  if [ "$conflict_count" -eq "$db_conflict" ]&&[ "$conflict_count" -eq "1" ]; then
+                      git checkout --theirs db/TDesign.db
+                      git add db/TDesign.db
+                      git status
+                      nohup pnpm run dev &
+                      sleep 10
+                      pnpm api:upload
+                      git commit -am "chore: resolve conflict"
+                      git push
+                  else
+                    echo "Condition not established."
+                  fi
