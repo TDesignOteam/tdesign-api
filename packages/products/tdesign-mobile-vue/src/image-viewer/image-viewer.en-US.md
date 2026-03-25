@@ -28,3 +28,9 @@ name | params | description
 close | `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`type ImageViewerCloseTrigger = 'image' \| 'overlay' \| 'close-btn'`<br/>
 delete | `(index: number)` | \-
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | \-
+
+### ImageViewerInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`import { SwiperToOptions } from '@Swiper'`<br/>
