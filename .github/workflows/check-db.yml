@@ -1,44 +1,44 @@
 name: check-db
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+        types: [opened, synchronize, reopened]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: true
 
 jobs:
-  check-db:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-          
-      - uses: pnpm/action-setup@v4
+    check-db:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
-        with:
-          cache: 'pnpm'  
+            - uses: pnpm/action-setup@v5
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+            - uses: actions/setup-node@v6
+              with:
+                  cache: 'pnpm'
 
-      - name: Start Service
-        run: pnpm run dev &
+            - name: Install Dependencies
+              run: pnpm install --frozen-lockfile
 
-      - name: Update api.json
-        run: pnpm run api:download
+            - name: Start Service
+              run: pnpm run dev &
 
-      - name: Check Diff
-        run: |
-          IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
-          echo "IS_DIFF: $IS_DIFF"
-          if [[ $IS_DIFF == 'true' ]]; then
-            git diff packages/scripts/api.json
-            echo "TDesign.db and api.json data inconsistency. Workflow will fail."
-            exit 1
-          fi
+            - name: Update api.json
+              run: pnpm run api:download
+
+            - name: Check Diff
+              run: |
+                  IS_DIFF=$(if git status | grep -q "packages/scripts/api.json"; then echo "true"; else echo "false"; fi)
+                  echo "IS_DIFF: $IS_DIFF"
+                  if [[ $IS_DIFF == 'true' ]]; then
+                    git diff packages/scripts/api.json
+                    echo "TDesign.db and api.json data inconsistency. Workflow will fail."
+                    exit 1
+                  fi
