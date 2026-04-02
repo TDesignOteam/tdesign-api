@@ -28,7 +28,12 @@ export default {
   readonly: {
     type: Boolean,
     default: undefined,
-  },
+    },
+/** 是否垂直排列 */
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
   /** 组件尺寸【讨论中】 */
   size: {
     type: String as PropType<TdRadioGroupProps['size']>,
