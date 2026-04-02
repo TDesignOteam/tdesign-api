@@ -69,6 +69,11 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   allowUncheck?: boolean;
   /**
+   * 当取值为 vertical 时，单选框选项以垂直方向排列。
+   * @default horizontal
+   */
+  direction?: 'horizontal' | 'vertical';
+  /**
    * 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
   disabled?: boolean;
@@ -112,12 +117,6 @@ export interface TdRadioGroupProps<T = RadioValue> {
    * @default outline
    */
   variant?: 'outline' | 'primary-filled' | 'default-filled';
-    /**
-   * 是否垂直排列
-   * @default false
-   */
-    vertical?: boolean;
-    
   /**
    * 选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性
    */
