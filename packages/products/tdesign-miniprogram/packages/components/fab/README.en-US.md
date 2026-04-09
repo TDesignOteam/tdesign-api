@@ -10,7 +10,7 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 button-props | Object | - | Typescript: `ButtonProps`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
 draggable | String / Boolean | false | Typescript: `boolean \| FabDirectionEnum ` `type FabDirectionEnum = 'all' \| 'vertical' \| 'horizontal'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
-icon | String | - | \- | N
+icon | String / Object | - | icon name | N
 magnet | String / Boolean | - | `1.12.3`。Typescript: `boolean \| MagnetEnum ` `type MagnetEnum = 'left' \| 'right'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
 text | String | - | \- | N
 using-custom-navbar | Boolean | false | \- | N

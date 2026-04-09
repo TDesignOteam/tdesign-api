@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, SizeEnum } from '../common';
+import type { TNode, SizeEnum } from '../common';
 
 export interface TdRadioProps<T = RadioValue> {
   /**
@@ -68,6 +68,11 @@ export interface TdRadioGroupProps<T = RadioValue> {
    * @default false
    */
   allowUncheck?: boolean;
+  /**
+   * 当取值为 vertical 时，单选框选项以垂直方向排列。
+   * @default horizontal
+   */
+  direction?: 'horizontal' | 'vertical';
   /**
    * 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
