@@ -46,12 +46,12 @@
     <div class="unit-test-design__out">
       <h3 class="unit-test-tdesign__h3">Unit Test Preview</h3>
       <p>
-        <t-radio-group variant="default-filled" v-model="unitTestType">
+        <t-radio-group variant="default-filled" v-model:value="unitTestType">
           <t-radio-button value="current">Current API Unit Tests</t-radio-button>
           <t-radio-button value="all">Whole Component Unit Tests</t-radio-button>
         </t-radio-group>
       </p>
-      <t-tabs v-model="tab" :list="tabList" style="margin-top: -16px; width: 100%" />
+      <t-tabs v-model:value="tab" :list="tabList" style="margin-top: -16px; width: 100%" />
       <div class="unit-test-code">
         <pre><code class="language-javascript" v-html="unitTestCode"></code></pre>
       </div>
@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import { ChevronRightDoubleIcon } from 'tdesign-icons-vue';
+import { ChevronRightDoubleIcon } from 'tdesign-icons-vue-next';
 import { CATEGORY_OPTIONS } from './unit-test/const'
 import UnitTestUI from './unit-test/unit-test-ui'
 import { cmpApiInstance } from '../../services/api-server'
@@ -146,9 +146,11 @@ export default {
       if (!r || !this.apiInfo || !this.componentApiData.length) return
       const index = this.componentApiData.findIndex(t => t.id === this.apiInfo.id)
       if (index < 0) return
-      this.$set(this.componentApiData[index], 'test_description', val || undefined)
+      // Vue 3 使用 Proxy 响应式，不再需要 $set
+      this.componentApiData[index].test_description = val || undefined
     },
-    testDescription: {
+    // eslint-disable-next-line no-dupe-keys
+    'testDescription': {
       handler(val) {
         this.$nextTick(() => {
           this.jsonEditor?.set(parseJSON(val, {}));
@@ -208,7 +210,6 @@ export default {
         console.warn(e)
         const error = 'Unit test generated fail, check the core code first.'
         codeData = `console.log('${error}')`
-        // this.$message.error(error)
         return Prism.highlight(codeData, Prism.languages.javascript, 'javascript')
       }
 
@@ -223,7 +224,6 @@ export default {
       } catch(e) {
         console.warn(e);
         const error = 'unit test code has syntax error. check test code please.'
-        // this.$message.error(error)
         const code = `console.log('${error}')`
         return Prism.highlight(code, Prism.languages.javascript, 'javascript')
       }

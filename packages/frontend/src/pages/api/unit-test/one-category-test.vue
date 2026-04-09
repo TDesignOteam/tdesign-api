@@ -20,7 +20,7 @@
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
           <template #content>
-            示例：[{ "value": "tdesign-vue" }]
+            示例：[{ "value": "tdesign-vue-next" }]
           </template>
           <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数" @blur="() => onFormDataChange('tnode')"></t-input>
         </t-tooltip>
@@ -154,7 +154,7 @@
 
     <template v-if="formData.category === 'event'">
       <div>
-        <t-radio-group v-model="eventType" style="margin: 16px 0">
+        <t-radio-group v-model:value="eventType" style="margin: 16px 0">
           <t-radio value="object">简单事件参数</t-radio>
           <t-radio value="array">复杂人机交互</t-radio>
         </t-radio-group>
@@ -173,10 +173,10 @@
             </t-tooltip>
             <t-button @click="() => onObjectEventAdd(index)" variant="text" theme="primary" size="small"
               style="margin-left: 8px">
-              <AddCircleIcon />
+              <ChevronRightDoubleIcon />
             </t-button>
             <t-button @click="() => onObjectEventDelete(index)" variant="text" theme="danger" size="small">
-              <MinusCircleIcon />
+              <CloseIcon />
             </t-button>
           </div>
         </t-card>
@@ -184,10 +184,6 @@
         <div v-if="eventType === 'array'">
           <t-card v-for="(item, index) in arrayEvent" :key="index" class="test-card-array-event">
             <h4 style="margin-top: 0">第{{ ['一', '二', '三', '四', '五'][index] }}个交互测试用例</h4>
-            
-            <!-- <p class="t-input__tips t-input__tips--default" style="position: relative">
-              总述：一个测试用例可能只包含一个事件触发，也可能包含多个事件触发
-            </p> -->
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">用例描述：</label>
@@ -214,13 +210,13 @@
                  variant="text"
                  size="small"
                  @click="() => onEventExpectAdd(expect, expectIndex, index, 'add')"
-               ><AddCircleIcon /></t-button>
+               ><ChevronRightDoubleIcon /></t-button>
                <t-button
                  theme="danger"
                  variant="text"
                  size="small"
                  @click="() => onEventExpectDelete(expectIndex, index, 'delete')"
-               ><MinusCircleIcon /></t-button>
+               ><CloseIcon /></t-button>
              </div>
              <p v-if="expect.trigger || expect.event || expect.exist" class="t-input__tips t-input__tips--default" style="position: relative">
                 {{getEventDescription(expect)}}
@@ -245,11 +241,9 @@
               ></t-input>
             </div>
 
-            <!-- {{ arrayEvent[index] }} -->
             <div style="margin-top: 16px; text-align: right;">
               <t-button @click="() => onArrayEventAdd(index)" size="small">
                 再来一个
-                <!-- <AddCircleIcon /> -->
               </t-button>
               <t-button
                 @click="() => onArrayEventDelete(index)"
@@ -259,7 +253,6 @@
                 v-if="arrayEvent.length > 1"
               >
                 移除
-                <!-- <MinusCircleIcon /> -->
               </t-button>
             </div>
           </t-card>
@@ -270,7 +263,7 @@
     <slot name="operation"></slot>
 
     <EventExpect
-      :visible.sync="eventExpectVisible"
+      v-model:visible="eventExpectVisible"
       :eventExpect="currentExpectData.expectData"
       :eventExpectMode="eventExpectMode"
       @confirm="onEventExpectChange"
@@ -281,7 +274,7 @@
 
 <script>
 import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const'
-import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue'
+import { ChevronRightDoubleIcon, CloseIcon, EditIcon } from 'tdesign-icons-vue-next'
 import EventExpect from './event-expect'
 import { parseJSON, getEventName } from '../util'
 import { formatToOneCategoryTest, getEventTestData } from './formatData'
@@ -299,7 +292,7 @@ const INITIAL_ARRAY_EVENT = [
 export default {
   name: 'OneCategoryTest',
 
-  components: { AddCircleIcon, MinusCircleIcon, EventExpect, EditIcon },
+  components: { ChevronRightDoubleIcon, CloseIcon, EventExpect, EditIcon },
 
   props: {
     data: {
@@ -353,7 +346,8 @@ export default {
           const tmpProps = typeof props === 'string' ? parseJSON(props) : props;
           const oldProps = this.formData.props ? parseJSON(this.formData.props, {}) : {};
           const finalProps = { ...oldProps, ...tmpProps };
-          this.$set(this.formData, 'props', Object.keys(finalProps).length ? JSON.stringify(finalProps) : '');
+          // Vue 3 使用 Proxy 响应式，不再需要 $set
+          this.formData.props = Object.keys(finalProps).length ? JSON.stringify(finalProps) : '';
         });
       }
     },
@@ -413,21 +407,6 @@ export default {
       this.onFormDataChange('category');
     },
 
-    // // 类名说明
-    // getClassNameIntroduction() {
-    //   const { apiInfo } = this
-    //   const { className } = this.formData
-    //   if (typeof className === 'string') {
-    //     return `${apiInfo.component}.${apiInfo.field_name} 的值是类名的一部分，其中 \${item} 表示替换类名的值`
-    //   } else if (Array.isArray(className)) {
-    //     if (typeof className[0] === 'object' && className[0].value) {
-    //       return `不同的值，期望不同的根元素（或子元素）对应不同的类名`
-    //     } else {
-    //       return `当值分别为 ${apiInfo.field_enum} 时，期望类名分别为 ${className.join('/')}`
-    //     }
-    //   }
-    // },
-
     // 类名规则推荐（TODO: 待完善文档）
     getClassNameRecommend() {
       return [
@@ -447,7 +426,7 @@ export default {
         '不同的值，期望不同的根元素（或子元素）存在不同的属性。元素的 style/value/checked 等也属于属性测试。',
         '推荐规则一：{ "type": ["submit", "reset", "button"] }',
         '推荐规则二：{ "href": "https://tdesign.tencent.com/" }',
-        '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串。【注意】这个规则不需要下方的「属性规则应用的 HTML 元素」',
+        '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1"}}] }]。其中，value 表示 API 的值，可以是函数或数组字符串。【注意】这个规则不需要下方的「属性规则应用的 HTML 元素」',
         '如果是 style，直接使用 "style.flexWrap": "wrap" 即可'
       ]
     },
@@ -547,12 +526,13 @@ export default {
 
     onEventExpectChange(eventData) {
       const { expectIndex, eventIndex } = this.currentExpectData
+      // Vue 3 使用 Proxy 响应式，不再需要 $set
       if (this.eventExpectMode === 'edit') {
-        this.$set(this.arrayEvent[eventIndex].expect, expectIndex, eventData)
+        this.arrayEvent[eventIndex].expect[expectIndex] = eventData
       } else if (this.eventExpectMode === 'add') {
         const expectList = [...this.arrayEvent[eventIndex].expect]
         expectList.splice(expectIndex + 1, 0, eventData);
-        this.$set(this.arrayEvent[eventIndex], 'expect', expectList)
+        this.arrayEvent[eventIndex].expect = expectList
       }
       this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
     },

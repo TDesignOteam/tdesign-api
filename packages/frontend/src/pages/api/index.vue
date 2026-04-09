@@ -59,44 +59,47 @@
 
           <t-pagination
             :total="total"
-            :page-size="pageSize"
+            :pageSize="pageSize"
             :current="page"
-            show-sizer
+            showPageSizeChange
+            showJumper
             @change="onPageChange"
           />
         </t-loading>
       </div>
       <t-drawer
         :header="mode === 'create' ? '新增' : '编辑'"
-        width="830"
-        :visible.sync="createApiVisible"
+        :width="830"
+        v-model:visible="createApiVisible"
         size="60%"
         class="api-edit"
         @confirm="onApiConfirm"
       >
-        <div slot="body">
+        <template #body>
           <import ref="api-form" :map="map" :info="apiInfo" :mode="mode"></import>
-        </div>
+        </template>
       </t-drawer>
 
       <t-dialog
-        width="830"
+        :width="830"
         top="calc(100% - 730px)"
-        :visible.sync="codePreviewVisible"
+        v-model:visible="codePreviewVisible"
         :cancelBtn="null"
         confirmBtn="关闭"
       >
-        <div slot="header">
-          <t-tabs v-model="previewType">
+        <template #header>
+          <t-tabs v-model:value="previewType">
             <t-tab-panel v-for="(item, index) in previewTabs" :key="index" :value="item.label" :label="item.label" />
           </t-tabs>
-        </div>
-        <codemirror slot="body" :value="code" :options="cmOptions"/>
+        </template>
+        <template #body>
+          <codemirror :value="code" :options="cmOptions"/>
+        </template>
       </t-dialog>
 
       <t-drawer
         header="测试用例设计"
-        :visible.sync="unitTestVisible"
+        v-model:visible="unitTestVisible"
         size="85%"
         @confirm="onUnitTestEditConfirm"
         @cancel="onUnitTestEditCancel"
@@ -108,7 +111,7 @@
 </template>
 
 <script>
-import { codemirror } from 'vue-codemirror'
+import { codemirror } from './components/codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/javascript/javascript.js'
 import 'codemirror/theme/base16-dark.css'
@@ -124,7 +127,7 @@ import {
   Pagination as TPagination,
   Dialog as TDialog,
   Loading as TLoading,
-} from 'tdesign-vue'
+} from 'tdesign-vue-next'
 
 const TYPE_MAP = {
   plugin: '插件',
@@ -286,7 +289,7 @@ export default {
     onUnitTestEditCancel() {
       this.apiInfo = null
     },
-    
+
     onCreateDialogShow () {
       this.apiInfo = null
       this.mode = 'create'

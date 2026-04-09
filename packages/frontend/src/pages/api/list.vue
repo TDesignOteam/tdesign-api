@@ -30,7 +30,7 @@
             <template v-if="row.deprecated">已废弃。</template>
             <template v-if="row.html_attribute">HTML 原生属性。</template>
             <template v-if="row.field_required">必需。</template>
-            {{row.field_desc_zh}} 
+            {{row.field_desc_zh}}
           </p>
           <template v-if="row.test_description"><p>Tested：
             <t-space :size="3">
@@ -79,15 +79,6 @@
       <template #operation="data">
         <div>
           <div class="t-demo-table-btns">
-            <!-- <t-popup showArrow placement='top'>
-              <t-button variant="text" @click="() => onCodePreview(data, 'Vue(PC)')">代码</t-button>
-              <div slot="content">
-                <t-button variant="text" @click="() => onCodePreview(data, 'Vue(PC)')">Vue(PC)</t-button>
-                <t-button variant="text" @click="() => onCodePreview(data, 'React(PC)')">React(PC)</t-button>
-                <t-button variant="text" @click="() => onCodePreview(data, 'Miniprogram')">Miniprogram</t-button>
-                <t-button variant="text" @click="() => onCodePreview(data, 'Vue(Mobile)')">Vue(Mobile)</t-button>
-              </div>
-            </t-popup> -->
             <t-button variant="text" theme="primary" @click="() => onEditClick(data)">Edit</t-button>
             <t-button variant="text" theme="primary" @click="() => onTestsEditClick(data)">Tests</t-button>
             <t-popconfirm theme="danger" content="确定删除吗？" trigger="click" @confirm="() => onDeleteConfirm(data)">
@@ -112,7 +103,7 @@ import {
   BaseTable as TTable,
   Button as TButton,
   Popconfirm as TPopconfirm
-} from 'tdesign-vue'
+} from 'tdesign-vue-next'
 
 export default {
   name: 'ApiList',
@@ -191,7 +182,6 @@ export default {
       this.$emit('create-api')
     },
     onDeleteConfirm (data) {
-      // console.log(data);
       cmpApiInstance({
         url: '/cmp/api',
         method: 'delete',

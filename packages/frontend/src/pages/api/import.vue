@@ -38,7 +38,7 @@
         </t-popup>：
       </label>
       <div class="t-form-content">
-        <t-radio-group v-model="formData.apiCategory">
+        <t-radio-group v-model:value="formData.apiCategory">
           <t-radio v-for="(item, index) in map.field_category" :key="index" :value="item.value">{{item.label}}</t-radio>
         </t-radio-group>
       </div>
@@ -63,7 +63,7 @@
     <div class="t-form-item" v-show="isShowSugar">
       <label>语法糖(Vue)：</label>
       <div class="t-form-content">
-        <t-radio-group v-model="formData.syntacticSugar">
+        <t-radio-group v-model:value="formData.syntacticSugar">
           <t-radio value="">无</t-radio>
           <t-radio value="v-model">
             <t-tooltip content="在 Vue3 中表示 v-model:modelValue">v-model</t-tooltip>
@@ -169,7 +169,7 @@
           <span>触发元素(React)</span>
           <t-popup
             class="placement-top"
-            content="【Tips】用于描述事件类型的范型约束，仅用于 React"
+            content="【Tips】用于描述事件类型的范性约束，仅用于 React"
             placement="top-left"
             visibleArrow
           >
@@ -218,8 +218,7 @@
           visibleArrow
         >
           <t-icon name="help-circle" size="middle"/>
-        </t-popup>
-        ：
+        </t-popup>：
       </label>
       <div class="t-form-content">
         <t-textarea
@@ -260,7 +259,7 @@ import {
   CheckboxGroup as TCheckboxGroup,
   Radio as TRadio,
   RadioGroup as TRadioGroup
-} from 'tdesign-vue'
+} from 'tdesign-vue-next'
 import {
   API_CATEGORY_MAP,
   API_CATEGORY_EVENTS,
@@ -281,9 +280,6 @@ import {
 import { cmpApiInstance } from '../../services/api-server'
 import { getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap } from './util'
-// import prettierConfig from '../../../../scripts/config/prettier'
-// import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
-// import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
 
 const versionDescription = [
   '从哪个版本号开始支持的这个 API，不同的框架有不同的版本号。',
@@ -457,15 +453,6 @@ export default {
         },
       }).then((res) => {
         this.componentApiData = res.data.data
-        // const rootComponentMap = getCmpTypeCombineMap('Vue(PC)');
-        // const finalComponent = rootComponentMap[this.info.component] || component;
-        // const codeData = getComponentUnitTests('Vue(PC)', finalComponent, this.componentApiData, this.map)
-        // // 格式化代码
-        // const code = prettier.format(codeData, {
-        //   ...prettierConfig,
-        //   parser: "babel",
-        //   plugins: [parserBabel],
-        // });
         this.loading = false
       }, () => {
         this.loading = false

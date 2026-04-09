@@ -1,6 +1,6 @@
 <template>
   <div class="platform-type">
-    <t-radio-group v-model="platform">
+    <t-radio-group v-model:value="platform">
       <t-radio
         v-for="(item, index) in platformOptions"
         :key="index"
@@ -17,9 +17,11 @@ export default {
   components: {},
 
   props: {
-    value: String,
+    modelValue: String,
     platformOptions: {}
   },
+
+  emits: ['update:modelValue'],
 
   data () {
     return {
@@ -30,14 +32,14 @@ export default {
   computed: {},
 
   watch: {
-    value: {
+    modelValue: {
       immediate: true,
       handler (val) {
         this.platform = val
       }
     },
     platform (val) {
-      this.$emit('input', val)
+      this.$emit('update:modelValue', val)
     }
   },
 

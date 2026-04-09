@@ -16,7 +16,7 @@
 
 <script>
 
-import { Checkbox as TCheckbox, CheckboxGroup as TCheckboxGroup } from 'tdesign-vue'
+import { Checkbox as TCheckbox, CheckboxGroup as TCheckboxGroup } from 'tdesign-vue-next'
 
 export default {
   name: 'SiteCheckbox',
@@ -28,8 +28,10 @@ export default {
 
   props: {
     options: Array,
-    value: {}
+    modelValue: {}
   },
+
+  emits: ['update:modelValue'],
 
   data () {
     return {
@@ -50,14 +52,14 @@ export default {
   },
 
   watch: {
-    value: {
+    modelValue: {
       immediate: true,
       handler (val) {
         this.checkedList = val
       }
     },
     checkedStr () {
-      this.$emit('input', this.checkedList)
+      this.$emit('update:modelValue', this.checkedList)
     }
   },
 

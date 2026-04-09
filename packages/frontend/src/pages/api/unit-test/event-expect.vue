@@ -46,7 +46,7 @@
         "clear": [{ "stopPropagation": true }],
         "change": ["''", { "stopPropagation": true }]
         }。表示会同时触发 clear 和 change 等 2 个事件。注意，如果事件参数是字符串，需要额外加上单引号包裹。</p>
-        <p>【注意】事件名为不带 on 的小驼峰</p>
+          <p>【注意】事件名为不带 on 的小驼峰</p>
         </p>
       </template>
 

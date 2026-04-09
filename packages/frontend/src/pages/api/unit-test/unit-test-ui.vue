@@ -1,6 +1,6 @@
 <template>
   <div class="unit-test-ui">
-    <t-tabs v-model="framework" :list="frameWorkOptions"></t-tabs>
+    <t-tabs v-model:value="framework" :list="frameWorkOptions"></t-tabs>
     <br/>
     <t-card>
       <t-form size="small">
@@ -36,7 +36,7 @@
         </t-form-item>
 
         <t-form-item>
-          <t-tooltip theme="light" content="示例一：Text，输出 <Button>Text</Button>； 示例二：<span>children</span>， 输出：<Button><span>children</span></Button>">
+          <t-tooltip theme="light" content="示例一：Text，输出 &lt;Button&gt;Text&lt;/Button&gt;； 示例二：&lt;span&gt;children&lt;/span&gt;， 输出：&lt;Button&gt;&lt;span&gt;children&lt;/span&gt;&lt;/Button&gt;">
             <t-input
               v-model="formData.content"
               placeholder="子组件"
@@ -155,7 +155,7 @@ export default {
         this.formDataMobile = cloneDeep(INITIAL_FROM_DATA)
       }
     },
-    
+
     updateFormData(formData, testJSON) {
       const newFormData = {
         ...formData,
@@ -184,7 +184,7 @@ export default {
           } else if (key === 'attribute') {
             obj.attributeDom = testJSON.attributeDom
           }
-          if (['tnode', 'className', 'attribute', 'dom'].includes('key')) {
+          if (['tnode', 'className', 'attribute', 'dom'].includes(key)) {
             obj.props = testJSON.props
           }
           newFormData.list.push(obj)
@@ -226,8 +226,9 @@ export default {
       } else {
         oneData = params.formData
       }
-      this.$set(this[`formData${this.framework}`].list, index, oneData)
-      this.$set(this[`formData${this.framework}`], 'props', oneData.props)
+      // Vue 3 使用 Proxy 响应式，不再需要 $set
+      this[`formData${this.framework}`].list[index] = oneData
+      this[`formData${this.framework}`].props = oneData.props
       this.onFormDataChange(trigger, {
         ...params,
         formData: this.formData

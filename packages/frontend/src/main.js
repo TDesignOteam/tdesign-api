@@ -1,24 +1,21 @@
 /* eslint-disable */
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import TDesign from 'tdesign-vue';
-import routes from './routes';
-import App from './App.vue';
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import TDesign from 'tdesign-vue-next'
+import routes from './routes'
+import App from './App.vue'
 
 // import tdesign style;
-import 'tdesign-vue/es/style/index.css';
+import 'tdesign-vue-next/es/style/index.css'
 
-Vue.use(VueRouter);
-Vue.use(TDesign);
-
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   routes,
-});
+})
 
-Vue.config.productionTip = false;
+const app = createApp(App)
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');
+app.use(router)
+app.use(TDesign)
+
+app.mount('#app')

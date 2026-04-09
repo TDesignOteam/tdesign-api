@@ -1,12 +1,12 @@
 <template>
   <div class="t-api-tool__multi-operations">
-    <t-button theme="primary" @click.native="onCreateApi">New API</t-button>
-    <t-button theme="primary" @click.native="onGenerateDialogShow">Generate API Files</t-button>
+    <t-button theme="primary" @click="onCreateApi">New API</t-button>
+    <t-button theme="primary" @click="onGenerateDialogShow">Generate API Files</t-button>
     <a href="https://github.com/Tencent/tdesign/wiki/Component-API-Guide" target="_blank" class="link">
       <t-button variant="text" style="color: #99999"> API Design </t-button>
     </a>
-    <t-dialog header="生成" width="830" :visible.sync="generateFilesVisible" @confirm="onGenerateConfirm">
-      <div slot="body">
+    <t-dialog header="生成" :width="830" v-model:visible="generateFilesVisible" @confirm="onGenerateConfirm">
+      <template #body>
         <!-- <import ref="api-form" :map="map" :info="apiInfo"></import> -->
         <form class="t-form api-edit-form" onsubmit="return false">
           <div class="t-form-item">
@@ -62,13 +62,13 @@
             </div>
           </div>
         </form>
-      </div>
+      </template>
     </t-dialog>
   </div>
 </template>
 
 <script>
-import { Button as TButton, Select as TSelect, Option as TOption } from 'tdesign-vue';
+import { Button as TButton, Select as TSelect, Option as TOption } from 'tdesign-vue-next';
 import SiteCheckbox from './checkbox.vue';
 import { cmpApiInstance } from '../../services/api-server';
 

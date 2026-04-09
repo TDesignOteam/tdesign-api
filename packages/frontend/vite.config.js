@@ -1,6 +1,6 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import { createVuePlugin } from 'vite-plugin-vue2'
+import vue from '@vitejs/plugin-vue'
 // vite run dev need this plugin, vite run build doesn't
 import commonjs from 'vite-plugin-commonjs'
 
@@ -42,10 +42,7 @@ export default ({ mode }) => {
     },
     plugins: [
       commonjs(),
-      createVuePlugin({
-        include: /(\.md|\.vue)$/,
-        jsx: true
-      })
+      vue()
     ]
   })
 }
