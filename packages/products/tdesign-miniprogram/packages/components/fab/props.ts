@@ -15,10 +15,9 @@ const props: TdFabProps = {
     type: null,
     value: false,
   },
-  /** 图标 */
+  /** 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon` 组件 */
   icon: {
-    type: String,
-    value: '',
+    type: null,
   },
   /** 是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附 */
   magnet: {
