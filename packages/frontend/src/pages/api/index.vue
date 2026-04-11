@@ -111,7 +111,7 @@
 </template>
 
 <script>
-import { codemirror } from './components/codemirror'
+import codemirror from './components/codemirror.vue'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/javascript/javascript.js'
 import 'codemirror/theme/base16-dark.css'
