@@ -8,5 +8,5 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-animation | String | gradient | 加载的状态形式。可选项：moving/gradient | N
+animation | String | moving | 加载的状态形式。可选项：skeleton/moving/gradient/dots/circle | N
 text | String | - | 加载过程展示的文字内容 | N
