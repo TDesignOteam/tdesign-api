@@ -96,188 +96,188 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, reactive, computed, getCurrentInstance } from 'vue'
 import OneCategoryTest from './one-category-test'
 import { INITIAL_CATEGORY, INITIAL_FROM_DATA, CATEGORY_OPTIONS } from './const'
 import { parseJSON } from '../util'
 import cloneDeep from 'lodash/cloneDeep'
 
-export default {
-  name: 'UnitTestUI',
+const { proxy } = getCurrentInstance()
 
-  components: { OneCategoryTest },
-
-  props: {
-    currentTestJSON: Object,
-    apiInfo: {
-      type: Object,
-      default: () => ({}),
-    },
+const props = defineProps({
+  currentTestJSON: Object,
+  apiInfo: {
+    type: Object,
+    default: () => ({}),
   },
+})
 
-  data() {
-    return {
-      // PC/Mobile
-      framework: 'PC',
-      formDataPC: cloneDeep(INITIAL_FROM_DATA),
-      formDataMobile: cloneDeep(INITIAL_FROM_DATA),
-      frameWorkOptions: [
-        { label: 'PC', value: 'PC' },
-        { label: 'Mobile', value: 'Mobile' },
-      ],
-      CATEGORY_OPTIONS,
+const emit = defineEmits(['test-ui-form-data-change'])
+
+// PC/Mobile
+const framework = ref('PC')
+const formDataPC = ref(cloneDeep(INITIAL_FROM_DATA))
+const formDataMobile = ref(cloneDeep(INITIAL_FROM_DATA))
+const frameWorkOptions = [
+  { label: 'PC', value: 'PC' },
+  { label: 'Mobile', value: 'Mobile' },
+]
+
+const formData = computed(() => {
+  return {
+    PC: formDataPC.value,
+    Mobile: formDataMobile.value,
+  }[framework.value]
+})
+
+const categories = computed(() => {
+  return formData.value.list.map(t => t.category)
+})
+
+function updateDataByJSON() {
+  const { currentTestJSON } = props
+  if (currentTestJSON.PC) {
+    formDataPC.value = updateFormData(formDataPC.value, currentTestJSON.PC)
+  } else {
+    formDataPC.value = cloneDeep(INITIAL_FROM_DATA)
+  }
+  if (currentTestJSON.Mobile) {
+    formDataMobile.value = updateFormData(formDataMobile.value, currentTestJSON.Mobile)
+  } else {
+    formDataMobile.value = cloneDeep(INITIAL_FROM_DATA)
+  }
+}
+
+function updateFormData(formDataVal, testJSON) {
+  const newFormData = {
+    ...formDataVal,
+    dom: testJSON.dom,
+    classNameDom: testJSON.classNameDom,
+    attributeDom: testJSON.attributeDom,
+    props: testJSON.props,
+    content: testJSON.content,
+    wrapper: testJSON.wrapper,
+    trigger: testJSON.trigger,
+    copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
+    needCopy: Boolean(testJSON.copyTestToWrapper && testJSON.copyTestToWrapper.length),
+    snapshot: testJSON.snapshot,
+    skip: testJSON.skip,
+    list: [],
+  };
+  CATEGORY_OPTIONS.forEach((item) => {
+    const key = item.value
+    if (testJSON[key]) {
+      const obj = {
+        category: key,
+        [key]: formatCategoryData(key, testJSON[key]),
+      }
+      if (key === 'className') {
+        obj.classNameDom = testJSON.classNameDom
+      } else if (key === 'attribute') {
+        obj.attributeDom = testJSON.attributeDom
+      }
+      if (['tnode', 'className', 'attribute', 'dom'].includes(key)) {
+        obj.props = testJSON.props
+      }
+      newFormData.list.push(obj)
     }
-  },
+  })
+  for (let i = newFormData.list.length; i < formDataVal.list.length; i++) {
+    newFormData.list.push({ category: formDataVal.list[i].category })
+  }
+  return newFormData
+}
 
-  computed: {
-    formData() {
-      return {
-        PC: this.formDataPC,
-        Mobile: this.formDataMobile,
-      }[this.framework]
-    },
-    categories() {
-      return this.formData.list.map(t => t.category)
-    },
-  },
+function formatCategoryData(category, data) {
+  if (category === 'tnode') {
+    if (data === true) {
+      return { dom: [], trigger: '' }
+    }
+  }
+  return data
+}
 
-  methods: {
-    updateDataByJSON() {
-      const { currentTestJSON } = this
-      if (currentTestJSON.PC) {
-        this.formDataPC = this.updateFormData(this.formDataPC, currentTestJSON.PC)
-      } else {
-        this.formDataPC = cloneDeep(INITIAL_FROM_DATA)
+function onFormDataChange(trigger, params) {
+  emit('test-ui-form-data-change', {
+    framework: framework.value,
+    formData: formData.value,
+    trigger,
+    params,
+  })
+}
+
+function onOneCategoryTestChange(trigger, params, index) {
+  const currentFormData = framework.value === 'PC' ? formDataPC.value : formDataMobile.value
+  let oneData = currentFormData.list[index]
+  // 子组件内部有单独的变量维护 Event 事件
+  if (trigger === 'event') {
+    const newEventData = getEventJSONData(params)
+    oneData = {
+      ...params.formData,
+      event: newEventData,
+    }
+  } else {
+    oneData = params.formData
+  }
+  // Vue 3 使用 Proxy 响应式，不再需要 $set
+  currentFormData.list[index] = oneData
+  currentFormData.props = oneData.props
+  onFormDataChange(trigger, {
+    ...params,
+    formData: formData.value
+  })
+}
+
+function getEventJSONData(eventData) {
+  if (eventData.objectEvent) {
+    const obj = {}
+    eventData.objectEvent.forEach((item) => {
+      obj[item.trigger] = {
+        arguments: item.arguments ? JSON.parse(item.arguments) : undefined
       }
-      if (currentTestJSON.Mobile) {
-        this.formDataMobile = this.updateFormData(this.formDataMobile, currentTestJSON.Mobile)
-      } else {
-        this.formDataMobile = cloneDeep(INITIAL_FROM_DATA)
-      }
-    },
+    })
+    return obj
+  }
+  if (eventData.arrayEvent) {
+    return eventData.arrayEvent.map((item) => ({
+      props: item.props ? parseJSON(item.props) : undefined,
+      description: item.description,
+      wrapper: item.wrapper,
+      expect: item.expect.map((ep) => ({
+        trigger: ep.trigger,
+        event: ep.event ? parseJSON(ep.event) : undefined,
+        exist: ep.exist ? parseJSON(ep.exist, []) : undefined,
+        delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined )
+      }))
+    }))
+  }
+}
 
-    updateFormData(formData, testJSON) {
-      const newFormData = {
-        ...formData,
-        dom: testJSON.dom,
-        classNameDom: testJSON.classNameDom,
-        attributeDom: testJSON.attributeDom,
-        props: testJSON.props,
-        content: testJSON.content,
-        wrapper: testJSON.wrapper,
-        trigger: testJSON.trigger,
-        copyTestToWrapper: testJSON.copyTestToWrapper?.join(),
-        needCopy: Boolean(testJSON.copyTestToWrapper && testJSON.copyTestToWrapper.length),
-        snapshot: testJSON.snapshot,
-        skip: testJSON.skip,
-        list: [],
-      };
-      CATEGORY_OPTIONS.forEach((item) => {
-        const key = item.value
-        if (testJSON[key]) {
-          const obj = {
-            category: key,
-            [key]: this.formatCategoryData(key, testJSON[key]),
-          }
-          if (key === 'className') {
-            obj.classNameDom = testJSON.classNameDom
-          } else if (key === 'attribute') {
-            obj.attributeDom = testJSON.attributeDom
-          }
-          if (['tnode', 'className', 'attribute', 'dom'].includes(key)) {
-            obj.props = testJSON.props
-          }
-          newFormData.list.push(obj)
-        }
-      })
-      for (let i = newFormData.list.length; i < this.formData.list.length; i++) {
-        newFormData.list.push({ category: this.formData.list[i].category })
-      }
-      return newFormData;
-    },
+function clearFormData() {
+  formDataPC.value = cloneDeep(INITIAL_FROM_DATA)
+  formDataMobile.value = cloneDeep(INITIAL_FROM_DATA)
+}
 
-    formatCategoryData(category, data) {
-      if (category === 'tnode') {
-        if (data === true) {
-          return { dom: [], trigger: '' }
-        }
-      }
-      return data
-    },
+function onAddMore() {
+  const currentFormData = framework.value === 'PC' ? formDataPC.value : formDataMobile.value
+  currentFormData.list.push({ ...INITIAL_CATEGORY })
+}
 
-    onFormDataChange(trigger, params) {
-      this.$emit('test-ui-form-data-change', {
-        framework: this.framework,
-        formData: this.formData,
-        trigger,
-        params,
-      })
-    },
+function onDelete(index) {
+  const currentFormData = framework.value === 'PC' ? formDataPC.value : formDataMobile.value
+  if (currentFormData.list.length <= 1) {
+    proxy.$message.warning('至少保留一个')
+    return
+  }
+  currentFormData.list.splice(index, 1)
+}
 
-    onOneCategoryTestChange(trigger, params, index) {
-      let oneData = this[`formData${this.framework}`].list[index]
-      // 子组件内部有单独的变量维护 Event 事件
-      if (trigger === 'event') {
-        const newEventData = this.getEventJSONData(params)
-        oneData = {
-          ...params.formData,
-          event: newEventData,
-        }
-      } else {
-        oneData = params.formData
-      }
-      // Vue 3 使用 Proxy 响应式，不再需要 $set
-      this[`formData${this.framework}`].list[index] = oneData
-      this[`formData${this.framework}`].props = oneData.props
-      this.onFormDataChange(trigger, {
-        ...params,
-        formData: this.formData
-      })
-    },
-
-    getEventJSONData(eventData) {
-      if (eventData.objectEvent) {
-        const obj = {}
-        eventData.objectEvent.forEach((item) => {
-          obj[item.trigger] = {
-            arguments: item.arguments ? JSON.parse(item.arguments) : undefined
-          }
-        })
-        return obj
-      }
-      if (eventData.arrayEvent) {
-        return eventData.arrayEvent.map((item) => ({
-          props: item.props ? parseJSON(item.props) : undefined,
-          description: item.description,
-          wrapper: item.wrapper,
-          expect: item.expect.map((ep) => ({
-            trigger: ep.trigger,
-            event: ep.event ? parseJSON(ep.event) : undefined,
-            exist: ep.exist ? parseJSON(ep.exist, []) : undefined,
-            delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined )
-          }))
-        }))
-      }
-    },
-
-    clearFormData() {
-      this.formDataPC = cloneDeep(INITIAL_FROM_DATA)
-      this.formDataMobile = cloneDeep(INITIAL_FROM_DATA)
-    },
-
-    onAddMore() {
-      this[`formData${this.framework}`].list.push({ ...INITIAL_CATEGORY })
-    },
-
-    onDelete(index) {
-      if (this[`formData${this.framework}`].list.length <= 1) {
-        this.$message.warning('至少保留一个')
-        return;
-      }
-      this[`formData${this.framework}`].list.splice(index, 1)
-    },
-  },
-};
+defineExpose({
+  updateDataByJSON,
+  clearFormData,
+  testDescription: undefined,
+})
 </script>
 
 <style>

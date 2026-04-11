@@ -96,8 +96,9 @@
   </div>
 </template>
 
-<script>
-import { parseJSON } from './util';
+<script setup>
+import { computed, getCurrentInstance } from 'vue'
+import { parseJSON } from './util'
 import { cmpApiInstance } from '../../services/api-server'
 import {
   BaseTable as TTable,
@@ -105,117 +106,98 @@ import {
   Popconfirm as TPopconfirm
 } from 'tdesign-vue-next'
 
-export default {
-  name: 'ApiList',
+const { proxy } = getCurrentInstance()
 
-  components: {
-    TTable,
-    TButton,
-    TPopconfirm
-  },
+const props = defineProps({
+  list: Array,
+  platformOptions: Array,
+  preview: Boolean
+})
 
-  props: {
-    list: Array,
-    platformOptions: Array,
-    preview: Boolean
-  },
+const emit = defineEmits(['create-api', 'delete-api-success', 'click-edit-btn', 'click-test-edit-btn', 'code-preview'])
 
-  computed: {
-    columns () {
-      return this.getCols()
-    }
-  },
+const columns = computed(() => {
+  return getCols()
+})
 
-  watch: {},
-
-  methods: {
-    getCols () {
-      const columns = [
-        { title: 'ID', colKey: 'id' },
-        {
-          title: '组件/插件',
-          colKey: 'component',
-          fixed: 'left',
-          width: 200,
-        },
-        // {
-        //   title: '分类',
-        //   colKey: 'field_category_text',
-        // },
-        // {
-        //   title: '平台框架',
-        //   colKey: 'platform_framework',
-        // },
-        {
-          title: '名称',
-          colKey: 'field_name',
-        },
-        {
-          title: '描述',
-          colKey: 'field_desc_zh',
-        },
-        {
-          title: '类型',
-          colKey: 'field_type_text',
-        },
-        {
-          title: '默认值',
-          colKey: 'field_default_value',
-          width: 90,
-        },
-        // {
-        //   title: '更新时间',
-        //   colKey: 'update_time',
-        //   width: 136,
-        // }
-      ]
-      if (!this.preview) {
-        columns.push({
-          title: '操作',
-          colKey: 'operation',
-          fixed: 'right',
-        })
-      }
-      return columns
+function getCols() {
+  const cols = [
+    { title: 'ID', colKey: 'id' },
+    {
+      title: '组件/插件',
+      colKey: 'component',
+      fixed: 'left',
+      width: 200,
     },
-    onCreate () {
-      this.$emit('create-api')
+    {
+      title: '名称',
+      colKey: 'field_name',
     },
-    onDeleteConfirm (data) {
-      cmpApiInstance({
-        url: '/cmp/api',
-        method: 'delete',
-        data: {
-          id: data.row.id
-        }
-      }).then(() => {
-        this.$message.info('删除成功！')
-        this.$emit('delete-api-success')
-      })
+    {
+      title: '描述',
+      colKey: 'field_desc_zh',
     },
-    onEditClick (data) {
-      this.$emit('click-edit-btn', data)
+    {
+      title: '类型',
+      colKey: 'field_type_text',
     },
-    onTestsEditClick (data) {
-      this.$emit('click-test-edit-btn', data)
+    {
+      title: '默认值',
+      colKey: 'field_default_value',
+      width: 90,
     },
-    onCodePreview (data, framework) {
-      this.$emit('code-preview', data, framework)
-    },
-    getTested(test) {
-      const testedList =[]
-      if (!test) return testedList;
-      const json = parseJSON(test);
-      if (!json) return testedList;
-      if (json.PC){
-        testedList.push('PC')
-      }
-      if (json.Mobile){
-        testedList.push('Mobile')
-      }
-      return testedList;
-    },
+  ]
+  if (!props.preview) {
+    cols.push({
+      title: '操作',
+      colKey: 'operation',
+      fixed: 'right',
+    })
   }
+  return cols
+}
+
+function onCreate() {
+  emit('create-api')
+}
+
+function onDeleteConfirm(data) {
+  cmpApiInstance({
+    url: '/cmp/api',
+    method: 'delete',
+    data: {
+      id: data.row.id
+    }
+  }).then(() => {
+    proxy.$message.info('删除成功！')
+    emit('delete-api-success')
+  })
+}
+
+function onEditClick(data) {
+  emit('click-edit-btn', data)
+}
+
+function onTestsEditClick(data) {
+  emit('click-test-edit-btn', data)
+}
+
+function onCodePreview(data, framework) {
+  emit('code-preview', data, framework)
+}
+
+function getTested(test) {
+  const testedList = []
+  if (!test) return testedList
+  const json = parseJSON(test)
+  if (!json) return testedList
+  if (json.PC) {
+    testedList.push('PC')
+  }
+  if (json.Mobile) {
+    testedList.push('Mobile')
+  }
+  return testedList
 }
 </script>
 

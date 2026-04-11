@@ -228,26 +228,11 @@
         ></t-textarea>
       </div>
     </div>
-
-    <!-- <div class="t-form-item">
-      <label>测试用例描述：</label>
-      <div class="t-form-content">
-        <t-textarea v-model="formData.testDescription" :autosize="{ minRows: 3 }" placeholder="请输入单测用例描述语言"></t-textarea>
-      </div>
-    </div> -->
-
-    <!-- <div class="t-form-item">
-      <label></label>
-      <div class="t-form-content">
-        不同框架支持的版本号不同，初步设想格式。{ key: value }，其中 key 为框架，value 为版本号
-        <t-input v-model="formData.version">支持版本号</t-input>
-      </div>
-    </div> -->
   </form>
 </template>
 
-<script>
-
+<script setup>
+import { ref, reactive, computed, watch } from 'vue'
 import SiteCheckbox from './checkbox.vue'
 import {
   Icon as TIcon,
@@ -290,176 +275,167 @@ const versionDescription = [
     'Miniprogram': '0.27.0',
     'Vue(Mobile)': '0.14.1',
   }, undefined, 2)}`,
-].join('\n');
+].join('\n')
 
-export default {
-  name: 'APIDesignImport',
+const props = defineProps({
+  dataBase: {},
+  map: Object,
+  info: Object,
+  mode: String,
+})
 
-  components: { SiteCheckbox, TIcon, TInput, TSelect, TOption, TPopup, TCheckbox, TCheckboxGroup, TRadio, TRadioGroup },
+const list = ref([])
+const componentApiData = ref([])
+const formData = reactive({
+  platform: [],
+  component: '',
+  apiCategory: '1',
+  fieldType: [],
+  customFieldType: '',
+  defaultValue: '',
+  required: false,
+  deprecated: false,
+  fieldEnums: '',
+  descZh: '',
+  descEn: '',
+  testDescription: '',
+  version: '',
+  supportDefaultValue: false,
+  name: '',
+  eventInput: '',
+  eventOutput: '',
+  syntacticSugar: '',
+  html_attribute: false,
+  triggerElements: ''
+})
 
-  props: {
-    dataBase: {},
-    map: Object,
-    info: Object,
-    mode: String,
-  },
+const components = computed(() => {
+  return props.map && props.map.components
+})
 
-  data () {
-    return {
-      API_CATEGORY_EVENTS,
-      API_CATEGORY_PROPS,
-      API_CATEGORY_PLUGINS,
-      API_CATEGORY_FUNCTIONS,
-      API_CATEGORY_CSS_VAR_API,
-      STRING,
-      list: [],
-      versionDescription,
-      componentApiData: [],
-      formData: {
-        platform: [],
-        component: '',
-        apiCategory: '1',
-        fieldType: [],
-        customFieldType: '',
-        defaultValue: '',
-        required: false,
-        deprecated: false,
-        fieldEnums: '',
-        descZh: '',
-        descEn: '',
-        testDescription: '',
-        version: '',
-        supportDefaultValue: false,
-        name: '',
-        eventInput: '',
-        eventOutput: '',
-        syntacticSugar: '',
-        html_attribute: false,
-        triggerElements: ''
-      }
-    }
-  },
+const fieldOptions = computed(() => {
+  return props.map && props.map.field_type
+})
 
-  computed: {
-    components () {
-      return this.map && this.map.components
-    },
-    fieldOptions () {
-      return this.map && this.map.field_type
-    },
-    platformOptions () {
-      return this.map && this.map.platform_framework
-    },
-    currentApiCategory () {
-      return API_CATEGORY_MAP[this.formData.apiCategory] || { placeholder: {} }
-    },
-    isShowSugar () {
-      const intersection = this.formData.platform.filter(item => [P_VUE_PC, P_VUE_MOBILE, P_UNIAPP].includes(Number(item)))
-      const platformAllow = !!intersection.length
-      const categoryAllow = [
-        API_CATEGORY_EVENTS,
-        API_CATEGORY_PROPS,
-        API_CATEGORY_PLUGINS
-      ].includes(Number(this.formData.apiCategory))
-      return platformAllow && categoryAllow
-    },
-    isExtendsApi () {
-      return String(this.formData.apiCategory) === String(API_CATEGORY_EXTENDS)
-    },
-    isReturnApi () {
-      return String(this.formData.apiCategory) === String(API_CATEGORY_RETURN)
-    },
-    isT () {
-      return String(this.formData.apiCategory) === String(API_CATEGORY_T)
-    },
-    isShowEnumField () {
-      return this.formData.fieldType.includes(String(STRING)) ||
-        this.formData.fieldType.includes(String(NUMBER))
-    },
-    isShowParams() {
-      return [API_CATEGORY_FUNCTIONS, API_CATEGORY_EVENTS].includes(Number(this.formData.apiCategory));
-    },
-    isShowReturn() {
-      return [API_CATEGORY_FUNCTIONS].includes(Number(this.formData.apiCategory));
-    },
-  },
+const platformOptions = computed(() => {
+  return props.map && props.map.platform_framework
+})
 
-  watch: {
-    platformOptions (val) {
-      if (!val) return
-      this.formData.platform = []
-    },
-    info (val) {
-      this.formData = {
-        ...this.formData,
-        testDescription: '',
-      };
-      if (!val) return
-      this.formData = {
-        platform: val.platform_framework,
-        component: val.component,
-        apiCategory: val.field_category ? String(val.field_category) : '1',
-        fieldType: val.field_type,
-        customFieldType: val.custom_field_type,
-        defaultValue: val.field_default_value,
-        required: !!val.field_required,
-        deprecated: !!val.deprecated,
-        fieldEnums: val.field_enum,
-        descZh: val.field_desc_zh,
-        descEn: val.field_desc_en,
-        testDescription: val.test_description,
-        version: val.version,
-        supportDefaultValue: Boolean(val.support_default_value),
-        htmlAttribute: Boolean(val.html_attribute),
-        name: val.field_name,
-        eventInput: val.event_input,
-        eventOutput: val.event_output,
-        syntacticSugar: val.syntactic_sugar,
-        triggerElements: val.trigger_elements
-      }
+const currentApiCategory = computed(() => {
+  return API_CATEGORY_MAP[formData.apiCategory] || { placeholder: {} }
+})
 
-      if (this.mode === 'create') {
-        this.formData.testDescription = '';
-      }
+const isShowSugar = computed(() => {
+  const intersection = formData.platform.filter(item => [P_VUE_PC, P_VUE_MOBILE, P_UNIAPP].includes(Number(item)))
+  const platformAllow = !!intersection.length
+  const categoryAllow = [
+    API_CATEGORY_EVENTS,
+    API_CATEGORY_PROPS,
+    API_CATEGORY_PLUGINS
+  ].includes(Number(formData.apiCategory))
+  return platformAllow && categoryAllow
+})
 
-      this.getCurrentComponentData()
-    }
-  },
+const isExtendsApi = computed(() => {
+  return String(formData.apiCategory) === String(API_CATEGORY_EXTENDS)
+})
 
-  methods: {
-    onFieldTypeChange (val) {
-      // 如果没有 String 没有，则需要清空可选值
-      if (!val.includes(String(STRING))) {
-        this.formData.fieldEnums = ''
-      }
-    },
+const isReturnApi = computed(() => {
+  return String(formData.apiCategory) === String(API_CATEGORY_RETURN)
+})
 
-    // 获取当前组件全部信息
-    getCurrentComponentData() {
-      // 如果不存在根组件，则直接返回
-      if (!this.info.component) return;
-      const siblingsMap = getCombinedComponentsByCurrentName();
-      const component = siblingsMap[this.info.component]
-        ? siblingsMap[this.info.component].join()
-        : this.info.component;
-      cmpApiInstance({
-        method: 'get',
-        url: '/cmp/api',
-        params: {
-          component,
-          page: 1,
-          // 单个组件 API 数量暂时不会超过 300 个
-          page_size: 300,
-        },
-      }).then((res) => {
-        this.componentApiData = res.data.data
-        this.loading = false
-      }, () => {
-        this.loading = false
-      })
-    },
+const isT = computed(() => {
+  return String(formData.apiCategory) === String(API_CATEGORY_T)
+})
+
+const isShowEnumField = computed(() => {
+  return formData.fieldType.includes(String(STRING)) ||
+    formData.fieldType.includes(String(NUMBER))
+})
+
+const isShowParams = computed(() => {
+  return [API_CATEGORY_FUNCTIONS, API_CATEGORY_EVENTS].includes(Number(formData.apiCategory))
+})
+
+const isShowReturn = computed(() => {
+  return [API_CATEGORY_FUNCTIONS].includes(Number(formData.apiCategory))
+})
+
+watch(() => props.platformOptions, (val) => {
+  if (!val) return
+  formData.platform = []
+})
+
+watch(() => props.info, (val) => {
+  Object.assign(formData, {
+    ...formData,
+    testDescription: '',
+  })
+  if (!val) return
+  Object.assign(formData, {
+    platform: val.platform_framework,
+    component: val.component,
+    apiCategory: val.field_category ? String(val.field_category) : '1',
+    fieldType: val.field_type,
+    customFieldType: val.custom_field_type,
+    defaultValue: val.field_default_value,
+    required: !!val.field_required,
+    deprecated: !!val.deprecated,
+    fieldEnums: val.field_enum,
+    descZh: val.field_desc_zh,
+    descEn: val.field_desc_en,
+    testDescription: val.test_description,
+    version: val.version,
+    supportDefaultValue: Boolean(val.support_default_value),
+    htmlAttribute: Boolean(val.html_attribute),
+    name: val.field_name,
+    eventInput: val.event_input,
+    eventOutput: val.event_output,
+    syntacticSugar: val.syntactic_sugar,
+    triggerElements: val.trigger_elements
+  })
+
+  if (props.mode === 'create') {
+    formData.testDescription = ''
+  }
+
+  getCurrentComponentData()
+})
+
+function onFieldTypeChange(val) {
+  // 如果没有 String 没有，则需要清空可选值
+  if (!val.includes(String(STRING))) {
+    formData.fieldEnums = ''
   }
 }
+
+// 获取当前组件全部信息
+function getCurrentComponentData() {
+  // 如果不存在根组件，则直接返回
+  if (!props.info.component) return
+  const siblingsMap = getCombinedComponentsByCurrentName()
+  const component = siblingsMap[props.info.component]
+    ? siblingsMap[props.info.component].join()
+    : props.info.component
+  cmpApiInstance({
+    method: 'get',
+    url: '/cmp/api',
+    params: {
+      component,
+      page: 1,
+      // 单个组件 API 数量暂时不会超过 300 个
+      page_size: 300,
+    },
+  }).then((res) => {
+    componentApiData.value = res.data.data
+  }, () => {
+    // error
+  })
+}
+
+defineExpose({
+  formData
+})
 </script>
 
 <style lang="less">

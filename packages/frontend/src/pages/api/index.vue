@@ -110,7 +110,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, reactive, computed, onMounted, getCurrentInstance } from 'vue'
 import codemirror from './components/codemirror.vue'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/javascript/javascript.js'
@@ -129,6 +130,8 @@ import {
   Loading as TLoading,
 } from 'tdesign-vue-next'
 
+const { proxy } = getCurrentInstance()
+
 const TYPE_MAP = {
   plugin: '插件',
   TS: '接口定义'
@@ -141,232 +144,214 @@ const CODE_PREVIEW_TABS = [
   { label: 'Docs' }
 ]
 
-export default {
-  name: 'APIDesign',
+const props = defineProps({
+  preview: Boolean
+})
 
-  components: {
-    codemirror,
-    ApiList,
-    ApiOperation,
-    Import,
-    TSelect,
-    TOption,
-    TInput,
-    TPagination,
-    TDialog,
-    TLoading,
-    UnitTestDesign,
-  },
+const loading = ref(false)
+const createApiVisible = ref(false)
+const unitTestVisible = ref(false)
+const list = ref([])
+const map = ref({})
+const platformOptions = ref([])
+const query = reactive({
+  platform: '',
+  component: '',
+  fieldName: '',
+  fieldCategory: ''
+})
+const apiInfo = ref(null)
+const mode = ref('create')
+const total = ref(0)
+const page = ref(1)
+const pageSize = ref(20)
+const codePreviewVisible = ref(false)
+const codeData = ref({
+  framework: '',
+  data: {}
+})
+const code = ref('')
+const cmOptions = {
+  tabSize: 4,
+  mode: 'text/javascript',
+  theme: 'base16-dark',
+  lineNumbers: true,
+  line: true,
+  viewportMargin: 20
+}
+const previewType = ref('Types')
 
-  props: {
-    preview: Boolean
-  },
-
-  data () {
-    return {
-      TYPE_MAP,
-      loading: false,
-      dataBase: null,
-      createApiVisible: false,
-      unitTestVisible: false,
-      list: [],
-      map: {},
-      platformOptions: [],
-      query: {
-        platform: '',
-        component: '',
-        fieldName: '',
-        fieldCategory: ''
-      },
-      apiInfo: null,
-      mode: 'create',
-      total: 0,
-      page: 1,
-      pageSize: 20,
-      codePreviewVisible: false,
-      codeData: {
-        framework: '',
-        data: {}
-      },
-      code: '',
-      cmOptions: {
-        tabSize: 4,
-        mode: 'text/javascript',
-        theme: 'base16-dark',
-        lineNumbers: true,
-        line: true,
-        viewportMargin: 20
-      },
-      previewType: 'Types'
+const previewTabs = computed(() => {
+  return CODE_PREVIEW_TABS.filter((item) => {
+    if (item.include) {
+      return item.include.includes(codeData.value.framework)
     }
-  },
+    return true
+  })
+})
 
-  computed: {
-    previewTabs () {
-      return CODE_PREVIEW_TABS.filter((item) => {
-        if (item.include) {
-          return item.include.includes(this.codeData.framework)
-        }
-        return true
-      })
-    }
-  },
+onMounted(() => {
+  getMap()
+  getApiList()
+})
 
-  created () {
-    this.getMap()
-    this.getApiList()
-  },
+function onPageChange(pageInfo) {
+  page.value = pageInfo.current
+  pageSize.value = pageInfo.pageSize
+  getApiList()
+}
 
-  methods: {
-    onPageChange (pageInfo) {
-      this.page = pageInfo.current
-      this.pageSize = pageInfo.pageSize
-      this.getApiList()
-    },
-    onEnter () {
-      this.search()
-    },
-    onComponentChange () {
-      this.search()
-    },
-    onPlatformChange () {
-      this.search()
-    },
-    search () {
-      this.page = 1
-      this.getApiList()
-    },
-    getMap () {
-      cmpApiInstance({
-        method: 'get',
-        url: '/cmp/map'
-      }).then((res) => {
-        const map = res.data.data
-        this.platformOptions = map.platform_framework
-        this.map = map
-      })
-    },
-    getApiList () {
-      const query = Object.assign({}, this.query)
-      const params = {
-        platform_framework: query.platform,
-        component: query.component,
-        field_category: query.fieldCategory,
-        field_name: query.fieldName,
-        page: this.page,
-        page_size: this.pageSize
-      }
-      this.loading = true
-      cmpApiInstance({
-        method: 'get',
-        url: '/cmp/api',
-        params
-      }).then((res) => {
-        this.list = res.data.data
-        this.total = res.data.total
-        this.loading = false
-      }, () => {
-        this.loading = false
-      })
-    },
-    onDeleteSuccess () {
-      this.getApiList()
-    },
-    showDialog () {
-      this.createApiVisible = true
-    },
-    onEditClick (data) {
-      this.apiInfo = data.row
-      this.mode = 'edit'
-      this.showDialog()
-    },
+function onEnter() {
+  search()
+}
 
-    onTestEditClick(data) {
-      this.apiInfo = data.row
-      this.unitTestVisible = true
-    },
+function onComponentChange() {
+  search()
+}
 
-    onUnitTestEditCancel() {
-      this.apiInfo = null
-    },
+function onPlatformChange() {
+  search()
+}
 
-    onCreateDialogShow () {
-      this.apiInfo = null
-      this.mode = 'create'
-      this.showDialog()
-    },
-    onApiConfirm () {
-      const data = this.$refs['api-form'].formData
-      if (data.version) {
-        try {
-          JSON.parse(data.version);
-        } catch(e) {
-          this.$message.error('版本号格式必须为合法 JSON');
-          return;
-        }
-      }
-      const params = {
-        id: this.apiInfo ? this.apiInfo.id : undefined,
-        platform_framework: data.platform,
-        component: data.component,
-        field_category: data.apiCategory,
-        field_name: data.name,
-        field_type: data.fieldType,
-        custom_field_type: data.customFieldType,
-        field_default_value: data.defaultValue,
-        field_enum: data.fieldEnums,
-        field_desc_zh: data.descZh,
-        field_desc_en: data.descEn,
-        test_description: data.testDescription,
-        version: data.version,
-        support_default_value: Number(data.supportDefaultValue),
-        field_required: data.required,
-        deprecated: Number(data.deprecated),
-        html_attribute: data.htmlAttribute,
-        event_input: data.eventInput,
-        event_output: data.eventOutput,
-        syntactic_sugar: data.syntacticSugar,
-        trigger_elements: data.triggerElements
-      }
-      // 保存成功后关闭弹窗
-      cmpApiInstance({
-        method: this.mode === 'create' ? 'post' : 'put',
-        url: '/cmp/api',
-        data: params
-      }).then(() => {
-        this.getApiList()
-        this.createApiVisible = false
-      })
-    },
+function search() {
+  page.value = 1
+  getApiList()
+}
 
-    onUnitTestEditConfirm() {
-      const testDescription = this.$refs['unit-test'].testDescription
-      try {
-        testDescription && JSON.parse(testDescription)
-      } catch(e) {
-        this.$message.error('测试用例不是合法 JSON');
-        return;
-      }
-      // 保存成功后关闭弹窗
-      cmpApiInstance({
-        method: 'put',
-        url: '/cmp/api',
-        data: {
-          id: this.apiInfo ? this.apiInfo.id : undefined,
-          test_description: testDescription
-        },
-      }).then(() => {
-        this.getApiList()
-        this.unitTestVisible = false
-      })
-    },
+function getMap() {
+  cmpApiInstance({
+    method: 'get',
+    url: '/cmp/map'
+  }).then((res) => {
+    const mapData = res.data.data
+    platformOptions.value = mapData.platform_framework
+    map.value = mapData
+  })
+}
 
-    onCodePreview (data, framework) {
-      this.codeData = { data, framework }
-      this.codePreviewVisible = true
-      this.code = JSON.stringify(data, undefined, 2)
+function getApiList() {
+  const queryObj = Object.assign({}, query)
+  const params = {
+    platform_framework: queryObj.platform,
+    component: queryObj.component,
+    field_category: queryObj.fieldCategory,
+    field_name: queryObj.fieldName,
+    page: page.value,
+    page_size: pageSize.value
+  }
+  loading.value = true
+  cmpApiInstance({
+    method: 'get',
+    url: '/cmp/api',
+    params
+  }).then((res) => {
+    list.value = res.data.data
+    total.value = res.data.total
+    loading.value = false
+  }, () => {
+    loading.value = false
+  })
+}
+
+function onDeleteSuccess() {
+  getApiList()
+}
+
+function showDialog() {
+  createApiVisible.value = true
+}
+
+function onEditClick(data) {
+  apiInfo.value = data.row
+  mode.value = 'edit'
+  showDialog()
+}
+
+function onTestEditClick(data) {
+  apiInfo.value = data.row
+  unitTestVisible.value = true
+}
+
+function onUnitTestEditCancel() {
+  apiInfo.value = null
+}
+
+function onCreateDialogShow() {
+  apiInfo.value = null
+  mode.value = 'create'
+  showDialog()
+}
+
+function onApiConfirm() {
+  const data = proxy.$refs['api-form'].formData
+  if (data.version) {
+    try {
+      JSON.parse(data.version)
+    } catch(e) {
+      proxy.$message.error('版本号格式必须为合法 JSON')
+      return
     }
   }
+  const params = {
+    id: apiInfo.value ? apiInfo.value.id : undefined,
+    platform_framework: data.platform,
+    component: data.component,
+    field_category: data.apiCategory,
+    field_name: data.name,
+    field_type: data.fieldType,
+    custom_field_type: data.customFieldType,
+    field_default_value: data.defaultValue,
+    field_enum: data.fieldEnums,
+    field_desc_zh: data.descZh,
+    field_desc_en: data.descEn,
+    test_description: data.testDescription,
+    version: data.version,
+    support_default_value: Number(data.supportDefaultValue),
+    field_required: data.required,
+    deprecated: Number(data.deprecated),
+    html_attribute: data.htmlAttribute,
+    event_input: data.eventInput,
+    event_output: data.eventOutput,
+    syntactic_sugar: data.syntacticSugar,
+    trigger_elements: data.triggerElements
+  }
+  // 保存成功后关闭弹窗
+  cmpApiInstance({
+    method: mode.value === 'create' ? 'post' : 'put',
+    url: '/cmp/api',
+    data: params
+  }).then(() => {
+    getApiList()
+    createApiVisible.value = false
+  })
+}
+
+function onUnitTestEditConfirm() {
+  const testDesc = proxy.$refs['unit-test'].testDescription
+  try {
+    testDesc && JSON.parse(testDesc)
+  } catch(e) {
+    proxy.$message.error('测试用例不是合法 JSON')
+    return
+  }
+  // 保存成功后关闭弹窗
+  cmpApiInstance({
+    method: 'put',
+    url: '/cmp/api',
+    data: {
+      id: apiInfo.value ? apiInfo.value.id : undefined,
+      test_description: testDesc
+    },
+  }).then(() => {
+    getApiList()
+    unitTestVisible.value = false
+  })
+}
+
+function onCodePreview(data, framework) {
+  codeData.value = { data, framework }
+  codePreviewVisible.value = true
+  code.value = JSON.stringify(data, undefined, 2)
 }
 </script>
 

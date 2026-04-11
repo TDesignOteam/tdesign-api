@@ -2,68 +2,61 @@
   <div ref="editorContainer"></div>
 </template>
 
-<script>
+<script setup>
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import CodeMirror from 'codemirror'
 
-export default {
-  name: 'CodemirrorWrapper',
-  props: {
-    value: {
-      type: String,
-      default: ''
-    },
-    options: {
-      type: Object,
-      default: () => ({})
-    }
+const props = defineProps({
+  value: {
+    type: String,
+    default: ''
   },
-
-  data() {
-    return {
-      editor: null
-    }
-  },
-
-  watch: {
-    value(newVal) {
-      if (this.editor && this.editor.getValue() !== newVal) {
-        this.editor.setValue(newVal)
-      }
-    }
-  },
-
-  mounted() {
-    this.initEditor()
-  },
-
-  beforeUnmount() {
-    if (this.editor) {
-      this.editor.toTextArea()
-    }
-  },
-
-  methods: {
-    initEditor() {
-      const defaultOptions = {
-        tabSize: 4,
-        mode: 'text/javascript',
-        theme: 'base16-dark',
-        lineNumbers: true,
-        line: true,
-        viewportMargin: 20
-      }
-
-      this.editor = CodeMirror(this.$refs.editorContainer, {
-        ...defaultOptions,
-        ...this.options,
-        value: this.value || ''
-      })
-
-      this.editor.on('change', (cm) => {
-        this.$emit('update:modelValue', cm.getValue())
-      })
-    }
+  options: {
+    type: Object,
+    default: () => ({})
   }
+})
+
+const emit = defineEmits(['update:modelValue'])
+
+const editorContainer = ref(null)
+let editor = null
+
+watch(() => props.value, (newVal) => {
+  if (editor && editor.getValue() !== newVal) {
+    editor.setValue(newVal)
+  }
+})
+
+onMounted(() => {
+  initEditor()
+})
+
+onBeforeUnmount(() => {
+  if (editor) {
+    editor.toTextArea()
+  }
+})
+
+function initEditor() {
+  const defaultOptions = {
+    tabSize: 4,
+    mode: 'text/javascript',
+    theme: 'base16-dark',
+    lineNumbers: true,
+    line: true,
+    viewportMargin: 20
+  }
+
+  editor = CodeMirror(editorContainer.value, {
+    ...defaultOptions,
+    ...props.options,
+    value: props.value || ''
+  })
+
+  editor.on('change', (cm) => {
+    emit('update:modelValue', cm.getValue())
+  })
 }
 </script>
 

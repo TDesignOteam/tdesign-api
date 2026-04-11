@@ -10,41 +10,25 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ApiCopy',
+<script setup>
+import { ref, watch } from 'vue'
 
-  components: {},
+const props = defineProps({
+  modelValue: String,
+  platformOptions: {}
+})
 
-  props: {
-    modelValue: String,
-    platformOptions: {}
-  },
+const emit = defineEmits(['update:modelValue'])
 
-  emits: ['update:modelValue'],
+const platform = ref('')
 
-  data () {
-    return {
-      platform: ''
-    }
-  },
+watch(() => props.modelValue, (val) => {
+  platform.value = val
+}, { immediate: true })
 
-  computed: {},
-
-  watch: {
-    modelValue: {
-      immediate: true,
-      handler (val) {
-        this.platform = val
-      }
-    },
-    platform (val) {
-      this.$emit('update:modelValue', val)
-    }
-  },
-
-  methods: {}
-}
+watch(platform, (val) => {
+  emit('update:modelValue', val)
+})
 </script>
 
 <style lang="less">
