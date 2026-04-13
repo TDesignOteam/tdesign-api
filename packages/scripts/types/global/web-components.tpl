@@ -45,3 +45,23 @@ export type TreeOptionData<T = string | number> = {
   /** option node content */
   content?: string | TNode;
 } & PlainObject;
+
+export type ExtendedElement = (HTMLElement | SVGAElement | HTMLInputElement) & {
+  receiveProps: Function;
+  update: Function;
+  queuedUpdate: Function;
+  store?: unknown;
+  className?: string;
+  props: Record<string, unknown>;
+  splitText?: Function;
+  prevProps?: Record<string, unknown> & {
+    ref?:
+      | {
+          current?: unknown;
+        }
+      | Function;
+  };
+  attributes: NamedNodeMap;
+  _component?: Component;
+  _listeners: Record<string, Function>;
+} & Record<string, unknown>;

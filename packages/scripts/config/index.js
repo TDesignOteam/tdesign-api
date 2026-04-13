@@ -123,9 +123,9 @@ const FRAMEWORK_MAP = {
         getDocs: getVueApiDocs,
         titleMap: VUE_TITLE_MAP,
         commonTypePath:
-            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/packages/components/common.ts',
+            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/common.ts',
         componentPath:
-            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/packages/components/',
+            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/',
         commonRelativePath: '../common',
         componentRelativiePath: '../',
         vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
