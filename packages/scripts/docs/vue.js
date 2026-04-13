@@ -438,6 +438,8 @@ function addCommonProperties({
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
       `style | Object | - | ${languageInfo.styleText} | N`,
+      `innerClass | String | - | shadowDOM ${languageInfo.classNameText} | N`,
+      `innerStyle | Object | - | shadowDOM ${languageInfo.styleText} | N`,
     ]);
   }
 }
