@@ -322,7 +322,7 @@ function formatToVueApi(api, params) {
       tmp.splice(i, 1, 'Slot', 'Function');
     } else if (isMiniprogram || isUniApp) {
       tmp.splice(i, 1); // 小程序端插槽部分独立输出
-    } else if (params.framework.indexOf('React') !== -1) {
+    } else if (params.framework.indexOf('React') !== -1 || params.framework.indexOf('WebComponents') !== -1) {
       tmp = type.join() === 'TNode' ? ['TElement'] : ['TNode'];
     }
     type = tmp;
