@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import type { TNode, TElement, SizeEnum } from '../common';
+import type { TNode, SizeEnum } from '../common';
 
 export interface TdButtonProps {
   /**
@@ -16,11 +16,11 @@ export interface TdButtonProps {
   /**
    * 按钮内容，同 content
    */
-  children?: TNode;
+  children?: string | TNode;
   /**
    * 按钮内容
    */
-  content?: TNode;
+  content?: string | TNode;
   /**
    * 禁用状态。优先级：Button.disabled > Form.disabled
    */
@@ -42,7 +42,7 @@ export interface TdButtonProps {
   /**
    * 按钮内部图标，可完全自定义
    */
-  icon?: TElement;
+  icon?: TNode;
   /**
    * 在host标签上忽略的属性
    * @default []
@@ -70,7 +70,7 @@ export interface TdButtonProps {
   /**
    * 右侧内容，可用于定义右侧图标
    */
-  suffix?: TElement;
+  suffix?: TNode;
   /**
    * 渲染按钮的 HTML 标签，默认使用标签 `<button>` 渲染，可以自定义为 `<a>` `<div>` 等。透传全部 HTML 属性，如：`href/target/data-*` 等。⚠️ 禁用按钮 `<button disabled>`无法显示 Popup 浮层信息，可通过修改 `tag=div` 解决这个问题
    */

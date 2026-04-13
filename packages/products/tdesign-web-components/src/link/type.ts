@@ -4,17 +4,17 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode, TElement, SizeEnum } from '../common';
+import type { TNode, SizeEnum } from '../common';
 
 export interface TdLinkProps {
   /**
    * 链接内容，同 content
    */
-  children?: TNode;
+  children?: string | TNode;
   /**
    * 链接内容
    */
-  content?: TNode;
+  content?: string | TNode;
   /**
    * 禁用链接。优先级：Link.disabled > Form.disabled
    */
@@ -36,7 +36,7 @@ export interface TdLinkProps {
   /**
    * 前置图标
    */
-  prefixIcon?: TElement;
+  prefixIcon?: TNode;
   /**
    * 尺寸
    * @default medium
@@ -45,7 +45,7 @@ export interface TdLinkProps {
   /**
    * 后置图标
    */
-  suffixIcon?: TElement;
+  suffixIcon?: TNode;
   /**
    * 跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同
    * @default ''
