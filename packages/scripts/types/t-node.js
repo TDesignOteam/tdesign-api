@@ -68,6 +68,8 @@ function formatTNode(framework, type, customType) {
       return getVueTNodeType(type, newCustomType);
     case 'React(PC)':
       return getReactTNodeType(type, newCustomType);
+    case 'WebComponents(PC)':
+      return getReactTNodeType(type, newCustomType);  
     case 'React(Mobile)':
       return getReactTNodeType(type, newCustomType);
     case 'Miniprogram':

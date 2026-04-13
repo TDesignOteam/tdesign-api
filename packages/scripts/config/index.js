@@ -109,11 +109,27 @@ const FRAMEWORK_MAP = {
         vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
         TNode,
     },
-    'Angular(PC)': {
-        apiBasePath: '',
+    'WebComponents(PC)': {
+        iconPath: 'tdesign-icons-web-components',
+        apiBasePath: `${BASE_PATH_URL}/tdesign-web-components/src`,
         apiEnglishBasePath: '',
-        tsBasePath: '',
+        usageDemoBasePath: `${BASE_PATH_URL}/tdesign-web-components/src/$compName/_usage`,
+        tsBasePath: `${BASE_PATH_URL}/tdesign-web-components/src`,
+        propsBasePath: `${BASE_PATH_URL}/tdesign-web-components/src`,
+        tsBaseFileName: 'USE_TYPE_NAME',
+        globalPath: `${BASE_PATH_URL}/tdesign-web-components/src/common.ts`,
+        globalTplPath: path.resolve(__dirname, '../types/global/web-components.tpl'),
         unitBasePath: '',
+        getDocs: getVueApiDocs,
+        titleMap: VUE_TITLE_MAP,
+        commonTypePath:
+            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/common.ts',
+        componentPath:
+            'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/',
+        commonRelativePath: '../common',
+        componentRelativiePath: '../',
+        vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
+        TNode,
     },
     'Vue(Mobile)': {
         iconPath: 'tdesign-icons-vue-next',
@@ -188,7 +204,7 @@ const FRAMEWORK_MAP = {
         getDocs: getVueApiDocs,
         titleMap: VUE_TITLE_MAP,
     },
-     UniApp: {
+    UniApp: {
         iconPath: 'tdesign-icons-uniapp',
         apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
         apiEnglishBasePath: '',

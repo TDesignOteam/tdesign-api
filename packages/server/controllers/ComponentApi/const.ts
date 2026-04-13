@@ -21,7 +21,7 @@ const BIGINT = 1024;
 
 const P_VUE_PC = 1;
 const P_REACT_PC = 2;
-const P_ANGULAR_PC = 4;
+const P_WEB_COMPONENTS_PC = 4;
 const P_VUE_MOBILE = 8;
 const P_REACT_MOBILE = 16;
 const P_ANGULAR_MOBILE = 32;
@@ -81,6 +81,7 @@ export const FIELD_TYPE_MAP: MapOptions = {
 export const PLATFORM_FRAMEWORK: MapOptions = {
     [P_VUE_PC]: 'Vue(PC)',
     [P_REACT_PC]: 'React(PC)',
+    [P_WEB_COMPONENTS_PC]: 'WebComponents(PC)',
     [P_VUE_MOBILE]: 'Vue(Mobile)',
     [P_REACT_MOBILE]: 'React(Mobile)',
     // Angular 暂未有开发计划

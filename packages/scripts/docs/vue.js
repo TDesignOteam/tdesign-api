@@ -35,6 +35,7 @@ const API_DOC_BLOCKS = {
   'Vue(PC)': ['Props', 'Events', 'Functions'],
   'VueNext(PC)': ['Props', 'Events', 'Functions'],
   'React(PC)': ['Props', 'Functions'],
+  'WebComponents(PC)': ['Props', 'Functions'],
   'Vue(Mobile)': ['Props', 'Events', 'Functions'],
   'React(Mobile)': ['Props', 'Functions'],
   Miniprogram: ['Props', 'Events', 'Functions', 'Slots', 'External Classes', 'CSS Variables'],
@@ -321,7 +322,7 @@ function formatToVueApi(api, params) {
       tmp.splice(i, 1, 'Slot', 'Function');
     } else if (isMiniprogram || isUniApp) {
       tmp.splice(i, 1); // 小程序端插槽部分独立输出
-    } else if (params.framework.indexOf('React') !== -1) {
+    } else if (params.framework.indexOf('React') !== -1 || params.framework.indexOf('WebComponents') !== -1) {
       tmp = type.join() === 'TNode' ? ['TElement'] : ['TNode'];
     }
     type = tmp;
@@ -432,6 +433,13 @@ function addCommonProperties({
   } else if (framework === 'UniApp' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[
       `custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`,
+    ]);
+  } else if (framework === 'WebComponents(PC)') {
+    md[category].apis = md[category].apis.concat([
+      `className | String | - | ${languageInfo.classNameText} | N`,
+      `style | Object | - | ${languageInfo.styleText} | N`,
+      `innerClass | String | - | shadowDOM ${languageInfo.classNameText} | N`,
+      `innerStyle | Object | - | shadowDOM ${languageInfo.styleText} | N`,
     ]);
   }
 }
