@@ -209,16 +209,16 @@ const COMPONENT_API_MD_MAP = {
         includes: ['Vue(Mobile)', 'React(Mobile)'],
     },
     // 高阶组件
-    Chat: [
-        'Chat',
-        'ChatLoading',
-        'ChatItem',
-        'ChatContent',
-        'ChatAction',
-        'ChatInput',
-        'ChatSender',
-        'ChatReasoning',
-    ],
+    // Chat: [
+    //     'Chat',
+    //     'ChatLoading',
+    //     'ChatItem',
+    //     'ChatContent',
+    //     'ChatAction',
+    //     'ChatInput',
+    //     'ChatSender',
+    //     'ChatReasoning',
+    // ],
     ColorPicker: {
         list: ['ColorPicker', 'ColorPickerPanel'],
         includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
