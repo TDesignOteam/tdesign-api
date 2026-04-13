@@ -139,7 +139,7 @@ function generateComponentApi() {
         // 生成 props 文件
         generateVueProps(baseData, framework, selfUseDefault);
         // 生成 React defaultProps 文件
-        if (framework.indexOf('React') !== -1) {
+        if (framework.indexOf('React') !== -1 || framework.indexOf('WebComponents') !== -1) {
             generateReactDefaultProps(baseData, framework);
         }
         // 生成 props 单元测试文件
@@ -235,7 +235,7 @@ function validateParams(components) {
         'Vue(PC)',
         'VueNext(PC)',
         'React(PC)',
-        'Angular(PC)',
+        'WebComponents(PC)',
         'Vue(Mobile)',
         'React(Mobile)',
         'Angular(Mobile)',

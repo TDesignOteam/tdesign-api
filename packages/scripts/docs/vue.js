@@ -35,6 +35,7 @@ const API_DOC_BLOCKS = {
   'Vue(PC)': ['Props', 'Events', 'Functions'],
   'VueNext(PC)': ['Props', 'Events', 'Functions'],
   'React(PC)': ['Props', 'Functions'],
+  'WebComponents(PC)': ['Props', 'Functions'],
   'Vue(Mobile)': ['Props', 'Events', 'Functions'],
   'React(Mobile)': ['Props', 'Functions'],
   Miniprogram: ['Props', 'Events', 'Functions', 'Slots', 'External Classes', 'CSS Variables'],
@@ -432,6 +433,11 @@ function addCommonProperties({
   } else if (framework === 'UniApp' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
     md[category].apis.push(...[
       `custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`,
+    ]);
+  } else if (framework === 'WebComponents(PC)') {
+    md[category].apis = md[category].apis.concat([
+      `className | String | - | ${languageInfo.classNameText} | N`,
+      `style | Object | - | ${languageInfo.styleText} | N`,
     ]);
   }
 }
