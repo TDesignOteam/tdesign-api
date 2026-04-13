@@ -398,6 +398,10 @@
         "label": "对话操作"
       },
       {
+        "value": "Chatbot",
+        "label": "智能对话"
+      },
+      {
         "value": "ChatContent",
         "label": "对话正文"
       },

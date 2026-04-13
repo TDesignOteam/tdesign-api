@@ -245,6 +245,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
     { value: 'CalendarCell', label: '日历项参数', type: 'TS' },
     { value: 'Cascader', label: '级联选择' },
     { value: 'Chat', label: '对话' },
+    { value: 'Chatbot', label: '智能对话' },
     { value: 'ChatAction', label: '对话操作' },
     { value: 'ChatItem', label: '对话单元' },
     { value: 'ChatInput', label: '对话输入框' },

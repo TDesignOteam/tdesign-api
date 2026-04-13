@@ -15,6 +15,7 @@ const {
   getFolderName,
   getCmpTypeCombineMap,
 } = require('../common');
+const { getComponentBasePath } = require('../utils');
 
 const CONFIG = reactDefaultValuePropsConfig;
 
@@ -136,7 +137,7 @@ function generateReactDefaultProps(baseData, framework) {
       console.warn(e);
     }
 
-    const basePath = FRAMEWORK_MAP[framework].propsBasePath;
+    const basePath = getComponentBasePath(parentCmp,FRAMEWORK_MAP[framework].propsBasePath);
     const folder = path.resolve(basePath, getFolderName(parentCmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
