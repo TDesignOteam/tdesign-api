@@ -18,3 +18,11 @@ default-value | String / Number | - | 当前选中的值。非受控属性 | N
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: string \| number, selectedOption: SegmentedItem)` | 选项值发生变化时触发
+
+### Segmented External Classes
+
+类名 | 描述
+-- | --
+t-class | 根节点样式类
+t-class-item | 列表子项样式类
+t-class-thumb | 动画背景样式类

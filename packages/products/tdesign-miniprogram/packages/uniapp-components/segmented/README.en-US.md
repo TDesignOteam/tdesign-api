@@ -18,3 +18,11 @@ default-value | String / Number | - | uncontrolled property | N
 name | params | description
 -- | -- | --
 change | `(value: string \| number, selectedOption: SegmentedItem)` | \-
+
+### Segmented External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-item | \-
+t-class-thumb | \-
