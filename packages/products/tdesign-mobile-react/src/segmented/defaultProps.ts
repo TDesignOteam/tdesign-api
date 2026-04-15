@@ -4,4 +4,4 @@
 
 import { TdSegmentedProps } from './type';
 
-export const segmentedDefaultProps: TdSegmentedProps = { options: [] };
+export const segmentedDefaultProps: TdSegmentedProps = { block: false, options: [] };

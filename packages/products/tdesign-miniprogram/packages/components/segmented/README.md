@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
+block | Boolean | false | 是否撑满父元素宽度 | N
 disabled | Boolean | - | 是否禁用 | N
 options | Object | [] | 数据化配置选项内容。TS 类型：`string[] \| number[] \| SegmentedItem[] ` `interface SegmentedItem { value: string \| number; label?: string; icon?: string \| object; disabled?: boolean }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/segmented/type.ts) | N
 value | String / Number | - | 当前选中的值 | N

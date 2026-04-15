@@ -8,6 +8,7 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
+block | Boolean | false | 是否撑满父元素宽度 | N
 disabled | Boolean | - | 是否禁用 | N
 options | Object | [] | 数据化配置选项内容。TS 类型：`string[] \| number[] \| SegmentedItem[] ` `interface SegmentedItem { value: string \| number; label?: TNode; icon?: TNode; disabled?: boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/segmented/type.ts) | N
 value | String / Number | - | 当前选中的值 | N

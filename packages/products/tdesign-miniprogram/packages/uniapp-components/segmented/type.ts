@@ -6,6 +6,11 @@
 
 export interface TdSegmentedProps {
   /**
+   * 是否撑满父元素宽度
+   * @default false
+   */
+  block?: boolean;
+  /**
    * 是否禁用
    */
   disabled?: boolean;
