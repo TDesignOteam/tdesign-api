@@ -75,7 +75,7 @@ export default {
       return ['base', 'outline', 'text'].includes(val);
     },
   },
-  /** null */
+  /** 长按事件 */
   onMessageLongpress: {
     type: Function,
     default: () => ({}),

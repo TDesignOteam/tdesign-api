@@ -59,7 +59,7 @@ export interface TdChatMessageProps {
    */
   variant?: 'base' | 'outline' | 'text';
   /**
-   * null
+   * 长按事件
    */
   onMessageLongpress?: (context: { e: MouseEvent; id: string; longPressPosition: { x: number; y: number } }) => void;
 }

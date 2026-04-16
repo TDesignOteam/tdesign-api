@@ -23,7 +23,7 @@ variant | String | base | options: base/outline/text | N
 
 name | params | description
 -- | -- | --
-message-longpress | `(context: { e: MouseEvent, id: string, longPressPosition: { x: number, y: number} })` | \-
+message-longpress | `(context: { e: MouseEvent, id: string, longPressPosition: { x: number, y: number } })` | \-
 
 ### ChatMessage Slots
 
