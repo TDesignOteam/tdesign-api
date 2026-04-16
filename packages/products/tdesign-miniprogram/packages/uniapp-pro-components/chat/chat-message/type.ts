@@ -61,7 +61,7 @@ export interface TdChatMessageProps {
   /**
    * null
    */
-  onLongpress?: (context: { e: MouseEvent; id: string }) => void;
+  onMessageLongpress?: (context: { e: MouseEvent; id: string; longPressPosition: { x: number; y: number } }) => void;
 }
 
 export interface ChatMessageContentProps extends ChatContentProps {

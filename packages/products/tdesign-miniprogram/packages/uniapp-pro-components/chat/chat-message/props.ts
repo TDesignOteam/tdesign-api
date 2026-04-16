@@ -76,7 +76,7 @@ export default {
     },
   },
   /** null */
-  onLongpress: {
+  onMessageLongpress: {
     type: Function,
     default: () => ({}),
   },

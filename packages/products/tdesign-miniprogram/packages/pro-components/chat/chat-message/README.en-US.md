@@ -24,7 +24,7 @@ variant | String | base | options: base/outline/text | N
 
 name | params | description
 -- | -- | --
-longpress | `(detail: { id: string })` | \-
+message-longpress | `(detail: { id: string, longPressPosition: { x: number, y: number} })` | \-
 
 ### ChatMessage Slots
 

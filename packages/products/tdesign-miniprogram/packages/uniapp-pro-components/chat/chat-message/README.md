@@ -23,7 +23,7 @@ variant | String | base | 气泡框样式，支持基础、线框、文字三种
 
 名称 | 参数 | 描述
 -- | -- | --
-longpress | `(context: { e: MouseEvent, id: string })` | \-
+message-longpress | `(context: { e: MouseEvent, id: string, longPressPosition: { x: number, y: number} })` | \-
 
 ### ChatMessage Slots
 
