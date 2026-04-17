@@ -1322,8 +1322,8 @@
         "label": "搜索框"
       },
       {
-        "value": "SegmentedControl",
-        "label": "分段器"
+        "value": "Segmented",
+        "label": "分段控制器"
       },
       {
         "value": "SideBar",
