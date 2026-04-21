@@ -245,6 +245,14 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
         list: ['Swiper', 'SwiperNav'],
         includes: ['Miniprogram', 'UniApp'],
     },
+    Paragraph: {
+        list: [
+            'Paragraph',
+            'Text',
+            'Title'
+        ],
+        includes: ['Miniprogram', 'UniApp'],
+    },
     Chat: [],
 };
 
@@ -435,6 +443,7 @@ const TYPES_COMBINE_MAP = {
             'TypographyEllipsis',
             'TypographyCopyable',
         ],
+        excludes: ['Miniprogram', 'UniApp'],
     },
     Toast: {
         list: ['Toast', 'ToastOptions'],
@@ -472,7 +481,7 @@ const MOBILE_TYPES_COMBINE_MAP = {
 const MINIPROGRAM_TYPES_COMBINE_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
-        excludes: ['Miniprogram', ],
+        excludes: ['Miniprogram'],
     },
     Form: {
         list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
