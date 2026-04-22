@@ -119,10 +119,10 @@ function generateComponentApi() {
         frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]
     );
     const cmpMap = getApiComponentMapByFrameWork(
-        framework === 'Miniprogram'
-         ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP) 
-         : (MOBILE_FRAMES.includes(framework) 
-           ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP) 
+        (framework === 'Miniprogram' || framework === 'UniApp')
+         ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP)
+         : (MOBILE_FRAMES.includes(framework)
+           ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP)
            : COMPONENT_API_MD_MAP),
         framework
     );
