@@ -55,6 +55,13 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
     value?: Array<number>;
   };
   /**
+   * 表尾总结行
+   */
+  footerSummary?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
    * 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`
    */
   height?: {
@@ -90,6 +97,13 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
     type: StringConstructor;
     value?: string;
     required?: boolean;
+  };
+  /**
+   * 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`
+   */
+  rowspanAndColspan?: {
+    type: undefined;
+    value?: TableRowspanAndColspanFunc<T>;
   };
   /**
    * 是否显示表头
@@ -133,12 +147,16 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   };
 }
 
-export interface BaseTableCol {
+export interface BaseTableCol<T extends TableRowData = TableRowData> {
   /**
    * 列横向对齐方式
    * @default left
    */
   align?: 'left' | 'right' | 'center';
+  /**
+   * 自定义单元格渲染。默认使用 `colKey` 的值作为自定义当前列的插槽名称。<br/>如果 `cell` 值类型为 Function 表示以函数形式渲染单元格。值类型为 string 表示使用插槽渲染，插槽名称为 cell 的值。优先级高于 `render`。泛型 T 指表格数据类型
+   */
+  cell?: string | ((params: BaseTableCellParams<T>) => string);
   /**
    * 列类名，值类型是 Function 使用返回值作为列类名；值类型不为 Function 时，值用于整列类名（含表头）。泛型 T 指表格数据类型
    */
@@ -163,9 +181,23 @@ export interface BaseTableCol {
   width?: string | number;
 }
 
+export type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan;
+
+export interface RowspanColspan {
+  colspan?: number;
+  rowspan?: number;
+}
+
 export interface TableRowData {
   [key: string]: any;
   children?: TableRowData[];
+}
+
+export interface BaseTableCellParams<T> {
+  row: T;
+  rowIndex: number;
+  col: BaseTableCol<T>;
+  colIndex: number;
 }
 
 export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName);
@@ -173,3 +205,5 @@ export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => Cla
 export interface CellData<T> extends BaseTableCellParams<T> {
   type: 'th' | 'td';
 }
+
+export type DataType = TableRowData;

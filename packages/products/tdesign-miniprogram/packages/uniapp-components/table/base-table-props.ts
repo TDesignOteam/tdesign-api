@@ -31,14 +31,18 @@ export default {
   fixedRows: {
     type: Array,
   },
+  /** 表尾总结行 */
+  footerSummary: {
+    type: String,
+  },
   /** 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight` */
   height: {
     type: [String, Number],
   },
   /** 加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态 */
   loading: {
-    type: Boolean,
-    default: undefined as TdBaseTableProps['loading'],
+    type: [Boolean, null],
+    default: null as TdBaseTableProps['loading'],
   },
   /** 透传加载组件全部属性 */
   loadingProps: {
@@ -53,6 +57,10 @@ export default {
     type: String,
     default: 'id',
     required: true,
+  },
+  /** 用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }` */
+  rowspanAndColspan: {
+    type: Function,
   },
   /** 是否显示表头 */
   showHeader: {
