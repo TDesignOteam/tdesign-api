@@ -32,6 +32,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   id?: string;
   /**
+   * 表单初始数据，重置时所需初始数据，优先级小于 FormItem 设置的 initialData
+   */
+  initialData?: object;
+  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -124,7 +128,7 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
   /**
    * 获取校验结果，当调用 getValidateMessage() 时返回所有校验结果
    */
-  getValidateMessage: (fields?: Array<keyof FormData>) => Array<FormRule> | voi;
+  getValidateMessage: (fields?: Array<keyof FormData>) => Array<FormRule> | void;
   /**
    * 重置表单，表单里面没有重置按钮`<button type=\"reset\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`
    */
@@ -175,6 +179,10 @@ export interface TdFormItemProps {
    */
   help?: TNode;
   /**
+   * 表单初始数据，重置时所需初始数据
+   */
+  initialData?: InitialData;
+  /**
    * 字段标签名称
    * @default ''
    */
@@ -199,6 +207,11 @@ export interface TdFormItemProps {
    * 表单字段校验规则
    */
   rules?: Array<FormRule>;
+  /**
+   * null
+   * @default false
+   */
+  shouldUpdate?: boolean | ((prevValue, curValue) => boolean);
   /**
    * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
    */
@@ -416,6 +429,8 @@ export interface FormValidateParams {
 export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
+
+export type InitialData = any;
 
 export type NamePath = string | number | Array<string | number>;
 
