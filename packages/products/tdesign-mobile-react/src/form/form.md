@@ -12,6 +12,7 @@ colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
 contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
+form | Object | - | 经 `Form.useForm()` 创建的 form 控制实例。TS 类型：`FormInstanceFunctions` | N
 id | String | undefined | 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件 | N
 initialData | Object | - | 表单初始数据，重置时所需初始数据，优先级小于 FormItem 设置的 initialData | N
 labelAlign | String | right | 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。可选项：left/right/top | N

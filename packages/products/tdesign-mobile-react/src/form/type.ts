@@ -28,6 +28,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
+   * 经 `Form.useForm()` 创建的 form 控制实例
+   */
+  form?: FormInstanceFunctions;
+  /**
    * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
    */
   id?: string;
