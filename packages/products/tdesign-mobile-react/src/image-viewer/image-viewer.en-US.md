@@ -15,6 +15,7 @@ image | TElement | - | `0.21.1`。Typescript: `TNode<ImageSlotParams>` `interfac
 images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/image-viewer/type.ts) | N
 index | Number | 0 | \- | N
 defaultIndex | Number | 0 | uncontrolled property | N
+loop | Boolean | true | \- | N
 maxZoom | Number | 3 | \- | N
 showIndex | Boolean | false | \- | N
 visible | Boolean | false | hide or show image viewer | N
