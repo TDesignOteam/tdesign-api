@@ -29,6 +29,7 @@ verticalAlign | String | middle | vertical align。options: top/middle/bottom | 
 onCellClick | Function |  | Typescript: `(context: BaseTableCellEventContext<T>) => void`<br/>trigger on cell clicked。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/> | N
 onRowClick | Function |  | Typescript: `(context: RowEventContext<T>) => void`<br/>trigger on row click。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/> | N
 onScroll | Function |  | Typescript: `(params: { e: Event }) => void`<br/>trigger on table content scroll | N
+onScrollToBottom | Function |  | Typescript: `() => void`<br/>Typescript: `Partial<AffixProps>` | N
 
 ### BaseTable Events
 
@@ -37,6 +38,7 @@ name | params | description
 cell-click | `(context: BaseTableCellEventContext<T>)` | trigger on cell clicked。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/>
 row-click | `(context: RowEventContext<T>)` | trigger on row click。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/>
 scroll | `(params: { e: Event })` | trigger on table content scroll
+scroll-to-bottom | \- | Typescript: `Partial<AffixProps>`
 
 ### BaseTableInstanceFunctions 组件实例方法
 

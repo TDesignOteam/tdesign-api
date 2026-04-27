@@ -108,4 +108,6 @@ export default {
   onRowClick: Function as PropType<TdBaseTableProps['onRowClick']>,
   /** 表格内容滚动时触发 */
   onScroll: Function as PropType<TdBaseTableProps['onScroll']>,
+  /** 表格内容滚动到底部时触发，可用于实现滚动加载 */
+  onScrollToBottom: Function as PropType<TdBaseTableProps['onScrollToBottom']>,
 };
