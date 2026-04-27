@@ -91,6 +91,11 @@ export interface SwiperNavigation {
    */
   paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right' | 'left' | 'right';
   /**
+   * 导航器位置，位于主体的内侧或是外侧
+   * @default inside
+   */
+  placement?: 'inside' | 'outside';
+  /**
    * 是否显示两侧的控制按钮
    * @default false
    */

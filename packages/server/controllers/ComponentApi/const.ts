@@ -427,7 +427,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
     { value: 'Rate', label: '评分' },
     { value: 'Row', label: '栅格-横向' },
     { value: 'SearchField', label: '搜索框' },
-    { value: 'SegmentedControl', label: '分段器' },
+    { value: 'Segmented', label: '分段控制器' },
     { value: 'ScrollView', label: '滚动容器' },
     { value: 'Skeleton', label: '骨架屏' },
     { value: 'Slider', label: '滑块' },
