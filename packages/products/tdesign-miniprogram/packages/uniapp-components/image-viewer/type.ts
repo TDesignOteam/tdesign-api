@@ -42,6 +42,11 @@ export interface TdImageViewerProps {
    */
   lazy?: boolean;
   /**
+   * 是否开启循环滚动
+   * @default true
+   */
+  loop?: boolean;
+  /**
    * 是否显示页码
    * @default false
    */
