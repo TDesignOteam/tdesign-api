@@ -149,8 +149,9 @@
           > 
             <template #content>
               <div>TDesign 的参数设置尽可能保证无序性，组件涉及到的事件参数和函数参数一般只会存在一个（Object），特殊情况可以允许两个。
-              <div>比如为支持 Vue 框架的语法糖，change 相关的事件参数第一个值必须 value，如此，像 MouseEvent 这类额外的环境参数只能放在第二个位置。</div>  
-              <div>比如：Anchor 组件 的 click 事件参数为 (link: { href: string; title: string; e: MouseEvent })，只有一个参数 link，其中 href / title / e 均为 link 的属性。</div>
+              <div>比如：</div>
+              <div>为支持 Vue 框架的语法糖，change 相关的事件参数第一个值必须 value，如此，像 MouseEvent 这类额外的环境参数只能放在第二个位置。</div>  
+              <div>Anchor 组件 的 click 事件参数为 (link: { href: string; title: string; e: MouseEvent })，只有一个参数 link，其中 href / title / e 均为 link 的属性。</div>
               <div>Popup 组件的 visibleChange 事件参数为 (visible: boolean, context: PopupVisibleChangeContext)，有两个参数 visible 和 context。</div></div>
             </template>
             <t-icon name="help-circle" size="middle"/>
