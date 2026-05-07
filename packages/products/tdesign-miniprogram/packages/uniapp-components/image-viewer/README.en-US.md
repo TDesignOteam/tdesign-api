@@ -14,6 +14,7 @@ image-props | Object | - | Typescript: `ImageProps`，[Image API Documents](./im
 images | Array | [] | Typescript: `Array<string>` | N
 initial-index | Number | 0 | Typescript: `Number` | N
 lazy | Boolean | true | \- | N
+loop | Boolean | true | \- | N
 show-index | Boolean | false | \- | N
 using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | hide or show image viewer。`v-model:visible` is supported | N
