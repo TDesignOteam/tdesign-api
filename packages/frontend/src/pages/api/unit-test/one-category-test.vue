@@ -18,9 +18,9 @@
       </div>
 
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light"
-          :content="`示例：[{ 'value': 'tdesign-vue' }]`">
-          <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数" @blur="() => onFormDataChange('tnode')"></t-input>
+        <t-tooltip theme="light" :content="`示例：[{ 'value': 'tdesign-vue' }]`">
+          <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数"
+            @blur="() => onFormDataChange('tnode')"></t-input>
         </t-tooltip>
       </div>
 
@@ -30,7 +30,7 @@
             @change="() => onFormDataChange('tnode')"></t-input>
           <template #content>
             <p>
-              格式：EventName(DomSelector)  或者 delay。focus(.t-input__wrap) 表示当元素 .t-input__wrap 聚焦后才会出现前面期望的元素。
+              格式：EventName(DomSelector) 或者 delay。focus(.t-input__wrap) 表示当元素 .t-input__wrap 聚焦后才会出现前面期望的元素。
               示例：delay 、 delay(100)
               <t-link underline href="https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L566"
                 target="_blank">所有事件列表</t-link>
@@ -60,7 +60,7 @@
             </p>
             <p v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
               类名规则：
-              <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
+            <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
             </p>
           </template>
           <t-textarea v-model="formData.className" placeholder="类名规则"
@@ -121,8 +121,7 @@
               </template>
             </p>
           </template>
-          <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则"
-            @blur="() => onFormDataChange('dom')">
+          <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则" @blur="() => onFormDataChange('dom')">
           </t-textarea>
         </t-tooltip>
 
@@ -180,72 +179,50 @@
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">用例描述：</label>
-              <t-input
-                v-model="arrayEvent[index].description"
-                placeholder="选填，当前测试用例文本描述，默认为 xxx works fine"
-                @blur="onEventPropsChange"
-              ></t-input>
+              <t-input v-model="arrayEvent[index].description" placeholder="选填，当前测试用例文本描述，默认为 xxx works fine"
+                @blur="onEventPropsChange"></t-input>
             </div>
 
-            <div
-              v-for="(expect, expectIndex) in arrayEvent[index].expect"
-              :key="expectIndex"
-            >
-             <div style="display: flex; align-items: center; margin-bottom: 16px">
-               第{{ ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'][expectIndex] }}个事件：
-               <t-button
-                 theme="primary"
-                 variant="text"
-                 size="small"
-                 @click="() => onEventExpectEdit(expect, expectIndex, index, 'edit')"
-               ><EditIcon /></t-button>
-               <t-button
-                 theme="primary"
-                 variant="text"
-                 size="small"
-                 @click="() => onEventExpectAdd(expect, expectIndex, index, 'add')"
-               ><AddCircleIcon /></t-button>
-               <t-button
-                 theme="danger"
-                 variant="text"
-                 size="small"
-                 @click="() => onEventExpectDelete(expectIndex, index, 'delete')"
-               ><MinusCircleIcon /></t-button>
-             </div>
-             <p v-if="expect.trigger || expect.event || expect.exist" class="t-input__tips t-input__tips--default" style="position: relative">
-                {{getEventDescription(expect)}}
+            <div v-for="(expect, expectIndex) in arrayEvent[index].expect" :key="expectIndex">
+              <div style="display: flex; align-items: center; margin-bottom: 16px">
+                第{{ ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'][expectIndex] }}个事件：
+                <t-button theme="primary" variant="text" size="small"
+                  @click="() => onEventExpectEdit(expect, expectIndex, index, 'edit')">
+                  <EditIcon />
+                </t-button>
+                <t-button theme="primary" variant="text" size="small"
+                  @click="() => onEventExpectAdd(expect, expectIndex, index, 'add')">
+                  <AddCircleIcon />
+                </t-button>
+                <t-button theme="danger" variant="text" size="small"
+                  @click="() => onEventExpectDelete(expectIndex, index, 'delete')">
+                  <MinusCircleIcon />
+                </t-button>
+              </div>
+              <p v-if="expect.trigger || expect.event || expect.exist" class="t-input__tips t-input__tips--default"
+                style="position: relative">
+                {{ getEventDescription(expect) }}
               </p>
             </div>
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">组件属性：</label>
-              <t-input
-                v-model="arrayEvent[index].props"
-                placeholder="选填，当前测试用例所需的必要属性，格式：JSON"
-                @blur="onEventPropsChange"
-              ></t-input>
+              <t-input v-model="arrayEvent[index].props" placeholder="选填，当前测试用例所需的必要属性，格式：JSON"
+                @blur="onEventPropsChange"></t-input>
             </div>
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">实例函数：</label>
-              <t-input
-                v-model="arrayEvent[index].wrapper"
-                placeholder="默认直接使用组件获取，示例：getRadioGroupDefaultMount"
-                @blur="onEventPropsChange"
-              ></t-input>
+              <t-input v-model="arrayEvent[index].wrapper" placeholder="默认直接使用组件获取，示例：getRadioGroupDefaultMount"
+                @blur="onEventPropsChange"></t-input>
             </div>
 
             <div style="margin-top: 16px; text-align: right;">
               <t-button @click="() => onArrayEventAdd(index)" size="small">
                 再来一个
               </t-button>
-              <t-button
-                @click="() => onArrayEventDelete(index)"
-                theme="danger"
-                size="small"
-                style="margin-left: 8px"
-                v-if="arrayEvent.length > 1"
-              >
+              <t-button @click="() => onArrayEventDelete(index)" theme="danger" size="small" style="margin-left: 8px"
+                v-if="arrayEvent.length > 1">
                 移除
               </t-button>
             </div>
@@ -256,12 +233,8 @@
 
     <slot name="operation"></slot>
 
-    <EventExpect
-      v-model:visible="eventExpectVisible"
-      :eventExpect="currentExpectData.expectData"
-      :eventExpectMode="eventExpectMode"
-      @confirm="onEventExpectChange"
-    ></EventExpect>
+    <EventExpect v-model:visible="eventExpectVisible" :eventExpect="currentExpectData.expectData"
+      :eventExpectMode="eventExpectMode" @confirm="onEventExpectChange"></EventExpect>
 
   </div>
 </template>
@@ -319,7 +292,7 @@ const objectEvent = ref([...INITIAL_OBJECT_EVENT])
 const arrayEvent = ref([...INITIAL_ARRAY_EVENT])
 const eventExpectVisible = ref(false)
 const currentExpectData = ref({
-  expectData: {...INITIAL_ARRAY_EVENT[0].expect},
+  expectData: { ...INITIAL_ARRAY_EVENT[0].expect },
   expectIndex: -1,
   eventIndex: -1,
 })
@@ -476,7 +449,7 @@ function onObjectEventChange() {
 
 function onEventExpectAdd(expectData, expectIndex, eventIndex) {
   eventExpectMode.value = 'add'
-  showEventExpectDialog({...INITIAL_ARRAY_EVENT[0].expect}, expectIndex, eventIndex)
+  showEventExpectDialog({ ...INITIAL_ARRAY_EVENT[0].expect }, expectIndex, eventIndex)
 }
 
 function onEventExpectEdit(expectData, expectIndex, eventIndex) {
@@ -557,7 +530,7 @@ function getExpectDesc(expectExistStr) {
           })
         })
         attributeExist.push(...list)
-      } else [
+      } else[
         expectExist.push(keys[0])
       ]
     }

@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import ApiDesign from './index'
+import ApiDesign from './index';
 </script>

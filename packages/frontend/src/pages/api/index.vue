@@ -6,20 +6,38 @@
       <div class="page-api__search">
         <div class="query-item">
           <t-select v-model="query.platform" placeholder="平台框架" clearable filterable @change="onPlatformChange">
-            <t-option v-for="(item, index) in map.platform_framework" :key="index" :label="item.label"
-              :value="item.value"></t-option>
+            <t-option
+              v-for="(item, index) in map.platform_framework"
+              :key="index"
+              :label="item.label"
+              :value="item.value"
+            ></t-option>
           </t-select>
         </div>
         <div class="query-item">
           <t-select v-model="query.component" placeholder="组件名称" clearable filterable @change="onComponentChange">
-            <t-option v-for="(item, index) in map.components" :key="index"
-              :label="`${item.value} ${item.label} (${TYPE_MAP[item.type] || '组件'})`" :value="item.value"></t-option>
+            <t-option
+              v-for="(item, index) in map.components"
+              :key="index"
+              :label="`${item.value} ${item.label} (${TYPE_MAP[item.type] || '组件'})`"
+              :value="item.value"
+            ></t-option>
           </t-select>
         </div>
         <div class="query-item">
-          <t-select v-model="query.fieldCategory" placeholder="API 分类" clearable filterable @change="onComponentChange">
-            <t-option v-for="(item, index) in map.field_category" :key="index" :label="item.label"
-              :value="item.value"></t-option>
+          <t-select
+            v-model="query.fieldCategory"
+            placeholder="API 分类"
+            clearable
+            filterable
+            @change="onComponentChange"
+          >
+            <t-option
+              v-for="(item, index) in map.field_category"
+              :key="index"
+              :label="item.label"
+              :value="item.value"
+            ></t-option>
           </t-select>
         </div>
         <div class="query-item">
@@ -31,22 +49,40 @@
 
       <div class="t-demo-api-list">
         <t-loading :loading="loading">
-          <api-list :list="list" :platformOptions="platformOptions" :preview="preview"
-            @delete-api-success="onDeleteSuccess" @click-edit-btn="onEditClick" @click-test-edit-btn="onTestEditClick"
-            @code-preview="onCodePreview"></api-list>
+          <api-list
+            :list="list"
+            :platformOptions="platformOptions"
+            :preview="preview"
+            @delete-api-success="onDeleteSuccess"
+            @click-edit-btn="onEditClick"
+            @click-test-edit-btn="onTestEditClick"
+            @code-preview="onCodePreview"
+          ></api-list>
 
           <t-pagination :total="total" :page-size="pageSize" :current="page" show-sizer @change="onPageChange" />
         </t-loading>
       </div>
-      <t-drawer :header="mode === 'create' ? '新增' : '编辑'" width="830" v-model:visible="createApiVisible" size="60%"
-        class="api-edit" closeOnConfirm @confirm="onApiConfirm">
+      <t-drawer
+        :header="mode === 'create' ? '新增' : '编辑'"
+        width="830"
+        v-model:visible="createApiVisible"
+        size="60%"
+        class="api-edit"
+        closeOnConfirm
+        @confirm="onApiConfirm"
+      >
         <template #body>
           <import ref="apiFormRef" :map="map" :info="apiInfo" :mode="mode"></import>
         </template>
       </t-drawer>
 
-      <t-dialog width="830" top="calc(100% - 730px)" v-model:visible="codePreviewVisible" :cancelBtn="null"
-        confirmBtn="关闭">
+      <t-dialog
+        width="830"
+        top="calc(100% - 730px)"
+        v-model:visible="codePreviewVisible"
+        :cancelBtn="null"
+        confirmBtn="关闭"
+      >
         <template #header>
           <t-tabs v-model="previewType">
             <t-tab-panel v-for="(item, index) in previewTabs" :key="index" :value="item.label" :label="item.label" />
@@ -57,8 +93,14 @@
         </template>
       </t-dialog>
 
-      <t-drawer header="测试用例设计" v-model:visible="unitTestVisible" size="85%" closeOnConfirm
-        @confirm="onUnitTestEditConfirm" @cancel="onUnitTestEditCancel">
+      <t-drawer
+        header="测试用例设计"
+        v-model:visible="unitTestVisible"
+        size="85%"
+        closeOnConfirm
+        @confirm="onUnitTestEditConfirm"
+        @cancel="onUnitTestEditCancel"
+      >
         <unit-test-design ref="unitTestRef" :map="map" :apiInfo="apiInfo" :visible="unitTestVisible" />
       </t-drawer>
     </div>
@@ -66,15 +108,15 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted } from 'vue'
-import { Codemirror } from 'vue-codemirror'
-import { javascript } from '@codemirror/lang-javascript'
-import { oneDark } from '@codemirror/theme-one-dark'
-import ApiList from './list.vue'
-import ApiOperation from './operation.vue'
-import Import from './import.vue'
-import UnitTestDesign from './unit-test-design.vue'
-import { cmpApiInstance } from '../../services/api-server'
+import { ref, reactive, computed, onMounted } from 'vue';
+import { Codemirror } from 'vue-codemirror';
+import { javascript } from '@codemirror/lang-javascript';
+import { oneDark } from '@codemirror/theme-one-dark';
+import ApiList from './list.vue';
+import ApiOperation from './operation.vue';
+import Import from './import.vue';
+import UnitTestDesign from './unit-test-design.vue';
+import { cmpApiInstance } from '../../services/api-server';
 import {
   Select as TSelect,
   Option as TOption,
@@ -85,172 +127,175 @@ import {
   Drawer as TDrawer,
   TabPanel as TTabPanel,
   Tabs as TTabs,
-  MessagePlugin
-} from 'tdesign-vue-next'
+  MessagePlugin,
+} from 'tdesign-vue-next';
 
 const TYPE_MAP = {
   plugin: '插件',
-  TS: '接口定义'
-}
+  TS: '接口定义',
+};
 
 const CODE_PREVIEW_TABS = [
   { label: 'Types' },
   { label: 'Props', include: ['Vue(PC)', 'Vue(Mobile)', 'Miniprogram'] },
-  { label: 'Docs' }
-]
+  { label: 'Docs' },
+];
 
 const props = defineProps({
-  preview: Boolean
-})
+  preview: Boolean,
+});
 
-const apiFormRef = ref(null)
-const unitTestRef = ref(null)
+const apiFormRef = ref(null);
+const unitTestRef = ref(null);
 
-const loading = ref(false)
-const dataBase = ref(null)
-const createApiVisible = ref(false)
-const unitTestVisible = ref(false)
-const list = ref([])
-const map = ref({})
-const platformOptions = ref([])
+const loading = ref(false);
+const dataBase = ref(null);
+const createApiVisible = ref(false);
+const unitTestVisible = ref(false);
+const list = ref([]);
+const map = ref({});
+const platformOptions = ref([]);
 const query = reactive({
   platform: '',
   component: '',
   fieldName: '',
-  fieldCategory: ''
-})
-const apiInfo = ref(null)
-const mode = ref('create')
-const total = ref(0)
-const page = ref(1)
+  fieldCategory: '',
+});
+const apiInfo = ref(null);
+const mode = ref('create');
+const total = ref(0);
+const page = ref(1);
 
-const pageSize = ref(20)
-const codePreviewVisible = ref(false)
+const pageSize = ref(20);
+const codePreviewVisible = ref(false);
 const codeData = reactive({
   framework: '',
-  data: {}
-})
-const code = ref('')
+  data: {},
+});
+const code = ref('');
 const cmOptions = {
   tabSize: 4,
   extensions: [javascript({ jsx: true, typescript: true }), oneDark],
   lineNumbers: true,
   line: true,
-  viewportMargin: 20
-}
-const previewType = ref('Types')
+  viewportMargin: 20,
+};
+const previewType = ref('Types');
 
 const previewTabs = computed(() => {
   return CODE_PREVIEW_TABS.filter((item) => {
     if (item.include) {
-      return item.include.includes(codeData.framework)
+      return item.include.includes(codeData.framework);
     }
-    return true
-  })
-})
+    return true;
+  });
+});
 
 onMounted(() => {
-  getMap()
-  getApiList()
-})
+  getMap();
+  getApiList();
+});
 
 function onPageChange(pageInfo) {
-  page.value = pageInfo.current
-  pageSize.value = pageInfo.pageSize
-  getApiList()
+  page.value = pageInfo.current;
+  pageSize.value = pageInfo.pageSize;
+  getApiList();
 }
 
 function onEnter() {
-  search()
+  search();
 }
 
 function onComponentChange() {
-  search()
+  search();
 }
 
 function onPlatformChange() {
-  search()
+  search();
 }
 
 function search() {
-  page.value = 1
-  getApiList()
+  page.value = 1;
+  getApiList();
 }
 
 function getMap() {
   cmpApiInstance({
     method: 'get',
-    url: '/cmp/map'
+    url: '/cmp/map',
   }).then((res) => {
-    const mapData = res.data.data
-    platformOptions.value = mapData.platform_framework
-    map.value = mapData
-  })
+    const mapData = res.data.data;
+    platformOptions.value = mapData.platform_framework;
+    map.value = mapData;
+  });
 }
 
 function getApiList() {
-  const queryParams = Object.assign({}, query)
+  const queryParams = Object.assign({}, query);
   const params = {
     platform_framework: queryParams.platform,
     component: queryParams.component,
     field_category: queryParams.fieldCategory,
     field_name: queryParams.fieldName,
     page: page.value,
-    page_size: pageSize.value
-  }
-  loading.value = true
+    page_size: pageSize.value,
+  };
+  loading.value = true;
   cmpApiInstance({
     method: 'get',
     url: '/cmp/api',
-    params
-  }).then((res) => {
-    list.value = res.data.data
-    total.value = res.data.total
-    loading.value = false
-  }, () => {
-    loading.value = false
-  })
+    params,
+  }).then(
+    (res) => {
+      list.value = res.data.data;
+      total.value = res.data.total;
+      loading.value = false;
+    },
+    () => {
+      loading.value = false;
+    },
+  );
 }
 
 function onDeleteSuccess() {
-  getApiList()
+  getApiList();
 }
 
 function showDialog() {
-  createApiVisible.value = true
+  createApiVisible.value = true;
 }
 
 function onEditClick(data) {
-  apiInfo.value = data.row
-  mode.value = 'edit'
-  showDialog()
+  apiInfo.value = data.row;
+  mode.value = 'edit';
+  showDialog();
 }
 
 function onTestEditClick(data) {
-  apiInfo.value = data.row
-  unitTestVisible.value = true
+  apiInfo.value = data.row;
+  unitTestVisible.value = true;
 }
 
 function onUnitTestEditCancel() {
-  apiInfo.value = null
+  apiInfo.value = null;
 }
 
 function onCreateDialogShow() {
-  apiInfo.value = null
-  mode.value = 'create'
-  showDialog()
+  apiInfo.value = null;
+  mode.value = 'create';
+  showDialog();
 }
 
 function onApiConfirm() {
-  const data = apiFormRef.value?.formData
-  if (!data) return
+  const data = apiFormRef.value?.formData;
+  if (!data) return;
 
   if (data.version) {
     try {
-      JSON.parse(data.version)
+      JSON.parse(data.version);
     } catch (e) {
-      MessagePlugin.error('版本号格式必须为合法 JSON')
-      return
+      MessagePlugin.error('版本号格式必须为合法 JSON');
+      return;
     }
   }
 
@@ -275,26 +320,26 @@ function onApiConfirm() {
     event_input: data.eventInput,
     event_output: data.eventOutput,
     syntactic_sugar: data.syntacticSugar,
-    trigger_elements: data.triggerElements
-  }
+    trigger_elements: data.triggerElements,
+  };
 
   cmpApiInstance({
     method: mode.value === 'create' ? 'post' : 'put',
     url: '/cmp/api',
-    data: params
+    data: params,
   }).then(() => {
-    getApiList()
-    createApiVisible.value = false
-  })
+    getApiList();
+    createApiVisible.value = false;
+  });
 }
 
 function onUnitTestEditConfirm() {
-  const testDescription = unitTestRef.value?.testDescription
+  const testDescription = unitTestRef.value?.testDescription;
   try {
-    testDescription && JSON.parse(testDescription)
+    testDescription && JSON.parse(testDescription);
   } catch (e) {
-    MessagePlugin.error('测试用例不是合法 JSON')
-    return
+    MessagePlugin.error('测试用例不是合法 JSON');
+    return;
   }
 
   cmpApiInstance({
@@ -302,19 +347,19 @@ function onUnitTestEditConfirm() {
     url: '/cmp/api',
     data: {
       id: apiInfo.value ? apiInfo.value.id : undefined,
-      test_description: testDescription
+      test_description: testDescription,
     },
   }).then(() => {
-    getApiList()
-    unitTestVisible.value = false
-  })
+    getApiList();
+    unitTestVisible.value = false;
+  });
 }
 
 function onCodePreview(data, framework) {
-  codeData.framework = framework
-  codeData.data = data
-  codePreviewVisible.value = true
-  code.value = JSON.stringify(data, undefined, 2)
+  codeData.framework = framework;
+  codeData.data = data;
+  codePreviewVisible.value = true;
+  code.value = JSON.stringify(data, undefined, 2);
 }
 </script>
 

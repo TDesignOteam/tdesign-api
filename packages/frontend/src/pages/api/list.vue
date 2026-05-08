@@ -1,18 +1,25 @@
 <template>
   <div class="API-Preview tdesign-document">
-    <t-table :data="list" :columns="columns" rowKey='id' tableLayout="auto" hover>
+    <t-table :data="list" :columns="columns" rowKey="id" tableLayout="auto" hover>
       <template #component="{ row = {} }">
         <div>
           <div>
-            <span style="padding-right: 8px;">{{ row.component }}</span>
-            <t-tag v-if="row.field_category_text" size="small" :theme="{
-              Props: 'primary',
-              Events: 'success',
-              Functions: 'warning',
-              Return: 'default',
-              Extends: 'default',
-              '<T>': 'default',
-            }[row.field_category_text] || 'primary'" variant="light">
+            <span style="padding-right: 8px">{{ row.component }}</span>
+            <t-tag
+              v-if="row.field_category_text"
+              size="small"
+              :theme="
+                {
+                  Props: 'primary',
+                  Events: 'success',
+                  Functions: 'warning',
+                  Return: 'default',
+                  Extends: 'default',
+                  '<T>': 'default',
+                }[row.field_category_text] || 'primary'
+              "
+              variant="light"
+            >
               {{ row.field_category_text }}
             </t-tag>
           </div>
@@ -27,10 +34,18 @@
             {{ row.field_desc_zh }}
           </p>
           <template v-if="row.test_description">
-            <p>Tested：
+            <p>
+              Tested：
               <t-space :size="3">
-                <t-tag variant="outline" shape="round" size="small" theme="primary"
-                  v-for="item in getTested(row.test_description)" :key="item">{{ item }}</t-tag>
+                <t-tag
+                  variant="outline"
+                  shape="round"
+                  size="small"
+                  theme="primary"
+                  v-for="item in getTested(row.test_description)"
+                  :key="item"
+                  >{{ item }}</t-tag
+                >
               </t-space>
             </p>
           </template>
@@ -41,28 +56,20 @@
             <p>TS 类型定义：{{ row.custom_field_type }}。</p>
           </template>
           <template v-if="row.event_input">
-            <p>
-              参数：{{ row.event_input }}
-            </p>
+            <p>参数：{{ row.event_input }}</p>
           </template>
           <template v-if="row.event_output">
-            <p>
-              返回值：{{ row.event_output }}
-            </p>
+            <p>返回值：{{ row.event_output }}</p>
           </template>
           <p>
-            <template v-if="row.syntactic_sugar">
-              支持 Vue 语法糖：{{ row.syntactic_sugar }}。
-            </template>
+            <template v-if="row.syntactic_sugar"> 支持 Vue 语法糖：{{ row.syntactic_sugar }}。 </template>
             <template v-if="row.support_default_value">支持非受控属性。</template>
           </p>
 
-          <p style="font-size: 12px; color: #a6a6a6;">
+          <p style="font-size: 12px; color: #a6a6a6">
             {{ row.platform_framework_text.join(', ') }}
           </p>
-          <p v-if="row.version" style="font-size: 12px; color: #a6a6a6;">
-            版本号：{{ row.version }}
-          </p>
+          <p v-if="row.version" style="font-size: 12px; color: #a6a6a6">版本号：{{ row.version }}</p>
         </div>
       </template>
       <template #field_type_text="{ row }">
@@ -78,36 +85,30 @@
             </t-popconfirm>
           </div>
 
-          <div style="font-size: 12px; color: #a6a6a6;">
+          <div style="font-size: 12px; color: #a6a6a6">
             {{ data.row.update_time }}
           </div>
         </div>
       </template>
     </t-table>
-
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { parseJSON } from './util'
-import { cmpApiInstance } from '../../services/api-server'
-import {
-  BaseTable as TTable,
-  Button as TButton,
-  Popconfirm as TPopconfirm,
-  MessagePlugin
-} from 'tdesign-vue-next'
+import { computed } from 'vue';
+import { parseJSON } from './util';
+import { cmpApiInstance } from '../../services/api-server';
+import { BaseTable as TTable, Button as TButton, Popconfirm as TPopconfirm, MessagePlugin } from 'tdesign-vue-next';
 
 const props = defineProps({
   list: Array,
   platformOptions: Array,
-  preview: Boolean
-})
+  preview: Boolean,
+});
 
-const emit = defineEmits(['delete-api-success', 'click-edit-btn', 'click-test-edit-btn', 'code-preview'])
+const emit = defineEmits(['delete-api-success', 'click-edit-btn', 'click-test-edit-btn', 'code-preview']);
 
-const columns = computed(() => getCols())
+const columns = computed(() => getCols());
 
 function getCols() {
   const cols = [
@@ -135,15 +136,15 @@ function getCols() {
       colKey: 'field_default_value',
       width: 90,
     },
-  ]
+  ];
   if (!props.preview) {
     cols.push({
       title: '操作',
       colKey: 'operation',
       fixed: 'right',
-    })
+    });
   }
-  return cols
+  return cols;
 }
 
 function onDeleteConfirm(data) {
@@ -151,38 +152,38 @@ function onDeleteConfirm(data) {
     url: '/cmp/api',
     method: 'delete',
     data: {
-      id: data.row.id
-    }
+      id: data.row.id,
+    },
   }).then(() => {
-    MessagePlugin.info('删除成功！')
-    emit('delete-api-success')
-  })
+    MessagePlugin.info('删除成功！');
+    emit('delete-api-success');
+  });
 }
 
 function onEditClick(data) {
-  emit('click-edit-btn', data)
+  emit('click-edit-btn', data);
 }
 
 function onTestsEditClick(data) {
-  emit('click-test-edit-btn', data)
+  emit('click-test-edit-btn', data);
 }
 
 function onCodePreview(data, framework) {
-  emit('code-preview', data, framework)
+  emit('code-preview', data, framework);
 }
 
 function getTested(test) {
-  const testedList = []
-  if (!test) return testedList
-  const json = parseJSON(test)
-  if (!json) return testedList
+  const testedList = [];
+  if (!test) return testedList;
+  const json = parseJSON(test);
+  if (!json) return testedList;
   if (json.PC) {
-    testedList.push('PC')
+    testedList.push('PC');
   }
   if (json.Mobile) {
-    testedList.push('Mobile')
+    testedList.push('Mobile');
   }
-  return testedList
+  return testedList;
 }
 </script>
 
@@ -207,7 +208,7 @@ div.tdesign-document.API-Preview {
     }
   }
 
-  .t-table-content+b {
+  .t-table-content + b {
     width: 100%;
     padding: 50px;
     display: block;

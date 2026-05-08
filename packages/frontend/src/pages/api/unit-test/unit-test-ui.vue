@@ -1,34 +1,19 @@
 <template>
   <div class="unit-test-ui">
     <t-tabs v-model="framework" :list="frameWorkOptions"></t-tabs>
-    <br/>
+    <br />
     <t-card>
       <t-form size="small">
         <t-form-item>
 
-          <OneCategoryTest
-            v-for="(item, index) in currentFormData.list"
-            :key="item.category + index"
-            :apiInfo="apiInfo"
-            :data="item"
-            :categories="categories"
-            :testProps="currentFormData.props"
-            @formDataChange="(trigger, params) => onOneCategoryTestChange(trigger, params, index)"
-          >
+          <OneCategoryTest v-for="(item, index) in currentFormData.list" :key="item.category + index" :apiInfo="apiInfo"
+            :data="item" :categories="categories" :testProps="currentFormData.props"
+            @formDataChange="(trigger, params) => onOneCategoryTestChange(trigger, params, index)">
             <template #operation>
               <div>
-                <t-button
-                  style="margin-top: 16px"
-                  size="small"
-                  @click="onAddMore"
-                >添加其他类别</t-button>
-                <t-button
-                  theme="danger"
-                  style="margin-top: 16px; margin-left: 16px"
-                  size="small"
-                  v-if="currentFormData.list.length > 1"
-                  @click="() => onDelete(index)"
-                >移除</t-button>
+                <t-button style="margin-top: 16px" size="small" @click="onAddMore">添加其他类别</t-button>
+                <t-button theme="danger" style="margin-top: 16px; margin-left: 16px" size="small"
+                  v-if="currentFormData.list.length > 1" @click="() => onDelete(index)">移除</t-button>
               </div>
             </template>
           </OneCategoryTest>
@@ -36,26 +21,21 @@
         </t-form-item>
 
         <t-form-item>
-          <t-tooltip theme="light" content="示例一：Text，输出 <Button>Text</Button>； 示例二：<span>children</span>， 输出：<Button><span>children</span></Button>">
-            <t-input
-              v-model="currentFormData.content"
-              placeholder="子组件"
-              @change="() => onFormDataChange('content')"
-            ></t-input>
+          <t-tooltip theme="light"
+            content="示例一：Text，输出 <Button>Text</Button>； 示例二：<span>children</span>， 输出：<Button><span>children</span></Button>">
+            <t-input v-model="currentFormData.content" placeholder="子组件"
+              @change="() => onFormDataChange('content')"></t-input>
           </t-tooltip>
         </t-form-item>
 
         <t-form-item>
           <t-tooltip theme="light">
             <template #content>
-              <p>{{ `const wrapper = mount(< RadioGroup ></ RadioGroup >)` }} 默认获取组件实例方法。</p>
+              <p>{{ `const wrapper = mount(< RadioGroup></ RadioGroup>)` }} 默认获取组件实例方法。</p>
               <p>{{ `const wrapper = getRadioGroupDefaultMount(RadioGroup, {})` }} 填写后的获取实例方法，一般用于存在子组件的场景</p>
             </template>
-            <t-input
-              v-model="currentFormData.wrapper"
-              placeholder="获取组件实例的函数名称，类子组件场景，如：getRadioGroupDefaultMount"
-              @change="() => onFormDataChange('wrapper')"
-            ></t-input>
+            <t-input v-model="currentFormData.wrapper" placeholder="获取组件实例的函数名称，类子组件场景，如：getRadioGroupDefaultMount"
+              @change="() => onFormDataChange('wrapper')"></t-input>
           </t-tooltip>
         </t-form-item>
 
@@ -74,18 +54,16 @@
         </div>
 
         <t-form-item style="margin: 16px 0 8px 0">
-          <t-checkbox v-model="currentFormData.snapshot" @change="() => onFormDataChange('snapshot')">生成快照（Snapshots）</t-checkbox>
+          <t-checkbox v-model="currentFormData.snapshot"
+            @change="() => onFormDataChange('snapshot')">生成快照（Snapshots）</t-checkbox>
         </t-form-item>
 
         <t-form-item style="margin: 0px 0 8px 0">
           <t-checkbox v-model="currentFormData.needCopy">复用当前所有测试用例到其他「组件实例」</t-checkbox>
         </t-form-item>
         <t-form-item v-if="currentFormData.needCopy">
-          <t-input
-            v-model="currentFormData.copyTestToWrapper"
-            placeholder="多个实例逗号隔开，示例：getRadioGroupKidsMount"
-            @change="() => onFormDataChange('copyTestToWrapper')"
-          ></t-input>
+          <t-input v-model="currentFormData.copyTestToWrapper" placeholder="多个实例逗号隔开，示例：getRadioGroupKidsMount"
+            @change="() => onFormDataChange('copyTestToWrapper')"></t-input>
         </t-form-item>
 
         <t-form-item>
@@ -243,7 +221,7 @@ function getEventJSONData(eventData) {
         trigger: ep.trigger,
         event: ep.event ? parseJSON(ep.event) : undefined,
         exist: ep.exist ? parseJSON(ep.exist, []) : undefined,
-        delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined )
+        delay: ep.delay === 'true' ? true : (ep.delay ? Number(ep.delay) : undefined)
       }))
     }))
   }
@@ -275,9 +253,11 @@ defineExpose({ updateDataByJSON, clearFormData })
 .unit-test-ui .t-form__label {
   text-align: left;
 }
+
 .t-form__controls-content {
   display: initial;
 }
+
 .unit-test-ui__form-item-inner {
   margin-top: 16px;
 }

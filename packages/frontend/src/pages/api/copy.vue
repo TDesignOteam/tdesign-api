@@ -7,19 +7,19 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 const props = defineProps({
   modelValue: String,
-  platformOptions: {}
-})
+  platformOptions: {},
+});
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue']);
 
 const modelValue = computed({
   get: () => props.modelValue,
-  set: (val) => emit('update:modelValue', val)
-})
+  set: (val) => emit('update:modelValue', val),
+});
 </script>
 
 <style lang="less">
