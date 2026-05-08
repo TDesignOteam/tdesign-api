@@ -4,14 +4,13 @@
       <h3 class="unit-test-tdesign__h3">
         {{ apiInfo?.component }}.{{ apiInfo?.field_name }}
         <template v-if="apiInfo && apiInfo.field_type_text && apiInfo.field_type_text.length">
-          {{ '<' + apiInfo.field_type_text.join('/') + '>' }}
-        </template>
+          {{ '<' + apiInfo.field_type_text.join('/') + '>' }} </template>
       </h3>
 
       <p v-if="apiInfo?.field_enum">
         <template v-if="apiInfo.field_enum">枚举值：{{ apiInfo.field_enum }}</template>
       </p>
-      <p>{{ apiInfo?.field_desc_zh  }}</p>
+      <p>{{ apiInfo?.field_desc_zh }}</p>
 
       <div id="test-json-editor" style="height: 500px"></div>
 
@@ -90,7 +89,7 @@ const unitTestCode = computed(() => {
 const currentTestJSON = computed(() => {
   try {
     return testDescription.value ? JSON.parse(testDescription.value) : {}
-  } catch(e) {
+  } catch (e) {
     return {}
   }
 })
@@ -174,7 +173,7 @@ function getInnerUnitTestCode() {
     } else {
       return
     }
-  } catch(e) {
+  } catch (e) {
     console.warn(e)
     const error = 'Unit test generated fail, check the core code first.'
     codeData = `console.log('${error}')`
@@ -188,7 +187,7 @@ function getInnerUnitTestCode() {
       plugins: [parserBabel],
     })
     return Prism.highlight(code, Prism.languages.javascript, 'javascript')
-  } catch(e) {
+  } catch (e) {
     console.warn(e)
     const error = 'unit test code has syntax error. check test code please.'
     const code = `console.log('${error}')`
@@ -201,7 +200,7 @@ function validateJSON(json) {
     json && JSON.parse(json)
     jsonError.value = ''
     return true
-  } catch(e) {
+  } catch (e) {
     jsonError.value = 'Not a validate JSON'
   }
   return false
@@ -220,11 +219,11 @@ function onTestUIFormDataChange({ framework, formData, trigger, params }) {
 function updateTestDescription(formData, trigger, params) {
   console.log('ui change', formData, trigger, params)
   const tmpJSON = {}
-  ;['wrapper', 'snapshot', 'trigger', 'skip', 'copyTestToWrapper', 'props'].forEach((field) => {
-    if (formData[field]) {
-      tmpJSON[field] = formData[field]
-    }
-  })
+    ;['wrapper', 'snapshot', 'trigger', 'skip', 'copyTestToWrapper', 'props'].forEach((field) => {
+      if (formData[field]) {
+        tmpJSON[field] = formData[field]
+      }
+    })
   if (formData.copyTestToWrapper?.trim()) {
     tmpJSON.copyTestToWrapper = formData.copyTestToWrapper.trim().split(',')
   }
@@ -307,9 +306,11 @@ defineExpose({
   display: flex;
   height: 100%;
 }
+
 .unit-test-design__input {
   width: 50%;
 }
+
 .unit-test-design__out {
   width: 50%;
   height: fit-content;

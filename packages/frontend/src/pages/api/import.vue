@@ -3,42 +3,29 @@
     <div class="t-form-item">
       <label>设计组件：</label>
       <div class="t-form-content">
-        <t-select
-          v-model="formData.component"
-          placeholder="请选择组件"
-          clearable
-          filterable
-        >
-          <t-option
-            v-for="(item, index) in components"
-            :key="index"
-            :label="`${item.value} ${item.label}`"
-            :value="item.value"
-          ></t-option>
+        <t-select v-model="formData.component" placeholder="请选择组件" clearable filterable>
+          <t-option v-for="(item, index) in components" :key="index" :label="`${item.value} ${item.label}`"
+            :value="item.value"></t-option>
         </t-select>
       </div>
     </div>
     <div class="t-form-item">
       <label style='vertical-align: top;'>框架平台：</label>
       <div class="t-form-content platform">
-        <site-checkbox v-model="formData.platform" :options="platformOptions" ></site-checkbox>
+        <site-checkbox v-model="formData.platform" :options="platformOptions"></site-checkbox>
       </div>
     </div>
     <div class="t-form-item">
       <label>
         API 类别
-        <t-popup
-          class="placement-top"
-          content="Extends 表示组件/插件会继承当前 API 所有属性。Return 表示插件或函数的返回值。<T> 表示泛型参数"
-          placement="top-left"
-          visibleArrow
-        >
-          <t-icon name="help-circle" size="middle"/>
+        <t-popup class="placement-top" content="Extends 表示组件/插件会继承当前 API 所有属性。Return 表示插件或函数的返回值。<T> 表示泛型参数"
+          placement="top-left" visibleArrow>
+          <t-icon name="help-circle" size="middle" />
         </t-popup>：
       </label>
       <div class="t-form-content">
         <t-radio-group v-model="formData.apiCategory">
-          <t-radio v-for="(item, index) in map.field_category" :key="index" :value="item.value">{{item.label}}</t-radio>
+          <t-radio v-for="(item, index) in map.field_category" :key="index" :value="item.value">{{ item.label }}</t-radio>
         </t-radio-group>
       </div>
     </div>
@@ -46,7 +33,7 @@
       <label>API 名称：</label>
       <div class="t-form-content">
         <t-input v-model="formData.name" :placeholder="currentApiCategory.placeholder.name"></t-input>
-        <small v-if="currentApiCategory.desc">示例：`{{currentApiCategory.desc}}'`</small>
+        <small v-if="currentApiCategory.desc">示例：`{{ currentApiCategory.desc }}'`</small>
       </div>
     </div>
 
@@ -85,28 +72,23 @@
       <div class="t-form-item">
         <label style="vertical-align: top">
           <span>API 类型</span>
-          <t-popup
-            class="placement-top"
+          <t-popup class="placement-top"
             content="【Tips】TNode 是 TDesign 定义的一种集合数据类型，用于描述多类型 API。TNode = Function + Slot + ReactNode"
-            placement="top-left"
-            visibleArrow
-          >
-            <t-icon name="help-circle" size="middle"/>
+            placement="top-left" visibleArrow>
+            <t-icon name="help-circle" size="middle" />
           </t-popup>：
         </label>
         <div class="t-form-content api-type">
           <t-checkbox-group v-model="formData.fieldType" @change="onFieldTypeChange">
-            <t-checkbox v-for="(item) in fieldOptions" :key="item.value" :value="item.value">{{item.label}}</t-checkbox>
+            <t-checkbox v-for="(item) in fieldOptions" :key="item.value" :value="item.value">{{ item.label }}</t-checkbox>
           </t-checkbox-group>
         </div>
       </div>
       <div class="t-form-item">
         <label>TS 类型：</label>
         <div class="t-form-content">
-          <t-textarea
-            v-model="formData.customFieldType"
-            placeholder="API 类型不能满足需要时，可在此处输入详细的 TS 类型，例如： ButtonProps。API 类型包含泛型时，该项必填。"
-          ></t-textarea>
+          <t-textarea v-model="formData.customFieldType"
+            placeholder="API 类型不能满足需要时，可在此处输入详细的 TS 类型，例如： ButtonProps。API 类型包含泛型时，该项必填。"></t-textarea>
         </div>
       </div>
       <div class="t-form-item">
@@ -139,19 +121,18 @@
       <div class="t-form-item" v-show="isShowParams">
         <label>
           <span>参数</span>
-          <t-popup
-            class="placement-top"
-            placement="top-left"
-            visibleArrow
-          >
+          <t-popup class="placement-top" placement="top-left" visibleArrow>
             <template #content>
               <div>TDesign 的参数设置尽可能保证无序性，组件涉及到的事件参数和函数参数一般只会存在一个（Object），特殊情况可以允许两个。
-              <div>比如：</div>
-              <div>为支持 Vue 框架的语法糖，change 相关的事件参数第一个值必须 value，如此，像 MouseEvent 这类额外的环境参数只能放在第二个位置。</div>
-              <div>Anchor 组件 的 click 事件参数为 (link: { href: string; title: string; e: MouseEvent })，只有一个参数 link，其中 href / title / e 均为 link 的属性。</div>
-              <div>Popup 组件的 visibleChange 事件参数为 (visible: boolean, context: PopupVisibleChangeContext)，有两个参数 visible 和 context。</div></div>
+                <div>比如：</div>
+                <div>为支持 Vue 框架的语法糖，change 相关的事件参数第一个值必须 value，如此，像 MouseEvent 这类额外的环境参数只能放在第二个位置。</div>
+                <div>Anchor 组件 的 click 事件参数为 (link: { href: string; title: string; e: MouseEvent })，只有一个参数 link，其中 href
+                  / title / e 均为 link 的属性。</div>
+                <div>Popup 组件的 visibleChange 事件参数为 (visible: boolean, context: PopupVisibleChangeContext)，有两个参数 visible
+                  和 context。</div>
+              </div>
             </template>
-            <t-icon name="help-circle" size="middle"/>
+            <t-icon name="help-circle" size="middle" />
           </t-popup>：
         </label>
         <div class="t-form-content">
@@ -180,20 +161,13 @@
       <div class="t-form-item" v-show="Number(formData.apiCategory) === API_CATEGORY_EVENTS">
         <label>
           <span>触发元素(React)</span>
-          <t-popup
-            class="placement-top"
-            content="【Tips】用于描述事件类型的范型约束，仅用于 React"
-            placement="top-left"
-            visibleArrow
-          >
-            <t-icon name="help-circle" size="middle"/>
+          <t-popup class="placement-top" content="【Tips】用于描述事件类型的范型约束，仅用于 React" placement="top-left" visibleArrow>
+            <t-icon name="help-circle" size="middle" />
           </t-popup>：
         </label>
         <div class="t-form-content">
-          <t-input
-            v-model="formData.triggerElements"
-            :placeholder="currentApiCategory.placeholder.triggerElements"
-          ></t-input>
+          <t-input v-model="formData.triggerElements"
+            :placeholder="currentApiCategory.placeholder.triggerElements"></t-input>
         </div>
       </div>
     </template>
@@ -215,22 +189,14 @@
     <div class="t-form-item">
       <label>
         版本号
-        <t-popup
-          class="placement-top"
-          :content="versionDescription"
-          placement="top-left"
-          visibleArrow
-        >
-          <t-icon name="help-circle" size="middle"/>
+        <t-popup class="placement-top" :content="versionDescription" placement="top-left" visibleArrow>
+          <t-icon name="help-circle" size="middle" />
         </t-popup>
         ：
       </label>
       <div class="t-form-content">
-        <t-textarea
-          v-model="formData.version"
-          :autosize="{ minRows: 3 }"
-          placeholder="从哪个版本号开始支持的这个 API（JSON）"
-        ></t-textarea>
+        <t-textarea v-model="formData.version" :autosize="{ minRows: 3 }"
+          placeholder="从哪个版本号开始支持的这个 API（JSON）"></t-textarea>
       </div>
     </div>
   </form>
@@ -403,7 +369,7 @@ watch(() => props.info, (val) => {
   getCurrentComponentData()
 })
 
-function onFieldTypeChange (val) {
+function onFieldTypeChange(val) {
   if (!val.includes(String(STRING))) {
     formData.fieldEnums = ''
   }
@@ -439,24 +405,28 @@ defineExpose({ formData })
   .t-form {
     margin-bottom: 60px;
   }
+
   .t-form-content {
     width: 590px;
   }
-  .t-form-item + .t-form-item {
+
+  .t-form-item+.t-form-item {
     margin-top: 20px;
   }
-  .t-form-item > label {
+
+  .t-form-item>label {
     width: 135px;
     text-align: right;
     margin-right: 8px;
     line-height: 32px;
   }
-  .t-form-item .t-button + .t-button {
+
+  .t-form-item .t-button+.t-button {
     margin-left: 16px;
   }
 
   .t-form-content,
-  .t-form-item > label {
+  .t-form-item>label {
     display: inline-block;
     vertical-align: top;
   }
@@ -469,11 +439,13 @@ defineExpose({ formData })
       margin-top: 5px;
     }
   }
+
   // fix tdesign ui
   .placement-top {
     position: initial !important;
   }
-  .t-checkbox + .t-checkbox {
+
+  .t-checkbox+.t-checkbox {
     margin-left: 0;
   }
 }

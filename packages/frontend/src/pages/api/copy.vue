@@ -1,11 +1,7 @@
 <template>
   <div class="platform-type">
     <t-radio-group v-model="modelValue">
-      <t-radio
-        v-for="(item, index) in platformOptions"
-        :key="index"
-        :value="item.value"
-      >{{item.label}}</t-radio>
+      <t-radio v-for="(item, index) in platformOptions" :key="index" :value="item.value">{{ item.label }}</t-radio>
     </t-radio-group>
   </div>
 </template>
@@ -29,6 +25,7 @@ const modelValue = computed({
 <style lang="less">
 .platform-type {
   padding: 8px;
+
   .t-radio {
     display: block;
     margin-bottom: 8px;

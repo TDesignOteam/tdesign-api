@@ -11,19 +11,10 @@
           <div class="t-form-item">
             <label>组件：</label>
             <div class="t-form-content">
-              <t-select
-                v-model="formData.component"
-                placeholder="请选择组件"
-                clearable
-                filterable
-                :tips="formData.component === 'ALL' ? tips : ''"
-              >
-                <t-option
-                  v-for="(item, index) in componentList"
-                  :key="index"
-                  :label="`${item.value} ${item.label}`"
-                  :value="item.value"
-                ></t-option>
+              <t-select v-model="formData.component" placeholder="请选择组件" clearable filterable
+                :tips="formData.component === 'ALL' ? tips : ''">
+                <t-option v-for="(item, index) in componentList" :key="index" :label="`${item.value} ${item.label}`"
+                  :value="item.value"></t-option>
               </t-select>
             </div>
           </div>
@@ -41,9 +32,8 @@
                 <div class="help-icon">?</div>
               </t-tooltip>
               <t-checkbox v-model="formData.onlyDocs">仅输出 md文件</t-checkbox>
-              <t-checkbox v-model="formData.useDefault" style="margin-right: 20px"
-                >输出 useDefault/useVModel 文件(Vue3)</t-checkbox
-              >
+              <t-checkbox v-model="formData.useDefault" style="margin-right: 20px">输出 useDefault/useVModel
+                文件(Vue3)</t-checkbox>
               <t-checkbox v-model="formData.vitest">输出单测用例</t-checkbox>
             </div>
           </div>
@@ -142,16 +132,20 @@ function onGenerateConfirm() {
 .t-api-tool__multi-operations {
   display: flex;
   margin-bottom: 16px;
+
   .t-button {
     margin-right: 10px;
   }
+
   .link {
     text-decoration: none;
   }
+
   .link:hover {
     text-decoration: underline;
   }
 }
+
 .help-icon {
   width: 14px;
   height: 14px;

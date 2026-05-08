@@ -6,40 +6,24 @@
       <div class="page-api__search">
         <div class="query-item">
           <t-select v-model="query.platform" placeholder="平台框架" clearable filterable @change="onPlatformChange">
-            <t-option
-              v-for="(item, index) in map.platform_framework"
-              :key="index"
-              :label="item.label"
-              :value="item.value"
-            ></t-option>
+            <t-option v-for="(item, index) in map.platform_framework" :key="index" :label="item.label"
+              :value="item.value"></t-option>
           </t-select>
         </div>
         <div class="query-item">
           <t-select v-model="query.component" placeholder="组件名称" clearable filterable @change="onComponentChange">
-            <t-option
-              v-for="(item, index) in map.components"
-              :key="index"
-              :label="`${item.value} ${item.label} (${TYPE_MAP[item.type] || '组件'})`"
-              :value="item.value"
-            ></t-option>
+            <t-option v-for="(item, index) in map.components" :key="index"
+              :label="`${item.value} ${item.label} (${TYPE_MAP[item.type] || '组件'})`" :value="item.value"></t-option>
           </t-select>
         </div>
         <div class="query-item">
           <t-select v-model="query.fieldCategory" placeholder="API 分类" clearable filterable @change="onComponentChange">
-            <t-option
-              v-for="(item, index) in map.field_category"
-              :key="index"
-              :label="item.label"
-              :value="item.value"
-            ></t-option>
+            <t-option v-for="(item, index) in map.field_category" :key="index" :label="item.label"
+              :value="item.value"></t-option>
           </t-select>
         </div>
         <div class="query-item">
-          <t-input
-            v-model="query.fieldName"
-            placeholder="输入 API 名称查询，如：theme"
-            @enter="onEnter"
-          />
+          <t-input v-model="query.fieldName" placeholder="输入 API 名称查询，如：theme" @enter="onEnter" />
         </div>
       </div>
 
@@ -47,63 +31,35 @@
 
       <div class="t-demo-api-list">
         <t-loading :loading="loading">
-          <api-list
-            :list="list"
-            :platformOptions="platformOptions"
-            :preview="preview"
-            @delete-api-success="onDeleteSuccess"
-            @click-edit-btn="onEditClick"
-            @click-test-edit-btn="onTestEditClick"
-            @code-preview="onCodePreview"
-          ></api-list>
+          <api-list :list="list" :platformOptions="platformOptions" :preview="preview"
+            @delete-api-success="onDeleteSuccess" @click-edit-btn="onEditClick" @click-test-edit-btn="onTestEditClick"
+            @code-preview="onCodePreview"></api-list>
 
-          <t-pagination
-            :total="total"
-            :page-size="pageSize"
-            :current="page"
-            show-sizer
-            @change="onPageChange"
-          />
+          <t-pagination :total="total" :page-size="pageSize" :current="page" show-sizer @change="onPageChange" />
         </t-loading>
       </div>
-      <t-drawer
-        :header="mode === 'create' ? '新增' : '编辑'"
-        width="830"
-        v-model:visible="createApiVisible"
-        size="60%"
-        class="api-edit"
-        @confirm="onApiConfirm"
-      >
+      <t-drawer :header="mode === 'create' ? '新增' : '编辑'" width="830" v-model:visible="createApiVisible" size="60%"
+        class="api-edit" closeOnConfirm @confirm="onApiConfirm">
         <template #body>
-          <import ref="api-form" :map="map" :info="apiInfo" :mode="mode"></import>
+          <import ref="apiFormRef" :map="map" :info="apiInfo" :mode="mode"></import>
         </template>
       </t-drawer>
 
-      <t-dialog
-        width="830"
-        top="calc(100% - 730px)"
-        v-model:visible="codePreviewVisible"
-        :cancelBtn="null"
-        confirmBtn="关闭"
-      >
+      <t-dialog width="830" top="calc(100% - 730px)" v-model:visible="codePreviewVisible" :cancelBtn="null"
+        confirmBtn="关闭">
         <template #header>
           <t-tabs v-model="previewType">
             <t-tab-panel v-for="(item, index) in previewTabs" :key="index" :value="item.label" :label="item.label" />
           </t-tabs>
         </template>
         <template #body>
-          <Codemirror :value="code" :options="cmOptions"/>
+          <Codemirror :value="code" :options="cmOptions" />
         </template>
       </t-dialog>
 
-      <t-drawer
-        header="测试用例设计"
-        v-model:visible="unitTestVisible"
-        size="85%"
-        @confirm="onUnitTestEditConfirm"
-        @cancel="onUnitTestEditCancel"
-      >
-        <unit-test-design ref="unit-test" :map="map" :apiInfo="apiInfo" :visible="unitTestVisible" />
+      <t-drawer header="测试用例设计" v-model:visible="unitTestVisible" size="85%" closeOnConfirm
+        @confirm="onUnitTestEditConfirm" @cancel="onUnitTestEditCancel">
+        <unit-test-design ref="unitTestRef" :map="map" :apiInfo="apiInfo" :visible="unitTestVisible" />
       </t-drawer>
     </div>
   </div>
@@ -198,30 +154,30 @@ onMounted(() => {
   getApiList()
 })
 
-function onPageChange (pageInfo) {
+function onPageChange(pageInfo) {
   page.value = pageInfo.current
   pageSize.value = pageInfo.pageSize
   getApiList()
 }
 
-function onEnter () {
+function onEnter() {
   search()
 }
 
-function onComponentChange () {
+function onComponentChange() {
   search()
 }
 
-function onPlatformChange () {
+function onPlatformChange() {
   search()
 }
 
-function search () {
+function search() {
   page.value = 1
   getApiList()
 }
 
-function getMap () {
+function getMap() {
   cmpApiInstance({
     method: 'get',
     url: '/cmp/map'
@@ -232,7 +188,7 @@ function getMap () {
   })
 }
 
-function getApiList () {
+function getApiList() {
   const queryParams = Object.assign({}, query)
   const params = {
     platform_framework: queryParams.platform,
@@ -256,15 +212,15 @@ function getApiList () {
   })
 }
 
-function onDeleteSuccess () {
+function onDeleteSuccess() {
   getApiList()
 }
 
-function showDialog () {
+function showDialog() {
   createApiVisible.value = true
 }
 
-function onEditClick (data) {
+function onEditClick(data) {
   apiInfo.value = data.row
   mode.value = 'edit'
   showDialog()
@@ -279,20 +235,20 @@ function onUnitTestEditCancel() {
   apiInfo.value = null
 }
 
-function onCreateDialogShow () {
+function onCreateDialogShow() {
   apiInfo.value = null
   mode.value = 'create'
   showDialog()
 }
 
-function onApiConfirm () {
+function onApiConfirm() {
   const data = apiFormRef.value?.formData
   if (!data) return
 
   if (data.version) {
     try {
       JSON.parse(data.version)
-    } catch(e) {
+    } catch (e) {
       MessagePlugin.error('版本号格式必须为合法 JSON')
       return
     }
@@ -336,7 +292,7 @@ function onUnitTestEditConfirm() {
   const testDescription = unitTestRef.value?.testDescription
   try {
     testDescription && JSON.parse(testDescription)
-  } catch(e) {
+  } catch (e) {
     MessagePlugin.error('测试用例不是合法 JSON')
     return
   }
@@ -354,7 +310,7 @@ function onUnitTestEditConfirm() {
   })
 }
 
-function onCodePreview (data, framework) {
+function onCodePreview(data, framework) {
   codeData.framework = framework
   codeData.data = data
   codePreviewVisible.value = true
@@ -366,18 +322,22 @@ function onCodePreview (data, framework) {
 .page-api {
   padding: 40px;
 }
+
 div.t-popup {
   z-index: 5500;
 }
+
 .page-api__title {
   font-weight: bold;
   font-size: 32px;
   margin-bottom: 40px;
 }
+
 .page-api__search {
   width: 100%;
   background-color: #ffffff;
   margin-bottom: 16px;
+
   .query-item {
     width: 260px;
     display: inline-block;
@@ -385,9 +345,11 @@ div.t-popup {
     margin-bottom: 16px;
   }
 }
+
 .t-demo-api-list {
   background-color: #ffffff;
   padding-bottom: 32px;
+
   .t-pagination {
     margin-right: 16px;
   }

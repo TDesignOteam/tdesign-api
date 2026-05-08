@@ -1,16 +1,8 @@
 <template>
   <div class="tdesign-checkbox-indeterminate">
-    <t-checkbox
-      class="site-check-all"
-      :checked="checkedAll"
-      :indeterminate="indeterminate"
-      @change="onCheckedAllChange"
-    >全部</t-checkbox>
-    <t-checkbox-group
-      v-model="checkedList"
-      :options="options"
-      @change="onChange"
-    ></t-checkbox-group>
+    <t-checkbox class="site-check-all" :checked="checkedAll" :indeterminate="indeterminate"
+      @change="onCheckedAllChange">全部</t-checkbox>
+    <t-checkbox-group v-model="checkedList" :options="options" @change="onChange"></t-checkbox-group>
   </div>
 </template>
 
@@ -44,12 +36,12 @@ watch(checkedStr, (val) => {
   emit('update:modelValue', checkedList.value)
 })
 
-function onCheckedAllChange (checked) {
+function onCheckedAllChange(checked) {
   indeterminate.value = false
   checkedList.value = checked ? props.options.map(e => e.value) : []
 }
 
-function onChange (list) {
+function onChange(list) {
   indeterminate.value = !!list.length && !checkedAll.value
 }
 </script>

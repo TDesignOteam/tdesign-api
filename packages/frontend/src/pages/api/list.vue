@@ -5,19 +5,14 @@
         <div>
           <div>
             <span style="padding-right: 8px;">{{ row.component }}</span>
-            <t-tag
-              v-if="row.field_category_text"
-              size="small"
-              :theme="{
-                Props: 'primary',
-                Events: 'success',
-                Functions: 'warning',
-                Return: 'default',
-                Extends: 'default',
-                '<T>': 'default',
-              }[row.field_category_text] || 'primary'"
-              variant="light"
-            >
+            <t-tag v-if="row.field_category_text" size="small" :theme="{
+              Props: 'primary',
+              Events: 'success',
+              Functions: 'warning',
+              Return: 'default',
+              Extends: 'default',
+              '<T>': 'default',
+            }[row.field_category_text] || 'primary'" variant="light">
               {{ row.field_category_text }}
             </t-tag>
           </div>
@@ -29,23 +24,35 @@
             <template v-if="row.deprecated">已废弃。</template>
             <template v-if="row.html_attribute">HTML 原生属性。</template>
             <template v-if="row.field_required">必需。</template>
-            {{row.field_desc_zh}}
+            {{ row.field_desc_zh }}
           </p>
-          <template v-if="row.test_description"><p>Tested：
-            <t-space :size="3">
-            <t-tag variant="outline" shape="round" size="small" theme="primary" v-for="item in getTested(row.test_description)" :key="item">{{item}}</t-tag>
-            </t-space></p></template>
-          <template v-if="row.field_enum"><p>可选值：{{row.field_enum}}。</p></template>
-          <template v-if="row.custom_field_type"><p>TS 类型定义：{{row.custom_field_type}}。</p></template>
-          <template v-if="row.event_input"><p>
-            参数：{{row.event_input}}
-          </p></template>
-          <template v-if="row.event_output"><p>
-            返回值：{{row.event_output}}
-          </p></template>
+          <template v-if="row.test_description">
+            <p>Tested：
+              <t-space :size="3">
+                <t-tag variant="outline" shape="round" size="small" theme="primary"
+                  v-for="item in getTested(row.test_description)" :key="item">{{ item }}</t-tag>
+              </t-space>
+            </p>
+          </template>
+          <template v-if="row.field_enum">
+            <p>可选值：{{ row.field_enum }}。</p>
+          </template>
+          <template v-if="row.custom_field_type">
+            <p>TS 类型定义：{{ row.custom_field_type }}。</p>
+          </template>
+          <template v-if="row.event_input">
+            <p>
+              参数：{{ row.event_input }}
+            </p>
+          </template>
+          <template v-if="row.event_output">
+            <p>
+              返回值：{{ row.event_output }}
+            </p>
+          </template>
           <p>
             <template v-if="row.syntactic_sugar">
-              支持 Vue 语法糖：{{row.syntactic_sugar}}。
+              支持 Vue 语法糖：{{ row.syntactic_sugar }}。
             </template>
             <template v-if="row.support_default_value">支持非受控属性。</template>
           </p>
@@ -102,7 +109,7 @@ const emit = defineEmits(['delete-api-success', 'click-edit-btn', 'click-test-ed
 
 const columns = computed(() => getCols())
 
-function getCols () {
+function getCols() {
   const cols = [
     { title: 'ID', colKey: 'id' },
     {
@@ -139,7 +146,7 @@ function getCols () {
   return cols
 }
 
-function onDeleteConfirm (data) {
+function onDeleteConfirm(data) {
   cmpApiInstance({
     url: '/cmp/api',
     method: 'delete',
@@ -152,15 +159,15 @@ function onDeleteConfirm (data) {
   })
 }
 
-function onEditClick (data) {
+function onEditClick(data) {
   emit('click-edit-btn', data)
 }
 
-function onTestsEditClick (data) {
+function onTestsEditClick(data) {
   emit('click-test-edit-btn', data)
 }
 
-function onCodePreview (data, framework) {
+function onCodePreview(data, framework) {
   emit('code-preview', data, framework)
 }
 
@@ -180,23 +187,27 @@ function getTested(test) {
 </script>
 
 <style lang="less">
-div.tdesign-document.API-Preview  {
+div.tdesign-document.API-Preview {
   padding: 32px 16px;
   background-color: #ffffff;
   width: 100%;
   max-width: 2000px;
+
   .t-table .t-table-content {
     overflow: auto;
   }
+
   .t-demo-table-btns {
     display: flex;
     justify-content: space-between;
     width: 138px;
+
     .t-button {
       padding: 0;
     }
   }
-  .t-table-content + b {
+
+  .t-table-content+b {
     width: 100%;
     padding: 50px;
     display: block;
@@ -208,8 +219,10 @@ div.tdesign-document.API-Preview  {
     margin: 8px 0;
   }
 }
+
 .t-demo-platforms {
   padding: 16px;
+
   p {
     margin: 4px 0;
   }
