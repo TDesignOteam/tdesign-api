@@ -19,7 +19,7 @@
 
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light"
-          :content="`示例：[{ "value": "tdesign-vue" }]`">
+          :content="`示例：[{ 'value': 'tdesign-vue' }]`">
           <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数" @blur="() => onFormDataChange('tnode')"></t-input>
         </t-tooltip>
       </div>
@@ -271,7 +271,7 @@ import { ref, watch, nextTick } from 'vue'
 import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const'
 import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue-next'
 import EventExpect from './event-expect'
-import { parseJSON, getEventName } from '../util'
+import { parseJSON } from '../util'
 import { formatToOneCategoryTest, getEventTestData } from './formatData'
 import { MessagePlugin } from 'tdesign-vue-next'
 
@@ -514,10 +514,10 @@ function onEventPropsChange() {
   onFormDataChange('event', { arrayEvent: arrayEvent.value })
 }
 
-function getEventName(event) {
+function parseEventName(event) {
   if (typeof event === 'string') {
     const eventJSON = parseJSON(event, {})
-    return Object.keys(eventJSON).map(name => getEventName(name)).join('、')
+    return Object.keys(eventJSON).map(name => parseEventName(name)).join('、')
   }
   return event
 }
@@ -528,7 +528,7 @@ function getEventDescription(expect) {
     expect.trigger && `触发 ${expect.trigger}`,
     expect.delay && `延迟 ${expect.delay === 'true' ? 300 : expect.delay} 毫秒之后`,
     expectDesc,
-    expect.event && `期望 ${getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
+    expect.event && `期望 ${parseEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
   ].filter(v => v).join('，') + '。'
 }
 

@@ -1,0 +1,1 @@
+import r from"./index-CcuiANGq.js";import{c as e,u as o,o as t}from"./index-CTG55DTB.js";import"https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs";import"https://tdesign.gtimg.com/js/prettier%402.8.1-parser-babel.mjs";const n={__name:"preview",setup(p){return(a,c)=>(t(),e(o(r),{preview:""}))}};export{n as default};

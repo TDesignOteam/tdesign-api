@@ -47,9 +47,9 @@ import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import { ChevronRightDoubleIcon } from 'tdesign-icons-vue-next'
 import UnitTestUI from './unit-test/unit-test-ui.vue'
 import { cmpApiInstance } from '../../services/api-server'
-import { getOneUnitTest, getComponentUnitTests } from '../../../../../scripts/vitest'
+import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest'
 import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON, loadScript } from './util'
-import prettierConfig from '../../../../../scripts/config/prettier'
+import prettierConfig from '../../../../scripts/config/prettier'
 import prettier from "https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs"
 import parserBabel from "https://tdesign.gtimg.com/js/prettier%402.8.1-parser-babel.mjs"
 import Prism from 'prismjs'

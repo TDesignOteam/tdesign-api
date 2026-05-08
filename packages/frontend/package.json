@@ -8,6 +8,8 @@
     "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./packages --fix"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
     "axios": "^1.6.7",
     "codemirror": "^6.0.1",
     "lodash": "^4.17.21",

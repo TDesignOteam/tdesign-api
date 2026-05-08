@@ -20,6 +20,9 @@ export default ({ mode }) => {
           index: path.resolve(__dirname, 'index.html')
         }
       },
+      commonjsOptions: {
+        include: [/node_modules/, /packages\/scripts/]
+      }
     },
     optimizeDeps: {
       include: [path.resolve(__dirname, '../scripts')],

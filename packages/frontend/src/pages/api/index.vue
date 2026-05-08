@@ -92,7 +92,7 @@
           </t-tabs>
         </template>
         <template #body>
-          <codemirror :value="code" :options="cmOptions"/>
+          <Codemirror :value="code" :options="cmOptions"/>
         </template>
       </t-dialog>
 
@@ -111,9 +111,9 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
-import { codemirror } from 'vue-codemirror'
-import 'codemirror/dist/index.css'
-import 'codemirror/theme/base16-dark.css'
+import { Codemirror } from 'vue-codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { oneDark } from '@codemirror/theme-one-dark'
 import ApiList from './list.vue'
 import ApiOperation from './operation.vue'
 import Import from './import.vue'
@@ -167,6 +167,7 @@ const apiInfo = ref(null)
 const mode = ref('create')
 const total = ref(0)
 const page = ref(1)
+
 const pageSize = ref(20)
 const codePreviewVisible = ref(false)
 const codeData = reactive({
@@ -176,8 +177,7 @@ const codeData = reactive({
 const code = ref('')
 const cmOptions = {
   tabSize: 4,
-  mode: 'text/javascript',
-  theme: 'base16-dark',
+  extensions: [javascript({ jsx: true, typescript: true }), oneDark],
   lineNumbers: true,
   line: true,
   viewportMargin: 20
