@@ -14,62 +14,43 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, watch } from 'vue'
+import { Checkbox as TCheckbox, CheckboxGroup as TCheckboxGroup } from 'tdesign-vue-next'
 
-import { Checkbox as TCheckbox, CheckboxGroup as TCheckboxGroup } from 'tdesign-vue'
+const props = defineProps({
+  options: Array,
+  modelValue: {}
+})
 
-export default {
-  name: 'SiteCheckbox',
+const emit = defineEmits(['update:modelValue'])
 
-  components: {
-    TCheckbox,
-    TCheckboxGroup
-  },
+const indeterminate = ref(false)
+const checkedList = ref([])
 
-  props: {
-    options: Array,
-    value: {}
-  },
+const checkedStr = computed(() => checkedList.value.join())
 
-  data () {
-    return {
-      indeterminate: false,
-      checkedList: []
-    }
-  },
+const checkedAll = computed(() => {
+  const a1 = checkedList.value
+  const a2 = props.options ? props.options.map(item => item.value) : []
+  return a1.sort().join() === a2.sort().join()
+})
 
-  computed: {
-    checkedStr () {
-      return this.checkedList.join()
-    },
-    checkedAll () {
-      const a1 = this.checkedList
-      const a2 = this.options ? this.options.map(item => item.value) : []
-      return a1.sort().join() === a2.sort().join()
-    }
-  },
+watch(() => props.modelValue, (val) => {
+  checkedList.value = val
+}, { immediate: true })
 
-  watch: {
-    value: {
-      immediate: true,
-      handler (val) {
-        this.checkedList = val
-      }
-    },
-    checkedStr () {
-      this.$emit('input', this.checkedList)
-    }
-  },
+watch(checkedStr, (val) => {
+  emit('update:modelValue', checkedList.value)
+})
 
-  methods: {
-    onCheckedAllChange (checked) {
-      this.indeterminate = false
-      this.checkedList = checked ? this.options.map(e => e.value) : []
-    },
-    onChange (checkedList) {
-      this.indeterminate = !!checkedList.length && !this.checkedAll
-    }
-  }
+function onCheckedAllChange (checked) {
+  indeterminate.value = false
+  checkedList.value = checked ? props.options.map(e => e.value) : []
+}
+
+function onChange (list) {
+  indeterminate.value = !!list.length && !checkedAll.value
 }
 </script>
 

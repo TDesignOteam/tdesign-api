@@ -1,6 +1,6 @@
 <template>
   <t-dialog
-    :visible="visible"
+    v-model:visible="dialogVisible"
     :header="eventExpectMode === 'edit' ? '创建人机交互' : '新增人机交互'"
     @confirm="onConfirm"
     @cancel="onCancel"
@@ -64,42 +64,37 @@
   </t-dialog>
 </template>
 
-<script>
-export default {
-  name: 'UnitTestExpect',
+<script setup>
+import { ref, watch } from 'vue'
 
-  props: {
-    visible: Boolean,
-    eventExpect: Object,
-    eventExpectMode: String,
-  },
+const props = defineProps({
+  visible: Boolean,
+  eventExpect: Object,
+  eventExpectMode: String,
+})
 
-  data() {
-    return {
-      eventData: {}
-    }
-  },
+const emit = defineEmits(['confirm', 'update:visible'])
 
-  watch: {
-    eventExpect: {
-      immediate: true,
-      handler(eventExpect) {
-        this.eventData = { ...eventExpect }
-        this.eventData.exist = this.eventData.exist || ''
-      }
-    }
-  },
+const dialogVisible = ref(props.visible)
+const eventData = ref({})
 
-  methods: {
-    onConfirm() {
-      this.$emit('confirm', this.eventData)
-      this.$emit('update:visible', false)
-    },
-    onCancel() {
-      this.$emit('update:visible', false)
-    },
-  },
-};
+watch(() => props.visible, (val) => {
+  dialogVisible.value = val
+})
+
+watch(() => props.eventExpect, (val) => {
+  eventData.value = { ...val }
+  eventData.value.exist = eventData.value.exist || ''
+}, { immediate: true })
+
+function onConfirm() {
+  emit('confirm', eventData.value)
+  emit('update:visible', false)
+}
+
+function onCancel() {
+  emit('update:visible', false)
+}
 </script>
 
 

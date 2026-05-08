@@ -18,10 +18,8 @@
       </div>
 
       <div class="unit-test-ui__form-item-inner">
-        <t-tooltip theme="light">
-          <template #content>
-            示例：[{ "value": "tdesign-vue" }]
-          </template>
+        <t-tooltip theme="light"
+          :content="`示例：[{ "value": "tdesign-vue" }]`">
           <t-input v-model="formData.tnode.params" placeholder="TNode 函数参数" @blur="() => onFormDataChange('tnode')"></t-input>
         </t-tooltip>
       </div>
@@ -62,12 +60,7 @@
             </p>
             <p v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
               类名规则：
-              <!-- <template v-if="formData.className">
-                {{ getClassNameRecommend() }}
-              </template>
-              <template v-else> -->
               <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
-              <!-- </template> -->
             </p>
           </template>
           <t-textarea v-model="formData.className" placeholder="类名规则"
@@ -184,10 +177,6 @@
         <div v-if="eventType === 'array'">
           <t-card v-for="(item, index) in arrayEvent" :key="index" class="test-card-array-event">
             <h4 style="margin-top: 0">第{{ ['一', '二', '三', '四', '五'][index] }}个交互测试用例</h4>
-            
-            <!-- <p class="t-input__tips t-input__tips--default" style="position: relative">
-              总述：一个测试用例可能只包含一个事件触发，也可能包含多个事件触发
-            </p> -->
 
             <div style="display: flex; align-items: center; margin-bottom: 16px">
               <label style="width: 100px">用例描述：</label>
@@ -200,6 +189,7 @@
 
             <div
               v-for="(expect, expectIndex) in arrayEvent[index].expect"
+              :key="expectIndex"
             >
              <div style="display: flex; align-items: center; margin-bottom: 16px">
                第{{ ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'][expectIndex] }}个事件：
@@ -245,11 +235,9 @@
               ></t-input>
             </div>
 
-            <!-- {{ arrayEvent[index] }} -->
             <div style="margin-top: 16px; text-align: right;">
               <t-button @click="() => onArrayEventAdd(index)" size="small">
                 再来一个
-                <!-- <AddCircleIcon /> -->
               </t-button>
               <t-button
                 @click="() => onArrayEventDelete(index)"
@@ -259,7 +247,6 @@
                 v-if="arrayEvent.length > 1"
               >
                 移除
-                <!-- <MinusCircleIcon /> -->
               </t-button>
             </div>
           </t-card>
@@ -270,7 +257,7 @@
     <slot name="operation"></slot>
 
     <EventExpect
-      :visible.sync="eventExpectVisible"
+      v-model:visible="eventExpectVisible"
       :eventExpect="currentExpectData.expectData"
       :eventExpectMode="eventExpectMode"
       @confirm="onEventExpectChange"
@@ -279,12 +266,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, watch, nextTick } from 'vue'
 import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const'
-import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue'
+import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue-next'
 import EventExpect from './event-expect'
 import { parseJSON, getEventName } from '../util'
 import { formatToOneCategoryTest, getEventTestData } from './formatData'
+import { MessagePlugin } from 'tdesign-vue-next'
 
 const INITIAL_OBJECT_EVENT = [
   { trigger: '', arguments: '' },
@@ -296,329 +285,291 @@ const INITIAL_ARRAY_EVENT = [
     props: '',
   }
 ]
-export default {
-  name: 'OneCategoryTest',
 
-  components: { AddCircleIcon, MinusCircleIcon, EventExpect, EditIcon },
-
-  props: {
-    data: {
-      type: Object,
-      default: () => ({}),
-    },
-    apiInfo: {
-      type: Object,
-      default: () => ({}),
-    },
-    categories: Array,
-    // 被测试组件的额外属性
-    testProps: {
-      type: [Object, String],
-      default: () => ({}),
-    },
+const props = defineProps({
+  data: {
+    type: Object,
+    default: () => ({}),
   },
+  apiInfo: {
+    type: Object,
+    default: () => ({}),
+  },
+  categories: Array,
+  testProps: {
+    type: [Object, String],
+    default: () => ({}),
+  },
+})
 
-  data() {
-    return {
-      formData: {
-        category: '',
-        attribute: '',
-        attributeDom: '',
-        props: '',
-        className: '',
-        classNameDom: '',
-        dom: '',
-      },
-      testCategoryOptions: CATEGORY_OPTIONS,
-      eventType: 'object',
-      objectEvent: [...INITIAL_OBJECT_EVENT],
-      arrayEvent: [...INITIAL_ARRAY_EVENT],
-      eventExpectVisible: false,
-      currentExpectData: {
-        expectData: {...INITIAL_ARRAY_EVENT[0].expect},
-        expectIndex: -1,
-        eventIndex: -1,
-      },
-      // edit/add
-      eventExpectMode: 'edit',
+const emit = defineEmits(['formDataChange'])
+
+const formData = ref({
+  category: '',
+  attribute: '',
+  attributeDom: '',
+  props: '',
+  className: '',
+  classNameDom: '',
+  dom: '',
+})
+const testCategoryOptions = CATEGORY_OPTIONS
+const eventType = ref('object')
+const objectEvent = ref([...INITIAL_OBJECT_EVENT])
+const arrayEvent = ref([...INITIAL_ARRAY_EVENT])
+const eventExpectVisible = ref(false)
+const currentExpectData = ref({
+  expectData: {...INITIAL_ARRAY_EVENT[0].expect},
+  expectIndex: -1,
+  eventIndex: -1,
+})
+const eventExpectMode = ref('edit')
+
+watch(() => props.testProps, (testProps) => {
+  if (!formData.value) return
+  nextTick(() => {
+    const tmpProps = typeof testProps === 'string' ? parseJSON(testProps) : testProps
+    const oldProps = formData.value.props ? parseJSON(formData.value.props, {}) : {}
+    const finalProps = { ...oldProps, ...tmpProps }
+    formData.value.props = Object.keys(finalProps).length ? JSON.stringify(finalProps) : ''
+  })
+}, { immediate: true })
+
+watch(() => props.data, (formDataProp) => {
+  formData.value = formatToOneCategoryTest(formDataProp)
+  if (formDataProp.event) {
+    eventType.value = Array.isArray(formDataProp.event) ? 'array' : 'object'
+    const { objectEvent: objEvent, arrayEvent: arrEvent } = getEventTestData(eventType.value, formDataProp)
+    if (objEvent?.length) {
+      objectEvent.value = objEvent
     }
-  },
+    if (arrEvent?.length) {
+      arrayEvent.value = arrEvent
+    }
+  }
+}, { immediate: true })
 
-  watch: {
-    testProps: {
-      immediate: true,
-      handler(props) {
-        if (!this.formData) return;
-        this.$nextTick(() => {
-          const tmpProps = typeof props === 'string' ? parseJSON(props) : props;
-          const oldProps = this.formData.props ? parseJSON(this.formData.props, {}) : {};
-          const finalProps = { ...oldProps, ...tmpProps };
-          this.$set(this.formData, 'props', Object.keys(finalProps).length ? JSON.stringify(finalProps) : '');
-        });
-      }
-    },
-    data: {
-      immediate: true,
-      handler(formData) {
-        this.formData = formatToOneCategoryTest(formData)
-        if (formData.event) {
-          this.eventType = Array.isArray(formData.event) ? 'array' : 'object'
-          const { objectEvent, arrayEvent } = getEventTestData(this.eventType, formData)
-          if (objectEvent.length) {
-            this.objectEvent = objectEvent
-          }
-          if (arrayEvent.length) {
-            this.arrayEvent = arrayEvent
-          }
-        }
-      }
-    },
-    eventType() {
-      this.objectEvent = [...INITIAL_OBJECT_EVENT]
-      this.arrayEvent = [...INITIAL_ARRAY_EVENT]
-    },
-  },
+watch(eventType, () => {
+  objectEvent.value = [...INITIAL_OBJECT_EVENT]
+  arrayEvent.value = [...INITIAL_ARRAY_EVENT]
+})
 
-  methods: {
-    onFormDataChange(trigger, params) {
-      this.$emit('formDataChange', trigger, {
-        ...params,
-        formData: this.formData,
-      })
-    },
+function onFormDataChange(trigger) {
+  emit('formDataChange', trigger, {
+    formData: formData.value,
+  })
+}
 
-    onCategoryChange(val) {
-      if (this.categories.includes(val)) {
-        const current = CATEGORY_OPTIONS.find(t => t.value === val)
-        this.$message.warning(`${current.label} already exist`)
-        return
-      }
-      CATEGORY_OPTIONS.map((item) => {
-        delete this.formData[item.value]
-      })
-      const value = INITIAL_CATEGORY[val]
-      if (Array.isArray(value)) {
-        this.formData[val] = [...value]
-      } else if (typeof value === 'object') {
-        this.formData[val] = { ...value }
-      } else {
-        this.formData[val] = value
-      }
-      this.formData.category = val
+function onCategoryChange(val) {
+  if (props.categories.includes(val)) {
+    const current = CATEGORY_OPTIONS.find(t => t.value === val)
+    MessagePlugin.warning(`${current.label} already exist`)
+    return
+  }
+  CATEGORY_OPTIONS.map((item) => {
+    delete formData.value[item.value]
+  })
+  const value = INITIAL_CATEGORY[val]
+  if (Array.isArray(value)) {
+    formData.value[val] = [...value]
+  } else if (typeof value === 'object') {
+    formData.value[val] = { ...value }
+  } else {
+    formData.value[val] = value
+  }
+  formData.value.category = val
 
-      if (val === 'event') {
-        this.objectEvent = [...INITIAL_OBJECT_EVENT];
-        this.arrayEvent = [...INITIAL_ARRAY_EVENT];
-      }
-      this.onFormDataChange('category');
-    },
+  if (val === 'event') {
+    objectEvent.value = [...INITIAL_OBJECT_EVENT]
+    arrayEvent.value = [...INITIAL_ARRAY_EVENT]
+  }
+  onFormDataChange('category')
+}
 
-    // // 类名说明
-    // getClassNameIntroduction() {
-    //   const { apiInfo } = this
-    //   const { className } = this.formData
-    //   if (typeof className === 'string') {
-    //     return `${apiInfo.component}.${apiInfo.field_name} 的值是类名的一部分，其中 \${item} 表示替换类名的值`
-    //   } else if (Array.isArray(className)) {
-    //     if (typeof className[0] === 'object' && className[0].value) {
-    //       return `不同的值，期望不同的根元素（或子元素）对应不同的类名`
-    //     } else {
-    //       return `当值分别为 ${apiInfo.field_enum} 时，期望类名分别为 ${className.join('/')}`
-    //     }
-    //   }
-    // },
+function getClassNameRecommend() {
+  return [
+    `不同的值，期望不同的根元素（或子元素）存在不同的类名。`,
+    `推荐规则一：t-button--variant-\${item}。存在枚举值，值为类名的一部分`,
+    `推荐规则二：["t-size-s", "t-size-m", "t-size-l"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
+    `推荐规则三：{ "underline": "t-link--hover-underline" }。不存在枚举值。`,
+    `推荐规则四：[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]。不同的值对应多个不同的元素和类名。【注意】这个规则，不需要填写下方的 「类名规则应用的 HTML 元素」`,
+  ]
+}
 
-    // 类名规则推荐（TODO: 待完善文档）
-    getClassNameRecommend() {
-      return [
-        `不同的值，期望不同的根元素（或子元素）存在不同的类名。`,
-        `推荐规则一：t-button--variant-\${item}。存在枚举值，值为类名的一部分`,
-        `推荐规则二：["t-size-s", "t-size-m", "t-size-l"]。存在枚举值。如果期望 t-size-m 不存在，请设置 [{ "t-size-m": false }]`,
-        `推荐规则三：{ "underline": "t-link--hover-underline" }。不存在枚举值。`,
-        // ，点击下方高级设置
-        `推荐规则四：[{ "value": "'tdesign-class'", "expect": [{"dom": "tbody > tr", "className": { "tdesign-class": true }}] }]。不同的值对应多个不同的元素和类名。【注意】这个规则，不需要填写下方的 「类名规则应用的 HTML 元素」`,
-      ]
-    },
+function getAttributeRecommend() {
+  return [
+    '属性规则：',
+    '不同的值，期望不同的根元素（或子元素）存在不同的属性。元素的 style/value/checked 等也属于属性测试。',
+    '推荐规则一：{ "type": ["submit", "reset", "button"] }',
+    '推荐规则二：{ "href": "https://tdesign.tencent.com/" }',
+    '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串。【注意】这个规则不需要下方的「属性规则应用的 HTML 元素」',
+    '如果是 style，直接使用 "style.flexWrap": "wrap" 即可'
+  ]
+}
 
-    // 属性规则推荐
-    getAttributeRecommend() {
-      return [
-        '属性规则：',
-        '不同的值，期望不同的根元素（或子元素）存在不同的属性。元素的 style/value/checked 等也属于属性测试。',
-        '推荐规则一：{ "type": ["submit", "reset", "button"] }',
-        '推荐规则二：{ "href": "https://tdesign.tencent.com/" }',
-        '推荐规则三：[{ "value": "{ \'data-level\': \'level-1\' }", "expect": [{ "dom": "tbody > tr", "attribute": { "data-level": "level-1" }}] }]。其中，value 表示 API 的值，可以是函数或数组字符串。【注意】这个规则不需要下方的「属性规则应用的 HTML 元素」',
-        '如果是 style，直接使用 "style.flexWrap": "wrap" 即可'
-      ]
-    },
+function getDomRecommend() {
+  return [
+    '元素校验规则：',
+    '最简规则：".t-tag__icon-close"，表示值为 true 时存在元素 `.t-tag__icon-close`',
+    '推荐规则一：["button", "a", "div"]。存在枚举值，依次验证这几个元素是否存在。如：Button.tag',
+    '推荐规则二：["tfoot.t-table__footer", { "tfoot > tr": 2 }]。直接校验组件实例是否存在这些元素，数字表示存在几个',
+    '推荐规则三：{ "[3, 1]": { ".t-table__row--fixed-top": 3 } }。表示值为 [3, 1] 时，校验 .t-table__row--fixed-top 是否存在 3 个',
+    '注意：如果元素不在组件内部，只能通过 document 查询，可以设置 "document.t-popup"',
+  ]
+}
 
-    // Element/Dom 元素检测规则
-    getDomRecommend() {
-      return [
-        '元素校验规则：',
-        '最简规则：".t-tag__icon-close"，表示值为 true 时存在元素 `.t-tag__icon-close`',
-        '推荐规则一：["button", "a", "div"]。存在枚举值，依次验证这几个元素是否存在。如：Button.tag',
-        '推荐规则二：["tfoot.t-table__footer", { "tfoot > tr": 2 }]。直接校验组件实例是否存在这些元素，数字表示存在几个',
-        '推荐规则三：{ "[3, 1]": { ".t-table__row--fixed-top": 3 } }。表示值为 [3, 1] 时，校验 .t-table__row--fixed-top 是否存在 3 个',
-        '注意：如果元素不在组件内部，只能通过 document 查询，可以设置 "document.t-popup"',
-      ]
-    },
+function getDomMoreTips() {
+  return [
+    '[".t-image"] 期望元素 .t-image 存在',
+    '[{ ".t-image": false }] 期望元素 .t-image 不存在',
+    '[{ ".t-image": 3 }] 期望元素 .t-image 存在 3 个',
+    '[{ ".t-image": { "text": "+1" } }] 期望元素 .t-image 存在文本 +1',
+    '[{ ".t-input": { "attribute": { "value": "input value" } } }] 期望元素 .t-image 的属性 value 值为 "input value"',
+  ]
+}
 
-    getDomMoreTips() {
-      return [
-        '[".t-image"] 期望元素 .t-image 存在',
-        '[{ ".t-image": false }] 期望元素 .t-image 不存在',
-        '[{ ".t-image": 3 }] 期望元素 .t-image 存在 3 个',
-        '[{ ".t-image": { "text": "+1" } }] 期望元素 .t-image 存在文本 +1',
-        '[{ ".t-input": { "attribute": { "value": "input value" } } }] 期望元素 .t-image 的属性 value 值为 "input value"',
-      ];
-    },
+function onObjectEventAdd(index) {
+  if (!objectEvent.value[index].trigger) {
+    MessagePlugin.warning('请把当前内容填写完整后再添加')
+    return
+  }
+  objectEvent.value.splice(index, 0, { trigger: '', arguments: '' })
+}
 
-    onObjectEventAdd(index) {
-      if (!this.objectEvent[index].trigger) {
-        this.$message.warning('请把当前内容填写完整后再添加')
-        return;
-      }
-      debugger
-      this.objectEvent.splice(index, 0, { trigger: '', arguments: '' })
-    },
+function onObjectEventDelete(index) {
+  if (objectEvent.value.length < 2) return
+  objectEvent.value.splice(index, 1)
+}
 
-    onObjectEventDelete(index) {
-      if (this.objectEvent.length < 2) return;
-      this.objectEvent.splice(index, 1)
-    },
+function onArrayEventAdd(index) {
+  arrayEvent.value.splice(index + 1, 0, { props: '', expect: [{ trigger: '', event: '', exist: '' }] })
+}
 
-    onArrayEventAdd(index) {
-      this.arrayEvent.splice(index + 1, 0, { props: '', expect: [{ trigger: '', event: '', exist: '' }] })
-    },
+function onArrayEventDelete(index) {
+  if (arrayEvent.value.length < 2) return
+  arrayEvent.value.splice(index, 1)
+}
 
-    onArrayEventDelete(index) {
-      if (this.arrayEvent.length < 2) return;
-      this.arrayEvent.splice(index, 1)
-    },
+function onArrayEventChange() {
+  for (let i = 0, len = arrayEvent.value.length; i < len; i++) {
+    const item = arrayEvent.value[i]
+    try {
+      item.event && JSON.parse(item.event)
+    } catch (e) {
+      return
+    }
+  }
+  onFormDataChange('event', { arrayEvent: arrayEvent.value })
+}
 
-    onArrayEventChange() {
-      for (let i = 0, len = this.arrayEvent.length; i < len; i++) {
-        const item = this.arrayEvent[i]
-        try {
-          item.event && JSON.parse(item.event)
-        } catch (e) {
-          return
-        }
-      }
-      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
-    },
+function onObjectEventChange() {
+  for (let i = 0, len = objectEvent.value.length; i < len; i++) {
+    const item = objectEvent.value[i]
+    try {
+      item.arguments && JSON.parse(item.arguments)
+    } catch (e) {
+      return
+    }
+  }
+  onFormDataChange('event', { objectEvent: objectEvent.value })
+}
 
-    onObjectEventChange() {
-      for (let i = 0, len = this.objectEvent.length; i < len; i++) {
-        const item = this.objectEvent[i]
-        try {
-          item.arguments && JSON.parse(item.arguments)
-        } catch (e) {
-          return
-        }
-      }
-      this.onFormDataChange('event', { objectEvent: this.objectEvent })
-    },
+function onEventExpectAdd(expectData, expectIndex, eventIndex) {
+  eventExpectMode.value = 'add'
+  showEventExpectDialog({...INITIAL_ARRAY_EVENT[0].expect}, expectIndex, eventIndex)
+}
 
-    onEventExpectAdd(expectData, expectIndex, eventIndex) {
-      this.eventExpectMode = 'add'
-      this.showEventExpectDialog({...INITIAL_ARRAY_EVENT[0].expect}, expectIndex, eventIndex)
-    },
+function onEventExpectEdit(expectData, expectIndex, eventIndex) {
+  eventExpectMode.value = 'edit'
+  showEventExpectDialog(expectData, expectIndex, eventIndex)
+}
 
-    onEventExpectEdit(expectData, expectIndex, eventIndex) {
-      this.eventExpectMode = 'edit'
-      this.showEventExpectDialog(expectData, expectIndex, eventIndex)
-    },
+function onEventExpectDelete(expectIndex, eventIndex) {
+  arrayEvent.value[eventIndex].expect.splice(expectIndex, 1)
+  onFormDataChange('event', { arrayEvent: arrayEvent.value })
+}
 
-    onEventExpectDelete(expectIndex, eventIndex) {
-      this.arrayEvent[eventIndex].expect.splice(expectIndex, 1)
-      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
-    },
+function showEventExpectDialog(expectData, expectIndex, eventIndex) {
+  currentExpectData.value = {
+    expectData: { ...expectData },
+    expectIndex,
+    eventIndex,
+  }
+  eventExpectVisible.value = true
+}
 
-    showEventExpectDialog(expectData, expectIndex, eventIndex) {
-      this.currentExpectData = {
-        expectData: { ...expectData },
-        expectIndex,
-        eventIndex,
-      }
-      this.eventExpectVisible = true
-    },
+function onEventExpectChange(eventData) {
+  const { expectIndex, eventIndex } = currentExpectData.value
+  if (eventExpectMode.value === 'edit') {
+    arrayEvent.value[eventIndex].expect[expectIndex] = eventData
+  } else if (eventExpectMode.value === 'add') {
+    const expectList = [...arrayEvent.value[eventIndex].expect]
+    expectList.splice(expectIndex + 1, 0, eventData)
+    arrayEvent.value[eventIndex].expect = expectList
+  }
+  onFormDataChange('event', { arrayEvent: arrayEvent.value })
+}
 
-    onEventExpectChange(eventData) {
-      const { expectIndex, eventIndex } = this.currentExpectData
-      if (this.eventExpectMode === 'edit') {
-        this.$set(this.arrayEvent[eventIndex].expect, expectIndex, eventData)
-      } else if (this.eventExpectMode === 'add') {
-        const expectList = [...this.arrayEvent[eventIndex].expect]
-        expectList.splice(expectIndex + 1, 0, eventData);
-        this.$set(this.arrayEvent[eventIndex], 'expect', expectList)
-      }
-      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
-    },
+function onEventPropsChange() {
+  onFormDataChange('event', { arrayEvent: arrayEvent.value })
+}
 
-    onEventPropsChange() {
-      this.onFormDataChange('event', { arrayEvent: this.arrayEvent })
-    },
+function getEventName(event) {
+  if (typeof event === 'string') {
+    const eventJSON = parseJSON(event, {})
+    return Object.keys(eventJSON).map(name => getEventName(name)).join('、')
+  }
+  return event
+}
 
-    getEventName(event) {
-      if (typeof event === 'string') {
-        const eventJSON = parseJSON(event, {})
-        return Object.keys(eventJSON).map(name => getEventName(name)).join('、')
-      }
-      return event
-    },
+function getEventDescription(expect) {
+  const expectDesc = getExpectDesc(expect.exist)
+  return [
+    expect.trigger && `触发 ${expect.trigger}`,
+    expect.delay && `延迟 ${expect.delay === 'true' ? 300 : expect.delay} 毫秒之后`,
+    expectDesc,
+    expect.event && `期望 ${getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
+  ].filter(v => v).join('，') + '。'
+}
 
-    getEventDescription(expect) {
-      const expectDesc = this.getExpectDesc(expect.exist)
-      return [
-        expect.trigger && `触发 ${expect.trigger}`,
-        expect.delay && `延迟 ${expect.delay === 'true' ? 300 : expect.delay} 毫秒之后`,
-        expectDesc,
-        expect.event && `期望 ${this.getEventName(expect.event)} 等事件处理函数被执行，以及相关参数正确`
-      ].filter(v => v).join('，') + '。';
-    },
-
-    getExpectDesc(expectExistStr) {
-      const exist = parseJSON(expectExistStr, [])
-      const expectExist = []
-      const expectNotExist = []
-      const attributeExist = []
-      exist?.forEach((item) => {
-        if (!item) return;
-        if (typeof item === 'string') {
-          expectExist.push(item)
-        } else if (typeof item === 'object') {
-          const keys = Object.keys(item)
-          if (item[keys[0]] === false) {
-            expectNotExist.push(keys[0])
-          } else if (item[keys[0]].attribute) {
-            const list = [];
-            keys.forEach((dom) => {
-              Object.keys(item[dom].attribute).forEach((attributeName) => {
-                list.push({
-                  dom,
-                  attributeName: attributeName,
-                  attributeValue: item[dom].attribute[attributeName],
-                });
-              })
+function getExpectDesc(expectExistStr) {
+  const exist = parseJSON(expectExistStr, [])
+  const expectExist = []
+  const expectNotExist = []
+  const attributeExist = []
+  exist?.forEach((item) => {
+    if (!item) return
+    if (typeof item === 'string') {
+      expectExist.push(item)
+    } else if (typeof item === 'object') {
+      const keys = Object.keys(item)
+      if (item[keys[0]] === false) {
+        expectNotExist.push(keys[0])
+      } else if (item[keys[0]].attribute) {
+        const list = []
+        keys.forEach((dom) => {
+          Object.keys(item[dom].attribute).forEach((attributeName) => {
+            list.push({
+              dom,
+              attributeName: attributeName,
+              attributeValue: item[dom].attribute[attributeName],
             })
-            attributeExist.push(...list);
-          } else [
-            expectExist.push(keys[0])
-          ]
-        }
-      })
-      return [
-        expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
-        expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
-        attributeExist.length && attributeExist.map((item) => (
-          `期望元素 ${item.dom} 的属性 ${item.attributeName} 值为 ${item.attributeValue}`
-        )).join('，'),
-      ].filter(v => v).join('，');
-    },
-  },
-};
+          })
+        })
+        attributeExist.push(...list)
+      } else [
+        expectExist.push(keys[0])
+      ]
+    }
+  })
+  return [
+    expectExist.length && `期望 ${expectExist.join('、')} 等元素存在`,
+    expectNotExist.length && `期望 ${expectNotExist.join('、')} 等元素不存在`,
+    attributeExist.length && attributeExist.map((item) => (
+      `期望元素 ${item.dom} 的属性 ${item.attributeName} 值为 ${item.attributeValue}`
+    )).join('，'),
+  ].filter(v => v).join('，')
+}
 </script>
 
 <style>

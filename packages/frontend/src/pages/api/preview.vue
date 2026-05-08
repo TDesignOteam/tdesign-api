@@ -2,13 +2,6 @@
   <api-design preview></api-design>
 </template>
 
-<script>
+<script setup>
 import ApiDesign from './index'
-export default {
-
-  name: 'ApiPreview',
-
-  components: { ApiDesign }
-
-}
 </script>
