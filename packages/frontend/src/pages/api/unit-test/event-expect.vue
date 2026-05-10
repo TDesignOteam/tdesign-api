@@ -1,5 +1,5 @@
 <template>
-  <t-dialog v-model:visible="dialogVisible" :header="eventExpectMode === 'edit' ? '创建人机交互' : '新增人机交互'"
+  <t-dialog :visible="dialogVisible" :header="eventExpectMode === 'edit' ? '创建人机交互' : '新增人机交互'"
     @confirm="onConfirm" @cancel="onCancel">
     <t-tooltip theme="light">
       <template #content>
