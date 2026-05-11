@@ -8,7 +8,7 @@ const routes = [
     component: () => import('./pages/api/preview.vue')
   },
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     redirect: '/api_design'
   }
 ]
