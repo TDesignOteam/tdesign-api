@@ -33,6 +33,10 @@ export default {
   fixedRows: {
     type: Array as PropType<TdBaseTableProps['fixedRows']>,
   },
+  /** 表尾总结行 */
+  footerSummary: {
+    type: [String, Function] as PropType<TdBaseTableProps['footerSummary']>,
+  },
   /** 表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight` */
   height: {
     type: [String, Number] as PropType<TdBaseTableProps['height']>,

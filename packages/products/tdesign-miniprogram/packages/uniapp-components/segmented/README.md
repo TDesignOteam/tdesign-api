@@ -17,7 +17,7 @@ default-value | String / Number | - | 当前选中的值。非受控属性 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: string \| number, selectedOption: SegmentedItem)` | 选项值发生变化时触发
+change | `(context: { value: string \| number, selectedOption: SegmentedItem })` | 选项值发生变化时触发
 
 ### Segmented External Classes
 

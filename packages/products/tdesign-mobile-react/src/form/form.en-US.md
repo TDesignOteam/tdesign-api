@@ -12,7 +12,9 @@ colon | Boolean | false | \- | N
 contentAlign | String | left | options: left/right | N
 disabled | Boolean | undefined | \- | N
 errorMessage | Object | - | Typescript: `FormErrorMessage` | N
+form | Object | - | Typescript: `FormInstanceFunctions` | N
 id | String | undefined |  native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events | N
+initialData | Object | - | \- | N
 labelAlign | String | right | options: left/right/top | N
 labelWidth | String / Number | '81px' | \- | N
 preventSubmitDefault | Boolean | true | \- | N
@@ -36,7 +38,14 @@ name | params | return | description
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
 clearValidate | `(fields?: Array<keyof FormData>)` | \- | required
+currentElement | \- | `HTMLFormElement` | \-
+getCurrentElement | \- | `HTMLFormElement` | \-
+getFieldValue | `(field: NamePath) ` | `unknown` | required
+getFieldsValue | `(nameList: string[] \| boolean)` | `getFieldsValue<FormData>` | required。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}`<br/>
+getValidateMessage | `(fields?: Array<keyof FormData>)` | `Array<FormRule> \| void` | required
 reset | `(params?: FormResetParams<FormData>)` | \- | required。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`interface FormResetParams<FormData> { type?: 'initial' \| 'empty'; fields?: Array<keyof FormData> }`<br/>
+setFields | `(fields: FieldData[])` | \- | required。Typescript: `(fields: FieldData[]) => void` `interface FieldData { name: NamePath; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)
+setFieldsValue | `(field: Data)` | \- | required
 setValidateMessage | `(message: FormValidateMessage<FormData>)` | \- | required。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] }`<br/><br/>`interface FormItemValidateMessage { type: 'warning' \| 'error'; message: string }`<br/>
 submit | `(params?: { showErrorMessage?: boolean })` | \- | required
 validate | `(params?: FormValidateParams)` | `Promise<FormValidateResult<FormData>>` | required。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts)。<br/>`interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }`<br/><br/>`type ValidateTriggerType = 'blur' \| 'change' \| 'submit' \| 'all'`<br/>
@@ -53,12 +62,14 @@ arrow | Boolean | false | \- | N
 contentAlign | String | - | options: left/right | N
 for | String | - | \- | N
 help | TNode | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+initialData | String / Number / Object / Array | - | Typescript: `InitialData` `type InitialData = any`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts) | N
 label | TNode | '' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 labelAlign | String | - | options: left/right/top | N
 labelWidth | String / Number | - | \- | N
 name | String / Number / Array | - | Typescript: `NamePath` `type NamePath = string \| number \| Array<string \| number>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/form/type.ts) | N
 requiredMark | Boolean | undefined | \- | N
 rules | Array | - | Typescript: `Array<FormRule>` | N
+shouldUpdate | Boolean / Function | false | Typescript: `boolean \| ((prevValue, curValue) => boolean)` | N
 showErrorMessage | Boolean | undefined | \- | N
 
 ### FormRule

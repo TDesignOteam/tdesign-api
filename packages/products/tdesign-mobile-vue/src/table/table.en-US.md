@@ -12,6 +12,7 @@ columns | Array | [] | table column configs。Typescript: `Array<BaseTableCol<T>
 data | Array | [] | table data。Typescript: `Array<T>` | N
 empty | String / Slot / Function | '' | empty text or empty element。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 fixedRows | Array | - | `1.9.3`。Typescript: `Array<number>` | N
+footerSummary | String / Slot / Function | - | footer summary content。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 height | String / Number | - | table height | N
 loading | Boolean / Slot / Function | undefined | loading state table。Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 loadingProps | Object | - | Typescript: `Partial<LoadingProps>`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
