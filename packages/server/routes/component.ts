@@ -16,7 +16,7 @@ router.post('/api', async (ctx: Koa.Context) => {
 });
 
 router.get('/api', async (ctx: Koa.Context) => {
-  ctx.body = await ComponentApiController.queryRecords(ctx.request.query);
+  ctx.body = await ComponentApiController.queryRecords(ctx.request.query as BaseObject);
 });
 
 router.delete('/api', async (ctx: Koa.Context) => {

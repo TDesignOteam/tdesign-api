@@ -121,9 +121,9 @@ export function apiUpdate(params?: BaseObject) {
   console.log(params);
   
   return new Promise((resolve, reject) => {
-    const { id } = params;
-    delete params.id;
-    TAPI.update(formatParams(params), Number(id)).then(
+    const { id } = params!;
+    delete params!.id;
+    TAPI.update(formatParams(params!), Number(id)).then(
       handleSuccess(resolve),
       handleError(reject),
     );
@@ -155,7 +155,7 @@ function formatRecords(records:any){
 }
 
 async function queryRecords(params?: BaseObject) {
-  const p = filterParams(params);
+  const p = filterParams(params!);
   const pageSize = Number(p.page_size);
   // 封装分页参数
   const paginationParams: QueryPaginationProps = {
@@ -178,7 +178,7 @@ async function queryRecords(params?: BaseObject) {
 }
 
 async function generateAPI(params?: { commandLines: string[] }) {
-  const commandLines = params.commandLines;
+  const commandLines = params!.commandLines;
   console.log('commandLines:', commandLines);
   if (commandLines) {
     commandLines.map((commandLine: string) => execScript({ commandLine }));

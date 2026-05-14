@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
+        "ignoreDeprecations": "6.0",
         "module": "commonjs", // 编译生成的模块系统代码
         "target": "es2017", // 指定ecmascript的目标版本
         "noImplicitAny": true, // 禁止隐式any类型
@@ -10,12 +11,12 @@
         "newLine": "LF",
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "suppressImplicitAnyIndexErrors":true,
     },
     "include": [
         "packages"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "packages/products"
     ],
 }
