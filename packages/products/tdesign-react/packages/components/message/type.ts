@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
-import { CSSProperties, MouseEvent } from 'react';
+import type { TNode, AttachNode } from '../common';
+import type { CSSProperties, MouseEvent } from 'react';
 
 export interface TdMessageProps {
   /**
@@ -71,7 +71,7 @@ export interface MessageOptions extends TdMessageProps {
   style?: CSSProperties;
   /**
    * 消息层级
-   * @default 5000
+   * @default 6000
    */
   zIndex?: number;
 }
