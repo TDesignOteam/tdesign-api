@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode, AppContext } from '../common';
+import type { TNode, AttachNode, AppContext } from '../common';
 
 export interface TdMessageProps {
   /**
@@ -70,7 +70,7 @@ export interface MessageOptions extends TdMessageProps {
   style?: object;
   /**
    * 消息层级
-   * @default 5000
+   * @default 6000
    */
   zIndex?: number;
 }
