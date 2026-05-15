@@ -555,7 +555,8 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
       result[cmp] = result[cmp].replace(/ e: (MouseEvent|Event|ImageEvent)[ ,]/g, '')
         .replace(/`\(context: {}\)`/g, '-')
         .replace(/, context: {}/g, '')
-        .replace(/`\(context: {/g, '`(detail: {');
+        .replace(/`\(context: {/g, '`(detail: {')
+        .replace(/`\(context: /g, '`(detail: ');
     }
   });
   return result;

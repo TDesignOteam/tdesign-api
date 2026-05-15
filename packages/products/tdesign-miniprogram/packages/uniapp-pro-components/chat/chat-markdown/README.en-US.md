@@ -9,6 +9,7 @@ name | type | default | description | required
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 content | String | - | required | Y
 options | Object | { gfm: true, pedantic: false, breaks: true } | Typescript: `TdChatContentMDOptions ` `interface TdChatContentMDOptions {gfm?: boolean; pedantic?: boolean; smartLists?: boolean; breaks?: boolean}`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-pro-components/chat/chat-markdown/type.ts) | N
+streaming | Object | - | Typescript: `TdChatMarkdownStreamingOptions` ` interface TdChatMarkdownStreamingOptions { hasNextChunk?: boolean; tail?: boolean \| { content?: string } }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-pro-components/chat/chat-markdown/type.ts) | N
 
 ### ChatMarkdown Events
 
