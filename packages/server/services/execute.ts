@@ -1,5 +1,5 @@
 import path from 'path';
-import { BaseObject } from 'packages/types';
+import { BaseObject } from '../../types';
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 

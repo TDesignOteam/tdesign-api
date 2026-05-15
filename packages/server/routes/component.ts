@@ -2,7 +2,7 @@ import Router from '@koa/router';
 import Koa from 'koa';
 // import Log from '../utils/log';
 import ComponentApiController from '../controllers/ComponentApi';
-import { BaseObject } from 'packages/types';
+import { BaseObject } from '../../types';
 
 const router = new Router({
   prefix: '/cmp',
