@@ -83,6 +83,11 @@ export interface TdUploadProps {
    */
   source?: 'media' | 'messageFile';
   /**
+   * 组件风格。提供宫格和列表两种布局风格
+   * @default grid
+   */
+  theme?: 'grid' | 'list';
+  /**
    * 拖拽位置移动时的过渡参数,`duration`单位为ms
    * @default { backTransition: true, duration: 300, timingFunction: 'ease' }
    */

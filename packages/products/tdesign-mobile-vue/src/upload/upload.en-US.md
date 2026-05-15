@@ -30,6 +30,7 @@ preview | Boolean | true | `1.6.0` | N
 removeBtn | Boolean | true | `1.10.0` | N
 requestMethod | Function | - | custom upload request method。Typescript: `(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 sizeLimit | Number / Object | - | files size limit。Typescript: `number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
+theme | String | grid | `1.14.1`。options: grid/list | N
 useMockProgress | Boolean | true | use mock progress, instead of real progress | N
 value | Array | [] | file list。`v-model` and `v-model:value` is supported。Typescript: `Array<T>` | N
 defaultValue | Array | [] | file list。uncontrolled property。Typescript: `Array<T>` | N

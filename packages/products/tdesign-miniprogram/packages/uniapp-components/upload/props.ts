@@ -86,6 +86,15 @@ export default {
       return ['media', 'messageFile'].includes(val);
     },
   },
+  /** 组件风格。提供宫格和列表两种布局风格 */
+  theme: {
+    type: String,
+    default: 'grid' as TdUploadProps['theme'],
+    validator(val: TdUploadProps['theme']): boolean {
+      if (!val) return true;
+      return ['grid', 'list'].includes(val);
+    },
+  },
   /** 拖拽位置移动时的过渡参数,`duration`单位为ms */
   transition: {
     type: Object,

@@ -1,4 +1,4 @@
-import Router from 'koa-router';
+import Router from '@koa/router';
 import Koa from 'koa';
 // import Log from '../utils/log';
 import ComponentApiController from '../controllers/ComponentApi';

@@ -115,6 +115,15 @@ export default {
   sizeLimit: {
     type: [Number, Object] as PropType<TdUploadProps['sizeLimit']>,
   },
+  /** 组件风格。提供宫格和列表两种布局风格 */
+  theme: {
+    type: String as PropType<TdUploadProps['theme']>,
+    default: 'grid' as TdUploadProps['theme'],
+    validator(val: TdUploadProps['theme']): boolean {
+      if (!val) return true;
+      return ['grid', 'list'].includes(val);
+    },
+  },
   /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 */
   useMockProgress: {
     type: Boolean,

@@ -24,6 +24,7 @@ remove-btn | Boolean | true | \- | N
 request-method | Function | - | Typescript: `(files: UploadFile \| UploadFile[]) => Promise<RequestMethodResponse>` `interface RequestMethodResponse { status: 'success' \| 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/upload/type.ts) | N
 size-limit | Number / Object | - | files size limit。Typescript: `number \| SizeLimitObj` `interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string }` `type SizeUnitArray = ['B', 'KB', 'MB', 'GB']` `type SizeUnit = SizeUnitArray[number]`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/upload/type.ts) | N
 source | String | media | options: media/messageFile | N
+theme | String | grid | options: grid/list | N
 transition | Object | { backTransition: true, duration: 300, timingFunction: 'ease' } | Typescript: `Transition` `interface Transition { backTransition?: boolean, duration?: number, timingFunction?: string }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/upload/type.ts) | N
 
 ### Upload Events
