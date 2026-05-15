@@ -75,9 +75,6 @@ jobs:
               with:
                   cache: 'pnpm'
 
-            - name: Install Dependencies
-              run: pnpm install --frozen-lockfile
-
             - name: Merge main
               run: |
                   git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -96,6 +93,7 @@ jobs:
                       git checkout --theirs db/TDesign.db
                       git add db/TDesign.db
                       git status
+                      pnpm install --frozen-lockfile
                       nohup pnpm run dev &
                       sleep 10
                       pnpm api:upload
