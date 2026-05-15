@@ -110,6 +110,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 表格内容滚动时触发
    */
   onScroll?: (params: { e: Event }) => void;
+  /**
+   * 表格内容滚动到底部时触发，可用于实现滚动加载
+   */
+  onScrollToBottom?: () => void;
 }
 
 /** 组件实例方法 */

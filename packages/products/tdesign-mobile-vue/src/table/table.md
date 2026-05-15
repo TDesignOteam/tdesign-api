@@ -29,6 +29,7 @@ verticalAlign | String | middle | 行内容上下方向对齐。可选项：top/
 onCellClick | Function |  | TS 类型：`(context: BaseTableCellEventContext<T>) => void`<br/>单元格点击时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/> | N
 onRowClick | Function |  | TS 类型：`(context: RowEventContext<T>) => void`<br/>行点击时触发，泛型 T 指表格数据类型。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/> | N
 onScroll | Function |  | TS 类型：`(params: { e: Event }) => void`<br/>表格内容滚动时触发 | N
+onScrollToBottom | Function |  | TS 类型：`() => void`<br/>表格内容滚动到底部时触发，可用于实现滚动加载。TS 类型：`Partial<AffixProps>` | N
 
 ### BaseTable Events
 
@@ -37,6 +38,7 @@ onScroll | Function |  | TS 类型：`(params: { e: Event }) => void`<br/>表格
 cell-click | `(context: BaseTableCellEventContext<T>)` | 单元格点击时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface BaseTableCellEventContext<T> { row: T; col: BaseTableCol; rowIndex: number; colIndex: number; e: MouseEvent }`<br/>
 row-click | `(context: RowEventContext<T>)` | 行点击时触发，泛型 T 指表格数据类型。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts)。<br/>`interface RowEventContext<T> { row: T; index: number; e: MouseEvent }`<br/>
 scroll | `(params: { e: Event })` | 表格内容滚动时触发
+scroll-to-bottom | \- | 表格内容滚动到底部时触发，可用于实现滚动加载。TS 类型：`Partial<AffixProps>`
 
 ### BaseTableInstanceFunctions 组件实例方法
 
