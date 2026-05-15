@@ -1,2 +1,6 @@
+catalogMode: prefer
+
+cleanupUnusedCatalogs: true
+
 packages:
   - 'packages/*'
