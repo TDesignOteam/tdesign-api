@@ -11,10 +11,11 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSPropert
 closeBtn | TNode | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 cover | TElement | - | `0.21.1`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 deleteBtn | TNode | false | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-image | TElement | - | `0.21.1`。Typescript: `TNode<ImageSlotParams>` `interface ImageSlotParams {src: string; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} `。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/image-viewer/type.ts) | N
-images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end' }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/image-viewer/type.ts) | N
+image | TElement | - | `0.21.1`。Typescript: `TNode<ImageSlotParams>` `interface ImageSlotParams {src: string; index?: number;  extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} `。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/image-viewer/type.ts) | N
+images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end'; extra?: Record<string, any>}`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/image-viewer/type.ts) | N
 index | Number | 0 | \- | N
 defaultIndex | Number | 0 | uncontrolled property | N
+loop | Boolean | true | \- | N
 maxZoom | Number | 3 | \- | N
 showIndex | Boolean | false | \- | N
 visible | Boolean | false | hide or show image viewer | N

@@ -17,7 +17,7 @@ default-value | String / Number | - | uncontrolled property | N
 
 name | params | description
 -- | -- | --
-change | `(value: string \| number, selectedOption: SegmentedItem)` | \-
+change | `(context: { value: string \| number, selectedOption: SegmentedItem })` | \-
 
 ### Segmented External Classes
 

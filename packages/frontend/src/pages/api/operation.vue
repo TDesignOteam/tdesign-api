@@ -1,13 +1,12 @@
 <template>
   <div class="t-api-tool__multi-operations">
-    <t-button theme="primary" @click.native="onCreateApi">New API</t-button>
-    <t-button theme="primary" @click.native="onGenerateDialogShow">Generate API Files</t-button>
+    <t-button theme="primary" @click="onCreateApi">New API</t-button>
+    <t-button theme="primary" @click="onGenerateDialogShow">Generate API Files</t-button>
     <a href="https://github.com/Tencent/tdesign/wiki/Component-API-Guide" target="_blank" class="link">
       <t-button variant="text" style="color: #99999"> API Design </t-button>
     </a>
-    <t-dialog header="生成" width="830" :visible.sync="generateFilesVisible" @confirm="onGenerateConfirm">
-      <div slot="body">
-        <!-- <import ref="api-form" :map="map" :info="apiInfo"></import> -->
+    <t-dialog header="生成" width="830" v-model:visible="generateFilesVisible" @confirm="onGenerateConfirm">
+      <template #body>
         <form class="t-form api-edit-form" onsubmit="return false">
           <div class="t-form-item">
             <label>组件：</label>
@@ -43,18 +42,11 @@
               </t-tooltip>
               <t-checkbox v-model="formData.onlyDocs">仅输出 md文件</t-checkbox>
               <t-checkbox v-model="formData.useDefault" style="margin-right: 20px"
-                >输出 useDefault/useVModel 文件(Vue2)</t-checkbox
+                >输出 useDefault/useVModel 文件(Vue3)</t-checkbox
               >
               <t-checkbox v-model="formData.vitest">输出单测用例</t-checkbox>
             </div>
           </div>
-          <!-- 暂时没有用上，需要的时候再恢复 -->
-          <!-- <div class="t-form-item">
-            <label>Live demo：</label>
-            <div class="t-form-content">
-              <t-checkbox v-model="checkedAll">全部</t-checkbox>
-            </div>
-          </div> -->
           <div class="t-form-item" v-if="commandLine && commandLine.length">
             <label>最终命令行：</label>
             <div class="t-form-content" style="vertical-align: top">
@@ -62,115 +54,108 @@
             </div>
           </div>
         </form>
-      </div>
+      </template>
     </t-dialog>
   </div>
 </template>
 
-<script>
-import { Button as TButton, Select as TSelect, Option as TOption } from 'tdesign-vue';
+<script setup>
+import { ref, computed } from 'vue';
+import { Button as TButton, Select as TSelect, Option as TOption } from 'tdesign-vue-next';
 import SiteCheckbox from './checkbox.vue';
 import { cmpApiInstance } from '../../services/api-server';
 
-export default {
-  name: 'ApiToolOperation',
+const props = defineProps({
+  map: Object,
+});
 
-  components: {
-    TButton,
-    TSelect,
-    TOption,
-    SiteCheckbox,
-  },
+const emit = defineEmits(['create-dialog-show']);
 
-  props: {
-    map: Object,
-  },
+const codeType = ref('');
+const generateFilesVisible = ref(false);
+const checkedAll = ref(false);
+const tips = '全量输出时限制为只能输出文档，如需输出其他文件请选择对应组件';
 
-  data() {
-    return {
-      codeType: '',
-      generateFilesVisible: false,
-      checkedAll: false,
-      tips: '全量输出时限制为只能输出文档，如需输出其他文件请选择对应组件',
-      formData: {
-        platform: [],
-        component: 'ALL',
-        finalProject: false,
-      },
-      paramsTips: [
-        '包括： props.ts、type.ts、md文件 ，默认各端框架与当前项目在同一目录，路径调整请在本地修改 BASE_PATH_URL',
-      ],
-    };
-  },
+const formData = ref({
+  platform: [],
+  component: 'ALL',
+  finalProject: false,
+});
 
-  computed: {
-    frameworkOptions() {
-      if (!this.map.platform_framework) return [];
-      return [{ label: 'VueNext(PC)', value: 1000 }].concat(this.map.platform_framework);
-    },
-    componentList() {
-      return [{ label: '全部', value: 'ALL' }]
-        .concat(this.map.components)
-        .filter((v) => (v && !v.type) || ['Table'].includes(v?.value));
-    },
-    commandLine() {
-      if (!this.map || !this.map.platform_framework) return;
-      const component = this.formData.component;
-      const params = {
-        finalProject: this.formData.finalProject,
-        onlyDocs: this.formData.onlyDocs,
-        useDefault: this.formData.useDefault,
-        vitest: this.formData.vitest,
-        isUseUnitTest: this.formData.isUseUnitTest,
-      };
-      // 组件全选的情况下，只能输出全部 API 文档
-      if (component.toLocaleLowerCase() === 'all') {
-        params.onlyDocs = true;
-      }
-      const commandParams = Object.keys(params)
-        .filter((key) => params[key])
-        .join();
-      const frameworks = this.frameworkOptions.filter((t) => this.formData.platform.includes(t.value));
-      return frameworks.map((framework) => `npm run api:docs ${component} "${framework.label}" ${commandParams}`);
-    },
-  },
+const paramsTips = [
+  '包括： props.ts、type.ts、md文件 ，默认各端框架与当前项目在同一目录，路径调整请在本地修改 BASE_PATH_URL',
+];
 
-  methods: {
-    onCreateApi() {
-      this.$emit('create-dialog-show');
+const frameworkOptions = computed(() => {
+  if (!props.map?.platform_framework) return [];
+  return [{ label: 'VueNext(PC)', value: 1000 }].concat(props.map.platform_framework);
+});
+
+const componentList = computed(() => {
+  return [{ label: '全部', value: 'ALL' }]
+    .concat(props.map?.components || [])
+    .filter((v) => (v && !v.type) || ['Table'].includes(v?.value));
+});
+
+const commandLine = computed(() => {
+  if (!props.map || !props.map.platform_framework) return;
+  const component = formData.value.component;
+  const params = {
+    finalProject: formData.value.finalProject,
+    onlyDocs: formData.value.onlyDocs,
+    useDefault: formData.value.useDefault,
+    vitest: formData.value.vitest,
+    isUseUnitTest: formData.value.isUseUnitTest,
+  };
+  if (component?.toLocaleLowerCase() === 'all') {
+    params.onlyDocs = true;
+  }
+  const commandParams = Object.keys(params)
+    .filter((key) => params[key])
+    .join();
+  const frameworks = frameworkOptions.value.filter((t) => formData.value.platform.includes(t.value));
+  return frameworks.map((framework) => `npm run api:docs ${component} "${framework.label}" ${commandParams}`);
+});
+
+function onCreateApi() {
+  emit('create-dialog-show');
+}
+
+function onGenerateDialogShow() {
+  generateFilesVisible.value = true;
+}
+
+function onGenerateConfirm() {
+  cmpApiInstance({
+    method: 'post',
+    url: '/cmp/generate-api',
+    data: {
+      commandLines: commandLine.value.map((command) => command.replace('npm run api:docs', '')),
     },
-    onGenerateDialogShow() {
-      this.generateFilesVisible = true;
-    },
-    onGenerateConfirm() {
-      cmpApiInstance({
-        method: 'post',
-        url: '/cmp/generate-api',
-        data: {
-          commandLines: this.commandLine.map((command) => command.replace('npm run api:docs', '')),
-        },
-      }).then(() => {
-        this.generateFilesVisible = false;
-      });
-    },
-  },
-};
+  }).then(() => {
+    generateFilesVisible.value = false;
+  });
+}
 </script>
 
 <style lang="less">
 .t-api-tool__multi-operations {
   display: flex;
   margin-bottom: 16px;
+
   .t-button {
     margin-right: 10px;
   }
+
   .link {
     text-decoration: none;
   }
+
   .link:hover {
     text-decoration: underline;
   }
 }
+
 .help-icon {
   width: 14px;
   height: 14px;
