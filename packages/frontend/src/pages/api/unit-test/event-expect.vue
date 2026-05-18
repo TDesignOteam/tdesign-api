@@ -19,28 +19,28 @@
 
     <t-tooltip theme="light">
       <template #content>
-        <p>
+        <div>
         <p>格式：JSON。</p>
         <p>[".t-image"] 期望元素 .t-image 存在</p>
         <p>[{ ".t-image": false }] 期望元素 .t-image 不存在</p>
         <p>[{ ".t-image": 3 }] 期望元素 .t-image 存在 3 个</p>
         <p>[{ ".t-image": { "text": "+1" } }] 期望元素 .t-image 存在文本 +1</p>
         <p>[{ ".t-input": { "attribute": { "value": "input value" } } }] 期望元素 .t-image 的属性 value 值为 "input value" </p>
-        </p>
+        </div>
       </template>
       <t-input v-model="eventData.exist" placeholder="选填，校验元素" style="margin-top: 16px"></t-input>
     </t-tooltip>
 
     <t-tooltip theme="light">
       <template #content>
-        <p>
+        <div>
         <p>格式：JSON。</p>
         <p>示例：{
           "clear": [{ "stopPropagation": true }],
           "change": ["''", { "stopPropagation": true }]
           }。表示会同时触发 clear 和 change 等 2 个事件。注意，如果事件参数是字符串，需要额外加上单引号包裹。</p>
         <p>【注意】事件名为不带 on 的小驼峰</p>
-        </p>
+        </div>
       </template>
 
       <t-textarea v-model="eventData.event" placeholder="选填，组件触发事件及其参数" style="margin-top: 16px"></t-textarea>

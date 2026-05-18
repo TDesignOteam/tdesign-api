@@ -30,6 +30,15 @@ export default [
     },
   },
   {
-    ignores: ['snapshot*', 'dist/', 'lib/', 'node_modules/', 'common/', 'packages/products/'],
+    ignores: [
+      'snapshot*',
+      'dist/',
+      'lib/',
+      'node_modules/',
+      'common/',
+      'packages/products/',
+      'packages/frontend/',
+      'packages/scripts/',
+    ],
   },
 ];

@@ -58,10 +58,10 @@
                   : '类名规则：当前值类型为 Boolean，推荐规则形如：.t-size-full-width。表示值为 true 时，期望类名 t-size-full-width 存在'
               }}
             </p>
-            <p v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
+            <div v-if="apiInfo && apiInfo.field_type_text.join() === 'String'">
               类名规则：
             <p v-for="(item, index) in getClassNameRecommend()" :key="index">{{ item }}</p>
-            </p>
+            </div>
           </template>
           <t-textarea v-model="formData.className" placeholder="类名规则"
             @blur="() => onFormDataChange('className')"></t-textarea>
@@ -87,11 +87,11 @@
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
           <template #content>
-            <p>
-              <template v-for="item in getAttributeRecommend()">
+            <div>
+              <template v-for="(item, index) in getAttributeRecommend()" :key="index">
                 <p>{{ item }}</p>
               </template>
-            </p>
+            </div>
           </template>
           <t-textarea v-model="formData.attribute" placeholder="属性规则"
             @blur="() => onFormDataChange('attribute')"></t-textarea>
@@ -115,11 +115,11 @@
       <div class="unit-test-ui__form-item-inner">
         <t-tooltip theme="light">
           <template #content>
-            <p>
-              <template v-for="item in getDomRecommend()">
+            <div>
+              <template v-for="(item, index) in getDomRecommend()" :key="index">
                 <p>{{ item }}</p>
               </template>
-            </p>
+            </div>
           </template>
           <t-textarea v-model="formData.dom" placeholder="检测某个元素是否存在的规则" @blur="() => onFormDataChange('dom')">
           </t-textarea>
@@ -128,11 +128,11 @@
         <t-tooltip theme="light" trigger="click" placement="bottom-left">
           <t-button variant="text" theme="primary" size="small">点击查看规则细节</t-button>
           <template #content>
-            <p>
-              <template v-for="item in getDomMoreTips()">
+            <div>
+              <template v-for="(item, index) in getDomMoreTips()" :key="index">
                 <p>{{ item }}</p>
               </template>
-            </p>
+            </div>
           </template>
         </t-tooltip>
       </div>
