@@ -187,7 +187,7 @@ export interface UploadFile {
   status: 'loading' | 'reload' | 'failed' | 'done';
 }
 
-export type MediaType = 'image' | 'video';
+export type MediaType = 'image' | 'video' | 'mix';
 
 export interface SizeLimitObj {
   size: number;

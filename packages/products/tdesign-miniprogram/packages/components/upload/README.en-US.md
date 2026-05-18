@@ -20,7 +20,7 @@ grid-config | Object | - | Typescript: `{column?: number;  width?: number; heigh
 gutter | Number | 16 | \- | N
 image-props | Object | - | Typescript: `ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/upload/type.ts) | N
 max | Number | 0 | max count of files limit | N
-media-type | Array | ['image', 'video'] | Typescript: `Array<MediaType>` `type MediaType = 'image' \| 'video'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/upload/type.ts) | N
+media-type | Array | ['image', 'video'] | Typescript: `Array<MediaType>` `type MediaType = 'image' \| 'video' \| 'mix'`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/upload/type.ts) | N
 preview | Boolean | true | `1.9.5` | N
 remove-btn | Boolean | true | \- | N
 request-method | Function | - | \- | N
