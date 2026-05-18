@@ -39,6 +39,7 @@
     "chalk": "catalog:",
     "cross-env": "catalog:",
     "eslint": "catalog:",
+    "globals": "catalog:",
     "nodemon": "catalog:",
     "pm2": "catalog:",
     "prettier": "catalog:",
@@ -48,7 +49,7 @@
     "typescript": "catalog:"
   },
   "scripts": {
-    "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
+    "lint": "eslint ./packages --max-warnings 0 --fix",
     "dev": "cross-env NODE_ENV=dev nodemon",
     "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
     "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env",

@@ -5,7 +5,7 @@
     "dev": "vite",
     "watch": "vite build --watch",
     "build": "vite build",
-    "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./packages --fix"
+    "lint:fix": "eslint ./packages --fix"
   },
   "dependencies": {
     "@codemirror/lang-javascript": "catalog:",
@@ -18,6 +18,7 @@
     "tdesign-vue-next": "catalog:",
     "vue": "catalog:",
     "vue-codemirror": "catalog:",
+    "vue-eslint-parser": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
@@ -31,11 +32,10 @@
     "cssnano": "catalog:",
     "cz-conventional-changelog": "catalog:",
     "eslint": "catalog:",
-    "eslint-config-standard": "catalog:",
-    "eslint-plugin-import": "catalog:",
-    "eslint-plugin-node": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
     "eslint-plugin-promise": "catalog:",
     "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
     "less": "catalog:",
     "lint-staged": "catalog:",
     "postcss": "catalog:",
