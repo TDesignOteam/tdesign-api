@@ -1,21 +1,23 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "module": "commonjs", // 编译生成的模块系统代码
-        "target": "es2017", // 指定ecmascript的目标版本
-        "noImplicitAny": true, // 禁止隐式any类型
+        "module": "commonjs",
+        "target": "es2017",
+        "lib": ["es2017"],
+        "rootDir": "./packages",
+        "strict": true,
+        "skipLibCheck": true,
         "outDir": "./dist",
         "sourceMap": false,
-        "allowJs": false, // 是否允许出现js
+        "allowJs": false,
         "newLine": "LF",
         "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "suppressImplicitAnyIndexErrors":true,
+        "resolveJsonModule": true
     },
     "include": [
         "packages"
     ],
     "exclude": [
-        "node_modules"
-    ],
+        "node_modules",
+        "packages/products"
+    ]
 }

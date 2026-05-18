@@ -83,7 +83,7 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
 
 async function apiCreate(params: BaseObject) {
   return new Promise((resolve, reject) => {
-    console.log('~~~~~', formatParams(params, true));
+    console.info('~~~~~', formatParams(params, true));
     TAPI.create(formatParams(params, true)).then(
       handleSuccess(resolve),
       handleError(reject),
@@ -117,8 +117,8 @@ export function getMap() {
   };
 }
 
-export function apiUpdate(params?: BaseObject) {
-  console.log(params);
+export function apiUpdate(params: BaseObject) {
+  console.info(params);
   
   return new Promise((resolve, reject) => {
     const { id } = params;
@@ -154,7 +154,7 @@ function formatRecords(records:any){
   });
 }
 
-async function queryRecords(params?: BaseObject) {
+async function queryRecords(params: BaseObject) {
   const p = filterParams(params);
   const pageSize = Number(p.page_size);
   // 封装分页参数
@@ -177,9 +177,9 @@ async function queryRecords(params?: BaseObject) {
   };
 }
 
-async function generateAPI(params?: { commandLines: string[] }) {
-  const commandLines = params.commandLines;
-  console.log('commandLines:', commandLines);
+async function generateAPI(params: { commandLines: string[] }) {
+  const { commandLines } = params;
+  console.info('commandLines:', commandLines);
   if (commandLines) {
     commandLines.map((commandLine: string) => execScript({ commandLine }));
   }

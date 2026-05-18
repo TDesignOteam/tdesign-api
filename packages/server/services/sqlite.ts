@@ -6,7 +6,7 @@ import path from 'path';
 const dbFilePath = path.resolve('db/TDesign.db');
 
 export default async function executeSQL(sqlStr: string, write?: boolean) {
-    console.log("Execute SQL: ", sqlStr);
+    console.info("Execute SQL: ", sqlStr);
     try {
         const sqlJs = await initSqlJs();
         // Load the db

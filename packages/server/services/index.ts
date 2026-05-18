@@ -68,11 +68,11 @@ class TAPI {
 
     // 查询符合条件的记录、统计条数
     const apis = await executeSQL(querySQL.toString());
-    const total = await executeSQL(countSQL.toString());
-    return [apis, total[0]['count(*)']];
+    const total = (await executeSQL(countSQL.toString())) as Record<string, unknown>[];
+    return [apis, total[0]['count(*)'] as number];
   }
 
-  public static async create(params: {}) {
+  public static async create(params: BaseObject) {
     const newID = moment().unix();
     const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
 
@@ -81,7 +81,7 @@ class TAPI {
     return res;
   }
 
-  public static async update(params: {}, id: number) {
+  public static async update(params: BaseObject, id: number) {
     const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
 
     Object.keys(params).map(param => updateSQL.set(param, params[param]));
