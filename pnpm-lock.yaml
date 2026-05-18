@@ -70,8 +70,8 @@ catalogs:
       specifier: ^10.4.0
       version: 10.4.21
     axios:
-      specifier: ^1.16.0
-      version: 1.16.0
+      specifier: ^1.16.1
+      version: 1.16.1
     chalk:
       specifier: ^4.1.2
       version: 4.1.2
@@ -166,8 +166,8 @@ catalogs:
       specifier: ^1.29.0
       version: 1.30.0
     qs:
-      specifier: ^6.15.1
-      version: 6.15.1
+      specifier: ^6.15.2
+      version: 6.15.2
     shelljs:
       specifier: ^0.8.5
       version: 0.8.5
@@ -247,7 +247,7 @@ importers:
         version: 2.30.1
       qs:
         specifier: 'catalog:'
-        version: 6.15.1
+        version: 6.15.2
       sql.js:
         specifier: 'catalog:'
         version: 1.14.1
@@ -296,7 +296,7 @@ importers:
         version: 8.59.3(eslint@8.57.1)(typescript@6.0.3)
       axios:
         specifier: 'catalog:'
-        version: 1.16.0
+        version: 1.16.1
       chalk:
         specifier: 'catalog:'
         version: 4.1.2
@@ -341,7 +341,7 @@ importers:
         version: 0.19.1
       axios:
         specifier: 'catalog:'
-        version: 1.16.0
+        version: 1.16.1
       codemirror:
         specifier: 'catalog:'
         version: 6.0.2
@@ -432,7 +432,7 @@ importers:
     dependencies:
       axios:
         specifier: 'catalog:'
-        version: 1.16.0
+        version: 1.16.1
       chalk:
         specifier: 'catalog:'
         version: 4.1.2
@@ -1444,8 +1444,8 @@ packages:
   axios@0.21.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
 
-  axios@1.16.0:
-    resolution: {integrity: sha512-6hp5CwvTPlN2A31g5dxnwAX0orzM7pmCRDLnZSX772mv8WDqICwFjowHuPs04Mc8deIld1+ejhtaMn5vp6b+1w==}
+  axios@1.16.1:
+    resolution: {integrity: sha512-caYkukvroVPO8KrzuJEb50Hm07KwfBZPEC3VeFHTsqWHvKTsy54hjJz9BS/cdaypROE2rH6xvm9mHX4fgWkr3A==}
 
   babel-polyfill@6.26.0:
     resolution: {integrity: sha512-F2rZGQnAdaHWQ8YAoeRbukc7HS9QgdgeyJ0rQDd485v9opwuPvjpPFcOOT/WmkKTdgy9ESgSPXDcTNpzrGr6iQ==}
@@ -3973,8 +3973,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  qs@6.15.1:
-    resolution: {integrity: sha512-6YHEFRL9mfgcAvql/XhwTvf5jKcOiiupt2FiJxHkiX1z4j7WL8J/jRHYLluORvc1XxB5rV20KoeK00gVJamspg==}
+  qs@6.15.2:
+    resolution: {integrity: sha512-Rzq0KEyX/w/tEybncDgdkZrJgVUsUMk3xjh3t5bv3S1HTAtg+uOYt72+ZfwiQwKdysThkTBdL/rTi6HDmX9Ddw==}
     engines: {node: '>=0.6'}
 
   queue-microtask@1.2.3:
@@ -6044,13 +6044,15 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  axios@1.16.0:
+  axios@1.16.1:
     dependencies:
       follow-redirects: 1.16.0(debug@4.3.7)
       form-data: 4.0.5
+      https-proxy-agent: 5.0.1
       proxy-from-env: 2.1.0
     transitivePeerDependencies:
       - debug
+      - supports-color
 
   babel-polyfill@6.26.0:
     dependencies:
@@ -6288,7 +6290,7 @@ snapshots:
     dependencies:
       '@hapi/bourne': 3.0.0
       inflation: 2.1.0
-      qs: 6.15.1
+      qs: 6.15.2
       raw-body: 2.5.2
       type-is: 1.6.18
 
@@ -8908,7 +8910,7 @@ snapshots:
       pngjs: 5.0.0
       yargs: 15.4.1
 
-  qs@6.15.1:
+  qs@6.15.2:
     dependencies:
       side-channel: 1.1.0
 
