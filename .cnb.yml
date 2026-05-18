@@ -17,6 +17,7 @@ $:
         build: .cnb/Dockerfile
         volumes:
           - node_modules:cow
+          - .pnpm-store:cow
       env:
         CNB_WELCOME_CMD: pnpm dev
       services:
