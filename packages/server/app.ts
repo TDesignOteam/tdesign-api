@@ -37,4 +37,4 @@ app.use(async (ctx:Koa.Context) => {
   });
 });
 
-app.listen(config.port, () => console.log(`Server running on http://localhost:${config.port}`));
+app.listen(config.port, () => console.info(`Server running on http://localhost:${config.port}`));

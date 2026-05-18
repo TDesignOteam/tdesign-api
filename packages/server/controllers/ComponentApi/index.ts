@@ -83,7 +83,7 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
 
 async function apiCreate(params: BaseObject) {
   return new Promise((resolve, reject) => {
-    console.log('~~~~~', formatParams(params, true));
+    console.info('~~~~~', formatParams(params, true));
     TAPI.create(formatParams(params, true)).then(
       handleSuccess(resolve),
       handleError(reject),
@@ -118,7 +118,7 @@ export function getMap() {
 }
 
 export function apiUpdate(params: BaseObject) {
-  console.log(params);
+  console.info(params);
   
   return new Promise((resolve, reject) => {
     const { id } = params;
@@ -179,7 +179,7 @@ async function queryRecords(params: BaseObject) {
 
 async function generateAPI(params: { commandLines: string[] }) {
   const { commandLines } = params;
-  console.log('commandLines:', commandLines);
+  console.info('commandLines:', commandLines);
   if (commandLines) {
     commandLines.map((commandLine: string) => execScript({ commandLine }));
   }
