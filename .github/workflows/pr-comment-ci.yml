@@ -94,7 +94,7 @@ jobs:
               git checkout --theirs db/TDesign.db
               git add db/TDesign.db
               git status
-              pnpm install --frozen-lockfile
+              pnpm ci
               nohup pnpm run dev &
               sleep 10
               pnpm api:upload
