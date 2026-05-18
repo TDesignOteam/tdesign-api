@@ -32,7 +32,6 @@
     "@types/koa2-cors": "catalog:",
     "@types/lodash": "catalog:",
     "@types/node": "catalog:",
-    "@types/pify": "catalog:",
     "@types/validator": "catalog:",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
