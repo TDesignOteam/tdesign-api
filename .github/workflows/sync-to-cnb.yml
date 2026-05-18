@@ -30,6 +30,6 @@ jobs:
         steps:
             - uses: TDesignOteam/workflows/actions/cnb-delete-branch@main
               with:
-                  repo: 'tencent/tdesign/tdesign-api'
+                  repo: "tencent/tdesign/tdesign-api"
                   token: ${{ secrets.CNB_TOKEN }}
                   branch: ${{ github.event.ref }}
