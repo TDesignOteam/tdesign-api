@@ -62,11 +62,11 @@ jobs:
         steps:
             - uses: actions/checkout@v6
               with:
-                  token: ${{ secrets.PERSONAL_TOKEN }}
+                  token: ${{ secrets.TDESIGN_BOT_TOKEN }}
                   fetch-depth: 0
             - name: gh checkout pr
               env:
-                  GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+                  GH_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
               run: gh pr checkout ${{ github.event.issue.number }}
 
             - uses: pnpm/action-setup@v5
