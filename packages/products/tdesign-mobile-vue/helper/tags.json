@@ -84,6 +84,7 @@
       "row-attributes",
       "row-class-name",
       "row-key",
+      "rowspan-and-colspan",
       "show-header",
       "stripe",
       "table-content-width",
@@ -338,6 +339,7 @@
   "t-dialog": {
     "attributes": [
       "actions",
+      "before-close",
       "button-layout",
       "cancel-btn",
       "close-btn",
@@ -405,7 +407,11 @@
       "placement",
       "value",
       "change",
+      "close",
+      "closed",
       "confirm",
+      "open",
+      "opened",
       "reset"
     ],
     "description": "DropdownItem\n\n下拉菜单选项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item)"
@@ -434,8 +440,10 @@
       "button-props",
       "draggable",
       "icon",
+      "magnet",
       "style",
       "text",
+      "x-bounds",
       "y-bounds",
       "click",
       "drag-end",
@@ -610,6 +618,7 @@
     "attributes": [
       "current",
       "index-list",
+      "show-full-index",
       "sticky",
       "sticky-offset",
       "change",
@@ -780,6 +789,14 @@
     ],
     "description": "Overlay\n\n遮罩层\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/overlay)"
   },
+  "t-typography-paragraph": {
+    "attributes": [
+      "content",
+      "default",
+      "ellipsis"
+    ],
+    "description": "Paragraph\n\n段落\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/typography)"
+  },
   "t-picker": {
     "attributes": [
       "cancel-btn",
@@ -793,6 +810,7 @@
       "swipe-duration",
       "title",
       "value",
+      "wheel-config",
       "cancel",
       "change",
       "confirm",
@@ -961,6 +979,7 @@
       "center",
       "clear-trigger",
       "clearable",
+      "cursor-color",
       "disabled",
       "focus",
       "left-icon",
@@ -980,6 +999,16 @@
       "submit"
     ],
     "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search)"
+  },
+  "t-segmented": {
+    "attributes": [
+      "block",
+      "disabled",
+      "options",
+      "value",
+      "change"
+    ],
+    "description": "Segmented\n\n分段控制器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/segmented)"
   },
   "t-side-bar": {
     "attributes": [
@@ -1137,6 +1166,7 @@
       "theme",
       "value",
       "z-index",
+      "change",
       "change"
     ],
     "description": "TabBar\n\n标签栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"
@@ -1201,6 +1231,24 @@
     ],
     "description": "Tag\n\n标签\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag)"
   },
+  "t-typography-text": {
+    "attributes": [
+      "code",
+      "content",
+      "copyable",
+      "default",
+      "delete",
+      "disabled",
+      "ellipsis",
+      "italic",
+      "keyboard",
+      "mark",
+      "strong",
+      "theme",
+      "underline"
+    ],
+    "description": "Text\n\n文本\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/typography)"
+  },
   "t-textarea": {
     "attributes": [
       "allow-input-over-max",
@@ -1223,6 +1271,15 @@
       "focus"
     ],
     "description": "Textarea\n\n文本输入框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/textarea)"
+  },
+  "t-typography-title": {
+    "attributes": [
+      "content",
+      "default",
+      "ellipsis",
+      "level"
+    ],
+    "description": "Title\n\n标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/typography)"
   },
   "t-toast": {
     "attributes": [
