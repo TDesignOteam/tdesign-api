@@ -67,10 +67,12 @@ export interface TdTextProps {
 
 export interface TypographyCopyable {
   text?: string;
+  suffix?: boolean;
 }
 
 export interface TypographyEllipsis {
   collapsible?: boolean;
   expandable?: boolean;
   row?: number;
+  suffix?: boolean;
 }

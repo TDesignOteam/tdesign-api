@@ -13,7 +13,10 @@ export default {
     type: String,
   },
   /** 是否可复制 */
-  copyable: Boolean,
+  copyable: {
+    type: [Boolean, Object],
+    default: false as TdTextProps['copyable'],
+  },
   /** 是否添加删除线样式 */
   delete: Boolean,
   /** 是否添加不可用样式 */
