@@ -1,7 +1,7 @@
-import path from 'path';
-import { BaseObject } from '../../types';
 import { exec as execCallback } from 'child_process';
+import path from 'path';
 import { promisify } from 'util';
+import { BaseObject } from '../../types';
 
 const exec = promisify(execCallback);
 
