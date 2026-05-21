@@ -40,7 +40,7 @@ async function generateVitestUnitCase(baseData, framework, { component }) {
 }
 
 function getFileComment(framework, component) {
-  const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ' useDefault' : '';
+  const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
   // 因 (h) 的存在，禁用整个文件规则
   const vue2Comment = `/* eslint-disable @typescript-eslint/no-unused-vars */\n`;
   const comment = [
