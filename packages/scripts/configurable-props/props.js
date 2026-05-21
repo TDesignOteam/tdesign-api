@@ -1,11 +1,11 @@
-const fs = require('fs');
-const pick = require('lodash/pick');
-const path = require('path');
-const chalk = require('chalk');
-const { isPlugin, getCmpTypeCombineMap, getFolderName } = require('../common');
-const map = require('../map.json');
-const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
-const { kebabCaseComponent } = require('../utils');
+import fs from 'fs'
+import path from 'path'
+import chalk from 'chalk'
+import { isPlugin, getCmpTypeCombineMap, getFolderName  } from '../common.js'
+import map from '../map.json' with { type: 'json' }
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP  } from '../config/index.js'
+import { kebabCaseComponent  } from '../utils.js'
+import { pick  } from 'lodash-es'
 
 let FRAMEWORK_TYPES_COMPONENT_RELATION = {};
 
@@ -191,7 +191,6 @@ function generateProps(baseData, framework) {
   });
 }
 
-
-module.exports = {
+export {
   generateProps,
 };

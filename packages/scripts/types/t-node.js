@@ -77,4 +77,4 @@ function formatTNode(framework, type, customType) {
   }
 }
 
-module.exports = formatTNode;
+export default formatTNode;

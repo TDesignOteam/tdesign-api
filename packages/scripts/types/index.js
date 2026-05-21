@@ -1,45 +1,35 @@
 /**
  * 自动生成 type.d.ts
  */
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const upperFirst = require('lodash/upperFirst');
-const camelcase = require('lodash/camelCase');
-const uniq = require('lodash/uniq');
-const {
-    FILE_RIGHTS_DESC,
+import fs from 'fs'
+import path from 'path'
+import chalk from 'chalk'
+import { FILE_RIGHTS_DESC,
     GLOBAL_TYPES,
     REACT_EVENTS,
-    REACT_TYPES,
-} = require('../config/const');
-const {
-    FRAMEWORK_MAP,
+    REACT_TYPES,  } from '../config/const.js'
+import { FRAMEWORK_MAP,
     TYPES_COMBINE_MAP,
     MOBILE_TYPES_COMBINE_MAP,
     MINIPROGRAM_TYPES_COMBINE_MAP,
-    MOBILE_FRAMES,
-} = require('../config');
-const generateGlobals = require('./global');
-const formatTNode = require('./t-node');
-const {
-    getMiniprogramType,
-    fetchApiDataFromOfficialWebsite,
-} = require('./miniprogram');
-const map = require('../map.json');
-const prettier = require('prettier');
-const prettierConfig = require('../config/prettier');
-const {
-    isPlugin,
+    MOBILE_FRAMES,  } from '../config/index.js'
+import generateGlobals from './global/index.js'
+import formatTNode from './t-node.js'
+import { getMiniprogramType,
+    fetchApiDataFromOfficialWebsite,  } from './miniprogram.js'
+import map from '../map.json' with { type: 'json' }
+import prettier from 'prettier'
+import prettierConfig from '../config/prettier.js'
+import { isPlugin,
     getTdCmpName,
     getEventName,
     getFolderName,
     getDefaultValueName,
     isComponentFunction,
     getInstanceName,
-    getApiComponentMapByFrameWork,
-} = require('../common');
-const { getComponentBasePath } = require('../utils');
+    getApiComponentMapByFrameWork,  } from '../common.js'
+import { getComponentBasePath  } from '../utils.js'
+import { upperFirst, camelCase as camelcase, uniq  } from 'lodash-es'
 
 const components = map.data.components
     .filter((item) => !item.type)
@@ -306,7 +296,6 @@ function initApi(apiData) {
     return api;
 }
 
-
 function formatCommonTypeImports(str, types) {
     let arr = [];
     const result = types.filter((item) => {
@@ -322,13 +311,13 @@ function formatCommonTypeImports(str, types) {
 function getGlobalsImports(str, framework) {
     const current = FRAMEWORK_MAP[framework];
     const map = {
-        // 从全局通用类型文件中引入数据类型，如： import { XXX } from 'common.ts';
+        // 从全局通用类型文件中引入数据类型，如： import { XXX  } from 'common.ts';
         common: {
             path: current.commonRelativePath,
             types: formatCommonTypeImports(str, GLOBAL_TYPES),
         },
     };
-    // 从框架中引入数据类型，如： import { MouseEvent } from 'react';
+    // 从框架中引入数据类型，如： import { MouseEvent  } from 'react';
     if (framework === 'React(PC)' || framework === 'React(Mobile)') {
         map.react = {
             path: 'react',
@@ -680,7 +669,7 @@ function getTypeScriptDesc(componentMap, framework) {
     return result;
 }
 
-function combineTsFile(componentMap, framework) {
+async function combineTsFile(componentMap, framework) {
     const ts = getTypeScriptDesc(componentMap, framework);
     const rMap = getApiComponentMapByFrameWork(
         ['Miniprogram', 'UniApp'].includes(framework) ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
@@ -728,7 +717,7 @@ function combineTsFile(componentMap, framework) {
         });
     });
     // 合并 imports / boyd / exports
-    Object.keys(ts).forEach((cmp) => {
+    for (const cmp of Object.keys(ts)) {
         const bodyDesc =
             typeof ts[cmp].body === 'string'
                 ? ts[cmp].body
@@ -757,7 +746,7 @@ function combineTsFile(componentMap, framework) {
         const str = `${r.join('\n\n')}\n`;
         // ts[cmp] = str;
         try {
-            ts[cmp] = prettier.format(str, prettierConfig);
+            ts[cmp] = await prettier.format(str, prettierConfig);
         } catch (e) {
             console.log(
                 chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n')
@@ -766,18 +755,18 @@ function combineTsFile(componentMap, framework) {
             // 格式化失败时，使用原始字符串作为 fallback，避免输出 [object Object]
             ts[cmp] = str;
         }
-    });
+    }
     return ts;
 }
 
 // 根据组件获取 API 类型数据
-function getTypesByComponent(baseData, framework, component) {
-    const apiTypes = combineTsFile(baseData, framework);
+async function getTypesByComponent(baseData, framework, component) {
+    const apiTypes = await combineTsFile(baseData, framework);
     return [FILE_RIGHTS_DESC, apiTypes[component]].join('\n\n');
 }
 
 // 输出 API 内容到具体文件路径
-function generateTypes(baseData, framework) {
+async function generateTypes(baseData, framework) {
     const keys = Object.keys(FRAMEWORK_MAP);
     if (!keys.includes(framework)) {
         console.error(`framework isn't in ${keys}`);
@@ -789,38 +778,22 @@ function generateTypes(baseData, framework) {
     const basePath = FRAMEWORK_MAP[framework].tsBasePath;
 
     // 输出 TS 类型定义文件
-    const apiTypes = combineTsFile(baseData, framework);
-    Object.keys(apiTypes).forEach((cmp) => {
+    const apiTypes = await combineTsFile(baseData, framework);
+    for (const cmp of Object.keys(apiTypes)) {
         let folder = '';
         const folderName = getFolderName(cmp);
         folder = path.resolve(getComponentBasePath(cmp, basePath), folderName);
-        fs.mkdir(folder, { recursive: true }, (err) => {
-            if (err) {
-                return console.error(err);
-            }
-            const name = getFileName(framework, cmp);
-            const outputPath = path.resolve(folder, `${name}.ts`);
-            const data = [FILE_RIGHTS_DESC, apiTypes[cmp]].join('\n\n');
-            fs.writeFile(
-                outputPath,
-                `/* eslint-disable */\n\n${data}`,
-                (err) => {
-                    if (err) {
-                        return console.error(err);
-                    }
-                    console.log(
-                        chalk.green(
-                            `interface file: ${outputPath} has been created.`
-                        )
-                    );
-                }
-            );
-        });
-    });
+        fs.mkdirSync(folder, { recursive: true });
+        const name = getFileName(framework, cmp);
+        const outputPath = path.resolve(folder, `${name}.ts`);
+        const data = [FILE_RIGHTS_DESC, apiTypes[cmp]].join('\n\n');
+        fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);
+        console.log(chalk.green(`interface file: ${outputPath} has been created.`));
+    }
 }
 
-module.exports = {
-    formatType,
-    generateTypes,
-    getTypesByComponent,
+export {
+  formatType,
+  generateTypes,
+  getTypesByComponent,
 };

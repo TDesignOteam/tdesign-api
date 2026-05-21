@@ -1,15 +1,16 @@
 /**
  * 同步本地 JSON 文件到 DB，用于解决 DB 冲突问题（JSON 的冲突非常容易解决，DB 冲突难以解决）
  */
+import axios from 'axios'
+import apiJSON from './api.json' with { type: 'json' }
+import chalk from 'chalk'
+
 const [component] = process.argv.slice(2);
-const axios = require('axios');
-const apiJSON = require('./api.json');
-const chalk = require('chalk');
 
 const url = '127.0.0.1:16001';
 function syncCreate(record) {
   return new Promise((resolve, reject) => {
-    console.log(`syncCreate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
+    console.log(`syncCreate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)} Field: ${chalk.blue(record.field_name)}`)
     axios.request({
       method: 'post',
       url: `http://${url}/cmp/api`,
@@ -21,7 +22,7 @@ function syncCreate(record) {
 }
 function syncUpdate(record) {
   return new Promise((resolve, reject) => {
-    console.log(`syncUpdate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
+    console.log(`syncUpdate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)} Field: ${chalk.blue(record.field_name)}`)
     axios.request({
       method: 'put',
       url: `http://${url}/cmp/api`,
@@ -33,7 +34,7 @@ function syncUpdate(record) {
 }
 function syncDelete(record) {
   return new Promise((resolve, reject) => {
-    console.log(`syncDelete ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)},Field: ${chalk.blue(record.field_name)}`)
+    console.log(`syncDelete ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)} Field: ${chalk.blue(record.field_name)}`)
     axios.request({
       method: 'delete',
       url: `http://${url}/cmp/api`,
@@ -93,7 +94,6 @@ function uploadApiToDB() {
     const createPromises = createIds.map(id => syncCreate(jsonRecords.get(id)))
     const updatePromises = updateIds.map(id => syncUpdate(jsonRecords.get(id)));
     const deletePromises = deleteIds.map(id => syncDelete(dbRecords.get(id)))
-
 
     Promise.all([...createPromises, ...updatePromises, ...deletePromises]).then(() => {
       console.log(chalk.green(`Upload API to DB successfully!\n`));

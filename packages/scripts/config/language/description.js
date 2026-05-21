@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   zh: {
     // 数据库中存储的描述字段
     descriptionField: 'field_desc_zh',

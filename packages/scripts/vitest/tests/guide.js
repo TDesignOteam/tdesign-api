@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Guide: {
-    backButtonProps_1708481239: { field_name: 'backButtonProps', id: 1708481239 },
+    backButtonProps_1708481239: { field_name: 'backButtonProps',
+  id: 1708481239,
+},
     counter_2970: {
       field_name: 'counter',
       id: 2970,
@@ -613,4 +615,4 @@ module.exports = {
     },
     title_1721621896: { field_name: 'title', id: 1721621896 },
   },
-};
+}

@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Image: {
-    MP_EXCLUDE_PROPS_2419: { field_name: 'MP_EXCLUDE_PROPS', id: 2419 },
+    MP_EXCLUDE_PROPS_2419: { field_name: 'MP_EXCLUDE_PROPS',
+  id: 2419,
+},
     MP_PROPS_1451: { field_name: 'MP_PROPS', id: 1451 },
     alt_2208: {
       field_name: 'alt',
@@ -169,4 +171,4 @@ module.exports = {
       },
     },
   },
-};
+}

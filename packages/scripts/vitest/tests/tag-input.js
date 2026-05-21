@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   TagInput: {
-    autoWidth_2321: { field_name: 'autoWidth', id: 2321 },
+    autoWidth_2321: { field_name: 'autoWidth',
+  id: 2321,
+},
     clearable_2099: {
       field_name: 'clearable',
       id: 2099,
@@ -464,4 +466,4 @@ module.exports = {
       },
     },
   },
-};
+}

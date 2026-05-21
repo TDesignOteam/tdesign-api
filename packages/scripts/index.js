@@ -20,36 +20,30 @@
  * 命名行示例：npm run api:docs Button 'Miniprogram'
  *
  * ======= 参数之间使用逗号分隔 =======
- * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault finalProject onlyDocs isUseUnitTest
  *
  */
-const {
-    groupByComponent,
+import { groupByComponent,
     formatArrayToMap,
-    getApiComponentMapByFrameWork,
-} = require('./common');
-const {
-    COMPONENT_API_MD_MAP,
+    getApiComponentMapByFrameWork,  } from './common.js'
+import { COMPONENT_API_MD_MAP,
     MOBILE_COMPONENT_API_MD_MAP,
     MINIPROGRAM_COMPONENT_API_MD_MAP,
-    MOBILE_FRAMES,
-} = require('./config');
-const { generateDocs } = require('./docs');
-const { generateUnitTest } = require('./unit');
-const map = require('./map.json');
-const { data: ALL_API } = require('./api.json');
-const { generateTypes } = require('./types');
-const { generateReactDefaultProps } = require('./types/react-default-props');
-const { generateVueProps } = require('./types/vue-props');
-const { generateVitestUnitCase } = require('./vitest/generateVitestUnitCase');
-const {
-    generateTestDescriptionToVitestFile,
-} = require('./vitest/tests/core/utils');
-const chalk = require('chalk');
-const pick = require('lodash/pick');
-const has = require('lodash/has');
+    MOBILE_FRAMES,  } from './config/index.js'
+import { generateDocs  } from './docs/index.js'
+import { generateUnitTest  } from './unit/index.js'
+import map from './map.json' with { type: 'json' }
+import apiJson from './api.json' with { type: 'json' }
+import { generateTypes  } from './types/index.js'
+import { generateReactDefaultProps  } from './types/react-default-props.js'
+import { generateVueProps  } from './types/vue-props.js'
+import { generateVitestUnitCase  } from './vitest/generateVitestUnitCase.js'
+import { generateTestDescriptionToVitestFile } from './vitest/tests/core/utils.js'
+import chalk from 'chalk'
+import { pick, has  } from 'lodash-es'
+import { GLOBAL_COMPONENTS_CONFIG  } from './config/const.js'
 
-const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
+const { data: ALL_API } = apiJson;
 
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
@@ -104,7 +98,7 @@ function parseParams(str) {
  * 输出单个组件的全部文件：TS 定义、Props 定义、API 文档（英文 + 中文）
  * 一般用于单个组件开发（由于全量组件一次性生成风险过高，不再支持全量输出所有组件。如果真的到必要的时候再打开）
  */
-function generateComponentApi() {
+async function generateComponentApi() {
     const components = map.data.components.map((item) => item.value);
     const r = validateParams(components);
     if (!r || isAll(component)) return;
@@ -131,7 +125,7 @@ function generateComponentApi() {
 
     if (!onlyDocs) {
         // 生成 API 类型定义文件
-        generateTypes(baseData, framework);
+        await generateTypes(baseData, framework);
         if (['VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
             selfUseDefault = true;
         }
@@ -140,7 +134,7 @@ function generateComponentApi() {
         generateVueProps(baseData, framework, selfUseDefault);
         // 生成 React defaultProps 文件
         if (framework.indexOf('React') !== -1) {
-            generateReactDefaultProps(baseData, framework);
+            await generateReactDefaultProps(baseData, framework);
         }
         // 生成 props 单元测试文件
         if (isUseUnitTest) {
@@ -162,7 +156,7 @@ function generateComponentApi() {
 
     // 统一输出 vitest 通用测试用例
     if (vitest) {
-        generateVitestUnitCase(baseData, framework, {
+        await generateVitestUnitCase(baseData, framework, {
             component: currentComponent,
         });
         // 输出测试用例数据到 vitest/tests

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   zh: {
     Props: {
       titles: ['名称', '类型', '默认值', '描述', '必传'],

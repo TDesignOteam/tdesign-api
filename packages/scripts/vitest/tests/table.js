@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   BaseTable: {
-    allowResizeColumnWidth_2646: { field_name: 'allowResizeColumnWidth', id: 2646 },
+    allowResizeColumnWidth_2646: { field_name: 'allowResizeColumnWidth',
+  id: 2646,
+},
     attach_3260: { field_name: 'attach', id: 3260 },
     bordered_325: {
       field_name: 'bordered',
@@ -424,4 +426,4 @@ module.exports = {
     threshold_2399: { field_name: 'threshold', id: 2399 },
     type_2184: { field_name: 'type', id: 2184 },
   },
-};
+}

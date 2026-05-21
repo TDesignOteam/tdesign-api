@@ -2,7 +2,7 @@
  * 由于配置会被应用在 Web 环境，故而代码中不能包含 Node 环境特有的依赖和代码
  */
 
-const GLOBAL_COMPONENTS_CONFIG = [
+export const GLOBAL_COMPONENTS_CONFIG = [
     'ActionSheetConfig',
     'AlertConfig',
     'AnchorConfig',
@@ -97,10 +97,10 @@ const GLOBAL_CONFIG_PROVIDER = [
     'ConfigProvider',
     'GlobalConfigProvider',
 ].concat(GLOBAL_COMPONENTS_CONFIG);
-const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'];
+export const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'];
 
 // 输出 API 文档时，哪些需要文件需要合并输出，数据内容为组件/插件名称
-const COMPONENT_API_MD_MAP = {
+export const COMPONENT_API_MD_MAP = {
     Avatar: ['Avatar', 'AvatarGroup'],
     Checkbox: ['Checkbox', 'CheckboxGroup'],
     Cell: ['Cell', 'CellGroup'],
@@ -226,7 +226,7 @@ const COMPONENT_API_MD_MAP = {
 };
 
 // H5 特殊组件
-const MOBILE_COMPONENT_API_MD_MAP = {
+export const MOBILE_COMPONENT_API_MD_MAP = {
     DropdownMenu: {
         list: ['DropdownMenu', 'DropdownItem'],
     },
@@ -240,7 +240,7 @@ const MOBILE_COMPONENT_API_MD_MAP = {
 };
 
 // 小程序 特殊组件
-const MINIPROGRAM_COMPONENT_API_MD_MAP = {
+export const MINIPROGRAM_COMPONENT_API_MD_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
         includes: ['Miniprogram', 'UniApp'],
@@ -257,7 +257,7 @@ const MINIPROGRAM_COMPONENT_API_MD_MAP = {
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
-const TYPES_COMBINE_MAP = {
+export const TYPES_COMBINE_MAP = {
     Avatar: {
         list: ['Avatar', 'AvatarGroup'],
         excludes: ['Miniprogram', 'UniApp'],
@@ -462,7 +462,7 @@ const TYPES_COMBINE_MAP = {
     // ],
 };
 
-const MOBILE_TYPES_COMBINE_MAP = {
+export const MOBILE_TYPES_COMBINE_MAP = {
     DropdownMenu: {
         list: ['DropdownMenu', 'DropdownItem'],
         excludes: ['Miniprogram'],
@@ -478,7 +478,7 @@ const MOBILE_TYPES_COMBINE_MAP = {
     List: ['List'],
 };
 
-const MINIPROGRAM_TYPES_COMBINE_MAP = {
+export const MINIPROGRAM_TYPES_COMBINE_MAP = {
     Swiper: {
         list: ['Swiper', 'SwiperNav'],
         excludes: ['Miniprogram'],
@@ -490,11 +490,7 @@ const MINIPROGRAM_TYPES_COMBINE_MAP = {
     Chat: [],
 };
 
-exports.GLOBAL_COMPONENTS_CONFIG = GLOBAL_COMPONENTS_CONFIG;
-exports.COMPONENT_API_MD_MAP = COMPONENT_API_MD_MAP;
-exports.TYPES_COMBINE_MAP = TYPES_COMBINE_MAP;
-
-exports.default = {
+export default {
     COMPONENT_API_MD_MAP,
     MOBILE_COMPONENT_API_MD_MAP,
     TYPES_COMBINE_MAP,
@@ -504,16 +500,3 @@ exports.default = {
     MINIPROGRAM_TYPES_COMBINE_MAP,
     MOBILE_FRAMES,
 };
-
-module.exports = {
-    COMPONENT_API_MD_MAP,
-    MOBILE_COMPONENT_API_MD_MAP,
-    TYPES_COMBINE_MAP,
-    MOBILE_TYPES_COMBINE_MAP,
-    GLOBAL_COMPONENTS_CONFIG,
-    MINIPROGRAM_COMPONENT_API_MD_MAP,
-    MINIPROGRAM_TYPES_COMBINE_MAP,
-    MOBILE_FRAMES,
-};
-
-Object.defineProperty(exports, '__esModule', { value: true });

@@ -1,6 +1,5 @@
-const getVueApiDocs = require('../docs/vue');
-const {
-    BASE_PATH_URL,
+import getVueApiDocs from '../docs/vue.js'
+import { BASE_PATH_URL,
     VUE_TITLE_MAP,
     TNode,
     TYPES_COMBINE_MAP,
@@ -9,9 +8,11 @@ const {
     MOBILE_COMPONENT_API_MD_MAP,
     MINIPROGRAM_COMPONENT_API_MD_MAP,
     MINIPROGRAM_TYPES_COMBINE_MAP,
-    MOBILE_FRAMES,
-} = require('./const');
-const path = require('path');
+    MOBILE_FRAMES, } from './const.js'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * apiBasePath 表示 API 文档的输出路径
@@ -211,13 +212,13 @@ const FRAMEWORK_MAP = {
     },
 };
 
-module.exports = {
-    FRAMEWORK_MAP,
-    COMPONENT_API_MD_MAP,
-    MOBILE_COMPONENT_API_MD_MAP,
-    TYPES_COMBINE_MAP,
-    MOBILE_TYPES_COMBINE_MAP,
-    MINIPROGRAM_COMPONENT_API_MD_MAP,
-    MINIPROGRAM_TYPES_COMBINE_MAP,
-    MOBILE_FRAMES,
+export {
+  FRAMEWORK_MAP,
+  COMPONENT_API_MD_MAP,
+  MOBILE_COMPONENT_API_MD_MAP,
+  TYPES_COMBINE_MAP,
+  MOBILE_TYPES_COMBINE_MAP,
+  MINIPROGRAM_COMPONENT_API_MD_MAP,
+  MINIPROGRAM_TYPES_COMBINE_MAP,
+  MOBILE_FRAMES,
 };

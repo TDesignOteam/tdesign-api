@@ -1,6 +1,8 @@
-const map = require('./map.json');
-const { formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } = require('./common');
-const { COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MOBILE_FRAMES } = require('./config');
+import map from './map.json' with { type: 'json' }
+import { formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork  } from './common.js'
+import { COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MOBILE_FRAMES  } from './config/index.js'
+import { pick  } from 'lodash-es'
+import apiData from './api.json' with { type: 'json' }
 
 const framework = 'UniApp';
 const component = 'Radio';
@@ -8,7 +10,6 @@ const component = 'Radio';
 const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
 console.log('UniApp value:', frameworkMap[framework]);
 
-const apiData = require('./api.json');
 const ALL_API = apiData.data;
 const frameworkData = groupByComponent(ALL_API, frameworkMap[framework]);
 
@@ -27,7 +28,6 @@ if (frameworkData['Radio']) {
     });
 }
 
-const pick = require('lodash/pick');
 const cmpMap = getApiComponentMapByFrameWork(
     Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP),
     framework

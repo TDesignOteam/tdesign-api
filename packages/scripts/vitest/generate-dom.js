@@ -1,5 +1,4 @@
-const {
-  getArrayCode,
+import { getArrayCode,
   getMountComponent,
   getSnapshotCase,
   getWrapper,
@@ -9,9 +8,8 @@ const {
   getPresetsExpect,
   getItAsync,
   getCategoryDesc,
-  getVariablesCode,
-} = require("./core");
-const { getSkipCode } = require("./utils");
+  getVariablesCode, } from './core.js'
+import { getSkipCode } from './utils.js'
 
 /**
  * 检测某个元素是否存在
@@ -200,6 +198,6 @@ function getDomExpect(framework, domInfo) {
   }
 }
 
-module.exports = {
-  generateDomUnitCase
+export {
+  generateDomUnitCase,
 };

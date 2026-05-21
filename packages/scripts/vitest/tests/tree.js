@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Tree: {
-    activable_536: { field_name: 'activable', id: 536 },
+    activable_536: { field_name: 'activable',
+  id: 536,
+},
     activeMultiple_537: {
       field_name: 'activeMultiple',
       id: 537,
@@ -296,4 +298,4 @@ module.exports = {
       id: 556,
     },
   },
-};
+}

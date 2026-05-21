@@ -6,20 +6,21 @@
  * 命名行示例：npm run api:helper 'Vue(Mobile)'
  *
  */
-const fs = require('fs');
-const path = require('path');
-const { groupByComponent, formatArrayToMap, isComponent, componentsMap, getApiComponentMapByFrameWork } = require('../common');
-const { getParentByChildComponent } = require('../vitest/utils');
-const map = require('../map.json');
-const { data: ALL_API } = require('../api.json');
-const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
-const { kebabCaseComponent } = require('../utils');
+import fs from 'fs'
+import path from 'path'
+import { groupByComponent, formatArrayToMap, isComponent, componentsMap, getApiComponentMapByFrameWork  } from '../common.js'
+import { getParentByChildComponent  } from '../vitest/utils.js'
+import map from '../map.json' with { type: 'json' }
+import apiJson from '../api.json' with { type: 'json' }
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP  } from '../config/index.js'
+import { kebabCaseComponent  } from '../utils.js'
+import { uniq  } from 'lodash-es'
+import chalk from 'chalk'
+import prettier from 'prettier'
+import prettierConfig from '../config/prettier.js'
+import { formatType  } from '../types/index.js'
 
-const uniq = require('lodash/uniq');
-const chalk = require('chalk');
-const prettier = require('prettier');
-const prettierConfig = require('../config/prettier');
-const { formatType } = require('../types');
+const { data: ALL_API } = apiJson;
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
  */
@@ -95,7 +96,7 @@ function processPickOmitApi(frameworkData, api, isPick) {
     });
   }
 }
-function generateHelper(baseData, framework) {
+async function generateHelper(baseData, framework) {
   const { webTypes, tags, attributes, volar } = getHelperData(baseData, framework);
   write(framework, 'tags.json', tags);
   write(framework, 'attributes.json', attributes);
@@ -110,7 +111,6 @@ function getHelperData(baseData, framework) {
   const attributes = {};
   const vueComponents = [];
   const volar = [];
-
 
   for (const key in baseData) {
     if (!isComponent(key)) {
@@ -306,7 +306,7 @@ function writeVolar(framework, data) {
   export {};
   
   `
-  writeFileRecursive(current.volarPath, prettier.format(volarTemplate, prettierConfig));
+  writeFileRecursive(current.volarPath, await prettier.format(volarTemplate, prettierConfig));
 }
 
 function writeFileRecursive(name, buffer) {

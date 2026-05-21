@@ -1,11 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const {
-  getGenSegmentFuncMap,
+import fs from 'fs'
+import path from 'path'
+import chalk from 'chalk'
+import { getGenSegmentFuncMap,
   getUnitTestFilePath,
-  generateComponentUnitTest,
-} = require('./gen-unit-test');
+  generateComponentUnitTest, } from './gen-unit-test.js'
 
 /**
  * - group props
@@ -45,6 +43,6 @@ function generateUnitTest(baseData, framework, extra) {
   });
 }
 
-module.exports = {
+export {
   generateUnitTest,
 };

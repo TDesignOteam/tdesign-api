@@ -1,6 +1,4 @@
-const { kebabCase } = require('lodash');
-const {
-  getItDescription,
+import { getItDescription,
   getWrapper,
   getSnapshotCase,
   getDomExpectTruthy,
@@ -8,12 +6,12 @@ const {
   getEventArguments,
   getDelayCode,
   getItAsync,
-  getVariablesCode,
-} = require('./core');
-const { getSkipCode } = require('./utils');
-// const map = require('../map.json');
+  getVariablesCode,  } from './core.js'
+import { getSkipCode  } from './utils.js'
+// import map from '../map.json' with { type: 'json' }
 
 // const componentMap = map.data.components;
+import { kebabCase  } from 'lodash-es'
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
@@ -99,7 +97,7 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
   let secondArr = [];
   let thirdArr = [];
   if (framework.indexOf('Vue') !== -1) {
-    const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean,TNode';
+    const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean TNode';
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
     const h = slotsText === 'scopedSlots' ? 'h' : '';
     const slotCodeProps = {
@@ -226,6 +224,6 @@ function getDomExpect(framework, tnodeDom) {
   }).join('\n');
 }
 
-module.exports = {
-  generateTNodeElement
+export {
+  generateTNodeElement,
 };

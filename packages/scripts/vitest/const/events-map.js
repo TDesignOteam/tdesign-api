@@ -107,6 +107,6 @@ const UNIT_TEST_EVENTS_MAP = {
   // },
 };
 
-module.exports = {
+export {
   UNIT_TEST_EVENTS_MAP
 };

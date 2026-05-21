@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   SideBar: {
-    children_1724669424: { field_name: 'children', id: 1724669424 },
+    children_1724669424: { field_name: 'children',
+  id: 1724669424,
+},
     defaultValue_1711973521: { field_name: 'defaultValue', id: 1711973521 },
     value_3379: { field_name: 'value', id: 3379 },
     value_3532: { field_name: 'value', id: 3532 },
@@ -16,4 +18,4 @@ module.exports = {
     label_3535: { field_name: 'label', id: 3535 },
     value_3515: { field_name: 'value', id: 3515 },
   },
-};
+}

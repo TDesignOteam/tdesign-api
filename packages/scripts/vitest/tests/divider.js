@@ -1,9 +1,10 @@
-module.exports = {
+export default {
   Divider: {
     align_234: {
       field_name: 'align',
-      id: 234,
-      PC: { className: 't-divider--with-text-${item}', content: 'Text', snapshot: true },
+  id: 234,
+  PC: { className: 't-divider--with-text-${item,
+};', content: 'Text', snapshot: true },
       Mobile: { className: 't-divider--${item}', content: 'Text', snapshot: true },
     },
     children_1383: { field_name: 'children', id: 1383 },
@@ -35,4 +36,4 @@ module.exports = {
     't-class_1711969012': { field_name: 't-class', id: 1711969012 },
     't-class-content_1711969030': { field_name: 't-class-content', id: 1711969030 },
   },
-};
+}

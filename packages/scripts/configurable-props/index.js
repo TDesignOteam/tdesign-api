@@ -1,10 +1,12 @@
-const chalk = require('chalk');
-const pick = require('lodash/pick');
-const { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } = require('../common');
-const { COMPONENT_API_MD_MAP } = require('../config');
-const { generateProps } = require('./props');
-const map = require('../map.json');
-const { data: ALL_API } = require('../api.json');
+import chalk from 'chalk'
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork  } from '../common.js'
+import { COMPONENT_API_MD_MAP  } from '../config/index.js'
+import { generateProps  } from './props.js'
+import map from '../map.json' with { type: 'json' }
+import apiJson from '../api.json' with { type: 'json' }
+import { pick  } from 'lodash-es'
+
+const { data: ALL_API } = apiJson;
 
 const [component, framework] = process.argv.slice(2);
 

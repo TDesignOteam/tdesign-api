@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "generate props/ts/api.md for API",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -19,7 +20,7 @@
     "chalk": "catalog:",
     "dayjs": "catalog:",
     "js-yaml": "catalog:",
-    "lodash": "catalog:",
+    "lodash-es": "catalog:",
     "prettier": "catalog:",
     "shelljs": "catalog:"
   }

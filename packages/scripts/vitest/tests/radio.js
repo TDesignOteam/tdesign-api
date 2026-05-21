@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Radio: {
-    align_1419: { field_name: 'align', id: 1419 },
+    align_1419: { field_name: 'align',
+  id: 1419,
+},
     allowUncheck_2035: {
       field_name: 'allowUncheck',
       id: 2035,
@@ -220,4 +222,4 @@ module.exports = {
     change_1231: { field_name: 'change', id: 1231 },
     '<T = RadioValue>_2919': { field_name: '<T = RadioValue>', id: 2919 },
   },
-};
+}

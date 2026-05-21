@@ -1,12 +1,14 @@
 /**
  * used for API system, web page, esm
  */
-const { getComponentUnitTests, getOneUnitTest } = require('./main');
+import { getComponentUnitTests, getOneUnitTest } from './main.js'
 
-module.exports = { getComponentUnitTests, getOneUnitTest };
+export {
+  getComponentUnitTests,
+  getOneUnitTest,
+};
 
-exports.getComponentUnitTests = getComponentUnitTests;
-exports.getOneUnitTest = getOneUnitTest;
-exports.default = getComponentUnitTests;
+export const getComponentUnitTests = getComponentUnitTests;
+export const getOneUnitTest = getOneUnitTest;
+export const default = getComponentUnitTests;
 
-Object.defineProperty(exports, '__esModule', { value: true })

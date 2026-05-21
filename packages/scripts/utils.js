@@ -1,9 +1,8 @@
-const kebabCase = require('lodash/kebabCase');
-
 
 function kebabCaseComponent(cmp) {
     return cmp === 'QRCode'? 'qrcode': kebabCase(cmp);
 }
+import { kebabCase  } from 'lodash-es'
 
 function getComponentBasePath(cmp, apiBasePath){
   if(cmp.startsWith('Chat') || cmp === 'Attachments'){
@@ -13,8 +12,7 @@ function getComponentBasePath(cmp, apiBasePath){
   return apiBasePath
 }
 
-
-module.exports = {
+export {
   kebabCaseComponent,
-  getComponentBasePath
+  getComponentBasePath,
 };

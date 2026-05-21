@@ -14,6 +14,6 @@ const NEED_USE_DEFAULT_OR_USE_VMODEL = [
   'AutoComplete',
 ];
 
-module.exports = {
+export {
   NEED_USE_DEFAULT_OR_USE_VMODEL,
 };

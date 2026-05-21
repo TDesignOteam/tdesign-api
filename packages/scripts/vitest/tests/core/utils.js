@@ -1,15 +1,17 @@
-const prettier = require('prettier');
-const prettierConfig = require('../../../config/prettier');
-const axios = require('axios');
-const path = require('path');
-const fs = require('fs');
-const chalk = require('chalk');
-const { kebabCaseComponent } = require('../../../utils');
+import prettier from 'prettier'
+import prettierConfig from '../../../config/prettier.js'
+import axios from 'axios'
+import path from 'path'
+import fs from 'fs'
+import chalk from 'chalk'
+import { kebabCaseComponent } from '../../../utils.js'
+import { fileURLToPath } from 'url'
+import { parseJSON } from '../../utils.js'
 
-const { parseJSON } = require('../../utils');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // 将 api.json 中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
-function generateTestDescriptionToVitestFile(baseData, { component }) {
+async function generateTestDescriptionToVitestFile(baseData, { component }) {
   const tests = {};
   // 一个组件可能由多个子组件拼凑而成
   Object.entries(baseData).forEach(([childComponent, oneComponentApi]) => {
@@ -25,14 +27,10 @@ function generateTestDescriptionToVitestFile(baseData, { component }) {
     });
   });
   const outputPath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
-  const data = 'module.exports=' + JSON.stringify(tests);
-  const codeData = prettier.format(data, {...prettierConfig, printWidth: 100});
-  fs.writeFile(outputPath, codeData, (err) => {
-    if (err) {
-      return console.error(err);
-    }
-    console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
-  });
+  const data = 'export default ' + JSON.stringify(tests) + ';';
+  const codeData = await prettier.format(data, {...prettierConfig, printWidth: 100});
+  fs.writeFileSync(outputPath, codeData);
+  console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
 }
 
 function uploadOneApi(id, testDescription) {
@@ -50,20 +48,17 @@ function uploadOneApi(id, testDescription) {
 function readTestsFile(component) {
   return new Promise((resolve) => {
     const filePath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
-    fs.readFile(filePath, (error, data) => {
-      if (error) {
-        throw Error(error);
-      }
-      try {
-        const tests = eval(data.toString());
-        resolve(tests);
-      } catch(e) {
-        console.log(chalk.red(`${filePath} code error.`));
-      }
-    });
-  }, (e) => {
-    console.error(e);
-  })
+    try {
+      import(`file://${filePath}`).then((module) => {
+        resolve(module.default);
+      }).catch((e) => {
+        console.log(chalk.red(`${filePath} import error.`));
+        throw e;
+      });
+    } catch(e) {
+      console.log(chalk.red(`${filePath} code error.`));
+    }
+  });
 }
 
 // 上传本地测试用例 vitest/tests 到 DB 文件
@@ -92,7 +87,7 @@ function uploadVitestFileDataToDB(component) {
   })
 }
 
-module.exports = {
+export {
   generateTestDescriptionToVitestFile,
   uploadVitestFileDataToDB,
 };

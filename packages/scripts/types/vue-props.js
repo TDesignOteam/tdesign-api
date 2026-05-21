@@ -1,21 +1,19 @@
-const fs = require('fs');
-const { kebabCaseComponent } = require('../utils');
+import fs from 'fs'
+import { kebabCaseComponent } from '../utils.js'
 
-const path = require('path');
-const chalk = require('chalk');
-const {
-  getTdCmpName,
+import path from 'path'
+import chalk from 'chalk'
+import { getTdCmpName,
   getEventName,
   getFolderName,
   isTypeApi,
   isPlugin,
   getDefaultValueName,
-  getCmpTypeCombineMap,
-} = require('../common');
-const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
-const { FILE_RIGHTS_DESC } = require('../config/const');
-const { fetchApiDataFromOfficialWebsite } = require('./miniprogram');
-const { getComponentBasePath } = require('../utils');
+  getCmpTypeCombineMap, } from '../common.js'
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js'
+import { FILE_RIGHTS_DESC } from '../config/const.js'
+import { fetchApiDataFromOfficialWebsite } from './miniprogram.js'
+import { getComponentBasePath } from '../utils.js'
 
 let currentFramework = '';
 let useDefault = '';
@@ -435,7 +433,7 @@ function generateVueProps(baseData, framework, isUseDefault) {
   });
 }
 
-module.exports = {
+export {
   generateVueProps,
   getPropsByComponent,
 };

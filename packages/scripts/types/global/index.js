@@ -2,10 +2,13 @@
  * 输出全局变量到目标文件
  */
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { FRAMEWORK_MAP } = require('../../config');
+import fs from 'fs'
+import path from 'path'
+import chalk from 'chalk'
+import { FRAMEWORK_MAP } from '../../config/index.js'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const baseGlobalPath = path.resolve(__dirname, 'base.tpl');
 
@@ -37,4 +40,4 @@ function combineGlobals(framework) {
   fs.writeFile(outputPath, data, callback);
 }
 
-module.exports = combineGlobals;
+export default combineGlobals;

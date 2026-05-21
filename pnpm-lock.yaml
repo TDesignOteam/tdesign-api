@@ -141,6 +141,9 @@ catalogs:
     lodash:
       specifier: ^4.18.1
       version: 4.18.1
+    lodash-es:
+      specifier: ^4.18.1
+      version: 4.18.1
     moment:
       specifier: ^2.29.1
       version: 2.30.1
@@ -439,7 +442,7 @@ importers:
       js-yaml:
         specifier: 'catalog:'
         version: 4.1.1
-      lodash:
+      lodash-es:
         specifier: 'catalog:'
         version: 4.18.1
       prettier:
@@ -448,6 +451,8 @@ importers:
       shelljs:
         specifier: 'catalog:'
         version: 0.10.0
+
+  packages/server: {}
 
 packages:
 
@@ -2630,6 +2635,9 @@ packages:
 
   lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -6211,6 +6219,8 @@ snapshots:
       p-locate: 5.0.0
 
   lodash-es@4.17.21: {}
+
+  lodash-es@4.18.1: {}
 
   lodash.isplainobject@4.0.6:
     optional: true

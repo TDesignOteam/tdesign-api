@@ -1,5 +1,5 @@
-const shell = require('shelljs');
-const { camelCase } = require('lodash');
+import shell from 'shelljs';
+import { camelCase } from 'lodash-es';
 
 // 小程序的 props 类型定义特殊
 function getMiniprogramType(type, tsType, required) {
@@ -171,7 +171,7 @@ function fetchApiDataFromOfficialWebsite(cmp = 'button', exclude) {
 
 // fetchApiDataFromOfficialWebsite();
 
-module.exports = {
+export {
   getMiniprogramType,
   fetchApiDataFromOfficialWebsite,
 };

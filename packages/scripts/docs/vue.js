@@ -1,14 +1,9 @@
-const pick = require('lodash/pick');
-const find = require('lodash/find');
-const camelCase = require('lodash/camelCase');
-const lowerFirst = require('lodash/lowerFirst');
-const { kebabCaseComponent, getComponentBasePath } = require('../utils');
+import { kebabCaseComponent, getComponentBasePath  } from '../utils.js'
 
-const map = require('../map.json');
-const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
-const { fetchApiDataFromOfficialWebsite } = require('../types/miniprogram');
-const {
-  getApiTitles,
+import map from '../map.json' with { type: 'json' }
+import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP  } from '../config/const.js'
+import { fetchApiDataFromOfficialWebsite  } from '../types/miniprogram.js'
+import { getApiTitles,
   getEventName,
   isPlugin,
   isTypeApi,
@@ -19,9 +14,9 @@ const {
   getFolderName,
   getCmpTypeCombineMap,
   getComponentsMap,
-  getGlobalConfigName,
-} = require('../common');
-const languageConfig = require('../config/language/description');
+  getGlobalConfigName,  } from '../common.js'
+import languageConfig from '../config/language/description.js'
+import { pick, find, camelCase, lowerFirst  } from 'lodash-es'
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
@@ -188,7 +183,7 @@ function formatDesc(
       // customFieldType = customFieldType.split('【')[0];
       customFieldType = customFieldType.split('【')
         .map(item => item.replace('】', ''));
-      // 处理：import { PopupProps } from '@Popup' 等引用，更为相关组件文档链接
+      // 处理：import { PopupProps  } from '@Popup' 等引用，更为相关组件文档链接
       let importIndex = -1;
       // 收集需要移除的 @common import 索引
       const commonImportIndexes = [];
@@ -562,5 +557,5 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
   return result;
 }
 
-module.exports = getVueApiDocs;
+export default getVueApiDocs;
 

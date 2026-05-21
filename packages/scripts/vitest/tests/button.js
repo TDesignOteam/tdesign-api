@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Button: {
-    MP_EXCLUDE_PROPS_1291: { field_name: 'MP_EXCLUDE_PROPS', id: 1291 },
+    MP_EXCLUDE_PROPS_1291: { field_name: 'MP_EXCLUDE_PROPS',
+  id: 1291,
+},
     MP_PROPS_1288: { field_name: 'MP_PROPS', id: 1288 },
     block_33: {
       field_name: 'block',
@@ -90,4 +92,4 @@ module.exports = {
       PC: { event: { click: { arguments: [{ stopPropagation: true, type: 'click' }] } } },
     },
   },
-};
+}

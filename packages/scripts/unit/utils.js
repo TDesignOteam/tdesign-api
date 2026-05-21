@@ -17,6 +17,6 @@ function getUnitTestDescription(
   return `[${segmentName}] ${fieldName}: ${value} (${fieldZhDesc})`;
 };
 
-module.exports = {
+export {
   getUnitTestDescription,
 };

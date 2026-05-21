@@ -1,14 +1,14 @@
-const pick = require('lodash/pick');
-const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork, getParentByChildComponent } = require('./utils');
-const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents, getVariableImports } = require('./generate-import');
-const { generateClassNameUnitCase } = require('./generate-class-name');
-const { generateTNodeElement } = require('./generate-tnode');
-const { generateAttributeUnitCase } = require('./generate-attribute');
-const { generateDomUnitCase } = require('./generate-dom');
-const { generateEventUnitCase } = require('./generate-event');
-const { copyUnitTestsToOtherWrapper } = require('./copy');
-const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
-const map = require('../map.json');
+import { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork, getParentByChildComponent  } from './utils.js'
+import { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents, getVariableImports  } from './generate-import.js'
+import { generateClassNameUnitCase  } from './generate-class-name.js'
+import { generateTNodeElement  } from './generate-tnode.js'
+import { generateAttributeUnitCase  } from './generate-attribute.js'
+import { generateDomUnitCase  } from './generate-dom.js'
+import { generateEventUnitCase  } from './generate-event.js'
+import { copyUnitTestsToOtherWrapper  } from './copy.js'
+import { COMPONENT_API_MD_MAP  } from '../config/files-combine.js'
+import map from '../map.json' with { type: 'json' }
+import { pick  } from 'lodash-es'
 
 const componentMap = map.data.components;
 
@@ -32,7 +32,6 @@ function getBaseData(framework, component, apiData, map) {
   const baseData = pick(frameworkData, cmpMap[component] || [component]);
   return baseData;
 }
-
 
 /**
  * 获取一个 it 单位测试用例
@@ -203,7 +202,7 @@ function addGlobalCode(global, oneComponentTests) {
   }
 }
 
-module.exports = {
+export {
   getUnitTestCode,
   getOneUnitTest,
   getComponentUnitTests,

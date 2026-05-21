@@ -1,5 +1,4 @@
-const {
-  getArrayCode,
+import { getArrayCode,
   getItDescription,
   getMountComponent,
   getWrapper,
@@ -8,9 +7,8 @@ const {
   getDomAttributeExpect,
   getItAsync,
   getPresetsExpect,
-  getCategoryDesc,
-} = require("./core");
-const { getSkipCode } = require("./utils");
+  getCategoryDesc, } from './core.js'
+import { getSkipCode } from './utils.js'
 
 function generateAttributeUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactAttribute(test, oneApiData, framework, component);
@@ -103,6 +101,6 @@ function isOnlyDocumentDom(attribute) {
   return true;
 }
 
-module.exports = {
-  generateAttributeUnitCase
+export {
+  generateAttributeUnitCase,
 };

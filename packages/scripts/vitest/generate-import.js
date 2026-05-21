@@ -3,7 +3,7 @@
  * hasEvent 是否引入事件 vi
  * importedComponents 引入了哪些组件依赖
  */
-const { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } = require('./core');
+import { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } from './core.js'
 
 // fireEvent, vi, render 等已经单独处理
 const TEST_KEYWORDS = ['mockDelay', 'mockTimeout'];
@@ -175,7 +175,7 @@ function getVariableImports(test) {
   return imports;
 }
 
-module.exports = {
+export {
   getImportsConfig,
   getImportsCode,
   getMoreEventImports,

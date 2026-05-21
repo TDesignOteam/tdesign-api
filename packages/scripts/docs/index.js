@@ -1,10 +1,10 @@
-const fs = require('fs');
-const os = require('os');
-const path = require('path');
-const chalk = require('chalk');
-const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
-const { getApiComponentMapByFrameWork } = require('../common');
-const { kebabCaseComponent,getComponentBasePath } = require('../utils');
+import fs from 'fs'
+import os from 'os'
+import path from 'path'
+import chalk from 'chalk'
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js'
+import { getApiComponentMapByFrameWork } from '../common.js'
+import { kebabCaseComponent, getComponentBasePath } from '../utils.js'
 
 let currentFramework = '';
 
@@ -39,7 +39,7 @@ function getApiData(api) {
 const props = \`
 ${api.replace(/`/g, '\\`')}\n
 \`;
-module.exports = {
+export {
   props,
 };
 `;
@@ -61,7 +61,7 @@ function outputComponentMD(file, apiData, isVscode) {
     const APIIndex = data.lastIndexOf(SIGNATURE);
     let result = APIIndex !== -1
       ? `${data.slice(0, APIIndex + 7)}${apiData}`
-      : `${data}\n${SIGNATURE}\n${apiData}`;
+      : `${data}\n${SIGNATURE}${apiData}`;
     result = result.replace('\n:: BASE_PROPS ::\n', '');
     if (cssVariables) {
       result += `\n### CSS Variables\n\n${cssVariables.trim()}\n`;
@@ -152,7 +152,7 @@ function generateDocs(baseData, framework, extra) {
   });
 }
 
-module.exports = {
+export {
   generateDocs,
   getDocsByComponent,
 };

@@ -1,10 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const shell = require('shelljs');
-const { kebabCaseComponent } = require('../../../utils');
-const { uploadVitestFileDataToDB } = require('./utils');
-const chalk = require('chalk');
-const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('../../const/vue2-use-default');
+import fs from 'fs'
+import path from 'path'
+import shell from 'shelljs'
+import { kebabCaseComponent } from '../../../utils.js'
+import { uploadVitestFileDataToDB } from './utils.js'
+import chalk from 'chalk'
+import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../../const/vue2-use-default.js'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const [component, framework, args] = process.argv.slice(2);
 
 const argsList = args.split(',');
@@ -25,8 +28,8 @@ function generateToFinalProject() {
   .then(() => {
     // 同步 DB 文件数据到 JSON
     shell.exec('npm run api:download')
-    const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
-    shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
+    const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ' useDefault' : '';
+    shell.exec(`npm run api:pure ${component} '${framework}' vitest finalProject${useDefault}`);
   }, (e) => {
     console.error(e);
   });

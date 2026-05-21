@@ -1,5 +1,4 @@
-const {
-  getItDescription,
+import { getItDescription,
   getWrapper,
   getMountComponent,
   getSnapshotCase,
@@ -9,9 +8,8 @@ const {
   getDomClassNameExpect,
   getPresetsExpect,
   getItAsync,
-  getCategoryDesc,
-} = require('./core');
-const { getSkipCode } = require('./utils');
+  getCategoryDesc, } from './core.js'
+import { getSkipCode } from './utils.js'
 
 /**
  * 输出类名检测单测用例
@@ -174,6 +172,6 @@ function isOnlyDocumentDom(className) {
   return true;
 }
 
-module.exports = {
-  generateClassNameUnitCase
+export {
+  generateClassNameUnitCase,
 };

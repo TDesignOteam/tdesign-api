@@ -14,11 +14,13 @@
  * 命名行示例：npm run api-docs Button 'Miniprogram'
  *
  */
-const { groupByComponent, formatArrayToMap } = require('../common');
-const { generateDocs } = require('../docs');
-const map = require('../map.json');
-const { data: ALL_API } = require('../api.json');
-const chalk = require('chalk');
+import { groupByComponent, formatArrayToMap } from '../common.js'
+import { generateDocs } from '../docs/index.js'
+import map from '../map.json' with { type: 'json' }
+import apiJson from '../api.json' with { type: 'json' }
+import chalk from 'chalk'
+
+const { data: ALL_API } = apiJson;
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
  * component 参数为大驼峰

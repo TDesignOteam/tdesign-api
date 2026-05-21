@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "a tool for manage API",
   "main": "index.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "lint": "eslint ./packages --max-warnings 0 --fix",

@@ -1,8 +1,6 @@
-const { kebabCaseComponent } = require('../utils');
+import { kebabCaseComponent  } from '../utils.js'
 
-const camelCase = require('lodash/camelCase');
-const {
-  getWrapper,
+import { getWrapper,
   getMountComponent,
   getDomExpectTruthy,
   getItDescription,
@@ -16,9 +14,9 @@ const {
   getEventFnName,
   getEventArguments,
   getPresetsExpect,
-  getItAsync,
-} = require("./core");
-const { getSkipCode } = require('./utils');
+  getItAsync,  } from './core.js'
+import { getSkipCode  } from './utils.js'
+import { camelCase  } from 'lodash-es'
 
 /**
  * 人机交互测试
@@ -191,6 +189,6 @@ function isOnlyDocumentDom(event) {
   return true;
 }
 
-module.exports = {
+export {
   generateEventUnitCase,
 };

@@ -1,27 +1,21 @@
-const yaml = require('js-yaml');
-const path = require('path');
-const { FRAMEWORK_MAP } = require('../config');
-const { kebabCaseComponent } = require('../utils');
+import yaml from 'js-yaml'
+import path from 'path'
+import { FRAMEWORK_MAP  } from '../config/index.js'
+import { kebabCaseComponent  } from '../utils.js'
 
-const includes = require('lodash/includes');
-const {
-  getTestImportSegment: getVueTestImportSegment,
-  getTNodeSegment: getVueTNodeSegment,
-  getDisabledSegment: getVueDisabledSegment,
-  getDefaultSegment: getVueDefaultSegment,
-} = require('./segment/vue');
-const {
-  getTestImportSegment: getVue2TestImportSegment,
-  getTNodeSegment: getVue2TNodeSegment,
-  getDisabledSegment: getVue2DisabledSegment,
-  getDefaultSegment: getVue2DefaultSegment,
-} = require('./segment/vue2');
-const {
-  getTestImportSegment: getReactTestImportSegment,
-  getTNodeSegment: getReactTNodeSegment,
-  getDisabledSegment: getReactDisabledSegment,
-  getDefaultSegment: getReactDefaultSegment,
-} = require('./segment/react');
+import { getTestImportSegment as getVueTestImportSegment,
+  getTNodeSegment as getVueTNodeSegment,
+  getDisabledSegment as getVueDisabledSegment,
+  getDefaultSegment as getVueDefaultSegment } from './segment/vue.js'
+import { getTestImportSegment as getVue2TestImportSegment,
+  getTNodeSegment as getVue2TNodeSegment,
+  getDisabledSegment as getVue2DisabledSegment,
+  getDefaultSegment as getVue2DefaultSegment } from './segment/vue2.js'
+import { getTestImportSegment as getReactTestImportSegment,
+  getTNodeSegment as getReactTNodeSegment,
+  getDisabledSegment as getReactDisabledSegment,
+  getDefaultSegment as getReactDefaultSegment } from './segment/react.js'
+import { includes } from 'lodash-es'
 
 /**
  * 自动生成的单测文件的路径位置
@@ -166,7 +160,6 @@ function generateComponentUnitTest(
         porpsObj = Object.assign(porpsObj, dependPropsMap.get(p.field_name));
       }
 
-
       let values = [];
       if (p.field_enum.length > 0) {
         // 处理枚举值
@@ -230,7 +223,7 @@ function getPropValue(value, valueTypes) {
   return value;
 };
 
-module.exports = {
+export {
   getUnitTestFilePath,
   getGenSegmentFuncMap,
   generateComponentUnitTest,

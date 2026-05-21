@@ -1,10 +1,12 @@
-module.exports = {
+export default {
   Upload: {
     abridgeName_2995: {
       field_name: 'abridgeName',
-      id: 2995,
-      PC: {
-        props: { abridgeName: [8, 6] },
+  id: 2995,
+  PC: {
+        props: { abridgeName: [8,
+  6],
+},
         dom: [
           {
             description: 'props.abridgeName works fine if theme=file-input',
@@ -79,7 +81,7 @@ module.exports = {
       id: 873,
       PC: {
         global: {
-          imports: ["import { getUploadServer } from './request'"],
+          imports: ["import { getUploadServer } from './request.js'"],
           variables: ['const server = getUploadServer()'],
           beforeAll: ["server.listen({ onUnhandledRequest: 'error' })"],
           afterEach: ['server.resetHandlers()'],
@@ -2009,4 +2011,4 @@ module.exports = {
     url_981: { field_name: 'url', id: 981 },
     PlainObject_3308: { field_name: 'PlainObject', id: 3308 },
   },
-};
+}

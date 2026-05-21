@@ -2,11 +2,11 @@
  * Vue2 unit test
  */
 
-const { kebabCaseComponent } = require('../../utils');
+import { kebabCaseComponent } from '../../utils.js';
 
-const {
+import {
   getUnitTestDescription,
-} = require('../utils');
+} from '../utils.js';
 
 /**
  * Test 文件头部与依赖引入部分
@@ -18,7 +18,7 @@ function getTestImportSegment(componentName) {
 * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
 * */
 import { mount } from '@vue/test-utils';
-import ${componentName} from '../../../src/${kebabCaseComponent(componentName)}';
+import ${componentName} from '../../../src/${kebabCaseComponent(componentName)}.js';
  `;
 };
 
@@ -96,7 +96,7 @@ function getDefaultSegment(
     });`;
 }
 
-module.exports = {
+export {
   getTestImportSegment,
   getTNodeSegment,
   getDisabledSegment,

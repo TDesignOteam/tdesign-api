@@ -9,6 +9,6 @@ const reactNeedMockDelayEvents = [
   'mouseleave',
 ];
 
-module.exports = {
+export {
   reactNeedMockDelayEvents,
 };

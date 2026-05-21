@@ -29,6 +29,6 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
   };
 }
 
-module.exports = {
+export {
   copyUnitTestsToOtherWrapper,
 };

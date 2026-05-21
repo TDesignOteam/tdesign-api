@@ -1,9 +1,9 @@
 /**
  * React unit test
  */
-const {
+import {
   getUnitTestDescription,
-} = require('../utils');
+} from '../utils.js';
 
 /**
  * Test 文件头部与依赖引入部分
@@ -16,7 +16,7 @@ function getTestImportSegment(componentName) {
 * */
 import React from 'react';
 import { render, fireEvent } from '@test/utils';
-import ${componentName} from '../${componentName}';
+import ${componentName} from '../${componentName}.js';
 `;
 };
 
@@ -84,7 +84,7 @@ function getDefaultSegment(
     });`;
 }
 
-module.exports = {
+export {
   getTestImportSegment,
   getTNodeSegment,
   getDisabledSegment,

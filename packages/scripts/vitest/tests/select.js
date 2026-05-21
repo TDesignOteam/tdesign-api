@@ -1,6 +1,8 @@
-module.exports = {
+export default {
   Select: {
-    autoWidth_2374: { field_name: 'autoWidth', id: 2374 },
+    autoWidth_2374: { field_name: 'autoWidth',
+  id: 2374,
+},
     autofocus_3299: { field_name: 'autofocus', id: 3299 },
     borderless_2377: { field_name: 'borderless', id: 2377 },
     clearable_289: { field_name: 'clearable', id: 289 },
@@ -79,4 +81,4 @@ module.exports = {
     threshold_2399: { field_name: 'threshold', id: 2399 },
     type_2184: { field_name: 'type', id: 2184 },
   },
-};
+}

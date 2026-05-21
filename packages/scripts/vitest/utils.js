@@ -80,7 +80,7 @@ function getParentByChildComponent(combineMap, childComponent) {
   }
 }
 
-module.exports = {
+export {
   parseJSON,
   formatArrayToMap,
   groupByComponent,

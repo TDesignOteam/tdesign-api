@@ -1,9 +1,10 @@
-const upperFirst = require('lodash/upperFirst');
-const camelcase = require('lodash/camelCase');
-const { data } = require('./map.json');
-const { kebabCaseComponent} = require('./utils');
-const { GLOBAL_COMPONENTS_CONFIG } = require('./config/const');
-const { groupByComponent, getApiComponentMapByFrameWork } = require('./vitest/utils');
+import mapJson from './map.json' with { type: 'json' }
+import { kebabCaseComponent  } from './utils.js'
+import { GLOBAL_COMPONENTS_CONFIG  } from './config/const.js'
+import { groupByComponent, getApiComponentMapByFrameWork  } from './vitest/utils.js'
+import { upperFirst, camelCase as camelcase } from 'lodash-es'
+
+const { data } = mapJson;
 
 const componentsMap = getMap(data.components);
 
@@ -94,9 +95,6 @@ function getApiTitles(titles) {
   return [firstLine, secondLine].join('\n');
 }
 
-
-
-
 // 输出父子组件映射关系（不同框架可能父子关系不一样）
 function getCmpTypeCombineMap(map, framework) {
   const rMap = {};
@@ -126,7 +124,7 @@ function getGlobalConfigName(cmp) {
   return '';
 }
 
-module.exports = {
+export {
   getLabelByKey,
   getApiTitles,
   groupByComponent,
