@@ -21,13 +21,13 @@
     "api:configurable": "node packages/scripts/configurable-props"
   },
   "dependencies": {
+    "@koa/router": "catalog:",
     "koa": "catalog:",
     "koa-body": "catalog:",
     "koa-bodyparser": "catalog:",
     "koa-cors": "catalog:",
     "koa-json": "catalog:",
     "koa-logger": "catalog:",
-    "@koa/router": "catalog:",
     "koa-send": "catalog:",
     "koa-static": "catalog:",
     "koa2-cors": "catalog:",
@@ -54,6 +54,7 @@
     "chalk": "catalog:",
     "cross-env": "catalog:",
     "eslint": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
     "globals": "catalog:",
     "nodemon": "catalog:",
     "pm2": "catalog:",
