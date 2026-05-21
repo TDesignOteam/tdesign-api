@@ -45,20 +45,15 @@ function uploadOneApi(id, testDescription) {
   });
 }
 
-function readTestsFile(component) {
-  return new Promise((resolve) => {
-    const filePath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
-    try {
-      import(`file://${filePath}`).then((module) => {
-        resolve(module.default);
-      }).catch((e) => {
-        console.log(chalk.red(`${filePath} import error.`));
-        throw e;
-      });
-    } catch(e) {
-      console.log(chalk.red(`${filePath} code error.`));
-    }
-  });
+async function readTestsFile(component) {
+  const filePath = path.resolve(__dirname, `../${kebabCaseComponent(component)}.js`);
+  try {
+    const module = await import(`file://${filePath}`);
+    return module.default;
+  } catch (e) {
+    console.log(chalk.red(`${filePath} import error.`));
+    throw e;
+  }
 }
 
 // 上传本地测试用例 vitest/tests 到 DB 文件
