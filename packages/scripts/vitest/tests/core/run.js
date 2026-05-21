@@ -28,8 +28,8 @@ function generateToFinalProject() {
   .then(() => {
     // 同步 DB 文件数据到 JSON
     shell.exec('npm run api:download')
-    const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ' useDefault' : '';
-    shell.exec(`npm run api:pure ${component} '${framework}' vitest finalProject${useDefault}`);
+    const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
+    shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
   }, (e) => {
     console.error(e);
   });

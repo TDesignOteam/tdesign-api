@@ -20,7 +20,7 @@
  * 命名行示例：npm run api:docs Button 'Miniprogram'
  *
  * ======= 参数之间使用逗号分隔 =======
- * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault finalProject onlyDocs isUseUnitTest
+ * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
  *
  */
 import { groupByComponent,
