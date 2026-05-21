@@ -93,7 +93,7 @@ function getChildrenEnumData(data) {
     if (index === 0) return;
     let words = item.match(/(?<=<td).*?(?=<\/td)/g);
     if (!words) return;
-    words = words.map(t => t.replace('>', ''));
+    words = words.map((t) => t.replace('>', ''));
     // console.log(words);
     arr.push({
       value: words[0],
@@ -105,25 +105,24 @@ function getChildrenEnumData(data) {
 
 function replaceMpUrl(str) {
   if (!str) return '';
-  return str.replace(/<a href="..\//g, `<a href="${MP_DOCS_BASE_URL}`)
-    .replace(/&quot;/g, '"');
+  return str.replace(/<a href="..\//g, `<a href="${MP_DOCS_BASE_URL}`).replace(/&quot;/g, '"');
 }
 
 // 解析小程序 API
 function getAPIData(mainApiTable, component, exclude, mpApiurl) {
   const trData = analysisAPIHtml(mainApiTable);
   const arr = [];
-  const excludeApi = exclude ? exclude.split(',').map(v => v.trim()) : [];
+  const excludeApi = exclude ? exclude.split(',').map((v) => v.trim()) : [];
   trData.forEach((item) => {
     let words = item.word.match(/(?<=<td).*?(?=<\/td)/g);
     if (!words) return;
-    words = words.map(t => t.replace('>', ''));
+    words = words.map((t) => t.replace('>', ''));
     console.log(words);
     const [, apiName, type, defaultValue, required, desc] = words;
     if (excludeApi.includes(apiName.trim())) return;
     const mainDesc = replaceMpUrl(desc);
     const childrenData = getChildrenEnumData(item.children);
-    const enumDesc = childrenData.map(o => `\`${o.value}\` ${o.desc}`);
+    const enumDesc = childrenData.map((o) => `\`${o.value}\` ${o.desc}`);
     const apiObj = {
       component,
       field_name: camelCase(apiName),
@@ -131,12 +130,12 @@ function getAPIData(mainApiTable, component, exclude, mpApiurl) {
       field_type_text: [upperFirst(type)],
       field_default_value: defaultValue,
       field_required: required === '否' ? 0 : 1,
-      field_enum: childrenData.map(t => t.value).join('/'),
+      field_enum: childrenData.map((t) => t.value).join('/'),
       field_desc_zh: enumDesc.length
         ? [
-          mainDesc,
-          `具体释义：<br />${replaceMpUrl(enumDesc.join('；<br />'))}。<br />[小程序官方文档](${mpApiurl})`,
-        ].join('。<br />')
+            mainDesc,
+            `具体释义：<br />${replaceMpUrl(enumDesc.join('；<br />'))}。<br />[小程序官方文档](${mpApiurl})`,
+          ].join('。<br />')
         : mainDesc,
     };
     arr.push(apiObj);
@@ -171,7 +170,4 @@ function fetchApiDataFromOfficialWebsite(cmp = 'button', exclude) {
 
 // fetchApiDataFromOfficialWebsite();
 
-export {
-  getMiniprogramType,
-  fetchApiDataFromOfficialWebsite,
-};
+export { getMiniprogramType, fetchApiDataFromOfficialWebsite };

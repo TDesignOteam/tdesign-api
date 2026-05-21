@@ -9,13 +9,21 @@ export default {
           {
             description: 'empty TagInput does not need clearIcon',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-tag-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: [{ '.t-tag-input__suffix-clear': false }],
+              },
             ],
           },
           {
             description: 'show clearIcon on mouse enter',
             wrapper: 'getTagInputValueMount',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-tag-input__suffix-clear'] }],
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-tag-input__suffix-clear'],
+              },
+            ],
           },
           {
             description: 'clear all tags on click clearIcon',
@@ -36,7 +44,10 @@ export default {
             description: 'disabled TagInput can not show clear icon',
             wrapper: 'getTagInputValueMount',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: [{ '.t-input__suffix-clear': false }],
+              },
             ],
           },
           {
@@ -44,7 +55,10 @@ export default {
             description: 'readonly TagInput can not show clear icon',
             wrapper: 'getTagInputValueMount',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: [{ '.t-input__suffix-clear': false }],
+              },
             ],
           },
         ],
@@ -70,12 +84,20 @@ export default {
             description: 'disabled TagInput does not need clearIcon',
             wrapper: 'getTagInputValueMount',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-tag-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: [{ '.t-tag-input__suffix-clear': false }],
+              },
             ],
           },
           {
             description: 'disabled TagInput can not trigger focus event',
-            expect: [{ trigger: 'click(.t-input)', event: { focus: 'not' } }],
+            expect: [
+              {
+                trigger: 'click(.t-input)',
+                event: { focus: 'not' },
+              },
+            ],
           },
         ],
       },
@@ -97,7 +119,12 @@ export default {
         className: [
           {
             value: "{size: 'small'}",
-            expect: [{ dom: '.t-input', className: { 't-size-s': true } }],
+            expect: [
+              {
+                dom: '.t-input',
+                className: { 't-size-s': true },
+              },
+            ],
           },
         ],
       },
@@ -109,7 +136,12 @@ export default {
         attribute: [
           {
             value: 'input value text',
-            expect: [{ dom: 'input', attribute: { value: 'input value text' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: { value: 'input value text' },
+              },
+            ],
           },
         ],
       },
@@ -127,9 +159,17 @@ export default {
             expect: [
               { trigger: 'focus(input)' },
               { trigger: "simulateInputChange('input', 'Tag3')" },
-              { trigger: "simulateInputEnter('input')", exist: [{ '.t-tag': 1 }] },
-              { trigger: " simulateInputChange('input', 'Tag5')" },
-              { trigger: "simulateInputEnter('input')", exist: [{ '.t-tag': 1 }] },
+              {
+                trigger: "simulateInputEnter('input')",
+                exist: [{ '.t-tag': 1 }],
+              },
+              {
+                trigger: " simulateInputChange('input', 'Tag5')",
+              },
+              {
+                trigger: "simulateInputEnter('input')",
+                exist: [{ '.t-tag': 1 }],
+              },
             ],
           },
         ],
@@ -147,7 +187,10 @@ export default {
     placeholder_2094: {
       field_name: 'placeholder',
       id: 2094,
-      PC: { attribute: { placeholder: 'This is TagInput placeholder' }, attributeDom: 'input' },
+      PC: {
+        attribute: { placeholder: 'This is TagInput placeholder' },
+        attributeDom: 'input',
+      },
     },
     readonly_2095: {
       field_name: 'readonly',
@@ -160,12 +203,20 @@ export default {
             description: 'readonly TagInput does not need clearIcon',
             wrapper: 'getTagInputValueMount',
             expect: [
-              { trigger: 'mouseenter(.t-input)', event: [{ '.t-tag-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                event: [{ '.t-tag-input__suffix-clear': false }],
+              },
             ],
           },
           {
             description: 'readonly TagInput can not trigger focus event',
-            expect: [{ trigger: 'click(.t-input)', event: { focus: 'not' } }],
+            expect: [
+              {
+                trigger: 'click(.t-input)',
+                event: { focus: 'not' },
+              },
+            ],
           },
         ],
       },
@@ -173,7 +224,10 @@ export default {
     size_2194: {
       field_name: 'size',
       id: 2194,
-      PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'], classNameDom: '.t-input' },
+      PC: {
+        className: ['t-size-s', { 't-size-m': false }, 't-size-l'],
+        classNameDom: '.t-input',
+      },
     },
     status_2098: {
       field_name: 'status',
@@ -184,14 +238,22 @@ export default {
       },
     },
     suffix_2130: { field_name: 'suffix', id: 2130, PC: { tnode: true } },
-    suffixIcon_2129: { field_name: 'suffixIcon', id: 2129, PC: { tnode: true } },
+    suffixIcon_2129: {
+      field_name: 'suffixIcon',
+      id: 2129,
+      PC: { tnode: true },
+    },
     tag_2107: {
       field_name: 'tag',
       id: 2107,
       PC: {
         wrapper: 'getTagInputValueMount',
         props: { value: ['tdesign-vue'] },
-        tnode: { dom: [], trigger: '', params: [{ value: 'tdesign-vue' }] },
+        tnode: {
+          dom: [],
+          trigger: '',
+          params: [{ value: 'tdesign-vue' }],
+        },
       },
     },
     tagProps_2096: {
@@ -221,7 +283,10 @@ export default {
             expect: [
               { trigger: 'focus(input)' },
               { trigger: "simulateInputChange('input', 'Tag1')" },
-              { trigger: "simulateInputEnter('input')", exist: [{ '.t-tag': false }] },
+              {
+                trigger: "simulateInputEnter('input')",
+                exist: [{ '.t-tag': false }],
+              },
             ],
           },
           {
@@ -229,7 +294,10 @@ export default {
             expect: [
               { trigger: 'focus(input)' },
               { trigger: "simulateInputChange('input', 'Tag2')" },
-              { trigger: "simulateInputEnter('input')", exist: [{ '.t-tag': 1 }] },
+              {
+                trigger: "simulateInputEnter('input')",
+                exist: [{ '.t-tag': 1 }],
+              },
             ],
           },
         ],
@@ -294,7 +362,10 @@ export default {
               { trigger: 'mouseenter(.t-input)' },
               {
                 trigger: 'click(.t-tag-input__suffix-clear)',
-                event: { clear: [{ 'e.type': 'click' }], change: [[], { trigger: 'clear' }] },
+                event: {
+                  clear: [{ 'e.type': 'click' }],
+                  change: [[], { trigger: 'clear' }],
+                },
               },
             ],
           },
@@ -304,7 +375,11 @@ export default {
     click_2323: {
       field_name: 'click',
       id: 2323,
-      PC: { event: { 'click(.t-input)': { arguments: [{ 'e.type': 'click' }] } } },
+      PC: {
+        event: {
+          'click(.t-input)': { arguments: [{ 'e.type': 'click' }] },
+        },
+      },
     },
     dragSort_2350: { field_name: 'dragSort', id: 2350 },
     enter_2093: {
@@ -318,7 +393,9 @@ export default {
             expect: [
               {
                 trigger: "simulateInputEnter('input')",
-                event: { enter: [['tag'], { 'e.type': 'keydown', inputValue: '' }] },
+                event: {
+                  enter: [['tag'], { 'e.type': 'keydown', inputValue: '' }],
+                },
               },
             ],
           },
@@ -326,7 +403,10 @@ export default {
             expect: [
               { trigger: 'focus(input)' },
               { trigger: "simulateInputChange('input', 'Tag')" },
-              { trigger: "simulateInputEnter('input')", exist: [{ '.t-tag': 1 }] },
+              {
+                trigger: "simulateInputEnter('input')",
+                exist: [{ '.t-tag': 1 }],
+              },
             ],
           },
         ],
@@ -343,7 +423,9 @@ export default {
             expect: [
               {
                 trigger: 'focus(input)',
-                event: { focus: [[], { 'e.type': 'focus', inputValue: '' }] },
+                event: {
+                  focus: [[], { 'e.type': 'focus', inputValue: '' }],
+                },
               },
             ],
           },
@@ -354,7 +436,15 @@ export default {
             expect: [
               {
                 trigger: 'focus(input)',
-                event: { focus: [[], { 'e.type': 'focus', inputValue: 'tag' }] },
+                event: {
+                  focus: [
+                    [],
+                    {
+                      'e.type': 'focus',
+                      inputValue: 'tag',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -372,7 +462,9 @@ export default {
             expect: [
               {
                 trigger: 'mouseenter(.t-input)',
-                event: { mouseenter: [{ 'e.type': 'mouseenter' }] },
+                event: {
+                  mouseenter: [{ 'e.type': 'mouseenter' }],
+                },
               },
             ],
           },
@@ -389,7 +481,9 @@ export default {
             expect: [
               {
                 trigger: 'mouseleave(.t-input)',
-                event: { mouseleave: [{ 'e.type': 'mouseleave' }] },
+                event: {
+                  mouseleave: [{ 'e.type': 'mouseleave' }],
+                },
               },
             ],
           },
@@ -401,7 +495,14 @@ export default {
       id: 2117,
       PC: {
         event: [
-          { expect: [{ trigger: 'paste(input)', event: { paste: [{ 'e.type': 'paste' }] } }] },
+          {
+            expect: [
+              {
+                trigger: 'paste(input)',
+                event: { paste: [{ 'e.type': 'paste' }] },
+              },
+            ],
+          },
         ],
       },
     },
@@ -419,12 +520,7 @@ export default {
                 event: {
                   remove: [
                     {
-                      value: [
-                        'tdesign-vue',
-                        'tdesign-react',
-                        'tdesign-miniprogram',
-                        'tdesign-mobile-vue',
-                      ],
+                      value: ['tdesign-vue', 'tdesign-react', 'tdesign-miniprogram', 'tdesign-mobile-vue'],
                       index: 4,
                       trigger: 'backspace',
                       item: 'tdesign-mobile-react',
@@ -444,12 +540,7 @@ export default {
                 event: {
                   remove: [
                     {
-                      value: [
-                        'tdesign-react',
-                        'tdesign-miniprogram',
-                        'tdesign-mobile-vue',
-                        'tdesign-mobile-react',
-                      ],
+                      value: ['tdesign-react', 'tdesign-miniprogram', 'tdesign-mobile-vue', 'tdesign-mobile-react'],
                       index: 0,
                       trigger: 'tag-remove',
                       item: 'tdesign-vue',
@@ -464,4 +555,4 @@ export default {
       },
     },
   },
-}
+};

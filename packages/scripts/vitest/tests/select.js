@@ -79,4 +79,4 @@ export default {
     threshold_2399: { field_name: 'threshold', id: 2399 },
     type_2184: { field_name: 'type', id: 2184 },
   },
-}
+};

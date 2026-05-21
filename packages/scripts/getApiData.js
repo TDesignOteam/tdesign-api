@@ -2,16 +2,16 @@
  * 仅获取 API 数据，不输出到文件。用于在线预览 API 代码
  */
 
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork  } from './common.js'
-import { COMPONENT_API_MD_MAP  } from './config/index.js'
-import { getDocsByComponent  } from './docs/index.js'
-import { getTypesByComponent  } from './types/index.js'
-import { getPropsByComponent  } from './types/vue-props.js'
-import { pick  } from 'lodash-es'
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from './common.js';
+import { COMPONENT_API_MD_MAP } from './config/index.js';
+import { getDocsByComponent } from './docs/index.js';
+import { getTypesByComponent } from './types/index.js';
+import { getPropsByComponent } from './types/vue-props.js';
+import { pick } from 'lodash-es';
 
 /**
-* framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
-*/
+ * framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
+ */
 
 async function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
   // [ labe, value ] => { label: value }
@@ -35,6 +35,4 @@ async function getApiPreviewData(apiData, map, framework, component, isUseDefaul
   };
 }
 
-export {
-  getApiPreviewData,
-};
+export { getApiPreviewData };

@@ -21,7 +21,10 @@ export default {
       id: 2216,
       PC: {
         props: { src: 'https://this.is.an.error.img.com' },
-        tnode: { trigger: "simulateImageEvent('img', 'error')", dom: [] },
+        tnode: {
+          trigger: "simulateImageEvent('img', 'error')",
+          dom: [],
+        },
       },
     },
     error_2421: { field_name: 'error', id: 2421 },
@@ -29,14 +32,23 @@ export default {
     fit_2209: {
       field_name: 'fit',
       id: 2209,
-      PC: { snapshot: true, className: 't-image--fit-${item}', classNameDom: '.t-image' },
+      PC: {
+        snapshot: true,
+        className: 't-image--fit-${item}',
+        classNameDom: '.t-image',
+      },
     },
     gallery_2869: {
       field_name: 'gallery',
       id: 2869,
       PC: {
         className: 't-image__wrapper--gallery',
-        dom: [{ props: { gallery: true }, dom: ['.t-image__gallery-shadow'] }],
+        dom: [
+          {
+            props: { gallery: true },
+            dom: ['.t-image__gallery-shadow'],
+          },
+        ],
       },
     },
     lazy_2211: { field_name: 'lazy', id: 2211 },
@@ -49,7 +61,10 @@ export default {
     overlayContent_2872: {
       field_name: 'overlayContent',
       id: 2872,
-      PC: { snapshot: true, tnode: { dom: ['.t-image__overlay-content'], trigger: '' } },
+      PC: {
+        snapshot: true,
+        tnode: { dom: ['.t-image__overlay-content'], trigger: '' },
+      },
     },
     overlayTrigger_2873: {
       field_name: 'overlayTrigger',
@@ -68,7 +83,9 @@ export default {
                 trigger: 'mouseenter(.t-image__wrapper)',
                 exist: [
                   '.t-image__overlay-content',
-                  { '.t-image__overlay-content--hidden': false },
+                  {
+                    '.t-image__overlay-content--hidden': false,
+                  },
                 ],
               },
               {
@@ -80,7 +97,11 @@ export default {
         ],
       },
     },
-    placeholder_2870: { field_name: 'placeholder', id: 2870, PC: { snapshot: true, tnode: true } },
+    placeholder_2870: {
+      field_name: 'placeholder',
+      id: 2870,
+      PC: { snapshot: true, tnode: true },
+    },
     position_2212: {
       field_name: 'position',
       id: 2212,
@@ -98,14 +119,22 @@ export default {
     shape_2210: {
       field_name: 'shape',
       id: 2210,
-      PC: { className: 't-image__wrapper--shape-${item}', classNameDom: '.t-image__wrapper' },
+      PC: {
+        className: 't-image__wrapper--shape-${item}',
+        classNameDom: '.t-image__wrapper',
+      },
     },
-    showMenuByLongpress_3124: { field_name: 'showMenuByLongpress', id: 3124 },
+    showMenuByLongpress_3124: {
+      field_name: 'showMenuByLongpress',
+      id: 3124,
+    },
     src_2207: {
       field_name: 'src',
       id: 2207,
       PC: {
-        attribute: { href: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+        attribute: {
+          href: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+        },
         attributeDom: 'img',
       },
     },
@@ -120,11 +149,15 @@ export default {
             expect: [
               {
                 dom: 'picture > source',
-                attribute: { srcset: 'https://tdesign.gtimg.com/img/tdesign-image.avif' },
+                attribute: {
+                  srcset: 'https://tdesign.gtimg.com/img/tdesign-image.avif',
+                },
               },
               {
                 dom: 'picture > source:nth-child(2)',
-                attribute: { srcset: 'https://tdesign.gtimg.com/img/tdesign-image.webp' },
+                attribute: {
+                  srcset: 'https://tdesign.gtimg.com/img/tdesign-image.webp',
+                },
               },
             ],
           },
@@ -156,7 +189,9 @@ export default {
       PC: {
         event: [
           {
-            props: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+            props: {
+              src: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+            },
             expect: [
               { trigger: '' },
               {
@@ -169,4 +204,4 @@ export default {
       },
     },
   },
-}
+};

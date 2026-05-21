@@ -1,11 +1,11 @@
-import fs from 'fs'
-import path from 'path'
-import shell from 'shelljs'
-import { kebabCaseComponent } from '../../../utils.js'
-import { uploadVitestFileDataToDB } from './utils.js'
-import chalk from 'chalk'
-import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../../const/vue2-use-default.js'
-import { fileURLToPath } from 'url'
+import fs from 'fs';
+import path from 'path';
+import shell from 'shelljs';
+import { kebabCaseComponent } from '../../../utils.js';
+import { uploadVitestFileDataToDB } from './utils.js';
+import chalk from 'chalk';
+import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../../const/vue2-use-default.js';
+import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const [component, framework, args] = process.argv.slice(2);
@@ -24,15 +24,18 @@ if (!framework) {
 
 function generateToFinalProject() {
   // 同步 vitest/tests 文件数据到本地 DB 文件
-  uploadVitestFileDataToDB(component)
-  .then(() => {
-    // 同步 DB 文件数据到 JSON
-    shell.exec('npm run api:download')
-    const useDefault = framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
-    shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
-  }, (e) => {
-    console.error(e);
-  });
+  uploadVitestFileDataToDB(component).then(
+    () => {
+      // 同步 DB 文件数据到 JSON
+      shell.exec('npm run api:download');
+      const useDefault =
+        framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
+      shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
+    },
+    (e) => {
+      console.error(e);
+    },
+  );
 }
 
 if (isWatch) {

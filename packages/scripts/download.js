@@ -1,30 +1,26 @@
-import axios from 'axios'
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function outputToFile(outputPath, res) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(
-      path.resolve(__dirname, outputPath),
-      JSON.stringify(res.data, null, 2),
-      (err) => {
-        if (err) {
-          reject();
-          return console.error(err);
-        }
-        console.log(`${outputPath} has been created`);
-        resolve();
-      },
-    );
+    fs.writeFile(path.resolve(__dirname, outputPath), JSON.stringify(res.data, null, 2), (err) => {
+      if (err) {
+        reject();
+        return console.error(err);
+      }
+      console.log(`${outputPath} has been created`);
+      resolve();
+    });
   });
 }
 
 function download() {
   return new Promise((resolve, reject) => {
-    const url = '127.0.0.1:16001'
+    const url = '127.0.0.1:16001';
     Promise.all([
       // 请求 map
       axios.request({
@@ -38,10 +34,7 @@ function download() {
     ]).then(
       ([mapRes, apiRes]) => {
         console.log('请求数据成功');
-        Promise.all([
-          outputToFile('./map.json', mapRes),
-          outputToFile('./api.json', apiRes),
-        ]).then(
+        Promise.all([outputToFile('./map.json', mapRes), outputToFile('./api.json', apiRes)]).then(
           () => {
             console.log('\n数据写入成功\n');
             resolve();

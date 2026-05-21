@@ -5,12 +5,27 @@ export default {
       id: 3152,
       PC: {
         attribute: [
-          { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
-          { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
+          {
+            value: false,
+            expect: [{ dom: 'input', attribute: { autofocus: false } }],
+          },
+          {
+            value: true,
+            expect: [
+              {
+                dom: 'input',
+                attribute: { autofocus: 'toBeDefined' },
+              },
+            ],
+          },
         ],
       },
     },
-    children_3175: { field_name: 'children', id: 3175, PC: { tnode: true } },
+    children_3175: {
+      field_name: 'children',
+      id: 3175,
+      PC: { tnode: true },
+    },
     clearable_3151: {
       field_name: 'clearable',
       id: 3151,
@@ -19,18 +34,38 @@ export default {
         event: [
           {
             description: 'show clear icon on mouse enter',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'] }],
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+              },
+            ],
             props: { value: "'Default Keyword'" },
           },
           {
             description: 'expect trigger clear and change events after clear icon has been clicked',
             expect: [
-              { trigger: 'mouseenter(.t-input)', delay: true, exist: ['.t-input__suffix-clear'] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                delay: true,
+                exist: ['.t-input__suffix-clear'],
+              },
               {
                 trigger: 'click(.t-input__suffix-clear)',
                 event: {
-                  clear: [{ 'e.stopPropagation': true, 'e.type': 'click' }],
-                  change: ['', { 'e.stopPropagation': true, 'e.type': 'click' }],
+                  clear: [
+                    {
+                      'e.stopPropagation': true,
+                      'e.type': 'click',
+                    },
+                  ],
+                  change: [
+                    '',
+                    {
+                      'e.stopPropagation': true,
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -51,11 +86,18 @@ export default {
       PC: {
         event: [
           {
-            props: { filter: "(filterWords, option) => option.text.includes('Second')" },
+            props: {
+              filter: "(filterWords, option) => option.text.includes('Second')",
+            },
             expect: [
               {
                 trigger: 'focus(input)',
-                exist: [{ 'document.t-select-option': 1, clearElementAtEnd: '.t-popup' }],
+                exist: [
+                  {
+                    'document.t-select-option': 1,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
               },
             ],
           },
@@ -73,7 +115,12 @@ export default {
             expect: [
               {
                 trigger: 'focus(input)',
-                exist: [{ 'document.t-select-option': 1, clearElementAtEnd: '.t-popup' }],
+                exist: [
+                  {
+                    'document.t-select-option': 1,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
               },
             ],
           },
@@ -91,7 +138,12 @@ export default {
             expect: [
               {
                 trigger: 'focus(input)',
-                exist: [{ 'document.t-select-option': 1, clearElementAtEnd: '.t-popup' }],
+                exist: [
+                  {
+                    'document.t-select-option': 1,
+                    clearElementAtEnd: '.t-popup',
+                  },
+                ],
               },
             ],
           },
@@ -118,21 +170,34 @@ export default {
           {
             description: '5 options should exist',
             wrapper: 'getNormalAutoCompleteMount',
-            expect: [{ trigger: 'focus(input)', exist: [{ 'document.t-select-option': 5 }] }],
+            expect: [
+              {
+                trigger: 'focus(input)',
+                exist: [{ 'document.t-select-option': 5 }],
+              },
+            ],
           },
           {
-            props: { popupProps: "{ overlayClassName: 'empty-options-class-name' }" },
+            props: {
+              popupProps: "{ overlayClassName: 'empty-options-class-name' }",
+            },
             description: 'expect empty options with no panel',
             wrapper: '',
             expect: [
               {
                 trigger: 'focus(input)',
-                exist: [{ 'document.empty-options-class-name .t-autocomplete__panel': 0 }],
+                exist: [
+                  {
+                    'document.empty-options-class-name .t-autocomplete__panel': 0,
+                  },
+                ],
               },
             ],
           },
           {
-            props: { popupProps: "{ overlayClassName: 'option-slot-class-name' }" },
+            props: {
+              popupProps: "{ overlayClassName: 'option-slot-class-name' }",
+            },
             description: 'define one option',
             wrapper: 'getOptionSlotAutoCompleteMount',
             expect: [
@@ -181,7 +246,14 @@ export default {
         attribute: [
           {
             value: "'type keyword to search'",
-            expect: [{ dom: 'input', attribute: { placeholder: 'type keyword to search' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: {
+                  placeholder: 'type keyword to search',
+                },
+              },
+            ],
           },
         ],
       },
@@ -193,12 +265,26 @@ export default {
         wrapper: 'getNormalAutoCompleteMount',
         event: [
           {
-            props: { popupProps: "{overlayClassName: 'custom-class-name'}" },
-            expect: [{ trigger: 'focus(input)', exist: ['document.custom-class-name'] }],
+            props: {
+              popupProps: "{overlayClassName: 'custom-class-name'}",
+            },
+            expect: [
+              {
+                trigger: 'focus(input)',
+                exist: ['document.custom-class-name'],
+              },
+            ],
           },
           {
-            props: { popupProps: "{overlayInnerClassName: 'custom-class-name'}" },
-            expect: [{ trigger: 'focus(input)', exist: ['document.custom-class-name'] }],
+            props: {
+              popupProps: "{overlayInnerClassName: 'custom-class-name'}",
+            },
+            expect: [
+              {
+                trigger: 'focus(input)',
+                exist: ['document.custom-class-name'],
+              },
+            ],
           },
         ],
       },
@@ -236,7 +322,11 @@ export default {
       id: 3162,
       PC: { dom: { "'this is a tip'": '.t-input__tips' } },
     },
-    triggerElement_3174: { field_name: 'triggerElement', id: 3174, PC: { tnode: true } },
+    triggerElement_3174: {
+      field_name: 'triggerElement',
+      id: 3174,
+      PC: { tnode: true },
+    },
     value_3164: {
       field_name: 'value',
       id: 3164,
@@ -244,7 +334,12 @@ export default {
         attribute: [
           {
             value: "'DefaultKeyword'",
-            expect: [{ dom: 'input', attribute: { value: 'DefaultKeyword' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: { value: 'DefaultKeyword' },
+              },
+            ],
           },
         ],
       },
@@ -257,8 +352,15 @@ export default {
         event: [
           {
             expect: [
-              { trigger: 'focus(input)', event: { focus: [{ 'e.type': 'focus' }] } },
-              { trigger: 'blur(input)', delay: 300, event: { blur: [{ 'e.type': 'blur' }] } },
+              {
+                trigger: 'focus(input)',
+                event: { focus: [{ 'e.type': 'focus' }] },
+              },
+              {
+                trigger: 'blur(input)',
+                delay: 300,
+                event: { blur: [{ 'e.type': 'blur' }] },
+              },
             ],
           },
         ],
@@ -276,7 +378,9 @@ export default {
             expect: [
               {
                 trigger: 'compositionend(input)',
-                event: { compositionend: [{ 'e.type': 'compositionend' }] },
+                event: {
+                  compositionend: [{ 'e.type': 'compositionend' }],
+                },
               },
             ],
           },
@@ -292,7 +396,9 @@ export default {
             expect: [
               {
                 trigger: 'compositionstart(input)',
-                event: { compositionstart: [{ 'e.type': 'compositionstart' }] },
+                event: {
+                  compositionstart: [{ 'e.type': 'compositionstart' }],
+                },
               },
             ],
           },
@@ -310,7 +416,14 @@ export default {
               { trigger: 'focus(input)' },
               {
                 trigger: 'keydown.enter(input)',
-                event: { enter: [{ 'e.type': 'keydown', 'e.key': '/Enter/i' }] },
+                event: {
+                  enter: [
+                    {
+                      'e.type': 'keydown',
+                      'e.key': '/Enter/i',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -342,12 +455,16 @@ export default {
         wrapper: 'getNormalAutoCompleteMount',
         event: [
           {
-            props: { popupProps: "{overlayClassName:'select-event-class-name'}" },
+            props: {
+              popupProps: "{overlayClassName:'select-event-class-name'}",
+            },
             expect: [
               { trigger: 'focus(input)' },
               {
                 trigger: 'click(document.select-event-class-name .t-select-option)',
-                event: { select: ['FirstKeyword', { 'e.type': 'click' }] },
+                event: {
+                  select: ['FirstKeyword', { 'e.type': 'click' }],
+                },
                 exist: [{ clearElementAtEnd: '.t-select-option' }],
               },
             ],
@@ -414,7 +531,9 @@ export default {
               },
               {
                 trigger: "simulateKeydownEvent(document, 'Enter')",
-                event: { select: ['FirstKeyword', { 'e.type': 'keydown' }] },
+                event: {
+                  select: ['FirstKeyword', { 'e.type': 'keydown' }],
+                },
                 exist: [{ clearElementAtEnd: '.t-select-option' }],
               },
             ],
@@ -429,4 +548,4 @@ export default {
         id: 3159,
       },
   },
-}
+};

@@ -1,13 +1,13 @@
-import prettier from 'prettier'
-import prettierConfig from '../config/prettier.js'
-import chalk from 'chalk'
-import fs from 'fs'
-import path from 'path'
-import { kebabCaseComponent } from '../utils.js'
+import prettier from 'prettier';
+import prettierConfig from '../config/prettier.js';
+import chalk from 'chalk';
+import fs from 'fs';
+import path from 'path';
+import { kebabCaseComponent } from '../utils.js';
 
-import { FRAMEWORK_MAP } from '../config/index.js'
-import { NEED_USE_DEFAULT_OR_USE_VMODEL } from './const/vue2-use-default.js'
-import { getUnitTestCode } from './main.js'
+import { FRAMEWORK_MAP } from '../config/index.js';
+import { NEED_USE_DEFAULT_OR_USE_VMODEL } from './const/vue2-use-default.js';
+import { getUnitTestCode } from './main.js';
 // import { generateTestDescriptionToVitestFile } from './tests/core/utils.js'
 
 async function generateVitestUnitCase(baseData, framework, { component }) {
@@ -25,14 +25,13 @@ async function generateVitestUnitCase(baseData, framework, { component }) {
         return console.error(err);
       }
       const comment = getFileComment(framework, component);
-      fs.writeFile(outputPath,  comment + codeData, (err) => {
+      fs.writeFile(outputPath, comment + codeData, (err) => {
         if (err) {
           return console.error(err);
         }
         console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
       });
     });
-
   } catch (e) {
     console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
     console.warn(e);
@@ -51,6 +50,4 @@ function getFileComment(framework, component) {
   return vue2Comment + comment;
 }
 
-export {
-  generateVitestUnitCase,
-};
+export { generateVitestUnitCase };

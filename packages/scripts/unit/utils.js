@@ -3,20 +3,11 @@
  * @param {*} componentName - 组件名称
  * @param {*} segmentName - 案例类型名称
  * @param {*} value - 案例值
- * @returns 
+ * @returns
  */
-function getUnitTestDescription(
-  componentInfo = {},
-  segmentName = '',
-  value = '',
-) {
-  const {
-    field_name: fieldName,
-    field_desc_zh: fieldZhDesc,
-  } = componentInfo;
+function getUnitTestDescription(componentInfo = {}, segmentName = '', value = '') {
+  const { field_name: fieldName, field_desc_zh: fieldZhDesc } = componentInfo;
   return `[${segmentName}] ${fieldName}: ${value} (${fieldZhDesc})`;
-};
+}
 
-export {
-  getUnitTestDescription,
-};
+export { getUnitTestDescription };

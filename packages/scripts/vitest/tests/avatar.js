@@ -11,10 +11,22 @@ export default {
     },
     badgeProps_1493: { field_name: 'badgeProps', id: 1493 },
     bordered_3265: { field_name: 'bordered', id: 3265 },
-    children_3295: { field_name: 'children', id: 3295, PC: { snapshot: true, tnode: true } },
-    content_3293: { field_name: 'content', id: 3293, PC: { snapshot: true, tnode: true } },
+    children_3295: {
+      field_name: 'children',
+      id: 3295,
+      PC: { snapshot: true, tnode: true },
+    },
+    content_3293: {
+      field_name: 'content',
+      id: 3293,
+      PC: { snapshot: true, tnode: true },
+    },
     customStyle_3078: { field_name: 'customStyle', id: 3078 },
-    default_3294: { field_name: 'default', id: 3294, PC: { snapshot: true, tnode: true } },
+    default_3294: {
+      field_name: 'default',
+      id: 3294,
+      PC: { snapshot: true, tnode: true },
+    },
     externalClasses_1657: { field_name: 'externalClasses', id: 1657 },
     hideOnLoadFailed_1683: {
       field_name: 'hideOnLoadFailed',
@@ -47,7 +59,14 @@ export default {
         attribute: [
           {
             value: 'https://tdesign.tencent.com/',
-            expect: [{ dom: 'img', attribute: { src: 'https://tdesign.tencent.com/' } }],
+            expect: [
+              {
+                dom: 'img',
+                attribute: {
+                  src: 'https://tdesign.tencent.com/',
+                },
+              },
+            ],
           },
         ],
       },
@@ -62,7 +81,11 @@ export default {
       field_name: 'size',
       id: 1461,
       PC: {
-        className: { small: 't-size-s', medium: 't-size-m', large: 't-size-l' },
+        className: {
+          small: 't-size-s',
+          medium: 't-size-m',
+          large: 't-size-l',
+        },
         attribute: [
           {
             value: '120px',
@@ -104,7 +127,10 @@ export default {
     cascading_1600: {
       field_name: 'cascading',
       id: 1600,
-      PC: { snapshot: true, className: ['t-avatar--offset-left', 't-avatar--offset-right'] },
+      PC: {
+        snapshot: true,
+        className: ['t-avatar--offset-left', 't-avatar--offset-right'],
+      },
     },
     collapseAvatar_1643: {
       field_name: 'collapseAvatar',
@@ -143,15 +169,27 @@ export default {
           {
             value: 'small',
             expect: [
-              { dom: '.t-avatar', className: { 't-size-s': true } },
-              { dom: '.t-avatar:nth-child(5)', className: { 't-size-l': true } },
+              {
+                dom: '.t-avatar',
+                className: { 't-size-s': true },
+              },
+              {
+                dom: '.t-avatar:nth-child(5)',
+                className: { 't-size-l': true },
+              },
             ],
           },
           {
             value: 'large',
             expect: [
-              { dom: '.t-avatar', className: { 't-size-l': true } },
-              { dom: '.t-avatar:nth-child(4)', className: { 't-size-s': true } },
+              {
+                dom: '.t-avatar',
+                className: { 't-size-l': true },
+              },
+              {
+                dom: '.t-avatar:nth-child(4)',
+                className: { 't-size-s': true },
+              },
             ],
           },
         ],
@@ -173,4 +211,4 @@ export default {
       },
     },
   },
-}
+};

@@ -1,18 +1,23 @@
 /**
  * React 需要单独生成 defaultProps
  */
-import fs from 'fs'
-import path from 'path'
-import chalk from 'chalk'
-import map from '../map.json' with { type: 'json' }
-import prettier from 'prettier'
-import prettierConfig from '../config/prettier.js'
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, MOBILE_FRAMES  } from '../config/index.js'
-import { needPickRequiredType  } from '../config/reac-default-props.js'
-import { FILE_RIGHTS_DESC  } from '../config/const.js'
-import { getFolderName,
-  getCmpTypeCombineMap,  } from '../common.js'
-import { lowerFirst, upperFirst  } from 'lodash-es'
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import map from '../map.json' with { type: 'json' };
+import prettier from 'prettier';
+import prettierConfig from '../config/prettier.js';
+import {
+  FRAMEWORK_MAP,
+  TYPES_COMBINE_MAP,
+  MOBILE_TYPES_COMBINE_MAP,
+  MINIPROGRAM_TYPES_COMBINE_MAP,
+  MOBILE_FRAMES,
+} from '../config/index.js';
+import { needPickRequiredType } from '../config/reac-default-props.js';
+import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { getFolderName, getCmpTypeCombineMap } from '../common.js';
+import { lowerFirst, upperFirst } from 'lodash-es';
 
 const CONFIG = { needPickRequiredType };
 
@@ -29,19 +34,17 @@ function getComponentsMap(components) {
 function getDefaultValue(api) {
   // 是否已废弃
   if (api.deprecated) return;
-  
+
   const defaultValue = api.field_default_value;
   // 如果 API 平台显示设置了默认值为 undefined，则必须立即返回 undefined。这种一般属于优先级之类的 API
   if (defaultValue === 'undefined') return defaultValue;
   if (defaultValue === '') return;
-  if (defaultValue === '\'\'') return defaultValue;
+  if (defaultValue === "''") return defaultValue;
   // 输出 Number 类型的默认值
   if (api.field_type_text.includes('Number')) {
     if (defaultValue) {
       // 支持诸如 210/332 的分数形式默认值配置原样返回
-      const frac = defaultValue.match(
-        /^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/
-      );
+      const frac = defaultValue.match(/^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/);
       if (frac) {
         return defaultValue;
       } else if (!isNaN(defaultValue)) {
@@ -55,7 +58,7 @@ function getDefaultValue(api) {
       JSON.parse(defaultValue);
       return defaultValue;
     } catch (e) {
-      return `'${defaultValue}'`.replace(/''/g, '\'');
+      return `'${defaultValue}'`.replace(/''/g, "'");
     }
   }
   return defaultValue;
@@ -77,7 +80,7 @@ function getOneComponentProps(cmp, tsTypeName, apiList) {
   });
   let finalTsType = tsTypeName;
   if (CONFIG.needPickRequiredType.includes(cmp)) {
-    finalTsType = `Pick<${tsTypeName}, ${properties.map(t => `'${t}'`).join(' | ')}>`;
+    finalTsType = `Pick<${tsTypeName}, ${properties.map((t) => `'${t}'`).join(' | ')}>`;
   }
   defaultProps.unshift(`export const ${lowerFirst(cmp)}DefaultProps: ${finalTsType} = {`);
   defaultProps.push('};');
@@ -94,8 +97,12 @@ function getTsTypeName(cmp) {
 
 async function generateReactDefaultProps(baseData, framework) {
   const relationMap = getCmpTypeCombineMap(
-    framework === 'Miniprogram' ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP) : (MOBILE_FRAMES.includes(framework)? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP): TYPES_COMBINE_MAP),
-    framework
+    framework === 'Miniprogram'
+      ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP)
+      : MOBILE_FRAMES.includes(framework)
+        ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP)
+        : TYPES_COMBINE_MAP,
+    framework,
   );
 
   // checkbox 和 checkboxGroup 等组件，组合输出
@@ -144,6 +151,4 @@ async function generateReactDefaultProps(baseData, framework) {
   }
 }
 
-export {
-  generateReactDefaultProps,
-};
+export { generateReactDefaultProps };

@@ -1,4 +1,5 @@
-import { getItDescription,
+import {
+  getItDescription,
   getWrapper,
   getSnapshotCase,
   getDomExpectTruthy,
@@ -6,13 +7,14 @@ import { getItDescription,
   getEventArguments,
   getDelayCode,
   getItAsync,
-  getVariablesCode,  } from './core.js'
-import { getSkipCode  } from './utils.js'
-import { kebabCaseComponent  } from '../utils.js'
+  getVariablesCode,
+} from './core.js';
+import { getSkipCode } from './utils.js';
+import { kebabCaseComponent } from '../utils.js';
 // import map from '../map.json' with { type: 'json' }
 
 // const componentMap = map.data.components;
-import { kebabCase  } from 'lodash-es'
+import { kebabCase } from 'lodash-es';
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';
@@ -39,7 +41,7 @@ function generateTNodeElement(test, oneApiData, framework, component) {
   } else {
     arr = arr.concat(generateVueAndReactTNode(test, oneApiData, framework, component));
   }
-  return arr.filter(v => v);
+  return arr.filter((v) => v);
 }
 
 function generateVueAndReactTNode(test, oneApiData, framework, component) {
@@ -48,35 +50,67 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   let componentCode = '';
   if (framework.indexOf('Vue') !== -1) {
     const h = framework === 'Vue(PC)' ? 'h' : '';
-    componentCode = getMountComponent(framework, component, {
-      [oneApiData.field_name]: `(${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span>`,
-      ...props,
-    }, extraCode);
+    componentCode = getMountComponent(
+      framework,
+      component,
+      {
+        [oneApiData.field_name]: `(${h}) => <span class='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+        ...props,
+      },
+      extraCode,
+    );
   } else if (framework.indexOf('React') !== -1) {
     if (oneApiData.field_name === 'children' && component === oneApiData.component) {
-      componentCode = getMountComponent(framework, component, {...props}, {
-        ...extraCode,
-        content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
-      });
+      componentCode = getMountComponent(
+        framework,
+        component,
+        { ...props },
+        {
+          ...extraCode,
+          content: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+        },
+      );
     } else {
-      componentCode = getMountComponent(framework, component, {
-        [oneApiData.field_name]: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
-        ...props,
-      }, extraCode);
+      componentCode = getMountComponent(
+        framework,
+        component,
+        {
+          [oneApiData.field_name]: `<span className='${CUSTOM_NODE_CLASS}'>TNode</span>`,
+          ...props,
+        },
+        extraCode,
+      );
     }
   }
-  const itDesc = oneApiData.component === component
-    ? getItDescription(oneApiData)
-    : `'${oneApiData.component}.${oneApiData.field_name} works fine'`;
+  const itDesc =
+    oneApiData.component === component
+      ? getItDescription(oneApiData)
+      : `'${oneApiData.component}.${oneApiData.field_name} works fine'`;
   let arr = getTestCaseByComponentCode({
     itDesc,
     componentCode,
     // 开始单测的前置条件：trigger
     trigger: tnode.trigger || trigger,
-    framework, component, snapshot, tnode, skip, variables,
+    framework,
+    component,
+    snapshot,
+    tnode,
+    skip,
+    variables,
   });
 
-  const vueSlotsArr = getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger, variables);
+  const vueSlotsArr = getVueSlotsCode(
+    extraCode,
+    oneApiData,
+    framework,
+    component,
+    snapshot,
+    tnode,
+    skip,
+    props,
+    trigger,
+    variables,
+  );
   if (vueSlotsArr.length) {
     arr = arr.concat(vueSlotsArr);
   }
@@ -84,7 +118,11 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   // 如果 TNode 存在参数，则一定是函数。进行函数参数测试
   if (typeof tnode === 'object' && tnode.params) {
     const list = getTNodeFnTest(tnode, oneApiData, framework, component, {
-      extraCode, skip, props, trigger, variables,
+      extraCode,
+      skip,
+      props,
+      trigger,
+      variables,
       description: tnode.description,
     });
     arr.push(list);
@@ -92,7 +130,18 @@ function generateVueAndReactTNode(test, oneApiData, framework, component) {
   return arr;
 }
 
-function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, tnode, skip, props, trigger, variables) {
+function getVueSlotsCode(
+  extraCode,
+  oneApiData,
+  framework,
+  component,
+  snapshot,
+  tnode,
+  skip,
+  props,
+  trigger,
+  variables,
+) {
   let arr = [];
   // Only Vue need this code block
   let secondArr = [];
@@ -115,7 +164,12 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
       itDesc: slotTtDesc,
       componentCode: slotCode,
       trigger: tnode.trigger || trigger,
-      framework, component, snapshot, tnode, skip, variables,
+      framework,
+      component,
+      snapshot,
+      tnode,
+      skip,
+      variables,
     });
 
     if (kebabCaseComponent(oneApiData.field_name) !== oneApiData.field_name) {
@@ -133,7 +187,12 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
         itDesc: slotTtDesc2,
         componentCode: slotCode2,
         trigger: tnode.trigger || trigger,
-        framework, component, snapshot, tnode, skip, variables,
+        framework,
+        component,
+        snapshot,
+        tnode,
+        skip,
+        variables,
       });
     }
   }
@@ -149,30 +208,34 @@ function getVueSlotsCode(extraCode, oneApiData, framework, component, snapshot, 
 }
 
 function getTestCaseByComponentCode(params) {
-  const {
-    itDesc, componentCode,
-    trigger,
-    framework, component, snapshot, tnode, skip, variables
-  } = params;
+  const { itDesc, componentCode, trigger, framework, component, snapshot, tnode, skip, variables } = params;
   const needAsync = getItAsync(trigger, framework);
   const isDocumentNode = Boolean(tnode.dom && tnode.dom.includes(DOCUMENT_CUSTOM_NODE_CLASS));
-  const triggerIsInDocument = Boolean(!trigger || trigger.indexOf('delay') !== -1 || trigger && trigger.indexOf('document') !== -1);
+  const triggerIsInDocument = Boolean(
+    !trigger || trigger.indexOf('delay') !== -1 || (trigger && trigger.indexOf('document') !== -1),
+  );
   const hasDom = Boolean(tnode.dom && tnode.dom.length);
-  let onlyDocumentDom = Boolean(triggerIsInDocument && (hasDom && tnode?.dom?.every(item => item.includes('document'))));
+  let onlyDocumentDom = Boolean(
+    triggerIsInDocument && hasDom && tnode?.dom?.every((item) => item.includes('document')),
+  );
   const arr = [
-    `it${getSkipCode(skip)}(${ tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
+    `it${getSkipCode(skip)}(${tnode.description ? `'${tnode.description}'` : itDesc}, ${needAsync} () => {`,
     getVariablesCode(variables),
     // 只有 document 元素的场景下，不需要 container 变量
-    getWrapper(framework, componentCode, '', '', { onlyDocumentDom, trigger, component }),
+    getWrapper(framework, componentCode, '', '', {
+      onlyDocumentDom,
+      trigger,
+      component,
+    }),
     // trigger && getPresetsExpect(trigger, framework, component),
     // 校验自定义元素是否存在
     !isDocumentNode && getDomExpectTruthy(framework, `'.${CUSTOM_NODE_CLASS}'`),
     // 校验额外的元素是否存在
     tnode.dom && getDomExpect(framework, tnode.dom),
     getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
-    `});`
+    `});`,
   ];
-  return arr.filter(v => v);
+  return arr.filter((v) => v);
 }
 
 function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
@@ -180,51 +243,64 @@ function getTNodeFnTest(tnode, oneApiData, framework, component, params) {
   const finalTrigger = tnode.trigger || trigger;
   const skipText = skip ? '.skip' : '';
   const async = getItAsync(finalTrigger, framework);
-  const category = oneApiData.component === component ? 'props': oneApiData.component;
+  const category = oneApiData.component === component ? 'props' : oneApiData.component;
   const defaultDescription = description
     ? `'${category}.${oneApiData.field_name}: a function with params${description ? `, ${description}` : ''}'`
     : `'${category}.${oneApiData.field_name} is a function with params'`;
   // props params test
   const arr = [
     `\nit${skipText}(${defaultDescription}, ${async} () => {`,
-      getVariablesCode(variables),
-      `const fn = vi.fn();`,
-      getMountComponent(framework, component, {
+    getVariablesCode(variables),
+    `const fn = vi.fn();`,
+    getMountComponent(
+      framework,
+      component,
+      {
         [oneApiData.field_name]: '/-fn-/',
         ...props,
-      }, extraCode),
-      finalTrigger && getDelayCode(finalTrigger, framework),
-      getEventArguments(framework, tnode.params, { tnodeProps: true }).join('\n'),
+      },
+      extraCode,
+    ),
+    finalTrigger && getDelayCode(finalTrigger, framework),
+    getEventArguments(framework, tnode.params, { tnodeProps: true }).join('\n'),
     `})`,
-  ].filter(v => v);
+  ].filter((v) => v);
   // slot params test
   if (framework.indexOf('Vue') !== -1) {
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
-    const defaultDescription = `slots.${oneApiData.field_name}: a function with params${description ? `, ${description}` : ''}`
-      || `slots.${oneApiData.field_name} is a function with params`;
-    arr.push(...[
-      `it${skipText}('${defaultDescription}', ${async}() => {`,
+    const defaultDescription =
+      `slots.${oneApiData.field_name}: a function with params${description ? `, ${description}` : ''}` ||
+      `slots.${oneApiData.field_name} is a function with params`;
+    arr.push(
+      ...[
+        `it${skipText}('${defaultDescription}', ${async}() => {`,
         getVariablesCode(variables),
         `const fn = vi.fn();`,
-        getMountComponent(framework, component, {
-          [slotsText]: `{ '${oneApiData.field_name}': fn }`,
-          ...props,
-        }, extraCode),
+        getMountComponent(
+          framework,
+          component,
+          {
+            [slotsText]: `{ '${oneApiData.field_name}': fn }`,
+            ...props,
+          },
+          extraCode,
+        ),
         getDelayCode(finalTrigger, framework),
         getEventArguments(framework, tnode.params).join('\n'),
-      `})`,
-    ]);
+        `})`,
+      ],
+    );
   }
   return arr.join('\n');
 }
 
 function getDomExpect(framework, tnodeDom) {
   const doms = Array.isArray(tnodeDom) ? tnodeDom : [tnodeDom];
-  return doms.map((dom) => {
-    return getDomExpectTruthy(framework, `'${dom}'`);
-  }).join('\n');
+  return doms
+    .map((dom) => {
+      return getDomExpectTruthy(framework, `'${dom}'`);
+    })
+    .join('\n');
 }
 
-export {
-  generateTNodeElement,
-};
+export { generateTNodeElement };

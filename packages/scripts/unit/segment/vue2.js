@@ -4,9 +4,7 @@
 
 import { kebabCaseComponent } from '../../utils.js';
 
-import {
-  getUnitTestDescription,
-} from '../utils.js';
+import { getUnitTestDescription } from '../utils.js';
 
 /**
  * Test 文件头部与依赖引入部分
@@ -20,18 +18,13 @@ function getTestImportSegment(componentName) {
 import { mount } from '@vue/test-utils';
 import ${componentName} from '../../../src/${kebabCaseComponent(componentName)}.js';
  `;
-};
+}
 
 /**
  * TNode类型单测
  */
-function getTNodeSegment(
-  componentName,
-  componentInfo = {},
-) {
-  const {
-    field_name: fieldName,
-  } = componentInfo;
+function getTNodeSegment(componentName, componentInfo = {}) {
+  const { field_name: fieldName } = componentInfo;
   return `
     it('${getUnitTestDescription(componentInfo, 'TNodeSegment', 'function')}', () => {
       const fn = jest.fn();
@@ -56,10 +49,7 @@ function getTNodeSegment(
 /**
  * 禁用单测
  */
-function getDisabledSegment(
-  componentName,
-  componentInfo = {},
-) {
+function getDisabledSegment(componentName, componentInfo = {}) {
   return `
     it('${getUnitTestDescription(componentInfo, 'disabledSegment', 'onClick')}', () => {
       const fn = jest.fn();
@@ -78,14 +68,8 @@ function getDisabledSegment(
 /**
  * 其余单测
  */
-function getDefaultSegment(
-  componentName,
-  componentInfo = {},
-  propsObj,
-) {
-  const {
-    field_name: fieldName,
-  } = componentInfo;
+function getDefaultSegment(componentName, componentInfo = {}, propsObj) {
+  const { field_name: fieldName } = componentInfo;
 
   return `
     it('${getUnitTestDescription(componentInfo, 'defaultSegment', propsObj[fieldName])}', () => {
@@ -96,9 +80,4 @@ function getDefaultSegment(
     });`;
 }
 
-export {
-  getTestImportSegment,
-  getTNodeSegment,
-  getDisabledSegment,
-  getDefaultSegment,
-};
+export { getTestImportSegment, getTNodeSegment, getDisabledSegment, getDefaultSegment };

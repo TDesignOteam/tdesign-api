@@ -1,6 +1,9 @@
 export default {
   Guide: {
-    backButtonProps_1708481239: { field_name: 'backButtonProps', id: 1708481239 },
+    backButtonProps_1708481239: {
+      field_name: 'backButtonProps',
+      id: 1708481239,
+    },
     counter_2970: {
       field_name: 'counter',
       id: 2970,
@@ -72,7 +75,10 @@ export default {
               },
             ],
           },
-          { props: { current: -1 }, dom: [{ 'document.t-guide__counter': false }] },
+          {
+            props: { current: -1 },
+            dom: [{ 'document.t-guide__counter': false }],
+          },
         ],
       },
     },
@@ -87,7 +93,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__finish', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__finish',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -157,7 +166,10 @@ export default {
         ],
       },
     },
-    highlightPadding_1721620852: { field_name: 'highlightPadding', id: 1721620852 },
+    highlightPadding_1721620852: {
+      field_name: 'highlightPadding',
+      id: 1721620852,
+    },
     mode_2968: { field_name: 'mode', id: 2968 },
     mode_1709177566: { field_name: 'mode', id: 1709177566 },
     nextButtonProps_2969: {
@@ -171,7 +183,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__next', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__next',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -188,7 +203,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__prev', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__prev',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -201,8 +219,14 @@ export default {
         wrapper: 'getGuideDefaultMount',
         trigger: 'delay(200)',
         dom: [
-          { props: { showOverlay: true }, dom: [{ 'document.t-guide__highlight--mask': 1 }] },
-          { props: { showOverlay: false }, dom: [{ 'document.t-guide__highlight--mask': false }] },
+          {
+            props: { showOverlay: true },
+            dom: [{ 'document.t-guide__highlight--mask': 1 }],
+          },
+          {
+            props: { showOverlay: false },
+            dom: [{ 'document.t-guide__highlight--mask': false }],
+          },
         ],
       },
     },
@@ -217,7 +241,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__skip', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__skip',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -242,7 +269,10 @@ export default {
         ],
       },
     },
-    usingCustomNavbar_1721621026: { field_name: 'usingCustomNavbar', id: 1721621026 },
+    usingCustomNavbar_1721621026: {
+      field_name: 'usingCustomNavbar',
+      id: 1721621026,
+    },
     zIndex_2980: {
       field_name: 'zIndex',
       id: 2980,
@@ -253,8 +283,14 @@ export default {
           {
             value: 5000,
             expect: [
-              { dom: 'document.t-guide__overlay', attribute: { 'style.zIndex': 4998 } },
-              { dom: 'document.t-guide__highlight--mask', attribute: { 'style.zIndex': 4999 } },
+              {
+                dom: 'document.t-guide__overlay',
+                attribute: { 'style.zIndex': 4998 },
+              },
+              {
+                dom: 'document.t-guide__highlight--mask',
+                attribute: { 'style.zIndex': 4999 },
+              },
             ],
           },
         ],
@@ -273,7 +309,9 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__next)',
-                event: { change: [1, { 'e.type': 'click', total: 3 }] },
+                event: {
+                  change: [1, { 'e.type': 'click', total: 3 }],
+                },
               },
             ],
           },
@@ -282,7 +320,9 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__prev)',
-                event: { change: [0, { 'e.type': 'click', total: 3 }] },
+                event: {
+                  change: [0, { 'e.type': 'click', total: 3 }],
+                },
               },
             ],
           },
@@ -301,7 +341,15 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__finish)',
-                event: { finish: [{ current: 2, 'e.type': 'click', total: 3 }] },
+                event: {
+                  finish: [
+                    {
+                      current: 2,
+                      'e.type': 'click',
+                      total: 3,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -320,7 +368,16 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__next)',
-                event: { nextStepClick: [{ current: 1, next: 2, 'e.type': 'click', total: 3 }] },
+                event: {
+                  nextStepClick: [
+                    {
+                      current: 1,
+                      next: 2,
+                      'e.type': 'click',
+                      total: 3,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -339,7 +396,16 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__prev)',
-                event: { prevStepClick: [{ current: 1, prev: 0, 'e.type': 'click', total: 3 }] },
+                event: {
+                  prevStepClick: [
+                    {
+                      current: 1,
+                      prev: 0,
+                      'e.type': 'click',
+                      total: 3,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -358,7 +424,15 @@ export default {
             expect: [
               {
                 trigger: 'click(document.t-guide__skip)',
-                event: { skip: [{ current: 0, 'e.type': 'click', total: 3 }] },
+                event: {
+                  skip: [
+                    {
+                      current: 0,
+                      'e.type': 'click',
+                      total: 3,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -366,19 +440,52 @@ export default {
       },
     },
     't-class_1721621122': { field_name: 't-class', id: 1721621122 },
-    't-class-back_1721621135': { field_name: 't-class-back', id: 1721621135 },
-    't-class-body_1721621146': { field_name: 't-class-body', id: 1721621146 },
-    't-class-finish_1721621157': { field_name: 't-class-finish', id: 1721621157 },
-    't-class-footer_1721621166': { field_name: 't-class-footer', id: 1721621166 },
-    't-class-next_1721621177': { field_name: 't-class-next', id: 1721621177 },
-    't-class-popover_1721621188': { field_name: 't-class-popover', id: 1721621188 },
-    't-class-reference_1721621198': { field_name: 't-class-reference', id: 1721621198 },
-    't-class-skip_1721621210': { field_name: 't-class-skip', id: 1721621210 },
-    't-class-title_1721621223': { field_name: 't-class-title', id: 1721621223 },
-    't-class-tooltip_1721621241': { field_name: 't-class-tooltip', id: 1721621241 },
+    't-class-back_1721621135': {
+      field_name: 't-class-back',
+      id: 1721621135,
+    },
+    't-class-body_1721621146': {
+      field_name: 't-class-body',
+      id: 1721621146,
+    },
+    't-class-finish_1721621157': {
+      field_name: 't-class-finish',
+      id: 1721621157,
+    },
+    't-class-footer_1721621166': {
+      field_name: 't-class-footer',
+      id: 1721621166,
+    },
+    't-class-next_1721621177': {
+      field_name: 't-class-next',
+      id: 1721621177,
+    },
+    't-class-popover_1721621188': {
+      field_name: 't-class-popover',
+      id: 1721621188,
+    },
+    't-class-reference_1721621198': {
+      field_name: 't-class-reference',
+      id: 1721621198,
+    },
+    't-class-skip_1721621210': {
+      field_name: 't-class-skip',
+      id: 1721621210,
+    },
+    't-class-title_1721621223': {
+      field_name: 't-class-title',
+      id: 1721621223,
+    },
+    't-class-tooltip_1721621241': {
+      field_name: 't-class-tooltip',
+      id: 1721621241,
+    },
   },
   GuideStep: {
-    backButtonProps_1708481323: { field_name: 'backButtonProps', id: 1708481323 },
+    backButtonProps_1708481323: {
+      field_name: 'backButtonProps',
+      id: 1708481323,
+    },
     body_2955: {
       field_name: 'body',
       id: 2955,
@@ -421,7 +528,10 @@ export default {
     },
     element_2956: { field_name: 'element', id: 2956, PC: {} },
     element_1721621525: { field_name: 'element', id: 1721621525 },
-    finishButtonProps_1721621588: { field_name: 'finishButtonProps', id: 1721621588 },
+    finishButtonProps_1721621588: {
+      field_name: 'finishButtonProps',
+      id: 1721621588,
+    },
     highlightContent_2966: {
       field_name: 'highlightContent',
       id: 2966,
@@ -432,7 +542,10 @@ export default {
         snapshot: true,
       },
     },
-    highlightContent_1709178118: { field_name: 'highlightContent', id: 1709178118 },
+    highlightContent_1709178118: {
+      field_name: 'highlightContent',
+      id: 1709178118,
+    },
     highlightPadding_2965: {
       field_name: 'highlightPadding',
       id: 2965,
@@ -466,7 +579,10 @@ export default {
         ],
       },
     },
-    highlightPadding_1721621705: { field_name: 'highlightPadding', id: 1721621705 },
+    highlightPadding_1721621705: {
+      field_name: 'highlightPadding',
+      id: 1721621705,
+    },
     mode_2967: {
       field_name: 'mode',
       id: 2967,
@@ -489,7 +605,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__next', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__next',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -507,7 +626,12 @@ export default {
           {
             value: 'bottom-left',
             expect: [
-              { dom: 'document.t-popup', attribute: { 'data-popper-placement': 'bottom-start' } },
+              {
+                dom: 'document.t-popup',
+                attribute: {
+                  'data-popper-placement': 'bottom-start',
+                },
+              },
             ],
           },
         ],
@@ -526,7 +650,12 @@ export default {
           {
             value: "{placement: 'top-left'}",
             expect: [
-              { dom: 'document.t-popup', attribute: { 'data-popper-placement': 'top-start' } },
+              {
+                dom: 'document.t-popup',
+                attribute: {
+                  'data-popper-placement': 'top-start',
+                },
+              },
             ],
           },
         ],
@@ -543,7 +672,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__prev', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__prev',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -580,7 +712,10 @@ export default {
           {
             value: "{theme: 'warning'}",
             expect: [
-              { dom: 'document.t-guide__skip', className: { 't-button--theme-warning': true } },
+              {
+                dom: 'document.t-guide__skip',
+                className: { 't-button--theme-warning': true },
+              },
             ],
           },
         ],
@@ -595,7 +730,14 @@ export default {
         className: [
           {
             value: 't-test-guide-step-overlay',
-            expect: [{ dom: 'document.t-popup', className: { 't-test-guide-step-overlay': true } }],
+            expect: [
+              {
+                dom: 'document.t-popup',
+                className: {
+                  't-test-guide-step-overlay': true,
+                },
+              },
+            ],
           },
         ],
         snapshot: true,
@@ -613,4 +755,4 @@ export default {
     },
     title_1721621896: { field_name: 'title', id: 1721621896 },
   },
-}
+};

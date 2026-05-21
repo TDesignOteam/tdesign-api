@@ -1,10 +1,10 @@
-import fs from 'fs'
-import os from 'os'
-import path from 'path'
-import chalk from 'chalk'
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js'
-import { getApiComponentMapByFrameWork } from '../common.js'
-import { kebabCaseComponent, getComponentBasePath } from '../utils.js'
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+import chalk from 'chalk';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
+import { getApiComponentMapByFrameWork } from '../common.js';
+import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
 
@@ -15,10 +15,10 @@ function combineApi(allApi, component) {
   Object.keys(map).forEach((cmp) => {
     if (!map[cmp]) return;
     const cmpApi = map[cmp]
-      .map(item => r[item])
-      .filter(v => !!v)
+      .map((item) => r[item])
+      .filter((v) => !!v)
       .join('\n\n');
-    if (cmpApi && (!component || component && cmp === component)) {
+    if (cmpApi && (!component || (component && cmp === component))) {
       map[cmp].forEach((item) => {
         delete r[item];
       });
@@ -59,9 +59,7 @@ function outputComponentMD(file, apiData, isVscode) {
       cssVariables = data.split('### CSS Variables')[1];
     }
     const APIIndex = data.lastIndexOf(SIGNATURE);
-    let result = APIIndex !== -1
-      ? `${data.slice(0, APIIndex + 7)}${apiData}`
-      : `${data}\n${SIGNATURE}${apiData}`;
+    let result = APIIndex !== -1 ? `${data.slice(0, APIIndex + 7)}${apiData}` : `${data}\n${SIGNATURE}${apiData}`;
     result = result.replace('\n:: BASE_PROPS ::\n', '');
     if (cssVariables) {
       result += `\n### CSS Variables\n\n${cssVariables.trim()}\n`;
@@ -116,9 +114,7 @@ function generateDocs(baseData, framework, extra) {
       const language = extra && extra.language && langMap[extra.language];
       // const basePath = `${folder}/${getDocFileName(cmp, framework)}`;
       const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
-      const mdfile = isVscode
-        ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`)
-        : apiDocsFilePath;
+      const mdfile = isVscode ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`) : apiDocsFilePath;
 
       if (isVscode) {
         fs.writeFile(mdfile, apiData, 'utf8', (err) => {
@@ -152,7 +148,4 @@ function generateDocs(baseData, framework, extra) {
   });
 }
 
-export {
-  generateDocs,
-  getDocsByComponent,
-};
+export { generateDocs, getDocsByComponent };

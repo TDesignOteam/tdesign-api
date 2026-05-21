@@ -3,8 +3,16 @@ export default {
     align_234: {
       field_name: 'align',
       id: 234,
-      PC: { className: 't-divider--with-text-${item}', content: 'Text', snapshot: true },
-      Mobile: { className: 't-divider--${item}', content: 'Text', snapshot: true },
+      PC: {
+        className: 't-divider--with-text-${item}',
+        content: 'Text',
+        snapshot: true,
+      },
+      Mobile: {
+        className: 't-divider--${item}',
+        content: 'Text',
+        snapshot: true,
+      },
     },
     children_1383: { field_name: 'children', id: 1383 },
     content_1381: {
@@ -33,6 +41,9 @@ export default {
     },
     theme_1974: { field_name: 'theme', id: 1974 },
     't-class_1711969012': { field_name: 't-class', id: 1711969012 },
-    't-class-content_1711969030': { field_name: 't-class-content', id: 1711969030 },
+    't-class-content_1711969030': {
+      field_name: 't-class-content',
+      id: 1711969030,
+    },
   },
-}
+};

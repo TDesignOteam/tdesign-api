@@ -17,4 +17,4 @@ export default {
     value_3451: { field_name: 'value', id: 3451 },
     start_1700880500: { field_name: 'start', id: 1700880500 },
   },
-}
+};

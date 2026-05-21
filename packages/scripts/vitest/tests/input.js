@@ -21,7 +21,13 @@ export default {
             expect: [
               {
                 trigger: 'simulateInputChange(\'input\', "Hello TDesign")',
-                exist: [{ input: { attribute: { value: 'Hello' } } }],
+                exist: [
+                  {
+                    input: {
+                      attribute: { value: 'Hello' },
+                    },
+                  },
+                ],
               },
             ],
           },
@@ -32,15 +38,29 @@ export default {
     autocomplete_2365: {
       field_name: 'autocomplete',
       id: 2365,
-      PC: { attribute: { autocomplete: 'https://tdesign.tencent.com/' }, attributeDom: 'input' },
+      PC: {
+        attribute: { autocomplete: 'https://tdesign.tencent.com/' },
+        attributeDom: 'input',
+      },
     },
     autofocus_1059: {
       field_name: 'autofocus',
       id: 1059,
       PC: {
         attribute: [
-          { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
-          { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
+          {
+            value: false,
+            expect: [{ dom: 'input', attribute: { autofocus: false } }],
+          },
+          {
+            value: true,
+            expect: [
+              {
+                dom: 'input',
+                attribute: { autofocus: 'toBeDefined' },
+              },
+            ],
+          },
         ],
       },
     },
@@ -54,28 +74,55 @@ export default {
           {
             props: { value: "'Default Keyword'" },
             description: 'clear icon should exist on input mouseenter',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'] }],
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+              },
+            ],
           },
           {
             props: { value: "'Default Keyword'" },
             description: 'click clear icon could clear input value to be empty',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'], delay: 300 },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+                delay: 300,
+              },
               {
                 trigger: 'click(.t-input__suffix-clear)',
                 event: {
-                  clear: [{ 'e.stopPropagation': true, 'e.type': 'click' }],
-                  change: ['', { 'e.stopPropagation': true, 'e.type': 'click' }],
+                  clear: [
+                    {
+                      'e.stopPropagation': true,
+                      'e.type': 'click',
+                    },
+                  ],
+                  change: [
+                    '',
+                    {
+                      'e.stopPropagation': true,
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
           },
           {
-            props: { type: 'password', value: "'this is my password'" },
+            props: {
+              type: 'password',
+              value: "'this is my password'",
+            },
             description: 'type=password, browseIcon and clearableIcon works fine',
             expect: [
               { trigger: '', exist: ['.t-icon-browse-off'] },
-              { trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'], delay: 300 },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+                delay: 300,
+              },
             ],
           },
         ],
@@ -94,11 +141,26 @@ export default {
       PC: {
         event: [
           {
-            props: { format: '(val) => `${val} 元`', value: "'100'" },
+            props: {
+              format: '(val) => `${val} 元`',
+              value: "'100'",
+            },
             description: 'focus and blur states have different value',
             expect: [
-              { trigger: 'focus(input)', exist: [{ input: { attribute: { value: '100' } } }] },
-              { trigger: 'blur(input)', exist: [{ input: { attribute: { value: '100 元' } } }] },
+              {
+                trigger: 'focus(input)',
+                exist: [{ input: { attribute: { value: '100' } } }],
+              },
+              {
+                trigger: 'blur(input)',
+                exist: [
+                  {
+                    input: {
+                      attribute: { value: '100 元' },
+                    },
+                  },
+                ],
+              },
             ],
           },
         ],
@@ -111,15 +173,30 @@ export default {
         className: [
           {
             value: 'name1 name2',
-            expect: [{ dom: '.t-input', className: { name1: true, name2: true } }],
+            expect: [
+              {
+                dom: '.t-input',
+                className: { name1: true, name2: true },
+              },
+            ],
           },
           {
             value: "['name1', 'name2']",
-            expect: [{ dom: '.t-input', className: { name1: true, name2: true } }],
+            expect: [
+              {
+                dom: '.t-input',
+                className: { name1: true, name2: true },
+              },
+            ],
           },
           {
             value: '{ name1: true, name2: false }',
-            expect: [{ dom: '.t-input', className: { name1: true, name2: false } }],
+            expect: [
+              {
+                dom: '.t-input',
+                className: { name1: true, name2: false },
+              },
+            ],
           },
         ],
       },
@@ -127,7 +204,10 @@ export default {
     label_2070: {
       field_name: 'label',
       id: 2070,
-      PC: { snapshot: true, tnode: { trigger: '', dom: ['.t-input__prefix'] } },
+      PC: {
+        snapshot: true,
+        tnode: { trigger: '', dom: ['.t-input__prefix'] },
+      },
     },
     layout_3382: { field_name: 'layout', id: 3382 },
     maxcharacter_1402: {
@@ -138,7 +218,14 @@ export default {
           {
             props: { value: '你好 TDesign', maxcharacter: 4 },
             description: 'length of value is over than maxcharacter',
-            expect: [{ trigger: '', event: { change: ['你好', { trigger: 'initial' }] } }],
+            expect: [
+              {
+                trigger: '',
+                event: {
+                  change: ['你好', { trigger: 'initial' }],
+                },
+              },
+            ],
           },
         ],
       },
@@ -151,7 +238,14 @@ export default {
           {
             props: { value: 'Hello TDesign', maxlength: 5 },
             description: 'length of value is over than maxlength',
-            expect: [{ trigger: '', event: { change: ['Hello', { trigger: 'initial' }] } }],
+            expect: [
+              {
+                trigger: '',
+                event: {
+                  change: ['Hello', { trigger: 'initial' }],
+                },
+              },
+            ],
           },
         ],
       },
@@ -164,7 +258,10 @@ export default {
     placeholder_748: {
       field_name: 'placeholder',
       id: 748,
-      PC: { attribute: { placeholder: 'this is input placeholder' }, attributeDom: 'input' },
+      PC: {
+        attribute: { placeholder: 'this is input placeholder' },
+        attributeDom: 'input',
+      },
     },
     prefixIcon_743: {
       field_name: 'prefixIcon',
@@ -182,7 +279,14 @@ export default {
       id: 2358,
       PC: {
         event: [
-          { expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'] }] },
+          {
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+              },
+            ],
+          },
         ],
       },
     },
@@ -197,7 +301,10 @@ export default {
     size_741: {
       field_name: 'size',
       id: 741,
-      PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'], classNameDom: '.t-input' },
+      PC: {
+        className: ['t-size-s', { 't-size-m': false }, 't-size-l'],
+        classNameDom: '.t-input',
+      },
     },
     size_1713: { field_name: 'size', id: 1713 },
     status_822: {
@@ -213,12 +320,18 @@ export default {
     suffix_2073: {
       field_name: 'suffix',
       id: 2073,
-      PC: { snapshot: true, tnode: { dom: ['.t-input__suffix'], trigger: '' } },
+      PC: {
+        snapshot: true,
+        tnode: { dom: ['.t-input__suffix'], trigger: '' },
+      },
     },
     suffixIcon_744: {
       field_name: 'suffixIcon',
       id: 744,
-      PC: { snapshot: true, tnode: { dom: ['.t-input__suffix-icon'], trigger: '' } },
+      PC: {
+        snapshot: true,
+        tnode: { dom: ['.t-input__suffix-icon'], trigger: '' },
+      },
     },
     suffixIcon_1711: { field_name: 'suffixIcon', id: 1711 },
     tips_2103: {
@@ -246,7 +359,14 @@ export default {
               },
               {
                 trigger: 'click(.t-icon-browse)',
-                exist: ['.t-icon-browse-off', { input: { attribute: { type: 'password' } } }],
+                exist: [
+                  '.t-icon-browse-off',
+                  {
+                    input: {
+                      attribute: { type: 'password' },
+                    },
+                  },
+                ],
               },
             ],
           },
@@ -264,11 +384,15 @@ export default {
             expect: [
               {
                 trigger: 'focus(input)',
-                event: { focus: ['initial-input-value', { 'e.type': 'focus' }] },
+                event: {
+                  focus: ['initial-input-value', { 'e.type': 'focus' }],
+                },
               },
               {
                 trigger: 'blur(input)',
-                event: { blur: ['initial-input-value', { 'e.type': 'blur' }] },
+                event: {
+                  blur: ['initial-input-value', { 'e.type': 'blur' }],
+                },
                 delay: 300,
               },
             ],
@@ -287,7 +411,9 @@ export default {
             expect: [
               {
                 trigger: "simulateInputChange('input', 'initial value')",
-                event: { change: ['initial value', { 'e.type': 'input' }] },
+                event: {
+                  change: ['initial value', { 'e.type': 'input' }],
+                },
               },
             ],
           },
@@ -297,8 +423,16 @@ export default {
             expect: [
               {
                 trigger: " simulateInputChange('input', 'Hello TDesign')",
-                event: { change: ['Hello TDesign', { 'e.type': 'input' }] },
-                exist: [{ input: { attribute: { value: 'TDesign' } } }],
+                event: {
+                  change: ['Hello TDesign', { 'e.type': 'input' }],
+                },
+                exist: [
+                  {
+                    input: {
+                      attribute: { value: 'TDesign' },
+                    },
+                  },
+                ],
               },
             ],
           },
@@ -308,8 +442,18 @@ export default {
             expect: [
               {
                 trigger: " simulateInputChange('input', 'Hello TDesign')",
-                event: { change: ['Hello TDesign', { 'e.type': 'input' }] },
-                exist: [{ input: { attribute: { value: 'Hello TDesign' } } }],
+                event: {
+                  change: ['Hello TDesign', { 'e.type': 'input' }],
+                },
+                exist: [
+                  {
+                    input: {
+                      attribute: {
+                        value: 'Hello TDesign',
+                      },
+                    },
+                  },
+                ],
               },
             ],
           },
@@ -322,7 +466,11 @@ export default {
     click_2322: {
       field_name: 'click',
       id: 2322,
-      PC: { event: { 'click(.t-input)': { arguments: [{ 'e.type': 'click' }] } } },
+      PC: {
+        event: {
+          'click(.t-input)': { arguments: [{ 'e.type': 'click' }] },
+        },
+      },
     },
     compositionend_2281: {
       field_name: 'compositionend',
@@ -334,7 +482,9 @@ export default {
             expect: [
               {
                 trigger: 'compositionend(input)',
-                event: { compositionend: ['输入结束', { 'e.type': 'compositionend' }] },
+                event: {
+                  compositionend: ['输入结束', { 'e.type': 'compositionend' }],
+                },
               },
             ],
           },
@@ -351,7 +501,9 @@ export default {
             expect: [
               {
                 trigger: 'compositionstart(input)',
-                event: { compositionstart: ['输入开始', { 'e.type': 'compositionstart' }] },
+                event: {
+                  compositionstart: ['输入开始', { 'e.type': 'compositionstart' }],
+                },
               },
             ],
           },
@@ -369,7 +521,9 @@ export default {
               { trigger: 'focus(input)' },
               {
                 trigger: 'keydown.enter(input)',
-                event: { enter: ['text', { 'e.type': 'keydown' }] },
+                event: {
+                  enter: ['text', { 'e.type': 'keydown' }],
+                },
               },
             ],
           },
@@ -384,14 +538,22 @@ export default {
         event: [
           {
             expect: [
-              { trigger: 'focus(input)', event: { focus: ['undefined', { 'e.type': 'focus' }] } },
+              {
+                trigger: 'focus(input)',
+                event: {
+                  focus: ['undefined', { 'e.type': 'focus' }],
+                },
+              },
             ],
           },
         ],
       },
     },
     focus_2543: { field_name: 'focus', id: 2543 },
-    keyboardheightchange_3383: { field_name: 'keyboardheightchange', id: 3383 },
+    keyboardheightchange_3383: {
+      field_name: 'keyboardheightchange',
+      id: 3383,
+    },
     keydown_818: {
       field_name: 'keydown',
       id: 818,
@@ -400,7 +562,12 @@ export default {
           {
             props: { value: 'text' },
             expect: [
-              { trigger: 'keydown(input)', event: { keydown: ['text', { 'e.type': 'keydown' }] } },
+              {
+                trigger: 'keydown(input)',
+                event: {
+                  keydown: ['text', { 'e.type': 'keydown' }],
+                },
+              },
             ],
           },
         ],
@@ -414,7 +581,12 @@ export default {
           {
             props: { value: 'text' },
             expect: [
-              { trigger: 'keydown(input)', event: { keydown: ['text', { 'e.type': 'keydown' }] } },
+              {
+                trigger: 'keydown(input)',
+                event: {
+                  keydown: ['text', { 'e.type': 'keydown' }],
+                },
+              },
             ],
           },
         ],
@@ -428,7 +600,12 @@ export default {
           {
             props: { value: 'text' },
             expect: [
-              { trigger: 'keyup(input)', event: { keyup: ['text', { 'e.type': 'keyup' }] } },
+              {
+                trigger: 'keyup(input)',
+                event: {
+                  keyup: ['text', { 'e.type': 'keyup' }],
+                },
+              },
             ],
           },
         ],
@@ -443,7 +620,9 @@ export default {
             expect: [
               {
                 trigger: 'mouseenter(.t-input)',
-                event: { mouseenter: [{ 'e.type': 'mouseenter' }] },
+                event: {
+                  mouseenter: [{ 'e.type': 'mouseenter' }],
+                },
               },
             ],
           },
@@ -459,7 +638,9 @@ export default {
             expect: [
               {
                 trigger: 'mouseleave(.t-input)',
-                event: { mouseleave: [{ 'e.type': 'mouseleave' }] },
+                event: {
+                  mouseleave: [{ 'e.type': 'mouseleave' }],
+                },
               },
             ],
           },
@@ -471,7 +652,14 @@ export default {
       id: 2116,
       PC: {
         event: [
-          { expect: [{ trigger: 'paste(input)', event: { paste: [{ 'e.type': 'paste' }] } }] },
+          {
+            expect: [
+              {
+                trigger: 'paste(input)',
+                event: { paste: [{ 'e.type': 'paste' }] },
+              },
+            ],
+          },
         ],
       },
     },
@@ -482,7 +670,14 @@ export default {
         event: [
           {
             props: { value: 'Hello World', maxlength: 5 },
-            expect: [{ trigger: '', event: { validate: [{ error: 'exceed-maximum' }] } }],
+            expect: [
+              {
+                trigger: '',
+                event: {
+                  validate: [{ error: 'exceed-maximum' }],
+                },
+              },
+            ],
           },
         ],
       },
@@ -492,17 +687,30 @@ export default {
       id: 2279,
       PC: {
         event: [
-          { expect: [{ trigger: 'wheel(input)', event: { wheel: [{ 'e.type': 'wheel' }] } }] },
+          {
+            expect: [
+              {
+                trigger: 'wheel(input)',
+                event: { wheel: [{ 'e.type': 'wheel' }] },
+              },
+            ],
+          },
         ],
       },
     },
-    '<T = InputValue>_1699771883': { field_name: '<T = InputValue>', id: 1699771883 },
+    '<T = InputValue>_1699771883': {
+      field_name: '<T = InputValue>',
+      id: 1699771883,
+    },
   },
   InputGroup: {
     separate_3296: {
       field_name: 'separate',
       id: 3296,
-      PC: { wrapper: 'getInputGroupDefaultMount', className: 't-input-group--separate' },
+      PC: {
+        wrapper: 'getInputGroupDefaultMount',
+        className: 't-input-group--separate',
+      },
     },
   },
-}
+};

@@ -6,19 +6,25 @@
  * 命名行示例：npm run api:helper 'Vue(Mobile)'
  *
  */
-import fs from 'fs'
-import path from 'path'
-import { groupByComponent, formatArrayToMap, isComponent, componentsMap, getApiComponentMapByFrameWork  } from '../common.js'
-import { getParentByChildComponent  } from '../vitest/utils.js'
-import map from '../map.json' with { type: 'json' }
-import apiJson from '../api.json' with { type: 'json' }
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP  } from '../config/index.js'
-import { kebabCaseComponent  } from '../utils.js'
-import { uniq  } from 'lodash-es'
-import chalk from 'chalk'
-import prettier from 'prettier'
-import prettierConfig from '../config/prettier.js'
-import { formatType  } from '../types/index.js'
+import fs from 'fs';
+import path from 'path';
+import {
+  groupByComponent,
+  formatArrayToMap,
+  isComponent,
+  componentsMap,
+  getApiComponentMapByFrameWork,
+} from '../common.js';
+import { getParentByChildComponent } from '../vitest/utils.js';
+import map from '../map.json' with { type: 'json' };
+import apiJson from '../api.json' with { type: 'json' };
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
+import { kebabCaseComponent } from '../utils.js';
+import { uniq } from 'lodash-es';
+import chalk from 'chalk';
+import prettier from 'prettier';
+import prettierConfig from '../config/prettier.js';
+import { formatType } from '../types/index.js';
 
 const { data: ALL_API } = apiJson;
 /**
@@ -40,7 +46,9 @@ start();
 
 function start() {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
-    return console.log(chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'）`));
+    return console.log(
+      chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'）`),
+    );
   }
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
@@ -69,8 +77,8 @@ function start() {
       if (api.field_name.includes('Omit')) {
         processPickOmitApi(frameworkData, api, false);
       }
-    })
-  })
+    });
+  });
   // 生成代码提示文件
   generateHelper(frameworkData, framework);
 }
@@ -157,7 +165,6 @@ function getHelperData(baseData, framework) {
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
       const rType = formatType(api, framework);
       switch (api.field_category_text) {
-
         case 'Props':
           props.push(prop);
           const attributesData = {
@@ -178,7 +185,7 @@ function getHelperData(baseData, framework) {
             'attribute-value': api.field_enum
               ? { type: /^string$/i.test(api.field_type_text.join('')) ? 'enum' : 'of-match' }
               : undefined,
-            values: api.field_enum ? api.field_enum.split('/').map(name => ({ name })) : undefined,
+            values: api.field_enum ? api.field_enum.split('/').map((name) => ({ name })) : undefined,
           });
           // vue slots types
           if (api.field_type_text.indexOf('TNode') !== -1) {
@@ -212,7 +219,7 @@ function getHelperData(baseData, framework) {
             description: apiDescription,
             'doc-url': `${apiDocs}-events`,
           });
-          break
+          break;
         default:
           break;
       }
@@ -220,8 +227,8 @@ function getHelperData(baseData, framework) {
 
     tags[componentName] = {
       attributes: props,
-      description: `${description}\n\n[docs](${componentDocs})`
-    }
+      description: `${description}\n\n[docs](${componentDocs})`,
+    };
 
     const componentWebTypesData = {
       name: componentName,
@@ -256,8 +263,8 @@ function getHelperData(baseData, framework) {
         },
       },
     },
-    volar: uniq(volar).sort((a, b) => a.localeCompare(b))
-  }
+    volar: uniq(volar).sort((a, b) => a.localeCompare(b)),
+  };
 }
 
 function write(framework, name, data) {
@@ -272,24 +279,22 @@ function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
   const readerGlobalComponents = data.map((item) => {
     if (item === 'IconSVG') {
-      return `Icon: typeof import('${current.iconPath}')['Icon'];`
+      return `Icon: typeof import('${current.iconPath}')['Icon'];`;
     }
     if (item === 'IconFont') {
-      return `${item}: typeof import('${current.iconPath}')['${item}'];`
+      return `${item}: typeof import('${current.iconPath}')['${item}'];`;
     }
     if (['Text', 'Title', 'Paragraph'].includes(item)) {
-      return `TTypography${item}: typeof import('${current.name}')['${item}'];`
+      return `TTypography${item}: typeof import('${current.name}')['${item}'];`;
     }
     if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
-      return `TTable: typeof import('${current.name}')['Table'];`
+      return `TTable: typeof import('${current.name}')['Table'];`;
     }
     if (item === 'QRCode') {
-      return `TQrcode: typeof import('${current.name}')['${item}'];`
+      return `TQrcode: typeof import('${current.name}')['${item}'];`;
     }
-    return `T${item}: typeof import('${current.name}')['${item}'];`
-
-  }
-  )
+    return `T${item}: typeof import('${current.name}')['${item}'];`;
+  });
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
   const volarTemplate = `
   /**
@@ -305,7 +310,7 @@ function writeVolar(framework, data) {
   
   export {};
   
-  `
+  `;
   writeFileRecursive(current.volarPath, await prettier.format(volarTemplate, prettierConfig));
 }
 

@@ -1,7 +1,7 @@
-import { kebabCaseComponent  } from '../utils.js'
-import { UNIT_TEST_EVENTS_MAP  } from './const/events-map.js'
-import { reactNeedMockDelayEvents  } from './const/react-need-mock-delay.js'
-import { camelCase, upperFirst  } from 'lodash-es'
+import { kebabCaseComponent } from '../utils.js';
+import { UNIT_TEST_EVENTS_MAP } from './const/events-map.js';
+import { reactNeedMockDelayEvents } from './const/react-need-mock-delay.js';
+import { camelCase, upperFirst } from 'lodash-es';
 
 // 直接从 DOM 获取的属性，不需要通过 getAttribute
 const ATTRIBUTES_DIRECT = ['value', 'checked'];
@@ -34,7 +34,7 @@ function getFullMountCode(framework, componentCode) {
             ${componentCode}
           );
         }
-      })`
+      })`,
     ];
   }
   if (['VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
@@ -69,15 +69,17 @@ function getMountComponent(framework, component, props, extra = {}) {
   delete props.events;
   let mountComponent = '';
   if (wrapper) {
-    const params = [component, getPropsObjectString(props, events), events].filter(v => v).join(', ');
+    const params = [component, getPropsObjectString(props, events), events].filter((v) => v).join(', ');
     return `${wrapper}(${params})`;
   } else {
     const properties = props
-      ? Object.keys(props).map((key) => {
-        const value = typeof props[key] === 'object' ? JSON.stringify(props[key]) : props[key];
-        const valueCode = getPropsValue(value);
-        return `${key}=${/^'.+'$/.test(valueCode) ? valueCode : `{${valueCode}}`}`;
-      }).join(' ')
+      ? Object.keys(props)
+          .map((key) => {
+            const value = typeof props[key] === 'object' ? JSON.stringify(props[key]) : props[key];
+            const valueCode = getPropsValue(value);
+            return `${key}=${/^'.+'$/.test(valueCode) ? valueCode : `{${valueCode}}`}`;
+          })
+          .join(' ')
       : '';
     const eventsCode = events && !events.includes('on=') && framework === 'Vue(PC)' ? `on={${events}}` : events;
     mountComponent = `<${component} ${properties} ${eventsCode || ''}>${content || ''}</${component}>`;
@@ -100,7 +102,7 @@ function getEventFunctions(expect, framework, extraCode) {
       } else {
         fns.push(`${formattedEventname}: ${getEventFnName(fEvent, index)}`);
       }
-    })
+    });
   });
 
   if (needPropsEvent) {
@@ -146,22 +148,24 @@ function getPropsValue(value) {
   // 测试用例变量（vitest core 内部）
   if (/^\/-.+-\/$/.test(value)) return value.slice(2, -2);
   // 可能是一个函数，或者 TNode
-  if (typeof value === 'string' && (
-    value.indexOf('=>') !== -1
-    || value.indexOf('</') !== -1
-    || value.indexOf('/>') !== -1
-    || /^\[.*\]$/.test(value)
-    || /^\{.*\}$/.test(value)
-    )) return value;
+  if (
+    typeof value === 'string' &&
+    (value.indexOf('=>') !== -1 ||
+      value.indexOf('</') !== -1 ||
+      value.indexOf('/>') !== -1 ||
+      /^\[.*\]$/.test(value) ||
+      /^\{.*\}$/.test(value))
+  )
+    return value;
   // 对象数组
-  if (Array.isArray(value) || !Array.isArray(value) && typeof value) {
+  if (Array.isArray(value) || (!Array.isArray(value) && typeof value)) {
     return JSON.stringify(value);
   }
   // 可能是一个对象或数组字符串
   try {
-    JSON.parse(value)
+    JSON.parse(value);
     return value;
-  } catch(e) {
+  } catch (e) {
     if (typeof value === 'string') return `'${value}'`;
     return value;
   }
@@ -177,13 +181,13 @@ function getPropsValue(value) {
 function getSnapshotCase(snapshot, framework, wrapperIndex = '', onlyDocumentDom) {
   if (!snapshot) return;
   if (onlyDocumentDom) {
-    return `expect(document.body).toMatchSnapshot();`
+    return `expect(document.body).toMatchSnapshot();`;
   }
   if (framework.indexOf('Vue') !== -1) {
-    return `expect(wrapper${wrapperIndex}.element).toMatchSnapshot();`
+    return `expect(wrapper${wrapperIndex}.element).toMatchSnapshot();`;
   }
   if (framework.indexOf('React') !== -1) {
-    return `expect(container${wrapperIndex}).toMatchSnapshot();`
+    return `expect(container${wrapperIndex}).toMatchSnapshot();`;
   }
 }
 
@@ -193,7 +197,7 @@ function getSnapshotCase(snapshot, framework, wrapperIndex = '', onlyDocumentDom
  * @param {String} mountCode 测试代码实例，如：<Button disabled={true} /> 或者 getNormalTableMount(BaseTable, { bordered: false })
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2。值为 false 表示不需要变量定义
  * @param {String} goalDom 寻找目标元素的选择器
- * @returns 
+ * @returns
  */
 function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extraData = {}) {
   const { trigger = '', component, wrapper, onlyDocumentDom } = extraData;
@@ -203,11 +207,13 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
     let tmpMountCode = Array.isArray(mountCode) ? mountCode.join('\n') : mountCode;
     // Vue2 的 trigger focus 需要 createElement 和 attachTo
     if (framework === 'Vue(PC)' && trigger.includes('focus') && !wrapper) {
-      wrapperDefinition.push(...[
-        '// Vue2 need attachTo to trigger \`focus\` event. https://v1.test-utils.vuejs.org/api/wrapper/#trigger',
-        'createElementById()',
-      ]);
-      tmpMountCode = tmpMountCode.replace(/\)$/, ', { attachTo: \'#focus-dom\' })');
+      wrapperDefinition.push(
+        ...[
+          '// Vue2 need attachTo to trigger \`focus\` event. https://v1.test-utils.vuejs.org/api/wrapper/#trigger',
+          'createElementById()',
+        ],
+      );
+      tmpMountCode = tmpMountCode.replace(/\)$/, ", { attachTo: '#focus-dom' })");
     }
     if (onlyDocumentDom) {
       wrapperDefinition.push(`${tmpMountCode}${findDomCode};`);
@@ -215,14 +221,16 @@ function getWrapper(framework, mountCode, goalDom = '', wrapperIndex = '', extra
       wrapperDefinition.push(`const wrapper${wrapperIndex} = ${tmpMountCode}${findDomCode};`);
     }
     trigger && wrapperDefinition.push(getPresetsExpect(trigger, framework, component));
-    return wrapperDefinition.filter(v => v).join('\n');
+    return wrapperDefinition.filter((v) => v).join('\n');
   }
   if (framework.indexOf('React') !== -1) {
     const triggerCode = trigger && getPresetsExpect(trigger, framework, component);
     if (onlyDocumentDom) {
-      return [mountCode, triggerCode].filter(v => v).join('\n');
+      return [mountCode, triggerCode].filter((v) => v).join('\n');
     }
-    return getReactWrapper(mountCode, goalDom, wrapperIndex, { triggerCode });
+    return getReactWrapper(mountCode, goalDom, wrapperIndex, {
+      triggerCode,
+    });
   }
 }
 
@@ -232,15 +240,19 @@ function getReactWrapper(mountCode, goalDom = '', wrapperIndex = '', { triggerCo
     return [
       `const wrapper${i} = ${mountCode};`,
       triggerCode,
-      `const container${i} = wrapper${i}.container.querySelector('${goalDom}');`
-    ].filter(v => v).join('\n');
+      `const container${i} = wrapper${i}.container.querySelector('${goalDom}');`,
+    ]
+      .filter((v) => v)
+      .join('\n');
   }
   return [
     wrapperIndex
       ? `const { container: container${wrapperIndex} } = ${mountCode};`
       : `const { container } = ${mountCode};`,
     triggerCode,
-  ].filter(v => v).join('\n');
+  ]
+    .filter((v) => v)
+    .join('\n');
 }
 
 function getVariableBySelector(selector) {
@@ -258,7 +270,9 @@ function getDocumentDomExpectTruthy(domSelector, framework, wrapperIndex = '') {
     `expect(${domVariable}).toBeTruthy();`,
     // isVue ? '// remove node in document to avoid influencing following test cases' : '',
     // isVue ? `${domVariable}${emptyJudgement}.remove();` : '',
-  ].filter(v => v).join('\n');
+  ]
+    .filter((v) => v)
+    .join('\n');
 }
 
 /**
@@ -266,7 +280,7 @@ function getDocumentDomExpectTruthy(domSelector, framework, wrapperIndex = '') {
  * @param {String} framework 框架名称
  * @param {String} domSelector DOM Selector
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
- * @returns 
+ * @returns
  */
 function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
@@ -287,7 +301,7 @@ function getDomExpectTruthy(framework, domSelector, wrapperIndex = '') {
  * @param {String} framework 框架名称
  * @param {String} domSelector DOM Selector
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
- * @returns 
+ * @returns
  */
 function getDomExpectFalsy(framework, domSelector, wrapperIndex = '') {
   if (!domSelector) return;
@@ -329,27 +343,29 @@ function getDocumentDomExpect(domSelector, countOrText, framework) {
     //   if (isObject) return `${domVariable}.remove();`
     //   return `${domVariable}.forEach(node => node.remove());`;
     // })() : '',
-  ].filter(v => v).join('\n');
+  ]
+    .filter((v) => v)
+    .join('\n');
 }
 
 function getDocumentDomExpectCount(domVariable, count) {
-  return `expect(${domVariable}.length).toBe(${count});`
+  return `expect(${domVariable}.length).toBe(${count});`;
 }
 
 function getDocumentDomTextExpect(domVariable, textInfo, framework) {
   if (framework.indexOf('Vue') !== -1) {
-    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`
+    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`;
   } else if (framework.indexOf('React') !== -1) {
-    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`
+    return `expect(${domVariable}.textContent).toBe('${textInfo.text}');`;
   }
-} 
+}
 
 /**
  * 验证某个 DOM 存在的数量
  * @param {String} framework 框架名称
  * @param {Array<Object>} domAndCount { domSelector: number }，示例：{ ".t-table__row--fixed-top": 3}
  * @param {String} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
- * @returns 
+ * @returns
  */
 function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '', eventIndex = '') {
   let clearElement = '';
@@ -381,16 +397,18 @@ function getDomCountExpectCode(framework, domAndCount, wrapperIndex = '', eventI
   if (clearElement) {
     arr.push(getClearDomInDocumentCode(clearElement, framework));
   }
-  return arr.filter(v => v).join('\n');
+  return arr.filter((v) => v).join('\n');
 }
 
 // 支持用例结束时清空多个元素
 function getClearDomInDocumentCode(clearElement, framework) {
   if (framework.indexOf('React') !== -1) return;
   const tmpElement = Array.isArray(clearElement) ? clearElement : [clearElement];
-  return tmpElement.map((element) => {
-    return `document.querySelectorAll('${element}').forEach(node => node.remove());`;
-  }).join('\n');
+  return tmpElement
+    .map((element) => {
+      return `document.querySelectorAll('${element}').forEach(node => node.remove());`;
+    })
+    .join('\n');
 }
 
 function getOneDomCountExpectCode(framework, className, countOrIndex, wrapperIndex) {
@@ -450,7 +468,7 @@ function getOneDomAttributeExpectCode(framework, className, attrInfo, wrapperInd
       arr.push(getReactOneAttributeCode(framework, domVariable, attributeName, attributeValue, 'attrDom'));
     }
   });
-  return arr.filter(v => v).join('\n');
+  return arr.filter((v) => v).join('\n');
 }
 
 function getOneDomClassNameExpectCode(framework, dom, classNameExpect, wrapperIndex, domIndex) {
@@ -459,7 +477,7 @@ function getOneDomClassNameExpectCode(framework, dom, classNameExpect, wrapperIn
     const expect = [{ dom, className: { [oneClass]: true } }];
     arr.push(getDomClassNameExpect(framework, expect, wrapperIndex, domIndex));
   });
-  return arr.filter(v => v).join('\n');
+  return arr.filter((v) => v).join('\n');
 }
 
 function getClassNameExpectTruthy(framework, className, wrapperIndex = '', goalDom = '') {
@@ -484,21 +502,23 @@ function getClassNameExpectFalsy(framework, className, wrapperIndex = '') {
  * 获取属性测试代码（不包含 DOM 查询）
  * @param {*} framework 框架名称
  * @param {*} attributes { attributeName: attributeValue }
- * @param {*} wrapperIndex 
- * @returns 
+ * @param {*} wrapperIndex
+ * @returns
  */
 function getAttributeExpect(framework, attributes, wrapperIndex = '', attributeDom) {
-  return Object.entries(attributes).map(([attribute, value]) => {
-    return getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom);
-  }).join('\n');
+  return Object.entries(attributes)
+    .map(([attribute, value]) => {
+      return getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom);
+    })
+    .join('\n');
 }
 
 function getOneAttributeExpect(framework, attribute, value, wrapperIndex, attributeDom) {
   if (framework.indexOf('Vue') !== -1) {
-   return getVueOneAttributeCode(framework, `wrapper${wrapperIndex}`, attribute, value);
+    return getVueOneAttributeCode(framework, `wrapper${wrapperIndex}`, attribute, value);
   }
   if (framework.indexOf('React') !== -1) {
-    return getReactOneAttributeCode(framework, `container${wrapperIndex}`, attribute, value, attributeDom)
+    return getReactOneAttributeCode(framework, `container${wrapperIndex}`, attribute, value, attributeDom);
   }
 }
 
@@ -526,8 +546,9 @@ function getReactOneAttributeCode(framework, wrapper, attribute, value, attribut
 
 // style.flex-wrap ===> style['flex-wrap']
 function getAttributeStr(attribute) {
-  return attribute.split('.')
-    .map((item) => item.includes('-') ? camelCase(item) : item)
+  return attribute
+    .split('.')
+    .map((item) => (item.includes('-') ? camelCase(item) : item))
     .join('.');
 }
 
@@ -544,7 +565,7 @@ function getAttributeValue(attribute, attributeValue, framework = '') {
   const toBeOrNotToBe = isNotToBe ? 'not.' : '';
   // 如果是关键词，直接返回
   if (['toBeUndefined', 'toBeDefined'].includes(value)) {
-    if (value === 'toBeUndefined'){
+    if (value === 'toBeUndefined') {
       return getAttributeNotExit(framework);
     }
     return 'toBeTruthy()';
@@ -594,7 +615,7 @@ function getDocumentDomCode(dom, backup) {
     const finalDom = ['document', 'body'].includes(dom)
       ? dom
       : dom.replace('document', '').replace('document.body', 'body');
-    return `document.querySelector('${finalDom}');`
+    return `document.querySelector('${finalDom}');`;
   }
   return backup;
 }
@@ -603,15 +624,13 @@ function getVueDomAttributeExpect(framework, dom, component, index, attribute, w
   const domFindCode = dom === 'self' || !dom ? `findComponent(${component})` : `find('${dom}')`;
   const oneExpect = [
     `const domWrapper${index || ''} = ${getDocumentDomCode(dom, `wrapper${wrapperIndex}.${domFindCode}`)};`,
-    Object.entries(attribute).map(([attributeName, attributeValue]) => {
-      return getVueOneAttributeCode(
-        framework,
-        `domWrapper${index || ''}`,
-        attributeName,
-        attributeValue,
-        { isDocumentNode: dom.indexOf('document') !== -1 },
-      );
-    }).join('\n'),
+    Object.entries(attribute)
+      .map(([attributeName, attributeValue]) => {
+        return getVueOneAttributeCode(framework, `domWrapper${index || ''}`, attributeName, attributeValue, {
+          isDocumentNode: dom.indexOf('document') !== -1,
+        });
+      })
+      .join('\n'),
   ];
   return oneExpect;
 }
@@ -620,15 +639,11 @@ function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperInd
   const domFindCode = dom === 'self' || !dom ? 'firstChild' : `querySelector('${dom}')`;
   const oneExpect = [
     `const domWrapper${index || ''} = ${getDocumentDomCode(dom, `container${wrapperIndex}.${domFindCode}`)};`,
-    Object.entries(attribute).map(([attributeName, attributeValue]) => {
-      return getReactOneAttributeCode(
-        framework,
-        `domWrapper${index || ''}`,
-        attributeName,
-        attributeValue,
-        dom
-      );
-    }).join('\n'),
+    Object.entries(attribute)
+      .map(([attributeName, attributeValue]) => {
+        return getReactOneAttributeCode(framework, `domWrapper${index || ''}`, attributeName, attributeValue, dom);
+      })
+      .join('\n'),
   ];
   return oneExpect;
 }
@@ -637,7 +652,7 @@ function getReactDomAttributeExpect(framework, dom, index, attribute, wrapperInd
  * 校验类名（支持子元素类名查询和验证）
  * @param {*} framework 框架名称
  * @param {*} expect "expect": [{ "dom": "tbody > tr", "className": { "tdesign-class": true } }]
- * @param {*} wrapperIndex 
+ * @param {*} wrapperIndex
  */
 function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = '') {
   let arr = [];
@@ -650,11 +665,13 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = 
         : `const ${domVariable} = wrapper${wrapperIndex}.find('${dom}');`;
       const oneExpect = [
         domNode,
-        Object.entries(className).map(([className, exist]) => {
-          const truthyOrFalsy = exist ? 'toBeTruthy' : 'toBeFalsy';
-          const classes = isDocument ? `classList.contains('${className}')` : `classes('${className}')`;
-          return `expect(${domVariable}.${classes}).${truthyOrFalsy}();`;
-        }).join('\n'),
+        Object.entries(className)
+          .map(([className, exist]) => {
+            const truthyOrFalsy = exist ? 'toBeTruthy' : 'toBeFalsy';
+            const classes = isDocument ? `classList.contains('${className}')` : `classes('${className}')`;
+            return `expect(${domVariable}.${classes}).${truthyOrFalsy}();`;
+          })
+          .join('\n'),
       ];
       arr = arr.concat(oneExpect);
     });
@@ -662,18 +679,21 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = 
   if (framework.indexOf('React') !== -1) {
     expect.forEach(({ dom, className }, index) => {
       const kidDomVariable = `domWrapper${domIndex || index || ''}`;
-      const domNode = dom.indexOf('document') !== -1
-        ? `const ${kidDomVariable} = document.querySelector('${dom.replace('document', '')}');`
-        : `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`
+      const domNode =
+        dom.indexOf('document') !== -1
+          ? `const ${kidDomVariable} = document.querySelector('${dom.replace('document', '')}');`
+          : `const ${kidDomVariable} = container${wrapperIndex}.querySelector('${dom}');`;
       const oneExpect = [
         domNode,
-        Object.entries(className).map(([className, exist]) => {
-          if (exist) {
-            return `expect(${kidDomVariable}).toHaveClass('${className}');`;
-          } else {
-            return `expect(${kidDomVariable}.classList.contains('${className}')).toBeFalsy();`;
-          }
-        }).join('\n'),
+        Object.entries(className)
+          .map(([className, exist]) => {
+            if (exist) {
+              return `expect(${kidDomVariable}).toHaveClass('${className}');`;
+            } else {
+              return `expect(${kidDomVariable}.classList.contains('${className}')).toBeFalsy();`;
+            }
+          })
+          .join('\n'),
       ];
       arr = arr.concat(oneExpect);
     });
@@ -682,7 +702,7 @@ function getDomClassNameExpect(framework, expect, wrapperIndex = '', domIndex = 
 }
 
 function getArrayCode(arr) {
-  return `[${arr.map(val => typeof val === 'string' ? `'${val}'` : JSON.stringify(val)).join(', ')}]`;
+  return `[${arr.map((val) => (typeof val === 'string' ? `'${val}'` : JSON.stringify(val))).join(', ')}]`;
 }
 
 function getObjectCode(obj) {
@@ -709,10 +729,12 @@ function formatToTriggerAndDom(oneExpect) {
 }
 
 function getFireEventName(event, framework) {
-  if (!event) return {}
+  if (!event) return {};
   const eventInfo = framework.indexOf('Vue') !== -1 ? event : UNIT_TEST_EVENTS_MAP[event];
   if (!eventInfo) {
-    console.warn(`can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`);
+    console.warn(
+      `can not recognize Event Name: ${event}. Check Event Name in https://github.com/vuejs/test-utils/blob/main/src/constants/dom-events.ts#L109`,
+    );
     return;
   }
   if (typeof eventInfo === 'object') {
@@ -726,18 +748,18 @@ function getFireEventName(event, framework) {
 
 function makeObjectToString(objectArgs) {
   const arr = ['{'];
-  const argsList = Object.entries(objectArgs).map(([key, value]) => {
-    let tmpValue = typeof value === 'string' && value !== 'undefined'
-      ? `'${value}'`
-      : value;
-    if (/\$\{.+\}/.test(value)) {
-      tmpValue = value.match(/\$\{(.+)\}/)[1];
-    }
-    if (typeof tmpValue === 'object') {
-      tmpValue = makeObjectToString(tmpValue);
-    }
-    return `'${key}': ${tmpValue}`;
-  }).join(',');
+  const argsList = Object.entries(objectArgs)
+    .map(([key, value]) => {
+      let tmpValue = typeof value === 'string' && value !== 'undefined' ? `'${value}'` : value;
+      if (/\$\{.+\}/.test(value)) {
+        tmpValue = value.match(/\$\{(.+)\}/)[1];
+      }
+      if (typeof tmpValue === 'object') {
+        tmpValue = makeObjectToString(tmpValue);
+      }
+      return `'${key}': ${tmpValue}`;
+    })
+    .join(',');
   arr.push(argsList);
   arr.push('}');
   return arr.join('');
@@ -745,10 +767,12 @@ function makeObjectToString(objectArgs) {
 
 function makeArrayToString(arrayArgs) {
   const arr = ['['];
-  const objList = arrayArgs.map((obj) => {
-    if (typeof obj === 'object') return makeObjectToString(obj);
-    return typeof obj === 'string' ? `'${obj}'` : obj;
-  }).join(',');
+  const objList = arrayArgs
+    .map((obj) => {
+      if (typeof obj === 'object') return makeObjectToString(obj);
+      return typeof obj === 'string' ? `'${obj}'` : obj;
+    })
+    .join(',');
   arr.push(objList);
   arr.push(']');
   return arr.join('');
@@ -757,20 +781,18 @@ function makeArrayToString(arrayArgs) {
 // Vue 的 input === react 的 change
 function handleVueAndReactInputEventDifference(framework, fnName, oneArgument, property) {
   const events = ['onChange', 'onInputChange'];
-  return framework.indexOf('React') !== -1
-    && (property === '.e.type' || property === '.type')
-    && /^'input'$/.test(oneArgument)
-    && events.find((changeEvent) => fnName.indexOf(changeEvent) !== -1)
-      ? `'change'`
-      : oneArgument;
+  return framework.indexOf('React') !== -1 &&
+    (property === '.e.type' || property === '.type') &&
+    /^'input'$/.test(oneArgument) &&
+    events.find((changeEvent) => fnName.indexOf(changeEvent) !== -1)
+    ? `'change'`
+    : oneArgument;
 }
 
 // Support RegExp Test
 function getOneArgEqual(framework, fnName, index, oneArgument, oneProperty = '', calls = 'calls[0]') {
   // /^\[\d\]\./.test(oneProperty) 表示数组 '[0].lastModified'。不需要数组深度相等的时候需要
-  const property = oneProperty
-    ? /^\[\d+\]/.test(oneProperty) ? oneProperty : `.${oneProperty}`
-    : '';
+  const property = oneProperty ? (/^\[\d+\]/.test(oneProperty) ? oneProperty : `.${oneProperty}`) : '';
   // 长度校验；正则校验；其他校验
   if (/length=/.test(oneArgument)) {
     const [_, length] = oneArgument.slice(1, -1).split('=');
@@ -810,23 +832,26 @@ function getEventArguments(framework, args, extra = {}) {
       return getOneArgEqual(framework, fnName, index, `'${oneArgument}'`, undefined, calls);
     }
     if (typeof oneArgument === 'object' && !Array.isArray(oneArgument)) {
-      return Object.keys(oneArgument).map(oneProperty => {
-        const value = oneArgument[oneProperty];
-        if (value === true) {
-          const expectInfo = `${fnName}.mock.${calls}[${index}].${oneProperty}`;
-          return isRegExp(oneArgument)
-            ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
-            : `expect(${expectInfo}).toBeTruthy();`;
-        }
-        const expectVal = typeof value === 'string' && !isRegExp(value) && value !== 'undefined' ? `'${value}'` : value;
-        return getOneArgEqual(framework, fnName, index, expectVal, oneProperty, calls);
-      }).join('\n');
+      return Object.keys(oneArgument)
+        .map((oneProperty) => {
+          const value = oneArgument[oneProperty];
+          if (value === true) {
+            const expectInfo = `${fnName}.mock.${calls}[${index}].${oneProperty}`;
+            return isRegExp(oneArgument)
+              ? `expect(${oneArgument}.test(${expectInfo})).toBeTruthy();`
+              : `expect(${expectInfo}).toBeTruthy();`;
+          }
+          const expectVal =
+            typeof value === 'string' && !isRegExp(value) && value !== 'undefined' ? `'${value}'` : value;
+          return getOneArgEqual(framework, fnName, index, expectVal, oneProperty, calls);
+        })
+        .join('\n');
     }
-    
+
     return getOneArgEqual(framework, fnName, index, oneArgument, undefined, calls);
   });
   arr.unshift(`expect(${fnName}).toHaveBeenCalled();`);
-  return arr.filter(v => v);
+  return arr.filter((v) => v);
 }
 
 /**
@@ -837,29 +862,38 @@ function getEventArguments(framework, args, extra = {}) {
  *  params1.event 事件名称，可选值：@vue/test-utils 的 trigger 函数的参数
  * @param {*} wrapperIndex 可选值：'1'/'2'/'3'/'4'/... 同一个函数中，避免重复变量名，给变量名添加下标字符串，如：wrapper1, container2
  */
- function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '', eventIndex = '') {
-   let fireEventCode = [];
-   if (event !== 'delay') {
+function getFireEventCode(framework, { dom, event, delay, component }, wrapperIndex = '', eventIndex = '') {
+  let fireEventCode = [];
+  if (event !== 'delay') {
     const eventInfo = parseSimulateEvents(event, dom);
     const findDom = /^'.+'$/.test(dom) ? dom.slice(1, -1) : dom;
     if (eventInfo.isSimulateEvent) {
-      const simulateEventCode = getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex });
+      const simulateEventCode = getSimulateEventCode(framework, {
+        component,
+        eventInfo,
+        wrapperIndex,
+        eventIndex,
+      });
       if (simulateEventCode) {
         fireEventCode.push(simulateEventCode);
       }
     } else {
-      const fireNormalEventCode = getFireNormalEventCode(framework, {
-        dom: findDom,
-        event: event?.indexOf('delay') !== -1 ? event : event?.replace(/\(.+\)/, ''),
-        component
-      }, wrapperIndex = '');
+      const fireNormalEventCode = getFireNormalEventCode(
+        framework,
+        {
+          dom: findDom,
+          event: event?.indexOf('delay') !== -1 ? event : event?.replace(/\(.+\)/, ''),
+          component,
+        },
+        (wrapperIndex = ''),
+      );
       if (fireNormalEventCode) {
         fireEventCode.push(fireNormalEventCode);
       }
     }
   }
 
-  let delayTime = delay && delay !== true || delay === 0 ? delay : '';
+  let delayTime = (delay && delay !== true) || delay === 0 ? delay : '';
   if (framework.indexOf('Vue') !== -1) {
     if (!delayTime && event === 'delay' && !isNaN(dom)) {
       delayTime = dom;
@@ -916,14 +950,12 @@ function getFireNormalEventCode(framework, { dom, event, component }, wrapperInd
     }
     return eventFireCode;
   } else if (framework.indexOf('React') !== -1) {
-    let tmpDom = dom === 'self' || !dom
-      ? `container${wrapperIndex}.firstChild`
-      : `container.querySelector('${dom}')`;
+    let tmpDom = dom === 'self' || !dom ? `container${wrapperIndex}.firstChild` : `container.querySelector('${dom}')`;
     if (dom.indexOf('document') !== -1) {
       const tDom = dom.replace('document', '');
       tmpDom = `document.querySelector('${tDom}')`;
     }
-    const params = [tmpDom, eventModifier].filter(v => v).join(', ');
+    const params = [tmpDom, eventModifier].filter((v) => v).join(', ');
     const eventCode = eventName ? `fireEvent.${eventName}(${params});` : '';
     return eventCode;
   }
@@ -931,7 +963,7 @@ function getFireNormalEventCode(framework, { dom, event, component }, wrapperInd
 
 function getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, eventIndex }) {
   const { simulateEvent, args } = eventInfo;
-  const domVariable = `${camelCase(args[0])}Dom${(eventIndex || '')}`;
+  const domVariable = `${camelCase(args[0])}Dom${eventIndex || ''}`;
   const dom = args[0];
   const arr = [];
   if (dom === 'document') {
@@ -949,9 +981,7 @@ function getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, e
     }
     arr.push(eventFireCode);
   } else if (framework.indexOf('React') !== -1) {
-    let tmpDom = dom === 'self' || !dom
-      ? `container${wrapperIndex}.firstChild`
-      : `container.querySelector(${dom})`;
+    let tmpDom = dom === 'self' || !dom ? `container${wrapperIndex}.firstChild` : `container.querySelector(${dom})`;
     if (dom.indexOf('document') !== -1) {
       const tDom = dom.replace('document', '');
       tmpDom = `document.querySelector(${tDom})`;
@@ -965,15 +995,17 @@ function getSimulateEventCode(framework, { component, eventInfo, wrapperIndex, e
 }
 
 function parseSimulateEvents(simulateEvent, args) {
-  const isSimulateEvent = Boolean(SIMULATE_FUNCTIONS.find((item) => simulateEvent && simulateEvent.indexOf(item) !== -1));
+  const isSimulateEvent = Boolean(
+    SIMULATE_FUNCTIONS.find((item) => simulateEvent && simulateEvent.indexOf(item) !== -1),
+  );
   if (!isSimulateEvent) {
     return { isSimulateEvent };
   }
   return {
     isSimulateEvent,
     simulateEvent,
-    args: args.split(',').map(t => t.trim()),
-  }
+    args: args.split(',').map((t) => t.trim()),
+  };
 }
 
 // 判断是否需要 mockDelay
@@ -1008,26 +1040,30 @@ function isRegExp(str) {
 function getPresetsExpect(triggerList, framework, component) {
   if (!triggerList || !component) return;
   const tmpTrigger = Array.isArray(triggerList) ? triggerList : [triggerList];
-  return tmpTrigger.map((oneTrigger) => {
-    const { triggerDom = 'self', trigger } = formatToTriggerAndDom({ trigger: oneTrigger });
-    return getFireEventCode(framework, {
-      dom: triggerDom,
-      event: oneTrigger.indexOf('delay') ? oneTrigger : trigger,
-      component,
-    });
-  }).join('\n');
+  return tmpTrigger
+    .map((oneTrigger) => {
+      const { triggerDom = 'self', trigger } = formatToTriggerAndDom({
+        trigger: oneTrigger,
+      });
+      return getFireEventCode(framework, {
+        dom: triggerDom,
+        event: oneTrigger.indexOf('delay') ? oneTrigger : trigger,
+        component,
+      });
+    })
+    .join('\n');
 }
 
 function getTriggerList(trigger) {
   if (typeof trigger === 'string') return [{ trigger }];
   if (Array.isArray(trigger)) {
-    return trigger.map(t => ({ trigger: t }));
+    return trigger.map((t) => ({ trigger: t }));
   }
 }
 
 function getItAsync(trigger, framework) {
   const { reactAsync } = getReactFireEventAsync(getTriggerList(trigger), framework);
-  return framework.indexOf('Vue') !== -1 && trigger || reactAsync || trigger?.includes('delay') ? 'async' : '';
+  return (framework.indexOf('Vue') !== -1 && trigger) || reactAsync || trigger?.includes('delay') ? 'async' : '';
 }
 
 function getCategoryDesc(oneApiData, component) {

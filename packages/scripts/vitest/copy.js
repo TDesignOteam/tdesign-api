@@ -7,7 +7,7 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
   const regExp = new RegExp(wrapper, 'g');
   if (Array.isArray(copyTestToWrapper)) {
     tmpWrappers.push(...copyTestToWrapper);
-     arr = copyTestToWrapper.map((oneWrapper) => {
+    arr = copyTestToWrapper.map((oneWrapper) => {
       return oneTestCode.replace(regExp, oneWrapper);
     });
   }
@@ -16,9 +16,11 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
       if (framework.indexOf(supportFramework) !== -1) {
         const wrappers = copyTestToWrapper[supportFramework];
         tmpWrappers.push(...wrappers);
-        const copyAnotherCode = wrappers.map((oneWrapper) => {
-          return oneTestCode.replace(regExp, oneWrapper);
-        }).join('\n');
+        const copyAnotherCode = wrappers
+          .map((oneWrapper) => {
+            return oneTestCode.replace(regExp, oneWrapper);
+          })
+          .join('\n');
         arr.push(copyAnotherCode);
       }
     });
@@ -29,6 +31,4 @@ function copyUnitTestsToOtherWrapper(code, test, framework) {
   };
 }
 
-export {
-  copyUnitTestsToOtherWrapper,
-};
+export { copyUnitTestsToOtherWrapper };

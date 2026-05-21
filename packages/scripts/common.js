@@ -1,8 +1,8 @@
-import mapJson from './map.json' with { type: 'json' }
-import { kebabCaseComponent  } from './utils.js'
-import { GLOBAL_COMPONENTS_CONFIG  } from './config/const.js'
-import { groupByComponent, getApiComponentMapByFrameWork  } from './vitest/utils.js'
-import { upperFirst, camelCase as camelcase } from 'lodash-es'
+import mapJson from './map.json' with { type: 'json' };
+import { kebabCaseComponent } from './utils.js';
+import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
+import { groupByComponent, getApiComponentMapByFrameWork } from './vitest/utils.js';
+import { upperFirst, camelCase as camelcase } from 'lodash-es';
 
 const { data } = mapJson;
 
@@ -85,7 +85,7 @@ function formatArrayToMap(map, field) {
  * @param {*} value
  */
 function getLabelByKey(map, mapField, value) {
-  const [r] = map[mapField].filter(item => String(item.value) === String(value));
+  const [r] = map[mapField].filter((item) => String(item.value) === String(value));
   return r && r.label;
 }
 
@@ -117,7 +117,7 @@ function getComponentsMap(components) {
 }
 
 function getGlobalConfigName(cmp) {
-  const configName =  `${upperFirst(cmp)}Config`;
+  const configName = `${upperFirst(cmp)}Config`;
   if (GLOBAL_COMPONENTS_CONFIG.includes(configName)) {
     return configName;
   }

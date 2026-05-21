@@ -17,4 +17,4 @@ export default {
     popupProps_1855: { field_name: 'popupProps', id: 1855 },
     trigger_1856: { field_name: 'trigger', id: 1856 },
   },
-}
+};

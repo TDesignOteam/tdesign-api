@@ -16,4 +16,4 @@ export default {
     label_3535: { field_name: 'label', id: 3535 },
     value_3515: { field_name: 'value', id: 3515 },
   },
-}
+};
