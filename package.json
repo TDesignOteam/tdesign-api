@@ -5,6 +5,20 @@
   "description": "a tool for manage API",
   "main": "index.js",
   "private": true,
+  "scripts": {
+    "lint": "eslint ./packages --max-warnings 0 --fix",
+    "dev": "cross-env NODE_ENV=dev nodemon",
+    "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
+    "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env",
+    "api:download": "node packages/scripts/download.js",
+    "api:upload": "node packages/scripts/upload.js",
+    "api:test": "node packages/scripts/vitest/tests/core/run.js",
+    "api:pure": "node packages/scripts/index.js",
+    "api:docs": "node packages/scripts/index.js",
+    "api:vscode": "node packages/scripts/vscode",
+    "api:helper": "node packages/scripts/helper",
+    "api:configurable": "node packages/scripts/configurable-props"
+  },
   "dependencies": {
     "koa": "catalog:",
     "koa-body": "catalog:",
@@ -47,20 +61,6 @@
     "ts-node": "catalog:",
     "tsconfig-paths": "catalog:",
     "typescript": "catalog:"
-  },
-  "scripts": {
-    "lint": "eslint ./packages --max-warnings 0 --fix",
-    "dev": "cross-env NODE_ENV=dev nodemon",
-    "prod": "npm run build && npx pm2 start ecosystem.config.js --env production",
-    "reload": "npm run build && pm2 reload api-server --parallel 32 --update-env",
-    "api:download": "node packages/scripts/download.js",
-    "api:upload": "node packages/scripts/upload.js",
-    "api:test": "node packages/scripts/vitest/tests/core/run.js",
-    "api:pure": "node packages/scripts/index.js",
-    "api:docs": "node packages/scripts/index.js",
-    "api:vscode": "node packages/scripts/vscode",
-    "api:helper": "node packages/scripts/helper",
-    "api:configurable": "node packages/scripts/configurable-props"
   },
   "author": "TDesign",
   "license": "ISC"
