@@ -8,7 +8,4 @@ export {
   getOneUnitTest,
 };
 
-export const getComponentUnitTests = getComponentUnitTests;
-export const getOneUnitTest = getOneUnitTest;
-export const default = getComponentUnitTests;
-
+export default getComponentUnitTests;
