@@ -8,6 +8,7 @@ import { getItDescription,
   getItAsync,
   getVariablesCode,  } from './core.js'
 import { getSkipCode  } from './utils.js'
+import { kebabCaseComponent  } from '../utils.js'
 // import map from '../map.json' with { type: 'json' }
 
 // const componentMap = map.data.components;
