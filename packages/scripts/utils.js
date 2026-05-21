@@ -1,7 +1,8 @@
+import { kebabCase } from 'lodash-es';
+
 function kebabCaseComponent(cmp) {
   return cmp === 'QRCode' ? 'qrcode' : kebabCase(cmp);
 }
-import { kebabCase } from 'lodash-es';
 
 function getComponentBasePath(cmp, apiBasePath) {
   if (cmp.startsWith('Chat') || cmp === 'Attachments') {

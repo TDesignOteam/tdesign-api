@@ -1,5 +1,5 @@
+import { camelCase } from 'lodash-es';
 import { kebabCaseComponent } from '../utils.js';
-
 import {
   getWrapper,
   getMountComponent,
@@ -18,7 +18,6 @@ import {
   getItAsync,
 } from './core.js';
 import { getSkipCode } from './utils.js';
-import { camelCase } from 'lodash-es';
 
 /**
  * 人机交互测试

@@ -1,10 +1,10 @@
 import chalk from 'chalk';
+import { pick } from 'lodash-es';
+import apiJson from '../api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from '../common.js';
 import { COMPONENT_API_MD_MAP } from '../config/index.js';
-import { generateProps } from './props.js';
 import map from '../map.json' with { type: 'json' };
-import apiJson from '../api.json' with { type: 'json' };
-import { pick } from 'lodash-es';
+import { generateProps } from './props.js';
 
 const { data: ALL_API } = apiJson;
 

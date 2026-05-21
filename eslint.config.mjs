@@ -5,10 +5,22 @@ import globals from 'globals';
 
 export default [
   {
-    files: ['**/*.{ts,tsx}'],
+    ignores: [
+      'snapshot*',
+      'dist/',
+      'lib/',
+      'node_modules/',
+      'common/',
+      'packages/products/',
+      'packages/frontend/',
+    ],
+  },
+  {
+    files: ['**/*.{js,ts,tsx}'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
       globals: {
@@ -37,15 +49,9 @@ export default [
     },
   },
   {
-    ignores: [
-      'snapshot*',
-      'dist/',
-      'lib/',
-      'node_modules/',
-      'common/',
-      'packages/products/',
-      'packages/frontend/',
-      'packages/scripts/',
-    ],
+    files: ['packages/scripts/**/*.{js,ts}'],
+    rules: {
+      'no-console': 'off',
+    },
   },
 ];

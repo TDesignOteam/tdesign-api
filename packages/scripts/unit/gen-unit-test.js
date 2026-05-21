@@ -1,8 +1,14 @@
-import yaml from 'js-yaml';
 import path from 'path';
+import yaml from 'js-yaml';
+import { includes } from 'lodash-es';
 import { FRAMEWORK_MAP } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
-
+import {
+  getTestImportSegment as getReactTestImportSegment,
+  getTNodeSegment as getReactTNodeSegment,
+  getDisabledSegment as getReactDisabledSegment,
+  getDefaultSegment as getReactDefaultSegment,
+} from './segment/react.js';
 import {
   getTestImportSegment as getVueTestImportSegment,
   getTNodeSegment as getVueTNodeSegment,
@@ -15,13 +21,6 @@ import {
   getDisabledSegment as getVue2DisabledSegment,
   getDefaultSegment as getVue2DefaultSegment,
 } from './segment/vue2.js';
-import {
-  getTestImportSegment as getReactTestImportSegment,
-  getTNodeSegment as getReactTNodeSegment,
-  getDisabledSegment as getReactDisabledSegment,
-  getDefaultSegment as getReactDefaultSegment,
-} from './segment/react.js';
-import { includes } from 'lodash-es';
 
 /**
  * 自动生成的单测文件的路径位置

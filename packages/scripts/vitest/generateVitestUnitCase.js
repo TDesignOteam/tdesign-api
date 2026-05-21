@@ -1,11 +1,10 @@
-import prettier from 'prettier';
-import prettierConfig from '../config/prettier.js';
-import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
-import { kebabCaseComponent } from '../utils.js';
-
+import chalk from 'chalk';
+import prettier from 'prettier';
 import { FRAMEWORK_MAP } from '../config/index.js';
+import prettierConfig from '../config/prettier.js';
+import { kebabCaseComponent } from '../utils.js';
 import { NEED_USE_DEFAULT_OR_USE_VMODEL } from './const/vue2-use-default.js';
 import { getUnitTestCode } from './main.js';
 // import { generateTestDescriptionToVitestFile } from './tests/core/utils.js'

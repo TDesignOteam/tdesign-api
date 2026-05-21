@@ -23,7 +23,11 @@
  * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
  *
  */
+import chalk from 'chalk';
+import { pick, has } from 'lodash-es';
+import apiJson from './api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from './common.js';
+import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
@@ -31,17 +35,13 @@ import {
   MOBILE_FRAMES,
 } from './config/index.js';
 import { generateDocs } from './docs/index.js';
-import { generateUnitTest } from './unit/index.js';
 import map from './map.json' with { type: 'json' };
-import apiJson from './api.json' with { type: 'json' };
 import { generateTypes } from './types/index.js';
 import { generateReactDefaultProps } from './types/react-default-props.js';
 import { generateVueProps } from './types/vue-props.js';
+import { generateUnitTest } from './unit/index.js';
 import { generateVitestUnitCase } from './vitest/generateVitestUnitCase.js';
 import { generateTestDescriptionToVitestFile } from './vitest/tests/core/utils.js';
-import chalk from 'chalk';
-import { pick, has } from 'lodash-es';
-import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 
 const { data: ALL_API } = apiJson;
 

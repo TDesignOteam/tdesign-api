@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import chalk from 'chalk';
 import shell from 'shelljs';
 import { kebabCaseComponent } from '../../../utils.js';
-import { uploadVitestFileDataToDB } from './utils.js';
-import chalk from 'chalk';
 import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../../const/vue2-use-default.js';
-import { fileURLToPath } from 'url';
+import { uploadVitestFileDataToDB } from './utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const [component, framework, args] = process.argv.slice(2);
@@ -15,11 +15,11 @@ const isWatch = argsList.includes('watch');
 
 if (!component) {
   console.log(chalk.red('component is required.'));
-  return;
+  process.exit(1);
 }
 if (!framework) {
   console.log(chalk.red('framework is required.'));
-  return;
+  process.exit(1);
 }
 
 function generateToFinalProject() {

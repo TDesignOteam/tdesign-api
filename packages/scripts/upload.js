@@ -2,8 +2,8 @@
  * 同步本地 JSON 文件到 DB，用于解决 DB 冲突问题（JSON 的冲突非常容易解决，DB 冲突难以解决）
  */
 import axios from 'axios';
-import apiJSON from './api.json' with { type: 'json' };
 import chalk from 'chalk';
+import apiJSON from './api.json' with { type: 'json' };
 
 const [component] = process.argv.slice(2);
 

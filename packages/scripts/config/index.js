@@ -1,3 +1,5 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 import getVueApiDocs from '../docs/vue.js';
 import {
   BASE_PATH_URL,
@@ -11,8 +13,6 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from './const.js';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

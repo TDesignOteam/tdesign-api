@@ -1,8 +1,4 @@
-import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
-
-import map from '../map.json' with { type: 'json' };
-import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } from '../config/const.js';
-import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
+import { pick, find, camelCase, lowerFirst } from 'lodash-es';
 import {
   getApiTitles,
   getEventName,
@@ -17,8 +13,12 @@ import {
   getComponentsMap,
   getGlobalConfigName,
 } from '../common.js';
+import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } from '../config/const.js';
 import languageConfig from '../config/language/description.js';
-import { pick, find, camelCase, lowerFirst } from 'lodash-es';
+import map from '../map.json' with { type: 'json' };
+import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
+import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
+
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
@@ -173,7 +173,7 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
     let importDocPath = '';
     if (isComplicatedType) {
       // 保留 【xxx】中的内容
-      // eslint-disable-next-line prefer-destructuring
+       
       // customFieldType = customFieldType.split('【')[0];
       customFieldType = customFieldType.split('【').map((item) => item.replace('】', ''));
       // 处理：import { PopupProps  } from '@Popup' 等引用，更为相关组件文档链接
@@ -379,7 +379,7 @@ function getOneApi(newApi, current, docTitleType, framework) {
   )
     return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
-  // eslint-disable-next-line no-useless-escape
+   
   const oneApi = Object.values(f)
     .map((item) => item || '\\-')
     .join(' | ');

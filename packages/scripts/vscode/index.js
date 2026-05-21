@@ -14,11 +14,11 @@
  * 命名行示例：npm run api-docs Button 'Miniprogram'
  *
  */
+import chalk from 'chalk';
+import apiJson from '../api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap } from '../common.js';
 import { generateDocs } from '../docs/index.js';
 import map from '../map.json' with { type: 'json' };
-import apiJson from '../api.json' with { type: 'json' };
-import chalk from 'chalk';
 
 const { data: ALL_API } = apiJson;
 /**

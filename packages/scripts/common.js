@@ -1,8 +1,8 @@
+import { upperFirst, camelCase as camelcase } from 'lodash-es';
+import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import mapJson from './map.json' with { type: 'json' };
 import { kebabCaseComponent } from './utils.js';
-import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import { groupByComponent, getApiComponentMapByFrameWork } from './vitest/utils.js';
-import { upperFirst, camelCase as camelcase } from 'lodash-es';
 
 const { data } = mapJson;
 

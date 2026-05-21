@@ -4,9 +4,10 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import map from '../map.json' with { type: 'json' };
+import { lowerFirst, upperFirst } from 'lodash-es';
 import prettier from 'prettier';
-import prettierConfig from '../config/prettier.js';
+import { getFolderName, getCmpTypeCombineMap } from '../common.js';
+import { FILE_RIGHTS_DESC } from '../config/const.js';
 import {
   FRAMEWORK_MAP,
   TYPES_COMBINE_MAP,
@@ -14,10 +15,9 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from '../config/index.js';
+import prettierConfig from '../config/prettier.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
-import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { getFolderName, getCmpTypeCombineMap } from '../common.js';
-import { lowerFirst, upperFirst } from 'lodash-es';
+import map from '../map.json' with { type: 'json' };
 
 const CONFIG = { needPickRequiredType };
 

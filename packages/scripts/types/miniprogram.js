@@ -1,5 +1,5 @@
-import shell from 'shelljs';
 import { camelCase } from 'lodash-es';
+import shell from 'shelljs';
 
 // 小程序的 props 类型定义特殊
 function getMiniprogramType(type, tsType, required) {

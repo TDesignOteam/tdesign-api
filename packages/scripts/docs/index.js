@@ -2,8 +2,8 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
 import { getApiComponentMapByFrameWork } from '../common.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
 import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';

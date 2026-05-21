@@ -1,6 +1,5 @@
 // import dayjs from 'dayjs'
 import path from 'path';
-import VUE_TITLE_MAP from './language/api-docs-title.js';
 import {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
@@ -11,6 +10,7 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from './files-combine.js';
+import VUE_TITLE_MAP from './language/api-docs-title.js';
 
 // common 数据类型，用于引入具体的组件类型定义文件中
 const GLOBAL_TYPES = [

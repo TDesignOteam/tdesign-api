@@ -1,8 +1,8 @@
-import map from './map.json' with { type: 'json' };
-import { formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } from './common.js';
-import { COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MOBILE_FRAMES } from './config/index.js';
 import { pick } from 'lodash-es';
 import apiData from './api.json' with { type: 'json' };
+import { formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } from './common.js';
+import { COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MOBILE_FRAMES } from './config/index.js';
+import map from './map.json' with { type: 'json' };
 
 const framework = 'UniApp';
 const component = 'Radio';

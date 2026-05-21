@@ -1,7 +1,7 @@
+import { camelCase, upperFirst } from 'lodash-es';
 import { kebabCaseComponent } from '../utils.js';
 import { UNIT_TEST_EVENTS_MAP } from './const/events-map.js';
 import { reactNeedMockDelayEvents } from './const/react-need-mock-delay.js';
-import { camelCase, upperFirst } from 'lodash-es';
 
 // 直接从 DOM 获取的属性，不需要通过 getAttribute
 const ATTRIBUTES_DIRECT = ['value', 'checked'];

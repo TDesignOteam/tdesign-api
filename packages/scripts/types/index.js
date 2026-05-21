@@ -4,20 +4,8 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
-import {
-  FRAMEWORK_MAP,
-  TYPES_COMBINE_MAP,
-  MOBILE_TYPES_COMBINE_MAP,
-  MINIPROGRAM_TYPES_COMBINE_MAP,
-  MOBILE_FRAMES,
-} from '../config/index.js';
-import generateGlobals from './global/index.js';
-import formatTNode from './t-node.js';
-import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
-import map from '../map.json' with { type: 'json' };
+import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
 import prettier from 'prettier';
-import prettierConfig from '../config/prettier.js';
 import {
   isPlugin,
   getTdCmpName,
@@ -28,8 +16,20 @@ import {
   getInstanceName,
   getApiComponentMapByFrameWork,
 } from '../common.js';
+import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
+import {
+  FRAMEWORK_MAP,
+  TYPES_COMBINE_MAP,
+  MOBILE_TYPES_COMBINE_MAP,
+  MINIPROGRAM_TYPES_COMBINE_MAP,
+  MOBILE_FRAMES,
+} from '../config/index.js';
+import prettierConfig from '../config/prettier.js';
+import map from '../map.json' with { type: 'json' };
 import { getComponentBasePath } from '../utils.js';
-import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
+import generateGlobals from './global/index.js';
+import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
+import formatTNode from './t-node.js';
 
 const components = map.data.components.filter((item) => !item.type).map((item) => item.value);
 

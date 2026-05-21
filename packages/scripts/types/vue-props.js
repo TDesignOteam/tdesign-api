@@ -1,6 +1,4 @@
 import fs from 'fs';
-import { kebabCaseComponent } from '../utils.js';
-
 import path from 'path';
 import chalk from 'chalk';
 import {
@@ -12,10 +10,11 @@ import {
   getDefaultValueName,
   getCmpTypeCombineMap,
 } from '../common.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
+import { kebabCaseComponent } from '../utils.js';
 import { getComponentBasePath } from '../utils.js';
+import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 
 let currentFramework = '';
 let useDefault = '';

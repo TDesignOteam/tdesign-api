@@ -1,11 +1,11 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import axios from 'axios';
+import chalk from 'chalk';
 import prettier from 'prettier';
 import prettierConfig from '../../../config/prettier.js';
-import axios from 'axios';
-import path from 'path';
-import fs from 'fs';
-import chalk from 'chalk';
 import { kebabCaseComponent } from '../../../utils.js';
-import { fileURLToPath } from 'url';
 import { parseJSON } from '../../utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

@@ -8,6 +8,9 @@ import globals from 'globals';
 export default [
   ...vuePlugin.configs['flat/essential'],
   {
+    ignores: ['snapshot*', 'node_modules/', 'common/', 'cypress/', 'script/test/cypress/', 'temp*', 'public/'],
+  },
+  {
     files: ['**/*.{vue,js,ts,tsx}'],
     languageOptions: {
       parser: vueParser,
@@ -35,8 +38,5 @@ export default [
         alphabetize: { order: 'asc', caseInsensitive: true },
       }],
     },
-  },
-  {
-    ignores: ['snapshot*', 'node_modules/', 'common/', 'cypress/', 'script/test/cypress/', 'temp*', 'public/'],
   },
 ];

@@ -8,6 +8,10 @@
  */
 import fs from 'fs';
 import path from 'path';
+import chalk from 'chalk';
+import { uniq } from 'lodash-es';
+import prettier from 'prettier';
+import apiJson from '../api.json' with { type: 'json' };
 import {
   groupByComponent,
   formatArrayToMap,
@@ -15,16 +19,12 @@ import {
   componentsMap,
   getApiComponentMapByFrameWork,
 } from '../common.js';
-import { getParentByChildComponent } from '../vitest/utils.js';
-import map from '../map.json' with { type: 'json' };
-import apiJson from '../api.json' with { type: 'json' };
 import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
-import { kebabCaseComponent } from '../utils.js';
-import { uniq } from 'lodash-es';
-import chalk from 'chalk';
-import prettier from 'prettier';
 import prettierConfig from '../config/prettier.js';
+import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
+import { kebabCaseComponent } from '../utils.js';
+import { getParentByChildComponent } from '../vitest/utils.js';
 
 const { data: ALL_API } = apiJson;
 /**
@@ -275,7 +275,7 @@ function write(framework, name, data) {
   writeFileRecursive(fileName, buffer);
 }
 
-function writeVolar(framework, data) {
+async function writeVolar(framework, data) {
   const current = FRAMEWORK_MAP[framework];
   const readerGlobalComponents = data.map((item) => {
     if (item === 'IconSVG') {

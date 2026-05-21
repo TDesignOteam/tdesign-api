@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../common.js';
-import map from '../map.json' with { type: 'json' };
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
-import { kebabCaseComponent } from '../utils.js';
 import { pick } from 'lodash-es';
+import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../common.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
+import map from '../map.json' with { type: 'json' };
+import { kebabCaseComponent } from '../utils.js';
 
 let FRAMEWORK_TYPES_COMPONENT_RELATION = {};
 

@@ -1,3 +1,5 @@
+import { kebabCase } from 'lodash-es';
+import { kebabCaseComponent } from '../utils.js';
 import {
   getItDescription,
   getWrapper,
@@ -10,11 +12,9 @@ import {
   getVariablesCode,
 } from './core.js';
 import { getSkipCode } from './utils.js';
-import { kebabCaseComponent } from '../utils.js';
 // import map from '../map.json' with { type: 'json' }
 
 // const componentMap = map.data.components;
-import { kebabCase } from 'lodash-es';
 
 const CUSTOM_NODE_CLASS = 'custom-node';
 const DOCUMENT_CUSTOM_NODE_CLASS = 'document.custom-node';

@@ -1,10 +1,11 @@
-import {
-  parseJSON,
-  formatArrayToMap,
-  groupByComponent,
-  getApiComponentMapByFrameWork,
-  getParentByChildComponent,
-} from './utils.js';
+import { pick } from 'lodash-es';
+import { COMPONENT_API_MD_MAP } from '../config/files-combine.js';
+import map from '../map.json' with { type: 'json' };
+import { copyUnitTestsToOtherWrapper } from './copy.js';
+import { generateAttributeUnitCase } from './generate-attribute.js';
+import { generateClassNameUnitCase } from './generate-class-name.js';
+import { generateDomUnitCase } from './generate-dom.js';
+import { generateEventUnitCase } from './generate-event.js';
 import {
   getImportsConfig,
   getImportsCode,
@@ -12,15 +13,14 @@ import {
   getSimulateEvents,
   getVariableImports,
 } from './generate-import.js';
-import { generateClassNameUnitCase } from './generate-class-name.js';
 import { generateTNodeElement } from './generate-tnode.js';
-import { generateAttributeUnitCase } from './generate-attribute.js';
-import { generateDomUnitCase } from './generate-dom.js';
-import { generateEventUnitCase } from './generate-event.js';
-import { copyUnitTestsToOtherWrapper } from './copy.js';
-import { COMPONENT_API_MD_MAP } from '../config/files-combine.js';
-import map from '../map.json' with { type: 'json' };
-import { pick } from 'lodash-es';
+import {
+  parseJSON,
+  formatArrayToMap,
+  groupByComponent,
+  getApiComponentMapByFrameWork,
+  getParentByChildComponent,
+} from './utils.js';
 
 const componentMap = map.data.components;
 
