@@ -413,18 +413,19 @@ function addCommonProperties({
 }) {
   // 部分组件无包裹元素不需要添加 className、style
   const filterComponents = ['Popup', 'Tooltip','ConfigProvider'];
+  const cmpConfig = COMPONENTS_MAP[cmp];
   // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
-  if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
+  if (['React(PC)', 'React(Mobile)'].includes(framework) && cmpConfig && !cmpConfig.type && !filterComponents.includes(cmp)) {
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
       `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}\`React.CSSProperties\` | N`,
     ]);
-  } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
+  } else if (framework === 'Miniprogram' && cmpConfig && !cmpConfig.type && category === 'Props') {
     md[category].apis.push(...[
       `style | Object | - | ${languageInfo.styleText} | N`,
       `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
     ]);
-  } else if (framework === 'UniApp' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
+  } else if (framework === 'UniApp' && cmpConfig && !cmpConfig.type && category === 'Props') {
     md[category].apis.push(...[
       `custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`,
     ]);
