@@ -2,9 +2,8 @@ export default {
   Space: {
     align_2772: {
       field_name: 'align',
-  id: 2772,
-  PC: { className: 't-space-align-${item,
-};', wrapper: 'getSpaceDefaultMount' },
+      id: 2772,
+      PC: { className: 't-space-align-${item}', wrapper: 'getSpaceDefaultMount' },
     },
     breakLine_2775: {
       field_name: 'breakLine',

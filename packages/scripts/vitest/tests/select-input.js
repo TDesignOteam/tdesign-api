@@ -2,13 +2,10 @@ export default {
   SelectInput: {
     allowInput_2293: {
       field_name: 'allowInput',
-  id: 2293,
-  PC: {
+      id: 2293,
+      PC: {
         className: [
-          { value: true,
-  expect: [{ dom: '.t-input',
-  className: { 't-is-readonly': false,
-}, }] },
+          { value: true, expect: [{ dom: '.t-input', className: { 't-is-readonly': false } }] },
         ],
         classNameDom: '',
       },

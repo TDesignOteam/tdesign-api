@@ -1,9 +1,6 @@
 export default {
   Tag: {
-    children_3310: { field_name: 'children',
-  id: 3310,
-  PC: { tnode: true,
-}, },
+    children_3310: { field_name: 'children', id: 3310, PC: { tnode: true } },
     closable_24: { field_name: 'closable', id: 24, PC: { dom: '.t-tag__icon-close' } },
     closable_1712653002: { field_name: 'closable', id: 1712653002 },
     color_1710397655: {

@@ -1,10 +1,6 @@
 export default {
   Link: {
-    children_2892: { field_name: 'children',
-  id: 2892,
-  PC: { tnode: true,
-  snapshot: true,
-}, },
+    children_2892: { field_name: 'children', id: 2892, PC: { tnode: true, snapshot: true } },
     content_2891: { field_name: 'content', id: 2891, PC: { tnode: true, snapshot: true } },
     default_2922: { field_name: 'default', id: 2922, PC: { tnode: true, snapshot: true } },
     disabled_2895: {

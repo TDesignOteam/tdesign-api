@@ -2,10 +2,9 @@ export default {
   Avatar: {
     alt_1466: {
       field_name: 'alt',
-  id: 1466,
-  PC: {
-        attribute: { alt: 'Avatar',
-},
+      id: 1466,
+      PC: {
+        attribute: { alt: 'Avatar' },
         attributeDom: 'img',
         props: { image: 'https://tdesign.gtimg.com/site/avatar.jpg' },
       },

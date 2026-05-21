@@ -2,14 +2,14 @@ export default {
   Timeline: {
     labelAlign_2823: {
       field_name: 'labelAlign',
-  id: 2823,
-  PC: {
+      id: 2823,
+      PC: {
         wrapper: 'getTimelineDefaultMount',
-  className: {
+        className: {
           left: 't-timeline-left',
-  alternate: 't-timeline-alternate',
-  right: 't-timeline-right',
-},
+          alternate: 't-timeline-alternate',
+          right: 't-timeline-right',
+        },
         event: [
           {
             props: { layout: 'horizontal', labelAlign: 'top' },

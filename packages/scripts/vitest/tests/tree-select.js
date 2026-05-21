@@ -1,8 +1,6 @@
 export default {
   TreeSelect: {
-    autoWidth_2375: { field_name: 'autoWidth',
-  id: 2375,
-},
+    autoWidth_2375: { field_name: 'autoWidth', id: 2375 },
     autofocus_3298: {
       field_name: 'autofocus',
       id: 3298,
@@ -623,7 +621,7 @@ export default {
       id: 1833,
       PC: {
         wrapper: 'getTreeSelectMultipleMount',
-        props: { value: 1, data: "[{label: 'tdesign-vue' value: 1}]" },
+        props: { value: 1, data: "[{label: 'tdesign-vue',value: 1}]" },
         tnode: {
           dom: [],
           trigger: '',

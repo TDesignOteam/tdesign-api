@@ -1,8 +1,6 @@
 export default {
   Statistic: {
-    animation_3457: { field_name: 'animation',
-  id: 3457,
-},
+    animation_3457: { field_name: 'animation', id: 3457 },
     animationStart_3455: { field_name: 'animationStart', id: 3455 },
     color_3459: { field_name: 'color', id: 3459 },
     decimalPlaces_3453: { field_name: 'decimalPlaces', id: 3453 },

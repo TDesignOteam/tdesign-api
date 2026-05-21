@@ -1,8 +1,6 @@
 export default {
   Input: {
-    MP_EXCLUDE_PROPS_2670: { field_name: 'MP_EXCLUDE_PROPS',
-  id: 2670,
-},
+    MP_EXCLUDE_PROPS_2670: { field_name: 'MP_EXCLUDE_PROPS', id: 2670 },
     MP_PROPS_2669: { field_name: 'MP_PROPS', id: 2669 },
     align_1738: {
       field_name: 'align',

@@ -1,8 +1,6 @@
 export default {
   StickyTool: {
-    list_1845: { field_name: 'list',
-  id: 1845,
-},
+    list_1845: { field_name: 'list', id: 1845 },
     offset_1847: { field_name: 'offset', id: 1847 },
     placement_1846: { field_name: 'placement', id: 1846 },
     popupProps_3336: { field_name: 'popupProps', id: 3336 },

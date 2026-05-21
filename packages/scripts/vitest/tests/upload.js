@@ -2,11 +2,9 @@ export default {
   Upload: {
     abridgeName_2995: {
       field_name: 'abridgeName',
-  id: 2995,
-  PC: {
-        props: { abridgeName: [8,
-  6],
-},
+      id: 2995,
+      PC: {
+        props: { abridgeName: [8, 6] },
         dom: [
           {
             description: 'props.abridgeName works fine if theme=file-input',
@@ -81,7 +79,7 @@ export default {
       id: 873,
       PC: {
         global: {
-          imports: ["import { getUploadServer } from './request.js'"],
+          imports: ["import { getUploadServer } from './request'"],
           variables: ['const server = getUploadServer()'],
           beforeAll: ["server.listen({ onUnhandledRequest: 'error' })"],
           afterEach: ['server.resetHandlers()'],

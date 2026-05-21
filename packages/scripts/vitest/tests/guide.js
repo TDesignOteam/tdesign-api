@@ -1,8 +1,6 @@
 export default {
   Guide: {
-    backButtonProps_1708481239: { field_name: 'backButtonProps',
-  id: 1708481239,
-},
+    backButtonProps_1708481239: { field_name: 'backButtonProps', id: 1708481239 },
     counter_2970: {
       field_name: 'counter',
       id: 2970,

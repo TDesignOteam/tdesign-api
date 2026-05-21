@@ -2,13 +2,10 @@ export default {
   AutoComplete: {
     autofocus_3152: {
       field_name: 'autofocus',
-  id: 3152,
-  PC: {
+      id: 3152,
+      PC: {
         attribute: [
-          { value: false,
-  expect: [{ dom: 'input',
-  attribute: { autofocus: false,
-}, }] },
+          { value: false, expect: [{ dom: 'input', attribute: { autofocus: false } }] },
           { value: true, expect: [{ dom: 'input', attribute: { autofocus: 'toBeDefined' } }] },
         ],
       },
