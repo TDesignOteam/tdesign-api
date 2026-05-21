@@ -1,7 +1,9 @@
 import path from 'path';
 import { BaseObject } from '../../types';
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+import { exec as execCallback } from 'child_process';
+import { promisify } from 'util';
+
+const exec = promisify(execCallback);
 
 const scriptsPath = path.resolve('packages/scripts');
 
