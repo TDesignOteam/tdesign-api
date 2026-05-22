@@ -3,7 +3,7 @@
  * hasEvent 是否引入事件 vi
  * importedComponents 引入了哪些组件依赖
  */
-const { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } = require('./core');
+import { SIMULATE_FUNCTIONS, GET_VAR_FUNCTIONS } from './core.js';
 
 // fireEvent, vi, render 等已经单独处理
 const TEST_KEYWORDS = ['mockDelay', 'mockTimeout'];
@@ -31,33 +31,33 @@ function getImportsConfig(params = {}, tests) {
   const obj = {
     'Vue(PC)': {
       '@vue/test-utils': [],
-      'vitest': [],
+      vitest: [],
       '..': [],
       './mount': [],
       '@test/utils': [],
     },
     'VueNext(PC)': {
       '@vue/test-utils': [],
-      'vitest': [],
+      vitest: [],
       '..': [],
       './mount': [],
       '@test/utils': [],
     },
     'Vue(Mobile)': {
       '@vue/test-utils': [],
-      'vitest': [],
+      vitest: [],
       '..': [],
       './mount': [],
       '@test/utils': [],
     },
     'React(PC)': {
-      'react': 'React',
+      react: 'React',
       '@test/utils': [],
       '..': [],
       './mount': [],
     },
     'React(Mobile)': {
-      'react': 'React',
+      react: 'React',
       '@test/utils': [],
       '..': [],
       './mount': [],
@@ -69,13 +69,13 @@ function getImportsConfig(params = {}, tests) {
     obj['React(PC)']['@test/utils'].push('fireEvent', 'vi');
   }
   if (importedComponents.length) {
-    Object.keys(obj).forEach(framework => {
+    Object.keys(obj).forEach((framework) => {
       obj[framework]['..'].push(...[...new Set(importedComponents)]);
     });
   }
   if (importedMounts.size > 0) {
     const list = [...importedMounts];
-    Object.keys(obj).forEach(framework => {
+    Object.keys(obj).forEach((framework) => {
       obj[framework]['./mount'] = list;
     });
   }
@@ -87,13 +87,13 @@ function getImportsConfig(params = {}, tests) {
     obj['Vue(Mobile)']['@vue/test-utils'].push('mount');
   }
   if (keywordsImports) {
-    Object.keys(obj).forEach(framework => {
+    Object.keys(obj).forEach((framework) => {
       obj[framework]['@test/utils'].push(...keywordsImports);
     });
   }
   if (importedTestUtils && importedTestUtils.length) {
     const list = [...new Set(importedTestUtils)];
-    Object.keys(obj).forEach(framework => {
+    Object.keys(obj).forEach((framework) => {
       obj[framework]['@test/utils'] = obj[framework]['@test/utils'].concat(list);
     });
   }
@@ -132,9 +132,7 @@ function getMoreEventImports(framework, event, wrapper, trigger) {
   event.forEach((oneEventExpect) => {
     if (Array.isArray(oneEventExpect.expect)) {
       oneEventExpect.expect.forEach((oneExpect) => {
-        if (typeof oneExpect === 'object'
-          && oneExpect.trigger
-        ) {
+        if (typeof oneExpect === 'object' && oneExpect.trigger) {
           // 添加模拟事件
           const list = getSimulateEvents(oneExpect.trigger || trigger);
           if (list && list.length) {
@@ -151,7 +149,7 @@ function getMoreEventImports(framework, event, wrapper, trigger) {
         importedMounts.push(oneEventExpect.wrapper);
       }
     }
-  })
+  });
   return { importedTestUtils, importedMounts };
 }
 
@@ -168,17 +166,11 @@ function getVariableImports(test) {
   }
   const imports = [];
   GET_VAR_FUNCTIONS.forEach((variable) => {
-    if (allVariables.find(t => t.includes(variable))) {
+    if (allVariables.find((t) => t.includes(variable))) {
       imports.push(variable);
     }
   });
   return imports;
 }
 
-module.exports = {
-  getImportsConfig,
-  getImportsCode,
-  getMoreEventImports,
-  getSimulateEvents,
-  getVariableImports,
-};
+export { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents, getVariableImports };

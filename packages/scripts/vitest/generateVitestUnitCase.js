@@ -1,20 +1,19 @@
-const prettier = require('prettier');
-const prettierConfig = require('../config/prettier');
-const chalk = require('chalk');
-const fs = require('fs');
-const path = require('path');
-const { kebabCaseComponent } = require('../utils');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import prettier from 'prettier';
+import { FRAMEWORK_MAP } from '../config/index.js';
+import prettierConfig from '../config/prettier.js';
+import { kebabCaseComponent } from '../utils.js';
+import { NEED_USE_DEFAULT_OR_USE_VMODEL } from './const/vue2-use-default.js';
+import { getUnitTestCode } from './main.js';
+// import { generateTestDescriptionToVitestFile } from './tests/core/utils.js'
 
-const { FRAMEWORK_MAP } = require('../config');
-const { NEED_USE_DEFAULT_OR_USE_VMODEL } = require('./const/vue2-use-default');
-const { getUnitTestCode } = require('./main');
-// const { generateTestDescriptionToVitestFile } = require('./tests/core/utils');
-
-function generateVitestUnitCase(baseData, framework, { component }) {
+async function generateVitestUnitCase(baseData, framework, { component }) {
   const cases = getUnitTestCode(baseData, framework, { component });
   try {
     // console.log(`>>>>>>>>>>\n${cases}\n>>>>>>>>>`);
-    const codeData = prettier.format(cases, prettierConfig);
+    const codeData = await prettier.format(cases, prettierConfig);
     const basePath = FRAMEWORK_MAP[framework].apiBasePath;
     const fileName = kebabCaseComponent(component);
     const outputFolder = path.resolve(basePath, `${fileName}/__tests__`);
@@ -25,14 +24,13 @@ function generateVitestUnitCase(baseData, framework, { component }) {
         return console.error(err);
       }
       const comment = getFileComment(framework, component);
-      fs.writeFile(outputPath,  comment + codeData, (err) => {
+      fs.writeFile(outputPath, comment + codeData, (err) => {
         if (err) {
           return console.error(err);
         }
         console.log(chalk.green(`unit test cases file: ${outputPath} has been created.`));
       });
     });
-
   } catch (e) {
     console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
     console.warn(e);
@@ -51,6 +49,4 @@ function getFileComment(framework, component) {
   return vue2Comment + comment;
 }
 
-module.exports = {
-  generateVitestUnitCase,
-};
+export { generateVitestUnitCase };

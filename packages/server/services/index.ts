@@ -1,8 +1,8 @@
-import { BaseObject, QueryPaginationProps } from '../../types';
 import { isEmpty } from 'lodash';
-import squel from 'squel';
-import executeSQL from './sqlite';
 import moment from 'moment';
+import squel from 'squel';
+import { BaseObject, QueryPaginationProps } from '../../types';
+import executeSQL from './sqlite';
 
 const tableName = 't_api';
 

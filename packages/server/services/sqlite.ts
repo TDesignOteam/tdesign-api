@@ -1,7 +1,7 @@
-// @ts-ignore
-import initSqlJs from "sql.js/dist/sql-wasm-debug.js";
 import fs from 'fs';
 import path from 'path';
+// @ts-expect-error sql.js subpath import has no type declarations
+import initSqlJs from "sql.js/dist/sql-wasm-debug.js";
 
 const dbFilePath = path.resolve('db/TDesign.db');
 

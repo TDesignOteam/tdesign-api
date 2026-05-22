@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "generate props/ts/api.md for API",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -15,12 +16,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.0",
-    "chalk": "^4.1.0",
-    "dayjs": "^1.9.7",
-    "js-yaml": "^4.1.0",
-    "lodash": "^4.17.20",
-    "prettier": "^2.6.2",
-    "shelljs": "^0.8.4"
+    "axios": "catalog:",
+    "chalk": "catalog:",
+    "dayjs": "catalog:",
+    "js-yaml": "catalog:",
+    "lodash-es": "catalog:",
+    "prettier": "catalog:",
+    "shelljs": "catalog:"
   }
 }

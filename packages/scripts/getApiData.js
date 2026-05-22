@@ -2,25 +2,25 @@
  * 仅获取 API 数据，不输出到文件。用于在线预览 API 代码
  */
 
-const { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } = require('./common');
-const { COMPONENT_API_MD_MAP } = require('./config');
-const { getDocsByComponent } = require('./docs');
-const { getTypesByComponent } = require('./types');
-const { getPropsByComponent } = require('./types/vue-props');
-const pick = require('lodash/pick');
+import { pick } from 'lodash-es';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from './common.js';
+import { COMPONENT_API_MD_MAP } from './config/index.js';
+import { getDocsByComponent } from './docs/index.js';
+import { getTypesByComponent } from './types/index.js';
+import { getPropsByComponent } from './types/vue-props.js';
 
 /**
-* framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
-*/
+ * framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
+ */
 
-function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
+async function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(apiData, frameworkMap[framework]);
   const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
   const baseData = pick(frameworkData, cmpMap[component] || [component]);
   // 生成 API 类型定义
-  const apiTypes = getTypesByComponent(baseData, framework, component);
+  const apiTypes = await getTypesByComponent(baseData, framework, component);
   // console.log(apiTypes);
   // 生成 API 文档
   const apiDocs = getDocsByComponent(baseData, framework, component);
@@ -35,6 +35,4 @@ function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
   };
 }
 
-module.exports = {
-  getApiPreviewData,
-};
+export { getApiPreviewData };

@@ -1,5 +1,5 @@
 function parseJSON(json, error = '') {
-  if (!json || json.indexOf('preSkip') !== -1) return {}
+  if (!json || json.indexOf('preSkip') !== -1) return {};
   try {
     return JSON.parse(json);
   } catch (e) {
@@ -33,7 +33,7 @@ function groupByComponent(allApi, framework) {
 
   // API 默认顺序为字母顺序，但是插件 API 的顺序应当为创建顺序。插件 API 形如：$Message.info(theme, duration)
   Object.keys(result).forEach((componentName) => {
-    if (componentName[0]==='$') {
+    if (componentName[0] === '$') {
       result[componentName] = result[componentName].sort((a, b) => {
         // props 放在前面，其余类型放在后面 (props 的 field_category 值最小)
         if (a.field_category < b.field_category) return -1;
@@ -56,9 +56,10 @@ function getApiComponentMapByFrameWork(map, framework) {
       // 没有 includes，并且没有 excludes，则认为适用所有框架。
       // 存在 includes，则表示仅在 includes 里面的框架才生效
       // 存在 excludes，则表示在 excludes 中的框架，父子关系不生效
-      if ((!item.includes && !item.excludes)
-        || (item.includes && item.includes.includes(framework))
-        || (item.excludes && !item.excludes.includes(framework))
+      if (
+        (!item.includes && !item.excludes) ||
+        (item.includes && item.includes.includes(framework)) ||
+        (item.excludes && !item.excludes.includes(framework))
       ) {
         rMap[parentComponent] = item.list;
       }
@@ -80,7 +81,7 @@ function getParentByChildComponent(combineMap, childComponent) {
   }
 }
 
-module.exports = {
+export {
   parseJSON,
   formatArrayToMap,
   groupByComponent,

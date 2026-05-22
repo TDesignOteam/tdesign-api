@@ -1,13 +1,5 @@
-const pick = require('lodash/pick');
-const find = require('lodash/find');
-const camelCase = require('lodash/camelCase');
-const lowerFirst = require('lodash/lowerFirst');
-const { kebabCaseComponent, getComponentBasePath } = require('../utils');
-
-const map = require('../map.json');
-const { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } = require('../config/const');
-const { fetchApiDataFromOfficialWebsite } = require('../types/miniprogram');
-const {
+import { pick, find, camelCase, lowerFirst } from 'lodash-es';
+import {
   getApiTitles,
   getEventName,
   isPlugin,
@@ -20,12 +12,17 @@ const {
   getCmpTypeCombineMap,
   getComponentsMap,
   getGlobalConfigName,
-} = require('../common');
-const languageConfig = require('../config/language/description');
+} from '../common.js';
+import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } from '../config/const.js';
+import languageConfig from '../config/language/description.js';
+import map from '../map.json' with { type: 'json' };
+import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
+import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
+
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
-const IMPORT_COMPONENT_PATH = map.data.components.map(cmp => `@${cmp.value}`);
+const IMPORT_COMPONENT_PATH = map.data.components.map((cmp) => `@${cmp.value}`);
 
 // LANGUAGE 会发生变化
 let LANGUAGE = 'zh';
@@ -46,12 +43,7 @@ const COMMON_PROPS = ['externalClasses', 'style', 'customStyle'];
 
 function categoryOrder(res) {
   const CATEGORY_ORDER = ['Props', 'Events', 'Functions', 'Slots', 'External Classes'];
-  return Object.fromEntries(
-    CATEGORY_ORDER.filter((key) => key in res).map((key) => [
-      key,
-      res[key],
-    ])
-  );;
+  return Object.fromEntries(CATEGORY_ORDER.filter((key) => key in res).map((key) => [key, res[key]]));
 }
 // category: props / events / functions / extends / return
 function groupByFieldCategory(framework, componentApi) {
@@ -60,9 +52,9 @@ function groupByFieldCategory(framework, componentApi) {
   const isUniApp = framework === 'UniApp';
   componentApi.forEach((apiOriginal) => {
     const api = { ...apiOriginal };
-    const isSlot = (isMini || isUniApp) ? api.field_type_text.includes('TNode') : false;
+    const isSlot = isMini || isUniApp ? api.field_type_text.includes('TNode') : false;
     const isExtend = api.field_category_text === 'Extends';
-    const isFunction = (isPlugin(api.component)) && api.field_category_text === 'Functions';
+    const isFunction = isPlugin(api.component) && api.field_category_text === 'Functions';
     if (isExtend) {
       const { baseName } = moveTsTypeToDesc(api.field_name);
       api.field_name = baseName.replace('Td', '');
@@ -79,31 +71,31 @@ function groupByFieldCategory(framework, componentApi) {
         api.field_desc_en = curLanguage.extendsText.replace(/\${fieldName}/g, api.field_name.replace('Td', ''));
       }
     }
-    const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
+    const category = isExtend || isFunction ? 'Props' : api.field_category_text;
     (result[category] ??= []).push(api);
     // 支持属性同名插槽输出到小程序端组件 API 文档
     if (isSlot) {
       const newAPi = { ...api };
-      const desc = '自定义' + ' `' + kebabCaseComponent(newAPi.field_name) +'` ' + '显示内容';
+      const desc = '自定义' + ' `' + kebabCaseComponent(newAPi.field_name) + '` ' + '显示内容';
       const onlyTNode = newAPi.field_type_text.length === 1 && newAPi.field_type_text[0] === 'TNode';
-      newAPi.field_desc_zh = onlyTNode ? newAPi.field_desc_zh : desc
+      newAPi.field_desc_zh = onlyTNode ? newAPi.field_desc_zh : desc;
       newAPi.field_category = 512;
       newAPi.field_category_text = 'Slots';
       (result['Slots'] ??= []).push(newAPi);
-    };
-  })
+    }
+  });
   return categoryOrder(result);
-};
+}
 
 function sortSlotsArrExceptFirst(arr) {
   if (arr.length <= 1) {
-      return arr;
+    return arr;
   }
 
   // 去重：以 | 之前的内容为 key，后者覆盖前者
   const uniqueMap = new Map();
   for (const item of arr) {
-    const [key] = item.split('|').map(part => part.trim());
+    const [key] = item.split('|').map((part) => part.trim());
     uniqueMap.set(key, item);
   }
   const uniqueArr = Array.from(uniqueMap.values());
@@ -126,15 +118,12 @@ function shouldShowLink(arr, isMiniOrUni, isSlots) {
 function parseJSON(json) {
   try {
     return JSON.parse(json);
-  } catch(e) {
+  } catch (e) {
     return {};
   }
 }
 
-function formatDesc(
-  api,
-  { isUncontrol, current: config, framework, category },
-) {
+function formatDesc(api, { isUncontrol, current: config, framework, category }) {
   const desc = [];
   const isMiniprogram = framework === 'Miniprogram';
   const isUniApp = framework === 'UniApp';
@@ -161,7 +150,7 @@ function formatDesc(
     desc.push(api[curLanguage.descriptionField]);
   }
   // 语法糖
-  if ((framework.indexOf('Vue') !== -1 ||  framework === 'UniApp') && api.syntactic_sugar && !isUncontrol) {
+  if ((framework.indexOf('Vue') !== -1 || framework === 'UniApp') && api.syntactic_sugar && !isUncontrol) {
     if (api.syntactic_sugar === 'v-model') {
       desc.push(curLanguage.vmodelSugarText[framework].replace('name', api.field_name));
     } else if (api.syntactic_sugar === 'sync') {
@@ -180,15 +169,14 @@ function formatDesc(
     let customFieldType = api.custom_field_type;
     const { interfaceDesc } = moveTsTypeToDesc(customFieldType);
     const isComplicatedType = !!interfaceDesc.length;
-    const filters = TDESIGN_GLOBALS.filter(global => customFieldType.indexOf(global) !== -1);
+    const filters = TDESIGN_GLOBALS.filter((global) => customFieldType.indexOf(global) !== -1);
     let importDocPath = '';
     if (isComplicatedType) {
       // 保留 【xxx】中的内容
-      // eslint-disable-next-line prefer-destructuring
+       
       // customFieldType = customFieldType.split('【')[0];
-      customFieldType = customFieldType.split('【')
-        .map(item => item.replace('】', ''));
-      // 处理：import { PopupProps } from '@Popup' 等引用，更为相关组件文档链接
+      customFieldType = customFieldType.split('【').map((item) => item.replace('】', ''));
+      // 处理：import { PopupProps  } from '@Popup' 等引用，更为相关组件文档链接
       let importIndex = -1;
       // 收集需要移除的 @common import 索引
       const commonImportIndexes = [];
@@ -212,14 +200,16 @@ function formatDesc(
       // importIndex 引入放在最后
       importIndex >= 0 && customFieldType.splice(importIndex, 1);
       // 移除 @common 的 import 语句（从后往前删，避免索引偏移）
-      commonImportIndexes.sort((a, b) => b - a).forEach((i) => {
-        // 如果前面已经 splice 了 importIndex，需要调整索引
-        if (importIndex >= 0 && i > importIndex) {
-          customFieldType.splice(i - 1, 1);
-        } else {
-          customFieldType.splice(i, 1);
-        }
-      });
+      commonImportIndexes
+        .sort((a, b) => b - a)
+        .forEach((i) => {
+          // 如果前面已经 splice 了 importIndex，需要调整索引
+          if (importIndex >= 0 && i > importIndex) {
+            customFieldType.splice(i - 1, 1);
+          } else {
+            customFieldType.splice(i, 1);
+          }
+        });
       customFieldType = customFieldType.join('` `');
     }
     if (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp)) {
@@ -235,7 +225,9 @@ function formatDesc(
     }
     if (isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
-      desc.push(`[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`);
+      desc.push(
+        `[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`,
+      );
     }
   }
   return desc;
@@ -244,10 +236,11 @@ function formatDesc(
 function getTsTypeFileName(cmp, config) {
   const rMap = getCmpTypeCombineMap(TYPES_COMBINE_MAP, currentFramework);
   const parentName = rMap[cmp] || cmp;
-  const fileName = {
-    USE_FILE_NAME: getTdCmpName(parentName),
-    USE_TYPE_NAME: 'type',
-  }[config.tsBaseFileName] || 'index';
+  const fileName =
+    {
+      USE_FILE_NAME: getTdCmpName(parentName),
+      USE_TYPE_NAME: 'type',
+    }[config.tsBaseFileName] || 'index';
   return `${[getFolderName(parentName), fileName].join('/')}.ts`;
 }
 
@@ -293,7 +286,7 @@ function formatToVueApi(api, params) {
   // 如果事件的输入/输出中包含通用类型，则也显示「查看通用类型定义」链接
   if (r._eventTypeBases && r._eventTypeBases.length) {
     const eventBasesStr = r._eventTypeBases.join(' ');
-    const filters = TDESIGN_GLOBALS.filter(global => eventBasesStr.indexOf(global) !== -1);
+    const filters = TDESIGN_GLOBALS.filter((global) => eventBasesStr.indexOf(global) !== -1);
     if (filters.length) {
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
@@ -312,12 +305,10 @@ function formatToVueApi(api, params) {
   const i = type.indexOf('TNode');
   if (i >= 0) {
     if (!r.custom_field_type) {
-      r.custom_field_type = type
-        .map(item => (item === 'TNode' ? item : lowerFirst(item)))
-        .join(' | ');
+      r.custom_field_type = type.map((item) => (item === 'TNode' ? item : lowerFirst(item))).join(' | ');
     }
     let tmp = type.concat();
-    if (['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(params.framework))  {
+    if (['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(params.framework)) {
       tmp.splice(i, 1, 'Slot', 'Function');
     } else if (isMiniprogram || isUniApp) {
       tmp.splice(i, 1); // 小程序端插槽部分独立输出
@@ -329,11 +320,9 @@ function formatToVueApi(api, params) {
   r.field_type_text = type.join(' / ');
   const moreDesc = formatDesc(r, params);
   desc = moreDesc.concat(desc);
-  const tmp = interfaceDescription.length
-    ? `<br/>${interfaceDescription.join('<br/><br/>')}<br/>`
-    : '';
+  const tmp = interfaceDescription.length ? `<br/>${interfaceDescription.join('<br/><br/>')}<br/>` : '';
   desc = desc.concat(tmp);
-  r.field_desc_zh = desc.filter(v => !!v).join('。');
+  r.field_desc_zh = desc.filter((v) => !!v).join('。');
   // 小程序的属性一般显示为中划线
   if (['Miniprogram', 'UniApp'].includes(params.framework)) {
     r.field_name = kebabCaseComponent(r.field_name);
@@ -367,7 +356,7 @@ function moveTsTypeToDesc(str) {
   const regExp = /【.*?】/g;
   const baseName = str.replace(regExp, '');
   let interfaceDesc = str.match(regExp) || [];
-  interfaceDesc = interfaceDesc.map(str => str.replace(/【|】/g, '`'));
+  interfaceDesc = interfaceDesc.map((str) => str.replace(/【|】/g, '`'));
   return { baseName, interfaceDesc };
 }
 
@@ -377,15 +366,22 @@ function formatEventToProps(api) {
   baseName = baseName.replace(/`/g, '');
   // tsTypeText 中文"TS 类型"
   const language = languageConfig[LANGUAGE];
-  const desc = [`${language.tsTypeText}\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh].filter(v => !!v).join('');
+  const desc = [`${language.tsTypeText}\`${baseName || '()'} => void\`<br/>`, api.field_desc_zh]
+    .filter((v) => !!v)
+    .join('');
   return [name, 'Function', undefined, desc, 'N'].join(' | ');
 }
 
 function getOneApi(newApi, current, docTitleType, framework) {
-  if (!current || (['Miniprogram', 'UniApp'].includes(framework) && docTitleType === 'Props' && newApi.field_type_text === '')) return;
+  if (
+    !current ||
+    (['Miniprogram', 'UniApp'].includes(framework) && docTitleType === 'Props' && newApi.field_type_text === '')
+  )
+    return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
-  // eslint-disable-next-line no-useless-escape
-  const oneApi = Object.values(f).map(item => item || '\\-')
+   
+  const oneApi = Object.values(f)
+    .map((item) => item || '\\-')
     .join(' | ');
   return oneApi;
 }
@@ -409,30 +405,30 @@ function getOneApi(newApi, current, docTitleType, framework) {
 //   return apiArr;
 // }
 
-function addCommonProperties({
-  framework,
-  category,
-  cmp,
-  md,
-  languageInfo,
-}) {
+function addCommonProperties({ framework, category, cmp, md, languageInfo }) {
   // 部分组件无包裹元素不需要添加 className、style
-  const filterComponents = ['Popup', 'Tooltip','ConfigProvider'];
+  const filterComponents = ['Popup', 'Tooltip', 'ConfigProvider'];
+  const cmpConfig = COMPONENTS_MAP[cmp];
   // add className and style to React components。COMPONENTS_MAP[cmp].type 值不存在则表示当前对象为组件
-  if (['React(PC)', 'React(Mobile)'].includes(framework) && !COMPONENTS_MAP[cmp].type && !filterComponents.includes(cmp)) {
+  if (
+    ['React(PC)', 'React(Mobile)'].includes(framework) &&
+    cmpConfig &&
+    !cmpConfig.type &&
+    !filterComponents.includes(cmp)
+  ) {
     md[category].apis = md[category].apis.concat([
       `className | String | - | ${languageInfo.classNameText} | N`,
       `style | Object | - | ${languageInfo.styleText}，${languageInfo.tsTypeText}\`React.CSSProperties\` | N`,
     ]);
-  } else if (framework === 'Miniprogram' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
-    md[category].apis.push(...[
-      `style | Object | - | ${languageInfo.styleText} | N`,
-      `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
-    ]);
-  } else if (framework === 'UniApp' && !COMPONENTS_MAP[cmp].type && category === 'Props') {
-    md[category].apis.push(...[
-      `custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`,
-    ]);
+  } else if (framework === 'Miniprogram' && cmpConfig && !cmpConfig.type && category === 'Props') {
+    md[category].apis.push(
+      ...[
+        `style | Object | - | ${languageInfo.styleText} | N`,
+        `custom-style | Object | - | ${languageInfo.styleText}，${languageInfo.customStyleText} | N`,
+      ],
+    );
+  } else if (framework === 'UniApp' && cmpConfig && !cmpConfig.type && category === 'Props') {
+    md[category].apis.push(...[`custom-style | Object | - | ${languageInfo.customStyleTextInUniApp} | N`]);
   }
 }
 
@@ -471,7 +467,9 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
       // `MessagePlugin.success` to `this.$message.success`
       if (['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework) && apiName.indexOf('Plugin') !== -1) {
         const names = apiName.split('.');
-        extraInfoForPlugin.push(`同时也支持 \`this.$${[camelCase(names[0]), names[1]].filter(v => v).join('.')}\`。`.replace('Plugin', ''));
+        extraInfoForPlugin.push(
+          `同时也支持 \`this.$${[camelCase(names[0]), names[1]].filter((v) => v).join('.')}\`。`.replace('Plugin', ''),
+        );
       }
       // if (['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Vue(Mobile)', 'React(Mobile)'].includes(framework) && apiName.indexOf('Plugin') !== -1) {
       //   extraInfoForPlugin.push('这是一个插件函数，参数形式为顺序参数（形如：(a, b, c)），而非对象参数（形如：({ a, b, c })）。顺序参数如下，');
@@ -506,14 +504,18 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
 
         // 存在对应的组件全局配置，则使用对应 xxxConfig 中对应 API 的默认值，代替原有默认值
         if (componentConfig) {
-          const configAPI = find(componentConfig, item => item.field_name === api.field_name);
+          const configAPI = find(componentConfig, (item) => item.field_name === api.field_name);
           if (configAPI && configAPI.field_default_value) {
             api.field_default_value = configAPI.field_default_value;
           }
         }
 
         // start
-        const newApi = formatToVueApi(api, { current, framework, category });
+        const newApi = formatToVueApi(api, {
+          current,
+          framework,
+          category,
+        });
         const oneApi = getOneApi(newApi, current, docTitleType, framework);
         const isMiniprogram = framework === 'Miniprogram';
         const shouldPushApi = !isMiniprogram || (isMiniprogram && !COMMON_PROPS.includes(api.field_name));
@@ -522,7 +524,12 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
         }
         // 添加非受控属性 API 文档
         if (api.support_default_value && api.field_category_text !== 'Events') {
-          const newSugarApi = formatToVueApi(api, { current, framework, category, isUncontrol: 'uncontrol' });
+          const newSugarApi = formatToVueApi(api, {
+            current,
+            framework,
+            category,
+            isUncontrol: 'uncontrol',
+          });
           const oneSugarApi = getOneApi(newSugarApi, current, docTitleType, framework);
           md[category].apis.push(oneSugarApi);
         }
@@ -541,18 +548,16 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
     // 整理数据到一个数组
     let docs = [];
     Object.keys(md).forEach((category) => {
-    const item = md[category];
+      const item = md[category];
       if (API_DOC_BLOCKS[framework].includes(category)) {
-        docs = docs.concat(
-          item.title,
-          category === 'Slots' ? sortSlotsArrExceptFirst(item.apis) : item.apis
-        );
+        docs = docs.concat(item.title, category === 'Slots' ? sortSlotsArrExceptFirst(item.apis) : item.apis);
       }
     });
     result[cmp] = docs.join('\n').replace(/`[^`]+`/g, (str) => str.replace(/\|/g, '\\|'));
     // 小程序，事件参数只需要描述 DetailType，因此去除 e: MouseEvent
     if (framework === 'Miniprogram') {
-      result[cmp] = result[cmp].replace(/ e: (MouseEvent|Event|ImageEvent)[ ,]/g, '')
+      result[cmp] = result[cmp]
+        .replace(/ e: (MouseEvent|Event|ImageEvent)[ ,]/g, '')
         .replace(/`\(context: {}\)`/g, '-')
         .replace(/, context: {}/g, '')
         .replace(/`\(context: {/g, '`(detail: {')
@@ -562,5 +567,4 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
   return result;
 }
 
-module.exports = getVueApiDocs;
-
+export default getVueApiDocs;

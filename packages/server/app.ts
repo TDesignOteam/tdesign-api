@@ -1,14 +1,14 @@
-import Koa from 'koa';
-import json from 'koa-json';
-import bodyParser from 'koa-bodyparser';
-import cors from 'koa2-cors';
-import logger from './middleware/logger';
-import errorParser from './middleware/errorParser';
-import config from './config';
-import componentRoutes from './routes/component';
-import serve from 'koa-static';
-import send from 'koa-send';
 import path from 'path';
+import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import json from 'koa-json';
+import send from 'koa-send';
+import serve from 'koa-static';
+import cors from 'koa2-cors';
+import config from './config';
+import errorParser from './middleware/errorParser';
+import logger from './middleware/logger';
+import componentRoutes from './routes/component';
 const app = new Koa();
 
 /** Middlewares */

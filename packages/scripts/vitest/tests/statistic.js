@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Statistic: {
     animation_3457: { field_name: 'animation', id: 3457 },
     animationStart_3455: { field_name: 'animationStart', id: 3455 },

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   zh: {
     // 数据库中存储的描述字段
     descriptionField: 'field_desc_zh',
@@ -9,13 +9,13 @@ module.exports = {
       'Vue(PC)': '支持语法糖 `v-model`',
       'VueNext(PC)': '支持语法糖 `v-model` 或 `v-model:name`',
       'Vue(Mobile)': '支持语法糖 `v-model` 或 `v-model:name`',
-      'UniApp': '支持语法糖 `v-model:name`',
+      UniApp: '支持语法糖 `v-model:name`',
     },
     syntaxSugarText: {
       'Vue(PC)': '支持语法糖 `.sync`',
       'VueNext(PC)': '支持语法糖 `v-model:name`',
       'Vue(Mobile)': '支持语法糖 `v-model:name`',
-      'UniApp': '支持语法糖 `v-model:name`',
+      UniApp: '支持语法糖 `v-model:name`',
     },
     uncontrolledText: '非受控属性',
     optionsText: '可选项：',

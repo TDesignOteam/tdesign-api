@@ -1,7 +1,6 @@
-const { kebabCaseComponent } = require('../utils');
-
-const camelCase = require('lodash/camelCase');
-const {
+import { camelCase } from 'lodash-es';
+import { kebabCaseComponent } from '../utils.js';
+import {
   getWrapper,
   getMountComponent,
   getDomExpectTruthy,
@@ -17,8 +16,8 @@ const {
   getEventArguments,
   getPresetsExpect,
   getItAsync,
-} = require("./core");
-const { getSkipCode } = require('./utils');
+} from './core.js';
+import { getSkipCode } from './utils.js';
 
 /**
  * 人机交互测试
@@ -27,7 +26,7 @@ const { getSkipCode } = require('./utils');
  */
 function generateEventUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactEventCase(test, oneApiData, framework, component);
-  return arr && arr.filter(v => v);
+  return arr && arr.filter((v) => v);
 }
 
 function generateVueAndReactEventCase(test, oneApiData, framework, component) {
@@ -36,7 +35,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
   if (props && Array.isArray(event)) {
     event = event.map((oneEvent) => ({
       ...oneEvent,
-      props: { ...props, ...oneEvent.props }
+      props: { ...props, ...oneEvent.props },
     }));
   }
   const extraCode = { content, wrapper };
@@ -50,8 +49,10 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const firstEvent = eventInfo.trigger;
     const finalDom = eventInfo.triggerDom;
     // Vue2 和 Vue3/React 事件绑定方式不同
-    const attachEventToDom = getEventsCode(framework, { [firstEvent]: 'fn' });
-    const tmpProps = { events: attachEventToDom }
+    const attachEventToDom = getEventsCode(framework, {
+      [firstEvent]: 'fn',
+    });
+    const tmpProps = { events: attachEventToDom };
     if (oneApiData.field_type_text[0] === 'Boolean') {
       tmpProps[oneApiData.field_name] = true;
     }
@@ -62,13 +63,22 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
     const arr = [
       `it${getSkipCode(skip)}('${categoryType}.${oneApiData.field_name} works fine', ${isVue || reactAsync || topAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
-        getWrapper(framework, mountCode, '', '', { trigger: firstEvent, wrapper, onlyDocumentDom }),
-        trigger && getPresetsExpect(trigger, framework, component),
-        getFireEventCode(framework, { dom: finalDom || 'self', event: firstEvent, component, delay }),
-        `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
+      getWrapper(framework, mountCode, '', '', {
+        trigger: firstEvent,
+        wrapper,
+        onlyDocumentDom,
+      }),
+      trigger && getPresetsExpect(trigger, framework, component),
+      getFireEventCode(framework, {
+        dom: finalDom || 'self',
+        event: firstEvent,
+        component,
+        delay,
+      }),
+      `${getEventArguments(framework, event[currentEvent].arguments).join('\n')}`,
       `});`,
     ];
-    return arr.filter(v => v);
+    return arr.filter((v) => v);
   } else if (Array.isArray(event)) {
     let arr = [];
     event.forEach((oneEventUnitCase) => {
@@ -81,14 +91,18 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         ...(props || {}),
         events: getEventFunctions(expect, framework, currentExtraCode),
       };
-      if (oneApiData.field_type_text && oneApiData.field_type_text[0] === 'Boolean' && codeProps[oneApiData.field_name] === undefined) {
+      if (
+        oneApiData.field_type_text &&
+        oneApiData.field_type_text[0] === 'Boolean' &&
+        codeProps[oneApiData.field_name] === undefined
+      ) {
         codeProps[oneApiData.field_name] = true;
       }
       const mountCode = getMountComponent(framework, component, codeProps, currentExtraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
       const async = framework.indexOf('Vue') !== -1 || reactAsync || topAsync ? 'async' : '';
       const category = oneApiData.field_category_text?.toLocaleLowerCase();
-      const apiPrefix = category? `${category}.${oneApiData.field_name}: ` : '';
+      const apiPrefix = category ? `${category}.${oneApiData.field_name}: ` : '';
       const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
       const oneEventArr = [
         `it${getSkipCode(skip)}(${itDescription}, ${async} () => {`,
@@ -100,23 +114,26 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         }),
         trigger && getPresetsExpect(trigger, framework, component),
         expect.map((p, index) => getEventExpectCode(p, index, framework, component)).join('\n'),
-        `});`
+        `});`,
       ];
-      arr = arr.filter(v => v).concat(oneEventArr, '\n');
+      arr = arr.filter((v) => v).concat(oneEventArr, '\n');
     });
     return arr;
   }
 }
 
 function getEventsDefinition(expect) {
-  return expect.map(({ event }, index) => {
-    if (!event) return '';
-    const arr = Object.keys(event).map((eventName) => {
-      const [fEventName] = eventName.split('.');
-      return `const ${getEventFnName(fEventName, index)} = vi.fn();`;
+  return expect
+    .map(({ event }, index) => {
+      if (!event) return '';
+      const arr = Object.keys(event).map((eventName) => {
+        const [fEventName] = eventName.split('.');
+        return `const ${getEventFnName(fEventName, index)} = vi.fn();`;
+      });
+      return arr && arr.join('\n');
     })
-    return arr && arr.join('\n');
-  }).filter(v => v).join('\n');
+    .filter((v) => v)
+    .join('\n');
 }
 
 function getEventExpectCode(p, index, framework, component) {
@@ -126,26 +143,34 @@ function getEventExpectCode(p, index, framework, component) {
   const arr = [
     getFireEventCode(framework, { dom: triggerDom, event: trigger, component, delay }, '', index),
     getExistDomExpect(framework, exist, index),
-    event && Object.entries(event).map(([eventName, args]) => {
-      const [fEventName, calls] = eventName.split('.');
-      const fnName = getEventFnName(fEventName, index);
-      return [
-        getEventArguments(framework, args, { fnName, calls }).join(''),
-      ].join('\n');
-    }).join('\n'),
+    event &&
+      Object.entries(event)
+        .map(([eventName, args]) => {
+          const [fEventName, calls] = eventName.split('.');
+          const fnName = getEventFnName(fEventName, index);
+          return [
+            getEventArguments(framework, args, {
+              fnName,
+              calls,
+            }).join(''),
+          ].join('\n');
+        })
+        .join('\n'),
     clearElementAtEnd && getClearDomInDocumentCode(clearElementAtEnd, framework),
-  ]
-  return arr.filter(v => v).join('');
+  ];
+  return arr.filter((v) => v).join('');
 }
 
 function getExistDomExpect(framework, exist, eventIndex) {
   const tmpExist = (Array.isArray(exist) || !exist ? exist : [exist]) || [];
-  return tmpExist.map((domSelector) => {
-    if (typeof domSelector === 'object') {
-      return getDomCountExpectCode(framework, domSelector, '', eventIndex);
-    }
-    return getDomExpectTruthy(framework, `'${domSelector}'`);
-  }).join('\n');
+  return tmpExist
+    .map((domSelector) => {
+      if (typeof domSelector === 'object') {
+        return getDomCountExpectCode(framework, domSelector, '', eventIndex);
+      }
+      return getDomExpectTruthy(framework, `'${domSelector}'`);
+    })
+    .join('\n');
 }
 
 // 如果事件存在 focus，返回 focus；如果不存在，则返回空（Vue2 的 focus 需要 attachTo）
@@ -156,7 +181,7 @@ function getFocusTrigger(expect) {
     if (item.trigger && item.trigger.includes('focus')) {
       trigger = 'focus';
     }
-  })
+  });
   return trigger;
 }
 
@@ -191,6 +216,4 @@ function isOnlyDocumentDom(event) {
   return true;
 }
 
-module.exports = {
-  generateEventUnitCase,
-};
+export { generateEventUnitCase };

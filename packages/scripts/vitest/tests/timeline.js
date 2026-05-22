@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Timeline: {
     labelAlign_2823: {
       field_name: 'labelAlign',
@@ -16,14 +16,32 @@ module.exports = {
             description: 'layout=horizontal labelAlign=top works fine',
             wrapper: 'getTimelineDefaultMount',
             expect: [
-              { trigger: '', exist: [{ '.t-timeline': { className: ['t-timeline-top'] } }] },
+              {
+                trigger: '',
+                exist: [
+                  {
+                    '.t-timeline': {
+                      className: ['t-timeline-top'],
+                    },
+                  },
+                ],
+              },
             ],
           },
           {
             props: { layout: 'horizontal', labelAlign: 'bottom' },
             description: 'layout=horizontal labelAlign=bottom works fine',
             expect: [
-              { trigger: '', exist: [{ '.t-timeline': { className: ['t-timeline-bottom'] } }] },
+              {
+                trigger: '',
+                exist: [
+                  {
+                    '.t-timeline': {
+                      className: ['t-timeline-bottom'],
+                    },
+                  },
+                ],
+              },
             ],
           },
         ],
@@ -32,16 +50,26 @@ module.exports = {
     layout_2824: {
       field_name: 'layout',
       id: 2824,
-      PC: { wrapper: 'getTimelineDefaultMount', className: 't-timeline-${item}' },
+      PC: {
+        wrapper: 'getTimelineDefaultMount',
+        className: 't-timeline-${item}',
+      },
     },
-    mode_2913: { field_name: 'mode', id: 2913, PC: { className: 't-timeline-label--${item}' } },
+    mode_2913: {
+      field_name: 'mode',
+      id: 2913,
+      PC: { className: 't-timeline-label--${item}' },
+    },
     reverse_2826: {
       field_name: 'reverse',
       id: 2826,
       PC: {
         wrapper: 'getTimelineDefaultMount',
         dom: [
-          { props: { reverse: true }, dom: [{ '.t-timeline-item__content': { text: 'Event4' } }] },
+          {
+            props: { reverse: true },
+            dom: [{ '.t-timeline-item__content': { text: 'Event4' } }],
+          },
         ],
       },
     },
@@ -55,8 +83,16 @@ module.exports = {
     },
   },
   TimelineItem: {
-    children_2837: { field_name: 'children', id: 2837, PC: { snapshot: true, tnode: true } },
-    content_2836: { field_name: 'content', id: 2836, PC: { snapshot: true, tnode: true } },
+    children_2837: {
+      field_name: 'children',
+      id: 2837,
+      PC: { snapshot: true, tnode: true },
+    },
+    content_2836: {
+      field_name: 'content',
+      id: 2836,
+      PC: { snapshot: true, tnode: true },
+    },
     dot_2828: { field_name: 'dot', id: 2828, PC: { tnode: true } },
     dotColor_2827: {
       field_name: 'dotColor',
@@ -73,19 +109,32 @@ module.exports = {
           {
             value: 'yellowgreen',
             expect: [
-              { dom: '.t-timeline-item__dot', attribute: { 'style.borderColor': 'yellowgreen' } },
+              {
+                dom: '.t-timeline-item__dot',
+                attribute: {
+                  'style.borderColor': 'yellowgreen',
+                },
+              },
             ],
           },
         ],
       },
     },
-    label_2835: { field_name: 'label', id: 2835, PC: { snapshot: true, tnode: true } },
+    label_2835: {
+      field_name: 'label',
+      id: 2835,
+      PC: { snapshot: true, tnode: true },
+    },
     labelAlign_2830: {
       field_name: 'labelAlign',
       id: 2830,
       PC: {
         wrapper: 'getTimelineItemMount',
-        dom: { left: { '.t-timeline-item:first-child.t-timeline-item-left': 1 } },
+        dom: {
+          left: {
+            '.t-timeline-item:first-child.t-timeline-item-left': 1,
+          },
+        },
       },
     },
     loading_2931: {

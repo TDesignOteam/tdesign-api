@@ -1,14 +1,26 @@
-const pick = require('lodash/pick');
-const { parseJSON, formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork, getParentByChildComponent } = require('./utils');
-const { getImportsConfig, getImportsCode, getMoreEventImports, getSimulateEvents, getVariableImports } = require('./generate-import');
-const { generateClassNameUnitCase } = require('./generate-class-name');
-const { generateTNodeElement } = require('./generate-tnode');
-const { generateAttributeUnitCase } = require('./generate-attribute');
-const { generateDomUnitCase } = require('./generate-dom');
-const { generateEventUnitCase } = require('./generate-event');
-const { copyUnitTestsToOtherWrapper } = require('./copy');
-const { COMPONENT_API_MD_MAP } = require('../config/files-combine');
-const map = require('../map.json');
+import { pick } from 'lodash-es';
+import { COMPONENT_API_MD_MAP } from '../config/files-combine.js';
+import map from '../map.json' with { type: 'json' };
+import { copyUnitTestsToOtherWrapper } from './copy.js';
+import { generateAttributeUnitCase } from './generate-attribute.js';
+import { generateClassNameUnitCase } from './generate-class-name.js';
+import { generateDomUnitCase } from './generate-dom.js';
+import { generateEventUnitCase } from './generate-event.js';
+import {
+  getImportsConfig,
+  getImportsCode,
+  getMoreEventImports,
+  getSimulateEvents,
+  getVariableImports,
+} from './generate-import.js';
+import { generateTNodeElement } from './generate-tnode.js';
+import {
+  parseJSON,
+  formatArrayToMap,
+  groupByComponent,
+  getApiComponentMapByFrameWork,
+  getParentByChildComponent,
+} from './utils.js';
 
 const componentMap = map.data.components;
 
@@ -33,14 +45,13 @@ function getBaseData(framework, component, apiData, map) {
   return baseData;
 }
 
-
 /**
  * 获取一个 it 单位测试用例
  * @param {Object} testDescription 测试用例描述 JSON
  * @param {Object} oneApiData 一个 API 的全部数据
  * @param {String} framework 框架名称
  * @param {String} component 组件名称
- * @returns 
+ * @returns
  */
 function getOneUnitTest(framework, component, oneApiData, test) {
   let oneUnitTests = [];
@@ -49,7 +60,7 @@ function getOneUnitTest(framework, component, oneApiData, test) {
   const importedTestUtils = [];
   Object.keys(test).forEach((key) => {
     // 空对象无效，返回
-    if (!test[key] || typeof test[key] === 'object' && !Object.keys(test[key]).length) return;
+    if (!test[key] || (typeof test[key] === 'object' && !Object.keys(test[key]).length)) return;
     if (generateFunctionsMap[key]) {
       const oneApiTestCase = generateFunctionsMap[key](test, oneApiData, framework, component);
       if (oneApiTestCase && oneApiTestCase.length) {
@@ -103,7 +114,7 @@ function getUnitTestCode(baseData, framework) {
     if (!oneComponentApi) return;
 
     let component = componentOri;
-    const typeInfo = componentMap.find(item => item.value === componentOri);
+    const typeInfo = componentMap.find((item) => item.value === componentOri);
     // 如果是 TS 类型，而非一个组件，则直接使用根组件输出用例。只要 type 存在，就不是组件
     if (typeInfo.type) {
       const combineMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
@@ -124,26 +135,30 @@ function getUnitTestCode(baseData, framework) {
       const hasPC = testDescription.PC && framework.indexOf('PC') !== -1;
       const hasMobile = testDescription.Mobile && framework.indexOf('Mobile') !== -1;
       if (!hasPC && !hasMobile) return;
-      
-      let finalDescription = {}
-      if (hasPC){
-        finalDescription = testDescription.PC
+
+      let finalDescription = {};
+      if (hasPC) {
+        finalDescription = testDescription.PC;
       }
-      if (hasMobile){
-        finalDescription = testDescription.Mobile
+      if (hasMobile) {
+        finalDescription = testDescription.Mobile;
       }
 
       if (finalDescription.global) {
         Object.keys(global).forEach((item) => {
           if (!finalDescription.global[item]) return;
           global[item].push(...finalDescription.global[item]);
-        })
+        });
       }
 
       // 存在 Web 框架的单测用例，再输出
-      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(framework, component, oneApiData, finalDescription);
+      const { oneUnitTests, hasEvent, importedMounts, importedTestUtils } = getOneUnitTest(
+        framework,
+        component,
+        oneApiData,
+        finalDescription,
+      );
       if (oneUnitTests && oneUnitTests.length) {
-
         oneComponentTests = oneComponentTests.concat(oneUnitTests);
 
         configFlag.hasEvent = hasEvent || configFlag.hasEvent;
@@ -183,7 +198,7 @@ function getUnitTestCode(baseData, framework) {
 
 function getComponentUnitTests(framework, component, apiData, map) {
   const baseData = getBaseData(framework, component, apiData, map);
-  return getUnitTestCode(baseData, framework)
+  return getUnitTestCode(baseData, framework);
 }
 
 function addGlobalCode(global, oneComponentTests) {
@@ -203,8 +218,4 @@ function addGlobalCode(global, oneComponentTests) {
   }
 }
 
-module.exports = {
-  getUnitTestCode,
-  getOneUnitTest,
-  getComponentUnitTests,
-};
+export { getUnitTestCode, getOneUnitTest, getComponentUnitTests };

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   parser: 'typescript',
   printWidth: 120,
   // 使用 2 个空格缩进

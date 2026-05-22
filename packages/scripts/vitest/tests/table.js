@@ -1,11 +1,17 @@
-module.exports = {
+export default {
   BaseTable: {
-    allowResizeColumnWidth_2646: { field_name: 'allowResizeColumnWidth', id: 2646 },
+    allowResizeColumnWidth_2646: {
+      field_name: 'allowResizeColumnWidth',
+      id: 2646,
+    },
     attach_3260: { field_name: 'attach', id: 3260 },
     bordered_325: {
       field_name: 'bordered',
       id: 325,
-      PC: { className: 't-table--bordered', wrapper: 'getNormalTableMount' },
+      PC: {
+        className: 't-table--bordered',
+        wrapper: 'getNormalTableMount',
+      },
     },
     bottomContent_2526: {
       field_name: 'bottomContent',
@@ -37,33 +43,52 @@ module.exports = {
       field_name: 'fixedRows',
       id: 2277,
       PC: {
-        dom: { '[3, 1]': { '.t-table__row--fixed-top': 3, '.t-table__row--fixed-bottom': 1 } },
+        dom: {
+          '[3, 1]': {
+            '.t-table__row--fixed-top': 3,
+            '.t-table__row--fixed-bottom': 1,
+          },
+        },
         wrapper: 'getNormalTableMount',
       },
     },
     footData_2348: {
       field_name: 'footData',
       id: 2348,
-      PC: { dom: ['tfoot.t-table__footer', { 'tfoot > tr': 2 }], wrapper: 'getNormalTableMount' },
+      PC: {
+        dom: ['tfoot.t-table__footer', { 'tfoot > tr': 2 }],
+        wrapper: 'getNormalTableMount',
+      },
     },
     footerAffixProps_2633: { field_name: 'footerAffixProps', id: 2633 },
-    footerAffixedBottom_2632: { field_name: 'footerAffixedBottom', id: 2632 },
+    footerAffixedBottom_2632: {
+      field_name: 'footerAffixedBottom',
+      id: 2632,
+    },
     footerSummary_2878: {
       field_name: 'footerSummary',
       id: 2878,
       PC: {
-        tnode: { dom: ['.t-table__footer', '.t-table__row-full-element', 'td[colspan="3"]'] },
+        tnode: {
+          dom: ['.t-table__footer', '.t-table__row-full-element', 'td[colspan="3"]'],
+        },
         wrapper: 'getNormalTableMount',
       },
     },
     headerAffixProps_2382: { field_name: 'headerAffixProps', id: 2382 },
     headerAffixedTop_2381: { field_name: 'headerAffixedTop', id: 2381 },
     height_329: { field_name: 'height', id: 329 },
-    horizontalScrollAffixedBottom_2761: { field_name: 'horizontalScrollAffixedBottom', id: 2761 },
+    horizontalScrollAffixedBottom_2761: {
+      field_name: 'horizontalScrollAffixedBottom',
+      id: 2761,
+    },
     hover_326: {
       field_name: 'hover',
       id: 326,
-      PC: { className: 't-table--hoverable', wrapper: 'getNormalTableMount' },
+      PC: {
+        className: 't-table--hoverable',
+        wrapper: 'getNormalTableMount',
+      },
     },
     lastFullRow_2056: {
       field_name: 'lastFullRow',
@@ -76,16 +101,26 @@ module.exports = {
     loading_332: {
       field_name: 'loading',
       id: 332,
-      PC: { tnode: { dom: ['.t-loading'] }, dom: '.t-loading', wrapper: 'getNormalTableMount' },
+      PC: {
+        tnode: { dom: ['.t-loading'] },
+        dom: '.t-loading',
+        wrapper: 'getNormalTableMount',
+      },
     },
     loadingProps_2278: { field_name: 'loadingProps', id: 2278 },
     maxHeight_585: { field_name: 'maxHeight', id: 585 },
     pagination_331: { field_name: 'pagination', id: 331 },
-    paginationAffixedBottom_2762: { field_name: 'paginationAffixedBottom', id: 2762 },
+    paginationAffixedBottom_2762: {
+      field_name: 'paginationAffixedBottom',
+      id: 2762,
+    },
     resizable_2731: {
       field_name: 'resizable',
       id: 2731,
-      PC: { className: 't-table--column-resizable', wrapper: 'getNormalTableMount' },
+      PC: {
+        className: 't-table--column-resizable',
+        wrapper: 'getNormalTableMount',
+      },
     },
     rowAttributes_2347: {
       field_name: 'rowAttributes',
@@ -95,24 +130,47 @@ module.exports = {
         attribute: [
           {
             value: "{ 'data-level': 'level-1' }",
-            expect: [{ dom: 'tbody > tr', attribute: { 'data-level': 'level-1' } }],
+            expect: [
+              {
+                dom: 'tbody > tr',
+                attribute: { 'data-level': 'level-1' },
+              },
+            ],
           },
           {
             value: "[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]",
             expect: [
-              { dom: 'tbody > tr', attribute: { 'data-level': 'level-1', 'data-name': 'tdesign' } },
+              {
+                dom: 'tbody > tr',
+                attribute: {
+                  'data-level': 'level-1',
+                  'data-name': 'tdesign',
+                },
+              },
             ],
           },
           {
             value: "() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]",
             expect: [
-              { dom: 'tbody > tr', attribute: { 'data-level': 'level-1', 'data-name': 'tdesign' } },
+              {
+                dom: 'tbody > tr',
+                attribute: {
+                  'data-level': 'level-1',
+                  'data-name': 'tdesign',
+                },
+              },
             ],
           },
           {
             value: "[() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]]",
             expect: [
-              { dom: 'tbody > tr', attribute: { 'data-level': 'level-1', 'data-name': 'tdesign' } },
+              {
+                dom: 'tbody > tr',
+                attribute: {
+                  'data-level': 'level-1',
+                  'data-name': 'tdesign',
+                },
+              },
             ],
           },
         ],
@@ -126,20 +184,27 @@ module.exports = {
         className: [
           {
             value: "'tdesign-class'",
-            expect: [{ dom: 'tbody > tr', className: { 'tdesign-class': true } }],
+            expect: [
+              {
+                dom: 'tbody > tr',
+                className: { 'tdesign-class': true },
+              },
+            ],
           },
           {
             value: "{ 'tdesign-class': true, 'tdesign-class-next': false }",
             expect: [
               {
                 dom: 'tbody > tr',
-                className: { 'tdesign-class': true, 'tdesign-class-next': false },
+                className: {
+                  'tdesign-class': true,
+                  'tdesign-class-next': false,
+                },
               },
             ],
           },
           {
-            value:
-              "['tdesign-class-default', { 'tdesign-class': true, 'tdesign-class-next': false }]",
+            value: "['tdesign-class-default', { 'tdesign-class': true, 'tdesign-class-next': false }]",
             expect: [
               {
                 dom: 'tbody > tr',
@@ -156,7 +221,10 @@ module.exports = {
             expect: [
               {
                 dom: 'tbody > tr',
-                className: { 'tdesign-class': true, 'tdesign-class-next': false },
+                className: {
+                  'tdesign-class': true,
+                  'tdesign-class-next': false,
+                },
               },
             ],
           },
@@ -165,12 +233,19 @@ module.exports = {
     },
     rowKey_321: { field_name: 'rowKey', id: 321 },
     rowspanAndColspan_1226: { field_name: 'rowspanAndColspan', id: 1226 },
-    rowspanAndColspanInFooter_2879: { field_name: 'rowspanAndColspanInFooter', id: 2879 },
+    rowspanAndColspanInFooter_2879: {
+      field_name: 'rowspanAndColspanInFooter',
+      id: 2879,
+    },
     scroll_2188: { field_name: 'scroll', id: 2188 },
     showHeader_3010: {
       field_name: 'showHeader',
       id: 3010,
-      PC: { dom: 'thead', wrapper: 'getNormalTableMount', snapshot: true },
+      PC: {
+        dom: 'thead',
+        wrapper: 'getNormalTableMount',
+        snapshot: true,
+      },
     },
     size_2798: {
       field_name: 'size',
@@ -184,7 +259,10 @@ module.exports = {
     stripe_327: {
       field_name: 'stripe',
       id: 327,
-      PC: { className: 't-table--striped', wrapper: 'getNormalTableMount' },
+      PC: {
+        className: 't-table--striped',
+        wrapper: 'getNormalTableMount',
+      },
     },
     tableContentWidth_2274: { field_name: 'tableContentWidth', id: 2274 },
     tableLayout_322: {
@@ -205,11 +283,7 @@ module.exports = {
       field_name: 'verticalAlign',
       id: 323,
       PC: {
-        className: [
-          't-vertical-align-top',
-          { 't-vertical-align-middle': false },
-          't-vertical-align-bottom',
-        ],
+        className: ['t-vertical-align-top', { 't-vertical-align-middle': false }, 't-vertical-align-bottom'],
         wrapper: 'getNormalTableMount',
       },
     },
@@ -262,7 +336,10 @@ module.exports = {
   PrimaryTable: {
     asyncLoading_333: { field_name: 'asyncLoading', id: 333 },
     columnController_2005: { field_name: 'columnController', id: 2005 },
-    columnControllerVisible_2527: { field_name: 'columnControllerVisible', id: 2527 },
+    columnControllerVisible_2527: {
+      field_name: 'columnControllerVisible',
+      id: 2527,
+    },
     columns_593: { field_name: 'columns', id: 593 },
     displayColumns_2491: { field_name: 'displayColumns', id: 2491 },
     dragSort_2349: { field_name: 'dragSort', id: 2349 },
@@ -277,12 +354,21 @@ module.exports = {
     filterRow_2063: { field_name: 'filterRow', id: 2063 },
     filterValue_836: { field_name: 'filterValue', id: 836 },
     hideSortTips_2675: { field_name: 'hideSortTips', id: 2675 },
-    indeterminateSelectedRowKeys_2799: { field_name: 'indeterminateSelectedRowKeys', id: 2799 },
+    indeterminateSelectedRowKeys_2799: {
+      field_name: 'indeterminateSelectedRowKeys',
+      id: 2799,
+    },
     multipleSort_985: { field_name: 'multipleSort', id: 985 },
-    reserveSelectedRowOnPaginate_3201: { field_name: 'reserveSelectedRowOnPaginate', id: 3201 },
+    reserveSelectedRowOnPaginate_3201: {
+      field_name: 'reserveSelectedRowOnPaginate',
+      id: 3201,
+    },
     selectOnRowClick_3209: { field_name: 'selectOnRowClick', id: 3209 },
     selectedRowKeys_337: { field_name: 'selectedRowKeys', id: 337 },
-    showSortColumnBgColor_3011: { field_name: 'showSortColumnBgColor', id: 3011 },
+    showSortColumnBgColor_3011: {
+      field_name: 'showSortColumnBgColor',
+      id: 3011,
+    },
     sort_834: { field_name: 'sort', id: 834 },
     sortIcon_2379: { field_name: 'sortIcon', id: 2379 },
     sortOnRowDraggable_1457: { field_name: 'sortOnRowDraggable', id: 1457 },
@@ -291,9 +377,15 @@ module.exports = {
     change_1270: { field_name: 'change', id: 1270 },
     columnChange_2353: { field_name: 'columnChange', id: 2353 },
     columnChange_2555: { field_name: 'columnChange', id: 2555 },
-    columnControllerVisibleChange_2529: { field_name: 'columnControllerVisibleChange', id: 2529 },
+    columnControllerVisibleChange_2529: {
+      field_name: 'columnControllerVisibleChange',
+      id: 2529,
+    },
     dataChange_1447: { field_name: 'dataChange', id: 1447 },
-    displayColumnsChange_2492: { field_name: 'displayColumnsChange', id: 2492 },
+    displayColumnsChange_2492: {
+      field_name: 'displayColumnsChange',
+      id: 2492,
+    },
     dragSort_1496: { field_name: 'dragSort', id: 1496 },
     expandChange_353: { field_name: 'expandChange', id: 353 },
     filterChange_829: { field_name: 'filterChange', id: 829 },
@@ -339,7 +431,10 @@ module.exports = {
   EnhancedTable: {
     beforeDragSort_2690: { field_name: 'beforeDragSort', id: 2690 },
     tree_1832: { field_name: 'tree', id: 1832 },
-    treeExpandAndFoldIcon_2672: { field_name: 'treeExpandAndFoldIcon', id: 2672 },
+    treeExpandAndFoldIcon_2672: {
+      field_name: 'treeExpandAndFoldIcon',
+      id: 2672,
+    },
     abnormalDragSort_2689: { field_name: 'abnormalDragSort', id: 2689 },
     treeExpandChange_2588: { field_name: 'treeExpandChange', id: 2588 },
     appendTo_2704: { field_name: 'appendTo', id: 2704 },
@@ -355,7 +450,10 @@ module.exports = {
     setData_2006: { field_name: 'setData', id: 2006 },
     swapData_2707: { field_name: 'swapData', id: 2707 },
     toggleExpandData_2506: { field_name: 'toggleExpandData', id: 2506 },
-    'TdPrimaryTableProps<T>_2361': { field_name: 'TdPrimaryTableProps<T>', id: 2361 },
+    'TdPrimaryTableProps<T>_2361': {
+      field_name: 'TdPrimaryTableProps<T>',
+      id: 2361,
+    },
     '<T extends TableRowData = TableRowData>_2018': {
       field_name: '<T extends TableRowData = TableRowData>',
       id: 2018,
@@ -363,7 +461,10 @@ module.exports = {
   },
   TableRowState: {
     disabled_2020: { field_name: 'disabled', id: 2020 },
-    expandChildrenLength_2016: { field_name: 'expandChildrenLength', id: 2016 },
+    expandChildrenLength_2016: {
+      field_name: 'expandChildrenLength',
+      id: 2016,
+    },
     expanded_2012: { field_name: 'expanded', id: 2012 },
     id_2679: { field_name: 'id', id: 2679 },
     level_2014: { field_name: 'level', id: 2014 },
@@ -383,7 +484,10 @@ module.exports = {
     popupProps_3208: { field_name: 'popupProps', id: 3208 },
     props_2059: { field_name: 'props', id: 2059 },
     resetValue_2062: { field_name: 'resetValue', id: 2062 },
-    showConfirmAndReset_2061: { field_name: 'showConfirmAndReset', id: 2061 },
+    showConfirmAndReset_2061: {
+      field_name: 'showConfirmAndReset',
+      id: 2061,
+    },
     type_2057: { field_name: 'type', id: 2057 },
   },
   TableColumnController: {
@@ -413,9 +517,15 @@ module.exports = {
     checkStrictly_2685: { field_name: 'checkStrictly', id: 2685 },
     childrenKey_2684: { field_name: 'childrenKey', id: 2684 },
     defaultExpandAll_2686: { field_name: 'defaultExpandAll', id: 2686 },
-    expandTreeNodeOnClick_3211: { field_name: 'expandTreeNodeOnClick', id: 3211 },
+    expandTreeNodeOnClick_3211: {
+      field_name: 'expandTreeNodeOnClick',
+      id: 3211,
+    },
     indent_2682: { field_name: 'indent', id: 2682 },
-    treeNodeColumnIndex_2683: { field_name: 'treeNodeColumnIndex', id: 2683 },
+    treeNodeColumnIndex_2683: {
+      field_name: 'treeNodeColumnIndex',
+      id: 2683,
+    },
   },
   InfinityScroll: {
     bufferSize_2186: { field_name: 'bufferSize', id: 2186 },

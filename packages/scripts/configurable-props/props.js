@@ -1,11 +1,11 @@
-const fs = require('fs');
-const pick = require('lodash/pick');
-const path = require('path');
-const chalk = require('chalk');
-const { isPlugin, getCmpTypeCombineMap, getFolderName } = require('../common');
-const map = require('../map.json');
-const { FRAMEWORK_MAP, TYPES_COMBINE_MAP } = require('../config');
-const { kebabCaseComponent } = require('../utils');
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
+import { pick } from 'lodash-es';
+import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../common.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
+import map from '../map.json' with { type: 'json' };
+import { kebabCaseComponent } from '../utils.js';
 
 let FRAMEWORK_TYPES_COMPONENT_RELATION = {};
 
@@ -14,7 +14,7 @@ function moveTsTypeToDesc(str) {
   const regExp = /【.*?】/g;
   const baseName = str.replace(regExp, '');
   let interfaceDesc = str.match(regExp) || [];
-  interfaceDesc = interfaceDesc.map(str => str.replace(/【|】/g, '`'));
+  interfaceDesc = interfaceDesc.map((str) => str.replace(/【|】/g, '`'));
   return { baseName, interfaceDesc };
 }
 
@@ -24,7 +24,7 @@ function groupByFieldCategory(componentApi) {
   componentApi.forEach((apiOriginal) => {
     const api = { ...apiOriginal };
     const isExtend = api.field_category_text === 'Extends';
-    const isFunction = (isPlugin(api.component)) && api.field_category_text === 'Functions';
+    const isFunction = isPlugin(api.component) && api.field_category_text === 'Functions';
     if (isExtend) {
       const { baseName } = moveTsTypeToDesc(api.field_name);
       api.field_name = baseName.replace('Td', '');
@@ -34,7 +34,7 @@ function groupByFieldCategory(componentApi) {
       }
       api.field_desc_zh = `继承 ${api.field_name.replace('Td', '')} 中的全部 API`;
     }
-    const category = (isExtend || isFunction) ? 'Props' : api.field_category_text;
+    const category = isExtend || isFunction ? 'Props' : api.field_category_text;
     if (result[category]) {
       result[category].push(api);
     } else {
@@ -62,7 +62,10 @@ function getOneApiInfo(api, category) {
       result[resultKey] = typeStr;
     } else if (resultKey === 'options') {
       if (f[item].split('/').length > 1) {
-        result[resultKey] = f[item].split('/').map(typeStr => ({ label: typeStr.trim(), value: typeStr.trim() }));
+        result[resultKey] = f[item].split('/').map((typeStr) => ({
+          label: typeStr.trim(),
+          value: typeStr.trim(),
+        }));
         result.type = 'enum';
       } else {
         result[resultKey] = [];
@@ -87,9 +90,9 @@ function getOneApiInfo(api, category) {
 function getApiInfos(baseData) {
   const result = {};
   // 获取非plugin组件列表，以获取组件label
-  const filterApiList = map.data.components.filter(item => item.type === undefined);
+  const filterApiList = map.data.components.filter((item) => item.type === undefined);
   Object.keys(baseData).forEach((cmp) => {
-    const isCmp = filterApiList.find(item => item.value === cmp);
+    const isCmp = filterApiList.find((item) => item.value === cmp);
     if (!isCmp) return;
     const info = {};
     info.name = cmp;
@@ -108,9 +111,12 @@ function getApiInfos(baseData) {
       const apis = fieldCategoryMap[category];
       apis.forEach((api) => {
         // HTML 原生属性不做展示
-        if ((api.html_attribute)) return;
+        if (api.html_attribute) return;
         // 只展示 Boolean 或枚举类型
-        if (api.field_type_text.includes('Boolean') || (api.field_type_text.includes('String') && api.field_default_value && api.field_enum.split('/').length > 1)) {
+        if (
+          api.field_type_text.includes('Boolean') ||
+          (api.field_type_text.includes('String') && api.field_default_value && api.field_enum.split('/').length > 1)
+        ) {
           const oneApiInfo = getOneApiInfo(api, category);
           oneApiInfo && info[p].push(oneApiInfo);
         }
@@ -124,9 +130,7 @@ function getApiInfos(baseData) {
 // ts 里面有些 TS 类型需要合并输出；props 也需要同目录输出
 function getFolderPath(basePath, cmp) {
   const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-  const folderName =    cmp === parentCmp || !parentCmp
-    ? getFolderName(cmp)
-    : getFolderName(parentCmp);
+  const folderName = cmp === parentCmp || !parentCmp ? getFolderName(cmp) : getFolderName(parentCmp);
   return path.resolve(basePath, folderName);
 }
 
@@ -151,7 +155,6 @@ function getCmpName(cmpName) {
   ];
   const targetCmp = comps.find(({ components }) => components.includes(cmpName));
   if (targetCmp) {
-   
     return {
       cmpStr: targetCmp.name,
       fileNameStr: `${kebabCaseComponent(cmpName)}-props.json`,
@@ -162,10 +165,7 @@ function getCmpName(cmpName) {
 
 function generateProps(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
-  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
-    TYPES_COMBINE_MAP,
-    framework,
-  );
+  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(TYPES_COMBINE_MAP, framework);
   const apiInfos = getApiInfos(baseData, current);
   const basePath = current.propsBasePath;
   // 输出至 examples 目录
@@ -191,7 +191,4 @@ function generateProps(baseData, framework) {
   });
 }
 
-
-module.exports = {
-  generateProps,
-};
+export { generateProps };

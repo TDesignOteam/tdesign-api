@@ -1,5 +1,5 @@
 function formatBaseType(type) {
-  return type.map(item => (item !== 'TNode' ? item.toLocaleLowerCase() : item)).join(' | ');
+  return type.map((item) => (item !== 'TNode' ? item.toLocaleLowerCase() : item)).join(' | ');
 }
 
 function getVueTNodeType(type, customType) {
@@ -8,7 +8,7 @@ function getVueTNodeType(type, customType) {
 
 function getMiniprogramTNodeType(type, customType) {
   let t = customType ? customType.split('|') : type;
-  t = t.filter(v => !v.trim().includes('TNode'));
+  t = t.filter((v) => !v.trim().includes('TNode'));
   return customType ? t.join('|') : formatBaseType(t);
 }
 
@@ -29,7 +29,7 @@ function getReactTNodeType(type, customType) {
   // 如果 API 类型只有一个 TNode，没有其他的数据类型，则表示 API 只接受传入组件，转义为 TElement（具体定义见项目 globals.d.ts）
   if (type.length === 1) {
     // 此时，customType 的值只可能是 TNode 或 TNode<T>
-    r = (!customType || customType === 'TNode') ? 'TElement' : (customType || 'TNode');
+    r = !customType || customType === 'TNode' ? 'TElement' : customType || 'TNode';
   } else {
     // API 类型不仅仅是 TNode 时，则表示 API 不仅接受传入组件，还接受传入其他的数据类型
     r = 'TNode';
@@ -40,15 +40,14 @@ function getReactTNodeType(type, customType) {
       if (hasTNodeFunction) {
         r = customType;
       } else {
-        r = customType.replace(
-          /(string|Array<.*?>|TNode<.*?>|number|boolean|TNode)/g,
-          (val) => {
+        r = customType
+          .replace(/(string|Array<.*?>|TNode<.*?>|number|boolean|TNode)/g, (val) => {
             if (['string', 'boolean', 'number'].includes(val)) {
               return '';
             }
             return val;
-          },
-        ).replace(/^ \| /, '');
+          })
+          .replace(/^ \| /, '');
       }
     }
   }
@@ -77,4 +76,4 @@ function formatTNode(framework, type, customType) {
   }
 }
 
-module.exports = formatTNode;
+export default formatTNode;

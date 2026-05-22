@@ -1,5 +1,7 @@
-import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
 import moment from 'moment';
+import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
+import TAPI from '../../services';
+import execScript from '../../services/execute';
 import {
   PLATFORM_MAP,
   FRAMEWORK_MAP,
@@ -9,8 +11,6 @@ import {
   COMPONENTS_MOBILE,
   API_CATEGORY,
 } from './const';
-import TAPI from '../../services';
-import execScript from '../../services/execute';
 
 function handleSuccess(resolve: Function) {
   return (data: any) => {

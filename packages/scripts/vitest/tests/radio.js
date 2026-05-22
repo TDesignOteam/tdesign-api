@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Radio: {
     align_1419: { field_name: 'align', id: 1419 },
     allowUncheck_2035: {
@@ -8,7 +8,14 @@ module.exports = {
         event: [
           {
             props: { checked: 'true' },
-            expect: [{ trigger: 'click', event: { change: [false, { 'e.type': 'click' }] } }],
+            expect: [
+              {
+                trigger: 'click',
+                event: {
+                  change: [false, { 'e.type': 'click' }],
+                },
+              },
+            ],
           },
         ],
       },
@@ -19,14 +26,31 @@ module.exports = {
       PC: {
         snapshot: true,
         className: 't-is-checked',
-        attribute: [{ value: true, expect: [{ dom: 'input', attribute: { checked: true } }] }],
+        attribute: [
+          {
+            value: true,
+            expect: [{ dom: 'input', attribute: { checked: true } }],
+          },
+        ],
       },
     },
-    children_1433: { field_name: 'children', id: 1433, PC: { tnode: true, snapshot: true } },
+    children_1433: {
+      field_name: 'children',
+      id: 1433,
+      PC: { tnode: true, snapshot: true },
+    },
     color_1861: { field_name: 'color', id: 1861 },
-    content_1431: { field_name: 'content', id: 1431, PC: { tnode: true, snapshot: true } },
+    content_1431: {
+      field_name: 'content',
+      id: 1431,
+      PC: { tnode: true, snapshot: true },
+    },
     contentDisabled_1418: { field_name: 'contentDisabled', id: 1418 },
-    default_1430: { field_name: 'default', id: 1430, PC: { tnode: true, snapshot: true } },
+    default_1430: {
+      field_name: 'default',
+      id: 1430,
+      PC: { tnode: true, snapshot: true },
+    },
     disabled_492: {
       field_name: 'disabled',
       id: 492,
@@ -34,7 +58,11 @@ module.exports = {
         className: 't-is-disabled',
         content: 'Text',
         snapshot: true,
-        event: [{ expect: [{ trigger: 'click', event: { change: 'not' } }] }],
+        event: [
+          {
+            expect: [{ trigger: 'click', event: { change: 'not' } }],
+          },
+        ],
       },
     },
     externalClasses_1417: { field_name: 'externalClasses', id: 1417 },
@@ -50,7 +78,10 @@ module.exports = {
     name_493: {
       field_name: 'name',
       id: 493,
-      PC: { attribute: { name: 'radio-gender-name' }, attributeDom: 'input' },
+      PC: {
+        attribute: { name: 'radio-gender-name' },
+        attributeDom: 'input',
+      },
     },
     style_3069: { field_name: 'style', id: 3069 },
     value_504: {
@@ -60,7 +91,12 @@ module.exports = {
         attribute: [
           {
             value: "'radio-value'",
-            expect: [{ dom: 'input', attribute: { value: 'radio-value' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: { value: 'radio-value' },
+              },
+            ],
           },
         ],
       },
@@ -75,18 +111,21 @@ module.exports = {
             expect: [
               {
                 trigger: 'click(.t-radio__label)',
-                event: { change: [true, { 'e.type': 'click' }] },
+                event: {
+                  change: [true, { 'e.type': 'click' }],
+                },
               },
             ],
           },
           {
-            description:
-              'checked value is true, without allowUncheck, click radio and trigger change',
+            description: 'checked value is true, without allowUncheck, click radio and trigger change',
             props: { checked: true },
             expect: [
               {
                 trigger: 'click(.t-radio__label)',
-                event: { change: [true, { 'e.type': 'click' }] },
+                event: {
+                  change: [true, { 'e.type': 'click' }],
+                },
               },
             ],
           },
@@ -100,7 +139,16 @@ module.exports = {
       id: 3257,
       PC: {
         event: [
-          { expect: [{ trigger: 'click', event: { click: [{ 'e.stopPropagation': true }] } }] },
+          {
+            expect: [
+              {
+                trigger: 'click',
+                event: {
+                  click: [{ 'e.stopPropagation': true }],
+                },
+              },
+            ],
+          },
         ],
       },
     },
@@ -123,7 +171,9 @@ module.exports = {
             expect: [
               {
                 trigger: 'click(.t-radio)',
-                event: { change: ['undefined', { 'e.type': 'click' }] },
+                event: {
+                  change: ['undefined', { 'e.type': 'click' }],
+                },
               },
             ],
           },
@@ -138,7 +188,12 @@ module.exports = {
         event: [
           {
             description: 'disabled radio can not trigger change',
-            expect: [{ trigger: 'click(.t-radio)', event: { change: 'not' } }],
+            expect: [
+              {
+                trigger: 'click(.t-radio)',
+                event: { change: 'not' },
+              },
+            ],
           },
         ],
         snapshot: true,
@@ -156,7 +211,12 @@ module.exports = {
         attribute: [
           {
             value: "'custom-radio-name'",
-            expect: [{ dom: 'input', attribute: { name: 'custom-radio-name' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: { name: 'custom-radio-name' },
+              },
+            ],
           },
         ],
         copyTestToWrapper: ['getRadioGroupKidsMount'],
@@ -180,7 +240,12 @@ module.exports = {
         attribute: [
           {
             value: "'2'",
-            expect: [{ dom: '.t-radio.t-is-checked input', attribute: { value: '2' } }],
+            expect: [
+              {
+                dom: '.t-radio.t-is-checked input',
+                attribute: { value: '2' },
+              },
+            ],
           },
         ],
         wrapper: 'getRadioGroupDefaultMount',
@@ -191,11 +256,7 @@ module.exports = {
       field_name: 'variant',
       id: 1651,
       PC: {
-        className: [
-          't-radio-group__outline',
-          't-radio-group--primary-filled',
-          't-radio-group--filled',
-        ],
+        className: ['t-radio-group__outline', 't-radio-group--primary-filled', 't-radio-group--filled'],
       },
     },
     change_501: {
@@ -208,11 +269,21 @@ module.exports = {
           {
             props: { value: 2 },
             description: 'default value is 2, trigger change after click',
-            expect: [{ trigger: 'click(.t-radio)', event: { change: [1, { 'e.type': 'click' }] } }],
+            expect: [
+              {
+                trigger: 'click(.t-radio)',
+                event: { change: [1, { 'e.type': 'click' }] },
+              },
+            ],
           },
           {
             description: 'default value is empty, trigger change after click',
-            expect: [{ trigger: 'click(.t-radio)', event: { change: [1, { 'e.type': 'click' }] } }],
+            expect: [
+              {
+                trigger: 'click(.t-radio)',
+                event: { change: [1, { 'e.type': 'click' }] },
+              },
+            ],
           },
         ],
       },

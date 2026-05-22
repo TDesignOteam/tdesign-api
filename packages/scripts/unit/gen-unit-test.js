@@ -1,40 +1,35 @@
-const yaml = require('js-yaml');
-const path = require('path');
-const { FRAMEWORK_MAP } = require('../config');
-const { kebabCaseComponent } = require('../utils');
-
-const includes = require('lodash/includes');
-const {
-  getTestImportSegment: getVueTestImportSegment,
-  getTNodeSegment: getVueTNodeSegment,
-  getDisabledSegment: getVueDisabledSegment,
-  getDefaultSegment: getVueDefaultSegment,
-} = require('./segment/vue');
-const {
-  getTestImportSegment: getVue2TestImportSegment,
-  getTNodeSegment: getVue2TNodeSegment,
-  getDisabledSegment: getVue2DisabledSegment,
-  getDefaultSegment: getVue2DefaultSegment,
-} = require('./segment/vue2');
-const {
-  getTestImportSegment: getReactTestImportSegment,
-  getTNodeSegment: getReactTNodeSegment,
-  getDisabledSegment: getReactDisabledSegment,
-  getDefaultSegment: getReactDefaultSegment,
-} = require('./segment/react');
+import path from 'path';
+import yaml from 'js-yaml';
+import { includes } from 'lodash-es';
+import { FRAMEWORK_MAP } from '../config/index.js';
+import { kebabCaseComponent } from '../utils.js';
+import {
+  getTestImportSegment as getReactTestImportSegment,
+  getTNodeSegment as getReactTNodeSegment,
+  getDisabledSegment as getReactDisabledSegment,
+  getDefaultSegment as getReactDefaultSegment,
+} from './segment/react.js';
+import {
+  getTestImportSegment as getVueTestImportSegment,
+  getTNodeSegment as getVueTNodeSegment,
+  getDisabledSegment as getVueDisabledSegment,
+  getDefaultSegment as getVueDefaultSegment,
+} from './segment/vue.js';
+import {
+  getTestImportSegment as getVue2TestImportSegment,
+  getTNodeSegment as getVue2TNodeSegment,
+  getDisabledSegment as getVue2DisabledSegment,
+  getDefaultSegment as getVue2DefaultSegment,
+} from './segment/vue2.js';
 
 /**
  * 自动生成的单测文件的路径位置
- * @param {*} framework - 框架名称 
+ * @param {*} framework - 框架名称
  * @param {*} componentName - 组件名称
  * @param {*} testName - 单测文件名称
- * @returns 
+ * @returns
  */
-function getUnitTestFilePath(
-  framework,
-  componentName,
-  testName = 'props.test'
-) {
+function getUnitTestFilePath(framework, componentName, testName = 'props.test') {
   // React follow component directory
   if (['React(PC)'].includes(framework)) {
     return path.resolve(
@@ -46,12 +41,12 @@ function getUnitTestFilePath(
     FRAMEWORK_MAP[framework].apiBasePath,
     `../test/unit/${kebabCaseComponent(componentName)}/${testName}.js`,
   );
-};
+}
 
 /**
  * 框架所支持的生成单测案例方法
  * @param {*} framework - 框架名称
- * @returns 
+ * @returns
  */
 function getGenSegmentFuncMap(framework) {
   // Vue 支持的生成单测能力（PC与Mobile一致）
@@ -87,26 +82,18 @@ function getGenSegmentFuncMap(framework) {
   };
 
   return frameworkGenSegmentFuncMap[framework];
-};
+}
 
 /**
  * 生成组件单测案例
  * @param {*} framework - 框架名称
  * @param {*} componentName - 组件名称
  * @param {*} componentInfo - 组件API信息
- * @returns 
+ * @returns
  */
-function generateComponentUnitTest(
-  framework,
-  componentName,
-  componentInfo,
-) {
-  const {
-    getTestImportSegment,
-    getTNodeSegment,
-    getDisabledSegment,
-    getDefaultSegment,
-  } = getGenSegmentFuncMap(framework);
+function generateComponentUnitTest(framework, componentName, componentInfo) {
+  const { getTestImportSegment, getTNodeSegment, getDisabledSegment, getDefaultSegment } =
+    getGenSegmentFuncMap(framework);
   const propsTest = [];
   const skipProps = [];
   const rawPropsMap = new Map();
@@ -114,7 +101,8 @@ function generateComponentUnitTest(
   let preDependProp = {};
   // 预处理
   componentInfo.forEach((p) => {
-    if (p.field_category === 1) { // props
+    if (p.field_category === 1) {
+      // props
       if (p.test_description) {
         const propsDoc = yaml.load(p.test_description);
         // 预设，所有的case都带上
@@ -128,7 +116,7 @@ function generateComponentUnitTest(
           preDependProp = Object.assign(preDependProp, propsDoc.preDepend);
         }
         if (propsDoc.preSkip) {
-          skipProps.push(...componentInfo.map(x => x.field_name));
+          skipProps.push(...componentInfo.map((x) => x.field_name));
         }
         const settings = propsDoc[framework];
         if (settings) {
@@ -148,7 +136,8 @@ function generateComponentUnitTest(
   });
 
   componentInfo.forEach((p) => {
-    if (p.field_category === 1) { // props
+    if (p.field_category === 1) {
+      // props
       let porpsObj = {};
       if (includes(skipProps, p.field_name)) {
         return;
@@ -166,7 +155,6 @@ function generateComponentUnitTest(
         porpsObj = Object.assign(porpsObj, dependPropsMap.get(p.field_name));
       }
 
-
       let values = [];
       if (p.field_enum.length > 0) {
         // 处理枚举值
@@ -175,19 +163,13 @@ function generateComponentUnitTest(
         values.push(p.field_default_value);
       }
       // 指定生成案例
-      if (
-        p.field_name === 'disabled'
-        && getDisabledSegment
-      ) {
+      if (p.field_name === 'disabled' && getDisabledSegment) {
         const disabledSegment = getDisabledSegment(componentName, p);
         if (disabledSegment) {
           propsTest.push(disabledSegment);
         }
       }
-      if (
-        p.field_type_text.includes('TNode')
-        && getTNodeSegment
-      ) {
+      if (p.field_type_text.includes('TNode') && getTNodeSegment) {
         const tnodeSegment = getTNodeSegment(componentName, p);
         if (tnodeSegment) {
           propsTest.push(getTNodeSegment(componentName, p));
@@ -199,7 +181,7 @@ function generateComponentUnitTest(
           porpsObj[p.field_name] = getPropValue(val, p.field_type_text);
           const defaultSegment = getDefaultSegment(componentName, p, porpsObj);
           if (defaultSegment) {
-            propsTest.push(defaultSegment)
+            propsTest.push(defaultSegment);
           }
         });
         return;
@@ -213,7 +195,7 @@ describe('${componentName}', () => {
   });
 });`;
   return propsTest.length > 0 ? getTestImportSegment(componentName) + propsUnitTest : '';
-};
+}
 
 function getPropValue(value, valueTypes) {
   const boolStr = ['false', 'true'];
@@ -228,10 +210,6 @@ function getPropValue(value, valueTypes) {
     console.warn(`warning: ${value} is ${valueType}, not in ${JSON.stringify(valueTypes)}`);
   }
   return value;
-};
+}
 
-module.exports = {
-  getUnitTestFilePath,
-  getGenSegmentFuncMap,
-  generateComponentUnitTest,
-};
+export { getUnitTestFilePath, getGenSegmentFuncMap, generateComponentUnitTest };
