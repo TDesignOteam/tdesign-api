@@ -1,6 +1,7 @@
 {
   "extends": ["github>TDesignOteam/tdesign-renovate-config:presets.json5"],
   "ignorePaths": [
+    "packages/frontend/index.html",
     "packages/frontend/_site/**"
   ]
 }
