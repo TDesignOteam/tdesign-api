@@ -1,8 +1,8 @@
 import path from 'path';
+import { send } from '@koa/send';
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
 import json from 'koa-json';
-import send from 'koa-send';
 import serve from 'koa-static';
 import cors from 'koa2-cors';
 import config from './config';
@@ -31,7 +31,7 @@ const staticPath = path.resolve('packages/frontend/_site');
 app.use(serve(staticPath));
 
 // support for spa
-app.use(async (ctx:Koa.Context) => {
+app.use(async (ctx) => {
   await send(ctx, `/index.html`, {
       root: staticPath,
   });
