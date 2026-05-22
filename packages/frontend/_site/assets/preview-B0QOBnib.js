@@ -1,1 +1,0 @@
-import{E as e,L as t,q as n}from"./index-ISQUPyOE.js";import r from"./api-Bgi-nLLm.js";var i={__name:`preview`,setup(i){return(i,a)=>(t(),e(n(r),{preview:``}))}};export{i as default};
