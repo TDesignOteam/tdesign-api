@@ -16,5 +16,3 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh \
 RUN apt-get update && apt-get install -y wget unzip openssh-server
 
 RUN npm install -g pnpm
-
-RUN pnpm config set store-dir /lib/pnpm
