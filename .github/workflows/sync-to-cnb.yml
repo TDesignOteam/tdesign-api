@@ -8,7 +8,7 @@ jobs:
         if: ${{ github.repository == 'TDesignOteam/tdesign-api' && github.event_name == 'push' }}
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v6.0.2
+            - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
               with:
                   fetch-depth: 0
 
@@ -28,7 +28,7 @@ jobs:
         if: ${{ github.repository == 'TDesignOteam/tdesign-api' && github.event_name == 'delete' && github.event.ref_type == 'branch' }}
         runs-on: ubuntu-latest
         steps:
-            - uses: TDesignOteam/workflows/actions/cnb-delete-branch@main
+            - uses: TDesignOteam/workflows/actions/cnb-delete-branch@62fc9a4d8efa914351f733f9b936e3aab259a105 # main
               with:
                   repo: "tencent/tdesign/tdesign-api"
                   token: ${{ secrets.CNB_TOKEN }}
