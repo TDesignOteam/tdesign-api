@@ -11,12 +11,12 @@ jobs:
       next_action: ${{ steps.get-action.outputs.next_action }}
     if: ${{ github.event.issue.pull_request }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
         with:
           sparse-checkout: |
             .github/CODEOWNERS
           sparse-checkout-cone-mode: false
-      - uses: actions/github-script@v8
+      - uses: actions/github-script@v9.0.0
         id: get-action
         with:
           script: |
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ needs.check.outputs.next_action == 'resolve-conflict' }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v6.0.2
       with:
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}
           fetch-depth: 0
@@ -69,9 +69,9 @@ jobs:
           GH_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
       run: gh pr checkout ${{ github.event.issue.number }}
 
-    - uses: pnpm/action-setup@v6
+    - uses: pnpm/action-setup@v6.0.8
 
-    - uses: actions/setup-node@v6
+    - uses: actions/setup-node@v6.4.0
       with:
         node-version-file: .node-version
         cache: "pnpm"
