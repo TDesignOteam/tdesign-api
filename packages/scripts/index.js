@@ -127,7 +127,7 @@ async function generateComponentApi() {
     }
     // 生成 props 单元测试文件
     if (isUseUnitTest) {
-      generateUnitTest(baseData, framework, { language });
+      generateUnitTest(baseData, framework);
     }
   }
   const currentComponent = isAll(component) ? undefined : component;
