@@ -28,7 +28,7 @@ jobs:
         if: ${{ github.repository == 'TDesignOteam/tdesign-api' && github.event_name == 'delete' && github.event.ref_type == 'branch' }}
         runs-on: ubuntu-latest
         steps:
-            - uses: TDesignOteam/workflows/actions/cnb-delete-branch@62fc9a4d8efa914351f733f9b936e3aab259a105 # main
+            - uses: TDesignOteam/workflows/actions/cnb-delete-branch@86860a363fd94437a642fc968ca220efaa1babfe # main
               with:
                   repo: "tencent/tdesign/tdesign-api"
                   token: ${{ secrets.CNB_TOKEN }}
