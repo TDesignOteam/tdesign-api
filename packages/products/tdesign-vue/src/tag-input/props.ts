@@ -104,6 +104,10 @@ export default {
   tag: {
     type: [String, Function] as PropType<TdTagInputProps['tag']>,
   },
+  /** 自定义单个标签的整体节点 */
+  tagDisplay: {
+    type: Function as PropType<TdTagInputProps['tagDisplay']>,
+  },
   /** 透传 Tag 组件全部属性 */
   tagProps: {
     type: Object as PropType<TdTagInputProps['tagProps']>,
