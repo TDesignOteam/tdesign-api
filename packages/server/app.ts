@@ -1,10 +1,10 @@
 import path from 'path';
+import bodyParser from '@koa/bodyparser';
+import cors from '@koa/cors';
 import { send } from '@koa/send';
 import Koa from 'koa';
-import bodyParser from 'koa-bodyparser';
 import json from 'koa-json';
 import serve from 'koa-static';
-import cors from 'koa2-cors';
 import config from './config';
 import errorParser from './middleware/errorParser';
 import logger from './middleware/logger';
@@ -17,9 +17,8 @@ app.use(logger());
 app.use(bodyParser());
 app.use(errorParser());
 app.use(cors({
-  origin: '*', 
   credentials: true,
-  allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'Access-Control-Allow-Origin'],
+  allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
 /** Routes */
