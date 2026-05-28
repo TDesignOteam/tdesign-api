@@ -1,4 +1,4 @@
-function parseJSON(json: string, error = ''): Record<string, unknown> {
+function parseJSON(json: string, error = ''): any {
   if (!json || json.indexOf('preSkip') !== -1) return {};
   try {
     return JSON.parse(json);

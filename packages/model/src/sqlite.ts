@@ -62,6 +62,16 @@ export async function waitForWriteDrain(timeoutMs = 5000): Promise<void> {
   }
 }
 
+// 缓存 sql.js 初始化结果，避免每次调用都重新加载 WASM
+let sqlJsPromise: Promise<any> | null = null;
+
+function getSqlJs() {
+  if (!sqlJsPromise) {
+    sqlJsPromise = initSqlJs();
+  }
+  return sqlJsPromise;
+}
+
 export default async function executeSQL(sqlStr: string, write?: boolean) {
   console.info('Execute SQL: ', sqlStr);
 
@@ -69,7 +79,7 @@ export default async function executeSQL(sqlStr: string, write?: boolean) {
   const unlock = write ? await writeMutex.acquire() : undefined;
 
   try {
-    const sqlJs = await initSqlJs();
+    const sqlJs = await getSqlJs();
     const fileBuffer = fs.readFileSync(dbFilePath);
     const db = new sqlJs.Database(fileBuffer);
     const stmt = db.prepare(sqlStr);

@@ -8,7 +8,7 @@ const exec = promisify(execCallback);
 const scriptsPath = path.resolve('packages/scripts');
 
 export default async function execScript(params: BaseObject) {
-    const script = `npx tsx ${scriptsPath}/download.ts && npx tsx ${scriptsPath}/index.ts ${params.commandLine}`;
+    const script = `pnpm exec tsx ${scriptsPath}/download.ts && pnpm exec tsx ${scriptsPath}/index.ts ${params.commandLine}`;
     const { stdout, stderr } = await exec(script);
     console.info('Execute:', script);
     console.info('stdout:', stdout);

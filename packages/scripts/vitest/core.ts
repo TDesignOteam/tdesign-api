@@ -46,7 +46,7 @@ function getFullMountCode(framework: string, componentCode: string): string | un
 
 function filterObject(obj) {
   Object.keys(obj).forEach((key) => {
-    if (key === undefined) {
+    if (obj[key] === undefined) {
       delete obj[key];
     }
   });

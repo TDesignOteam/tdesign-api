@@ -124,7 +124,7 @@ class TAPI {
       if (framework) {
         delete _params.platform_framework;
         const fw = Number(framework);
-        if (!Number.isNaN(fw)) {
+        if (!Number.isNaN(fw) && fw > 0) {
           // 使用参数化方式防止 SQL 注入，但位运算需要直接构建条件表达式
           expr.and(`platform_framework & ${fw} = ${fw}`);
         }
