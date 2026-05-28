@@ -2,6 +2,7 @@ declare module 'sql.js/dist/sql-wasm-debug.js' {
   interface Database {
     prepare(sql: string): Statement;
     export(): Uint8Array;
+    close(): void;
   }
   interface Statement {
     step(): boolean;

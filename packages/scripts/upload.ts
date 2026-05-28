@@ -18,18 +18,37 @@ interface ApiRecord {
   [key: string]: unknown;
 }
 
+/**
+ * 将 ApiRecord 安全转换为 BaseObject，过滤掉值类型不在 BaseObject 联合范围内的字段
+ */
+function toBaseObject(record: ApiRecord): BaseObject {
+  const result: BaseObject = {};
+  for (const [key, value] of Object.entries(record)) {
+    if (value === null || value === undefined) continue;
+    if (
+      typeof value === 'string' ||
+      typeof value === 'number' ||
+      typeof value === 'boolean' ||
+      (typeof value === 'object' && value !== null)
+    ) {
+      result[key] = value as BaseObject[string];
+    }
+  }
+  return result;
+}
+
 async function syncCreate(record: ApiRecord) {
   console.log(
     `syncCreate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)} Field: ${chalk.blue(record.field_name)}`,
   );
-  return apiCreate(record as BaseObject);
+  return apiCreate(toBaseObject(record));
 }
 
 async function syncUpdate(record: ApiRecord) {
   console.log(
     `syncUpdate ${chalk.blue(record.id)} Component: ${chalk.blue(record.component)} Field: ${chalk.blue(record.field_name)}`,
   );
-  return apiUpdate(record as BaseObject);
+  return apiUpdate(toBaseObject(record));
 }
 
 async function syncDelete(record: ApiRecord) {

@@ -31,10 +31,10 @@ router.get('/map', (ctx: Koa.Context) => {
   };
 });
 
-router.post('/generate-api', (ctx: Koa.Context) => {
+router.post('/generate-api', async (ctx: Koa.Context) => {
   ctx.body = {
     code: 0,
-    data: ComponentApiController.generateAPI(ctx.request.body as { commandLines: string[] }),
+    data: await ComponentApiController.generateAPI(ctx.request.body as { commandLines: string[] }),
   };
 });
 

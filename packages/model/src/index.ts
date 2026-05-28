@@ -27,6 +27,15 @@ export {
 
 const tableName = 't_api';
 
+// t_api 表合法列名白名单，防止 SQL 注入
+const VALID_COLUMNS = new Set([
+  'id', 'platform_framework', 'component', 'field_category', 'field_name',
+  'field_type', 'field_default_value', 'field_enum', 'field_desc_zh', 'field_desc_en',
+  'field_required', 'event_input', 'create_time', 'update_time', 'event_output',
+  'custom_field_type', 'syntactic_sugar', 'readonly', 'html_attribute',
+  'trigger_elements', 'deprecated', 'version', 'test_description', 'support_default_value',
+]);
+
 // ============ Utility Functions ============
 
 function formatIntToArray(map: MapOptions, p: number) {
@@ -45,7 +54,7 @@ function filterParams(params: BaseObject) {
 }
 
 export function formatParams(params: BaseObject, clearEmpty?: boolean) {
-  const _params = clearEmpty ? filterParams(params) : params;
+  const _params = clearEmpty ? filterParams(params) : { ...params };
   if (_params.platform_framework) {
     const p = _params.platform_framework as Array<string | number>;
     _params.platform_framework = p.length ? p.reduce((r, v) => Number(r) + Number(v)) : 0;
@@ -97,25 +106,29 @@ class TAPI {
     const querySQL = squel.select().from(tableName);
     const countSQL = squel.select().from(tableName).field('count(*)');
     if (columns) {
-      columns.map((column) => querySQL.field(column));
+      columns.forEach((column) => querySQL.field(column));
     }
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
-      const { field_name: fieldName, component } = params;
-      let { platform_framework: framework } = params;
+      // 操作副本，避免修改调用方传入的对象
+      const _params = { ...params };
+      const { field_name: fieldName, component } = _params;
+      let { platform_framework: framework } = _params;
       // 处理 API名称以支持模糊查询，LIKE %xxx%
       if (fieldName) {
         expr.and(`field_name like ?`, `%${fieldName}%`);
-        delete params.field_name;
+        delete _params.field_name;
       }
       // 一个 API 可能属于多个平台，需要使用 sql 的位运算
       if (framework) {
-        delete params.platform_framework;
-        framework = String(framework);
-        expr.and(`platform_framework & ${framework} = ${framework}`);
+        delete _params.platform_framework;
+        const fw = Number(framework);
+        if (!Number.isNaN(fw)) {
+          expr.and(squel.str('platform_framework & ? = ?', fw, fw));
+        }
       }
       if (component) {
-        delete params.component;
+        delete _params.component;
         const list = (component as string).split(',');
         const componentsExpr = squel.expr();
         list.forEach((oneComponent) => {
@@ -123,8 +136,10 @@ class TAPI {
         });
         expr.and(componentsExpr);
       }
-      Object.keys(params).forEach((paramName) => {
-        expr.and(`${paramName} = ?`, params[paramName]);
+      Object.keys(_params).forEach((paramName) => {
+        if (VALID_COLUMNS.has(paramName)) {
+          expr.and(`${paramName} = ?`, _params[paramName]);
+        }
       });
     }
 
@@ -143,22 +158,31 @@ class TAPI {
   }
 
   public static async create(params: BaseObject) {
-    const newID = moment().unix();
+    // 使用毫秒时间戳 + 随机数避免同一秒内 ID 碰撞
+    const newID = moment().valueOf() * 1000 + Math.floor(Math.random() * 1000);
     const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
-    Object.keys(params).map((param) => insertSQL.set(param, params[param]));
+    Object.keys(params).forEach((param) => {
+      if (VALID_COLUMNS.has(param)) {
+        insertSQL.set(param, params[param]);
+      }
+    });
     const res = await executeSQL(insertSQL.toString(), true);
     return res;
   }
 
   public static async update(params: BaseObject, id: number) {
-    const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
-    Object.keys(params).map((param) => updateSQL.set(param, params[param]));
+    const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where('id = ?', id);
+    Object.keys(params).forEach((param) => {
+      if (VALID_COLUMNS.has(param)) {
+        updateSQL.set(param, params[param]);
+      }
+    });
     const res = await executeSQL(updateSQL.toString(), true);
     return res;
   }
 
   public static async delete(id: number) {
-    const deleteSQL = squel.delete().from(tableName).where(`id = ${id}`);
+    const deleteSQL = squel.delete().from(tableName).where('id = ?', id);
     const res = await executeSQL(deleteSQL.toString(), true);
     return res;
   }
@@ -169,7 +193,7 @@ export default TAPI;
 // ============ High-level API ============
 
 export async function queryRecords(params: BaseObject) {
-  const p = filterParams(params);
+  const p = { ...filterParams(params) };
   const pageSize = Number(p.page_size);
   const paginationParams: QueryPaginationProps = {
     size: pageSize,
@@ -209,9 +233,8 @@ export async function apiCreate(params: BaseObject) {
 }
 
 export async function apiUpdate(params: BaseObject) {
-  const { id } = params;
-  delete params.id;
-  const res = await TAPI.update(formatParams(params), Number(id));
+  const { id, ...rest } = params;
+  const res = await TAPI.update(formatParams(rest), Number(id));
   return {
     code: 0,
     msg: 'success',
