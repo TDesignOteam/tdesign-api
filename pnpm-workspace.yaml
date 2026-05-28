@@ -22,6 +22,7 @@ catalog:
   "@types/koa-static": "^4.0.4"
   "@types/lodash": "^4.17.24"
   "@types/node": "^25.9.1"
+  "@types/shelljs": "^0.8.17"
   "@types/validator": "^13.15.10"
   "@typescript-eslint/eslint-plugin": "^8.59.4"
   "@typescript-eslint/parser": "^8.59.4"
@@ -59,6 +60,7 @@ catalog:
   shelljs: "^0.10.0"
   sql.js: "^1.14.1"
   squel: "^6.0.7"
+  tsx: "^4.19.0"
   tdesign-icons-vue-next: "latest"
   tdesign-vue-next: "latest"
   ts-node: "^10.9.2"
@@ -71,4 +73,5 @@ catalog:
   vue-router: "^5.0.7"
 
 allowBuilds:
+  esbuild: true
   unrs-resolver: true

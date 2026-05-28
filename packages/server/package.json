@@ -1,1 +1,6 @@
-{"type": "commonjs"}
+{
+  "type": "commonjs",
+  "dependencies": {
+    "@tdesign/api-model": "workspace:*"
+  }
+}

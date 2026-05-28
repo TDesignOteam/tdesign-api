@@ -12,14 +12,14 @@
     "dev": "cross-env NODE_ENV=dev nodemon",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
-    "api:download": "node packages/scripts/download.js",
-    "api:upload": "node packages/scripts/upload.js",
-    "api:test": "node packages/scripts/vitest/tests/core/run.js",
-    "api:pure": "node packages/scripts/index.js",
-    "api:docs": "node packages/scripts/index.js",
-    "api:vscode": "node packages/scripts/vscode",
-    "api:helper": "node packages/scripts/helper",
-    "api:configurable": "node packages/scripts/configurable-props"
+    "api:download": "npx tsx packages/scripts/download.ts",
+    "api:upload": "npx tsx packages/scripts/upload.ts",
+    "api:test": "npx tsx packages/scripts/vitest/tests/core/run.ts",
+    "api:pure": "npx tsx packages/scripts/index.ts",
+    "api:docs": "npx tsx packages/scripts/index.ts",
+    "api:vscode": "npx tsx packages/scripts/vscode",
+    "api:helper": "npx tsx packages/scripts/helper",
+    "api:configurable": "npx tsx packages/scripts/configurable-props"
   },
   "dependencies": {
     "@koa/router": "catalog:",
@@ -58,6 +58,7 @@
     "pm2": "catalog:",
     "prettier": "catalog:",
     "shelljs": "catalog:",
+    "tsx": "catalog:",
     "ts-node": "catalog:",
     "tsconfig-paths": "catalog:",
     "typescript": "catalog:"

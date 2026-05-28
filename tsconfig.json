@@ -18,6 +18,8 @@
     ],
     "exclude": [
         "node_modules",
-        "packages/products"
+        "packages/products",
+        "packages/scripts",
+        "packages/model/dist"
     ]
 }
