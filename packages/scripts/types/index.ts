@@ -53,7 +53,7 @@ const tdPrefixedTypeNames = new Set(
 const indent = '  ';
 
 function getComponentsMap(components: ComponentMapItem[]) {
-  const map: Record<string, any> = {};
+  const map: Record<string, ComponentMapItem> = {};
   components.forEach((item) => {
     map[item.value] = item;
   });
@@ -116,7 +116,7 @@ function getPropsApiType(api: ApiData, framework: string) {
       exp.length && exports.push(...exp);
       type = baseName;
     } else {
-      type = baseType.map((item: any) => formatOneType(api, item)).join(' | ');
+      type = baseType.map((item: string) => formatOneType(api, item)).join(' | ');
     }
   }
   if (csType && csType.includes('ListFilterConfig')) {
@@ -171,7 +171,7 @@ function getFileName(framework: string, cmp: string) {
 function formatType(api: ApiData, framework: string): FormatTypeResult | undefined {
   // MP_PROPS 表示需要透传小程序原生属性，原生属性从小程序官网自动拉取
   if (api.field_name === 'MP_PROPS') return;
-  const map: Record<string, any> = {
+  const map: Record<string, (api: ApiData, framework: string) => FormatTypeResult | undefined> = {
     Props: getPropsApiType,
     Functions: getEventsApiType,
   };
@@ -296,7 +296,7 @@ function formatCommonTypeImports(str: string, types: string[]) {
 // 按需引入，存储需要从 common 或公共库等路径下引入的类型定义
 function getGlobalsImports(str: string, framework: string) {
   const current = FRAMEWORK_MAP[framework];
-  const map: Record<string, any> = {
+  const map: Record<string, { path: string; types: string[] }> = {
     // 从全局通用类型文件中引入数据类型，如： import { XXX  } from 'common.ts';
     common: {
       path: current.commonRelativePath,
@@ -455,7 +455,7 @@ function getMiniprogramOriginalApi(miniprogram: Record<string, ApiData>) {
 }
 
 function getTypeScriptDesc(componentMap: Record<string, ApiData[]>, framework: string) {
-  const result = {};
+  const result: Record<string, { imports: string[]; body: string | string[]; exports: string[] }> = {};
   Object.keys(componentMap).forEach((cmp) => {
     // 当前组件主体内容
     let body = [];

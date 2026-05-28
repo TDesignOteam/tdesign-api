@@ -27,6 +27,10 @@ class Mutex {
     });
   }
 
+  isLocked() {
+    return this.locked;
+  }
+
   private release() {
     this.locked = false;
     const next = this.queue.shift();
@@ -35,6 +39,22 @@ class Mutex {
 }
 
 const writeMutex = new Mutex();
+
+/** 检查写锁是否正在使用中 */
+export function isWriteLocked() {
+  return writeMutex.isLocked();
+}
+
+/** 等待写锁释放（轮询），用于优雅关闭时等待进行中的写操作完成 */
+export async function waitForWriteDrain(timeoutMs = 5000): Promise<void> {
+  const start = Date.now();
+  while (writeMutex.isLocked()) {
+    if (Date.now() - start > timeoutMs) {
+      throw new Error('等待写操作完成超时');
+    }
+    await new Promise((resolve) => setTimeout(resolve, 50));
+  }
+}
 
 export default async function executeSQL(sqlStr: string, write?: boolean) {
   console.info('Execute SQL: ', sqlStr);

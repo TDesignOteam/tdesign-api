@@ -24,7 +24,7 @@ export interface ApiData {
   platform_framework: string[];
   create_time: string;
   id: number;
-  [key: string]: unknown;
+  [key: string]: string | number | boolean | string[] | undefined;
 }
 
 /** 测试描述 JSON 中的全局配置 */
@@ -110,7 +110,7 @@ export interface AttributeArrayItem {
 export interface EventExpectItem {
   expect?: EventArgExpect[];
   wrapper?: string;
-  [key: string]: unknown;
+  [key: string]: EventArgExpect[] | string | undefined;
 }
 
 /** 事件参数期望 */

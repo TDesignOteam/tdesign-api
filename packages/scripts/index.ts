@@ -24,7 +24,7 @@
  *
  */
 import chalk from 'chalk';
-import { pick, has } from 'lodash-es';
+import { pick } from 'lodash-es';
 import apiJson from './api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from './common.ts';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.ts';
@@ -225,6 +225,6 @@ function validateParams(components) {
 }
 
 // 是否输出全量组件
-function isAll(r: any) {
+function isAll(r?: string) {
   return typeof r === 'string' && r.toLocaleLowerCase() === 'all';
 }

@@ -9,8 +9,9 @@ function outputToFile(outputPath: string, data: unknown) {
   return new Promise<void>((resolve, reject) => {
     fs.writeFile(path.resolve(__dirname, outputPath), JSON.stringify(data, null, 2), (err) => {
       if (err) {
+        console.error(err);
         reject(err);
-        return console.error(err);
+        return;
       }
       console.log(`${outputPath} has been created`);
       resolve();

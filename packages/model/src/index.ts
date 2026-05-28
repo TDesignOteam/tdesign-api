@@ -160,7 +160,7 @@ class TAPI {
   public static async create(params: BaseObject) {
     // 使用毫秒时间戳 + 随机数避免同一秒内 ID 碰撞
     const newID = moment().valueOf() * 1000 + Math.floor(Math.random() * 1000);
-    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
+    const insertSQL = squel.insert().into(tableName).set('id', newID);
     Object.keys(params).forEach((param) => {
       if (VALID_COLUMNS.has(param)) {
         insertSQL.set(param, params[param]);
@@ -171,7 +171,7 @@ class TAPI {
   }
 
   public static async update(params: BaseObject, id: number) {
-    const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where('id = ?', id);
+    const updateSQL = squel.update().table(tableName).where('id = ?', id);
     Object.keys(params).forEach((param) => {
       if (VALID_COLUMNS.has(param)) {
         updateSQL.set(param, params[param]);
