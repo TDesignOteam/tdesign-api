@@ -21,11 +21,11 @@ export default {
   queryRecords,
   apiDelete,
   apiUpdate,
-  generateAPI(params: { commandLines: string[] }) {
+  async generateAPI(params: { commandLines: string[] }) {
     const { commandLines } = params;
     console.info('commandLines:', commandLines);
     if (commandLines) {
-      commandLines.map((commandLine: string) => execScript({ commandLine }));
+      await Promise.all(commandLines.map((commandLine: string) => execScript({ commandLine })));
     }
     return {
       code: 0,

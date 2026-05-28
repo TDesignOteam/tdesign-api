@@ -93,7 +93,7 @@ class TAPI {
     params?: BaseObject,
     limitObj?: QueryPaginationProps,
     columns?: string[],
-  ) {
+  ): Promise<[Record<string, unknown>[], number]> {
     const querySQL = squel.select().from(tableName);
     const countSQL = squel.select().from(tableName).field('count(*)');
     if (columns) {
@@ -105,7 +105,7 @@ class TAPI {
       let { platform_framework: framework } = params;
       // 处理 API名称以支持模糊查询，LIKE %xxx%
       if (fieldName) {
-        expr.and(`field_name like "%${fieldName}%"`);
+        expr.and(`field_name like ?`, `%${fieldName}%`);
         delete params.field_name;
       }
       // 一个 API 可能属于多个平台，需要使用 sql 的位运算
@@ -119,12 +119,12 @@ class TAPI {
         const list = (component as string).split(',');
         const componentsExpr = squel.expr();
         list.forEach((oneComponent) => {
-          componentsExpr.or(`component = '${oneComponent}'`);
+          componentsExpr.or(`component = ?`, oneComponent);
         });
         expr.and(componentsExpr);
       }
-      Object.keys(params).map((paramName) => {
-        expr.and(`${paramName} = "${params[paramName]}"`);
+      Object.keys(params).forEach((paramName) => {
+        expr.and(`${paramName} = ?`, params[paramName]);
       });
     }
 
@@ -178,9 +178,8 @@ export async function queryRecords(params: BaseObject) {
   delete p.page;
   delete p.page_size;
 
-  const queryResult = await TAPI.query(p, paginationParams) as [Record<string, unknown>[], Record<string, unknown>[]];
-  const formattedData = formatRecords(queryResult[0]);
-  const total = (queryResult[1][0] as Record<string, number>)['count(*)'];
+  const [records, total] = await TAPI.query(p, paginationParams);
+  const formattedData = formatRecords(records);
 
   return {
     code: 0,
@@ -191,7 +190,7 @@ export async function queryRecords(params: BaseObject) {
 }
 
 export async function exportAPI() {
-  const [res] = await TAPI.query() as [Record<string, unknown>[]];
+  const [res] = await TAPI.query();
   const formattedData = formatRecords(res);
   return {
     code: 0,
