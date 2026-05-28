@@ -260,9 +260,11 @@ export function getMap() {
     const map: BaseObject = {};
     const r: Array<MapItem> = [];
     array.forEach((item: MapItem) => {
-      if (!map[item.value]) {
+      // 使用 value + type 联合去重，避免不同 type 的同名条目被静默丢弃
+      const key = `${item.value}_${item.type || ''}`;
+      if (!map[key]) {
         r.push(item);
-        map[item.value] = true;
+        map[key] = true;
       }
     });
     return r;

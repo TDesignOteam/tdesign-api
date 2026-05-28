@@ -1,11 +1,17 @@
 import fs from 'fs';
 import path from 'path';
-import initSqlJs from 'sql.js/dist/sql-wasm-debug.js';
+import initSqlJs from 'sql.js/dist/sql-wasm.js';
 
-const dbFilePath = path.resolve('db/TDesign.db');
+// DB 文件路径，默认基于 process.cwd() 解析
+// 可通过 setDbFilePath() 覆盖，适用于非标准 CWD 的运行环境
+let dbFilePath = path.resolve(process.cwd(), 'db/TDesign.db');
 
 export function getDbFilePath() {
   return dbFilePath;
+}
+
+export function setDbFilePath(filePath: string) {
+  dbFilePath = path.resolve(filePath);
 }
 
 // 简单的异步互斥锁，防止并发写入导致数据丢失

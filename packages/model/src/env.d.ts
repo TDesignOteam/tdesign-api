@@ -1,4 +1,4 @@
-declare module 'sql.js/dist/sql-wasm-debug.js' {
+declare module 'sql.js/dist/sql-wasm.js' {
   interface Database {
     prepare(sql: string): Statement;
     export(): Uint8Array;

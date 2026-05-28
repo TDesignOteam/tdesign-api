@@ -33,9 +33,7 @@
     "koa-static": "catalog:",
     "lodash": "catalog:",
     "moment": "catalog:",
-    "qs": "catalog:",
-    "sql.js": "catalog:",
-    "squel": "catalog:"
+    "qs": "catalog:"
   },
   "devDependencies": {
     "@types/koa": "catalog:",
