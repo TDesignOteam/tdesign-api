@@ -71,6 +71,7 @@ catalog:
   vue-codemirror: "^6.1.1"
   vue-eslint-parser: "^10.4.0"
   vue-router: "^5.0.7"
+  '@types/lodash-es': ^4.17.12
 
 allowBuilds:
   esbuild: true

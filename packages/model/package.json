@@ -11,12 +11,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "sql.js": "catalog:",
-    "squel": "catalog:",
+    "lodash-es": "catalog:",
     "moment": "catalog:",
-    "lodash-es": "catalog:"
+    "sql.js": "catalog:",
+    "squel": "catalog:"
   },
   "devDependencies": {
+    "@types/lodash-es": "catalog:",
     "@types/node": "catalog:"
   }
 }

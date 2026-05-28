@@ -36,4 +36,21 @@ app.use(async (ctx) => {
   });
 });
 
-app.listen(config.port, () => console.info(`Server running on http://localhost:${config.port}`));
+const server = app.listen(config.port, () => console.info(`Server running on http://localhost:${config.port}`));
+
+// 优雅关闭
+function gracefulShutdown(signal: string) {
+  console.info(`\n收到 ${signal} 信号，正在关闭服务器...`);
+  server.close(() => {
+    console.info('服务器已关闭');
+    process.exit(0);
+  });
+  // 5 秒超时强制退出
+  setTimeout(() => {
+    console.error('强制退出');
+    process.exit(1);
+  }, 5000);
+}
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));

@@ -1,20 +1,6 @@
 import { isEmpty } from 'lodash-es';
 import moment from 'moment';
 import squel from 'squel';
-import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from './types.ts';
-
-// Re-export types for external consumers
-export { BaseObject, MapItem, MapOptions, QueryPaginationProps, QueryColumns, Order, Orders, FieldsObject } from './types.ts';
-import executeSQL from './sqlite.ts';
-export {
-  API_CATEGORY,
-  PLATFORM_MAP,
-  FRAMEWORK_MAP,
-  FIELD_TYPE_MAP,
-  PLATFORM_FRAMEWORK,
-  COMPONENTS_PC,
-  COMPONENTS_MOBILE,
-} from './const.ts';
 import {
   API_CATEGORY as _API_CATEGORY,
   PLATFORM_MAP as _PLATFORM_MAP,
@@ -23,6 +9,20 @@ import {
   PLATFORM_FRAMEWORK as _PLATFORM_FRAMEWORK,
   COMPONENTS_PC as _COMPONENTS_PC,
   COMPONENTS_MOBILE as _COMPONENTS_MOBILE,
+} from './const.ts';
+import executeSQL from './sqlite.ts';
+import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from './types.ts';
+
+// Re-export types for external consumers
+export { BaseObject, MapItem, MapOptions, QueryPaginationProps, QueryColumns, Order, Orders, FieldsObject } from './types.ts';
+export {
+  API_CATEGORY,
+  PLATFORM_MAP,
+  FRAMEWORK_MAP,
+  FIELD_TYPE_MAP,
+  PLATFORM_FRAMEWORK,
+  COMPONENTS_PC,
+  COMPONENTS_MOBILE,
 } from './const.ts';
 
 const tableName = 't_api';
@@ -137,7 +137,7 @@ class TAPI {
 
     countSQL.where(expr);
 
-    const apis = await executeSQL(querySQL.toString());
+    const apis = (await executeSQL(querySQL.toString())) as Record<string, unknown>[];
     const total = (await executeSQL(countSQL.toString())) as Record<string, unknown>[];
     return [apis, total[0]['count(*)'] as number];
   }

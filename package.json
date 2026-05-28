@@ -9,7 +9,7 @@
     "lint": "eslint ./packages --max-warnings 0",
     "lint:fix": "eslint ./packages --max-warnings 0 --fix",
     "build":"tsc",
-    "dev": "cross-env NODE_ENV=dev nodemon",
+    "dev": "tsx watch packages/server/app.ts",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
     "api:download": "npx tsx packages/scripts/download.ts",
