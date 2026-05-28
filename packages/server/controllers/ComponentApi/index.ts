@@ -9,14 +9,10 @@ import {
 } from '@tdesign/api-model';
 import execScript from '../../services/execute';
 
-export { getMap, apiDelete, apiUpdate };
-
-export async function apiCreateHandler(params: BaseObject) {
-  return apiCreate(params);
-}
+export { getMap, apiDelete, apiUpdate, apiCreate };
 
 export default {
-  apiCreate: apiCreateHandler,
+  apiCreate,
   getMap,
   queryRecords,
   apiDelete,

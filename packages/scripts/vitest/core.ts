@@ -44,7 +44,7 @@ function getFullMountCode(framework: string, componentCode: string): string | un
   }
 }
 
-function filterObject(obj) {
+function filterObject(obj: Record<string, unknown>) {
   Object.keys(obj).forEach((key) => {
     if (obj[key] === undefined) {
       delete obj[key];
@@ -130,7 +130,7 @@ function getPropsObjectString(props, events) {
     return events ? '{}' : '';
   }
   const entries = Object.entries(props);
-  if (!entries.length) return {};
+  if (!entries.length) return '{}';
   const list = entries.map(([name, value]) => {
     return `'${name}': ${getPropsValue(value)}`;
   });
