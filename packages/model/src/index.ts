@@ -10,11 +10,12 @@ import {
   COMPONENTS_PC as _COMPONENTS_PC,
   COMPONENTS_MOBILE as _COMPONENTS_MOBILE,
 } from './const.ts';
-import executeSQL from './sqlite.ts';
+import executeSQL, { waitForWriteDrain } from './sqlite.ts';
 import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from './types.ts';
 
 // Re-export types for external consumers
 export { BaseObject, MapItem, MapOptions, QueryPaginationProps, QueryColumns, Order, Orders, FieldsObject } from './types.ts';
+export { waitForWriteDrain } from './sqlite.ts';
 export {
   API_CATEGORY,
   PLATFORM_MAP,
@@ -124,7 +125,8 @@ class TAPI {
         delete _params.platform_framework;
         const fw = Number(framework);
         if (!Number.isNaN(fw)) {
-          expr.and(squel.str('platform_framework & ? = ?', fw, fw));
+          // 使用参数化方式防止 SQL 注入，但位运算需要直接构建条件表达式
+          expr.and(`platform_framework & ${fw} = ${fw}`);
         }
       }
       if (component) {
