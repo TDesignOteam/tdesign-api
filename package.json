@@ -12,14 +12,14 @@
     "dev": "tsx watch packages/server/app.ts",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
-    "api:download": "npx tsx packages/scripts/download.ts",
-    "api:upload": "npx tsx packages/scripts/upload.ts",
-    "api:test": "npx tsx packages/scripts/vitest/tests/core/run.ts",
-    "api:pure": "npx tsx packages/scripts/index.ts",
-    "api:docs": "npx tsx packages/scripts/index.ts",
-    "api:vscode": "npx tsx packages/scripts/vscode",
-    "api:helper": "npx tsx packages/scripts/helper",
-    "api:configurable": "npx tsx packages/scripts/configurable-props"
+    "api:download": "pnpm exec tsx packages/scripts/download.ts",
+    "api:upload": "pnpm exec tsx packages/scripts/upload.ts",
+    "api:test": "pnpm exec tsx packages/scripts/vitest/tests/core/run.ts",
+    "api:pure": "pnpm exec tsx packages/scripts/index.ts",
+    "api:docs": "pnpm exec tsx packages/scripts/index.ts",
+    "api:vscode": "pnpm exec tsx packages/scripts/vscode",
+    "api:helper": "pnpm exec tsx packages/scripts/helper",
+    "api:configurable": "pnpm exec tsx packages/scripts/configurable-props"
   },
   "dependencies": {
     "@koa/router": "catalog:",
