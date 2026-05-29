@@ -39,11 +39,22 @@ const VALID_COLUMNS = new Set([
 
 // ============ Utility Functions ============
 
+/**
+ * 将位掩码拆分为匹配的枚举键数组
+ * @param {MapOptions} map - 枚举映射表，键为数值字符串，值为标签
+ * @param {number} p - 位掩码值
+ * @returns {string[]} 匹配的枚举键数组
+ */
 function formatIntToArray(map: MapOptions, p: number) {
   const platforms = Object.keys(map);
   return platforms.filter((num: string) => (Number(num) & p) === Number(num));
 }
 
+/**
+ * 过滤掉值为空字符串、'NaN'、'null' 的参数
+ * @param {BaseObject} params - 待过滤的参数对象
+ * @returns {BaseObject} 过滤后的参数对象
+ */
 function filterParams(params: BaseObject) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
@@ -54,6 +65,12 @@ function filterParams(params: BaseObject) {
   return r;
 }
 
+/**
+ * 格式化查询参数，将数组字段转换为位运算值，处理字段类型转换
+ * @param {BaseObject} params - 原始查询参数
+ * @param {boolean} [clearEmpty] - 是否清除空值参数
+ * @returns {BaseObject} 格式化后的参数对象
+ */
 export function formatParams(params: BaseObject, clearEmpty?: boolean) {
   const _params = clearEmpty ? filterParams(params) : { ...params };
   if (_params.platform_framework) {
@@ -77,6 +94,11 @@ export function formatParams(params: BaseObject, clearEmpty?: boolean) {
   return _params;
 }
 
+/**
+ * 格式化数据库记录，将时间戳转为可读格式，将位掩码字段转为文本数组
+ * @param {Record<string, unknown>[]} records - 原始数据库记录数组
+ * @returns {Record<string, unknown>[]} 格式化后的记录数组
+ */
 export function formatRecords(records: Record<string, unknown>[]) {
   return records.map((item: Record<string, unknown>) => {
     item.create_time = moment(item.create_time as string).format('YYYY-MM-DD HH:mm:ss');
@@ -95,9 +117,10 @@ export function formatRecords(records: Record<string, unknown>[]) {
 class TAPI {
   /**
    * 查询API记录
-   * @param params 查询条件, [key: string]: value
-   * @param limitObj 分页参数，{size, offset}，size为分页大小，offset为起点
-   * @param columns 自定义列，默认为全部
+   * @param {BaseObject} [params] - 查询条件
+   * @param {QueryPaginationProps} [limitObj] - 分页参数，{size, offset}
+   * @param {string[]} [columns] - 自定义查询列，默认为全部
+   * @returns {Promise<[Record<string, unknown>[], number]>} [记录数组, 总条数]
    */
   public static async query(
     params?: BaseObject,
@@ -159,6 +182,11 @@ class TAPI {
     return [apis, total[0]['count(*)'] as number];
   }
 
+  /**
+   * 创建API记录
+   * @param {BaseObject} params - 新记录字段键值对
+   * @returns {Promise<unknown>} 执行结果
+   */
   public static async create(params: BaseObject) {
     // 使用毫秒时间戳 + 随机数避免同一秒内 ID 碰撞
     const newID = moment().valueOf() * 1000 + Math.floor(Math.random() * 1000);
@@ -172,6 +200,12 @@ class TAPI {
     return res;
   }
 
+  /**
+   * 更新API记录
+   * @param {BaseObject} params - 需更新的字段键值对
+   * @param {number} id - 记录ID
+   * @returns {Promise<unknown>} 执行结果
+   */
   public static async update(params: BaseObject, id: number) {
     const updateSQL = squel.update().table(tableName).where('id = ?', id);
     Object.keys(params).forEach((param) => {
@@ -183,6 +217,11 @@ class TAPI {
     return res;
   }
 
+  /**
+   * 删除API记录
+   * @param {number} id - 记录ID
+   * @returns {Promise<unknown>} 执行结果
+   */
   public static async delete(id: number) {
     const deleteSQL = squel.delete().from(tableName).where('id = ?', id);
     const res = await executeSQL(deleteSQL.toString(), true);
@@ -194,6 +233,11 @@ export default TAPI;
 
 // ============ High-level API ============
 
+/**
+ * 分页查询API记录，返回格式化后的数据及分页信息
+ * @param {BaseObject} params - 查询参数，包含 page、page_size 及其他筛选条件
+ * @returns {Promise<{code: number, msg: string, data: Record<string, unknown>[], total: number}>} 查询结果
+ */
 export async function queryRecords(params: BaseObject) {
   const p = { ...filterParams(params) };
   const pageSize = Number(p.page_size);
@@ -215,6 +259,10 @@ export async function queryRecords(params: BaseObject) {
   };
 }
 
+/**
+ * 导出全部API记录（无分页）
+ * @returns {Promise<{code: number, msg: string, data: Record<string, unknown>[]}>} 全部API记录
+ */
 export async function exportAPI() {
   const [res] = await TAPI.query();
   const formattedData = formatRecords(res);
@@ -225,6 +273,11 @@ export async function exportAPI() {
   };
 }
 
+/**
+ * 创建API记录
+ * @param {BaseObject} params - 新记录字段键值对
+ * @returns {Promise<{code: number, msg: string, data: unknown}>} 创建结果
+ */
 export async function apiCreate(params: BaseObject) {
   const res = await TAPI.create(formatParams(params, true));
   return {
@@ -234,6 +287,11 @@ export async function apiCreate(params: BaseObject) {
   };
 }
 
+/**
+ * 更新API记录
+ * @param {BaseObject} params - 需更新的字段键值对，必须包含 id 字段
+ * @returns {Promise<{code: number, msg: string, data: unknown}>} 更新结果
+ */
 export async function apiUpdate(params: BaseObject) {
   const { id, ...rest } = params;
   const res = await TAPI.update(formatParams(rest), Number(id));
@@ -244,6 +302,11 @@ export async function apiUpdate(params: BaseObject) {
   };
 }
 
+/**
+ * 删除API记录
+ * @param {BaseObject} params - 包含 id 字段的参数对象
+ * @returns {Promise<{code: number, msg: string, data: unknown}>} 删除结果
+ */
 export async function apiDelete(params: BaseObject) {
   const res = await TAPI.delete(Number(params.id));
   return {
@@ -253,6 +316,10 @@ export async function apiDelete(params: BaseObject) {
   };
 }
 
+/**
+ * 获取各类枚举映射表（字段分类、平台、框架、组件列表等）
+ * @returns {{field_category: MapItem[], platform: MapItem[], framework: MapItem[], platform_framework: MapItem[], field_type: MapItem[], components: MapItem[]}} 枚举映射表集合
+ */
 export function getMap() {
   const cmp = _COMPONENTS_PC.concat(_COMPONENTS_MOBILE);
 

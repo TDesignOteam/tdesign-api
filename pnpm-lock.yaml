@@ -245,12 +245,6 @@ importers:
       qs:
         specifier: 'catalog:'
         version: 6.15.2
-      sql.js:
-        specifier: 'catalog:'
-        version: 1.14.1
-      squel:
-        specifier: 'catalog:'
-        version: 6.0.7
     devDependencies:
       '@types/koa':
         specifier: 'catalog:'
