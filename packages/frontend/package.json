@@ -37,7 +37,6 @@
     "eslint-plugin-vue": "catalog:",
     "globals": "catalog:",
     "less": "catalog:",
-    "lint-staged": "catalog:",
     "postcss": "catalog:",
     "prismjs": "catalog:",
     "typescript": "catalog:",
@@ -47,12 +46,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,vue,tsx}": [
-      "npm run lint:fix",
-      "git add"
-    ]
   },
   "author": "tdesign",
   "license": "MIT"
