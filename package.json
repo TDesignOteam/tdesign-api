@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint ./packages --max-warnings 0",
     "lint:fix": "eslint ./packages --max-warnings 0 --fix",
-    "build":"tsc",
+    "build": "tsc",
     "dev": "cross-env NODE_ENV=dev nodemon",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
@@ -22,14 +22,14 @@
     "api:configurable": "node packages/scripts/configurable-props"
   },
   "dependencies": {
-    "@koa/router": "catalog:",
-    "koa": "catalog:",
-    "koa-body": "catalog:",
     "@koa/bodyparser": "catalog:",
     "@koa/cors": "catalog:",
+    "@koa/router": "catalog:",
+    "@koa/send": "catalog:",
+    "koa": "catalog:",
+    "koa-body": "catalog:",
     "koa-json": "catalog:",
     "koa-logger": "catalog:",
-    "@koa/send": "catalog:",
     "koa-static": "catalog:",
     "lodash": "catalog:",
     "moment": "catalog:",
@@ -39,10 +39,10 @@
   },
   "devDependencies": {
     "@types/koa": "catalog:",
-    "@types/koa__cors": "catalog:",
     "@types/koa-json": "catalog:",
     "@types/koa-logger": "catalog:",
     "@types/koa-static": "catalog:",
+    "@types/koa__cors": "catalog:",
     "@types/lodash": "catalog:",
     "@types/node": "catalog:",
     "@types/validator": "catalog:",
@@ -54,6 +54,7 @@
     "eslint": "catalog:",
     "eslint-plugin-import-x": "catalog:",
     "globals": "catalog:",
+    "lint-staged": "catalog:",
     "nodemon": "catalog:",
     "pm2": "catalog:",
     "prettier": "catalog:",
@@ -61,6 +62,12 @@
     "ts-node": "catalog:",
     "tsconfig-paths": "catalog:",
     "typescript": "catalog:"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,tsx}": [
+      "prettier --write --cache",
+      "eslint --fix --cache"
+    ]
   },
   "author": "TDesign",
   "license": "ISC"

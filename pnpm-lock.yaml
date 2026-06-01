@@ -291,6 +291,9 @@ importers:
       globals:
         specifier: 'catalog:'
         version: 17.6.0
+      lint-staged:
+        specifier: 'catalog:'
+        version: 17.0.7
       nodemon:
         specifier: 'catalog:'
         version: 3.1.14
@@ -397,9 +400,6 @@ importers:
       less:
         specifier: 'catalog:'
         version: 4.6.4
-      lint-staged:
-        specifier: 'catalog:'
-        version: 17.0.7
       postcss:
         specifier: 'catalog:'
         version: 8.5.15
