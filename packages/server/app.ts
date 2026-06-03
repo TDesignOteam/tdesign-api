@@ -14,7 +14,9 @@ const app = new Koa();
 /** Middlewares */
 app.use(json());
 app.use(logger());
-app.use(bodyParser());
+app.use(bodyParser({
+  parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],
+}));
 app.use(errorParser());
 app.use(cors({
   credentials: true,
