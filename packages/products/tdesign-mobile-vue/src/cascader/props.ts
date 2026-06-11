@@ -15,6 +15,17 @@ export default {
     type: [Boolean, Function] as PropType<TdCascaderProps['closeBtn']>,
     default: true as TdCascaderProps['closeBtn'],
   },
+  /**  自定义过滤函数。返回 true 表示匹配，未设置时使用内置匹配规则：对路径中所有 label 拼接后做大小写不敏感的 includes 匹配 */
+  filter: {
+    type: Function as PropType<TdCascaderProps['filter']>,
+  },
+  /** 搜索框占位符描述文本 */
+  filterPlaceholder: {
+    type: String,
+    default: '',
+  },
+  /** 是否可搜索，开启后顶部会展示一个搜索框  */
+  filterable: Boolean,
   /** 头部 */
   header: {
     type: Function as PropType<TdCascaderProps['header']>,
