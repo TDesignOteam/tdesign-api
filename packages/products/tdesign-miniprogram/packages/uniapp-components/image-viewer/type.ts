@@ -42,10 +42,10 @@ export interface TdImageViewerProps {
    */
   lazy?: boolean;
   /**
-   * 是否开启循环滚动
-   * @default true
+   * 图片最大放大比例
+   * @default 3
    */
-  loop?: boolean;
+  maxZoom?: number;
   /**
    * 是否显示页码
    * @default false
@@ -60,7 +60,7 @@ export interface TdImageViewerProps {
    * 隐藏/显示预览
    * @default false
    */
-  visible?: boolean;
+  visible?: boolean | null;
   /**
    * 隐藏/显示预览，非受控属性
    * @default false
