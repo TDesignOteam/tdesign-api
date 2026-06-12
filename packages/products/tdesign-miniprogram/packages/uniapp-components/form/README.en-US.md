@@ -8,6 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 colon | Boolean | false | \- | N
+content-align | String | left | options: left/right | N
 data | Object | {} | Typescript: `FormData` | N
 error-message | Object | - | Typescript: `FormErrorMessage` | N
 label-align | String | right | options: left/right/top | N
@@ -45,6 +46,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 arrow | Boolean | false | \- | N
+content-align | String | - | options: left/right | N
 help | String | - | \- | N
 label | String | '' | \- | N
 label-align | String | - | options: left/right/top | N
