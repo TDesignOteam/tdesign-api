@@ -60,7 +60,7 @@ export interface TdImageViewerProps {
    * 隐藏/显示预览
    * @default false
    */
-  visible?: boolean;
+  visible?: boolean | null;
   /**
    * 隐藏/显示预览，非受控属性
    * @default false
