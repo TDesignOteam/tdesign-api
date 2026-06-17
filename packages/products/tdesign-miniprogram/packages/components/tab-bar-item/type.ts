@@ -23,10 +23,11 @@ export interface TdTabBarItemProps {
   };
   /**
    * 页面跳转类型
+   * @default redirectTo
    */
   linkType?: {
     type: StringConstructor;
-    value?: 'redirectTo' | 'switchTab' | 'reLaunch';
+    value?: 'redirectTo' | 'switchTab' | 'reLaunch' | 'navigateTo';
   };
   /**
    * 二级菜单

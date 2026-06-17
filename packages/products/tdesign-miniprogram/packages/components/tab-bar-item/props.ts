@@ -17,6 +17,7 @@ const props: TdTabBarItemProps = {
   /** 页面跳转类型 */
   linkType: {
     type: String,
+    value: 'redirectTo',
   },
   /** 二级菜单 */
   subTabBar: {

@@ -41,7 +41,7 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 badge-props | Object | - | Typescript: `BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tab-bar-item/type.ts) | N
 icon | String / Object | - | \- | N
-link-type | String | - | `1.15.2`。options: redirectTo/switchTab/reLaunch | N
+link-type | String | redirectTo | `1.15.2`。options: redirectTo/switchTab/reLaunch/navigateTo | N
 sub-tab-bar | Array | - | Typescript: `SubTabBarItem[] ` `interface SubTabBarItem { value: string; label: string }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tab-bar-item/type.ts) | N
 url | String | - | `1.15.2` | N
 value | String / Number | - | \- | N
