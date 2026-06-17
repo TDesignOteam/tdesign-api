@@ -5,7 +5,6 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { PaginationProps, PageInfo } from '../pagination';
 import { CheckboxGroupValue } from '../checkbox';
 import { SortableEvent, SortableOptions } from 'sortablejs';
 import { CheckboxProps } from '../checkbox';
@@ -56,6 +55,11 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态
    */
   loading?: TNode;
+  /**
+   * 数据加载模式
+   * @default pull-refresh
+   */
+  loadingMode?: 'pull-refresh' | 'pagination';
   /**
    * 透传加载组件全部属性
    */
@@ -114,6 +118,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 单元格点击时触发
    */
   onCellClick?: (context: BaseTableCellEventContext<T>) => void;
+  /**
+   * 分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型
+   */
+  onPageChange?: (pageInfo: PageInfo, newDataSource: Array<T>) => void;
   /**
    * 行点击时触发，泛型 T 指表格数据类型
    */
@@ -253,11 +261,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    * 半选状态行。选中行请更为使用 `selectedRowKeys` 控制
    */
   indeterminateSelectedRowKeys?: Array<string | number>;
-  /**
-   * 数据加载模式
-   * @default pull-refresh
-   */
-  loadingMode?: 'pull-refresh' | 'pagination';
   /**
    * 是否支持多列排序
    * @default false
@@ -450,6 +453,36 @@ export interface TableColumnFilter {
    * @default ''
    */
   type?: FilterType;
+}
+
+export interface PaginationProps {
+  current?: number;
+  defaultCurrent?: number;
+  disabled?: boolean;
+  foldedMaxPageBtn?: number;
+  maxPageBtn?: number;
+  pageEllipsisMode?: 'mid' | 'both-ends';
+  pageSize?: number;
+  defaultPageSize?: number;
+  pageSizeOptions?: Array<number | { label: string; value: number }>;
+  showFirstAndLastPageBtn?: boolean;
+  showJumper?: boolean;
+  showPageNumber?: boolean;
+  showPageSize?: boolean;
+  showPreviousAndNextBtn?: boolean;
+  size?: 'small' | 'medium';
+  theme?: 'default' | 'simple';
+  total?: number;
+  totalContent?: TNode;
+  onChange?: (pageInfo: PageInfo) => void;
+  onCurrentChange?: (current: number, pageInfo: PageInfo) => void;
+  onPageSizeChange?: (pageSize: number, pageInfo: PageInfo) => void;
+}
+
+export interface PageInfo {
+  current: number;
+  previous: number;
+  pageSize: number;
 }
 
 export type TableRowAttributes<T> =
