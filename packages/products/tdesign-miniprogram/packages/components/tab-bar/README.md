@@ -41,7 +41,9 @@ style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
 badge-props | Object | - | 图标右上角提示信息。TS 类型：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tab-bar-item/type.ts) | N
 icon | String / Object | - | 图标名称。传入对象时透传至 Icon 组件 | N
+link-type | String | - | `1.15.2`。页面跳转类型。可选项：redirectTo/switchTab/reLaunch | N
 sub-tab-bar | Array | - | 二级菜单。TS 类型：`SubTabBarItem[] ` `interface SubTabBarItem { value: string; label: string }`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/tab-bar-item/type.ts) | N
+url | String | - | `1.15.2`。点击后跳转的页面路径, 需要以 `/` 开头 | N
 value | String / Number | - | 标识符 | N
 
 ### TabBarItem Slots
