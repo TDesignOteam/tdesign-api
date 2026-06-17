@@ -48,4 +48,4 @@ value | String / Number | - | 标识符 | N
 
 名称 | 描述
 -- | --
-icon | 图标插槽，用于自定义图标区域内容
+icon | 自定义 `icon` 显示内容
