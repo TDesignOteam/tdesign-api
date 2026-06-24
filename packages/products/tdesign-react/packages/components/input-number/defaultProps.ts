@@ -7,6 +7,7 @@ import { TdInputNumberProps } from './type';
 export const inputNumberDefaultProps: TdInputNumberProps = {
   allowInputOverLimit: true,
   autoWidth: false,
+  autofocus: false,
   decimalPlaces: undefined,
   disabled: undefined,
   largeNumber: false,

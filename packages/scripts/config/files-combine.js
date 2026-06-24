@@ -28,6 +28,7 @@ export const GLOBAL_COMPONENTS_CONFIG = [
   'ImageViewerConfig',
   'InputConfig',
   'ListConfig',
+  'LoadingConfig',
   'MessageConfig',
   'PaginationConfig',
   'PickerConfig',

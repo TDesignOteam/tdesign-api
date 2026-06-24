@@ -347,6 +347,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
         type: 'TS',
     },
     { value: 'ListConfig', label: '列表全局配置', type: 'TS' },
+    { value: 'LoadingConfig', label: '加载中全局配置', type: 'TS' },
     { value: 'FormConfig', label: '表单全局配置', type: 'TS' },
     { value: 'TagConfig', label: '标签全局配置', type: 'TS' },
     { value: 'StepsConfig', label: '步骤条全局配置', type: 'TS' },
