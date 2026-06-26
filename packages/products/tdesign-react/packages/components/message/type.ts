@@ -25,7 +25,7 @@ export interface TdMessageProps {
    * 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
    * @default true
    */
-  icon?: TNode;
+  icon?: boolean | TNode<{ theme: MessageThemeList }>;
   /**
    * 消息组件风格
    * @default info
