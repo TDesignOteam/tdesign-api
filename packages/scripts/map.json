@@ -737,6 +737,11 @@
         "label": "加载中"
       },
       {
+        "value": "LoadingConfig",
+        "label": "加载中全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Mentions",
         "label": "提及"
       },
