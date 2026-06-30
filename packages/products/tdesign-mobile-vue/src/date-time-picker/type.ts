@@ -8,13 +8,8 @@ import type { TNode } from '../common';
 
 export interface TdDateTimePickerProps {
   /**
-   * 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible
-   * @default false
-   */
-  autoClose?: boolean;
-  /**
    * 取消按钮文字
-   * @default 取消
+   * @default ''
    */
   cancelBtn?: string;
   /**
@@ -27,22 +22,17 @@ export interface TdDateTimePickerProps {
    */
   end?: string | number;
   /**
-   * 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)
-   */
-  filter?: (type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn;
-  /**
    * 底部内容
    */
   footer?: TNode;
   /**
-   * 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)
+   * 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss'。当值为 'time-stamp' 时，表示事件参数与 v-model 返回毫秒级时间戳数值（number） [详细文档](https://day.js.org/docs/en/display/format)
    */
   format?: string;
   /**
-   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容
-   * @default true
+   * 头部内容
    */
-  header?: boolean | TNode;
+  header?: TNode;
   /**
    * year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒
    * @default 'date'
@@ -68,14 +58,9 @@ export interface TdDateTimePickerProps {
   steps?: { [key in TimeModeValues]?: number };
   /**
    * 标题
-   * @default '选择时间'
+   * @default ''
    */
   title?: string;
-  /**
-   * 是否使用弹出层包裹
-   * @default true
-   */
-  usePopup?: boolean;
   /**
    * 选中值
    */
@@ -104,13 +89,6 @@ export interface TdDateTimePickerProps {
    * 选中值发生变化时触发
    */
   onPick?: (value: DateValue) => void;
-}
-
-export type DateTimePickerColumn = DateTimePickerColumnItem[];
-
-export interface DateTimePickerColumnItem {
-  label: string;
-  value: string;
 }
 
 export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues>;
