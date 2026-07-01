@@ -8,20 +8,16 @@ const tableName = 't_api';
 
 class TAPI {
   /**
-    * 查询API记录
-    * @param params 查询条件, [key: string]: value
-    * @param limitObj 分页参数，{size, offset}，size为分页大小，offset为起点
-    * @param columns 自定义列，默认为全部
-  */
-  public static async query(
-    params?: BaseObject,
-    limitObj?: QueryPaginationProps,
-    columns?: string[],
-  ) {
+   * 查询API记录
+   * @param params 查询条件, [key: string]: value
+   * @param limitObj 分页参数，{size, offset}，size为分页大小，offset为起点
+   * @param columns 自定义列，默认为全部
+   */
+  public static async query(params?: BaseObject, limitObj?: QueryPaginationProps, columns?: string[]) {
     const querySQL = squel.select().from(tableName);
     const countSQL = squel.select().from(tableName).field('count(*)');
     if (columns) {
-      columns.map(column => querySQL.field(column));
+      columns.map((column) => querySQL.field(column));
     }
     const expr = squel.expr();
     if (params && !isEmpty(params)) {
@@ -41,22 +37,19 @@ class TAPI {
       if (component) {
         delete params.component;
         const list = (component as string).split(',');
-        const componentsExpr = squel.expr()
+        const componentsExpr = squel.expr();
         list.forEach((oneComponent) => {
           componentsExpr.or(`component = '${oneComponent}'`);
         });
         expr.and(componentsExpr);
       }
       // 处理其他参数
-      Object.keys(params).map(paramName => {
+      Object.keys(params).map((paramName) => {
         expr.and(`${paramName} = "${params[paramName]}"`);
       });
     }
 
-    querySQL.where(expr)
-      .order('component')
-      .order('field_category')
-      .order('field_name');
+    querySQL.where(expr).order('component').order('field_category').order('field_name');
 
     // 分页参数设置
     if (limitObj) {
@@ -76,7 +69,7 @@ class TAPI {
     const newID = moment().unix();
     const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
 
-    Object.keys(params).map(param => insertSQL.set(param, params[param]));
+    Object.keys(params).map((param) => insertSQL.set(param, params[param]));
     const res = await executeSQL(insertSQL.toString(), true);
     return res;
   }
@@ -84,7 +77,7 @@ class TAPI {
   public static async update(params: BaseObject, id: number) {
     const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
 
-    Object.keys(params).map(param => updateSQL.set(param, params[param]));
+    Object.keys(params).map((param) => updateSQL.set(param, params[param]));
     const res = await executeSQL(updateSQL.toString(), true);
     return res;
   }

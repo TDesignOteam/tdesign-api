@@ -19,7 +19,6 @@ import map from '../map.json' with { type: 'json' };
 import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
 import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
-
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
 const IMPORT_COMPONENT_PATH = map.data.components.map((cmp) => `@${cmp.value}`);
@@ -173,7 +172,7 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
     let importDocPath = '';
     if (isComplicatedType) {
       // 保留 【xxx】中的内容
-       
+
       // customFieldType = customFieldType.split('【')[0];
       customFieldType = customFieldType.split('【').map((item) => item.replace('】', ''));
       // 处理：import { PopupProps  } from '@Popup' 等引用，更为相关组件文档链接
@@ -379,7 +378,7 @@ function getOneApi(newApi, current, docTitleType, framework) {
   )
     return;
   const f = pick(newApi, current.titleMap[LANGUAGE][docTitleType].fields);
-   
+
   const oneApi = Object.values(f)
     .map((item) => item || '\\-')
     .join(' | ');

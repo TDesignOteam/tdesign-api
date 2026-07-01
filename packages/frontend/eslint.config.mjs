@@ -32,11 +32,14 @@ export default [
     rules: {
       indent: ['error', 2],
       'vue/multi-word-component-names': 'off',
-      'import-x/order': ['error', {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
-        'newlines-between': 'never',
-        alphabetize: { order: 'asc', caseInsensitive: true },
-      }],
+      'import-x/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
+          'newlines-between': 'never',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
+      ],
     },
   },
 ];

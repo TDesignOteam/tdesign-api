@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
-import prettier from 'prettier';
 import {
   isPlugin,
   getTdCmpName,
@@ -24,7 +23,7 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from '../config/index.js';
-import prettierConfig from '../config/prettier.js';
+import { formatGeneratedCode } from '../config/format-generated-code.js';
 import map from '../map.json' with { type: 'json' };
 import { getComponentBasePath } from '../utils.js';
 import generateGlobals from './global/index.js';
@@ -650,14 +649,7 @@ async function combineTsFile(componentMap, framework) {
     const r = [`${ts[cmp].imports.filter((v) => !!v).join('\n')}`, bodyDesc, exportDesc].filter((v) => !!v);
     const str = `${r.join('\n\n')}\n`;
     // ts[cmp] = str;
-    try {
-      ts[cmp] = await prettier.format(str, prettierConfig);
-    } catch (e) {
-      console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
-      console.warn(e);
-      // 格式化失败时，使用原始字符串作为 fallback，避免输出 [object Object]
-      ts[cmp] = str;
-    }
+    ts[cmp] = await formatGeneratedCode(str);
   }
   return ts;
 }
@@ -676,7 +668,7 @@ async function generateTypes(baseData, framework) {
     return;
   }
   // 输出全局类型定义文件
-  generateGlobals(framework);
+  await generateGlobals(framework);
 
   const basePath = FRAMEWORK_MAP[framework].tsBasePath;
 

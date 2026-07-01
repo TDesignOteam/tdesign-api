@@ -14,20 +14,20 @@ export interface MapItem {
 }
 
 export interface MapOptions {
-  [key: string]: string
+  [key: string]: string;
 }
 
 export type QueryColumns = Array<string> | string;
 
 export interface Order {
-  key: string
-  type: 'desc' | 'asc'
+  key: string;
+  type: 'desc' | 'asc';
 }
 
 export type Orders = Array<Order>;
 
 // 查询, 分页参数的类型
 export interface QueryPaginationProps {
-  size: number,
-  offset?: number
+  size: number;
+  offset?: number;
 }

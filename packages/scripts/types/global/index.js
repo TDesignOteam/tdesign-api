@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
+import { formatGeneratedCode } from '../../config/format-generated-code.js';
 import { FRAMEWORK_MAP } from '../../config/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -16,7 +17,7 @@ function formatType(str) {
   return str.replace(/declare/g, 'export');
 }
 
-function combineGlobals(framework) {
+async function combineGlobals(framework) {
   const current = FRAMEWORK_MAP[framework];
   // 通用全局变量
   const baseGlobalData = fs.readFileSync(baseGlobalPath);
@@ -27,13 +28,12 @@ function combineGlobals(framework) {
   if (['React(PC)', 'React(Mobile)'].includes(framework)) {
     data = formatType(data);
   }
-  const callback = (err) => {
-    if (err) return console.error(err);
-     
-    console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
-  };
+  data = await formatGeneratedCode(data);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFile(outputPath, data, callback);
+  fs.writeFile(outputPath, data, (err) => {
+    if (err) return console.error(err);
+    console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
+  });
 }
 
 export default combineGlobals;

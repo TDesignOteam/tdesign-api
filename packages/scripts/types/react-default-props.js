@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { lowerFirst, upperFirst } from 'lodash-es';
-import prettier from 'prettier';
 import { getFolderName, getCmpTypeCombineMap } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
 import {
@@ -15,7 +14,7 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from '../config/index.js';
-import prettierConfig from '../config/prettier.js';
+import { formatGeneratedCode } from '../config/format-generated-code.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
 import map from '../map.json' with { type: 'json' };
 
@@ -134,12 +133,7 @@ async function generateReactDefaultProps(baseData, framework) {
     const importsString = `import { ${importsMap[parentCmp].join(', ')} } from './type';\n\n`;
     let apiStr = importsString + finalApiDefaultProps[parentCmp].join('\n\n');
 
-    try {
-      apiStr = await prettier.format(apiStr, prettierConfig);
-    } catch (e) {
-      console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
-      console.warn(e);
-    }
+    apiStr = await formatGeneratedCode(apiStr);
 
     const basePath = FRAMEWORK_MAP[framework].propsBasePath;
     const folder = path.resolve(basePath, getFolderName(parentCmp));

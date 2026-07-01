@@ -1,6 +1,6 @@
 import { TYPES_COMBINE_MAP } from '../../../../scripts/config/files-combine';
-import camelCase from 'lodash/camelCase'
-import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase';
+import upperFirst from 'lodash/upperFirst';
 
 // 根据框架获取 API 文档输出路径关系（不同的框架，父子组件关系不一样）
 export function getApiComponentMapByFrameWork(framework, map = TYPES_COMBINE_MAP) {
@@ -13,10 +13,11 @@ export function getApiComponentMapByFrameWork(framework, map = TYPES_COMBINE_MAP
       // 没有 includes，并且没有 excludes，则认为适用所有框架。
       // 存在 includes，则表示仅在 includes 里面的框架才生效
       // 存在 excludes，则表示在 excludes 中的框架，父子关系不生效
-      if ((!item.includes && !item.excludes)
-        || (item.includes && item.includes.includes(framework))
-        || (item.excludes && !item.excludes.includes(framework))
-        || !framework
+      if (
+        (!item.includes && !item.excludes) ||
+        (item.includes && item.includes.includes(framework)) ||
+        (item.excludes && !item.excludes.includes(framework)) ||
+        !framework
       ) {
         rMap[parentComponent] = item.list;
       }
@@ -53,11 +54,11 @@ export function getCombinedComponentsByCurrentName(framework, map = TYPES_COMBIN
 }
 
 export function parseJSON(json, defaultValue = undefined) {
-  if (typeof json === 'object') return json
+  if (typeof json === 'object') return json;
   try {
-    return JSON.parse(json)
-  } catch(e) {
-    return defaultValue
+    return JSON.parse(json);
+  } catch (e) {
+    return defaultValue;
   }
 }
 
@@ -74,6 +75,6 @@ export function loadScript(src) {
   return new Promise((resolve) => {
     script.onload = () => {
       resolve();
-    }
-  })
+    };
+  });
 }

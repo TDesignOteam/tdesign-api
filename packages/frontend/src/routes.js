@@ -1,15 +1,15 @@
 const routes = [
   {
     path: '/api_design',
-    component: () => import('./pages/api/index.vue')
+    component: () => import('./pages/api/index.vue'),
   },
   {
     path: '/apis',
-    component: () => import('./pages/api/preview.vue')
+    component: () => import('./pages/api/preview.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
-    redirect: '/api_design'
-  }
-]
-export default routes
+    redirect: '/api_design',
+  },
+];
+export default routes;

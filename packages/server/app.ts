@@ -14,14 +14,18 @@ const app = new Koa();
 /** Middlewares */
 app.use(json());
 app.use(logger());
-app.use(bodyParser({
-  parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],
-}));
+app.use(
+  bodyParser({
+    parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],
+  }),
+);
 app.use(errorParser());
-app.use(cors({
-  credentials: true,
-  allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
-}));
+app.use(
+  cors({
+    credentials: true,
+    allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  }),
+);
 
 /** Routes */
 app.use(componentRoutes);
@@ -34,7 +38,7 @@ app.use(serve(staticPath));
 // support for spa
 app.use(async (ctx) => {
   await send(ctx, `/index.html`, {
-      root: staticPath,
+    root: staticPath,
   });
 });
 

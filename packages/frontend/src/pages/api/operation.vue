@@ -7,7 +7,7 @@
     </a>
     <t-dialog header="生成" width="830" v-model:visible="generateFilesVisible" @confirm="onGenerateConfirm">
       <template #body>
-        <form class="t-form api-edit-form" onsubmit="return false">
+        <form class="t-form api-edit-form" onsubmit="return false;">
           <div class="t-form-item">
             <label>组件：</label>
             <div class="t-form-content">

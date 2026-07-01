@@ -1,1 +1,1 @@
-module.exports = require('./bar')
+module.exports = require('./bar');

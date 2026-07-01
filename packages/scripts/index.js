@@ -120,7 +120,7 @@ async function generateComponentApi() {
     }
 
     // 生成 props 文件
-    generateVueProps(baseData, framework, selfUseDefault);
+    await generateVueProps(baseData, framework, selfUseDefault);
     // 生成 React defaultProps 文件
     if (framework.indexOf('React') !== -1) {
       await generateReactDefaultProps(baseData, framework);

@@ -1,6 +1,6 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import path from 'path';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -10,19 +10,19 @@ export default ({ mode }) => {
     resolve: {
       extensions: ['.js', '.ts', '.mjs', '.vue'],
       alias: {
-        '@': path.resolve(__dirname, './src')
-      }
+        '@': path.resolve(__dirname, './src'),
+      },
     },
     build: {
       outDir: '_site',
       rollupOptions: {
         input: {
-          index: path.resolve(__dirname, 'index.html')
-        }
+          index: path.resolve(__dirname, 'index.html'),
+        },
       },
       commonjsOptions: {
-        include: [/node_modules/, /packages\/scripts/]
-      }
+        include: [/node_modules/, /packages\/scripts/],
+      },
     },
     optimizeDeps: {
       include: [path.resolve(__dirname, '../scripts')],
@@ -33,11 +33,9 @@ export default ({ mode }) => {
       open: '/',
       https: false,
       fs: {
-        strict: false
-      }
+        strict: false,
+      },
     },
-    plugins: [
-      vue()
-    ]
-  })
-}
+    plugins: [vue()],
+  });
+};

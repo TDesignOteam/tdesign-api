@@ -11,6 +11,7 @@ import {
   getCmpTypeCombineMap,
 } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { formatGeneratedCode } from '../config/format-generated-code.js';
 import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
 import { getComponentBasePath } from '../utils.js';
@@ -388,30 +389,23 @@ function getPropsByComponent(baseData, framework, component, isUseDefault) {
   return vueProps[component];
 }
 
-function generateVueProps(baseData, framework, isUseDefault) {
+async function generateVueProps(baseData, framework, isUseDefault) {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)) return;
   currentFramework = framework;
   useDefault = isUseDefault;
   FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(TYPES_COMBINE_MAP, framework);
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);
-  Object.keys(vueProps).forEach((cmp) => {
-    if (!vueProps[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;
+  for (const cmp of Object.keys(vueProps)) {
+    if (!vueProps[cmp] || isPlugin(cmp) || isTypeApi(cmp)) continue;
     const basePath = FRAMEWORK_MAP[framework].propsBasePath;
     const folder = getFolderPath(basePath, cmp);
-    fs.mkdir(folder, { recursive: true }, (err) => {
-      if (err) {
-        return console.error(err);
-      }
-      const outputPath = getPropsFileName(folder, cmp);
-      const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
-      fs.writeFile(outputPath, `/* eslint-disable */\n\n${data}`, (err) => {
-        if (err) {
-          return console.error(err);
-        }
-        console.log(chalk.green(`vue props: ${outputPath} has been created.`));
-      });
-    });
-  });
+    await fs.promises.mkdir(folder, { recursive: true });
+    const outputPath = getPropsFileName(folder, cmp);
+    const formattedProps = await formatGeneratedCode(vueProps[cmp]);
+    const data = [FILE_RIGHTS_DESC, formattedProps].join('\n\n');
+    await fs.promises.writeFile(outputPath, `/* eslint-disable */\n\n${data}`);
+    console.log(chalk.green(`vue props: ${outputPath} has been created.`));
+  }
 }
 
 export { generateVueProps, getPropsByComponent };

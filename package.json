@@ -6,8 +6,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "format:fix": "prettier --write --cache \"packages/{scripts,server,frontend,types}/**/*.{js,ts,vue,tsx,mjs}\" \".prettierrc.mjs\"",
+    "format:check": "prettier --check --cache \"packages/{scripts,server,frontend,types}/**/*.{js,ts,vue,tsx,mjs}\" \".prettierrc.mjs\"",
     "lint": "eslint ./packages --max-warnings 0",
     "lint:fix": "eslint ./packages --max-warnings 0 --fix",
+    "verify:fix": "npm run format:fix && npm run lint:fix",
+    "verify:check": "npm run format:check && npm run lint",
     "build": "tsc",
     "dev": "cross-env NODE_ENV=dev nodemon",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",

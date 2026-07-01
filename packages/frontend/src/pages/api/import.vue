@@ -1,5 +1,5 @@
 <template>
-  <form class="t-form api-edit-form" onsubmit="return false">
+  <form class="t-form api-edit-form" onsubmit="return false;">
     <div class="t-form-item">
       <label>设计组件：</label>
       <div class="t-form-content">

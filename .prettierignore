@@ -1,0 +1,6 @@
+# 自动生成产物，由 api:docs 脚本格式化，不参与本地 format
+packages/products/
+packages/tdesign-miniprogram/
+
+# frontend 构建产物，由 vite build 生成，提交 Git 但不参与本地 format
+packages/frontend/_site/
