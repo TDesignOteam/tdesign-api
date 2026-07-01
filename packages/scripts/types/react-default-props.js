@@ -7,6 +7,7 @@ import chalk from 'chalk';
 import { lowerFirst, upperFirst } from 'lodash-es';
 import { getFolderName, getCmpTypeCombineMap } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { formatGeneratedCode } from '../config/format-generated-code.js';
 import {
   FRAMEWORK_MAP,
   TYPES_COMBINE_MAP,
@@ -14,7 +15,6 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from '../config/index.js';
-import { formatGeneratedCode } from '../config/format-generated-code.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
 import map from '../map.json' with { type: 'json' };
 

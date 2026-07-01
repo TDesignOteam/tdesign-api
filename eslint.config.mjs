@@ -1,7 +1,18 @@
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import importX from 'eslint-plugin-import-x';
+import vuePlugin from 'eslint-plugin-vue';
+import vueParser from 'vue-eslint-parser';
 import globals from 'globals';
+
+const importOrderRule = [
+  'error',
+  {
+    groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
+    'newlines-between': 'never',
+    alphabetize: { order: 'asc', caseInsensitive: true },
+  },
+];
 
 export default [
   {
@@ -12,11 +23,12 @@ export default [
       'node_modules/',
       'common/',
       'packages/products/',
-      'packages/frontend/',
+      'packages/frontend/_site/',
     ],
   },
   {
-    files: ['**/*.{js,ts,tsx}'],
+    files: ['packages/**/*.{js,ts,tsx,mjs}'],
+    ignores: ['**/*.vue'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
@@ -41,11 +53,33 @@ export default [
       'func-style': 'off',
       'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
       '@typescript-eslint/no-explicit-any': 'off',
-      'import-x/order': ['error', {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type'],
-        'newlines-between': 'never',
-        alphabetize: { order: 'asc', caseInsensitive: true },
-      }],
+      'import-x/order': importOrderRule,
+    },
+  },
+  ...vuePlugin.configs['flat/essential'],
+  {
+    files: ['packages/frontend/**/*.{vue,js,ts}'],
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        parser: tsparser,
+        sourceType: 'module',
+      },
+      globals: {
+        ...globals.browser,
+        aegis: 'readonly',
+        NProgress: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'import-x': importX,
+    },
+    rules: {
+      indent: ['error', 2],
+      'vue/multi-word-component-names': 'off',
+      'import-x/order': importOrderRule,
     },
   },
   {

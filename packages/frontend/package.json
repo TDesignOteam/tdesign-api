@@ -4,8 +4,7 @@
   "scripts": {
     "dev": "vite",
     "watch": "vite build --watch",
-    "build": "vite build",
-    "lint:fix": "eslint ./packages --fix"
+    "build": "vite build"
   },
   "dependencies": {
     "@codemirror/lang-javascript": "catalog:",

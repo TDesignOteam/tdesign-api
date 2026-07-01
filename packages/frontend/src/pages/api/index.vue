@@ -108,15 +108,8 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted } from 'vue';
-import { Codemirror } from 'vue-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { oneDark } from '@codemirror/theme-one-dark';
-import ApiList from './list.vue';
-import ApiOperation from './operation.vue';
-import Import from './import.vue';
-import UnitTestDesign from './unit-test-design.vue';
-import { cmpApiInstance } from '../../services/api-server';
 import {
   Select as TSelect,
   Option as TOption,
@@ -129,6 +122,13 @@ import {
   Tabs as TTabs,
   MessagePlugin,
 } from 'tdesign-vue-next';
+import { ref, reactive, computed, onMounted } from 'vue';
+import { Codemirror } from 'vue-codemirror';
+import { cmpApiInstance } from '../../services/api-server';
+import Import from './import.vue';
+import ApiList from './list.vue';
+import ApiOperation from './operation.vue';
+import UnitTestDesign from './unit-test-design.vue';
 
 const TYPE_MAP = {
   plugin: '插件',

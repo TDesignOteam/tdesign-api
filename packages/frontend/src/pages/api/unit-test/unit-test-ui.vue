@@ -48,9 +48,7 @@
             <template #content>
               <p v-pre>const wrapper = mount(&lt;RadioGroup&gt;&lt;/RadioGroup&gt;) 默认获取组件实例方法。</p>
               <p>
-                {{
-                  `const wrapper = getRadioGroupDefaultMount(RadioGroup, {})`
-                }}
+                {{ `const wrapper = getRadioGroupDefaultMount(RadioGroup, {})` }}
                 填写后的获取实例方法，一般用于存在子组件的场景
               </p>
             </template>
@@ -111,12 +109,12 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import OneCategoryTest from './one-category-test';
-import { INITIAL_CATEGORY, INITIAL_FROM_DATA, CATEGORY_OPTIONS } from './const';
-import { parseJSON } from '../util';
 import cloneDeep from 'lodash/cloneDeep';
 import { MessagePlugin } from 'tdesign-vue-next';
+import { ref, computed } from 'vue';
+import { parseJSON } from '../util';
+import { INITIAL_CATEGORY, INITIAL_FROM_DATA, CATEGORY_OPTIONS } from './const';
+import OneCategoryTest from './one-category-test';
 
 const props = defineProps({
   currentTestJSON: Object,

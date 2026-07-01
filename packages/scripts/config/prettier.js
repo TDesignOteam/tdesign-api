@@ -1,7 +1,7 @@
 /**
  * 生成产物（type.ts、defaultProps、vitest 等）使用的 Prettier 配置。
  * 生成脚本通过 config/format-generated-code.js 统一引用此配置。
- * 根目录 .prettierrc.mjs 与 packages/frontend/.prettierrc.mjs 均引用此文件。
+ * 根目录 .prettierrc.mjs 引用此文件。
  * 修改后需重新执行 npm run api:docs 才会影响已生成的文件。
  */
 export default {

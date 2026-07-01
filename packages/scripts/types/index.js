@@ -16,6 +16,7 @@ import {
   getApiComponentMapByFrameWork,
 } from '../common.js';
 import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
+import { formatGeneratedCode } from '../config/format-generated-code.js';
 import {
   FRAMEWORK_MAP,
   TYPES_COMBINE_MAP,
@@ -23,7 +24,6 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
 } from '../config/index.js';
-import { formatGeneratedCode } from '../config/format-generated-code.js';
 import map from '../map.json' with { type: 'json' };
 import { getComponentBasePath } from '../utils.js';
 import generateGlobals from './global/index.js';

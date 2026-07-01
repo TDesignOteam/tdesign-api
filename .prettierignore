@@ -1,3 +1,7 @@
+node_modules/
+dist/
+lib/
+
 # 自动生成产物，由 api:docs 脚本格式化，不参与本地 format
 packages/products/
 packages/tdesign-miniprogram/

@@ -242,8 +242,6 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue';
-import SiteCheckbox from './checkbox.vue';
 import {
   Icon as TIcon,
   Input as TInput,
@@ -256,6 +254,9 @@ import {
   Radio as TRadio,
   RadioGroup as TRadioGroup,
 } from 'tdesign-vue-next';
+import { ref, reactive, computed, watch } from 'vue';
+import { cmpApiInstance } from '../../services/api-server';
+import SiteCheckbox from './checkbox.vue';
 import {
   API_CATEGORY_MAP,
   API_CATEGORY_EVENTS,
@@ -272,8 +273,6 @@ import {
   API_CATEGORY_RETURN,
   API_CATEGORY_T,
 } from './const';
-
-import { cmpApiInstance } from '../../services/api-server';
 import { getCombinedComponentsByCurrentName } from './util';
 
 const versionDescription = [

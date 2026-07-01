@@ -327,13 +327,13 @@
 </template>
 
 <script setup>
-import { ref, watch, nextTick } from 'vue';
-import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const';
 import { AddCircleIcon, MinusCircleIcon, EditIcon } from 'tdesign-icons-vue-next';
-import EventExpect from './event-expect';
-import { parseJSON } from '../util';
-import { formatToOneCategoryTest, getEventTestData } from './formatData';
 import { MessagePlugin } from 'tdesign-vue-next';
+import { ref, watch, nextTick } from 'vue';
+import { parseJSON } from '../util';
+import { INITIAL_CATEGORY, CATEGORY_OPTIONS } from './const';
+import EventExpect from './event-expect';
+import { formatToOneCategoryTest, getEventTestData } from './formatData';
 
 const INITIAL_OBJECT_EVENT = [{ trigger: '', arguments: '' }];
 

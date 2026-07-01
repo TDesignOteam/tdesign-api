@@ -288,6 +288,9 @@ importers:
       eslint-plugin-import-x:
         specifier: 'catalog:'
         version: 4.16.2(@typescript-eslint/utils@8.60.0(eslint@10.4.1(jiti@2.4.2))(typescript@6.0.3))(eslint@10.4.1(jiti@2.4.2))
+      eslint-plugin-vue:
+        specifier: 'catalog:'
+        version: 10.9.2(@typescript-eslint/parser@8.60.0(eslint@10.4.1(jiti@2.4.2))(typescript@6.0.3))(eslint@10.4.1(jiti@2.4.2))(vue-eslint-parser@10.4.1(eslint@10.4.1(jiti@2.4.2)))
       globals:
         specifier: 'catalog:'
         version: 17.6.0
@@ -315,6 +318,9 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
+      vue-eslint-parser:
+        specifier: 'catalog:'
+        version: 10.4.1(eslint@10.4.1(jiti@2.4.2))
 
   packages/frontend:
     dependencies:
@@ -2168,6 +2174,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   git-sha1@0.1.2:
@@ -3086,10 +3093,6 @@ packages:
     engines: {node: ^22.11.0 || ^24.11.0 || >=26.0}
     peerDependencies:
       postcss: ^8.5.15
-
-  postcss-selector-parser@7.1.1:
-    resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
-    engines: {node: '>=4'}
 
   postcss-selector-parser@7.1.4:
     resolution: {integrity: sha512-HeP7D2wyhkR+XaK6v4W8oRF62Dsz4flyuczALJp61GckGm42u1saSSJ/0auvcBqxs3jMRFEcPK34At/0JBKdOg==}
@@ -5443,7 +5446,7 @@ snapshots:
       eslint: 10.4.1(jiti@2.4.2)
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 7.1.1
+      postcss-selector-parser: 7.1.4
       semver: 7.8.0
       vue-eslint-parser: 10.4.1(eslint@10.4.1(jiti@2.4.2))
       xml-name-validator: 4.0.0
@@ -6493,7 +6496,7 @@ snapshots:
   postcss-calc@10.1.1(postcss@8.5.15):
     dependencies:
       postcss: 8.5.15
-      postcss-selector-parser: 7.1.1
+      postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
 
   postcss-colormin@8.0.1(postcss@8.5.15):
@@ -6629,11 +6632,6 @@ snapshots:
     dependencies:
       postcss: 8.5.15
       postcss-value-parser: 4.2.0
-
-  postcss-selector-parser@7.1.1:
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
 
   postcss-selector-parser@7.1.4:
     dependencies:

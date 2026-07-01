@@ -1,8 +1,8 @@
+import TDesign from 'tdesign-vue-next';
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import TDesign from 'tdesign-vue-next';
-import routes from './routes';
 import App from './App.vue';
+import routes from './routes';
 
 import 'tdesign-vue-next/es/style/index.css';
 

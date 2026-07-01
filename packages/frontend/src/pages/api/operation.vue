@@ -60,10 +60,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
 import { Button as TButton, Select as TSelect, Option as TOption } from 'tdesign-vue-next';
-import SiteCheckbox from './checkbox.vue';
+import { ref, computed } from 'vue';
 import { cmpApiInstance } from '../../services/api-server';
+import SiteCheckbox from './checkbox.vue';
 
 const props = defineProps({
   map: Object,

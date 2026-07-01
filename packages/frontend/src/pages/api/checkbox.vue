@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
 import { Checkbox as TCheckbox, CheckboxGroup as TCheckboxGroup } from 'tdesign-vue-next';
+import { ref, computed, watch } from 'vue';
 
 const props = defineProps({
   options: Array,

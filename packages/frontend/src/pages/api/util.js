@@ -1,6 +1,6 @@
-import { TYPES_COMBINE_MAP } from '../../../../scripts/config/files-combine';
 import camelCase from 'lodash/camelCase';
 import upperFirst from 'lodash/upperFirst';
+import { TYPES_COMBINE_MAP } from '../../../../scripts/config/files-combine';
 
 // 根据框架获取 API 文档输出路径关系（不同的框架，父子组件关系不一样）
 export function getApiComponentMapByFrameWork(framework, map = TYPES_COMBINE_MAP) {

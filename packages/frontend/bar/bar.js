@@ -1,6 +1,6 @@
 // bar/bar.js
 function bar(name) {
-  console.log(`Hi ${name}!`);
+  console.info(`Hi ${name}!`);
 }
 
 Object.defineProperty(exports, '__esModule', { value: true });
