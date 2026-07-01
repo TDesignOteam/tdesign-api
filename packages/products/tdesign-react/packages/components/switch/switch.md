@@ -14,6 +14,7 @@ disabled | Boolean | undefined | 是否禁用组件。优先级：Switch.disable
 label | TNode | [] | 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'。TS 类型：`Array<string \| TNode> \| TNode<{ value: SwitchValue }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 loading | Boolean | false | 是否处于加载中状态 | N
 size | String | medium | 开关尺寸。可选项：small/medium/large | N
+theme | String | round | 组件风格。round为圆形，rectangle为矩形，line为线形。可选项：round/rectangle/line | N
 value | String / Number / Boolean | - | 开关值。TS 类型：`T` `type SwitchValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/switch/type.ts) | N
 defaultValue | String / Number / Boolean | - | 开关值。非受控属性。TS 类型：`T` `type SwitchValue = string \| number \| boolean`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/switch/type.ts) | N
 onChange | Function |  | TS 类型：`(value: T, context: { e: MouseEvent }) => void`<br/>数据发生变化时触发 | N
