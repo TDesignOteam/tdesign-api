@@ -27,6 +27,7 @@ qrcode | Object | - | 二维码全局配置。TS 类型：`QRCodeConfig` | N
 rate | Object | - | 评分全局配置。TS 类型：`RateConfig` | N
 tabBar | Object | - | 标签栏全局配置。TS 类型：`TabBarConfig` | N
 table | Object | - | 表格组件全局配置。TS 类型：`TableConfig` | N
+typography | Object | - | 排版组件全局配置。TS 类型：`TypographyConfig` | N
 upload | Object | - | 上传组件全局配置。TS 类型：`UploadConfig` | N
 
 ### ActionSheetConfig
@@ -158,6 +159,14 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 empty | String / Slot / Function | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+
+### TypographyConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapseText | String | - | 语言配置，“收起”描述文本 | N
+copiedText | String | - | 语言配置，“复制成功”描述文本 | N
+expandText | String | - | 语言配置，“展开”描述文本 | N
 
 ### UploadConfig
 

@@ -27,6 +27,7 @@ qrcode | Object | - | QRCode global configs。Typescript: `QRCodeConfig` | N
 rate | Object | - | Rate global configs。Typescript: `RateConfig` | N
 tabBar | Object | - | TabBar global configs。Typescript: `TabBarConfig` | N
 table | Object | - | Table global configs。Typescript: `TableConfig` | N
+typography | Object | - | Typography global configs。Typescript: `TypographyConfig` | N
 upload | Object | - | Upload global configs。Typescript: `UploadConfig` | N
 
 ### ActionSheetConfig
@@ -164,6 +165,14 @@ filterIcon | TElement | undefined | Typescript: `TNode`。[see more ts definitio
 hideSortTips | Boolean | false | hide sort tips | N
 resetText | String | - | \- | N
 searchResultText | String | - | \- | N
+
+### TypographyConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+collapseText | String | - | collapse text | N
+copiedText | String | - | copied text | N
+expandText | String | - | expand text | N
 
 ### UploadConfig
 

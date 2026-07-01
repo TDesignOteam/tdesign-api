@@ -8,12 +8,10 @@ import { TdDateTimePickerProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible */
-  autoClose: Boolean,
   /** 取消按钮文字 */
   cancelBtn: {
     type: String,
-    default: '取消',
+    default: '',
   },
   /** 确定按钮文字 */
   confirmBtn: {
@@ -24,23 +22,18 @@ export default {
   end: {
     type: [String, Number] as PropType<TdDateTimePickerProps['end']>,
   },
-  /** 列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second) */
-  filter: {
-    type: Function as PropType<TdDateTimePickerProps['filter']>,
-  },
   /** 底部内容 */
   footer: {
     type: Function as PropType<TdDateTimePickerProps['footer']>,
   },
-  /** 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format) */
+  /** 用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss'。当值为 'time-stamp' 时，表示事件参数与 v-model 返回毫秒级时间戳数值（number） [详细文档](https://day.js.org/docs/en/display/format) */
   format: {
     type: String,
     default: undefined,
   },
-  /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容 */
+  /** 头部内容 */
   header: {
-    type: [Boolean, Function] as PropType<TdDateTimePickerProps['header']>,
-    default: true as TdDateTimePickerProps['header'],
+    type: Function as PropType<TdDateTimePickerProps['header']>,
   },
   /** year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒 */
   mode: {
@@ -65,12 +58,7 @@ export default {
   /** 标题 */
   title: {
     type: String,
-    default: '选择时间',
-  },
-  /** 是否使用弹出层包裹 */
-  usePopup: {
-    type: Boolean,
-    default: true,
+    default: '',
   },
   /** 选中值 */
   value: {
