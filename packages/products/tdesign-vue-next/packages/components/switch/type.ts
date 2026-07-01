@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdSwitchProps<T = SwitchValue> {
   /**
@@ -34,6 +34,11 @@ export interface TdSwitchProps<T = SwitchValue> {
    * @default medium
    */
   size?: 'small' | 'medium' | 'large';
+  /**
+   * 组件风格。round为圆形，rectangle为矩形，line为线形
+   * @default round
+   */
+  theme?: 'round' | 'rectangle' | 'line';
   /**
    * 开关值
    */

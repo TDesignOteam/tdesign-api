@@ -37,6 +37,15 @@ export default {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
+  /** 组件风格。round为圆形，rectangle为矩形，line为线形 */
+  theme: {
+    type: String as PropType<TdSwitchProps['theme']>,
+    default: 'round' as TdSwitchProps['theme'],
+    validator(val: TdSwitchProps['theme']): boolean {
+      if (!val) return true;
+      return ['round', 'rectangle', 'line'].includes(val);
+    },
+  },
   /** 开关值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
