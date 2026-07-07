@@ -5,8 +5,8 @@
  * */
 
 import { Instance } from '@popperjs/core';
-import { TNode, ClassName, Styles, AttachNode } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
+import type { TNode, ClassName, Styles, AttachNode } from '../common';
+import type { MouseEvent, WheelEvent } from 'react';
 
 export interface TdPopupProps {
   /**
@@ -148,7 +148,7 @@ export interface PopupVisibleChangeContext {
   trigger?: PopupTriggerSource;
 }
 
-export type PopupTriggerEvent = MouseEvent<HTMLDivElement> | FocusEvent<HTMLDivElement> | KeyboardEvent<HTMLDivElement>;
+export type PopupTriggerEvent = Event;
 
 export type PopupTriggerSource =
   | 'document'

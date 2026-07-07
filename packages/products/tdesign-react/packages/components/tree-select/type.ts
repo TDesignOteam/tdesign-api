@@ -10,8 +10,8 @@ import { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext
 import { TagProps } from '../tag';
 import { TreeProps, TreeNodeModel, TreeKeysType } from '../tree';
 import { PopupVisibleChangeContext, PopupTriggerEvent, PopupTriggerSource } from '../popup';
-import { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
+import type { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
+import type { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
 
 export interface TdTreeSelectProps<
   DataOption extends TreeOptionData = TreeOptionData,
@@ -254,7 +254,7 @@ export interface TreeSelectChangeContext<DataOption> {
 export type TreeSelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck';
 
 export interface TreeSelectPopupVisibleContext<T> {
-  e?: PopupTriggerEvent | Event;
+  e?: PopupTriggerEvent;
   node?: TreeNodeModel<T>;
   trigger?: PopupTriggerSource | 'clear';
 }
