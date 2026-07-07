@@ -5,8 +5,8 @@
  * */
 
 import { Instance } from '@popperjs/core';
-import { TNode, ClassName, Styles, AttachNode } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
+import type { TNode, ClassName, Styles, AttachNode } from '../common';
+import type { MouseEvent, KeyboardEvent, FocusEvent, WheelEvent } from 'react';
 
 export interface TdPopupProps {
   /**
