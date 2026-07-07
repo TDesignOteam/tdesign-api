@@ -13,8 +13,8 @@ export default {
   },
   /** 是否禁用组件。优先级：Switch.disabled > Form.disabled */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdSwitchProps['disabled'],
   },
   /** 开关的图标；[打开时的图标，关闭时的图标] */
   icon: {
@@ -40,12 +40,10 @@ export default {
   /** 开关值 */
   value: {
     type: [String, Number, Boolean],
-    default: () => (null) as TdSwitchProps['value'],
   },
   /** 开关值，非受控属性 */
   defaultValue: {
     type: [String, Number, Boolean],
-    default: () => (null) as TdSwitchProps['defaultValue'],
   },
   /** 数据发生变化时触发 */
   onChange: {
