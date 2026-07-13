@@ -12,7 +12,7 @@ catalog:
   "@commitlint/config-conventional": "^21.2.0"
   "@koa/bodyparser": "^6.1.0"
   "@koa/cors": "^5.0.0"
-  "@koa/router": "^15.6.0"
+  "@koa/router": "^15.7.0"
   "@koa/send": "^6.0.0"
   "@tdesign/site-components": "^0.19.1"
   "@types/koa": "^3.0.3"
