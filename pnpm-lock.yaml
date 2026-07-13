@@ -94,8 +94,8 @@ catalogs:
       specifier: ^10.7.0
       version: 10.7.0
     eslint-plugin-import-x:
-      specifier: ^4.16.2
-      version: 4.16.2
+      specifier: ^4.17.1
+      version: 4.17.1
     eslint-plugin-promise:
       specifier: ^7.3.0
       version: 7.3.0
@@ -287,7 +287,7 @@ importers:
         version: 10.7.0(jiti@2.4.2)
       eslint-plugin-import-x:
         specifier: 'catalog:'
-        version: 4.16.2(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2))
+        version: 4.17.1(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2))
       globals:
         specifier: 'catalog:'
         version: 17.6.0
@@ -387,7 +387,7 @@ importers:
         version: 10.7.0(jiti@2.4.2)
       eslint-plugin-import-x:
         specifier: 'catalog:'
-        version: 4.16.2(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2))
+        version: 4.17.1(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2))
       eslint-plugin-promise:
         specifier: 'catalog:'
         version: 7.3.0(eslint@10.7.0(jiti@2.4.2))
@@ -786,9 +786,6 @@ packages:
   '@oxc-project/types@0.133.0':
     resolution: {integrity: sha512-KzkdCd6Uxqnf6l3HOw1xfatAlUURA0g14cvBYFyJ5SaNOQbOUvBr9PKArcPcrNIeRsBdgcUzOGrhKveVpvOIGA==}
 
-  '@package-json/types@0.0.12':
-    resolution: {integrity: sha512-uu43FGU34B5VM9mCNjXCwLaGHYjXdNincqKLaraaCW+7S2+SmiBg1Nv8bPnmschrIfZmfKNY9f3fC376MRrObw==}
-
   '@paralleldrive/cuid2@2.3.1':
     resolution: {integrity: sha512-XO7cAxhnTZl0Yggq6jOgjiOHhbgcO4NqFqwSmQpjK3b6TEE6Uj/jfSk6wzYyemh3+I0sHirKSetjQwn5cZktFw==}
 
@@ -1080,10 +1077,6 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
       typescript: '>=4.8.4 <6.1.0'
-
-  '@typescript-eslint/types@8.59.3':
-    resolution: {integrity: sha512-ePFoH0g4ludssdRFqqDxQePCxU4WQyRa9+XVwjm7yLn0FKhMeoetC+qBEEI1Eyb1pGSDveTIT09Bvw2WhlGayg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/types@8.60.0':
     resolution: {integrity: sha512-AsE7x2XaAK+CVbeih0Fvbn+r1qHxtpLDJ3XUuFcIinT318T90yHMJC+Zgv+jUuDjQQd06HKwxnDu6sz1IcTilA==}
@@ -1942,8 +1935,8 @@ packages:
       unrs-resolver:
         optional: true
 
-  eslint-plugin-import-x@4.16.2:
-    resolution: {integrity: sha512-rM9K8UBHcWKpzQzStn1YRN2T5NvdeIfSVoKu/lKF41znQXHAUcBbYXe5wd6GNjZjTrP7viQ49n1D83x/2gYgIw==}
+  eslint-plugin-import-x@4.17.1:
+    resolution: {integrity: sha512-4cdstYkKCyjumM2Q9NSI03K8D2a9F4Ssz33K2lv2hQa4KmR9jPLwk3uWGtNvclfqBrPGfGuMBwsGMbe6dMRbfg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@typescript-eslint/utils': ^8.56.0
@@ -4271,8 +4264,6 @@ snapshots:
 
   '@oxc-project/types@0.133.0': {}
 
-  '@package-json/types@0.0.12': {}
-
   '@paralleldrive/cuid2@2.3.1':
     dependencies:
       '@noble/hashes': 1.8.0
@@ -4572,8 +4563,6 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/types@8.59.3': {}
 
   '@typescript-eslint/types@8.60.0': {}
 
@@ -5442,10 +5431,9 @@ snapshots:
     optionalDependencies:
       unrs-resolver: 1.11.1
 
-  eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2)):
+  eslint-plugin-import-x@4.17.1(@typescript-eslint/utils@8.60.0(eslint@10.7.0(jiti@2.4.2))(typescript@6.0.3))(eslint@10.7.0(jiti@2.4.2)):
     dependencies:
-      '@package-json/types': 0.0.12
-      '@typescript-eslint/types': 8.59.3
+      '@typescript-eslint/types': 8.60.0
       comment-parser: 1.4.6
       debug: 4.4.3(supports-color@5.5.0)
       eslint: 10.7.0(jiti@2.4.2)
