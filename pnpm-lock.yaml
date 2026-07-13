@@ -25,8 +25,8 @@ catalogs:
       specifier: ^5.0.0
       version: 5.0.0
     '@koa/router':
-      specifier: ^15.6.0
-      version: 15.6.0
+      specifier: ^15.7.0
+      version: 15.7.0
     '@koa/send':
       specifier: ^6.0.0
       version: 6.0.0
@@ -208,7 +208,7 @@ importers:
         version: 5.0.0
       '@koa/router':
         specifier: 'catalog:'
-        version: 15.6.0(koa@3.2.1)
+        version: 15.7.0(koa@3.2.1)
       '@koa/send':
         specifier: 'catalog:'
         version: 6.0.0
@@ -733,8 +733,8 @@ packages:
     resolution: {integrity: sha512-x/iUDjcS90W69PryLDIMgFyV21YLTnG9zOpPXS7Bkt2b8AsY3zZsIpOLBkYr9fBcF3HbkKaER5hOBZLfpLgYNw==}
     engines: {node: '>= 14.0.0'}
 
-  '@koa/router@15.6.0':
-    resolution: {integrity: sha512-iEOXlvGIBqSNkGXrg0XtMARAOm5zA24oedXxiTGEkrD4JgwVjfRDddCQvW1s4WEcwDYvyecRbf8BikXsuEEj8w==}
+  '@koa/router@15.7.0':
+    resolution: {integrity: sha512-WaAlk4TOl/O0rhTpOR0l052gz03syPMmI6Pe2gd7v3ubjfv5UcSGcnb0Y/J5NNC/ln+5FiUqPJTc/a15I+XqAA==}
     engines: {node: '>= 20'}
     peerDependencies:
       koa: ^2.0.0 || ^3.0.0
@@ -4208,7 +4208,7 @@ snapshots:
     dependencies:
       vary: 1.1.2
 
-  '@koa/router@15.6.0(koa@3.2.1)':
+  '@koa/router@15.7.0(koa@3.2.1)':
     dependencies:
       debug: 4.4.3(supports-color@5.5.0)
       http-errors: 2.0.1
