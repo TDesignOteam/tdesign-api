@@ -8,6 +8,8 @@ import type { TdChatSenderProps } from './type';
 export default {
   /** 默认键盘弹起不会把页面顶起来 */
   adjustPosition: Boolean,
+  /** 是否允许语音输入。为 true 时显示语音切换按钮，语音输入 UI 由开发者通过 speech 插槽自行提供 */
+  allowSpeech: Boolean,
   /** 附件列表属性 */
   attachmentsProps: {
     type: Object,
