@@ -70,8 +70,8 @@ catalogs:
       specifier: ^10.5.2
       version: 10.5.2
     axios:
-      specifier: ^1.16.1
-      version: 1.16.1
+      specifier: ^1.18.1
+      version: 1.18.1
     chalk:
       specifier: ^5.6.2
       version: 5.6.2
@@ -275,7 +275,7 @@ importers:
         version: 8.60.0(eslint@10.4.1(jiti@2.4.2))(typescript@6.0.3)
       axios:
         specifier: 'catalog:'
-        version: 1.16.1
+        version: 1.18.1
       chalk:
         specifier: 'catalog:'
         version: 5.6.2
@@ -329,7 +329,7 @@ importers:
         version: 0.19.1
       axios:
         specifier: 'catalog:'
-        version: 1.16.1
+        version: 1.18.1
       codemirror:
         specifier: 'catalog:'
         version: 6.0.2
@@ -417,7 +417,7 @@ importers:
     dependencies:
       axios:
         specifier: 'catalog:'
-        version: 1.16.1
+        version: 1.18.1
       chalk:
         specifier: 'catalog:'
         version: 5.6.2
@@ -1402,8 +1402,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
-  axios@1.16.1:
-    resolution: {integrity: sha512-caYkukvroVPO8KrzuJEb50Hm07KwfBZPEC3VeFHTsqWHvKTsy54hjJz9BS/cdaypROE2rH6xvm9mHX4fgWkr3A==}
+  axios@1.18.1:
+    resolution: {integrity: sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -4898,7 +4898,7 @@ snapshots:
       postcss: 8.5.17
       postcss-value-parser: 4.2.0
 
-  axios@1.16.1:
+  axios@1.18.1:
     dependencies:
       follow-redirects: 1.16.0(debug@4.3.7)
       form-data: 4.0.5
