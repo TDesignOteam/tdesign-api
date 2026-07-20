@@ -163,8 +163,8 @@ catalogs:
       specifier: ^1.14.1
       version: 1.14.1
     squel:
-      specifier: ^6.0.7
-      version: 6.0.7
+      specifier: ^6.3.1
+      version: 6.3.1
     tdesign-icons-vue-next:
       specifier: ^0.4.6
       version: 0.4.6
@@ -241,7 +241,7 @@ importers:
         version: 1.14.1
       squel:
         specifier: 'catalog:'
-        version: 6.0.7
+        version: 6.3.1
     devDependencies:
       '@types/koa':
         specifier: 'catalog:'
@@ -3308,8 +3308,8 @@ packages:
   sql.js@1.14.1:
     resolution: {integrity: sha512-gcj8zBWU5cFsi9WUP+4bFNXAyF1iRpA3LLyS/DP5xlrNzGmPIizUeBggKa8DbDwdqaKwUcTEnChtd2grWo/x/A==}
 
-  squel@6.0.7:
-    resolution: {integrity: sha512-Sd+yOi6tMLfga2zl/1OAHv0awNGGPbq9cT7O9Cg19P9mLwXsUo9GHu+bVTnGNGxtiV77ikxmlfLCrEATll6eiA==}
+  squel@6.3.1:
+    resolution: {integrity: sha512-mCs6KgSRAzJ0ZsvDkcO1sc0ujpZxxGzL8oY/4+uxDlK9tL5OGZKkGUp4KuZuJV7SCaI6IOkzAvmgAT9FT59N9w==}
     engines: {node: '>=18.0.0'}
 
   stable-hash-x@0.2.0:
@@ -6773,7 +6773,7 @@ snapshots:
 
   sql.js@1.14.1: {}
 
-  squel@6.0.7: {}
+  squel@6.3.1: {}
 
   stable-hash-x@0.2.0: {}
 
