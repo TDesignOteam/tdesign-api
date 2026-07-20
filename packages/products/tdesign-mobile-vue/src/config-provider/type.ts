@@ -6,7 +6,7 @@
 
 import { FormErrorMessage } from '../form';
 import { ImageProps } from '../image';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -77,6 +77,10 @@ export interface GlobalConfigProvider {
    * 表格组件全局配置
    */
   table?: TableConfig;
+  /**
+   * 排版组件全局配置
+   */
+  typography?: TypographyConfig;
   /**
    * 上传组件全局配置
    */
@@ -373,6 +377,24 @@ export interface TableConfig {
    * 语言配置，“暂无数据” 描述文本
    */
   empty?: string | TNode;
+}
+
+export interface TypographyConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，“复制成功”描述文本
+   * @default ''
+   */
+  copiedText?: string;
+  /**
+   * 语言配置，“展开”描述文本
+   * @default ''
+   */
+  expandText?: string;
 }
 
 export interface UploadConfig {

@@ -15,6 +15,8 @@ export default {
   addContent: {
     type: String,
   },
+  /** 是否允许重复上传相同文件名的文件 */
+  allowUploadDuplicateFile: Boolean,
   /** 图片上传配置，视频上传配置，文件上传配置等，包含图片尺寸、图片来源、视频来源、视频拍摄最长时间等。更多细节查看小程序官网。[图片上传](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseImage.html)。[视频上传](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseVideo.html) */
   config: {
     type: Object,
@@ -57,7 +59,7 @@ export default {
   /** 支持上传的文件类型，图片或视频 */
   mediaType: {
     type: Array,
-    default: ['image', 'video'],
+    default: (): TdUploadProps['mediaType'] => ['image', 'video'],
   },
   /** 是否支持图片预览，文件没有预览 */
   preview: {
@@ -98,7 +100,7 @@ export default {
   /** 拖拽位置移动时的过渡参数,`duration`单位为ms */
   transition: {
     type: Object,
-    default: { backTransition: true, duration: 300, timingFunction: 'ease' },
+    default: () => ({ backTransition: true, duration: 300, timingFunction: 'ease' }),
   },
   /** 选择后触发，仅包含本次选择的照片；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size`选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述 */
   onAdd: {

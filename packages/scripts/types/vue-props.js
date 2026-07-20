@@ -55,17 +55,34 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
     dl = undefined;
   } else {
     if (currentFramework !== 'Miniprogram') {
+      // 识别 Array/Object 默认值并加 () => 包裹，避免 Vue 共享引用警告
+      let isArray = false;
+      let isObject = false;
       try {
         const tmp = JSON.parse(dl);
-        if (['object', 'function'].includes(typeof tmp) && !(tmp instanceof Array)) {
-          dl = `() => (${dl})`;
-        } else if (tmp instanceof Array) {
-          const type = `: ${getPropType(cmp, name)}`;
-          dl = `()${type} => ${dl}`;
-        } else {
-          dl = defaultValue;
+        if (tmp instanceof Array) {
+          isArray = true;
+        } else if (['object', 'function'].includes(typeof tmp)) {
+          isObject = true;
         }
       } catch (e) {
+        // JSON 解析失败（如对象字面量属性未加引号），按首字符判断
+        const trimmed = (dl || '').trim();
+        if (trimmed.startsWith('[')) {
+          isArray = true;
+        } else if (trimmed.startsWith('{')) {
+          isObject = true;
+        }
+      }
+      if (isObject) {
+        // 对象需加圆括号包裹避免被解析为块语句
+        dl = `() => (${dl})`;
+      } else if (isArray) {
+        // Array 类型使用 () => 工厂函数避免多个实例共享同一数组引用
+        // 带返回类型注解以保持与 Vue(PC)/VueNext 现有规范一致
+        const valueType = `: ${getPropType(cmp, name)}`;
+        dl = `()${valueType} => ${dl}`;
+      } else {
         dl = defaultValue;
       }
     }

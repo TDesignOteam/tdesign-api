@@ -430,6 +430,10 @@
         "label": "对话思考过程"
       },
       {
+        "value": "ChatRecord",
+        "label": "语音输入"
+      },
+      {
         "value": "ChatSender",
         "label": "对话输入"
       },
@@ -735,6 +739,11 @@
       {
         "value": "Loading",
         "label": "加载中"
+      },
+      {
+        "value": "LoadingConfig",
+        "label": "加载中全局配置",
+        "type": "TS"
       },
       {
         "value": "Mentions",

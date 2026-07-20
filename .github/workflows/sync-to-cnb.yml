@@ -5,7 +5,7 @@ on:
 
 jobs:
     call-cnb-sync:
-        uses: TDesignOteam/workflows/.github/workflows/reusable-cnb-sync.yml@50ba4f86432c1145d41342166190c973efbc337c # main
+        uses: TDesignOteam/workflows/.github/workflows/reusable-cnb-sync.yml@a213a7f227b679c23c639d73b2ca0251023d926f # main
         with:
             github-repo: TDesignOteam/tdesign-api
             cnb-repo: tencent/tdesign/tdesign-api
