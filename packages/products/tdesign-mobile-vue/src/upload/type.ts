@@ -54,6 +54,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
+   * 是否支持拖拽排序。
+   */
+  draggable?: boolean;
+  /**
    * 已上传文件列表，同 `value`。TS 类型：`UploadFile`
    * @default []
    */
@@ -78,7 +82,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 设置上传的请求头部，`action` 存在时有效
    */
-  headers?: { [key: string]: string };
+  headers?: {[key: string]: string};
   /**
    * 透传 Image 组件全部属性
    */
@@ -155,13 +159,21 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   onClickUpload?: (context: { e: MouseEvent }) => void;
   /**
+   * 拖拽开始时触发，`context.file` 为拖拽文件
+   */
+  onDrag?: (context: { file: UploadFile, index: number }) => void => void;
+  /**
+   * 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
+   */
+  onDrop?: (value: Array<T>) => void => void;
+  /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
   onFail?: (options: UploadFailContext) => void;
   /**
    * 点击图片预览时触发，文件没有预览
    */
-  onPreview?: (options: { file: UploadFile; index: number; e: MouseEvent }) => void;
+  onPreview?: (options: { file: UploadFile, index: number, e: MouseEvent }) => void;
   /**
    * 上传进度变化时触发，真实进度和模拟进度都会触发。<br/>⚠️ 原始上传请求，小文件的上传进度只有 0 和 100，故而不会触发 `progress` 事件；只有大文件才有真实的中间进度。如果你希望很小的文件也显示上传进度，保证 `useMockProgress=true` 的情况下，设置 `mockProgressDuration` 为更小的值。<br/>参数 `options.type=real` 表示真实上传进度，`options.type=mock` 表示模拟上传进度
    */
@@ -181,7 +193,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 文件上传校验结束事件，文件数量超出、文件大小超出限制、文件同名、`beforeAllFilesUpload` 返回值为假、`beforeUpload` 返回值为假等场景会触发。<br/>注意：如果设置允许上传同名文件，即 `allowUploadDuplicateFile=true`，则不会因为文件重名触发该事件。<br/>结合 `status` 和 `tips` 可以在组件中呈现不同类型的错误（或告警）提示
    */
-  onValidate?: (context: { type: UploadValidateType; files: UploadFile[] }) => void;
+  onValidate?: (context: { type: UploadValidateType, files: UploadFile[] }) => void;
 }
 
 export interface UploadFile extends PlainObject {
@@ -214,7 +226,7 @@ export interface UploadFile extends PlainObject {
    * 文件上传状态：上传成功，上传失败，上传中，等待上传
    * @default ''
    */
-  status?: 'success' | 'fail' | 'progress' | 'waiting';
+  status?:  'success' | 'fail' | 'progress' | 'waiting';
   /**
    * 文件类型
    * @default ''
@@ -234,81 +246,30 @@ export interface UploadFile extends PlainObject {
 
 export type ResponseType = { error?: string; url?: string } & Record<string, any>;
 
-export interface FormatResponseContext {
-  file: UploadFile;
-  currentFiles?: UploadFile[];
-}
+export  interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] };
 
-export interface RequestMethodResponse {
-  status: 'success' | 'fail';
-  error?: string;
-  response: { url?: string; files?: UploadFile[]; [key: string]: any };
-}
+export interface RequestMethodResponse { status: 'success' | 'fail'; error?: string; response: { url?: string; files?: UploadFile[]; [key: string]: any } };
 
-export interface SizeLimitObj {
-  size: number;
-  unit: SizeUnit;
-  message?: string;
-}
+export interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string };
 
 export type SizeUnitArray = ['B', 'KB', 'MB', 'GB'];
 
 export type SizeUnit = SizeUnitArray[number];
 
-export interface UploadChangeContext {
-  e?: MouseEvent | ProgressEvent;
-  response?: any;
-  trigger: UploadChangeTrigger;
-  index?: number;
-  file?: UploadFile;
-  files?: UploadFile[];
-}
+export interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] };
 
-export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
+export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'sort';
 
-export interface UploadFailContext {
-  e?: ProgressEvent;
-  failedFiles: UploadFile[];
-  currentFiles: UploadFile[];
-  response?: any;
-  file: UploadFile;
-  XMLHttpRequest?: XMLHttpRequest;
-}
+export interface UploadFailContext { e?: ProgressEvent; failedFiles: UploadFile[]; currentFiles: UploadFile[]; response?: any; file: UploadFile; XMLHttpRequest?: XMLHttpRequest};
 
-export interface ProgressContext {
-  e?: ProgressEvent;
-  file?: UploadFile;
-  currentFiles: UploadFile[];
-  percent: number;
-  type: UploadProgressType;
-  XMLHttpRequest?: XMLHttpRequest;
-}
+export interface ProgressContext { e?: ProgressEvent; file?: UploadFile; currentFiles: UploadFile[]; percent: number; type: UploadProgressType; XMLHttpRequest?: XMLHttpRequest };
 
 export type UploadProgressType = 'real' | 'mock';
 
-export interface UploadRemoveContext {
-  index?: number;
-  file?: UploadFile;
-  e: MouseEvent;
-}
+export interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent };
 
-export interface UploadSelectChangeContext {
-  currentSelectedFiles: UploadFile[];
-}
+export interface UploadSelectChangeContext { currentSelectedFiles: UploadFile[] };
 
-export interface SuccessContext {
-  e?: ProgressEvent;
-  file?: UploadFile;
-  fileList?: UploadFile[];
-  currentFiles?: UploadFile[];
-  response?: any;
-  results?: SuccessContext[];
-  XMLHttpRequest?: XMLHttpRequest;
-}
+export interface SuccessContext { e?: ProgressEvent; file?: UploadFile; fileList?: UploadFile[]; currentFiles?: UploadFile[]; response?: any; results?: SuccessContext[]; XMLHttpRequest?: XMLHttpRequest };
 
-export type UploadValidateType =
-  | 'FILE_OVER_SIZE_LIMIT'
-  | 'FILES_OVER_LENGTH_LIMIT'
-  | 'FILTER_FILE_SAME_NAME'
-  | 'BEFORE_ALL_FILES_UPLOAD'
-  | 'CUSTOM_BEFORE_UPLOAD';
+export type UploadValidateType = 'FILE_OVER_SIZE_LIMIT' | 'FILES_OVER_LENGTH_LIMIT' | 'FILTER_FILE_SAME_NAME' | 'BEFORE_ALL_FILES_UPLOAD' | 'CUSTOM_BEFORE_UPLOAD';
