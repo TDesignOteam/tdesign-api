@@ -12,6 +12,7 @@ export const baseTableDefaultProps: TdBaseTableProps = {
   disableDataPage: false,
   disableSpaceInactiveRow: undefined,
   empty: '',
+  enableLockScrollbar: false,
   footData: [],
   footerAffixedBottom: false,
   headerAffixedTop: false,
