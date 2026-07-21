@@ -18,7 +18,7 @@ import { ButtonProps } from '../button';
 import { CheckboxGroupProps } from '../checkbox';
 import { DialogProps } from '../dialog';
 import { FormRule, AllValidateResult } from '../form';
-import {
+import type {
   TNode,
   TElement,
   OptionData,
@@ -31,7 +31,7 @@ import {
   TScroll,
   ComponentScrollToElementParams,
 } from '../common';
-import { MouseEvent, KeyboardEvent, WheelEvent, ChangeEvent } from 'react';
+import type { MouseEvent, KeyboardEvent, WheelEvent, ChangeEvent } from 'react';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -90,6 +90,11 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * @default ''
    */
   empty?: TNode;
+  /**
+   * 切换分页时是否锁定滚动条。开启后，切换分页时不会重置滚动条位置。
+   * @default false
+   */
+  enableLockScrollbar?: boolean;
   /**
    * 首行内容，横跨所有列
    */
@@ -393,8 +398,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
   width?: string | number;
 }
 
-export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
-  extends Omit<TdBaseTableProps<T>, 'columns' | 'onCellClick'> {
+export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> extends Omit<
+  TdBaseTableProps<T>,
+  'columns' | 'onCellClick'
+> {
   /**
    * 异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `load-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容
    */
@@ -618,8 +625,10 @@ export interface PrimaryTableInstanceFunctions<T extends TableRowData = TableRow
   validateTableData: () => Promise<{ result: TableErrorListMap }>;
 }
 
-export interface PrimaryTableCol<T extends TableRowData = TableRowData>
-  extends Omit<BaseTableCol, 'cell' | 'title' | 'render' | 'children'> {
+export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends Omit<
+  BaseTableCol,
+  'cell' | 'title' | 'render' | 'children'
+> {
   /**
    * 自定义单元格渲染，优先级高于 render。泛型 T 指表格数据类型
    */
@@ -1008,7 +1017,9 @@ export interface RowClassNameParams<T> {
   type?: 'body' | 'foot';
 }
 
-export type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan;
+export type TableRowspanAndColspanFunc<T extends TableRowData = TableRowData> = (
+  params: BaseTableCellParams<T>,
+) => RowspanColspan;
 
 export interface RowspanColspan {
   colspan?: number;
@@ -1028,9 +1039,9 @@ export interface ActiveRowActionContext<T> {
 
 export type ActiveRowActionType = 'shift-area-selection' | 'space-one-selection' | 'clear' | 'select-all';
 
-export interface BaseTableCellEventContext<T> {
+export interface BaseTableCellEventContext<T extends TableRowData = TableRowData> {
   row: T;
-  col: BaseTableCol;
+  col: BaseTableCol<T>;
   rowIndex: number;
   colIndex: number;
   e: MouseEvent<HTMLTableCellElement>;
@@ -1056,9 +1067,10 @@ export interface BaseTableCellParams<T> {
   colIndex: number;
 }
 
-export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName);
+export type TableColumnClassName<T extends TableRowData = TableRowData> =
+  ClassName | ((context: CellData<T>) => ClassName);
 
-export interface CellData<T> extends BaseTableCellParams<T> {
+export interface CellData<T extends TableRowData = TableRowData> extends BaseTableCellParams<T> {
   type: 'th' | 'td';
 }
 
@@ -1192,9 +1204,7 @@ export interface PrimaryTableCellParams<T> {
 }
 
 export type CheckProps<T> =
-  | CheckboxProps
-  | RadioProps
-  | ((options: { row: T; rowIndex: number }) => CheckboxProps | RadioProps);
+  CheckboxProps | RadioProps | ((options: { row: T; rowIndex: number }) => CheckboxProps | RadioProps);
 
 export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
   type: RenderType;
@@ -1247,8 +1257,7 @@ export interface TableColumnGroup {
 export type PrimaryTableOnEditedContext<T> = PrimaryTableCellParams<T> & { trigger: string; newRowData: T };
 
 export type TableEditableCellProps<T> =
-  | TablePlainObject
-  | ((params: TableEditableCellPropsParams<T>) => TablePlainObject);
+  TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject);
 
 export interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> {
   editedRow: T;
