@@ -15,7 +15,7 @@ export default {
   /** 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色 */
   colorModes: {
     type: Array as PropType<TdColorPickerProps['colorModes']>,
-    default: (): TdColorPickerProps['colorModes'] => ["monochrome", "linear-gradient"],
+    default: (): TdColorPickerProps['colorModes'] => ['monochrome', 'linear-gradient'],
   },
   /** 是否禁用组件 */
   disabled: {
@@ -41,6 +41,11 @@ export default {
   /** 透传 Input 输入框组件全部属性 */
   inputProps: {
     type: Object as PropType<TdColorPickerProps['inputProps']>,
+  },
+  /** 是否显示颜色值输入框，值为 false 时仅显示颜色色块 */
+  isInput: {
+    type: Boolean,
+    default: true,
   },
   /** 透传 Popup 组件全部属性，如 `placement` `overlayStyle` `overlayClassName` `trigger`等 */
   popupProps: {
