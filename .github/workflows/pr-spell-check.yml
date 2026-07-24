@@ -3,6 +3,6 @@ on: [pull_request]
 
 jobs:
     run:
-        uses: TDesignOteam/workflows/.github/workflows/reusable-spell-check.yml@a213a7f227b679c23c639d73b2ca0251023d926f # main
+        uses: TDesignOteam/workflows/.github/workflows/reusable-spell-check.yml@2c83bb5eec2aa598759e8ce57f0af326ed022056 # main
         with:
             config: .github/workflows/typos-config.toml
