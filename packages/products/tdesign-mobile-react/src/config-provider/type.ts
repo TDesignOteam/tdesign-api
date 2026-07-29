@@ -397,6 +397,11 @@ export interface TableConfig {
    */
   hideSortTips?: boolean;
   /**
+   * 语言配置，“加载中...” 描述文本
+   * @default ''
+   */
+  pullUpLoadingText?: string;
+  /**
    * 语言配置，“重置” 描述文本
    * @default ''
    */
