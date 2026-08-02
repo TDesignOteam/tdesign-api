@@ -120074,6 +120074,954 @@
       ]
     },
     {
+      "id": 1785668366,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "必须是 Panel 组件，数量需与 initialSizes 长度匹配",
+      "field_desc_en": "Must be a Panel component, and the quantity must match the initialSizes length.",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2026-08-02 10:59:26",
+      "update_time": "2026-08-02 10:59:26",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1785668269,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "className",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "容器自定义类名",
+      "field_desc_en": "Container custom class name",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:57:49",
+      "update_time": "2026-08-02 10:57:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785667918,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "direction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "horizontal",
+      "field_enum": "horizontal/vertical",
+      "field_desc_zh": "分割方向。horizontal：左右排列；vertical：上下排列",
+      "field_desc_en": "Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:51:58",
+      "update_time": "2026-08-02 10:51:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785668466,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "draggerIcon",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "拖拽图标",
+      "field_desc_en": "Drag icons",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 11:01:06",
+      "update_time": "2026-08-02 11:01:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1785667969,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "gap",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "0",
+      "field_enum": "",
+      "field_desc_zh": "面板之间的间距（px），会体现在分割条视觉上",
+      "field_desc_en": "The spacing (px) between panels will be reflected in the visual appearance of the divider.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:52:49",
+      "update_time": "2026-08-02 10:52:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1785668424,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "延迟渲染模式",
+      "field_desc_en": "Deferred rendering mode",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 11:00:24",
+      "update_time": "2026-08-02 11:00:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785668557,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "panelSize",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "定义每个面板的最大最小比例",
+      "field_desc_en": "Define the maximum and minimum scale for each panel.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 11:02:37",
+      "update_time": "2026-08-02 11:02:37",
+      "event_output": null,
+      "custom_field_type": "{min?: number; max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668156,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "splitterClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义分割条的样式类名",
+      "field_desc_en": "Custom divider style class name",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:55:56",
+      "update_time": "2026-08-02 10:55:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785668109,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "splitterSize",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "6",
+      "field_enum": "",
+      "field_desc_zh": "分割条的可交互区域宽度/高度（px）",
+      "field_desc_en": "Width/height (px) of the interactive area of ​​the divider bar",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:55:09",
+      "update_time": "2026-08-02 10:55:09",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1785668599,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 2,
+      "field_name": "onResize",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "拖拽过程中尺寸变化的回调（像素值数组）",
+      "field_desc_en": "Callback (array of pixel values) for size changes during dragging.",
+      "field_required": 0,
+      "event_input": "(sizes: number[])",
+      "create_time": "2026-08-02 11:03:19",
+      "update_time": "2026-08-02 11:03:19",
+      "event_output": null,
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668746,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 2,
+      "field_name": "onResizeEnd",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "拖拽结束时的回调",
+      "field_desc_en": "Callback when drag ends",
+      "field_required": 0,
+      "event_input": "(sizes: number[])",
+      "create_time": "2026-08-02 11:05:46",
+      "update_time": "2026-08-02 11:05:46",
+      "event_output": null,
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668717,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 2,
+      "field_name": "onResizeStart",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "开始拖拽时的回调",
+      "field_desc_en": "Callback when drag starts",
+      "field_required": 0,
+      "event_input": "(sizes: number[])",
+      "create_time": "2026-08-02 11:05:17",
+      "update_time": "2026-08-02 11:05:17",
+      "event_output": null,
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668792,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 4,
+      "field_name": "getSizes",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取当前各面板的像素尺寸",
+      "field_desc_en": "Get the current pixel size of each panel",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 11:06:32",
+      "update_time": "2026-08-02 11:06:32",
+      "event_output": "number[]",
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668892,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 4,
+      "field_name": "reset",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "重置为初始尺寸",
+      "field_desc_en": "Reset to initial size",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 11:08:12",
+      "update_time": "2026-08-02 11:08:12",
+      "event_output": null,
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668850,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 4,
+      "field_name": "setSizes",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "程序化设置尺寸",
+      "field_desc_en": "Programmatically set size",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:07:30",
+      "update_time": "2026-08-02 11:07:30",
+      "event_output": "",
+      "custom_field_type": "{min?: number max?: number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785668191,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 256,
+      "field_name": "splitterStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义分割条的内联样式",
+      "field_desc_en": "Customize the inline style of the splitter",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:56:31",
+      "update_time": "2026-08-02 10:56:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785668303,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 256,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "容器内联样式",
+      "field_desc_en": "Container inline styles",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:58:23",
+      "update_time": "2026-08-02 10:58:23",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785669186,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板内容",
+      "field_desc_en": "Panel content",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:13:06",
+      "update_time": "2026-08-02 11:13:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1785669125,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "className",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板自定义类名",
+      "field_desc_en": "Panel Custom Class Name",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:12:05",
+      "update_time": "2026-08-02 11:12:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785669246,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "defaultSize",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "初始面板大小，支持数字 px 或者文字 '百分比%' 类型",
+      "field_desc_en": "Initial panel size, supports numeric pixels (px) or text percentages (%).",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:14:06",
+      "update_time": "2026-08-02 11:14:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785669101,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "max",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max",
+      "field_desc_en": "The maximum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.max",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:11:41",
+      "update_time": "2026-08-02 11:11:41",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785669035,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "min",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min",
+      "field_desc_en": "The minimum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.min",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:10:35",
+      "update_time": "2026-08-02 11:10:35",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785669272,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 1,
+      "field_name": "resizable",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "是否开启拖拽伸缩",
+      "field_desc_en": "Enable drag-and-drop scaling?",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:14:32",
+      "update_time": "2026-08-02 11:14:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785669146,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "SplitPanel",
+      "field_category": 256,
+      "field_name": "style",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "面板内联样式",
+      "field_desc_en": "Panel Inline Style",
+      "field_required": 0,
+      "event_input": "(sizes: (number | string | 'auto')[]) ",
+      "create_time": "2026-08-02 11:12:26",
+      "update_time": "2026-08-02 11:12:26",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 3457,
       "platform_framework": [
         "1",
