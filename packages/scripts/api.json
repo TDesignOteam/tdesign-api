@@ -109895,6 +109895,870 @@
       "field_type_text": []
     },
     {
+      "id": 1785643138,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "ariaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 aria-label 文本",
+      "field_desc_en": "aria-label text in view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:58",
+      "update_time": "2026-08-02 03:58:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642956,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "autoExpand",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "滚动条 hover 时是否向外扩展（增加交互热区）",
+      "field_desc_en": "Should the scrollbar expand outwards when hovering (to increase the interactive hotspot)?",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:55:56",
+      "update_time": "2026-08-02 03:55:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785642550,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "container",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置滚动容器的最大高度/宽度",
+      "field_desc_en": "Set the maximum height/width of the scrolling container.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:49:10",
+      "update_time": "2026-08-02 03:49:10",
+      "event_output": null,
+      "custom_field_type": "ScrollbarContainerProps",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785642610,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "禁止滚动",
+      "field_desc_en": "disabled scroll",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:50:10",
+      "update_time": "2026-08-02 03:50:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785643082,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "id",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 ID",
+      "field_desc_en": "ID of the view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:02",
+      "update_time": "2026-08-02 03:58:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642246,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "noResize",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "容器尺寸是否响应变化（若容器尺寸恒定，开启可优化性能）",
+      "field_desc_en": "Does the container size respond to changes? (If the container size is constant, enabling this feature can optimize performance.)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:44:06",
+      "update_time": "2026-08-02 03:44:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785643111,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "role",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "scrollbar",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 WAI-ARIA 角色",
+      "field_desc_en": "WAI-ARIA role in the view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:31",
+      "update_time": "2026-08-02 03:58:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642680,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "step",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动步长",
+      "field_desc_en": "Rolling step",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:51:20",
+      "update_time": "2026-08-02 03:51:20",
+      "event_output": null,
+      "custom_field_type": "{x?:number;y?:number}",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785643171,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "tabindex",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的 tabindex",
+      "field_desc_en": "tabindex of the container",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:59:31",
+      "update_time": "2026-08-02 03:59:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785642391,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "thumbMinSize",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "20",
+      "field_enum": "",
+      "field_desc_zh": "滚动条滑块的最小尺寸（px）",
+      "field_desc_en": "Minimum size (px) of the scroll bar slider.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:46:31",
+      "update_time": "2026-08-02 03:46:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1785642840,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "viewClass",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图（内容区）的自定义类名",
+      "field_desc_en": "Custom class name for the view (content area)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:54:00",
+      "update_time": "2026-08-02 03:54:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642898,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "visibility",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "hover",
+      "field_enum": "always/hover/hide",
+      "field_desc_zh": "滚动条的显示形式",
+      "field_desc_en": "Scroll bar display format",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:54:58",
+      "update_time": "2026-08-02 03:54:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642797,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "wrapClass",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的自定义类名",
+      "field_desc_en": "Custom class name of the wrapper container",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:53:17",
+      "update_time": "2026-08-02 03:53:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785643580,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动时触发",
+      "field_desc_en": "Triggered while scrolling",
+      "field_required": 0,
+      "event_input": "(context:{e:Event})",
+      "create_time": "2026-08-02 04:06:20",
+      "update_time": "2026-08-02 04:06:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785647487,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "getValues",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取包含完整滚动信息的视图对象",
+      "field_desc_en": "Get the view object containing complete scrolling information",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2026-08-02 05:11:28",
+      "update_time": "2026-08-02 05:11:28",
+      "event_output": "PositionValues 【 interface PositionValues {  left:number,top: number,scrollLeft:number,scrollTop:number,scrollWidth:number,scrollHeight:number, clientWidth:number,clientHeight:number }】",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785646744,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "scrollTo",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动到一组特定坐标",
+      "field_desc_en": "Scroll to a specific set of coordinates",
+      "field_required": 1,
+      "event_input": "(options: { top?: number; left?: number; behavior?: ScrollBehavior })",
+      "create_time": "2026-08-02 04:59:04",
+      "update_time": "2026-08-02 04:59:04",
+      "event_output": "",
+      "custom_field_type": "ScrollToFn【type ScrollToFn = {   (x: number, y: number): void;   (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1785646985,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "scrollToEdge",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 1,
+      "event_input": "(position:PositionEdge) 【type PositionEdge = \"left\"|\"right\"|\"top\"|\"bottom\"】",
+      "create_time": "2026-08-02 05:03:05",
+      "update_time": "2026-08-02 05:03:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1785642818,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 256,
+      "field_name": "viewStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图（内容区）的自定义内联样式",
+      "field_desc_en": "Custom inline styles for view (content area)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:53:38",
+      "update_time": "2026-08-02 03:53:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642756,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 256,
+      "field_name": "wrapStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的自定义内联样式",
+      "field_desc_en": "Custom inline styles for wrapping containers",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:52:36",
+      "update_time": "2026-08-02 03:52:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650133,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionEdge",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "left/right/top/bottom",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:55:33",
+      "update_time": "2026-08-02 05:55:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650340,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionEdge",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "left/right/top/bottom",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:59:00",
+      "update_time": "2026-08-02 05:59:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650036,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionValues",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取包含完整滚动信息的视图对象",
+      "field_desc_en": "Get the view object containing complete scrolling information",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:53:56",
+      "update_time": "2026-08-02 05:53:56",
+      "event_output": null,
+      "custom_field_type": "{left: (scrollLeft / (scrollWidth - clientWidth)) || 0,top: (scrollTop / (scrollHeight - clientHeight)) || 0,scrollLeft,scrollTop,scrollWidth,scrollHeight,clientWidth, clientHeight}",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1542,
       "platform_framework": [
         "16",
