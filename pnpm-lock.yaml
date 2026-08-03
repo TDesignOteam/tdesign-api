@@ -106,8 +106,8 @@ catalogs:
       specifier: ^17.8.0
       version: 17.8.0
     js-yaml:
-      specifier: ^4.3.1
-      version: 4.3.1
+      specifier: ^5.2.3
+      version: 5.2.3
     koa:
       specifier: ^3.2.1
       version: 3.2.1
@@ -426,7 +426,7 @@ importers:
         version: 1.11.21
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.1
+        version: 5.2.3
       lodash-es:
         specifier: 'catalog:'
         version: 4.18.1
@@ -2379,6 +2379,10 @@ packages:
 
   js-yaml@4.3.1:
     resolution: {integrity: sha512-CY6crGq313MX8GkwvB7tzgp99vjQxY1++5y10/BKN/GUfHqWaOGQMNZkBvqSzsZKWk/ijwHlWzzkLulsGHhjWQ==}
+    hasBin: true
+
+  js-yaml@5.2.3:
+    resolution: {integrity: sha512-n+mUVyUX5bVv7G/G2zyIHOhdxfuU1dY2NOFzTQUWiMUbFss8b57NFlgCCaggU78wSw5KVS9cllzeLyzyR+n5nw==}
     hasBin: true
 
   jsbn@1.1.0:
@@ -5194,7 +5198,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.3.0
+      js-yaml: 4.3.1
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 6.0.3
@@ -6055,6 +6059,10 @@ snapshots:
       argparse: 2.0.1
 
   js-yaml@4.3.1:
+    dependencies:
+      argparse: 2.0.1
+
+  js-yaml@5.2.3:
     dependencies:
       argparse: 2.0.1
 
