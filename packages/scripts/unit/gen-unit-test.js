@@ -1,5 +1,5 @@
 import path from 'path';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { includes } from 'lodash-es';
 import { FRAMEWORK_MAP } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
