@@ -14,6 +14,11 @@ export interface TdTabBarProps {
    */
   bordered?: boolean;
   /**
+   * 标签栏的材质效果
+   * @default normal
+   */
+  effect?: 'normal' | 'glass';
+  /**
    * 是否固定在底部
    * @default true
    */
@@ -39,10 +44,10 @@ export interface TdTabBarProps {
    */
   split?: boolean;
   /**
-   * 选项风格
+   * 选项风格。normal 为弱选中，tag 为逐项标签选中，capsule 为共享胶囊选中态
    * @default normal
    */
-  theme?: 'normal' | 'tag';
+  theme?: 'normal' | 'tag' | 'capsule';
   /**
    * 当前选中标签的索引
    */
@@ -63,7 +68,7 @@ export interface TdTabBarProps {
   /**
    * 选中标签切换时触发
    */
-  onChange?: (context: { value: string | number }) => void;
+  onChange?: (value: string | number) => void;
 }
 
 export interface TdTabBarItemProps {
