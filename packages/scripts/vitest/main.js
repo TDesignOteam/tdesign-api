@@ -1,4 +1,5 @@
 import { pick } from 'lodash-es';
+import { resolveComponentMergeList } from '../common.js';
 import { COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP } from '../config/files-combine.js';
 import map from '../map.json' with { type: 'json' };
 import { copyUnitTestsToOtherWrapper } from './copy.js';
@@ -21,7 +22,6 @@ import {
   getApiComponentMapByFrameWork,
   getParentByChildComponent,
 } from './utils.js';
-import { resolveComponentMergeList } from '../common.js';
 
 const componentMap = map.data.components;
 
