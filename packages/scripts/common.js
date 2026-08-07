@@ -1,5 +1,6 @@
 import { upperFirst, camelCase as camelcase } from 'lodash-es';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
+import { CHAT_COMPONENT_MAP } from './config/files-combine.js';
 import mapJson from './map.json' with { type: 'json' };
 import { kebabCaseComponent } from './utils.js';
 import { groupByComponent, getApiComponentMapByFrameWork } from './vitest/utils.js';
@@ -30,7 +31,7 @@ function isTypeApi(cmp) {
 }
 
 function isComponent(cmp) {
-  return !componentsMap[cmp].type;
+  return componentsMap[cmp] && !componentsMap[cmp].type;
 }
 
 function getCmpName(cmp) {
@@ -124,6 +125,38 @@ function getGlobalConfigName(cmp) {
   return '';
 }
 
+/**
+ * Build reverse lookup from PascalCase component names to their merge lists.
+ * For CHAT_COMPONENT_MAP entries like 'chat-actionbar': ['ChatActionbar', 'ChatAction'],
+ * the reverse gives: { ChatActionbar: ['ChatActionbar', 'ChatAction'], ChatAction: ['ChatActionbar', 'ChatAction'] }
+ * Supports future high-order component maps via the same pattern.
+ */
+let _chatReverseMap = null;
+function getChatReverseMap() {
+  if (_chatReverseMap) return _chatReverseMap;
+  _chatReverseMap = {};
+  Object.entries(CHAT_COMPONENT_MAP).forEach(([, list]) => {
+    list.forEach((cmp) => {
+      _chatReverseMap[cmp] = list;
+    });
+  });
+  return _chatReverseMap;
+}
+
+/**
+ * Resolve component name to its merge list. First checks the merged map for direct key match,
+ * then searches map values (handles kebab-case keys in CHAT_COMPONENT_MAP and future HO maps).
+ * Falls back to [component] if no match found.
+ */
+function resolveComponentMergeList(mergeMap, component) {
+  if (mergeMap[component]) return mergeMap[component];
+  for (const [, values] of Object.entries(mergeMap)) {
+    if (values.includes && values.includes(component)) return values;
+    if (Array.isArray(values) && values.includes(component)) return values;
+  }
+  return [component];
+}
+
 export {
   getLabelByKey,
   getApiTitles,
@@ -146,4 +179,6 @@ export {
   getCmpTypeCombineMap,
   getComponentsMap,
   getGlobalConfigName,
+  getChatReverseMap,
+  resolveComponentMergeList,
 };

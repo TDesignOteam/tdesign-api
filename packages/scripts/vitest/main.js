@@ -1,5 +1,5 @@
 import { pick } from 'lodash-es';
-import { COMPONENT_API_MD_MAP } from '../config/files-combine.js';
+import { COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP } from '../config/files-combine.js';
 import map from '../map.json' with { type: 'json' };
 import { copyUnitTestsToOtherWrapper } from './copy.js';
 import { generateAttributeUnitCase } from './generate-attribute.js';
@@ -21,6 +21,7 @@ import {
   getApiComponentMapByFrameWork,
   getParentByChildComponent,
 } from './utils.js';
+import { resolveComponentMergeList } from '../common.js';
 
 const componentMap = map.data.components;
 
@@ -40,8 +41,9 @@ const generateFunctionsMap = {
 function getBaseData(framework, component, apiData, map) {
   const frameworkMap = formatArrayToMap(map, 'platform_framework');
   const frameworkData = groupByComponent(apiData, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
-  const baseData = pick(frameworkData, cmpMap[component] || [component]);
+  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP);
+  const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
+  const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, component));
   return baseData;
 }
 
@@ -117,7 +119,10 @@ function getUnitTestCode(baseData, framework) {
     const typeInfo = componentMap.find((item) => item.value === componentOri);
     // 如果是 TS 类型，而非一个组件，则直接使用根组件输出用例。只要 type 存在，就不是组件
     if (typeInfo.type) {
-      const combineMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
+      const combineMap = getApiComponentMapByFrameWork(
+        Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP),
+        framework,
+      );
       component = getParentByChildComponent(combineMap, componentOri);
     }
 

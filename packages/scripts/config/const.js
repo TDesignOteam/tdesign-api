@@ -9,6 +9,7 @@ import {
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  CHAT_COMPONENT_MAP,
 } from './files-combine.js';
 import VUE_TITLE_MAP from './language/api-docs-title.js';
 
@@ -98,4 +99,5 @@ export {
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  CHAT_COMPONENT_MAP,
 };

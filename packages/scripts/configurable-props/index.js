@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import { pick } from 'lodash-es';
 import apiJson from '../api.json' with { type: 'json' };
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from '../common.js';
-import { COMPONENT_API_MD_MAP } from '../config/index.js';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../common.js';
+import { COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP } from '../config/index.js';
 import map from '../map.json' with { type: 'json' };
 import { generateProps } from './props.js';
 
@@ -21,8 +21,9 @@ function start() {
   console.log(chalk.blue(`\n ----- 组件 configurable props json 文件自动生成开始（框架：${framework}） ------ \n`));
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
-  const baseData = isAll(r) ? frameworkData : pick(frameworkData, cmpMap[component] || [component]);
+  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP);
+  const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
+  const baseData = isAll(r) ? frameworkData : pick(frameworkData, resolveComponentMergeList(cmpMap, component));
   // 生成info-json文件
   generateProps(baseData, framework);
 }

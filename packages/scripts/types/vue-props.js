@@ -11,7 +11,7 @@ import {
   getCmpTypeCombineMap,
 } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
 import { getComponentBasePath } from '../utils.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
@@ -389,7 +389,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
 function getFolderPath(basePath, cmp) {
   const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
   const folderName = cmp === parentCmp || !parentCmp ? getFolderName(cmp) : getFolderName(parentCmp);
-  return path.resolve(getComponentBasePath(cmp, basePath), folderName);
+  return path.resolve(getComponentBasePath(cmp, basePath, currentFramework), folderName);
 }
 
 function getPropsFileName(folder, cmp) {
@@ -409,7 +409,10 @@ function generateVueProps(baseData, framework, isUseDefault) {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)) return;
   currentFramework = framework;
   useDefault = isUseDefault;
-  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(TYPES_COMBINE_MAP, framework);
+  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
+    Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+    framework,
+  );
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);
   Object.keys(vueProps).forEach((cmp) => {
     if (!vueProps[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;

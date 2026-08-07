@@ -181,12 +181,28 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
   },
-  // 高阶组件
-  Chat: ['Chat', 'ChatLoading', 'ChatItem', 'ChatContent', 'ChatAction', 'ChatInput', 'ChatSender', 'ChatReasoning'],
   ColorPicker: {
     list: ['ColorPicker', 'ColorPickerPanel'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
+};
+// 高阶组件 — Chat 系列独立拆分（key 为 PascalCase，经 kebabCase 转为输出目录名）
+export const CHAT_COMPONENT_MAP = {
+  Attachments: ['Attachments'],
+  ChatActionbar: ['ChatActionbar', 'ChatAction'], // vue-chat: ChatAction 改名 ChatActionbar,保留 ChatAction 用于兼容，后续版本将移除
+  ChatContent: ['ChatContent'],
+  ChatInput: ['ChatInput'], // vue-chat: 后续版本将移除
+  ChatItem: ['ChatItem'], // vue-chat: 后续版本将移除
+  ChatList: ['ChatList', 'Chat'], // vue-chat: Chat 改名 ChatList, 保留 Chat 用于兼容，后续版本将移除
+  ChatLoading: ['ChatLoading'],
+  ChatMarkdown: ['ChatMarkdown'],
+  ChatMessage: ['ChatMessage'],
+  ChatReasoning: ['ChatReasoning'], // vue-chat: 后续版本将移除
+  ChatSender: ['ChatSender'],
+  ChatThinking: ['ChatThinking'],
+  Chatbot: ['Chatbot'],
+  ChatEngine: ['useChat', 'useAgentToolcall', 'useAgentState'],
+  ChatRecord: ['ChatRecord'],
 };
 
 // H5 特殊组件
@@ -213,7 +229,6 @@ export const MINIPROGRAM_COMPONENT_API_MD_MAP = {
     list: ['Paragraph', 'Text', 'Title'],
     includes: ['Miniprogram', 'UniApp'],
   },
-  Chat: [],
 };
 
 // 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
@@ -384,17 +399,6 @@ export const TYPES_COMBINE_MAP = {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
   },
-  // 高阶组件
-  // Chat: [
-  //     'Chat',
-  //     'ChatLoading',
-  //     'ChatItem',
-  //     'ChatContent',
-  //     'ChatAction',
-  //     'ChatInput',
-  //     'ChatSender',
-  //     'ChatReasoning',
-  // ],
 };
 
 export const MOBILE_TYPES_COMBINE_MAP = {
@@ -422,12 +426,12 @@ export const MINIPROGRAM_TYPES_COMBINE_MAP = {
     list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
     includes: ['Miniprogram', 'UniApp'],
   },
-  Chat: [],
 };
 
 export default {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
+  CHAT_COMPONENT_MAP,
   TYPES_COMBINE_MAP,
   MOBILE_TYPES_COMBINE_MAP,
   GLOBAL_COMPONENTS_CONFIG,

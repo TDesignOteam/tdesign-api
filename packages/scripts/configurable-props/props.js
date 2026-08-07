@@ -3,7 +3,7 @@ import path from 'path';
 import chalk from 'chalk';
 import { pick } from 'lodash-es';
 import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../common.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP } from '../config/index.js';
 import map from '../map.json' with { type: 'json' };
 import { kebabCaseComponent } from '../utils.js';
 
@@ -165,7 +165,10 @@ function getCmpName(cmpName) {
 
 function generateProps(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
-  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(TYPES_COMBINE_MAP, framework);
+  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
+    Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+    framework,
+  );
   const apiInfos = getApiInfos(baseData, current);
   const basePath = current.propsBasePath;
   // 输出至 examples 目录

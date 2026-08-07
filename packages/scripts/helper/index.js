@@ -4,6 +4,7 @@
  * 命名行示例：npm run api:helper 'Vue(PC)'
  * 命名行示例：npm run api:helper 'VueNext(PC)'
  * 命名行示例：npm run api:helper 'Vue(Mobile)'
+ * 命名行示例：npm run api:helper 'UniApp'
  *
  */
 import fs from 'fs';
@@ -19,16 +20,16 @@ import {
   componentsMap,
   getApiComponentMapByFrameWork,
 } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP, getChatFrameworkConfig } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
-import { kebabCaseComponent } from '../utils.js';
+import { kebabCaseComponent, isChatComponentPath } from '../utils.js';
 import { getParentByChildComponent } from '../vitest/utils.js';
 
 const { data: ALL_API } = apiJson;
 /**
- * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)
+ * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)/UniApp
  */
 const [framework] = process.argv.slice(2);
 
@@ -45,9 +46,9 @@ const aliasComponents = {
 start();
 
 function start() {
-  if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework)) {
+  if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'UniApp'].includes(framework)) {
     return console.log(
-      chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'）`),
+      chalk.blue(`不支持向当前框架生成代码提示文件（仅支持的框架：'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'UniApp'）`),
     );
   }
   if ('Vue(Mobile)' === framework) {
@@ -105,16 +106,28 @@ function processPickOmitApi(frameworkData, api, isPick) {
   }
 }
 async function generateHelper(baseData, framework) {
-  const { webTypes, tags, attributes, volar } = getHelperData(baseData, framework);
-  write(framework, 'tags.json', tags);
-  write(framework, 'attributes.json', attributes);
-  write(framework, 'web-types.json', webTypes);
+  const current = FRAMEWORK_MAP[framework];
+  const { webTypes, tags, attributes, volar, chatVolar } = getHelperData(baseData, framework);
+  // UniApp 无 helper 文件，仅生成 volar
+  if (current.helperPath) {
+    write(framework, 'tags.json', tags);
+    write(framework, 'attributes.json', attributes);
+    write(framework, 'web-types.json', webTypes);
+  }
+  // 生成常规组件的 volar 声明文件
   writeVolar(framework, volar);
+  // 生成 Chat 高阶组件的 volar 声明文件（使用独立包名如 @tdesign-vue-next/chat）
+  if (chatVolar.length > 0) {
+    writeVolar(framework, chatVolar, true);
+  }
 }
 
 function getHelperData(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
-  const cmpMap = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, framework);
+  const cmpMap = getApiComponentMapByFrameWork(
+    Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP),
+    framework,
+  );
   const tags = {};
   const attributes = {};
   const vueComponents = [];
@@ -150,8 +163,8 @@ function getHelperData(baseData, framework) {
     const eventsList = [];
     const parentComponent = getParentByChildComponent(cmpMap, key);
     const componentDocsName = parentComponent || key;
-    const componentDocs = `${current.docsPath}${kebabCaseComponent(componentDocsName)}`;
-    const description = `${componentsMap[key].value}\n\n${componentsMap[key].label}`;
+    const componentDocs = current.docsPath ? `${current.docsPath}${kebabCaseComponent(componentDocsName)}` : '';
+    const description = componentsMap[key] ? `${componentsMap[key].value}\n\n${componentsMap[key].label}` : key;
 
     for (let i = 0; i < baseData[key].length; i++) {
       const api = baseData[key][i];
@@ -248,6 +261,17 @@ function getHelperData(baseData, framework) {
     }
   }
 
+  // 区分常规组件与 chat 组件的 volar 声明
+  const nonChatVolar = [];
+  const chatVolar = [];
+  volar.forEach((cmp) => {
+    if (isChatComponentPath(cmp)) {
+      chatVolar.push(cmp);
+    } else {
+      nonChatVolar.push(cmp);
+    }
+  });
+
   return {
     tags,
     attributes,
@@ -263,7 +287,8 @@ function getHelperData(baseData, framework) {
         },
       },
     },
-    volar: uniq(volar).sort((a, b) => a.localeCompare(b)),
+    volar: uniq(nonChatVolar).sort((a, b) => a.localeCompare(b)),
+    chatVolar: uniq(chatVolar).sort((a, b) => a.localeCompare(b)),
   };
 }
 
@@ -275,8 +300,10 @@ function write(framework, name, data) {
   writeFileRecursive(fileName, buffer);
 }
 
-async function writeVolar(framework, data) {
+async function writeVolar(framework, data, isChat = false) {
   const current = FRAMEWORK_MAP[framework];
+  const chatConfig = isChat ? getChatFrameworkConfig(framework) : null;
+  const packageName = chatConfig?.name || current.name;
   const readerGlobalComponents = data.map((item) => {
     if (item === 'IconSVG') {
       return `Icon: typeof import('${current.iconPath}')['Icon'];`;
@@ -285,15 +312,19 @@ async function writeVolar(framework, data) {
       return `${item}: typeof import('${current.iconPath}')['${item}'];`;
     }
     if (['Text', 'Title', 'Paragraph'].includes(item)) {
-      return `TTypography${item}: typeof import('${current.name}')['${item}'];`;
+      return `TTypography${item}: typeof import('${packageName}')['${item}'];`;
     }
     if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
-      return `TTable: typeof import('${current.name}')['Table'];`;
+      return `TTable: typeof import('${packageName}')['Table'];`;
     }
     if (item === 'QRCode') {
-      return `TQrcode: typeof import('${current.name}')['${item}'];`;
+      return `TQrcode: typeof import('${packageName}')['${item}'];`;
     }
-    return `T${item}: typeof import('${current.name}')['${item}'];`;
+    if (framework === 'UniApp') {
+      const kebabName = kebabCaseComponent(item);
+      return `T${item}: typeof import('${packageName}/${kebabName}/${kebabName}.vue').default`;
+    }
+    return `T${item}: typeof import('${packageName}')['${item}'];`;
   });
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
   const volarTemplate = `
@@ -309,9 +340,10 @@ async function writeVolar(framework, data) {
   }
   
   export {};
-  
+
   `;
-  writeFileRecursive(current.volarPath, await prettier.format(volarTemplate, prettierConfig));
+  const outputPath = isChat ? chatConfig.volarPath || current.volarPath : current.volarPath;
+  writeFileRecursive(outputPath, await prettier.format(volarTemplate, prettierConfig));
 }
 
 function writeFileRecursive(name, buffer) {
