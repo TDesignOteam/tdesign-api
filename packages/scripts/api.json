@@ -131563,7 +131563,8 @@
       "id": 2242,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "16"
       ],
       "component": "TableConfig",
       "field_category": 1,
@@ -131592,7 +131593,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
