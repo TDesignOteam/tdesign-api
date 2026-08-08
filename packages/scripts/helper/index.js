@@ -20,7 +20,7 @@ import {
   componentsMap,
   getApiComponentMapByFrameWork,
 } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatFrameworkConfig } from '../config/index.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatConfig } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
@@ -302,7 +302,7 @@ function write(framework, name, data) {
 
 async function writeVolar(framework, data, isChat = false) {
   const current = FRAMEWORK_MAP[framework];
-  const chatConfig = isChat ? getChatFrameworkConfig(framework) : null;
+  const chatConfig = isChat ? getChatConfig(framework) : null;
   const packageName = chatConfig?.name || current.name;
   const readerGlobalComponents = data.map((item) => {
     if (item === 'IconSVG') {

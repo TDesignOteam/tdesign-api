@@ -181,11 +181,6 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
   },
-  // 高阶组件 Chat：仅 Vue(PC)（tdesign-vue）没有独立 chat 包，仍按合并方式输出到主包目录
-  Chat: {
-    list: ['Chat', 'ChatLoading', 'ChatItem', 'ChatContent', 'ChatAction', 'ChatInput', 'ChatSender', 'ChatReasoning'],
-    includes: ['Vue(PC)'],
-  },
   ColorPicker: {
     list: ['ColorPicker', 'ColorPickerPanel'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],

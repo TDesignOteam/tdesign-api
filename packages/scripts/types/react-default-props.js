@@ -19,6 +19,7 @@ import {
 import prettierConfig from '../config/prettier.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
 import map from '../map.json' with { type: 'json' };
+import { getComponentBasePath } from '../utils.js';
 
 const CONFIG = { needPickRequiredType };
 
@@ -142,7 +143,7 @@ async function generateReactDefaultProps(baseData, framework) {
       console.warn(e);
     }
 
-    const basePath = FRAMEWORK_MAP[framework].propsBasePath;
+    const basePath = getComponentBasePath(parentCmp, FRAMEWORK_MAP[framework].propsBasePath, framework);
     const folder = path.resolve(basePath, getFolderName(parentCmp));
     fs.mkdirSync(folder, { recursive: true });
     const outputPath = path.resolve(folder, 'defaultProps.ts');
