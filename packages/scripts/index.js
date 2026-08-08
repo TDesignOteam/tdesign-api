@@ -33,7 +33,7 @@ import {
   MOBILE_COMPONENT_API_MD_MAP,
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
-  CHAT_COMPONENT_MAP,
+  getChatComponentMap,
 } from './config/index.js';
 import { generateDocs } from './docs/index.js';
 import map from './map.json' with { type: 'json' };
@@ -104,10 +104,10 @@ async function generateComponentApi() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(
     framework === 'Miniprogram' || framework === 'UniApp'
-      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP)
+      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
       : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP)
-        : Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP),
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
     framework,
   );
   const mergeList = resolveComponentMergeList(cmpMap, component);

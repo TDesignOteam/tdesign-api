@@ -3,7 +3,7 @@ import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
 import { getApiComponentMapByFrameWork } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
 import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
@@ -12,7 +12,7 @@ let currentFramework = '';
 function combineApi(allApi, component) {
   const r = { ...allApi };
   const map = getApiComponentMapByFrameWork(
-    Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP),
+    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
   Object.keys(map).forEach((cmp) => {

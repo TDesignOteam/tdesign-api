@@ -14,7 +14,7 @@ import {
   MOBILE_TYPES_COMBINE_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
-  CHAT_COMPONENT_MAP,
+  getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
@@ -99,10 +99,10 @@ function getTsTypeName(cmp) {
 async function generateReactDefaultProps(baseData, framework) {
   const relationMap = getCmpTypeCombineMap(
     framework === 'Miniprogram'
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
       : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP)
-        : Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
     framework,
   );
 

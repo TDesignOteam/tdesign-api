@@ -23,7 +23,7 @@ import {
   MOBILE_TYPES_COMBINE_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
-  CHAT_COMPONENT_MAP,
+  getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import map from '../map.json' with { type: 'json' };
@@ -593,10 +593,10 @@ async function combineTsFile(componentMap, framework) {
   const ts = getTypeScriptDesc(componentMap, framework);
   const rMap = getApiComponentMapByFrameWork(
     ['Miniprogram', 'UniApp'].includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
       : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP)
-        : Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
     framework,
   );
   Object.keys(rMap).forEach((cmp) => {

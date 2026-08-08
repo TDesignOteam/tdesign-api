@@ -11,7 +11,7 @@ import {
   getCmpTypeCombineMap,
 } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
 import { getComponentBasePath } from '../utils.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
@@ -410,7 +410,7 @@ function generateVueProps(baseData, framework, isUseDefault) {
   currentFramework = framework;
   useDefault = isUseDefault;
   FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
-    Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+    Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
     framework,
   );
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);

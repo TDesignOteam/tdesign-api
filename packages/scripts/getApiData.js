@@ -4,7 +4,7 @@
 
 import { pick } from 'lodash-es';
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
-import { COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP } from './config/index.js';
+import { COMPONENT_API_MD_MAP, getChatComponentMap } from './config/index.js';
 import { getDocsByComponent } from './docs/index.js';
 import { getTypesByComponent } from './types/index.js';
 import { getPropsByComponent } from './types/vue-props.js';
@@ -17,7 +17,7 @@ async function getApiPreviewData(apiData, map, framework, component, isUseDefaul
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(apiData, frameworkMap[framework]);
-  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP);
+  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework));
   const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
   const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, component));
   // 生成 API 类型定义

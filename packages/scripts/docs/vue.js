@@ -13,7 +13,7 @@ import {
   getComponentsMap,
   getGlobalConfigName,
 } from '../common.js';
-import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP } from '../config/const.js';
+import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/const.js';
 import languageConfig from '../config/language/description.js';
 import map from '../map.json' with { type: 'json' };
 import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
@@ -235,7 +235,7 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
 
 function getTsTypeFileName(cmp, config) {
   const rMap = getCmpTypeCombineMap(
-    Object.assign({}, TYPES_COMBINE_MAP, CHAT_COMPONENT_MAP),
+    Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
   const parentName = rMap[cmp] || cmp;

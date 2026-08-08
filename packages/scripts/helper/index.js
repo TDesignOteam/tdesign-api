@@ -20,7 +20,7 @@ import {
   componentsMap,
   getApiComponentMapByFrameWork,
 } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP, getChatFrameworkConfig } from '../config/index.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatFrameworkConfig } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
@@ -125,7 +125,7 @@ async function generateHelper(baseData, framework) {
 function getHelperData(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
   const cmpMap = getApiComponentMapByFrameWork(
-    Object.assign({}, COMPONENT_API_MD_MAP, CHAT_COMPONENT_MAP),
+    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
     framework,
   );
   const tags = {};
@@ -265,7 +265,7 @@ function getHelperData(baseData, framework) {
   const nonChatVolar = [];
   const chatVolar = [];
   volar.forEach((cmp) => {
-    if (isChatComponentPath(cmp)) {
+    if (isChatComponentPath(cmp, framework)) {
       chatVolar.push(cmp);
     } else {
       nonChatVolar.push(cmp);
@@ -342,7 +342,7 @@ async function writeVolar(framework, data, isChat = false) {
   export {};
 
   `;
-  const outputPath = isChat ? chatConfig.volarPath || current.volarPath : current.volarPath;
+  const outputPath = isChat ? chatConfig?.volarPath || current.volarPath : current.volarPath;
   writeFileRecursive(outputPath, await prettier.format(volarTemplate, prettierConfig));
 }
 

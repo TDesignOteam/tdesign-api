@@ -10,6 +10,8 @@ import {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
   CHAT_COMPONENT_MAP,
+  CHAT_FRAMEWORKS,
+  getChatComponentMap,
 } from './files-combine.js';
 import VUE_TITLE_MAP from './language/api-docs-title.js';
 
@@ -100,4 +102,6 @@ export {
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
   CHAT_COMPONENT_MAP,
+  CHAT_FRAMEWORKS,
+  getChatComponentMap,
 };
