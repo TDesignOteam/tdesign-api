@@ -368,6 +368,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'AutoCompleteConfig', label: '自动填充全局配置', type: 'TS' },
   { value: 'QRCode', label: '二维码' },
   { value: 'QRCodeConfig', label: '二维码全局配置', type: 'TS' },
+  { value: 'Split', label: '分屏视图' },
+  { value: 'SplitPanel', label: '分屏视图面板' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [
