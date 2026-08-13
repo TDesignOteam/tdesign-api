@@ -11,7 +11,7 @@ export interface TdCommentProps {
   /**
    * 操作
    */
-  actions?: Array<TNode>;
+  actions?: Array<TNode> | TNode;
   /**
    * 作者
    */

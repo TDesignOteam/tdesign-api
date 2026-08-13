@@ -39752,7 +39752,7 @@
       "create_time": "2021-09-06 07:46:14",
       "update_time": "2021-09-14 03:24:52",
       "event_output": null,
-      "custom_field_type": "Array<TNode>",
+      "custom_field_type": "Array<TNode> | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

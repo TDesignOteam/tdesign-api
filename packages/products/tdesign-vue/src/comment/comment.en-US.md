@@ -6,7 +6,7 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-actions | Array / Slot / Function | - | Typescript: `Array<TNode>`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+actions | Array / Slot / Function | - | Typescript: `Array<TNode> \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 author | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 avatar | String / Object / Slot / Function | - | Typescript: `string \| AvatarProps \| TNode`，[Avatar API Documents](./avatar?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/comment/type.ts) | N
 content | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
