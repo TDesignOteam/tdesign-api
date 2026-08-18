@@ -12,6 +12,9 @@ import {
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  CHAT_COMPONENT_MAP,
+  CHAT_FRAMEWORKS,
+  getChatComponentMap,
 } from './const.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -85,6 +88,14 @@ const FRAMEWORK_MAP = {
     docsPath: 'https://tdesign.tencent.com/vue-next/components/',
     name: 'tdesign-vue-next',
     TNode,
+    chat: {
+      name: '@tdesign-vue-next/chat',
+      apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
+      tsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
+      propsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
+      helperPath: `${BASE_PATH_URL}/tdesign-vue-next/packages/tdesign-vue-next-chat/helper`,
+      volarPath: `${BASE_PATH_URL}/tdesign-vue-next/packages/tdesign-vue-next-chat/global.d.ts`,
+    },
   },
   'React(PC)': {
     iconPath: 'tdesign-icons-react',
@@ -105,6 +116,12 @@ const FRAMEWORK_MAP = {
     componentRelativiePath: '../',
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
     TNode,
+    chat: {
+      name: '@tdesign-react/chat',
+      apiBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
+      tsBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
+      propsBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
+    },
   },
   'Angular(PC)': {
     apiBasePath: '',
@@ -162,6 +179,7 @@ const FRAMEWORK_MAP = {
     unitBasePath: '',
   },
   Miniprogram: {
+    name: 'tdesign-miniprogram',
     iconPath: 'tdesign-icons-miniprogram',
     apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/components`,
     apiEnglishBasePath: '',
@@ -178,8 +196,14 @@ const FRAMEWORK_MAP = {
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/miniprogram`,
     getDocs: getVueApiDocs,
     titleMap: VUE_TITLE_MAP,
+    chat: {
+      apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
+      tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
+      propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
+    },
   },
   UniApp: {
+    name: 'tdesign-uniapp',
     iconPath: 'tdesign-icons-uniapp',
     apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-components`,
     apiEnglishBasePath: '',
@@ -197,9 +221,21 @@ const FRAMEWORK_MAP = {
     vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/uniapp`,
     getDocs: getVueApiDocs,
     titleMap: VUE_TITLE_MAP,
-    volarPath: `${BASE_PATH_URL}/tdesign-vue-next/packages/tdesign-vue-next/global.d.ts`,
+    volarPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/tdesign-uniapp/global.d.ts`,
+    chat: {
+      name: '@tdesign/uniapp-chat',
+      apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,
+      tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,
+      propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,
+      volarPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/tdesign-uniapp-chat/global.d.ts`,
+    },
   },
 };
+
+// 获取指定框架的 Chat 独立包配置
+function getChatConfig(framework) {
+  return FRAMEWORK_MAP[framework]?.chat || null;
+}
 
 export {
   FRAMEWORK_MAP,
@@ -210,4 +246,8 @@ export {
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  CHAT_COMPONENT_MAP,
+  CHAT_FRAMEWORKS,
+  getChatComponentMap,
+  getChatConfig,
 };
