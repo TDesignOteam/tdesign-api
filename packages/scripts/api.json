@@ -152944,8 +152944,7 @@
     {
       "id": 1559,
       "platform_framework": [
-        "8",
-        "16"
+        "64"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -152956,7 +152955,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效",
+      "field_desc_zh": "添加按钮内容。值为 slots 时，表示使用插槽渲染",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -152974,8 +152973,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -152985,7 +152983,8 @@
     {
       "id": 1690274500,
       "platform_framework": [
-        "64",
+        "8",
+        "16",
         "128"
       ],
       "component": "Upload",
@@ -153015,7 +153014,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram",
+        "Vue(Mobile)",
+        "React(Mobile)",
         "UniApp"
       ],
       "field_type_text": [
