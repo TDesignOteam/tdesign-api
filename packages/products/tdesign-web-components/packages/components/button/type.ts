@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
 import type { TNode, TElement, SizeEnum } from '@tdesign/web-components-shared/common';
 
 export interface TdButtonProps {
@@ -17,6 +16,10 @@ export interface TdButtonProps {
    * 按钮内容，同 content
    */
   children?: TNode;
+  /**
+   * 按钮内容
+   */
+  content?: TNode;
   /**
    * 禁用状态。优先级：Button.disabled > Form.disabled
    */
@@ -40,14 +43,15 @@ export interface TdButtonProps {
    */
   icon?: TElement;
   /**
+   * 在host标签上忽略的属性，例如`['style']`就不会生成style属性
+   * @default []
+   */
+  ignoreAttributes?: Array<string>;
+  /**
    * 是否显示为加载状态
    * @default false
    */
   loading?: boolean;
-  /**
-   * 透传 Loading 组件全部属性
-   */
-  loadingProps?: LoadingProps;
   /**
    * 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形
    * @default rectangle
