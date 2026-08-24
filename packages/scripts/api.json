@@ -30362,7 +30362,7 @@
       "create_time": "2026-08-24 15:26:25",
       "update_time": "2026-08-24 15:26:25",
       "event_output": null,
-      "custom_field_type": "ChatLoadingAnimationType【type ChatLoadingAnimationType = 'skeleton' | 'moving' | 'gradient' | 'circle' | 'dots'】",
+      "custom_field_type": "ChatLoadingAnimation【type ChatLoadingAnimation = 'skeleton' | 'moving' | 'gradient' | 'circle' | 'dots'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
