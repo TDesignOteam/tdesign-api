@@ -137,12 +137,17 @@ const FRAMEWORK_MAP = {
     getDocs: getVueApiDocs,
     titleMap: VUE_TITLE_MAP,
     commonTypePath: 'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/packages/components/common.ts',
-    componentPath:
-        'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/',
+    componentPath:'https://github.com/TDesignOteam/tdesign-web-components/blob/develop/src/',
     commonRelativePath: '../common',
     componentRelativiePath: '../',
-    vscodePath: `${BASE_PATH_URL}/vscode-tdesign/document/react`,
+    vscodePath: '',
     TNode,
+    chat: {
+      name: '@tdesign/web-components-chat',
+      apiBasePath: `${BASE_PATH_URL}/tdesign-web-components/packages/pro-components/chat`,
+      tsBasePath: `${BASE_PATH_URL}/tdesign-web-components/packages/pro-components/chat`,
+      propsBasePath: `${BASE_PATH_URL}/tdesign-web-components/packages/pro-components/chat`,
+    },
   },
   'Vue(Mobile)': {
     iconPath: 'tdesign-icons-vue-next',
