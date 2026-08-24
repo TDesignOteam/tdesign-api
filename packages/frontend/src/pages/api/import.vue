@@ -481,7 +481,7 @@ defineExpose({ formData });
   .t-form-content.platform,
   .t-form-content.api-type {
     label.t-checkbox {
-      width: 150px;
+      width: 170px;
       display: inline-block;
       margin-top: 5px;
     }
