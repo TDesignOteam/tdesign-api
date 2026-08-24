@@ -42,6 +42,12 @@ router.post('/generate-api', (ctx: Koa.Context) => {
   };
 });
 
+router.post('/unit-test', async (ctx: Koa.Context) => {
+  ctx.body = await ComponentApiController.generateUnitTest(
+    ctx.request.body as Parameters<typeof ComponentApiController.generateUnitTest>[0],
+  );
+});
+
 router.get('/export-api-data', async(ctx: Koa.Context) => {
   ctx.body = await ComponentApiController.exportAPI();
 });
