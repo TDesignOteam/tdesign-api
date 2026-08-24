@@ -30268,8 +30268,7 @@
       "id": 1742882111,
       "platform_framework": [
         "1",
-        "2",
-        "4"
+        "2"
       ],
       "component": "ChatLoading",
       "field_category": 1,
@@ -30278,7 +30277,7 @@
         "1"
       ],
       "field_default_value": "gradient",
-      "field_enum": "moving/gradient",
+      "field_enum": "moving/gradient/dots",
       "field_desc_zh": "加载的状态形式",
       "field_desc_en": null,
       "field_required": 0,
@@ -30298,8 +30297,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "WebComponents(PC)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String"
@@ -30345,10 +30343,48 @@
       ]
     },
     {
+      "id": 1787585185,
+      "platform_framework": [
+        "4"
+      ],
+      "component": "ChatLoading",
+      "field_category": 1,
+      "field_name": "animation",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "moving",
+      "field_enum": "",
+      "field_desc_zh": "加载的状态形式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-24 15:26:25",
+      "update_time": "2026-08-24 15:26:25",
+      "event_output": null,
+      "custom_field_type": "ChatLoadingAnimationType【type ChatLoadingAnimationType = 'skeleton' | 'moving' | 'gradient' | 'circle' | 'dots'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "WebComponents(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 1742882019,
       "platform_framework": [
         "1",
         "2",
+        "4",
         "64",
         "128"
       ],
@@ -30380,6 +30416,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "WebComponents(PC)",
         "Miniprogram",
         "UniApp"
       ],
