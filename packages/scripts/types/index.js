@@ -410,7 +410,7 @@ function formatAliasImportsPath(imports, framework) {
 function formatImportsPath(imports, framework) {
   let newImports = imports.concat();
   if (
-    ['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)
+    ['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'WebComponents(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)
   ) {
     newImports = formatAliasImportsPath(imports, framework);
   }
@@ -642,7 +642,7 @@ async function combineTsFile(componentMap, framework) {
     const bodyDesc = typeof ts[cmp].body === 'string' ? ts[cmp].body : ts[cmp].body.filter((v) => !!v).join('\n\n');
     const exportDesc = ts[cmp].exports.filter((v) => !!v).join('\n\n');
     if (
-      ['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'React(Mobile)', 'UniApp'].includes(
+      ['React(PC)', 'Vue(PC)', 'VueNext(PC)', 'WebComponents(PC)', 'Vue(Mobile)', 'Miniprogram', 'React(Mobile)', 'UniApp'].includes(
         framework,
       )
     ) {

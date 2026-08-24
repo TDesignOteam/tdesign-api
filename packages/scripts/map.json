@@ -77,6 +77,10 @@
         "value": "2"
       },
       {
+        "label": "WebComponents(PC)",
+        "value": "4"
+      },
+      {
         "label": "Vue(Mobile)",
         "value": "8"
       },
