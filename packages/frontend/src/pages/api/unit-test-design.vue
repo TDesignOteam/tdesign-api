@@ -35,24 +35,25 @@
         </t-radio-group>
       </p>
       <t-tabs v-model="tab" :list="tabList" style="margin-top: -16px; width: 100%" />
-      <div class="unit-test-code">
-        <pre><code class="language-javascript" v-html="unitTestCode"></code></pre>
-      </div>
+      <t-loading :loading="codeLoading" style="width: 100%">
+        <div class="unit-test-code">
+          <pre><code class="language-javascript" v-html="unitTestCode"></code></pre>
+        </div>
+      </t-loading>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted, nextTick } from 'vue';
-import { ChevronRightDoubleIcon } from 'tdesign-icons-vue-next';
-import UnitTestUI from './unit-test/unit-test-ui.vue';
-import { cmpApiInstance } from '../../services/api-server';
-import { getOneUnitTest, getComponentUnitTests } from '../../../../scripts/vitest';
-import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON, loadScript } from './util';
-import prettierConfig from '../../../../scripts/config/prettier';
-import prettier from 'https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs';
 import parserBabel from 'https://tdesign.gtimg.com/js/prettier%402.8.1-parser-babel.mjs';
+import prettier from 'https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs';
 import Prism from 'prismjs';
+import { ChevronRightDoubleIcon } from 'tdesign-icons-vue-next';
+import { ref, computed, watch, onMounted, nextTick } from 'vue';
+import prettierConfig from '../../../../scripts/config/prettier';
+import { cmpApiInstance } from '../../services/api-server';
+import UnitTestUI from './unit-test/unit-test-ui.vue';
+import { getCombinedComponentsByCurrentName, getCmpTypeCombineMap, parseJSON, loadScript } from './util';
 import 'prismjs/components/prism-json';
 import '@tdesign/site-components/lib/styles/prism-theme.less';
 
@@ -77,15 +78,14 @@ const tabList = ref([
   { label: 'React(Mobile)', value: 'React(Mobile)' },
 ]);
 const loading = ref(false);
+const codeLoading = ref(false);
 const componentApiData = ref([]);
 const testDescription = ref('');
 const jsonError = ref('');
 const unitTestType = ref('current');
 const jsonEditor = ref(null);
-
-const unitTestCode = computed(() => {
-  return getInnerUnitTestCode();
-});
+const unitTestCode = ref('');
+let codeRequestCount = 0;
 
 const currentTestJSON = computed(() => {
   try {
@@ -156,13 +156,33 @@ function checkInFramework() {
   return props.apiInfo && props.apiInfo.platform_framework_text?.includes(framework);
 }
 
-function getInnerUnitTestCode() {
-  if (!props.apiInfo || !componentApiData.value.length) return;
+watch(
+  () => [tab.value, unitTestType.value, testDescription.value, componentApiData.value],
+  () => {
+    generateUnitTestCode();
+  },
+  { immediate: true },
+);
+
+watch(
+  () => props.apiInfo,
+  () => {
+    generateUnitTestCode();
+  },
+);
+
+async function generateUnitTestCode() {
+  if (!props.apiInfo || !componentApiData.value.length) {
+    unitTestCode.value = '';
+    return;
+  }
   if (tab.value === 'JSON') {
     const testJSONString = JSON.stringify(currentTestJSON.value, '', 2);
-    return Prism.highlight(testJSONString, Prism.languages.json, 'json');
+    unitTestCode.value = Prism.highlight(testJSONString, Prism.languages.json, 'json');
+    return;
   }
 
+  const requestCount = ++codeRequestCount;
   let codeData = '';
   try {
     const rootComponentMap = getCmpTypeCombineMap(tab.value);
@@ -170,35 +190,66 @@ function getInnerUnitTestCode() {
     if (unitTestType.value === 'current') {
       if (Object.keys(currentTestJSON.value).length !== 0 && checkInFramework()) {
         const testData = tab.value.indexOf('PC') !== -1 ? currentTestJSON.value.PC : currentTestJSON.value.Mobile;
-        const { oneUnitTests } = getOneUnitTest(tab.value, props.apiInfo.component, props.apiInfo, testData);
+        codeLoading.value = true;
+        const res = await cmpApiInstance({
+          method: 'post',
+          url: '/cmp/unit-test',
+          data: {
+            type: 'one',
+            framework: tab.value,
+            component: props.apiInfo.component,
+            apiData: props.apiInfo,
+            test: testData,
+          },
+        });
+        if (requestCount !== codeRequestCount) return;
+        const { oneUnitTests } = res.data.data || {};
         codeData = oneUnitTests.join('');
       } else {
         codeData = "console.log('current unit test is empty')";
       }
     } else if (unitTestType.value === 'all') {
-      codeData = getComponentUnitTests(tab.value, finalComponent, componentApiData.value, props.map);
+      codeLoading.value = true;
+      const res = await cmpApiInstance({
+        method: 'post',
+        url: '/cmp/unit-test',
+        data: {
+          type: 'all',
+          framework: tab.value,
+          component: finalComponent,
+          apiData: componentApiData.value,
+          map: props.map,
+        },
+      });
+      if (requestCount !== codeRequestCount) return;
+      codeData = res.data.data || '';
     } else {
+      unitTestCode.value = '';
       return;
     }
   } catch (e) {
+    if (requestCount !== codeRequestCount) return;
     console.warn(e);
     const error = 'Unit test generated fail, check the core code first.';
     codeData = `console.log('${error}')`;
-    return Prism.highlight(codeData, Prism.languages.javascript, 'javascript');
+    unitTestCode.value = Prism.highlight(codeData, Prism.languages.javascript, 'javascript');
+    codeLoading.value = false;
+    return;
   }
 
+  codeLoading.value = false;
   try {
     const code = prettier.format(codeData, {
       ...prettierConfig,
       parser: 'babel',
       plugins: [parserBabel],
     });
-    return Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    unitTestCode.value = Prism.highlight(code, Prism.languages.javascript, 'javascript');
   } catch (e) {
     console.warn(e);
     const error = 'unit test code has syntax error. check test code please.';
     const code = `console.log('${error}')`;
-    return Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    unitTestCode.value = Prism.highlight(code, Prism.languages.javascript, 'javascript');
   }
 }
 

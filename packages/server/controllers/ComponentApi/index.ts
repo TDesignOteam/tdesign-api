@@ -2,6 +2,7 @@ import moment from 'moment';
 import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
 import TAPI from '../../services';
 import execScript from '../../services/execute';
+import { generateComponentUnitTests, generateOneUnitTest } from '../../services/unit-test';
 import {
   PLATFORM_MAP,
   FRAMEWORK_MAP,
@@ -202,6 +203,43 @@ async function exportAPI()
   };
 }
 
+export interface GenerateUnitTestParams {
+  type: 'one' | 'all';
+  framework: string;
+  component: string;
+  apiData: Record<string, unknown> | Array<Record<string, unknown>>;
+  test?: Record<string, unknown>;
+  map?: Record<string, unknown>;
+}
+
+async function generateUnitTest(params: GenerateUnitTestParams) {
+  const { type, framework, component, apiData, test, map } = params;
+  if (type === 'one') {
+    const data = await generateOneUnitTest({
+      framework,
+      component,
+      apiData: apiData as Record<string, unknown>,
+      test: test || {},
+    });
+    return {
+      code: 0,
+      msg: 'success',
+      data,
+    };
+  }
+  const data = await generateComponentUnitTests({
+    framework,
+    component,
+    apiData: apiData as Array<Record<string, unknown>>,
+    map: map || {},
+  });
+  return {
+    code: 0,
+    msg: 'success',
+    data,
+  };
+}
+
 export default {
   apiCreate,
   getMap,
@@ -210,4 +248,5 @@ export default {
   apiUpdate,
   generateAPI,
   exportAPI,
+  generateUnitTest,
 };
