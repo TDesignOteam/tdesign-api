@@ -176,13 +176,14 @@ async function generateUnitTestCode() {
     unitTestCode.value = '';
     return;
   }
+  const requestCount = ++codeRequestCount;
   if (tab.value === 'JSON') {
     const testJSONString = JSON.stringify(currentTestJSON.value, '', 2);
     unitTestCode.value = Prism.highlight(testJSONString, Prism.languages.json, 'json');
+    codeLoading.value = false;
     return;
   }
 
-  const requestCount = ++codeRequestCount;
   let codeData = '';
   try {
     const rootComponentMap = getCmpTypeCombineMap(tab.value);
@@ -225,6 +226,7 @@ async function generateUnitTestCode() {
       codeData = res.data.data || '';
     } else {
       unitTestCode.value = '';
+      codeLoading.value = false;
       return;
     }
   } catch (e) {
