@@ -27,7 +27,7 @@ catalog:
   "@typescript-eslint/parser": "^8.65.0"
   "@vitejs/plugin-vue": "^6.0.8"
   autoprefixer: "^10.5.4"
-  axios: "^1.19.0"
+  axios: "^1.20.0"
   chalk: "^6.0.0"
   codemirror: "^6.0.2"
   cross-env: "^10.1.0"
