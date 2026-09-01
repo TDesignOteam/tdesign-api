@@ -23,5 +23,4 @@ export const buttonPropTypes = {
   type: String,
   variant: String,
   onClick: Function,
-  innerStyle: String,
 };

@@ -7,5 +7,4 @@
 export const chatLoadingPropTypes = {
   animation: String,
   text: String,
-  innerStyle: String,
 };
