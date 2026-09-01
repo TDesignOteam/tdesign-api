@@ -22,6 +22,12 @@ import { getComponentBasePath } from '../utils.js';
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
+// Omi propTypes 中 TNode 可接受的全部构造函数
+// TNode<T> = VNode<T> | ((props: T) => VNode) | object | string | number | boolean | null
+const T_NODE_TYPES = ['Function', 'Object', 'String', 'Number'];
+// TElement<T> = WeElement | ((props: T) => WeElement)
+const T_ELEMENT_TYPES = ['Object', 'Function'];
+
 function getComponentsMap(components) {
   const map = {};
   components.forEach((item) => {
@@ -32,13 +38,25 @@ function getComponentsMap(components) {
 
 // 将 API 基础类型映射为 omi propTypes 的构造函数
 function getPropTypeValue(api) {
-  let types = api.field_type_text;
-  // 过滤 TNode 类型，Omi 中 TNode 使用 Function 声明
-  types = types.map((t) => (t === 'TNode' ? 'Function' : t)).filter((v) => !!v);
-  if (!types.length) return;
-  const typeName = types.length <= 1 ? types[0] : `[${types.join(', ')}]`;
-  // 复杂类型（多类型、Function/Object/Array）仍需保留，供类型校验使用
-  return typeName;
+  const rawTypes = api.field_type_text;
+  // 将 TNode/TElement 展开为对应的 Omi 构造函数列表
+  // TNode/TElement 展开结果置于最前，保证 `children` 等插槽类属性类型顺序与 Omi 组件手写保持一致
+  const expanded = rawTypes.flatMap((t) => {
+    if (t === 'TNode') return T_NODE_TYPES;
+    if (t === 'TElement') return T_ELEMENT_TYPES;
+    return [];
+  });
+  const original = rawTypes.filter((t) => t !== 'TNode' && t !== 'TElement');
+  const types = [...expanded, ...original].filter((v) => !!v);
+  // 去重并保持首次出现顺序
+  const uniqueTypes = [...new Set(types)];
+  if (!uniqueTypes.length) return;
+  return uniqueTypes.length <= 1 ? uniqueTypes[0] : `[${uniqueTypes.join(', ')}]`;
+}
+
+// 将 Events 类别的事件名转换为 propTypes 的 key（click -> onClick）
+function getEventPropName(fieldName) {
+  return `on${upperFirst(fieldName)}`;
 }
 
 function getOneComponentPropTypes(cmp, apiList) {
@@ -46,14 +64,24 @@ function getOneComponentPropTypes(cmp, apiList) {
   const propTypes = [];
   apiList.forEach((api) => {
     if (api.deprecated) return;
-    if (api.field_category_text !== 'Props') return;
     if (api.html_attribute) return;
+    const { field_category_text: category } = api;
+    // 仅处理 Props 和 Events
+    if (!['Props', 'Events'].includes(category)) return;
+    // Events 类型没有 field_type_text，统一映射为 Function
+    if (category === 'Events') {
+      const eventName = getEventPropName(api.field_name);
+      propTypes.push(`${eventName}: Function,`);
+      return;
+    }
     const typeValue = getPropTypeValue(api);
     if (!typeValue) return;
     // 非受控属性添加前缀 default
     const name = api.support_default_value ? `default${upperFirst(api.field_name)}` : api.field_name;
     propTypes.push(`${name}: ${typeValue},`);
   });
+  // StyledProps 通用属性（所有 WebComponents 组件继承 StyledProps）
+  propTypes.push('innerStyle: String,');
   if (!propTypes.length) return;
   const propTypesStr = `export const ${lowerFirst(cmp)}PropTypes = {\n${propTypes.map((p) => `  ${p}`).join('\n')}\n};`;
   return propTypesStr;
