@@ -39,6 +39,7 @@ import { generateDocs } from './docs/index.js';
 import map from './map.json' with { type: 'json' };
 import { generateTypes } from './types/index.js';
 import { generateReactDefaultProps } from './types/react-default-props.js';
+import { generateWebComponentsPropTypes } from './types/web-components-props.js';
 import { generateVueProps } from './types/vue-props.js';
 import { generateUnitTest } from './unit/index.js';
 import { generateVitestUnitCase } from './vitest/generateVitestUnitCase.js';
@@ -126,6 +127,10 @@ async function generateComponentApi() {
     // 生成 React defaultProps 文件
     if (framework.indexOf('React') !== -1 || framework.indexOf('WebComponents') !== -1) {
       await generateReactDefaultProps(baseData, framework);
+    }
+    // 生成 WebComponents propTypes 文件（供 static propTypes 使用）
+    if (framework.indexOf('WebComponents') !== -1) {
+      await generateWebComponentsPropTypes(baseData, framework);
     }
     // 生成 props 单元测试文件
     if (isUseUnitTest) {
