@@ -34785,6 +34785,41 @@
       ]
     },
     {
+      "id": 1788345610,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "tooltipProps",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Tooltip 组件的全部特性。用于自定义悬浮气泡内容和样式，作用于 Checkbox 的勾选框本体",
+      "field_desc_en": "Transparent all feature props of the Tooltip. Used to customize the hover popup content and style, applied to the checkbox input box only",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-02 10:40:10",
+      "update_time": "2026-09-02 10:40:10",
+      "event_output": null,
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 490,
       "platform_framework": [
         "1",
