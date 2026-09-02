@@ -189,7 +189,7 @@ export const COMPONENT_API_MD_MAP = {
 // 支持 Chat 独立拆分（独立包 pro-components/chat）的框架。
 // 仅这些框架的 Chat 组件走 CHAT_COMPONENT_MAP 拆分逻辑；
 // 其余框架（如 Vue(PC)、Vue(Mobile)）没有独立 chat 包，仍按常规组件在各自框架目录中输出。
-export const CHAT_FRAMEWORKS = ['VueNext(PC)', 'React(PC)', 'Miniprogram', 'UniApp'];
+export const CHAT_FRAMEWORKS = ['VueNext(PC)', 'React(PC)', 'WebComponents(PC)','Miniprogram', 'UniApp'];
 
 // 高阶组件 — Chat 系列独立拆分（key 为 PascalCase，经 kebabCase 转为输出目录名）
 export const CHAT_COMPONENT_MAP = {
