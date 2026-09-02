@@ -18,7 +18,7 @@ data | Object | - | 上传请求所需的额外字段，默认字段有 `file`�
 default | String / Slot / Function | - | 非拖拽场景，指触发上传的元素，如：“选择文件”。如果是拖拽场景，则是指拖拽区域。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 disabled | Boolean | undefined | 是否禁用组件 | N
 dragContent | String / Slot / Function | - | 用于自定义拖拽区域，`theme=custom` 且 `draggable=true` 时有效。TS 类型：`TNode \| TNode<TriggerContext>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-draggable | Boolean | undefined | 是否启用拖拽上传，不同的组件风格默认值不同。`theme=file` 或 `theme=image` 时有效 | N
+draggable | Boolean | undefined | 是否启用拖拽上传。`theme` 非 `file-input` 时有效。`theme=file-flow`/`theme=image-flow` 时默认值为 `true`；`theme=file`/`theme=image`/`theme=custom` 时默认值为 `false` | N
 fileListDisplay | Slot / Function | - | 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效。TS 类型：`TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 files | Array | [] | 已上传文件列表，同 `value`。TS 类型：`UploadFile`。支持语法糖 `v-model:files`。TS 类型：`Array<T>` | N
 defaultFiles | Array | [] | 已上传文件列表，同 `value`。TS 类型：`UploadFile`。非受控属性。TS 类型：`Array<T>` | N
@@ -55,7 +55,7 @@ value | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFi
 defaultValue | Array | [] | 已上传文件列表，同 `files`。TS 类型：`UploadFile`。非受控属性。TS 类型：`Array<T>` | N
 withCredentials | Boolean | false | 上传请求时是否携带 cookie | N
 onCancelUpload | Function |  | TS 类型：`() => void`<br/>点击「取消上传」时触发 | N
-onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/> | N
+onChange | Function |  | TS 类型：`(value: Array<T>, context: UploadChangeContext) => void`<br/>已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/> | N
 onDragenter | Function |  | TS 类型：`(context: { e: DragEvent }) => void`<br/>进入拖拽区域时触发 | N
 onDragleave | Function |  | TS 类型：`(context: { e: DragEvent }) => void`<br/>离开拖拽区域时触发 | N
 onDrop | Function |  | TS 类型：`(context: { e: DragEvent }) => void`<br/>拖拽结束时触发 | N
@@ -75,7 +75,7 @@ onWaitingUploadFilesChange | Function |  | TS 类型：`(context: { files: Array
 名称 | 参数 | 描述
 -- | -- | --
 cancel-upload | \- | 点击「取消上传」时触发
-change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail'`<br/>
+change | `(value: Array<T>, context: UploadChangeContext)` | 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/upload/type.ts)。<br/>`interface UploadChangeContext { e?: MouseEvent \| ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }`<br/><br/>`type UploadChangeTrigger = 'add' \| 'remove' \| 'abort' \| 'progress-success' \| 'progress' \| 'progress-fail' \| 'sort'`<br/>
 dragenter | `(context: { e: DragEvent })` | 进入拖拽区域时触发
 dragleave | `(context: { e: DragEvent })` | 离开拖拽区域时触发
 drop | `(context: { e: DragEvent })` | 拖拽结束时触发
