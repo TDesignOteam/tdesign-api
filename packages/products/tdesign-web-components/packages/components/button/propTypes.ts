@@ -23,4 +23,8 @@ export const buttonPropTypes = {
   type: String,
   variant: String,
   onClick: Function,
+  className: String,
+  style: Object,
+  innerClass: String,
+  innerStyle: Object,
 };
