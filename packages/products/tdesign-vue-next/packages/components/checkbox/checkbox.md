@@ -17,6 +17,7 @@ lazyLoad | Boolean | false | 是否启用懒加载。数据量大时建议开启
 name | String | - | HTML 元素原生属性 | N
 readonly | Boolean | undefined | 只读状态 | N
 title | String | - | HTML 原生属性 | N
+tooltipProps | \- | - | 透传 Tooltip 组件的全部特性。用于自定义悬浮气泡内容和样式，作用于 Checkbox 的勾选框本体。TS 类型：`TooltipProps`，[Tooltip API Documents](./tooltip?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/checkbox/type.ts) | N
 value | String / Number / Boolean | - | 多选框的值。TS 类型：`string \| number \| boolean` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>值变化时触发 | N
 
