@@ -5,6 +5,10 @@
  * */
 
 export const buttonPropTypes = {
+  className: String,
+  style: Object,
+  innerClass: String,
+  innerStyle: Object,
   block: Boolean,
   children: [Function, Object, String, Number],
   content: [Function, Object, String, Number],
@@ -23,8 +27,4 @@ export const buttonPropTypes = {
   type: String,
   variant: String,
   onClick: Function,
-  className: String,
-  style: Object,
-  innerClass: String,
-  innerStyle: Object,
 };

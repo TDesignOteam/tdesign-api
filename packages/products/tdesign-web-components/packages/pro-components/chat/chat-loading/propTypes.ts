@@ -5,10 +5,10 @@
  * */
 
 export const chatLoadingPropTypes = {
-  animation: String,
-  text: String,
   className: String,
   style: Object,
   innerClass: String,
   innerStyle: Object,
+  animation: String,
+  text: String,
 };

@@ -81,10 +81,12 @@ function getOneComponentPropTypes(cmp, apiList) {
     propTypes.push(`${name}: ${typeValue},`);
   });
   // StyledProps 通用属性（所有 WebComponents 组件继承 StyledProps）
-  propTypes.push('className: String,');
-  propTypes.push('style: Object,');
-  propTypes.push('innerClass: String,');
-  propTypes.push('innerStyle: Object,');
+  propTypes.unshift(
+    'className: String,',
+    'style: Object,',
+    'innerClass: String,',
+    'innerStyle: Object,',
+  );
   if (!propTypes.length) return;
   const propTypesStr = `export const ${lowerFirst(cmp)}PropTypes = {\n${propTypes.map((p) => `  ${p}`).join('\n')}\n};`;
   return propTypesStr;
