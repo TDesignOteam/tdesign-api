@@ -1,0 +1,90 @@
+:: BASE_DOC ::
+
+## API
+
+### Tree Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
+actived | Array | - | `v-model:actived` is supported。Typescript: `Array<TreeNodeValue>` | N
+allow-drop | Function | - | Determine whether the node can execute the drop operation。Typescript: `(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean` | N
+allow-fold-node-on-filter | Boolean | false | \- | N
+check-strictly | Boolean | false | \- | N
+checkable | Boolean | false | \- | N
+data | Array | [] | Typescript: `Array<T>` | N
+disabled | Boolean | - | \- | N
+empty | String | '' | \- | N
+expand-all | Boolean | false | \- | N
+expand-level | Number | 0 | \- | N
+expand-mutex | Boolean | false | \- | N
+expand-on-click-node | Boolean | false | \- | N
+expand-parent | Boolean | false | \- | N
+expanded | Array | [] | `v-model:expanded` is supported。Typescript: `Array<TreeNodeValue>` | N
+filter | Function | - | Typescript: `(node: TreeNodeModel<T>) => boolean` | N
+hover | Boolean | - | \- | N
+icon | Boolean | true | \- | N
+keys | Object | - | alias field name in data。Typescript: `TreeKeysType`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
+label | String / Boolean | true | \- | N
+lazy | Boolean | true | \- | N
+line | Boolean | false | \- | N
+load | Function | - | Typescript: `(node: TreeNodeModel<T>) => Promise<Array<T>>` | N
+transition | Boolean | true | \- | N
+value | Array | [] | `v-model:value` is supported。Typescript: `Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tree/type.ts) | N
+default-value | Array | [] | uncontrolled property。Typescript: `Array<TreeNodeValue>` `type TreeNodeValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tree/type.ts) | N
+value-mode | String | onlyLeaf | options: onlyLeaf/parentFirst/all | N
+
+### Tree Events
+
+name | params | description
+-- | -- | --
+active | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'setItem' })` | \-
+change | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' \| 'setItem' })` | \-
+click | `(context: { node: TreeNodeModel<T>; e: MouseEvent })` | \-
+expand | `(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' })` | \-
+load | `(context: { node: TreeNodeModel<T> })` | \-
+
+### TreeInstanceFunctions 组件实例方法
+
+name | params | return | description
+-- | -- | -- | --
+append-to | `(value: TreeNodeValue, newData: T \| Array<T>)` | \- | required
+get-index | `(value: TreeNodeValue)` | `number` | required
+get-item | `(value: TreeNodeValue)` | `TreeNodeModel<T>` | required
+get-items | `(value?: TreeNodeValue)` | `Array<TreeNodeModel<T>>` | required
+get-parent | `(value: TreeNodeValue)` | `TreeNodeModel<T>` | required
+get-parents | `(value: TreeNodeValue)` | `TreeNodeModel<T>[]` | required
+get-path | `(value: TreeNodeValue)` | `TreeNodeModel<T>[]` | required
+get-tree-data | `(value?: TreeNodeValue)` | `Array<T>` | required。get tree struct data
+insert-after | `(value: TreeNodeValue, newData: T)` | \- | required
+insert-before | `(value: TreeNodeValue, newData: T)` | \- | required
+remove | `(value: TreeNodeValue)` | \- | required
+set-item | `(value: TreeNodeValue, options: TreeNodeState)` | \- | required
+
+### Tree Slots
+
+name | Description
+-- | --
+empty | \-
+icon | \-
+label | \-
+line | \-
+operations | \-
+
+### TreeNodeState
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+activable | Boolean | false | \- | N
+actived | Boolean | false | \- | N
+checkable | Boolean | false | \- | N
+checked | Boolean | false | \- | N
+disabled | Boolean | false | \- | N
+draggable | Boolean | true | \- | N
+expand-mutex | Boolean | false | \- | N
+expanded | Boolean | false | \- | N
+indeterminate | Boolean | false | \- | N
+label | String | - | \- | N
+loading | Boolean | false | \- | N
+value | String / Number | - | \- | N
+visible | Boolean | false | \- | N

@@ -1,0 +1,52 @@
+{
+  "name": "tdesign-api-statics",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "watch": "vite build --watch",
+    "build": "vite build",
+    "lint:fix": "eslint ./packages --fix"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "catalog:",
+    "@codemirror/theme-one-dark": "catalog:",
+    "@tdesign/site-components": "catalog:",
+    "axios": "catalog:",
+    "codemirror": "catalog:",
+    "lodash": "catalog:",
+    "tdesign-icons-vue-next": "catalog:",
+    "tdesign-vue-next": "catalog:",
+    "vue": "catalog:",
+    "vue-codemirror": "catalog:",
+    "vue-eslint-parser": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@types/lodash": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "autoprefixer": "catalog:",
+    "cssnano": "catalog:",
+    "cz-conventional-changelog": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-promise": "catalog:",
+    "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
+    "less": "catalog:",
+    "postcss": "catalog:",
+    "prismjs": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "author": "tdesign",
+  "license": "MIT"
+}

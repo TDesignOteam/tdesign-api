@@ -1,0 +1,62 @@
+:: BASE_DOC ::
+
+## API
+
+### Swiper Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
+autoplay | Boolean | true | \- | N
+current | Number | 0 | \- | N
+direction | String | horizontal | options: horizontal/vertical | N
+display-multiple-items | Number | 1 | \- | N
+duration | Number | 300 | \- | N
+easing-function | String | default | options: default/linear/easeInCubic/easeOutCubic/easeInOutCubic | N
+height | String / Number | 192 | \- | N
+image-props | Object | {} | \- | N
+interval | Number | 5000 | \- | N
+list | Array | - | Typescript: `string[] \| SwiperList[]` `interface SwiperList { value: string, ariaLabel: string }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
+loop | Boolean | true | \- | N
+navigation | Boolean / Object | true | Typescript: `SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
+next-margin | String / Number | 0 | \- | N
+pagination-position | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right/left/right | N
+previous-margin | String / Number | 0 | \- | N
+snap-to-edge | Boolean | false | \- | N
+
+### Swiper Events
+
+name | params | description
+-- | -- | --
+animationfinish | `(current: number, source: SwiperChangeSource)` | 动画结束时会触发 animationfinish 事件
+change | `(current: number, source: SwiperChangeSource)` | [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
+click | `(index: number)` | \-
+image-load | `(index: number)` | \-
+
+### Swiper Slots
+
+name | Description
+-- | --
+navigation | \-
+
+### Swiper External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-image | \-
+t-class-nav | \-
+t-class-next-image | \-
+t-class-prev-image | \-
+
+### SwiperNavigation
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+current | Number | 0 | \- | N
+direction | String | horizontal | options: horizontal/vertical | N
+min-show-num | Number | - | \- | N
+pagination-position | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right/left/right | N
+show-controls | Boolean | false | \- | N
+total | Number | 0 | \- | N
+type | String | - | Typescript: `SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N

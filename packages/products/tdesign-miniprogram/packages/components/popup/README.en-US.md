@@ -1,0 +1,43 @@
+:: BASE_DOC ::
+
+## API
+
+### Popup Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+close-btn | Boolean | - | \- | N
+close-on-overlay-click | Boolean | true | \- | N
+content | String | - | \- | N
+duration | Number | 240 | \- | N
+overlay-props | Object | {} | Typescript：`OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts) | N
+placement | String | top | options: top/left/right/bottom/center | N
+prevent-scroll-through | Boolean | true | \- | N
+show-overlay | Boolean | true | \- | N
+using-custom-navbar | Boolean | false | \- | N
+visible | Boolean | - | Typescript：`boolean` | N
+default-visible | Boolean | undefined | uncontrolled property。Typescript：`boolean` | N
+z-index | Number | 11500 | \- | N
+
+### Popup Events
+
+name | params | description
+-- | -- | --
+visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay'`<br/>
+
+### Popup Slots
+
+name | Description
+-- | --
+\- | \-
+close-btn | \-
+content | \-
+
+### Popup External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-content | \-

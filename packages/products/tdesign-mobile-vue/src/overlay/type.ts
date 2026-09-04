@@ -1,0 +1,58 @@
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+export interface TdOverlayProps {
+  /**
+   * 遮罩层的背景色
+   * @default ''
+   */
+  backgroundColor?: string;
+  /**
+   * 遮罩层自定义样式。优先级低于其他属性
+   * @default ''
+   */
+  customStyle?: string;
+  /**
+   * 背景色过渡时间，单位毫秒
+   * @default 300
+   */
+  duration?: number;
+  /**
+   * 是否阻止背景滚动，阻止时蒙层里的内容也将无法滚动
+   * @default true
+   */
+  preventScrollThrough?: boolean;
+  /**
+   * 是否展示
+   * @default false
+   */
+  visible?: boolean;
+  /**
+   * 遮罩的层级
+   * @default 1000
+   */
+  zIndex?: number;
+  /**
+   * 遮罩层的点击事件
+   */
+  onClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 遮罩执行消失动画效果前触发
+   */
+  onClose?: () => void;
+  /**
+   * 遮罩消失动画效果结束后触发
+   */
+  onClosed?: () => void;
+  /**
+   * 遮罩执行弹出动画效果前触发
+   */
+  onOpen?: () => void;
+  /**
+   * 遮罩弹出动画效果结束后触发
+   */
+  onOpened?: () => void;
+}

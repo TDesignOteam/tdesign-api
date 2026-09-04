@@ -1,0 +1,66 @@
+:: BASE_DOC ::
+
+## API
+
+### Tabs Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
+animation | Object | - | Typescript: `TabAnimation` `type TabAnimation = { duration: number } & Record<string, any>`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tabs/type.ts) | N
+bottom-line-mode | String | fixed | options: fixed/auto/full | N
+show-bottom-line | Boolean | true | \- | N
+space-evenly | Boolean | true | \- | N
+split | Boolean | true | \- | N
+sticky | Boolean | false | \- | N
+sticky-props | Object | - | Typescript: `StickyProps`，[Sticky API Documents](./sticky?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tabs/type.ts) | N
+swipeable | Boolean | true | \- | N
+theme | String | line | options: line/tag/card | N
+value | String / Number | - | `v-model:value` is supported。Typescript: `TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tabs/type.ts) | N
+default-value | String / Number | - | uncontrolled property。Typescript: `TabValue` `type TabValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tabs/type.ts) | N
+
+### Tabs Events
+
+name | params | description
+-- | -- | --
+change | `(value: TabValue, label: string)` | \-
+click | `(value: TabValue, label: string)` | \-
+scroll | `(scrollTop: number, isFixed: boolean)` | \-
+
+### Tabs Slots
+
+name | Description
+-- | --
+\- | \-
+middle | \-
+
+### Tabs External Classes
+
+className | Description
+-- | --
+t-class | \-
+t-class-active | \-
+t-class-content | \-
+t-class-item | \-
+t-class-track | \-
+
+
+### TabPanel Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
+badge-props | Object | {} | \- | N
+disabled | Boolean | false | \- | N
+icon | String / Object | - | \- | N
+label | String | - | \- | N
+lazy | Boolean | false | Enable tab lazy loading | N
+panel | String | - | \- | N
+value | String / Number | - | Typescript: `TabValue`，[Tabs API Documents](./tabs?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/tab-panel/type.ts) | N
+
+### TabPanel Slots
+
+name | Description
+-- | --
+\- | \-
+panel | \-

@@ -1,0 +1,84 @@
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+export interface TdChatActionbarProps {
+  /**
+   * 操作栏配置
+   * @default ['replay', 'copy', 'good', 'bad', 'share']
+   */
+  actionBar?: {
+    type: ArrayConstructor;
+    value?: Array<'replay' | 'copy' | 'good' | 'bad' | 'share' | 'quote'>;
+  };
+  /**
+   * 【实验】聊天消息的唯一标识
+   * @default ''
+   */
+  chatId?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空
+   */
+  comment?: {
+    type: StringConstructor;
+    value?: 'good' | 'bad';
+  };
+  /**
+   * 被复制的内容
+   * @default ''
+   */
+  content?: {
+    type: StringConstructor;
+    value?: string;
+  };
+  /**
+   * 【实验】复制内容的模式，可选 'markdown'（复制markdown原文）或 'text'（复制纯文本）
+   * @default markdown
+   */
+  copyMode?: {
+    type: StringConstructor;
+    value?: 'markdown' | 'text';
+  };
+  /**
+   * 【讨论中】操作按钮是否可点击
+   * @default false
+   */
+  disabled?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 【实验】长按操作栏位置
+   */
+  longPressPosition?: {
+    type: ObjectConstructor;
+    value?: ChatActionbarLongPressPosition;
+  };
+  /**
+   * 【实验】操作栏位置
+   * @default start
+   */
+  placement?: {
+    type: StringConstructor;
+    value?: 'start' | 'end' | 'space-around' | 'space-between' | 'longpress';
+  };
+}
+
+export interface ChatActionbarLongPressPosition {
+  type?: object;
+  value?: LongPressPositionValue;
+}
+
+export interface LongPressPositionValue {
+  pageX?: number;
+  pageY?: number;
+  clientX?: number;
+  clientY?: number;
+  x?: number;
+  y?: number;
+}

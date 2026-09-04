@@ -1,0 +1,39 @@
+/**
+ * 仅获取 API 数据，不输出到文件。用于在线预览 API 代码
+ */
+
+import { pick } from 'lodash-es';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
+import { COMPONENT_API_MD_MAP, getChatComponentMap } from './config/index.js';
+import { getDocsByComponent } from './docs/index.js';
+import { getTypesByComponent } from './types/index.js';
+import { getPropsByComponent } from './types/vue-props.js';
+
+/**
+ * framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
+ */
+
+async function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
+  // [ labe, value ] => { label: value }
+  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
+  const frameworkData = groupByComponent(apiData, frameworkMap[framework]);
+  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework));
+  const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
+  const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, component));
+  // 生成 API 类型定义
+  const apiTypes = await getTypesByComponent(baseData, framework, component);
+  // console.log(apiTypes);
+  // 生成 API 文档
+  const apiDocs = getDocsByComponent(baseData, framework, component);
+  // console.log(apiDocs);
+  // 生成 props 定义
+  const apiPrpos = getPropsByComponent(baseData, framework, component, isUseDefault);
+  // console.log(apiPrpos);
+  return {
+    apiTypes,
+    apiDocs,
+    apiPrpos,
+  };
+}
+
+export { getApiPreviewData };
