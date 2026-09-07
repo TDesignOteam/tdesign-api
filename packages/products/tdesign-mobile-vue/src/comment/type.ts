@@ -1,0 +1,78 @@
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+import { AvatarProps } from '../avatar';
+import type { TNode } from '../common';
+
+export interface TdCommentProps {
+  /**
+   * 操作
+   */
+  actions?: Array<CommentAction> | TNode;
+  /**
+   * 作者
+   */
+  author?: string | TNode;
+  /**
+   * 头像
+   */
+  avatar?: string | AvatarProps | TNode;
+  /**
+   * 内容
+   */
+  content?: string | TNode;
+  /**
+   * 时间
+   */
+  datetime?: string | TNode;
+  /**
+   * 折叠/展开配置项
+   */
+  fold?: CommentFold;
+  /**
+   * 折叠/展开配置项，非受控属性
+   */
+  defaultFold?: CommentFold;
+  /**
+   * 折叠/展开配置项
+   */
+  modelValue?: CommentFold;
+  /**
+   * 回复
+   */
+  reply?: string | TNode;
+  /**
+   * 点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项
+   */
+  onActions?: (context: { action: CommentActionItem | TNode; e: Event }) => void;
+  /**
+   * 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置
+   */
+  onFold?: (context: { fold: CommentFold; e: Event }) => void;
+}
+
+export type ActionPlacement = 'start' | 'end';
+
+export interface CommentActionItem {
+  key: string;
+  icon?: TNode;
+  content?: string | TNode;
+  count?: string | number;
+  placement?: ActionPlacement;
+  disabled?: boolean;
+}
+
+export type CommentAction = TNode | CommentActionItem;
+
+export type CommentFoldState = 'collapsed' | 'expanded' | 'all';
+
+export interface CommentFold {
+  state: CommentFoldState;
+  total?: number;
+  visible?: number;
+  step?: number;
+  text?: Partial<Record<CommentFoldState, string>>;
+}
