@@ -58,21 +58,18 @@ export type ActionPlacement = 'start' | 'end';
 
 export interface CommentActionItem {
   key: string;
-  icon?: TNode;
   content?: string | TNode;
-  count?: string | number;
   placement?: ActionPlacement;
   disabled?: boolean;
 }
 
 export type CommentAction = TNode | CommentActionItem;
 
-export type CommentFoldState = 'collapsed' | 'expanded' | 'all';
+export type CommentFoldState = 'collapsed' | 'partial' | 'expanded';
 
 export interface CommentFold {
   state: CommentFoldState;
   total?: number;
-  visible?: number;
   step?: number;
-  text?: Partial<Record<CommentFoldState, string>>;
+  content?: Partial<Record<CommentFoldState, TNode | [TNode, TNode]>>;
 }
