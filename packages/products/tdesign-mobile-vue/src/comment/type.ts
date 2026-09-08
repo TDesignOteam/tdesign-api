@@ -31,11 +31,11 @@ export interface TdCommentProps {
   /**
    * 折叠/展开配置项
    */
-  fold?: CommentFold;
+  folds?: CommentFold;
   /**
    * 折叠/展开配置项，非受控属性
    */
-  defaultFold?: CommentFold;
+  defaultFolds?: CommentFold;
   /**
    * 折叠/展开配置项
    */
@@ -51,7 +51,7 @@ export interface TdCommentProps {
   /**
    * 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置
    */
-  onFold?: (context: { fold: CommentFold; e: Event }) => void;
+  onFolds?: (context: { fold: CommentFold; e: Event }) => void;
 }
 
 export type ActionPlacement = 'start' | 'end';

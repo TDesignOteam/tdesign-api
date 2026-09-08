@@ -29,17 +29,17 @@ export default {
     type: [String, Function] as PropType<TdCommentProps['datetime']>,
   },
   /** 折叠/展开配置项 */
-  fold: {
-    type: Object as PropType<TdCommentProps['fold']>,
-    default: undefined as TdCommentProps['fold'],
+  folds: {
+    type: Object as PropType<TdCommentProps['folds']>,
+    default: undefined as TdCommentProps['folds'],
   },
   modelValue: {
-    type: Object as PropType<TdCommentProps['fold']>,
-    default: undefined as TdCommentProps['fold'],
+    type: Object as PropType<TdCommentProps['folds']>,
+    default: undefined as TdCommentProps['folds'],
   },
   /** 折叠/展开配置项，非受控属性 */
-  defaultFold: {
-    type: Object as PropType<TdCommentProps['defaultFold']>,
+  defaultFolds: {
+    type: Object as PropType<TdCommentProps['defaultFolds']>,
   },
   /** 回复 */
   reply: {
@@ -48,5 +48,5 @@ export default {
   /** 点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项 */
   onActions: Function as PropType<TdCommentProps['onActions']>,
   /** 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置 */
-  onFold: Function as PropType<TdCommentProps['onFold']>,
+  onFolds: Function as PropType<TdCommentProps['onFolds']>,
 };
