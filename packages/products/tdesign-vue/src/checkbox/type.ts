@@ -4,7 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TooltipProps } from '../tooltip';
+import type { TNode } from '../common';
 
 export interface TdCheckboxProps {
   /**
@@ -58,6 +59,10 @@ export interface TdCheckboxProps {
    * @default ''
    */
   title?: string;
+  /**
+   * 透传 Tooltip 组件的全部特性。用于自定义悬浮气泡内容和样式，作用于 Checkbox 的勾选框本体
+   */
+  tooltipProps?: TooltipProps;
   /**
    * 多选框的值
    */
