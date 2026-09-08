@@ -7,8 +7,8 @@
 import { ImageViewerProps } from '../image-viewer';
 import { UploadConfig } from '../config-provider/type';
 import { ButtonProps } from '../button';
-import { PlainObject, TNode, UploadDisplayDragEvents } from '../common';
-import { CSSProperties, MouseEvent, DragEvent } from 'react';
+import type { PlainObject, TNode, UploadDisplayDragEvents } from '../common';
+import type { CSSProperties, MouseEvent, DragEvent } from 'react';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
@@ -67,7 +67,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   dragContent?: TNode | TNode<TriggerContext>;
   /**
-   * 是否启用拖拽上传，不同的组件风格默认值不同。`theme=file` 或 `theme=image` 时有效
+   * 是否启用拖拽上传。`theme` 非 `file-input` 时有效。`theme=file-flow`/`theme=image-flow` 时默认值为 `true`；`theme=file`/`theme=image`/`theme=custom` 时默认值为 `false`
    */
   draggable?: boolean;
   /**
@@ -203,9 +203,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 批量文件/图片上传，`autoUpload=false` 场景下，透传“点击上传”按钮属性
    */
   uploadButton?:
-    | null
-    | ButtonProps
-    | TNode<{ disabled: boolean; uploading: boolean; uploadFiles: () => void; uploadText: string }>;
+    null | ButtonProps | TNode<{ disabled: boolean; uploading: boolean; uploadFiles: () => void; uploadText: string }>;
   /**
    * 是否允许粘贴上传剪贴板中的文件
    * @default true
@@ -391,7 +389,8 @@ export interface UploadChangeContext {
   files?: UploadFile[];
 }
 
-export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
+export type UploadChangeTrigger =
+  'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'sort';
 
 export interface UploadFailContext {
   e?: ProgressEvent;
