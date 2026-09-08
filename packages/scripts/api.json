@@ -2727,7 +2727,7 @@
       "field_type": [
         "16"
       ],
-      "field_default_value": "",
+      "field_default_value": "[]",
       "field_enum": "",
       "field_desc_zh": "菜单项",
       "field_desc_en": null,

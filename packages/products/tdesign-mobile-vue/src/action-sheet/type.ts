@@ -31,6 +31,7 @@ export interface TdActionSheetProps {
   description?: string;
   /**
    * 菜单项
+   * @default []
    */
   items?: Array<string | ActionSheetItem>;
   /**

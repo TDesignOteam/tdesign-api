@@ -35,6 +35,7 @@ export default {
   /** 菜单项 */
   items: {
     type: Array as PropType<TdActionSheetProps['items']>,
+    default: (): TdActionSheetProps['items'] => [],
   },
   /** 透传 Popup 组件全部属性 */
   popupProps: {
