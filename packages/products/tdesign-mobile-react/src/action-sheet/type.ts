@@ -83,7 +83,7 @@ export interface ActionSheetItem {
   description?: string;
   color?: string;
   disabled?: boolean;
-  icon?: TNode;
+  icon?: string | TNode;
   suffixIcon?: TNode;
   badge?: BadgeProps;
 }
