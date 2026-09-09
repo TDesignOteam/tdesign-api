@@ -13,7 +13,7 @@ import {
   getComponentsMap,
   getGlobalConfigName,
 } from '../common.js';
-import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP } from '../config/const.js';
+import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/const.js';
 import languageConfig from '../config/language/description.js';
 import map from '../map.json' with { type: 'json' };
 import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
@@ -226,7 +226,7 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
     if (isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
       desc.push(
-        `[${text}](${getComponentBasePath(api.component, config.componentPath)}${getTsTypeFileName(api.component, config)})`,
+        `[${text}](${getComponentBasePath(api.component, config.componentPath, currentFramework)}${getTsTypeFileName(api.component, config)})`,
       );
     }
   }
@@ -234,7 +234,10 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
 }
 
 function getTsTypeFileName(cmp, config) {
-  const rMap = getCmpTypeCombineMap(TYPES_COMBINE_MAP, currentFramework);
+  const rMap = getCmpTypeCombineMap(
+    Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(currentFramework)),
+    currentFramework,
+  );
   const parentName = rMap[cmp] || cmp;
   const fileName =
     {
@@ -278,7 +281,7 @@ function formatToVueApi(api, params) {
   }
   // 如果有复杂类型定义就添加超链接指向具体的 TS 类型定义链接地址
   if (hasComplicatedType) {
-    const v = `(${config.componentPath}${getTsTypeFileName(api.component, config)})`;
+    const v = `(${getComponentBasePath(api.component, config.componentPath, params.framework)}${getTsTypeFileName(api.component, config)})`;
     // TS 类型定义
     const text = languageConfig[LANGUAGE];
     desc = desc.concat(`[${text.detailDefineText}]${v}`);

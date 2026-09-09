@@ -30,7 +30,7 @@ function isTypeApi(cmp) {
 }
 
 function isComponent(cmp) {
-  return !componentsMap[cmp].type;
+  return componentsMap[cmp] && !componentsMap[cmp].type;
 }
 
 function getCmpName(cmp) {
@@ -124,6 +124,19 @@ function getGlobalConfigName(cmp) {
   return '';
 }
 
+/**
+ * Resolve component name to its merge list. First checks the merged map for direct key match,
+ * then searches map values (handles kebab-case keys in CHAT_COMPONENT_MAP and future HO maps).
+ * Falls back to [component] if no match found.
+ */
+function resolveComponentMergeList(mergeMap, component) {
+  if (mergeMap[component]) return mergeMap[component];
+  for (const [, values] of Object.entries(mergeMap)) {
+    if (Array.isArray(values) && values.includes(component)) return values;
+  }
+  return [component];
+}
+
 export {
   getLabelByKey,
   getApiTitles,
@@ -146,4 +159,5 @@ export {
   getCmpTypeCombineMap,
   getComponentsMap,
   getGlobalConfigName,
+  resolveComponentMergeList,
 };

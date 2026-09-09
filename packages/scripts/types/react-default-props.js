@@ -14,10 +14,12 @@ import {
   MOBILE_TYPES_COMBINE_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import { needPickRequiredType } from '../config/reac-default-props.js';
 import map from '../map.json' with { type: 'json' };
+import { getComponentBasePath } from '../utils.js';
 
 const CONFIG = { needPickRequiredType };
 
@@ -98,10 +100,10 @@ function getTsTypeName(cmp) {
 async function generateReactDefaultProps(baseData, framework) {
   const relationMap = getCmpTypeCombineMap(
     framework === 'Miniprogram'
-      ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
       : MOBILE_FRAMES.includes(framework)
-        ? Object.assign(TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP)
-        : TYPES_COMBINE_MAP,
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
     framework,
   );
 
@@ -141,7 +143,7 @@ async function generateReactDefaultProps(baseData, framework) {
       console.warn(e);
     }
 
-    const basePath = FRAMEWORK_MAP[framework].propsBasePath;
+    const basePath = getComponentBasePath(parentCmp, FRAMEWORK_MAP[framework].propsBasePath, framework);
     const folder = path.resolve(basePath, getFolderName(parentCmp));
     fs.mkdirSync(folder, { recursive: true });
     const outputPath = path.resolve(folder, 'defaultProps.ts');

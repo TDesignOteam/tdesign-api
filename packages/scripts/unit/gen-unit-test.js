@@ -1,5 +1,5 @@
 import path from 'path';
-import yaml from 'js-yaml';
+import {load as yamlLoad} from 'js-yaml';
 import { includes } from 'lodash-es';
 import { FRAMEWORK_MAP } from '../config/index.js';
 import { kebabCaseComponent } from '../utils.js';
@@ -104,7 +104,7 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
     if (p.field_category === 1) {
       // props
       if (p.test_description) {
-        const propsDoc = yaml.load(p.test_description);
+        const propsDoc = yamlLoad(p.test_description);
         // 预设，所有的case都带上
         if (propsDoc.skip) {
           skipProps.push(p.field_name);

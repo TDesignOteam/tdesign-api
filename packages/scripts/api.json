@@ -11276,6 +11276,7 @@
     {
       "id": 1779355008,
       "platform_framework": [
+        "8",
         "16"
       ],
       "component": "BaseTable",
@@ -11299,11 +11300,12 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Vue(Mobile)\": \"1.6.2\",\n\"React(Mobile)\": \"0.23.2\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -11522,6 +11524,7 @@
     {
       "id": 1779870947,
       "platform_framework": [
+        "8",
         "16"
       ],
       "component": "BaseTable",
@@ -11545,11 +11548,12 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "",
+      "version": "{\n\"Vue(Mobile)\": \"1.6.2\",\n\"React(Mobile)\": \"0.23.2\"\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -29672,14 +29676,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "流式输出配置，控制尾部光标的显示与隐藏。尾部光标配置，true 使用默认光标 ▋，传对象可自定义光标字符",
+      "field_desc_zh": "流式输出配置：`hasNextChunk` 表示是否还有后续分片（输出中为 true，结束时为 false）；`completeSyntax` 默认为 false，仅控制是否处理流式末尾未闭合的 Markdown 语法。设为 true 时，会对末尾未闭合的链接、图片、加粗、行内代码等语法进行补全或隐藏，避免暴露原始符号与 URL；`tail` 控制尾部光标，true 使用默认光标 ▋，传对象可自定义光标字符",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
       "create_time": "2026-05-14 04:09:54",
       "update_time": "2026-05-14 04:09:54",
       "event_output": null,
-      "custom_field_type": "TdChatMarkdownStreamingOptions【 interface TdChatMarkdownStreamingOptions { hasNextChunk?: boolean; tail?: boolean | { content?: string } }】",
+      "custom_field_type": "TdChatMarkdownStreamingOptions【 interface TdChatMarkdownStreamingOptions { hasNextChunk?: boolean; completeSyntax?: boolean; tail?: boolean | { content?: string } }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -34783,6 +34787,41 @@
       ]
     },
     {
+      "id": 1788345610,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Checkbox",
+      "field_category": 1,
+      "field_name": "tooltipProps",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Tooltip 组件的全部特性。用于自定义悬浮气泡内容和样式，作用于 Checkbox 的勾选框本体",
+      "field_desc_en": "Transparent all feature props of the Tooltip. Used to customize the hover popup content and style, applied to the checkbox input box only",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-02 10:40:10",
+      "update_time": "2026-09-02 10:40:10",
+      "event_output": null,
+      "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 490,
       "platform_framework": [
         "1",
@@ -39742,7 +39781,8 @@
       "field_category": 1,
       "field_name": "actions",
       "field_type": [
-        "16"
+        "16",
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -39753,7 +39793,7 @@
       "create_time": "2021-09-06 07:46:14",
       "update_time": "2021-09-14 03:24:52",
       "event_output": null,
-      "custom_field_type": "Array<TNode>",
+      "custom_field_type": "Array<TNode> | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -39768,14 +39808,58 @@
         "React(PC)"
       ],
       "field_type_text": [
-        "Array"
+        "Array",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1788788206,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "actions",
+      "field_type": [
+        "16",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "操作",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-07 13:36:46",
+      "update_time": "2026-09-07 13:36:46",
+      "event_output": null,
+      "custom_field_type": "Array<CommentAction> | TNode 【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string | TNode; placement?: ActionPlacement; disabled?: boolean}】【type CommentAction = TNode | CommentActionItem;】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array",
+        "TNode"
       ]
     },
     {
       "id": 1637,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Comment",
       "field_category": 1,
@@ -39805,7 +39889,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -39816,7 +39902,9 @@
       "id": 1636,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Comment",
       "field_category": 1,
@@ -39847,7 +39935,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -39856,10 +39946,51 @@
       ]
     },
     {
+      "id": 1788787623,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "子元素内容，同 reply",
+      "field_desc_en": "children, same as `reply`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-07 13:27:03",
+      "update_time": "2026-09-07 13:27:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1639,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Comment",
       "field_category": 1,
@@ -39889,7 +40020,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -39900,7 +40033,9 @@
       "id": 1638,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Comment",
       "field_category": 1,
@@ -39930,11 +40065,52 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
         "TNode"
+      ]
+    },
+    {
+      "id": 1788789744,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "folds",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "折叠/展开配置项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-07 14:02:24",
+      "update_time": "2026-09-07 14:02:24",
+      "event_output": null,
+      "custom_field_type": "CommentFold 【type CommentFoldState = 'collapsed' | 'partial' | 'expanded'】【interface CommentFold { state: CommentFoldState; total?: number; step?: number; content?: Partial<Record<CommentFoldState, TNode | [TNode, TNode]>>}】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
       ]
     },
     {
@@ -39982,7 +40158,9 @@
       "id": 1802,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Comment",
       "field_category": 1,
@@ -40012,12 +40190,84 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
         "TNode"
       ]
+    },
+    {
+      "id": 1788791182,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Comment",
+      "field_category": 2,
+      "field_name": "actions",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { action: CommentActionItem | TNode; e: Event })",
+      "create_time": "2026-09-07 14:26:22",
+      "update_time": "2026-09-07 14:26:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1788791492,
+      "platform_framework": [
+        "8",
+        "16"
+      ],
+      "component": "Comment",
+      "field_category": 2,
+      "field_name": "folds",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { fold: CommentFold; e: Event })",
+      "create_time": "2026-09-07 14:31:32",
+      "update_time": "2026-09-07 14:31:32",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": []
     },
     {
       "id": 1740488877,
@@ -99206,6 +99456,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99236,6 +99487,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99247,6 +99499,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99277,6 +99530,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99288,6 +99542,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99318,6 +99573,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99329,6 +99585,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99359,6 +99616,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99448,6 +99706,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99479,6 +99738,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99491,6 +99751,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99521,6 +99782,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99532,6 +99794,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99563,6 +99826,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99575,6 +99839,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99605,6 +99870,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99616,6 +99882,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99646,6 +99913,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99657,6 +99925,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99688,6 +99957,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99700,6 +99970,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99730,6 +100001,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99741,6 +100013,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99771,6 +100044,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99782,6 +100056,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99812,6 +100087,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99823,6 +100099,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99853,6 +100130,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99864,6 +100142,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -99894,6 +100173,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -99983,6 +100263,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100013,6 +100294,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -100024,6 +100306,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100054,6 +100337,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -100065,6 +100349,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100095,6 +100380,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -100106,6 +100392,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100137,6 +100424,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -100149,6 +100437,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100179,6 +100468,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -100264,6 +100554,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100292,6 +100583,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100301,6 +100593,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100329,6 +100622,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100370,6 +100664,7 @@
       "id": 2555,
       "platform_framework": [
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100397,6 +100692,7 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100441,6 +100737,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100469,6 +100766,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100478,6 +100776,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100506,6 +100805,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100515,6 +100815,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100543,6 +100844,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100552,6 +100854,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100580,6 +100883,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100589,6 +100893,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100617,6 +100922,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100696,6 +101002,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100724,6 +101031,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100733,6 +101041,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100761,6 +101070,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100945,6 +101255,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100973,6 +101284,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -100982,6 +101294,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -101010,6 +101323,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -101099,6 +101413,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101130,6 +101445,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101142,6 +101458,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101172,6 +101489,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101183,6 +101501,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101213,6 +101532,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101224,6 +101544,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101254,6 +101575,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101304,6 +101626,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101334,6 +101657,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101345,6 +101669,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101375,6 +101700,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101386,6 +101712,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101416,6 +101743,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101427,6 +101755,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101458,6 +101787,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101470,6 +101800,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101501,6 +101832,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101513,6 +101845,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101543,6 +101876,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -101554,6 +101888,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101582,6 +101917,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -101591,6 +101927,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "PrimaryTableCol",
@@ -101619,6 +101956,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": []
@@ -131162,6 +131500,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131192,6 +131531,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -131320,6 +131660,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131350,6 +131691,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -131445,6 +131787,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131475,6 +131818,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -131486,6 +131830,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131516,6 +131861,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -131565,7 +131911,9 @@
       "id": 2242,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "TableConfig",
       "field_category": 1,
@@ -131594,7 +131942,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -131605,6 +131955,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131635,6 +131986,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -131646,6 +131998,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "TableConfig",
@@ -131676,6 +132029,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -152836,8 +153190,7 @@
     {
       "id": 1559,
       "platform_framework": [
-        "8",
-        "16"
+        "64"
       ],
       "component": "Upload",
       "field_category": 1,
@@ -152848,7 +153201,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效",
+      "field_desc_zh": "添加按钮内容。值为 slots 时，表示使用插槽渲染",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -152866,8 +153219,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -152877,7 +153229,8 @@
     {
       "id": 1690274500,
       "platform_framework": [
-        "64",
+        "8",
+        "16",
         "128"
       ],
       "component": "Upload",
@@ -152907,7 +153260,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Miniprogram",
+        "Vue(Mobile)",
+        "React(Mobile)",
         "UniApp"
       ],
       "field_type_text": [
@@ -153503,8 +153857,8 @@
       ],
       "field_default_value": "undefined",
       "field_enum": "",
-      "field_desc_zh": "是否启用拖拽上传，不同的组件风格默认值不同。`theme=file` 或 `theme=image` 时有效",
-      "field_desc_en": "if drag uploading allowed, works on `theme=file` or `theme=image`",
+      "field_desc_zh": "是否启用拖拽上传。`theme` 非 `file-input` 时有效。`theme=file-flow`/`theme=image-flow` 时默认值为 `true`；`theme=file`/`theme=image`/`theme=custom` 时默认值为 `false`",
+      "field_desc_en": "if drag uploading allowed, Valid when `theme` is not `file-input`. The default value is `true` when `theme=file-flow` or `theme=image-flow`, and `false` when `theme=file`, `theme=image`, or `theme=custom`.",
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-02-18 15:20:18",
