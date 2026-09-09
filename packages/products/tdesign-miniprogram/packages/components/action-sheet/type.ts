@@ -42,10 +42,9 @@ export interface TdActionSheetProps {
   /**
    * 菜单项
    */
-  items: {
+  items?: {
     type: ArrayConstructor;
     value?: Array<string | ActionSheetItem>;
-    required?: boolean;
   };
   /**
    * 透传 Popup 组件全部属性
