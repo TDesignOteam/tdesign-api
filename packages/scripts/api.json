@@ -16500,7 +16500,9 @@
       "id": 2832,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Button",
       "field_category": 1,
@@ -16529,7 +16531,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"

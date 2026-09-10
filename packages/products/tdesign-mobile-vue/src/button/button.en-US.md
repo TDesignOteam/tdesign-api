@@ -16,6 +16,7 @@ loadingProps | Object | - | Typescript: `LoadingProps`，[Loading API Documents]
 shape | String | rectangle | button shape。options: rectangle/square/round/circle | N
 size | String | medium | a button has four size。options: extra-small/small/medium/large | N
 suffix | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+tag | String | - | HTML Tag Element。options: button/a/div | N
 theme | String | default | button theme。options: default/primary/danger/light | N
 type | String | button | type of button element in html。options: submit/reset/button | N
 variant | String | base | variant of button。options: base/outline/dashed/text | N

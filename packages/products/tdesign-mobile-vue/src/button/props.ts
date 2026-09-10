@@ -53,6 +53,14 @@ export default {
   suffix: {
     type: Function as PropType<TdButtonProps['suffix']>,
   },
+  /** 渲染按钮的 HTML 标签，默认使用标签 `<button>` 渲染，可以自定义为 `<a>` `<div>` 等。透传全部 HTML 属性，如：`href/target/data-*` 等。⚠️ 禁用按钮 `<button disabled>`无法显示 Popup 浮层信息，可通过修改 `tag=div` 解决这个问题 */
+  tag: {
+    type: String as PropType<TdButtonProps['tag']>,
+    validator(val: TdButtonProps['tag']): boolean {
+      if (!val) return true;
+      return ['button', 'a', 'div'].includes(val);
+    },
+  },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String as PropType<TdButtonProps['theme']>,
