@@ -12,7 +12,9 @@ block | Boolean | false | make button to be a block-level element | N
 children | TNode | - | button's children elements。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 content | TNode | - | button's children elements。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | disable the button, make it can not be clicked | N
+form | String | undefined |  native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute | N
 ghost | Boolean | false | make background-color to be transparent | N
+href | String | - | \- | N
 icon | TElement | - | use it to set left icon in button。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 loading | Boolean | false | set button to be loading state | N
 loadingProps | Object | - | Typescript: `LoadingProps`，[Loading API Documents](./loading?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/button/type.ts) | N
