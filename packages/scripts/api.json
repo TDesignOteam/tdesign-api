@@ -39832,7 +39832,7 @@
       "create_time": "2026-09-07 13:36:46",
       "update_time": "2026-09-07 13:36:46",
       "event_output": null,
-      "custom_field_type": "Array<CommentAction> | TNode 【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string | TNode; placement?: ActionPlacement; disabled?: boolean}】【type CommentAction = TNode | CommentActionItem;】",
+      "custom_field_type": "Array<CommentActionItem> | TNode 【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string | TNode; placement?: ActionPlacement; disabled?: boolean}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
