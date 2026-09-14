@@ -3,7 +3,7 @@ import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
 import { getApiComponentMapByFrameWork } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } from '../config/index.js';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
 import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
@@ -11,7 +11,10 @@ let currentFramework = '';
 // 组件 Form 的 API 为 Form 和 FormItem 的组合
 function combineApi(allApi, component) {
   const r = { ...allApi };
-  const map = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, currentFramework);
+  const map = getApiComponentMapByFrameWork(
+    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
+    currentFramework,
+  );
   Object.keys(map).forEach((cmp) => {
     if (!map[cmp]) return;
     const cmpApi = map[cmp]
@@ -99,7 +102,7 @@ function generateDocs(baseData, framework, extra) {
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath
-      : path.resolve(getComponentBasePath(cmp, current.apiBasePath), kebabCaseComponent(cmp));
+      : path.resolve(getComponentBasePath(cmp, current.apiBasePath, framework), kebabCaseComponent(cmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
         return console.error(err);

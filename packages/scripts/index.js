@@ -26,13 +26,14 @@
 import chalk from 'chalk';
 import { pick, has } from 'lodash-es';
 import apiJson from './api.json' with { type: 'json' };
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork } from './common.js';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
+  getChatComponentMap,
 } from './config/index.js';
 import { generateDocs } from './docs/index.js';
 import map from './map.json' with { type: 'json' };
@@ -103,13 +104,14 @@ async function generateComponentApi() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(
     framework === 'Miniprogram' || framework === 'UniApp'
-      ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP)
+      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
       : MOBILE_FRAMES.includes(framework)
-        ? Object.assign(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP)
-        : COMPONENT_API_MD_MAP,
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
     framework,
   );
-  const baseData = pick(frameworkData, cmpMap[component] || [component]);
+  const mergeList = resolveComponentMergeList(cmpMap, component);
+  const baseData = pick(frameworkData, mergeList);
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
 
   if (!onlyDocs) {
@@ -150,7 +152,7 @@ async function generateComponentApi() {
     });
     // 输出测试用例数据到 vitest/tests
     const currentComponentData = groupByComponent(ALL_API);
-    const apiData = pick(currentComponentData, cmpMap[component] || [component]);
+    const apiData = pick(currentComponentData, resolveComponentMergeList(cmpMap, component));
     generateTestDescriptionToVitestFile(apiData, { component });
   }
 }
