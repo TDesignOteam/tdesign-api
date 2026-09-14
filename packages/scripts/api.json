@@ -110855,7 +110855,7 @@
       "event_input": "(options: { top?: number; left?: number; behavior?: ScrollBehavior })",
       "create_time": "2026-08-02 04:59:04",
       "update_time": "2026-08-02 04:59:04",
-      "event_output": "",
+      "event_output": null,
       "custom_field_type": "ScrollToFn【type ScrollToFn = {   (x: number, y: number): void;   (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }】",
       "syntactic_sugar": null,
       "readonly": 1,
