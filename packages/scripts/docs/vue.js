@@ -281,7 +281,7 @@ function formatToVueApi(api, params) {
   }
   // 如果有复杂类型定义就添加超链接指向具体的 TS 类型定义链接地址
   if (hasComplicatedType) {
-    const v = `(${config.componentPath}${getTsTypeFileName(api.component, config)})`;
+    const v = `(${getComponentBasePath(api.component, config.componentPath, params.framework)}${getTsTypeFileName(api.component, config)})`;
     // TS 类型定义
     const text = languageConfig[LANGUAGE];
     desc = desc.concat(`[${text.detailDefineText}]${v}`);

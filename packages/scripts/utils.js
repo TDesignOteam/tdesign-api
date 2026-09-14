@@ -28,8 +28,8 @@ function getComponentBasePath(cmp, apiBasePath, framework) {
 
   // GitHub URL：用主包组件路径 → Chat 包路径做替换
   const current = FRAMEWORK_MAP[framework];
-  if (current) {
-    return apiBasePath.replace(current.apiBasePath, chatConfig.apiBasePath);
+  if (current && chatConfig.componentPath) {
+    return apiBasePath.replace(current.componentPath, chatConfig.componentPath);
   }
 
   return apiBasePath;

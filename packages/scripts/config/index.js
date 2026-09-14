@@ -90,6 +90,7 @@ const FRAMEWORK_MAP = {
     TNode,
     chat: {
       name: '@tdesign-vue-next/chat',
+      componentPath: 'https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/pro-components/chat/',
       apiBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
       tsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
       propsBasePath: `${BASE_PATH_URL}/tdesign-vue-next/packages/pro-components/chat`,
@@ -118,6 +119,7 @@ const FRAMEWORK_MAP = {
     TNode,
     chat: {
       name: '@tdesign-react/chat',
+      componentPath: 'https://github.com/Tencent/tdesign-react/blob/develop/packages/pro-components/chat/',
       apiBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
       tsBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
       propsBasePath: `${BASE_PATH_URL}/tdesign-react/packages/pro-components/chat`,
@@ -197,6 +199,7 @@ const FRAMEWORK_MAP = {
     getDocs: getVueApiDocs,
     titleMap: VUE_TITLE_MAP,
     chat: {
+      componentPath: 'https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/pro-components/chat/',
       apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
       tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
       propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/pro-components/chat`,
@@ -224,6 +227,7 @@ const FRAMEWORK_MAP = {
     volarPath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/tdesign-uniapp/global.d.ts`,
     chat: {
       name: '@tdesign/uniapp-chat',
+      componentPath: 'https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-pro-components/chat/',
       apiBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,
       tsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,
       propsBasePath: `${BASE_PATH_URL}/tdesign-miniprogram/packages/uniapp-pro-components/chat`,

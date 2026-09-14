@@ -29,7 +29,6 @@ const props: TdActionSheetProps = {
   /** 菜单项 */
   items: {
     type: Array,
-    required: true,
   },
   /** 透传 Popup 组件全部属性 */
   popupProps: {
