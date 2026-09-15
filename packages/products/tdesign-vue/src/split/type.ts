@@ -52,15 +52,15 @@ export interface TdSplitProps {
   /**
    * 拖拽过程中尺寸变化的回调（像素值数组）
    */
-  onOnResize?: (sizes: number[]) => void;
+  onResize?: (sizes: number[]) => void;
   /**
    * 拖拽结束时的回调
    */
-  onOnResizeEnd?: (sizes: number[]) => void;
+  onResizeEnd?: (sizes: number[]) => void;
   /**
    * 开始拖拽时的回调
    */
-  onOnResizeStart?: (sizes: number[]) => void;
+  onResizeStart?: (sizes: number[]) => void;
 }
 
 /** 组件实例方法 */
@@ -77,33 +77,4 @@ export interface SplitInstanceFunctions {
    * 程序化设置尺寸
    */
   setSizes?: (sizes: (number | string | 'auto')[]) => void;
-}
-
-export interface TdSplitPanelProps {
-  /**
-   * 面板内容
-   */
-  children?: string | TNode;
-  /**
-   * 面板自定义类名
-   * @default ''
-   */
-  className?: string;
-  /**
-   * 初始面板大小，支持数字 px 或者文字 '百分比%' 类型
-   */
-  defaultSize?: string | number;
-  /**
-   * 当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max
-   */
-  max?: string | number;
-  /**
-   * 当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min
-   */
-  min?: string | number;
-  /**
-   * 是否开启拖拽伸缩
-   * @default true
-   */
-  resizable?: boolean;
 }

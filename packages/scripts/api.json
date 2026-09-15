@@ -120786,7 +120786,7 @@
       ],
       "component": "Split",
       "field_category": 2,
-      "field_name": "onResize",
+      "field_name": "resize",
       "field_type": [
         "8"
       ],
@@ -120825,7 +120825,7 @@
       ],
       "component": "Split",
       "field_category": 2,
-      "field_name": "onResizeEnd",
+      "field_name": "resizeEnd",
       "field_type": [
         "8"
       ],
@@ -120864,7 +120864,7 @@
       ],
       "component": "Split",
       "field_category": 2,
-      "field_name": "onResizeStart",
+      "field_name": "resizeStart",
       "field_type": [
         "8"
       ],

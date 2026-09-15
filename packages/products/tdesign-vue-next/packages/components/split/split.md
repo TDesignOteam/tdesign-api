@@ -15,17 +15,17 @@ lazy | Boolean | false | 延迟渲染模式 | N
 panelSize | Object | - | 定义每个面板的最大最小比例。TS 类型：`{min?: number; max?: number }` | N
 splitterClassName | String | - | 自定义分割条的样式类名 | N
 splitterSize | Number | 6 | 分割条的可交互区域宽度/高度（px） | N
-onOnResize | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽过程中尺寸变化的回调（像素值数组）。TS 类型：`{min?: number max?: number }` | N
-onOnResizeEnd | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽结束时的回调。TS 类型：`{min?: number max?: number }` | N
-onOnResizeStart | Function |  | TS 类型：`(sizes: number[]) => void`<br/>开始拖拽时的回调。TS 类型：`{min?: number max?: number }` | N
+onResize | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽过程中尺寸变化的回调（像素值数组）。TS 类型：`{min?: number max?: number }` | N
+onResizeEnd | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽结束时的回调。TS 类型：`{min?: number max?: number }` | N
+onResizeStart | Function |  | TS 类型：`(sizes: number[]) => void`<br/>开始拖拽时的回调。TS 类型：`{min?: number max?: number }` | N
 
 ### Split Events
 
 名称 | 参数 | 描述
 -- | -- | --
-on-resize | `(sizes: number[])` | 拖拽过程中尺寸变化的回调（像素值数组）。TS 类型：`{min?: number max?: number }`
-on-resize-end | `(sizes: number[])` | 拖拽结束时的回调。TS 类型：`{min?: number max?: number }`
-on-resize-start | `(sizes: number[])` | 开始拖拽时的回调。TS 类型：`{min?: number max?: number }`
+resize | `(sizes: number[])` | 拖拽过程中尺寸变化的回调（像素值数组）。TS 类型：`{min?: number max?: number }`
+resize-end | `(sizes: number[])` | 拖拽结束时的回调。TS 类型：`{min?: number max?: number }`
+resize-start | `(sizes: number[])` | 开始拖拽时的回调。TS 类型：`{min?: number max?: number }`
 
 ### SplitInstanceFunctions 组件实例方法
 
@@ -34,14 +34,3 @@ on-resize-start | `(sizes: number[])` | 开始拖拽时的回调。TS 类型：`
 getSizes | \- | `number[]` | 获取当前各面板的像素尺寸。TS 类型：`{min?: number max?: number }`
 reset | \- | \- | 重置为初始尺寸。TS 类型：`{min?: number max?: number }`
 setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | 程序化设置尺寸。TS 类型：`{min?: number max?: number }`
-
-### SplitPanel Props
-
-名称 | 类型 | 默认值 | 描述 | 必传
--- | -- | -- | -- | --
-children | String / Slot / Function | - | 面板内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-className | String | - | 面板自定义类名 | N
-defaultSize | String / Number | - | 初始面板大小，支持数字 px 或者文字 '百分比%' 类型 | N
-max | String / Number | - | 当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max | N
-min | String / Number | - | 当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min | N
-resizable | Boolean | true | 是否开启拖拽伸缩 | N
