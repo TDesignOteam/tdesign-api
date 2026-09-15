@@ -907,6 +907,14 @@
         "label": "间距"
       },
       {
+        "value": "Split",
+        "label": "分屏视图"
+      },
+      {
+        "value": "SplitPanel",
+        "label": "分屏视图面板"
+      },
+      {
         "value": "Statistic",
         "label": "统计数值"
       },
