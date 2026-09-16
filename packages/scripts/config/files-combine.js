@@ -409,7 +409,7 @@ export const TYPES_COMBINE_MAP = {
 export const MOBILE_TYPES_COMBINE_MAP = {
   DropdownMenu: {
     list: ['DropdownMenu', 'DropdownItem'],
-    excludes: ['Miniprogram'],
+    excludes: ['Miniprogram', 'UniApp'],
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
@@ -425,7 +425,7 @@ export const MOBILE_TYPES_COMBINE_MAP = {
 export const MINIPROGRAM_TYPES_COMBINE_MAP = {
   Swiper: {
     list: ['Swiper', 'SwiperNav'],
-    excludes: ['Miniprogram'],
+    excludes: ['Miniprogram', 'UniApp'],
   },
   Form: {
     list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],

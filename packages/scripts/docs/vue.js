@@ -13,7 +13,14 @@ import {
   getComponentsMap,
   getGlobalConfigName,
 } from '../common.js';
-import { TDESIGN_GLOBALS, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/const.js';
+import {
+  TDESIGN_GLOBALS,
+  TYPES_COMBINE_MAP,
+  MOBILE_TYPES_COMBINE_MAP,
+  MINIPROGRAM_TYPES_COMBINE_MAP,
+  MOBILE_FRAMES,
+  getChatComponentMap,
+} from '../config/const.js';
 import languageConfig from '../config/language/description.js';
 import map from '../map.json' with { type: 'json' };
 import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
@@ -234,8 +241,19 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
 }
 
 function getTsTypeFileName(cmp, config) {
+  // 父子组件的 type.ts 需按实际生成规则取父组件目录，与 types/index.js 中的组合逻辑保持一致
   const rMap = getCmpTypeCombineMap(
-    Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(currentFramework)),
+    ['Miniprogram', 'UniApp'].includes(currentFramework)
+      ? Object.assign(
+          {},
+          TYPES_COMBINE_MAP,
+          MOBILE_TYPES_COMBINE_MAP,
+          MINIPROGRAM_TYPES_COMBINE_MAP,
+          getChatComponentMap(currentFramework),
+        )
+      : MOBILE_FRAMES.includes(currentFramework)
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(currentFramework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
   const parentName = rMap[cmp] || cmp;
