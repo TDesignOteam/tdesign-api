@@ -22903,43 +22903,6 @@
       ]
     },
     {
-      "id": 3538,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Cascader",
-      "field_category": 1,
-      "field_name": "lazy",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "是否异步加载",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2023-06-20 17:43:02",
-      "update_time": "2023-06-20 17:43:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 394,
       "platform_framework": [
         "1",
@@ -23543,6 +23506,7 @@
     {
       "id": 1712024363,
       "platform_framework": [
+        "8",
         "16",
         "64",
         "128"
@@ -23573,51 +23537,13 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1712578657,
-      "platform_framework": [
-        "8"
-      ],
-      "component": "Cascader",
-      "field_category": 1,
-      "field_name": "placeholder",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "'选择选项'",
-      "field_enum": "",
-      "field_desc_zh": "未选中时的提示文案",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2024-04-08 12:17:37",
-      "update_time": "2024-04-08 12:17:37",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
       ]
     },
     {
@@ -34342,7 +34268,7 @@
       "create_time": "2021-08-06 05:48:42",
       "update_time": "2021-08-10 05:28:54",
       "event_output": null,
-      "custom_field_type": "CheckboxIconType【type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[];】",
+      "custom_field_type": "CheckboxIconType【type CheckboxIconType = 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -53036,9 +52962,7 @@
       "id": 1760451356,
       "platform_framework": [
         "1",
-        "2",
-        "8",
-        "16"
+        "2"
       ],
       "component": "Divider",
       "field_category": 1,
@@ -53068,9 +52992,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",
@@ -68475,7 +68397,8 @@
       "id": 2970,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "16"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -68504,7 +68427,8 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -70261,6 +70185,7 @@
       "id": 1708481323,
       "platform_framework": [
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -70291,6 +70216,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70303,7 +70229,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70334,7 +70261,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70383,7 +70311,8 @@
     {
       "id": 2953,
       "platform_framework": [
-        "2"
+        "2",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70412,7 +70341,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70424,7 +70354,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70454,7 +70385,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -70465,7 +70397,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70496,7 +70429,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70545,6 +70479,7 @@
     {
       "id": 1721621588,
       "platform_framework": [
+        "16",
         "64",
         "128"
       ],
@@ -70574,6 +70509,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70623,7 +70559,8 @@
     {
       "id": 1709178118,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70651,7 +70588,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -70662,7 +70600,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70692,7 +70631,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -70780,6 +70720,7 @@
       "id": 1709178151,
       "platform_framework": [
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -70810,6 +70751,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70823,6 +70765,7 @@
         "1",
         "2",
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -70855,6 +70798,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70867,7 +70811,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70897,7 +70842,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -70985,6 +70931,7 @@
       "id": 1709197181,
       "platform_framework": [
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -71015,6 +70962,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71025,7 +70973,8 @@
     {
       "id": 1709178092,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -71053,7 +71002,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -71143,6 +71093,7 @@
         "1",
         "2",
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -71175,6 +71126,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71188,6 +71140,7 @@
         "1",
         "2",
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -71220,6 +71173,7 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71271,7 +71225,8 @@
       "platform_framework": [
         "1",
         "2",
-        "8"
+        "8",
+        "16"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -71302,7 +71257,8 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -74278,7 +74234,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -77585,7 +77541,6 @@
     {
       "id": 1710,
       "platform_framework": [
-        "16",
         "64",
         "128"
       ],
@@ -77615,7 +77570,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -78899,7 +78853,6 @@
     {
       "id": 1713,
       "platform_framework": [
-        "16",
         "64",
         "128"
       ],
@@ -78929,7 +78882,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -87684,43 +87636,6 @@
       "field_type_text": []
     },
     {
-      "id": 1981,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Message",
-      "field_category": 2,
-      "field_name": "change",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "可见性变化时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "(visible: boolean)",
-      "create_time": "2021-11-28 10:47:20",
-      "update_time": "2022-07-05 07:06:08",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
-    },
-    {
       "id": 3016,
       "platform_framework": [
         "1",
@@ -87754,45 +87669,6 @@
         "React(PC)"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 3437,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Message",
-      "field_category": 2,
-      "field_name": "close",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "关闭消息时触发",
-      "field_desc_en": "close message event",
-      "field_required": 0,
-      "event_input": "(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })",
-      "create_time": "2023-03-28 07:15:58",
-      "update_time": "2023-03-28 07:15:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
     },
     {
       "id": 103,
@@ -87836,43 +87712,6 @@
         "UniApp"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 1984,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Message",
-      "field_category": 2,
-      "field_name": "closed",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "关闭消息并且动画结束后触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-11-28 10:51:22",
-      "update_time": "2021-11-28 10:51:44",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
     },
     {
       "id": 104,
@@ -87955,80 +87794,6 @@
         "UniApp"
       ],
       "field_type_text": []
-    },
-    {
-      "id": 1982,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Message",
-      "field_category": 2,
-      "field_name": "open",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "展示Message时触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-11-28 10:49:12",
-      "update_time": "2021-11-28 10:50:15",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
-    },
-    {
-      "id": 1983,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Message",
-      "field_category": 2,
-      "field_name": "opened",
-      "field_type": [
-        "32"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "展示Message时并且动画结束后触发",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-11-28 10:50:50",
-      "update_time": "2021-11-28 10:51:51",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Function"
-      ]
     },
     {
       "id": 1712057171,
@@ -88732,7 +88497,6 @@
     {
       "id": 1624,
       "platform_framework": [
-        "16",
         "64",
         "128"
       ],
@@ -88762,7 +88526,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -90327,6 +90090,7 @@
       "id": 1712057349,
       "platform_framework": [
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -90357,6 +90121,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -94547,7 +94312,7 @@
       "create_time": "2022-06-21 09:12:37",
       "update_time": "2022-06-24 06:22:10",
       "event_output": null,
-      "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>)  => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string,disabled?: boolean}】",
+      "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string,disabled?: boolean}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -94896,7 +94661,7 @@
       "field_category": 1,
       "field_name": "option",
       "field_type": [
-        "64"
+        "32"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -94922,7 +94687,7 @@
         "React(Mobile)"
       ],
       "field_type_text": [
-        "TNode"
+        "Function"
       ]
     },
     {
@@ -95211,7 +94976,6 @@
     {
       "id": 1471,
       "platform_framework": [
-        "16",
         "64"
       ],
       "component": "Picker",
@@ -95240,7 +95004,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -95326,7 +95089,8 @@
     {
       "id": 1773297544,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -95343,7 +95107,7 @@
       "create_time": "2026-03-12 06:39:04",
       "update_time": "2026-03-12 06:39:04",
       "event_output": null,
-      "custom_field_type": "PickerWheelConfig 【interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}】",
+      "custom_field_type": "PickerWheelConfig【interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95354,7 +95118,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -95747,7 +95512,7 @@
       "field_desc_zh": "任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>,context: PickerContext)",
+      "event_input": "(value: Array<PickerValue>, context: PickerContext)",
       "create_time": "2021-08-23 08:27:06",
       "update_time": "2022-06-23 07:16:03",
       "event_output": null,
@@ -104471,43 +104236,6 @@
       ]
     },
     {
-      "id": 1419,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Radio",
-      "field_category": 1,
-      "field_name": "align",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "left",
-      "field_enum": "left/right",
-      "field_desc_zh": "已废弃。复选框和内容相对位置",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-08-10 05:21:42",
-      "update_time": "2021-08-10 06:29:39",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
       "id": 2035,
       "platform_framework": [
         "1",
@@ -104805,7 +104533,6 @@
     {
       "id": 1418,
       "platform_framework": [
-        "16",
         "64",
         "128"
       ],
@@ -104835,7 +104562,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -104846,7 +104572,8 @@
     {
       "id": 1712656500,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Radio",
       "field_category": 1,
@@ -104874,7 +104601,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -111510,6 +111238,7 @@
       "id": 1712030157,
       "platform_framework": [
         "8",
+        "16",
         "64",
         "128"
       ],
@@ -111540,6 +111269,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -111589,7 +111319,8 @@
     {
       "id": 1733883439,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Search",
       "field_category": 1,
@@ -111618,7 +111349,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -111861,78 +111593,6 @@
       ],
       "field_type_text": [
         "Object"
-      ]
-    },
-    {
-      "id": 1547,
-      "platform_framework": [],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "prefixIcon",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "'search'",
-      "field_enum": "",
-      "field_desc_zh": "已废弃。前置图标，默认为搜索图标。值为 `null` 时则不显示",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-01 08:17:25",
-      "update_time": "2022-07-20 14:46:16",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1835,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Search",
-      "field_category": 1,
-      "field_name": "prefixIcon",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "前置图标，默认为搜索图标。值为 `null` 时则不显示",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-11-10 05:27:50",
-      "update_time": "2022-07-20 14:46:02",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "TNode"
       ]
     },
     {
@@ -127777,43 +127437,6 @@
       ],
       "field_type_text": [
         "Function"
-      ]
-    },
-    {
-      "id": 1537,
-      "platform_framework": [
-        "16"
-      ],
-      "component": "Switch",
-      "field_category": 1,
-      "field_name": "colors",
-      "field_type": [
-        "16"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]",
-      "field_desc_en": null,
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2021-09-01 03:30:56",
-      "update_time": "2022-04-01 00:38:19",
-      "event_output": null,
-      "custom_field_type": "string[]",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 1,
-      "version": null,
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(Mobile)"
-      ],
-      "field_type_text": [
-        "Array"
       ]
     },
     {
@@ -153986,7 +153609,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否支持拖拽排序。",
+      "field_desc_zh": "是否支持拖拽排序",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

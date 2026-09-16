@@ -15,7 +15,6 @@ filterPlaceholder | String | - | \- | N
 filterable | Boolean | false | \- | N
 header | TElement | - | `0.21.2`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 keys | Object | - | Typescript: `CascaderKeysType` `type CascaderKeysType = TreeKeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/cascader/type.ts) | N
-lazy | Boolean | false | \- | N
 load | Function | - | loading subtree data (only effective when the node's children value is true)。Typescript: `(node: CascaderOption) => Promise<Array<CascaderOption>>` | N
 loadCompleted | Boolean | false | \- | N
 middleContent | TElement | - | `0.21.2`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
