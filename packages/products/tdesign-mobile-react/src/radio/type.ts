@@ -9,11 +9,6 @@ import type { ChangeEvent } from 'react';
 
 export interface TdRadioProps<T = RadioValue> {
   /**
-   * 已废弃。复选框和内容相对位置
-   * @default left
-   */
-  align?: 'left' | 'right';
-  /**
    * 是否允许取消选中
    * @default false
    */
@@ -47,7 +42,6 @@ export interface TdRadioProps<T = RadioValue> {
   content?: TNode;
   /**
    * 是否禁用组件内容（content）触发选中
-   * @default false
    */
   contentDisabled?: boolean;
   /**
