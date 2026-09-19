@@ -47,6 +47,10 @@ function getType(cmp, api, name) {
 }
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
+  // Vue Next 在运行时合并全局挂载配置，再回退到 body，避免 prop 默认值遮蔽全局配置。
+  if (currentFramework === 'VueNext(PC)' && name === 'attach' && ['Popup', 'ImageViewer'].includes(cmp)) {
+    return 'undefined';
+  }
   const type = api.field_type_text.join();
   const defaultValue = api.field_default_value;
   let dl = defaultValue;

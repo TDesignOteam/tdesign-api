@@ -15,7 +15,7 @@ name | type | default | description | required
 alert | Object | - | Alert global configs。Typescript: `AlertConfig` | N
 anchor | Object | - | Anchor global configs。Typescript: `AnchorConfig` | N
 animation | Object | - | Typescript: `Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/config-provider/type.ts) | N
-attach | String / Object / Function | - | Typescript: `AttachNode \| { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+attach | String / Object / Function | - | Popup container, configured for all overlays or separately for imageViewer, popup, dialog and drawer. The component attach prop takes precedence. Unconfigured components retain their default mounting behavior。Typescript: `AttachNode \| { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 autoComplete | Object | - | AutoComplete global configs。Typescript: `AutoCompleteConfig` | N
 calendar | Object | - | Calendar global configs。Typescript: `CalendarConfig` | N
 cascader | Object | - | Cascader global configs。Typescript: `CascaderConfig` | N
