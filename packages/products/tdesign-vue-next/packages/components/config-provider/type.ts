@@ -34,7 +34,7 @@ export interface GlobalConfigProvider {
    */
   animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
   /**
-   * null
+   * 浮层挂载节点，可统一设置或按 imageViewer、popup、dialog、drawer 分别设置。组件的 attach 属性优先于全局配置；未配置时保持各组件原有的默认挂载行为
    */
   attach?: AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode };
   /**
