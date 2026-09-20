@@ -8,10 +8,19 @@ import type { TdCheckboxGroupProps } from './type';
 export default {
   /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
+  /** 单选框按钮排列方式 */
+  direction: {
+    type: String,
+    default: 'vertical' as TdCheckboxGroupProps['direction'],
+    validator(val: TdCheckboxGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdCheckboxGroupProps['disabled'],
   },
   /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
@@ -19,8 +28,8 @@ export default {
   },
   /** 支持最多选中的数量 */
   max: {
-    type: Number,
-    default: undefined,
+    type: [Number, null],
+    default: null as TdCheckboxGroupProps['max'],
   },
   /** 统一设置内部复选框 HTML 属性 */
   name: {
@@ -34,8 +43,8 @@ export default {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdCheckboxGroupProps['readonly'],
   },
   /** -1 时代表独立，不再寻找 parent，用于头条小程序 */
   relationKey: {

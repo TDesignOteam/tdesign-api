@@ -107,6 +107,11 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   borderless?: boolean;
   /**
+   * 单选框按钮排列方式
+   * @default vertical
+   */
+  direction?: 'vertical' | 'horizontal';
+  /**
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: boolean;
@@ -152,7 +157,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   onChange?: (value: T, context: CheckboxGroupChangeContext) => void;
 }
 
-export type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[];
+export type CheckboxIconType = 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
 

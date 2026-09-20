@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TdCheckboxIconType as CheckboxIconType } from '../checkbox/type';
+import type { CheckboxIconType } from '../checkbox/type';
 import type { KeysType } from '../common/common';
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
@@ -14,9 +14,14 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
    */
   borderless?: boolean;
   /**
+   * 单选框按钮排列方式
+   * @default vertical
+   */
+  direction?: 'vertical' | 'horizontal';
+  /**
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
-  disabled?: boolean;
+  disabled?: boolean | null;
   /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
@@ -24,7 +29,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
    * 支持最多选中的数量
    */
-  max?: number;
+  max?: number | null;
   /**
    * 统一设置内部复选框 HTML 属性
    * @default ''
@@ -38,7 +43,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**
    * 只读状态
    */
-  readonly?: boolean;
+  readonly?: boolean | null;
   /**
    * -1 时代表独立，不再寻找 parent，用于头条小程序
    * @default ''
