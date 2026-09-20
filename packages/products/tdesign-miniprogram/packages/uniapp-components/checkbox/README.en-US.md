@@ -57,7 +57,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 borderless | Boolean | false | \- | N
-direction | String | vertical | Radio option arrangement。options: vertical/horizontal | N
+direction | String | vertical | `1.0.0`。Radio option arrangement。options: vertical/horizontal | N
 disabled | Boolean | undefined | \- | N
 keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 max | Number | undefined | \- | N
