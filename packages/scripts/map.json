@@ -908,11 +908,11 @@
       },
       {
         "value": "Split",
-        "label": "分屏视图"
+        "label": "分割面板"
       },
       {
         "value": "SplitPanel",
-        "label": "分屏视图面板"
+        "label": "分割面板内容"
       },
       {
         "value": "Statistic",

@@ -185,6 +185,9 @@ export const COMPONENT_API_MD_MAP = {
     list: ['ColorPicker', 'ColorPickerPanel'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
+  Split: {
+    list: ['Split', 'SplitPanel'],
+  },
 };
 // 支持 Chat 独立拆分（独立包 pro-components/chat）的框架。
 // 仅这些框架的 Chat 组件走 CHAT_COMPONENT_MAP 拆分逻辑；
