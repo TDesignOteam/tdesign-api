@@ -911,6 +911,14 @@
         "label": "间距"
       },
       {
+        "value": "Split",
+        "label": "分割面板"
+      },
+      {
+        "value": "SplitPanel",
+        "label": "分割面板内容"
+      },
+      {
         "value": "Statistic",
         "label": "统计数值"
       },

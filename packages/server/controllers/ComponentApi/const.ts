@@ -369,6 +369,8 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'QRCode', label: '二维码' },
   { value: 'QRCodeConfig', label: '二维码全局配置', type: 'TS' },
   { value: 'Scrollbar', label: '滚动条' },
+  { value: 'Split', label: '分割面板' },
+  { value: 'SplitPanel', label: '分割面板内容' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [

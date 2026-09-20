@@ -8,7 +8,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
-align | String | left | options: left/right | N
 allowUncheck | Boolean | false | \- | N
 block | Boolean | true | \- | N
 borderless | Boolean | undefined | \- | N
@@ -16,7 +15,7 @@ checked | Boolean | false | \- | N
 defaultChecked | Boolean | false | uncontrolled property | N
 children | TNode | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 content | TNode | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
-contentDisabled | Boolean | false | \- | N
+contentDisabled | Boolean | - | \- | N
 disabled | Boolean | undefined | \- | N
 icon | String / Array | 'circle' | Typescript: `'circle' \| 'line' \| 'dot' \| 'none' \|Array<TNode>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 label | TNode | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

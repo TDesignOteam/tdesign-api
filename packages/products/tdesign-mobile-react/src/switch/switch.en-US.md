@@ -8,7 +8,6 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
-colors | Array | - | `deprecated`。Typescript: `string[]` | N
 customValue | Array | - | Typescript: `Array<SwitchValue>` | N
 disabled | Boolean | undefined | \- | N
 label | TNode | [] | Typescript: `Array<string \| TNode> \| TNode<{ value: SwitchValue }>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N

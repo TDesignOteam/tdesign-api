@@ -185,6 +185,9 @@ export const COMPONENT_API_MD_MAP = {
     list: ['ColorPicker', 'ColorPickerPanel'],
     includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
+  Split: {
+    list: ['Split', 'SplitPanel'],
+  },
 };
 // 支持 Chat 独立拆分（独立包 pro-components/chat）的框架。
 // 仅这些框架的 Chat 组件走 CHAT_COMPONENT_MAP 拆分逻辑；
@@ -270,6 +273,9 @@ export const TYPES_COMBINE_MAP = {
   Tabs: {
     list: ['Tabs', 'TabPanel'],
     excludes: ['Miniprogram', 'UniApp'],
+  },
+  Split:{
+    list: ['Split', 'SplitPanel'],
   },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
@@ -409,7 +415,7 @@ export const TYPES_COMBINE_MAP = {
 export const MOBILE_TYPES_COMBINE_MAP = {
   DropdownMenu: {
     list: ['DropdownMenu', 'DropdownItem'],
-    excludes: ['Miniprogram'],
+    excludes: ['Miniprogram', 'UniApp'],
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
@@ -425,7 +431,7 @@ export const MOBILE_TYPES_COMBINE_MAP = {
 export const MINIPROGRAM_TYPES_COMBINE_MAP = {
   Swiper: {
     list: ['Swiper', 'SwiperNav'],
-    excludes: ['Miniprogram'],
+    excludes: ['Miniprogram', 'UniApp'],
   },
   Form: {
     list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
