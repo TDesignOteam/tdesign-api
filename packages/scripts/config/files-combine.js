@@ -274,6 +274,9 @@ export const TYPES_COMBINE_MAP = {
     list: ['Tabs', 'TabPanel'],
     excludes: ['Miniprogram', 'UniApp'],
   },
+  Split:{
+    list: ['Split', 'SplitPanel'],
+  },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
     excludes: ['Miniprogram', 'UniApp'],
