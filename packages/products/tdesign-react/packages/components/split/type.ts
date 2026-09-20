@@ -4,18 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode } from '../common';
+import type { TNode, TElement } from '../common';
 
 export interface TdSplitProps {
   /**
-   * 必须是 Panel 组件，数量需与 initialSizes 长度匹配
+   * 分割面板的内容节点，同 content，必须是SplitPanel
    */
-  children: TNode;
-  /**
-   * 容器自定义类名
-   * @default ''
-   */
-  className?: string;
+  children?: TElement;
   /**
    * 分割方向。horizontal：左右排列；vertical：上下排列
    * @default horizontal

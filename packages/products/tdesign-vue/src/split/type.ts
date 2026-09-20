@@ -8,15 +8,6 @@ import type { TNode } from '../common';
 
 export interface TdSplitProps {
   /**
-   * 必须是 Panel 组件，数量需与 initialSizes 长度匹配
-   */
-  children: string | TNode;
-  /**
-   * 容器自定义类名
-   * @default ''
-   */
-  className?: string;
-  /**
    * 分割方向。horizontal：左右排列；vertical：上下排列
    * @default horizontal
    */

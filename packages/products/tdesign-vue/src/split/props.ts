@@ -8,16 +8,6 @@ import { TdSplitProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 必须是 Panel 组件，数量需与 initialSizes 长度匹配 */
-  children: {
-    type: [String, Function] as PropType<TdSplitProps['children']>,
-    required: true,
-  },
-  /** 容器自定义类名 */
-  className: {
-    type: String,
-    default: '',
-  },
   /** 分割方向。horizontal：左右排列；vertical：上下排列 */
   direction: {
     type: String as PropType<TdSplitProps['direction']>,

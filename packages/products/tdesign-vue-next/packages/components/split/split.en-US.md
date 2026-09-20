@@ -6,8 +6,6 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-children | String / Slot / Function | - | required。Must be a Panel component, and the quantity must match the initialSizes length.。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | Y
-className | String | - | Container custom class name | N
 direction | String | horizontal | Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically.。options: horizontal/vertical | N
 draggerIcon | String / Slot / Function | - | Drag icons。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 gap | Number | 0 | The spacing (px) between panels will be reflected in the visual appearance of the divider. | N
@@ -34,3 +32,13 @@ name | params | return | description
 getSizes | \- | `number[]` | Get the current pixel size of each panel。Typescript: `{min?: number max?: number }`
 reset | \- | \- | Reset to initial size。Typescript: `{min?: number max?: number }`
 setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size。Typescript: `{min?: number max?: number }`
+
+
+### SplitPanel Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+defaultSize | String / Number | - | Initial panel size, supports numeric pixels (px) or text percentages (%). | N
+max | String / Number | - | The maximum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.max | N
+min | String / Number | - | The minimum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.min | N
+resizable | Boolean | true | Enable drag-and-drop scaling? | N

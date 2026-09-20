@@ -6,8 +6,6 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-children | String / Slot / Function | - | 必需。必须是 Panel 组件，数量需与 initialSizes 长度匹配。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | Y
-className | String | - | 容器自定义类名 | N
 direction | String | horizontal | 分割方向。horizontal：左右排列；vertical：上下排列。可选项：horizontal/vertical | N
 draggerIcon | String / Slot / Function | - | 拖拽图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 gap | Number | 0 | 面板之间的间距（px），会体现在分割条视觉上 | N
@@ -34,3 +32,13 @@ resize-start | `(sizes: number[])` | 开始拖拽时的回调。TS 类型：`{mi
 getSizes | \- | `number[]` | 获取当前各面板的像素尺寸。TS 类型：`{min?: number max?: number }`
 reset | \- | \- | 重置为初始尺寸。TS 类型：`{min?: number max?: number }`
 setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | 程序化设置尺寸。TS 类型：`{min?: number max?: number }`
+
+
+### SplitPanel Props
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+defaultSize | String / Number | - | 初始面板大小，支持数字 px 或者文字 '百分比%' 类型 | N
+max | String / Number | - | 当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max | N
+min | String / Number | - | 当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min | N
+resizable | Boolean | true | 是否开启拖拽伸缩 | N

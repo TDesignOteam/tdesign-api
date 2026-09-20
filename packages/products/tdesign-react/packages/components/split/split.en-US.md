@@ -8,8 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
-children | TNode | - | required。Must be a Panel component, and the quantity must match the initialSizes length.。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | Y
-className | String | - | Container custom class name | N
+children | TElement | - | split's children elements。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 direction | String | horizontal | Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically.。options: horizontal/vertical | N
 draggerIcon | TNode | - | Drag icons。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 gap | Number | 0 | The spacing (px) between panels will be reflected in the visual appearance of the divider. | N
@@ -30,3 +29,15 @@ style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSPropert
 getSizes | \- | `number[]` | Get the current pixel size of each panel。Typescript: `{min?: number max?: number }`
 reset | \- | \- | Reset to initial size。Typescript: `{min?: number max?: number }`
 setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size。Typescript: `{min?: number max?: number }`
+
+
+### SplitPanel Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
+defaultSize | String / Number | - | Initial panel size, supports numeric pixels (px) or text percentages (%). | N
+max | String / Number | - | The maximum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.max | N
+min | String / Number | - | The minimum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.min | N
+resizable | Boolean | true | Enable drag-and-drop scaling? | N
