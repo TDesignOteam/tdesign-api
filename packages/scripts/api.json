@@ -35231,6 +35231,49 @@
       ]
     },
     {
+      "id": 1789894182,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "CheckboxGroup",
+      "field_category": 1,
+      "field_name": "direction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "vertical",
+      "field_enum": "vertical/horizontal",
+      "field_desc_zh": "单选框按钮排列方式",
+      "field_desc_en": "Radio option arrangement",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-20 08:49:42",
+      "update_time": "2026-09-20 08:49:42",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 149,
       "platform_framework": [
         "1",
@@ -105834,6 +105877,49 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1789894129,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "RadioGroup",
+      "field_category": 1,
+      "field_name": "direction",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "vertical",
+      "field_enum": "vertical/horizontal",
+      "field_desc_zh": "单选框按钮排列方式",
+      "field_desc_en": "Radio option arrangement",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-20 08:48:49",
+      "update_time": "2026-09-20 08:48:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
       ],
       "field_type_text": [
         "String"

@@ -12,6 +12,15 @@ export default {
   allowUncheck: Boolean,
   /** 是否开启无边框模式；优先级低于 Radio */
   borderless: Boolean,
+  /** 单选框按钮排列方式 */
+  direction: {
+    type: String as PropType<TdRadioGroupProps['direction']>,
+    default: 'vertical' as TdRadioGroupProps['direction'],
+    validator(val: TdRadioGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
   disabled: {
     type: Boolean,
