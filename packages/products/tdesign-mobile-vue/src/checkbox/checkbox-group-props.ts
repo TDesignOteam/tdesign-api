@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
-  /** 单选框按钮排列方式 */
+  /** 复选框按钮排列方式 */
   direction: {
     type: String as PropType<TdCheckboxGroupProps['direction']>,
     default: 'vertical' as TdCheckboxGroupProps['direction'],

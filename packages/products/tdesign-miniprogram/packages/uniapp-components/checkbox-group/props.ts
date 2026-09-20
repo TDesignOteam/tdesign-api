@@ -8,7 +8,7 @@ import type { TdCheckboxGroupProps } from './type';
 export default {
   /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
-  /** 单选框按钮排列方式 */
+  /** 复选框按钮排列方式 */
   direction: {
     type: String,
     default: 'vertical' as TdCheckboxGroupProps['direction'],

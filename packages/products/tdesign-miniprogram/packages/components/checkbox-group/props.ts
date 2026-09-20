@@ -11,7 +11,7 @@ const props: TdCheckboxGroupProps = {
     type: Boolean,
     value: false,
   },
-  /** 单选框按钮排列方式 */
+  /** 复选框按钮排列方式 */
   direction: {
     type: String,
     value: 'vertical',

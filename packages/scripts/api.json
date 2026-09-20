@@ -35246,7 +35246,7 @@
       ],
       "field_default_value": "vertical",
       "field_enum": "vertical/horizontal",
-      "field_desc_zh": "单选框按钮排列方式",
+      "field_desc_zh": "复选框按钮排列方式",
       "field_desc_en": "Radio option arrangement",
       "field_required": 0,
       "event_input": "",

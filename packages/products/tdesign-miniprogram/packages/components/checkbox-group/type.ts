@@ -17,7 +17,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
     value?: boolean;
   };
   /**
-   * 单选框按钮排列方式
+   * 复选框按钮排列方式
    * @default vertical
    */
   direction?: {
