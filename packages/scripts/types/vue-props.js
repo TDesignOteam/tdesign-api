@@ -11,7 +11,9 @@ import {
   getCmpTypeCombineMap,
 } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+// 移动端 H5 父子组件的 props 需要合并输出到父组件目录；小程序和 UniApp 父子组件保持独立输出
+const MOBILE_PROPS_MERGE_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
 import { kebabCaseComponent } from '../utils.js';
 import { getComponentBasePath } from '../utils.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
@@ -410,7 +412,9 @@ function generateVueProps(baseData, framework, isUseDefault) {
   currentFramework = framework;
   useDefault = isUseDefault;
   FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
-    Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
+    MOBILE_PROPS_MERGE_FRAMES.includes(framework)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+      : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
     framework,
   );
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);

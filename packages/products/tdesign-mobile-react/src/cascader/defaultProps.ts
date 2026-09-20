@@ -8,7 +8,6 @@ export const cascaderDefaultProps: TdCascaderProps = {
   checkStrictly: false,
   closeBtn: true,
   filterable: false,
-  lazy: false,
   loadCompleted: false,
   options: [],
   overlayProps: {},

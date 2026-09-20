@@ -3,7 +3,14 @@ import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
 import { getApiComponentMapByFrameWork } from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
+import {
+  FRAMEWORK_MAP,
+  COMPONENT_API_MD_MAP,
+  MOBILE_COMPONENT_API_MD_MAP,
+  MINIPROGRAM_COMPONENT_API_MD_MAP,
+  MOBILE_FRAMES,
+  getChatComponentMap,
+} from '../config/index.js';
 import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
@@ -11,8 +18,19 @@ let currentFramework = '';
 // 组件 Form 的 API 为 Form 和 FormItem 的组合
 function combineApi(allApi, component) {
   const r = { ...allApi };
+  // 所有技术栈的 md 文档父子组件都合并输出（小程序和 UniApp 仅 type.ts 和 props.ts 独立输出）
   const map = getApiComponentMapByFrameWork(
-    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
+    currentFramework === 'Miniprogram' || currentFramework === 'UniApp'
+      ? Object.assign(
+          {},
+          COMPONENT_API_MD_MAP,
+          MOBILE_COMPONENT_API_MD_MAP,
+          MINIPROGRAM_COMPONENT_API_MD_MAP,
+          getChatComponentMap(currentFramework),
+        )
+      : MOBILE_FRAMES.includes(currentFramework)
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
   Object.keys(map).forEach((cmp) => {
