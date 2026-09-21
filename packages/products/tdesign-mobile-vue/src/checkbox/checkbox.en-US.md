@@ -15,7 +15,7 @@ content | String / Slot / Function | - | Typescript: `string \| TNode`。[see mo
 contentDisabled | Boolean | - | \- | N
 default | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | \- | N
-icon | String / Boolean / Array | 'circle' | Typescript: `CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[];`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts) | N
+icon | String / Boolean / Array | 'circle' | Typescript: `CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| boolean \| Array<TNode \| String>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/checkbox/type.ts) | N
 indeterminate | Boolean | false | \- | N
 label | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | \- | N

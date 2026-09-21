@@ -8,8 +8,7 @@ import { InputProps } from '../input';
 import { PopupProps } from '../popup';
 import { SelectInputProps } from '../select-input';
 import { TextareaProps } from '../textarea';
-import type { TNode, TElement } from '../common';
-import type { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
+import type { TNode } from '../common';
 
 export interface TdSearchProps {
   /**
@@ -53,7 +52,7 @@ export interface TdSearchProps {
    * 搜索框内部左侧内容，位于 `prefixIcon` 左侧
    * @default ''
    */
-  label?: TNode;
+  label?: string | TNode;
   /**
    * 批量搜索模式，也叫多行搜索，输入框表现为类似 `textarea`，允许输入多行搜索内容
    * @default false
@@ -71,7 +70,7 @@ export interface TdSearchProps {
   /**
    * 前置图标
    */
-  prefixIcon?: TElement;
+  prefixIcon?: TNode;
   /**
    * 只读状态
    */
@@ -84,11 +83,11 @@ export interface TdSearchProps {
    * 搜索框内部右侧内容，位于 `suffixIcon` 右侧
    * @default ''
    */
-  suffix?: TNode;
+  suffix?: string | TNode;
   /**
    * 后置图标，默认为搜索图标。值为 `null` 时则不显示
    */
-  suffixIcon?: TElement;
+  suffixIcon?: TNode;
   /**
    * 透传 Textarea 组件全部属性
    */
@@ -104,32 +103,37 @@ export interface TdSearchProps {
    */
   defaultValue?: string;
   /**
+   * 值
+   * @default ''
+   */
+  modelValue?: string;
+  /**
    * 失去焦点时触发
    * @default ''
    */
-  onBlur?: (context: { value: string; e: FocusEvent<HTMLDivElement> }) => void;
+  onBlur?: (context: { value: string; e: FocusEvent }) => void;
   /**
    * 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
    * @default ''
    */
   onChange?: (
     value: string,
-    context: { trigger: 'input-change' | 'option-click'; e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> },
+    context: { trigger: 'input-change' | 'option-click'; e?: InputEvent | MouseEvent },
   ) => void;
   /**
    * 点击清除时触发
    * @default ''
    */
-  onClear?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
+  onClear?: (context: { e: MouseEvent }) => void;
   /**
    * 回车键按下时触发
    */
-  onEnter?: (context: { value: string; e: KeyboardEvent<HTMLInputElement> }) => void;
+  onEnter?: (context: { value: string; e: KeyboardEvent }) => void;
   /**
    * 获得焦点时触发
    * @default ''
    */
-  onFocus?: (context: { value: string; e: FocusEvent<HTMLDivElement> }) => void;
+  onFocus?: (context: { value: string; e: FocusEvent }) => void;
   /**
    * 搜索触发，包含：Enter 键、联想关键词点击、清空按钮点击、搜索框后置内容点击（含后置图标）、搜索框前置内容点击（含前置图标）等
    * @default ''
@@ -137,7 +141,7 @@ export interface TdSearchProps {
   onSearch?: (context?: {
     value: string;
     trigger: 'enter' | 'option-click' | 'clear' | 'suffix-click' | 'prefix-click';
-    e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement>;
+    e?: InputEvent | MouseEvent;
   }) => void;
 }
 

@@ -79,15 +79,7 @@ export interface MessageOptions extends TdMessageProps {
 export type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading';
 
 export type MessagePlacementList =
-  | 'center'
-  | 'top'
-  | 'left'
-  | 'right'
-  | 'bottom'
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right';
+  'center' | 'top' | 'left' | 'right' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 
 export interface MessageInstance {
   close: () => void;

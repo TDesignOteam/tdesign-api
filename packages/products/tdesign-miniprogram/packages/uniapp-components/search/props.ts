@@ -97,8 +97,8 @@ export default {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdSearchProps['readonly'],
   },
   /** 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 */
   selectionEnd: {

@@ -69,7 +69,7 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   allowUncheck?: boolean;
   /**
-   * 当取值为 vertical 时，单选框选项以垂直方向排列。
+   * 单选框按钮排列方式
    * @default horizontal
    */
   direction?: 'horizontal' | 'vertical';

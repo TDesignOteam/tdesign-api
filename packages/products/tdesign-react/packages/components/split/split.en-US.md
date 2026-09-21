@@ -16,9 +16,9 @@ lazy | Boolean | false | Deferred rendering mode | N
 panelSize | Object | - | Define the maximum and minimum scale for each panel.。Typescript: `{min?: number; max?: number }` | N
 splitterClassName | String | - | Custom divider style class name | N
 splitterSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
-onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging.。Typescript: `{min?: number max?: number }` | N
-onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends。Typescript: `{min?: number max?: number }` | N
-onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts。Typescript: `{min?: number max?: number }` | N
+onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging. | N
+onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends | N
+onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts | N
 
 ### SplitInstanceFunctions 组件实例方法
 
@@ -26,9 +26,9 @@ name | params | return | description
 -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
-getSizes | \- | `number[]` | Get the current pixel size of each panel。Typescript: `{min?: number max?: number }`
-reset | \- | \- | Reset to initial size。Typescript: `{min?: number max?: number }`
-setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size。Typescript: `{min?: number max?: number }`
+getSizes | \- | `number[]` | Get the current pixel size of each panel
+reset | \- | \- | Reset to initial size
+setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size
 
 
 ### SplitPanel Props

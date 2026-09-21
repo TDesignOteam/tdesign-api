@@ -31,6 +31,6 @@ scroll | `({ scrollTop: number, scrollLeft: number }) ` | Triggered while scroll
 
 name | params | return | description
 -- | -- | -- | --
-getValues | \- | `PositionValues ` | required。Get the view object containing complete scrolling information。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/scrollbar/type.ts)。<br/>` interface PositionValues {  left:number,top: number,scrollLeft:number,scrollTop:number,scrollWidth:number,scrollHeight:number, clientWidth:number,clientHeight:number }`<br/>
+getValues | \- | `PositionValues` | required。Get the view object containing complete scrolling information。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/scrollbar/type.ts)。<br/>`interface PositionValues { left: number; top: number; scrollLeft: number; scrollTop: number; scrollWidth: number; scrollHeight: number; clientWidth: number; clientHeight: number }`<br/>
 scrollTo | `ScrollToFn` | \- | required。Scroll to a specific set of coordinates。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/scrollbar/type.ts)。<br/>`type ScrollToFn = { (x: number, y: number): void; (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }`<br/>
 scrollToEdge | `(position:PositionEdge) ` | \- | required。Scroll to one side。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/scrollbar/type.ts)。<br/>`type PositionEdge = "left"\|"right"\|"top"\|"bottom"`<br/>
