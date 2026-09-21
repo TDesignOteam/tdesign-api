@@ -11,27 +11,28 @@ draggerIcon | String / Slot / Function | - | Drag icons。Typescript: `string \|
 gap | Number | 0 | The spacing (px) between panels will be reflected in the visual appearance of the divider. | N
 lazy | Boolean | false | Deferred rendering mode | N
 panelSize | Object | - | Define the maximum and minimum scale for each panel.。Typescript: `{min?: number; max?: number }` | N
-splitterClassName | String | - | Custom divider style class name | N
-splitterSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
-onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging.。Typescript: `{min?: number max?: number }` | N
-onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends。Typescript: `{min?: number max?: number }` | N
-onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts。Typescript: `{min?: number max?: number }` | N
+splitClassName | String | - | Custom divider style class name | N
+splitSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
+splitStyle | Object | - | Customize the inline style of the splitter。Typescript: `Styles`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging. | N
+onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends | N
+onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts | N
 
 ### Split Events
 
 name | params | description
 -- | -- | --
-resize | `(sizes: number[])` | Callback (array of pixel values) for size changes during dragging.。Typescript: `{min?: number max?: number }`
-resize-end | `(sizes: number[])` | Callback when drag ends。Typescript: `{min?: number max?: number }`
-resize-start | `(sizes: number[])` | Callback when drag starts。Typescript: `{min?: number max?: number }`
+resize | `(sizes: number[])` | Callback (array of pixel values) for size changes during dragging.
+resize-end | `(sizes: number[])` | Callback when drag ends
+resize-start | `(sizes: number[])` | Callback when drag starts
 
 ### SplitInstanceFunctions 组件实例方法
 
 name | params | return | description
 -- | -- | -- | --
-getSizes | \- | `number[]` | Get the current pixel size of each panel。Typescript: `{min?: number max?: number }`
-reset | \- | \- | Reset to initial size。Typescript: `{min?: number max?: number }`
-setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size。Typescript: `{min?: number max?: number }`
+getSizes | \- | `number[]` | Get the current pixel size of each panel
+reset | \- | \- | Reset to initial size
+setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size
 
 
 ### SplitPanel Props

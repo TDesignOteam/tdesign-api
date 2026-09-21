@@ -4,6 +4,6 @@
 
 import { TdSplitProps, TdSplitPanelProps } from './type';
 
-export const splitDefaultProps: TdSplitProps = { direction: 'horizontal', gap: 0, lazy: false, splitterSize: 6 };
+export const splitDefaultProps: TdSplitProps = { direction: 'horizontal', gap: 0, lazy: false, splitSize: 6 };
 
 export const splitPanelDefaultProps: TdSplitPanelProps = { resizable: true };

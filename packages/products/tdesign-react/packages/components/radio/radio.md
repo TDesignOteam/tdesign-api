@@ -28,6 +28,7 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 allowUncheck | Boolean | false | 是否允许取消选中 | N
+direction | String | horizontal | 单选框按钮排列方式。可选项：horizontal/vertical | N
 disabled | Boolean | undefined | 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled | N
 name | String | - | HTML 元素原生属性 | N
 options | Array | - | 单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同。TS 类型：`Array<RadioOption>` `type RadioOption = string \| number \| RadioOptionObj` `interface RadioOptionObj { label?: string \| TNode; value?: string \| number \| boolean; disabled?: boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/radio/type.ts) | N

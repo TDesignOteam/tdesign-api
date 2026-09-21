@@ -5,7 +5,7 @@
  * */
 
 import { CheckboxIconType } from '../checkbox/index';
-import { KeysType } from '../common/common';
+import type { KeysType } from '../common/common';
 
 export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   /**

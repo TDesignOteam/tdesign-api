@@ -16,7 +16,7 @@ default-checked | Boolean | undefined | uncontrolled property | N
 content | String | - | \- | N
 content-disabled | Boolean | - | \- | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'circle' | Typescript: `CheckboxIconType ` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[] `。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/checkbox/type.ts) | N
+icon | String / Array | 'circle' | Typescript: `CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[];`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/checkbox/type.ts) | N
 indeterminate | Boolean | false | \- | N
 label | String | - | \- | N
 max-content-row | Number | 5 | \- | N

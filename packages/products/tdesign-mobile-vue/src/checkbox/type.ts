@@ -152,7 +152,7 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
   onChange?: (value: T, context: CheckboxGroupChangeContext) => void;
 }
 
-export type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[];
+export type CheckboxIconType = 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
 

@@ -10,6 +10,15 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
+  /** 单选框按钮排列方式 */
+  direction: {
+    type: String as PropType<TdRadioGroupProps['direction']>,
+    default: 'horizontal' as TdRadioGroupProps['direction'],
+    validator(val: TdRadioGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
+    },
+  },
   /** 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
   disabled: {
     type: Boolean,

@@ -5,7 +5,7 @@
  * */
 
 import { PopupProps } from '../popup/index';
-import { KeysType } from '../common/common';
+import type { KeysType } from '../common/common';
 
 export interface TdPickerProps {
   /**

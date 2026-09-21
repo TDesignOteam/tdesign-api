@@ -16,7 +16,7 @@ default-checked | Boolean | undefined | 是否选中。非受控属性 | N
 content | String | - | 多选框内容 | N
 content-disabled | Boolean | - | 是否禁用组件内容（content）触发选中 | N
 disabled | Boolean | undefined | 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。优先级：Checkbox.disabled > CheckboxGroup.disabled > Form.disabled | N
-icon | String / Array | 'circle' | 自定义选中图标和非选中图标。使用 Array 时表示：`[选中态图标，非选中态图标，半选中态图标]`。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。TS 类型：`CheckboxIconType ` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[] `。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/checkbox/type.ts) | N
+icon | String / Array | 'circle' | 自定义选中图标和非选中图标。使用 Array 时表示：`[选中态图标，非选中态图标，半选中态图标]`。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。TS 类型：`CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[];`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/checkbox/type.ts) | N
 indeterminate | Boolean | false | 是否为半选 | N
 label | String | - | 主文案 | N
 max-content-row | Number | 5 | 内容最大行数限制 | N
