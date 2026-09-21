@@ -1,5 +1,5 @@
 <template>
-  <form class="t-form api-edit-form" onsubmit="return false">
+  <form class="t-form api-edit-form" onsubmit="return false;">
     <div class="t-form-item">
       <label>设计组件：</label>
       <div class="t-form-content">
@@ -172,7 +172,11 @@
       <div class="t-form-item" v-show="isShowReturn">
         <label>返回值：</label>
         <div class="t-form-content">
-          <t-input v-model="formData.eventOutput" :placeholder="currentApiCategory.placeholder.outputParams"></t-input>
+          <t-textarea
+            v-model="formData.eventOutput"
+            :autosize="{ minRows: 2 }"
+            :placeholder="currentApiCategory.placeholder.outputParams"
+          ></t-textarea>
         </div>
       </div>
       <div class="t-form-item" v-show="isShowReturn">
@@ -253,7 +257,6 @@
 
 <script setup>
 import { ref, reactive, computed, watch } from 'vue';
-import SiteCheckbox from './checkbox.vue';
 import {
   Icon as TIcon,
   Input as TInput,
@@ -266,6 +269,8 @@ import {
   Radio as TRadio,
   RadioGroup as TRadioGroup,
 } from 'tdesign-vue-next';
+import { cmpApiInstance } from '../../services/api-server';
+import SiteCheckbox from './checkbox.vue';
 import {
   API_CATEGORY_MAP,
   API_CATEGORY_EVENTS,
@@ -282,8 +287,6 @@ import {
   API_CATEGORY_RETURN,
   API_CATEGORY_T,
 } from './const';
-
-import { cmpApiInstance } from '../../services/api-server';
 import { getCombinedComponentsByCurrentName } from './util';
 
 const versionDescription = [
