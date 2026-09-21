@@ -175,6 +175,16 @@
           <t-input v-model="formData.eventOutput" :placeholder="currentApiCategory.placeholder.outputParams"></t-input>
         </div>
       </div>
+      <div class="t-form-item" v-show="isShowReturn">
+        <label>TS 类型：</label>
+        <div class="t-form-content">
+          <t-textarea
+            v-model="formData.customFieldType"
+            :autosize="{ minRows: 2 }"
+            :placeholder="currentApiCategory.placeholder.customFieldType"
+          ></t-textarea>
+        </div>
+      </div>
       <div class="t-form-item">
         <label>描述：</label>
         <div class="t-form-content">

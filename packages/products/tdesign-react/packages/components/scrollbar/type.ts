@@ -87,7 +87,7 @@ export interface ScrollbarInstanceFunctions {
   /**
    * 滚动到一组特定坐标
    */
-  scrollTo: (options: { top?: number; left?: number; behavior?: ScrollBehavior }) => void;
+  scrollTo: ScrollToFn;
   /**
    * 滚动到某一边
    */

@@ -32,5 +32,5 @@ scroll | `({ scrollTop: number, scrollLeft: number }) ` | 滚动时触发
 名称 | 参数 | 返回值 | 描述
 -- | -- | -- | --
 getValues | \- | `PositionValues ` | 必需。获取包含完整滚动信息的视图对象。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/scrollbar/type.ts)。<br/>` interface PositionValues {  left:number,top: number,scrollLeft:number,scrollTop:number,scrollWidth:number,scrollHeight:number, clientWidth:number,clientHeight:number }`<br/>
-scrollTo | `(options: { top?: number; left?: number; behavior?: ScrollBehavior })` | \- | 必需。滚动到一组特定坐标。TS 类型：`ScrollToFn` `type ScrollToFn = {   (x: number, y: number): void;   (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/scrollbar/type.ts)
+scrollTo | `ScrollToFn` | \- | 必需。滚动到一组特定坐标。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/scrollbar/type.ts)。<br/>`type ScrollToFn = { (x: number, y: number): void; (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }`<br/>
 scrollToEdge | `(position:PositionEdge) ` | \- | 必需。滚动到某一边。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/scrollbar/type.ts)。<br/>`type PositionEdge = "left"\|"right"\|"top"\|"bottom"`<br/>
