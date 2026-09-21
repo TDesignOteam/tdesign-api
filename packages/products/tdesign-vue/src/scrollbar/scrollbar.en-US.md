@@ -9,23 +9,23 @@ name | type | default | description | required
 ariaLabel | String | - | aria-label text in view layer | N
 autoExpand | Boolean | true | Should the scrollbar expand outwards when hovering (to increase the interactive hotspot)? | N
 autoresize | Boolean | true | Does the container size respond to changes | N
-container | Object | - | Set the maximum height/width of the scrolling container.。Typescript: `ScrollbarContainerProps` | N
+container | Object | - | Set the maximum height/width of the scrolling container。Typescript: `{ height?:string \| number; maxHeight?: string \| number; width?: string \| number; maxWidth?: string \| number }` | N
 disabled | Boolean | false | disabled scroll | N
 id | String | - | ID of the view layer | N
 role | String | scrollbar | WAI-ARIA role in the view layer | N
-step | Object | - | Rolling step。Typescript: `{x?:number;y?:number}` | N
+step | Object | - | Rolling step。Typescript: `{ x?: number; y?: number}` | N
 tabindex | String / Number | - | tabindex of the container | N
 thumbMinSize | Number | 20 | Minimum size (px) of the scroll bar slider. | N
 viewClassName | String | - | Custom class name for the view (content area) | N
 visibility | String | hover | Scroll bar display format。options: always/hover/hide | N
 wrapClassName | String | - | Custom class name of the wrapper container | N
-onScroll | Function |  | Typescript: `(context:{e:Event}) => void`<br/>Triggered while scrolling | N
+onScroll | Function |  | Typescript: `({ scrollTop: number, scrollLeft: number })  => void`<br/>Triggered while scrolling | N
 
 ### Scrollbar Events
 
 name | params | description
 -- | -- | --
-scroll | `(context:{e:Event})` | Triggered while scrolling
+scroll | `({ scrollTop: number, scrollLeft: number }) ` | Triggered while scrolling
 
 ### ScrollbarInstanceFunctions 组件实例方法
 

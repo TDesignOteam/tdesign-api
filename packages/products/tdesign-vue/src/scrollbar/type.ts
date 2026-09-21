@@ -23,7 +23,12 @@ export interface TdScrollbarProps {
   /**
    * 设置滚动容器的最大高度/宽度
    */
-  container?: ScrollbarContainerProps;
+  container?: {
+    height?: string | number;
+    maxHeight?: string | number;
+    width?: string | number;
+    maxWidth?: string | number;
+  };
   /**
    * 禁止滚动
    * @default false
@@ -70,7 +75,7 @@ export interface TdScrollbarProps {
   /**
    * 滚动时触发
    */
-  onScroll?: (context: { e: Event }) => void;
+  onScroll?: ({ scrollTop: number, scrollLeft: number }) => void;
 }
 
 /** 组件实例方法 */
