@@ -11,8 +11,9 @@ draggerIcon | String / Slot / Function | - | Drag icons。Typescript: `string \|
 gap | Number | 0 | The spacing (px) between panels will be reflected in the visual appearance of the divider. | N
 lazy | Boolean | false | Deferred rendering mode | N
 panelSize | Object | - | Define the maximum and minimum scale for each panel.。Typescript: `{min?: number; max?: number }` | N
-splitterClassName | String | - | Custom divider style class name | N
-splitterSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
+splitClassName | String | - | Custom divider style class name | N
+splitSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
+splitStyle | Object | - | Customize the inline style of the splitter。Typescript: `Styles`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging. | N
 onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends | N
 onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts | N

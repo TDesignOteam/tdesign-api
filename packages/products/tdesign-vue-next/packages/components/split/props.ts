@@ -33,14 +33,18 @@ export default {
     type: Object as PropType<TdSplitProps['panelSize']>,
   },
   /** 自定义分割条的样式类名 */
-  splitterClassName: {
+  splitClassName: {
     type: String,
     default: '',
   },
   /** 分割条的可交互区域宽度/高度（px） */
-  splitterSize: {
+  splitSize: {
     type: Number,
     default: 6,
+  },
+  /** 自定义分割条的内联样式 */
+  splitStyle: {
+    type: Object as PropType<TdSplitProps['splitStyle']>,
   },
   /** 拖拽过程中尺寸变化的回调（像素值数组） */
   onResize: Function as PropType<TdSplitProps['onResize']>,
