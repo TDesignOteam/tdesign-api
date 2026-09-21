@@ -120435,6 +120435,45 @@
       ]
     },
     {
+      "id": 1785668191,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Split",
+      "field_category": 1,
+      "field_name": "splitterStyle",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义分割条的内联样式",
+      "field_desc_en": "Customize the inline style of the splitter",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 10:56:31",
+      "update_time": "2026-08-02 10:56:31",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1785668599,
       "platform_framework": [
         "1",
@@ -120666,45 +120705,6 @@
       ],
       "field_type_text": [
         "Object"
-      ]
-    },
-    {
-      "id": 1785668191,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 256,
-      "field_name": "splitterStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义分割条的内联样式",
-      "field_desc_en": "Customize the inline style of the splitter",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:56:31",
-      "update_time": "2026-08-02 10:56:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "CSS Variables",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String"
       ]
     },
     {

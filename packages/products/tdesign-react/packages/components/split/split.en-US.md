@@ -16,6 +16,7 @@ lazy | Boolean | false | Deferred rendering mode | N
 panelSize | Object | - | Define the maximum and minimum scale for each panel.。Typescript: `{min?: number; max?: number }` | N
 splitterClassName | String | - | Custom divider style class name | N
 splitterSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
+splitterStyle | Object | - | Customize the inline style of the splitter。Typescript: `Styles`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging.。Typescript: `{min?: number max?: number }` | N
 onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends。Typescript: `{min?: number max?: number }` | N
 onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts。Typescript: `{min?: number max?: number }` | N

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode, TElement } from '../common';
+import type { TNode, TElement, Styles } from '../common';
 
 export interface TdSplitProps {
   /**
@@ -44,6 +44,10 @@ export interface TdSplitProps {
    * @default 6
    */
   splitterSize?: number;
+  /**
+   * 自定义分割条的内联样式
+   */
+  splitterStyle?: Styles;
   /**
    * 拖拽过程中尺寸变化的回调（像素值数组）
    */

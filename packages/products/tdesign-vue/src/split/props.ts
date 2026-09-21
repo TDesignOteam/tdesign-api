@@ -42,6 +42,10 @@ export default {
     type: Number,
     default: 6,
   },
+  /** 自定义分割条的内联样式 */
+  splitterStyle: {
+    type: Object as PropType<TdSplitProps['splitterStyle']>,
+  },
   /** 拖拽过程中尺寸变化的回调（像素值数组） */
   onResize: Function as PropType<TdSplitProps['onResize']>,
   /** 拖拽结束时的回调 */

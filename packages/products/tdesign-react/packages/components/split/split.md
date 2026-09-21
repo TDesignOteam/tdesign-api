@@ -16,6 +16,7 @@ lazy | Boolean | false | 延迟渲染模式 | N
 panelSize | Object | - | 定义每个面板的最大最小比例。TS 类型：`{min?: number; max?: number }` | N
 splitterClassName | String | - | 自定义分割条的样式类名 | N
 splitterSize | Number | 6 | 分割条的可交互区域宽度/高度（px） | N
+splitterStyle | Object | - | 自定义分割条的内联样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 onResize | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽过程中尺寸变化的回调（像素值数组）。TS 类型：`{min?: number max?: number }` | N
 onResizeEnd | Function |  | TS 类型：`(sizes: number[]) => void`<br/>拖拽结束时的回调。TS 类型：`{min?: number max?: number }` | N
 onResizeStart | Function |  | TS 类型：`(sizes: number[]) => void`<br/>开始拖拽时的回调。TS 类型：`{min?: number max?: number }` | N
