@@ -45,11 +45,11 @@
 </template>
 
 <script setup>
+import { ref, computed, watch, onMounted, nextTick } from 'vue';
 import parserBabel from 'https://tdesign.gtimg.com/js/prettier%402.8.1-parser-babel.mjs';
 import prettier from 'https://tdesign.gtimg.com/js/prettier%402.8.1-standalone.mjs';
 import Prism from 'prismjs';
 import { ChevronRightDoubleIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, watch, onMounted, nextTick } from 'vue';
 import prettierConfig from '../../../../scripts/config/prettier';
 import { cmpApiInstance } from '../../services/api-server';
 import UnitTestUI from './unit-test/unit-test-ui.vue';
