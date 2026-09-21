@@ -18,6 +18,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 容器尺寸是否响应变化 */
+  autoresize: {
+    type: Boolean,
+    default: true,
+  },
   /** 设置滚动容器的最大高度/宽度 */
   container: {
     type: Object as PropType<TdScrollbarProps['container']>,
@@ -29,8 +34,6 @@ export default {
     type: String,
     default: '',
   },
-  /** 容器尺寸是否响应变化（若容器尺寸恒定，开启可优化性能） */
-  noResize: Boolean,
   /** 视图层的 WAI-ARIA 角色 */
   role: {
     type: String,
@@ -50,7 +53,7 @@ export default {
     default: 20,
   },
   /** 视图（内容区）的自定义类名 */
-  viewClass: {
+  viewClassName: {
     type: String,
     default: '',
   },
@@ -64,7 +67,7 @@ export default {
     },
   },
   /** 包裹容器的自定义类名 */
-  wrapClass: {
+  wrapClassName: {
     type: String,
     default: '',
   },

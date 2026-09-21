@@ -6,8 +6,8 @@ import { TdScrollbarProps } from './type';
 
 export const scrollbarDefaultProps: TdScrollbarProps = {
   autoExpand: true,
+  autoresize: true,
   disabled: false,
-  noResize: false,
   role: 'scrollbar',
   thumbMinSize: 20,
   visibility: 'hover',

@@ -110323,6 +110323,45 @@
       ]
     },
     {
+      "id": 1785642246,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "autoresize",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "容器尺寸是否响应变化",
+      "field_desc_en": "Does the container size respond to changes",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:44:06",
+      "update_time": "2026-08-02 03:44:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 1785642550,
       "platform_framework": [
         "1",
@@ -110437,45 +110476,6 @@
       ],
       "field_type_text": [
         "String"
-      ]
-    },
-    {
-      "id": 1785642246,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Scrollbar",
-      "field_category": 1,
-      "field_name": "noResize",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "容器尺寸是否响应变化（若容器尺寸恒定，开启可优化性能）",
-      "field_desc_en": "Does the container size respond to changes? (If the container size is constant, enabling this feature can optimize performance.)",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 03:44:06",
-      "update_time": "2026-08-02 03:44:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
       ]
     },
     {
@@ -110644,7 +110644,7 @@
       ],
       "component": "Scrollbar",
       "field_category": 1,
-      "field_name": "viewClass",
+      "field_name": "viewClassName",
       "field_type": [
         "1"
       ],
@@ -110722,7 +110722,7 @@
       ],
       "component": "Scrollbar",
       "field_category": 1,
-      "field_name": "wrapClass",
+      "field_name": "wrapClassName",
       "field_type": [
         "1"
       ],

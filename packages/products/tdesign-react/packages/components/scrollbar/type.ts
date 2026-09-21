@@ -16,6 +16,11 @@ export interface TdScrollbarProps {
    */
   autoExpand?: boolean;
   /**
+   * 容器尺寸是否响应变化
+   * @default true
+   */
+  autoresize?: boolean;
+  /**
    * 设置滚动容器的最大高度/宽度
    */
   container?: ScrollbarContainerProps;
@@ -29,11 +34,6 @@ export interface TdScrollbarProps {
    * @default ''
    */
   id?: string;
-  /**
-   * 容器尺寸是否响应变化（若容器尺寸恒定，开启可优化性能）
-   * @default false
-   */
-  noResize?: boolean;
   /**
    * 视图层的 WAI-ARIA 角色
    * @default scrollbar
@@ -56,7 +56,7 @@ export interface TdScrollbarProps {
    * 视图（内容区）的自定义类名
    * @default ''
    */
-  viewClass?: string;
+  viewClassName?: string;
   /**
    * 滚动条的显示形式
    * @default hover
@@ -66,7 +66,7 @@ export interface TdScrollbarProps {
    * 包裹容器的自定义类名
    * @default ''
    */
-  wrapClass?: string;
+  wrapClassName?: string;
   /**
    * 滚动时触发
    */
