@@ -15238,45 +15238,6 @@
       ]
     },
     {
-      "id": 1789893952,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Button",
-      "field_category": 1,
-      "field_name": "content",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "分割面板的内容节点，必须意思SplitPanel",
-      "field_desc_en": "split's children elements",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-09-20 08:45:52",
-      "update_time": "2026-09-20 08:45:52",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
       "id": 2412,
       "platform_framework": [
         "64"
@@ -22942,6 +22903,43 @@
       ]
     },
     {
+      "id": 3538,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "lazy",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否异步加载",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2023-06-20 17:43:02",
+      "update_time": "2023-06-20 17:43:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 394,
       "platform_framework": [
         "1",
@@ -23545,7 +23543,6 @@
     {
       "id": 1712024363,
       "platform_framework": [
-        "8",
         "16",
         "64",
         "128"
@@ -23576,13 +23573,51 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
       "field_type_text": [
         "String"
+      ]
+    },
+    {
+      "id": 1712578657,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "Cascader",
+      "field_category": 1,
+      "field_name": "placeholder",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "'选择选项'",
+      "field_enum": "",
+      "field_desc_zh": "未选中时的提示文案",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2024-04-08 12:17:37",
+      "update_time": "2024-04-08 12:17:37",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
       ]
     },
     {
@@ -34307,7 +34342,7 @@
       "create_time": "2021-08-06 05:48:42",
       "update_time": "2021-08-10 05:28:54",
       "event_output": null,
-      "custom_field_type": "CheckboxIconType【type CheckboxIconType = 'circle' | 'line' | 'rectangle' | boolean | Array<TNode | String>;】",
+      "custom_field_type": "CheckboxIconType【type CheckboxIconType = 'circle' | 'line' | 'rectangle' | string[];】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -53001,7 +53036,9 @@
       "id": 1760451356,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "8",
+        "16"
       ],
       "component": "Divider",
       "field_category": 1,
@@ -53031,7 +53068,9 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -68436,8 +68475,7 @@
       "id": 2970,
       "platform_framework": [
         "1",
-        "2",
-        "16"
+        "2"
       ],
       "component": "Guide",
       "field_category": 1,
@@ -68466,8 +68504,7 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "TNode"
@@ -70224,7 +70261,6 @@
       "id": 1708481323,
       "platform_framework": [
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -70255,7 +70291,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70268,8 +70303,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70300,8 +70334,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70350,8 +70383,7 @@
     {
       "id": 2953,
       "platform_framework": [
-        "2",
-        "16"
+        "2"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70380,8 +70412,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(PC)",
-        "React(Mobile)"
+        "React(PC)"
       ],
       "field_type_text": [
         "String",
@@ -70393,8 +70424,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70424,8 +70454,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -70436,8 +70465,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70468,8 +70496,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -70518,7 +70545,6 @@
     {
       "id": 1721621588,
       "platform_framework": [
-        "16",
         "64",
         "128"
       ],
@@ -70548,7 +70574,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70598,8 +70623,7 @@
     {
       "id": 1709178118,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70627,8 +70651,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "TNode"
@@ -70639,8 +70662,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70670,8 +70692,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Number"
@@ -70759,7 +70780,6 @@
       "id": 1709178151,
       "platform_framework": [
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -70790,7 +70810,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70804,7 +70823,6 @@
         "1",
         "2",
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -70837,7 +70855,6 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -70850,8 +70867,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -70881,8 +70897,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -70970,7 +70985,6 @@
       "id": 1709197181,
       "platform_framework": [
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -71001,7 +71015,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71012,8 +71025,7 @@
     {
       "id": 1709178092,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -71041,8 +71053,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -71132,7 +71143,6 @@
         "1",
         "2",
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -71165,7 +71175,6 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71179,7 +71188,6 @@
         "1",
         "2",
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -71212,7 +71220,6 @@
         "Vue(PC)",
         "React(PC)",
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -71264,8 +71271,7 @@
       "platform_framework": [
         "1",
         "2",
-        "8",
-        "16"
+        "8"
       ],
       "component": "GuideStep",
       "field_category": 1,
@@ -71296,8 +71302,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -74273,7 +74278,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{ \"Vue(Mobile)\": \"1.12.0\" }",
+      "version": "{ \"Vue(Mobile)\": \"1.12.0\", \"React(Mobile)\": \"0.21.1\" }",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -77580,6 +77585,7 @@
     {
       "id": 1710,
       "platform_framework": [
+        "16",
         "64",
         "128"
       ],
@@ -77609,6 +77615,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -78892,6 +78899,7 @@
     {
       "id": 1713,
       "platform_framework": [
+        "16",
         "64",
         "128"
       ],
@@ -78921,6 +78929,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -87675,6 +87684,43 @@
       "field_type_text": []
     },
     {
+      "id": 1981,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "change",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "可见性变化时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(visible: boolean)",
+      "create_time": "2021-11-28 10:47:20",
+      "update_time": "2022-07-05 07:06:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
       "id": 3016,
       "platform_framework": [
         "1",
@@ -87708,6 +87754,45 @@
         "React(PC)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 3437,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭消息时触发",
+      "field_desc_en": "close message event",
+      "field_required": 0,
+      "event_input": "(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })",
+      "create_time": "2023-03-28 07:15:58",
+      "update_time": "2023-03-28 07:15:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
     },
     {
       "id": 103,
@@ -87751,6 +87836,43 @@
         "UniApp"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1984,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "closed",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭消息并且动画结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-11-28 10:51:22",
+      "update_time": "2021-11-28 10:51:44",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
     },
     {
       "id": 104,
@@ -87833,6 +87955,80 @@
         "UniApp"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1982,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "open",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "展示Message时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-11-28 10:49:12",
+      "update_time": "2021-11-28 10:50:15",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1983,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Message",
+      "field_category": 2,
+      "field_name": "opened",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "展示Message时并且动画结束后触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-11-28 10:50:50",
+      "update_time": "2021-11-28 10:51:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
     },
     {
       "id": 1712057171,
@@ -88536,6 +88732,7 @@
     {
       "id": 1624,
       "platform_framework": [
+        "16",
         "64",
         "128"
       ],
@@ -88565,6 +88762,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -90129,7 +90327,6 @@
       "id": 1712057349,
       "platform_framework": [
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -90160,7 +90357,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -94351,7 +94547,7 @@
       "create_time": "2022-06-21 09:12:37",
       "update_time": "2022-06-24 06:22:10",
       "event_output": null,
-      "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string,disabled?: boolean}】",
+      "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>)  => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string,disabled?: boolean}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -94700,7 +94896,7 @@
       "field_category": 1,
       "field_name": "option",
       "field_type": [
-        "32"
+        "64"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -94726,7 +94922,7 @@
         "React(Mobile)"
       ],
       "field_type_text": [
-        "Function"
+        "TNode"
       ]
     },
     {
@@ -95015,6 +95211,7 @@
     {
       "id": 1471,
       "platform_framework": [
+        "16",
         "64"
       ],
       "component": "Picker",
@@ -95043,6 +95240,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram"
       ],
       "field_type_text": [
@@ -95128,8 +95326,7 @@
     {
       "id": 1773297544,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "Picker",
       "field_category": 1,
@@ -95146,7 +95343,7 @@
       "create_time": "2026-03-12 06:39:04",
       "update_time": "2026-03-12 06:39:04",
       "event_output": null,
-      "custom_field_type": "PickerWheelConfig【interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}】",
+      "custom_field_type": "PickerWheelConfig 【interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -95157,8 +95354,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -95551,7 +95747,7 @@
       "field_desc_zh": "任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标",
       "field_desc_en": null,
       "field_required": 0,
-      "event_input": "(value: Array<PickerValue>, context: PickerContext)",
+      "event_input": "(value: Array<PickerValue>,context: PickerContext)",
       "create_time": "2021-08-23 08:27:06",
       "update_time": "2022-06-23 07:16:03",
       "event_output": null,
@@ -104275,6 +104471,43 @@
       ]
     },
     {
+      "id": 1419,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Radio",
+      "field_category": 1,
+      "field_name": "align",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "left",
+      "field_enum": "left/right",
+      "field_desc_zh": "已废弃。复选框和内容相对位置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-08-10 05:21:42",
+      "update_time": "2021-08-10 06:29:39",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2035,
       "platform_framework": [
         "1",
@@ -104572,6 +104805,7 @@
     {
       "id": 1418,
       "platform_framework": [
+        "16",
         "64",
         "128"
       ],
@@ -104601,6 +104835,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
+        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -104611,8 +104846,7 @@
     {
       "id": 1712656500,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "Radio",
       "field_category": 1,
@@ -104640,8 +104874,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -110012,6 +110245,870 @@
       "field_type_text": []
     },
     {
+      "id": 1785643138,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "ariaLabel",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 aria-label 文本",
+      "field_desc_en": "aria-label text in view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:58",
+      "update_time": "2026-08-02 03:58:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642956,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "autoExpand",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "滚动条 hover 时是否向外扩展（增加交互热区）",
+      "field_desc_en": "Should the scrollbar expand outwards when hovering (to increase the interactive hotspot)?",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:55:56",
+      "update_time": "2026-08-02 03:55:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785642246,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "autoresize",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "true",
+      "field_enum": "",
+      "field_desc_zh": "容器尺寸是否响应变化",
+      "field_desc_en": "Does the container size respond to changes",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:44:06",
+      "update_time": "2026-08-02 03:44:06",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785642550,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "container",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "设置滚动容器的最大高度/宽度",
+      "field_desc_en": "Set the maximum height/width of the scrolling container",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:49:10",
+      "update_time": "2026-08-02 03:49:10",
+      "event_output": null,
+      "custom_field_type": "{ height?:string | number; maxHeight?: string | number; width?: string | number; maxWidth?: string | number }",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785642610,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "disabled",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "禁止滚动",
+      "field_desc_en": "disabled scroll",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:50:10",
+      "update_time": "2026-08-02 03:50:10",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1785643082,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "id",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 ID",
+      "field_desc_en": "ID of the view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:02",
+      "update_time": "2026-08-02 03:58:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785643111,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "role",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "scrollbar",
+      "field_enum": "",
+      "field_desc_zh": "视图层的 WAI-ARIA 角色",
+      "field_desc_en": "WAI-ARIA role in the view layer",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:58:31",
+      "update_time": "2026-08-02 03:58:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642680,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "step",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动步长",
+      "field_desc_en": "Rolling step",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:51:20",
+      "update_time": "2026-08-02 03:51:20",
+      "event_output": null,
+      "custom_field_type": "{ x?: number; y?: number}",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1785643171,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "tabindex",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的 tabindex",
+      "field_desc_en": "tabindex of the container",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:59:31",
+      "update_time": "2026-08-02 03:59:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785642391,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "thumbMinSize",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "20",
+      "field_enum": "",
+      "field_desc_zh": "滚动条滑块的最小尺寸（px）",
+      "field_desc_en": "Minimum size (px) of the scroll bar slider.",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:46:31",
+      "update_time": "2026-08-02 03:46:31",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1785642840,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "viewClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图（内容区）的自定义类名",
+      "field_desc_en": "Custom class name for the view (content area)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:54:00",
+      "update_time": "2026-08-02 03:54:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642898,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "visibility",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "hover",
+      "field_enum": "always/hover/hide",
+      "field_desc_zh": "滚动条的显示形式",
+      "field_desc_en": "Scroll bar display format",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:54:58",
+      "update_time": "2026-08-02 03:54:58",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642797,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 1,
+      "field_name": "wrapClassName",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的自定义类名",
+      "field_desc_en": "Custom class name of the wrapper container",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:53:17",
+      "update_time": "2026-08-02 03:53:17",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785643580,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 2,
+      "field_name": "scroll",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动时触发",
+      "field_desc_en": "Triggered while scrolling",
+      "field_required": 0,
+      "event_input": "({ scrollTop: number, scrollLeft: number }) ",
+      "create_time": "2026-08-02 04:06:20",
+      "update_time": "2026-08-02 04:06:20",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785647487,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "getValues",
+      "field_type": [
+        "1",
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取包含完整滚动信息的视图对象",
+      "field_desc_en": "Get the view object containing complete scrolling information",
+      "field_required": 1,
+      "event_input": "",
+      "create_time": "2026-08-02 05:11:28",
+      "update_time": "2026-08-02 05:11:28",
+      "event_output": "PositionValues 【 interface PositionValues {  left:number,top: number,scrollLeft:number,scrollTop:number,scrollWidth:number,scrollHeight:number, clientWidth:number,clientHeight:number }】",
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number"
+      ]
+    },
+    {
+      "id": 1785646744,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "scrollTo",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动到一组特定坐标",
+      "field_desc_en": "Scroll to a specific set of coordinates",
+      "field_required": 1,
+      "event_input": "ScrollToFn【type ScrollToFn = { (x: number, y: number): void; (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }】",
+      "create_time": "2026-08-02 04:59:04",
+      "update_time": "2026-08-02 04:59:04",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1785646985,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 4,
+      "field_name": "scrollToEdge",
+      "field_type": [
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 1,
+      "event_input": "(position:PositionEdge) 【type PositionEdge = \"left\"|\"right\"|\"top\"|\"bottom\"】",
+      "create_time": "2026-08-02 05:03:05",
+      "update_time": "2026-08-02 05:03:05",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Functions",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Function"
+      ]
+    },
+    {
+      "id": 1785642818,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 256,
+      "field_name": "viewStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "视图（内容区）的自定义内联样式",
+      "field_desc_en": "Custom inline styles for view (content area)",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:53:38",
+      "update_time": "2026-08-02 03:53:38",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785642756,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Scrollbar",
+      "field_category": 256,
+      "field_name": "wrapStyle",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "包裹容器的自定义内联样式",
+      "field_desc_en": "Custom inline styles for wrapping containers",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 03:52:36",
+      "update_time": "2026-08-02 03:52:36",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "CSS Variables",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650133,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionEdge",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "left/right/top/bottom",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:55:33",
+      "update_time": "2026-08-02 05:55:33",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650340,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionEdge",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "left/right/top/bottom",
+      "field_desc_zh": "滚动到某一边",
+      "field_desc_en": "Scroll to one side",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:59:00",
+      "update_time": "2026-08-02 05:59:00",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1785650036,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ScrollbarValues",
+      "field_category": 1,
+      "field_name": "PositionValues",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "获取包含完整滚动信息的视图对象",
+      "field_desc_en": "Get the view object containing complete scrolling information",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-08-02 05:53:56",
+      "update_time": "2026-08-02 05:53:56",
+      "event_output": null,
+      "custom_field_type": "{left: (scrollLeft / (scrollWidth - clientWidth)) || 0,top: (scrollTop / (scrollHeight - clientHeight)) || 0,scrollLeft,scrollTop,scrollWidth,scrollHeight,clientWidth, clientHeight}",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1542,
       "platform_framework": [
         "16",
@@ -111277,7 +112374,6 @@
       "id": 1712030157,
       "platform_framework": [
         "8",
-        "16",
         "64",
         "128"
       ],
@@ -111308,7 +112404,6 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
         "Miniprogram",
         "UniApp"
       ],
@@ -111358,8 +112453,7 @@
     {
       "id": 1733883439,
       "platform_framework": [
-        "8",
-        "16"
+        "8"
       ],
       "component": "Search",
       "field_category": 1,
@@ -111388,8 +112482,7 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)",
-        "React(Mobile)"
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -111632,6 +112725,78 @@
       ],
       "field_type_text": [
         "Object"
+      ]
+    },
+    {
+      "id": 1547,
+      "platform_framework": [],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "'search'",
+      "field_enum": "",
+      "field_desc_zh": "已废弃。前置图标，默认为搜索图标。值为 `null` 时则不显示",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-01 08:17:25",
+      "update_time": "2022-07-20 14:46:16",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1835,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Search",
+      "field_category": 1,
+      "field_name": "prefixIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "前置图标，默认为搜索图标。值为 `null` 时则不显示",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-11-10 05:27:50",
+      "update_time": "2022-07-20 14:46:02",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
       ]
     },
     {
@@ -120123,753 +121288,6 @@
       ]
     },
     {
-      "id": 1789893903,
-      "platform_framework": [
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "children",
-      "field_type": [
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "分割面板的内容节点，同 content，必须是SplitPanel",
-      "field_desc_en": "split's children elements",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-09-20 08:45:03",
-      "update_time": "2026-09-20 08:45:03",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "TNode"
-      ]
-    },
-    {
-      "id": 1785667918,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "direction",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "horizontal",
-      "field_enum": "horizontal/vertical",
-      "field_desc_zh": "分割方向。horizontal：左右排列；vertical：上下排列",
-      "field_desc_en": "Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically.",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:51:58",
-      "update_time": "2026-08-02 10:51:58",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1785668466,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "draggerIcon",
-      "field_type": [
-        "1",
-        "64"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "拖拽图标",
-      "field_desc_en": "Drag icons",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 11:01:06",
-      "update_time": "2026-08-02 11:01:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "TNode"
-      ]
-    },
-    {
-      "id": 1785667969,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "gap",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "0",
-      "field_enum": "",
-      "field_desc_zh": "面板之间的间距（px），会体现在分割条视觉上",
-      "field_desc_en": "The spacing (px) between panels will be reflected in the visual appearance of the divider.",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:52:49",
-      "update_time": "2026-08-02 10:52:49",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 1785668424,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "lazy",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "false",
-      "field_enum": "",
-      "field_desc_zh": "延迟渲染模式",
-      "field_desc_en": "Deferred rendering mode",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 11:00:24",
-      "update_time": "2026-08-02 11:00:24",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
-      "id": 1785668557,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "panelSize",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "定义每个面板的最大最小比例",
-      "field_desc_en": "Define the maximum and minimum scale for each panel.",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 11:02:37",
-      "update_time": "2026-08-02 11:02:37",
-      "event_output": null,
-      "custom_field_type": "{min?: number; max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668156,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "splitterClassName",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义分割条的样式类名",
-      "field_desc_en": "Custom divider style class name",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:55:56",
-      "update_time": "2026-08-02 10:55:56",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1785668109,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 1,
-      "field_name": "splitterSize",
-      "field_type": [
-        "2"
-      ],
-      "field_default_value": "6",
-      "field_enum": "",
-      "field_desc_zh": "分割条的可交互区域宽度/高度（px）",
-      "field_desc_en": "Width/height (px) of the interactive area of ​​the divider bar",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:55:09",
-      "update_time": "2026-08-02 10:55:09",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Number"
-      ]
-    },
-    {
-      "id": 1785668599,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 2,
-      "field_name": "resize",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "拖拽过程中尺寸变化的回调（像素值数组）",
-      "field_desc_en": "Callback (array of pixel values) for size changes during dragging.",
-      "field_required": 0,
-      "event_input": "(sizes: number[])",
-      "create_time": "2026-08-02 11:03:19",
-      "update_time": "2026-08-02 11:03:19",
-      "event_output": null,
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668746,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 2,
-      "field_name": "resizeEnd",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "拖拽结束时的回调",
-      "field_desc_en": "Callback when drag ends",
-      "field_required": 0,
-      "event_input": "(sizes: number[])",
-      "create_time": "2026-08-02 11:05:46",
-      "update_time": "2026-08-02 11:05:46",
-      "event_output": null,
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668717,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 2,
-      "field_name": "resizeStart",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "开始拖拽时的回调",
-      "field_desc_en": "Callback when drag starts",
-      "field_required": 0,
-      "event_input": "(sizes: number[])",
-      "create_time": "2026-08-02 11:05:17",
-      "update_time": "2026-08-02 11:05:17",
-      "event_output": null,
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Events",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668792,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 4,
-      "field_name": "getSizes",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "获取当前各面板的像素尺寸",
-      "field_desc_en": "Get the current pixel size of each panel",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 11:06:32",
-      "update_time": "2026-08-02 11:06:32",
-      "event_output": "number[]",
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Functions",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668892,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 4,
-      "field_name": "reset",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "重置为初始尺寸",
-      "field_desc_en": "Reset to initial size",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 11:08:12",
-      "update_time": "2026-08-02 11:08:12",
-      "event_output": null,
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Functions",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668850,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 4,
-      "field_name": "setSizes",
-      "field_type": [
-        "8"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "程序化设置尺寸",
-      "field_desc_en": "Programmatically set size",
-      "field_required": 0,
-      "event_input": "(sizes: (number | string | 'auto')[]) ",
-      "create_time": "2026-08-02 11:07:30",
-      "update_time": "2026-08-02 11:07:30",
-      "event_output": null,
-      "custom_field_type": "{min?: number max?: number }",
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Functions",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Object"
-      ]
-    },
-    {
-      "id": 1785668191,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "Split",
-      "field_category": 256,
-      "field_name": "splitterStyle",
-      "field_type": [
-        "1"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "自定义分割条的内联样式",
-      "field_desc_en": "Customize the inline style of the splitter",
-      "field_required": 0,
-      "event_input": "",
-      "create_time": "2026-08-02 10:56:31",
-      "update_time": "2026-08-02 10:56:31",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "CSS Variables",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String"
-      ]
-    },
-    {
-      "id": 1785669246,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "SplitPanel",
-      "field_category": 1,
-      "field_name": "defaultSize",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "初始面板大小，支持数字 px 或者文字 '百分比%' 类型",
-      "field_desc_en": "Initial panel size, supports numeric pixels (px) or text percentages (%).",
-      "field_required": 0,
-      "event_input": "(sizes: (number | string | 'auto')[]) ",
-      "create_time": "2026-08-02 11:14:06",
-      "update_time": "2026-08-02 11:14:06",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1785669101,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "SplitPanel",
-      "field_category": 1,
-      "field_name": "max",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max",
-      "field_desc_en": "The maximum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.max",
-      "field_required": 0,
-      "event_input": "(sizes: (number | string | 'auto')[]) ",
-      "create_time": "2026-08-02 11:11:41",
-      "update_time": "2026-08-02 11:11:41",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1785669035,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "SplitPanel",
-      "field_category": 1,
-      "field_name": "min",
-      "field_type": [
-        "1",
-        "2"
-      ],
-      "field_default_value": "",
-      "field_enum": "",
-      "field_desc_zh": "当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min",
-      "field_desc_en": "The minimum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.min",
-      "field_required": 0,
-      "event_input": "(sizes: (number | string | 'auto')[]) ",
-      "create_time": "2026-08-02 11:10:35",
-      "update_time": "2026-08-02 11:10:35",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "String",
-        "Number"
-      ]
-    },
-    {
-      "id": 1785669272,
-      "platform_framework": [
-        "1",
-        "2"
-      ],
-      "component": "SplitPanel",
-      "field_category": 1,
-      "field_name": "resizable",
-      "field_type": [
-        "4"
-      ],
-      "field_default_value": "true",
-      "field_enum": "",
-      "field_desc_zh": "是否开启拖拽伸缩",
-      "field_desc_en": "Enable drag-and-drop scaling?",
-      "field_required": 0,
-      "event_input": "(sizes: (number | string | 'auto')[]) ",
-      "create_time": "2026-08-02 11:14:32",
-      "update_time": "2026-08-02 11:14:32",
-      "event_output": null,
-      "custom_field_type": null,
-      "syntactic_sugar": null,
-      "readonly": 1,
-      "html_attribute": 0,
-      "trigger_elements": "",
-      "deprecated": 0,
-      "version": "",
-      "test_description": null,
-      "support_default_value": 0,
-      "field_category_text": "Props",
-      "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)"
-      ],
-      "field_type_text": [
-        "Boolean"
-      ]
-    },
-    {
       "id": 3457,
       "platform_framework": [
         "1",
@@ -128223,6 +128641,43 @@
       ],
       "field_type_text": [
         "Function"
+      ]
+    },
+    {
+      "id": 1537,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "Switch",
+      "field_category": 1,
+      "field_name": "colors",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-01 03:30:56",
+      "update_time": "2022-04-01 00:38:19",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 1,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
       ]
     },
     {
@@ -154395,7 +154850,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否支持拖拽排序",
+      "field_desc_zh": "是否支持拖拽排序。",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",

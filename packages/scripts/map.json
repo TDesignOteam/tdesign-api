@@ -878,6 +878,10 @@
         "label": "栅格-横向"
       },
       {
+        "value": "Scrollbar",
+        "label": "滚动条"
+      },
+      {
         "value": "Search",
         "label": "搜索"
       },

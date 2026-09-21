@@ -129,6 +129,21 @@ function getPropsApiType(api, framework) {
   };
 }
 
+/**
+ * Functions 的参数可能是普通参数列表，也可能已经是完整函数类型（具名重载 / call signature / 箭头函数）。
+ * 后者不能再包一层 `(type) => void`。
+ */
+function isCompleteFunctionType(str) {
+  if (!str || typeof str !== 'string') return false;
+  const s = str.trim();
+  if (!s) return false;
+  if (/[\u4e00-\u9fff]/.test(s) || /<br\s*\/?>/i.test(s)) return false;
+  if (s.startsWith('{') && s.endsWith('}')) return true;
+  if (s.includes('=>')) return true;
+  if (s.startsWith('(') || s.includes(':')) return false;
+  return /^[A-Za-z_$][\w.$]*(<.*>)?$/.test(s);
+}
+
 function getEventsApiType(api) {
   let r = {
     type: '()',
@@ -138,12 +153,19 @@ function getEventsApiType(api) {
   if (api.event_input) {
     const { baseName: rawBaseName, exports, imports } = formatTsTypeDesc(api.event_input);
     // 容错处理：event_input 中可能误用分号分隔参数，需替换为逗号
-    const baseName = rawBaseName ? rawBaseName.replace(/;/g, ',') : rawBaseName;
-    r = {
-      type: baseName ? (baseName.startsWith('(') ? `${baseName}` : `(${baseName})`) : '()',
-      exports,
-      imports,
-    };
+    const baseName = rawBaseName ? rawBaseName.replace(/;/g, ',').trim() : rawBaseName;
+    if (api.field_category_text === 'Functions' && isCompleteFunctionType(baseName)) {
+      r = { type: baseName, exports, imports };
+    } else {
+      r = {
+        type: baseName ? (baseName.startsWith('(') ? `${baseName}` : `(${baseName})`) : '()',
+        exports,
+        imports,
+      };
+    }
+  }
+  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.type)) {
+    return r;
   }
   if (api.event_output) {
     const { baseName, exports, imports } = formatTsTypeDesc(api.event_output);
@@ -212,7 +234,7 @@ function formatApi(api, framework, plugin) {
   const comment = getComment(api);
   // 计算导入和导出内容
   const csType = api.custom_field_type;
-  let r = '';
+  let r = { baseName: '', exports: [], imports: [] };
   if (csType) {
     r = formatTsTypeDesc(csType);
     exportsApi = exportsApi.concat(r.exports);
@@ -223,6 +245,10 @@ function formatApi(api, framework, plugin) {
 
   // UniApp 中默认值为 undefined 的 Props 属性，TS 类型需加上 | null
   let finalType = type;
+  // Functions 若填写了完整 TS 类型（如 ScrollToFn 重载），优先用它作为方法类型
+  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.baseName)) {
+    finalType = r.baseName.trim();
+  }
   if (
     framework === 'UniApp' &&
     api.field_default_value === 'undefined' &&
