@@ -107,7 +107,7 @@ export interface TdSearchProps {
   /**
    * 只读状态
    */
-  readonly?: boolean;
+  readonly?: boolean | null;
   /**
    * 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用
    * @default -1
