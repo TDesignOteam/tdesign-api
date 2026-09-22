@@ -57,6 +57,7 @@ t-class-label | 标签样式类
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
 borderless | Boolean | false | 是否开启无边框模式。优先级低于 Checkbox.borderless | N
+direction | String | vertical | `1.0.0`。复选框按钮排列方式。可选项：vertical/horizontal | N
 disabled | Boolean | undefined | 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled | N
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 max | Number | undefined | 支持最多选中的数量 | N

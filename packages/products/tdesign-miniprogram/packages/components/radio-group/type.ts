@@ -24,6 +24,14 @@ export interface TdRadioGroupProps<T = RadioValue> {
     value?: boolean;
   };
   /**
+   * 单选框按钮排列方式
+   * @default vertical
+   */
+  direction?: {
+    type: StringConstructor;
+    value?: 'vertical' | 'horizontal';
+  };
+  /**
    * 是否禁用全部子单选框
    */
   disabled?: {

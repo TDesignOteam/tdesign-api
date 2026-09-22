@@ -38,6 +38,7 @@ change | `(checked: boolean, context: { e: Event })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 borderless | Boolean | false | \- | N
+direction | String | vertical | `1.16.3`。Radio option arrangement。options: vertical/horizontal | N
 disabled | Boolean | undefined | \- | N
 keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | undefined | \- | N

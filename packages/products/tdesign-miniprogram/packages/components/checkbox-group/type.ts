@@ -17,6 +17,14 @@ export interface TdCheckboxGroupProps<T = CheckboxGroupValue> {
     value?: boolean;
   };
   /**
+   * 复选框按钮排列方式
+   * @default vertical
+   */
+  direction?: {
+    type: StringConstructor;
+    value?: 'vertical' | 'horizontal';
+  };
+  /**
    * 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled
    */
   disabled?: {

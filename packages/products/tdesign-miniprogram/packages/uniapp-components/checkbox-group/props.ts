@@ -8,6 +8,15 @@ import type { TdCheckboxGroupProps } from './type';
 export default {
   /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
+  /** 复选框按钮排列方式 */
+  direction: {
+    type: String,
+    default: 'vertical' as TdCheckboxGroupProps['direction'],
+    validator(val: TdCheckboxGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
     type: [Boolean, null],

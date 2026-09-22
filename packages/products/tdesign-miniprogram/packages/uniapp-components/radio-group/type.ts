@@ -18,6 +18,11 @@ export interface TdRadioGroupProps<T = RadioValue> {
    */
   borderless?: boolean;
   /**
+   * 单选框按钮排列方式
+   * @default vertical
+   */
+  direction?: 'vertical' | 'horizontal';
+  /**
    * 是否禁用全部子单选框
    */
   disabled?: boolean | null;
