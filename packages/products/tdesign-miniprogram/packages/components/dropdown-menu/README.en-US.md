@@ -59,6 +59,7 @@ default-value | String / Number / Array | undefined | uncontrolled property。Ty
 name | params | description
 -- | -- | --
 change | `(value: DropdownValue)` | \-
+close | \- | \-
 closed | \- | \-
 confirm | `(value: DropdownValue)` | \-
 open | \- | \-
