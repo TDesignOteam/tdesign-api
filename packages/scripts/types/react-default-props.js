@@ -60,6 +60,11 @@ function getDefaultValue(api) {
       JSON.parse(defaultValue);
       return defaultValue;
     } catch (e) {
+      // JSON 解析失败（如数组/对象字面量使用单引号），按首字符判断为 Array/Object 时原样输出
+      const trimmed = defaultValue.trim();
+      if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
+        return defaultValue;
+      }
       return `'${defaultValue}'`.replace(/''/g, "'");
     }
   }
