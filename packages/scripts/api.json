@@ -39635,6 +39635,7 @@
       "field_category": 1,
       "field_name": "recentColors",
       "field_type": [
+        "4",
         "16"
       ],
       "field_default_value": "[]",
@@ -39661,6 +39662,7 @@
         "React(PC)"
       ],
       "field_type_text": [
+        "Boolean",
         "Array"
       ]
     },
