@@ -12,7 +12,7 @@ arrow-icon | String / Object | 'caret-down-small' | \- | N
 close-on-click-overlay | Boolean | true | \- | N
 duration | String / Number | 200 | \- | N
 show-overlay | Boolean | true | \- | N
-z-index | Number | 11600 | \- | N
+z-index | Number | - | \- | N
 
 ### DropdownMenu Events
 
@@ -59,7 +59,6 @@ default-value | String / Number / Array | undefined | uncontrolled property。Ty
 name | params | description
 -- | -- | --
 change | `(value: DropdownValue)` | \-
-close | \- | \-
 closed | \- | \-
 confirm | `(value: DropdownValue)` | \-
 open | \- | \-
