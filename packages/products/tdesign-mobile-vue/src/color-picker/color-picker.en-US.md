@@ -7,7 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 clearable | Boolean | false | \- | N
-colorModes | String / Array | "monochrome" | Typescript: `colorModesEnum \| colorModesEnum[] ` `type colorModesEnum = 'monochrome' \| 'linear-gradient'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts) | N
+colorModes | String / Array | 'monochrome' | Typescript: `colorModesEnum \| colorModesEnum[]` `type colorModesEnum = 'monochrome' \| 'linear-gradient'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/color-picker/type.ts) | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
 fixed | Boolean | false | \- | N

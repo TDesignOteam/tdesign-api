@@ -35,7 +35,7 @@ export interface TdColorPickerProps {
   /**
    * 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色
    */
-  swatchColors?: Array<string> | null | undefined;
+  swatchColors?: Array<string> | null | undefined | null;
   /**
    * 颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容
    * @default base

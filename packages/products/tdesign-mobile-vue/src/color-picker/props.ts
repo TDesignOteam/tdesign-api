@@ -13,7 +13,7 @@ export default {
   /** 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色 */
   colorModes: {
     type: [String, Array] as PropType<TdColorPickerProps['colorModes']>,
-    default: "monochrome" as TdColorPickerProps['colorModes'],
+    default: 'monochrome' as TdColorPickerProps['colorModes'],
   },
   /** 是否开启透明通道 */
   enableAlpha: Boolean,

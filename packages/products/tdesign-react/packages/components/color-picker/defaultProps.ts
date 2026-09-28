@@ -4,25 +4,6 @@
 
 import { TdColorPickerProps, TdColorPickerPanelProps } from './type';
 
-export const colorPickerDefaultProps: TdColorPickerProps = {
-  borderless: false,
-  clearable: false,
-  colorModes: ['monochrome', 'linear-gradient'],
-  disabled: undefined,
-  enableAlpha: false,
-  enableMultipleGradient: true,
-  format: 'RGB',
-  defaultRecentColors: [],
-  showPrimaryColorPreview: true,
-  size: 'medium',
-  swatchColors: undefined,
-};
+export const colorPickerDefaultProps: TdColorPickerProps = {borderless: false,clearable: false,colorModes: '['monochrome', 'linear-gradient']',disabled: undefined,enableAlpha: false,enableMultipleGradient: true,format: 'RGB',defaultRecentColors: [],showPrimaryColorPreview: true,size: 'medium',swatchColors: undefined,};
 
-export const colorPickerPanelDefaultProps: TdColorPickerPanelProps = {
-  colorModes: ['monochrome', 'linear-gradient'],
-  enableAlpha: false,
-  enableMultipleGradient: true,
-  format: 'RGB',
-  defaultRecentColors: [],
-  showPrimaryColorPreview: true,
-};
+export const colorPickerPanelDefaultProps: TdColorPickerPanelProps = {colorModes: ["monochrome", "linear-gradient"],enableAlpha: false,enableMultipleGradient: true,format: 'RGB',defaultRecentColors: [],showPrimaryColorPreview: true,};

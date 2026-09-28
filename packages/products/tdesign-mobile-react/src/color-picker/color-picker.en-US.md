@@ -9,7 +9,7 @@ name | type | default | description | required
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
 clearable | Boolean | false | \- | N
-colorModes | String / Array | "monochrome" | Typescript: `colorModesEnum \| colorModesEnum[] ` `type colorModesEnum = 'monochrome' \| 'linear-gradient'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/color-picker/type.ts) | N
+colorModes | String / Array | 'monochrome' | Typescript: `colorModesEnum \| colorModesEnum[]` `type colorModesEnum = 'monochrome' \| 'linear-gradient'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/tree/develop/src/color-picker/type.ts) | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
 fixed | Boolean | false | \- | N
