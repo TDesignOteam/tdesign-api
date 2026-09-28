@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 borderless | Boolean | false | \- | N
 clearable | Boolean | false | \- | N
-colorModes | Array | ['monochrome', 'linear-gradient'] | Typescript: `Array<'monochrome' \| 'linear-gradient'>` | N
+colorModes | Array | ["monochrome", "linear-gradient"] | Typescript: `Array<'monochrome' \| 'linear-gradient'>` | N
 disabled | Boolean | undefined | \- | N
 enableAlpha | Boolean | false | \- | N
 enableMultipleGradient | Boolean | true | \- | N
