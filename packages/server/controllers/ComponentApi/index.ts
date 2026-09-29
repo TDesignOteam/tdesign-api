@@ -45,18 +45,33 @@ function removeRepeat(array: Array<MapItem>) {
   return r;
 }
 
-function filterParams(params: BaseObject) {
+// 将字符串 'null'/'undefined' 归一为真正的 SQL NULL，其余空字符串、NaN 视为未填写
+function normalizeValue(value: any) {
+  if (value === 'null' || value === 'undefined') return null;
+  return value;
+}
+
+function filterParams(params: BaseObject, keepNull?: boolean) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
-    if (!['', 'NaN', 'null'].includes(String(params[key]))) {
-      r[key] = params[key];
+    const value = normalizeValue(params[key]);
+    // 显式 null 需要保留（用于清空可空字段）；仅过滤未填写的空字符串/NaN
+    if (value === null) {
+      if (keepNull) r[key] = value;
+      return;
+    }
+    if (!['', 'NaN'].includes(String(value))) {
+      r[key] = value;
     }
   });
   return r;
 }
 
 function formatParams(params: BaseObject, clearEmpty?: Boolean) {
-  const _params = clearEmpty ? filterParams(params) : params;
+  const _params = clearEmpty ? filterParams(params, true) : params;
+  Object.keys(_params).forEach((key) => {
+    _params[key] = normalizeValue(_params[key]);
+  });
   // 处理框架类型
   if (_params.platform_framework) {
     const p = _params.platform_framework as Array<string | number>;

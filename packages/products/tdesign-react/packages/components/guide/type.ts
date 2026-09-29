@@ -6,8 +6,8 @@
 
 import { ButtonProps } from '../button';
 import { PopupProps } from '../popup';
-import { TNode, TElement, AttachNode } from '../common';
-import { MouseEvent } from 'react';
+import type { TNode, TElement, AttachNode } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdGuideProps {
   /**

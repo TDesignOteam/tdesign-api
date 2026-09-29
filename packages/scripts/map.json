@@ -878,6 +878,10 @@
         "label": "栅格-横向"
       },
       {
+        "value": "Scrollbar",
+        "label": "滚动条"
+      },
+      {
         "value": "Search",
         "label": "搜索"
       },
@@ -905,6 +909,14 @@
       {
         "value": "Space",
         "label": "间距"
+      },
+      {
+        "value": "Split",
+        "label": "分割面板"
+      },
+      {
+        "value": "SplitPanel",
+        "label": "分割面板内容"
       },
       {
         "value": "Statistic",

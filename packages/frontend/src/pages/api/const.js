@@ -26,8 +26,10 @@ export const API_CATEGORY_MAP = {
   [API_CATEGORY_FUNCTIONS]: {
     placeholder: {
       name: '组件对外暴露的方法名称',
-      inputParams: '方法参数，如：(validateRules: RulesObject)',
+      inputParams: '方法参数，如：(validateRules: RulesObject)。函数重载可填完整类型名，如：ScrollToFn【type ScrollToFn = { (x: number, y: number): void; (options: Options): void; }】',
       outputParams: '方法返回值，如：(validateResult: boolean)',
+      customFieldType:
+        '方法的完整 TS 类型。支持函数重载，例如：ScrollToFn【type ScrollToFn = { (x: number, y: number): void; (options: { top?: number; left?: number }): void; }】。不填则由参数和返回值拼接。',
       descZh: '输入方法描述，如：使用该方法进行表单校验',
       descEn: 'type function description in English'
     }

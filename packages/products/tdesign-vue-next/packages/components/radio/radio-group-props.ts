@@ -10,7 +10,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
-  /** 当取值为 vertical 时，单选框选项以垂直方向排列。 */
+  /** 单选框按钮排列方式 */
   direction: {
     type: String as PropType<TdRadioGroupProps['direction']>,
     default: 'horizontal' as TdRadioGroupProps['direction'],

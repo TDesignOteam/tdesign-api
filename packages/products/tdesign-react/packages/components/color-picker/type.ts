@@ -7,8 +7,8 @@
 import { InputProps } from '../input';
 import { PopupProps } from '../popup';
 import { SelectInputProps } from '../select-input';
-import { SizeEnum } from '../common';
-import { MouseEvent } from 'react';
+import type { SizeEnum } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdColorPickerProps {
   /**

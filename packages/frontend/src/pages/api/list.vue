@@ -96,9 +96,9 @@
 
 <script setup>
 import { computed } from 'vue';
-import { parseJSON } from './util';
-import { cmpApiInstance } from '../../services/api-server';
 import { BaseTable as TTable, Button as TButton, Popconfirm as TPopconfirm, MessagePlugin } from 'tdesign-vue-next';
+import { cmpApiInstance } from '../../services/api-server';
+import { parseJSON } from './util';
 
 const props = defineProps({
   list: Array,

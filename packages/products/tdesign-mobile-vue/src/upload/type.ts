@@ -277,13 +277,7 @@ export interface UploadChangeContext {
 }
 
 export type UploadChangeTrigger =
-  | 'add'
-  | 'remove'
-  | 'abort'
-  | 'progress-success'
-  | 'progress'
-  | 'progress-fail'
-  | 'sort';
+  'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'sort';
 
 export interface UploadFailContext {
   e?: ProgressEvent;

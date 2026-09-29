@@ -10,10 +10,19 @@ export default {
   allowUncheck: Boolean,
   /** 是否开启无边框模式 */
   borderless: Boolean,
+  /** 单选框按钮排列方式 */
+  direction: {
+    type: String,
+    default: 'vertical' as TdRadioGroupProps['direction'],
+    validator(val: TdRadioGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用全部子单选框 */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdRadioGroupProps['disabled'],
   },
   /** 自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标；仅在使用 options 时生效 */
   icon: {
@@ -44,8 +53,8 @@ export default {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdRadioGroupProps['readonly'],
   },
   /** -1 时代表独立，不再寻找 parent，用于头条小程序 */
   relationKey: {
