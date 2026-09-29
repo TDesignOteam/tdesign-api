@@ -14,6 +14,10 @@ export interface TdGuideProps {
    */
   backButtonProps?: ButtonProps;
   /**
+   * 用于自定义渲染计数部分
+   */
+  counter?: TNode<{ current: number; total: number }>;
+  /**
    * 当前步骤，即整个引导的进度。-1 则不展示，用于需要中断展示的场景
    */
   current?: number;

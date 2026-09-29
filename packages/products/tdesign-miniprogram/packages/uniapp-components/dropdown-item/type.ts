@@ -11,71 +11,60 @@ export interface TdDropdownItemProps {
    * 是否禁用操作项
    * @default false
    */
-  disabled?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
+  disabled?: boolean;
   /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
-  keys?: {
-    type: ObjectConstructor;
-    value?: KeysType;
-  };
+  keys?: KeysType;
   /**
    * 标题
    * @default ''
    */
-  label?: {
-    type: StringConstructor;
-    value?: string;
-  };
+  label?: string;
   /**
    * 是否多选
    * @default false
    */
-  multiple?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
+  multiple?: boolean;
   /**
    * 选项数据
    * @default []
    */
-  options?: {
-    type: ArrayConstructor;
-    value?: Array<DropdownOption>;
-  };
+  options?: Array<DropdownOption>;
   /**
    * 选项分栏（1-3）
    * @default 1
    */
-  optionsColumns?: {
-    type: null;
-    value?: string | number;
-  };
+  optionsColumns?: string | number;
   /**
    * 复选框和内容相对位置，仅单选菜单栏有效
    * @default left
    */
-  placement?: {
-    type: StringConstructor;
-    value?: 'left' | 'right';
-  };
+  placement?: 'left' | 'right';
   /**
    * 选中值
    */
-  value?: {
-    type: null;
-    value?: DropdownValue;
-  };
+  value?: DropdownValue | null;
   /**
    * 选中值，非受控属性
    */
-  defaultValue?: {
-    type: null;
-    value?: DropdownValue;
-  };
+  defaultValue?: DropdownValue | null;
+  /**
+   * 值改变时触发
+   */
+  onChange?: (value: DropdownValue) => void;
+  /**
+   * 关闭时触发
+   */
+  onClose?: () => void;
+  /**
+   * 点击确认时触发
+   */
+  onConfirm?: (value: DropdownValue) => void;
+  /**
+   * 点击重置时触发
+   */
+  onReset?: () => void;
 }
 
 export interface DropdownOption {

@@ -50911,7 +50911,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500",
+      "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -50950,9 +50950,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11500",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 2500，小程序样式默认为 11500",
+      "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -52790,7 +52790,8 @@
     {
       "id": 1731475189,
       "platform_framework": [
-        "1"
+        "1",
+        "8"
       ],
       "component": "DialogOptions",
       "field_category": 1,
@@ -52819,7 +52820,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)"
+        "Vue(PC)",
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -54582,7 +54584,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "抽屉层级，样式默认为 1500",
+      "field_desc_zh": "抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -54621,9 +54623,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11500",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "抽屉层级，样式默认为 11500",
+      "field_desc_zh": "抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -57242,6 +57244,41 @@
       "field_type_text": []
     },
     {
+      "id": 1790603782,
+      "platform_framework": [
+        "64",
+        "128"
+      ],
+      "component": "DropdownItem",
+      "field_category": 2,
+      "field_name": "close",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "关闭时触发",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-28 13:56:22",
+      "update_time": "2026-09-28 13:56:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1768815105,
       "platform_framework": [
         "8",
@@ -58040,9 +58077,7 @@
       "id": 2570,
       "platform_framework": [
         "8",
-        "16",
-        "64",
-        "128"
+        "16"
       ],
       "component": "DropdownMenu",
       "field_category": 1,
@@ -58050,9 +58085,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11600",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "菜单栏 z-index 层级",
+      "field_desc_zh": "菜单栏 z-index 层级，默认为 1600",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -58071,7 +58106,44 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(Mobile)",
-        "React(Mobile)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Number"
+      ]
+    },
+    {
+      "id": 1790585412,
+      "platform_framework": [
+        "64",
+        "128"
+      ],
+      "component": "DropdownMenu",
+      "field_category": 1,
+      "field_name": "zIndex",
+      "field_type": [
+        "2"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "菜单栏 z-index 层级，默认为 11600",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-28 08:50:12",
+      "update_time": "2026-09-28 08:50:12",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
         "Miniprogram",
         "UniApp"
       ],
@@ -68577,6 +68649,7 @@
       "platform_framework": [
         "1",
         "2",
+        "8",
         "16"
       ],
       "component": "Guide",
@@ -68607,6 +68680,7 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)",
+        "Vue(Mobile)",
         "React(Mobile)"
       ],
       "field_type_text": [
@@ -92621,9 +92695,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "1000",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "遮罩的层级",
+      "field_desc_zh": "遮罩的层级，默认为 1000",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -92660,9 +92734,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11000",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "遮罩层级",
+      "field_desc_zh": "遮罩层级，默认为 11000",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -98632,7 +98706,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500",
+      "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -98671,9 +98745,9 @@
       "field_type": [
         "2"
       ],
-      "field_default_value": "11500",
+      "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500",
+      "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
