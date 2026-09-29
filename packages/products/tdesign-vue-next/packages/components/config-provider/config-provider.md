@@ -15,7 +15,7 @@ globalConfig | Object | - | 全局配置。TS 类型：`GlobalConfigProvider` | 
 alert | Object | - | 警告全局配置。TS 类型：`AlertConfig` | N
 anchor | Object | - | 锚点全局配置。TS 类型：`AnchorConfig` | N
 animation | Object | - | 动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`。TS 类型：`Partial<Record<'include'\|'exclude', Array<AnimationType>>>` `type AnimationType = 'ripple' \| 'expand' \| 'fade'`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/config-provider/type.ts) | N
-attach | String / Object / Function | - | TS 类型：`AttachNode \| { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+attach | String / Object / Function | - | 浮层挂载节点，可统一设置或按 imageViewer、popup、dialog、drawer 分别设置。组件的 attach 属性优先于全局配置；未配置时保持各组件原有的默认挂载行为。TS 类型：`AttachNode \| { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 autoComplete | Object | - | 自动填充组件全局配置。TS 类型：`AutoCompleteConfig` | N
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
