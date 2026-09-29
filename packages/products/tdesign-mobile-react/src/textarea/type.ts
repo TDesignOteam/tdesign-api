@@ -4,12 +4,12 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
-import { FocusEvent, FormEvent, CompositionEvent } from 'react';
+import type { TNode } from '../common';
+import type { FocusEvent, FormEvent, CompositionEvent } from 'react';
 
 export interface TdTextareaProps {
   /**
-   * 超出maxlength或maxcharacter之后是否还允许输入
+   * 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入
    * @default false
    */
   allowInputOverMax?: boolean;
@@ -28,6 +28,11 @@ export interface TdTextareaProps {
    * @default false
    */
   bordered?: boolean;
+  /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
   /**
    * 是否禁用文本框
    */

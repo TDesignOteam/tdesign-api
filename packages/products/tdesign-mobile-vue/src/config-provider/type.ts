@@ -4,8 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { FormErrorMessage } from '../form';
 import { ImageProps } from '../image';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -41,6 +42,10 @@ export interface GlobalConfigProvider {
    */
   dropdownMenu?: DropdownMenuConfig;
   /**
+   * 表单组件全局配置
+   */
+  form?: FormConfig;
+  /**
    * 引导全局配置
    */
   guide?: GuideConfig;
@@ -57,6 +62,10 @@ export interface GlobalConfigProvider {
    */
   pullDownRefresh?: PullDownRefreshConfig;
   /**
+   * 二维码全局配置
+   */
+  qrcode?: QRCodeConfig;
+  /**
    * 评分全局配置
    */
   rate?: RateConfig;
@@ -68,6 +77,10 @@ export interface GlobalConfigProvider {
    * 表格组件全局配置
    */
   table?: TableConfig;
+  /**
+   * 排版组件全局配置
+   */
+  typography?: TypographyConfig;
   /**
    * 上传组件全局配置
    */
@@ -139,7 +152,7 @@ export interface DateTimePickerConfig {
   dateLabel?: string;
   /**
    * 日期格式化规则
-   * @default YYYY-MM-DD
+   * @default 'YYYY-MM-DD HH:mm:ss'
    */
   format?: string;
   /**
@@ -185,6 +198,28 @@ export interface DropdownMenuConfig {
    * @default ''
    */
   reset?: string;
+}
+
+export interface FormConfig {
+  /**
+   * 字段旁边的冒号，中文为“：”
+   * @default ''
+   */
+  colonText?: string;
+  /**
+   * 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`
+   */
+  errorMessage?: FormErrorMessage;
+  /**
+   * 是否显示必填符号（*），默认显示
+   * @default true
+   */
+  requiredMark?: boolean;
+  /**
+   * 表单必填符号（*）显示位置
+   * @default left
+   */
+  requiredMarkPosition?: 'left' | 'right';
 }
 
 export interface GuideConfig {
@@ -283,6 +318,24 @@ export interface PullDownRefreshConfig {
   loadingTexts?: string[];
 }
 
+export interface QRCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expiredText?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refreshText?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scannedText?: string;
+}
+
 export interface RateConfig {
   /**
    * 语言配置，“未评分”描述文本
@@ -321,9 +374,61 @@ export interface TabBarConfig {
 
 export interface TableConfig {
   /**
+   * 语言配置，过滤功能中，“清空筛选” 描述文本
+   * @default ''
+   */
+  clearFilterResultButtonText?: string;
+  /**
+   * 语言配置，“确认” 描述文本
+   * @default ''
+   */
+  confirmText?: string;
+  /**
    * 语言配置，“暂无数据” 描述文本
    */
   empty?: string | TNode;
+  /**
+   * 过滤图标，如果没有配置，会使用组件内置的默认图标
+   */
+  filterIcon?: TNode;
+  /**
+   * 隐藏排序文本提示
+   * @default false
+   */
+  hideSortTips?: boolean;
+  /**
+   * 语言配置，“正在加载中，请稍后” 描述文本
+   * @default ''
+   */
+  loadingText?: string;
+  /**
+   * 语言配置，“重置” 描述文本
+   * @default ''
+   */
+  resetText?: string;
+  /**
+   * 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果'
+   * @default ''
+   */
+  searchResultText?: string;
+}
+
+export interface TypographyConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，“复制成功”描述文本
+   * @default ''
+   */
+  copiedText?: string;
+  /**
+   * 语言配置，“展开”描述文本
+   * @default ''
+   */
+  expandText?: string;
 }
 
 export interface UploadConfig {

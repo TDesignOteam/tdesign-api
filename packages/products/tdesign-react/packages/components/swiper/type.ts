@@ -66,11 +66,6 @@ export interface TdSwiperProps {
    */
   stopOnHover?: boolean;
   /**
-   * 深色模式和浅色模式
-   * @default light
-   */
-  theme?: 'light' | 'dark';
-  /**
    * 触发切换的方式：悬浮、点击等
    * @default hover
    */

@@ -7,6 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 actions | Array / Slot / Function | - | 操作栏。TS 类型：`Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+beforeClose | Function | - | 关闭前的拦截钩子，支持异步。返回 Promise 时，确认按钮显示加载状态，Promise resolve 后关闭对话框，reject 则不关闭。TS 类型：`(trigger: 'confirm' \| 'cancel' \| 'overlay' \| 'close-btn', context: { e: MouseEvent }) => void \| Promise<void>` | N
 buttonLayout | String | horizontal | 多按钮排列方式。可选项：horizontal/vertical | N
 cancelBtn | String / Object / Slot / Function | - | 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件。TS 类型：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 closeBtn | Boolean | false | 多按钮排列方式。可选项：true/false | N
@@ -22,7 +23,7 @@ title | String / Slot / Function | - | 标题。TS 类型：`string \| TNode`。
 top | Slot / Function | - | 顶部自定义内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 visible | Boolean | - | 控制对话框是否显示 | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
-zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
+zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N
 onClose | Function |  | TS 类型：`(context: DialogCloseContext) => void`<br/>关闭事件，点击 取消按钮 或 点击蒙层 时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | TS 类型：`() => void`<br/>对话框消失动画效果结束后触发 | N
@@ -44,6 +45,7 @@ overlay-click | `(context: { e: MouseEvent })` | 如果蒙层存在，点击蒙�
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 弹框类名，示例：'t-class-dialog-first t-class-dialog-second' | N
+style | String / Object | - | 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)。TS 类型：`string \| Styles`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 `Omit<DialogProps, 'attach'>` | \- | - | 继承 `Omit<DialogProps, 'attach'>` 中的全部属性 | N
 
 ### DialogInstance
@@ -62,8 +64,6 @@ update | `(props: DialogOptions)` | \- | 必需。更新弹框内容
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | \- | - | TS 类型：`DialogOptions`
-
-插件返回值：`DialogInstance`
 
 ### DialogPlugin.confirm
 

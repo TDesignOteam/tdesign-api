@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Select: {
     autoWidth_2374: { field_name: 'autoWidth', id: 2374 },
     autofocus_3299: { field_name: 'autofocus', id: 3299 },

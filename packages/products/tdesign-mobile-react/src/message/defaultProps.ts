@@ -5,6 +5,7 @@
 import { TdMessageProps } from './type';
 
 export const messageDefaultProps: TdMessageProps = {
+  align: 'left',
   closeBtn: undefined,
   duration: 3000,
   icon: true,

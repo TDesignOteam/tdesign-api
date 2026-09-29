@@ -1,12 +1,12 @@
-// @ts-ignore
-import initSqlJs from "sql.js/dist/sql-wasm-debug.js";
 import fs from 'fs';
 import path from 'path';
+// @ts-expect-error sql.js subpath import has no type declarations
+import initSqlJs from "sql.js/dist/sql-wasm-debug.js";
 
 const dbFilePath = path.resolve('db/TDesign.db');
 
 export default async function executeSQL(sqlStr: string, write?: boolean) {
-    console.log("Execute SQL: ", sqlStr);
+    console.info("Execute SQL: ", sqlStr);
     try {
         const sqlJs = await initSqlJs();
         // Load the db

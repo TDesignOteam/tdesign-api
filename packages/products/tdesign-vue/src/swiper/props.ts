@@ -25,6 +25,7 @@ export default {
   /** 卡片模式下非当前展示轮播图的缩放比例 */
   cardScale: {
     type: Number,
+    default: 210/332,
   },
   /** 当前轮播在哪一项（下标） */
   current: {
@@ -72,15 +73,6 @@ export default {
   stopOnHover: {
     type: Boolean,
     default: true,
-  },
-  /** 深色模式和浅色模式 */
-  theme: {
-    type: String as PropType<TdSwiperProps['theme']>,
-    default: 'light' as TdSwiperProps['theme'],
-    validator(val: TdSwiperProps['theme']): boolean {
-      if (!val) return true;
-      return ['light', 'dark'].includes(val);
-    },
   },
   /** 触发切换的方式：悬浮、点击等 */
   trigger: {

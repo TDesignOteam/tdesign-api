@@ -23,11 +23,11 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效 */
+  /** 添加按钮内容 */
   addContent: {
     type: [String, Function] as PropType<TdUploadProps['addContent']>,
   },
-  /** 是否允许重复上传相同文件名的文件 */
+  /** 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤 */
   allowUploadDuplicateFile: Boolean,
   /** 是否在选择文件后自动发起请求上传文件 */
   autoUpload: {
@@ -40,8 +40,7 @@ export default {
   },
   /** 图片选取模式，可选值为 camera (直接调起摄像头) */
   capture: {
-    type: String,
-    default: '',
+    type: [String, Boolean] as PropType<TdUploadProps['capture']>,
   },
   /** 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段 */
   data: {
@@ -52,10 +51,12 @@ export default {
     type: Boolean,
     default: undefined,
   },
+  /** 是否支持拖拽排序 */
+  draggable: Boolean,
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile` */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
-    default: undefined,
+    default: undefined as TdUploadProps['files'],
   },
   /** 已上传文件列表，同 `value`。TS 类型：`UploadFile`，非受控属性 */
   defaultFiles: {
@@ -116,6 +117,15 @@ export default {
   sizeLimit: {
     type: [Number, Object] as PropType<TdUploadProps['sizeLimit']>,
   },
+  /** 组件风格。提供宫格和列表两种布局风格 */
+  theme: {
+    type: String as PropType<TdUploadProps['theme']>,
+    default: 'grid' as TdUploadProps['theme'],
+    validator(val: TdUploadProps['theme']): boolean {
+      if (!val) return true;
+      return ['grid', 'list'].includes(val);
+    },
+  },
   /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传 */
   useMockProgress: {
     type: Boolean,
@@ -124,11 +134,11 @@ export default {
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile` */
   value: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdUploadProps['value']>,
-    default: undefined,
+    default: undefined as TdUploadProps['value'],
   },
   /** 已上传文件列表，同 `files`。TS 类型：`UploadFile`，非受控属性 */
   defaultValue: {
@@ -141,6 +151,10 @@ export default {
   onChange: Function as PropType<TdUploadProps['onChange']>,
   /** 点击上传区域时触发 */
   onClickUpload: Function as PropType<TdUploadProps['onClickUpload']>,
+  /** 拖拽开始时触发，`context.file` 为拖拽文件 */
+  onDrag: Function as PropType<TdUploadProps['onDrag']>,
+  /** 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序） */
+  onDrop: Function as PropType<TdUploadProps['onDrop']>,
   /** 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response` */
   onFail: Function as PropType<TdUploadProps['onFail']>,
   /** 点击图片预览时触发，文件没有预览 */

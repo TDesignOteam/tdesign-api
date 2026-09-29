@@ -1,5 +1,8 @@
-import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
 import moment from 'moment';
+import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
+import TAPI from '../../services';
+import execScript from '../../services/execute';
+import { generateComponentUnitTests, generateOneUnitTest } from '../../services/unit-test';
 import {
   PLATFORM_MAP,
   FRAMEWORK_MAP,
@@ -9,8 +12,6 @@ import {
   COMPONENTS_MOBILE,
   API_CATEGORY,
 } from './const';
-import TAPI from '../../services';
-import execScript from '../../services/execute';
 
 function handleSuccess(resolve: Function) {
   return (data: any) => {
@@ -44,18 +45,33 @@ function removeRepeat(array: Array<MapItem>) {
   return r;
 }
 
-function filterParams(params: BaseObject) {
+// 将字符串 'null'/'undefined' 归一为真正的 SQL NULL，其余空字符串、NaN 视为未填写
+function normalizeValue(value: any) {
+  if (value === 'null' || value === 'undefined') return null;
+  return value;
+}
+
+function filterParams(params: BaseObject, keepNull?: boolean) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
-    if (!['', 'NaN', 'undefined', 'null'].includes(String(params[key]))) {
-      r[key] = params[key];
+    const value = normalizeValue(params[key]);
+    // 显式 null 需要保留（用于清空可空字段）；仅过滤未填写的空字符串/NaN
+    if (value === null) {
+      if (keepNull) r[key] = value;
+      return;
+    }
+    if (!['', 'NaN'].includes(String(value))) {
+      r[key] = value;
     }
   });
   return r;
 }
 
 function formatParams(params: BaseObject, clearEmpty?: Boolean) {
-  const _params = clearEmpty ? filterParams(params) : params;
+  const _params = clearEmpty ? filterParams(params, true) : params;
+  Object.keys(_params).forEach((key) => {
+    _params[key] = normalizeValue(_params[key]);
+  });
   // 处理框架类型
   if (_params.platform_framework) {
     const p = _params.platform_framework as Array<string | number>;
@@ -83,7 +99,7 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
 
 async function apiCreate(params: BaseObject) {
   return new Promise((resolve, reject) => {
-    console.log('~~~~~', formatParams(params, true));
+    console.info('~~~~~', formatParams(params, true));
     TAPI.create(formatParams(params, true)).then(
       handleSuccess(resolve),
       handleError(reject),
@@ -117,8 +133,8 @@ export function getMap() {
   };
 }
 
-export function apiUpdate(params?: BaseObject) {
-  console.log(params);
+export function apiUpdate(params: BaseObject) {
+  console.info(params);
   
   return new Promise((resolve, reject) => {
     const { id } = params;
@@ -154,7 +170,7 @@ function formatRecords(records:any){
   });
 }
 
-async function queryRecords(params?: BaseObject) {
+async function queryRecords(params: BaseObject) {
   const p = filterParams(params);
   const pageSize = Number(p.page_size);
   // 封装分页参数
@@ -177,9 +193,9 @@ async function queryRecords(params?: BaseObject) {
   };
 }
 
-async function generateAPI(params?: { commandLines: string[] }) {
-  const commandLines = params.commandLines;
-  console.log('commandLines:', commandLines);
+async function generateAPI(params: { commandLines: string[] }) {
+  const { commandLines } = params;
+  console.info('commandLines:', commandLines);
   if (commandLines) {
     commandLines.map((commandLine: string) => execScript({ commandLine }));
   }
@@ -202,6 +218,43 @@ async function exportAPI()
   };
 }
 
+export interface GenerateUnitTestParams {
+  type: 'one' | 'all';
+  framework: string;
+  component: string;
+  apiData: Record<string, unknown> | Array<Record<string, unknown>>;
+  test?: Record<string, unknown>;
+  map?: Record<string, unknown>;
+}
+
+async function generateUnitTest(params: GenerateUnitTestParams) {
+  const { type, framework, component, apiData, test, map } = params;
+  if (type === 'one') {
+    const data = await generateOneUnitTest({
+      framework,
+      component,
+      apiData: apiData as Record<string, unknown>,
+      test: test || {},
+    });
+    return {
+      code: 0,
+      msg: 'success',
+      data,
+    };
+  }
+  const data = await generateComponentUnitTests({
+    framework,
+    component,
+    apiData: apiData as Array<Record<string, unknown>>,
+    map: map || {},
+  });
+  return {
+    code: 0,
+    msg: 'success',
+    data,
+  };
+}
+
 export default {
   apiCreate,
   getMap,
@@ -210,4 +263,5 @@ export default {
   apiUpdate,
   generateAPI,
   exportAPI,
+  generateUnitTest,
 };

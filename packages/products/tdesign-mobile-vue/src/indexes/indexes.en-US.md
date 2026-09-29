@@ -6,11 +6,14 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-indexList | Array | - | Typescript：`Array<string \| number>` | N
-sticky | Boolean | true | Typescript：`Boolean` | N
+current | String / Number | - | `v-model` and `v-model:current` is supported | N
+defaultCurrent | String / Number | - | uncontrolled property | N
+indexList | Array | - | Typescript: `Array<string \| number>` | N
+showFullIndex | Boolean | false | `1.13.3`。Typescript: `Boolean` | N
+sticky | Boolean | true | Typescript: `Boolean` | N
 stickyOffset | Number | 0 | \- | N
-onChange | Function |  | Typescript：`(index: string \| number) => void`<br/> | N
-onSelect | Function |  | Typescript：`(index: string \| number) => void`<br/> | N
+onChange | Function |  | Typescript: `(index: string \| number) => void`<br/> | N
+onSelect | Function |  | Typescript: `(index: string \| number) => void`<br/> | N
 
 ### Indexes Events
 

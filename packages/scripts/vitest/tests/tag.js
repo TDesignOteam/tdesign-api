@@ -1,7 +1,15 @@
-module.exports = {
+export default {
   Tag: {
-    children_3310: { field_name: 'children', id: 3310, PC: { tnode: true } },
-    closable_24: { field_name: 'closable', id: 24, PC: { dom: '.t-tag__icon-close' } },
+    children_3310: {
+      field_name: 'children',
+      id: 3310,
+      PC: { tnode: true },
+    },
+    closable_24: {
+      field_name: 'closable',
+      id: 24,
+      PC: { dom: '.t-tag__icon-close' },
+    },
     closable_1712653002: { field_name: 'closable', id: 1712653002 },
     color_1710397655: {
       field_name: 'color',
@@ -10,7 +18,14 @@ module.exports = {
         attribute: [
           {
             value: '#ff0000',
-            expect: [{ dom: 'self', attribute: { 'style.backgroundColor': 'rgb(255, 0, 0)' } }],
+            expect: [
+              {
+                dom: 'self',
+                attribute: {
+                  'style.backgroundColor': 'rgb(255, 0, 0)',
+                },
+              },
+            ],
           },
           {
             value: '#ff0000',
@@ -19,7 +34,10 @@ module.exports = {
             expect: [
               {
                 dom: 'self',
-                attribute: { 'style.backgroundColor': 'rgb(255, 0, 0)', 'style.color': 'white' },
+                attribute: {
+                  'style.backgroundColor': 'rgb(255, 0, 0)',
+                  'style.color': 'white',
+                },
               },
             ],
           },
@@ -44,7 +62,10 @@ module.exports = {
             expect: [
               {
                 dom: 'self',
-                attribute: { 'style.borderColor': '#ff0000', 'style.color': 'rgb(255, 0, 0)' },
+                attribute: {
+                  'style.borderColor': '#ff0000',
+                  'style.color': 'rgb(255, 0, 0)',
+                },
               },
             ],
           },
@@ -55,7 +76,10 @@ module.exports = {
             expect: [
               {
                 dom: 'self',
-                attribute: { 'style.borderColor': '#ff0000', 'style.color': 'rgb(255, 0, 0)' },
+                attribute: {
+                  'style.borderColor': '#ff0000',
+                  'style.color': 'rgb(255, 0, 0)',
+                },
               },
             ],
           },
@@ -123,27 +147,43 @@ module.exports = {
     shape_26: {
       field_name: 'shape',
       id: 26,
-      PC: { className: [{ 't-tag--square': false }, 't-tag--round', 't-tag--mark'] },
+      PC: {
+        className: [{ 't-tag--square': false }, 't-tag--round', 't-tag--mark'],
+      },
     },
     size_23: {
       field_name: 'size',
       id: 23,
       PC: { className: ['t-size-s', { 't-size-m': false }, 't-size-l'] },
     },
-    size_3240: { field_name: 'size', id: 3240, PC: { className: 't-tag--${item}' } },
-    theme_4: { field_name: 'theme', id: 4, PC: { className: 't-tag--${item}' } },
+    size_3240: {
+      field_name: 'size',
+      id: 3240,
+      PC: { className: 't-tag--${item}' },
+    },
+    theme_4: {
+      field_name: 'theme',
+      id: 4,
+      PC: { className: 't-tag--${item}' },
+    },
     title_1724231877: {
       field_name: 'title',
       id: 1724231877,
       PC: {
-        props: { content: 'This is a long long long long long tag', maxWidth: '150px' },
+        props: {
+          content: 'This is a long long long long long tag',
+          maxWidth: '150px',
+        },
         attribute: [
           {
             value: 'This is a long tag',
             expect: [
               {
                 dom: '.t-tag--text',
-                attribute: { 'style.maxWidth': '150px', title: 'This is a long tag' },
+                attribute: {
+                  'style.maxWidth': '150px',
+                  title: 'This is a long tag',
+                },
               },
             ],
           },
@@ -152,7 +192,10 @@ module.exports = {
             expect: [
               {
                 dom: '.t-tag--text',
-                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
+                attribute: {
+                  'style.maxWidth': '150px',
+                  title: 'toBeUndefined',
+                },
               },
             ],
           },
@@ -160,14 +203,21 @@ module.exports = {
             expect: [
               {
                 dom: '.t-tag--text',
-                attribute: { 'style.maxWidth': '150px', title: 'toBeUndefined' },
+                attribute: {
+                  'style.maxWidth': '150px',
+                  title: 'toBeUndefined',
+                },
               },
             ],
           },
         ],
       },
     },
-    variant_2255: { field_name: 'variant', id: 2255, PC: { className: 't-tag--${item}' } },
+    variant_2255: {
+      field_name: 'variant',
+      id: 2255,
+      PC: { className: 't-tag--${item}' },
+    },
     click_625: {
       field_name: 'click',
       id: 625,
@@ -181,7 +231,10 @@ module.exports = {
           {
             props: { closable: true },
             expect: [
-              { trigger: 'click(.t-tag__icon-close)', event: { close: [{ 'e.type': 'click' }] } },
+              {
+                trigger: 'click(.t-tag__icon-close)',
+                event: { close: [{ 'e.type': 'click' }] },
+              },
             ],
           },
         ],
@@ -192,7 +245,11 @@ module.exports = {
   CheckTag: {
     checked_418: { field_name: 'checked', id: 418 },
     checkedProps_1695545685: { field_name: 'checkedProps', id: 1695545685 },
-    children_3313: { field_name: 'children', id: 3313, PC: { tnode: true } },
+    children_3313: {
+      field_name: 'children',
+      id: 3313,
+      PC: { tnode: true },
+    },
     closable_1124: { field_name: 'closable', id: 1124 },
     content_957: { field_name: 'content', id: 957, PC: { tnode: true } },
     content_1712653187: { field_name: 'content', id: 1712653187 },
@@ -202,7 +259,10 @@ module.exports = {
     icon_3132: { field_name: 'icon', id: 3132 },
     shape_1490: { field_name: 'shape', id: 1490 },
     size_1487: { field_name: 'size', id: 1487 },
-    uncheckedProps_1695545724: { field_name: 'uncheckedProps', id: 1695545724 },
+    uncheckedProps_1695545724: {
+      field_name: 'uncheckedProps',
+      id: 1695545724,
+    },
     value_1695615361: { field_name: 'value', id: 1695615361 },
     variant_3239: { field_name: 'variant', id: 3239 },
     change_960: { field_name: 'change', id: 960 },
@@ -216,7 +276,10 @@ module.exports = {
     checkedProps_1695565419: { field_name: 'checkedProps', id: 1695565419 },
     multiple_1695554166: { field_name: 'multiple', id: 1695554166 },
     options_1695564598: { field_name: 'options', id: 1695564598 },
-    uncheckedProps_1695564897: { field_name: 'uncheckedProps', id: 1695564897 },
+    uncheckedProps_1695564897: {
+      field_name: 'uncheckedProps',
+      id: 1695564897,
+    },
     value_1695554043: { field_name: 'value', id: 1695554043 },
     change_1695564191: { field_name: 'change', id: 1695564191 },
   },

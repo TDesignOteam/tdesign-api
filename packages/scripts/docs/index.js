@@ -1,24 +1,51 @@
-const fs = require('fs');
-const os = require('os');
-const path = require('path');
-const chalk = require('chalk');
-const kebabCase = require('lodash/kebabCase');
-const { FRAMEWORK_MAP, COMPONENT_API_MD_MAP } = require('../config');
-const { getApiComponentMapByFrameWork } = require('../common');
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+import chalk from 'chalk';
+import { getApiComponentMapByFrameWork } from '../common.js';
+import {
+  FRAMEWORK_MAP,
+  COMPONENT_API_MD_MAP,
+  MOBILE_COMPONENT_API_MD_MAP,
+  MINIPROGRAM_COMPONENT_API_MD_MAP,
+  MOBILE_FRAMES,
+  getChatComponentMap,
+} from '../config/index.js';
+import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
+
+// 获取当前框架下 md 文档需要合并输出的父子组件关系
+function getComponentApiMdMap() {
+  return getApiComponentMapByFrameWork(
+    currentFramework === 'Miniprogram' || currentFramework === 'UniApp'
+      ? Object.assign(
+          {},
+          COMPONENT_API_MD_MAP,
+          MOBILE_COMPONENT_API_MD_MAP,
+          MINIPROGRAM_COMPONENT_API_MD_MAP,
+          getChatComponentMap(currentFramework),
+        )
+      : MOBILE_FRAMES.includes(currentFramework)
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
+    currentFramework,
+  );
+}
 
 // 组件 Form 的 API 为 Form 和 FormItem 的组合
 function combineApi(allApi, component) {
   const r = { ...allApi };
-  const map = getApiComponentMapByFrameWork(COMPONENT_API_MD_MAP, currentFramework);
+  // 所有技术栈的 md 文档父子组件都合并输出（小程序和 UniApp 仅 type.ts 和 props.ts 独立输出）
+  const map = getComponentApiMdMap();
   Object.keys(map).forEach((cmp) => {
     if (!map[cmp]) return;
     const cmpApi = map[cmp]
-      .map(item => r[item])
-      .filter(v => !!v)
+      .map((item) => r[item])
+      .filter((v) => !!v)
       .join('\n\n');
-    if (cmpApi && (!component || component && cmp === component)) {
+    // component 为父组件或任意子组件时，都需要合并输出
+    if (cmpApi && (!component || (component && map[cmp].includes(component)))) {
       map[cmp].forEach((item) => {
         delete r[item];
       });
@@ -39,7 +66,7 @@ function getApiData(api) {
 const props = \`
 ${api.replace(/`/g, '\\`')}\n
 \`;
-module.exports = {
+export {
   props,
 };
 `;
@@ -59,12 +86,10 @@ function outputComponentMD(file, apiData, isVscode) {
       cssVariables = data.split('### CSS Variables')[1];
     }
     const APIIndex = data.lastIndexOf(SIGNATURE);
-    let result = APIIndex !== -1
-      ? `${data.slice(0, APIIndex + 7)}${apiData}`
-      : `${data}\n${SIGNATURE}\n${apiData}`;
+    let result = APIIndex !== -1 ? `${data.slice(0, APIIndex + 7)}${apiData}` : `${data}\n${SIGNATURE}${apiData}`;
     result = result.replace('\n:: BASE_PROPS ::\n', '');
     if (cssVariables) {
-      result += `\n### CSS Variables\n\n${cssVariables.trim()}`;
+      result += `\n### CSS Variables\n\n${cssVariables.trim()}\n`;
     }
     fs.writeFile(file, result, 'utf8', (err) => {
       if (err) return console.error(err);
@@ -74,8 +99,35 @@ function outputComponentMD(file, apiData, isVscode) {
 }
 
 function getDocFileName(cmp, framework) {
-  if (framework === 'Miniprogram') return 'README';
-  return kebabCase(cmp);
+  if (['Miniprogram', 'UniApp'].includes(framework)) return 'README';
+  return kebabCaseComponent(cmp);
+}
+
+// 合并输出的子组件，其独立的 markdown 文档需要删除，避免与父组件文档重复
+function removeChildComponentDocs(api, framework, current, isVscode) {
+  if (isVscode) return;
+  const map = getComponentApiMdMap();
+  Object.keys(map).forEach((parentCmp) => {
+    if (!map[parentCmp] || !api[parentCmp]) return;
+    map[parentCmp].forEach((childCmp) => {
+      if (childCmp === parentCmp) return;
+      const childFolder = path.resolve(
+        getComponentBasePath(childCmp, current.apiBasePath, framework),
+        kebabCaseComponent(childCmp),
+      );
+      [`${getDocFileName(childCmp, framework)}.md`, `${getDocFileName(childCmp, framework)}.en-US.md`].forEach(
+        (fileName) => {
+          const file = path.resolve(childFolder, fileName);
+          if (fs.existsSync(file)) {
+            fs.unlink(file, (err) => {
+              if (err) return console.error(err);
+              console.log(chalk.yellow(`remove useless docs: ${file} has been removed.`));
+            });
+          }
+        },
+      );
+    });
+  });
 }
 
 // 根据组件获取 API 类型数据
@@ -98,10 +150,11 @@ function generateDocs(baseData, framework, extra) {
   }
   let api = current.getDocs(baseData, current, framework, globalConfigData, extra && extra.language);
   api = combineApi(api, extra.component);
+  removeChildComponentDocs(api, framework, current, isVscode);
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath
-      : path.resolve(current.apiBasePath, kebabCase(cmp));
+      : path.resolve(getComponentBasePath(cmp, current.apiBasePath, framework), kebabCaseComponent(cmp));
     fs.mkdir(folder, { recursive: true }, (err) => {
       if (err) {
         return console.error(err);
@@ -116,9 +169,7 @@ function generateDocs(baseData, framework, extra) {
       const language = extra && extra.language && langMap[extra.language];
       // const basePath = `${folder}/${getDocFileName(cmp, framework)}`;
       const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
-      const mdfile = isVscode
-        ? path.resolve(folder, `t-${kebabCase(cmp)}.js`)
-        : apiDocsFilePath;
+      const mdfile = isVscode ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`) : apiDocsFilePath;
 
       if (isVscode) {
         fs.writeFile(mdfile, apiData, 'utf8', (err) => {
@@ -152,7 +203,4 @@ function generateDocs(baseData, framework, extra) {
   });
 }
 
-module.exports = {
-  generateDocs,
-  getDocsByComponent,
-};
+export { generateDocs, getDocsByComponent };

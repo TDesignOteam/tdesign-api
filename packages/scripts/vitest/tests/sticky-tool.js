@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   StickyTool: {
     list_1845: { field_name: 'list', id: 1845 },
     offset_1847: { field_name: 'offset', id: 1847 },

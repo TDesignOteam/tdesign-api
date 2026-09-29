@@ -1,8 +1,8 @@
-import Router from 'koa-router';
+import Router from '@koa/router';
 import Koa from 'koa';
 // import Log from '../utils/log';
+import { BaseObject } from '../../types';
 import ComponentApiController from '../controllers/ComponentApi';
-import { BaseObject } from 'packages/types';
 
 const router = new Router({
   prefix: '/cmp',
@@ -16,7 +16,7 @@ router.post('/api', async (ctx: Koa.Context) => {
 });
 
 router.get('/api', async (ctx: Koa.Context) => {
-  ctx.body = await ComponentApiController.queryRecords(ctx.request.query);
+  ctx.body = await ComponentApiController.queryRecords(ctx.request.query as BaseObject);
 });
 
 router.delete('/api', async (ctx: Koa.Context) => {
@@ -40,6 +40,12 @@ router.post('/generate-api', (ctx: Koa.Context) => {
     code: 0,
     data: ComponentApiController.generateAPI(ctx.request.body as { commandLines: string[] }),
   };
+});
+
+router.post('/unit-test', async (ctx: Koa.Context) => {
+  ctx.body = await ComponentApiController.generateUnitTest(
+    ctx.request.body as Parameters<typeof ComponentApiController.generateUnitTest>[0],
+  );
 });
 
 router.get('/export-api-data', async(ctx: Koa.Context) => {

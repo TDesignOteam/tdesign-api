@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
+import { TNode, Styles, AttachNode, AppContext } from '../common';
 
 export interface TdNotificationProps {
   /**
@@ -43,6 +43,10 @@ export interface TdNotificationProps {
    */
   title?: string | TNode;
   /**
+   * 调用 NotificationPlugin.close 的事件回调
+   */
+  onClose?: () => void;
+  /**
    * 点击关闭按钮时触发
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;
@@ -59,6 +63,11 @@ export interface NotificationOptions extends TdNotificationProps {
    */
   attach?: AttachNode;
   /**
+   * 通知框类名
+   * @default ''
+   */
+  className?: string;
+  /**
    * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']
    */
   offset?: Array<string | number>;
@@ -67,6 +76,10 @@ export interface NotificationOptions extends TdNotificationProps {
    * @default top-right
    */
   placement?: NotificationPlacementList;
+  /**
+   * 通知框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
+   */
+  style?: string | Styles;
   /**
    * 消息通知层级
    * @default 6000
@@ -85,17 +98,30 @@ export interface NotificationInstance {
 export type NotificationMethod = (
   theme: NotificationThemeList,
   options: NotificationOptions,
+  context?: AppContext,
 ) => Promise<NotificationInstance>;
 
 export type NotificationInfoOptions = Omit<NotificationOptions, 'theme'>;
 
-export type NotificationInfoMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationInfoMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationWarningMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationWarningMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationErrorMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationErrorMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
-export type NotificationSuccessMethod = (options: NotificationInfoOptions) => Promise<NotificationInstance>;
+export type NotificationSuccessMethod = (
+  options: NotificationInfoOptions,
+  context?: AppContext,
+) => Promise<NotificationInstance>;
 
 export type NotificationCloseMethod = (options: Promise<NotificationInstance>) => void;
 

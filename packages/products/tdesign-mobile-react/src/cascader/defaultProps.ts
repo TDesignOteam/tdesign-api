@@ -7,10 +7,10 @@ import { TdCascaderProps } from './type';
 export const cascaderDefaultProps: TdCascaderProps = {
   checkStrictly: false,
   closeBtn: true,
-  lazy: false,
+  filterable: false,
   loadCompleted: false,
   options: [],
-  placeholder: '选择选项',
+  overlayProps: {},
   subTitles: [],
   theme: 'step',
   visible: false,

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdSearchProps {
   /**
@@ -22,10 +22,20 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否可清空
    * @default true
    */
   clearable?: boolean;
+  /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
   /**
    * 禁用状态
    */
@@ -96,7 +106,10 @@ export interface TdSearchProps {
    * 搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词
    * @default ''
    */
-  onChange?: (value: string, context: { e?: InputEvent | MouseEvent }) => void;
+  onChange?: (
+    value: string,
+    context: { trigger: 'input-change' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent },
+  ) => void;
   /**
    * 点击清除时触发
    * @default ''

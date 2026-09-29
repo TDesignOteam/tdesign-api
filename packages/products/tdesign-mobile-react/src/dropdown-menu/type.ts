@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TElement, KeysType } from '../common';
+import type { TNode, TElement, KeysType } from '../common';
 
 export interface TdDropdownMenuProps {
   /**
@@ -28,8 +28,7 @@ export interface TdDropdownMenuProps {
    */
   showOverlay?: boolean;
   /**
-   * 菜单栏 z-index 层级
-   * @default 11600
+   * 菜单栏 z-index 层级，默认为 1600
    */
   zIndex?: number;
 }
@@ -44,6 +43,10 @@ export interface TdDropdownItemProps {
    * 底部
    */
   footer?: TElement;
+  /**
+   * 自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]
+   */
+  icon?: TNode | TNode[] | undefined;
   /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
@@ -86,9 +89,25 @@ export interface TdDropdownItemProps {
    */
   onChange?: (value: DropdownValue) => void;
   /**
+   * 关闭时触发
+   */
+  onClose?: () => void;
+  /**
+   * 关闭且动画结束后触发
+   */
+  onClosed?: () => void;
+  /**
    * 点击确认时触发
    */
   onConfirm?: (value: DropdownValue) => void;
+  /**
+   * 打开时触发
+   */
+  onOpen?: () => void;
+  /**
+   * 打开且动画结束后触发
+   */
+  onOpened?: () => void;
   /**
    * 点击重置时触发
    */

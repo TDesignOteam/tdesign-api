@@ -15,7 +15,7 @@ export default {
   /** 高度，默认单位为 px */
   height: {
     type: [String, Number] as PropType<TdTreeSelectProps['height']>,
-    default: 336,
+    default: 336 as TdTreeSelectProps['height'],
   },
   /** 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
   keys: {
@@ -31,11 +31,11 @@ export default {
   /** 选中值 */
   value: {
     type: [String, Number, Array] as PropType<TdTreeSelectProps['value']>,
-    default: undefined,
+    default: undefined as TdTreeSelectProps['value'],
   },
   modelValue: {
     type: [String, Number, Array] as PropType<TdTreeSelectProps['value']>,
-    default: undefined,
+    default: undefined as TdTreeSelectProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

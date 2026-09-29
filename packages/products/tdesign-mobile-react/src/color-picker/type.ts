@@ -11,10 +11,20 @@ export interface TdColorPickerProps {
    */
   clearable?: boolean;
   /**
+   * 颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色
+   * @default "monochrome"
+   */
+  colorModes?: colorModesEnum | colorModesEnum[];
+  /**
    * 是否开启透明通道
    * @default false
    */
   enableAlpha?: boolean;
+  /**
+   * 是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色
+   * @default true
+   */
+  enableMultipleGradient?: boolean;
   /**
    * 如果 color-picker 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true
    * @default false
@@ -49,20 +59,16 @@ export interface TdColorPickerProps {
    */
   onChange?: (value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger }) => void;
   /**
-   * 关闭按钮时触发
-   */
-  onClose?: (trigger: ColorPickerTrigger) => void;
-  /**
    * 调色板控制器的值变化时触发，`context.color` 指调色板控制器的值
    */
   onPaletteBarChange?: (context: { color: ColorObject }) => void;
 }
 
+export type colorModesEnum = 'monochrome' | 'linear-gradient';
+
 export type TypeEnum = 'base' | 'multiple';
 
 export type ColorPickerChangeTrigger = 'palette-hue-bar' | 'palette-alpha-bar' | 'preset';
-
-export type ColorPickerTrigger = 'overlay';
 
 export interface ColorObject {
   alpha: number;

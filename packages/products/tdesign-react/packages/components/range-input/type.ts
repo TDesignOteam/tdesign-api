@@ -29,7 +29,7 @@ export interface TdRangeInputProps {
   /**
    * 是否禁用范围输入框
    */
-  disabled?: boolean;
+  disabled?: boolean | Array<boolean>;
   /**
    * 指定输入框展示值的格式
    */

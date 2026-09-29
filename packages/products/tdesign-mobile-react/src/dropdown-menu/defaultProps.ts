@@ -9,11 +9,11 @@ export const dropdownMenuDefaultProps: TdDropdownMenuProps = {
   direction: 'down',
   duration: 200,
   showOverlay: true,
-  zIndex: 11600,
 };
 
 export const dropdownItemDefaultProps: TdDropdownItemProps = {
   disabled: false,
+  icon: undefined,
   multiple: false,
   options: [],
   optionsColumns: 1,

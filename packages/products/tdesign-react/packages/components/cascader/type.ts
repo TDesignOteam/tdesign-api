@@ -12,8 +12,8 @@ import { TagInputProps } from '../tag-input';
 import { TagProps } from '../tag';
 import { TreeNodeModel } from '../tree';
 import { PopupVisibleChangeContext } from '../popup';
-import { TNode, TElement, TreeOptionData, SizeEnum, TreeKeysType } from '../common';
-import { MouseEvent, FocusEvent } from 'react';
+import type { TNode, TElement, TreeOptionData, SizeEnum, TreeKeysType, TScroll } from '../common';
+import type { MouseEvent, FocusEvent } from 'react';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
@@ -47,6 +47,24 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
     collapsedSelectedItems: CascaderOption[];
     count: number;
     onClose: (context: { index: number; e?: MouseEvent }) => void;
+  }>;
+  /**
+   * 每一列的底部自定义内容。`panelIndex` 表示当前列索引，`options` 表示当前列原始选项，`filteredOptions` 表示当前列过滤后的选项（未过滤时与 options 相同），`onFilter` 用于过滤当前列选项（传入字符串时内置大小写不敏感匹配；如需自定义匹配逻辑请传入过滤函数）。当内置搜索（filterable）有输入时，面板切换为扁平模式，`onFilter` 为空操作
+   */
+  columnFooter?: TNode<{
+    panelIndex: number;
+    options: TreeOptionData[];
+    filteredOptions: TreeOptionData[];
+    onFilter: (filter: string | ((node: TreeOptionData, panelIndex: number) => boolean)) => void;
+  }>;
+  /**
+   * 每一列的顶部自定义内容。`panelIndex` 表示当前列索引，`options` 表示当前列原始选项，`filteredOptions` 表示当前列过滤后的选项（未过滤时与 options 相同），`onFilter` 用于过滤当前列选项（传入字符串时内置大小写不敏感匹配；如需自定义匹配逻辑请传入过滤函数）。当内置搜索（filterable）有输入时，面板切换为扁平模式，`onFilter` 为空操作。
+   */
+  columnHeader?: TNode<{
+    panelIndex: number;
+    options: TreeOptionData[];
+    filteredOptions: TreeOptionData[];
+    onFilter: (filter: string | ((node: TreeOptionData, panelIndex: number) => boolean)) => void;
   }>;
   /**
    * 是否禁用组件
@@ -111,9 +129,9 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   multiple?: boolean;
   /**
-   * 自定义单个级联选项
+   * 自定义单个级联选项, item 是选项本身的值，index 是下标，onChange 用于触发当前节点选中，onExpand 用于触发当前节点展开
    */
-  option?: TNode<{ item: CascaderOption; index: number }>;
+  option?: TNode<{ item: CascaderOption; index: number; onChange: () => void; onExpand: () => void }>;
   /**
    * 可选项数据源
    * @default []
@@ -152,6 +170,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    * @default false
    */
   reserveKeyword?: boolean;
+  /**
+   * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
+   */
+  scroll?: TScroll;
   /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, Styles } from '../common';
+import type { TNode, Styles } from '../common';
 
 export interface TdSwipeCellProps {
   /**
@@ -49,7 +49,7 @@ export interface TdSwipeCellProps {
 /** 组件实例方法 */
 export interface SwipeCellInstanceFunctions {
   /**
-   * 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content
+   * 显示二次确认内容的函数。参数: `sure` 表示二次确认的具体内容，同 content; `onClick` 表示点击二次确认内容时执行的回调
    */
   showSure?: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
 }

@@ -64,7 +64,7 @@ export interface TdDialogProps {
    */
   dialogStyle?: Styles;
   /**
-   * 对话框是否可以拖拽（仅在非模态对话框时有效）
+   * 是否可以拖拽（对全屏对话框无效）
    * @default false
    */
   draggable?: boolean;
@@ -108,6 +108,11 @@ export interface TdDialogProps {
    * @default true
    */
   showOverlay?: boolean;
+  /**
+   * 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。
+   * @default false
+   */
+  sizeDraggable?: boolean | DialogSizeDragLimit;
   /**
    * 对话框风格
    * @default default
@@ -229,6 +234,7 @@ export interface TdDialogCardProps
   onCancel?: (context: { e: MouseEvent }) => void;
   /**
    * 点击右上角关闭按钮时触发
+   * @default ''
    */
   onCloseBtnClick?: (context: { e: MouseEvent }) => void;
   /**
@@ -275,6 +281,13 @@ export interface DialogInstance {
    * 更新弹框内容
    */
   update: (props: DialogOptions) => void;
+}
+
+export interface DialogSizeDragLimit {
+  maxWidth: number | undefined;
+  minWidth: number | undefined;
+  maxHeight: number | undefined;
+  minHeight: number | undefined;
 }
 
 export type DialogEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay';

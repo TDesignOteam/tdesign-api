@@ -11,7 +11,7 @@ import { TagInputProps } from '../tag-input';
 import { TagProps } from '../tag';
 import { SelectInputValueChangeContext } from '../select-input';
 import { PopupVisibleChangeContext } from '../popup';
-import { PlainObject, TNode, TElement, SizeEnum, InfinityScroll } from '../common';
+import { PlainObject, TNode, TElement, SizeEnum, TScroll } from '../common';
 import { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
 
 export interface TdSelectProps<T extends SelectOption = SelectOption> {
@@ -115,9 +115,9 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   options?: Array<T>;
   /**
    * 下拉选项布局方式，有纵向排列和横向排列两种，默认纵向排列
-   * @default vertical
+   * @default 'vertical'
    */
-  optionsLayout?: vertical | horizontal;
+  optionsLayout?: 'vertical' | 'horizontal';
   /**
    * 面板内的底部内容
    */
@@ -158,7 +158,7 @@ export interface TdSelectProps<T extends SelectOption = SelectOption> {
   /**
    * 懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`
    */
-  scroll?: InfinityScroll;
+  scroll?: TScroll;
   /**
    * 透传 SelectInput 筛选器输入框组件的全部属性
    */
@@ -299,7 +299,7 @@ export interface TdOptionProps {
   /**
    * 选项值
    */
-  value?: string | number | boolean;
+  value?: string | number | boolean | bigint;
 }
 
 export interface TdOptionGroupProps {
@@ -321,7 +321,13 @@ export interface SelectKeysType {
   disabled?: string;
 }
 
-export type SelectValue<T extends SelectOption = SelectOption> = string | number | boolean | T | Array<SelectValue<T>>;
+export type SelectValue<T extends SelectOption = SelectOption> =
+  | string
+  | number
+  | bigint
+  | boolean
+  | T
+  | Array<SelectValue<T>>;
 
 export type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default';
 

@@ -39,6 +39,7 @@ declare module '@vue/runtime-core' {
     TCollapse: typeof import('tdesign-vue')['Collapse'];
     TCollapsePanel: typeof import('tdesign-vue')['CollapsePanel'];
     TColorPicker: typeof import('tdesign-vue')['ColorPicker'];
+    TColorPickerPanel: typeof import('tdesign-vue')['ColorPickerPanel'];
     TComment: typeof import('tdesign-vue')['Comment'];
     TConfigProvider: typeof import('tdesign-vue')['ConfigProvider'];
     TContent: typeof import('tdesign-vue')['Content'];
@@ -54,6 +55,7 @@ declare module '@vue/runtime-core' {
     TDrawer: typeof import('tdesign-vue')['Drawer'];
     TDropdown: typeof import('tdesign-vue')['Dropdown'];
     TDropdownItem: typeof import('tdesign-vue')['DropdownItem'];
+    TDropdownMenu: typeof import('tdesign-vue')['DropdownMenu'];
     TEmpty: typeof import('tdesign-vue')['Empty'];
     TEnhancedTable: typeof import('tdesign-vue')['EnhancedTable'];
     TFooter: typeof import('tdesign-vue')['Footer'];
@@ -91,6 +93,7 @@ declare module '@vue/runtime-core' {
     TPopup: typeof import('tdesign-vue')['Popup'];
     TPrimaryTable: typeof import('tdesign-vue')['PrimaryTable'];
     TProgress: typeof import('tdesign-vue')['Progress'];
+    TQrcode: typeof import('tdesign-vue')['QRCode'];
     TRadio: typeof import('tdesign-vue')['Radio'];
     TRadioButton: typeof import('tdesign-vue')['RadioButton'];
     TRadioGroup: typeof import('tdesign-vue')['RadioGroup'];
@@ -111,6 +114,7 @@ declare module '@vue/runtime-core' {
     TStickyTool: typeof import('tdesign-vue')['StickyTool'];
     TSubmenu: typeof import('tdesign-vue')['Submenu'];
     TSwiper: typeof import('tdesign-vue')['Swiper'];
+    TSwiperItem: typeof import('tdesign-vue')['SwiperItem'];
     TSwitch: typeof import('tdesign-vue')['Switch'];
     TTable: typeof import('tdesign-vue')['Table'];
     TTabPanel: typeof import('tdesign-vue')['TabPanel'];

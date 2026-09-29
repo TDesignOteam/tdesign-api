@@ -29,5 +29,3 @@ theme | String | circular | 加载组件类型。可选项：circular/spinner/do
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
-
-插件返回值：`LoadingInstance【interface LoadingInstance { hide: () => void }】`

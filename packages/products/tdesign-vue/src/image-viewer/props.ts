@@ -57,6 +57,10 @@ export default {
     type: Number,
     default: 0,
   },
+  /** 内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`） */
+  innerClassName: {
+    type: [String, Object, Array] as PropType<TdImageViewerProps['innerClassName']>,
+  },
   /** 模态预览（modal）和非模态预览（modeless) */
   mode: {
     type: String as PropType<TdImageViewerProps['mode']>,
@@ -80,7 +84,7 @@ export default {
   title: {
     type: [String, Function] as PropType<TdImageViewerProps['title']>,
   },
-  /** 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义 */
+  /** 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义，默认为预览图片的缩略图 */
   trigger: {
     type: [String, Function] as PropType<TdImageViewerProps['trigger']>,
   },
@@ -92,7 +96,7 @@ export default {
   visible: Boolean,
   /** 隐藏/显示预览，非受控属性 */
   defaultVisible: Boolean,
-  /** 层级，默认为 2000 */
+  /** 层级，默认为 3000 */
   zIndex: {
     type: Number,
   },

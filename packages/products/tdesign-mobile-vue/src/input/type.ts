@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdInputProps {
   /**
@@ -144,7 +144,7 @@ export interface TdInputProps {
    */
   onChange?: (
     value: InputValue,
-    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' },
+    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' | 'blur' },
   ) => void;
   /**
    * 清空按钮点击时触发
@@ -155,7 +155,7 @@ export interface TdInputProps {
    */
   onFocus?: (value: InputValue, context: { e: FocusEvent }) => void;
   /**
-   * 【暂不支持】字数超出限制时触发
+   * 字数超出限制时触发
    */
   onValidate?: (context: { error?: 'exceed-maximum' | 'below-minimum' }) => void;
 }

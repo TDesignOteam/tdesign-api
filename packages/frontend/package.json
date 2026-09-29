@@ -5,56 +5,47 @@
     "dev": "vite",
     "watch": "vite build --watch",
     "build": "vite build",
-    "lint:fix": "eslint --ext .vue,.js,.ts,.tsx ./packages --fix"
+    "lint:fix": "eslint ./packages --fix"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.4.1",
-    "axios": "^0.20.0",
-    "codemirror": "^5.41.0",
-    "lodash": "^4.17.21",
-    "tdesign-icons-vue": "^0.1.6",
-    "tdesign-vue": "^1.9.0",
-    "vue": "~2.6.14",
-    "vue-codemirror": "^4.0.6",
-    "vue-router": "^3.5.3"
+    "@codemirror/lang-javascript": "catalog:",
+    "@codemirror/theme-one-dark": "catalog:",
+    "@tdesign/site-components": "catalog:",
+    "axios": "catalog:",
+    "codemirror": "catalog:",
+    "lodash": "catalog:",
+    "tdesign-icons-vue-next": "catalog:",
+    "tdesign-vue-next": "catalog:",
+    "vue": "catalog:",
+    "vue-codemirror": "catalog:",
+    "vue-eslint-parser": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.6.0",
-    "@typescript-eslint/parser": "^5.6.0",
-    "autoprefixer": "^10.4.0",
-    "babel-eslint": "^10.1.0",
-    "cssnano": "^5.0.12",
-    "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "husky": "^3.0.7",
-    "less": "^4.1.2",
-    "lint-staged": "8.1.5",
-    "postcss": "^8.4.5",
-    "prismjs": "^1.29.0",
-    "tdesign-site-components": "^0.11.17",
-    "typescript": "^4.5.2",
-    "vite": "^2.7.10",
-    "vite-plugin-commonjs": "^0.6.1",
-    "vite-plugin-vue2": "^2.0.3",
-    "vue-template-compiler": "~2.6.14"
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@types/lodash": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "autoprefixer": "catalog:",
+    "cssnano": "catalog:",
+    "cz-conventional-changelog": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-promise": "catalog:",
+    "eslint-plugin-vue": "catalog:",
+    "globals": "catalog:",
+    "less": "catalog:",
+    "postcss": "catalog:",
+    "prismjs": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,vue,tsx}": [
-      "npm run lint:fix",
-      "git add"
-    ]
   },
   "author": "tdesign",
   "license": "MIT"

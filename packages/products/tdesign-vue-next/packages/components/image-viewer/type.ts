@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
+import { TNode, ClassName, AttachNode } from '../common';
 
 export interface TdImageViewerProps {
   /**
@@ -45,7 +45,7 @@ export interface TdImageViewerProps {
   /**
    *  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例
    */
-  imageScale?: ImageScale;
+  imageScale?: Partial<ImageScale>;
   /**
    * 图片数组。`mainImage` 表示主图，必传；`thumbnail` 表示缩略图，如果不存在，则使用主图显示；`download` 是否允许下载图片，默认允许下载。示例: `['img_url_1', 'img_url_2']`，`[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]`
    * @default []
@@ -61,6 +61,10 @@ export interface TdImageViewerProps {
    * @default 0
    */
   defaultIndex?: number;
+  /**
+   * 内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）
+   */
+  innerClassName?: ClassName;
   /**
    * 模态预览（modal）和非模态预览（modeless)
    * @default modal
@@ -80,9 +84,9 @@ export interface TdImageViewerProps {
    */
   title?: string | TNode;
   /**
-   * 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义
+   * 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义，默认为预览图片的缩略图
    */
-  trigger?: TNode | TNode<{ open: () => void }>;
+  trigger?: TNode | TNode<{ open: (index?: number) => void }>;
   /**
    * 限制预览器缩放的最小宽度和最小高度，仅 `mode=modeless` 时有效
    */
@@ -103,7 +107,7 @@ export interface TdImageViewerProps {
    */
   modelValue?: boolean;
   /**
-   * 层级，默认为 2000
+   * 层级，默认为 3000
    */
   zIndex?: number;
   /**
@@ -124,7 +128,7 @@ export interface ImageScale {
   max: number;
   min: number;
   step: number;
-  defaultScale?: number;
+  defaultScale: number;
 }
 
 export interface ImageInfo {

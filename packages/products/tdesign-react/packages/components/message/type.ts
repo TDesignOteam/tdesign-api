@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, AttachNode } from '../common';
-import { CSSProperties, MouseEvent } from 'react';
+import type { TNode, AttachNode } from '../common';
+import type { CSSProperties, MouseEvent } from 'react';
 
 export interface TdMessageProps {
   /**
@@ -71,7 +71,7 @@ export interface MessageOptions extends TdMessageProps {
   style?: CSSProperties;
   /**
    * 消息层级
-   * @default 5000
+   * @default 6000
    */
   zIndex?: number;
 }
@@ -79,15 +79,7 @@ export interface MessageOptions extends TdMessageProps {
 export type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading';
 
 export type MessagePlacementList =
-  | 'center'
-  | 'top'
-  | 'left'
-  | 'right'
-  | 'bottom'
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right';
+  'center' | 'top' | 'left' | 'right' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 
 export interface MessageInstance {
   close: () => void;
@@ -95,33 +87,39 @@ export interface MessageInstance {
 
 export type MessageMethod = (
   theme: MessageThemeList,
-  message: string | MessageOptions,
+  message: string | TNode | MessageOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
 export type MessageInfoOptions = Omit<MessageOptions, 'theme'>;
 
-export type MessageInfoMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageInfoMethod = (
+  message: string | TNode | MessageInfoOptions,
+  duration?: number,
+) => Promise<MessageInstance>;
 
-export type MessageErrorMethod = (message: string | MessageInfoOptions, duration?: number) => Promise<MessageInstance>;
+export type MessageErrorMethod = (
+  message: string | TNode | MessageInfoOptions,
+  duration?: number,
+) => Promise<MessageInstance>;
 
 export type MessageWarningMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
 export type MessageSuccessMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
 export type MessageLoadingMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 
 export type MessageQuestionMethod = (
-  message: string | MessageInfoOptions,
+  message: string | TNode | MessageInfoOptions,
   duration?: number,
 ) => Promise<MessageInstance>;
 

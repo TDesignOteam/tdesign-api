@@ -32,7 +32,7 @@ className | String | - | 类名 | N
 offset | Array | - | 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']。TS 类型：`Array<string \| number>` | N
 placement | String | top | 弹出消息位置。可选项：center/top/left/right/bottom/top-left/top-right/bottom-left/bottom-right。TS 类型：`MessagePlacementList` `type MessagePlacementList = 'center' \| 'top' \| 'left' \| 'right' \| 'bottom' \| 'top-left' \| 'top-right' \| 'bottom-left' \| 'bottom-right'`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/message/type.ts) | N
 style | Object | - | 内敛样式。TS 类型：`CSSProperties` | N
-zIndex | Number | 5000 | 消息层级 | N
+zIndex | Number | 6000 | 消息层级 | N
 `MessageProps` | \- | - | 继承 `MessageProps` 中的全部属性 | N
 
 ### MessagePlugin
@@ -42,7 +42,7 @@ zIndex | Number | 5000 | 消息层级 | N
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 theme | String | - | 必需。消息类型。TS 类型：`MessageThemeList`
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -52,7 +52,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/message/type.ts)
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/message/type.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -62,7 +62,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -72,7 +72,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -82,7 +82,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -92,7 +92,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息提醒内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息提醒内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 
@@ -102,7 +102,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 
 参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
-message | String / Object | - | 必需。消息内容。TS 类型：`string \| MessageInfoOptions`
+message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
 context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)
 

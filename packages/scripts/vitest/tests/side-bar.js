@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   SideBar: {
     children_1724669424: { field_name: 'children', id: 1724669424 },
     defaultValue_1711973521: { field_name: 'defaultValue', id: 1711973521 },

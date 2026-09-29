@@ -1,4 +1,4 @@
-const {
+import {
   getItDescription,
   getWrapper,
   getMountComponent,
@@ -10,28 +10,38 @@ const {
   getPresetsExpect,
   getItAsync,
   getCategoryDesc,
-} = require('./core');
-const { getSkipCode } = require('./utils');
+} from './core.js';
+import { getSkipCode } from './utils.js';
 
 /**
  * 输出类名检测单测用例
  */
 function generateClassNameUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactClassName(test, oneApiData, framework, component);
-  return arr && arr.filter(v => v);
+  return arr && arr.filter((v) => v);
 }
 
 function generateVueAndReactClassName(test, oneApiData, framework, component) {
   const { className, classNameDom, props, snapshot, content, wrapper, trigger, skip } = test;
   const extraCode = { content, wrapper };
   const async = getItAsync(trigger, framework);
-  const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-item-/' }, extraCode);
-  const enums = oneApiData.field_enum.split('/').filter(v => v);
+  const mountCode = getMountComponent(
+    framework,
+    component,
+    { ...props, [oneApiData.field_name]: '/-item-/' },
+    extraCode,
+  );
+  const enums = oneApiData.field_enum.split('/').filter((v) => v);
   const propsCode = getCategoryDesc(oneApiData, component);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
-  if (typeof className === 'string' && className.indexOf('${item}') != -1 && enums.length && oneApiData.field_type_text[0] === 'String') {
+  if (
+    typeof className === 'string' &&
+    className.indexOf('${item}') != -1 &&
+    enums.length &&
+    oneApiData.field_type_text[0] === 'String'
+  ) {
     const arr = [
-      `[${enums.map(val => `'${val}'`).join(', ')}].forEach((item) => {`,
+      `[${enums.map((val) => `'${val}'`).join(', ')}].forEach((item) => {`,
       `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${ item }\`,${async} () => {`,
       getWrapper(framework, mountCode, classNameDom),
       trigger && getPresetsExpect(trigger, framework, component),
@@ -57,15 +67,15 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
         getWrapper(framework, mountCode, classNameDom),
         trigger && getPresetsExpect(trigger, framework, component),
         hasObjectClassName
-        ? [
-            `if (typeof ${classNameVariable}[index] === 'string') {`,
-            getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
-          `} else if (typeof ${classNameVariable}[index] === 'object') {
+          ? [
+              `if (typeof ${classNameVariable}[index] === 'string') {`,
+              getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
+              `} else if (typeof ${classNameVariable}[index] === 'object') {
             const classNameKey = Object.keys(${classNameVariable}[index])[0];`,
-            getClassNameExpectFalsy(framework, 'classNameKey'),
-          `}`,
-          ].join('\n')
-        : getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
+              getClassNameExpectFalsy(framework, 'classNameKey'),
+              `}`,
+            ].join('\n')
+          : getClassNameExpectTruthy(framework, `${classNameVariable}[index]`, '', classNameDom),
         getSnapshotCase(snapshot, framework),
         `});`,
         `});`,
@@ -75,16 +85,25 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       const onlyDocumentDom = isOnlyDocumentDom(className);
       const propsCode = getCategoryDesc(oneApiData, component);
       return className.map(({ value, expect }) => {
-        const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: value }, extraCode);
+        const mountCode = getMountComponent(
+          framework,
+          component,
+          { ...props, [oneApiData.field_name]: value },
+          extraCode,
+        );
         const arr = [
           `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to ${value}\`,${async} () => {`,
-            getWrapper(framework, mountCode, '', '', { onlyDocumentDom }),
-            trigger && getPresetsExpect(trigger, framework, component),
-            getDomClassNameExpect(framework, expect),
-            getSnapshotCase(snapshot, framework, '', { onlyDocumentDom }),
-          `});`
+          getWrapper(framework, mountCode, '', '', {
+            onlyDocumentDom,
+          }),
+          trigger && getPresetsExpect(trigger, framework, component),
+          getDomClassNameExpect(framework, expect),
+          getSnapshotCase(snapshot, framework, '', {
+            onlyDocumentDom,
+          }),
+          `});`,
         ];
-        return arr.filter(v => v).join('\n');
+        return arr.filter((v) => v).join('\n');
       });
     }
   }
@@ -93,8 +112,18 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   if (typeof className === 'string') {
     if (oneApiData.field_type_text[0] === 'Boolean') {
       const mountCode1 = getMountComponent(framework, component, { ...props }, extraCode);
-      const mountCode2 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: true }, extraCode);
-      const mountCode3 = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: false }, extraCode);
+      const mountCode2 = getMountComponent(
+        framework,
+        component,
+        { ...props, [oneApiData.field_name]: true },
+        extraCode,
+      );
+      const mountCode3 = getMountComponent(
+        framework,
+        component,
+        { ...props, [oneApiData.field_name]: false },
+        extraCode,
+      );
       const arr = [
         `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
         `// ${oneApiData.field_name} default value is ${oneApiData.field_default_value}`,
@@ -121,7 +150,11 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
       return [
         `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
-        getWrapper(framework, mountCode, classNameDom, '', { trigger, component, ...extraCode }),
+        getWrapper(framework, mountCode, classNameDom, '', {
+          trigger,
+          component,
+          ...extraCode,
+        }),
         // trigger && getPresetsExpect(trigger, framework, component),
         getClassNameExpectTruthy(framework, `'${className}'`, '', classNameDom),
         getSnapshotCase(snapshot, framework),
@@ -134,17 +167,22 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   if (typeof className === 'object' && !Array.isArray(className)) {
     const propsCode = getCategoryDesc(oneApiData, component);
     const mapVariable = `${oneApiData.field_name}ClassNameMap`;
-    const mountCode = getMountComponent(framework, component, { ...props, [oneApiData.field_name]: '/-propValue-/' }, extraCode);
+    const mountCode = getMountComponent(
+      framework,
+      component,
+      { ...props, [oneApiData.field_name]: '/-propValue-/' },
+      extraCode,
+    );
     const arr = [
       `const ${mapVariable} = ${JSON.stringify(className)};`,
       `Object.entries(${mapVariable}).forEach(([enumValue, expectedClassName]) => {
         it(\`${propsCode}.${oneApiData.field_name} is equal to \${ enumValue }\`,${async} () => {
           let propValue = { true: true, false: false }[enumValue];
           propValue = propValue === undefined ? enumValue : propValue;`,
-          getWrapper(framework, mountCode, classNameDom),
-          trigger && getPresetsExpect(trigger, framework, component),
-          getClassNameExpectTruthy(framework, 'expectedClassName', '', classNameDom),
-        `});
+      getWrapper(framework, mountCode, classNameDom),
+      trigger && getPresetsExpect(trigger, framework, component),
+      getClassNameExpectTruthy(framework, 'expectedClassName', '', classNameDom),
+      `});
       });`,
     ];
     return arr;
@@ -153,7 +191,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
 
 function hasObjectInArray(arr) {
   for (let i = 0, len = arr.length; i < len; i++) {
-    if (typeof arr[i] !== 'string') return true
+    if (typeof arr[i] !== 'string') return true;
   }
   return false;
 }
@@ -174,6 +212,4 @@ function isOnlyDocumentDom(className) {
   return true;
 }
 
-module.exports = {
-  generateClassNameUnitCase
-};
+export { generateClassNameUnitCase };

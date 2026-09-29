@@ -38,7 +38,7 @@ export interface TdDrawerProps {
    */
   closeOnOverlayClick?: boolean;
   /**
-   * 确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
+   * 确认按钮，可自定义。值为 null 则不显示确认按钮。类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件
    */
   confirmBtn?: FooterButton;
   /**
@@ -135,6 +135,10 @@ export interface TdDrawerProps {
    */
   onCloseBtnClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
   /**
+   * 抽屉关闭后触发
+   */
+  onClosed?: () => void;
+  /**
    * 如果“确认”按钮存在，则点击“确认”按钮时触发
    */
   onConfirm?: (context: { e: MouseEvent<HTMLDivElement | HTMLButtonElement> }) => void;
@@ -142,6 +146,10 @@ export interface TdDrawerProps {
    * 按下 ESC 键时触发
    */
   onEscKeydown?: (context: { e: KeyboardEvent<HTMLDivElement> }) => void;
+  /**
+   * 抽屉打开后触发
+   */
+  onOpened?: () => void;
   /**
    * 如果蒙层存在，点击蒙层时触发
    */
@@ -188,7 +196,7 @@ export interface DrawerInstance {
   update?: (props: DrawerOptions) => void;
 }
 
-export type FooterButton = string | ButtonProps | TNode;
+export type FooterButton = string | ButtonProps | TNode | null;
 
 export interface SizeDragLimit {
   max: number;

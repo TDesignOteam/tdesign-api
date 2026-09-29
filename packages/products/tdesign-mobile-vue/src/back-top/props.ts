@@ -20,7 +20,7 @@ export default {
   /** 图标 */
   icon: {
     type: [Boolean, Function] as PropType<TdBackTopProps['icon']>,
-    default: true,
+    default: true as TdBackTopProps['icon'],
   },
   /** 定位滚动到指定对象 */
   target: {

@@ -74,7 +74,7 @@ export interface TdTabsProps {
   /**
    * 删除选项卡时触发
    */
-  onRemove?: (options: { value: TabValue; index: number; e: MouseEvent<SVGSVGElement> }) => void;
+  onRemove?: (options: { value: TabValue; index: number; e: MouseEvent<HTMLSpanElement> }) => void;
 }
 
 export interface TdTabPanelProps {

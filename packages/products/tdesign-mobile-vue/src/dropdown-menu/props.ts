@@ -25,16 +25,15 @@ export default {
   /** 动画时长 */
   duration: {
     type: [String, Number] as PropType<TdDropdownMenuProps['duration']>,
-    default: 200,
+    default: 200 as TdDropdownMenuProps['duration'],
   },
   /** 是否显示遮罩层 */
   showOverlay: {
     type: Boolean,
     default: true,
   },
-  /** 菜单栏 z-index 层级 */
+  /** 菜单栏 z-index 层级，默认为 1600 */
   zIndex: {
     type: Number,
-    default: 11600,
   },
 };

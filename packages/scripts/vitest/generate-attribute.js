@@ -1,4 +1,4 @@
-const {
+import {
   getArrayCode,
   getItDescription,
   getMountComponent,
@@ -9,12 +9,12 @@ const {
   getItAsync,
   getPresetsExpect,
   getCategoryDesc,
-} = require("./core");
-const { getSkipCode } = require("./utils");
+} from './core.js';
+import { getSkipCode } from './utils.js';
 
 function generateAttributeUnitCase(test, oneApiData, framework, component) {
   const arr = generateVueAndReactAttribute(test, oneApiData, framework, component);
-  return arr && arr.filter(v => v);
+  return arr && arr.filter((v) => v);
 }
 
 function generateVueAndReactAttribute(test, oneApiData, framework, component) {
@@ -34,34 +34,44 @@ function generateVueAndReactAttribute(test, oneApiData, framework, component) {
   const propsValues = oneApiData.field_enum && oneApiData.field_enum.split('/');
   // 按顺序处理枚举值对应的属性
   if (Array.isArray(attributeValue) && propsValues.length) {
-    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: '/-item-/', ...props }, extraCode);
+    const componentCode = getMountComponent(
+      framework,
+      component,
+      { [oneApiData.field_name]: '/-item-/', ...props },
+      extraCode,
+    );
     const propsCode = getCategoryDesc(oneApiData, component);
     const arr = [
       `const attributeValues = ${getArrayCode(attributeValue)};`,
       `${getArrayCode(propsValues)}.forEach((item, index) => {`,
-        `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${item}\`, ${async} () => {`,
-          getWrapper(framework, componentCode, attributeDom),
-          trigger && getPresetsExpect(trigger, framework, component),
-          // 变量使用双斜杠包裹
-          getAttributeExpect(framework, { [attributeName]: '/attributeValues[index]/' }, '', attributeDom),
-          getSnapshotCase(snapshot, framework),
-        `});`,
+      `it${getSkipCode(skip)}(\`${propsCode}.${oneApiData.field_name} is equal to \${item}\`, ${async} () => {`,
+      getWrapper(framework, componentCode, attributeDom),
+      trigger && getPresetsExpect(trigger, framework, component),
+      // 变量使用双斜杠包裹
+      getAttributeExpect(framework, { [attributeName]: '/attributeValues[index]/' }, '', attributeDom),
+      getSnapshotCase(snapshot, framework),
+      `});`,
       `});`,
     ];
-    return arr.filter(v => v);
+    return arr.filter((v) => v);
   }
   // 测试属性赋值，如：<Button href="https://tdesign.tencent.com/" />
   if (typeof attributeValue === 'string' && attributeName === oneApiData.field_name) {
-    const componentCode = getMountComponent(framework, component, { [oneApiData.field_name]: attributeValue, ...props }, extraCode);
+    const componentCode = getMountComponent(
+      framework,
+      component,
+      { [oneApiData.field_name]: attributeValue, ...props },
+      extraCode,
+    );
     const arr = [
       `it${getSkipCode(skip)}(${getItDescription(oneApiData)},${async} () => {`,
-        getWrapper(framework, componentCode, attributeDom),
-        trigger && getPresetsExpect(trigger, framework, component),
-        getAttributeExpect(framework, { [attributeName]: attributeValue }, '', attributeDom),
-        getSnapshotCase(snapshot, framework),
+      getWrapper(framework, componentCode, attributeDom),
+      trigger && getPresetsExpect(trigger, framework, component),
+      getAttributeExpect(framework, { [attributeName]: attributeValue }, '', attributeDom),
+      getSnapshotCase(snapshot, framework),
       `});`,
     ];
-    return arr.filter(v => v);
+    return arr.filter((v) => v);
   }
 }
 
@@ -72,19 +82,21 @@ function generateMapAttribute(test, oneApiData, framework, component, attributeD
   const async = getItAsync(trigger, framework);
   const onlyDocumentDom = isOnlyDocumentDom(attribute);
   return attribute.map(({ value, expect, props: attrProps, description }) => {
-    const mProps={ ...attrProps, ...props }
+    const mProps = { ...attrProps, ...props };
     const mountCode = getMountComponent(framework, component, { [oneApiData.field_name]: value, ...mProps }, extraCode);
     const propsCode = getCategoryDesc(oneApiData, component);
-    const itDescription = `${propsCode}.${oneApiData.field_name} ${description || `is equal to ${value}` }`;
+    const itDescription = `${propsCode}.${oneApiData.field_name} ${description || `is equal to ${value}`}`;
     const arr = [
       `it${getSkipCode(skip)}(\`${itDescription}\`,${async} () => {`,
-        getWrapper(framework, mountCode, attributeDom, '', { onlyDocumentDom }),
-        trigger && getPresetsExpect(trigger, framework, component),
-        getDomAttributeExpect(framework, expect, component),
-        getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
-      `});`
+      getWrapper(framework, mountCode, attributeDom, '', {
+        onlyDocumentDom,
+      }),
+      trigger && getPresetsExpect(trigger, framework, component),
+      getDomAttributeExpect(framework, expect, component),
+      getSnapshotCase(snapshot, framework, '', onlyDocumentDom),
+      `});`,
     ];
-    return arr.filter(v => v).join('\n');
+    return arr.filter((v) => v).join('\n');
   });
 }
 
@@ -103,6 +115,4 @@ function isOnlyDocumentDom(attribute) {
   return true;
 }
 
-module.exports = {
-  generateAttributeUnitCase
-};
+export { generateAttributeUnitCase };

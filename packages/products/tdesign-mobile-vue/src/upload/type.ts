@@ -5,7 +5,7 @@
  * */
 
 import { ImageProps } from '../image';
-import { PlainObject, TNode } from '../common';
+import type { PlainObject, TNode } from '../common';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
@@ -24,11 +24,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   addBtn?: boolean;
   /**
-   * 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效
+   * 添加按钮内容
    */
   addContent?: string | TNode;
   /**
-   * 是否允许重复上传相同文件名的文件
+   * 是否允许重复上传相同文件名的文件。在 `capture = ''` + 拍照上传场景中，`allowUploadDuplicateFile` 应取 `true`，避免拍照上传的文件被同名文件校验过滤
    * @default false
    */
   allowUploadDuplicateFile?: boolean;
@@ -43,9 +43,8 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
   /**
    * 图片选取模式，可选值为 camera (直接调起摄像头)
-   * @default ''
    */
-  capture?: string;
+  capture?: string | boolean;
   /**
    * 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段
    */
@@ -54,6 +53,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 是否禁用组件
    */
   disabled?: boolean;
+  /**
+   * 是否支持拖拽排序
+   */
+  draggable?: boolean;
   /**
    * 已上传文件列表，同 `value`。TS 类型：`UploadFile`
    * @default []
@@ -118,6 +121,11 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   sizeLimit?: number | SizeLimitObj;
   /**
+   * 组件风格。提供宫格和列表两种布局风格
+   * @default grid
+   */
+  theme?: 'grid' | 'list';
+  /**
    * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
    * @default true
    */
@@ -150,6 +158,14 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 点击上传区域时触发
    */
   onClickUpload?: (context: { e: MouseEvent }) => void;
+  /**
+   * 拖拽开始时触发，`context.file` 为拖拽文件
+   */
+  onDrag?: (context: { file: UploadFile; index: number }) => void;
+  /**
+   * 拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）
+   */
+  onDrop?: (value: Array<T>) => void;
   /**
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
@@ -260,7 +276,8 @@ export interface UploadChangeContext {
   files?: UploadFile[];
 }
 
-export type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail';
+export type UploadChangeTrigger =
+  'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'sort';
 
 export interface UploadFailContext {
   e?: ProgressEvent;

@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
+import type { TNode } from '../common';
+import type { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdSearchProps {
   /**
@@ -23,10 +23,20 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
+  /**
    * 是否启用清除控件
    * @default true
    */
   clearable?: boolean;
+  /**
+   * 光标颜色
+   * @default #0052d9
+   */
+  cursorColor?: string;
   /**
    * 是否禁用
    * @default false
@@ -43,15 +53,27 @@ export interface TdSearchProps {
    */
   leftIcon?: TNode;
   /**
+   * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用
+   */
+  maxcharacter?: number;
+  /**
+   * 用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用
+   */
+  maxlength?: string | number;
+  /**
    * 占位符
    * @default ''
    */
   placeholder?: string;
   /**
    * 只读状态
-   * @default false
    */
   readonly?: boolean;
+  /**
+   * 预览结果列表
+   * @default []
+   */
+  resultList?: Array<string>;
   /**
    * 搜索框形状
    * @default 'square'
@@ -69,7 +91,6 @@ export interface TdSearchProps {
   defaultValue?: string;
   /**
    * 点击右侧操作按钮文字时触发
-   * @default ''
    */
   onActionClick?: ({}) => void;
   /**
@@ -83,7 +104,10 @@ export interface TdSearchProps {
    */
   onChange?: (
     value: string,
-    context: { trigger: 'input-change' | 'option-click'; e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement> },
+    context: {
+      trigger: 'input-change' | 'option-click' | 'clear';
+      e?: FormEvent<HTMLInputElement> | MouseEvent<HTMLDivElement>;
+    },
   ) => void;
   /**
    * 点击清除时触发

@@ -12,6 +12,10 @@ export default {
   actions: {
     type: [Array, Function] as PropType<TdDialogProps['actions']>,
   },
+  /** 关闭前的拦截钩子，支持异步。返回 Promise 时，确认按钮显示加载状态，Promise resolve 后关闭对话框，reject 则不关闭 */
+  beforeClose: {
+    type: Function as PropType<TdDialogProps['beforeClose']>,
+  },
   /** 多按钮排列方式 */
   buttonLayout: {
     type: String as PropType<TdDialogProps['buttonLayout']>,
@@ -72,7 +76,7 @@ export default {
   width: {
     type: [String, Number] as PropType<TdDialogProps['width']>,
   },
-  /** 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 */
+  /** 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
   },

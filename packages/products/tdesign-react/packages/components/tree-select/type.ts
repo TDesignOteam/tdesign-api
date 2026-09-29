@@ -8,10 +8,10 @@ import { InputProps } from '../input';
 import { PopupProps } from '../popup';
 import { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext } from '../select-input';
 import { TagProps } from '../tag';
-import { TreeProps, TreeNodeModel, TreeKeysType } from '../tree';
+import { TreeProps, TreeNodeModel } from '../tree';
 import { PopupVisibleChangeContext, PopupTriggerEvent, PopupTriggerSource } from '../popup';
-import { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
-import { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
+import type { TNode, TElement, TreeOptionData, TreeKeysType } from '../common';
+import type { MouseEvent, KeyboardEvent, FocusEvent } from 'react';
 
 export interface TdTreeSelectProps<
   DataOption extends TreeOptionData = TreeOptionData,

@@ -9,8 +9,9 @@ import { CalendarController } from '../calendar';
 import { ButtonProps } from '../button';
 import { FormErrorMessage } from '../form';
 import { ImageProps } from '../image';
+import { LoadingProps } from '../loading';
 import { MessageOptions } from '../message';
-import { TNode, SizeEnum, AttachNode } from '../common';
+import type { TNode, SizeEnum, AttachNode } from '../common';
 
 export interface TdConfigProviderProps {
   /**
@@ -33,7 +34,7 @@ export interface GlobalConfigProvider {
    */
   animation?: Partial<Record<'include' | 'exclude', Array<AnimationType>>>;
   /**
-   * null
+   * 浮层挂载节点，可统一设置或按 imageViewer、popup、dialog、drawer 分别设置。组件的 attach 属性优先于全局配置；未配置时保持各组件原有的默认挂载行为
    */
   attach?: AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode };
   /**
@@ -106,6 +107,10 @@ export interface GlobalConfigProvider {
    */
   list?: ListConfig;
   /**
+   * 加载中组件全局配置
+   */
+  loading?: LoadingConfig;
+  /**
    * 消息组件全局配置
    */
   message?: MessageConfig;
@@ -117,6 +122,10 @@ export interface GlobalConfigProvider {
    * 气泡确认框全局配置
    */
   popconfirm?: PopconfirmConfig;
+  /**
+   * 二维码全局配置
+   */
+  qrcode?: QRCodeConfig;
   /**
    * 评分全局配置
    */
@@ -448,6 +457,15 @@ export interface DialogConfig {
    * 确认按钮主题色，即 Dialog 的 `theme` 和 确认按钮的 `theme` 映射关系。示例：{ danger: 'danger' }
    */
   confirmBtnTheme?: { default: string; info: string; warning: string; danger: string; success: string };
+  /**
+   * 全局配置的对话框位置，垂直水平居中显示 和 靠近顶部（top:20%）显示
+   * @default top
+   */
+  placement?: 'top' | 'center';
+  /**
+   * 对话框层级，默认为 2500
+   */
+  zIndex?: number;
 }
 
 export interface DrawerConfig {
@@ -564,6 +582,11 @@ export interface ImageViewerConfig {
    */
   originalSizeTipText?: string;
   /**
+   * 全局语言配置，默认为 “预览”
+   * @default ''
+   */
+  previewText?: string;
+  /**
    * 全局语言配置，默认为 “旋转”
    * @default ''
    */
@@ -595,6 +618,8 @@ export interface ListConfig {
    */
   loadingText?: string;
 }
+
+export interface LoadingConfig extends LoadingProps {}
 
 export interface MessageConfig extends MessageOptions {}
 
@@ -638,6 +663,24 @@ export interface PopconfirmConfig {
    * 确认按钮主题色，即 Popconfirm 的 `theme` 和 确认按钮的 `theme` 映射关系。示例：{ danger: 'danger' }
    */
   confirmBtnTheme?: { default: string; warning: string; danger: string };
+}
+
+export interface QRCodeConfig {
+  /**
+   * 语言配置，“二维码过期”描述文本
+   * @default ''
+   */
+  expiredText?: string;
+  /**
+   * 语言配置，“点击刷新”描述文本
+   * @default ''
+   */
+  refreshText?: string;
+  /**
+   * 语言配置，“已扫描”描述文本
+   * @default ''
+   */
+  scannedText?: string;
 }
 
 export interface RateConfig {

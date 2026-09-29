@@ -8,7 +8,7 @@ import { PopupPlacement } from '../popup';
 import { TdPopupProps } from '../popup';
 import { TNode } from '../common';
 
-export interface TdTooltipProps extends TdPopupProps {
+export interface TdTooltipProps extends Omit<TdPopupProps, 'placement'> {
   /**
    * 延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。直接透传到 Popup 组件。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]
    */

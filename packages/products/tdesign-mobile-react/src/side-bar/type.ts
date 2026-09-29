@@ -5,7 +5,7 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode, TElement } from '../common';
+import type { TNode, TElement } from '../common';
 
 export interface TdSideBarProps {
   /**

@@ -58,7 +58,7 @@ export default {
   dragContent: {
     type: [String, Function] as PropType<TdUploadProps['dragContent']>,
   },
-  /** 是否启用拖拽上传，不同的组件风格默认值不同。`theme=file` 或 `theme=image` 时有效 */
+  /** 是否启用拖拽上传。`theme` 非 `file-input` 时有效。`theme=file-flow`/`theme=image-flow` 时默认值为 `true`；`theme=file`/`theme=image`/`theme=custom` 时默认值为 `false` */
   draggable: {
     type: Boolean,
     default: undefined,
@@ -182,7 +182,7 @@ export default {
   tips: {
     type: [String, Function] as PropType<TdUploadProps['tips']>,
   },
-  /** 触发上传的元素，`files` 指本次显示的全部文件 */
+  /** 触发上传的元素，`files` 指本次显示的全部文件; `triggerUpload` 用于触发上传文件的选择，在图片上传风格中有效 */
   trigger: {
     type: Function as PropType<TdUploadProps['trigger']>,
   },

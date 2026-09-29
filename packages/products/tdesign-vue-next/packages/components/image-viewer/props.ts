@@ -11,7 +11,7 @@ export default {
   /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
     type: [String, Function] as PropType<TdImageViewerProps['attach']>,
-    default: 'body' as TdImageViewerProps['attach'],
+    default: undefined as TdImageViewerProps['attach'],
   },
   /** 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮 */
   closeBtn: {
@@ -57,6 +57,10 @@ export default {
     type: Number,
     default: 0,
   },
+  /** 内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`） */
+  innerClassName: {
+    type: [String, Object, Array] as PropType<TdImageViewerProps['innerClassName']>,
+  },
   /** 模态预览（modal）和非模态预览（modeless) */
   mode: {
     type: String as PropType<TdImageViewerProps['mode']>,
@@ -80,7 +84,7 @@ export default {
   title: {
     type: [String, Function] as PropType<TdImageViewerProps['title']>,
   },
-  /** 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义 */
+  /** 触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义，默认为预览图片的缩略图 */
   trigger: {
     type: [String, Function] as PropType<TdImageViewerProps['trigger']>,
   },
@@ -99,7 +103,7 @@ export default {
   },
   /** 隐藏/显示预览，非受控属性 */
   defaultVisible: Boolean,
-  /** 层级，默认为 2000 */
+  /** 层级，默认为 3000 */
   zIndex: {
     type: Number,
   },

@@ -6,7 +6,7 @@
 
 import { IsEmailOptions } from 'validator/es/lib/isEmail';
 import { IsURLOptions } from 'validator/es/lib/isURL';
-import { TNode, FormResetEvent, FormSubmitEvent } from '../common';
+import type { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
 export interface TdFormProps<FormData extends Data = Data> {
   /**
@@ -28,9 +28,17 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
+   * 经 `Form.useForm()` 创建的 form 控制实例
+   */
+  form?: FormInstanceFunctions;
+  /**
    * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
    */
   id?: string;
+  /**
+   * 表单初始数据，重置时所需初始数据，优先级小于 FormItem 设置的 initialData
+   */
+  initialData?: object;
   /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
@@ -46,6 +54,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default true
    */
   preventSubmitDefault?: boolean;
+  /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */
@@ -72,10 +84,6 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default true
    */
   showErrorMessage?: boolean;
-  /**
-   * 校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标
-   */
-  statusIcon?: boolean | TNode<TdFormItemProps>;
   /**
    * 【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件
    * @default false
@@ -106,9 +114,37 @@ export interface FormInstanceFunctions<FormData extends Data = Data> {
    */
   clearValidate: (fields?: Array<keyof FormData>) => void;
   /**
+   * 获取 form dom 元素
+   */
+  currentElement?: () => HTMLFormElement;
+  /**
+   * 获取 form dom 元素
+   */
+  getCurrentElement?: () => HTMLFormElement;
+  /**
+   * 获取单个字段值
+   */
+  getFieldValue: (field: NamePath) => unknown;
+  /**
+   * 获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据
+   */
+  getFieldsValue: (nameList: string[] | boolean) => getFieldsValue<FormData>;
+  /**
+   * 获取校验结果，当调用 getValidateMessage() 时返回所有校验结果
+   */
+  getValidateMessage: (fields?: Array<keyof FormData>) => Array<FormRule> | void;
+  /**
    * 重置表单，表单里面没有重置按钮`<button type=\"reset\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`
    */
   reset: (params?: FormResetParams<FormData>) => void;
+  /**
+   * 设置多组字段状态
+   */
+  setFields: (fields: FieldData[]) => void;
+  /**
+   * 设置表单字段值
+   */
+  setFieldsValue: (field: Data) => void;
   /**
    * 设置自定义校验结果，如远程校验信息直接呈现。注意需要在组件挂载结束后使用该方法。`FormData` 指表单数据泛型
    */
@@ -134,6 +170,10 @@ export interface TdFormItemProps {
    */
   arrow?: boolean;
   /**
+   * 表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign
+   */
+  contentAlign?: 'left' | 'right';
+  /**
    * label 原生属性
    * @default ''
    */
@@ -142,6 +182,10 @@ export interface TdFormItemProps {
    * 表单项说明内容
    */
   help?: TNode;
+  /**
+   * 表单初始数据，重置时所需初始数据
+   */
+  initialData?: InitialData;
   /**
    * 字段标签名称
    * @default ''
@@ -157,9 +201,8 @@ export interface TdFormItemProps {
   labelWidth?: string | number;
   /**
    * 表单字段名称
-   * @default ''
    */
-  name?: string;
+  name?: NamePath;
   /**
    * 是否显示必填符号（*），优先级高于 Form.requiredMark
    */
@@ -168,6 +211,11 @@ export interface TdFormItemProps {
    * 表单字段校验规则
    */
   rules?: Array<FormRule>;
+  /**
+   * null
+   * @default false
+   */
+  shouldUpdate?: boolean | ((prevValue, curValue) => boolean);
   /**
    * 校验不通过时，是否显示错误提示信息，优先级高于 `Form.showErrorMessage`
    */
@@ -219,7 +267,7 @@ export interface FormRule {
   /**
    * 内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`
    */
-  pattern?: RegExp;
+  pattern?: RegExp | string;
   /**
    * 内置校验方法，校验值是否已经填写。该值为 true，默认显示必填标记，可通过设置 `requiredMark: false` 隐藏必填标记
    */
@@ -243,7 +291,7 @@ export interface FormRule {
    */
   url?: boolean | IsURLOptions;
   /**
-   * 自定义校验规则，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
+   * 自定义校验规则，context 中 formData 为当前完整表单值，name为该字段的标识，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
    */
   validator?: CustomValidator;
   /**
@@ -352,9 +400,21 @@ export type ErrorList = Array<FormRule>;
 
 export type ValidateResultContext<T extends Data> = Omit<SubmitContext<T>, 'e'>;
 
+export interface getFieldsValue<T> {
+  (nameList: true): T;
+  (nameList: any[]): Record<keyof T, unknown>;
+}
+
 export interface FormResetParams<FormData> {
   type?: 'initial' | 'empty';
   fields?: Array<keyof FormData>;
+}
+
+export interface FieldData {
+  name: NamePath;
+  value?: unknown;
+  status?: string;
+  validateMessage?: { type?: string; message?: string };
 }
 
 export type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] };
@@ -374,13 +434,20 @@ export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
 
+export type InitialData = any;
+
+export type NamePath = string | number | Array<string | number>;
+
 export interface IsDateOptions {
   format: string;
   strictMode: boolean;
   delimiters: string[];
 }
 
-export type CustomValidator = (val: ValueType) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
+export type CustomValidator = (
+  val: ValueType,
+  context?: { formData: Data; name: string },
+) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
 
 export type CustomValidateResolveType = boolean | CustomValidateObj;
 

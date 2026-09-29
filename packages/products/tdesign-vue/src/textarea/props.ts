@@ -8,7 +8,7 @@ import { TdTextareaProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 超出maxlength或maxcharacter之后是否还允许输入 */
+  /** 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入 */
   allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,
@@ -16,6 +16,10 @@ export default {
   autosize: {
     type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
     default: false,
+  },
+  /** 文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true */
+  count: {
+    type: [Boolean, Function] as PropType<TdTextareaProps['count']>,
   },
   /** 是否禁用文本框 */
   disabled: {

@@ -4,8 +4,16 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TElement, SizeEnum, ClassName } from '../common';
-import { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, WheelEvent, FormEvent, CompositionEvent } from 'react';
+import type { TNode, TElement, SizeEnum, ClassName } from '../common';
+import type {
+  MouseEvent,
+  KeyboardEvent,
+  ClipboardEvent,
+  FocusEvent,
+  WheelEvent,
+  FormEvent,
+  CompositionEvent,
+} from 'react';
 
 export interface TdInputProps<T = InputValue> {
   /**

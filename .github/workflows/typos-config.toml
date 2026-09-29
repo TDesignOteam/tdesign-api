@@ -3,6 +3,7 @@ default.check-filename = true
 [default.extend-words]
 actived = "actived"
 destory = "destory"
+loosing = "loosing"
 
 [files]
 extend-exclude = ["packages/frontend/_site"]

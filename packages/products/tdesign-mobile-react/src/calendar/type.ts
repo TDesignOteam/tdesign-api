@@ -5,9 +5,14 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdCalendarProps {
+  /**
+   * 是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效
+   * @default false
+   */
+  allowSameDay?: boolean;
   /**
    * 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible
    * @default true
@@ -36,7 +41,11 @@ export interface TdCalendarProps {
    */
   minDate?: number | Date;
   /**
-   * 【开发中】切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
+   * 是否只读，只读状态下不能选择日期
+   */
+  readonly?: boolean;
+  /**
+   * 切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换
    * @default none
    */
   switchMode?: 'none' | 'month' | 'year-month';
@@ -46,7 +55,7 @@ export interface TdCalendarProps {
   title?: TNode;
   /**
    * 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择
-   * @default 'single'
+   * @default single
    */
   type?: 'single' | 'multiple' | 'range';
   /**
@@ -55,13 +64,13 @@ export interface TdCalendarProps {
    */
   usePopup?: boolean;
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组
    */
-  value?: number | Date | TCalendarValue[];
+  value?: CalendarValue;
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组，非受控属性
    */
-  defaultValue?: number | Date | TCalendarValue[];
+  defaultValue?: CalendarValue;
   /**
    * 是否显示日历；`usePopup` 为 true 时有效
    * @default false
@@ -70,7 +79,7 @@ export interface TdCalendarProps {
   /**
    * 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）
    */
-  onChange?: (value: Date) => void;
+  onChange?: (value: CalendarValue) => void;
   /**
    * 关闭按钮时触发
    */
@@ -78,7 +87,15 @@ export interface TdCalendarProps {
   /**
    * 点击确认按钮时触发
    */
-  onConfirm?: (value: Date) => void;
+  onConfirm?: (value: CalendarValue) => void;
+  /**
+   * 切换月或年时触发（switch-mode 不为 none 时有效）
+   */
+  onPanelChange?: (context: { year: number; month: number }) => void;
+  /**
+   * 滚动时触发
+   */
+  onScroll?: (context: { e: React.UIEvent<HTMLDivElement> }) => void;
   /**
    * 点击日期时触发
    */
@@ -87,7 +104,7 @@ export interface TdCalendarProps {
 
 export type CalendarFormatType = (day: TDate) => TDate;
 
-export type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
+export type TDateType = 'selected' | 'disabled' | 'start' | 'start-end' | 'centre' | 'end' | '';
 
 export interface TDate {
   date: Date;
@@ -98,6 +115,8 @@ export interface TDate {
   suffix?: string;
 }
 
+export type CalendarValue = TCalendarValue | TCalendarValue[];
+
 export type TCalendarValue = number | Date;
 
-export type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay';
+export type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay' | 'auto-close';

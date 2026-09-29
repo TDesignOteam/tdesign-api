@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Tree: {
     activable_536: { field_name: 'activable', id: 536 },
     activeMultiple_537: {
@@ -8,10 +8,18 @@ module.exports = {
         wrapper: 'getTreeDefaultMount',
         event: [
           {
-            props: { activable: true, defaultActived: [1], activeMultiple: true },
+            props: {
+              activable: true,
+              defaultActived: [1],
+              activeMultiple: true,
+            },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-tree__item': 2 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-tree__item': 2 },
+              },
               {
                 trigger: 'click(.t-tree__item:nth-child(2))',
                 delay: 300,
@@ -33,7 +41,11 @@ module.exports = {
             props: { activable: true, actived: [1] },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-tree__item': 2 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-tree__item': 2 },
+              },
               {
                 trigger: 'click(.t-tree__item:nth-child(2))',
                 delay: 300,
@@ -45,7 +57,10 @@ module.exports = {
         ],
       },
     },
-    allowFoldNodeOnFilter_2444: { field_name: 'allowFoldNodeOnFilter', id: 2444 },
+    allowFoldNodeOnFilter_2444: {
+      field_name: 'allowFoldNodeOnFilter',
+      id: 2444,
+    },
     checkProps_526: { field_name: 'checkProps', id: 526 },
     checkStrictly_527: { field_name: 'checkStrictly', id: 527 },
     checkable_525: { field_name: 'checkable', id: 525 },
@@ -60,7 +75,11 @@ module.exports = {
             props: { checkable: true, disableCheck: true },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 2 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-checkbox__input': 2 },
+              },
               {
                 trigger: 'click(.t-checkbox__input)',
                 delay: 300,
@@ -80,13 +99,33 @@ module.exports = {
         wrapper: 'getTreeDefaultMount',
         event: [
           {
-            props: { checkable: true, disableCheck: true, draggable: true },
+            props: {
+              checkable: true,
+              disableCheck: true,
+              draggable: true,
+            },
             expect: [
               { trigger: 'delay(300)', delay: true },
-              { trigger: 'dragover(.t-tree__item)', delay: true, event: { dragOver: [] } },
-              { trigger: 'dragend(.t-tree__item)', delay: true, event: { dragEnd: [] } },
-              { trigger: 'dragstart(.t-tree__item)', delay: true, event: { dragStart: [] } },
-              { trigger: 'dragleave(.t-tree__item)', delay: true, event: { dragLeave: [] } },
+              {
+                trigger: 'dragover(.t-tree__item)',
+                delay: true,
+                event: { dragOver: [] },
+              },
+              {
+                trigger: 'dragend(.t-tree__item)',
+                delay: true,
+                event: { dragEnd: [] },
+              },
+              {
+                trigger: 'dragstart(.t-tree__item)',
+                delay: true,
+                event: { dragStart: [] },
+              },
+              {
+                trigger: 'dragleave(.t-tree__item)',
+                delay: true,
+                event: { dragLeave: [] },
+              },
             ],
           },
           {
@@ -98,7 +137,11 @@ module.exports = {
                 delay: true,
                 event: { dragEnd: [] },
               },
-              { trigger: 'drop(.t-tree__item)', delay: true, event: { drop: [] } },
+              {
+                trigger: 'drop(.t-tree__item)',
+                delay: true,
+                event: { drop: [] },
+              },
             ],
           },
         ],
@@ -121,7 +164,13 @@ module.exports = {
         event: [
           {
             props: { icon: false },
-            expect: [{ trigger: 'delay(300)', delay: true, exist: { '.t-tree__icon': 2 } }],
+            expect: [
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-tree__icon': 2 },
+              },
+            ],
           },
         ],
       },
@@ -137,7 +186,13 @@ module.exports = {
         event: [
           {
             props: { expandAll: true, line: true },
-            expect: [{ trigger: 'delay(300)', delay: true, exist: { '.t-tree__line': 2 } }],
+            expect: [
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-tree__line': 2 },
+              },
+            ],
           },
         ],
       },
@@ -193,7 +248,11 @@ module.exports = {
             },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-checkbox__input': 1 },
+              },
               {
                 trigger: 'click(.t-checkbox__input)',
                 delay: 300,
@@ -211,7 +270,11 @@ module.exports = {
             },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-checkbox__input': 1 },
+              },
               {
                 trigger: 'click(.t-checkbox__input)',
                 delay: 300,
@@ -229,7 +292,11 @@ module.exports = {
             },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-checkbox__input': 1 },
+              },
               {
                 trigger: 'click(.t-checkbox__input)',
                 delay: 300,
@@ -247,7 +314,11 @@ module.exports = {
             },
             trigger: 'delay(300)',
             expect: [
-              { trigger: 'delay(300)', delay: true, exist: { '.t-checkbox__input': 1 } },
+              {
+                trigger: 'delay(300)',
+                delay: true,
+                exist: { '.t-checkbox__input': 1 },
+              },
               {
                 trigger: 'click(.t-checkbox__input)',
                 delay: 300,

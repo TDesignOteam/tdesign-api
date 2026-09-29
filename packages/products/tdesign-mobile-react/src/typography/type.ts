@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdTextProps {
   /**
@@ -16,10 +16,6 @@ export interface TdTextProps {
    * @default false
    */
   code?: boolean;
-  /**
-   * 文本内容
-   */
-  content?: TNode;
   /**
    * 是否可复制，可通过配置参数自定义复制操作的具体功能和样式
    * @default false

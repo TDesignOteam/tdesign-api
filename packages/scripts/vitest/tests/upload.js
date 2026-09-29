@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   Upload: {
     abridgeName_2995: {
       field_name: 'abridgeName',
@@ -8,31 +8,79 @@ module.exports = {
         dom: [
           {
             description: 'props.abridgeName works fine if theme=file-input',
-            props: { theme: 'file-input', files: [{ name: 'this_is_a_long_name.png' }] },
-            dom: [{ '.t-upload__single-input-text': { text: 'this_is_…me.png' } }],
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'this_is_a_long_name.png' }],
+            },
+            dom: [
+              {
+                '.t-upload__single-input-text': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=file and file url exists',
             props: {
               theme: 'file',
-              files: [{ name: 'this_is_a_long_name.png', url: 'https://xxx.png' }],
+              files: [
+                {
+                  name: 'this_is_a_long_name.png',
+                  url: 'https://xxx.png',
+                },
+              ],
             },
-            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+            dom: [
+              {
+                '.t-upload__single-name': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=file and file url does not exist',
-            props: { theme: 'file', files: [{ name: 'this_is_a_long_name.png' }] },
-            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+            props: {
+              theme: 'file',
+              files: [{ name: 'this_is_a_long_name.png' }],
+            },
+            dom: [
+              {
+                '.t-upload__single-name': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=image',
-            props: { theme: 'image', files: [{ name: 'this_is_a_long_name.png' }] },
-            dom: [{ '.t-upload__card-name': { text: 'this_is_…me.png' } }],
+            props: {
+              theme: 'image',
+              files: [{ name: 'this_is_a_long_name.png' }],
+            },
+            dom: [
+              {
+                '.t-upload__card-name': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=file&draggable=true',
-            props: { theme: 'file', draggable: true, files: [{ name: 'this_is_a_long_name.png' }] },
-            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+            props: {
+              theme: 'file',
+              draggable: true,
+              files: [{ name: 'this_is_a_long_name.png' }],
+            },
+            dom: [
+              {
+                '.t-upload__single-name': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=image&draggable=true',
@@ -40,31 +88,72 @@ module.exports = {
               theme: 'image',
               draggable: true,
               status: 'success',
-              files: [{ name: 'this_is_a_long_name.png', url: 'https://wwww.png' }],
+              files: [
+                {
+                  name: 'this_is_a_long_name.png',
+                  url: 'https://wwww.png',
+                },
+              ],
             },
-            dom: [{ '.t-upload__single-name': { text: 'this_is_…me.png' } }],
+            dom: [
+              {
+                '.t-upload__single-name': {
+                  text: 'this_is_…me.png',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=image-flow',
             props: {
               theme: 'image-flow',
-              files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
+              files: [
+                {
+                  name: 'this_is_a_long_name.jpg',
+                  url: 'https://xxx.jpg',
+                },
+              ],
             },
-            dom: [{ '.t-upload__card-name': { text: 'this_is_…me.jpg' } }],
+            dom: [
+              {
+                '.t-upload__card-name': {
+                  text: 'this_is_…me.jpg',
+                },
+              },
+            ],
           },
           {
             description: 'props.abridgeName works fine if theme=file-flow and file url exists',
             props: {
               theme: 'file-flow',
-              files: [{ name: 'this_is_a_long_name.jpg', url: 'https://xxx.jpg' }],
+              files: [
+                {
+                  name: 'this_is_a_long_name.jpg',
+                  url: 'https://xxx.jpg',
+                },
+              ],
             },
-            dom: [{ '.t-upload__file-name > a': { text: 'this_is_…me.jpg' } }],
+            dom: [
+              {
+                '.t-upload__file-name > a': {
+                  text: 'this_is_…me.jpg',
+                },
+              },
+            ],
           },
           {
-            description:
-              'props.abridgeName works fine if theme=file-flow and file url does not exist',
-            props: { theme: 'file-flow', files: [{ name: 'this_is_a_long_name.jpg' }] },
-            dom: [{ '.t-upload__file-name': { text: 'this_is_…me.jpg' } }],
+            description: 'props.abridgeName works fine if theme=file-flow and file url does not exist',
+            props: {
+              theme: 'file-flow',
+              files: [{ name: 'this_is_a_long_name.jpg' }],
+            },
+            dom: [
+              {
+                '.t-upload__file-name': {
+                  text: 'this_is_…me.jpg',
+                },
+              },
+            ],
           },
         ],
       },
@@ -87,7 +176,9 @@ module.exports = {
         },
         event: [
           {
-            props: { action: 'https://tdesign.test.com/upload/image_success' },
+            props: {
+              action: 'https://tdesign.test.com/upload/image_success',
+            },
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input')",
@@ -157,7 +248,12 @@ module.exports = {
               {
                 trigger: "const fileList = simulateFileChange('input')",
                 event: {
-                  validate: [{ type: 'FILTER_FILE_SAME_NAME', 'files[0].raw': '${fileList[0]}' }],
+                  validate: [
+                    {
+                      type: 'FILTER_FILE_SAME_NAME',
+                      'files[0].raw': '${fileList[0]}',
+                    },
+                  ],
                 },
                 delay: true,
               },
@@ -176,7 +272,11 @@ module.exports = {
             },
             description: 'allowUploadDuplicateFile is equal to true',
             expect: [
-              { trigger: "simulateFileChange('input')", event: { validate: 'not' }, delay: true },
+              {
+                trigger: "simulateFileChange('input')",
+                event: { validate: 'not' },
+                delay: true,
+              },
             ],
           },
         ],
@@ -188,7 +288,10 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { autoUpload: false, action: 'https://tdesign.test.com/upload/file_success' },
+            props: {
+              autoUpload: false,
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
             description: 'autoUpload is equal false',
             expect: [
               {
@@ -269,8 +372,7 @@ module.exports = {
             ],
           },
           {
-            description:
-              'autoUpload=false & theme=image & draggable = true, cancel upload works fine',
+            description: 'autoUpload=false & theme=image & draggable = true, cancel upload works fine',
             props: {
               theme: 'image',
               autoUpload: false,
@@ -319,7 +421,10 @@ module.exports = {
                 event: {
                   change: 'not',
                   validate: [
-                    { type: 'BEFORE_ALL_FILES_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
+                    {
+                      type: 'BEFORE_ALL_FILES_UPLOAD',
+                      'files.map(t => t.raw)': '${fileList}',
+                    },
                   ],
                 },
               },
@@ -339,8 +444,7 @@ module.exports = {
               beforeUpload: '() => false',
               action: 'https://tdesign.test.com/upload/file_success',
             },
-            description:
-              'beforeUpload can skip all files to upload, just like beforeAllFilesUpload',
+            description: 'beforeUpload can skip all files to upload, just like beforeAllFilesUpload',
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'file', 3)",
@@ -348,7 +452,10 @@ module.exports = {
                 event: {
                   change: 'not',
                   validate: [
-                    { type: 'CUSTOM_BEFORE_UPLOAD', 'files.map(t => t.raw)': '${fileList}' },
+                    {
+                      type: 'CUSTOM_BEFORE_UPLOAD',
+                      'files.map(t => t.raw)': '${fileList}',
+                    },
                   ],
                 },
               },
@@ -387,12 +494,18 @@ module.exports = {
         tnode: [
           {
             description: 'children works fine if theme = file',
-            props: { theme: 'file', action: 'https://tdesign.test.com/upload/file_success' },
+            props: {
+              theme: 'file',
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
             snapshot: true,
           },
           {
             description: 'children works fine if theme = custom',
-            props: { theme: 'custom', action: 'https://tdesign.test.com/upload/file_success' },
+            props: {
+              theme: 'custom',
+              action: 'https://tdesign.test.com/upload/file_success',
+            },
             snapshot: true,
           },
           {
@@ -444,7 +557,10 @@ module.exports = {
     default_1168: {
       field_name: 'default',
       id: 1168,
-      PC: { props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' }, tnode: true },
+      PC: {
+        props: { action: 'https://cdc.cdn-go.cn/tdc/latest/menu.json' },
+        tnode: true,
+      },
     },
     deleteBtn_1567: { field_name: 'deleteBtn', id: 1567 },
     disabled_879: {
@@ -480,17 +596,27 @@ module.exports = {
             description: 'disabled upload can not trigger onSelectChange',
             props: { disabled: true },
             expect: [
-              { trigger: "simulateFileChange('input')", delay: 0, event: { selectChange: 'not' } },
+              {
+                trigger: "simulateFileChange('input')",
+                delay: 0,
+                event: { selectChange: 'not' },
+              },
             ],
           },
           {
             description: 'disabled upload can not remove file',
-            props: { theme: 'file', files: [{ name: 'file1.txt' }] },
+            props: {
+              theme: 'file',
+              files: [{ name: 'file1.txt' }],
+            },
             expect: [{ exist: [{ '.t-upload__icon-delete': false }] }],
           },
           {
             description: 'disabled upload can not remove image',
-            props: { theme: 'image', files: [{ name: 'img1.txt', url: 'https://img1.png' }] },
+            props: {
+              theme: 'image',
+              files: [{ name: 'img1.txt', url: 'https://img1.png' }],
+            },
             expect: [{ exist: [{ '.t-upload__icon-delete': false }] }],
           },
         ],
@@ -530,21 +656,24 @@ module.exports = {
               {
                 '.t-icon-check-circle-filled': 1,
                 '.t-upload__dragger-img-wrap img': {
-                  attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                  attribute: {
+                    src: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  },
                 },
               },
             ],
             snapshot: true,
           },
           {
-            description:
-              'theme=image & draggable=true, success file render fine with file.response.url',
+            description: 'theme=image & draggable=true, success file render fine with file.response.url',
             props: {
               theme: 'image',
               draggable: true,
               files: [
                 {
-                  response: { url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                  response: {
+                    url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  },
                   name: 'image1.png',
                   status: 'success',
                 },
@@ -554,7 +683,9 @@ module.exports = {
               {
                 '.t-icon-check-circle-filled': 1,
                 '.t-upload__dragger-img-wrap img': {
-                  attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                  attribute: {
+                    src: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                  },
                 },
               },
             ],
@@ -565,7 +696,13 @@ module.exports = {
             props: {
               theme: 'image',
               draggable: true,
-              files: [{ url: 'https://image4.png', name: 'image4.png', status: 'fail' }],
+              files: [
+                {
+                  url: 'https://image4.png',
+                  name: 'image4.png',
+                  status: 'fail',
+                },
+              ],
             },
             dom: [{ '.t-icon-error-circle-filled': 1 }],
             snapshot: true,
@@ -576,7 +713,12 @@ module.exports = {
               theme: 'image',
               draggable: true,
               files: [
-                { url: 'https://image2.png', name: 'image2.png', status: 'progress', percent: 80 },
+                {
+                  url: 'https://image2.png',
+                  name: 'image2.png',
+                  status: 'progress',
+                  percent: 80,
+                },
               ],
             },
             dom: [{ '.t-upload__single-percent': { text: '80%' } }],
@@ -587,32 +729,48 @@ module.exports = {
             props: {
               theme: 'image',
               draggable: true,
-              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+              files: [
+                {
+                  url: 'https://image3.png',
+                  name: 'image3.png',
+                  status: 'waiting',
+                },
+              ],
             },
             dom: [{ '.t-upload__dragger-progress-cancel': 1 }],
             snapshot: true,
           },
           {
-            description:
-              'theme=image & draggable=true & autoUpload=false, waiting file render fine',
+            description: 'theme=image & draggable=true & autoUpload=false, waiting file render fine',
             props: {
               theme: 'image',
               draggable: true,
               autoUpload: false,
-              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+              files: [
+                {
+                  url: 'https://image3.png',
+                  name: 'image3.png',
+                  status: 'waiting',
+                },
+              ],
             },
             dom: [{ '.t-upload__dragger-progress-cancel': 1 }],
           },
         ],
         event: [
           {
-            description:
-              'theme=image & draggable=true & autoUpload=false, cancel upload works fine',
+            description: 'theme=image & draggable=true & autoUpload=false, cancel upload works fine',
             props: {
               theme: 'image',
               draggable: true,
               autoUpload: false,
-              files: [{ url: 'https://image3.png', name: 'image3.png', status: 'waiting' }],
+              files: [
+                {
+                  url: 'https://image3.png',
+                  name: 'image3.png',
+                  status: 'waiting',
+                },
+              ],
             },
             expect: [
               {
@@ -621,7 +779,11 @@ module.exports = {
                   cancelUpload: [],
                   remove: [
                     {
-                      file: { url: 'https://image3.png', name: 'image3.png', status: 'waiting' },
+                      file: {
+                        url: 'https://image3.png',
+                        name: 'image3.png',
+                        status: 'waiting',
+                      },
                       'e.type': 'click',
                       index: 0,
                     },
@@ -651,11 +813,8 @@ module.exports = {
             params: [{ files: '${fileList}' }],
           },
           {
-            description:
-              'theme=image-flow && multiple=true && draggable=true, fileListDisplay works fine',
-            variables: [
-              "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
-            ],
+            description: 'theme=image-flow && multiple=true && draggable=true, fileListDisplay works fine',
+            variables: ["const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];"],
             props: {
               files: '${fileList}',
               theme: 'image-flow',
@@ -668,11 +827,8 @@ module.exports = {
             params: [{ files: '${fileList}' }],
           },
           {
-            description:
-              'theme=file-flow && multiple=true && draggable=true, fileListDisplay works fine',
-            variables: [
-              "const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];",
-            ],
+            description: 'theme=file-flow && multiple=true && draggable=true, fileListDisplay works fine',
+            variables: ["const fileList = [{ url: 'https://tdesign.gtimg.com/demo/demo-image-1.png' }];"],
             props: {
               files: '${fileList}',
               theme: 'file-flow',
@@ -689,10 +845,24 @@ module.exports = {
             props: {
               theme: 'file',
               draggable: true,
-              files: [{ name: 'file1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+              files: [
+                {
+                  name: 'file1.txt',
+                  status: 'waiting',
+                  uploadTime: 1674897038406,
+                },
+              ],
             },
             params: [
-              { files: [{ name: 'file1.txt', status: 'waiting', uploadTime: 1674897038406 }] },
+              {
+                files: [
+                  {
+                    name: 'file1.txt',
+                    status: 'waiting',
+                    uploadTime: 1674897038406,
+                  },
+                ],
+              },
             ],
           },
           {
@@ -700,11 +870,23 @@ module.exports = {
             props: {
               theme: 'image',
               draggable: true,
-              files: [{ url: 'https://img1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+              files: [
+                {
+                  url: 'https://img1.txt',
+                  status: 'waiting',
+                  uploadTime: 1674897038406,
+                },
+              ],
             },
             params: [
               {
-                files: [{ url: 'https://img1.txt', status: 'waiting', uploadTime: 1674897038406 }],
+                files: [
+                  {
+                    url: 'https://img1.txt',
+                    status: 'waiting',
+                    uploadTime: 1674897038406,
+                  },
+                ],
               },
             ],
           },
@@ -720,8 +902,7 @@ module.exports = {
         event: [
           {
             props: {
-              format:
-                "(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })",
+              format: "(fileRaw) => ({ field_custom: 'a new file field', name: 'another name', raw: fileRaw })",
               action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
@@ -802,8 +983,7 @@ module.exports = {
                           url: 'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
                         },
                       },
-                      '[0].response.url':
-                        'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
+                      '[0].response.url': 'https://tdesign.gtimg.com/site/spline/script/tdesign.min.js',
                       '[0].response.extra_field': 'extra value',
                     },
                   ],
@@ -829,7 +1009,10 @@ module.exports = {
                       'file.raw': '${fileList[0]}',
                       'e.type': 'load',
                       XMLHttpRequest: 'toBeTruthy',
-                      response: { error: 'upload failed', name: 'file-name.txt' },
+                      response: {
+                        error: 'upload failed',
+                        name: 'file-name.txt',
+                      },
                     },
                   ],
                 },
@@ -858,7 +1041,9 @@ module.exports = {
                 delay: 0,
                 event: {
                   fail: [
-                    { "XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']": 'tdesign_token' },
+                    {
+                      "XMLHttpRequest.upload.requestHeaders['XML-HTTP-REQUEST']": 'tdesign_token',
+                    },
                   ],
                 },
               },
@@ -876,7 +1061,14 @@ module.exports = {
         attribute: [
           {
             value: "{ webkitdirectory: 'webkitdirectory' }",
-            expect: [{ dom: 'input', attribute: { webkitdirectory: 'webkitdirectory' } }],
+            expect: [
+              {
+                dom: 'input',
+                attribute: {
+                  webkitdirectory: 'webkitdirectory',
+                },
+              },
+            ],
           },
         ],
       },
@@ -925,7 +1117,9 @@ module.exports = {
             props: { theme: 'file-flow' },
             dom: {
               "{progress: { uploadingText: 'uploading' }}": {
-                '.t-upload__file-flow-progress': { text: 'uploading 80%' },
+                '.t-upload__file-flow-progress': {
+                  text: 'uploading 80%',
+                },
               },
             },
           },
@@ -934,7 +1128,9 @@ module.exports = {
             props: { theme: 'image' },
             dom: {
               "{progress: { uploadingText: 'uploading' }}": {
-                '.t-upload__image-progress': { text: 'uploading 80%' },
+                '.t-upload__image-progress': {
+                  text: 'uploading 80%',
+                },
               },
             },
           },
@@ -966,8 +1162,7 @@ module.exports = {
               max: 2,
               multiple: true,
               autoUpload: false,
-              files:
-                "[{ url: 'xxxx.url', name: 'file1.txt' }, { url: 'yyyy.url', name: 'file2.txt' }]",
+              files: "[{ url: 'xxxx.url', name: 'file1.txt' }, { url: 'yyyy.url', name: 'file2.txt' }]",
             },
             expect: [
               {
@@ -979,7 +1174,12 @@ module.exports = {
           },
           {
             description: 'max=0 means any count of files are allowed',
-            props: { max: 0, multiple: true, autoUpload: false, files: '[]' },
+            props: {
+              max: 0,
+              multiple: true,
+              autoUpload: false,
+              files: '[]',
+            },
             expect: [
               {
                 trigger: "simulateFileChange('input', 'file', 3)",
@@ -993,7 +1193,10 @@ module.exports = {
     },
     mediaType_1561: { field_name: 'mediaType', id: 1561 },
     method_874: { field_name: 'method', id: 874 },
-    mockProgressDuration_3253: { field_name: 'mockProgressDuration', id: 3253 },
+    mockProgressDuration_3253: {
+      field_name: 'mockProgressDuration',
+      id: 3253,
+    },
     multiple_880: {
       field_name: 'multiple',
       id: 880,
@@ -1037,23 +1240,59 @@ module.exports = {
         dom: [
           {
             description: 'theme=file works fine',
-            props: { theme: 'file', placeholder: 'this is placeholder' },
-            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+            props: {
+              theme: 'file',
+              placeholder: 'this is placeholder',
+            },
+            dom: [
+              {
+                '.t-upload__placeholder': {
+                  text: 'this is placeholder',
+                },
+              },
+            ],
           },
           {
             description: 'theme=file-input works fine',
-            props: { theme: 'file-input', placeholder: 'this is placeholder' },
-            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+            props: {
+              theme: 'file-input',
+              placeholder: 'this is placeholder',
+            },
+            dom: [
+              {
+                '.t-upload__placeholder': {
+                  text: 'this is placeholder',
+                },
+              },
+            ],
           },
           {
             description: 'theme=image-flow works fine',
-            props: { theme: 'image-flow', placeholder: 'this is placeholder' },
-            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+            props: {
+              theme: 'image-flow',
+              placeholder: 'this is placeholder',
+            },
+            dom: [
+              {
+                '.t-upload__placeholder': {
+                  text: 'this is placeholder',
+                },
+              },
+            ],
           },
           {
             description: 'theme=file-flow works fine',
-            props: { theme: 'file-flow', placeholder: 'this is placeholder' },
-            dom: [{ '.t-upload__placeholder': { text: 'this is placeholder' } }],
+            props: {
+              theme: 'file-flow',
+              placeholder: 'this is placeholder',
+            },
+            dom: [
+              {
+                '.t-upload__placeholder': {
+                  text: 'this is placeholder',
+                },
+              },
+            ],
           },
         ],
       },
@@ -1131,7 +1370,13 @@ module.exports = {
               ],
               action: 'https://tdesign.test.com/upload/file_success',
             },
-            dom: [{ '.t-upload__file-flow-progress': { text: '上传中' } }],
+            dom: [
+              {
+                '.t-upload__file-flow-progress': {
+                  text: '上传中',
+                },
+              },
+            ],
           },
           {
             props: {
@@ -1168,7 +1413,14 @@ module.exports = {
               {
                 trigger: "simulateFileChange('input', 'file', 5)",
                 delay: 0,
-                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+                event: {
+                  validate: [
+                    {
+                      type: 'FILE_OVER_SIZE_LIMIT',
+                      files: 'length=3',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1194,13 +1446,19 @@ module.exports = {
                     },
                   },
                 ],
-                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+                event: {
+                  validate: [
+                    {
+                      type: 'FILE_OVER_SIZE_LIMIT',
+                      files: 'length=3',
+                    },
+                  ],
+                },
               },
             ],
           },
           {
-            description:
-              'file size is over than 0.023KB, show default error tips (KB is default unit)',
+            description: 'file size is over than 0.023KB, show default error tips (KB is default unit)',
             props: {
               sizeLimit: 0.023,
               multiple: true,
@@ -1210,7 +1468,14 @@ module.exports = {
               {
                 trigger: "simulateFileChange('input', 'file', 5)",
                 delay: 0,
-                event: { validate: [{ type: 'FILE_OVER_SIZE_LIMIT', files: 'length=3' }] },
+                event: {
+                  validate: [
+                    {
+                      type: 'FILE_OVER_SIZE_LIMIT',
+                      files: 'length=3',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1222,13 +1487,11 @@ module.exports = {
       field_name: 'status',
       id: 2994,
       PC: {
-        props: { tips: 'upload tips text', action: 'https://tdesign.test.com/upload/file_success' },
-        dom: [
-          '.t-upload__tips-default',
-          '.t-upload__tips-success',
-          '.t-upload__tips-warning',
-          '.t-upload__tips-error',
-        ],
+        props: {
+          tips: 'upload tips text',
+          action: 'https://tdesign.test.com/upload/file_success',
+        },
+        dom: ['.t-upload__tips-default', '.t-upload__tips-success', '.t-upload__tips-warning', '.t-upload__tips-error'],
       },
     },
     style_3077: { field_name: 'style', id: 3077 },
@@ -1260,22 +1523,34 @@ module.exports = {
           },
           {
             description: 'theme=file-input and file status is progress works fine',
-            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'progress' }] },
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'file1.txt', status: 'progress' }],
+            },
             dom: ['.t-upload__single-progress'],
           },
           {
             description: 'theme=file-input and file status is waiting works fine',
-            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'waiting' }] },
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'file1.txt', status: 'waiting' }],
+            },
             dom: ['.t-upload__file-waiting.t-icon-time-filled'],
           },
           {
             description: 'theme=file-input and file status is fail works fine',
-            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'fail' }] },
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'file1.txt', status: 'fail' }],
+            },
             dom: ['.t-icon-error-circle-filled'],
           },
           {
             description: 'theme=file-input and file status is success works fine',
-            props: { theme: 'file-input', files: [{ name: 'file1.txt', status: 'success' }] },
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'file1.txt', status: 'success' }],
+            },
             dom: ['.t-icon-check-circle-filled'],
           },
           {
@@ -1286,7 +1561,11 @@ module.exports = {
                 { name: 'file1.txt', status: 'success' },
                 { name: 'file2.txt', status: 'waiting' },
                 { name: 'file3.txt', status: 'fail' },
-                { name: 'file4.txt', status: 'progress', percent: 90 },
+                {
+                  name: 'file4.txt',
+                  status: 'progress',
+                  percent: 90,
+                },
               ],
             },
             dom: [{ '.t-upload__flow-table tbody > tr': 4 }],
@@ -1298,10 +1577,27 @@ module.exports = {
               theme: 'image-flow',
               files: [
                 { url: '', status: 'success', name: 'img.txt' },
-                { url: 'https://img1.txt', status: 'success', name: 'img1.txt' },
-                { url: 'https://img2.txt', status: 'waiting', name: 'img2.txt' },
-                { url: 'https://img3.txt', status: 'fail', name: 'img3.txt' },
-                { url: 'https://img4.txt', status: 'progress', percent: 90, name: 'img4.txt' },
+                {
+                  url: 'https://img1.txt',
+                  status: 'success',
+                  name: 'img1.txt',
+                },
+                {
+                  url: 'https://img2.txt',
+                  status: 'waiting',
+                  name: 'img2.txt',
+                },
+                {
+                  url: 'https://img3.txt',
+                  status: 'fail',
+                  name: 'img3.txt',
+                },
+                {
+                  url: 'https://img4.txt',
+                  status: 'progress',
+                  percent: 90,
+                  name: 'img4.txt',
+                },
               ],
             },
             dom: [{ '.t-upload__card-item': 5 }],
@@ -1314,7 +1610,9 @@ module.exports = {
       field_name: 'tips',
       id: 1183,
       PC: {
-        props: { action: 'https://tdesign.test.com/upload/file_success' },
+        props: {
+          action: 'https://tdesign.test.com/upload/file_success',
+        },
         tnode: { dom: ['.t-upload__tips'], trigger: '' },
       },
     },
@@ -1346,7 +1644,17 @@ module.exports = {
               draggable: true,
               files: [{ name: 'file-name.txt', status: 'progress' }],
             },
-            params: [{ dragActive: false, files: [{ name: 'file-name.txt', status: 'progress' }] }],
+            params: [
+              {
+                dragActive: false,
+                files: [
+                  {
+                    name: 'file-name.txt',
+                    status: 'progress',
+                  },
+                ],
+              },
+            ],
             snapshot: true,
           },
         ],
@@ -1356,11 +1664,18 @@ module.exports = {
       field_name: 'triggerButtonProps',
       id: 2985,
       PC: {
-        props: { action: 'https://tdesign.test.com/upload/file_success' },
-        dom: { "{ theme: 'warning' }": { '.t-button--theme-warning': 1 } },
+        props: {
+          action: 'https://tdesign.test.com/upload/file_success',
+        },
+        dom: {
+          "{ theme: 'warning' }": { '.t-button--theme-warning': 1 },
+        },
       },
     },
-    uploadAllFilesInOneRequest_2362: { field_name: 'uploadAllFilesInOneRequest', id: 2362 },
+    uploadAllFilesInOneRequest_2362: {
+      field_name: 'uploadAllFilesInOneRequest',
+      id: 2362,
+    },
     useMockProgress_1987: { field_name: 'useMockProgress', id: 1987 },
     value_3009: { field_name: 'value', id: 3009 },
     withCredentials_882: {
@@ -1378,7 +1693,13 @@ module.exports = {
               {
                 trigger: "simulateFileChange('input')",
                 delay: 0,
-                event: { fail: [{ 'XMLHttpRequest.withCredentials': true }] },
+                event: {
+                  fail: [
+                    {
+                      'XMLHttpRequest.withCredentials': true,
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1417,7 +1738,12 @@ module.exports = {
         event: [
           {
             description: 'can trigger change if autoUpload is false for image',
-            props: { theme: 'image', draggable: true, autoUpload: false, files: [] },
+            props: {
+              theme: 'image',
+              draggable: true,
+              autoUpload: false,
+              files: [],
+            },
             expect: [
               {
                 trigger: "const fileList = simulateFileChange('input', 'image', 1)",
@@ -1425,7 +1751,11 @@ module.exports = {
                 event: {
                   change: [
                     { '[0].raw': '${fileList[0]}' },
-                    { trigger: 'add', index: 0, 'file.raw': '${fileList[0]}' },
+                    {
+                      trigger: 'add',
+                      index: 0,
+                      'file.raw': '${fileList[0]}',
+                    },
                   ],
                 },
               },
@@ -1438,7 +1768,12 @@ module.exports = {
               draggable: true,
               autoUpload: false,
               multiple: true,
-              files: [{ url: 'https://image1.png', status: 'success' }],
+              files: [
+                {
+                  url: 'https://image1.png',
+                  status: 'success',
+                },
+              ],
             },
             expect: [
               {
@@ -1447,7 +1782,10 @@ module.exports = {
                 event: {
                   change: [
                     {
-                      '[0]': { url: 'https://image1.png', status: 'success' },
+                      '[0]': {
+                        url: 'https://image1.png',
+                        status: 'success',
+                      },
                       '[1].raw': '${fileList[0]}',
                     },
                     {
@@ -1475,17 +1813,28 @@ module.exports = {
             props: { theme: 'image', draggable: true },
             expect: [
               {
-                trigger:
-                  "const files = simulateDragFileChange('.t-upload__dragger', 'dragEnter', 'image')",
+                trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'dragEnter', 'image')",
                 event: {
-                  dragenter: [{ 'e.type': 'dragenter', 'e.dataTransfer.files': '${files}' }],
+                  dragenter: [
+                    {
+                      'e.type': 'dragenter',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
                 },
               },
-              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')",
+              },
               {
                 trigger: "simulateDragFileChange('.t-upload__dragger', 'dragLeave')",
                 event: {
-                  dragleave: [{ 'e.type': 'dragleave', 'e.dataTransfer.files': '${files}' }],
+                  dragleave: [
+                    {
+                      'e.type': 'dragleave',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
                 },
               },
             ],
@@ -1497,14 +1846,26 @@ module.exports = {
               {
                 trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'dragEnter')",
                 event: {
-                  dragenter: [{ 'e.type': 'dragenter', 'e.dataTransfer.files': '${files}' }],
+                  dragenter: [
+                    {
+                      'e.type': 'dragenter',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
                 },
               },
-              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__dragger', 'dragOver')",
+              },
               {
                 trigger: "simulateDragFileChange('.t-upload__dragger', 'dragLeave')",
                 event: {
-                  dragleave: [{ 'e.type': 'dragleave', 'e.dataTransfer.files': '${files}' }],
+                  dragleave: [
+                    {
+                      'e.type': 'dragleave',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
                 },
               },
             ],
@@ -1525,7 +1886,9 @@ module.exports = {
               action: 'https://tdesign.test.com/upload/file_success',
             },
             expect: [
-              { trigger: "simulateDragFileChange('.t-upload__dragger', 'dragEnter')" },
+              {
+                trigger: "simulateDragFileChange('.t-upload__dragger', 'dragEnter')",
+              },
               {
                 trigger: "simulateDragFileChange('.t-upload__trigger', 'dragLeave')",
                 event: { dragleave: 'not' },
@@ -1549,9 +1912,15 @@ module.exports = {
             },
             expect: [
               {
-                trigger:
-                  "const files = simulateDragFileChange('.t-upload__dragger', 'drop', 'image')",
-                event: { drop: [{ 'e.type': 'drop', 'e.dataTransfer.files': '${files}' }] },
+                trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'drop', 'image')",
+                event: {
+                  drop: [
+                    {
+                      'e.type': 'drop',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1565,7 +1934,14 @@ module.exports = {
             expect: [
               {
                 trigger: "const files = simulateDragFileChange('.t-upload__dragger', 'drop')",
-                event: { drop: [{ 'e.type': 'drop', 'e.dataTransfer.files': '${files}' }] },
+                event: {
+                  drop: [
+                    {
+                      'e.type': 'drop',
+                      'e.dataTransfer.files': '${files}',
+                    },
+                  ],
+                },
               },
             ],
           },
@@ -1578,7 +1954,9 @@ module.exports = {
       PC: {
         event: [
           {
-            props: { action: 'https://tdesign.test.com/upload/fail/status_error' },
+            props: {
+              action: 'https://tdesign.test.com/upload/fail/status_error',
+            },
             description: '',
             expect: [
               {
@@ -1587,7 +1965,10 @@ module.exports = {
                 event: {
                   fail: [
                     {
-                      'XMLHttpRequest.upload.requestParams': { file: '${fileList[0]}', length: 1 },
+                      'XMLHttpRequest.upload.requestParams': {
+                        file: '${fileList[0]}',
+                        length: 1,
+                      },
                     },
                   ],
                 },
@@ -1624,7 +2005,9 @@ module.exports = {
                 exist: [
                   {
                     'document.t-image-viewer__modal-image': {
-                      attribute: { src: 'https://tdesign.gtimg.com/demo/demo-image-1.png' },
+                      attribute: {
+                        src: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
+                      },
                     },
                     clearElementAtEnd: ['.t-image-viewer'],
                   },
@@ -1652,20 +2035,27 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
                   name: 'demo-image-1.png',
                 },
-                { url: 'https://tdesign.gtimg.com/site/avatar.jpg', name: 'avatar.jpg' },
+                {
+                  url: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                  name: 'avatar.jpg',
+                },
               ],
               theme: 'image',
               multiple: true,
             },
             expect: [
-              { trigger: 'mouseenter(.t-upload__card-item:last-child)' },
+              {
+                trigger: 'mouseenter(.t-upload__card-item:last-child)',
+              },
               {
                 trigger: 'click(.t-upload__card-item:nth-child(2) .t-icon-browse)',
                 delay: 300,
                 exist: [
                   {
                     'document.t-image-viewer__modal-image': {
-                      attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
+                      attribute: {
+                        src: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                      },
                     },
                     clearElementAtEnd: ['.t-image-viewer'],
                   },
@@ -1693,20 +2083,27 @@ module.exports = {
                   url: 'https://tdesign.gtimg.com/demo/demo-image-1.png',
                   name: 'demo-image-1.png',
                 },
-                { url: 'https://tdesign.gtimg.com/site/avatar.jpg', name: 'avatar.jpg' },
+                {
+                  url: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                  name: 'avatar.jpg',
+                },
               ],
               theme: 'image-flow',
               multiple: true,
             },
             expect: [
-              { trigger: 'mouseenter(.t-upload__card-item:nth-child(2))' },
+              {
+                trigger: 'mouseenter(.t-upload__card-item:nth-child(2))',
+              },
               {
                 trigger: 'click(.t-upload__card-item:nth-child(2) .t-icon-browse)',
                 delay: 300,
                 exist: [
                   {
                     'document.t-image-viewer__modal-image': {
-                      attribute: { src: 'https://tdesign.gtimg.com/site/avatar.jpg' },
+                      attribute: {
+                        src: 'https://tdesign.gtimg.com/site/avatar.jpg',
+                      },
                     },
                     clearElementAtEnd: ['.t-image-viewer'],
                   },
@@ -1737,13 +2134,21 @@ module.exports = {
         event: [
           {
             description: 'remove single file, trigger remove event',
-            props: { files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }] },
+            props: {
+              files: [{ name: 'file1.txt', url: 'https://xxx1.txt' }],
+            },
             expect: [
               {
                 trigger: 'click(.t-upload__icon-delete)',
                 event: {
                   change: [[], { 'e.type': 'click' }],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -1764,12 +2169,28 @@ module.exports = {
                 event: {
                   change: [
                     [
-                      { name: 'file2.txt', url: 'https://xxx2.txt' },
-                      { name: 'file3.txt', url: 'https://xxx3.txt' },
+                      {
+                        name: 'file2.txt',
+                        url: 'https://xxx2.txt',
+                      },
+                      {
+                        name: 'file3.txt',
+                        url: 'https://xxx3.txt',
+                      },
                     ],
-                    { index: 0, file: 'toBeTruthy', 'e.type': 'click' },
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
                   ],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -1785,8 +2206,21 @@ module.exports = {
               {
                 trigger: 'click(.t-upload__card-mask-item .t-icon-delete)',
                 event: {
-                  change: [[], { index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  change: [
+                    [],
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -1796,25 +2230,49 @@ module.exports = {
             props: {
               theme: 'image',
               multiple: true,
-              files: [{ url: 'https://image1.png', status: 'success' }],
+              files: [
+                {
+                  url: 'https://image1.png',
+                  status: 'success',
+                },
+              ],
             },
             expect: [
               {
                 trigger: 'click(.t-upload__card-mask-item .t-icon-delete)',
                 event: {
-                  change: [[], { index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  change: [
+                    [],
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
           },
           {
             description: 'theme=file-input, file can be removed to be empty',
-            props: { theme: 'file-input', files: [{ name: 'file.txt', status: 'success' }] },
+            props: {
+              theme: 'file-input',
+              files: [{ name: 'file.txt', status: 'success' }],
+            },
             expect: [
               {
                 trigger: 'click(.t-upload__single-input-clear)',
-                event: { change: [[]], remove: [{ 'e.type': 'click' }] },
+                event: {
+                  change: [[]],
+                  remove: [{ 'e.type': 'click' }],
+                },
               },
             ],
           },
@@ -1830,7 +2288,13 @@ module.exports = {
                 trigger: 'click(.t-upload__delete)',
                 event: {
                   change: [[], { 'e.type': 'click' }],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -1847,14 +2311,19 @@ module.exports = {
                 trigger: 'click(.t-upload__delete)',
                 event: {
                   change: [[], { 'e.type': 'click' }],
-                  remove: [{ index: 0, file: 'toBeTruthy', 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: 0,
+                      file: 'toBeTruthy',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
           },
           {
-            description:
-              'theme=file-flow & isBatchUpload=true, remove all files if click delete node',
+            description: 'theme=file-flow & isBatchUpload=true, remove all files if click delete node',
             props: {
               theme: 'file-flow',
               multiple: true,
@@ -1869,7 +2338,13 @@ module.exports = {
                 trigger: 'click(.t-upload__delete)',
                 event: {
                   change: [[], { 'e.type': 'click' }],
-                  remove: [{ index: -1, file: 'undefined', 'e.type': 'click' }],
+                  remove: [
+                    {
+                      index: -1,
+                      file: 'undefined',
+                      'e.type': 'click',
+                    },
+                  ],
                 },
               },
             ],
@@ -1879,7 +2354,12 @@ module.exports = {
             props: {
               theme: 'image',
               draggable: true,
-              files: [{ url: 'https://www.image.png', status: 'success' }],
+              files: [
+                {
+                  url: 'https://www.image.png',
+                  status: 'success',
+                },
+              ],
             },
             expect: [
               {
@@ -1889,7 +2369,10 @@ module.exports = {
                   remove: [
                     {
                       index: 0,
-                      file: { url: 'https://www.image.png', status: 'success' },
+                      file: {
+                        url: 'https://www.image.png',
+                        status: 'success',
+                      },
                       'e.type': 'click',
                     },
                   ],
@@ -1913,9 +2396,24 @@ module.exports = {
               {
                 trigger: 'click(.t-upload__single-display-text:last-child .t-upload__icon-delete)',
                 event: {
-                  change: [[{ name: 'file1.txt' }, { name: 'file2.txt', status: 'success' }]],
+                  change: [
+                    [
+                      { name: 'file1.txt' },
+                      {
+                        name: 'file2.txt',
+                        status: 'success',
+                      },
+                    ],
+                  ],
                   remove: [
-                    { index: 2, file: { name: 'file3.txt', status: 'waiting' }, 'e.type': 'click' },
+                    {
+                      index: 2,
+                      file: {
+                        name: 'file3.txt',
+                        status: 'waiting',
+                      },
+                      'e.type': 'click',
+                    },
                   ],
                 },
               },
@@ -1941,12 +2439,25 @@ module.exports = {
                   change: [
                     [
                       { name: 'file1.txt' },
-                      { name: 'file3.txt', status: 'waiting' },
-                      { name: 'file4.txt', status: 'fail' },
+                      {
+                        name: 'file3.txt',
+                        status: 'waiting',
+                      },
+                      {
+                        name: 'file4.txt',
+                        status: 'fail',
+                      },
                     ],
                   ],
                   remove: [
-                    { index: 1, file: { name: 'file2.txt', status: 'success' }, 'e.type': 'click' },
+                    {
+                      index: 1,
+                      file: {
+                        name: 'file2.txt',
+                        status: 'success',
+                      },
+                      'e.type': 'click',
+                    },
                   ],
                 },
               },
@@ -1962,7 +2473,10 @@ module.exports = {
               action: 'https://tdesign.test.com/upload/fail/status_error',
             },
             expect: [
-              { trigger: "simulateFileChange('input')", delay: 0 },
+              {
+                trigger: "simulateFileChange('input')",
+                delay: 0,
+              },
               {
                 trigger: 'click(.t-upload__flow-table tbody tr:last-child .t-upload__delete)',
                 event: {
@@ -1988,7 +2502,10 @@ module.exports = {
     success_891: { field_name: 'success', id: 891 },
     success_1672: { field_name: 'success', id: 1672 },
     validate_2929: { field_name: 'validate', id: 2929 },
-    waitingUploadFilesChange_2947: { field_name: 'waitingUploadFilesChange', id: 2947 },
+    waitingUploadFilesChange_2947: {
+      field_name: 'waitingUploadFilesChange',
+      id: 2947,
+    },
     triggerUpload_2989: { field_name: 'triggerUpload', id: 2989 },
     uploadFiles_2990: { field_name: 'uploadFiles', id: 2990 },
     '<T extends UploadFile = UploadFile>_2996': {

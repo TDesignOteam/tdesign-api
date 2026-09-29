@@ -5,7 +5,7 @@
  * */
 
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import type { TNode, Styles } from '../common';
 
 export interface TdFabProps {
   /**
@@ -22,15 +22,23 @@ export interface TdFabProps {
    */
   icon?: TNode;
   /**
-   * 悬浮按钮的样式，常用于调整位置
-   * @default right: 16px; bottom: 32px;
+   * 是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附
    */
-  style?: string;
+  magnet?: boolean | MagnetEnum;
+  /**
+   * 悬浮按钮的样式，常用于调整位置
+   * @default 'right: 16px; bottom: 32px;'
+   */
+  style?: string | Styles;
   /**
    * 文本内容
    * @default ''
    */
   text?: string;
+  /**
+   * 设置水平方向边界限制，示例：[16, 16] 或 ['16px', 16]
+   */
+  xBounds?: Array<string | number>;
   /**
    * 设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]
    */
@@ -50,3 +58,5 @@ export interface TdFabProps {
 }
 
 export type FabDirectionEnum = 'all' | 'vertical' | 'horizontal';
+
+export type MagnetEnum = 'left' | 'right';

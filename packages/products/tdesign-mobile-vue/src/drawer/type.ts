@@ -4,7 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, Styles, AttachNode } from '../common';
+import { OverlayProps } from '../overlay';
+import type { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDrawerProps {
   /**
@@ -29,6 +30,11 @@ export interface TdDrawerProps {
    * 抽屉里的列表项
    */
   items?: DrawerItem[];
+  /**
+   * 遮罩层的属性，透传至 overlay
+   * @default {}
+   */
+  overlayProps?: OverlayProps;
   /**
    * 抽屉方向
    * @default right

@@ -1,11 +1,19 @@
-module.exports = {
+export default {
   SelectInput: {
     allowInput_2293: {
       field_name: 'allowInput',
       id: 2293,
       PC: {
         className: [
-          { value: true, expect: [{ dom: '.t-input', className: { 't-is-readonly': false } }] },
+          {
+            value: true,
+            expect: [
+              {
+                dom: '.t-input',
+                className: { 't-is-readonly': false },
+              },
+            ],
+          },
         ],
         classNameDom: '',
       },
@@ -26,18 +34,31 @@ module.exports = {
             description: 'empty value can not show clear icon',
             wrapper: '',
             expect: [
-              { trigger: 'mouseenter(.t-input)', exist: [{ '.t-input__suffix-clear': false }] },
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: [{ '.t-input__suffix-clear': false }],
+              },
             ],
           },
           {
             props: { value: 'tdesign' },
             description: 'show clear icon on mouse enter in single select input',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-input__suffix-clear'] }],
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-input__suffix-clear'],
+              },
+            ],
           },
           {
             props: { value: ['tdesign'], multiple: true },
             description: 'show clear icon on mouse enter in multiple select input',
-            expect: [{ trigger: 'mouseenter(.t-input)', exist: ['.t-tag-input__suffix-clear'] }],
+            expect: [
+              {
+                trigger: 'mouseenter(.t-input)',
+                exist: ['.t-tag-input__suffix-clear'],
+              },
+            ],
           },
         ],
       },
@@ -66,16 +87,28 @@ module.exports = {
       PC: { props: { loading: true }, dom: ['.t-loading'] },
     },
     minCollapsedNum_2139: { field_name: 'minCollapsedNum', id: 2139 },
-    multiple_2295: { field_name: 'multiple', id: 2295, PC: { dom: '.t-tag-input' } },
+    multiple_2295: {
+      field_name: 'multiple',
+      id: 2295,
+      PC: { dom: '.t-tag-input' },
+    },
     panel_2300: {
       field_name: 'panel',
       id: 2300,
-      PC: { tnode: { dom: ['document.custom-node'], trigger: 'click(.t-input)' } },
+      PC: {
+        tnode: {
+          dom: ['document.custom-node'],
+          trigger: 'click(.t-input)',
+        },
+      },
     },
     placeholder_2146: {
       field_name: 'placeholder',
       id: 2146,
-      PC: { attribute: { placeholder: 'This is SelectInput placeholder' }, attributeDom: 'input' },
+      PC: {
+        attribute: { placeholder: 'This is SelectInput placeholder' },
+        attributeDom: 'input',
+      },
     },
     popupProps_2166: { field_name: 'popupProps', id: 2166 },
     popupVisible_2164: { field_name: 'popupVisible', id: 2164 },
@@ -90,13 +123,21 @@ module.exports = {
       },
     },
     suffix_2149: { field_name: 'suffix', id: 2149, PC: { tnode: true } },
-    suffixIcon_2150: { field_name: 'suffixIcon', id: 2150, PC: { tnode: true } },
+    suffixIcon_2150: {
+      field_name: 'suffixIcon',
+      id: 2150,
+      PC: { tnode: true },
+    },
     tag_2302: {
       field_name: 'tag',
       id: 2302,
       PC: {
         props: { multiple: true, value: ['tdesign-vue'] },
-        tnode: { dom: [], trigger: '', params: [{ value: 'tdesign-vue' }] },
+        tnode: {
+          dom: [],
+          trigger: '',
+          params: [{ value: 'tdesign-vue' }],
+        },
       },
     },
     tagInputProps_2141: { field_name: 'tagInputProps', id: 2141 },

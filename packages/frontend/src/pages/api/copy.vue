@@ -1,53 +1,31 @@
 <template>
   <div class="platform-type">
-    <t-radio-group v-model="platform">
-      <t-radio
-        v-for="(item, index) in platformOptions"
-        :key="index"
-        :value="item.value"
-      >{{item.label}}</t-radio>
+    <t-radio-group v-model="modelValue">
+      <t-radio v-for="(item, index) in platformOptions" :key="index" :value="item.value">{{ item.label }}</t-radio>
     </t-radio-group>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ApiCopy',
+<script setup>
+import { computed } from 'vue';
 
-  components: {},
+const props = defineProps({
+  modelValue: String,
+  platformOptions: {},
+});
 
-  props: {
-    value: String,
-    platformOptions: {}
-  },
+const emit = defineEmits(['update:modelValue']);
 
-  data () {
-    return {
-      platform: ''
-    }
-  },
-
-  computed: {},
-
-  watch: {
-    value: {
-      immediate: true,
-      handler (val) {
-        this.platform = val
-      }
-    },
-    platform (val) {
-      this.$emit('input', val)
-    }
-  },
-
-  methods: {}
-}
+const modelValue = computed({
+  get: () => props.modelValue,
+  set: (val) => emit('update:modelValue', val),
+});
 </script>
 
 <style lang="less">
 .platform-type {
   padding: 8px;
+
   .t-radio {
     display: block;
     margin-bottom: 8px;

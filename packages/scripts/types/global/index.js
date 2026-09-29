@@ -2,10 +2,13 @@
  * 输出全局变量到目标文件
  */
 
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const { FRAMEWORK_MAP } = require('../../config');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import chalk from 'chalk';
+import { FRAMEWORK_MAP } from '../../config/index.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const baseGlobalPath = path.resolve(__dirname, 'base.tpl');
 
@@ -24,14 +27,13 @@ function combineGlobals(framework) {
   if (['React(PC)', 'React(Mobile)'].includes(framework)) {
     data = formatType(data);
   }
-  fs.writeFile(
-    outputPath,
-    data,
-    (err) => {
-      if (err) return console.error(err);
-      console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
-    },
-  );
+  const callback = (err) => {
+    if (err) return console.error(err);
+     
+    console.log(chalk.green(`globals: ${outputPath} has been created successfully!`));
+  };
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFile(outputPath, data, callback);
 }
 
-module.exports = combineGlobals;
+export default combineGlobals;

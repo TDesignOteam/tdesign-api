@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TElement, KeysType } from '../common';
-import { MouseEvent } from 'react';
+import type { TElement, KeysType } from '../common';
+import type { MouseEvent } from 'react';
 
 export interface TdPickerProps {
   /**
@@ -24,22 +24,30 @@ export interface TdPickerProps {
    */
   confirmBtn?: boolean | string;
   /**
-   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
-   * @default true
+   * 底部内容
    */
-  header?: TNode;
+  footer?: TElement;
   /**
-   * 用来定义 value / label 在 `options` 中对应的字段别名
+   * 自定义头部内容
+   */
+  header?: TElement;
+  /**
+   * 用来定义 value / label / disabled 在 `columns ` 中对应的字段别名
    */
   keys?: KeysType;
   /**
    * 自定义选项内容。参数为 `option: PickerColumnItem, index: number`
    */
-  option?: TElement;
+  option?: (option: PickerColumnItem, index: number) => string | Record<string, string | boolean>;
   /**
    * 自定义label
    */
-  renderLabel?: (item: PickerColumnItem) => string;
+  renderLabel?: (item: PickerColumnItem, index: number) => string;
+  /**
+   * ⚠️ 即将废弃，请使用 `wheelConfig.inertiaDuration` 代替。快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动
+   * @default 300
+   */
+  swipeDuration?: string | number;
   /**
    * 标题
    * @default ''
@@ -54,10 +62,9 @@ export interface TdPickerProps {
    */
   defaultValue?: Array<PickerValue>;
   /**
-   * 是否显示
-   * @default false
+   * 【实验】滚轮滑动相关配置，用于自定义滚轮的动画和交互行为。`inertiaDuration` 表示惯性滚动的持续时长；`bounceDuration` 表示边界归位动画时长；`transitionDuration` 表示切换选项时的过渡动画时长； `inertiaTimeThreshold` 表示惯性触发的时间阈值； `inertiaDistanceThreshold` 表示惯性触发的距离阈值； `boundOffset` 表示边界偏移量；`clickDistanceThreshold` 表示点击操作的距离阈值；`clickTimeThreshold` 表示点击操作的时间阈值
    */
-  visible?: boolean;
+  wheelConfig?: PickerWheelConfig;
   /**
    * 点击取消按钮时触发
    * @default ''
@@ -91,9 +98,21 @@ export type PickerColumn = PickerColumnItem[];
 export interface PickerColumnItem {
   label: string;
   value: string;
+  disabled?: boolean;
 }
 
 export type PickerValue = string | number;
+
+export interface PickerWheelConfig {
+  inertiaDuration?: number;
+  bounceDuration?: number;
+  transitionDuration?: number;
+  inertiaTimeThreshold?: number;
+  inertiaDistanceThreshold?: number;
+  boundOffset?: number;
+  clickDistanceThreshold?: number;
+  clickTimeThreshold?: number;
+}
 
 export interface PickerContext {
   column: number;

@@ -3,9 +3,10 @@ import Koa from 'koa';
 export default () => async (ctx: Koa.Context, next: Function) => {
   try {
     await next();
-  } catch (err) {
+  } catch (err: unknown) {
     console.error(err);
-    ctx.status = err.status || 500;
-    ctx.body = err.message;
+    const error = err as Error & { status?: number; message?: string };
+    ctx.status = error.status || 500;
+    ctx.body = error.message;
   }
 };

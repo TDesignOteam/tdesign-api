@@ -10,10 +10,9 @@ import { PropType } from 'vue';
 export default {
   /** 是否显示右侧箭头 */
   arrow: Boolean,
-  /** 表单内容对齐方式：左对齐、右对齐 */
+  /** 表单内容对齐方式，优先级高于 Form.contentAlign */
   contentAlign: {
     type: String as PropType<TdFormItemProps['contentAlign']>,
-    default: 'left' as TdFormItemProps['contentAlign'],
     validator(val: TdFormItemProps['contentAlign']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);
@@ -31,7 +30,7 @@ export default {
   /** 字段标签名称 */
   label: {
     type: [String, Function] as PropType<TdFormItemProps['label']>,
-    default: '',
+    default: '' as TdFormItemProps['label'],
   },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐。默认使用 Form 的对齐方式，优先级高于 Form.labelAlign */
   labelAlign: {
@@ -47,7 +46,8 @@ export default {
   },
   /** 表单字段名称 */
   name: {
-    type: [String, Number] as PropType<TdFormItemProps['name']>,
+    type: String,
+    default: '',
   },
   /** 是否显示必填符号（*），优先级高于 Form.requiredMark */
   requiredMark: {

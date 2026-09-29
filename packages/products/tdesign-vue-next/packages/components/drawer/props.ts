@@ -34,7 +34,7 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
+  /** 确认按钮，可自定义。值为 null 则不显示确认按钮。类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDrawerProps['confirmBtn']>,
   },
@@ -117,10 +117,14 @@ export default {
   onClose: Function as PropType<TdDrawerProps['onClose']>,
   /** 如果关闭按钮存在，点击关闭按钮时触发该事件，同时触发关闭事件 */
   onCloseBtnClick: Function as PropType<TdDrawerProps['onCloseBtnClick']>,
+  /** 抽屉关闭后触发 */
+  onClosed: Function as PropType<TdDrawerProps['onClosed']>,
   /** 如果“确认”按钮存在，则点击“确认”按钮时触发 */
   onConfirm: Function as PropType<TdDrawerProps['onConfirm']>,
   /** 按下 ESC 键时触发 */
   onEscKeydown: Function as PropType<TdDrawerProps['onEscKeydown']>,
+  /** 抽屉打开后触发 */
+  onOpened: Function as PropType<TdDrawerProps['onOpened']>,
   /** 如果蒙层存在，点击蒙层时触发 */
   onOverlayClick: Function as PropType<TdDrawerProps['onOverlayClick']>,
   /** 抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度 */

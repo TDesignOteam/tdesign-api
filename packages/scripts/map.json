@@ -33,6 +33,10 @@
       {
         "label": "CSS Variables",
         "value": "256"
+      },
+      {
+        "label": "Slots",
+        "value": "512"
       }
     ],
     "platform": [
@@ -73,10 +77,6 @@
         "value": "2"
       },
       {
-        "label": "Angular(PC)",
-        "value": "4"
-      },
-      {
         "label": "Vue(Mobile)",
         "value": "8"
       },
@@ -85,12 +85,12 @@
         "value": "16"
       },
       {
-        "label": "Angular(Mobile)",
-        "value": "32"
-      },
-      {
         "label": "Miniprogram",
         "value": "64"
+      },
+      {
+        "label": "UniApp",
+        "value": "128"
       }
     ],
     "field_type": [
@@ -133,6 +133,10 @@
       {
         "label": "any",
         "value": "512"
+      },
+      {
+        "label": "BigInt",
+        "value": "1024"
       }
     ],
     "components": [
@@ -296,6 +300,10 @@
         "label": "布局-侧边栏"
       },
       {
+        "value": "Attachments",
+        "label": "文件附件"
+      },
+      {
         "value": "AutoComplete",
         "label": "自动填充"
       },
@@ -386,8 +394,12 @@
         "label": "对话操作"
       },
       {
+        "value": "ChatActionbar",
+        "label": "对话操作"
+      },
+      {
         "value": "ChatContent",
-        "label": "对话内容"
+        "label": "对话正文"
       },
       {
         "value": "ChatInput",
@@ -398,16 +410,36 @@
         "label": "对话单元"
       },
       {
+        "value": "ChatList",
+        "label": "对话列表"
+      },
+      {
         "value": "ChatLoading",
         "label": "对话加载"
+      },
+      {
+        "value": "ChatMarkdown",
+        "label": "Markdown内容"
+      },
+      {
+        "value": "ChatMessage",
+        "label": "对话消息体"
       },
       {
         "value": "ChatReasoning",
         "label": "对话思考过程"
       },
       {
+        "value": "ChatRecord",
+        "label": "语音输入"
+      },
+      {
         "value": "ChatSender",
-        "label": "对话输入框"
+        "label": "对话输入"
+      },
+      {
+        "value": "ChatThinking",
+        "label": "思考过程"
       },
       {
         "value": "Checkbox",
@@ -709,6 +741,11 @@
         "label": "加载中"
       },
       {
+        "value": "LoadingConfig",
+        "label": "加载中全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Mentions",
         "label": "提及"
       },
@@ -799,6 +836,15 @@
         "label": "进度条"
       },
       {
+        "value": "QRCode",
+        "label": "二维码"
+      },
+      {
+        "value": "QRCodeConfig",
+        "label": "二维码全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Radio",
         "label": "单选框"
       },
@@ -832,6 +878,10 @@
         "label": "栅格-横向"
       },
       {
+        "value": "Scrollbar",
+        "label": "滚动条"
+      },
+      {
         "value": "Search",
         "label": "搜索"
       },
@@ -859,6 +909,14 @@
       {
         "value": "Space",
         "label": "间距"
+      },
+      {
+        "value": "Split",
+        "label": "分割面板"
+      },
+      {
+        "value": "SplitPanel",
+        "label": "分割面板内容"
       },
       {
         "value": "Statistic",
@@ -1145,12 +1203,32 @@
         "type": "TS"
       },
       {
+        "value": "AttachmentsConfig",
+        "label": "文件附件全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Cell",
         "label": "单元格"
       },
       {
         "value": "CellGroup",
         "label": "单元格组"
+      },
+      {
+        "value": "ChatActionbarConfig",
+        "label": "对话操作全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "ChatSenderConfig",
+        "label": "对话输入全局配置",
+        "type": "TS"
+      },
+      {
+        "value": "ChatThinkingConfig",
+        "label": "思考过程全局配置",
+        "type": "TS"
       },
       {
         "value": "CountDown",
@@ -1257,16 +1335,16 @@
         "type": "TS"
       },
       {
+        "value": "ScrollView",
+        "label": "滚动容器"
+      },
+      {
         "value": "SearchField",
         "label": "搜索框"
       },
       {
-        "value": "SegmentedControl",
-        "label": "分段器"
-      },
-      {
-        "value": "ScrollView",
-        "label": "滚动容器"
+        "value": "Segmented",
+        "label": "分段控制器"
       },
       {
         "value": "SideBar",
@@ -1277,20 +1355,20 @@
         "label": "侧边导航项"
       },
       {
-        "value": "SwipeCell",
-        "label": "滑动操作"
-      },
-      {
-        "value": "SwiperNav",
-        "label": "轮播导航"
-      },
-      {
         "value": "Stepper",
         "label": "步进器"
       },
       {
         "value": "Sticky",
         "label": "吸顶容器"
+      },
+      {
+        "value": "SwipeCell",
+        "label": "滑动操作"
+      },
+      {
+        "value": "SwiperNav",
+        "label": "轮播导航"
       },
       {
         "value": "Tab",

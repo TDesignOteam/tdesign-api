@@ -15,7 +15,7 @@ export default {
   /** 展开图标。值为 undefined 或 false 则不显示展开图标；值为 true 显示默认图标；值类型为函数，则表示完全自定义展开图标 */
   expandIcon: {
     type: [Boolean, Function] as PropType<TdCollapseProps['expandIcon']>,
-    default: true,
+    default: true as TdCollapseProps['expandIcon'],
   },
   /** 每个面板互斥展开，每次只展开一个面板 */
   expandMutex: Boolean,
@@ -31,11 +31,11 @@ export default {
   /** 展开的面板集合 */
   value: {
     type: Array as PropType<TdCollapseProps['value']>,
-    default: undefined,
+    default: undefined as TdCollapseProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdCollapseProps['value']>,
-    default: undefined,
+    default: undefined as TdCollapseProps['value'],
   },
   /** 展开的面板集合，非受控属性 */
   defaultValue: {

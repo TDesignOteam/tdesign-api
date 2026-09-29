@@ -18,13 +18,16 @@ cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfi
 classPrefix | String | t | CSS 类名前缀 | N
 dateTimePicker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
+form | Object | - | 表单组件全局配置。TS 类型：`FormConfig` | N
 guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
 list | Object | - | 列表组件全局配置。TS 类型：`ListConfig` | N
 picker | Object | - | 选择器全局配置。TS 类型：`PickerConfig` | N
 pullDownRefresh | Object | - | 下拉刷新全局配置。TS 类型：`PullDownRefreshConfig` | N
+qrcode | Object | - | 二维码全局配置。TS 类型：`QRCodeConfig` | N
 rate | Object | - | 评分全局配置。TS 类型：`RateConfig` | N
 tabBar | Object | - | 标签栏全局配置。TS 类型：`TabBarConfig` | N
 table | Object | - | 表格组件全局配置。TS 类型：`TableConfig` | N
+typography | Object | - | 排版组件全局配置。TS 类型：`TypographyConfig` | N
 upload | Object | - | 上传组件全局配置。TS 类型：`UploadConfig` | N
 
 ### ActionSheetConfig
@@ -57,7 +60,7 @@ title | String | - | 语言配置，组件标题“选择地址”描述文本 |
 cancel | String | - | 语言配置，“取消”按钮描述文本 | N
 confirm | String | - | 语言配置，“确定”按钮描述文本 | N
 dateLabel | String | - | 语言配置，“日” 描述文本 | N
-format | String | YYYY-MM-DD | 日期格式化规则 | N
+format | String | 'YYYY-MM-DD HH:mm:ss' | 日期格式化规则 | N
 hourLabel | String | - | 语言配置，“时” 描述文本 | N
 minuteLabel | String | - | 语言配置，“分” 描述文本 | N
 monthLabel | String | - | 语言配置，“月” 描述文本 | N
@@ -71,6 +74,15 @@ yearLabel | String | - | 语言配置，“年” 描述文本 | N
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
 reset | String | - | 语言配置，“重置” 按钮描述文本 | N
+
+### FormConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+colonText | String | - | 字段旁边的冒号，中文为“：” | N
+errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage`，[Form API Documents](./form?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
+requiredMark | Boolean | true | 是否显示必填符号（*），默认显示 | N
+requiredMarkPosition | String | left | 表单必填符号（*）显示位置。可选项：left/right | N
 
 ### GuideConfig
 
@@ -118,6 +130,14 @@ confirm | String | - | 语言配置，“确认” 按钮描述文本 | N
 -- | -- | -- | -- | --
 loadingTexts | Array | - | 提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']。TS 类型：`string[]` | N
 
+### QRCodeConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+expiredText | String | - | 语言配置，“二维码过期”描述文本 | N
+refreshText | String | - | 语言配置，“点击刷新”描述文本 | N
+scannedText | String | - | 语言配置，“已扫描”描述文本 | N
+
 ### RateConfig
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -138,7 +158,22 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+clearFilterResultButtonText | String | - | 语言配置，过滤功能中，“清空筛选” 描述文本 | N
+confirmText | String | - | 语言配置，“确认” 描述文本 | N
 empty | String / Slot / Function | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | undefined | 过滤图标，如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | 隐藏排序文本提示 | N
+loadingText | String | - | 语言配置，“正在加载中，请稍后” 描述文本 | N
+resetText | String | - | 语言配置，“重置” 描述文本 | N
+searchResultText | String | - | 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果' | N
+
+### TypographyConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapseText | String | - | 语言配置，“收起”描述文本 | N
+copiedText | String | - | 语言配置，“复制成功”描述文本 | N
+expandText | String | - | 语言配置，“展开”描述文本 | N
 
 ### UploadConfig
 

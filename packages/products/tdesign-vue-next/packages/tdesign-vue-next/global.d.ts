@@ -39,6 +39,7 @@ declare module 'vue' {
     TCollapse: typeof import('tdesign-vue-next')['Collapse'];
     TCollapsePanel: typeof import('tdesign-vue-next')['CollapsePanel'];
     TColorPicker: typeof import('tdesign-vue-next')['ColorPicker'];
+    TColorPickerPanel: typeof import('tdesign-vue-next')['ColorPickerPanel'];
     TComment: typeof import('tdesign-vue-next')['Comment'];
     TConfigProvider: typeof import('tdesign-vue-next')['ConfigProvider'];
     TContent: typeof import('tdesign-vue-next')['Content'];
@@ -54,6 +55,7 @@ declare module 'vue' {
     TDrawer: typeof import('tdesign-vue-next')['Drawer'];
     TDropdown: typeof import('tdesign-vue-next')['Dropdown'];
     TDropdownItem: typeof import('tdesign-vue-next')['DropdownItem'];
+    TDropdownMenu: typeof import('tdesign-vue-next')['DropdownMenu'];
     TEmpty: typeof import('tdesign-vue-next')['Empty'];
     TEnhancedTable: typeof import('tdesign-vue-next')['EnhancedTable'];
     TFooter: typeof import('tdesign-vue-next')['Footer'];
@@ -91,6 +93,7 @@ declare module 'vue' {
     TPopup: typeof import('tdesign-vue-next')['Popup'];
     TPrimaryTable: typeof import('tdesign-vue-next')['PrimaryTable'];
     TProgress: typeof import('tdesign-vue-next')['Progress'];
+    TQrcode: typeof import('tdesign-vue-next')['QRCode'];
     TRadio: typeof import('tdesign-vue-next')['Radio'];
     TRadioButton: typeof import('tdesign-vue-next')['RadioButton'];
     TRadioGroup: typeof import('tdesign-vue-next')['RadioGroup'];
@@ -111,6 +114,7 @@ declare module 'vue' {
     TStickyTool: typeof import('tdesign-vue-next')['StickyTool'];
     TSubmenu: typeof import('tdesign-vue-next')['Submenu'];
     TSwiper: typeof import('tdesign-vue-next')['Swiper'];
+    TSwiperItem: typeof import('tdesign-vue-next')['SwiperItem'];
     TSwitch: typeof import('tdesign-vue-next')['Switch'];
     TTable: typeof import('tdesign-vue-next')['Table'];
     TTabPanel: typeof import('tdesign-vue-next')['TabPanel'];

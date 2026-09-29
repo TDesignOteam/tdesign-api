@@ -9,7 +9,7 @@ import { KeyboardEvent, FocusEvent, FormEvent } from 'react';
 
 export interface TdTextareaProps {
   /**
-   * 超出maxlength或maxcharacter之后是否还允许输入
+   * 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入
    * @default false
    */
   allowInputOverMax?: boolean;
@@ -23,6 +23,10 @@ export interface TdTextareaProps {
    * @default false
    */
   autosize?: boolean | { minRows?: number; maxRows?: number };
+  /**
+   * 文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true
+   */
+  count?: boolean | ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode);
   /**
    * 是否禁用文本框
    */

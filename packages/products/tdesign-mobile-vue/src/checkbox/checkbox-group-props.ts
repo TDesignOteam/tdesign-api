@@ -10,6 +10,15 @@ import { PropType } from 'vue';
 export default {
   /** 是否开启无边框模式。优先级低于 Checkbox.borderless */
   borderless: Boolean,
+  /** 复选框按钮排列方式 */
+  direction: {
+    type: String as PropType<TdCheckboxGroupProps['direction']>,
+    default: 'vertical' as TdCheckboxGroupProps['direction'],
+    validator(val: TdCheckboxGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled */
   disabled: {
     type: Boolean,
@@ -41,11 +50,11 @@ export default {
   /** 选中值 */
   value: {
     type: Array as PropType<TdCheckboxGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdCheckboxGroupProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdCheckboxGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdCheckboxGroupProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

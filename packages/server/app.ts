@@ -1,24 +1,26 @@
+import path from 'path';
+import bodyParser from '@koa/bodyparser';
+import cors from '@koa/cors';
+import { send } from '@koa/send';
 import Koa from 'koa';
 import json from 'koa-json';
-import bodyParser from 'koa-bodyparser';
-import cors from 'koa2-cors';
-import logger from './middleware/logger';
-import errorParser from './middleware/errorParser';
-import config from './config';
-import componentRoutes from './routes/component';
 import serve from 'koa-static';
-import send from 'koa-send';
-import path from 'path';
+import config from './config';
+import errorParser from './middleware/errorParser';
+import logger from './middleware/logger';
+import componentRoutes from './routes/component';
 const app = new Koa();
 
 /** Middlewares */
 app.use(json());
 app.use(logger());
-app.use(bodyParser());
+app.use(bodyParser({
+  parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'],
+}));
 app.use(errorParser());
 app.use(cors({
   credentials: true,
-  allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'Access-Control-Allow-Origin'],
+  allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
 /** Routes */
@@ -30,10 +32,10 @@ const staticPath = path.resolve('packages/frontend/_site');
 app.use(serve(staticPath));
 
 // support for spa
-app.use(async (ctx:Koa.Context) => {
+app.use(async (ctx) => {
   await send(ctx, `/index.html`, {
       root: staticPath,
   });
 });
 
-app.listen(config.port, () => console.log(`Server running on http://localhost:${config.port}`));
+app.listen(config.port, () => console.info(`Server running on http://localhost:${config.port}`));

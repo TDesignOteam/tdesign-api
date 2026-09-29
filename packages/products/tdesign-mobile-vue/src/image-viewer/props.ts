@@ -11,12 +11,20 @@ export default {
   /** 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮 */
   closeBtn: {
     type: [Boolean, Function] as PropType<TdImageViewerProps['closeBtn']>,
-    default: true,
+    default: true as TdImageViewerProps['closeBtn'],
+  },
+  /** 支持自定义覆盖在图片预览最上方的内容 */
+  cover: {
+    type: Function as PropType<TdImageViewerProps['cover']>,
   },
   /** 是否显示删除操作，前提需要开启页码 */
   deleteBtn: {
     type: [Boolean, Function] as PropType<TdImageViewerProps['deleteBtn']>,
-    default: false,
+    default: false as TdImageViewerProps['deleteBtn'],
+  },
+  /** 自定义图片内容 */
+  image: {
+    type: Function as PropType<TdImageViewerProps['image']>,
   },
   /** 图片数组 */
   images: {
@@ -32,7 +40,12 @@ export default {
   defaultIndex: {
     type: Number,
   },
-  /** 【开发中】最大放大比例 */
+  /** 是否开启循环滚动 */
+  loop: {
+    type: Boolean,
+    default: true,
+  },
+  /** 图片最大放大比例 */
   maxZoom: {
     type: Number,
     default: 3,

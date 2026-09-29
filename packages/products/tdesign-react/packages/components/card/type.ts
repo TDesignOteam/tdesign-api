@@ -5,7 +5,7 @@
  * */
 
 import { LoadingProps } from '../loading';
-import { TNode } from '../common';
+import { TNode, Styles } from '../common';
 
 export interface TdCardProps {
   /**
@@ -16,6 +16,15 @@ export interface TdCardProps {
    * 卡片中的用户头像，仅在海报风格的卡片中有效
    */
   avatar?: TNode;
+  /**
+   * 卡片内容的类名，示例：'t-class-body'
+   * @default ''
+   */
+  bodyClassName?: string;
+  /**
+   * 作用于卡片内容的样式
+   */
+  bodyStyle?: Styles;
   /**
    * 是否有边框
    * @default true
@@ -30,7 +39,7 @@ export interface TdCardProps {
    */
   content?: TNode;
   /**
-   * 卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全最定义封面图
+   * 卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全自定义封面图
    */
   cover?: TNode;
   /**
@@ -42,6 +51,15 @@ export interface TdCardProps {
    */
   footer?: TNode;
   /**
+   * 卡片底部的类名，示例：'t-class-footer'
+   * @default ''
+   */
+  footerClassName?: string;
+  /**
+   * 作用于卡片底部的样式
+   */
+  footerStyle?: Styles;
+  /**
    * 卡片顶部内容，优先级高于其他所有元素
    */
   header?: TNode;
@@ -51,12 +69,21 @@ export interface TdCardProps {
    */
   headerBordered?: boolean;
   /**
+   * 卡片头部的类名，示例：'t-class-header'
+   * @default ''
+   */
+  headerClassName?: string;
+  /**
+   * 作用于卡片头部的样式
+   */
+  headerStyle?: Styles;
+  /**
    * hover时是否有阴影
    * @default false
    */
   hoverShadow?: boolean;
   /**
-   * 加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Sketon 组件完全自定义加载态呈现内容
+   * 加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Skeleton 组件完全自定义加载态呈现内容
    * @default false
    */
   loading?: TNode;

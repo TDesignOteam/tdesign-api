@@ -2,7 +2,7 @@
 
 ## 本地启动
 
-`npm i` 安装依赖后，执行 `npm run dev`，执行成功后本地访问 http://127.0.0.1:16001/api_design 查看 API 设计页面
+`pnpm i` 安装依赖后，执行 `pnpm dev`，执行成功后本地访问 http://127.0.0.1:16001/api_design 查看 API 设计页面
 
 ## 功能说明
 

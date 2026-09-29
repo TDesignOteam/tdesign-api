@@ -1,26 +1,32 @@
-name: Check DB
+name: check-db
+
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-db:
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.merged == false
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
+          node-version-file: .node-version
+          cache: "pnpm"
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm ci
 
       - name: Start Service
         run: pnpm run dev &

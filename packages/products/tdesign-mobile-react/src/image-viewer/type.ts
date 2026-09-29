@@ -4,7 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode, TElement } from '../common';
+import type { TransitionEvent } from 'react';
 
 export interface TdImageViewerProps {
   /**
@@ -13,10 +14,18 @@ export interface TdImageViewerProps {
    */
   closeBtn?: TNode;
   /**
+   * 支持自定义覆盖在图片预览最上方的内容
+   */
+  cover?: TElement;
+  /**
    * 是否显示删除操作，前提需要开启页码
    * @default false
    */
   deleteBtn?: TNode;
+  /**
+   * 自定义图片内容
+   */
+  image?: TNode<ImageSlotParams>;
   /**
    * 图片数组
    * @default []
@@ -33,10 +42,15 @@ export interface TdImageViewerProps {
    */
   defaultIndex?: number;
   /**
-   * 【开发中】最大放大比例
+   * 是否开启循环滚动
+   * @default true
+   */
+  loop?: boolean;
+  /**
+   * 图片最大放大比例
    * @default 3
    */
-  maxZoom?: Number;
+  maxZoom?: number;
   /**
    * 是否显示页码
    * @default false
@@ -55,7 +69,7 @@ export interface TdImageViewerProps {
   /**
    * 关闭时触发
    */
-  onClose?: (context: { trigger: 'overlay' | 'close-btn'; visible: boolean; index: number }) => void;
+  onClose?: (context: { trigger: ImageViewerCloseTrigger; visible: boolean; index: number }) => void;
   /**
    * 点击删除操作按钮时触发
    */
@@ -66,7 +80,21 @@ export interface TdImageViewerProps {
   onIndexChange?: (index: number, context: { trigger: 'prev' | 'next' | 'current' }) => void;
 }
 
+export interface ImageSlotParams {
+  src: string;
+  index?: number;
+  extra?: Record<string, any>;
+  className?: string;
+  style?: string;
+  onLoad?: (e: Event) => void;
+  onTransitionstart?: (e: TransitionEvent) => void;
+  onTransitionend?: (e: TransitionEvent) => void;
+}
+
 export interface ImageInfo {
   url: string;
   align: 'start' | 'center' | 'end';
+  extra?: Record<string, any>;
 }
+
+export type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn';

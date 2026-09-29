@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TElement } from '../common';
-import { MouseEvent, FocusEvent, FormEvent, CompositionEvent, TouchEvent } from 'react';
+import type { TNode, TElement } from '../common';
+import type { MouseEvent, FocusEvent, FormEvent, CompositionEvent, TouchEvent } from 'react';
 
 export interface TdInputProps {
   /**
@@ -143,7 +143,7 @@ export interface TdInputProps {
     value: InputValue,
     context?: {
       e?: FormEvent<HTMLInputElement> | MouseEvent<any> | CompositionEvent<HTMLDivElement>;
-      trigger: 'input' | 'initial' | 'clear';
+      trigger: 'input' | 'initial' | 'clear' | 'blur';
     },
   ) => void;
   /**
