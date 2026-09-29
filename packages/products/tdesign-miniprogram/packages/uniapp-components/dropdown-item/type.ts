@@ -69,7 +69,7 @@ export interface TdDropdownItemProps {
 
 export interface DropdownOption {
   label: string;
-  disabled: boolean;
+  disabled?: boolean;
   value: DropdownValue;
 }
 
