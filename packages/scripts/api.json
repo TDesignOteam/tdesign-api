@@ -56751,7 +56751,7 @@
       "create_time": "2021-09-21 07:23:31",
       "update_time": "2022-04-14 04:47:27",
       "event_output": null,
-      "custom_field_type": "Array<DropdownOption>【interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }】",
+      "custom_field_type": "Array<DropdownOption>【interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,

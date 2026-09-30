@@ -45,7 +45,7 @@ disabled | Boolean | false | \- | N
 keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N
-options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/dropdown-item/type.ts) | N
+options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/dropdown-item/type.ts) | N
 options-columns | String / Number | 1 | \- | N
 options-layout | String | columns | `deprecated` | N
 placement | String | left | options: left/right | N
