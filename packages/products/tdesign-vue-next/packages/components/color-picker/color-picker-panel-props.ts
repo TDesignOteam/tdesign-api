@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdColorPickerPanelProps } from '../color-picker/type';
+import { TdColorPickerPanelProps } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -40,6 +40,10 @@ export default {
   defaultRecentColors: {
     type: [Boolean, Array] as PropType<TdColorPickerPanelProps['defaultRecentColors']>,
     default: (): TdColorPickerPanelProps['defaultRecentColors'] => [] as TdColorPickerPanelProps['defaultRecentColors'],
+  },
+  /** 透传 SelectInputProps 筛选器输入框组件全部属性 */
+  selectInputProps: {
+    type: Object as PropType<TdColorPickerPanelProps['selectInputProps']>,
   },
   /** 是否展示颜色选择条右侧的颜色预览区域 */
   showPrimaryColorPreview: {

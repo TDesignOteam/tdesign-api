@@ -39667,6 +39667,45 @@
       ]
     },
     {
+      "id": 1790738147,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "ColorPickerPanel",
+      "field_category": 1,
+      "field_name": "selectInputProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 SelectInputProps 筛选器输入框组件全部属性",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-30 03:15:47",
+      "update_time": "2026-09-30 03:15:47",
+      "event_output": null,
+      "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 1748927833,
       "platform_framework": [
         "1",

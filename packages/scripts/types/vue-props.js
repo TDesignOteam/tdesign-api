@@ -272,12 +272,9 @@ function getImportPath(body, cmp, framework) {
   const isUniApp = framework === 'UniApp';
   const tdName = getTdCmpName(cmp);
   if (body.indexOf(tdName) !== -1) {
-    const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
+    // 子组件 props 文件与父组件 type.ts 同目录输出（见 getFolderPath），统一使用 './type'
     if (framework === 'Vue(PC)' || framework === 'VueNext(PC)' || framework === 'Vue(Mobile)' || isUniApp) {
-      r =
-        parentCmp && parentCmp !== cmp
-          ? `import ${isUniApp ? 'type ' : ''}{ ${tdName} } from '../${getFolderName(parentCmp)}/type';\n`
-          : `import ${isUniApp ? 'type ' : ''}{ ${tdName} } from './type';\n`;
+      r = `import ${isUniApp ? 'type ' : ''}{ ${tdName} } from './type';\n`;
     }
   }
   return r;
