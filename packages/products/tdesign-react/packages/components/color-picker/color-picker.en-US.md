@@ -44,6 +44,7 @@ enableMultipleGradient | Boolean | true | \- | N
 format | String | RGB | When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid。options: HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS | N
 recentColors | Boolean / Array | [] | used color recently。Typescript: `Array<string> \| boolean \| null` | N
 defaultRecentColors | Boolean / Array | [] | used color recently。uncontrolled property。Typescript: `Array<string> \| boolean \| null` | N
+selectInputProps | Object | - | Typescript: `SelectInputProps`，[SelectInput API Documents](./select-input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/color-picker/type.ts) | N
 showPrimaryColorPreview | Boolean | true | \- | N
 swatchColors | Array | - | swatch colors。Typescript: `Array<string> \| null \| undefined` | N
 value | String | - | color value | N
