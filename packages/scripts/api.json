@@ -126443,7 +126443,7 @@
       "create_time": "2024-04-10 03:29:22",
       "update_time": "2024-04-10 03:29:22",
       "event_output": null,
-      "custom_field_type": "Array<SwipeActionItem> | TNode【interface SwipeActionItem {text: string; className?: string; style?: Styles; sure?: Sure; onClick?: () => void; [key: string]: any }】【type Sure = string | TNode】",
+      "custom_field_type": "Array<SwipeActionItem> | TNode【interface SwipeActionItem {text: string; className?: string; style?: Styles; sure?: string | TNode; onClick?: () => void; [key: string]: any }】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -126617,7 +126617,8 @@
     {
       "id": 1712719889,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "SwipeCell",
       "field_category": 4,
@@ -126628,14 +126629,14 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content",
+      "field_desc_zh": "显示二次确认内容的函数。参数: `sure` 表示二次确认的具体内容，同 content; `onClick` 表示点击二次确认内容时执行的回调",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "(sure: string | TNode, onClick?: SwipeActionItem['onClick'])",
       "create_time": "2024-04-10 03:31:29",
       "update_time": "2024-04-10 03:31:29",
       "event_output": "void",
-      "custom_field_type": "string | TNode；如果设置了 `onClick`，则点击二次确认内容时，会执行此onClick方法。<br />[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swipe-cell/type.ts)。<br/>",
+      "custom_field_type": "string | TNode",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
@@ -126646,7 +126647,8 @@
       "support_default_value": 0,
       "field_category_text": "Functions",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String",
