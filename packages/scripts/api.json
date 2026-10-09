@@ -11313,6 +11313,39 @@
       ]
     },
     {
+      "id": 1791442123,
+      "platform_framework": [],
+      "component": "BaseTable",
+      "field_category": 1,
+      "field_name": "loadingMode",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "pull-refresh",
+      "field_enum": "pull-refresh/pagination",
+      "field_desc_zh": "数据加载模式",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 06:48:43",
+      "update_time": "2026-10-08 06:48:43",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2278,
       "platform_framework": [
         "1",
@@ -12440,6 +12473,39 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1791451726,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "BaseTable",
+      "field_category": 2,
+      "field_name": "pageChange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型",
+      "field_desc_en": "trigger on pagination changing",
+      "field_required": 0,
+      "event_input": "(pageInfo: PageInfo, newDataSource: Array<T>)",
+      "create_time": "2026-10-08 09:28:46",
+      "update_time": "2026-10-08 09:28:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -100733,7 +100799,6 @@
       "id": 2555,
       "platform_framework": [
         "2",
-        "8",
         "16"
       ],
       "component": "PrimaryTable",
@@ -100761,8 +100826,40 @@
       "field_category_text": "Events",
       "platform_framework_text": [
         "React(PC)",
-        "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1791453108,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 2,
+      "field_name": "columnChange",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "确认操作之前列配置发生变化时触发。`context.columns` 表示已选中的列；`context.currentColumn` 表示本次变化操作的列，值不存在表示全选操作；`context.type` 表示当前操作属于选中列或是取消列",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: PrimaryTableColumnChange<T>)【interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }】",
+      "create_time": "2026-10-08 09:51:48",
+      "update_time": "2026-10-08 09:51:48",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": []
     },
@@ -101471,6 +101568,45 @@
       "platform_framework_text": [
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Function"
+      ]
+    },
+    {
+      "id": 1791453287,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "PrimaryTableCol",
+      "field_category": 1,
+      "field_name": "cell",
+      "field_type": [
+        "1",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义单元格渲染，优先级高于 render。泛型 T 指表格数据类型",
+      "field_desc_en": "to render table cell",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:54:47",
+      "update_time": "2026-10-08 09:54:47",
+      "event_output": null,
+      "custom_field_type": "string | TNode<PrimaryTableCellParams<T>>【interface PrimaryTableCellParams<T> { row: T; rowIndex: number; col: PrimaryTableCol<T>; colIndex: number }】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String",
@@ -132552,7 +132688,44 @@
       ]
     },
     {
-      "id": 1690445477,
+      "id": 1791449404,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "attrs",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于透传筛选器属性到自定义组件 `component`，HTML 原生属性",
+      "field_desc_en": "html attributes of component",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 08:50:04",
+      "update_time": "2026-10-08 08:50:04",
+      "event_output": null,
+      "custom_field_type": "HTMLElementAttributes",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1791450170,
       "platform_framework": [
         "1",
         "2",
@@ -132570,8 +132743,8 @@
       "field_desc_en": "component class names",
       "field_required": 0,
       "event_input": "",
-      "create_time": "2023-07-27 08:11:17",
-      "update_time": "2023-07-27 08:11:17",
+      "create_time": "2026-10-08 09:02:50",
+      "update_time": "2026-10-08 09:02:50",
       "event_output": null,
       "custom_field_type": "ClassName",
       "syntactic_sugar": null,
@@ -132587,6 +132760,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1791450695,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "classNames",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传类名到自定义组件 `component`",
+      "field_desc_en": "component class names",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:11:35",
+      "update_time": "2026-10-08 09:11:35",
+      "event_output": null,
+      "custom_field_type": "ClassName",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -132634,6 +132844,43 @@
       ]
     },
     {
+      "id": 1791450203,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "component",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于自定义筛选器，只要保证自定义筛选器包含 value 属性 和 change 事件，即可像内置筛选器一样正常使用。示例：`component: DatePicker`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:03:23",
+      "update_time": "2026-10-08 09:03:23",
+      "event_output": null,
+      "custom_field_type": "ComponentType",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
       "id": 2730,
       "platform_framework": [
         "1",
@@ -132669,6 +132916,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1791450221,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "confirmEvents",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "哪些事件触发后会进行过滤搜索（确认按钮无需配置，会默认触发搜索）。输入框组件示例：`confirmEvents: ['onEnter']`",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:03:41",
+      "update_time": "2026-10-08 09:03:41",
+      "event_output": null,
+      "custom_field_type": "string[]",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -132718,6 +133002,45 @@
       ]
     },
     {
+      "id": 1791450253,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "label",
+      "field_type": [
+        "1",
+        "32"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于表头标题和过滤文本行中的列标题不一样的场景",
+      "field_desc_en": "filter column title text, used to be showed in filter row",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:04:13",
+      "update_time": "2026-10-08 09:04:13",
+      "event_output": null,
+      "custom_field_type": "string | TNode",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "Function"
+      ]
+    },
+    {
       "id": 2058,
       "platform_framework": [
         "1",
@@ -132753,6 +133076,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1791450264,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "list",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于配置当前筛选器可选值有哪些，仅当 `filter.type` 等于 `single` 或 `multiple` 时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:04:24",
+      "update_time": "2026-10-08 09:04:24",
+      "event_output": null,
+      "custom_field_type": "Array<OptionData>",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Array"
@@ -132839,6 +133199,43 @@
       ]
     },
     {
+      "id": 1791450277,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "popupProps",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传 Popup 组件全部属性到筛选器浮层",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:04:37",
+      "update_time": "2026-10-08 09:04:37",
+      "event_output": null,
+      "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2059,
       "platform_framework": [
         "1",
@@ -132874,6 +133271,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1791450303,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "props",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于透传筛选器属性到自定义组件 `component`，可以对筛选器进行任何原组件支持的属性配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:05:03",
+      "update_time": "2026-10-08 09:05:03",
+      "event_output": null,
+      "custom_field_type": "FilterProps【type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any }】【import { InputProps } from '@Input'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Object"
@@ -132917,6 +133351,39 @@
       "field_type_text": []
     },
     {
+      "id": 1791450320,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "resetValue",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "重置时设置的值，示例：'' 或 []",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:05:20",
+      "update_time": "2026-10-08 09:05:20",
+      "event_output": null,
+      "custom_field_type": "any",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 2061,
       "platform_framework": [
         "1",
@@ -132952,6 +133419,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1791450352,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "showConfirmAndReset",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否显示重置和确认。值为真，过滤事件（filter-change）会在确定时触发；值为假，则数据变化时会立即触发过滤事件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:05:52",
+      "update_time": "2026-10-08 09:05:52",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -132999,6 +133503,43 @@
       ]
     },
     {
+      "id": 1791450388,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "style",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "透传内联样式到自定义组件 `component`",
+      "field_desc_en": "styles of component",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:06:28",
+      "update_time": "2026-10-08 09:06:28",
+      "event_output": null,
+      "custom_field_type": "Styles",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
       "id": 2057,
       "platform_framework": [
         "1",
@@ -133034,6 +133575,43 @@
         "Vue(PC)",
         "React(PC)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1791450396,
+      "platform_framework": [
+        "8"
+      ],
+      "component": "TableColumnFilter",
+      "field_category": 1,
+      "field_name": "type",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用于设置筛选器类型：单选按钮筛选器、复选框筛选器、输入框筛选器。更多复杂组件，请更为使用 `component` 自定义任意组件",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-08 09:06:36",
+      "update_time": "2026-10-08 09:06:36",
+      "event_output": null,
+      "custom_field_type": "FilterType【type FilterType = 'input' | 'single' | 'multiple'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)"
       ],
       "field_type_text": [
         "String"
