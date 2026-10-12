@@ -163,8 +163,8 @@ catalogs:
       specifier: ^1.14.2
       version: 1.14.2
     squel:
-      specifier: ^6.3.1
-      version: 6.3.1
+      specifier: ^6.5.0
+      version: 6.5.0
     tdesign-icons-vue-next:
       specifier: ^0.4.11
       version: 0.4.11
@@ -241,7 +241,7 @@ importers:
         version: 1.14.2
       squel:
         specifier: 'catalog:'
-        version: 6.3.1
+        version: 6.5.0
     devDependencies:
       '@types/koa':
         specifier: 'catalog:'
@@ -2710,11 +2710,6 @@ packages:
   mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
 
-  nanoid@3.3.18:
-    resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.20:
     resolution: {integrity: sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -3082,10 +3077,6 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.28:
-    resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
-    engines: {node: ^10 || ^12 || >=14}
-
   postcss@8.5.29:
     resolution: {integrity: sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==}
     engines: {node: ^10 || ^12 || >=14}
@@ -3347,8 +3338,8 @@ packages:
   sql.js@1.14.2:
     resolution: {integrity: sha512-3ZGPovObMFrdw79zrUHbfdE/DLIsy8jdNdssmMSQuRAymedU6q84asPt0kgiqrdMYlPegDItiIMfmIXzZnYFcw==}
 
-  squel@6.3.1:
-    resolution: {integrity: sha512-mCs6KgSRAzJ0ZsvDkcO1sc0ujpZxxGzL8oY/4+uxDlK9tL5OGZKkGUp4KuZuJV7SCaI6IOkzAvmgAT9FT59N9w==}
+  squel@6.5.0:
+    resolution: {integrity: sha512-vd11z9dMQlasgp+eYfy2ja7/i15a4XP9zReK/YsJ1JhH6mBWDLQNLIJa+eky3aVoN9sjvx2hEmVwzDN6gNNoKw==}
     engines: {node: '>=18.0.0'}
 
   stable-hash-x@0.2.0:
@@ -4783,7 +4774,7 @@ snapshots:
       '@vue/shared': 3.5.43
       entities: 7.0.1
       estree-walker: 2.0.2
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@vue/compiler-dom@3.5.42':
     dependencies:
@@ -4816,8 +4807,8 @@ snapshots:
       '@vue/shared': 3.5.43
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.28
-      source-map-js: 1.2.1
+      postcss: 8.5.29
+      source-map-js: 1.2.2
 
   '@vue/compiler-ssr@3.5.42':
     dependencies:
@@ -6433,8 +6424,6 @@ snapshots:
 
   mute-stream@0.0.8: {}
 
-  nanoid@3.3.18: {}
-
   nanoid@3.3.20: {}
 
   napi-postinstall@0.3.4: {}
@@ -6813,12 +6802,6 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.28:
-    dependencies:
-      nanoid: 3.3.18
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
   postcss@8.5.29:
     dependencies:
       nanoid: 3.3.20
@@ -7090,7 +7073,7 @@ snapshots:
 
   sql.js@1.14.2: {}
 
-  squel@6.3.1: {}
+  squel@6.5.0: {}
 
   stable-hash-x@0.2.0: {}
 

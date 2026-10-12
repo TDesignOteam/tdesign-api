@@ -58,7 +58,7 @@ catalog:
   qs: "^6.15.3"
   shelljs: "^0.10.0"
   sql.js: "^1.14.2"
-  squel: "^6.3.1"
+  squel: "^6.5.0"
   tdesign-icons-vue-next: "^0.4.11"
   tdesign-vue-next: "^1.20.9"
   ts-node: "^10.9.2"
