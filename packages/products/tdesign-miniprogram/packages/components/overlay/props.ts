@@ -31,10 +31,9 @@ const props: TdOverlayProps = {
     type: Boolean,
     value: false,
   },
-  /** 遮罩层级 */
+  /** 遮罩层级，默认为 11000 */
   zIndex: {
     type: Number,
-    value: 11000,
   },
 };
 

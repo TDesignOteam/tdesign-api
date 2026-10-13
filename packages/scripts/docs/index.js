@@ -15,11 +15,9 @@ import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 let currentFramework = '';
 
-// 组件 Form 的 API 为 Form 和 FormItem 的组合
-function combineApi(allApi, component) {
-  const r = { ...allApi };
-  // 所有技术栈的 md 文档父子组件都合并输出（小程序和 UniApp 仅 type.ts 和 props.ts 独立输出）
-  const map = getApiComponentMapByFrameWork(
+// 获取当前框架下 md 文档需要合并输出的父子组件关系
+function getComponentApiMdMap() {
+  return getApiComponentMapByFrameWork(
     currentFramework === 'Miniprogram' || currentFramework === 'UniApp'
       ? Object.assign(
           {},
@@ -33,13 +31,21 @@ function combineApi(allApi, component) {
         : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
+}
+
+// 组件 Form 的 API 为 Form 和 FormItem 的组合
+function combineApi(allApi, component) {
+  const r = { ...allApi };
+  // 所有技术栈的 md 文档父子组件都合并输出（小程序和 UniApp 仅 type.ts 和 props.ts 独立输出）
+  const map = getComponentApiMdMap();
   Object.keys(map).forEach((cmp) => {
     if (!map[cmp]) return;
     const cmpApi = map[cmp]
       .map((item) => r[item])
       .filter((v) => !!v)
       .join('\n\n');
-    if (cmpApi && (!component || (component && cmp === component))) {
+    // component 为父组件或任意子组件时，都需要合并输出
+    if (cmpApi && (!component || (component && map[cmp].includes(component)))) {
       map[cmp].forEach((item) => {
         delete r[item];
       });
@@ -97,6 +103,33 @@ function getDocFileName(cmp, framework) {
   return kebabCaseComponent(cmp);
 }
 
+// 合并输出的子组件，其独立的 markdown 文档需要删除，避免与父组件文档重复
+function removeChildComponentDocs(api, framework, current, isVscode) {
+  if (isVscode) return;
+  const map = getComponentApiMdMap();
+  Object.keys(map).forEach((parentCmp) => {
+    if (!map[parentCmp] || !api[parentCmp]) return;
+    map[parentCmp].forEach((childCmp) => {
+      if (childCmp === parentCmp) return;
+      const childFolder = path.resolve(
+        getComponentBasePath(childCmp, current.apiBasePath, framework),
+        kebabCaseComponent(childCmp),
+      );
+      [`${getDocFileName(childCmp, framework)}.md`, `${getDocFileName(childCmp, framework)}.en-US.md`].forEach(
+        (fileName) => {
+          const file = path.resolve(childFolder, fileName);
+          if (fs.existsSync(file)) {
+            fs.unlink(file, (err) => {
+              if (err) return console.error(err);
+              console.log(chalk.yellow(`remove useless docs: ${file} has been removed.`));
+            });
+          }
+        },
+      );
+    });
+  });
+}
+
 // 根据组件获取 API 类型数据
 function getDocsByComponent(baseData, framework, component) {
   const current = FRAMEWORK_MAP[framework];
@@ -117,6 +150,7 @@ function generateDocs(baseData, framework, extra) {
   }
   let api = current.getDocs(baseData, current, framework, globalConfigData, extra && extra.language);
   api = combineApi(api, extra.component);
+  removeChildComponentDocs(api, framework, current, isVscode);
   Object.keys(api).forEach((cmp) => {
     const folder = isVscode
       ? current.vscodePath

@@ -31,8 +31,7 @@ export interface TdOverlayProps {
    */
   visible?: boolean;
   /**
-   * 遮罩的层级
-   * @default 1000
+   * 遮罩的层级，默认为 1000
    */
   zIndex?: number;
   /**

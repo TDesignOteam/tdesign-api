@@ -154,7 +154,7 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   align?: 'left' | 'right' | 'center';
   /**
-   * 自定义单元格渲染。默认使用 `colKey` 的值作为自定义当前列的插槽名称。<br/>如果 `cell` 值类型为 Function 表示以函数形式渲染单元格。值类型为 string 表示使用插槽渲染，插槽名称为 cell 的值。优先级高于 `render`。泛型 T 指表格数据类型
+   * 自定义单元格渲染。默认使用 `colKey` 的值作为自定义当前列的插槽名称。<br/>如果 `cell` 值类型为 Function 表示以函数形式渲染单元格。优先级高于 `render`。泛型 T 指表格数据类型
    */
   cell?: string | ((params: BaseTableCellParams<T>) => string);
   /**
@@ -181,7 +181,9 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
   width?: string | number;
 }
 
-export type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan;
+export type TableRowspanAndColspanFunc<T extends TableRowData = TableRowData> = (
+  params: BaseTableCellParams<T>,
+) => RowspanColspan;
 
 export interface RowspanColspan {
   colspan?: number;
@@ -193,16 +195,18 @@ export interface TableRowData {
   children?: TableRowData[];
 }
 
-export interface BaseTableCellParams<T> {
+export interface BaseTableCellParams<T extends TableRowData = TableRowData> {
   row: T;
   rowIndex: number;
   col: BaseTableCol<T>;
   colIndex: number;
 }
 
-export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName);
+export type TableColumnClassName<T extends TableRowData = TableRowData> =
+  | ClassName
+  | ((context: CellData<T>) => ClassName);
 
-export interface CellData<T> extends BaseTableCellParams<T> {
+export interface CellData<T extends TableRowData = TableRowData> extends BaseTableCellParams<T> {
   type: 'th' | 'td';
 }
 

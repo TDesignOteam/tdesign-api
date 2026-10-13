@@ -277,6 +277,10 @@ export const TYPES_COMBINE_MAP = {
   Split:{
     list: ['Split', 'SplitPanel'],
   },
+  ColorPicker: {
+    list: ['ColorPicker', 'ColorPickerPanel'],
+    excludes: ['Miniprogram', 'UniApp'],
+  },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
     excludes: ['Miniprogram', 'UniApp'],

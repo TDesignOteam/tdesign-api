@@ -253,7 +253,8 @@ function formatApi(api, framework, plugin) {
     framework === 'UniApp' &&
     api.field_default_value === 'undefined' &&
     api.field_category_text === 'Props' &&
-    finalType
+    finalType &&
+    !/(^|[|\s])null(\s*[|]|$)/.test(finalType)
   ) {
     finalType = `${finalType} | null`;
   }

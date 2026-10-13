@@ -6,7 +6,7 @@
 
 import { ButtonProps } from '../button';
 import { OverlayProps } from '../overlay';
-import type { TNode } from '../common';
+import type { TNode, Styles } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -88,7 +88,7 @@ export interface TdDialogProps {
    */
   width?: string | number;
   /**
-   * 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500
+   * 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: number;
   /**
@@ -119,6 +119,10 @@ export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
    * @default ''
    */
   className?: string;
+  /**
+   * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
+   */
+  style?: string | Styles;
 }
 
 export interface DialogInstance {

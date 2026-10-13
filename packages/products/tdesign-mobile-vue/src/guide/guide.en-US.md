@@ -7,6 +7,7 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 backButtonProps | Object | - | Typescript: `ButtonProps` | N
+counter | Slot / Function | - | Typescript: `TNode<{ current: number; total: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 current | Number | - | `v-model` and `v-model:current` is supported | N
 defaultCurrent | Number | - | uncontrolled property | N
 finishButtonProps | Object | - | Typescript: `ButtonProps` | N

@@ -30,10 +30,9 @@ export default {
   },
   /** 是否展示 */
   visible: Boolean,
-  /** 遮罩的层级 */
+  /** 遮罩的层级，默认为 1000 */
   zIndex: {
     type: Number,
-    default: 1000,
   },
   /** 遮罩层的点击事件 */
   onClick: Function as PropType<TdOverlayProps['onClick']>,
