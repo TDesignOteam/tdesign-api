@@ -11,7 +11,7 @@ custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场�
 button-props | Object | - | 透传至 Button 组件。TS 类型：`ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
 draggable | String / Boolean | false | 是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动。TS 类型：`boolean \| FabDirectionEnum ` `type FabDirectionEnum = 'all' \| 'vertical' \| 'horizontal'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
 icon | String / Object | - | 图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon` 组件 | N
-magnet | String / Boolean | - | `1.12.3`。是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附。TS 类型：`boolean \| MagnetEnum ` `type MagnetEnum = 'left' \| 'right'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
+magnet | String / Boolean | - | `1.12.3`。是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附。TS 类型：`boolean \| MagnetEnum ` `type MagnetEnum = 'left' \| 'right'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/fab/type.ts) | N
 text | String | - | 文本内容 | N
 using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 x-bounds | Array | - | `1.12.3`。设置水平方向边界限制，示例：[16, 16] 或 ['16px', 16]。TS 类型：`Array<string \| number>` | N
