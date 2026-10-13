@@ -55,7 +55,7 @@ catalog:
   postcss: "^8.5.29"
   prettier: "^3.9.10"
   prismjs: "^1.30.0"
-  qs: "^6.15.3"
+  qs: "^6.16.0"
   shelljs: "^0.10.0"
   sql.js: "^1.14.2"
   squel: "^6.5.0"
