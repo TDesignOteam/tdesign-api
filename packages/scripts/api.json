@@ -40118,7 +40118,7 @@
       "create_time": "2021-09-06 07:44:09",
       "update_time": "2021-09-06 07:48:30",
       "event_output": null,
-      "custom_field_type": "string | AvatarProps | TNode【import { AvatarProps } from '@Avatar'】",
+      "custom_field_type": "String | AvatarProps | TNode【import { AvatarProps } from '@Avatar'】",
       "syntactic_sugar": null,
       "readonly": 1,
       "html_attribute": 0,
