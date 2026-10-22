@@ -8,6 +8,7 @@ export const treeDefaultProps: TdTreeProps = {
   activable: false,
   activeMultiple: false,
   allowFoldNodeOnFilter: false,
+  checkAllScope: 'all',
   checkStrictly: false,
   checkable: false,
   data: [],
