@@ -147736,6 +147736,45 @@
       ]
     },
     {
+      "id": 1792659018,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "checkAllAffectedBy",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "all",
+      "field_enum": "all/onlyEnabled",
+      "field_desc_zh": "参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效",
+      "field_desc_en": "Child nodes that affect the checked and indeterminate states of parent nodes. all includes every child, including disabled children; onlyEnabled includes only enabled children. With onlyEnabled, no checked or indeterminate state is derived from children when all children are disabled. This option only controls parent state calculation and does not change the checked states of disabled children. It has no effect when checkStrictly is true",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-22 16:50:18",
+      "update_time": "2026-10-22 16:59:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 526,
       "platform_framework": [
         "1",
