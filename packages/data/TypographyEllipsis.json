@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1706637229,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Props",
+    "field_name": "collapsible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "展开后是否可以重新收起",
+    "field_desc_en": "collapsible after expanding"
+  },
+  {
+    "id": 1706637150,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Props",
+    "field_name": "expandable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否可展开",
+    "field_desc_en": "expandable"
+  },
+  {
+    "id": 1706637000,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Props",
+    "field_name": "row",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "省略配置默认展示行数",
+    "field_desc_en": "default row number of ellipsis "
+  },
+  {
+    "id": 1706637830,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义省略触发元素，一般用于自定义折叠图标",
+    "field_desc_en": "custom element configuration for ellipsis and collapse icon",
+    "custom_field_type": "TNode<{ expanded: boolean }>"
+  },
+  {
+    "id": 1706637302,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Props",
+    "field_name": "tooltipProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "光标在省略图标上出现的tooltip的配置",
+    "field_desc_en": "Configuration of the tooltip that appears on the ellipsis icon when the cursor is over it",
+    "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】"
+  },
+  {
+    "id": 1706637464,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyEllipsis",
+    "field_category": "Events",
+    "field_name": "expand",
+    "field_type": [],
+    "field_desc_zh": "点击省略按钮的回调",
+    "event_input": "(expanded:boolean)"
+  }
+]

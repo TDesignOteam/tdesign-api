@@ -65,7 +65,7 @@ function getComment(api) {
   let defaultValue = api.field_default_value;
   let dft = '';
   // 字符串类型，默认为空字符串
-  const defaultEmptyString = api.field_type_text.join() === 'String' && !defaultValue && !api.field_enum;
+  const defaultEmptyString = api.field_type.join() === 'String' && !defaultValue && !api.field_enum;
   if (defaultEmptyString) {
     defaultValue = "''";
   }
@@ -95,7 +95,6 @@ function formatOneType(api, oneType) {
   let r = type;
   if (type === 'string' && api.field_enum) {
     r = api.field_enum
-      .split('/')
       .map((val) => `'${val.trim()}'`.replace(/''/g, "'"))
       .join(' | ');
   }
@@ -105,7 +104,7 @@ function formatOneType(api, oneType) {
 function getPropsApiType(api, framework) {
   let type = '';
   const csType = api.custom_field_type;
-  const baseType = api.field_type_text;
+  const baseType = api.field_type;
   const hasTNodes = baseType.includes('TNode');
   const exports = [];
   if (hasTNodes) {
@@ -154,7 +153,7 @@ function getEventsApiType(api) {
     const { baseName: rawBaseName, exports, imports } = formatTsTypeDesc(api.event_input);
     // 容错处理：event_input 中可能误用分号分隔参数，需替换为逗号
     const baseName = rawBaseName ? rawBaseName.replace(/;/g, ',').trim() : rawBaseName;
-    if (api.field_category_text === 'Functions' && isCompleteFunctionType(baseName)) {
+    if (api.field_category === 'Functions' && isCompleteFunctionType(baseName)) {
       r = { type: baseName, exports, imports };
     } else {
       r = {
@@ -164,7 +163,7 @@ function getEventsApiType(api) {
       };
     }
   }
-  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.type)) {
+  if (api.field_category === 'Functions' && isCompleteFunctionType(r.type)) {
     return r;
   }
   if (api.event_output) {
@@ -200,7 +199,7 @@ function formatType(api, framework) {
   if (framework !== 'Miniprogram') {
     map.Events = getEventsApiType;
   }
-  const func = map[api.field_category_text];
+  const func = map[api.field_category];
   if (typeof func === 'function') {
     return func(api, framework);
   }
@@ -210,7 +209,7 @@ function formatType(api, framework) {
 // 获取插件参数
 function getPluginDesc(api, type) {
   if (!api.field_name || api.field_name === '-') return;
-  const t = type || api.field_type_text.join(' | ').toLocaleLowerCase();
+  const t = type || api.field_type.join(' | ').toLocaleLowerCase();
   // return [comment, indent, name, required, type];
   return ['', '', api.field_name, api.field_required ? '' : '?', type || t];
 }
@@ -220,7 +219,7 @@ function formatApi(api, framework, plugin) {
     Props: api.field_name,
     Events: getEventName(api.field_name),
     Functions: api.field_name,
-  }[api.field_category_text];
+  }[api.field_category];
   if (!name) return;
   let exportsApi = [];
   let importsApi = [];
@@ -246,13 +245,13 @@ function formatApi(api, framework, plugin) {
   // UniApp 中默认值为 undefined 的 Props 属性，TS 类型需加上 | null
   let finalType = type;
   // Functions 若填写了完整 TS 类型（如 ScrollToFn 重载），优先用它作为方法类型
-  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.baseName)) {
+  if (api.field_category === 'Functions' && isCompleteFunctionType(r.baseName)) {
     finalType = r.baseName.trim();
   }
   if (
     framework === 'UniApp' &&
     api.field_default_value === 'undefined' &&
-    api.field_category_text === 'Props' &&
+    api.field_category === 'Props' &&
     finalType &&
     !/(^|[|\s])null(\s*[|]|$)/.test(finalType)
   ) {
@@ -303,7 +302,7 @@ function formatTsTypeDesc(str) {
 
 function initApi(apiData) {
   const api = { ...apiData };
-  if (api.field_category_text === 'Events') {
+  if (api.field_category === 'Events') {
     delete api.field_default_value;
   }
   return api;
@@ -349,7 +348,7 @@ function replaceInputEvent(str, newApi) {
   let newStr = str.replace(/InputEvent/g, 'FormEvent');
   const reg = new RegExp(`(${REACT_EVENTS.concat('ImageEvent').join('|')})`, 'g');
   // 处理字段 trigger_elements，可能存在多个事件替换的情况
-  const triggerElements = newApi.trigger_elements.split('/');
+  const triggerElements = (newApi.trigger_elements || '').split('/');
   newStr = newStr.replace(reg, (val) => {
     const r = triggerElements.find((el) => el && el.indexOf(val) !== -1);
     return r || `${val}<${['FormEvent', 'InputEvent'].includes(val) ? 'HTMLInputElement' : 'HTMLDivElement'}>`;
@@ -473,7 +472,7 @@ function getMiniprogramOriginalApi(miniprogram) {
     const r = formatApi(apiData, framework) || {};
     if (r.desc instanceof Array && r.desc.length) {
       const [comment, indent, name, required, type] = r.desc;
-      const rType = getMiniprogramType(apiData.field_type_text, type);
+      const rType = getMiniprogramType(apiData.field_type, type);
       const apiContext = [formatComment(comment), indent, name, required, ': ', rType].filter((v) => !!v).join('');
       apiArr.push(`${apiContext};`);
     }
@@ -514,15 +513,15 @@ function getTypeScriptDesc(componentMap, framework) {
       // HTML 原生属性不输出到 TS 文件
       if (api.html_attribute) return;
       // 特殊 API 和 普通 API 分开处理：'Return', 'Extends', '<T>'等属于特殊 API
-      if (['Return', 'Extends', '<T>'].includes(api.field_category_text)) {
+      if (['Return', 'Extends', '<T>'].includes(api.field_category)) {
         const r = formatTsTypeDesc(api.field_name);
         exports = exports.concat(r.exports);
         imports = imports.concat(r.imports);
-        if (api.field_category_text === 'Return') {
+        if (api.field_category === 'Return') {
           returnName = r.baseName;
-        } else if (api.field_category_text === 'Extends') {
+        } else if (api.field_category === 'Extends') {
           extendApis.push(r.baseName);
-        } else if (api.field_category_text === '<T>') {
+        } else if (api.field_category === '<T>') {
           tApis.push(r.baseName);
         }
       } else {
@@ -536,7 +535,7 @@ function getTypeScriptDesc(componentMap, framework) {
           // 小程序 TS 类型特殊，需单独处理
           const rType =
             framework === 'Miniprogram' && !COMPONENTS_MAP[api.component].type
-              ? getMiniprogramType(api.field_type_text, type, api.field_required)
+              ? getMiniprogramType(api.field_type, type, api.field_required)
               : type;
           const apiContext = [formatComment(comment, plugin), indent, name, required, ': ', rType]
             .filter((v) => !!v)
@@ -544,7 +543,7 @@ function getTypeScriptDesc(componentMap, framework) {
           // 小程序中，纯 TNode 类型，表示没有 props，仅需支持插槽
           if (type) {
             // API 是否为组件实例方法
-            const isInstanceFuncs = isComponentFunction(cmp, api.field_category_text);
+            const isInstanceFuncs = isComponentFunction(cmp, api.field_category);
             if (isInstanceFuncs) {
               instanceFunctions.push(`${apiContext};`);
             } else {
@@ -552,7 +551,7 @@ function getTypeScriptDesc(componentMap, framework) {
             }
           }
           // 添加非受控属性 ts 定义
-          if (api.syntactic_sugar && api.field_category_text !== 'Events') {
+          if (api.syntactic_sugar && api.field_category !== 'Events') {
             const ds = [
               formatComment(comment, plugin, 'uncontrol'),
               indent,
@@ -569,7 +568,7 @@ function getTypeScriptDesc(componentMap, framework) {
           if (
             ['VueNext(PC)', 'Vue(Mobile)'].includes(framework) &&
             api.syntactic_sugar === 'v-model' &&
-            api.field_category_text !== 'Events'
+            api.field_category !== 'Events'
           ) {
             const ds = [formatComment(comment, plugin), indent, 'modelValue', required, ': ', rType]
               .filter((v) => !!v)

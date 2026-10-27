@@ -1,0 +1,1316 @@
+[
+  {
+    "id": 1694262363,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "activeRowKeys",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "高亮行，支持鼠标键盘操作(Shift)连续高亮行，可用于处理行选中等批量操作，模拟操作系统区域选择行为",
+    "field_desc_en": "keys of highlight rows, used to mock area selection behavior, just like macOS or windows area selection",
+    "custom_field_type": "Array<string | number>",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 1694267086,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "activeRowType",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "默认不会高亮点击行，`activeRowType=single` 表示鼠标点击仅允许同时高亮一行，Shift 键盘操作加鼠标操作依然可以高亮多行，因为这属于明显的区域选择行为。`activeRowType= multiple ` 表示允许鼠标点击同时高亮多行",
+    "field_desc_en": "make nodes can be highlight on clicked",
+    "custom_field_type": "'single' | 'multiple'"
+  },
+  {
+    "id": 2646,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "allowResizeColumnWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否允许调整列宽。请更为使用 `resizable`",
+    "field_desc_en": "allow to resize column width",
+    "deprecated": true
+  },
+  {
+    "id": 3260,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "超出省略等所有浮层元素统一绑定到 `attach`，可根据实际情况调整挂载元素",
+    "field_desc_en": "elements with popup would be attached to `attach`",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 325,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示表格边框",
+    "field_desc_en": "show table bordered",
+    "test_description": "{\"PC\":{\"className\":\"t-table--bordered\",\"wrapper\": \"getNormalTableMount\" }}"
+  },
+  {
+    "id": 2526,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "bottomContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "表格底部内容，可以用于自定义列设置等",
+    "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}"
+  },
+  {
+    "id": 2911,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "cellEmptyContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "单元格数据为空时呈现的内容",
+    "custom_field_type": "string | TNode<BaseTableCellParams<T>>",
+    "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}"
+  },
+  {
+    "id": 320,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "columns",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "列配置，泛型 T 指表格数据类型",
+    "field_desc_en": "table column configs",
+    "custom_field_type": "Array<BaseTableCol<T>>"
+  },
+  {
+    "id": 319,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "数据源，泛型 T 指表格数据类型",
+    "field_desc_en": "table data",
+    "custom_field_type": "Array<T>"
+  },
+  {
+    "id": 2081,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "disableDataPage",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用本地数据分页。当 `data` 数据长度超过分页大小时，会自动进行本地数据分页。如果 `disableDataPage` 设置为 true，则无论何时，都不会进行本地数据分页"
+  },
+  {
+    "id": 1694319326,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "disableSpaceInactiveRow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "默认重复按下 Space 键可取消当前行高亮，是否禁用取消",
+    "field_desc_en": "can not set row to be inactive with Space keydown"
+  },
+  {
+    "id": 328,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "空表格呈现样式，支持全局配置 `GlobalConfigProvider`",
+    "field_desc_en": "empty text or empty element",
+    "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getEmptyDataTableMount\" }}"
+  },
+  {
+    "id": 2054,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "firstFullRow",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "首行内容，横跨所有列",
+    "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__first-full-row\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}"
+  },
+  {
+    "id": 2277,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "fixedRows",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行",
+    "custom_field_type": "Array<number>",
+    "version": {
+      "Vue(Mobile)": "1.9.3",
+      "React(Mobile)": "0.16.0"
+    },
+    "test_description": "{\"PC\":{ \"dom\": { \"[3, 1]\": { \".t-table__row--fixed-top\": 3, \".t-table__row--fixed-bottom\": 1 } }, \"wrapper\":\"getNormalTableMount\" }}"
+  },
+  {
+    "id": 2348,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "footData",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "表尾数据源，泛型 T 指表格数据类型",
+    "field_desc_en": "table foot data",
+    "custom_field_type": "Array<T>",
+    "test_description": "{\"PC\":{\"dom\":[\"tfoot.t-table__footer\", {\"tfoot > tr\":2}], \"wrapper\":\"getNormalTableMount\"}}"
+  },
+  {
+    "id": 2633,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "footerAffixProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "请更为使用 `footerAffixedBottom`。表尾吸底基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix props",
+    "custom_field_type": "Partial<AffixProps>",
+    "deprecated": true
+  },
+  {
+    "id": 2632,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "footerAffixedBottom",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "表尾吸底。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，则表示相对于整个窗口吸底。如果表格滚动的父元素不是整个窗口，请通过 `footerAffixedBottom.container` 调整固钉的吸顶范围。基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix foot to viewport bottom",
+    "custom_field_type": "boolean | Partial<AffixProps>"
+  },
+  {
+    "id": 2878,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "footerSummary",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "表尾总结行",
+    "field_desc_en": "footer summary content",
+    "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__footer\", \".t-table__row-full-element\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}"
+  },
+  {
+    "id": 2382,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "headerAffixProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "请更为使用 `headerAffixedTop`。表头吸顶基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix props",
+    "custom_field_type": "Partial<AffixProps>【import { AffixProps } from '@Affix'】",
+    "deprecated": true
+  },
+  {
+    "id": 2381,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "headerAffixedTop",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "表头吸顶。使用该功能，需要非常注意表格是相对于哪一个父元素进行滚动。值为 `true`，表示相对于整个窗口吸顶。如果表格滚动的父元素不是整个窗口，请通过 `headerAffixedTop.container` 调整吸顶的位置。基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix header to viewport top",
+    "custom_field_type": "boolean | Partial<AffixProps>"
+  },
+  {
+    "id": 329,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`",
+    "field_desc_en": "table height"
+  },
+  {
+    "id": 2761,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "horizontalScrollAffixedBottom",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "滚动条吸底。基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix props",
+    "custom_field_type": "boolean | Partial<AffixProps>"
+  },
+  {
+    "id": 326,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "hover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示鼠标悬浮状态",
+    "field_desc_en": "show hover style",
+    "test_description": "{\"PC\":{\"className\":\"t-table--hoverable\", \"wrapper\": \"getNormalTableMount\"}}"
+  },
+  {
+    "id": 1694314241,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "keyboardRowHover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "键盘操作行显示悬浮效果，一般用于键盘操作行选中、行展开、行高亮等功能",
+    "field_desc_en": "make table row to be hover by keydown ArrowUp/ArrowDown"
+  },
+  {
+    "id": 2056,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "lastFullRow",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "尾行内容，横跨所有列",
+    "test_description": "{\"PC\":{\"tnode\":{ \"dom\":[\".t-table__last-full-row\", \"td[colspan=\\\"3\\\"]\"] }, \"wrapper\":\"getNormalTableMount\"}}"
+  },
+  {
+    "id": 1690078441,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "lazyLoad",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否启用整个表格元素的懒加载，当页面滚动到可视区域后再渲染表格。注意和表格内部行滚动懒加载的区别，内部行滚动无论表格是否在可视区域都会默认渲染第一屏的行元素",
+    "field_desc_en": "load table content when it entering the visible area, all elements in table are not rendered before it become visible"
+  },
+  {
+    "id": 332,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态",
+    "field_desc_en": "loading state table",
+    "test_description": "{\"PC\": { \"tnode\": { \"dom\": [\".t-loading\"] }, \"dom\": \".t-loading\", \"wrapper\":\"getNormalTableMount\" }}"
+  },
+  {
+    "id": 1779355008,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "loadingMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "pull-refresh",
+    "field_enum": [
+      "pull-refresh",
+      "pagination"
+    ],
+    "field_desc_zh": "数据加载模式",
+    "field_desc_en": "Data Loading Mode",
+    "version": {
+      "Vue(Mobile)": "1.6.2",
+      "React(Mobile)": "0.23.2"
+    }
+  },
+  {
+    "id": 2278,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "loadingProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传加载组件全部属性",
+    "custom_field_type": "Partial<LoadingProps>【import { LoadingProps } from '@Loading'】"
+  },
+  {
+    "id": 1712663213,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "loadingProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传加载组件全部属性",
+    "custom_field_type": "Partial<LoadingProps>【import { LoadingProps } from '@Loading'】"
+  },
+  {
+    "id": 1694516888,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "locale",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置",
+    "field_desc_en": "table locale config",
+    "custom_field_type": "TableConfig【import { TableConfig } from '@ConfigProvider'】"
+  },
+  {
+    "id": 585,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "maxHeight",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+    "field_desc_en": "table max height"
+  },
+  {
+    "id": 331,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "pagination",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "分页配置，值为空则不显示。具体 API 参考分页组件。当 `data` 数据长度超过分页大小时，会自动对本地数据 `data` 进行排序，如果不希望对于 `data` 进行排序，可以设置 `disableDataPage = true`",
+    "field_desc_en": "you can use all props of pagination component with paginationProps",
+    "custom_field_type": "PaginationProps【import { PaginationProps, PageInfo } from '@Pagination'】"
+  },
+  {
+    "id": 1779870947,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "pagination",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "分页配置，值为空则不显示。具体 API 参考分页组件。当 `data` 数据长度超过分页大小时，会自动对本地数据 `data` 进行排序，如果不希望对于 `data` 进行排序，可以设置 `disableDataPage = true`",
+    "field_desc_en": "you can use all props of pagination component with paginationProps",
+    "custom_field_type": "PaginationProps【interface PaginationProps { current?: number; defaultCurrent?: number; disabled?: boolean; foldedMaxPageBtn?: number; maxPageBtn?: number; pageEllipsisMode?: 'mid' | 'both-ends'; pageSize?: number; defaultPageSize?: number; pageSizeOptions?: Array<number | { label: string; value: number }>; showFirstAndLastPageBtn?: boolean; showJumper?: boolean; showPageNumber?: boolean; showPageSize?: boolean; showPreviousAndNextBtn?: boolean; size?: 'small' | 'medium'; theme?: 'default' | 'simple'; total?: number; totalContent?: TNode; onChange?: (pageInfo: PageInfo) => void; onCurrentChange?: (current: number, pageInfo: PageInfo) => void; onPageSizeChange?: (pageSize: number, pageInfo: PageInfo) => void; }】【interface PageInfo { current: number; previous: number; pageSize: number }】",
+    "version": {
+      "Vue(Mobile)": "1.6.2",
+      "React(Mobile)": "0.23.2"
+    }
+  },
+  {
+    "id": 2762,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "paginationAffixedBottom",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "分页吸底。基于 Affix 组件开发，透传全部 Affix 组件属性",
+    "field_desc_en": "affix props",
+    "custom_field_type": "boolean | Partial<AffixProps>"
+  },
+  {
+    "id": 2731,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "resizable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许调整列宽，设置 `tableLayout=fixed` 效果更友好，此时不允许通过 CSS 设置 `table`元素宽度，也不允许设置 `tableContentWidth`。一般不建议在列宽调整场景使用 `tableLayout: auto`。如果想要配置宽度可调整的最小值和最大值，请使用 `column.resize`，示例：`columns: [{ resize: { minWidth: 120, maxWidth: 300 } }]`。<br/> 默认规则：因列宽超出存在横向滚动条时，列宽调整仅影响当前列宽和总列宽；表格列较少没有横向滚动条时，列宽调整表现为自身宽度和相邻宽度变化",
+    "field_desc_en": "allow to resize column width, set `tableLayout=fixed` would be better",
+    "test_description": "{\"PC\":{\"className\":\"t-table--column-resizable\", \"wrapper\":\"getNormalTableMount\" }}"
+  },
+  {
+    "id": 2347,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "rowAttributes",
+    "field_type": [
+      "Object",
+      "Array",
+      "Function"
+    ],
+    "field_desc_zh": "HTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]",
+    "field_desc_en": "`tr` attributes",
+    "custom_field_type": "TableRowAttributes<T>【type TableRowAttributes<T> = HTMLElementAttributes | ((params: { row: T; rowIndex: number; type: 'body' | 'foot' }) => HTMLElementAttributes) | Array<TableRowAttributes<T>>】",
+    "version": {
+      "Vue(Mobile)": "1.9.3",
+      "React(Mobile)": "0.17.0"
+    },
+    "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getNormalTableMount\",\n        \"attribute\": [\n            {\n                \"value\": \"{ 'data-level': 'level-1' }\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"[{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"[() => [{ 'data-level': 'level-1' }, { 'data-name': 'tdesign' }]]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"attribute\": {\n                            \"data-level\": \"level-1\",\n                            \"data-name\": \"tdesign\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+  },
+  {
+    "id": 330,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "rowClassName",
+    "field_type": [
+      "String",
+      "Object",
+      "Array",
+      "Function"
+    ],
+    "field_desc_zh": "行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素",
+    "field_desc_en": "table `th` classname",
+    "custom_field_type": "ClassName | ((params: RowClassNameParams<T>) => ClassName)【interface RowClassNameParams<T> { row: T; rowIndex: number; rowKey?: string; type?: 'body' | 'foot' }】",
+    "version": {
+      "Vue(Mobile)": "1.9.3",
+      "React(Mobile)": "0.17.0"
+    },
+    "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getNormalTableMount\",\n        \"className\": [\n            {\n                \"value\": \"'tdesign-class'\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"{ 'tdesign-class': true, 'tdesign-class-next': false }\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"['tdesign-class-default', { 'tdesign-class': true, 'tdesign-class-next': false }]\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class-default\": true,\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            },\n            {\n                \"value\": \"() => ({ 'tdesign-class': true, 'tdesign-class-next': false })\",\n                \"expect\": [\n                    {\n                        \"dom\": \"tbody > tr\",\n                        \"className\": {\n                            \"tdesign-class\": true,\n                            \"tdesign-class-next\": false\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+  },
+  {
+    "id": 321,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "rowKey",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'id'",
+    "field_desc_zh": "唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法",
+    "field_desc_en": "unique key for each row data",
+    "field_required": true
+  },
+  {
+    "id": 1226,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "rowspanAndColspan",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`",
+    "field_desc_en": "rowspan and colspan",
+    "custom_field_type": "TableRowspanAndColspanFunc<T>【type TableRowspanAndColspanFunc<T extends TableRowData = TableRowData> = (params: BaseTableCellParams<T>) => RowspanColspan】【interface RowspanColspan { colspan?: number; rowspan?: number }】"
+  },
+  {
+    "id": 2879,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "rowspanAndColspanInFooter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "用于自定义表尾的合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`",
+    "field_desc_en": "rowspan and colspan for footer",
+    "custom_field_type": "TableRowspanAndColspanFunc<T>"
+  },
+  {
+    "id": 2188,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "scroll",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+    "field_desc_en": "lazy load and virtual scroll",
+    "custom_field_type": "TScroll"
+  },
+  {
+    "id": 3010,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "showHeader",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示表头",
+    "field_desc_en": "show table header",
+    "test_description": "{\"PC\":{\"dom\": \"thead\", \"wrapper\": \"getNormalTableMount\", \"snapshot\": true }}"
+  },
+  {
+    "id": 2798,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "表格尺寸，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `medium`",
+    "field_desc_en": "table size, support `GlobalConfigProvider`, default value is `medium`",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\": [\"t-size-s\", { \"t-size-m\": false }, \"t-size-l\"], \"wrapper\": \"getNormalTableMount\", \"snapshot\": true}}"
+  },
+  {
+    "id": 327,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "stripe",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示斑马纹",
+    "field_desc_en": "show stripe style",
+    "test_description": "{\"PC\":{\"className\":\"t-table--striped\", \"wrapper\": \"getNormalTableMount\"}}"
+  },
+  {
+    "id": 2274,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "tableContentWidth",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度"
+  },
+  {
+    "id": 322,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "tableLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "fixed",
+    "field_enum": [
+      "auto",
+      "fixed"
+    ],
+    "field_desc_zh": "表格布局方式，`<table>` 元素原生属性。[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)。注意，在列宽调整下场景只能使用 `fixed` 模式",
+    "field_desc_en": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please",
+    "test_description": "{\"PC\":{\"dom\": [\"table.t-table--layout-auto\", \"table.t-table--layout-fixed\"], \"wrapper\": \"getNormalTableMount\", \"snapshot\": true }}"
+  },
+  {
+    "id": 1712663466,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "tableLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "fixed",
+    "field_enum": [
+      "auto",
+      "fixed"
+    ],
+    "field_desc_zh": "表格布局方式",
+    "field_desc_en": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please"
+  },
+  {
+    "id": 2055,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "topContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "表格顶部内容，可以用于自定义列设置、顶部查询条件等",
+    "test_description": "{\"PC\":{ \"tnode\": true, \"wrapper\": \"getNormalTableMount\" }}"
+  },
+  {
+    "id": 323,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Props",
+    "field_name": "verticalAlign",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "middle",
+    "field_enum": [
+      "top",
+      "middle",
+      "bottom"
+    ],
+    "field_desc_zh": "行内容上下方向对齐",
+    "field_desc_en": "vertical align",
+    "test_description": "{\"PC\":{\"className\": [\"t-vertical-align-top\", { \"t-vertical-align-middle\": false }, \"t-vertical-align-bottom\"],\"wrapper\": \"getNormalTableMount\"}}"
+  },
+  {
+    "id": 1694262856,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "activeChange",
+    "field_type": [],
+    "field_desc_zh": "高亮行发生变化时触发，泛型 T 指表格数据类型。参数 `activeRowList` 表示所有高亮行数据， `currentRowData` 表示当前操作行数据",
+    "field_desc_en": "trigger on row active change",
+    "event_input": "(activeRowKeys: Array<string | number>, context: ActiveChangeContext<T>)【interface ActiveChangeContext<T> { activeRowList: Array<{ row: T, rowIndex: number }>; currentRowData?: T; type: 'active' | 'inactive' }】"
+  },
+  {
+    "id": 1694316289,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "activeRowAction",
+    "field_type": [],
+    "field_desc_zh": "键盘操作事件。开启行高亮功能后，会自动开启键盘操作功能，如：通过键盘(Shift)或鼠标操作连续选中高亮行时触发，一般用于处理行选中等批量操作，模拟操作系统区域选择行为",
+    "field_desc_en": "keyboard operation event actions. used to mock selection behavior, just like macOS or windows",
+    "event_input": "(context: ActiveRowActionContext<T>)【interface ActiveRowActionContext<T> { action: ActiveRowActionType,  activeRowList: Array<{ row: T, rowIndex: number }> }】【type ActiveRowActionType ='shift-area-selection' | 'space-one-selection' | 'clear' | 'select-all'】"
+  },
+  {
+    "id": 2196,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "cellClick",
+    "field_type": [],
+    "field_desc_zh": "单元格点击时触发",
+    "field_desc_en": "trigger on cell clicked",
+    "event_input": "(context: BaseTableCellEventContext<T>)【interface BaseTableCellEventContext<T extends TableRowData = TableRowData> { row: T; col: BaseTableCol<T>; rowIndex: number; colIndex: number; e: MouseEvent }】",
+    "trigger_elements": "MouseEvent<HTMLTableCellElement>"
+  },
+  {
+    "id": 3498,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "columnResizeChange",
+    "field_type": [],
+    "field_desc_zh": "列调整大小之后触发。`context.columnsWidth` 表示操作后各个列的宽度；",
+    "event_input": "(context: { columnsWidth: { [colKey: string]: number }; })"
+  },
+  {
+    "id": 1111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "pageChange",
+    "field_type": [],
+    "field_desc_zh": "分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on pagination changing",
+    "event_input": "(pageInfo: PageInfo, newDataSource: Array<T>)"
+  },
+  {
+    "id": 354,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowClick",
+    "field_type": [],
+    "field_desc_zh": "行点击时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row click",
+    "event_input": "(context: RowEventContext<T>)【interface RowEventContext<T> { row: T; index: number; e: MouseEvent | KeyboardEvent }】",
+    "trigger_elements": "MouseEvent<HTMLTableRowElement>"
+  },
+  {
+    "id": 1712663505,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowClick",
+    "field_type": [],
+    "field_desc_zh": "行点击时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row click",
+    "event_input": "(context: RowEventContext<T>)【interface RowEventContext<T extends TableRowData = TableRowData> { row: T; index: number; e: MouseEvent }】",
+    "trigger_elements": "MouseEvent<HTMLTableRowElement>"
+  },
+  {
+    "id": 355,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowDblclick",
+    "field_type": [],
+    "field_desc_zh": "行双击时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on double click",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 589,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowMousedown",
+    "field_type": [],
+    "field_desc_zh": "鼠标在表格行按下时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row mousedown",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 1826,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowMouseenter",
+    "field_type": [],
+    "field_desc_zh": "鼠标在表格行进入时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row mouseenter",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 1827,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowMouseleave",
+    "field_type": [],
+    "field_desc_zh": "鼠标在表格行离开时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row mouseenter",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 587,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowMouseover",
+    "field_type": [],
+    "field_desc_zh": "鼠标悬浮到行时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row mouseover",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 588,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "rowMouseup",
+    "field_type": [],
+    "field_desc_zh": "鼠标在表格行按下又弹起时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on row mouseup",
+    "event_input": "(context: RowEventContext<T>)"
+  },
+  {
+    "id": 2380,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "表格内容滚动时触发",
+    "field_desc_en": "trigger on table content scroll",
+    "event_input": "(params: { e: WheelEvent })"
+  },
+  {
+    "id": 1751043827,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "表格内容滚动时触发",
+    "field_desc_en": "trigger on table content scroll",
+    "event_input": "(params: { e: Event })"
+  },
+  {
+    "id": 1751950763,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "表格内容滚动时触发",
+    "field_desc_en": "trigger on table content scroll",
+    "event_input": "(params: { e: UIEvent })"
+  },
+  {
+    "id": 1773210471,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scrollToBottom",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "50",
+    "field_desc_zh": "表格内容滚动到底部时触发，可用于实现滚动加载",
+    "custom_field_type": "Partial<AffixProps>"
+  },
+  {
+    "id": 591,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scrollX",
+    "field_type": [],
+    "field_desc_zh": "表格内容横向滚动时触发。请更为使用 `onScroll` 事件",
+    "field_desc_en": "trigger on scroll horizontal",
+    "event_input": "(params: { e: WheelEvent })",
+    "deprecated": true
+  },
+  {
+    "id": 590,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Events",
+    "field_name": "scrollY",
+    "field_type": [],
+    "field_desc_zh": "表格内容纵向滚动时触发。当内容超出高度(height)或最大高度(max-height)时，会出现纵向滚动条。请更为使用 `onScroll` 事件",
+    "field_desc_en": "trigger on scroll vertical",
+    "event_input": "(params: { e: WheelEvent })",
+    "deprecated": true
+  },
+  {
+    "id": 3431,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Functions",
+    "field_name": "refreshTable",
+    "field_type": [],
+    "field_desc_zh": "全部重新渲染表格",
+    "field_required": true
+  },
+  {
+    "id": 3433,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Functions",
+    "field_name": "scrollColumnIntoView",
+    "field_type": [],
+    "field_desc_zh": "横向滚动到指定列，呈现在可视范围内",
+    "event_input": "(colKey: string)",
+    "field_required": true
+  },
+  {
+    "id": 3432,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BaseTable",
+    "field_category": "Functions",
+    "field_name": "scrollToElement",
+    "field_type": [],
+    "field_desc_zh": "纵向滚动到指定行。示例：`scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
+    "field_desc_en": "Scrolls vertically to the specified row. Example: `scrollToElement({ index: 100, top: 80, time: 200, behavior: 'smooth' })`",
+    "event_input": "(params: ComponentScrollToElementParams)"
+  },
+  {
+    "id": 586,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BaseTable",
+    "field_category": "<T>",
+    "field_name": "<T extends TableRowData = TableRowData>【interface TableRowData { [key: string]: any; children?: TableRowData[]; }】",
+    "field_type": []
+  },
+  {
+    "id": 1790075632,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "BaseTable",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1790075655,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "BaseTable",
+    "field_category": "External Classes",
+    "field_name": "t-class-footer",
+    "field_type": [],
+    "field_desc_zh": "表尾总结行样式类"
+  },
+  {
+    "id": 1790075665,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "BaseTable",
+    "field_category": "External Classes",
+    "field_name": "t-class-header",
+    "field_type": [],
+    "field_desc_zh": "表头行样式类"
+  }
+]

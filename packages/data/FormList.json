@@ -1,0 +1,61 @@
+[
+  {
+    "id": 2559,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "FormList",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "渲染函数",
+    "custom_field_type": "(fields: FormListField[], operation: FormListFieldOperation) => React.ReactNode【type FormListField = { key: number; name: number; isListField: boolean }】【type FormListFieldOperation = { add: (defaultValue?: any, insertIndex?: number) => void, remove: (index: number | number[]) => void, move: (from: number, to: number) => void  }】"
+  },
+  {
+    "id": 2560,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "FormList",
+    "field_category": "Props",
+    "field_name": "initialData",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "设置子元素默认值，如果与 FormItem 的 initialData 冲突则以 FormItem 为准",
+    "custom_field_type": "Array<any>"
+  },
+  {
+    "id": 2558,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "FormList",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "表单字段名称",
+    "custom_field_type": "NamePath"
+  },
+  {
+    "id": 2566,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "FormList",
+    "field_category": "Props",
+    "field_name": "rules",
+    "field_type": [
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "表单字段校验规则",
+    "custom_field_type": "{ [field in keyof FormData]: Array<FormRule> } | Array<FormRule>"
+  }
+]

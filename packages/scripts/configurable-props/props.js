@@ -23,8 +23,8 @@ function groupByFieldCategory(componentApi) {
   const result = {};
   componentApi.forEach((apiOriginal) => {
     const api = { ...apiOriginal };
-    const isExtend = api.field_category_text === 'Extends';
-    const isFunction = isPlugin(api.component) && api.field_category_text === 'Functions';
+    const isExtend = api.field_category === 'Extends';
+    const isFunction = isPlugin(api.component) && api.field_category === 'Functions';
     if (isExtend) {
       const { baseName } = moveTsTypeToDesc(api.field_name);
       api.field_name = baseName.replace('Td', '');
@@ -34,7 +34,7 @@ function groupByFieldCategory(componentApi) {
       }
       api.field_desc_zh = `继承 ${api.field_name.replace('Td', '')} 中的全部 API`;
     }
-    const category = isExtend || isFunction ? 'Props' : api.field_category_text;
+    const category = isExtend || isFunction ? 'Props' : api.field_category;
     if (result[category]) {
       result[category].push(api);
     } else {
@@ -46,7 +46,7 @@ function groupByFieldCategory(componentApi) {
 
 const titleConfig = {
   Props: {
-    fields: ['field_name', 'field_type_text', 'field_default_value', 'field_enum'],
+    fields: ['field_name', 'field_type', 'field_default_value', 'field_enum'],
     output: ['name', 'type', 'defaultValue', 'options'],
   },
 };
@@ -114,8 +114,8 @@ function getApiInfos(baseData) {
         if (api.html_attribute) return;
         // 只展示 Boolean 或枚举类型
         if (
-          api.field_type_text.includes('Boolean') ||
-          (api.field_type_text.includes('String') && api.field_default_value && api.field_enum.split('/').length > 1)
+          api.field_type.includes('Boolean') ||
+          (api.field_type.includes('String') && api.field_default_value && api.field_enum?.length > 1)
         ) {
           const oneApiInfo = getOneApiInfo(api, category);
           oneApiInfo && info[p].push(oneApiInfo);

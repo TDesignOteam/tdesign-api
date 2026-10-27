@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1730,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "函数返回容器对应的 NodesRef 节点，将对应节点指定为组件的外部容器，滚动时组件会始终保持在容器范围内，当组件即将超出容器底部时，会返回原位置"
+  },
+  {
+    "id": 2777,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "body",
+    "field_desc_zh": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "ScrollContainer"
+  },
+  {
+    "id": 1712662567,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "指定容器对应的NodesRef节点为组件的外部容器，滚动时组件会始终保持在容器范围内，当组件即将超出容器底部时，会返回原位置",
+    "custom_field_type": "Element"
+  },
+  {
+    "id": 1729,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 1728,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "offsetTop",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "吸顶时与顶部的距离，单位`px`"
+  },
+  {
+    "id": 1726,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "99",
+    "field_desc_zh": "吸顶时的 z-index"
+  },
+  {
+    "id": 1761302045,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶",
+    "event_input": "(context: { scrollTop: number, isFixed: boolean })"
+  },
+  {
+    "id": 1712053525,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712053529,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1759200405,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Sticky",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

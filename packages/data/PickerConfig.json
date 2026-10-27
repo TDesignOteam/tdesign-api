@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1741185484,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerConfig",
+    "field_category": "Props",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消” 按钮描述文本",
+    "field_desc_en": "cancel text"
+  },
+  {
+    "id": 1741185505,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确认” 按钮描述文本",
+    "field_desc_en": "confirm text"
+  }
+]

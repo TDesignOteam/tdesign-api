@@ -147,7 +147,7 @@ function getVueSlotsCode(
   let secondArr = [];
   let thirdArr = [];
   if (framework.indexOf('Vue') !== -1) {
-    const isBothBooleanAndTNode = oneApiData.field_type_text.join() === 'Boolean TNode';
+    const isBothBooleanAndTNode = oneApiData.field_type.join() === 'Boolean TNode';
     const slotsText = framework === 'Vue(PC)' ? 'scopedSlots' : 'v-slots';
     const h = slotsText === 'scopedSlots' ? 'h' : '';
     const slotCodeProps = {

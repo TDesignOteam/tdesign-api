@@ -1,0 +1,221 @@
+[
+  {
+    "id": 612,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2476,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "currentStatus",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "process",
+    "field_enum": [
+      "default",
+      "process",
+      "finish",
+      "error"
+    ],
+    "field_desc_zh": "用于控制 current 指向的步骤条的状态"
+  },
+  {
+    "id": 613,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "步骤条方向，有两种：横向和纵向"
+  },
+  {
+    "id": 616,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "步骤条数据列表（作用和 StepItem 效果一样）",
+    "custom_field_type": "Array<TdStepItemProps>"
+  },
+  {
+    "id": 1582,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态"
+  },
+  {
+    "id": 1731659548,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "line",
+    "field_enum": [
+      "line",
+      "dashed",
+      "arrow"
+    ],
+    "field_desc_zh": "步骤条分割符"
+  },
+  {
+    "id": 622,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "sequence",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "positive",
+    "field_enum": [
+      "positive",
+      "reverse"
+    ],
+    "field_desc_zh": "步骤条顺序"
+  },
+  {
+    "id": 624,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "dot"
+    ],
+    "field_desc_zh": "步骤条风格"
+  },
+  {
+    "id": 615,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Steps",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "当前步骤发生变化时触发",
+    "event_input": "(current: string | number, previous: string | number, context?: { e?: MouseEvent })"
+  },
+  {
+    "id": 1587,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "当前步骤发生变化时触发",
+    "event_input": "({current: string | number, previous: string | number})"
+  },
+  {
+    "id": 1712547366,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1760086510,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Steps",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义步骤条内容"
+  }
+]

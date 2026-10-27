@@ -8,11 +8,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "api:download": "node ./download.js",
-    "api:docs": "npm run api:download && node ./index.js",
-    "api:vscode": "npm run api:download && node ./vscode",
-    "api:configurable": "npm run api:download && node ./configurable-props",
-    "api:helper": "npm run api:download && node ./helper"
+    "api:docs": "node ./index.js",
+    "api:vscode": "node ./vscode",
+    "api:configurable": "node ./configurable-props",
+    "api:helper": "node ./helper"
   },
   "license": "MIT",
   "dependencies": {

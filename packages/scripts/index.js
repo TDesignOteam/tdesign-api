@@ -25,7 +25,6 @@
  */
 import chalk from 'chalk';
 import { pick, has } from 'lodash-es';
-import apiJson from './api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import {
@@ -35,6 +34,7 @@ import {
   MOBILE_FRAMES,
   getChatComponentMap,
 } from './config/index.js';
+import apiJson from './data.js';
 import { generateDocs } from './docs/index.js';
 import map from './map.json' with { type: 'json' };
 import { generateTypes } from './types/index.js';

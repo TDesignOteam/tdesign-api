@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1708481323,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "backButtonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于自定义当前引导框的返回按钮的内容",
+    "custom_field_type": "ButtonProps"
+  },
+  {
+    "id": 2955,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "body",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "当前步骤提示框的内容",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true,\"global\":{\"afterEach\":[\"document.querySelector('.t-guide__overlay')?.remove()\",\"document.querySelector('.t-guide__highlight--popup')?.remove()\",\"document.querySelector('.t-guide__reference')?.remove()\",\"document.querySelector('.t-guide__highlight--mask')?.remove()\",\"document.querySelector('.t-popup')?.remove()\"]}}}"
+  },
+  {
+    "id": 1721621362,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "body",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "当前步骤提示框的内容，支持插槽：slot=\"body-{{index}}\" (1、当要显示body-{{index}}插槽时，请将body设置为空；2、当要显示content-{{index}}插槽完全自定义内容时，请将body和title都设置为空)"
+  },
+  {
+    "id": 2953,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义内容，同 content",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}"
+  },
+  {
+    "id": 2954,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用户自定义引导弹框的内容，一旦存在，此时除 `placement`、`offset`和`element` 外，其它属性全部失效）",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}"
+  },
+  {
+    "id": 2956,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "element",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "高亮的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'#tdesign' 或 () => document.querySelector('#tdesign')",
+    "custom_field_type": "AttachNode",
+    "test_description": "{\"PC\":{}}",
+    "field_required": true
+  },
+  {
+    "id": 1721621525,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "element",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "高亮的节点。示例： `() => new Promise((resolve) => this.createSelectorQuery().select('#tdesign').boundingClientRect((rect) => resolve(rect)).exec())`",
+    "custom_field_type": "StepElement【type StepElement = () => Promise<WechatMiniprogram.BoundingClientRectCallbackResult>】",
+    "field_required": true
+  },
+  {
+    "id": 1721621588,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "finishButtonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }`",
+    "custom_field_type": "ButtonProps"
+  },
+  {
+    "id": 2966,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "highlightContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用户自定义的高亮框 (仅当 `mode` 为 `popup` 时生效)",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}"
+  },
+  {
+    "id": 1709178118,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "highlightContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用户自定义的高亮框 (仅当 `mode` 为 `popover` 时生效)"
+  },
+  {
+    "id": 2965,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "highlightPadding",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "高亮框的内边距",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"attribute\":[{\"value\":32,\"expect\":[{\"dom\":\"document.t-guide__highlight--mask\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}},{\"dom\":\"document.t-guide__reference\",\"attribute\":{\"style.width\":\"64px\",\"style.height\":\"64px\",\"style.top\":\"-32px\",\"style.left\":\"-32px\"}}]}]}}"
+  },
+  {
+    "id": 1721621705,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "highlightPadding",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "高亮框的内边距，单位rpx"
+  },
+  {
+    "id": 2967,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "popup",
+      "dialog"
+    ],
+    "field_desc_zh": "引导框的类型",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"dom\":[\"document.t-popup\",\"document.t-guide__dialog\"],\"snapshot\":true}}"
+  },
+  {
+    "id": 1709178151,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "popover",
+      "dialog"
+    ],
+    "field_desc_zh": "引导框的类型"
+  },
+  {
+    "id": 2957,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "nextButtonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于自定义当前引导框的下一步按钮的内容",
+    "custom_field_type": "ButtonProps",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(60)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__next\",\"className\":{\"t-button--theme-warning\":true}}]}]}}"
+  },
+  {
+    "id": 2958,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "【讨论确认中】相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
+    "field_desc_en": "this api is in discussing. do not use it",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1721621784,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "相对于 placement 的偏移量[left, top]，默认单位rpx，示例：[-10, 20] 或 ['10px', '8px'] 或 ['20rpx', '16rpx'] (仅当 `mode` 为 `popover` 时生效)",
+    "field_desc_en": "this api is in discussing. do not use it",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 2959,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'top'",
+    "field_desc_zh": "引导框相对于高亮元素出现的位置",
+    "custom_field_type": "StepPopupPlacement | StepDialogPlacement【type StepPopupPlacement = 'top'|'left'|'right'|'bottom'|'top-left'|'top-right'|'bottom-left'|'bottom-right'|'left-top'|'left-bottom'|'right-top'|'right-bottom'】【type StepDialogPlacement = 'top'|'center' 】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(60)\",\"attribute\":[{\"value\":\"bottom-left\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"bottom-start\"}}]}],\"snapshot\":true}}"
+  },
+  {
+    "id": 1709197181,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'top'",
+    "field_desc_zh": "引导框相对于高亮元素出现的位置，(仅当 `mode` 为 `popover` 时生效)",
+    "custom_field_type": "StepPopoverPlacement 【type StepPopoverPlacement = 'top'|'left'|'right'|'bottom'|'top-left'|'top-right'|'bottom-left'|'bottom-right'|'left-top'|'left-bottom'|'right-top'|'right-bottom'|'center'】"
+  },
+  {
+    "id": 1709178092,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "popoverProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传全部属性到 Popover 组件。`mode=popover` 时有效",
+    "field_desc_en": "Popover component props if `mode = popover`",
+    "custom_field_type": "PopoverProps【import { PopoverProps } from '@Popover'】"
+  },
+  {
+    "id": 3307,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性。`mode=popup` 时有效",
+    "field_desc_en": "Popup component props if `mode = popup`",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"attribute\":[{\"value\":\"{placement: 'top-left'}\",\"expect\":[{\"dom\":\"document.t-popup\",\"attribute\":{\"data-popper-placement\":\"top-start\"}}]}]}}"
+  },
+  {
+    "id": 2960,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "prevButtonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于自定义当前引导框的上一步按钮的内容",
+    "custom_field_type": "ButtonProps",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(200)\",\"props\":{\"current\":2},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__prev\",\"className\":{\"t-button--theme-warning\":true}}]}]}}"
+  },
+  {
+    "id": 2964,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否出现遮罩层",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(200)\",\"dom\":[{\"description\":\".t-guide__highlight--mask should exit if showOverlay=true\",\"props\":{\"showOverlay\":true},\"dom\":[{\"document.t-guide__highlight--mask\":1}]},{\"description\":\".t-guide__highlight--mask should not exit if showOverlay=false\",\"props\":{\"showOverlay\":false},\"dom\":[{\"document.t-guide__highlight--mask\":false}]}]}}"
+  },
+  {
+    "id": 2961,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "skipButtonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于自定义当前步骤引导框的跳过按钮的内容",
+    "custom_field_type": "ButtonProps",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomMultipleGuideStepMount\",\"trigger\":\"delay(200)\",\"props\":{\"current\":1},\"className\":[{\"value\":\"{theme: 'warning'}\",\"expect\":[{\"dom\":\"document.t-guide__skip\",\"className\":{\"t-button--theme-warning\":true}}]}]}}"
+  },
+  {
+    "id": 2963,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "stepOverlayClass",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "覆盖引导框的类名",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"className\":[{\"value\":\"t-test-guide-step-overlay\",\"expect\":[{\"dom\":\"document.t-popup\",\"className\":{\"t-test-guide-step-overlay\":true}}]}],\"snapshot\":true}}"
+  },
+  {
+    "id": 2962,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "当前步骤的标题内容",
+    "field_desc_en": "title of current step",
+    "test_description": "{\"PC\":{\"wrapper\":\"getCustomGuideStepMount\",\"trigger\":\"delay(200)\",\"tnode\":{\"dom\":[\"document.custom-node\"]},\"snapshot\":true}}"
+  },
+  {
+    "id": 1721621896,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GuideStep",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "当前步骤的标题内容，支持插槽：slot=\"title-{{index}}\" (1、当要显示body-{{index}}插槽时，请将title设置为空；2、当要显示content-{{index}}插槽完全自定义内容时，请将body和title都设置为空)",
+    "field_desc_en": "title of current step"
+  }
+]

@@ -43,7 +43,7 @@ function getDefaultValue(api) {
   if (defaultValue === '') return;
   if (defaultValue === "''") return defaultValue;
   // 输出 Number 类型的默认值
-  if (api.field_type_text.includes('Number')) {
+  if (api.field_type.includes('Number')) {
     if (defaultValue) {
       // 支持诸如 210/332 的分数形式默认值配置原样返回
       const frac = defaultValue.match(/^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/);
@@ -73,7 +73,7 @@ function getOneComponentProps(cmp, tsTypeName, apiList) {
   const properties = [];
   apiList.forEach((api) => {
     const defaultPropsValue = getDefaultValue(api);
-    if (api.field_category_text === 'Props' && defaultPropsValue !== undefined) {
+    if (api.field_category === 'Props' && defaultPropsValue !== undefined) {
       // 受控属性，直接输出；非受控属性添加前缀 `default`
       const name = api.support_default_value ? `default${upperFirst(api.field_name)}` : api.field_name;
       defaultProps.push(`${name}: ${defaultPropsValue},`);

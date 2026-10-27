@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import { pick } from 'lodash-es';
-import apiJson from '../api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../common.js';
 import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
+import apiJson from '../data.js';
 import map from '../map.json' with { type: 'json' };
 import { generateProps } from './props.js';
 

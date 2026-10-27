@@ -6,7 +6,7 @@
           <div>
             <span style="padding-right: 8px">{{ row.component }}</span>
             <t-tag
-              v-if="row.field_category_text"
+              v-if="row.field_category"
               size="small"
               :theme="
                 {
@@ -16,11 +16,11 @@
                   Return: 'default',
                   Extends: 'default',
                   '<T>': 'default',
-                }[row.field_category_text] || 'primary'
+                }[row.field_category] || 'primary'
               "
               variant="light"
             >
-              {{ row.field_category_text }}
+              {{ row.field_category }}
             </t-tag>
           </div>
         </div>
@@ -50,7 +50,7 @@
             </p>
           </template>
           <template v-if="row.field_enum">
-            <p>可选值：{{ row.field_enum }}。</p>
+            <p>可选值：{{ row.field_enum.join('/') }}。</p>
           </template>
           <template v-if="row.custom_field_type">
             <p>TS 类型定义：{{ row.custom_field_type }}。</p>
@@ -67,13 +67,15 @@
           </p>
 
           <p style="font-size: 12px; color: #a6a6a6">
-            {{ row.platform_framework_text.join(', ') }}
+            {{ row.platform_framework.join(', ') }}
           </p>
-          <p v-if="row.version" style="font-size: 12px; color: #a6a6a6">版本号：{{ row.version }}</p>
+          <p v-if="row.version" style="font-size: 12px; color: #a6a6a6">
+            版本号：{{ JSON.stringify(row.version) }}
+          </p>
         </div>
       </template>
-      <template #field_type_text="{ row }">
-        {{ row.field_type_text && row.field_type_text.join('/') }}
+      <template #field_type="{ row }">
+        {{ row.field_type && row.field_type.join('/') }}
       </template>
       <template #operation="data">
         <div>
@@ -83,10 +85,6 @@
             <t-popconfirm theme="danger" content="确定删除吗？" trigger="click" @confirm="() => onDeleteConfirm(data)">
               <t-button variant="text" theme="danger" style="margin-left: 8px">Delete</t-button>
             </t-popconfirm>
-          </div>
-
-          <div style="font-size: 12px; color: #a6a6a6">
-            {{ data.row.update_time }}
           </div>
         </div>
       </template>
@@ -129,7 +127,7 @@ function getCols() {
     },
     {
       title: '类型',
-      colKey: 'field_type_text',
+      colKey: 'field_type',
     },
     {
       title: '默认值',

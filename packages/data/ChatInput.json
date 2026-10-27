@@ -1,0 +1,174 @@
+[
+  {
+    "id": 1742884968,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "输入框是否自动聚焦"
+  },
+  {
+    "id": 1742885300,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "autosize",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "{ minRows: 1, maxRows: 5 }",
+    "field_desc_zh": "高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度",
+    "custom_field_type": "boolean | { minRows?: number; maxRows?: number }"
+  },
+  {
+    "id": 1742884930,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用输入框"
+  },
+  {
+    "id": 1742884754,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入框默认文案"
+  },
+  {
+    "id": 1742883827,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "stopDisabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个"
+  },
+  {
+    "id": 1743345588,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "发送按钮的自定义扩展"
+  },
+  {
+    "id": 1743345240,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1742885940,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "(value:string, context: { e: FocusEvent })"
+  },
+  {
+    "id": 1742885911,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发",
+    "event_input": "(value:string, context: { e: InputEvent | MouseEvent | KeyboardEvent })"
+  },
+  {
+    "id": 1742885930,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "(value:string, context: { e: FocusEvent }) "
+  },
+  {
+    "id": 1742885865,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Events",
+    "field_name": "send",
+    "field_type": [],
+    "field_desc_zh": "点击消息发送的回调方法",
+    "event_input": "(value:string, context: { e: MouseEvent | KeyboardEvent })"
+  },
+  {
+    "id": 1742885891,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatInput",
+    "field_category": "Events",
+    "field_name": "stop",
+    "field_type": [],
+    "field_desc_zh": "点击消息终止的回调方法",
+    "event_input": "(value:string, context: { e: MouseEvent })"
+  }
+]

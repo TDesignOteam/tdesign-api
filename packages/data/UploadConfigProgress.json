@@ -1,0 +1,74 @@
+[
+  {
+    "id": 2222,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "UploadConfigProgress",
+    "field_category": "Props",
+    "field_name": "failText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上传失败”文本描述"
+  },
+  {
+    "id": 2223,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "UploadConfigProgress",
+    "field_category": "Props",
+    "field_name": "successText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上传成功”文本描述"
+  },
+  {
+    "id": 2220,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "UploadConfigProgress",
+    "field_category": "Props",
+    "field_name": "uploadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上传中”文本描述"
+  },
+  {
+    "id": 2221,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "UploadConfigProgress",
+    "field_category": "Props",
+    "field_name": "waitingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“待上传”文本描述"
+  }
+]

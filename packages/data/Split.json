@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1789893903,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "分割面板的内容节点，同 content，必须是SplitPanel",
+    "field_desc_en": "split's children elements"
+  },
+  {
+    "id": 1785667918,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "分割方向。horizontal：左右排列；vertical：上下排列",
+    "field_desc_en": "Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically."
+  },
+  {
+    "id": 1785668466,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "draggerIcon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "拖拽图标",
+    "field_desc_en": "Drag icons"
+  },
+  {
+    "id": 1785667969,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "gap",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "面板之间的间距（px），会体现在分割条视觉上",
+    "field_desc_en": "The spacing (px) between panels will be reflected in the visual appearance of the divider."
+  },
+  {
+    "id": 1785668424,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "延迟渲染模式",
+    "field_desc_en": "Deferred rendering mode"
+  },
+  {
+    "id": 1785668557,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "panelSize",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "定义每个面板的最大最小比例",
+    "field_desc_en": "Define the maximum and minimum scale for each panel.",
+    "custom_field_type": "{min?: number; max?: number }"
+  },
+  {
+    "id": 1785668156,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "splitClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "自定义分割条的样式类名",
+    "field_desc_en": "Custom divider style class name"
+  },
+  {
+    "id": 1785668109,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "splitSize",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "6",
+    "field_desc_zh": "分割条的可交互区域宽度/高度（px）",
+    "field_desc_en": "Width/height (px) of the interactive area of ​​the divider bar"
+  },
+  {
+    "id": 1785668191,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Props",
+    "field_name": "splitStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自定义分割条的内联样式",
+    "field_desc_en": "Customize the inline style of the splitter",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 1785668599,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Events",
+    "field_name": "resize",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "拖拽过程中尺寸变化的回调（像素值数组）",
+    "field_desc_en": "Callback (array of pixel values) for size changes during dragging.",
+    "event_input": "(sizes: number[])"
+  },
+  {
+    "id": 1785668746,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Events",
+    "field_name": "resizeEnd",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "拖拽结束时的回调",
+    "field_desc_en": "Callback when drag ends",
+    "event_input": "(sizes: number[])"
+  },
+  {
+    "id": 1785668717,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Events",
+    "field_name": "resizeStart",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "开始拖拽时的回调",
+    "field_desc_en": "Callback when drag starts",
+    "event_input": "(sizes: number[])"
+  },
+  {
+    "id": 1785668792,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Functions",
+    "field_name": "getSizes",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "获取当前各面板的像素尺寸",
+    "field_desc_en": "Get the current pixel size of each panel",
+    "event_output": "number[]"
+  },
+  {
+    "id": 1785668892,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Functions",
+    "field_name": "reset",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "重置为初始尺寸",
+    "field_desc_en": "Reset to initial size"
+  },
+  {
+    "id": 1785668850,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Split",
+    "field_category": "Functions",
+    "field_name": "setSizes",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "程序化设置尺寸",
+    "field_desc_en": "Programmatically set size",
+    "event_input": "(sizes: (number | string | 'auto')[]) "
+  }
+]

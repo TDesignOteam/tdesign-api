@@ -12,8 +12,9 @@
     "dev": "cross-env NODE_ENV=dev nodemon",
     "prod": "npm run build && npx pm2 start ecosystem.config.cjs --env production",
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
-    "api:download": "node packages/scripts/download.js",
-    "api:upload": "node packages/scripts/upload.js",
+    "api:add": "node packages/scripts/cli/index.js",
+    "api:update": "node packages/scripts/cli/index.js update",
+    "api:check": "node packages/scripts/check-data.js",
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
     "api:pure": "node packages/scripts/index.js",
     "api:docs": "node packages/scripts/index.js",
@@ -32,10 +33,7 @@
     "koa-logger": "catalog:",
     "koa-static": "catalog:",
     "lodash": "catalog:",
-    "moment": "catalog:",
-    "qs": "catalog:",
-    "sql.js": "catalog:",
-    "squel": "catalog:"
+    "qs": "catalog:"
   },
   "devDependencies": {
     "@types/koa": "catalog:",

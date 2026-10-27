@@ -1,0 +1,155 @@
+[
+  {
+    "id": 3126,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述文字"
+  },
+  {
+    "id": 3129,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `false` 表示不显示图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标"
+  },
+  {
+    "id": 3439,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标名称"
+  },
+  {
+    "id": 3130,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "图片地址"
+  },
+  {
+    "id": 3131,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "内置主题"
+  },
+  {
+    "id": 3127,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 1712053329,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712053373,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "External Classes",
+    "field_name": "t-class-description",
+    "field_type": [],
+    "field_desc_zh": "描述样式类"
+  },
+  {
+    "id": 1712053362,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "图片样式类"
+  },
+  {
+    "id": 1712053367,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Result",
+    "field_category": "External Classes",
+    "field_name": "t-class-title",
+    "field_type": [],
+    "field_desc_zh": "标题样式类"
+  }
+]

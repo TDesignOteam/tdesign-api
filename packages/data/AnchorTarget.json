@@ -1,0 +1,32 @@
+[
+  {
+    "id": 199,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AnchorTarget",
+    "field_category": "Props",
+    "field_name": "id",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "目标内容 id",
+    "field_required": true
+  },
+  {
+    "id": 200,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AnchorTarget",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "div",
+    "field_desc_zh": "渲染的标签"
+  }
+]

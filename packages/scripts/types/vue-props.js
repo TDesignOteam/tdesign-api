@@ -29,12 +29,12 @@ function getPropType(cmp, name) {
 function isNeedPropType(typeName, api) {
   if (['Miniprogram', 'UniApp'].includes(currentFramework)) return false;
   const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
-  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type_text.length > 1;
+  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type.length > 1;
   return multipleTypeStr || complicatedApi;
 }
 
 function getType(cmp, api, name) {
-  let type = api.field_type_text;
+  let type = api.field_type;
   type = type
     .map((t) => {
       // 小程序只需要支持插槽，不需要支持 function
@@ -47,7 +47,7 @@ function getType(cmp, api, name) {
 }
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
-  const type = api.field_type_text.join();
+  const type = api.field_type.join();
   const defaultValue = api.field_default_value;
   let dl = defaultValue;
   // 如果 API 显示指明 undefined，则一定返回 default: undefined
@@ -126,7 +126,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
 // Number 类型的数据也有可选值
 function getEnumValue(api, enumValue) {
   const val = enumValue ? enumValue.trim() : enumValue;
-  return api.field_type_text.join('') === 'Number' ? Number(val) : `'${val}'`;
+  return api.field_type.join('') === 'Number' ? Number(val) : `'${val}'`;
 }
 
 // API 有可选值，但是没有设置默认值，则默认值为 undefined
@@ -146,7 +146,7 @@ function getDefaultWithType(api, dl, valueType) {
   // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
   const isVue3NeedDefaultTsType =
     ['Vue(Mobile)', 'VueNext(PC)', 'UniApp'].includes(currentFramework) &&
-    (api.field_type_text?.length > 1 || (api.custom_field_type && ["''", 'undefined'].includes(dl)));
+    (api.field_type?.length > 1 || (api.custom_field_type && ["''", 'undefined'].includes(dl)));
 
   // UniApp 中 null 默认值也需要 as 类型断言
   const isUniAppNullDefault = currentFramework === 'UniApp' && dl === 'null';
@@ -168,7 +168,7 @@ function formatNormalProps(api, cmp, extraParams = {}) {
   // Boolean 类型，且默认值为 false，则不需要过多的处理（小程序 prop 只能是 Object，不能是 block: Boolean
   if (
     !isMiniprogram &&
-    api.field_type_text.join() === 'Boolean' &&
+    api.field_type.join() === 'Boolean' &&
     (api.field_default_value === 'false' || !api.field_default_value)
   ) {
     if (modelValue) {
@@ -235,7 +235,6 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     // 小程序没有 validator
     if (api.field_enum && currentFramework !== 'Miniprogram') {
       const enumData = api.field_enum
-        .split('/')
         .map((item) => {
           let tmp = getEnumValue(api, item);
           if (typeof tmp === 'string') {
@@ -301,7 +300,7 @@ function getImportPath(body, cmp, framework) {
 //   );
 //   const apiArr = [];
 //   apis.forEach((api) => {
-//     if (!['Props'].includes(api.field_category_text)) return;
+//     if (!['Props'].includes(api.field_category)) return;
 //     const propsCode = formatNormalProps(api, cmp);
 //     propsCode
 //       && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
@@ -334,7 +333,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
       if (MP_PROPS.includes(api.field_name)) return;
       // html 原生属性，不放在 props 中
       if (api.html_attribute) return;
-      const category = api.field_category_text;
+      const category = api.field_category;
       if (!['Props', 'Events'].includes(category)) return;
       if (isMiniprogram && !['Props'].includes(category)) return;
       const propsCode = category === 'Props' ? formatNormalProps(api, cmp) : formatEventProps(api, cmp, framework);
@@ -356,7 +355,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
         propStrs.push(modelValueApi);
       }
       // 根据 value 添加非受控属性
-      if (api.syntactic_sugar && api.field_category_text !== 'Events') {
+      if (api.syntactic_sugar && api.field_category !== 'Events') {
         const uncontrolApi = formatNormalProps(api, cmp, {
           isUncontrolApi: true,
         });

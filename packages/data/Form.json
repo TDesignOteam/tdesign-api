@@ -1,0 +1,759 @@
+[
+  {
+    "id": 171,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "colon",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在表单标签字段右侧显示冒号"
+  },
+  {
+    "id": 1712574615,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "contentAlign",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "表单内容对齐方式：左对齐、右对齐"
+  },
+  {
+    "id": 166,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "表单数据",
+    "custom_field_type": "FormData"
+  },
+  {
+    "id": 2201,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用整个表单"
+  },
+  {
+    "id": 2206,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "errorMessage",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`",
+    "custom_field_type": "FormErrorMessage"
+  },
+  {
+    "id": 2940,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "form",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "经 `Form.useForm()` 创建的 form 控制实例",
+    "custom_field_type": "FormInstanceFunctions"
+  },
+  {
+    "id": 2203,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "formControlledComponents",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "允许表单统一控制禁用状态的自定义组件名称列表。默认会有组件库的全部输入类组件：TInput、TInputNumber、TCascader、TSelect、TOption、TSwitch、TCheckbox、TCheckboxGroup、TRadio、TRadioGroup、TTreeSelect、TDatePicker、TTimePicker、TUpload、TTransfer、TSlider。对于自定义组件，组件内部需要包含可以控制表单禁用状态的变量 `formDisabled`。示例：`['CustomUpload', 'CustomInput']`",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 1725604435,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "id",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件",
+    "field_desc_en": " native id attribute of the form，which supports being used in conjunction with non-form buttons through the form attribute to trigger form events"
+  },
+  {
+    "id": 2868,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "initialData",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表单初始数据，重置时所需初始数据，优先级小于 FormItem 设置的 initialData"
+  },
+  {
+    "id": 168,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "labelAlign",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right",
+    "field_enum": [
+      "left",
+      "right",
+      "top"
+    ],
+    "field_desc_zh": "表单字段标签对齐方式：左对齐、右对齐、顶部对齐"
+  },
+  {
+    "id": 285,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "labelWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "'100px'",
+    "field_desc_zh": "可以整体设置label标签宽度，默认为100px"
+  },
+  {
+    "id": 1712579340,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "labelWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "'81px'",
+    "field_desc_zh": "可以整体设置label标签宽度，默认为81px"
+  },
+  {
+    "id": 169,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "vertical",
+    "field_enum": [
+      "vertical",
+      "inline"
+    ],
+    "field_desc_zh": "表单布局，有两种方式：纵向布局 和 行内布局"
+  },
+  {
+    "id": 1069,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "preventSubmitDefault",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新"
+  },
+  {
+    "id": 1715098299,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否整个表单只读"
+  },
+  {
+    "id": 172,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "requiredMark",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否显示必填符号（*），默认显示"
+  },
+  {
+    "id": 1742816710,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "requiredMarkPosition",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "表单必填符号（*）显示位置",
+    "field_desc_en": "Display position of required symbols"
+  },
+  {
+    "id": 795,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "resetType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "empty",
+    "field_enum": [
+      "empty",
+      "initial"
+    ],
+    "field_desc_zh": "重置表单的方式，值为 empty 表示重置表单为空，值为 initial 表示重置表单数据为初始值"
+  },
+  {
+    "id": 175,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "rules",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表单字段校验规则",
+    "custom_field_type": "FormRules<FormData>【type FormRules<T extends Data = any> = { [field in keyof T]?: Array<FormRule> }】"
+  },
+  {
+    "id": 173,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "scrollToFirstError",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "''",
+      "smooth",
+      "auto"
+    ],
+    "field_desc_zh": "表单校验不通过时，是否自动滚动到第一个校验不通过的字段，平滑滚动或是瞬间直达。值为空则表示不滚动"
+  },
+  {
+    "id": 174,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "showErrorMessage",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "校验不通过时，是否显示错误提示信息，统一控制全部表单项。如果希望控制单个表单项，请给 FormItem 设置该属性"
+  },
+  {
+    "id": 413,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "statusIcon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "校验状态图标，值为 `true` 显示默认图标，默认图标有 成功、失败、警告 等，不同的状态图标不同。`statusIcon` 值为 `false`，不显示图标。`statusIcon` 值类型为渲染函数，则可以自定义右侧状态图标",
+    "custom_field_type": "boolean | TNode<TdFormItemProps>"
+  },
+  {
+    "id": 2200,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "submitWithWarningMessage",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "【讨论中】当校验结果只有告警信息时，是否触发 `submit` 提交事件"
+  },
+  {
+    "id": 1733759742,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Form",
+    "field_category": "Props",
+    "field_name": "supportNumberKey",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否支持使用数字作为表单键值，在1.9.3版本后表单组件支持数字作为键值，若仍需要保留数字作为数组下标，请关闭此API",
+    "field_desc_en": "support using numbers as form key values or not.  Form supports numbers as key values since 1.9.3, set supportNumberKey as false If you still need to retain numbers as array subscripts"
+  },
+  {
+    "id": 177,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Events",
+    "field_name": "reset",
+    "field_type": [],
+    "field_desc_zh": "表单重置时触发",
+    "event_input": "(context: { e?: FormResetEvent })"
+  },
+  {
+    "id": 178,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Events",
+    "field_name": "submit",
+    "field_type": [],
+    "field_desc_zh": "表单提交时触发。其中 `context.validateResult` 表示校验结果，`context.firstError` 表示校验不通过的第一个规则提醒。`context.validateResult` 值为 `true` 表示校验通过；如果校验不通过，`context.validateResult` 值为校验结果列表。<br />【注意】⚠️ 默认情况，输入框按下 Enter 键会自动触发提交事件，如果希望禁用这个默认行为，可以给输入框添加  enter 事件，并在事件中设置 `e.preventDefault()`",
+    "event_input": "(context: SubmitContext<FormData>)【interface SubmitContext<T extends Data = Data> { e?: FormSubmitEvent; validateResult: FormValidateResult<T>; firstError?: string; fields?: any }】【type FormValidateResult<T> = boolean | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】【type ValidateResult<T> = { [key in keyof T]: boolean | ErrorList }】【type ErrorList = Array<FormRule>】"
+  },
+  {
+    "id": 1428,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Events",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "校验结束后触发，result 值为 true 表示校验通过；如果校验不通过，result 值为校验结果列表",
+    "event_input": "(result: ValidateResultContext<FormData>)【type ValidateResultContext<T extends Data> = Omit<SubmitContext<T>, 'e'>】"
+  },
+  {
+    "id": 2084,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Events",
+    "field_name": "valuesChange",
+    "field_type": [],
+    "field_desc_zh": "字段值更新时触发的回调事件",
+    "event_input": "(changedValues: Record<string, unknown>, allValues: Record<string, unknown>)"
+  },
+  {
+    "id": 1755,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "clearValidate",
+    "field_type": [],
+    "field_desc_zh": "清空校验结果。可使用 fields 指定清除部分字段的校验结果，fields 值为空则表示清除所有字段校验结果。清除邮箱校验结果示例：`clearValidate(['email'])`",
+    "event_input": "(fields?: Array<keyof FormData>)",
+    "field_required": true
+  },
+  {
+    "id": 2941,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "currentElement",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取 form dom 元素",
+    "event_output": "HTMLFormElement"
+  },
+  {
+    "id": 1706499223,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "getCurrentElement",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取 form dom 元素",
+    "event_output": "HTMLFormElement"
+  },
+  {
+    "id": 1068,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "getFieldValue",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取单个字段值",
+    "event_input": "(field: NamePath) ",
+    "event_output": "unknown",
+    "field_required": true
+  },
+  {
+    "id": 2272,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "getFieldsValue",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据",
+    "event_input": "(nameList: string[] | boolean)【interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}】",
+    "event_output": "getFieldsValue<FormData>",
+    "field_required": true
+  },
+  {
+    "id": 1776675143,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "getValidateMessage",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取校验结果，当调用 getValidateMessage() 时返回所有校验结果",
+    "event_input": "(fields?: Array<keyof FormData>)",
+    "event_output": "Array<FormRule> | void",
+    "field_required": true
+  },
+  {
+    "id": 1268,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "reset",
+    "field_type": [],
+    "field_desc_zh": "重置表单，表单里面没有重置按钮`<button type=\\\"reset\\\" />`时可以使用该方法，默认重置全部字段为空，该方法会触发 `reset` 事件。<br />如果表单属性 `resetType='empty'` 或者 `reset.type='empty'` 会重置为空；<br />如果表单属性 `resetType='initial'` 或者 `reset.type='initial'` 会重置为表单初始值。<br />`reset.fields` 用于设置具体重置哪些字段，示例：`reset({ type: 'initial', fields: ['name', 'age'] })`",
+    "event_input": "(params?: FormResetParams<FormData>)【interface FormResetParams<FormData> { type?: 'initial' | 'empty'; fields?: Array<keyof FormData> }】",
+    "field_required": true
+  },
+  {
+    "id": 1492,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "setFields",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "设置多组字段状态",
+    "event_input": "(fields: FieldData[])",
+    "custom_field_type": "(fields: FieldData[]) => void【interface FieldData { name: NamePath; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }】",
+    "field_required": true
+  },
+  {
+    "id": 1067,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "setFieldsValue",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "设置表单字段值",
+    "event_input": "(field: Data)",
+    "field_required": true
+  },
+  {
+    "id": 2366,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "setValidateMessage",
+    "field_type": [],
+    "field_desc_zh": "设置自定义校验结果，如远程校验信息直接呈现。注意需要在组件挂载结束后使用该方法。`FormData` 指表单数据泛型",
+    "event_input": "(message: FormValidateMessage<FormData>)【type FormValidateMessage<FormData> = { [field in keyof FormData]: FormItemValidateMessage[] }】【interface FormItemValidateMessage { type: 'warning' | 'error'; message: string }】",
+    "field_required": true
+  },
+  {
+    "id": 1269,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "submit",
+    "field_type": [],
+    "field_desc_zh": "提交表单，表单里面没有提交按钮`<button type=\\\"submit\\\" />`时可以使用该方法。`showErrorMessage` 表示是否在提交校验不通过时显示校验不通过的原因，默认显示。该方法会触发 `submit` 事件",
+    "event_input": "(params?: { showErrorMessage?: boolean })",
+    "field_required": true
+  },
+  {
+    "id": 1401,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表",
+    "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all'】",
+    "event_output": "Promise<FormValidateResult<FormData>> 【type FormValidateResult<T> = boolean | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】",
+    "field_required": true
+  },
+  {
+    "id": 1773716995,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表",
+    "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all'】",
+    "event_output": "Promise<FormValidateResult<FormData>>",
+    "field_required": true
+  },
+  {
+    "id": 2764,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "validateOnly",
+    "field_type": [],
+    "field_desc_zh": "纯净的校验函数，仅返回校验结果，不对组件进行任何操作。泛型 `FormData` 表示表单数据 TS 类型。参数和返回值含义同 `validate` 方法",
+    "event_input": "(params?: Pick<FormValidateParams, 'fields' | 'trigger'>)",
+    "event_output": "Promise<FormValidateResult<FormData>>",
+    "field_required": true
+  },
+  {
+    "id": 603,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Form",
+    "field_category": "<T>",
+    "field_name": "<FormData extends Data = Data>【type Data = { [key: string]: any }】",
+    "field_type": []
+  }
+]

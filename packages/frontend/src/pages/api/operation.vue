@@ -88,7 +88,7 @@ const paramsTips = [
 
 const frameworkOptions = computed(() => {
   if (!props.map?.platform_framework) return [];
-  return [{ label: 'VueNext(PC)', value: 1000 }].concat(props.map.platform_framework);
+  return [{ label: 'VueNext(PC)', value: 'VueNext(PC)' }].concat(props.map.platform_framework);
 });
 
 const componentList = computed(() => {

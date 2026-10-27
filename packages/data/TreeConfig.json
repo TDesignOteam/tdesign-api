@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1921,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”描述文本"
+  },
+  {
+    "id": 1922,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeConfig",
+    "field_category": "Props",
+    "field_name": "folderIcon",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "目录层级图标，传入收起状态图标即可。【注意】使用渲染函数输出图标组件",
+    "custom_field_type": "TNode"
+  }
+]

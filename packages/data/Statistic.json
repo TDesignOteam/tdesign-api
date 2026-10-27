@@ -1,0 +1,260 @@
+[
+  {
+    "id": 3457,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "动画效果控制，`duration` 指动画的过渡时间`单位：毫秒`，`valueFrom` 指动画的起始数值。`{ duration, valueFrom }`",
+    "field_desc_en": "Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`",
+    "custom_field_type": "animation【interface animation { duration: number; valueFrom: number;  }】"
+  },
+  {
+    "id": 3455,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "animationStart",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开始动画",
+    "field_desc_en": "Whether to start animation"
+  },
+  {
+    "id": 3459,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "颜色风格，预设五个 TDesign 颜色风格：黑色（black）、蓝色（blue）、红色（red）、橙色（orange）、绿色（green）支持深浅色模式切换。也可以自定义任何 [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) 支持颜色值，深浅色模式切换需自行适配",
+    "field_desc_en": "The color style can support TDesign's light and dark modes with the following options: black, blue, red, orange, and green. Alternatively, it can be any [CSS color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) value, but in this case, TDesign's light and dark modes will not be supported."
+  },
+  {
+    "id": 3453,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "decimalPlaces",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "小数保留位数",
+    "field_desc_en": " Decimal places"
+  },
+  {
+    "id": 3462,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "extra",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "额外的显示内容",
+    "field_desc_en": " Additional display content"
+  },
+  {
+    "id": 3452,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "格式化数值显示值",
+    "field_desc_en": "Format numeric display value",
+    "custom_field_type": "(value: number) => number"
+  },
+  {
+    "id": 3456,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否加载中",
+    "field_desc_en": "Loading"
+  },
+  {
+    "id": 3463,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "prefix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "前缀内容，展示优先级高于 trend",
+    "field_desc_en": "Prefix content, display priority is higher than trend"
+  },
+  {
+    "id": 3454,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": ",",
+    "field_desc_zh": "默认展示千位分隔符，可以自定义为其他内容，`separator = ''` 设置为空字符串/null/undefined 时展示默认分隔符",
+    "field_desc_en": "Thousands separator is displayed by default, and can be customized to other content, and the default separator is displayed when `separator = ''` is set to an empty string/null/undefined"
+  },
+  {
+    "id": 3464,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后缀内容，展示优先级高于 trend",
+    "field_desc_en": " Suffix content, display priority is higher than trend"
+  },
+  {
+    "id": 3450,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "数值显示的标题",
+    "field_desc_en": "The title of Statistic"
+  },
+  {
+    "id": 3460,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "trend",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "increase",
+      "decrease"
+    ],
+    "field_desc_zh": "趋势",
+    "field_desc_en": "trend"
+  },
+  {
+    "id": 3461,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "trendPlacement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "趋势展示位置",
+    "field_desc_en": "Position of trending placements"
+  },
+  {
+    "id": 3465,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "unit",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "单位内容",
+    "field_desc_en": "Unit content"
+  },
+  {
+    "id": 3451,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "数值显示的值",
+    "field_desc_en": "The value of Statistic"
+  },
+  {
+    "id": 1700880500,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Statistic",
+    "field_category": "Functions",
+    "field_name": "start",
+    "field_type": [],
+    "field_desc_zh": "开始动画",
+    "field_desc_en": "start animation",
+    "field_required": true
+  }
+]

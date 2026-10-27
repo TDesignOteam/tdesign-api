@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1762424283,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "moving",
+    "field_enum": [
+      "skeleton",
+      "moving",
+      "gradient",
+      "dots"
+    ],
+    "field_desc_zh": "加载的状态形式"
+  },
+  {
+    "id": 1762424304,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "collapsed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否折叠"
+  },
+  {
+    "id": 1762423978,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "思考内容对象",
+    "custom_field_type": "{ text?: string; title?: string }",
+    "field_required": true
+  },
+  {
+    "id": 1762424182,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "block",
+    "field_enum": [
+      "block",
+      "border"
+    ],
+    "field_desc_zh": "布局方式"
+  },
+  {
+    "id": 1762424258,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "maxHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "内容区域最大高度，超出会自动滚动"
+  },
+  {
+    "id": 1762424242,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "pending",
+    "field_enum": [
+      "complete",
+      "stop",
+      "error",
+      "pending"
+    ],
+    "field_desc_zh": "思考状态",
+    "field_required": true
+  },
+  {
+    "id": 1762424352,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Events",
+    "field_name": "collapsedChange",
+    "field_type": [],
+    "field_desc_zh": "切换折叠面板时触发",
+    "event_input": "(value: boolean)"
+  },
+  {
+    "id": 1776138832,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinking",
+    "field_category": "Slots",
+    "field_name": "content",
+    "field_type": [],
+    "field_desc_zh": "自定义 `content` 显示内容"
+  }
+]

@@ -1,7 +1,7 @@
 import { pick } from 'lodash-es';
-import apiData from './api.json' with { type: 'json' };
 import { formatArrayToMap, groupByComponent, getApiComponentMapByFrameWork } from './common.js';
 import { COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MOBILE_FRAMES } from './config/index.js';
+import apiData from './data.js';
 import map from './map.json' with { type: 'json' };
 
 const framework = 'UniApp';
@@ -26,7 +26,7 @@ if (frameworkData['Radio']) {
       'typeof:',
       typeof a.field_default_value,
       'fct:',
-      a.field_category_text,
+      a.field_category,
     );
     console.log('  fdv === "undefined":', a.field_default_value === 'undefined');
     console.log('  fdv === undefined:', a.field_default_value === undefined);

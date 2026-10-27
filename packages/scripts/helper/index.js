@@ -12,7 +12,6 @@ import path from 'path';
 import chalk from 'chalk';
 import { uniq } from 'lodash-es';
 import prettier from 'prettier';
-import apiJson from '../api.json' with { type: 'json' };
 import {
   groupByComponent,
   formatArrayToMap,
@@ -22,6 +21,7 @@ import {
 } from '../common.js';
 import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatConfig } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
+import apiJson from '../data.js';
 import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
 import { kebabCaseComponent, isChatComponentPath } from '../utils.js';
@@ -65,10 +65,10 @@ function start() {
     // Typography 是空定义组件，特殊处理
     frameworkData['Typography'] = [];
   }
-  // API field_category_text 等于 Extends, 提取 Pick, Omit 类型的 API
+  // API field_category 等于 Extends, 提取 Pick, Omit 类型的 API
   Object.keys(frameworkData).forEach((componentName) => {
     frameworkData[componentName].forEach((api, index) => {
-      if (api.field_category_text !== 'Extends') return;
+      if (api.field_category !== 'Extends') return;
 
       // 提取 Pick 类型的 API
       if (api.field_name.includes('Pick')) {
@@ -177,12 +177,12 @@ function getHelperData(baseData, framework) {
       const apiDocs = `${componentDocs}?tab=api#${key.toLowerCase()}`;
       const apiDescription = `${api.field_desc_en ? `${api.field_desc_en}\n\n` : ''}${api.field_desc_zh || ''}`;
       const rType = formatType(api, framework);
-      switch (api.field_category_text) {
+      switch (api.field_category) {
         case 'Props':
           props.push(prop);
           const attributesData = {
-            type: api.field_type_text.join('|') || undefined,
-            options: api.field_enum ? api.field_enum.split('/') : undefined,
+            type: api.field_type.join('|') || undefined,
+            options: api.field_enum,
             description: `${apiDescription}\n\n${api.field_default_value ? `default: ${api.field_default_value}\n\n` : ''}[docs](${apiDocs}-props)`,
           };
           attributes[attributeKey] = attributesData;
@@ -193,15 +193,15 @@ function getHelperData(baseData, framework) {
             name: prop,
             description: apiDescription,
             'doc-url': `${apiDocs}-props`,
-            type: rType ? rType.type : api.field_type_text,
+            type: rType ? rType.type : api.field_type,
             default: api.field_default_value || undefined,
             'attribute-value': api.field_enum
-              ? { type: /^string$/i.test(api.field_type_text.join('')) ? 'enum' : 'of-match' }
+              ? { type: /^string$/i.test(api.field_type.join('')) ? 'enum' : 'of-match' }
               : undefined,
-            values: api.field_enum ? api.field_enum.split('/').map((name) => ({ name })) : undefined,
+            values: api.field_enum?.map((name) => ({ name })),
           });
           // vue slots types
-          if (api.field_type_text.indexOf('TNode') !== -1) {
+          if (api.field_type.indexOf('TNode') !== -1) {
             const slotApiDescription = `${apiDescription}${api.custom_field_type ? `类型和参数：${api.custom_field_type}` : ''}`;
             slotsList.push({
               name: api.field_name,

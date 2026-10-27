@@ -1,99 +1,243 @@
-import { isEmpty } from 'lodash';
-import moment from 'moment';
-import squel from 'squel';
+import fs from 'fs';
+import path from 'path';
 import { BaseObject, QueryPaginationProps } from '../../types';
-import executeSQL from './sqlite';
 
-const tableName = 't_api';
+type ApiRecord = Record<string, any>;
+
+const dataDirectory = path.resolve('packages/data');
+const booleanFields = ['field_required', 'deprecated', 'html_attribute', 'support_default_value'];
+const requiredFields = ['id', 'platform_framework', 'component', 'field_category', 'field_name', 'field_type'];
+const optionalStringFields = [
+  'field_default_value',
+  'field_desc_zh',
+  'field_desc_en',
+  'event_input',
+  'event_output',
+  'custom_field_type',
+  'syntactic_sugar',
+  'trigger_elements',
+  'test_description',
+];
+const allowedFields = new Set([
+  ...requiredFields,
+  ...booleanFields,
+  ...optionalStringFields,
+  'field_enum',
+  'version',
+  'order',
+]);
+const categoryOrder = new Map(
+  ['Props', 'Events', 'Functions', 'Extends', 'Return', '<T>', 'External Classes', 'CSS Variables', 'Slots'].map(
+    (category, index) => [category, index],
+  ),
+);
+
+let writeQueue = Promise.resolve();
+
+function compareRecords(a: ApiRecord, b: ApiRecord) {
+  return (
+    String(a.component).localeCompare(String(b.component)) ||
+    (categoryOrder.get(String(a.field_category)) ?? Number.MAX_SAFE_INTEGER) -
+      (categoryOrder.get(String(b.field_category)) ?? Number.MAX_SAFE_INTEGER) ||
+    String(a.field_name).localeCompare(String(b.field_name)) ||
+    Number(a.id) - Number(b.id)
+  );
+}
+
+function componentFamily(component: string) {
+  return component.startsWith('$') ? component.slice(1).split('.')[0] : component;
+}
+
+function familyFileName(family: string) {
+  if (!/^[A-Za-z0-9_.-]+$/.test(family)) throw new Error(`组件家族名 ${family} 不能安全地用作文件名`);
+  return `${family}.json`;
+}
+
+function compactRecord(record: ApiRecord) {
+  const result = { ...record };
+  Object.keys(result).forEach((field) => {
+    if (!requiredFields.includes(field) && (result[field] === '' || result[field] === null || result[field] === undefined)) {
+      delete result[field];
+    }
+  });
+  booleanFields.forEach((field) => {
+    if (result[field] === false) delete result[field];
+  });
+  return result;
+}
+
+function assertRecord(record: ApiRecord) {
+  const unknownFields = Object.keys(record).filter((field) => !allowedFields.has(field));
+  if (unknownFields.length) throw new Error(`包含未知字段：${unknownFields.join(', ')}`);
+  const missingFields = requiredFields.filter((field) => !(field in record));
+  if (missingFields.length) throw new Error(`缺少必填字段：${missingFields.join(', ')}`);
+  if (!Number.isInteger(record.id)) throw new Error('id 必须是整数');
+  if (!Array.isArray(record.platform_framework) || !record.platform_framework.every((item) => typeof item === 'string')) {
+    throw new Error('platform_framework 必须是字符串数组');
+  }
+  if (!Array.isArray(record.field_type) || !record.field_type.every((item) => typeof item === 'string')) {
+    throw new Error('field_type 必须是字符串数组');
+  }
+  ['component', 'field_category'].forEach((field) => {
+    if (typeof record[field] !== 'string' || !record[field]) throw new Error(`${field} 必须是非空字符串`);
+  });
+  if (typeof record.field_name !== 'string') throw new Error('field_name 必须是字符串');
+  optionalStringFields.forEach((field) => {
+    if (field in record && typeof record[field] !== 'string') throw new Error(`${field} 必须是字符串`);
+  });
+  booleanFields.forEach((field) => {
+    if (field in record && record[field] !== true) throw new Error(`${field} 只能为 true，false 时请省略`);
+  });
+  if (
+    'field_enum' in record &&
+    (!Array.isArray(record.field_enum) ||
+      record.field_enum.length === 0 ||
+      !record.field_enum.every((item: unknown) => typeof item === 'string' && item.length > 0))
+  ) {
+    throw new Error('field_enum 必须是非空字符串数组');
+  }
+  if (String(record.component).startsWith('$') && !Number.isInteger(record.order)) {
+    throw new Error('插件 API 必须包含整数 order');
+  }
+  if (!String(record.component).startsWith('$') && 'order' in record) {
+    throw new Error('非插件 API 不能包含 order');
+  }
+}
+
+async function loadRecords() {
+  const files = (await fs.promises.readdir(dataDirectory)).filter((file) => file.endsWith('.json')).sort();
+  const groups = await Promise.all(
+    files.map(async (file) => {
+      const content = await fs.promises.readFile(path.join(dataDirectory, file), 'utf8');
+      const records = JSON.parse(content);
+      if (!Array.isArray(records)) throw new Error(`${file} 必须包含 API 数组`);
+      records.forEach(assertRecord);
+      return records as ApiRecord[];
+    }),
+  );
+  return groups.flat().sort(compareRecords);
+}
+
+async function writeFamily(family: string, records: ApiRecord[]) {
+  const filePath = path.join(dataDirectory, familyFileName(family));
+  const familyRecords = records
+    .filter((record) => componentFamily(String(record.component)) === family)
+    .map(compactRecord)
+    .sort(compareRecords);
+  if (familyRecords.length === 0) {
+    await fs.promises.rm(filePath, { force: true });
+    return;
+  }
+  const temporaryPath = `${filePath}.${process.pid}.tmp`;
+  await fs.promises.writeFile(temporaryPath, `${JSON.stringify(familyRecords, null, 2)}\n`);
+  await fs.promises.rename(temporaryPath, filePath);
+}
+
+function mutateRecords<T>(mutation: (records: ApiRecord[]) => Promise<T>) {
+  const operation = writeQueue.then(async () => mutation(await loadRecords()));
+  writeQueue = operation.then(
+    () => undefined,
+    () => undefined,
+  );
+  return operation;
+}
+
+function includesPlatform(record: ApiRecord, expected: unknown) {
+  const required = Array.isArray(expected) ? expected.map(String) : [String(expected)];
+  const actual = Array.isArray(record.platform_framework) ? record.platform_framework.map(String) : [];
+  return required.every((value) => actual.includes(value));
+}
+
+function nextPluginOrder(records: ApiRecord[], component: string, category: string) {
+  const orders = records
+    .filter((record) => record.component === component && record.field_category === category)
+    .map((record) => Number(record.order))
+    .filter(Number.isInteger);
+  return orders.length === 0 ? 0 : Math.max(...orders) + 1;
+}
+
+function matches(record: ApiRecord, params: BaseObject) {
+  return Object.entries(params).every(([key, value]) => {
+    if (key === 'field_name') return String(record.field_name).includes(String(value));
+    if (key === 'platform_framework') return includesPlatform(record, value);
+    if (key === 'component') return String(value).split(',').includes(String(record.component));
+    return String(record[key]) === String(value);
+  });
+}
 
 class TAPI {
   /**
-    * 查询API记录
-    * @param params 查询条件, [key: string]: value
-    * @param limitObj 分页参数，{size, offset}，size为分页大小，offset为起点
-    * @param columns 自定义列，默认为全部
-  */
-  public static async query(
-    params?: BaseObject,
-    limitObj?: QueryPaginationProps,
-    columns?: string[],
-  ) {
-    const querySQL = squel.select().from(tableName);
-    const countSQL = squel.select().from(tableName).field('count(*)');
+   * 查询API记录
+   * @param params 查询条件, [key: string]: value
+   * @param limitObj 分页参数，{size, offset}，size为分页大小，offset为起点
+   * @param columns 自定义列，默认为全部
+   */
+  public static async query(params?: BaseObject, limitObj?: QueryPaginationProps, columns?: string[]) {
+    const records = await loadRecords();
+    let result = params && Object.keys(params).length ? records.filter((record) => matches(record, params)) : records;
+    const total = result.length;
+    if (limitObj) result = result.slice(limitObj.offset || 0, (limitObj.offset || 0) + limitObj.size);
     if (columns) {
-      columns.map(column => querySQL.field(column));
+      result = result.map((record) =>
+        Object.fromEntries(columns.filter((column) => column in record).map((column) => [column, record[column]])),
+      );
     }
-    const expr = squel.expr();
-    if (params && !isEmpty(params)) {
-      const { field_name: fieldName, component } = params;
-      let { platform_framework: framework } = params;
-      // 处理 API名称以支持模糊查询，LIKE %xxx%
-      if (fieldName) {
-        expr.and(`field_name like "%${fieldName}%"`);
-        delete params.field_name;
-      }
-      // 一个 API 可能属于多个平台，需要使用 sql 的位运算，如： 2 & platform_framework = 2
-      if (framework) {
-        delete params.platform_framework;
-        framework = String(framework);
-        expr.and(`platform_framework & ${framework} = ${framework}`);
-      }
-      if (component) {
-        delete params.component;
-        const list = (component as string).split(',');
-        const componentsExpr = squel.expr()
-        list.forEach((oneComponent) => {
-          componentsExpr.or(`component = '${oneComponent}'`);
-        });
-        expr.and(componentsExpr);
-      }
-      // 处理其他参数
-      Object.keys(params).map(paramName => {
-        expr.and(`${paramName} = "${params[paramName]}"`);
-      });
-    }
-
-    querySQL.where(expr)
-      .order('component')
-      .order('field_category')
-      .order('field_name');
-
-    // 分页参数设置
-    if (limitObj) {
-      const { size, offset = 0 } = limitObj;
-      querySQL.limit(size).offset(offset);
-    }
-
-    countSQL.where(expr);
-
-    // 查询符合条件的记录、统计条数
-    const apis = await executeSQL(querySQL.toString());
-    const total = (await executeSQL(countSQL.toString())) as Record<string, unknown>[];
-    return [apis, total[0]['count(*)'] as number];
+    return [result.map((record) => ({ ...record })), total];
   }
 
   public static async create(params: BaseObject) {
-    const newID = moment().unix();
-    const insertSQL = squel.insert({ replaceSingleQuotes: true }).into(tableName).set('id', newID);
-
-    Object.keys(params).map(param => insertSQL.set(param, params[param]));
-    const res = await executeSQL(insertSQL.toString(), true);
-    return res;
+    return mutateRecords(async (records) => {
+      const payload = compactRecord({ ...params });
+      const explicitId = payload.id;
+      let newID = explicitId ? Number(explicitId) : Math.floor(Date.now() / 1000);
+      const used = new Set(records.map((record) => Number(record.id)));
+      if (explicitId && used.has(newID)) throw new Error(`API id ${newID} 已存在`);
+      while (used.has(newID)) newID += 1;
+      if (String(payload.component).startsWith('$') && !Number.isInteger(payload.order)) {
+        payload.order = nextPluginOrder(records, String(payload.component), String(payload.field_category));
+      }
+      const record: ApiRecord = compactRecord({ ...payload, id: newID });
+      assertRecord(record);
+      records.push(record);
+      records.sort(compareRecords);
+      await writeFamily(componentFamily(String(record.component)), records);
+      return record;
+    });
   }
 
   public static async update(params: BaseObject, id: number) {
-    const updateSQL = squel.update({ replaceSingleQuotes: true }).table(tableName).where(`id = ${id}`);
-
-    Object.keys(params).map(param => updateSQL.set(param, params[param]));
-    const res = await executeSQL(updateSQL.toString(), true);
-    return res;
+    return mutateRecords(async (records) => {
+      const index = records.findIndex((record) => Number(record.id) === id);
+      if (index === -1) throw new Error(`API id ${id} 不存在`);
+      const previousFamily = componentFamily(String(records[index].component));
+      const updated: ApiRecord = {
+        ...records[index],
+        ...params,
+        id,
+      };
+      if (String(updated.component).startsWith('$') && !Number.isInteger(updated.order)) {
+        updated.order = nextPluginOrder(records, String(updated.component), String(updated.field_category));
+      } else if (!String(updated.component).startsWith('$')) {
+        delete updated.order;
+      }
+      records[index] = compactRecord(updated);
+      assertRecord(records[index]);
+      const nextFamily = componentFamily(String(records[index].component));
+      records.sort(compareRecords);
+      await writeFamily(previousFamily, records);
+      if (nextFamily !== previousFamily) await writeFamily(nextFamily, records);
+      return records[index];
+    });
   }
 
   public static async delete(id: number) {
-    const deleteSQL = squel.delete().from(tableName).where(`id = ${id}`);
-
-    const res = await executeSQL(deleteSQL.toString(), true);
-    return res;
+    return mutateRecords(async (records) => {
+      const index = records.findIndex((record) => Number(record.id) === id);
+      if (index === -1) throw new Error(`API id ${id} 不存在`);
+      const [deleted] = records.splice(index, 1);
+      await writeFamily(componentFamily(String(deleted.component)), records);
+      return deleted;
+    });
   }
 }
 

@@ -1,0 +1,449 @@
+[
+  {
+    "id": 1718962073,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用下拉刷新",
+    "field_desc_en": "disabled pull down refresh",
+    "event_input": "boolean"
+  },
+  {
+    "id": 3480,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "enableBackToTop",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向。自 2.27.3 版本开始，若非显式设置为 false，则在显示尺寸大于屏幕 90% 时自动开启",
+    "version": {
+      "Miniprogram": "1.1.5"
+    }
+  },
+  {
+    "id": 3481,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "enablePassive",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "开启 passive 特性，能优化一定的滚动性能",
+    "version": {
+      "Miniprogram": "1.1.5"
+    }
+  },
+  {
+    "id": 1712058324,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "头部",
+    "version": {
+      "Miniprogram": "1.2.10"
+    }
+  },
+  {
+    "id": 1757,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "loadingBarHeight",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "50",
+    "field_desc_zh": "加载中下拉高度，如果值为数字则单位是：'px'"
+  },
+  {
+    "id": 1759,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "loadingProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "加载loading样式",
+    "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】"
+  },
+  {
+    "id": 1760,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "loadingTexts",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "提示语，组件内部默认值为 ['下拉刷新', '松手刷新', '正在刷新', '刷新完成']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 3478,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "lowerThreshold",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "50",
+    "field_desc_zh": "距底部/右边多远时，触发 scrolltolower 事件",
+    "version": {
+      "Miniprogram": "1.1.5"
+    }
+  },
+  {
+    "id": 1756,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "maxBarHeight",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "80",
+    "field_desc_zh": "最大下拉高度，如果值为数字则单位是：'px'"
+  },
+  {
+    "id": 1758,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "refreshTimeout",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "刷新超时时间"
+  },
+  {
+    "id": 3479,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "scrollIntoView",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素",
+    "version": {
+      "Miniprogram": "1.1.5"
+    }
+  },
+  {
+    "id": 3528,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "showScrollbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "滚动条显隐控制 (同时开启 enhanced 属性后生效)"
+  },
+  {
+    "id": 1752227984,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "successDuration",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "500",
+    "field_desc_zh": "刷新成功提示展示时长，单位 'ms'"
+  },
+  {
+    "id": 3477,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "upperThreshold",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "50",
+    "field_desc_zh": "距顶部/左边多远时，触发 scrolltoupper 事件",
+    "version": {
+      "Miniprogram": "1.1.5"
+    }
+  },
+  {
+    "id": 1735092907,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 2497,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2496,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态",
+    "event_input": "(value: boolean)"
+  },
+  {
+    "id": 1712058447,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "dragend",
+    "field_type": [],
+    "field_desc_zh": "滑动结束事件",
+    "event_input": "(scrollTop: number, scrollLeft: number)",
+    "version": {
+      "Miniprogram": "1.2.10"
+    }
+  },
+  {
+    "id": 1712058436,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "dragging",
+    "field_type": [],
+    "field_desc_zh": "滑动事件",
+    "event_input": "(scrollTop: number, scrollLeft: number)",
+    "version": {
+      "Miniprogram": "1.2.10"
+    }
+  },
+  {
+    "id": 1712058420,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "dragstart",
+    "field_type": [],
+    "field_desc_zh": "滑动开始事件",
+    "event_input": "(scrollTop: number, scrollLeft: number)",
+    "version": {
+      "Miniprogram": "1.2.10"
+    }
+  },
+  {
+    "id": 1764,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "refresh",
+    "field_type": [],
+    "field_desc_zh": "结束下拉时触发"
+  },
+  {
+    "id": 3531,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "scrolltolower",
+    "field_type": [],
+    "field_desc_zh": "滚动到页面底部时触发"
+  },
+  {
+    "id": 1765,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Events",
+    "field_name": "timeout",
+    "field_type": [],
+    "field_desc_zh": "刷新超时触发"
+  },
+  {
+    "id": 1712058496,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712058523,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "External Classes",
+    "field_name": "t-class-indicator",
+    "field_type": [],
+    "field_desc_zh": "指示样式类"
+  },
+  {
+    "id": 1712058513,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "External Classes",
+    "field_name": "t-class-loading",
+    "field_type": [],
+    "field_desc_zh": "加载样式类"
+  },
+  {
+    "id": 1712058518,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "External Classes",
+    "field_name": "t-class-text",
+    "field_type": [],
+    "field_desc_zh": "文本样式类"
+  },
+  {
+    "id": 1759216042,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefresh",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

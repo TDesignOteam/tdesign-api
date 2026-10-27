@@ -1,0 +1,598 @@
+[
+  {
+    "id": 2321,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "宽度随内容自适应"
+  },
+  {
+    "id": 1715162187,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "无边框模式"
+  },
+  {
+    "id": 2099,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可清空",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty TagInput does not need clearIcon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-tag-input__suffix-clear\":false}]}]},{\"description\":\"show clearIcon on mouse enter\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]},{\"description\":\"clear all tags on click clearIcon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\",\"e.type\":\"click\"}]}}]},{\"props\":{\"disabled\":true},\"description\":\"disabled TagInput can not show clear icon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"readonly\":true},\"description\":\"readonly TagInput can not show clear icon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]}]}}"
+  },
+  {
+    "id": 2105,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "collapsedItems",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
+    "custom_field_type": "TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number,  e?: MouseEvent }) => void }>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"trigger\":\"\",\"dom\":[]}}}"
+  },
+  {
+    "id": 2114,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用标签输入框",
+    "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"disabled TagInput does not need clearIcon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-tag-input__suffix-clear\":false}]}]},{\"description\":\"disabled TagInput can not trigger focus event\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":\"not\"}}]}]}}"
+  },
+  {
+    "id": 2131,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "dragSort",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "拖拽调整标签顺序"
+  },
+  {
+    "id": 2115,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "excessTagsDisplayType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "break-line",
+    "field_enum": [
+      "scroll",
+      "break-line"
+    ],
+    "field_desc_zh": "标签超出时的呈现方式，有两种：横向滚动显示 和 换行显示",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"className\":[{\"t-tag-input--break-line\":false},\"t-tag-input--break-line\"],\"attribute\":\"\"}}"
+  },
+  {
+    "id": 2092,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Input 输入框组件全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】",
+    "test_description": "{\"PC\":{\"className\":[{\"value\":\"{size: 'small'}\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"t-size-s\":true}}]}]}}"
+  },
+  {
+    "id": 2355,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "inputValue",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "custom_field_type": "string",
+    "syntactic_sugar": "sync",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"input value text\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"input value text\"}}]}]}}",
+    "support_default_value": true
+  },
+  {
+    "id": 2097,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 2101,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "最大允许输入的标签数量",
+    "field_desc_en": "max tag number",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":1},\"description\":\"could type only three tags\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag3')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]},{\"trigger\":\" simulateInputChange('input', 'Tag5')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}"
+  },
+  {
+    "id": 2104,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "minCollapsedNum",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "最小折叠数量，用于标签数量过多的情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"minCollapsedNum\":3},\"dom\":[{\".t-tag\":4}]}}"
+  },
+  {
+    "id": 2094,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符",
+    "field_desc_en": "placeholder description",
+    "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"This is TagInput placeholder\"},\"attributeDom\":\"input\"}}"
+  },
+  {
+    "id": 1693985396,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标"
+  },
+  {
+    "id": 2095,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态，值为真会隐藏标签移除按钮和输入框",
+    "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"readonly TagInput does not need clearIcon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"event\":[{\".t-tag-input__suffix-clear\":false}]}]},{\"description\":\"readonly TagInput can not trigger focus event\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":\"not\"}}]}]}}"
+  },
+  {
+    "id": 2194,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 2098,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态",
+    "test_description": "{\"PC\":{\"className\":[{\"t-is-default\":false},\"t-is-success\",\"t-is-warning\",\"t-is-error\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 2130,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标前的后置内容",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 2129,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件后置图标",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 2107,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义标签的内部内容，每一个标签的当前值。注意和 `valueDisplay` 区分，`valueDisplay`  是用来定义全部标签内容，而非某一个标签",
+    "custom_field_type": "string | TNode<{ value: string | number }>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"value\":[\"tdesign-vue\"]},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":\"tdesign-vue\"}]}}}"
+  },
+  {
+    "id": 1779877619,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "tagDisplay",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义单个标签的整体节点",
+    "custom_field_type": "TNode<{ value: string | number; index: number; onClose: (context?: { e?: MouseEvent }) => void; }>"
+  },
+  {
+    "id": 2096,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "tagProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Tag 组件全部属性",
+    "custom_field_type": "TagProps【import { TagProps } from '@Tag'】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"multiple\":true},\"dom\":{\"{ theme: 'warning' }\":{\".t-tag--warning\":5}}}}"
+  },
+  {
+    "id": 2171,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+    "test_description": "{\"PC\":{\"dom\":{\"this is a tip\":{\".t-input__tips\":1}}}}"
+  },
+  {
+    "id": 2090,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "值",
+    "field_desc_en": "value",
+    "custom_field_type": "TagInputValue【type TagInputValue = Array<string | number>】",
+    "syntactic_sugar": "v-model",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputDefaultMount\",\"event\":[{\"props\":{\"value\":[]},\"description\":\"controlled value test: only props can change count of tags\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag1')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":false}]}]},{\"description\":\"uncontrolled value test: count of tags can be changed inner TagInput\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag2')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}",
+    "support_default_value": true
+  },
+  {
+    "id": 2102,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Props",
+    "field_name": "valueDisplay",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义值呈现的全部内容，参数为所有标签的值",
+    "custom_field_type": "string | TNode<{ value: TagInputValue; onClose: (index: number, item?: any) => void }>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[\"tdesign-vue\",\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\",\"tdesign-mobile-react\"]}]}}}"
+  },
+  {
+    "id": 2127,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "field_desc_en": "trigger on blur",
+    "event_input": "(value: TagInputValue, context: { inputValue: string; e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"trigger blur event and clear inputValue on blur\",\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'tag1')\"},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[[],{\"e.type\":\"blur\",\"inputValue\":\"\"}],\"inputChange.calls[1]\":[\"\",{\"e.type\":\"blur\",\"trigger\":\"blur\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"\"}}}]}]}]}}"
+  },
+  {
+    "id": 2091,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发，参数 `context.trigger` 表示数据变化的触发来源；`context.index` 指当前变化项的下标；`context.item` 指当前变化项；`context.e` 表示事件参数",
+    "event_input": "(value: TagInputValue, context: TagInputChangeContext)【interface TagInputChangeContext { trigger: TagInputTriggerSource; index?: number; item?: string | number; e?: MouseEvent | KeyboardEvent }】【type TagInputTriggerSource = 'enter' | 'tag-remove' | 'backspace' | 'clear'】",
+    "trigger_elements": "MouseEvent<SVGSVGElement>/KeyboardEvent<HTMLInputElement>"
+  },
+  {
+    "id": 2100,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<SVGSVGElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"clearable\":true},\"description\":\"click clear icon, then clear all tags\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}]}}]}]}}"
+  },
+  {
+    "id": 2323,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击组件时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":{\"click(.t-input)\":{\"arguments\":[{\"e.type\":\"click\"}]}}}}"
+  },
+  {
+    "id": 2350,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "dragSort",
+    "field_type": [],
+    "field_desc_zh": "【开发中】拖拽排序时触发",
+    "field_desc_en": "trigger on drag sort",
+    "event_input": "(context: TagInputDragSortContext)【interface TagInputDragSortContext { newTags: TagInputValue; currentIndex: number; current: string | number; targetIndex: number; target: string | number }】"
+  },
+  {
+    "id": 2093,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "按键按下 Enter 时触发",
+    "event_input": "(value: TagInputValue, context: { e: KeyboardEvent; inputValue: string })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"['tag']\"},\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"enter\":[[\"tag\"],{\"e.type\":\"keydown\",\"inputValue\":\"\"}]}}]},{\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"simulateInputChange('input', 'Tag')\"},{\"trigger\":\"simulateInputEnter('input')\",\"exist\":[{\".t-tag\":1}]}]}]}}"
+  },
+  {
+    "id": 2128,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "聚焦时触发",
+    "field_desc_en": "trigger on focus",
+    "event_input": "(value: TagInputValue, context: { inputValue: string; e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[[],{\"e.type\":\"focus\",\"inputValue\":\"\"}]}}]},{\"props\":{\"inputValue\":\"tag\"},\"description\":\"expect focus not change inputValue\",\"wrapper\":\"getTagInputDefaultMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[[],{\"e.type\":\"focus\",\"inputValue\":\"tag\"}]}}]}]}}"
+  },
+  {
+    "id": 2335,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "inputChange",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等",
+    "event_input": "(value: string, context?: InputValueChangeContext)【interface InputValueChangeContext { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent; trigger: 'input' | 'clear' | 'enter' | 'blur'   }】",
+    "trigger_elements": "MouseEvent<HTMLElement | SVGElement>/KeyboardEvent<HTMLInputElement>"
+  },
+  {
+    "id": 2111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "mouseenter",
+    "field_type": [],
+    "field_desc_zh": "进入输入框时触发",
+    "field_desc_en": "trigger on mouseenter",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"event\":{\"mouseenter\":[{\"e.type\":\"mouseenter\"}]}}]}]}}"
+  },
+  {
+    "id": 2112,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "mouseleave",
+    "field_type": [],
+    "field_desc_zh": "离开输入框时触发",
+    "field_desc_en": "trigger on mouseleave",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"\",\"expect\":[{\"trigger\":\"mouseleave(.t-input)\",\"event\":{\"mouseleave\":[{\"e.type\":\"mouseleave\"}]}}]}]}}"
+  },
+  {
+    "id": 2117,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "paste",
+    "field_type": [],
+    "field_desc_zh": "粘贴事件，`pasteValue` 表示粘贴板的内容",
+    "event_input": "(context: { e: ClipboardEvent; pasteValue: string })",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"paste(input)\",\"event\":{\"paste\":[{\"e.type\":\"paste\"}]}}]}]}}"
+  },
+  {
+    "id": 2113,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TagInput",
+    "field_category": "Events",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "移除单个标签时触发",
+    "event_input": "(context: TagInputRemoveContext)【interface TagInputRemoveContext { value: TagInputValue; index: number; item: string | number; e?: MouseEvent | KeyboardEvent; trigger: TagInputRemoveTrigger }】【type TagInputRemoveTrigger = 'tag-remove' | 'backspace'】",
+    "trigger_elements": "MouseEvent<SVGSVGElement>/KeyboardEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"remove last tag on keydown Backspace\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"keydown.backspace(input)\",\"event\":{\"remove\":[{\"value\":[\"tdesign-vue\",\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\"],\"index\":4,\"trigger\":\"backspace\",\"item\":\"tdesign-mobile-react\",\"e.type\":\"keydown\"}]}}]},{\"description\":\"remove any tag on click tag close icon\",\"wrapper\":\"getTagInputValueMount\",\"expect\":[{\"trigger\":\"click(.t-tag__icon-close)\",\"event\":{\"remove\":[{\"value\":[\"tdesign-react\",\"tdesign-miniprogram\",\"tdesign-mobile-vue\",\"tdesign-mobile-react\"],\"index\":0,\"trigger\":\"tag-remove\",\"item\":\"tdesign-vue\",\"e.type\":\"click\"}]}}]}]}}"
+  }
+]

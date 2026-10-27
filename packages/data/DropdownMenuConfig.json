@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1741184034,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownMenuConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定” 按钮描述文本",
+    "field_desc_en": "confirm text"
+  },
+  {
+    "id": 1741184082,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownMenuConfig",
+    "field_category": "Props",
+    "field_name": "reset",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“重置” 按钮描述文本",
+    "field_desc_en": "reset text"
+  }
+]

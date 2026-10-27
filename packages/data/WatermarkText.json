@@ -1,0 +1,102 @@
+[
+  {
+    "id": 2597,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkText",
+    "field_category": "Props",
+    "field_name": "fontColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "rgba(0,0,0,0.1)",
+    "field_desc_zh": "水印文本文字颜色"
+  },
+  {
+    "id": 1693810226,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkText",
+    "field_category": "Props",
+    "field_name": "fontFamily",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "水印文本文字字体",
+    "field_desc_en": "font-family configuration for watermark text"
+  },
+  {
+    "id": 2598,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkText",
+    "field_category": "Props",
+    "field_name": "fontSize",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "16",
+    "field_desc_zh": "水印文本文字大小"
+  },
+  {
+    "id": 2599,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkText",
+    "field_category": "Props",
+    "field_name": "fontWeight",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "lighter",
+      "bold",
+      "bolder"
+    ],
+    "field_desc_zh": "水印文本文字粗细"
+  },
+  {
+    "id": 2595,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkText",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "水印文本内容"
+  }
+]

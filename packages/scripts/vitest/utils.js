@@ -21,6 +21,7 @@ function getSkipCode(skip) {
 }
 
 function groupByComponent(allApi, framework) {
+  const categoryOrder = ['Props', 'Events', 'Functions', 'Extends', 'Return', '<T>', 'External Classes', 'CSS Variables', 'Slots'];
   const result = {};
   allApi.forEach((api) => {
     if (framework && !api.platform_framework.includes(framework)) return;
@@ -31,13 +32,15 @@ function groupByComponent(allApi, framework) {
     }
   });
 
-  // API 默认顺序为字母顺序，但是插件 API 的顺序应当为创建顺序。插件 API 形如：$Message.info(theme, duration)
+  // API 默认按名称排序；插件方法参数使用源数据中的显式顺序。插件 API 形如：$Message.info(theme, duration)
   Object.keys(result).forEach((componentName) => {
     if (componentName[0] === '$') {
       result[componentName] = result[componentName].sort((a, b) => {
         // props 放在前面，其余类型放在后面 (props 的 field_category 值最小)
-        if (a.field_category < b.field_category) return -1;
-        return a.create_time.localeCompare(b.create_time);
+        if (a.field_category !== b.field_category) {
+          return categoryOrder.indexOf(a.field_category) - categoryOrder.indexOf(b.field_category);
+        }
+        return a.order - b.order;
       });
     }
   });

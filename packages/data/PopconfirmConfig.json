@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1916,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PopconfirmConfig",
+    "field_category": "Props",
+    "field_name": "cancel",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，“取消”描述文本",
+    "custom_field_type": "string | ButtonProps【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1917,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PopconfirmConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，“确定”描述文本",
+    "custom_field_type": "string | ButtonProps"
+  },
+  {
+    "id": 1955,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PopconfirmConfig",
+    "field_category": "Props",
+    "field_name": "confirmBtnTheme",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "确认按钮主题色，即 Popconfirm 的 `theme` 和 确认按钮的 `theme` 映射关系。示例：{ danger: 'danger' }",
+    "custom_field_type": "{ default: string; warning: string; danger: string; }"
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "id": 375,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "close",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "即将废弃，请使用 closeBtn 属性。关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮",
+    "field_desc_en": "Deprecated, use closeBtn instead."
+  },
+  {
+    "id": 1750247844,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "关闭按钮。值为 true 则显示默认关闭按钮；值为 false 则不显示按钮；值类型为 string 则直接显示；值类型为 Function 则可以自定关闭按钮",
+    "field_desc_en": "Close button. Value \"true\" show the close button. Value \"False\" hide close button. Value type string display as is. Use TNode to custom the close trigger.",
+    "custom_field_type": "string | boolean | TNode",
+    "version": 1.41
+  },
+  {
+    "id": 919,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容，同 message"
+  },
+  {
+    "id": 373,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 376,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "maxLine",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "内容显示最大行数，超出的内容会折叠收起，用户点击后再展开。值为 0 表示不折叠"
+  },
+  {
+    "id": 370,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容（子元素）"
+  },
+  {
+    "id": 374,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "operation",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "跟在告警内容后面的操作区"
+  },
+  {
+    "id": 372,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "info",
+    "field_enum": [
+      "success",
+      "info",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "组件风格"
+  },
+  {
+    "id": 371,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 918,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 917,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Alert",
+    "field_category": "Events",
+    "field_name": "closed",
+    "field_type": [],
+    "field_desc_zh": "告警提示框关闭动画结束后触发",
+    "event_input": "(context: { e: TransitionEvent })"
+  }
+]

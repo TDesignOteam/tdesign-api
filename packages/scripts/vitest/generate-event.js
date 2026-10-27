@@ -53,13 +53,13 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       [firstEvent]: 'fn',
     });
     const tmpProps = { events: attachEventToDom };
-    if (oneApiData.field_type_text[0] === 'Boolean') {
+    if (oneApiData.field_type[0] === 'Boolean') {
       tmpProps[oneApiData.field_name] = true;
     }
     const mountCode = getMountComponent(framework, component, tmpProps, extraCode);
     const { reactAsync } = getReactFireEventAsync([{ trigger: firstEvent, delay }], framework);
     const isVue = framework.indexOf('Vue') !== -1;
-    const categoryType = oneApiData.field_category_text ? camelCase(oneApiData.field_category_text) : 'interactive';
+    const categoryType = oneApiData.field_category ? camelCase(oneApiData.field_category) : 'interactive';
     const arr = [
       `it${getSkipCode(skip)}('${categoryType}.${oneApiData.field_name} works fine', ${isVue || reactAsync || topAsync ? 'async' : ''} () => {
         const fn = vi.fn();`,
@@ -92,8 +92,8 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
         events: getEventFunctions(expect, framework, currentExtraCode),
       };
       if (
-        oneApiData.field_type_text &&
-        oneApiData.field_type_text[0] === 'Boolean' &&
+        oneApiData.field_type &&
+        oneApiData.field_type[0] === 'Boolean' &&
         codeProps[oneApiData.field_name] === undefined
       ) {
         codeProps[oneApiData.field_name] = true;
@@ -101,7 +101,7 @@ function generateVueAndReactEventCase(test, oneApiData, framework, component) {
       const mountCode = getMountComponent(framework, component, codeProps, currentExtraCode);
       const { reactAsync } = getReactFireEventAsync(expect, framework);
       const async = framework.indexOf('Vue') !== -1 || reactAsync || topAsync ? 'async' : '';
-      const category = oneApiData.field_category_text?.toLocaleLowerCase();
+      const category = oneApiData.field_category?.toLocaleLowerCase();
       const apiPrefix = category ? `${category}.${oneApiData.field_name}: ` : '';
       const itDescription = description ? `'${apiPrefix}${description}'` : getItDescription(oneApiData);
       const oneEventArr = [

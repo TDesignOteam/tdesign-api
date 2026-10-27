@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1762423223,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMarkdown",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "markdown 内容文本",
+    "field_required": true
+  },
+  {
+    "id": 1762423331,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMarkdown",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{ gfm: true, pedantic: false, breaks: true }",
+    "field_desc_zh": "Markdown 解析器基础配置",
+    "custom_field_type": "TdChatContentMDOptions 【interface TdChatContentMDOptions {gfm?: boolean; pedantic?: boolean; smartLists?: boolean; breaks?: boolean}】"
+  },
+  {
+    "id": 1778731794,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMarkdown",
+    "field_category": "Props",
+    "field_name": "streaming",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "流式输出配置：`hasNextChunk` 表示是否还有后续分片（输出中为 true，结束时为 false）；`completeSyntax` 默认为 false，仅控制是否处理流式末尾未闭合的 Markdown 语法。设为 true 时，会对末尾未闭合的链接、图片、加粗、行内代码等语法进行补全或隐藏，避免暴露原始符号与 URL；`tail` 控制尾部光标，true 使用默认光标 ▋，传对象可自定义光标字符",
+    "custom_field_type": "TdChatMarkdownStreamingOptions【 interface TdChatMarkdownStreamingOptions { hasNextChunk?: boolean; completeSyntax?: boolean; tail?: boolean | { content?: string } }】"
+  },
+  {
+    "id": 1762423469,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMarkdown",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击链接时触发",
+    "event_input": "(context: TdMarkdownClickContext)【interface TdMarkdownClickContext {event: TouchEvent;node: TdMarkdownNode;}】【interface TdMarkdownNode {   type: string;   raw?: string;   text?: string;   href?: string;   title?: string;   tokens?: TdMarkdownNode[];   [key: string]: unknown;}】"
+  }
+]

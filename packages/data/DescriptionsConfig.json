@@ -1,0 +1,17 @@
+[
+  {
+    "id": 3510,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DescriptionsConfig",
+    "field_category": "Props",
+    "field_name": "colonText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "字段旁边的冒号，中文为“：”",
+    "field_desc_en": "colon on the right of label, \":\""
+  }
+]

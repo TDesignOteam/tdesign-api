@@ -1,0 +1,104 @@
+[
+  {
+    "id": 246,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Props",
+    "field_name": "loadDefaultIcons",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否加载组件库内置图标"
+  },
+  {
+    "id": 414,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图标名称",
+    "event_output": "返回为false或者reject promise时表示停止关闭",
+    "field_required": true
+  },
+  {
+    "id": 243,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等"
+  },
+  {
+    "id": 244,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "可用于设置图标颜色，如：style=\\\"color: red\\\"",
+    "html_attribute": true
+  },
+  {
+    "id": 245,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_desc_zh": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.js)",
+    "custom_field_type": "string | Array<string>"
+  },
+  {
+    "id": 1249,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconSVG",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  }
+]

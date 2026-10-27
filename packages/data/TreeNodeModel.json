@@ -1,0 +1,359 @@
+[
+  {
+    "id": 716,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "actived",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当前节点是否处于高亮激活态",
+    "field_required": true
+  },
+  {
+    "id": 719,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "checked",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当前节点是否被选中",
+    "field_required": true
+  },
+  {
+    "id": 564,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`",
+    "field_desc_en": "node data, extends `TreeOptionData`",
+    "custom_field_type": "T",
+    "field_required": true
+  },
+  {
+    "id": 1701315118,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "禁用状态",
+    "field_desc_en": "node disabled state",
+    "field_required": true
+  },
+  {
+    "id": 718,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当前节点是否展开",
+    "field_required": true
+  },
+  {
+    "id": 720,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "indeterminate",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当前节点是否处于半选状态",
+    "field_required": true
+  },
+  {
+    "id": 721,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当前节点是否处于加载中状态",
+    "field_required": true
+  },
+  {
+    "id": 557,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "appendData",
+    "field_type": [],
+    "field_desc_zh": "追加子节点数据，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`",
+    "field_desc_en": "add node data, `T` extends `TreeOptionData`",
+    "event_input": "(data: T | Array<T>)",
+    "field_required": true
+  },
+  {
+    "id": 1063,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getChildren",
+    "field_type": [],
+    "field_desc_zh": "默认获取当前节点的全部子节点，deep 值为 true 则表示获取全部子孙节点",
+    "event_input": "(deep: boolean)",
+    "event_output": "Array<TreeNodeModel<T>> | boolean",
+    "field_required": true
+  },
+  {
+    "id": 558,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getIndex",
+    "field_type": [],
+    "field_desc_zh": "获取节点在父节点的子节点列表中的位置，如果没有父节点，则获取节点在根节点列表的位置",
+    "event_output": "number",
+    "field_required": true
+  },
+  {
+    "id": 559,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getLevel",
+    "field_type": [],
+    "field_desc_zh": "获取节点所在的层级",
+    "event_output": "number",
+    "field_required": true
+  },
+  {
+    "id": 560,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getParent",
+    "field_type": [],
+    "field_desc_zh": "获取单个父节点",
+    "event_output": "TreeNodeModel<T>",
+    "field_required": true
+  },
+  {
+    "id": 561,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getParents",
+    "field_type": [],
+    "field_desc_zh": "获取所有父节点",
+    "event_output": "Array<TreeNodeModel<T>>",
+    "field_required": true
+  },
+  {
+    "id": 555,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getPath",
+    "field_type": [],
+    "field_desc_zh": "获取节点全路径",
+    "event_output": "Array<TreeNodeModel<T>>",
+    "field_required": true
+  },
+  {
+    "id": 573,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getRoot",
+    "field_type": [],
+    "field_desc_zh": "获取根节点",
+    "event_output": "TreeNodeModel<T>",
+    "field_required": true
+  },
+  {
+    "id": 574,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "getSiblings",
+    "field_type": [],
+    "field_desc_zh": "获取兄弟节点，包含自己在内",
+    "event_output": "Array<TreeNodeModel<T>>",
+    "field_required": true
+  },
+  {
+    "id": 576,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "insertAfter",
+    "field_type": [],
+    "field_desc_zh": "在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(newData: T)",
+    "field_required": true
+  },
+  {
+    "id": 575,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "insertBefore",
+    "field_type": [],
+    "field_desc_zh": "在当前节点前插入新节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(newData: T)",
+    "field_required": true
+  },
+  {
+    "id": 578,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "isFirst",
+    "field_type": [],
+    "field_desc_zh": "是否为兄弟节点中的第一个节点",
+    "event_output": "boolean",
+    "field_required": true
+  },
+  {
+    "id": 579,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "isLast",
+    "field_type": [],
+    "field_desc_zh": "是否为兄弟节点中的最后一个节点",
+    "event_output": "boolean",
+    "field_required": true
+  },
+  {
+    "id": 580,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "isLeaf",
+    "field_type": [],
+    "field_desc_zh": "是否为叶子节点",
+    "event_output": "boolean",
+    "field_required": true
+  },
+  {
+    "id": 2021,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "移除当前节点或当前节点的子节点，值为空则移除当前节点，值存在则移除当前节点的子节点",
+    "event_input": "(value?: TreeNodeValue)",
+    "field_required": true
+  },
+  {
+    "id": 2022,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Functions",
+    "field_name": "setData",
+    "field_type": [],
+    "field_desc_zh": "设置节点数据，数据变化可自动刷新页面，泛型 `T` 表示树节点 TS 类型，继承 `TreeOptionData`",
+    "field_desc_en": "set node data, `T` extends `TreeOptionData`",
+    "event_input": "(data: T)",
+    "field_required": true
+  },
+  {
+    "id": 554,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "Extends",
+    "field_name": "TreeNodeState",
+    "field_type": []
+  },
+  {
+    "id": 556,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeModel",
+    "field_category": "<T>",
+    "field_name": "<T extends TreeOptionData = TreeOptionData>",
+    "field_type": []
+  }
+]

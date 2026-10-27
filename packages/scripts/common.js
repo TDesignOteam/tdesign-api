@@ -1,4 +1,5 @@
 import { upperFirst, camelCase as camelcase } from 'lodash-es';
+import { API_ORIGIN } from './api-origin.js';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import mapJson from './map.json' with { type: 'json' };
 import { kebabCaseComponent } from './utils.js';
@@ -138,6 +139,7 @@ function resolveComponentMergeList(mergeMap, component) {
 }
 
 export {
+  API_ORIGIN,
   getLabelByKey,
   getApiTitles,
   groupByComponent,

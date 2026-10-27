@@ -3,8 +3,8 @@
     <div class="unit-test-design__input">
       <h3 class="unit-test-tdesign__h3">
         {{ apiInfo?.component }}.{{ apiInfo?.field_name }}
-        <template v-if="apiInfo && apiInfo.field_type_text && apiInfo.field_type_text.length">
-          {{ '<' + apiInfo.field_type_text.join('/') + '>' }}
+        <template v-if="apiInfo && apiInfo.field_type && apiInfo.field_type.length">
+          {{ '<' + apiInfo.field_type.join('/') + '>' }}
         </template>
       </h3>
 
@@ -153,7 +153,7 @@ function jsonConfirm() {
 
 function checkInFramework() {
   const framework = tab.value === 'VueNext(PC)' ? 'Vue(PC)' : tab.value;
-  return props.apiInfo && props.apiInfo.platform_framework_text?.includes(framework);
+  return props.apiInfo && props.apiInfo.platform_framework?.includes(framework);
 }
 
 watch(

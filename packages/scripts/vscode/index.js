@@ -15,8 +15,8 @@
  *
  */
 import chalk from 'chalk';
-import apiJson from '../api.json' with { type: 'json' };
 import { groupByComponent, formatArrayToMap } from '../common.js';
+import apiJson from '../data.js';
 import { generateDocs } from '../docs/index.js';
 import map from '../map.json' with { type: 'json' };
 

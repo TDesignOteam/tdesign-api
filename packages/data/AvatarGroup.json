@@ -1,0 +1,211 @@
+[
+  {
+    "id": 1600,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "cascading",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'left-up'",
+    "field_enum": [
+      "left-up",
+      "right-up"
+    ],
+    "field_desc_zh": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上",
+    "field_desc_en": "multiple images cascading",
+    "custom_field_type": "CascadingValue【type CascadingValue = 'left-up' | 'right-up'】",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"className\":[\"t-avatar--offset-left\",\"t-avatar--offset-right\"]}}"
+  },
+  {
+    "id": 1712660787,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "cascading",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'right-up'",
+    "field_enum": [
+      "left-up",
+      "right-up"
+    ],
+    "field_desc_zh": "图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上",
+    "field_desc_en": "multiple images cascading",
+    "custom_field_type": "CascadingValue【type CascadingValue = 'left-up' | 'right-up'】"
+  },
+  {
+    "id": 1643,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "collapseAvatar",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`",
+    "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"snapshot\":true,\"props\":{\"max\":3},\"tnode\":{\"dom\":[],\"trigger\":\"\"}}}"
+  },
+  {
+    "id": 1597,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "能够同时显示的最多头像数量",
+    "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"props\":{\"max\":3},\"dom\":[{\".t-avatar\":4,\".t-avatar__collapse\":1,\".t-avatar__collapse > span\":{\"text\":\"+2\"}}]}}"
+  },
+  {
+    "id": 1598,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "头像右上角提示信息",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1725940938,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "shape",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "circle",
+      "round"
+    ],
+    "field_desc_zh": "形状。优先级低于 Avatar.shape",
+    "field_desc_en": "shape",
+    "custom_field_type": "ShapeEnum"
+  },
+  {
+    "id": 1655,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size",
+    "field_desc_en": "size",
+    "test_description": "{\"PC\":{\"wrapper\":\"getAvatarGroupDefaultMount\",\"className\":[{\"value\":\"small\",\"expect\":[{\"dom\":\".t-avatar\",\"className\":{\"t-size-s\":true}},{\"dom\":\".t-avatar:nth-child(5)\",\"className\":{\"t-size-l\":true}}]},{\"value\":\"large\",\"expect\":[{\"dom\":\".t-avatar\",\"className\":{\"t-size-l\":true}},{\"dom\":\".t-avatar:nth-child(4)\",\"className\":{\"t-size-s\":true}}]}],\"attribute\":[{\"value\":\"120px\",\"expect\":[{\"dom\":\".t-avatar\",\"attribute\":{\"style.width\":\"120px\",\"style.height\":\"120px\",\"style.fontSize\":\"60px\"}}]}]}}"
+  },
+  {
+    "id": 1724159377,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Events",
+    "field_name": "collapsedItemClick",
+    "field_type": [],
+    "field_desc_zh": "点击头像折叠元素触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLSpanElement>"
+  },
+  {
+    "id": 1712048317,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712048342,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1712048336,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "图片样式类"
+  },
+  {
+    "id": 1759130576,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "AvatarGroup",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

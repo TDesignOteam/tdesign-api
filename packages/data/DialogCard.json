@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1739543304,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "body",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话框内容"
+  },
+  {
+    "id": 1739543335,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1739543363,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1739543397,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+    "custom_field_type": "string | ButtonProps | TNode | null"
+  },
+  {
+    "id": 1739543439,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "confirmLoading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "确认按钮加载状态",
+    "field_desc_en": "confirm button loading status",
+    "custom_field_type": "string | ButtonProps | TNode | null"
+  },
+  {
+    "id": 1739543482,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容"
+  },
+  {
+    "id": 1739543515,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容"
+  },
+  {
+    "id": 1739543544,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "info",
+      "warning",
+      "danger",
+      "success"
+    ],
+    "field_desc_zh": "对话框风格"
+  },
+  {
+    "id": 1739543594,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1739543624,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Events",
+    "field_name": "closeBtnClick",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击右上角关闭按钮时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1739543673,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
+    "event_input": "(context: { e: MouseEvent | KeyboardEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 3325,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DialogCard",
+    "field_category": "Extends",
+    "field_name": "Pick<TdDialogProps, 'body' | 'cancelBtn' | 'closeBtn' | 'confirmBtn' | 'footer' | 'header' | 'theme' | 'onCancel' | 'onCloseBtnClick' | 'onConfirm' | 'confirmLoading'>",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话框内容"
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1762417465,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "skeleton",
+    "field_enum": [
+      "skeleton",
+      "moving",
+      "gradient",
+      "dots"
+    ],
+    "field_desc_zh": "动画效果"
+  },
+  {
+    "id": 1762417018,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "avatar",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义的头像配置"
+  },
+  {
+    "id": 1762417484,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "chatContentProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "聊天内容组件的属性，支持通过 `thinking` 字段透传 ChatThinking 组件属性",
+    "custom_field_type": "ChatMessageContentProps【interface ChatMessageContentProps extends ChatContentProps { thinking?: ChatMessageThinking; }】【type ChatMessageThinking = Pick<ChatThinkingProps, 'animation' | 'collapsed' | 'layout' | 'maxHeight'>  】【import { ChatContentProps } from '@ChatContent'】【import { ChatThinkingProps } from '@ChatThinking'】"
+  },
+  {
+    "id": 1762416954,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "chatId",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "聊天消息的唯一标识",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  },
+  {
+    "id": 1762417202,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "消息内容，数组中的每一项为一个消息内容对象",
+    "custom_field_type": "ChatMessageContent[] 【type ChatMessageContent = TextContent | MarkdownContent | ThinkingContent | AttachmentContent】【 type AttachmentContent = ChatBaseContent<'attachment', FileItem[]>】【type ThinkingContent = ChatBaseContent<'thinking', ThinkingContentData>】【type MarkdownContent = ChatBaseContent<'markdown', string>】【type TextContent = ChatBaseContent<'text', string>】【interface ThinkingContentData {title?: string; text: string}】【interface ChatBaseContent<T extends ChatContentType, TData> {type: T; data: TData}】【type ChatMessageStatus = 'pending' | 'streaming' | 'complete' | 'stop' | 'error'】【type ChatContentType = | 'text' | 'markdown' | 'thinking' | 'attachment'】【import { FileItem} from '@Attachments'】"
+  },
+  {
+    "id": 1762417161,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "datetime",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "对话单元的时间配置"
+  },
+  {
+    "id": 1762417139,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义的昵称"
+  },
+  {
+    "id": 1762417314,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "消息显示位置"
+  },
+  {
+    "id": 1762417238,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "role",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "user",
+    "field_enum": [
+      "user",
+      "assistant",
+      "system"
+    ],
+    "field_desc_zh": "消息角色"
+  },
+  {
+    "id": 1762417265,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "pending",
+      "streaming",
+      "complete",
+      "stop",
+      "error "
+    ],
+    "field_desc_zh": "消息状态"
+  },
+  {
+    "id": 1762417188,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "base",
+    "field_enum": [
+      "base",
+      "outline",
+      "text"
+    ],
+    "field_desc_zh": "气泡框样式，支持基础、线框、文字三种类型"
+  },
+  {
+    "id": 1762417897,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Events",
+    "field_name": "message-longpress",
+    "field_type": [],
+    "field_desc_zh": "长按事件",
+    "event_input": "(context: { e: MouseEvent, id: string, longPressPosition: { x: number, y: number } })"
+  },
+  {
+    "id": 1764755920,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatMessage",
+    "field_category": "Slots",
+    "field_name": "content",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "自定义消息内容"
+  }
+]

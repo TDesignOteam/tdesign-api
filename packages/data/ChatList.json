@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1762413791,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Props",
+    "field_name": "actionbar",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义操作按钮的插槽"
+  },
+  {
+    "id": 1762413829,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "skeleton",
+    "field_enum": [
+      "skeleton",
+      "moving",
+      "gradient",
+      "dot"
+    ],
+    "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种"
+  },
+  {
+    "id": 1762414006,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "对话列表的数据",
+    "custom_field_type": "Array<TdChatItemMeta>【 interface TdChatItemMeta { avatar?: string; name?:string; role?:string; datetime?: string; content?: string; status?: string }】"
+  },
+  {
+    "id": 1762414018,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "both",
+    "field_enum": [
+      "both",
+      "single"
+    ],
+    "field_desc_zh": "对话布局形式，支持两侧对齐与左对齐。使用插槽自定义对话内容时不生效，得用`t-chat-message`的`placement`属性",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  },
+  {
+    "id": 1762414029,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Props",
+    "field_name": "reverse",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否表现为倒序"
+  },
+  {
+    "id": 1762414717,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatList",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动事件的回调",
+    "event_input": "(context: TdChatScrollContext)【 interface TdChatScrollContext { scrollLeft: number;   scrollTop: number;   scrollHeight: number;   scrollWidth: number;   deltaX: number;   deltaY: number}】"
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "id": 3210,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "delay",
+    "field_type": [
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。直接透传到 Popup 组件。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+    "field_desc_en": "delay to show or hide popover",
+    "custom_field_type": "number | Array<number>"
+  },
+  {
+    "id": 1359,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "destroyOnClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否在关闭浮层时销毁浮层"
+  },
+  {
+    "id": 1279,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "用于设置提示默认显示多长时间之后消失，初始第一次有效，单位：毫秒"
+  },
+  {
+    "id": 2620,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_desc_zh": "浮层出现位置",
+    "custom_field_type": "PopupPlacement【import { PopupPlacement } from '@Popup'】"
+  },
+  {
+    "id": 129,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "showArrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示浮层箭头"
+  },
+  {
+    "id": 934,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "primary",
+      "success",
+      "danger",
+      "warning",
+      "light"
+    ],
+    "field_desc_zh": "文字提示风格"
+  },
+  {
+    "id": 3195,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tooltip",
+    "field_category": "Extends",
+    "field_name": "Omit<TdPopupProps, 'delay' | 'destroyOnClose' | 'duration' | 'placement' | 'showArrow' | 'theme'> 【import { TdPopupProps } from '@Popup'】",
+    "field_type": []
+  }
+]

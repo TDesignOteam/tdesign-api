@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1723517427,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyConfig",
+    "field_category": "Props",
+    "field_name": "collapseText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“收起”描述文本",
+    "field_desc_en": "collapse text"
+  },
+  {
+    "id": 1723518937,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyConfig",
+    "field_category": "Props",
+    "field_name": "copiedText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“复制成功”描述文本",
+    "field_desc_en": "copied text"
+  },
+  {
+    "id": 1723517557,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TypographyConfig",
+    "field_category": "Props",
+    "field_name": "expandText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“展开”描述文本",
+    "field_desc_en": "expand text"
+  }
+]

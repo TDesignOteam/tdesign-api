@@ -1,0 +1,16 @@
+[
+  {
+    "id": 219,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Aside",
+    "field_category": "Props",
+    "field_name": "width",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "侧边栏宽度。样式表（class）中定义的默认宽度为：232px"
+  }
+]

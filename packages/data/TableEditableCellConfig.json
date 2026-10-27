@@ -1,0 +1,173 @@
+[
+  {
+    "id": 2697,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "abortEditOnEvent",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "除了点击非自身元素退出编辑态之外，还有哪些事件退出编辑态。示例：`abortEditOnEvent: ['onChange']`",
+    "custom_field_type": "string[]",
+    "test_description": "exit editing on trigger the events in `abortEditOnEvent`"
+  },
+  {
+    "id": 2695,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "component",
+    "field_type": [],
+    "field_desc_zh": "组件定义，如：`Input` `Select`。对于完全自定义的组件（非组件库内的组件），组件需要支持 `value` 和 `onChange` ；如果还需要支持校验规则，则组件还需实现 `tips` 和 `status` 两个 API，实现规则可参考 `Input` 组件",
+    "field_desc_en": "component definition",
+    "custom_field_type": "ComponentType"
+  },
+  {
+    "id": 2938,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "defaultEditable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "单元格默认状态是否为编辑态",
+    "field_desc_en": "set default editable once"
+  },
+  {
+    "id": 1691031950,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "keepEditMode",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "设置当前列的单元格始终保持为编辑态",
+    "field_desc_en": "set table cell always to be editable"
+  },
+  {
+    "id": 3259,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "on",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "透传给编辑组件的事件，参数有({ row, rowIndex, col, colIndex, editedRow, updateEditedCellValue })。可以使用参数 `updateEditedCellValue` 更新当前单元格（或当前行任意编辑状态单元格）的值。<br/>更新当前单元格数据示例：`updateEditedCellValue(value)`；<br/>更新当前行编辑态数据示例：`updateEditedCellValue({ isUpdateCurrentRow: true, column_key: 'test'  })`；<br/>更新其他行编辑态数据示例：`updateEditedCellValue({ rowValue: '124', column_key: 'test' })`",
+    "field_desc_en": "edit component events, you can update any cell value of current row data with param `updateEditedCellValue`",
+    "custom_field_type": "(context: TableEditableCellPropsParams<T>) => { [eventName: string]: Function }"
+  },
+  {
+    "id": 2698,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "onEdited",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "编辑完成后，退出编辑模式时触发",
+    "field_desc_en": "trigger on finishing editing",
+    "custom_field_type": "(context: PrimaryTableOnEditedContext<T>) => void【type PrimaryTableOnEditedContext<T> = PrimaryTableCellParams<T> & { trigger: string; newRowData: T; }】"
+  },
+  {
+    "id": 2696,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "props",
+    "field_type": [
+      "Object",
+      "Function"
+    ],
+    "field_desc_zh": "透传给组件 `edit.component` 的属性，可以使用 `updateEditedCellValue` 更新当前行任意编辑状态单元格的值",
+    "field_desc_en": "props of `edit.component`, you can update any cell value of current row with param `updateEditedCellValue`",
+    "custom_field_type": "TableEditableCellProps<T>【type TableEditableCellProps<T> = TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject)】【interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> { editedRow: T; updateEditedCellValue: (val: any | { rowValue?: string | number; isUpdateCurrentRow?: boolean; [key: string]: any }) => void }】【interface TablePlainObject{ [key: string]: any }】"
+  },
+  {
+    "id": 2699,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "rules",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "校验规则",
+    "field_desc_en": "form rules",
+    "custom_field_type": "TableEditableCellRules<T>【type TableEditableCellRules<T> = FormRule[] | ((params: PrimaryTableCellParams<T>) => FormRule[])】【import { FormRule, AllValidateResult } from '@Form'】"
+  },
+  {
+    "id": 2818,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "showEditIcon",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示编辑图标",
+    "field_desc_en": "show edit icon"
+  },
+  {
+    "id": 3359,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "Props",
+    "field_name": "validateTrigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'exit'",
+    "field_desc_zh": "触发校验的时机，有 2 种：退出编辑时和数据变化时",
+    "field_desc_en": "when to trigger validate",
+    "custom_field_type": "'exit' | 'change'"
+  },
+  {
+    "id": 2701,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableEditableCellConfig",
+    "field_category": "<T>",
+    "field_name": "<T extends TableRowData = TableRowData>",
+    "field_type": []
+  }
+]

@@ -1,15 +1,14 @@
 # tdesign-generate-api
 
-## npm run api:download
+组件 API 数据按组件存放在 `packages/data`，该目录是唯一数据源。服务、CLI 和生成脚本直接读取这些 JSON 文件，不再需要同步 SQLite 数据库或聚合的 `api.json`。
 
-同步TDesign.db数据到api.json
+## pnpm api:check
 
-## npm run api:upload 
+校验组件数据文件、记录 ID、字段格式和派生字段。
 
-同步api.json数据到TDesign.db
+## pnpm api:add / pnpm api:update
 
-当合并分支发生冲突时，TDesign.db文件使用其他人的版本，
-然后本地执行 `npm run api:upload` 同步刚刚修改的组件数据到TDesign.db。
+通过 JSON 草稿新增或修改 API，命令会启动本地服务并只写入对应组件的数据文件。执行前使用 `--help` 查看字段格式。
 
 ## npm run api:docs
 

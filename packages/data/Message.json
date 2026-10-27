@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1748950099,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 3
+  },
+  {
+    "id": 434,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 2
+  },
+  {
+    "id": 433,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageOptions",
+    "field_required": true,
+    "order": 1
+  },
+  {
+    "id": 432,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "消息类型",
+    "custom_field_type": "MessageThemeList",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 260,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>【interface MessageInstance { close: () => void }】",
+    "field_type": [],
+    "order": 4
+  },
+  {
+    "id": 431,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.close",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "该插件参数为 $Message.info() 等插件执行后的返回值。示例：`const msg = $Message.info({}); $Message.close(msg)`",
+    "custom_field_type": "Promise<MessageInstance>",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 448,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.closeAll",
+    "field_category": "Props",
+    "field_name": "",
+    "field_type": [],
+    "order": 0
+  },
+  {
+    "id": 2883,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.config",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "全局提醒插件全局配置",
+    "custom_field_type": "MessageOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 1748950105,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.error",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 446,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.error",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 437,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.error",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 261,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.error",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1748950110,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.info",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 436,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.info",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 435,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.info",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions【type MessageInfoOptions = Omit<MessageOptions, 'theme'>】",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 262,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.info",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1748950114,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.loading",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 445,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.loading",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 438,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.loading",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息提醒内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 263,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.loading",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1748950119,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.question",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 444,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.question",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 439,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.question",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 264,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.question",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1748950123,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.success",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 443,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.success",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 440,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.success",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 265,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.success",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1748950127,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Message.warning",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文。",
+    "custom_field_type": "AppContext",
+    "order": 2
+  },
+  {
+    "id": 442,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.warning",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息显示时长，单位：毫秒。值为 0 表示永久显示",
+    "order": 1
+  },
+  {
+    "id": 441,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.warning",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "消息内容",
+    "custom_field_type": "string | TNode | MessageInfoOptions",
+    "field_required": true,
+    "order": 0
+  },
+  {
+    "id": 266,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "$Message.warning",
+    "field_category": "Return",
+    "field_name": "Promise<MessageInstance>",
+    "field_type": [],
+    "order": 3
+  },
+  {
+    "id": 1450,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "action",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "操作",
+    "field_desc_en": "operation",
+    "deprecated": true
+  },
+  {
+    "id": 1617,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "center"
+    ],
+    "field_desc_zh": "文本对齐方式",
+    "custom_field_type": "MessageAlignType【type MessageAlignType = 'left' | 'center'】"
+  },
+  {
+    "id": 100,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮"
+  },
+  {
+    "id": 3409,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'user'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件"
+  },
+  {
+    "id": 102,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义消息弹出内容"
+  },
+  {
+    "id": 99,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3000",
+    "field_desc_zh": "消息内置计时器，计时到达时会触发 duration-end 事件。单位：毫秒。值为 0 则表示没有计时器"
+  },
+  {
+    "id": 1725334222,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "gap",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean"
+    ],
+    "field_default_value": "12",
+    "field_desc_zh": "两条 `message` 之间的间距"
+  },
+  {
+    "id": 101,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标",
+    "custom_field_type": "boolean | TNode"
+  },
+  {
+    "id": 1400,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "消息提醒前面的图标，可以自定义。值为 true 则根据 theme 显示对应的图标，值为 false 则不显示图标。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string ，如：'info'，则显示组件内置图标。值类型为 object ，则会透传至 icon 组件"
+  },
+  {
+    "id": 3410,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "link",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`",
+    "custom_field_type": "string | object | TNode"
+  },
+  {
+    "id": 2611,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "marquee",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放",
+    "custom_field_type": "boolean | MessageMarquee【interface MessageMarquee { speed?: number; loop?: number; delay?: number }】"
+  },
+  {
+    "id": 1449,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "相对于 placement 的偏移量，默认单位 rpx。示例：[-10, 20] 或 ['10rpx', '8rpx']",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1712718531,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1725334169,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "single",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否保持仅显示一条信息"
+  },
+  {
+    "id": 98,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "info",
+    "field_enum": [
+      "info",
+      "success",
+      "warning",
+      "error",
+      "question",
+      "loading"
+    ],
+    "field_desc_zh": "消息组件风格",
+    "custom_field_type": "MessageThemeList【type MessageThemeList = 'info' | 'success' | 'warning' | 'error' | 'question' | 'loading'】"
+  },
+  {
+    "id": 1393,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "info",
+    "field_enum": [
+      "info",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "消息组件风格",
+    "custom_field_type": "MessageThemeList【type MessageThemeList = 'info' | 'success' | 'warning' | 'error'】"
+  },
+  {
+    "id": 1392,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示，隐藏时默认销毁组件",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1398,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "元素层级，样式默认为 5000"
+  },
+  {
+    "id": 3136,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "15000",
+    "field_desc_zh": "元素层级，样式默认为 15000"
+  },
+  {
+    "id": 1399,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Events",
+    "field_name": "actionBtnClick",
+    "field_type": [],
+    "field_desc_zh": "已废弃。当操作按钮存在时，用户点击操作按钮时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 3016,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Message",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭消息时触发",
+    "field_desc_en": "close message event",
+    "event_input": "(context: { trigger: 'close-click' | 'duration-end', e?: MouseEvent })"
+  },
+  {
+    "id": 103,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Events",
+    "field_name": "closeBtnClick",
+    "field_type": [],
+    "field_desc_zh": "当关闭按钮存在时，用户点击关闭按钮触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<SVGElement | HTMLElement>"
+  },
+  {
+    "id": 104,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Events",
+    "field_name": "durationEnd",
+    "field_type": [],
+    "field_desc_zh": "计时结束后触发"
+  },
+  {
+    "id": 3411,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Events",
+    "field_name": "link-click",
+    "field_type": [],
+    "field_desc_zh": "当`link`链接存在时，点击链接文本时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1712057171,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712057208,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "External Classes",
+    "field_name": "t-class-close-btn",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮样式类"
+  },
+  {
+    "id": 1712057193,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1712057198,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "External Classes",
+    "field_name": "t-class-icon",
+    "field_type": [],
+    "field_desc_zh": "图标样式类"
+  },
+  {
+    "id": 1712057203,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "External Classes",
+    "field_name": "t-class-link",
+    "field_type": [],
+    "field_desc_zh": "链接样式类"
+  },
+  {
+    "id": 1759215134,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，作用同 `content` 插槽"
+  },
+  {
+    "id": 1759215151,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Slots",
+    "field_name": "close-btn",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮"
+  },
+  {
+    "id": 1759215212,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Slots",
+    "field_name": "content",
+    "field_type": [],
+    "field_desc_zh": "自定义消息弹出内容"
+  },
+  {
+    "id": 1759215173,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Slots",
+    "field_name": "icon",
+    "field_type": [],
+    "field_desc_zh": "消息提醒前面的图标"
+  },
+  {
+    "id": 1759215192,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Message",
+    "field_category": "Slots",
+    "field_name": "link",
+    "field_type": [],
+    "field_desc_zh": "链接名称"
+  }
+]

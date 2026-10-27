@@ -4,139 +4,139 @@
     "field_category": [
       {
         "label": "Props",
-        "value": "1"
+        "value": "Props"
       },
       {
         "label": "Events",
-        "value": "2"
+        "value": "Events"
       },
       {
         "label": "Functions",
-        "value": "4"
+        "value": "Functions"
       },
       {
         "label": "Extends",
-        "value": "16"
+        "value": "Extends"
       },
       {
         "label": "Return",
-        "value": "32"
+        "value": "Return"
       },
       {
         "label": "<T>",
-        "value": "64"
+        "value": "<T>"
       },
       {
         "label": "External Classes",
-        "value": "128"
+        "value": "External Classes"
       },
       {
         "label": "CSS Variables",
-        "value": "256"
+        "value": "CSS Variables"
       },
       {
         "label": "Slots",
-        "value": "512"
+        "value": "Slots"
       }
     ],
     "platform": [
       {
         "label": "PC",
-        "value": "1"
+        "value": "PC"
       },
       {
         "label": "Mobile",
-        "value": "2"
+        "value": "Mobile"
       },
       {
         "label": "MP",
-        "value": "3"
+        "value": "MP"
       }
     ],
     "framework": [
       {
         "label": "Vue",
-        "value": "1"
+        "value": "Vue"
       },
       {
         "label": "React",
-        "value": "2"
+        "value": "React"
       },
       {
         "label": "MP",
-        "value": "3"
+        "value": "MP"
       }
     ],
     "platform_framework": [
       {
         "label": "Vue(PC)",
-        "value": "1"
+        "value": "Vue(PC)"
       },
       {
         "label": "React(PC)",
-        "value": "2"
+        "value": "React(PC)"
       },
       {
         "label": "Vue(Mobile)",
-        "value": "8"
+        "value": "Vue(Mobile)"
       },
       {
         "label": "React(Mobile)",
-        "value": "16"
+        "value": "React(Mobile)"
       },
       {
         "label": "Miniprogram",
-        "value": "64"
+        "value": "Miniprogram"
       },
       {
         "label": "UniApp",
-        "value": "128"
+        "value": "UniApp"
       }
     ],
     "field_type": [
       {
         "label": "String",
-        "value": "1"
+        "value": "String"
       },
       {
         "label": "Number",
-        "value": "2"
+        "value": "Number"
       },
       {
         "label": "Boolean",
-        "value": "4"
+        "value": "Boolean"
       },
       {
         "label": "Object",
-        "value": "8"
+        "value": "Object"
       },
       {
         "label": "Array",
-        "value": "16"
+        "value": "Array"
       },
       {
         "label": "Function",
-        "value": "32"
+        "value": "Function"
       },
       {
         "label": "TNode",
-        "value": "64"
+        "value": "TNode"
       },
       {
         "label": "Date",
-        "value": "128"
+        "value": "Date"
       },
       {
         "label": "File",
-        "value": "256"
+        "value": "File"
       },
       {
         "label": "any",
-        "value": "512"
+        "value": "any"
       },
       {
         "label": "BigInt",
-        "value": "1024"
+        "value": "BigInt"
       }
     ],
     "components": [

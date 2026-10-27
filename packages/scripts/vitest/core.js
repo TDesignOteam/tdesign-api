@@ -21,7 +21,7 @@ const SIMULATE_FUNCTIONS = [
 const GET_VAR_FUNCTIONS = ['getFakeFileList'];
 
 function getItDescription(oneApiData) {
-  const type = oneApiData.field_category_text.toLocaleLowerCase();
+  const type = oneApiData.field_category.toLocaleLowerCase();
   return `'${type}.${oneApiData.field_name} works fine'`;
 }
 

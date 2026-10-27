@@ -1,0 +1,368 @@
+[
+  {
+    "id": 1730199095,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "beforeChange",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "Switch 切换状态前的回调方法，常用于需要发起异步请求的场景，回调返回值支持布尔和 Promise 类型，返回`false`或 Promise reject不继续执行change，否则则继续执行",
+    "custom_field_type": "() => boolean | Promise<boolean>"
+  },
+  {
+    "id": 425,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "customValue",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']",
+    "custom_field_type": "Array<SwitchValue>"
+  },
+  {
+    "id": 1712653386,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "customValue",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[true, false]",
+    "field_desc_zh": "用于自定义开关的值，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]、['open', 'close']",
+    "custom_field_type": "Array<SwitchValue>"
+  },
+  {
+    "id": 135,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件。优先级：Switch.disabled > Form.disabled"
+  },
+  {
+    "id": 3390,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "开关的图标；[打开时的图标，关闭时的图标]",
+    "custom_field_type": "string[]",
+    "version": {
+      "Miniprogram": "0.27.0"
+    }
+  },
+  {
+    "id": 3424,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "开关的图标；[打开时的图标，关闭时的图标]",
+    "custom_field_type": "TNode[]"
+  },
+  {
+    "id": 424,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'",
+    "custom_field_type": "Array<string | TNode> | TNode<{ value: SwitchValue }>"
+  },
+  {
+    "id": 1538,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] ",
+    "custom_field_type": "string[]",
+    "version": {
+      "Miniprogram": "0.27.0"
+    }
+  },
+  {
+    "id": 136,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否处于加载中状态",
+    "version": {
+      "Miniprogram": "0.27.0"
+    }
+  },
+  {
+    "id": 139,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "开关尺寸",
+    "version": {
+      "Miniprogram": "0.27.0"
+    }
+  },
+  {
+    "id": 134,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "开关值",
+    "custom_field_type": "T【type SwitchValue = string | number | boolean】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3121,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean"
+    ],
+    "field_default_value": "null",
+    "field_desc_zh": "开关值",
+    "custom_field_type": "SwitchValue【type SwitchValue = string | number | boolean】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1783405470,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "开关值",
+    "custom_field_type": "SwitchValue【type SwitchValue = string | number | boolean】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 132,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Switch",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "数据发生变化时触发",
+    "event_input": "(value: T, context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1726808201,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "数据发生变化时触发",
+    "event_input": "(value: T, context: { e: MouseEvent })"
+  },
+  {
+    "id": 1761301398,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Switch",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "数据发生变化时触发",
+    "event_input": "(value: SwitchValue)",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1783405517,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "数据发生变化时触发",
+    "event_input": "(context: { value: SwitchValue })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 3341,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Switch",
+    "field_category": "<T>",
+    "field_name": "<T = SwitchValue>",
+    "field_type": []
+  },
+  {
+    "id": 1759061475,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1759061554,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "External Classes",
+    "field_name": "t-class-body",
+    "field_type": [],
+    "field_desc_zh": "描述文本样式类"
+  },
+  {
+    "id": 1759061567,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "External Classes",
+    "field_name": "t-class-dot",
+    "field_type": [],
+    "field_desc_zh": "滑块样式类"
+  },
+  {
+    "id": 1759061533,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Switch",
+    "field_category": "External Classes",
+    "field_name": "t-class-label",
+    "field_type": [],
+    "field_desc_zh": "开关内容样式类"
+  }
+]
