@@ -58,7 +58,7 @@
       "TNode"
     ],
     "field_desc_zh": "标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
-    "custom_field_type": "TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number,  e?: MouseEvent }) => void }>",
+    "custom_field_type": "TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
     "test_description": "{\"PC\":{\"wrapper\":\"getTagInputValueMount\",\"props\":{\"minCollapsedNum\":3},\"tnode\":{\"trigger\":\"\",\"dom\":[]}}}"
   },
   {
@@ -533,7 +533,7 @@
     "field_name": "inputChange",
     "field_type": [],
     "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等",
-    "event_input": "(value: string, context?: InputValueChangeContext)【interface InputValueChangeContext { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent; trigger: 'input' | 'clear' | 'enter' | 'blur'   }】",
+    "event_input": "(value: string, context?: InputValueChangeContext)【interface InputValueChangeContext { e?: InputEvent | MouseEvent | CompositionEvent | KeyboardEvent; trigger: 'input' | 'clear' | 'enter' | 'blur' }】",
     "trigger_elements": "MouseEvent<HTMLElement | SVGElement>/KeyboardEvent<HTMLInputElement>"
   },
   {

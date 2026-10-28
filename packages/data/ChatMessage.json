@@ -48,7 +48,7 @@
       "Object"
     ],
     "field_desc_zh": "聊天内容组件的属性，支持通过 `thinking` 字段透传 ChatThinking 组件属性",
-    "custom_field_type": "ChatMessageContentProps【interface ChatMessageContentProps extends ChatContentProps { thinking?: ChatMessageThinking; }】【type ChatMessageThinking = Pick<ChatThinkingProps, 'animation' | 'collapsed' | 'layout' | 'maxHeight'>  】【import { ChatContentProps } from '@ChatContent'】【import { ChatThinkingProps } from '@ChatThinking'】"
+    "custom_field_type": "ChatMessageContentProps【interface ChatMessageContentProps extends ChatContentProps { thinking?: ChatMessageThinking; }】【type ChatMessageThinking = Pick<ChatThinkingProps, 'animation' | 'collapsed' | 'layout' | 'maxHeight'> 】【import { ChatContentProps } from '@ChatContent'】【import { ChatThinkingProps } from '@ChatThinking'】"
   },
   {
     "id": 1762416954,

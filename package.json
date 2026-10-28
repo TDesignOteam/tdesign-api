@@ -14,7 +14,7 @@
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
     "api:add": "node packages/scripts/cli/index.js",
     "api:update": "node packages/scripts/cli/index.js update",
-    "api:check": "node packages/scripts/check-data.js",
+    "api:lint": "node packages/scripts/lint.js",
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
     "api:pure": "node packages/scripts/index.js",
     "api:docs": "node packages/scripts/index.js",

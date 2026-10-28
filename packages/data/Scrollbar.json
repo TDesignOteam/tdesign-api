@@ -223,7 +223,7 @@
     ],
     "field_desc_zh": "滚动时触发",
     "field_desc_en": "Triggered while scrolling",
-    "event_input": "({ scrollTop: number, scrollLeft: number }) "
+    "event_input": "({ scrollTop: number, scrollLeft: number })"
   },
   {
     "id": 1785647487,

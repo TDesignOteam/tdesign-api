@@ -302,7 +302,7 @@
     "field_name": "toggleExpandData",
     "field_type": [],
     "field_desc_zh": "展开或收起树形行",
-    "event_input": "(p: { row: T,  rowIndex: number})",
+    "event_input": "(p: { row: T, rowIndex: number})",
     "field_required": true
   },
   {

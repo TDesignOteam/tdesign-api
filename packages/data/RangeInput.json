@@ -311,7 +311,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "范围输入框值发生变化时触发",
-    "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; position?: RangeInputPosition; trigger?: 'input' | 'initial' | 'clear' })  【type RangeInputPosition = 'first' | 'second' | 'all'】 ",
+    "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; position?: RangeInputPosition; trigger?: 'input' | 'initial' | 'clear' }) 【type RangeInputPosition = 'first' | 'second' | 'all'】",
     "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<HTMLElement | SVGElement>/"
   },
   {
@@ -355,7 +355,7 @@
     "field_name": "enter",
     "field_type": [],
     "field_desc_zh": "回车键按下时触发",
-    "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent; position?: RangeInputPosition }) ",
+    "event_input": "(value: RangeInputValue, context?: { e?: InputEvent | MouseEvent; position?: RangeInputPosition })",
     "trigger_elements": "FormEvent<HTMLInputElement>"
   },
   {

@@ -58,7 +58,7 @@
     ],
     "field_desc_zh": "禁用时间项的配置函数",
     "field_desc_en": "disable time config function",
-    "custom_field_type": "(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number>  }>"
+    "custom_field_type": "(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number> }>"
   },
   {
     "id": 632,

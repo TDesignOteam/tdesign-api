@@ -268,7 +268,7 @@
       "Date"
     ],
     "field_desc_zh": "最大可选的日期，不传则默认半年后",
-    "custom_field_type": " number | Date"
+    "custom_field_type": "number | Date"
   },
   {
     "id": 3143,
@@ -298,7 +298,7 @@
       "Date"
     ],
     "field_desc_zh": "最小可选的日期，不传则默认今天",
-    "custom_field_type": " number | Date"
+    "custom_field_type": "number | Date"
   },
   {
     "id": 645,

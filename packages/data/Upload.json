@@ -533,7 +533,7 @@
       "Object"
     ],
     "field_desc_zh": "upload组件每行上传图片列数以及图片的宽度和高度",
-    "custom_field_type": "{column?: number;  width?: number; height?: number;}"
+    "custom_field_type": "{column?: number; width?: number; height?: number;}"
   },
   {
     "id": 1712045812,
@@ -1141,7 +1141,7 @@
     ],
     "field_desc_zh": "触发上传的元素，`files` 指本次显示的全部文件; `triggerUpload` 用于触发上传文件的选择，在图片上传风格中有效",
     "field_desc_en": "trigger elements UI",
-    "custom_field_type": "TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean;  files: UploadFile[]; triggerUpload?: (e: MouseEvent) => void }】",
+    "custom_field_type": "TNode<TriggerContext>【interface TriggerContext { dragActive?: boolean; files: UploadFile[]; triggerUpload?: (e: MouseEvent) => void }】",
     "test_description": "{\"PC\":{\"tnode\":[{\"description\":\"theme = file, trigger works fine\",\"props\":{\"theme\":\"file\"},\"snapshot\":true},{\"description\":\"theme = custom & draggable = true, trigger works fine\",\"props\":{\"theme\":\"custom\",\"draggable\":true},\"params\":[{\"dragActive\":false,\"files\":[]}],\"snapshot\":true},{\"description\":\"theme = custom, trigger works fine\",\"props\":{\"theme\":\"custom\"},\"snapshot\":true},{\"description\":\"theme = custom, trigger is right with files\",\"props\":{\"theme\":\"custom\",\"draggable\":true,\"files\":[{\"name\":\"file-name.txt\",\"status\":\"progress\"}]},\"params\":[{\"dragActive\":false,\"files\":[{\"name\":\"file-name.txt\",\"status\":\"progress\"}]}],\"snapshot\":true}]}}"
   },
   {
@@ -1276,7 +1276,7 @@
     "field_name": "add",
     "field_type": [],
     "field_desc_zh": "选择后触发，仅包含本次选择的照片；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size`选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述",
-    "event_input": "(files: MediaContext)【type MediaContext = VideoContext[] | ImageContext[]】【interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }】【interface ImageContext { name: string; type: string; url: string;  size: number; width: number; height: number; progress: number  }】"
+    "event_input": "(files: MediaContext)【type MediaContext = VideoContext[] | ImageContext[]】【interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }】【interface ImageContext { name: string; type: string; url: string; size: number; width: number; height: number; progress: number }】"
   },
   {
     "id": 1773995968,
@@ -1288,7 +1288,7 @@
     "field_name": "add",
     "field_type": [],
     "field_desc_zh": "选择后触发，仅包含本次选择的照片；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size`选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述",
-    "event_input": "(context: { files: MediaContext })【type MediaContext = VideoContext[] | ImageContext[]】【interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }】【interface ImageContext { name: string; type: string; url: string;  size: number; width: number; height: number; progress: number  }】"
+    "event_input": "(context: { files: MediaContext })【type MediaContext = VideoContext[] | ImageContext[]】【interface VideoContext { name?: string; type?: string; url?: string; duration?: number; size?: number; width?: number; height?: number; thumb: string; progress: number }】【interface ImageContext { name: string; type: string; url: string; size: number; width: number; height: number; progress: number }】"
   },
   {
     "id": 1791,
@@ -1319,7 +1319,7 @@
     "field_desc_zh": "已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源",
     "field_desc_en": "trigger on uploaded files change",
     "event_input": "(value: Array<T>, context: UploadChangeContext)【interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: UploadChangeTrigger; index?: number; file?: UploadFile; files?: UploadFile[] }】【type UploadChangeTrigger = 'add' | 'remove' | 'abort' | 'progress-success' | 'progress' | 'progress-fail' | 'sort'】",
-    "trigger_elements": "MouseEvent<HTMLElement> ",
+    "trigger_elements": "MouseEvent<HTMLElement>",
     "test_description": "{\"PC\":{\"event\":[{\"description\":\"can trigger change if autoUpload is false for image\",\"props\":{\"theme\":\"image\",\"draggable\":true,\"autoUpload\":false,\"files\":[]},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'image', 1)\",\"delay\":100,\"event\":{\"change\":[{\"[0].raw\":\"${fileList[0]}\"},{\"trigger\":\"add\",\"index\":0,\"file.raw\":\"${fileList[0]}\"}]}}]},{\"description\":\"can trigger change if autoUpload is false for image-flow\",\"props\":{\"theme\":\"image-flow\",\"draggable\":true,\"autoUpload\":false,\"multiple\":true,\"files\":[{\"url\":\"https://image1.png\",\"status\":\"success\"}]},\"expect\":[{\"trigger\":\"const fileList = simulateFileChange('input', 'image', 1)\",\"delay\":100,\"event\":{\"change\":[{\"[0]\":{\"url\":\"https://image1.png\",\"status\":\"success\"},\"[1].raw\":\"${fileList[0]}\"},{\"trigger\":\"add\",\"index\":1,\"file.raw\":\"${fileList[0]}\",\"files.map(t => t.raw)\":\"${fileList}\"}]}}]}]}}"
   },
   {
@@ -1358,7 +1358,7 @@
     "field_type": [],
     "field_desc_zh": "点击上传区域时触发",
     "event_input": "(context: { e: MouseEvent })",
-    "trigger_elements": "MouseEvent<HTMLElement> "
+    "trigger_elements": "MouseEvent<HTMLElement>"
   },
   {
     "id": 1674,
@@ -1440,7 +1440,7 @@
     "field_name": "drop",
     "field_type": [],
     "field_desc_zh": "拖拽结束后触发，包含所有上传的文件（拖拽后的文件顺序）；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size` 选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述",
-    "event_input": "(files: MediaContext) "
+    "event_input": "(files: MediaContext)"
   },
   {
     "id": 1773996051,
@@ -1452,7 +1452,7 @@
     "field_name": "drop",
     "field_type": [],
     "field_desc_zh": "拖拽结束后触发，包含所有上传的文件（拖拽后的文件顺序）；`url` 表示选定视频的临时文件路径 (本地路径)。`duration` 表示选定视频的时间长度。`size` 选定视频的数据量大小。更多描述参考 wx.chooseMedia 小程序官网描述",
-    "event_input": "(context: { files: MediaContext }) "
+    "event_input": "(context: { files: MediaContext })"
   },
   {
     "id": 1781271298,

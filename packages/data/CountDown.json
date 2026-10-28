@@ -184,7 +184,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "时间变化时触发",
-    "event_input": "(time: TimeData)【interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }】"
+    "event_input": "(time: TimeData)【interface TimeData { days: number; hours: number; minutes: number; seconds: number; milliseconds: number }】"
   },
   {
     "id": 1796,

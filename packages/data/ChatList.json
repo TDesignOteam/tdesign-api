@@ -95,6 +95,6 @@
     "field_name": "scroll",
     "field_type": [],
     "field_desc_zh": "滚动事件的回调",
-    "event_input": "(context: TdChatScrollContext)【 interface TdChatScrollContext { scrollLeft: number;   scrollTop: number;   scrollHeight: number;   scrollWidth: number;   deltaX: number;   deltaY: number}】"
+    "event_input": "(context: TdChatScrollContext)【 interface TdChatScrollContext { scrollLeft: number; scrollTop: number; scrollHeight: number; scrollWidth: number; deltaX: number; deltaY: number}】"
   }
 ]

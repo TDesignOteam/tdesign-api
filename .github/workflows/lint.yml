@@ -1,4 +1,4 @@
-name: check-data
+name: lint
 
 on:
   push:
@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-data:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -29,7 +29,7 @@ jobs:
         run: pnpm ci
 
       - name: Validate API data
-        run: pnpm api:check
+        run: pnpm api:lint
 
       - name: Build
         run: pnpm build

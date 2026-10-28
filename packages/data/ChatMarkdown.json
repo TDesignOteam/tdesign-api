@@ -56,6 +56,6 @@
     "field_name": "click",
     "field_type": [],
     "field_desc_zh": "点击链接时触发",
-    "event_input": "(context: TdMarkdownClickContext)【interface TdMarkdownClickContext {event: TouchEvent;node: TdMarkdownNode;}】【interface TdMarkdownNode {   type: string;   raw?: string;   text?: string;   href?: string;   title?: string;   tokens?: TdMarkdownNode[];   [key: string]: unknown;}】"
+    "event_input": "(context: TdMarkdownClickContext)【interface TdMarkdownClickContext {event: TouchEvent;node: TdMarkdownNode;}】【interface TdMarkdownNode { type: string; raw?: string; text?: string; href?: string; title?: string; tokens?: TdMarkdownNode[]; [key: string]: unknown;}】"
   }
 ]

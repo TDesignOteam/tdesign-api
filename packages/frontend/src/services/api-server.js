@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { API_ORIGIN } from '../../../scripts/api-origin.js'
 
 const cmpApiInstance = axios.create({
   baseURL: getBaseURL(),
@@ -14,7 +13,7 @@ function getBaseURL() {
     if (window.location.host.includes('cnb.run')) {
       return window.location.origin.replace('10000.cnb.run', '16001.cnb.run')
     }
-    return `${API_ORIGIN}/`
+    return 'http://127.0.0.1:16001/'
   }
   return '/'
 }

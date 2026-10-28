@@ -126,7 +126,7 @@
       "String"
     ],
     "field_desc_zh": "文件上传状态：上传成功，上传失败，上传中，等待上传",
-    "custom_field_type": " 'success' | 'fail' | 'progress' | 'waiting'"
+    "custom_field_type": "'success' | 'fail' | 'progress' | 'waiting'"
   },
   {
     "id": 1180,

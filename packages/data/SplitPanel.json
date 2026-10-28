@@ -14,7 +14,7 @@
     ],
     "field_desc_zh": "初始面板大小，支持数字 px 或者文字 '百分比%' 类型",
     "field_desc_en": "Initial panel size, supports numeric pixels (px) or text percentages (%).",
-    "event_input": "(sizes: (number | string | 'auto')[]) "
+    "event_input": "(sizes: (number | string | 'auto')[])"
   },
   {
     "id": 1785669101,
@@ -31,7 +31,7 @@
     ],
     "field_desc_zh": "当前面板的最大尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.max",
     "field_desc_en": "The maximum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.max",
-    "event_input": "(sizes: (number | string | 'auto')[]) "
+    "event_input": "(sizes: (number | string | 'auto')[])"
   },
   {
     "id": 1785669035,
@@ -48,7 +48,7 @@
     ],
     "field_desc_zh": "当前面板的最小尺寸,支持数字 px 或者文字 '百分比%' 类型-继承父级 panelSize.min",
     "field_desc_en": "The minimum size of the current panel, supporting numbers in pixels (px) or percentages (%).-Inherited from parent panelSize.min",
-    "event_input": "(sizes: (number | string | 'auto')[]) "
+    "event_input": "(sizes: (number | string | 'auto')[])"
   },
   {
     "id": 1785669272,
@@ -65,6 +65,6 @@
     "field_default_value": "true",
     "field_desc_zh": "是否开启拖拽伸缩",
     "field_desc_en": "Enable drag-and-drop scaling?",
-    "event_input": "(sizes: (number | string | 'auto')[]) "
+    "event_input": "(sizes: (number | string | 'auto')[])"
   }
 ]

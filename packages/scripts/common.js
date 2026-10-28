@@ -1,11 +1,12 @@
 import { upperFirst, camelCase as camelcase } from 'lodash-es';
-import { API_ORIGIN } from './api-origin.js';
 import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
 import mapJson from './map.json' with { type: 'json' };
 import { kebabCaseComponent } from './utils.js';
 import { groupByComponent, getApiComponentMapByFrameWork } from './vitest/utils.js';
 
 const { data } = mapJson;
+
+const API_ORIGIN = 'http://127.0.0.1:16001';
 
 const componentsMap = getMap(data.components);
 

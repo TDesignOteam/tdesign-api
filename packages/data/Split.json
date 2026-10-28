@@ -237,6 +237,6 @@
     ],
     "field_desc_zh": "程序化设置尺寸",
     "field_desc_en": "Programmatically set size",
-    "event_input": "(sizes: (number | string | 'auto')[]) "
+    "event_input": "(sizes: (number | string | 'auto')[])"
   }
 ]

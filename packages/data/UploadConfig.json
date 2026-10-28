@@ -89,6 +89,6 @@
       "Object"
     ],
     "field_desc_zh": "语言配置，上传功能触发文案。示例：{ image: '点击上传图片', normal: '点击上传',  fileInput: '选择文件', reupload: '重新上传', delete: '删除', continueUpload?: '继续选择' }",
-    "custom_field_type": "UploadTriggerUploadText【interface UploadTriggerUploadText { image?: string, normal?: string,  fileInput?: string,  reupload?: string, continueUpload?: string, delete?: string }】"
+    "custom_field_type": "UploadTriggerUploadText【interface UploadTriggerUploadText { image?: string, normal?: string, fileInput?: string, reupload?: string, continueUpload?: string, delete?: string }】"
   }
 ]

@@ -31,6 +31,7 @@ const allowedFields = new Set([
 const optionalStringFields = optionalFields.filter(
   (field) => !['field_enum', 'version', 'order'].includes(field),
 );
+const syntaxStringFields = ['event_input', 'event_output', 'custom_field_type', 'trigger_elements'];
 const files = fs
   .readdirSync(dataDirectory)
   .filter((file) => file.endsWith('.json'))
@@ -102,6 +103,15 @@ for (const file of files) {
     optionalStringFields.forEach((field) => {
       if (field in record && typeof record[field] !== 'string') {
         errors.push(`${file}: id ${record.id} 的 ${field} 必须是字符串`);
+      }
+    });
+    syntaxStringFields.forEach((field) => {
+      if (typeof record[field] !== 'string') return;
+      if (record[field] !== record[field].trim()) {
+        errors.push(`${file}: id ${record.id} 的 ${field} 不能包含首尾空白`);
+      }
+      if (/ {2,}/.test(record[field])) {
+        errors.push(`${file}: id ${record.id} 的 ${field} 不能包含连续空格`);
       }
     });
     if (component.startsWith('$') && !Number.isInteger(record.order)) {

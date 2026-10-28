@@ -120,7 +120,7 @@
       "TNode"
     ],
     "field_desc_zh": "图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件",
-    "custom_field_type": "String | TNode  | ImageProps【import { ImageProps } from '@Image'】"
+    "custom_field_type": "String | TNode | ImageProps【import { ImageProps } from '@Image'】"
   },
   {
     "id": 3187,

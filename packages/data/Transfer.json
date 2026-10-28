@@ -117,7 +117,7 @@
     ],
     "field_default_value": "''",
     "field_desc_zh": "列表为空时呈现的内容。值类型为数组，则表示分别控制源列表和目标列表数据为空的呈现内容",
-    "custom_field_type": "EmptyType | Array<EmptyType> | TNode【type EmptyType = string | TNode】 "
+    "custom_field_type": "EmptyType | Array<EmptyType> | TNode【type EmptyType = string | TNode】"
   },
   {
     "id": 782,
@@ -432,7 +432,7 @@
       "TNode"
     ],
     "field_desc_zh": "搜索时触发，options.query 表示用户输入的内容",
-    "event_input": "(options: SearchContext)【interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter';  e: InputEvent | KeyboardEvent }】"
+    "event_input": "(options: SearchContext)【interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }】"
   },
   {
     "id": 1214,

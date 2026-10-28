@@ -13,7 +13,7 @@
     ],
     "field_desc_zh": "动画效果控制，`duration` 指动画的过渡时间`单位：毫秒`，`valueFrom` 指动画的起始数值。`{ duration, valueFrom }`",
     "field_desc_en": "Animation effect control, `duration` refers to the transition time of the animation `unit: millisecond`, `valueFrom` refers to the initial value of the animation. `{ duration, valueFrom }`",
-    "custom_field_type": "animation【interface animation { duration: number; valueFrom: number;  }】"
+    "custom_field_type": "animation【interface animation { duration: number; valueFrom: number; }】"
   },
   {
     "id": 3455,

@@ -376,7 +376,7 @@
     "field_name": "focus",
     "field_type": [],
     "field_desc_zh": "输入框聚焦时触发",
-    "event_input": "(value: string, context: { e: FocusEvent }) "
+    "event_input": "(value: string, context: { e: FocusEvent })"
   },
   {
     "id": 1762420136,

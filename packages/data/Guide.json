@@ -381,7 +381,7 @@
     "field_name": "back",
     "field_type": [],
     "field_desc_zh": "点击返回按钮时触发",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 2948,
@@ -398,7 +398,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "当前步骤发生变化时触发",
-    "event_input": "(current: number, context?: { e: MouseEvent,  total: number })",
+    "event_input": "(current: number, context?: { e: MouseEvent, total: number })",
     "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(200)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"change\":[1,{\"e.type\":\"click\",\"total\":3}]}}]},{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"change\":[0,{\"e.type\":\"click\",\"total\":3}]}}]}]}}"
   },
   {
@@ -416,7 +416,7 @@
     "field_name": "finish",
     "field_type": [],
     "field_desc_zh": "点击完成按钮时触发",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })",
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })",
     "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(200)\",\"event\":[{\"props\":{\"current\":2},\"expect\":[{\"trigger\":\"click(document.t-guide__finish)\",\"event\":{\"finish\":[{\"current\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}"
   },
   {
@@ -434,7 +434,7 @@
     "field_name": "nextStepClick",
     "field_type": [],
     "field_desc_zh": "点击下一步时触发",
-    "event_input": "(context: { e: MouseEvent, next: number, current: number, total: number  })",
+    "event_input": "(context: { e: MouseEvent, next: number, current: number, total: number })",
     "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(200)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__next)\",\"event\":{\"nextStepClick\":[{\"current\":1,\"next\":2,\"e.type\":\"click\",\"total\":3}]}}]}]}}"
   },
   {
@@ -448,7 +448,7 @@
     "field_name": "prevStepClick",
     "field_type": [],
     "field_desc_zh": "点击上一步时触发",
-    "event_input": "(context: { e: MouseEvent, prev: number, current: number, total: number  })",
+    "event_input": "(context: { e: MouseEvent, prev: number, current: number, total: number })",
     "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(200)\",\"event\":[{\"props\":{\"current\":1},\"expect\":[{\"trigger\":\"click(document.t-guide__prev)\",\"event\":{\"prevStepClick\":[{\"current\":1,\"prev\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}"
   },
   {
@@ -466,7 +466,7 @@
     "field_name": "skip",
     "field_type": [],
     "field_desc_zh": "点击跳过按钮时触发",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })",
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })",
     "test_description": "{\"PC\":{\"wrapper\":\"getGuideMultipleStepsMount\",\"trigger\":\"delay(200)\",\"event\":[{\"props\":{\"current\":0},\"expect\":[{\"trigger\":\"click(document.t-guide__skip)\",\"event\":{\"skip\":[{\"current\":0,\"e.type\":\"click\",\"total\":3}]}}]}]}}"
   },
   {
@@ -480,7 +480,7 @@
     "field_name": "t-class",
     "field_type": [],
     "field_desc_zh": "根节点样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621135,
@@ -493,7 +493,7 @@
     "field_name": "t-class-back",
     "field_type": [],
     "field_desc_zh": "返回按钮样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621146,
@@ -506,7 +506,7 @@
     "field_name": "t-class-body",
     "field_type": [],
     "field_desc_zh": "高亮框提示内容主体样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621157,
@@ -519,7 +519,7 @@
     "field_name": "t-class-finish",
     "field_type": [],
     "field_desc_zh": "结束按钮样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621166,
@@ -532,7 +532,7 @@
     "field_name": "t-class-footer",
     "field_type": [],
     "field_desc_zh": "高亮框底部操作区域样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621177,
@@ -545,7 +545,7 @@
     "field_name": "t-class-next",
     "field_type": [],
     "field_desc_zh": "下一步按钮样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621188,
@@ -558,7 +558,7 @@
     "field_name": "t-class-popover",
     "field_type": [],
     "field_desc_zh": "引导框样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621198,
@@ -571,7 +571,7 @@
     "field_name": "t-class-reference",
     "field_type": [],
     "field_desc_zh": "高亮框样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621210,
@@ -584,7 +584,7 @@
     "field_name": "t-class-skip",
     "field_type": [],
     "field_desc_zh": "跳过按钮样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621223,
@@ -597,7 +597,7 @@
     "field_name": "t-class-title",
     "field_type": [],
     "field_desc_zh": "高亮框提示内容标题样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   },
   {
     "id": 1721621241,
@@ -610,6 +610,6 @@
     "field_name": "t-class-tooltip",
     "field_type": [],
     "field_desc_zh": "高亮框提示内容区域样式类",
-    "event_input": "(context: { e: MouseEvent, current: number, total: number  })"
+    "event_input": "(context: { e: MouseEvent, current: number, total: number })"
   }
 ]

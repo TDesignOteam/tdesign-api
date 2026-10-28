@@ -567,7 +567,7 @@
       "Function"
     ],
     "field_desc_zh": "获取单个字段值",
-    "event_input": "(field: NamePath) ",
+    "event_input": "(field: NamePath)",
     "event_output": "unknown",
     "field_required": true
   },

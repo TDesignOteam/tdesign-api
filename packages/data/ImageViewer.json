@@ -175,7 +175,7 @@
       "TNode"
     ],
     "field_desc_zh": "自定义图片内容",
-    "custom_field_type": "TNode<ImageSlotParams>【interface ImageSlotParams {src: string; index?: number;  extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
+    "custom_field_type": "TNode<ImageSlotParams>【interface ImageSlotParams {src: string; index?: number; extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
     "version": {
       "Vue(Mobile)": "1.12.0",
       "React(Mobile)": "0.21.1"

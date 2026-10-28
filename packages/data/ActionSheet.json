@@ -341,7 +341,7 @@
     "field_name": "selected",
     "field_type": [],
     "field_desc_zh": "选择菜单项时触发",
-    "event_input": "(context: {  selected: ActionSheetItem | string, index: number })"
+    "event_input": "(context: { selected: ActionSheetItem | string, index: number })"
   },
   {
     "id": 1712054648,
