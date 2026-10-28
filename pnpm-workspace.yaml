@@ -14,7 +14,7 @@ catalog:
   "@koa/cors": "^5.0.0"
   "@koa/router": "^15.7.0"
   "@koa/send": "^6.0.0"
-  "@tdesign/site-components": "^0.19.4"
+  "@tdesign/site-components": "^0.20.0"
   "@types/koa": "^3.0.3"
   "@types/koa__cors": "^5.0.1"
   "@types/koa-json": "^2.0.24"
@@ -68,7 +68,7 @@ catalog:
   vue: "^3.5.44"
   vue-codemirror: "^6.1.1"
   vue-eslint-parser: "^10.4.1"
-  vue-router: "^5.2.0"
+  vue-router: "^5.4.0"
 
 allowBuilds:
   unrs-resolver: true

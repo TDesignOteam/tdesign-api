@@ -24484,7 +24484,8 @@
       "field_type": [
         "1",
         "2",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "[]",
       "field_enum": "",
@@ -24493,9 +24494,9 @@
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-21 06:22:33",
-      "update_time": "2022-07-06 03:06:27",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
-      "custom_field_type": "CascaderValue<CascaderOption>【type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | T | Array<CascaderValue<T>>】",
+      "custom_field_type": "CascaderValue<CascaderOption>【type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | bigint | T | Array<CascaderValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -24512,7 +24513,8 @@
       "field_type_text": [
         "String",
         "Number",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {
@@ -147777,6 +147779,45 @@
       ]
     },
     {
+      "id": 1792659018,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "checkAllAffectedBy",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "all",
+      "field_enum": "all/onlyEnabled",
+      "field_desc_zh": "参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效",
+      "field_desc_en": "Child nodes that affect the checked and indeterminate states of parent nodes. all includes every child, including disabled children; onlyEnabled includes only enabled children. With onlyEnabled, no checked or indeterminate state is derived from children when all children are disabled. This option only controls parent state calculation and does not change the checked states of disabled children. It has no effect when checkStrictly is true",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-22 16:50:18",
+      "update_time": "2026-10-22 16:59:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 526,
       "platform_framework": [
         "1",
@@ -148976,8 +149017,6 @@
     {
       "id": 524,
       "platform_framework": [
-        "1",
-        "2",
         "16",
         "64",
         "128"
@@ -149008,11 +149047,48 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1792401068,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "选中值，组件为可选状态时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-12-28 06:05:28",
+      "update_time": "2026-10-19 09:11:07",
+      "event_output": null,
+      "custom_field_type": "Array<TreeNodeValue>【type TreeNodeValue = string | number | bigint】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -149979,9 +150055,9 @@
       "field_desc_zh": "虚拟滚动场景下 支持指定滚动到具体的节点",
       "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
       "field_required": 0,
-      "event_input": "(scrollToParams: ScrollToElementParams)",
+      "event_input": "(scrollToParams: TreeScrollToElementParams)【interface TreeScrollToElementParams extends Omit<ComponentScrollToElementParams, 'key'> { key?: TreeNodeValue; }】",
       "create_time": "2023-08-23 08:51:53",
-      "update_time": "2023-08-23 08:51:53",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -151560,8 +151636,6 @@
     {
       "id": 505,
       "platform_framework": [
-        "1",
-        "2",
         "16",
         "64",
         "128"
@@ -151593,8 +151667,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
@@ -151602,6 +151674,49 @@
       "field_type_text": [
         "String",
         "Number"
+      ]
+    },
+    {
+      "id": 1792401069,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "TreeNodeState",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2",
+        "1024"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "节点值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-12-28 05:24:40",
+      "update_time": "2026-10-19 09:11:07",
+      "event_output": null,
+      "custom_field_type": "TreeNodeValue",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number",
+        "BigInt"
       ]
     },
     {
@@ -153229,7 +153344,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -153238,9 +153354,9 @@
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-04-14 03:06:08",
-      "update_time": "2022-01-21 04:23:43",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
-      "custom_field_type": "TreeValueType【type TreeSelectValue = string | number | TreeOptionData | Array<string | number | TreeOptionData>】",
+      "custom_field_type": "TreeValueType【type TreeSelectValue = string | number | bigint | TreeOptionData | Array<string | number | bigint | TreeOptionData>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -153258,7 +153374,8 @@
         "String",
         "Number",
         "Object",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {

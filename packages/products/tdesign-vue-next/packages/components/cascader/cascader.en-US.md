@@ -1,7 +1,6 @@
 :: BASE_DOC ::
 
 ## API
-
 ### Cascader Props
 
 name | type | default | description | required
@@ -50,8 +49,8 @@ tagInputProps | Object | - | Typescript: `TagInputProps`，[TagInput API Documen
 tagProps | Object | - | Typescript: `TagProps`，[Tag API Documents](./tag?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/cascader/type.ts) | N
 tips | String / Slot / Function | - | tips at the bottom of cascader。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 trigger | String | click | options: click/hover | N
-value | String / Number / Array | [] | `v-model` and `v-model:value` is supported。Typescript: `CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| T \| Array<CascaderValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/cascader/type.ts) | N
-defaultValue | String / Number / Array | [] | uncontrolled property。Typescript: `CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| T \| Array<CascaderValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/cascader/type.ts) | N
+value | String / Number / Array / BigInt | [] | `v-model` and `v-model:value` is supported。Typescript: `CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| bigint \| T \| Array<CascaderValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/cascader/type.ts) | N
+defaultValue | String / Number / Array / BigInt | [] | uncontrolled property。Typescript: `CascaderValue<CascaderOption>` `type CascaderValue<T extends TreeOptionData = TreeOptionData> = string \| number \| bigint \| T \| Array<CascaderValue<T>>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/cascader/type.ts) | N
 valueDisplay | String / Slot / Function | - | `MouseEvent<SVGElement>`。Typescript: `string \| TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption>; selectedOptions: CascaderOption[] }>`。[see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 valueMode | String | onlyLeaf | options: onlyLeaf/parentFirst/all | N
 valueType | String | single | options: single/full | N
