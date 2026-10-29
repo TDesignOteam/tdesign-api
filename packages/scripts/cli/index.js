@@ -23,7 +23,7 @@ function printHelp(command, map) {
   ];
   const optionalRows = [
     ['--field_type', optionList(map.field_type)],
-    ['--custom_field_type', '自定义 TS 类型'],
+    ['--custom_field_type', '自定义 TS 类型，对象用 Name【interface Name { key?: Type }】'],
     ['--field_default_value', '默认值'],
     ['--field_enum', '可选值'],
     ['--field_desc_zh', '中文描述'],
@@ -43,8 +43,16 @@ function printHelp(command, map) {
   ];
   const width = Math.max(...requiredRows.concat(optionalRows).map(([name]) => name.length));
 
+  const scene =
+    command === 'update'
+      ? '给已有组件修改已存在的 API'
+      : '给已有组件新增不存在的 API';
+
   console.info(`用法:
   ${bin} --<options>
+
+场景:
+  ${scene}
 
 必填:
 ${formatFields(requiredRows, width)}

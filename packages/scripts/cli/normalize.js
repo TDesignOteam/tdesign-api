@@ -14,7 +14,7 @@ function optionText(options = []) {
   return `可选：${labelText(options)}`;
 }
 
-function readLabels(values, options, field, errors) {
+function readLabels(values, options, field, errors, warnings = []) {
   const list = Array.isArray(values) ? values : [values];
   const byLabel = indexByLabel(options);
   const seen = new Set();
@@ -24,11 +24,14 @@ function readLabels(values, options, field, errors) {
       errors.push(`${field} 不合法。${optionText(options)}`);
       return;
     }
-    if (value === 'VueNext(PC)') {
-      errors.push(`VueNext(PC) 与 Vue(PC) 共用记录，platform_framework 写 Vue(PC)。${optionText(options)}`);
-      return;
+    let remapped = false;
+    if (field === 'platform_framework' && value === 'VueNext(PC)') {
+      warnings.push('VueNext(PC) 与 Vue(PC) 共用记录，已改为 Vue(PC)');
+      value = 'Vue(PC)';
+      remapped = true;
     }
     if (seen.has(value)) {
+      if (remapped) return;
       errors.push(`${field} 重复：${value}`);
       return;
     }
@@ -184,7 +187,7 @@ export function validateRequest(record, map) {
   if (!Array.isArray(input.platform_framework) || input.platform_framework.length === 0) {
     errors.push(`platform_framework 必须是数组，例如 Vue(PC) React(PC)。${optionText(map.platform_framework)}`);
   } else {
-    platformValues = readLabels(input.platform_framework, map.platform_framework, 'platform_framework', errors);
+    platformValues = readLabels(input.platform_framework, map.platform_framework, 'platform_framework', errors, warnings);
   }
 
   let typeValues = [];
@@ -192,12 +195,18 @@ export function validateRequest(record, map) {
     if (!Array.isArray(input.field_type)) {
       errors.push(`field_type 必须是字符串数组，例如 String。${optionText(map.field_type)}`);
     } else {
-      typeValues = readLabels(input.field_type, map.field_type, 'field_type', errors);
+      typeValues = readLabels(input.field_type, map.field_type, 'field_type', errors, warnings);
     }
   }
 
-  if (input.field_category === 'Events' && /^on[A-Z]/.test(String(input.field_name || ''))) {
-    errors.push('事件名使用小驼峰且不带 on，例如 visibleChange');
+  if (input.field_category === 'Events') {
+    const name = String(input.field_name || '');
+    if (/^on[A-Z]/.test(name)) {
+      const stripped = name.slice(2);
+      const camel = `${stripped.charAt(0).toLowerCase()}${stripped.slice(1)}`;
+      warnings.push(`事件名 ${name} 规范为 ${camel}（去掉 on 前缀）`);
+      input.field_name = camel;
+    }
   }
 
   const sugar = input.syntactic_sugar ?? '';

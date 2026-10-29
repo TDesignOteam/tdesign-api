@@ -44,7 +44,7 @@ function printHelp() {
 
   component     组件名，例如 Button。全量文档为 ALL
   framework     ${FRAMEWORKS.join(' | ')}
-  flags         可省略。多项用逗号连接，不要加空格
+  flags         可省略。多项用逗号连接
 
 flags:
   finalProject  写入同级组件库。默认写入本仓库 packages/products
