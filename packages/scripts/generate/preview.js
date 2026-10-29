@@ -3,11 +3,11 @@
  */
 
 import { pick } from 'lodash-es';
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
-import { COMPONENT_API_MD_MAP, getChatComponentMap } from './config/index.js';
-import { getDocsByComponent } from './docs/index.js';
-import { getTypesByComponent } from './types/index.js';
-import { getPropsByComponent } from './types/vue-props.js';
+import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../core/context.js';
+import { getDocsByComponent } from '../docs/index.js';
+import { getTypesByComponent } from '../types/index.js';
+import { getPropsByComponent } from '../types/vue-props.js';
 
 /**
  * framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram

@@ -134,8 +134,8 @@
       "Object"
     ],
     "field_desc_zh": "透传 Popup 组件全部属性",
-    "event_input": "(options: { e: MouseEvent })",
-    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+    "event_input": "(options: { e: MouseEvent })"
   },
   {
     "id": 1361,

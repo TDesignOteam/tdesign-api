@@ -2,7 +2,7 @@
  * Vue2 unit test
  */
 
-import { kebabCaseComponent } from '../../utils.js';
+import { kebabCaseComponent } from '../../core/utils.js';
 import { getUnitTestDescription } from '../utils.js';
 
 /**

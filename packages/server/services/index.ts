@@ -1,5 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+// @ts-ignore
+import { orderRecordFields } from '../../scripts/lint/record-order.js';
 import { BaseObject, QueryPaginationProps } from '../../types';
 
 type ApiRecord = Record<string, any>;
@@ -66,6 +68,10 @@ function compactRecord(record: ApiRecord) {
   return result;
 }
 
+function formatRecordForDisk(record: ApiRecord) {
+  return orderRecordFields(compactRecord(record));
+}
+
 function assertRecord(record: ApiRecord) {
   const unknownFields = Object.keys(record).filter((field) => !allowedFields.has(field));
   if (unknownFields.length) throw new Error(`包含未知字段：${unknownFields.join(', ')}`);
@@ -122,7 +128,7 @@ async function writeFamily(family: string, records: ApiRecord[]) {
   const filePath = path.join(dataDirectory, familyFileName(family));
   const familyRecords = records
     .filter((record) => componentFamily(String(record.component)) === family)
-    .map(compactRecord)
+    .map(formatRecordForDisk)
     .sort(compareRecords);
   if (familyRecords.length === 0) {
     await fs.promises.rm(filePath, { force: true });

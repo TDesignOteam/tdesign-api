@@ -2,16 +2,16 @@
   "name": "tdesign-generate-api",
   "version": "1.0.4",
   "description": "generate props/ts/api.md for API",
-  "main": "index.js",
+  "main": "./generate/index.js",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "api:docs": "node ./index.js",
-    "api:vscode": "node ./vscode",
-    "api:configurable": "node ./configurable-props",
-    "api:helper": "node ./helper"
+    "api:docs": "node ./generate/index.js",
+    "api:vscode": "node ./vscode/index.js",
+    "api:configurable": "node ./configurable/index.js",
+    "api:completion": "node ./completion/index.js"
   },
   "license": "MIT",
   "dependencies": {

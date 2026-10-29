@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataDirectory = path.resolve(__dirname, '../data');
+const dataDirectory = path.resolve(__dirname, '../../data');
 const categoryOrder = new Map(
   ['Props', 'Events', 'Functions', 'Extends', 'Return', '<T>', 'External Classes', 'CSS Variables', 'Slots'].map(
     (category, index) => [category, index],

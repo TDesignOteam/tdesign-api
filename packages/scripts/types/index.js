@@ -6,16 +6,6 @@ import path from 'path';
 import chalk from 'chalk';
 import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
 import prettier from 'prettier';
-import {
-  isPlugin,
-  getTdCmpName,
-  getEventName,
-  getFolderName,
-  getDefaultValueName,
-  isComponentFunction,
-  getInstanceName,
-  getApiComponentMapByFrameWork,
-} from '../common.js';
 import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
 import {
   FRAMEWORK_MAP,
@@ -26,8 +16,18 @@ import {
   getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
+import {
+  isPlugin,
+  getTdCmpName,
+  getEventName,
+  getFolderName,
+  getDefaultValueName,
+  isComponentFunction,
+  getInstanceName,
+  getApiComponentMapByFrameWork,
+} from '../core/context.js';
+import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
-import { getComponentBasePath } from '../utils.js';
 import generateGlobals from './global/index.js';
 import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 import formatTNode from './t-node.js';

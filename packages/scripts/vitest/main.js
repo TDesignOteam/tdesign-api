@@ -1,6 +1,6 @@
 import { pick } from 'lodash-es';
-import { resolveComponentMergeList } from '../common.js';
 import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/files-combine.js';
+import { resolveComponentMergeList } from '../core/context.js';
 import map from '../map.json' with { type: 'json' };
 import { copyUnitTestsToOtherWrapper } from './copy.js';
 import { generateAttributeUnitCase } from './generate-attribute.js';

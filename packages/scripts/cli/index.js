@@ -1,133 +1,70 @@
-import { spawn } from 'child_process';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import axios from 'axios';
-import { API_ORIGIN } from '../common.js';
-import { parseDraftDocument, validateRequest } from './normalize.js';
+import { scriptArgs } from '../core/utils.js';
+import mapJson from '../map.json' with { type: 'json' };
+import { parseFlags, parseRecords, validateRequest } from './normalize.js';
+import { openStore } from './store/index.js';
 import { findConflicts, findMatches } from './validate.js';
 
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
-let temporaryServer = null;
+function optionList(options = []) {
+  return options.map((item) => item.label).join(' | ');
+}
 
-const IDENTITY_FIELDS = `  component            组件名
-  fieldName            API 名称
-  fieldCategory        Props | Events | Functions | Extends | Return | <T> | External Classes | CSS Variables | Slots
-  platformFramework    数组。Vue(PC) | React(PC) | Vue(Mobile) | React(Mobile) | Miniprogram | UniApp`;
+function formatFields(rows, width) {
+  const column = width ?? Math.max(...rows.map(([name]) => name.length));
+  return rows.map(([name, desc]) => `  ${name.padEnd(column)}  ${desc}`).join('\n');
+}
 
-const VALUE_FIELDS = `  fieldType            类型数组。String | Number | Boolean | Object | Array | Function | TNode | Date | File | any | BigInt
-  customFieldType      自定义 TS 类型。对象或联合类型写：类型名【interface 类型名 { ... }】
-  fieldDefaultValue    默认值
-  fieldEnum            可选值数组。仅 fieldType 含 String 或 Number 时可用
-  fieldDescZh          中文描述
-  fieldDescEn          英文描述
-  eventInput           参数。事件名使用小驼峰且不带 on
-  eventOutput          返回值
-  triggerElements      事件触发元素，仅 React
-  syntacticSugar       v-model | sync。平台需含 Vue(PC)、Vue(Mobile) 或 UniApp
-  version              JSON 对象
-  testDescription      测试描述`;
+function printHelp(command, map) {
+  const bin = command === 'update' ? 'pnpm api:update' : 'pnpm api:add';
+  const requiredRows = [
+    ['--component', '组件名'],
+    ['--field_name', 'API 名称'],
+    ['--field_category', optionList(map.field_category)],
+    ['--platform_framework', optionList(map.platform_framework)],
+  ];
+  const optionalRows = [
+    ['--field_type', optionList(map.field_type)],
+    ['--custom_field_type', '自定义 TS 类型'],
+    ['--field_default_value', '默认值'],
+    ['--field_enum', '可选值'],
+    ['--field_desc_zh', '中文描述'],
+    ['--field_desc_en', '英文描述'],
+    ['--event_input', '事件参数'],
+    ['--event_output', '事件返回值'],
+    ['--trigger_elements', '事件触发元素'],
+    ['--syntactic_sugar', 'v-model | sync'],
+    ['--version', 'JSON 对象'],
+    ['--test_description', '测试描述'],
+    ['--field_required', 'true | false'],
+    ['--deprecated', 'true | false'],
+    ['--support_default_value', 'true | false'],
+    ['--html_attribute', 'true | false'],
+    ['--stdin', '标准输入 JSON'],
+    ['-h, --help', '显示帮助'],
+  ];
+  const width = Math.max(...requiredRows.concat(optionalRows).map(([name]) => name.length));
 
-function printHelp(command) {
-  const usage = command === 'update' ? 'pnpm api:update -- <file.json>' : 'pnpm api:add -- <file.json>';
   console.info(`用法:
-  ${usage}
-
-记录是 JSON 对象，多条时使用数组。
-字段用驼峰。类别、平台、类型写下面列出的可选值。
-校验失败时跳过写入。
+  ${bin} --<options>
 
 必填:
-${IDENTITY_FIELDS}
+${formatFields(requiredRows, width)}
 
-可选:
-${VALUE_FIELDS}
-  fieldRequired        true | false
-  deprecated           true | false
-  supportDefaultValue  true | false
-  htmlAttribute        true | false
+选填:
+${formatFields(optionalRows, width)}
 `);
 }
 
-function formatRequestError(error) {
-  if (error.code === 'ECONNREFUSED' || error.code === 'ENOTFOUND') {
-    return `无法连接 ${API_ORIGIN}`;
-  }
-  if (error.response?.data) return JSON.stringify(error.response.data);
-  return error.message;
-}
-
-async function readInput(file) {
-  if (file === '-') {
-    process.stdin.setEncoding('utf8');
-    let text = '';
-    for await (const chunk of process.stdin) text += chunk;
-    return text;
-  }
-  return fs.promises.readFile(path.resolve(file), 'utf8');
+async function readStdin() {
+  process.stdin.setEncoding('utf8');
+  let text = '';
+  for await (const chunk of process.stdin) text += chunk;
+  return text;
 }
 
 function printIssues(title, items) {
   if (items.length === 0) return;
   console.error(title);
   items.forEach((item) => console.error(`  - ${item}`));
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function serverReady() {
-  try {
-    await axios.get(`${API_ORIGIN}/cmp/map`, { timeout: 1000 });
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-async function ensureServer() {
-  if (await serverReady()) return { started: false, child: null };
-  console.info('服务未运行，正在启动');
-  const child = spawn('pnpm', ['dev'], {
-    cwd: repoRoot,
-    detached: true,
-    stdio: 'ignore',
-  });
-  child.unref();
-  const deadline = Date.now() + 40000;
-  while (Date.now() < deadline) {
-    if (await serverReady()) {
-      temporaryServer = child;
-      return { started: true, child };
-    }
-    await sleep(400);
-  }
-  await stopServer(child);
-  throw new Error('启动服务超时');
-}
-
-async function stopServer(child) {
-  if (!child?.pid) return;
-  const killGroup = (signal) => {
-    try {
-      process.kill(-child.pid, signal);
-    } catch {
-      try {
-        child.kill(signal);
-      } catch {
-        // 进程已经退出
-      }
-    }
-  };
-  killGroup('SIGTERM');
-  await sleep(300);
-  try {
-    process.kill(-child.pid, 0);
-    killGroup('SIGKILL');
-  } catch {
-    // 进程已经退出
-  }
 }
 
 function describe(map, payload) {
@@ -143,54 +80,47 @@ function describe(map, payload) {
   }）`;
 }
 
-async function loadContext(client) {
-  const [mapRes, dataRes] = await Promise.all([client.get('/cmp/map'), client.get('/cmp/export-data')]);
-  if (mapRes.data?.code !== 0 || dataRes.data?.code !== 0) throw new Error('读取类别表或已有 API 失败');
-  return { map: mapRes.data.data, existing: dataRes.data.data || [] };
+function parseJsonRecords(text, source) {
+  try {
+    return parseRecords(JSON.parse(text.replace(/^\uFEFF/, '')));
+  } catch (error) {
+    throw new Error(`${source} 不是合法 JSON：${error.message}`);
+  }
 }
 
-function createdRows(before, after, payloads) {
-  const beforeIds = new Set(before.map((row) => row.id));
-  return after.filter(
-    (row) =>
-      !beforeIds.has(row.id) &&
-      payloads.some(
-        (payload) =>
-          row.component === payload.component &&
-          row.field_name === payload.field_name &&
-          row.field_category === payload.field_category,
-      ),
-  );
+async function readDocuments(args) {
+  const useStdin = args.includes('--stdin');
+  const flags = args.filter((arg) => arg !== '--stdin' && arg !== '-h' && arg !== '--help');
+  if (useStdin && flags.length) throw new Error('不要同时传记录字段和 --stdin');
+  if (useStdin) return { documents: parseJsonRecords(await readStdin(), '标准输入'), parseErrors: [] };
+  if (flags.length === 0) return { documents: null, parseErrors: [] };
+  const { record, errors } = parseFlags(flags);
+  return { documents: [record], parseErrors: errors };
 }
 
 async function main() {
-  const args = process.argv.slice(2);
+  const args = scriptArgs();
   const command = args[0] === 'update' ? 'update' : 'add';
   if (args.includes('-h') || args.includes('--help')) {
-    printHelp(command);
+    printHelp(command, mapJson.data);
     process.exit(0);
   }
   if (command === 'update') args.shift();
-  const file = args.find((arg) => !arg.startsWith('--'));
-  if (!file) {
-    printHelp(command);
+
+  const { documents, parseErrors } = await readDocuments(args);
+  if (!documents) {
+    printHelp(command, mapJson.data);
     process.exit(1);
   }
-
-  const text = await readInput(file);
-  let document;
-  try {
-    document = JSON.parse(text.replace(/^\uFEFF/, ''));
-  } catch (error) {
-    throw new Error(`新增记录不是合法 JSON：${error.message}`);
+  if (parseErrors.length > 0) {
+    printIssues('校验未通过，未写入：', parseErrors);
+    process.exitCode = 1;
+    return;
   }
 
-  await ensureServer();
-
-  const client = axios.create({ baseURL: API_ORIGIN, timeout: 30000 });
-  const drafts = parseDraftDocument(document);
-  const { map, existing } = await loadContext(client);
-  const normalized = drafts.map((draft) => validateRequest(draft, map));
+  const map = mapJson.data;
+  const store = await openStore();
+  const normalized = documents.map((document) => validateRequest(document, map));
   const fieldErrors = normalized.flatMap((item, index) => item.errors.map((error) => `第 ${index + 1} 条：${error}`));
   const warnings = normalized.flatMap((item) => item.warnings);
   if (fieldErrors.length > 0) {
@@ -204,27 +134,22 @@ async function main() {
   printIssues('提示：', warnings);
 
   if (command === 'add') {
-    const conflicts = findConflicts(payloads, existing);
+    const conflicts = findConflicts(payloads, store.records);
     printIssues('提示：', conflicts.warnings);
     if (conflicts.errors.length > 0) {
       printIssues('查重未通过，未写入：', conflicts.errors);
       process.exitCode = 1;
       return;
     }
-    for (const payload of payloads) {
-      const res = await client.post('/cmp/api', payload);
-      if (res.data?.code !== 0) throw new Error(JSON.stringify(res.data));
-    }
-    const { existing: synced } = await loadContext(client);
-    const rows = createdRows(existing, synced, payloads);
+    const rows = payloads.map((payload) => store.create(payload));
+    await store.commit();
     rows.forEach((row) => console.info(`已新增 ${describe(map, row)} id ${row.id}`));
-    if (rows.length !== payloads.length) console.info('已写入，但未能从同步结果里匹配全部 id');
     console.info('已写入 packages/data');
     return;
   }
 
   const updates = normalized.map((item, index) => {
-    const matches = findMatches(item.payload, existing);
+    const matches = findMatches(item.payload, store.records);
     return { index, item, matches };
   });
   const updateErrors = [];
@@ -235,7 +160,7 @@ async function main() {
       return;
     }
     updateErrors.push(
-      `第 ${index + 1} 条匹配到多条记录：${matches.map((row) => row.id).join('、')}。请收窄 platformFramework`,
+      `第 ${index + 1} 条匹配到多条记录：${matches.map((row) => row.id).join('、')}。请收窄 platform_framework`,
     );
   });
   if (updateErrors.length > 0) {
@@ -244,16 +169,14 @@ async function main() {
     return;
   }
   for (const { item, matches } of updates) {
-    const res = await client.put('/cmp/api', { id: matches[0].id, ...item.changes });
-    if (res.data?.code !== 0) throw new Error(JSON.stringify(res.data));
-    console.info(`已修改 ${describe(map, item.payload)} id ${matches[0].id}`);
+    const row = store.update(item.changes, matches[0].id);
+    console.info(`已修改 ${describe(map, row)} id ${matches[0].id}`);
   }
+  await store.commit();
   console.info('已写入 packages/data');
 }
 
-main()
-  .catch((error) => {
-    console.error(formatRequestError(error));
-    process.exitCode = 1;
-  })
-  .finally(() => stopServer(temporaryServer));
+main().catch((error) => {
+  console.error(error.message);
+  process.exitCode = 1;
+});

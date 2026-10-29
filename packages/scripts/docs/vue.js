@@ -1,5 +1,14 @@
 import { find, camelCase, lowerFirst } from 'lodash-es';
 import {
+  TDESIGN_GLOBALS,
+  TYPES_COMBINE_MAP,
+  MOBILE_TYPES_COMBINE_MAP,
+  MINIPROGRAM_TYPES_COMBINE_MAP,
+  MOBILE_FRAMES,
+  getChatComponentMap,
+} from '../config/const.js';
+import languageConfig from '../config/language/description.js';
+import {
   getApiTitles,
   getEventName,
   isPlugin,
@@ -12,19 +21,10 @@ import {
   getCmpTypeCombineMap,
   getComponentsMap,
   getGlobalConfigName,
-} from '../common.js';
-import {
-  TDESIGN_GLOBALS,
-  TYPES_COMBINE_MAP,
-  MOBILE_TYPES_COMBINE_MAP,
-  MINIPROGRAM_TYPES_COMBINE_MAP,
-  MOBILE_FRAMES,
-  getChatComponentMap,
-} from '../config/const.js';
-import languageConfig from '../config/language/description.js';
+} from '../core/context.js';
+import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
 import { fetchApiDataFromOfficialWebsite } from '../types/miniprogram.js';
-import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
 
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);

@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
+import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
 import {
   getTdCmpName,
   getEventName,
@@ -9,13 +11,11 @@ import {
   isPlugin,
   getDefaultValueName,
   getCmpTypeCombineMap,
-} from '../common.js';
-import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+} from '../core/context.js';
 // 移动端 H5 父子组件的 props 需要合并输出到父组件目录；小程序和 UniApp 父子组件保持独立输出
 const MOBILE_PROPS_MERGE_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
-import { kebabCaseComponent } from '../utils.js';
-import { getComponentBasePath } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
+import { getComponentBasePath } from '../core/utils.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 
 let currentFramework = '';

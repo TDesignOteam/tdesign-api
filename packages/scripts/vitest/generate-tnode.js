@@ -1,5 +1,5 @@
 import { kebabCase } from 'lodash-es';
-import { kebabCaseComponent } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
 import {
   getItDescription,
   getWrapper,

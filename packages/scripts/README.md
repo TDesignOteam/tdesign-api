@@ -12,6 +12,23 @@
 | `packages/scripts`  | 读取数据，生成文档、类型、props 和编辑器提示 |
 | `packages/products` | 各框架生成结果的本地副本                     |
 
+## `packages/scripts` 结构
+
+```text
+scripts/
+├── map.json
+├── core/             # 数据加载与共享工具
+├── cli/              # pnpm api:add / api:update
+├── lint/             # pnpm api:lint
+├── generate/         # pnpm api:docs
+├── docs/、types/     # 文档与类型实现
+├── config/
+├── vscode/           # pnpm api:vscode
+├── completion/       # pnpm api:completion
+├── configurable/     # pnpm api:configurable
+├── unit/、vitest/    # pnpm:api:test
+```
+
 ## 生成结果
 
 | 框架            | 本地目录                                 |
@@ -22,17 +39,3 @@
 | `Vue(Mobile)`   | `packages/products/tdesign-mobile-vue`   |
 | `React(Mobile)` | `packages/products/tdesign-mobile-react` |
 | `Miniprogram`   | `packages/products/tdesign-miniprogram`  |
-
-## 脚本模块
-
-| 路径                  | 职责                       |
-| --------------------- | -------------------------- |
-| `data.js`             | 加载 `packages/data`       |
-| `lint.js`             | 校验记录结构               |
-| `cli/`                | 通过本地服务写入数据       |
-| `index.js`            | 生成文档、类型和 props     |
-| `docs/`、`types/`     | 文档与类型生成             |
-| `vscode/`、`helper/`  | 编辑器提示与代码提示       |
-| `configurable-props/` | 可配置属性                 |
-| `vitest/`             | 测试用例                   |
-| `map.json`            | 平台、类别、类型和组件映射 |

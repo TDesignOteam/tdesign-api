@@ -197,9 +197,9 @@
       "TNode"
     ],
     "field_desc_zh": "显示二次确认内容的函数。参数: `sure` 表示二次确认的具体内容，同 content; `onClick` 表示点击二次确认内容时执行的回调",
+    "custom_field_type": "string | TNode",
     "event_input": "(sure: string | TNode, onClick?: SwipeActionItem['onClick'])",
-    "event_output": "void",
-    "custom_field_type": "string | TNode"
+    "event_output": "void"
   },
   {
     "id": 1759216167,

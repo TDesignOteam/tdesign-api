@@ -45,7 +45,7 @@ theme | String | default | 对话框风格。可选项：default/info/warning/da
 top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级大于 placement | N
 visible | Boolean | - | 控制对话框是否显示 | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
-zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
+zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 | N
 onBeforeClose | Function |  | TS 类型：`() => void`<br/>对话框执行消失动画效果前触发 | N
 onBeforeOpen | Function |  | TS 类型：`() => void`<br/>对话框执行弹出动画效果前触发 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N

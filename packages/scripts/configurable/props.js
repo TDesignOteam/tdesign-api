@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { pick } from 'lodash-es';
-import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../common.js';
 import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+import { isPlugin, getCmpTypeCombineMap, getFolderName } from '../core/context.js';
+import { kebabCaseComponent } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
-import { kebabCaseComponent } from '../utils.js';
 
 let FRAMEWORK_TYPES_COMPONENT_RELATION = {};
 

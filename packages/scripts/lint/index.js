@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import mapJson from './map.json' with { type: 'json' };
+import mapJson from '../map.json' with { type: 'json' };
+import { recordKeysInOrder } from './record-order.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataDirectory = path.resolve(__dirname, '../data');
+const dataDirectory = path.resolve(__dirname, '../../data');
 const derivedFields = ['field_category_text', 'platform_framework_text', 'field_type_text'];
 const requiredFields = ['id', 'platform_framework', 'component', 'field_category', 'field_name', 'field_type'];
 const removedFields = [...derivedFields, 'readonly', 'create_time', 'update_time'];
@@ -133,6 +134,9 @@ for (const file of files) {
     });
     for (const field of removedFields) {
       if (field in record) errors.push(`${file}: id ${record.id} 不应保存字段 ${field}`);
+    }
+    if (!recordKeysInOrder(record)) {
+      errors.push(`${file}: id ${record.id} 的字段键顺序不符合 record-order`);
     }
   }
 }

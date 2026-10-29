@@ -1,58 +1,77 @@
-/**
- * 1. 自动生成 API 文档
- * 2. 自动生成组件 API 类型定义文件（type.ts）
- * 3. 自动生成 props 定义文件（props.ts）
- * 4. 自动生成英文 API 文档（api_en.md）
- * 5. 自动生成组件单元测试用例（TODO）
- *
- * ======== 输出全部组件的 API 中文文档和英文文档 ========
- * 命令行示例：npm run api:docs ALL 'Vue(PC)' onlyDocs
- * 命令行示例：npm run api:docs ALL 'React(PC)' onlyDocs
- * 命令行示例：npm run api:docs ALL 'VueNext(PC)' onlyDocs
- *
- * ======== 输出单个组件的 API 文件 ========
- * 命名行示例：npm run api:docs Button 'Vue(PC)' finalProject
- * 命名行示例：npm run api:docs Button 'Vue(PC)'
- * 命名行示例：npm run api:docs Button 'VueNext(PC)'
- * 命名行示例：npm run api:docs Button 'Vue(Mobile)'
- * 命名行示例：npm run api:docs Button 'React(PC)'
- * 命名行示例：npm run api:docs Button 'React(Mobile)'
- * 命名行示例：npm run api:docs Button 'Miniprogram'
- *
- * ======= 参数之间使用逗号分隔 =======
- * 命名行示例：npm run api:docs Button 'Vue(PC)' useDefault,finalProject,onlyDocs,isUseUnitTest
- *
- */
+/** 生成组件 API 文档、类型和 props。用法见 printHelp。 */
 import chalk from 'chalk';
 import { pick, has } from 'lodash-es';
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from './common.js';
-import { GLOBAL_COMPONENTS_CONFIG } from './config/const.js';
+import { GLOBAL_COMPONENTS_CONFIG } from '../config/const.js';
 import {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
   getChatComponentMap,
-} from './config/index.js';
-import apiJson from './data.js';
-import { generateDocs } from './docs/index.js';
-import map from './map.json' with { type: 'json' };
-import { generateTypes } from './types/index.js';
-import { generateReactDefaultProps } from './types/react-default-props.js';
-import { generateVueProps } from './types/vue-props.js';
-import { generateUnitTest } from './unit/index.js';
-import { generateVitestUnitCase } from './vitest/generateVitestUnitCase.js';
-import { generateTestDescriptionToVitestFile } from './vitest/tests/core/utils.js';
+} from '../config/index.js';
+import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../core/context.js';
+import apiJson from '../core/data.js';
+import { scriptArgs } from '../core/utils.js';
+import { generateDocs } from '../docs/index.js';
+import map from '../map.json' with { type: 'json' };
+import { generateTypes } from '../types/index.js';
+import { generateReactDefaultProps } from '../types/react-default-props.js';
+import { generateVueProps } from '../types/vue-props.js';
+import { generateUnitTest } from '../unit/index.js';
+import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../vitest/const/vue2-use-default.js';
+import { generateVitestUnitCase } from '../vitest/generate-vitest-unit-case.js';
+import { generateTestDescriptionToVitestFile } from '../vitest/tests/core/utils.js';
+
+const FRAMEWORKS = [
+  'Vue(PC)',
+  'VueNext(PC)',
+  'React(PC)',
+  'Angular(PC)',
+  'Vue(Mobile)',
+  'React(Mobile)',
+  'Angular(Mobile)',
+  'Miniprogram',
+  'UniApp',
+];
 
 const { data: ALL_API } = apiJson;
 
-/**
- * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
- * component 参数为大驼峰
- * allParams 全部指令参数，具体内容见 parseParams
- */
-// const [component, framework, language, isUseDefault, isUseUnitTest, finalProject] = process.argv.slice(2);
-const [component, framework, allParams] = process.argv.slice(2);
+function printHelp() {
+  console.info(`用法:
+  pnpm api:docs -- <component> '<framework>' [flags]
+
+一次只生成一个组件和一个框架。多个组合请分别执行。
+
+  component     组件名，例如 Button。全量文档为 ALL
+  framework     ${FRAMEWORKS.join(' | ')}
+  flags         可省略。多项用逗号连接，不要加空格
+
+flags:
+  finalProject  写入同级组件库。默认写入本仓库 packages/products
+  onlyDocs      只生成 API 文档。component 为 ALL 时必须带上，且不要带 useDefault
+  useDefault    Vue(PC) 受控组件生成 props 时使用。当前组件：${NEED_USE_DEFAULT_OR_USE_VMODEL.join('、')}
+  vitest        同时输出测试用例
+  isUseUnitTest 同时输出单元测试
+
+示例:
+  pnpm api:docs -- Button 'Vue(PC)'
+  pnpm api:docs -- Button 'VueNext(PC)' finalProject
+  pnpm api:docs -- Select 'Vue(PC)' useDefault,finalProject
+  pnpm api:docs -- ALL 'Vue(PC)' onlyDocs
+`);
+}
+
+const args = scriptArgs();
+if (args.includes('-h') || args.includes('--help')) {
+  printHelp();
+  process.exit(0);
+}
+
+const [component, framework, allParams] = args;
+if (!component || !framework) {
+  printHelp();
+  process.exit(1);
+}
 
 const { useDefault, onlyDocs, isUseUnitTest, vitest } = parseParams(allParams);
 
@@ -206,21 +225,9 @@ function validateParams(components) {
     return false;
   }
 
-  const keys = [
-    'Vue(PC)',
-    'VueNext(PC)',
-    'React(PC)',
-    'Angular(PC)',
-    'Vue(Mobile)',
-    'React(Mobile)',
-    'Angular(Mobile)',
-    'Miniprogram',
-    'UniApp',
-  ];
-  if (!keys.includes(framework)) {
-    console.error(
-      chalk.red(`\n请输入正确的组件库框架名称，可选值有：${keys}。示例：npm run api-docs Button Vue(PC)\n`),
-    );
+  if (!FRAMEWORKS.includes(framework)) {
+    console.error(chalk.red(`\n请输入正确的组件库框架名称，可选值有：${FRAMEWORKS.join('、')}\n`));
+    printHelp();
     return false;
   }
   return true;

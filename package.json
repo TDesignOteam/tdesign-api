@@ -14,13 +14,12 @@
     "reload": "npm run build && pm2 reload ecosystem.config.cjs --env production --update-env",
     "api:add": "node packages/scripts/cli/index.js",
     "api:update": "node packages/scripts/cli/index.js update",
-    "api:lint": "node packages/scripts/lint.js",
+    "api:lint": "node packages/scripts/lint/index.js",
     "api:test": "node packages/scripts/vitest/tests/core/run.js",
-    "api:pure": "node packages/scripts/index.js",
-    "api:docs": "node packages/scripts/index.js",
-    "api:vscode": "node packages/scripts/vscode",
-    "api:helper": "node packages/scripts/helper",
-    "api:configurable": "node packages/scripts/configurable-props"
+    "api:docs": "node packages/scripts/generate/index.js",
+    "api:vscode": "node packages/scripts/vscode/index.js",
+    "api:completion": "node packages/scripts/completion/index.js",
+    "api:configurable": "node packages/scripts/configurable/index.js"
   },
   "dependencies": {
     "@koa/bodyparser": "catalog:",

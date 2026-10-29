@@ -3,12 +3,12 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
 import shell from 'shelljs';
-import { kebabCaseComponent } from '../../../utils.js';
+import { kebabCaseComponent, scriptArgs } from '../../../core/utils.js';
 import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../../const/vue2-use-default.js';
 import { saveVitestFileData } from './utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const [component, framework, args] = process.argv.slice(2);
+const [component, framework, args] = scriptArgs();
 
 const argsList = args.split(',');
 const isWatch = argsList.includes('watch');
@@ -27,7 +27,7 @@ function generateToFinalProject() {
     () => {
       const useDefault =
         framework === 'Vue(PC)' && NEED_USE_DEFAULT_OR_USE_VMODEL.includes(component) ? ',useDefault' : '';
-      shell.exec(`npm run api:pure ${component} '${framework}' vitest,finalProject${useDefault}`);
+      shell.exec(`npm run api:docs -- ${component} '${framework}' vitest,finalProject${useDefault}`);
     },
     (e) => {
       console.error(e);

@@ -4,9 +4,9 @@ import { fileURLToPath } from 'url';
 import axios from 'axios';
 import chalk from 'chalk';
 import prettier from 'prettier';
-import { API_ORIGIN } from '../../../common.js';
 import prettierConfig from '../../../config/prettier.js';
-import { kebabCaseComponent } from '../../../utils.js';
+import { API_ORIGIN } from '../../../core/context.js';
+import { kebabCaseComponent } from '../../../core/utils.js';
 import { parseJSON } from '../../utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

@@ -2,7 +2,6 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
-import { getApiComponentMapByFrameWork } from '../common.js';
 import {
   FRAMEWORK_MAP,
   COMPONENT_API_MD_MAP,
@@ -11,7 +10,8 @@ import {
   MOBILE_FRAMES,
   getChatComponentMap,
 } from '../config/index.js';
-import { kebabCaseComponent, getComponentBasePath } from '../utils.js';
+import { getApiComponentMapByFrameWork } from '../core/context.js';
+import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
 
 let currentFramework = '';
 

@@ -114,7 +114,9 @@ const commandLine = computed(() => {
     .filter((key) => params[key])
     .join();
   const frameworks = frameworkOptions.value.filter((t) => formData.value.platform.includes(t.value));
-  return frameworks.map((framework) => `npm run api:docs ${component} "${framework.label}" ${commandParams}`);
+  return frameworks.map(
+    (framework) => `pnpm api:docs -- ${component} '${framework.label}'${commandParams ? ` ${commandParams}` : ''}`,
+  );
 });
 
 function onCreateApi() {
@@ -130,7 +132,10 @@ function onGenerateConfirm() {
     method: 'post',
     url: '/cmp/generate-api',
     data: {
-      commandLines: commandLine.value.map((command) => command.replace('npm run api:docs', '')),
+      commandLines: commandLine.value.map((command) => {
+        const match = command.match(/pnpm api:docs --\s+(.+)/);
+        return match ? match[1] : command;
+      }),
     },
   }).then(() => {
     generateFilesVisible.value = false;

@@ -1,5 +1,5 @@
 import { camelCase, upperFirst } from 'lodash-es';
-import { kebabCaseComponent } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
 import { UNIT_TEST_EVENTS_MAP } from './const/events-map.js';
 import { reactNeedMockDelayEvents } from './const/react-need-mock-delay.js';
 

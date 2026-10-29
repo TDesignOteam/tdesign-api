@@ -15,8 +15,9 @@
  *
  */
 import chalk from 'chalk';
-import { groupByComponent, formatArrayToMap } from '../common.js';
-import apiJson from '../data.js';
+import { groupByComponent, formatArrayToMap } from '../core/context.js';
+import apiJson from '../core/data.js';
+import { scriptArgs } from '../core/utils.js';
 import { generateDocs } from '../docs/index.js';
 import map from '../map.json' with { type: 'json' };
 
@@ -25,7 +26,7 @@ const { data: ALL_API } = apiJson;
  * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
  * component 参数为大驼峰
  */
-const [framework] = process.argv.slice(2);
+const [framework] = scriptArgs();
 
 start();
 

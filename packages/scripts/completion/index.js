@@ -1,37 +1,40 @@
 /**
- * 1. 自动生成代码提示文件 web-types.json tags.json attributes.json
+ * 生成 Vue / UniApp 模板补全：
+ * - helper/ 下的 web-types.json、tags.json、attributes.json（Vetur、WebStorm）
+ * - global.d.ts（Volar）
  *
- * 命名行示例：npm run api:helper 'Vue(PC)'
- * 命名行示例：npm run api:helper 'VueNext(PC)'
- * 命名行示例：npm run api:helper 'Vue(Mobile)'
- * 命名行示例：npm run api:helper 'UniApp'
+ * 与 api:vscode 不同：那条命令写的是 vscode-tdesign 插件用的属性说明，不是模板补全。
  *
+ * pnpm api:completion -- 'Vue(PC)'
+ * pnpm api:completion -- 'VueNext(PC)'
+ * pnpm api:completion -- 'Vue(Mobile)'
+ * pnpm api:completion -- 'UniApp'
  */
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { uniq } from 'lodash-es';
 import prettier from 'prettier';
+import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatConfig } from '../config/index.js';
+import prettierConfig from '../config/prettier.js';
 import {
   groupByComponent,
   formatArrayToMap,
   isComponent,
   componentsMap,
   getApiComponentMapByFrameWork,
-} from '../common.js';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatConfig } from '../config/index.js';
-import prettierConfig from '../config/prettier.js';
-import apiJson from '../data.js';
+} from '../core/context.js';
+import apiJson from '../core/data.js';
+import { kebabCaseComponent, isChatComponentPath, scriptArgs } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
 import { formatType } from '../types/index.js';
-import { kebabCaseComponent, isChatComponentPath } from '../utils.js';
 import { getParentByChildComponent } from '../vitest/utils.js';
 
 const { data: ALL_API } = apiJson;
 /**
  * framework 参数可选值：Vue(PC)/VueNext(PC)/Vue(Mobile)/UniApp
  */
-const [framework] = process.argv.slice(2);
+const [framework] = scriptArgs();
 
 const PREFIX = 't';
 
@@ -81,7 +84,7 @@ function start() {
     });
   });
   // 生成代码提示文件
-  generateHelper(frameworkData, framework);
+  generateCompletion(frameworkData, framework);
 }
 
 function processPickOmitApi(frameworkData, api, isPick) {
@@ -105,7 +108,7 @@ function processPickOmitApi(frameworkData, api, isPick) {
     });
   }
 }
-async function generateHelper(baseData, framework) {
+async function generateCompletion(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
   const { webTypes, tags, attributes, volar, chatVolar } = getHelperData(baseData, framework);
   // UniApp 无 helper 文件，仅生成 volar

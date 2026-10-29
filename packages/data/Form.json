@@ -636,8 +636,8 @@
       "Function"
     ],
     "field_desc_zh": "设置多组字段状态",
-    "event_input": "(fields: FieldData[])",
     "custom_field_type": "(fields: FieldData[]) => void【interface FieldData { name: NamePath; value?: unknown, status?: string, validateMessage?: { type?: string, message?: string } }】",
+    "event_input": "(fields: FieldData[])",
     "field_required": true
   },
   {

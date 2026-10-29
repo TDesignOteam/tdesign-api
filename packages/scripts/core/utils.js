@@ -1,6 +1,6 @@
 import { kebabCase } from 'lodash-es';
-import { CHAT_COMPONENT_MAP, getChatComponentMap } from './config/files-combine.js';
-import { getChatConfig, FRAMEWORK_MAP } from './config/index.js';
+import { CHAT_COMPONENT_MAP, getChatComponentMap } from '../config/files-combine.js';
+import { getChatConfig, FRAMEWORK_MAP } from '../config/index.js';
 
 const CHAT_COMPONENT_NAMES = new Set(
   Object.values(CHAT_COMPONENT_MAP).flatMap((list) => (Array.isArray(list) ? list : [])),
@@ -33,6 +33,13 @@ function getComponentBasePath(cmp, apiBasePath, framework) {
   }
 
   return apiBasePath;
+}
+
+/** pnpm 会在脚本参数前插入 `--`，入口读取 argv 时去掉 */
+export function scriptArgs() {
+  const args = process.argv.slice(2);
+  if (args[0] === '--') args.shift();
+  return args;
 }
 
 export { kebabCaseComponent, getComponentBasePath, isChatComponentPath };
