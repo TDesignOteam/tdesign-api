@@ -19,6 +19,7 @@ action-sheet | Object | - | 动作面板全局配置。TS 类型：`ActionSheetC
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 class-prefix | String | t | CSS 类名前缀 | N
+comment | Object | - | 评论组件全局配置。TS 类型：`CommentConfig` | N
 date-time-picker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdown-menu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
 guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
@@ -77,6 +78,14 @@ stop-text | String | - | 语言配置，停止发送按钮描述文本 | N
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 status | Object | - | 语言配置，思考状态描述文本。TS 类型：`{ pending: string; complete: string; stop: string; }` | N
+
+### CommentConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapse-text | String | - | 语言配置，“收起”描述文本 | N
+collapsed-text | String | - | 语言配置，折叠状态下“展开回复”描述文本 | N
+expand-more-text | String | - | 语言配置，半展开状态下“展开更多回复”描述文本 | N
 
 ### DateTimePickerConfig
 

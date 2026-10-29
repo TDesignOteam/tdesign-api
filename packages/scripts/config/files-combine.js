@@ -14,6 +14,7 @@ export const GLOBAL_COMPONENTS_CONFIG = [
   'ChatSenderConfig',
   'ChatThinkingConfig',
   'ColorPickerConfig',
+  'CommentConfig',
   'DatePickerConfig',
   'DateTimePickerConfig',
   'DescriptionsConfig',
