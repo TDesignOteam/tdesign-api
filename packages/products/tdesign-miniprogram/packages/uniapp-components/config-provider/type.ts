@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TdFormErrorMessage as FormErrorMessage } from '../form/type';
+import type { FormErrorMessage } from '../form/type';
 import type { TdImageProps as ImageProps } from '../image/type';
 
 export interface TdConfigProviderProps {
@@ -36,6 +36,10 @@ export interface GlobalConfigProvider {
    * @default t
    */
   classPrefix?: string;
+  /**
+   * 评论组件全局配置
+   */
+  comment?: CommentConfig;
   /**
    * 时间选择器全局配置
    */
@@ -90,6 +94,11 @@ export interface AttachmentsConfig {
 }
 
 export interface CalendarConfig {
+  /**
+   * 语言配置，“确定” 按钮描述文本
+   * @default ''
+   */
+  confirm?: string;
   /**
    * 语言配置，日期月面板标题描述文本。示例：“{year} / {month}”
    * @default ''
@@ -153,6 +162,24 @@ export interface ChatThinkingConfig {
    * 语言配置，思考状态描述文本
    */
   status?: { pending: string; complete: string; stop: string };
+}
+
+export interface CommentConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，折叠状态下“展开回复”描述文本
+   * @default ''
+   */
+  collapsedText?: string;
+  /**
+   * 语言配置，半展开状态下“展开更多回复”描述文本
+   * @default ''
+   */
+  expandMoreText?: string;
 }
 
 export interface DateTimePickerConfig {
