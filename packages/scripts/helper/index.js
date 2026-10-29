@@ -304,7 +304,8 @@ async function writeVolar(framework, data, isChat = false) {
   const current = FRAMEWORK_MAP[framework];
   const chatConfig = isChat ? getChatConfig(framework) : null;
   const packageName = chatConfig?.name || current.name;
-  const readerGlobalComponents = data.map((item) => {
+  const readerGlobalComponents = uniq(
+    data.map((item) => {
     if (item === 'IconSVG') {
       return `Icon: typeof import('${current.iconPath}')['Icon'];`;
     }
@@ -325,7 +326,8 @@ async function writeVolar(framework, data, isChat = false) {
       return `T${item}: typeof import('${packageName}/${kebabName}/${kebabName}.vue').default`;
     }
     return `T${item}: typeof import('${packageName}')['${item}'];`;
-  });
+    }),
+  );
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
   const volarTemplate = `
   /**
