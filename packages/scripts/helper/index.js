@@ -54,6 +54,7 @@ function start() {
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
     delete aliasComponents['Swiper'];
+    delete aliasComponents['PrimaryTable'];
   }
 
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
