@@ -99687,6 +99687,43 @@
       ]
     },
     {
+      "id": 1793243025,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "dragSort",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "row/row-handler/col/row-handler-col/drag-col",
+      "field_desc_zh": "拖拽排序方式，值为 `row` 表示行拖拽排序，这种方式无法进行文本复制，慎用。值为`row-handler` 表示通过拖拽手柄进行行拖拽排序。值为 `col` 表示列顺序拖拽。值为 `row-handler-col` 表示同时支持行拖拽和列拖拽。⚠️`drag-col` 已废弃，请勿使用",
+      "field_desc_en": "dag sort",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:03:45",
+      "update_time": "2026-10-29 03:03:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 2589,
       "platform_framework": [
         "1",
@@ -100197,6 +100234,43 @@
       ]
     },
     {
+      "id": 1793243064,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "hideSortTips",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "隐藏排序文本提示，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `false`",
+      "field_desc_en": "hide sort tips",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:04:24",
+      "update_time": "2026-10-29 03:04:24",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2799,
       "platform_framework": [
         "1",
@@ -100314,6 +100388,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1793243080,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "multipleSort",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否支持多列排序",
+      "field_desc_en": "support multiple column fields sort",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:04:40",
+      "update_time": "2026-10-29 03:04:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
       ],
       "field_type_text": [
         "Boolean"
@@ -100607,6 +100718,43 @@
       ]
     },
     {
+      "id": 1793243089,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "showSortColumnBgColor",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "当前排序列是否显示背景色",
+      "field_desc_en": "column shows sort bg color",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:04:49",
+      "update_time": "2026-10-29 03:04:49",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 834,
       "platform_framework": [
         "1",
@@ -100691,6 +100839,45 @@
       ]
     },
     {
+      "id": 1793243099,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "sort",
+      "field_type": [
+        "8",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序",
+      "field_desc_en": "sort configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:04:59",
+      "update_time": "2026-10-29 03:04:59",
+      "event_output": null,
+      "custom_field_type": "TableSort【type TableSort = SortInfo | Array<SortInfo>】【interface SortInfo { sortBy: string; descending: boolean }】",
+      "syntactic_sugar": "sync",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
+      ],
+      "field_type_text": [
+        "Object",
+        "Array"
+      ]
+    },
+    {
       "id": 2379,
       "platform_framework": [
         "1",
@@ -100728,6 +100915,43 @@
         "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "TNode"
+      ]
+    },
+    {
+      "id": 1793243108,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTable",
+      "field_category": 1,
+      "field_name": "sortIcon",
+      "field_type": [
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "自定义排序图标，支持全局配置 `GlobalConfigProvider`",
+      "field_desc_en": "sort icon",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:05:08",
+      "update_time": "2026-10-29 03:05:08",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
       ],
       "field_type_text": [
         "TNode"
@@ -102116,6 +102340,43 @@
       ]
     },
     {
+      "id": 1793243394,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTableCol",
+      "field_category": 1,
+      "field_name": "sortType",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "all",
+      "field_enum": "desc/asc/all",
+      "field_desc_zh": "当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列",
+      "field_desc_en": "sort options",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:09:54",
+      "update_time": "2026-10-29 03:09:54",
+      "event_output": null,
+      "custom_field_type": "SortType【type SortType = 'desc' | 'asc' | 'all'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 833,
       "platform_framework": [
         "1",
@@ -102192,6 +102453,43 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Miniprogram"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
+      "id": 1793243404,
+      "platform_framework": [
+        "128"
+      ],
+      "component": "PrimaryTableCol",
+      "field_category": 1,
+      "field_name": "sorter",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "该列是否支持排序。值为 true 表示该列支持排序；值类型为函数，表示对本地数据 `data` 进行排序，返回值参考 [MDN Array.sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。泛型 T 指表格数据类型",
+      "field_desc_en": "sort configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 03:10:04",
+      "update_time": "2026-10-29 03:10:04",
+      "event_output": null,
+      "custom_field_type": "boolean",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "UniApp"
       ],
       "field_type_text": [
         "Boolean"
