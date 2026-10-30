@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1793257196,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CommentConfig",
+    "field_category": "Props",
+    "field_name": "collapseText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“收起”描述文本"
+  },
+  {
+    "id": 1793257162,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CommentConfig",
+    "field_category": "Props",
+    "field_name": "collapsedText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，折叠状态下“展开回复”描述文本"
+  },
+  {
+    "id": 1793257174,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CommentConfig",
+    "field_category": "Props",
+    "field_name": "expandMoreText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，半展开状态下“展开更多回复”描述文本"
+  }
+]

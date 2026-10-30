@@ -115,6 +115,29 @@
     "custom_field_type": "KeysType"
   },
   {
+    "id": 1792396819,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "keepLabelActive",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否保持标题高亮（含菜单收起态），仅多选场景生效",
+    "version": {
+      "React(Mobile)": "1.0.1",
+      "Vue(Mobile)": "1.17.0",
+      "Miniprogram": "1.18.0",
+      "UniApp": "1.0.1"
+    }
+  },
+  {
     "id": 1699,
     "platform_framework": [
       "Vue(Mobile)",

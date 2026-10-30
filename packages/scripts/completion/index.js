@@ -57,6 +57,7 @@ function start() {
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
     delete aliasComponents['Swiper'];
+    delete aliasComponents['PrimaryTable'];
   }
 
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
@@ -307,7 +308,8 @@ async function writeVolar(framework, data, isChat = false) {
   const current = FRAMEWORK_MAP[framework];
   const chatConfig = isChat ? getChatConfig(framework) : null;
   const packageName = chatConfig?.name || current.name;
-  const readerGlobalComponents = data.map((item) => {
+  const readerGlobalComponents = uniq(
+    data.map((item) => {
     if (item === 'IconSVG') {
       return `Icon: typeof import('${current.iconPath}')['Icon'];`;
     }
@@ -328,7 +330,8 @@ async function writeVolar(framework, data, isChat = false) {
       return `T${item}: typeof import('${packageName}/${kebabName}/${kebabName}.vue').default`;
     }
     return `T${item}: typeof import('${packageName}')['${item}'];`;
-  });
+    }),
+  );
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
   const volarTemplate = `
   /**

@@ -272,6 +272,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'CalendarConfig', label: '日历全局配置', type: 'TS' },
   { value: 'CascaderConfig', label: '级联选择全局配置', type: 'TS' },
   { value: 'ColorPickerConfig', label: '颜色选择器全局配置', type: 'TS' },
+  { value: 'CommentConfig', label: '评论组件全局配置', type: 'TS' },
   { value: 'TransferConfig', label: '穿梭框全局配置', type: 'TS' },
   { value: 'TimePickerConfig', label: '时间选择器全局配置', type: 'TS' },
   { value: 'DatePickerConfig', label: '日期选择器全局配置', type: 'TS' },
