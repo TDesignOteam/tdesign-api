@@ -40051,6 +40051,45 @@
       ]
     },
     {
+      "id": 1792997875,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "actions",
+      "field_type": [
+        "1",
+        "16"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "操作",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:57:55",
+      "update_time": "2026-10-26 06:57:55",
+      "event_output": null,
+      "custom_field_type": "Array<CommentActionItem> | string【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string; placement?: ActionPlacement; disabled?: boolean}】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Array"
+      ]
+    },
+    {
       "id": 1637,
       "platform_framework": [
         "1",
@@ -40089,6 +40128,45 @@
         "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1792997883,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "author",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "作者",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:58:03",
+      "update_time": "2026-10-26 06:58:03",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -40180,6 +40258,47 @@
       ]
     },
     {
+      "id": 1792997892,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "avatar",
+      "field_type": [
+        "1",
+        "8",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "头像",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:58:12",
+      "update_time": "2026-10-26 06:58:12",
+      "event_output": null,
+      "custom_field_type": "string | AvatarProps | TNode【import { AvatarProps } from '@Avatar'】",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "Object",
+        "TNode"
+      ]
+    },
+    {
       "id": 1788787623,
       "platform_framework": [
         "16"
@@ -40212,6 +40331,45 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1792997910,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "children",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "子元素内容，同 reply",
+      "field_desc_en": "children, same as `reply`",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:58:30",
+      "update_time": "2026-10-26 06:58:30",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "String",
@@ -40264,6 +40422,45 @@
       ]
     },
     {
+      "id": 1792997920,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "content",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "内容",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:58:40",
+      "update_time": "2026-10-26 06:58:40",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1638,
       "platform_framework": [
         "1",
@@ -40309,6 +40506,45 @@
       ]
     },
     {
+      "id": 1792997931,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "datetime",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "时间",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:58:51",
+      "update_time": "2026-10-26 06:58:51",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1788789744,
       "platform_framework": [
         "8",
@@ -40342,6 +40578,43 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1793090570,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "folds",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "折叠/展开配置项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-27 08:42:50",
+      "update_time": "2026-10-27 08:42:50",
+      "event_output": null,
+      "custom_field_type": "CommentFold 【type CommentFoldState = 'collapsed' | 'partial' | 'expanded'】【interface CommentFold { state: CommentFoldState; total?: number; step?: number; content?: Partial<Record<CommentFoldState, string | [string , string ]>>}】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": [
         "Object"
@@ -40434,6 +40707,45 @@
       ]
     },
     {
+      "id": 1792997974,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "reply",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "回复",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-26 06:59:34",
+      "update_time": "2026-10-26 06:59:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
       "id": 1788791182,
       "platform_framework": [
         "8",
@@ -40469,6 +40781,39 @@
       "field_type_text": []
     },
     {
+      "id": 1792997986,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 2,
+      "field_name": "actions",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { action: CommentActionItem | TNode; e: Event })",
+      "create_time": "2026-10-26 06:59:46",
+      "update_time": "2026-10-26 06:59:46",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
+      ],
+      "field_type_text": []
+    },
+    {
       "id": 1788791492,
       "platform_framework": [
         "8",
@@ -40500,6 +40845,39 @@
       "platform_framework_text": [
         "Vue(Mobile)",
         "React(Mobile)"
+      ],
+      "field_type_text": []
+    },
+    {
+      "id": 1792997999,
+      "platform_framework": [
+        "64"
+      ],
+      "component": "Comment",
+      "field_category": 2,
+      "field_name": "folds",
+      "field_type": [],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "(context: { fold: CommentFold; e: Event })",
+      "create_time": "2026-10-26 06:59:59",
+      "update_time": "2026-10-26 06:59:59",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Events",
+      "platform_framework_text": [
+        "Miniprogram"
       ],
       "field_type_text": []
     },
