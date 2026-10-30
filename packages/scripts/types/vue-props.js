@@ -35,6 +35,14 @@ function isNeedPropType(typeName, api) {
   return multipleTypeStr || complicatedApi;
 }
 
+function customFieldTypeHasNull(customFieldType) {
+  if (!customFieldType) return false;
+  // 只看对外类型，忽略【interface / type / import】里的内部 null
+  const visible = String(customFieldType).replace(/【[\s\S]*?】/g, '');
+  const withoutGenerics = visible.replace(/<[^<>]*>/g, '');
+  return /(^|\|)\s*null\s*(\||$)/.test(withoutGenerics);
+}
+
 function getType(cmp, api, name) {
   let type = api.field_type;
   type = type
@@ -44,6 +52,14 @@ function getType(cmp, api, name) {
       return t === 'TNode' ? nodeType : t;
     })
     .filter((v) => !!v);
+  // custom_field_type 顶级 `| null` 写入 Vue runtime type，对应可显式传 null 的 API
+  if (
+    !['Miniprogram', 'UniApp'].includes(currentFramework) &&
+    customFieldTypeHasNull(api.custom_field_type) &&
+    !type.includes('null')
+  ) {
+    type.push('null');
+  }
   const typeName = type.length <= 1 ? type[0] : `[${type.join(', ')}]`;
   return isNeedPropType(typeName, api) ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
 }
@@ -399,6 +415,11 @@ function getPropsFileName(folder, cmp) {
   return path.resolve(folder, fileName);
 }
 
+function hasChildComponentImpl(folder, cmp) {
+  const name = kebabCaseComponent(cmp);
+  return ['tsx', 'vue', 'jsx', 'ts', 'js'].some((ext) => fs.existsSync(path.resolve(folder, `${name}.${ext}`)));
+}
+
 // 根据组件获取 API 类型数据
 function getPropsByComponent(baseData, framework, component, isUseDefault) {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram'].includes(framework)) return;
@@ -422,6 +443,9 @@ function generateVueProps(baseData, framework, isUseDefault) {
     const basePath = FRAMEWORK_MAP[framework].propsBasePath;
     const folder = getFolderPath(basePath, cmp);
     const outputPath = getPropsFileName(folder, cmp);
+    const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
+    // 子组件没有实现文件时不写独立 props，避免 Vue2 误出 dialog-card-props.ts
+    if (parentCmp && parentCmp !== cmp && !hasChildComponentImpl(folder, cmp)) return;
     const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
     fs.mkdirSync(folder, { recursive: true });
     fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);

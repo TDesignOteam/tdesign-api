@@ -29,7 +29,6 @@ import {
 } from '../core/context.js';
 import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
-import generateGlobals from './global/index.js';
 import { formatTypeImport, toTypeImport } from './import.js';
 import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 import formatTNode from './t-node.js';
@@ -277,6 +276,23 @@ function getInterfaceInfo(name, extendApis, TApis = []) {
   return `export interface ${name}${t}${et} {`;
 }
 
+/**
+ * Extends Pick<Parent, 'a' | 'b'> 已带上的字段不再写入 interface 主体，
+ * 避免重复覆盖且类型冲突
+ */
+function getExtendedPickKeys(extendApis = []) {
+  const keys = new Set();
+  extendApis.forEach((ext) => {
+    for (const match of String(ext).matchAll(/Pick<\s*[^,]+,\s*([^>]+)>/g)) {
+      match[1].split('|').forEach((part) => {
+        const key = part.replace(/['"`\s]/g, '');
+        if (key) keys.add(key);
+      });
+    }
+  });
+  return keys;
+}
+
 function formatTsTypeDesc(str) {
   let baseName = '';
   const exports = [];
@@ -512,6 +528,11 @@ function getTypeScriptDesc(componentMap, framework) {
     const apis = componentMap[cmp];
     const isPluginFunctions = isPlugin(cmp);
     const miniprogram = {};
+    const pickedKeys = getExtendedPickKeys(
+      apis
+        .filter((apiData) => !apiData.deprecated && apiData.field_category === 'Extends')
+        .map((apiData) => formatTsTypeDesc(apiData.field_name).baseName),
+    );
     apis.forEach((apiData) => {
       //废弃属性不输出到到 TS 文件
       if (apiData.deprecated) return;
@@ -546,6 +567,12 @@ function getTypeScriptDesc(componentMap, framework) {
         const r = formatApi(newApi, framework, plugin) || {};
         if (r.desc instanceof Array && r.desc.length) {
           const [comment, indent, name, required, type] = r.desc;
+          // Pick 已包含的字段只用于文档 / props，不重复写进 TS
+          if (pickedKeys.has(name)) {
+            exports = exports.concat(r.exports);
+            imports = imports.concat(r.imports);
+            return;
+          }
           // 小程序 TS 类型特殊，需单独处理
           const rType =
             framework === 'Miniprogram' && !COMPONENTS_MAP[api.component].type
@@ -717,9 +744,6 @@ async function generateTypes(baseData, framework) {
     console.error(`framework isn't in ${keys}`);
     return;
   }
-  // 输出全局类型定义文件
-  generateGlobals(framework);
-
   const basePath = FRAMEWORK_MAP[framework].tsBasePath;
 
   // 输出 TS 类型定义文件

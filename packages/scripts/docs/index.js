@@ -1,5 +1,4 @@
 import fs from 'fs';
-import os from 'os';
 import path from 'path';
 import chalk from 'chalk';
 import {
@@ -10,7 +9,7 @@ import {
   MOBILE_FRAMES,
   getChatComponentMap,
 } from '../config/index.js';
-import { getApiComponentMapByFrameWork, componentsMap, isTypeApi } from '../core/context.js';
+import { getApiComponentMapByFrameWork, componentsMap, isTypeApi, isPlugin } from '../core/context.js';
 import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
 
 let currentFramework = '';
@@ -72,30 +71,33 @@ export {
 `;
 }
 
-// 输出 API 到组件 markdown 文档中，从 ## API 后（小程序和 mobile-vue 此处的逻辑相同）
+const API_DOC_HEADING = '## API';
+
+function findApiDocStart(data) {
+  const match = String(data).match(/(^|\n)## API(?:[ \t]*)(?:\r?\n|$)/);
+  if (!match) return -1;
+  return match.index + (match[1] === '\n' ? 1 : 0);
+}
+
+// 只覆盖 ## API 之后。插件函数式调用、{{ plugin }}、FAQ 等手写内容不读不写
 function outputComponentMD(file, apiData, isVscode) {
-  fs.readFile(file, 'utf8', (err, data) => {
-    if (err) {
-      return console.error(err);
-    }
-    // 自动生成的 API 文档会自动替换 SIGNATURE 之后的内容
-    // 如果 SIGNATURE 不存在，则会自动在文末补充
-    const SIGNATURE = isVscode ? '/** 当前文件为自动生成，请勿手动调整 */' : `## API${os.EOL}`;
-    let cssVariables = data.split('### CSS 变量')[1];
-    if (!cssVariables) {
-      cssVariables = data.split('### CSS Variables')[1];
-    }
-    const APIIndex = data.lastIndexOf(SIGNATURE);
-    let result = APIIndex !== -1 ? `${data.slice(0, APIIndex + 7)}${apiData}` : `${data}\n${SIGNATURE}${apiData}`;
-    result = result.replace('\n:: BASE_PROPS ::\n', '');
-    if (cssVariables) {
-      result += `\n### CSS Variables\n\n${cssVariables.trim()}\n`;
-    }
-    fs.writeFile(file, result, 'utf8', (err) => {
-      if (err) return console.error(err);
-      console.log(chalk.green(`generate docs: ${file} has been created.`));
-    });
-  });
+  const data = fs.readFileSync(file, 'utf8');
+  const marker = isVscode ? '/** 当前文件为自动生成，请勿手动调整 */' : API_DOC_HEADING;
+  let cssVariables = data.split('### CSS 变量')[1];
+  if (!cssVariables) {
+    cssVariables = data.split('### CSS Variables')[1];
+  }
+  const APIIndex = isVscode ? data.lastIndexOf(marker) : findApiDocStart(data);
+  let result =
+    APIIndex !== -1
+      ? `${data.slice(0, APIIndex + marker.length)}\n${apiData}`
+      : `${data.replace(/\s*$/, '')}\n\n${marker}\n${apiData}`;
+  result = result.replace('\n:: BASE_PROPS ::\n', '');
+  if (cssVariables) {
+    result += `\n### CSS Variables\n\n${cssVariables.trim()}\n`;
+  }
+  fs.writeFileSync(file, result);
+  console.log(chalk.green(`generate docs: ${file} has been created.`));
 }
 
 function getDocFileName(cmp, framework) {
@@ -111,6 +113,12 @@ function removeChildComponentDocs(api, framework, current, isVscode) {
     if (!map[parentCmp] || !api[parentCmp]) return;
     map[parentCmp].forEach((childCmp) => {
       if (childCmp === parentCmp) return;
+      // 插件 / TS 没有独立文档。`$Dialog` kebab 后是 dialog.md，会误删父组件文档开头
+      if (isPlugin(childCmp) || isTypeApi(childCmp) || childCmp.startsWith('$')) return;
+      const parentFolder = path.resolve(
+        getComponentBasePath(parentCmp, current.apiBasePath, framework),
+        kebabCaseComponent(parentCmp),
+      );
       const childFolder = path.resolve(
         getComponentBasePath(childCmp, current.apiBasePath, framework),
         kebabCaseComponent(childCmp),
@@ -118,6 +126,8 @@ function removeChildComponentDocs(api, framework, current, isVscode) {
       [`${getDocFileName(childCmp, framework)}.md`, `${getDocFileName(childCmp, framework)}.en-US.md`].forEach(
         (fileName) => {
           const file = path.resolve(childFolder, fileName);
+          const parentFile = path.resolve(parentFolder, fileName.replace(getDocFileName(childCmp, framework), getDocFileName(parentCmp, framework)));
+          if (path.resolve(file) === path.resolve(parentFile)) return;
           if (fs.existsSync(file)) {
             fs.unlink(file, (err) => {
               if (err) return console.error(err);

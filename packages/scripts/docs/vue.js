@@ -264,6 +264,30 @@ function getTsTypeFileName(cmp, config) {
   return `${[getFolderName(parentName), fileName].join('/')}.ts`;
 }
 
+function hasDocSentenceMark(text, edge) {
+  return (edge === 'start' ? /^\s*[.。]/ : /[.。]\s*$/).test(String(text));
+}
+
+/**
+ * 描述片段拼接：
+ * 中文用「。」、英文用「. 」；上一段已以 `.` / `。` 结尾，或下一段已以 `.` / `。` 开头，则不再补
+ */
+function joinDocDesc(parts) {
+  const items = (parts || []).filter((v) => !!v);
+  if (!items.length) return '';
+  const isEn = LANGUAGE === 'en';
+  const sep = isEn ? '. ' : '。';
+  return items.reduce((acc, part, index) => {
+    if (index === 0) return String(part);
+    const next = String(part);
+    if (hasDocSentenceMark(acc, 'end') || hasDocSentenceMark(next, 'start')) {
+      const needSpace = isEn && !/\s$/.test(acc) && !/^\s/.test(next);
+      return `${acc}${needSpace ? ' ' : ''}${next}`;
+    }
+    return `${acc}${sep}${next}`;
+  }, '');
+}
+
 function formatToVueApi(api, params) {
   const { isUncontrol, framework, current: config } = params;
   const r = { ...api };
@@ -342,7 +366,7 @@ function formatToVueApi(api, params) {
   desc = moreDesc.concat(desc);
   const tmp = interfaceDescription.length ? `<br/>${interfaceDescription.join('<br/><br/>')}<br/>` : '';
   desc = desc.concat(tmp);
-  r.field_desc_zh = desc.filter((v) => !!v).join('。');
+  r.field_desc_zh = joinDocDesc(desc);
   // 小程序的属性一般显示为中划线
   if (['Miniprogram', 'UniApp'].includes(params.framework)) {
     r.field_name = kebabCaseComponent(r.field_name);
