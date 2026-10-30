@@ -265,21 +265,6 @@
     }
   },
   {
-    "id": 1711943489,
-    "platform_framework": [
-      "React(PC)"
-    ],
-    "component": "Drawer",
-    "field_category": "Props",
-    "field_name": "forceRender",
-    "field_type": [
-      "Boolean"
-    ],
-    "field_default_value": "false",
-    "field_desc_zh": "是否强制渲染Drawer",
-    "field_desc_en": "to force render Drawer"
-  },
-  {
     "id": 683,
     "platform_framework": [
       "Vue(PC)",

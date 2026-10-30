@@ -2,7 +2,8 @@
   {
     "id": 1739543304,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -16,7 +17,8 @@
   {
     "id": 1739543335,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -32,7 +34,8 @@
   {
     "id": 1739543363,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -43,13 +46,13 @@
       "TNode"
     ],
     "field_default_value": "true",
-    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例",
-    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例"
   },
   {
     "id": 1739543397,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -59,14 +62,14 @@
       "Object",
       "TNode"
     ],
-    "field_default_value": "true",
     "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
     "custom_field_type": "string | ButtonProps | TNode | null"
   },
   {
     "id": 1739543439,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -74,14 +77,15 @@
     "field_type": [
       "Boolean"
     ],
+    "field_default_value": "undefined",
     "field_desc_zh": "确认按钮加载状态",
-    "field_desc_en": "confirm button loading status",
-    "custom_field_type": "string | ButtonProps | TNode | null"
+    "field_desc_en": "confirm button loading status"
   },
   {
     "id": 1739543482,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -96,7 +100,8 @@
   {
     "id": 1739543515,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -112,7 +117,8 @@
   {
     "id": 1739543544,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Props",
@@ -133,7 +139,8 @@
   {
     "id": 1739543594,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Events",
@@ -148,13 +155,14 @@
   {
     "id": 1739543624,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Events",
     "field_name": "closeBtnClick",
     "field_type": [
-      "String"
+      "Function"
     ],
     "field_desc_zh": "点击右上角关闭按钮时触发",
     "event_input": "(context: { e: MouseEvent })"
@@ -162,7 +170,8 @@
   {
     "id": 1739543673,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "React(PC)"
     ],
     "component": "DialogCard",
     "field_category": "Events",

@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDialogProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdDialogProps } from './type';
 export default {
   /** 对话框挂载的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
@@ -18,7 +17,7 @@ export default {
   },
   /** 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件 */
   cancelBtn: {
-    type: [String, Object, Function] as PropType<TdDialogProps['cancelBtn']>,
+    type: [String, Object, Function, null] as PropType<TdDialogProps['cancelBtn']>,
   },
   /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例 */
   closeBtn: {
@@ -37,7 +36,7 @@ export default {
   },
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
-    type: [String, Object, Function] as PropType<TdDialogProps['confirmBtn']>,
+    type: [String, Object, Function, null] as PropType<TdDialogProps['confirmBtn']>,
   },
   /** 确认按钮加载状态 */
   confirmLoading: {
@@ -52,10 +51,9 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
-  /** 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' */
+  /** 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]` */
   dialogClassName: {
-    type: String,
-    default: '',
+    type: [String, Object, Array] as PropType<TdDialogProps['dialogClassName']>,
   },
   /** 作用于对话框本身的样式 */
   dialogStyle: {
@@ -63,6 +61,10 @@ export default {
   },
   /** 是否可以拖拽（对全屏对话框无效） */
   draggable: Boolean,
+  /** 对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。 */
+  focusable: {
+    type: Object as PropType<TdDialogProps['focusable']>,
+  },
   /** 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容 */
   footer: {
     type: [Boolean, Function] as PropType<TdDialogProps['footer']>,
@@ -129,7 +131,7 @@ export default {
   width: {
     type: [String, Number] as PropType<TdDialogProps['width']>,
   },
-  /** 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 */
+  /** 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
   },
