@@ -9,6 +9,7 @@ import {
   getFolderName,
   isTypeApi,
   isPlugin,
+  componentsMap,
   getDefaultValueName,
   getCmpTypeCombineMap,
 } from '../core/context.js';
@@ -16,6 +17,7 @@ import {
 const MOBILE_PROPS_MERGE_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
 import { kebabCaseComponent } from '../core/utils.js';
 import { getComponentBasePath } from '../core/utils.js';
+import { formatTypeImport } from './import.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 
 let currentFramework = '';
@@ -102,8 +104,10 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
         dl = defaultValue;
       }
     } else if (type === 'String') {
-      // 为字符串添加单引号
-      dl = `'${defaultValue}'`;
+      /* 与 types/index.js 一致
+         String 且无默认值时按空字符串处理，避免 `'undefined'` */
+      const stringDefault = defaultValue ?? '';
+      dl = `'${stringDefault}'`;
       // 值不为 '' 时，避免连续两个单引号出现
       dl.length !== 2 && (dl = dl.replace(/''/g, "'"));
     }
@@ -267,23 +271,15 @@ function formatEventProps(api, cmp, framework) {
 
 // 类型定义可能来自组件基础文件，比如：ForItemProps 类型定义来源于 Form 目录
 function getImportPath(body, cmp, framework) {
-  let r = '';
-  const isUniApp = framework === 'UniApp';
   const tdName = getTdCmpName(cmp);
-  if (body.indexOf(tdName) !== -1) {
-    if (framework === 'Vue(PC)' || framework === 'VueNext(PC)' || framework === 'Vue(Mobile)') {
-      // 子组件 props 文件与父组件 type.ts 同目录输出（见 getFolderPath），统一使用 './type'
-      r = `import { ${tdName} } from './type';\n`;
-    } else if (isUniApp) {
-      // UniApp 子组件 props 文件同步至上游子组件自身目录，需通过 '../父组件目录/type' 引用类型
-      const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-      r =
-        parentCmp && parentCmp !== cmp
-          ? `import type { ${tdName} } from '../${getFolderName(parentCmp)}/type';\n`
-          : `import type { ${tdName} } from './type';\n`;
-    }
-  }
-  return r;
+  if (body.indexOf(tdName) === -1) return '';
+  const isUniApp = framework === 'UniApp';
+  if (!(isUniApp || ['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework))) return '';
+  const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
+  // UniApp 子组件 props 同步至上游子组件目录，需通过 '../父组件目录/type' 引用；其余框架与 type.ts 同目录
+  const from =
+    isUniApp && parentCmp && parentCmp !== cmp ? `../${getFolderName(parentCmp)}/type` : './type';
+  return `${formatTypeImport(tdName, from)}\n`;
 }
 
 /**
@@ -373,15 +369,15 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     let body = '';
     if (isMiniprogram) {
       const name = getTdCmpName(cmp);
-      body = [`import { ${name} } from './type';`, `const props: ${name} = {\n${propStrs.join(',\n')}`].join('\n');
+      body = [`${formatTypeImport(name, './type')}`, `const props: ${name} = {\n${propStrs.join(',\n')}`].join('\n');
     } else {
       body = `export default {\n${propStrs.join(',\n')}`;
     }
-    // Vue 需要 PropType 进行类型定义
-    if (body.indexOf('PropType') !== -1) {
-      body = `import { PropType } from 'vue';\n\n${body}`;
-    }
+    // 内部 type 先就位，再把 vue 的 type-only import 写到最前
     body = getImportPath(body, cmp, framework) + body;
+    if (body.indexOf('PropType') !== -1) {
+      body = `${formatTypeImport('PropType', 'vue')}\n${body}`;
+    }
     if (isMiniprogram) {
       body = `${body}\nexport default props;\n`;
     }
@@ -422,22 +418,14 @@ function generateVueProps(baseData, framework, isUseDefault) {
   );
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);
   Object.keys(vueProps).forEach((cmp) => {
-    if (!vueProps[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;
+    if (!vueProps[cmp] || !componentsMap[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;
     const basePath = FRAMEWORK_MAP[framework].propsBasePath;
     const folder = getFolderPath(basePath, cmp);
-    fs.mkdir(folder, { recursive: true }, (err) => {
-      if (err) {
-        return console.error(err);
-      }
-      const outputPath = getPropsFileName(folder, cmp);
-      const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
-      fs.writeFile(outputPath, `/* eslint-disable */\n\n${data}`, (err) => {
-        if (err) {
-          return console.error(err);
-        }
-        console.log(chalk.green(`vue props: ${outputPath} has been created.`));
-      });
-    });
+    const outputPath = getPropsFileName(folder, cmp);
+    const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
+    fs.mkdirSync(folder, { recursive: true });
+    fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);
+    console.log(chalk.green(`vue props: ${outputPath} has been created.`));
   });
 }
 

@@ -10,7 +10,7 @@ import {
   MOBILE_FRAMES,
   getChatComponentMap,
 } from '../config/index.js';
-import { getApiComponentMapByFrameWork } from '../core/context.js';
+import { getApiComponentMapByFrameWork, componentsMap, isTypeApi } from '../core/context.js';
 import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
 
 let currentFramework = '';
@@ -152,6 +152,8 @@ function generateDocs(baseData, framework, extra) {
   api = combineApi(api, extra.component);
   removeChildComponentDocs(api, framework, current, isVscode);
   Object.keys(api).forEach((cmp) => {
+    // 未注册组件、未合并的独立 TS 类型不输出文档目录
+    if (!componentsMap[cmp] || isTypeApi(cmp)) return;
     const folder = isVscode
       ? current.vscodePath
       : path.resolve(getComponentBasePath(cmp, current.apiBasePath, framework), kebabCaseComponent(cmp));

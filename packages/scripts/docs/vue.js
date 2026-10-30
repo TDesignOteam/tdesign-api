@@ -462,9 +462,7 @@ function getVueApiDocs(componentMap, current, framework, globalConfigData, langu
   const result = {};
   const isMiniprogram = framework === 'Miniprogram';
   const UniApp = framework === 'UniApp';
-  if (language) {
-    LANGUAGE = language;
-  }
+  LANGUAGE = language || 'zh';
   // tsTypeText 中文"TS 类型"
   const languageInfo = languageConfig[LANGUAGE];
   Object.keys(componentMap).forEach((cmp) => {

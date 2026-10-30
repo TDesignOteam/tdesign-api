@@ -19,6 +19,7 @@ import prettierConfig from '../config/prettier.js';
 import { getCmpTypeCombineMap, getFolderName } from '../core/context.js';
 import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
+import { formatTypeImport } from './import.js';
 
 // 需要使用 Pick 的组件白名单：API 平台中定义的名字，比如：是 PrimaryTable，不是 TdPrimaryTableProps
 const needPickRequiredType = ['PrimaryTable'];
@@ -133,7 +134,7 @@ async function generateReactDefaultProps(baseData, framework) {
   // 输出组合 defaultProps 到文件
   // console.log(finalApiDefaultProps);
   for (const parentCmp of Object.keys(finalApiDefaultProps)) {
-    const importsString = `import { ${importsMap[parentCmp].join(', ')} } from './type';\n\n`;
+    const importsString = `${formatTypeImport(importsMap[parentCmp], './type')}\n\n`;
     let apiStr = importsString + finalApiDefaultProps[parentCmp].join('\n\n');
 
     try {

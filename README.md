@@ -31,3 +31,10 @@ github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，
 你可以自行发起 PR，也可以让开发者在对应分支上继续实现。
 
 例：https://github.com/TDesignOteam/tdesign-react-test/pull/6
+
+### 命令行操作
+
+拉取某技术栈仓库 Button 组件的 API 定义文件：
+组件仓库放在同级目录 然后执行脚本 如 npm run api:docs Button 'Vue(PC)' finalProject
+
+更多指令见 [命令行操作](./packages/scripts/README.md)

@@ -18,6 +18,7 @@ import {
 import prettierConfig from '../config/prettier.js';
 import {
   isPlugin,
+  isTypeApi,
   getTdCmpName,
   getEventName,
   getFolderName,
@@ -29,6 +30,7 @@ import {
 import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
 import generateGlobals from './global/index.js';
+import { formatTypeImport, toTypeImport } from './import.js';
 import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 import formatTNode from './t-node.js';
 
@@ -319,26 +321,40 @@ function formatCommonTypeImports(str, types) {
   return arr;
 }
 
+function isFrameworkTypeImport(statement) {
+  return /from ['"](?:react|vue)['"]/.test(statement || '');
+}
+
+// 框架类型（react / vue）排在最前，与 Vue props 的 from 'vue' 一致
+function sortTypeImports(imports) {
+  const list = (imports || []).filter((v) => !!v);
+  const framework = [];
+  const rest = [];
+  list.forEach((item) => {
+    (isFrameworkTypeImport(item) ? framework : rest).push(item);
+  });
+  return framework.concat(rest);
+}
+
 // 按需引入，存储需要从 common 或公共库等路径下引入的类型定义
 function getGlobalsImports(str, framework) {
   const current = FRAMEWORK_MAP[framework];
-  const map = {
-    // 从全局通用类型文件中引入数据类型，如： import { XXX  } from 'common.ts';
-    common: {
-      path: current.commonRelativePath,
-      types: formatCommonTypeImports(str, GLOBAL_TYPES),
-    },
-  };
-  // 从框架中引入数据类型，如： import { MouseEvent  } from 'react';
+  const map = {};
+  // 从框架中引入数据类型，如： import type { MouseEvent } from 'react';
   if (framework === 'React(PC)' || framework === 'React(Mobile)') {
     map.react = {
       path: 'react',
       types: formatCommonTypeImports(str, REACT_TYPES),
     };
   }
+  // 从全局通用类型文件中引入数据类型，如： import type { XXX } from '../common';
+  map.common = {
+    path: current.commonRelativePath,
+    types: formatCommonTypeImports(str, GLOBAL_TYPES),
+  };
   const r = Object.keys(map)
     .filter((key) => map[key].types.length)
-    .map((key) => `import type { ${map[key].types.join(', ')} } from '${map[key].path}';`);
+    .map((key) => formatTypeImport(map[key].types, map[key].path));
   return r;
 }
 
@@ -396,17 +412,15 @@ function formatAliasImportsPath(imports, framework) {
       // 只对组件间引用（'@组件名' 格式路径）进行 Td 前缀转换，外部依赖导入不处理
       const cmpMatch = item.match(/'@(\w+)'/);
       if (!cmpMatch || !cmpMatch[1] || !components.includes(cmpMatch[1])) {
-        // 非组件引用，仅添加 type 关键字
-        return item.replace(/^import\s+\{/, 'import type {');
+        return item;
       }
-      const reg = /import\s+\{\s+(\w+)/;
-      return item.replace(reg, (a, b) => {
+      return item.replace(/import(?:\s+type)?\s+\{\s+(\w+)/, (full, name) => {
         // 只有组件主类型（如 ButtonProps、MessageOptions）才需要加 Td 前缀
         // TS 类型（如 FormRule）和组件内部辅助类型（如 CheckboxIconType、TabValue）不需要
-        if (!tdPrefixedTypeNames.has(b)) {
-          return `import type { ${b}`;
+        if (!tdPrefixedTypeNames.has(name)) {
+          return full;
         }
-        return `import type { Td${b} as ${b}`;
+        return full.replace(name, `Td${name} as ${name}`);
       });
     })
     .map((item) => {
@@ -453,7 +467,7 @@ function formatImportsPath(imports, framework) {
         // 将 from 'common.ts' 替换为框架对应的 commonRelativePath
         .replace(/from '@common'/, `from '${current.commonRelativePath}'`),
   );
-  return newImports;
+  return newImports.map(toTypeImport);
 }
 
 /**
@@ -674,6 +688,7 @@ async function combineTsFile(componentMap, framework) {
     ) {
       ts[cmp].imports = ts[cmp].imports.concat(getGlobalsImports(bodyDesc + exportDesc, framework));
     }
+    ts[cmp].imports = sortTypeImports(ts[cmp].imports);
     const r = [`${ts[cmp].imports.filter((v) => !!v).join('\n')}`, bodyDesc, exportDesc].filter((v) => !!v);
     const str = `${r.join('\n\n')}\n`;
     // ts[cmp] = str;
@@ -709,7 +724,18 @@ async function generateTypes(baseData, framework) {
 
   // 输出 TS 类型定义文件
   const apiTypes = await combineTsFile(baseData, framework);
+  const typeCombineMap = getApiComponentMapByFrameWork(
+    ['Miniprogram', 'UniApp'].includes(framework)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+      : MOBILE_FRAMES.includes(framework)
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
+    framework,
+  );
   for (const cmp of Object.keys(apiTypes)) {
+    // 未注册名称、以及未作为合并父级的独立 TS 类型（TScroll / InfinityScroll 等）不单独建目录
+    if (!COMPONENTS_MAP[cmp]) continue;
+    if (isTypeApi(cmp) && !typeCombineMap[cmp]) continue;
     let folder = '';
     const folderName = getFolderName(cmp);
     folder = path.resolve(getComponentBasePath(cmp, basePath, framework), folderName);

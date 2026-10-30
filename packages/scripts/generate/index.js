@@ -189,7 +189,7 @@ function generateDocuments() {
   );
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const baseData = frameworkData;
+  const baseData = pick(frameworkData, components);
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
   const currentComponent = isAll(component) ? undefined : component;
   // 生成 API 中文文档
