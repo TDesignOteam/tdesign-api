@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1911,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TimePickerConfig",
+    "field_category": "Props",
+    "field_name": "anteMeridiem",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上午”描述文本"
+  },
+  {
+    "id": 1906,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TimePickerConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定”描述文本"
+  },
+  {
+    "id": 1905,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TimePickerConfig",
+    "field_category": "Props",
+    "field_name": "now",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“此刻”描述文本"
+  },
+  {
+    "id": 1913,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TimePickerConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，\\\"请选择时间\\\"占位符描述文本",
+    "field_desc_en": "placeholder text"
+  },
+  {
+    "id": 1912,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TimePickerConfig",
+    "field_category": "Props",
+    "field_name": "postMeridiem",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“下午”描述文本"
+  }
+]

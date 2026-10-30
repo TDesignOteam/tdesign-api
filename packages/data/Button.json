@@ -1,0 +1,1000 @@
+[
+  {
+    "id": 1769581756,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "activityType",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "卡片id。 `open-type` 的值设置为 `liveActivity` ，设置 `activity-type` 参数为 [notify_type](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html)。当用户点击 `button` 后，可以通过 `bindcreateliveactivity` 事件回调获取到 `code`"
+  },
+  {
+    "id": 1709459753,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "appParameter",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效"
+  },
+  {
+    "id": 33,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "block",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否为块级元素",
+    "field_desc_en": "make button to be a block-level element",
+    "test_description": "{\"PC\":{\"className\":\"t-size-full-width\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1234,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "按钮内容，同 content",
+    "field_desc_en": "button's children elements",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 730,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "按钮内容",
+    "field_desc_en": "button's children elements",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 1789893952,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "分割面板的内容节点，必须意思SplitPanel",
+    "field_desc_en": "split's children elements"
+  },
+  {
+    "id": 2412,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "customDataset",
+    "field_type": [
+      "any"
+    ],
+    "field_desc_zh": "自定义 dataset，可通过 event.currentTarget.dataset.custom 获取"
+  },
+  {
+    "id": 1762315793,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "customDataset",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean",
+      "Object",
+      "Array"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "自定义 dataset，可通过 event.currentTarget.dataset.custom 获取"
+  },
+  {
+    "id": 731,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "按钮内容",
+    "field_desc_en": "default slot",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 39,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "禁用状态。优先级：Button.disabled > Form.disabled",
+    "field_desc_en": "disable the button, make it can not be clicked",
+    "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1769581302,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "entrancePath",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "从消息小程序入口打开小程序的路径，默认为聊天工具启动路径"
+  },
+  {
+    "id": 1725604537,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "form",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件",
+    "field_desc_en": " native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute"
+  },
+  {
+    "id": 489,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "ghost",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否为幽灵按钮（镂空按钮）",
+    "field_desc_en": "make background-color to be transparent",
+    "test_description": "{\"PC\":{\"className\":\"t-button--ghost\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1709458832,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "hoverClass",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定按钮按下去的样式类，按钮不为加载或禁用状态时有效。当 `hover-class=\"none\"` 时，没有点击态效果"
+  },
+  {
+    "id": 1709458975,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "hoverStartTime",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "20",
+    "field_desc_zh": "按住后多久出现点击态，单位毫秒"
+  },
+  {
+    "id": 1709459011,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "hoverStayTime",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "70",
+    "field_desc_zh": "手指松开后点击态保留时间，单位毫秒"
+  },
+  {
+    "id": 1709458937,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "hoverStopPropagation",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "指定是否阻止本节点的祖先节点出现点击态"
+  },
+  {
+    "id": 2833,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "href",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "跳转地址。href 存在时，按钮标签默认使用 `<a>` 渲染；如果指定了 `tag` 则使用指定的标签渲染",
+    "test_description": "{\"PC\":{\"attribute\":{\"href\":\"https://tdesign.tencent.com/\"},\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 34,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "按钮内部图标，可完全自定义",
+    "field_desc_en": "use it to set left icon in button",
+    "test_description": "{\"PC\":{\"tnode\":true,\"content\":\"Text\"}}"
+  },
+  {
+    "id": 1664,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`",
+    "field_desc_en": "icon name"
+  },
+  {
+    "id": 2709,
+    "platform_framework": [],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "iconProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "图标属性，透传至 icon",
+    "field_desc_en": "icon properties"
+  },
+  {
+    "id": 1709459081,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "lang",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "en",
+      "zh_CN",
+      "zh_TW"
+    ],
+    "field_desc_zh": "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。<br />具体释义：<br />`en` 英文；<br />`zh_CN` 简体中文；<br />`zh_TW` 繁体中文。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+    "field_desc_en": "message language"
+  },
+  {
+    "id": 36,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示为加载状态",
+    "field_desc_en": "set button to be loading state",
+    "test_description": "{\"PC\":{\"className\":\"t-is-loading\",\"dom\":\".t-loading\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 3111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "loadingProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Loading 组件全部属性",
+    "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】"
+  },
+  {
+    "id": 1769581268,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "needShowEntrance",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "转发的文本消息是否要带小程序入口"
+  },
+  {
+    "id": 1709458728,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "openType",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "contact",
+      "liveActivity",
+      "share",
+      "getPhoneNumber",
+      "getRealtimePhoneNumber",
+      "getUserInfo",
+      "launchApp",
+      "openSetting",
+      "feedback",
+      "chooseAvatar",
+      "agreePrivacyAuthorization",
+      "phoneOneClickLogin"
+    ],
+    "field_desc_zh": "微信开放能力。<br />具体释义：<br />`contact` 打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/customer-message.html\">具体说明</a> （*鸿蒙 OS 暂不支持*）；<br />`liveActivity` 通过前端获取<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html\">新的一次性订阅消息下发机制</a>使用的 code；<br />`share` 触发用户转发，使用前建议先阅读<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share.html#使用指引\">使用指引</a>；<br />`getPhoneNumber` 手机号快速验证，向用户申请，并在用户同意后，快速填写和验证手机，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getRealtimePhoneNumber` 手机号实时验证，向用户申请，并在用户同意后，快速填写和实时验证手机号。<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getRealtimePhoneNumber.html\">具体说明</a> （*小程序插件中不能使用*）；<br />`getUserInfo` 获取用户信息，可以从 bindgetuserinfo 回调中获取到用户信息 （*小程序插件中不能使用*）；<br />`launchApp` 打开APP，可以通过 app-parameter 属性设定向 APP 传的参数<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html\">具体说明</a>；<br />`openSetting` 打开授权设置页；<br />`feedback` 打开“意见反馈”页面，用户可提交反馈内容并上传<a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html\">日志</a>，开发者可以登录<a href=\"https://mp.weixin.qq.com/\">小程序管理后台</a>后进入左侧菜单“客服反馈”页面获取到反馈内容；<br />`chooseAvatar` 获取用户头像，可以从 bindchooseavatar 回调中获取到头像信息；<br />`agreePrivacyAuthorization`用户同意隐私协议按钮。用户点击一次此按钮后，所有隐私接口可以正常调用。可通过`bindagreeprivacyauthorization`监听用户同意隐私协议事件。隐私合规开发指南详情可见《<a href=\"https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/PrivacyAuthorize.html\">小程序隐私协议开发指南</a>》。<br />`phoneOneClickLogin` 发起本机号码一键登录流程，<a href=\"https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/miniapp/component/auth/phoneOneClickLogin.html\">具体说明</a> <br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)",
+    "field_desc_en": "open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)"
+  },
+  {
+    "id": 1709459838,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "phoneNumberNoQuotaToast",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "原生按钮属性，当手机号快速验证或手机号实时验证额度用尽时，是否对用户展示“申请获取你的手机号，但该功能使用次数已达当前小程序上限，暂时无法使用”的提示，默认展示，open-type=\"getPhoneNumber\" 或 open-type=\"getRealtimePhoneNumber\" 时有效"
+  },
+  {
+    "id": 1709459686,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "sendMessageImg",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "截图",
+    "field_desc_zh": "会话内消息卡片图片，open-type=\"contact\"时有效"
+  },
+  {
+    "id": 1709459448,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "sendMessagePath",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "当前分享路径",
+    "field_desc_zh": "会话内消息卡片点击跳转小程序路径，open-type=\"contact\"时有效"
+  },
+  {
+    "id": 1709459391,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "sendMessageTitle",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "当前标题",
+    "field_desc_zh": "会话内消息卡片标题，open-type=\"contact\"时有效"
+  },
+  {
+    "id": 1709459157,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "sessionFrom",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "会话来源，open-type=\"contact\"时有效，长度不超过 1024 个字符"
+  },
+  {
+    "id": 35,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "shape",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "rectangle",
+    "field_enum": [
+      "rectangle",
+      "square",
+      "round",
+      "circle"
+    ],
+    "field_desc_zh": "按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形",
+    "field_desc_en": "button shape",
+    "test_description": "{\"PC\":{\"className\":[{\"t-button--shape-rectangle\":false},\"t-button--shape-square\",\"t-button--shape-round\",\"t-button--shape-circle\"],\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1709459794,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "showMessageCard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示\"可能要发送的小程序\"提示，用户点击后可以快速发送小程序消息，open-type=\"contact\"时有效"
+  },
+  {
+    "id": 30,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "field_desc_en": "a button has four size",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1712914060,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "extra-small",
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "field_desc_en": "a button has four size"
+  },
+  {
+    "id": 2831,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "右侧内容，可用于定义右侧图标",
+    "test_description": "{\"PC\":{\"tnode\":true,\"content\":\"Text\"}}"
+  },
+  {
+    "id": 1709453000,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "tId",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "按钮标签id",
+    "field_desc_en": "id"
+  },
+  {
+    "id": 2832,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "button",
+      "a",
+      "div"
+    ],
+    "field_desc_zh": "渲染按钮的 HTML 标签，默认使用标签 `<button>` 渲染，可以自定义为 `<a>` `<div>` 等。透传全部 HTML 属性，如：`href/target/data-*` 等。⚠️ 禁用按钮 `<button disabled>`无法显示 Popup 浮层信息，可通过修改 `tag=div` 解决这个问题",
+    "field_desc_en": "HTML Tag Element",
+    "test_description": "{\"PC\":{\"dom\":[\"button\",\"a\",\"div\"],\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 6,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "default",
+      "primary",
+      "danger",
+      "warning",
+      "success"
+    ],
+    "field_desc_zh": "组件风格，依次为默认色、品牌色、危险色、警告色、成功色",
+    "field_desc_en": "button theme",
+    "test_description": "{\"PC\":{\"className\":\"t-button--theme-${item}\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1292,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "primary",
+      "danger",
+      "light"
+    ],
+    "field_desc_zh": "组件风格，依次为品牌色、危险色",
+    "field_desc_en": "button theme"
+  },
+  {
+    "id": 739,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "button",
+    "field_enum": [
+      "submit",
+      "reset",
+      "button"
+    ],
+    "field_desc_zh": "按钮类型",
+    "field_desc_en": "type of button element in html",
+    "test_description": "{\"PC\":{\"attribute\":{\"type\":[\"submit\",\"reset\",\"button\"],\"content\":\"Text\",\"snapshot\":true}}}"
+  },
+  {
+    "id": 1242,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "submit",
+      "reset"
+    ],
+    "field_desc_zh": "同小程序的 formType",
+    "field_desc_en": "type of button element, same as formType of Miniprogram"
+  },
+  {
+    "id": 38,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "base",
+    "field_enum": [
+      "base",
+      "outline",
+      "dashed",
+      "text"
+    ],
+    "field_desc_zh": "按钮形式，基础、线框、虚线、文字",
+    "field_desc_en": "variant of button",
+    "test_description": "{\"PC\":{\"className\":\"t-button--variant-${item}\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1709460216,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "agreeprivacyauthorization",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，用户同意隐私协议事件回调，open-type=agreePrivacyAuthorization时有效 （Tips: 如果使用 onNeedPrivacyAuthorization 接口，需要在 bindagreeprivacyauthorization 触发后再调用 resolve({ event: \"agree\", buttonId })）"
+  },
+  {
+    "id": 1709460195,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "chooseavatar",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，获取用户头像回调，`open-type=chooseAvatar` 时有效。返回 `e.detail.avatarUrl` 为头像临时文件链接"
+  },
+  {
+    "id": 1990,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击时触发",
+    "field_desc_en": "trigger on click",
+    "event_input": "(e: MouseEvent)",
+    "trigger_elements": "MouseEvent<HTMLElement>",
+    "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"stopPropagation\":true,\"type\":\"click\"}]}}}}"
+  },
+  {
+    "id": 1709459969,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "contact",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，客服消息回调，`open-type=\"contact\"` 时有效"
+  },
+  {
+    "id": 1709460045,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "createliveactivity",
+    "field_type": [],
+    "field_desc_zh": "新的一次性订阅消息下发机制回调，`open-type=liveActivity` 时有效"
+  },
+  {
+    "id": 1709460137,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "error",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，当使用开放能力时，发生错误的回调，`open-type=launchApp` 时有效"
+  },
+  {
+    "id": 1709460067,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "getphonenumber",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，手机号快速验证回调，open-type=getPhoneNumber时有效。Tips：在触发 bindgetphonenumber 回调后应立即隐藏手机号按钮组件，或置为 disabled 状态，避免用户重复授权手机号产生额外费用"
+  },
+  {
+    "id": 1709460095,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "getrealtimephonenumber",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，手机号实时验证回调，open-type=getRealtimePhoneNumber 时有效。Tips：在触发 bindgetrealtimephonenumber 回调后应立即隐藏手机号按钮组件，或置为 disabled 状态，避免用户重复授权手机号产生额外费用"
+  },
+  {
+    "id": 1709459941,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "getuserinfo",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type=\"getUserInfo\"时有效"
+  },
+  {
+    "id": 1709460173,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "launchapp",
+    "field_type": [],
+    "field_desc_zh": "打开 APP 成功的回调，`open-type=launchApp` 时有效"
+  },
+  {
+    "id": 1709460154,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "opensetting",
+    "field_type": [],
+    "field_desc_zh": "原生按钮属性，在打开授权设置页后回调，open-type=openSetting时有效"
+  },
+  {
+    "id": 1773990573,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "phoneoneclicklogin",
+    "field_type": [],
+    "field_desc_zh": "一键登录回调，open-type=phoneOneClickLogin 时有效"
+  },
+  {
+    "id": 1711968760,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Events",
+    "field_name": "tap",
+    "field_type": [],
+    "field_desc_zh": "点击按钮，当按钮不为加载或禁用状态时触发",
+    "event_input": "event"
+  },
+  {
+    "id": 1711974741,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1709439384,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "External Classes",
+    "field_name": "t-class-icon",
+    "field_type": [],
+    "field_desc_zh": "图标样式类",
+    "field_desc_en": "class name of icon"
+  },
+  {
+    "id": 1709439405,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "External Classes",
+    "field_name": "t-class-loading",
+    "field_type": [],
+    "field_desc_zh": "加载样式类",
+    "field_desc_en": "class name of loading"
+  },
+  {
+    "id": 1759130366,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Button",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，作用同 `content` 插槽"
+  }
+]

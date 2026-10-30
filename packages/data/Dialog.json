@@ -1,0 +1,1196 @@
+[
+  {
+    "id": 1747311239,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Dialog",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "field_desc_zh": "要继承的应用的上下文",
+    "custom_field_type": "AppContext",
+    "order": 1
+  },
+  {
+    "id": 364,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [],
+    "custom_field_type": "DialogOptions",
+    "order": 0
+  },
+  {
+    "id": 365,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog",
+    "field_category": "Return",
+    "field_name": "DialogInstance",
+    "field_type": [],
+    "order": 2
+  },
+  {
+    "id": 1748949577,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Dialog.alert",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "custom_field_type": "AppContext",
+    "order": 1
+  },
+  {
+    "id": 368,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog.alert",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Object"
+    ],
+    "custom_field_type": "Omit<DialogOptions, 'cancelBtn'>",
+    "order": 0
+  },
+  {
+    "id": 367,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog.alert",
+    "field_category": "Return",
+    "field_name": "DialogInstance",
+    "field_type": [],
+    "order": 2
+  },
+  {
+    "id": 1748949556,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Dialog.confirm",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "custom_field_type": "AppContext",
+    "order": 1
+  },
+  {
+    "id": 369,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog.confirm",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [],
+    "custom_field_type": "DialogOptions",
+    "order": 0
+  },
+  {
+    "id": 366,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Dialog.confirm",
+    "field_category": "Return",
+    "field_name": "DialogInstance",
+    "field_type": [],
+    "order": 2
+  },
+  {
+    "id": 1374,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "actions",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "操作栏",
+    "custom_field_type": "Array<ButtonProps>【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 61,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "对话框挂载的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1774342556,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "beforeClose",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "关闭前的拦截钩子，支持异步。返回 Promise 时，确认按钮显示加载状态，Promise resolve 后关闭对话框，reject 则不关闭",
+    "custom_field_type": "(trigger: 'confirm' | 'cancel' | 'overlay' | 'close-btn', context: { e: MouseEvent }) => void | Promise<void>"
+  },
+  {
+    "id": 53,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "body",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话框内容"
+  },
+  {
+    "id": 1286,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "buttonLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "多按钮排列方式"
+  },
+  {
+    "id": 56,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 3197,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 Slot 自定义按钮时，需自行控制取消事件",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1712717397,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1159,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话框内容，同 body"
+  },
+  {
+    "id": 55,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例"
+  },
+  {
+    "id": 3408,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；使用 Object 时透传至图标组件",
+    "custom_field_type": "boolean | ButtonProps | null【import { ButtonProps } from '@Button'】",
+    "version": {
+      "Miniprogram": "0.31.0"
+    }
+  },
+  {
+    "id": 1712717514,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "多按钮排列方式。可选项：true/false"
+  },
+  {
+    "id": 708,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeOnEscKeydown",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "按下 ESC 时是否触发对话框关闭事件",
+    "field_desc_en": "trigger dialog close event on `ESC` keydown"
+  },
+  {
+    "id": 709,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "点击蒙层时是否触发关闭事件"
+  },
+  {
+    "id": 1735113569,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "点击蒙层时是否触发关闭事件"
+  },
+  {
+    "id": 57,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+    "custom_field_type": "string | ButtonProps | TNode | null"
+  },
+  {
+    "id": 3198,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 Slot 自定义按钮时，需自行控制确认事件",
+    "custom_field_type": "string | ButtonProps | TNode | null"
+  },
+  {
+    "id": 1712717458,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+    "custom_field_type": "string | ButtonProps | TNode | null"
+  },
+  {
+    "id": 1693635335,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "confirmLoading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "确认按钮加载状态",
+    "field_desc_en": "confirm button loading status"
+  },
+  {
+    "id": 2935,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "confirmOnEnter",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否在按下回车键时，触发确认事件",
+    "field_desc_en": "confirm on enter"
+  },
+  {
+    "id": 1373,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容"
+  },
+  {
+    "id": 1158,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话框内容，同 body"
+  },
+  {
+    "id": 73,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "destroyOnClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在关闭弹框的时候销毁子元素"
+  },
+  {
+    "id": 1708683804,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "dialogClassName",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
+    "field_desc_en": "Class name of the dialog element. Supports string (e.g. 't-class-dialog-first t-class-dialog-second'), array (e.g. ['name1', 'name2']), or object array (e.g. [{ 'name1': true }])",
+    "custom_field_type": "ClassName"
+  },
+  {
+    "id": 1719484808,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "dialogStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "作用于对话框本身的样式",
+    "field_desc_en": "Styles that apply to the dialog box itself",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 60,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可以拖拽（对全屏对话框无效）",
+    "field_desc_en": "not effective in `full-screen` mode"
+  },
+  {
+    "id": 1793355180,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "focusable",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。",
+    "field_desc_en": "Dialog focus control. `defaultFocus` determines the default focus after opening; `focusTrap` determines whether focus is trapped within the current dialog; `focusTriggerAfterClose` determines whether focus is returned to the trigger element after closing.",
+    "custom_field_type": "DialogFocusable【interface DialogFocusable { defaultFocus?: null | 'confirm-button' | 'cancel-button' | (() => HTMLElement | null); focusTrap?: boolean; focusTriggerAfterClose: boolean }】"
+  },
+  {
+    "id": 54,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容"
+  },
+  {
+    "id": 52,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容"
+  },
+  {
+    "id": 1744620271,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否启用对话框懒加载，启用时对话框内的内容不渲染",
+    "field_desc_en": "Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable"
+  },
+  {
+    "id": 1741766727,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "middle",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "中间自定义内容"
+  },
+  {
+    "id": 46,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "modal",
+    "field_enum": [
+      "modal",
+      "modeless",
+      "normal",
+      "full-screen"
+    ],
+    "field_desc_zh": "对话框类型，有 4 种：模态对话框、非模态对话框、普通对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件"
+  },
+  {
+    "id": 3134,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "overlayProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传至 Overlay 组件",
+    "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】"
+  },
+  {
+    "id": 49,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "top",
+      "center"
+    ],
+    "field_desc_zh": "对话框位置，内置两种：垂直水平居中显示 和 靠近顶部（top:20%）显示。默认情况，为避免贴顶或贴底，顶部和底部距离最小为 `48px`，可通过调整 `top` 覆盖默认大小"
+  },
+  {
+    "id": 59,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "防止滚动穿透"
+  },
+  {
+    "id": 2466,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "showInAttachedElement",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative"
+  },
+  {
+    "id": 58,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示遮罩层"
+  },
+  {
+    "id": 1760007814,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "sizeDraggable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。",
+    "field_desc_en": "allow resizing dialog width/height, set max or min to limit size.",
+    "custom_field_type": "boolean | DialogSizeDragLimit【interface DialogSizeDragLimit { maxWidth: number|undefined, minWidth: number|undefined, maxHeight: number|undefined, minHeight: number|undefined }】"
+  },
+  {
+    "id": 715,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "info",
+      "warning",
+      "danger",
+      "success"
+    ],
+    "field_desc_zh": "对话框风格"
+  },
+  {
+    "id": 1372,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 734,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "top",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "用于弹框具体窗口顶部的距离，优先级大于 placement"
+  },
+  {
+    "id": 1741766620,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "top",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "顶部自定义内容"
+  },
+  {
+    "id": 1719908441,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 45,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "控制对话框是否显示"
+  },
+  {
+    "id": 51,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "width",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "对话框宽度，示例：320, '500px', '80%'"
+  },
+  {
+    "id": 62,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500"
+  },
+  {
+    "id": 3133,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500"
+  },
+  {
+    "id": 1731453332,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "beforeClose",
+    "field_type": [],
+    "field_desc_zh": "对话框执行消失动画效果前触发"
+  },
+  {
+    "id": 1731453190,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "beforeOpen",
+    "field_type": [],
+    "field_desc_zh": "对话框执行弹出动画效果前触发"
+  },
+  {
+    "id": 66,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 3196,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 72,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭事件，点击取消按钮、点击关闭按钮、点击蒙层、按下 ESC 等场景下触发",
+    "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent | KeyboardEvent }】",
+    "trigger_elements": "MouseEvent<HTMLElement>/KeyboardEvent"
+  },
+  {
+    "id": 1287,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭事件，点击 取消按钮 或 点击蒙层 时触发",
+    "event_input": "(context: DialogCloseContext)【type DialogEventSource = 'cancel' | 'overlay' | 'close-btn'】【interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }】",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  },
+  {
+    "id": 2548,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭事件，点击 取消按钮 或 点击蒙层 时触发",
+    "event_input": "(trigger: DialogEventSource)【type DialogEventSource = 'cancel' | 'overlay' | 'close-btn'】",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  },
+  {
+    "id": 65,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "closeBtnClick",
+    "field_type": [],
+    "field_desc_zh": "点击右上角关闭按钮时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 71,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "closed",
+    "field_type": [],
+    "field_desc_zh": "对话框消失动画效果结束后触发"
+  },
+  {
+    "id": 68,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发",
+    "event_input": "(context: { e: MouseEvent | KeyboardEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 2936,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 64,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "escKeydown",
+    "field_type": [],
+    "field_desc_zh": "按下 ESC 时触发事件",
+    "event_input": "(context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 70,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "opened",
+    "field_type": [],
+    "field_desc_zh": "对话框弹出动画效果结束后触发"
+  },
+  {
+    "id": 69,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Events",
+    "field_name": "overlayClick",
+    "field_type": [],
+    "field_desc_zh": "如果蒙层存在，点击蒙层时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1712055083,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712055131,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "External Classes",
+    "field_name": "t-class-action",
+    "field_type": [],
+    "field_desc_zh": "操作样式类"
+  },
+  {
+    "id": 1712055126,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "External Classes",
+    "field_name": "t-class-cancel",
+    "field_type": [],
+    "field_desc_zh": "取消样式类"
+  },
+  {
+    "id": 1712055121,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "External Classes",
+    "field_name": "t-class-confirm",
+    "field_type": [],
+    "field_desc_zh": "确认样式类"
+  },
+  {
+    "id": 1712055104,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1761308802,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Slots",
+    "field_name": "actions",
+    "field_type": [],
+    "field_desc_zh": "自定义 `actions` 显示内容"
+  },
+  {
+    "id": 1761308223,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Dialog",
+    "field_category": "Slots",
+    "field_name": "cancel-btn",
+    "field_type": [],
+    "field_desc_zh": "自定义 `cancel-btn` 显示内容"
+  }
+]

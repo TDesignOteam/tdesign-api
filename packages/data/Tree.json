@@ -1,0 +1,1052 @@
+[
+  {
+    "id": 536,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "activable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否可高亮",
+    "field_desc_en": "make nodes can be highlight"
+  },
+  {
+    "id": 537,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "activeMultiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许多个节点同时高亮",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"defaultActived\":[1],\"activeMultiple\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"active\":[[1,2]]}}]}]}}"
+  },
+  {
+    "id": 538,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "actived",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "高亮的节点值",
+    "custom_field_type": "Array<TreeNodeValue>",
+    "syntactic_sugar": "sync",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":1},\"event\":{\"active\":[[2]]}}]}]}}"
+  },
+  {
+    "id": 1718771238,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "allowDrop",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "判断节点是否可以执行 drop 操作，泛型 `T` 表示树节点 TS 类型",
+    "field_desc_en": "Determine whether the node can execute the drop operation",
+    "custom_field_type": "(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean"
+  },
+  {
+    "id": 2444,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "allowFoldNodeOnFilter",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许在过滤时节点折叠节点"
+  },
+  {
+    "id": 526,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "checkProps",
+    "field_type": [
+      "Object",
+      "Function"
+    ],
+    "field_desc_zh": "透传属性到 checkbox 组件。参考 checkbox 组件 API",
+    "custom_field_type": "CheckboxProps | ((node: TreeNodeModel<T>) => CheckboxProps)【import { CheckboxProps } from '@Checkbox'】"
+  },
+  {
+    "id": 527,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "checkStrictly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "父子节点选中状态不再关联，可各自选中或取消"
+  },
+  {
+    "id": 525,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "checkable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏节点复选框"
+  },
+  {
+    "id": 519,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "树数据，泛型 `T` 表示树节点 TS 类型",
+    "custom_field_type": "Array<T>"
+  },
+  {
+    "id": 1859,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "disableCheck",
+    "field_type": [
+      "Boolean",
+      "Function"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "禁用复选框，可支持禁用不同的行",
+    "custom_field_type": "boolean | ((node: TreeNodeModel<T>) => boolean)",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"checkable\":true,\"disableCheck\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":2}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":{\"change\":\"not\"}}]}]}}"
+  },
+  {
+    "id": 539,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用树操作"
+  },
+  {
+    "id": 2808,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "节点是否可拖拽",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"checkable\":true,\"disableCheck\":true,\"draggable\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true},{\"trigger\":\"dragover(.t-tree__item)\",\"delay\":true,\"event\":{\"dragOver\":[]}},{\"trigger\":\"dragend(.t-tree__item)\",\"delay\":true,\"event\":{\"dragEnd\":[]}},{\"trigger\":\"dragstart(.t-tree__item)\",\"delay\":true,\"event\":{\"dragStart\":[]}},{\"trigger\":\"dragleave(.t-tree__item)\",\"delay\":true,\"event\":{\"dragLeave\":[]}}]},{\"props\":{\"draggable\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true},{\"trigger\":\"dragend(.t-tree__item:nth-child(2))\",\"delay\":true,\"event\":{\"dragEnd\":[]}},{\"trigger\":\"drop(.t-tree__item)\",\"delay\":true,\"event\":{\"drop\":[]}}]}]}}"
+  },
+  {
+    "id": 521,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "数据为空时展示的文本"
+  },
+  {
+    "id": 531,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expandAll",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展开全部节点"
+  },
+  {
+    "id": 533,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expandLevel",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "默认展开的级别，第一层为 0"
+  },
+  {
+    "id": 534,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expandMutex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "同级别展开互斥，手风琴效果"
+  },
+  {
+    "id": 547,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expandOnClickNode",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否支持点击节点也能展开收起"
+  },
+  {
+    "id": 530,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expandParent",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "展开子节点时是否自动展开父节点"
+  },
+  {
+    "id": 532,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "展开的节点值",
+    "custom_field_type": "Array<TreeNodeValue>",
+    "syntactic_sugar": "sync"
+  },
+  {
+    "id": 545,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型",
+    "custom_field_type": "(node: TreeNodeModel<T>) => boolean"
+  },
+  {
+    "id": 3356,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "树的高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 `maxHeight`",
+    "field_desc_en": "The height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. The value should be a number and will automatically be converted to a pixel value. If the tree height is not fixed, it is recommended to use `maxHeight`"
+  },
+  {
+    "id": 540,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "hover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "节点是否有悬浮状态"
+  },
+  {
+    "id": 541,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "节点图标，可自定义",
+    "custom_field_type": "boolean | TNode<TreeNodeModel<T>>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"icon\":false},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__icon\":2}}]}]}}"
+  },
+  {
+    "id": 520,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label 'name', children: 'list' }`。其中，disabled 待开发",
+    "field_desc_en": "alias field name in data",
+    "custom_field_type": "TreeKeysType"
+  },
+  {
+    "id": 529,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "自定义节点内容，值为 `false` 不显示，值为 `true` 显示默认 label，值为字符串直接输出该字符串。泛型 `T` 表示树节点 TS 类型。<br/>如果期望只有点击复选框才选中，而点击节点不选中，可以使用 `label` 自定义节点，然后加上点击事件 `e.preventDefault()`，通过调整自定义节点的宽度和高度决定禁止点击选中的范围",
+    "custom_field_type": "string | boolean | TNode<TreeNodeModel<T>>"
+  },
+  {
+    "id": 544,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "延迟加载 children 为 true 的节点的子节点数据，即使 expandAll 被设置为 true，也同样延迟加载"
+  },
+  {
+    "id": 542,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "line",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "连接线。值为 false 不显示连接线；值为 true 显示默认连接线；值类型为 Function 表示自定义连接线",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"expandAll\":true,\"line\":true},\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__line\":2}}]}]}}"
+  },
+  {
+    "id": 543,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "load",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "加载子数据的方法，在展开节点时调用（仅当节点 children 为 true 时生效），泛型 `T` 表示树节点 TS 类型",
+    "custom_field_type": "(node: TreeNodeModel<T>) => Promise<Array<T>>"
+  },
+  {
+    "id": 3357,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "maxHeight",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "树的最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px",
+    "field_desc_en": "The max height of tree. Scrollbar will appear after the content is overflow. Examples: 100, '30%', '300'. "
+  },
+  {
+    "id": 546,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "operations",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义节点操作项，泛型 `T` 表示树节点 TS 类型",
+    "custom_field_type": "TNode<TreeNodeModel<T>>"
+  },
+  {
+    "id": 3355,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "scroll",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+    "field_desc_en": "lazy load and virtual scroll",
+    "custom_field_type": "TScroll"
+  },
+  {
+    "id": 535,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "transition",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "节点展开折叠时是否使用过渡动画"
+  },
+  {
+    "id": 524,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中值，组件为可选状态时有效",
+    "custom_field_type": "Array<TreeNodeValue>【type TreeNodeValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1792401068,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中值，组件为可选状态时有效",
+    "custom_field_type": "Array<TreeNodeValue>【type TreeNodeValue = string | number | bigint】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 528,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "valueMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "onlyLeaf",
+    "field_enum": [
+      "onlyLeaf",
+      "parentFirst",
+      "all"
+    ],
+    "field_desc_zh": "选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点"
+  },
+  {
+    "id": 549,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "active",
+    "field_type": [],
+    "field_desc_zh": "节点激活时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'setItem' })",
+    "trigger_elements": "MouseEvent<HTMLDivElement>"
+  },
+  {
+    "id": 550,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "节点选中状态变化时触发，context.node 表示当前变化的选项，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: any; trigger: 'node-click' | 'setItem' })"
+  },
+  {
+    "id": 551,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "节点点击时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { node: TreeNodeModel<T>; e: MouseEvent })"
+  },
+  {
+    "id": 3181,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "dragEnd",
+    "field_type": [],
+    "field_desc_zh": "节点结束拖拽时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })"
+  },
+  {
+    "id": 3183,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "dragLeave",
+    "field_type": [],
+    "field_desc_zh": "节点拖拽时离开目标元素时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })"
+  },
+  {
+    "id": 3182,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "dragOver",
+    "field_type": [],
+    "field_desc_zh": "节点拖拽到目标元素时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; })"
+  },
+  {
+    "id": 3180,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "dragStart",
+    "field_type": [],
+    "field_desc_zh": "节点开始拖拽时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { e: DragEvent; node: TreeNodeModel<T> })"
+  },
+  {
+    "id": 3184,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "drop",
+    "field_type": [],
+    "field_desc_zh": "节点在目标元素上释放时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; })"
+  },
+  {
+    "id": 553,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "expand",
+    "field_type": [],
+    "field_desc_zh": "节点展开或收起时触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' | 'icon-click' | 'setItem' })",
+    "trigger_elements": "MouseEvent<HTMLDivElement>"
+  },
+  {
+    "id": 552,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "load",
+    "field_type": [],
+    "field_desc_zh": "异步加载后触发，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(context: { node: TreeNodeModel<T> })"
+  },
+  {
+    "id": 3358,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动事件",
+    "field_desc_en": "trigger on content scroll",
+    "event_input": "(params: { e: WheelEvent })"
+  },
+  {
+    "id": 566,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "appendTo",
+    "field_type": [],
+    "field_desc_zh": "为指定节点添加子节点，默认添加到根节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue, newData: T | Array<T>)",
+    "field_required": true
+  },
+  {
+    "id": 570,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getIndex",
+    "field_type": [],
+    "field_desc_zh": "获取指定节点下标",
+    "event_input": "(value: TreeNodeValue)",
+    "event_output": "number",
+    "field_required": true
+  },
+  {
+    "id": 565,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getItem",
+    "field_type": [],
+    "field_desc_zh": "获取指定节点所有信息，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue)",
+    "event_output": "TreeNodeModel<T>",
+    "field_required": true
+  },
+  {
+    "id": 998,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getItems",
+    "field_type": [],
+    "field_desc_zh": "获取某节点的全部子孙节点；参数为空，则表示获取整棵树的全部节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value?: TreeNodeValue)",
+    "event_output": "Array<TreeNodeModel<T>>",
+    "field_required": true
+  },
+  {
+    "id": 571,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getParent",
+    "field_type": [],
+    "field_desc_zh": "获取指定节点的直属父节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue)",
+    "event_output": "TreeNodeModel<T>",
+    "field_required": true
+  },
+  {
+    "id": 572,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getParents",
+    "field_type": [],
+    "field_desc_zh": "获取指定节点的全部父节点，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue)",
+    "event_output": "TreeNodeModel<T>[]",
+    "field_required": true
+  },
+  {
+    "id": 717,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getPath",
+    "field_type": [],
+    "field_desc_zh": "自下而上获取全路径数据，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue)",
+    "event_output": "TreeNodeModel<T>[]",
+    "field_required": true
+  },
+  {
+    "id": 1698917228,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "getTreeData",
+    "field_type": [],
+    "field_desc_zh": "获取某节点的全部树形结构；参数为空，则表示获取整棵树的结构数据，泛型 `T` 表示树节点 TS 类型",
+    "field_desc_en": "get tree struct data",
+    "event_input": "(value?: TreeNodeValue)",
+    "event_output": "Array<T>",
+    "field_required": true
+  },
+  {
+    "id": 568,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "insertAfter",
+    "field_type": [],
+    "field_desc_zh": "插入新节点到指定节点后面，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue, newData: T)",
+    "field_required": true
+  },
+  {
+    "id": 567,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "insertBefore",
+    "field_type": [],
+    "field_desc_zh": "插入新节点到指定节点前面，泛型 `T` 表示树节点 TS 类型",
+    "event_input": "(value: TreeNodeValue, newData: T)",
+    "field_required": true
+  },
+  {
+    "id": 1707275700,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "refresh",
+    "field_type": [],
+    "field_desc_zh": "刷新树节点状态，可用于搜索场景刷新",
+    "field_desc_en": "refresh tree state, used in tree search",
+    "field_required": true
+  },
+  {
+    "id": 569,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "移除指定节点",
+    "event_input": "(value: TreeNodeValue)",
+    "field_required": true
+  },
+  {
+    "id": 1692780713,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "scrollTo",
+    "field_type": [],
+    "field_desc_zh": "虚拟滚动场景下 支持指定滚动到具体的节点",
+    "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
+    "event_input": "(scrollToParams: TreeScrollToElementParams)【interface TreeScrollToElementParams extends Omit<ComponentScrollToElementParams, 'key'> { key?: TreeNodeValue; }】"
+  },
+  {
+    "id": 562,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "Functions",
+    "field_name": "setItem",
+    "field_type": [],
+    "field_desc_zh": "设置节点状态",
+    "event_input": "(value: TreeNodeValue, options: TreeNodeState)",
+    "field_required": true
+  },
+  {
+    "id": 548,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Tree",
+    "field_category": "<T>",
+    "field_name": "<T extends TreeOptionData = TreeOptionData>",
+    "field_type": []
+  }
+]

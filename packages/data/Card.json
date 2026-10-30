@@ -1,0 +1,404 @@
+[
+  {
+    "id": 2030,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "actions",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片操作区"
+  },
+  {
+    "id": 2175,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "avatar",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片中的用户头像，仅在海报风格的卡片中有效"
+  },
+  {
+    "id": 1755079195,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "bodyClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "卡片内容的类名，示例：'t-class-body'"
+  },
+  {
+    "id": 1755079040,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "bodyStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "作用于卡片内容的样式",
+    "field_desc_en": "Styles that apply to the card body content",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 2028,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否有边框"
+  },
+  {
+    "id": 2182,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片内容，同 content"
+  },
+  {
+    "id": 2177,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片内容"
+  },
+  {
+    "id": 2031,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "cover",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片封面图。值类型为字符串，会自动使用 `img` 标签输出封面图；也可以完全自定义封面图"
+  },
+  {
+    "id": 2181,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片内容，同 content"
+  },
+  {
+    "id": 2564,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片描述文案",
+    "field_desc_en": "card description"
+  },
+  {
+    "id": 2033,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片底部内容，可完全自定义"
+  },
+  {
+    "id": 1755079220,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "footerClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "卡片底部的类名，示例：'t-class-footer'"
+  },
+  {
+    "id": 1755079064,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "footerStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "作用于卡片底部的样式",
+    "field_desc_en": "Styles that apply to the card footer content",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 2176,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片顶部内容，优先级高于其他所有元素"
+  },
+  {
+    "id": 2561,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "headerBordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "头部是否带分割线，仅在有header时有效"
+  },
+  {
+    "id": 1755079231,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "headerClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "卡片头部的类名，示例：'t-class-header'"
+  },
+  {
+    "id": 1755079135,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "headerStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "作用于卡片头部的样式",
+    "field_desc_en": "Styles that apply to the card header content",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 2565,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "hoverShadow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "hover时是否有阴影"
+  },
+  {
+    "id": 2034,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "加载状态，值为 true 会根据不同的布局显示不同的加载状态，值为 false 则表示非加载状态。也可以使用 Skeleton 组件完全自定义加载态呈现内容",
+    "custom_field_type": "boolean | TNode"
+  },
+  {
+    "id": 1701155589,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "loadingProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传加载组件(Loading)全部属性",
+    "field_desc_en": "Loading Component Props",
+    "custom_field_type": "LoadingProps【import { LoadingProps } from '@Loading'】"
+  },
+  {
+    "id": 2032,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "shadow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示卡片阴影，默认不显示"
+  },
+  {
+    "id": 2029,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "medium",
+      "small"
+    ],
+    "field_desc_zh": "尺寸"
+  },
+  {
+    "id": 2174,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "卡片状态内容，仅在操作区域不在顶部时有效（即 `theme=poster2` ）"
+  },
+  {
+    "id": 2562,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "subtitle",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片副标题",
+    "field_desc_en": "card subtitle"
+  },
+  {
+    "id": 2173,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "poster1",
+      "poster2"
+    ],
+    "field_desc_zh": "卡片风格：普通风格、海报风格1（操作区域在顶部）、海报风格2（操作区域在底部）"
+  },
+  {
+    "id": 2027,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Card",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "卡片标题",
+    "field_desc_en": "card title"
+  }
+]

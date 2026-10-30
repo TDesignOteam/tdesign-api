@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1762421222,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Props",
+    "field_name": "imageViewer",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否启用图片预览功能"
+  },
+  {
+    "id": 1762421184,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "附件列表",
+    "custom_field_type": "FileItem[]【interface FileItem { fileType: 'image'|'video'|'audio'|'pdf'|'doc'|'ppt'|'txt'; name: string; url: string; size: number; status?: 'success'|'fail'|'pending'|'error'; progress?: number; errorMessage?: string; fileIcon?: string; width?: number; height?: number; mode?: 'aspectFit' | 'aspectFill' | 'widthFix' | 'heightFix' | 'scaleToFill'}】",
+    "field_required": true
+  },
+  {
+    "id": 1762421201,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Props",
+    "field_name": "removable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示删除按钮"
+  },
+  {
+    "id": 1762421370,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Events",
+    "field_name": "add",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击添加按钮时触发"
+  },
+  {
+    "id": 1762421334,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Events",
+    "field_name": "fileClick",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击文件时触发",
+    "event_input": "(item: FileItem)"
+  },
+  {
+    "id": 1762421355,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Attachments",
+    "field_category": "Events",
+    "field_name": "remove",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击删除按钮时触发",
+    "event_input": "(item: FileItem, index: number)"
+  }
+]

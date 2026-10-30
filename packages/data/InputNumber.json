@@ -1,0 +1,471 @@
+[
+  {
+    "id": 2204,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "left",
+      "center",
+      "right"
+    ],
+    "field_desc_zh": "文本内容位置，居左/居中/居右",
+    "test_description": "{\"PC\":{\"className\":[{\"t-align-left\":false},\"t-align-center\",\"t-align-right\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 3192,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "allowInputOverLimit",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否允许输入超过 `max` `min` 范围外的数字。为保障用户体验，仅在失去焦点时进行数字范围矫正。默认允许超出，数字超出范围时，输入框变红提醒"
+  },
+  {
+    "id": 2325,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "宽度随内容自适应"
+  },
+  {
+    "id": 1781173707,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动聚焦",
+    "version": {
+      "Vue(PC)": "1.15.1",
+      "VueNext(PC)": "1.20.2",
+      "React(PC)": "1.17.2"
+    }
+  },
+  {
+    "id": 1001,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "decimalPlaces",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "[小数位数](https://en.wiktionary.org/wiki/decimal_place)",
+    "custom_field_type": "InputNumberDecimalPlaces【type InputNumberDecimalPlaces = number | { enableRound: boolean; places: number } 】"
+  },
+  {
+    "id": 768,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "禁用组件"
+  },
+  {
+    "id": 769,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "格式化输入框展示值。第二个事件参数 `context.fixedNumber` 表示处理过小数位数 `decimalPlaces` 的数字",
+    "custom_field_type": "(value: InputNumberValue, context?: { fixedNumber?: InputNumberValue }) => InputNumberValue"
+  },
+  {
+    "id": 2702,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Input 输入框组件全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 2887,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本"
+  },
+  {
+    "id": 2880,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "largeNumber",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否作为大数使用。JS 支持的最大数字位数是 16 位，超过 16 位的数字需作为字符串大数处理。此时，数据类型必须保持为字符串，否则会丢失数据"
+  },
+  {
+    "id": 764,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "Infinity",
+    "field_desc_zh": "最大值。如果是大数，请传入字符串",
+    "custom_field_type": "InputNumberValue"
+  },
+  {
+    "id": 765,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "min",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "-Infinity",
+    "field_desc_zh": "最小值。如果是大数，请传入字符串",
+    "custom_field_type": "InputNumberValue"
+  },
+  {
+    "id": 996,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符"
+  },
+  {
+    "id": 2386,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态"
+  },
+  {
+    "id": 767,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸"
+  },
+  {
+    "id": 2168,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "文本框状态"
+  },
+  {
+    "id": 766,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "step",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "数值改变步数，可以是小数。如果是大数，请保证数据类型为字符串",
+    "custom_field_type": "InputNumberValue"
+  },
+  {
+    "id": 2886,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后置内容"
+  },
+  {
+    "id": 763,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "row",
+    "field_enum": [
+      "column",
+      "row",
+      "normal"
+    ],
+    "field_desc_zh": "按钮布局"
+  },
+  {
+    "id": 2170,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式"
+  },
+  {
+    "id": 762,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "数字输入框的值。当值为 '' 时，输入框显示为空",
+    "custom_field_type": "T【type InputNumberValue = number | string】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2881,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: InputNumberValue, context: { e: FocusEvent })"
+  },
+  {
+    "id": 770,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发，`type` 表示触发本次变化的来源",
+    "event_input": "(value: T, context: ChangeContext)【interface ChangeContext { type: ChangeSource; e: InputEvent | MouseEvent | FocusEvent | KeyboardEvent | CompositionEvent }】【type ChangeSource = 'add' | 'reduce' | 'input' | 'blur' | 'enter' | 'clear' | 'props'】",
+    "trigger_elements": "MouseEvent<HTMLDivElement | SVGElement>"
+  },
+  {
+    "id": 817,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "回车键按下时触发",
+    "event_input": "(value: InputNumberValue, context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 815,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获取焦点时触发",
+    "event_input": "(value: InputNumberValue, context: { e: FocusEvent })"
+  },
+  {
+    "id": 823,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "keydown",
+    "field_type": [],
+    "field_desc_zh": "键盘按下时触发",
+    "event_input": "(value: InputNumberValue, context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 825,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "keypress",
+    "field_type": [],
+    "field_desc_zh": "按下字符键时触发（keydown -> keypress -> keyup）",
+    "event_input": "(value: InputNumberValue, context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 824,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "keyup",
+    "field_type": [],
+    "field_desc_zh": "释放键盘时触发",
+    "event_input": "(value: InputNumberValue, context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 2882,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "Events",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "最大值或最小值校验结束后触发，`exceed-maximum` 表示超出最大值，`below-minimum` 表示小于最小值",
+    "event_input": "(context: { error?: 'exceed-maximum' | 'below-minimum' })"
+  },
+  {
+    "id": 2925,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputNumber",
+    "field_category": "<T>",
+    "field_name": "<T = InputNumberValue>",
+    "field_type": [],
+    "field_desc_zh": "数字输入框的值。当值为 '' 时，输入框显示为空"
+  }
+]

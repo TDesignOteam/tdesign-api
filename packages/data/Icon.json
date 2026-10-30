@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1691,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图标颜色"
+  },
+  {
+    "id": 1688,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图标名称或图片链接",
+    "field_required": true
+  },
+  {
+    "id": 2085,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "Props",
+    "field_name": "prefix",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "自定义图标前缀"
+  },
+  {
+    "id": 1689,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Icon",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "图标大小, 如 `20`, `20px`, `48rpx`, 默认单位是 `px`"
+  },
+  {
+    "id": 1762314479,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "图标大小, 如 `20`, `20px`, `48rpx`, 默认单位是 `px`"
+  },
+  {
+    "id": 1761301048,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击图标时触发"
+  },
+  {
+    "id": 1711969401,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Icon",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "根节点样式类"
+  }
+]

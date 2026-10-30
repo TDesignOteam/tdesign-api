@@ -1,0 +1,99 @@
+[
+  {
+    "id": 2772,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Space",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "start",
+      "end",
+      "center",
+      "baseline"
+    ],
+    "field_desc_zh": "对齐方式",
+    "field_desc_en": "alignment",
+    "test_description": "{\"PC\": { \"className\": \"t-space-align-${item}\", \"wrapper\": \"getSpaceDefaultMount\" }}"
+  },
+  {
+    "id": 2775,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Space",
+    "field_category": "Props",
+    "field_name": "breakLine",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否自动换行，仅在 horizontal 时有效\t",
+    "field_desc_en": "Whether to wrap, valid only in horizontal",
+    "test_description": "{\"PC\":{\"className\":\"t-space--break-line\",\"wrapper\":\"getSpaceDefaultMount\"}}"
+  },
+  {
+    "id": 2773,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Space",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "间距方向",
+    "field_desc_en": "Spacing direction",
+    "test_description": "{\"PC\": { \"className\": \"t-space-${item}\", \"wrapper\": \"getSpaceDefaultMount\" }}"
+  },
+  {
+    "id": 2776,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Space",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "分隔符",
+    "field_desc_en": "separator",
+    "test_description": "{\"PC\": { \"tnode\": true, \"wrapper\": \"getSpaceDefaultMount\" }}"
+  },
+  {
+    "id": 2774,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Space",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_default_value": "'medium'",
+    "field_desc_zh": "间距大小",
+    "field_desc_en": "Spacing",
+    "custom_field_type": "SpaceSize | SpaceSize[]【type SpaceSize = number | string | SizeEnum】",
+    "test_description": "{\"PC\": {\n  \"attribute\": [\n    {\n      \"value\": \"'small'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"8px\" }}]\n    },\n    {\n      \"value\": \"'large'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"24px\" }}]\n    },\n        {\n      \"value\": \"'38px'\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"38px\" }}]\n    },\n    {\n      \"value\": \"['20px', '80px']\",\n      \"expect\": [{ \"dom\": \"self\", \"attribute\": { \"style.gap\": \"20px 80px\" }}]\n    }\n  ],\n  \"wrapper\": \"getSpaceDefaultMount\"\n}}"
+  }
+]

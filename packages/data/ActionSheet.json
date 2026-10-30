@@ -1,0 +1,394 @@
+[
+  {
+    "id": 3342,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "center",
+    "field_enum": [
+      "center",
+      "left"
+    ],
+    "field_desc_zh": "水平对齐方式",
+    "version": {
+      "Miniprogram": "0.29.0"
+    }
+  },
+  {
+    "id": 1612,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "cancelText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "设置取消按钮的文本"
+  },
+  {
+    "id": 1610,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "count",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "8",
+    "field_desc_zh": "设置每页展示菜单的数量，仅当 type=grid 时有效"
+  },
+  {
+    "id": 3343,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "动作面板描述文字",
+    "version": {
+      "Miniprogram": "0.29.0"
+    }
+  },
+  {
+    "id": 1608,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "菜单项",
+    "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string | object; suffixIcon?: string | object }】"
+  },
+  {
+    "id": 1712717101,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "菜单项",
+    "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string | TNode; suffixIcon?: TNode; badge?: BadgeProps }】【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 1762330578,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "菜单项",
+    "custom_field_type": "Array<string | ActionSheetItem>【interface ActionSheetItem { label: string; description?: string; color?: string; disabled?: boolean; icon?: string | object; suffixIcon?: string | object }】"
+  },
+  {
+    "id": 1712054580,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1781246514,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "防止滚动穿透，即不允许点击和滚动"
+  },
+  {
+    "id": 1611,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "showCancel",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示取消按钮"
+  },
+  {
+    "id": 1712054606,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示遮罩层"
+  },
+  {
+    "id": 1609,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "list",
+    "field_enum": [
+      "list",
+      "grid"
+    ],
+    "field_desc_zh": "展示类型，列表和表格形式展示"
+  },
+  {
+    "id": 1719908417,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 1607,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "显示与隐藏",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1781247106,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "显示与隐藏",
+    "custom_field_type": "boolean | null",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1615,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "点击取消按钮时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 2550,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "点击取消按钮时触发"
+  },
+  {
+    "id": 1616,
+    "platform_framework": [],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 2551,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(trigger: ActionSheetTriggerSource)【type ActionSheetTriggerSource = 'overlay' | 'command' | 'select' 】"
+  },
+  {
+    "id": 1762328361,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(context: { trigger: ActionSheetTriggerSource })【type ActionSheetTriggerSource = 'overlay' | 'command' | 'select' 】"
+  },
+  {
+    "id": 1614,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "selected",
+    "field_type": [],
+    "field_desc_zh": "选择菜单项时触发",
+    "event_input": "(selected: ActionSheetItem | string, index: number)"
+  },
+  {
+    "id": 2552,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Events",
+    "field_name": "selected",
+    "field_type": [],
+    "field_desc_zh": "选择菜单项时触发",
+    "event_input": "(context: { selected: ActionSheetItem | string, index: number })"
+  },
+  {
+    "id": 1712054648,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712054668,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "External Classes",
+    "field_name": "t-class-cancel",
+    "field_type": [],
+    "field_desc_zh": "取消样式类"
+  },
+  {
+    "id": 1712054662,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1759130478,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheet",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

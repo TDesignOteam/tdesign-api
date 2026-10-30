@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1263,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "affixProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性",
+    "custom_field_type": "AffixProps【import { AffixProps } from '@Affix'】"
+  },
+  {
+    "id": 2771,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "affixProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性",
+    "custom_field_type": "Omit<AffixProps, 'children'>【import { AffixProps } from '@Affix'】"
+  },
+  {
+    "id": 190,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "bounds",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "5",
+    "field_desc_zh": "锚点区域边界"
+  },
+  {
+    "id": 192,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "() => (() => window)",
+    "field_desc_zh": "指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "ScrollContainer"
+  },
+  {
+    "id": 1652,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义选中项左侧游标"
+  },
+  {
+    "id": 1691741305,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "getCurrentAnchor",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义高亮的锚点\t",
+    "field_desc_en": "Custom Highlighted Anchor Points",
+    "custom_field_type": "(activeLink: string) => string"
+  },
+  {
+    "id": 193,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸，small(120px)，medium(200px)，large(320px)",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 191,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Props",
+    "field_name": "targetOffset",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "锚点滚动偏移量"
+  },
+  {
+    "id": 194,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "锚点改变时触发",
+    "event_input": "(currentLink: string, prevLink: string)"
+  },
+  {
+    "id": 195,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Anchor",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "锚点被点击时触发",
+    "event_input": "(link: { href: string; title: string; e: MouseEvent })"
+  }
+]

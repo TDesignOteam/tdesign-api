@@ -2,7 +2,7 @@ export default {
   zh: {
     Props: {
       titles: ['名称', '类型', '默认值', '描述', '必传'],
-      fields: ['field_name', 'field_type_text', 'field_default_value', 'field_desc_zh', 'field_required'],
+      fields: ['field_name', 'field_type', 'field_default_value', 'field_desc_zh', 'field_required'],
     },
     Events: {
       titles: ['名称', '参数', '描述'],
@@ -14,7 +14,7 @@ export default {
     },
     Plugins: {
       titles: ['参数名称', '参数类型', '参数默认值', '参数描述'],
-      fields: ['field_name', 'field_type_text', 'field_default_value', 'field_desc_zh'],
+      fields: ['field_name', 'field_type', 'field_default_value', 'field_desc_zh'],
     },
     Slots: {
       titles: ['名称', '描述'],
@@ -32,7 +32,7 @@ export default {
   en: {
     Props: {
       titles: ['name', 'type', 'default', 'description', 'required'],
-      fields: ['field_name', 'field_type_text', 'field_default_value', 'field_desc_zh', 'field_required'],
+      fields: ['field_name', 'field_type', 'field_default_value', 'field_desc_zh', 'field_required'],
     },
     Events: {
       titles: ['name', 'params', 'description'],
@@ -44,7 +44,7 @@ export default {
     },
     Plugins: {
       titles: ['name', 'params', 'default', 'description'],
-      fields: ['field_name', 'field_type_text', 'field_default_value', 'field_desc_zh'],
+      fields: ['field_name', 'field_type', 'field_default_value', 'field_desc_zh'],
     },
     Slots: {
       titles: ['name', 'Description'],

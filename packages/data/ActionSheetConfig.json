@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1741182503,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ActionSheetConfig",
+    "field_category": "Props",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消” 按钮描述文本",
+    "field_desc_en": "cancel text"
+  }
+]

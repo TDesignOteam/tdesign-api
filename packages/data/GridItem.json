@@ -1,0 +1,347 @@
+[
+  {
+    "id": 1712661731,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "badge",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "null",
+    "field_desc_zh": "透传至 Badge 属性",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 2309,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "null",
+    "field_desc_zh": "透传至 Badge 属性",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 1762401753,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传至 Badge 属性",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 1771,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点"
+  },
+  {
+    "id": 3189,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`"
+  },
+  {
+    "id": 1736954183,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标名称。"
+  },
+  {
+    "id": 1769,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "图片，可以是图片地址，也可以自定义图片节点，值为 slot 的时候才能使用插槽"
+  },
+  {
+    "id": 1712661829,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件",
+    "custom_field_type": "String | TNode | ImageProps【import { ImageProps } from '@Image'】"
+  },
+  {
+    "id": 3187,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "imageProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Image 组件",
+    "custom_field_type": "ImageProps【import { ImageProps } from '@Image'】"
+  },
+  {
+    "id": 1762406722,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "imageProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传至 Image 组件",
+    "custom_field_type": "ImageProps【import { ImageProps } from '@Image'】"
+  },
+  {
+    "id": 1780,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "jumpType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "navigate-to",
+    "field_enum": [
+      "redirect-to",
+      "switch-tab",
+      "relaunch",
+      "navigate-to"
+    ],
+    "field_desc_zh": "链接跳转类型"
+  },
+  {
+    "id": 1812,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "vertical",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "内容布局方式"
+  },
+  {
+    "id": 1770,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文本，可以通过 Props 传入文本，也可以自定义标题节点"
+  },
+  {
+    "id": 1781,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击后的跳转链接"
+  },
+  {
+    "id": 1761302509,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击子项后触发"
+  },
+  {
+    "id": 1712050904,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712050926,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1712050942,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-description",
+    "field_type": [],
+    "field_desc_zh": "描述样式类"
+  },
+  {
+    "id": 1712050932,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "图片样式类"
+  },
+  {
+    "id": 1712050937,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-text",
+    "field_type": [],
+    "field_desc_zh": "文本样式类"
+  },
+  {
+    "id": 1759198395,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  },
+  {
+    "id": 1760520132,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Slots",
+    "field_name": "description",
+    "field_type": [],
+    "field_desc_zh": "自定义 `description` 模块内容"
+  },
+  {
+    "id": 1760520176,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Slots",
+    "field_name": "image",
+    "field_type": [],
+    "field_desc_zh": "自定义 `image` 模块内容"
+  },
+  {
+    "id": 1760520202,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GridItem",
+    "field_category": "Slots",
+    "field_name": "text",
+    "field_type": [],
+    "field_desc_zh": "自定义 `text` 模块内容"
+  }
+]

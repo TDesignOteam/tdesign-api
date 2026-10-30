@@ -1,0 +1,523 @@
+[
+  {
+    "id": 1470,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "colors",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "颜色，[已选择, 未选择]",
+    "custom_field_type": "Array<string>",
+    "deprecated": true
+  },
+  {
+    "id": 1202,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 1810,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "disabledColor",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "禁用状态滑动条的颜色，[已选, 未选]",
+    "custom_field_type": "Array<string>",
+    "deprecated": true
+  },
+  {
+    "id": 1201,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "inputNumberProps",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "用于控制数字输入框组件，值为 false 表示不显示数字输入框；值为 true 表示呈现默认数字输入框；值类型为 Object 表示透传属性到数字输入框组件",
+    "custom_field_type": "boolean | InputNumberProps【import { InputNumberProps } from '@InputNumber'】"
+  },
+  {
+    "id": 2418,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "滑块当前值文本。<br />值为 true 显示默认文案；值为 false 不显示滑块当前值文本；<br />值为 `${value}%` 则表示组件会根据占位符渲染文案；<br />值类型为函数时，参数 `value` 标识滑块值，参数 `position=start` 表示范围滑块的起始值，参数 `position=end` 表示范围滑块的终点值",
+    "custom_field_type": "string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>"
+  },
+  {
+    "id": 3120,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Function"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "滑块当前值文本。<br />值为 true 显示默认文案；值为 false 不显示滑块当前值文本；<br />值为 `${value}%` 则表示组件会根据占位符渲染文案；<br />值类型为函数时，参数 `value` 标识滑块值，参数 `position=start` 表示范围滑块的起始值，参数 `position=end` 表示范围滑块的终点值",
+    "custom_field_type": "string | boolean"
+  },
+  {
+    "id": 1712658209,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "滑块当前值文本。<br />值为 true 显示默认文案；值为 false 不显示滑块当前值文本；<br />值为 `${value}%` 则表示组件会根据占位符渲染文案；<br />值类型为函数时，参数 `value` 标识滑块值，参数 `position=start` 表示范围滑块的起始值，参数 `position=end` 表示范围滑块的终点值",
+    "custom_field_type": "string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>"
+  },
+  {
+    "id": 1193,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "滑块布局方向"
+  },
+  {
+    "id": 1199,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "marks",
+    "field_type": [
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "刻度标记，示例：[0, 10, 40, 200] 或者 `{ 10: (val) => val + '%', 50: (h) => <button>50</button> }`",
+    "custom_field_type": "Array<number> | SliderMarks【interface SliderMarks { [mark: number]: string | TNode<{ value: number }> }】"
+  },
+  {
+    "id": 1325,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "marks",
+    "field_type": [
+      "Object",
+      "Array"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "刻度标记，示例：`[0, 10, 40, 200]` 或者 `{ 5:  '5¥', 10: '10%' }`",
+    "custom_field_type": "Record<number, string> | Array<number>"
+  },
+  {
+    "id": 1195,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "100",
+    "field_desc_zh": "滑块范围最大值"
+  },
+  {
+    "id": 1196,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "min",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "滑块范围最小值"
+  },
+  {
+    "id": 1194,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "range",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "双游标滑块"
+  },
+  {
+    "id": 1435,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "showExtremeValue",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否边界值"
+  },
+  {
+    "id": 2875,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "showStep",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "控制步长刻度值显示"
+  },
+  {
+    "id": 1198,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "step",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "步长"
+  },
+  {
+    "id": 3388,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "capsule"
+    ],
+    "field_desc_zh": "滑块风格",
+    "version": {
+      "Miniprogram": "0.30.0"
+    }
+  },
+  {
+    "id": 1200,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "tooltipProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传提示组件属性",
+    "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】"
+  },
+  {
+    "id": 1197,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Number",
+      "Array"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "滑块值",
+    "custom_field_type": "SliderValue【type SliderValue = number | Array<number>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712043696,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "vertical",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否是垂直的滑块（渲染垂直滑块时，默认高度为400rpx，可通过修改`--td-slider-bar-height`来自定义高度）"
+  },
+  {
+    "id": 1739007105,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Slider",
+    "field_category": "Props",
+    "field_name": "vertical",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否是垂直的滑块（渲染垂直滑块时，默认高度为200px，可通过修改`--td-slider-bar-height`来自定义高度）"
+  },
+  {
+    "id": 1203,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "滑块值变化时触发",
+    "event_input": "(value: SliderValue)"
+  },
+  {
+    "id": 1703150122,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "changeEnd",
+    "field_type": [],
+    "field_desc_zh": "松开拖动`mouseup` 或点击滑块条时触发，适合不希望在拖动滑块过程频繁触发回调的场景实用",
+    "field_desc_en": "triggered when the mouse button is released after dragging or clicking on the slider bar. It is suitable for scenarios where you do not want the callback to be triggered frequently during the process of dragging the slider",
+    "event_input": "(value: SliderValue)"
+  },
+  {
+    "id": 2001,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "dragend",
+    "field_type": [],
+    "field_desc_zh": "结束拖动时触发",
+    "event_input": "(value: SliderValue, e: TouchEvent)"
+  },
+  {
+    "id": 1739523132,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "dragend",
+    "field_type": [],
+    "field_desc_zh": "结束拖动时触发",
+    "event_input": "(value: SliderValue, context: {e: TouchEvent})"
+  },
+  {
+    "id": 2000,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "dragstart",
+    "field_type": [],
+    "field_desc_zh": "开始拖动时触发",
+    "event_input": "(e: TouchEvent)"
+  },
+  {
+    "id": 1739523112,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Slider",
+    "field_category": "Events",
+    "field_name": "dragstart",
+    "field_type": [],
+    "field_desc_zh": "开始拖动时触发",
+    "event_input": "(context: {e: TouchEvent})"
+  },
+  {
+    "id": 1712043752,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712043777,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "External Classes",
+    "field_name": "t-class-bar",
+    "field_type": [],
+    "field_desc_zh": "滑道底部样式类"
+  },
+  {
+    "id": 1712043782,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "External Classes",
+    "field_name": "t-class-bar-active",
+    "field_type": [],
+    "field_desc_zh": "滑道激活态样式类"
+  },
+  {
+    "id": 1712043788,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "External Classes",
+    "field_name": "t-class-bar-disabled",
+    "field_type": [],
+    "field_desc_zh": "滑道禁用态样式类"
+  },
+  {
+    "id": 1712043793,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Slider",
+    "field_category": "External Classes",
+    "field_name": "t-class-cursor",
+    "field_type": [],
+    "field_desc_zh": "游标样式类"
+  }
+]

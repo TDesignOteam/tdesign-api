@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1723455343,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "EmptyConfig",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "空状态组件各类型的图片配置",
+    "custom_field_type": "{ maintenance: TNode; success: TNode; fail: TNode; empty: TNode; networkError: TNode; }"
+  },
+  {
+    "id": 1723455232,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "EmptyConfig",
+    "field_category": "Props",
+    "field_name": "titleText",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "空状态组件各类型的标题文本配置",
+    "custom_field_type": "{ maintenance: string; success: string; fail: string; empty: string; networkError: string; }"
+  }
+]

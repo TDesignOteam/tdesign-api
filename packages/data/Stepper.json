@@ -1,0 +1,368 @@
+[
+  {
+    "id": 1502,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "disableInput",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "禁用输入框"
+  },
+  {
+    "id": 1501,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "禁用全部操作"
+  },
+  {
+    "id": 1503,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "inputWidth",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "输入框宽度，默认单位 `px`"
+  },
+  {
+    "id": 1712658521,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "inputWidth",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "输入框宽度"
+  },
+  {
+    "id": 1712658566,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "integer",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否整型"
+  },
+  {
+    "id": 1504,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "100",
+    "field_desc_zh": "最大值"
+  },
+  {
+    "id": 1505,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "min",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "最小值"
+  },
+  {
+    "id": 3389,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 1506,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "step",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "步长"
+  },
+  {
+    "id": 1507,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "filled",
+      "outline"
+    ],
+    "field_desc_zh": "组件风格",
+    "field_desc_en": "stylish"
+  },
+  {
+    "id": 1508,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2326,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "输入框失去焦点时触发",
+    "event_input": "(value: string | number)"
+  },
+  {
+    "id": 1761301868,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "输入框失去焦点时触发",
+    "event_input": "({ type: string | number })",
+    "syntactic_sugar": "v-model"
+  },
+  {
+    "id": 2327,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "数值发生变更时触发",
+    "event_input": "(value: string | number)"
+  },
+  {
+    "id": 1761301878,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "数值发生变更时触发",
+    "event_input": "({ value: string | number })",
+    "syntactic_sugar": "v-model"
+  },
+  {
+    "id": 1712658600,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "(value: string | number)"
+  },
+  {
+    "id": 1761301896,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "({ value: string | number }))"
+  },
+  {
+    "id": 2328,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "overlimit",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "数值超出限制时触发",
+    "event_input": "(type: 'minus' | 'plus')"
+  },
+  {
+    "id": 1761301983,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "Events",
+    "field_name": "overlimit",
+    "field_type": [],
+    "field_desc_zh": "数值超出限制时触发",
+    "event_input": "({type: 'minus' | 'plus'})"
+  },
+  {
+    "id": 1712043997,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712044016,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "External Classes",
+    "field_name": "t-class-input",
+    "field_type": [],
+    "field_desc_zh": "输入框样式类"
+  },
+  {
+    "id": 1712044021,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "External Classes",
+    "field_name": "t-class-minus",
+    "field_type": [],
+    "field_desc_zh": "左侧递减号样式类"
+  },
+  {
+    "id": 1712044027,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Stepper",
+    "field_category": "External Classes",
+    "field_name": "t-class-plus",
+    "field_type": [],
+    "field_desc_zh": "右侧递增号样式类"
+  }
+]

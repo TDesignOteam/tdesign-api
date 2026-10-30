@@ -1,0 +1,79 @@
+[
+  {
+    "id": 3039,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerOptions",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "抽屉挂载的节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 3038,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DrawerOptions",
+    "field_category": "Props",
+    "field_name": "className",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "抽屉类名，示例：'t-class-drawer-first t-class-drawer-second'"
+  },
+  {
+    "id": 3036,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "DrawerOptions",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 3037,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "DrawerOptions",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+    "custom_field_type": "string | Styles"
+  },
+  {
+    "id": 3035,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DrawerOptions",
+    "field_category": "Extends",
+    "field_name": "Omit<TdDrawerProps, 'attach'>",
+    "field_type": []
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "id": 904,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "asyncLoading",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义加载中。值为空不显示加载中，值为 'loading' 显示加载中状态，值为 'load-more' 显示加载更多状态。值类型为函数，则表示自定义加载状态呈现内容"
+  },
+  {
+    "id": 909,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "底部"
+  },
+  {
+    "id": 908,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "头部"
+  },
+  {
+    "id": 907,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "排列方式（待设计稿输出）"
+  },
+  {
+    "id": 3493,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "scroll",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+    "field_desc_en": "lazy load and virtual scroll",
+    "custom_field_type": "TScroll"
+  },
+  {
+    "id": 903,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "尺寸"
+  },
+  {
+    "id": 905,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "split",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示分割线"
+  },
+  {
+    "id": 906,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Props",
+    "field_name": "stripe",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示斑马纹"
+  },
+  {
+    "id": 910,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Events",
+    "field_name": "loadMore",
+    "field_type": [],
+    "field_desc_zh": "点击加载更多时触发",
+    "event_input": "(options: { e: MouseEvent })"
+  },
+  {
+    "id": 1119,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "List",
+    "field_category": "Events",
+    "field_name": "loadMore",
+    "field_type": [],
+    "field_desc_zh": "点击加载更多时触发"
+  },
+  {
+    "id": 911,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "列表滚动时触发，scrollTop 表示顶部滚动距离，scrollBottom 表示底部滚动距离",
+    "event_input": "(options: { e: Event | WheelEvent; scrollTop: number; scrollBottom: number })"
+  },
+  {
+    "id": 1118,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "List",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "列表滚动时触发，bottomDistance 表示底部距离；scrollTop 表示顶部滚动距离",
+    "event_input": "(bottomDistance: number, scrollTop: number)"
+  },
+  {
+    "id": 1733196291,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "List",
+    "field_category": "Functions",
+    "field_name": "scrollTo",
+    "field_type": [],
+    "field_desc_zh": "虚拟滚动场景下，支持指定滚动到具体的节点",
+    "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
+    "event_input": "(scrollToParams: ScrollToElementParams)"
+  }
+]

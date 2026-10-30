@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1326,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Row",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "start",
+      "end",
+      "center",
+      "stretch",
+      "baseline",
+      "top",
+      "middle",
+      "bottom"
+    ],
+    "field_desc_zh": "纵向对齐方式，CSS 属性 `align-items` 值。其中 `top` 和 `start` 等效；`middle` 和 `center` 等效；`bottom` 和 `end` 等效"
+  },
+  {
+    "id": 186,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Row",
+    "field_category": "Props",
+    "field_name": "gutter",
+    "field_type": [
+      "Number",
+      "Object",
+      "Array"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "栅格间隔，示例：`{ xs: 8, sm: 16, md: 24, lg: 32, xl: 32, xxl: 40 }`。当数据类型为 Number 和 Object 时，用于指定横向间隔。当数据类型为数组时，第一个参数为横向间隔，第二个参数为纵向间隔， [水平间隔, 垂直间隔]",
+    "custom_field_type": "number | GutterObject | Array<GutterObject | number>【interface GutterObject { xs?: number; sm?: number; md?: number; lg?: number, xl?: number; xxl?: number; } 】"
+  },
+  {
+    "id": 3428,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Row",
+    "field_category": "Props",
+    "field_name": "gutter",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "列之间的间距（默认单位px）"
+  },
+  {
+    "id": 187,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Row",
+    "field_category": "Props",
+    "field_name": "justify",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "start",
+    "field_enum": [
+      "start",
+      "end",
+      "center",
+      "space-around",
+      "space-between"
+    ],
+    "field_desc_zh": "flex 布局下的水平排列方式"
+  },
+  {
+    "id": 188,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Row",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "div",
+    "field_desc_zh": "自定义元素标签"
+  },
+  {
+    "id": 1760085899,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Row",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，行内容"
+  }
+]

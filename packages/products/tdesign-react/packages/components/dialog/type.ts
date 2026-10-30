@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode } from '../common';
-import { MouseEvent, KeyboardEvent } from 'react';
+import type { MouseEvent, KeyboardEvent } from 'react';
+import type { ButtonProps } from '../button';
+import type { TNode, ClassName, Styles, AttachNode } from '../common';
 
 export interface TdDialogProps {
   /**
@@ -56,10 +56,9 @@ export interface TdDialogProps {
    */
   destroyOnClose?: boolean;
   /**
-   * 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second'
-   * @default ''
+   * 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`
    */
-  dialogClassName?: string;
+  dialogClassName?: ClassName;
   /**
    * 作用于对话框本身的样式
    */
@@ -70,13 +69,18 @@ export interface TdDialogProps {
    */
   draggable?: boolean;
   /**
+   * 对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。
+   */
+  focusable?: DialogFocusable;
+  /**
    * 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容
    * @default true
    */
   footer?: TNode;
   /**
-   * 是否强制渲染Dialog
+   * 是否强制渲染 Dialog，请使用 lazy 代替
    * @default false
+   * @deprecated
    */
   forceRender?: boolean;
   /**
@@ -137,7 +141,7 @@ export interface TdDialogProps {
    */
   width?: string | number;
   /**
-   * 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500
+   * 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: number;
   /**
@@ -182,21 +186,20 @@ export interface TdDialogProps {
   onOverlayClick?: (context: { e: MouseEvent<HTMLDivElement> }) => void;
 }
 
-export interface TdDialogCardProps
-  extends Pick<
-    TdDialogProps,
-    | 'body'
-    | 'cancelBtn'
-    | 'closeBtn'
-    | 'confirmBtn'
-    | 'footer'
-    | 'header'
-    | 'theme'
-    | 'onCancel'
-    | 'onCloseBtnClick'
-    | 'onConfirm'
-    | 'confirmLoading'
-  > {}
+export interface TdDialogCardProps extends Pick<
+  TdDialogProps,
+  | 'body'
+  | 'cancelBtn'
+  | 'closeBtn'
+  | 'confirmBtn'
+  | 'footer'
+  | 'header'
+  | 'theme'
+  | 'onCancel'
+  | 'onCloseBtnClick'
+  | 'onConfirm'
+  | 'confirmLoading'
+> {}
 
 export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
   /**
@@ -236,6 +239,12 @@ export interface DialogInstance {
    * 更新弹框内容
    */
   update: (props: DialogOptions) => void;
+}
+
+export interface DialogFocusable {
+  defaultFocus?: null | 'confirm-button' | 'cancel-button' | (() => HTMLElement | null);
+  focusTrap?: boolean;
+  focusTriggerAfterClose: boolean;
 }
 
 export interface DialogSizeDragLimit {

@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1742882111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatLoading",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "gradient",
+    "field_enum": [
+      "moving",
+      "gradient"
+    ],
+    "field_desc_zh": "加载的状态形式"
+  },
+  {
+    "id": 1762423633,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatLoading",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "moving",
+    "field_enum": [
+      "skeleton",
+      "moving",
+      "gradient",
+      "dots"
+    ],
+    "field_desc_zh": "加载的状态形式"
+  },
+  {
+    "id": 1742882019,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatLoading",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "加载过程展示的文字内容",
+    "field_desc_en": "text of chat loading"
+  }
+]

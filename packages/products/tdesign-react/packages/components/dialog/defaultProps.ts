@@ -2,7 +2,15 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDialogProps } from './type';
+import type { TdDialogCardProps, TdDialogProps } from './type';
+
+export const dialogCardDefaultProps: TdDialogCardProps = {
+  closeBtn: true,
+  confirmLoading: undefined,
+  footer: true,
+  header: true,
+  theme: 'default',
+};
 
 export const dialogDefaultProps: TdDialogProps = {
   closeBtn: true,
@@ -12,7 +20,6 @@ export const dialogDefaultProps: TdDialogProps = {
   destroyOnClose: false,
   draggable: false,
   footer: true,
-  forceRender: false,
   header: true,
   lazy: false,
   mode: 'modal',

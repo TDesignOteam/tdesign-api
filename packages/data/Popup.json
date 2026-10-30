@@ -1,0 +1,771 @@
+[
+  {
+    "id": 423,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1229,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素，同 triggerElement"
+  },
+  {
+    "id": 1300,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_desc_zh": "关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮"
+  },
+  {
+    "id": 3489,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_desc_zh": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮"
+  },
+  {
+    "id": 1306,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "点击遮罩层是否关闭"
+  },
+  {
+    "id": 94,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "浮层里面的内容"
+  },
+  {
+    "id": 1228,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素，同 triggerElement"
+  },
+  {
+    "id": 2939,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "delay",
+    "field_type": [
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "延时显示或隐藏浮层，[延迟显示的时间，延迟隐藏的时间]，单位：毫秒。如果只有一个时间，则表示显示和隐藏的延迟时间相同。示例 `'300'` 或者 `[200, 200]`。默认为：[250, 150]",
+    "field_desc_en": "delay to show or hide popover",
+    "custom_field_type": "number | Array<number>"
+  },
+  {
+    "id": 1309,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "destroyOnClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在关闭浮层时销毁浮层"
+  },
+  {
+    "id": 1712719525,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "destroyOnClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在关闭浮层时销毁浮层"
+  },
+  {
+    "id": 90,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 3416,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "240",
+    "field_desc_zh": "动画过渡时间"
+  },
+  {
+    "id": 2250,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "hideEmptyPopup",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "浮层是否隐藏空内容，默认不隐藏"
+  },
+  {
+    "id": 1998,
+    "platform_framework": [],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "lockScroll",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否锁定内容滚动"
+  },
+  {
+    "id": 131,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "overlayClassName",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "浮层类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
+    "custom_field_type": "ClassName"
+  },
+  {
+    "id": 2934,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "overlayInnerClassName",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "浮层内容部分类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
+    "custom_field_type": "ClassName"
+  },
+  {
+    "id": 2921,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "overlayInnerStyle",
+    "field_type": [
+      "Boolean",
+      "Object",
+      "Function"
+    ],
+    "field_desc_zh": "浮层内容部分样式，第一个参数 `triggerElement` 表示触发元素 DOM 节点，第二个参数 `popupElement` 表示浮层元素 DOM 节点",
+    "custom_field_type": "Styles | ((triggerElement: HTMLElement, popupElement: HTMLElement) => Styles)"
+  },
+  {
+    "id": 2703,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "overlayProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "遮罩层的属性，透传至 overlay",
+    "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】"
+  },
+  {
+    "id": 130,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "overlayStyle",
+    "field_type": [
+      "Boolean",
+      "Object",
+      "Function"
+    ],
+    "field_desc_zh": "浮层样式，第一个参数 `triggerElement` 表示触发元素 DOM 节点，第二个参数 `popupElement` 表示浮层元素 DOM 节点",
+    "custom_field_type": "Styles | ((triggerElement: HTMLElement, popupElement: HTMLElement) => Styles)"
+  },
+  {
+    "id": 91,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_desc_zh": "浮层出现位置",
+    "custom_field_type": "PopupPlacement【type PopupPlacement = 'top'|'left'|'right'|'bottom'|'top-left'|'top-right'|'bottom-left'|'bottom-right'|'left-top'|'left-bottom'|'right-top'|'right-bottom'】"
+  },
+  {
+    "id": 1301,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "top",
+      "left",
+      "right",
+      "bottom",
+      "center"
+    ],
+    "field_desc_zh": "浮层出现位置"
+  },
+  {
+    "id": 2988,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "popperOptions",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "popper 初始化配置，详情参考 https://popper.js.org/docs/",
+    "field_desc_en": "popper initial options，details refer to https://popper.js.org/docs"
+  },
+  {
+    "id": 1308,
+    "platform_framework": [],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "防止滚动穿透"
+  },
+  {
+    "id": 1712719572,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否阻止背景滚动"
+  },
+  {
+    "id": 1360,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "showArrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示浮层箭头"
+  },
+  {
+    "id": 1305,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示遮罩层"
+  },
+  {
+    "id": 1991,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "transitionName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "弹出层内容区的动画名，等价于transition组件的name属性"
+  },
+  {
+    "id": 1303,
+    "platform_framework": [],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "transitionProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "动画效果定义",
+    "custom_field_type": "TdTransitionProps【import { TdTransitionProps } from '@Transition'】【interface PopupVisibleChangeContext { trigger: 'close-btn' | 'overlay' }】"
+  },
+  {
+    "id": 93,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "hover",
+    "field_enum": [
+      "hover",
+      "click",
+      "focus",
+      "mousedown",
+      "context-menu"
+    ],
+    "field_desc_zh": "触发浮层出现的方式"
+  },
+  {
+    "id": 1227,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "triggerElement",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素。值类型为字符串表示元素选择器"
+  },
+  {
+    "id": 1719908487,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 92,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否显示浮层",
+    "custom_field_type": "boolean",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1307,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500"
+  },
+  {
+    "id": 3137,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500"
+  },
+  {
+    "id": 1996,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "组件准备关闭时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1997,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "closed",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "组件关闭且动画结束后执行"
+  },
+  {
+    "id": 1994,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "open",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "组件准备展示时触发"
+  },
+  {
+    "id": 1995,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "opened",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "组件展示且动画结束后执行"
+  },
+  {
+    "id": 1695438218,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "overlayClick",
+    "field_type": [],
+    "field_desc_zh": "内容面板点击时触发",
+    "field_desc_en": "trigger on popup content click",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 2193,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "下拉选项滚动事件",
+    "event_input": "(context: { e: WheelEvent })"
+  },
+  {
+    "id": 3327,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "scrollToBottom",
+    "field_type": [],
+    "field_desc_zh": "下拉滚动触底事件，常用于滚动到底执行具体业务逻辑",
+    "event_input": "(context: { e: WheelEvent })"
+  },
+  {
+    "id": 97,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "visibleChange",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "当浮层隐藏或显示时触发，`trigger=document` 表示点击非浮层元素触发；`trigger=context-menu` 表示右击触发",
+    "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【interface PopupVisibleChangeContext { e?: PopupTriggerEvent; trigger?: PopupTriggerSource }】【type PopupTriggerEvent = MouseEvent | FocusEvent | KeyboardEvent】【type PopupTriggerSource = 'document' | 'trigger-element-click' | 'trigger-element-hover' | 'trigger-element-blur' | 'trigger-element-focus' | 'trigger-element-mousedown' | 'trigger-element-close' | 'context-menu' | 'keydown-esc'】"
+  },
+  {
+    "id": 1302,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Events",
+    "field_name": "visibleChange",
+    "field_type": [
+      "Function"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发",
+    "event_input": "(visible: boolean, trigger: PopupSource) 【type PopupSource = 'close-btn' | 'overlay' | 'document'】"
+  },
+  {
+    "id": 1695463182,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Functions",
+    "field_name": "getOverlay",
+    "field_type": [],
+    "field_desc_zh": "获取浮层元素",
+    "field_desc_en": "used to get overly html element",
+    "event_output": "HTMLElement | null"
+  },
+  {
+    "id": 1695463300,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Functions",
+    "field_name": "getOverlayState",
+    "field_type": [],
+    "field_desc_zh": "获取浮层悬浮状态",
+    "field_desc_en": "get mouseover state of overlay",
+    "event_output": "{ hover: boolean }"
+  },
+  {
+    "id": 1761621205,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Functions",
+    "field_name": "getPopper",
+    "field_type": [],
+    "field_desc_zh": "获取当前组件 popper 实例",
+    "field_desc_en": "get the popup component popper instance",
+    "event_output": "Instance | null【import { Instance } from '@popperjs/core'】"
+  },
+  {
+    "id": 1695463043,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Popup",
+    "field_category": "Functions",
+    "field_name": "update",
+    "field_type": [],
+    "field_desc_zh": "更新浮层内容",
+    "field_desc_en": "used to update overlay content"
+  },
+  {
+    "id": 1712058201,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712058212,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1759215938,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，作用同 `content` 插槽"
+  }
+]

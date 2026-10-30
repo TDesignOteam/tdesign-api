@@ -1,0 +1,120 @@
+[
+  {
+    "id": 1706635433,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "段落内容，同 content",
+    "field_desc_en": "children of title"
+  },
+  {
+    "id": 1706635466,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "段落内容",
+    "field_desc_en": "content of title"
+  },
+  {
+    "id": 1706635482,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题内容",
+    "field_desc_en": "default slot of title"
+  },
+  {
+    "id": 1706638273,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis"
+  },
+  {
+    "id": 1776829625,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis 【import { TypographyEllipsis } from '@Text'】"
+  },
+  {
+    "id": 1706635230,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Title",
+    "field_category": "Props",
+    "field_name": "level",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "h1",
+    "field_enum": [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6"
+    ],
+    "field_desc_zh": "标题等级",
+    "field_desc_en": "level of title"
+  }
+]

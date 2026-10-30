@@ -1,0 +1,198 @@
+[
+  {
+    "id": 3503,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否带边框",
+    "field_desc_en": "set description list with grey border",
+    "test_description": "{\"PC\":{\"className\":\"t-descriptions--bordered\"}}"
+  },
+  {
+    "id": 3507,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "colon",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "字段名右侧是否携带冒号“：”",
+    "field_desc_en": "set label with \":\" on the right"
+  },
+  {
+    "id": 3504,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "column",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "2",
+    "field_desc_zh": "一行 `DescriptionsItem` 的数量",
+    "field_desc_en": "count of DescriptionsItem in one row"
+  },
+  {
+    "id": 1703752844,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "contentStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自定义描述项内容的样式",
+    "field_desc_en": "style of description content",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 1703751056,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "itemLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "描述项的排列方向",
+    "field_desc_en": "layout direction of description item"
+  },
+  {
+    "id": 1703751197,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "描述项的列表",
+    "field_desc_en": "list of descriptions items",
+    "custom_field_type": "Array<TdDescriptionsItemProps>"
+  },
+  {
+    "id": 1703752820,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "labelStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自定义描述项标签的样式，需要配合 `tableLayout` 为 `auto` 才可以生效",
+    "field_desc_en": "style of description item, which takes effect when `tableLayout` is `auto`",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 3505,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "排列方向",
+    "field_desc_en": "layout direction",
+    "test_description": "{\"PC\":{\"className\":[\"t-descriptions--horizontal\",\"t-descriptions--vertical\"]}}"
+  },
+  {
+    "id": 3506,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "field_desc_en": "a descriptions has three size",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-descriptions\"}}"
+  },
+  {
+    "id": 1717655432,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "tableLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "fixed",
+    "field_enum": [
+      "fixed",
+      "auto"
+    ],
+    "field_desc_zh": "用于设置底层 `table` 单元格、行和列的布局算法，与原生 table-layout css 属性完全一致。`fixed`：采用固定布局算法；`auto`：采用自动布局算法。详情可参考 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)",
+    "field_desc_en": "Sets the algorithm used to layout `table` cells, rows, and columns, exactly the same as the native table-layout css property. `fixed`: uses fixed layout algorithm; `auto`: uses automatic layout algorithm. For more details, see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout)"
+  },
+  {
+    "id": 1703751109,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Descriptions",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述列表的标题",
+    "field_desc_en": "title of descriptions"
+  }
+]

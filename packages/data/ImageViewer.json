@@ -1,0 +1,775 @@
+[
+  {
+    "id": 1721025806,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 2605,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "backgroundColor",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "遮罩的背景颜色"
+  },
+  {
+    "id": 2711,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以完全自定义关闭按钮"
+  },
+  {
+    "id": 3472,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示关闭操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `close`，值为 `Object` 类型，表示透传至 `icon` ，不传表示不显示图标"
+  },
+  {
+    "id": 1699168758,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "closeOnEscKeydown",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "按下 ESC 时是否触发图片预览器关闭事件",
+    "field_desc_en": "trigger image viewer close event on `ESC` keydown"
+  },
+  {
+    "id": 2721,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "closeOnOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否在点击遮罩层时，触发预览关闭"
+  },
+  {
+    "id": 1765908904,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "cover",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "支持自定义覆盖在图片预览最上方的内容",
+    "version": {
+      "Vue(Mobile)": "1.12.0"
+    }
+  },
+  {
+    "id": 3125,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "deleteBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示删除操作，前提需要开启页码。值为字符串表示图标名称，值为 `true` 表示使用默认图标 `delete`，值为 `Object` 类型，表示透传至 `icon`，不传表示不显示图标"
+  },
+  {
+    "id": 3491,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "deleteBtn",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示删除操作，前提需要开启页码"
+  },
+  {
+    "id": 2717,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否允许拖拽调整位置。`mode=modal` 时，默认不允许拖拽；`mode=modeless` 时，默认允许拖拽"
+  },
+  {
+    "id": 1765908976,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义图片内容",
+    "custom_field_type": "TNode<ImageSlotParams>【interface ImageSlotParams {src: string; index?: number; extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} 】",
+    "version": {
+      "Vue(Mobile)": "1.12.0",
+      "React(Mobile)": "0.21.1"
+    }
+  },
+  {
+    "id": 1764210910,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "imageProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Image 组件",
+    "custom_field_type": "ImageProps【import { ImageProps } from '@Image'】",
+    "version": {
+      "Miniprogram": "1.12.0"
+    }
+  },
+  {
+    "id": 1711596997,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "imageReferrerpolicy",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "no-referrer",
+      "no-referrer-when-downgrade",
+      "origin",
+      "origin-when-cross-origin",
+      "same-origin",
+      "strict-origin",
+      "strict-origin-when-cross-origin",
+      "unsafe-url"
+    ],
+    "field_desc_zh": "图片预览中的 `<img>` 标签的原生属性，[MDN 定义](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)",
+    "field_desc_en": "attribute of `<img>`, [MDN Definition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)"
+  },
+  {
+    "id": 2723,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "imageScale",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": " 图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例",
+    "custom_field_type": "Partial<ImageScale>【interface ImageScale { max: number; min: number; step: number; defaultScale: number; }】"
+  },
+  {
+    "id": 2601,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "images",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "图片数组",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 2724,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "images",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "图片数组。`mainImage` 表示主图，必传；`thumbnail` 表示缩略图，如果不存在，则使用主图显示；`download` 是否允许下载图片，默认允许下载。示例: `['img_url_1', 'img_url_2']`，`[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]`",
+    "custom_field_type": "Array<string | File | ImageInfo>【interface ImageInfo { mainImage: string | File; thumbnail?: string | File; download?: boolean; isSvg?: boolean }】"
+  },
+  {
+    "id": 1717132021,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "images",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "图片数组",
+    "custom_field_type": "Array<string | ImageInfo>【interface ImageInfo { url: string; align: 'start' | 'center' | 'end'; extra?: Record<string, any>}】"
+  },
+  {
+    "id": 2713,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "index",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "当前预览图片所在的下标",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 1712662062,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "index",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "当前预览图片所在的下标",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 2802,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "initialIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "初始化页码",
+    "custom_field_type": "Number"
+  },
+  {
+    "id": 1768792174,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "innerClassName",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "内容部分的类名，支持多种格式：字符串（例如 `'name1 name2 name3'`）、数组（例如 `['name1', 'name2']`）或对象数组（例如 `[{ 'name1': true }]`）",
+    "field_desc_en": "The class name for the popover content section, supporting multiple formats: string (e.g., `'name1 name2 name3'`), array (e.g., `['name1', 'name2']`), or array of objects (e.g., `[{ 'name1': true }]`)",
+    "custom_field_type": "ClassName",
+    "version": {
+      "React(PC)": "1.16.5"
+    }
+  },
+  {
+    "id": 1748404966,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否开启图片懒加载。开启后会预加载当前图片、相邻图片",
+    "version": {
+      "Miniprogram": "1.9.4"
+    }
+  },
+  {
+    "id": 1777017746,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "loop",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否开启循环滚动"
+  },
+  {
+    "id": 2803,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "maxZoom",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "3",
+    "field_desc_zh": "图片最大放大比例"
+  },
+  {
+    "id": 2716,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "modal",
+    "field_enum": [
+      "modal",
+      "modeless"
+    ],
+    "field_desc_zh": "模态预览（modal）和非模态预览（modeless)"
+  },
+  {
+    "id": 2718,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "navigationArrow",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "切换预览图片的左图标，可自定义"
+  },
+  {
+    "id": 2603,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "showIndex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示页码"
+  },
+  {
+    "id": 2722,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否显示遮罩层。`mode=modal` 时，默认显示；`mode=modeless` 时，默认不显示"
+  },
+  {
+    "id": 2992,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "预览标题",
+    "field_desc_en": "preview title"
+  },
+  {
+    "id": 2715,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发图片预览的元素，可能是一个预览按钮，可能是一张缩略图，完全自定义，默认为预览图片的缩略图",
+    "field_desc_en": "trigger element",
+    "custom_field_type": "TNode | TNode<{ open: (index?: number) => void }>"
+  },
+  {
+    "id": 3473,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏",
+    "version": {
+      "Miniprogram": "v1.1.4"
+    }
+  },
+  {
+    "id": 2719,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "viewerScale",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "限制预览器缩放的最小宽度和最小高度，仅 `mode=modeless` 时有效",
+    "custom_field_type": "ImageViewerScale【interface ImageViewerScale { minWidth: number; minHeight: number }】"
+  },
+  {
+    "id": 2602,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏/显示预览",
+    "field_desc_en": "hide or show image viewer",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1781250866,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏/显示预览",
+    "field_desc_en": "hide or show image viewer",
+    "custom_field_type": "boolean | null",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2720,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "层级，默认为 3000"
+  },
+  {
+    "id": 3406,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "翻页时回调",
+    "event_input": "(index: number)"
+  },
+  {
+    "id": 1769240000,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "翻页时回调",
+    "event_input": "(context: { index: number })"
+  },
+  {
+    "id": 2712,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发，事件参数包含触发关闭的来源：关闭按钮、遮罩层、ESC 键",
+    "event_input": "(context: { trigger: 'close-btn' | 'overlay' | 'esc'; e: MouseEvent | KeyboardEvent })",
+    "trigger_elements": "MouseEvent<HTMLElement>/KeyboardEvent"
+  },
+  {
+    "id": 3474,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "点击操作按钮button或者overlay时触发",
+    "event_input": "(trigger: 'overlay' | 'button', visible: Boolean, index: Number)"
+  },
+  {
+    "id": 3492,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })【type ImageViewerCloseTrigger = 'image' | 'overlay' | 'close-btn'】"
+  },
+  {
+    "id": 1769240017,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "点击操作按钮button或者overlay时触发",
+    "event_input": "(context: { trigger: 'overlay' | 'button', visible: Boolean, index: Number } )"
+  },
+  {
+    "id": 3407,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "delete",
+    "field_type": [],
+    "field_desc_zh": "点击删除操作按钮时触发",
+    "event_input": "(index: number)"
+  },
+  {
+    "id": 1769240036,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "delete",
+    "field_type": [],
+    "field_desc_zh": "点击删除操作按钮时触发",
+    "event_input": "(context: { index: number } )"
+  },
+  {
+    "id": 1740567887,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "download",
+    "field_type": [],
+    "field_desc_zh": "自定义预览图片下载操作，url为图片链接",
+    "event_input": "(url: string | File)"
+  },
+  {
+    "id": 2714,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "indexChange",
+    "field_type": [],
+    "field_desc_zh": "预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片",
+    "event_input": "(index: number, context: { trigger: 'prev' | 'next' | 'current' })"
+  },
+  {
+    "id": 1712662128,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Events",
+    "field_name": "indexChange",
+    "field_type": [],
+    "field_desc_zh": "预览图片切换时触发，`context.prev` 切换到上一张图片，`context.next` 切换到下一张图片",
+    "event_input": "(index: number, context: { trigger: 'prev' | 'next' })"
+  },
+  {
+    "id": 1774433543,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Functions",
+    "field_name": "swipeTo",
+    "field_type": [],
+    "field_desc_zh": "切换到指定预览图片位置",
+    "event_input": "(index: number, options?: SwiperToOptions)【import { SwiperToOptions } from '@Swiper'】",
+    "version": {
+      "Vue(Mobile)": "1.13.2"
+    }
+  },
+  {
+    "id": 1759199178,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Slots",
+    "field_name": "close-btn",
+    "field_type": [],
+    "field_desc_zh": "关闭操作"
+  },
+  {
+    "id": 1759199206,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageViewer",
+    "field_category": "Slots",
+    "field_name": "delete-btn",
+    "field_type": [],
+    "field_desc_zh": "删除操作"
+  }
+]

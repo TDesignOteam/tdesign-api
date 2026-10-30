@@ -1,12 +1,12 @@
-export const API_CATEGORY_PROPS = 1
-export const API_CATEGORY_EVENTS = 2
-export const API_CATEGORY_FUNCTIONS = 4
-export const API_CATEGORY_PLUGINS = 8
-export const API_CATEGORY_EXTENDS = 16
-export const API_CATEGORY_RETURN = 32
-export const API_CATEGORY_T = 64
-export const API_CATEGORY_CLASS_API = 128
-export const API_CATEGORY_CSS_VAR_API = 256
+export const API_CATEGORY_PROPS = 'Props'
+export const API_CATEGORY_EVENTS = 'Events'
+export const API_CATEGORY_FUNCTIONS = 'Functions'
+export const API_CATEGORY_PLUGINS = 'PluginAPI'
+export const API_CATEGORY_EXTENDS = 'Extends'
+export const API_CATEGORY_RETURN = 'Return'
+export const API_CATEGORY_T = '<T>'
+export const API_CATEGORY_CLASS_API = 'External Classes'
+export const API_CATEGORY_CSS_VAR_API = 'CSS Variables'
 
 export const API_CATEGORY_MAP = {
   [API_CATEGORY_PROPS]: {
@@ -62,19 +62,19 @@ export const API_CATEGORY_MAP = {
   }
 }
 
-export const STRING = 1
-export const NUMBER = 2
-export const BOOLEAN = 4
-export const OBJECT = 8
-export const ARRAY = 16
-export const FUNCTION = 32
-export const TNODE = 64
+export const STRING = 'String'
+export const NUMBER = 'Number'
+export const BOOLEAN = 'Boolean'
+export const OBJECT = 'Object'
+export const ARRAY = 'Array'
+export const FUNCTION = 'Function'
+export const TNODE = 'TNode'
 
-export const P_VUE_PC = 1
-export const P_REACT_PC = 2
-export const P_ANGULAR_PC = 4
-export const P_VUE_MOBILE = 8
-export const P_REACT_MOBILE = 16
-export const P_ANGULAR_MOBILE = 32
-export const P_MINIPROGRAM = 64
-export const P_UNIAPP = 128
+export const P_VUE_PC = 'Vue(PC)'
+export const P_REACT_PC = 'React(PC)'
+export const P_ANGULAR_PC = 'Angular(PC)'
+export const P_VUE_MOBILE = 'Vue(Mobile)'
+export const P_REACT_MOBILE = 'React(Mobile)'
+export const P_ANGULAR_MOBILE = 'Angular(Mobile)'
+export const P_MINIPROGRAM = 'Miniprogram'
+export const P_UNIAPP = 'UniApp'

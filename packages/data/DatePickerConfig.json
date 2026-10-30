@@ -1,0 +1,373 @@
+[
+  {
+    "id": 1943,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定” 描述文本",
+    "field_desc_en": "confirm text"
+  },
+  {
+    "id": 1939,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "dayAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“日” 描述文本",
+    "field_desc_en": "date text"
+  },
+  {
+    "id": 3309,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "dayjsLocale",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "dayjs 语言国际化配置",
+    "field_desc_en": "dayjs language international configuration"
+  },
+  {
+    "id": 1937,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'ltr'",
+    "field_desc_zh": "日期方向，'ltr' 表示从左往右",
+    "field_desc_en": "range separator text"
+  },
+  {
+    "id": 1933,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "firstDayOfWeek",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "7",
+    "field_enum": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "field_desc_zh": "第一天从星期几开始"
+  },
+  {
+    "id": 1938,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'YYYY-MM-DD'",
+    "field_desc_zh": "日期格式化规则",
+    "field_desc_en": "date format rules"
+  },
+  {
+    "id": 2251,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "monthAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“月” 描述文本",
+    "field_desc_en": "month text"
+  },
+  {
+    "id": 1932,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "months",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1951,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "nextDecade",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“下个十年” 描述文本",
+    "field_desc_en": "next decade text"
+  },
+  {
+    "id": 1948,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "nextMonth",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“下个月” 描述文本",
+    "field_desc_en": "next month text"
+  },
+  {
+    "id": 1946,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "nextYear",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“下一年” 描述文本",
+    "field_desc_en": "next year text"
+  },
+  {
+    "id": 1952,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "now",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“此刻” 描述文本",
+    "field_desc_en": "now text"
+  },
+  {
+    "id": 1930,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "占位符文本提示，默认值：`{ date: '请选择日期',  month: '请选择月份',  year: '请选择年份' }`",
+    "custom_field_type": "{ date?: string; month?: string; year?: string }"
+  },
+  {
+    "id": 1950,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "preDecade",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上个十年” 描述文本",
+    "field_desc_en": "pre decade text"
+  },
+  {
+    "id": 1949,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "preMonth",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上个月” 描述文本",
+    "field_desc_en": "pre month text"
+  },
+  {
+    "id": 1947,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "preYear",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上一年” 描述文本",
+    "field_desc_en": "pre year text"
+  },
+  {
+    "id": 1961,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "presets",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "【暂不支持，讨论确认中】预设快捷日期选择，示例：`{ '元旦': '2021-01-01', '昨天':  dayjs().subtract(1, 'day').format('YYYY-MM-DD'), '特定日期': () => ['2021-02-01'] }`",
+    "custom_field_type": "ConfigPresetDate【interface ConfigPresetDate { [name: string]: DateConfigValue | (() => DateConfigValue) }】【type DateConfigValue = string | Date | Array<DateConfigValue>】"
+  },
+  {
+    "id": 2920,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "quarters",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "季度文本描述，默认值：['1 季度', '2 季度', '3 季度', '4 季度']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1936,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "rangeSeparator",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“ 至 ” 范围分隔符描述文本，示例：' ~ '",
+    "field_desc_en": "range separator text"
+  },
+  {
+    "id": 1945,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "selectDate",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“选择日期” 描述文本",
+    "field_desc_en": "select date text"
+  },
+  {
+    "id": 1944,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "selectTime",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“选择时间” 描述文本",
+    "field_desc_en": "select time text"
+  },
+  {
+    "id": 1940,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "weekAbbreviation",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“周” 描述文本",
+    "field_desc_en": "week text"
+  },
+  {
+    "id": 1931,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "weekdays",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1941,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DatePickerConfig",
+    "field_category": "Props",
+    "field_name": "yearAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“年” 描述文本",
+    "field_desc_en": "year text"
+  }
+]

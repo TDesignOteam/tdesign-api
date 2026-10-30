@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1690444114,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "attrs",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于透传筛选器属性到自定义组件 `component`，HTML 原生属性",
+    "field_desc_en": "html attributes of component",
+    "custom_field_type": "HTMLElementAttributes"
+  },
+  {
+    "id": 1690445477,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "classNames",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "透传类名到自定义组件 `component`",
+    "field_desc_en": "component class names",
+    "custom_field_type": "ClassName"
+  },
+  {
+    "id": 2060,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "component",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义筛选器，只要保证自定义筛选器包含 value 属性 和 change 事件，即可像内置筛选器一样正常使用。示例：`component: DatePicker`",
+    "custom_field_type": "ComponentType"
+  },
+  {
+    "id": 2730,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "confirmEvents",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "哪些事件触发后会进行过滤搜索（确认按钮无需配置，会默认触发搜索）。输入框组件示例：`confirmEvents: ['onEnter']`",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1693805055,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于表头标题和过滤文本行中的列标题不一样的场景",
+    "field_desc_en": "filter column title text, used to be showed in filter row",
+    "custom_field_type": "string | TNode"
+  },
+  {
+    "id": 2058,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "list",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "用于配置当前筛选器可选值有哪些，仅当 `filter.type` 等于 `single` 或 `multiple` 时有效",
+    "custom_field_type": "Array<OptionData>"
+  },
+  {
+    "id": 1709366584,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "listFilterConfig",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "选项过滤功能配置，`listFilterConfig=true` 表示使用默认过滤功能和组件风格，`listFilterConfig.filterMethod` 用于自定义过滤方法，其中 `props/className/style` 分别表示透传属性、类名、样式到输入框组件",
+    "field_desc_en": "config of `filter.list`, used to filter `list`. `listFilterConfig=true` means default filter function used. `listFilterConfig.filterMethod` used to custom filter rules",
+    "custom_field_type": "boolean | ListFilterConfig【interface ListFilterConfig { filterMethod?: (item: OptionData, keyword: string) => boolean; props?: InputProps; className?: string; style?: Styles; slots?: { [key: string]: () => JSX.Element }}】"
+  },
+  {
+    "id": 3208,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性到筛选器浮层",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2059,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "props",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于透传筛选器属性到自定义组件 `component`，可以对筛选器进行任何原组件支持的属性配置",
+    "custom_field_type": "FilterProps【type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any }】【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 2062,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "resetValue",
+    "field_type": [],
+    "field_desc_zh": "重置时设置的值，示例：'' 或 []",
+    "custom_field_type": "any"
+  },
+  {
+    "id": 2061,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "showConfirmAndReset",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示重置和确认。值为真，过滤事件（filter-change）会在确定时触发；值为假，则数据变化时会立即触发过滤事件"
+  },
+  {
+    "id": 1690445626,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传内联样式到自定义组件 `component`",
+    "field_desc_en": "styles of component",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 2057,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TableColumnFilter",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "用于设置筛选器类型：单选按钮筛选器、复选框筛选器、输入框筛选器。更多复杂组件，请更为使用 `component` 自定义任意组件",
+    "custom_field_type": "FilterType【type FilterType = 'input' | 'single' | 'multiple'】"
+  }
+]

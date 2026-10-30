@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1782292053,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "LoadingConfig",
+    "field_category": "Extends",
+    "field_name": "LoadingProps【import { LoadingProps } from '@Loading'】",
+    "field_type": []
+  }
+]

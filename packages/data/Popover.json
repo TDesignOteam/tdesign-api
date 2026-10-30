@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1726067019,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素，同 triggerElement",
+    "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>"
+  },
+  {
+    "id": 3526,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "closeOnClickOutside",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否在点击外部元素后关闭菜单 "
+  },
+  {
+    "id": 942,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "确认框内容"
+  },
+  {
+    "id": 3518,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素，同 triggerElement"
+  },
+  {
+    "id": 1765425274,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "fixed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "如果触发元素为 `fixed` 场景，需要显示指定 `fixed` 属性为 `true`，同时需在触发元素层添加 `t-popover-wrapper--fixed` 类，用于定位触发元素 ",
+    "version": {
+      "Miniprogram": "1.12.1"
+    }
+  },
+  {
+    "id": 3514,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "top",
+      "left",
+      "right",
+      "bottom",
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right",
+      "left-top",
+      "left-bottom",
+      "right-top",
+      "right-bottom"
+    ],
+    "field_desc_zh": "浮层出现位置"
+  },
+  {
+    "id": 3513,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "showArrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示浮层箭头"
+  },
+  {
+    "id": 3516,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "dark",
+    "field_enum": [
+      "dark",
+      "light",
+      "brand",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "弹出气泡主题"
+  },
+  {
+    "id": 3517,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "triggerElement",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素"
+  },
+  {
+    "id": 1160,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否显示气泡确认框",
+    "syntactic_sugar": "v-model"
+  },
+  {
+    "id": 1769003994,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否显示气泡确认框",
+    "syntactic_sugar": "v-model"
+  },
+  {
+    "id": 3519,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Events",
+    "field_name": "visibleChange",
+    "field_type": [],
+    "field_desc_zh": "确认框显示或隐藏时触发",
+    "event_input": "(visible: boolean)",
+    "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>"
+  },
+  {
+    "id": 1762617354,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1762617306,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1762944284,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popover",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，用于自定义触发元素"
+  }
+]

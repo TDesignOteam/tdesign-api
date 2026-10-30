@@ -5,12 +5,13 @@ import axios from 'axios';
 import chalk from 'chalk';
 import prettier from 'prettier';
 import prettierConfig from '../../../config/prettier.js';
-import { kebabCaseComponent } from '../../../utils.js';
+import { API_ORIGIN } from '../../../core/context.js';
+import { kebabCaseComponent } from '../../../core/utils.js';
 import { parseJSON } from '../../utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// 将 api.json 中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
+// 将组件 API 数据中的 testDescription 字段输出到 vitest/tests 中，方便本地开发
 async function generateTestDescriptionToVitestFile(baseData, { component }) {
   const tests = {};
   // 一个组件可能由多个子组件拼凑而成
@@ -43,10 +44,9 @@ async function generateTestDescriptionToVitestFile(baseData, { component }) {
 }
 
 function uploadOneApi(id, testDescription) {
-  const url = '127.0.0.1:16001';
   return axios.request({
     method: 'put',
-    url: `http://${url}/cmp/api`,
+    url: `${API_ORIGIN}/cmp/api`,
     data: {
       id,
       test_description: testDescription,
@@ -65,8 +65,8 @@ async function readTestsFile(component) {
   }
 }
 
-// 上传本地测试用例 vitest/tests 到 DB 文件
-function uploadVitestFileDataToDB(component) {
+// 将本地测试用例 vitest/tests 写回组件 API 数据
+function saveVitestFileData(component) {
   return new Promise((resolve, reject) => {
     readTestsFile(component).then((componentTests) => {
       const promiseList = [];
@@ -92,4 +92,4 @@ function uploadVitestFileDataToDB(component) {
   });
 }
 
-export { generateTestDescriptionToVitestFile, uploadVitestFileDataToDB };
+export { generateTestDescriptionToVitestFile, saveVitestFileData };

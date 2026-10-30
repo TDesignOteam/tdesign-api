@@ -1,0 +1,18 @@
+[
+  {
+    "id": 3296,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputGroup",
+    "field_category": "Props",
+    "field_name": "separate",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "多个输入框之间是否需要间隔",
+    "field_desc_en": "need separate between multiple inputs",
+    "test_description": "{\"PC\":{\"wrapper\":\"getInputGroupDefaultMount\",\"className\":\"t-input-group--separate\"}}"
+  }
+]

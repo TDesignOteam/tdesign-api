@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 const cmpApiInstance = axios.create({
-
   baseURL: getBaseURL(),
   headers: {
     'Access-Control-Allow-Origin': '*'

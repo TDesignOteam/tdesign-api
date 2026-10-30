@@ -1,0 +1,236 @@
+[
+  {
+    "id": 3249,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "当前轮播在哪一项（下标）",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 3251,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "轮播滑动方向，包括横向滑动和纵向滑动两个方向",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 2042,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "minShowNum",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "小于这个数字不会显示导航器"
+  },
+  {
+    "id": 3252,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "paginationPosition",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "bottom",
+    "field_enum": [
+      "top-left",
+      "top",
+      "top-right",
+      "bottom-left",
+      "bottom",
+      "bottom-right",
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "页码信息展示位置",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 2039,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "inside",
+    "field_enum": [
+      "inside",
+      "outside"
+    ],
+    "field_desc_zh": "导航器位置，位于主体的内侧或是外侧"
+  },
+  {
+    "id": 1734341852,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "inside",
+    "field_enum": [
+      "inside",
+      "outside"
+    ],
+    "field_desc_zh": "导航器位置，位于主体的内侧或是外侧"
+  },
+  {
+    "id": 2195,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "showControls",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示两侧的控制按钮",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 2040,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "showSlideBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "always",
+    "field_enum": [
+      "always",
+      "hover",
+      "never"
+    ],
+    "field_desc_zh": "何时显示导航器的翻页按钮：始终显示、悬浮显示、永不显示"
+  },
+  {
+    "id": 2038,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "导航器尺寸"
+  },
+  {
+    "id": 3250,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "total",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "总共的项数",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 2037,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "导航器类型，点状(dots)、点条状(dots-bar)、条状(bars)、分式(fraction)等",
+    "custom_field_type": "SwiperNavigationType【type SwiperNavigationType = 'dots' | 'dots-bar' | 'bars' | 'fraction'】"
+  },
+  {
+    "id": 2041,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SwiperNavigation",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等",
+    "custom_field_type": "SwiperNavigationType【type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction'】"
+  }
+]

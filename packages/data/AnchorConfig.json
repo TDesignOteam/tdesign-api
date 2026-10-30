@@ -1,0 +1,30 @@
+[
+  {
+    "id": 2404,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AnchorConfig",
+    "field_category": "Props",
+    "field_name": "copySuccessText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“链接复制成功”描述文本"
+  },
+  {
+    "id": 2405,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AnchorConfig",
+    "field_category": "Props",
+    "field_name": "copyText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“复制链接” 描述文本"
+  }
+]

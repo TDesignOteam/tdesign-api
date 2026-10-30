@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1772103332,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSenderConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，占位符描述文本"
+  },
+  {
+    "id": 1772103359,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSenderConfig",
+    "field_category": "Props",
+    "field_name": "sendText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，发送按钮描述文本"
+  },
+  {
+    "id": 1772103371,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSenderConfig",
+    "field_category": "Props",
+    "field_name": "stopText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，停止发送按钮描述文本"
+  }
+]

@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1088,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "allowHalf",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许半选"
+  },
+  {
+    "id": 2075,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许清除评分，如果允许，重新点击当前评分清除"
+  },
+  {
+    "id": 1092,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "'#ED7B2F'",
+    "field_desc_zh": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']",
+    "custom_field_type": "string | Array<string>"
+  },
+  {
+    "id": 1712911333,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "'#ED7B2F'",
+    "field_desc_zh": "评分图标的颜色，样式中默认为 #ED7B2F。一个值表示设置选中高亮的五角星颜色，示例：[选中颜色]。数组则表示分别设置 选中高亮的五角星颜色 和 未选中暗灰的五角星颜色，[选中颜色，未选中颜色]。示例：['#ED7B2F', '#E3E6EB']",
+    "custom_field_type": "string | Array<string>",
+    "version": {
+      "Miniprogram": "0.30.0"
+    }
+  },
+  {
+    "id": 1086,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "count",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "5",
+    "field_desc_zh": "评分的数量"
+  },
+  {
+    "id": 1357,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用评分"
+  },
+  {
+    "id": 1354,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "gap",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "4",
+    "field_desc_zh": "评分图标的间距"
+  },
+  {
+    "id": 1712916879,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "gap",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "8",
+    "field_desc_zh": "评分图标的间距"
+  },
+  {
+    "id": 2884,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义评分图标"
+  },
+  {
+    "id": 2885,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_desc_zh": "自定义评分图标，[选中图标，未选中图标]",
+    "custom_field_type": "string | string[]",
+    "version": {
+      "Miniprogram": "0.30.0"
+    }
+  },
+  {
+    "id": 3438,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义评分图标，[选中图标，未选中图标]",
+    "custom_field_type": "Array<TNode | Function>"
+  },
+  {
+    "id": 1712029577,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "iconPrefix",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "定义图标前缀"
+  },
+  {
+    "id": 1712029537,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "top ",
+      " bottom ",
+      " ''"
+    ],
+    "field_desc_zh": "选择评分弹框的位置，值为空字符表示不显示评分弹框"
+  },
+  {
+    "id": 1838,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "showText",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示对应的辅助文字"
+  },
+  {
+    "id": 1093,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "24px",
+    "field_desc_zh": "评分图标的大小"
+  },
+  {
+    "id": 1091,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "texts",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分']",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 1085,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "选择评分的值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 2428,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "outline",
+    "field_enum": [
+      "outline",
+      "filled"
+    ],
+    "field_desc_zh": "已废弃。形状类型，有描边类型和填充类型两种"
+  },
+  {
+    "id": 1761301677,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "评分数改变时触发",
+    "event_input": "(value: number)"
+  },
+  {
+    "id": 1712029768,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712029783,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "External Classes",
+    "field_name": "t-class-icon",
+    "field_type": [],
+    "field_desc_zh": "图标样式类"
+  },
+  {
+    "id": 1712029794,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Rate",
+    "field_category": "External Classes",
+    "field_name": "t-class-text",
+    "field_type": [],
+    "field_desc_zh": "文本样式类"
+  }
+]

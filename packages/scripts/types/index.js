@@ -6,16 +6,6 @@ import path from 'path';
 import chalk from 'chalk';
 import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
 import prettier from 'prettier';
-import {
-  isPlugin,
-  getTdCmpName,
-  getEventName,
-  getFolderName,
-  getDefaultValueName,
-  isComponentFunction,
-  getInstanceName,
-  getApiComponentMapByFrameWork,
-} from '../common.js';
 import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
 import {
   FRAMEWORK_MAP,
@@ -26,9 +16,20 @@ import {
   getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
+import {
+  isPlugin,
+  isTypeApi,
+  getTdCmpName,
+  getEventName,
+  getFolderName,
+  getDefaultValueName,
+  isComponentFunction,
+  getInstanceName,
+  getApiComponentMapByFrameWork,
+} from '../core/context.js';
+import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
-import { getComponentBasePath } from '../utils.js';
-import generateGlobals from './global/index.js';
+import { formatTypeImport, toTypeImport } from './import.js';
 import { getMiniprogramType, fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 import formatTNode from './t-node.js';
 
@@ -65,7 +66,7 @@ function getComment(api) {
   let defaultValue = api.field_default_value;
   let dft = '';
   // 字符串类型，默认为空字符串
-  const defaultEmptyString = api.field_type_text.join() === 'String' && !defaultValue && !api.field_enum;
+  const defaultEmptyString = api.field_type.join() === 'String' && !defaultValue && !api.field_enum;
   if (defaultEmptyString) {
     defaultValue = "''";
   }
@@ -95,7 +96,6 @@ function formatOneType(api, oneType) {
   let r = type;
   if (type === 'string' && api.field_enum) {
     r = api.field_enum
-      .split('/')
       .map((val) => `'${val.trim()}'`.replace(/''/g, "'"))
       .join(' | ');
   }
@@ -105,7 +105,7 @@ function formatOneType(api, oneType) {
 function getPropsApiType(api, framework) {
   let type = '';
   const csType = api.custom_field_type;
-  const baseType = api.field_type_text;
+  const baseType = api.field_type;
   const hasTNodes = baseType.includes('TNode');
   const exports = [];
   if (hasTNodes) {
@@ -154,7 +154,7 @@ function getEventsApiType(api) {
     const { baseName: rawBaseName, exports, imports } = formatTsTypeDesc(api.event_input);
     // 容错处理：event_input 中可能误用分号分隔参数，需替换为逗号
     const baseName = rawBaseName ? rawBaseName.replace(/;/g, ',').trim() : rawBaseName;
-    if (api.field_category_text === 'Functions' && isCompleteFunctionType(baseName)) {
+    if (api.field_category === 'Functions' && isCompleteFunctionType(baseName)) {
       r = { type: baseName, exports, imports };
     } else {
       r = {
@@ -164,7 +164,7 @@ function getEventsApiType(api) {
       };
     }
   }
-  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.type)) {
+  if (api.field_category === 'Functions' && isCompleteFunctionType(r.type)) {
     return r;
   }
   if (api.event_output) {
@@ -200,7 +200,7 @@ function formatType(api, framework) {
   if (framework !== 'Miniprogram') {
     map.Events = getEventsApiType;
   }
-  const func = map[api.field_category_text];
+  const func = map[api.field_category];
   if (typeof func === 'function') {
     return func(api, framework);
   }
@@ -210,7 +210,7 @@ function formatType(api, framework) {
 // 获取插件参数
 function getPluginDesc(api, type) {
   if (!api.field_name || api.field_name === '-') return;
-  const t = type || api.field_type_text.join(' | ').toLocaleLowerCase();
+  const t = type || api.field_type.join(' | ').toLocaleLowerCase();
   // return [comment, indent, name, required, type];
   return ['', '', api.field_name, api.field_required ? '' : '?', type || t];
 }
@@ -220,7 +220,7 @@ function formatApi(api, framework, plugin) {
     Props: api.field_name,
     Events: getEventName(api.field_name),
     Functions: api.field_name,
-  }[api.field_category_text];
+  }[api.field_category];
   if (!name) return;
   let exportsApi = [];
   let importsApi = [];
@@ -246,13 +246,13 @@ function formatApi(api, framework, plugin) {
   // UniApp 中默认值为 undefined 的 Props 属性，TS 类型需加上 | null
   let finalType = type;
   // Functions 若填写了完整 TS 类型（如 ScrollToFn 重载），优先用它作为方法类型
-  if (api.field_category_text === 'Functions' && isCompleteFunctionType(r.baseName)) {
+  if (api.field_category === 'Functions' && isCompleteFunctionType(r.baseName)) {
     finalType = r.baseName.trim();
   }
   if (
     framework === 'UniApp' &&
     api.field_default_value === 'undefined' &&
-    api.field_category_text === 'Props' &&
+    api.field_category === 'Props' &&
     finalType &&
     !/(^|[|\s])null(\s*[|]|$)/.test(finalType)
   ) {
@@ -274,6 +274,23 @@ function getInterfaceInfo(name, extendApis, TApis = []) {
   const et = extendApis.length ? ` extends ${extendApis}` : '';
   const t = TApis.length ? TApis.join('') : '';
   return `export interface ${name}${t}${et} {`;
+}
+
+/**
+ * Extends Pick<Parent, 'a' | 'b'> 已带上的字段不再写入 interface 主体，
+ * 避免重复覆盖且类型冲突
+ */
+function getExtendedPickKeys(extendApis = []) {
+  const keys = new Set();
+  extendApis.forEach((ext) => {
+    for (const match of String(ext).matchAll(/Pick<\s*[^,]+,\s*([^>]+)>/g)) {
+      match[1].split('|').forEach((part) => {
+        const key = part.replace(/['"`\s]/g, '');
+        if (key) keys.add(key);
+      });
+    }
+  });
+  return keys;
 }
 
 function formatTsTypeDesc(str) {
@@ -303,7 +320,7 @@ function formatTsTypeDesc(str) {
 
 function initApi(apiData) {
   const api = { ...apiData };
-  if (api.field_category_text === 'Events') {
+  if (api.field_category === 'Events') {
     delete api.field_default_value;
   }
   return api;
@@ -320,26 +337,40 @@ function formatCommonTypeImports(str, types) {
   return arr;
 }
 
+function isFrameworkTypeImport(statement) {
+  return /from ['"](?:react|vue)['"]/.test(statement || '');
+}
+
+// 框架类型（react / vue）排在最前，与 Vue props 的 from 'vue' 一致
+function sortTypeImports(imports) {
+  const list = (imports || []).filter((v) => !!v);
+  const framework = [];
+  const rest = [];
+  list.forEach((item) => {
+    (isFrameworkTypeImport(item) ? framework : rest).push(item);
+  });
+  return framework.concat(rest);
+}
+
 // 按需引入，存储需要从 common 或公共库等路径下引入的类型定义
 function getGlobalsImports(str, framework) {
   const current = FRAMEWORK_MAP[framework];
-  const map = {
-    // 从全局通用类型文件中引入数据类型，如： import { XXX  } from 'common.ts';
-    common: {
-      path: current.commonRelativePath,
-      types: formatCommonTypeImports(str, GLOBAL_TYPES),
-    },
-  };
-  // 从框架中引入数据类型，如： import { MouseEvent  } from 'react';
+  const map = {};
+  // 从框架中引入数据类型，如： import type { MouseEvent } from 'react';
   if (framework === 'React(PC)' || framework === 'React(Mobile)') {
     map.react = {
       path: 'react',
       types: formatCommonTypeImports(str, REACT_TYPES),
     };
   }
+  // 从全局通用类型文件中引入数据类型，如： import type { XXX } from '../common';
+  map.common = {
+    path: current.commonRelativePath,
+    types: formatCommonTypeImports(str, GLOBAL_TYPES),
+  };
   const r = Object.keys(map)
     .filter((key) => map[key].types.length)
-    .map((key) => `import type { ${map[key].types.join(', ')} } from '${map[key].path}';`);
+    .map((key) => formatTypeImport(map[key].types, map[key].path));
   return r;
 }
 
@@ -349,7 +380,7 @@ function replaceInputEvent(str, newApi) {
   let newStr = str.replace(/InputEvent/g, 'FormEvent');
   const reg = new RegExp(`(${REACT_EVENTS.concat('ImageEvent').join('|')})`, 'g');
   // 处理字段 trigger_elements，可能存在多个事件替换的情况
-  const triggerElements = newApi.trigger_elements.split('/');
+  const triggerElements = (newApi.trigger_elements || '').split('/');
   newStr = newStr.replace(reg, (val) => {
     const r = triggerElements.find((el) => el && el.indexOf(val) !== -1);
     return r || `${val}<${['FormEvent', 'InputEvent'].includes(val) ? 'HTMLInputElement' : 'HTMLDivElement'}>`;
@@ -397,17 +428,15 @@ function formatAliasImportsPath(imports, framework) {
       // 只对组件间引用（'@组件名' 格式路径）进行 Td 前缀转换，外部依赖导入不处理
       const cmpMatch = item.match(/'@(\w+)'/);
       if (!cmpMatch || !cmpMatch[1] || !components.includes(cmpMatch[1])) {
-        // 非组件引用，仅添加 type 关键字
-        return item.replace(/^import\s+\{/, 'import type {');
+        return item;
       }
-      const reg = /import\s+\{\s+(\w+)/;
-      return item.replace(reg, (a, b) => {
+      return item.replace(/import(?:\s+type)?\s+\{\s+(\w+)/, (full, name) => {
         // 只有组件主类型（如 ButtonProps、MessageOptions）才需要加 Td 前缀
         // TS 类型（如 FormRule）和组件内部辅助类型（如 CheckboxIconType、TabValue）不需要
-        if (!tdPrefixedTypeNames.has(b)) {
-          return `import type { ${b}`;
+        if (!tdPrefixedTypeNames.has(name)) {
+          return full;
         }
-        return `import type { Td${b} as ${b}`;
+        return full.replace(name, `Td${name} as ${name}`);
       });
     })
     .map((item) => {
@@ -454,7 +483,7 @@ function formatImportsPath(imports, framework) {
         // 将 from 'common.ts' 替换为框架对应的 commonRelativePath
         .replace(/from '@common'/, `from '${current.commonRelativePath}'`),
   );
-  return newImports;
+  return newImports.map(toTypeImport);
 }
 
 /**
@@ -473,7 +502,7 @@ function getMiniprogramOriginalApi(miniprogram) {
     const r = formatApi(apiData, framework) || {};
     if (r.desc instanceof Array && r.desc.length) {
       const [comment, indent, name, required, type] = r.desc;
-      const rType = getMiniprogramType(apiData.field_type_text, type);
+      const rType = getMiniprogramType(apiData.field_type, type);
       const apiContext = [formatComment(comment), indent, name, required, ': ', rType].filter((v) => !!v).join('');
       apiArr.push(`${apiContext};`);
     }
@@ -499,6 +528,11 @@ function getTypeScriptDesc(componentMap, framework) {
     const apis = componentMap[cmp];
     const isPluginFunctions = isPlugin(cmp);
     const miniprogram = {};
+    const pickedKeys = getExtendedPickKeys(
+      apis
+        .filter((apiData) => !apiData.deprecated && apiData.field_category === 'Extends')
+        .map((apiData) => formatTsTypeDesc(apiData.field_name).baseName),
+    );
     apis.forEach((apiData) => {
       //废弃属性不输出到到 TS 文件
       if (apiData.deprecated) return;
@@ -514,15 +548,15 @@ function getTypeScriptDesc(componentMap, framework) {
       // HTML 原生属性不输出到 TS 文件
       if (api.html_attribute) return;
       // 特殊 API 和 普通 API 分开处理：'Return', 'Extends', '<T>'等属于特殊 API
-      if (['Return', 'Extends', '<T>'].includes(api.field_category_text)) {
+      if (['Return', 'Extends', '<T>'].includes(api.field_category)) {
         const r = formatTsTypeDesc(api.field_name);
         exports = exports.concat(r.exports);
         imports = imports.concat(r.imports);
-        if (api.field_category_text === 'Return') {
+        if (api.field_category === 'Return') {
           returnName = r.baseName;
-        } else if (api.field_category_text === 'Extends') {
+        } else if (api.field_category === 'Extends') {
           extendApis.push(r.baseName);
-        } else if (api.field_category_text === '<T>') {
+        } else if (api.field_category === '<T>') {
           tApis.push(r.baseName);
         }
       } else {
@@ -533,10 +567,16 @@ function getTypeScriptDesc(componentMap, framework) {
         const r = formatApi(newApi, framework, plugin) || {};
         if (r.desc instanceof Array && r.desc.length) {
           const [comment, indent, name, required, type] = r.desc;
+          // Pick 已包含的字段只用于文档 / props，不重复写进 TS
+          if (pickedKeys.has(name)) {
+            exports = exports.concat(r.exports);
+            imports = imports.concat(r.imports);
+            return;
+          }
           // 小程序 TS 类型特殊，需单独处理
           const rType =
             framework === 'Miniprogram' && !COMPONENTS_MAP[api.component].type
-              ? getMiniprogramType(api.field_type_text, type, api.field_required)
+              ? getMiniprogramType(api.field_type, type, api.field_required)
               : type;
           const apiContext = [formatComment(comment, plugin), indent, name, required, ': ', rType]
             .filter((v) => !!v)
@@ -544,7 +584,7 @@ function getTypeScriptDesc(componentMap, framework) {
           // 小程序中，纯 TNode 类型，表示没有 props，仅需支持插槽
           if (type) {
             // API 是否为组件实例方法
-            const isInstanceFuncs = isComponentFunction(cmp, api.field_category_text);
+            const isInstanceFuncs = isComponentFunction(cmp, api.field_category);
             if (isInstanceFuncs) {
               instanceFunctions.push(`${apiContext};`);
             } else {
@@ -552,7 +592,7 @@ function getTypeScriptDesc(componentMap, framework) {
             }
           }
           // 添加非受控属性 ts 定义
-          if (api.syntactic_sugar && api.field_category_text !== 'Events') {
+          if (api.syntactic_sugar && api.field_category !== 'Events') {
             const ds = [
               formatComment(comment, plugin, 'uncontrol'),
               indent,
@@ -569,7 +609,7 @@ function getTypeScriptDesc(componentMap, framework) {
           if (
             ['VueNext(PC)', 'Vue(Mobile)'].includes(framework) &&
             api.syntactic_sugar === 'v-model' &&
-            api.field_category_text !== 'Events'
+            api.field_category !== 'Events'
           ) {
             const ds = [formatComment(comment, plugin), indent, 'modelValue', required, ': ', rType]
               .filter((v) => !!v)
@@ -675,6 +715,7 @@ async function combineTsFile(componentMap, framework) {
     ) {
       ts[cmp].imports = ts[cmp].imports.concat(getGlobalsImports(bodyDesc + exportDesc, framework));
     }
+    ts[cmp].imports = sortTypeImports(ts[cmp].imports);
     const r = [`${ts[cmp].imports.filter((v) => !!v).join('\n')}`, bodyDesc, exportDesc].filter((v) => !!v);
     const str = `${r.join('\n\n')}\n`;
     // ts[cmp] = str;
@@ -703,14 +744,22 @@ async function generateTypes(baseData, framework) {
     console.error(`framework isn't in ${keys}`);
     return;
   }
-  // 输出全局类型定义文件
-  generateGlobals(framework);
-
   const basePath = FRAMEWORK_MAP[framework].tsBasePath;
 
   // 输出 TS 类型定义文件
   const apiTypes = await combineTsFile(baseData, framework);
+  const typeCombineMap = getApiComponentMapByFrameWork(
+    ['Miniprogram', 'UniApp'].includes(framework)
+      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+      : MOBILE_FRAMES.includes(framework)
+        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
+        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
+    framework,
+  );
   for (const cmp of Object.keys(apiTypes)) {
+    // 未注册名称、以及未作为合并父级的独立 TS 类型（TScroll / InfinityScroll 等）不单独建目录
+    if (!COMPONENTS_MAP[cmp]) continue;
+    if (isTypeApi(cmp) && !typeCombineMap[cmp]) continue;
     let folder = '';
     const folderName = getFolderName(cmp);
     folder = path.resolve(getComponentBasePath(cmp, basePath, framework), folderName);

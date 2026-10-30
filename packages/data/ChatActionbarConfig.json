@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1772103301,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbarConfig",
+    "field_category": "Props",
+    "field_name": "actionBar",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，对话操作栏描述文本",
+    "custom_field_type": "{ replay: string; copy: string; good: string; bad: string; share: string; quote: string; }"
+  }
+]
