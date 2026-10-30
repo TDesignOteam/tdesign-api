@@ -24570,7 +24570,8 @@
       "field_type": [
         "1",
         "2",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "[]",
       "field_enum": "",
@@ -24579,9 +24580,9 @@
       "field_required": 0,
       "event_input": "",
       "create_time": "2020-12-21 06:22:33",
-      "update_time": "2022-07-06 03:06:27",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
-      "custom_field_type": "CascaderValue<CascaderOption>【type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | T | Array<CascaderValue<T>>】",
+      "custom_field_type": "CascaderValue<CascaderOption>【type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | bigint | T | Array<CascaderValue<T>>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -24598,7 +24599,8 @@
       "field_type_text": [
         "String",
         "Number",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {
@@ -25380,7 +25382,8 @@
       "id": 1888,
       "platform_framework": [
         "1",
-        "2"
+        "2",
+        "16"
       ],
       "component": "CascaderConfig",
       "field_category": 1,
@@ -25409,7 +25412,45 @@
       "field_category_text": "Props",
       "platform_framework_text": [
         "Vue(PC)",
-        "React(PC)"
+        "React(PC)",
+        "React(Mobile)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1790068365,
+      "platform_framework": [
+        "16"
+      ],
+      "component": "CascaderConfig",
+      "field_category": 1,
+      "field_name": "filterPlaceholder",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“搜索框”占位描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-09-22 09:12:45",
+      "update_time": "2026-09-22 09:12:45",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "React(Mobile)"
       ],
       "field_type_text": [
         "String"
@@ -40144,7 +40185,46 @@
       "id": 1636,
       "platform_framework": [
         "1",
-        "2",
+        "2"
+      ],
+      "component": "Comment",
+      "field_category": 1,
+      "field_name": "avatar",
+      "field_type": [
+        "1",
+        "64"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "头像",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2021-09-06 07:44:09",
+      "update_time": "2021-09-06 07:48:30",
+      "event_output": null,
+      "custom_field_type": "",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "TNode"
+      ]
+    },
+    {
+      "id": 1792057074,
+      "platform_framework": [
         "8",
         "16"
       ],
@@ -40162,8 +40242,8 @@
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
-      "create_time": "2021-09-06 07:44:09",
-      "update_time": "2021-09-06 07:48:30",
+      "create_time": "2026-10-15 09:37:54",
+      "update_time": "2026-10-15 09:37:54",
       "event_output": null,
       "custom_field_type": "string | AvatarProps | TNode【import { AvatarProps } from '@Avatar'】",
       "syntactic_sugar": null,
@@ -40176,8 +40256,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
         "Vue(Mobile)",
         "React(Mobile)"
       ],
@@ -40510,6 +40588,135 @@
         "React(Mobile)"
       ],
       "field_type_text": []
+    },
+    {
+      "id": 1793257196,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "CommentConfig",
+      "field_category": 1,
+      "field_name": "collapseText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，“收起”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 06:59:56",
+      "update_time": "2026-10-29 06:59:56",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1793257162,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "CommentConfig",
+      "field_category": 1,
+      "field_name": "collapsedText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，折叠状态下“展开回复”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 06:59:22",
+      "update_time": "2026-10-29 06:59:22",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
+      "id": 1793257174,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "CommentConfig",
+      "field_category": 1,
+      "field_name": "expandMoreText",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "语言配置，半展开状态下“展开更多回复”描述文本",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 06:59:34",
+      "update_time": "2026-10-29 06:59:34",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": [
+        "String"
+      ]
     },
     {
       "id": 1740488877,
@@ -56725,6 +56932,49 @@
       ]
     },
     {
+      "id": 1792396819,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "DropdownItem",
+      "field_category": 1,
+      "field_name": "keepLabelActive",
+      "field_type": [
+        "4"
+      ],
+      "field_default_value": "false",
+      "field_enum": "",
+      "field_desc_zh": "是否保持标题高亮（含菜单收起态），仅多选场景生效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-19 08:00:19",
+      "update_time": "2026-10-19 08:00:19",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "{\n\"React(Mobile)\": \"1.0.1\",\n\"Vue(Mobile)\": \"1.17.0\",\n\"Miniprogram\": \"1.18.0\",\n\"UniApp\": \"1.0.1\"\n}",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
+      ],
+      "field_type_text": [
+        "Boolean"
+      ]
+    },
+    {
       "id": 2815,
       "platform_framework": [
         "8",
@@ -60219,7 +60469,7 @@
       ],
       "field_default_value": "",
       "field_enum": "",
-      "field_desc_zh": "是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附",
+      "field_desc_zh": "是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附",
       "field_desc_en": null,
       "field_required": 0,
       "event_input": "",
@@ -60232,7 +60482,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"0.21.2\"\n\n}",
+      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"1.0.0\"\n\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -60434,7 +60684,7 @@
       "html_attribute": 0,
       "trigger_elements": "",
       "deprecated": 0,
-      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"0.21.2\"\n\n}",
+      "version": "{\n\"Miniprogram\": \"1.12.3\",\n\"Vue(Mobile)\": \"1.13.1\",\n\"React(Mobile)\": \"1.0.0\"\n\n}",
       "test_description": null,
       "support_default_value": 0,
       "field_category_text": "Props",
@@ -66058,6 +66308,49 @@
       "platform_framework_text": [
         "Vue(PC)",
         "React(PC)"
+      ],
+      "field_type_text": [
+        "Object"
+      ]
+    },
+    {
+      "id": 1793256814,
+      "platform_framework": [
+        "8",
+        "16",
+        "64",
+        "128"
+      ],
+      "component": "GlobalConfigProvider",
+      "field_category": 1,
+      "field_name": "comment",
+      "field_type": [
+        "8"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "评论组件全局配置",
+      "field_desc_en": "Comment global configs",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-29 06:53:34",
+      "update_time": "2026-10-29 06:53:34",
+      "event_output": null,
+      "custom_field_type": "CommentConfig",
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(Mobile)",
+        "React(Mobile)",
+        "Miniprogram",
+        "UniApp"
       ],
       "field_type_text": [
         "Object"
@@ -120703,7 +120996,8 @@
     {
       "id": 1739007105,
       "platform_framework": [
-        "8"
+        "8",
+        "16"
       ],
       "component": "Slider",
       "field_category": 1,
@@ -120731,7 +121025,8 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(Mobile)"
+        "Vue(Mobile)",
+        "React(Mobile)"
       ],
       "field_type_text": [
         "Boolean"
@@ -147742,6 +148037,45 @@
       ]
     },
     {
+      "id": 1792659018,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "checkAllAffectedBy",
+      "field_type": [
+        "1"
+      ],
+      "field_default_value": "all",
+      "field_enum": "all/onlyEnabled",
+      "field_desc_zh": "参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效",
+      "field_desc_en": "Child nodes that affect the checked and indeterminate states of parent nodes. all includes every child, including disabled children; onlyEnabled includes only enabled children. With onlyEnabled, no checked or indeterminate state is derived from children when all children are disabled. This option only controls parent state calculation and does not change the checked states of disabled children. It has no effect when checkStrictly is true",
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2026-10-22 16:50:18",
+      "update_time": "2026-10-22 16:59:28",
+      "event_output": null,
+      "custom_field_type": null,
+      "syntactic_sugar": null,
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": "",
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String"
+      ]
+    },
+    {
       "id": 526,
       "platform_framework": [
         "1",
@@ -148941,8 +149275,6 @@
     {
       "id": 524,
       "platform_framework": [
-        "1",
-        "2",
         "16",
         "64",
         "128"
@@ -148973,11 +149305,48 @@
       "support_default_value": 1,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
+      ],
+      "field_type_text": [
+        "Array"
+      ]
+    },
+    {
+      "id": 1792401068,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "Tree",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "16"
+      ],
+      "field_default_value": "[]",
+      "field_enum": "",
+      "field_desc_zh": "选中值，组件为可选状态时有效",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-12-28 06:05:28",
+      "update_time": "2026-10-19 09:11:07",
+      "event_output": null,
+      "custom_field_type": "Array<TreeNodeValue>【type TreeNodeValue = string | number | bigint】",
+      "syntactic_sugar": "v-model",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 1,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
       ],
       "field_type_text": [
         "Array"
@@ -149944,9 +150313,9 @@
       "field_desc_zh": "虚拟滚动场景下 支持指定滚动到具体的节点",
       "field_desc_en": "support scrolling to a specific node when virtual scrolling ",
       "field_required": 0,
-      "event_input": "(scrollToParams: ScrollToElementParams)",
+      "event_input": "(scrollToParams: TreeScrollToElementParams)【interface TreeScrollToElementParams extends Omit<ComponentScrollToElementParams, 'key'> { key?: TreeNodeValue; }】",
       "create_time": "2023-08-23 08:51:53",
-      "update_time": "2023-08-23 08:51:53",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
       "custom_field_type": null,
       "syntactic_sugar": null,
@@ -151525,8 +151894,6 @@
     {
       "id": 505,
       "platform_framework": [
-        "1",
-        "2",
         "16",
         "64",
         "128"
@@ -151558,8 +151925,6 @@
       "support_default_value": 0,
       "field_category_text": "Props",
       "platform_framework_text": [
-        "Vue(PC)",
-        "React(PC)",
         "React(Mobile)",
         "Miniprogram",
         "UniApp"
@@ -151567,6 +151932,49 @@
       "field_type_text": [
         "String",
         "Number"
+      ]
+    },
+    {
+      "id": 1792401069,
+      "platform_framework": [
+        "1",
+        "2"
+      ],
+      "component": "TreeNodeState",
+      "field_category": 1,
+      "field_name": "value",
+      "field_type": [
+        "1",
+        "2",
+        "1024"
+      ],
+      "field_default_value": "",
+      "field_enum": "",
+      "field_desc_zh": "节点值",
+      "field_desc_en": null,
+      "field_required": 0,
+      "event_input": "",
+      "create_time": "2020-12-28 05:24:40",
+      "update_time": "2026-10-19 09:11:07",
+      "event_output": null,
+      "custom_field_type": "TreeNodeValue",
+      "syntactic_sugar": "",
+      "readonly": 1,
+      "html_attribute": 0,
+      "trigger_elements": "",
+      "deprecated": 0,
+      "version": null,
+      "test_description": null,
+      "support_default_value": 0,
+      "field_category_text": "Props",
+      "platform_framework_text": [
+        "Vue(PC)",
+        "React(PC)"
+      ],
+      "field_type_text": [
+        "String",
+        "Number",
+        "BigInt"
       ]
     },
     {
@@ -153194,7 +153602,8 @@
         "1",
         "2",
         "8",
-        "16"
+        "16",
+        "1024"
       ],
       "field_default_value": "",
       "field_enum": "",
@@ -153203,9 +153612,9 @@
       "field_required": 0,
       "event_input": "",
       "create_time": "2021-04-14 03:06:08",
-      "update_time": "2022-01-21 04:23:43",
+      "update_time": "2026-10-19 09:11:07",
       "event_output": null,
-      "custom_field_type": "TreeValueType【type TreeSelectValue = string | number | TreeOptionData | Array<string | number | TreeOptionData>】",
+      "custom_field_type": "TreeValueType【type TreeSelectValue = string | number | bigint | TreeOptionData | Array<string | number | bigint | TreeOptionData>】",
       "syntactic_sugar": "v-model",
       "readonly": 1,
       "html_attribute": 0,
@@ -153223,7 +153632,8 @@
         "String",
         "Number",
         "Object",
-        "Array"
+        "Array",
+        "BigInt"
       ]
     },
     {
