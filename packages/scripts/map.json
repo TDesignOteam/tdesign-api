@@ -487,6 +487,11 @@
         "label": "评论"
       },
       {
+        "value": "CommentConfig",
+        "label": "评论组件全局配置",
+        "type": "TS"
+      },
+      {
         "value": "ConfigProvider",
         "label": "全局特性配置"
       },

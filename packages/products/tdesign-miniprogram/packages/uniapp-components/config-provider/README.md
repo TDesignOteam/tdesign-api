@@ -18,6 +18,7 @@ action-sheet | Object | - | 动作面板全局配置。TS 类型：`ActionSheetC
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 class-prefix | String | t | CSS 类名前缀 | N
+comment | Object | - | 评论组件全局配置。TS 类型：`CommentConfig` | N
 date-time-picker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdown-menu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
 guide | Object | - | 引导全局配置。TS 类型：`GuideConfig` | N
@@ -44,6 +45,7 @@ status | Object | - | 语言配置，附件上传状态描述文本。TS 类型�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
 month-title | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
 months | Array | - | 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
 title | String | - | 语言配置，组件标题“请选择日期”描述文本 | N
@@ -75,6 +77,14 @@ stop-text | String | - | 语言配置，停止发送按钮描述文本 | N
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 status | Object | - | 语言配置，思考状态描述文本。TS 类型：`{ pending: string; complete: string; stop: string; }` | N
+
+### CommentConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapse-text | String | - | 语言配置，“收起”描述文本 | N
+collapsed-text | String | - | 语言配置，折叠状态下“展开回复”描述文本 | N
+expand-more-text | String | - | 语言配置，半展开状态下“展开更多回复”描述文本 | N
 
 ### DateTimePickerConfig
 

@@ -34,6 +34,10 @@ export interface GlobalConfigProvider {
    */
   classPrefix?: string;
   /**
+   * 评论组件全局配置
+   */
+  comment?: CommentConfig;
+  /**
    * 时间选择器全局配置
    */
   dateTimePicker?: DateTimePickerConfig;
@@ -123,6 +127,16 @@ export interface CalendarConfig {
 
 export interface CascaderConfig {
   /**
+   * 语言配置，“暂无数据”描述文本
+   * @default ''
+   */
+  empty?: string;
+  /**
+   * 语言配置，“搜索框”占位描述文本
+   * @default ''
+   */
+  filterPlaceholder?: string;
+  /**
    * 语言配置，未选中时的提示文案“选择选项”描述文本
    * @default ''
    */
@@ -132,6 +146,24 @@ export interface CascaderConfig {
    * @default ''
    */
   title?: string;
+}
+
+export interface CommentConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，折叠状态下“展开回复”描述文本
+   * @default ''
+   */
+  collapsedText?: string;
+  /**
+   * 语言配置，半展开状态下“展开更多回复”描述文本
+   * @default ''
+   */
+  expandMoreText?: string;
 }
 
 export interface DateTimePickerConfig {

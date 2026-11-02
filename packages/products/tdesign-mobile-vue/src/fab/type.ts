@@ -22,7 +22,7 @@ export interface TdFabProps {
    */
   icon?: TNode;
   /**
-   * 是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附
+   * 是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附
    */
   magnet?: boolean | MagnetEnum;
   /**

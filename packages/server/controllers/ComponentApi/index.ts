@@ -45,22 +45,19 @@ function removeRepeat(array: Array<MapItem>) {
   return r;
 }
 
-// 将字符串 'null'/'undefined' 归一为真正的 SQL NULL，其余空字符串、NaN 视为未填写
-function normalizeValue(value: any) {
-  if (value === 'null' || value === 'undefined') return null;
-  return value;
+// 仅真正的 JSON null 表示「清空字段」，需要落库为 SQL NULL。
+// 注意：字符串 'null'/'undefined' 是合法的默认值字面量（如 Calendar.readonly 默认值即为 undefined），
+// 用于生成脚本判断是否为受控/非受控属性，不能归一成 NULL，否则默认值信息会丢失。
+function isClearValue(value: any) {
+  return value === null;
 }
 
-function filterParams(params: BaseObject, keepNull?: boolean) {
+// 仅创建时使用：过滤掉未填写的字段（空字符串、NaN、字符串 'null'/'undefined'）
+function filterParams(params: BaseObject) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
-    const value = normalizeValue(params[key]);
-    // 显式 null 需要保留（用于清空可空字段）；仅过滤未填写的空字符串/NaN
-    if (value === null) {
-      if (keepNull) r[key] = value;
-      return;
-    }
-    if (!['', 'NaN'].includes(String(value))) {
+    const value = params[key];
+    if (!['', 'NaN', 'null', 'undefined'].includes(String(value))) {
       r[key] = value;
     }
   });
@@ -68,9 +65,10 @@ function filterParams(params: BaseObject, keepNull?: boolean) {
 }
 
 function formatParams(params: BaseObject, clearEmpty?: Boolean) {
-  const _params = clearEmpty ? filterParams(params, true) : params;
+  // 创建时过滤未填写字段；更新时保留传入的所有字段，显式 null 落库为 NULL 以清空可空字段
+  const _params = clearEmpty ? filterParams(params) : params;
   Object.keys(_params).forEach((key) => {
-    _params[key] = normalizeValue(_params[key]);
+    if (isClearValue(_params[key])) _params[key] = null;
   });
   // 处理框架类型
   if (_params.platform_framework) {
@@ -100,24 +98,18 @@ function formatParams(params: BaseObject, clearEmpty?: Boolean) {
 async function apiCreate(params: BaseObject) {
   return new Promise((resolve, reject) => {
     console.info('~~~~~', formatParams(params, true));
-    TAPI.create(formatParams(params, true)).then(
-      handleSuccess(resolve),
-      handleError(reject),
-    );
+    TAPI.create(formatParams(params, true)).then(handleSuccess(resolve), handleError(reject));
   });
 }
 
 function formatIntToArray(map: MapOptions, p: number) {
   const platforms = Object.keys(map);
-  return platforms.filter((num: string) => ((Number(num) & p) === Number(num)));
+  return platforms.filter((num: string) => (Number(num) & p) === Number(num));
 }
 
 export function apiDelete(params: BaseObject) {
   return new Promise((resolve, reject) => {
-    TAPI.delete(Number(params.id)).then(
-      handleSuccess(resolve),
-      handleError(reject),
-    );
+    TAPI.delete(Number(params.id)).then(handleSuccess(resolve), handleError(reject));
   });
 }
 
@@ -135,14 +127,11 @@ export function getMap() {
 
 export function apiUpdate(params: BaseObject) {
   console.info(params);
-  
+
   return new Promise((resolve, reject) => {
     const { id } = params;
     delete params.id;
-    TAPI.update(formatParams(params), Number(id)).then(
-      handleSuccess(resolve),
-      handleError(reject),
-    );
+    TAPI.update(formatParams(params), Number(id)).then(handleSuccess(resolve), handleError(reject));
   });
 }
 
@@ -157,15 +146,15 @@ function formatMap(obj: { [key: string]: string }) {
   return r;
 }
 
-function formatRecords(records:any){
+function formatRecords(records: any) {
   return records.map((item: any) => {
     item.create_time = moment(item.create_time).format('YYYY-MM-DD HH:mm:ss');
     item.update_time = moment(item.update_time).format('YYYY-MM-DD HH:mm:ss');
     item.field_category_text = API_CATEGORY[String(item.field_category)];
     item.platform_framework = formatIntToArray(PLATFORM_FRAMEWORK, item.platform_framework);
-    item.platform_framework_text = item.platform_framework.map((index: string) => (PLATFORM_FRAMEWORK[index]));
+    item.platform_framework_text = item.platform_framework.map((index: string) => PLATFORM_FRAMEWORK[index]);
     item.field_type = formatIntToArray(FIELD_TYPE_MAP, item.field_type);
-    item.field_type_text = item.field_type.map((index: string) => (FIELD_TYPE_MAP[index]));
+    item.field_type_text = item.field_type.map((index: string) => FIELD_TYPE_MAP[index]);
     return item;
   });
 }
@@ -205,12 +194,11 @@ async function generateAPI(params: { commandLines: string[] }) {
   };
 }
 
-async function exportAPI()
-{
+async function exportAPI() {
   const [res]: any = await TAPI.query();
 
   const formattedData = formatRecords(res);
-  
+
   return {
     code: 0,
     msg: 'success',

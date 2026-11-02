@@ -161,16 +161,16 @@ export default {
   },
   /** 选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue` */
   value: {
-    type: [String, Number, Object, Array] as PropType<TdTreeSelectProps['value']>,
+    type: [String, Number, Object, Array, BigInt] as PropType<TdTreeSelectProps['value']>,
     default: undefined as TdTreeSelectProps['value'],
   },
   modelValue: {
-    type: [String, Number, Object, Array] as PropType<TdTreeSelectProps['value']>,
+    type: [String, Number, Object, Array, BigInt] as PropType<TdTreeSelectProps['value']>,
     default: undefined as TdTreeSelectProps['value'],
   },
   /** 选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue`，非受控属性 */
   defaultValue: {
-    type: [String, Number, Object, Array] as PropType<TdTreeSelectProps['defaultValue']>,
+    type: [String, Number, Object, Array, BigInt] as PropType<TdTreeSelectProps['defaultValue']>,
   },
   /** 自定义选中项呈现方式 */
   valueDisplay: {
