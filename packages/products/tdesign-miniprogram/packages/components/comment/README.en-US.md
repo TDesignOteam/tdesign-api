@@ -27,9 +27,9 @@ folds | `(detail: { fold: CommentFold;})` | \-
 
 name | Description
 -- | --
-actions | Typescript: `Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts)
+actions | \-
 author | \-
-avatar | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts)
+avatar | \-
 content | \-
 datetime | \-
 reply | \-

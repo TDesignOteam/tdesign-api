@@ -26,9 +26,9 @@ folds | `(context: { fold: CommentFold; e: Event })` | 用户点击“展开回�
 
 名称 | 描述
 -- | --
-actions | 自定义 `actions` 显示内容。TS 类型：`Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts)
+actions | 自定义 `actions` 显示内容
 author | 自定义 `author` 显示内容
-avatar | 自定义 `avatar` 显示内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts)
+avatar | 自定义 `avatar` 显示内容
 content | 自定义 `content` 显示内容
 datetime | 自定义 `datetime` 显示内容
 reply | 自定义 `reply` 显示内容
