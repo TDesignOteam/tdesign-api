@@ -4,7 +4,12 @@
 
 import { pick } from 'lodash-es';
 import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../core/context.js';
+import {
+  groupByComponent,
+  formatArrayToMap,
+  getApiComponentMapByFrameWork,
+  resolveComponentMergeList,
+} from '../core/context.js';
 import { getDocsByComponent } from '../docs/index.js';
 import { getTypesByComponent } from '../types/index.js';
 import { getPropsByComponent } from '../types/vue-props.js';
@@ -27,12 +32,12 @@ async function getApiPreviewData(apiData, map, framework, component, isUseDefaul
   const apiDocs = getDocsByComponent(baseData, framework, component);
   // console.log(apiDocs);
   // 生成 props 定义
-  const apiPrpos = getPropsByComponent(baseData, framework, component, isUseDefault);
-  // console.log(apiPrpos);
+  const apiProps = getPropsByComponent(baseData, framework, component, isUseDefault);
+  // console.log(apiProps);
   return {
     apiTypes,
     apiDocs,
-    apiPrpos,
+    apiProps,
   };
 }
 
