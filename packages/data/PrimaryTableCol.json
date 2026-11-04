@@ -2,7 +2,8 @@
   {
     "id": 993,
     "platform_framework": [
-      "Vue(PC)"
+      "Vue(PC)",
+      "Vue(Mobile)"
     ],
     "component": "PrimaryTableCol",
     "field_category": "Props",
