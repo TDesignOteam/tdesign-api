@@ -29,7 +29,18 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-`Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm'>` | TNode | - | 继承 `Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm'>` 中的全部属性。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+body | TNode | - | 对话框内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+cancelBtn | TNode | - | 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件。TS 类型：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
+closeBtn | TNode | true | 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+confirmBtn | TNode | - | 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：`string \| ButtonProps \| TNode \| null`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+confirmLoading | Boolean | undefined | 确认按钮加载状态 | N
+footer | TNode | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+theme | String | default | 对话框风格。可选项：default/info/warning/danger/success | N
+`Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm' \| 'confirmLoading'>` | TNode | - | 继承 `Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm' \| 'confirmLoading'>` 中的全部属性。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N
+onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击右上角关闭按钮时触发 | N
+onConfirm | Function |  | TS 类型：`(context: { e: MouseEvent \| KeyboardEvent }) => void`<br/>如果“确认”按钮存在，则点击“确认”按钮时触发，或者键盘按下回车键时触发 | N
 
 
 ### Dialog Props
@@ -50,16 +61,18 @@ confirmLoading | Boolean | undefined | 确认按钮加载状态 | N
 confirmOnEnter | Boolean | - | 是否在按下回车键时，触发确认事件 | N
 destroyOnClose | Boolean | false | 是否在关闭弹框的时候销毁子元素 | N
 dialogClassName | String / Object / Array | - | 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`。TS 类型：`ClassName`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+dialogStyle | Object | - | 作用于对话框本身的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 draggable | Boolean | false | 是否可以拖拽（对全屏对话框无效） | N
 focusable | Object | - | 对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。TS 类型：`DialogFocusable` `interface DialogFocusable { defaultFocus?: null \| 'confirm-button' \| 'cancel-button' \| (() => HTMLElement \| null); focusTrap?: boolean; focusTriggerAfterClose: boolean }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
 footer | TNode | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 header | TNode | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-lazy | Boolean | false | 是否启用对话框懒加载，启用时对话框内的内容不渲染 | N
+lazy | Boolean | true | 是否启用对话框懒加载，启用时对话框内的内容不渲染 | N
 mode | String | modal | 对话框类型，有 4 种：模态对话框、非模态对话框、普通对话框、全屏对话框。弹出「模态对话框」时，只能操作对话框里面的内容，不能操作其他内容。弹出「非模态对话框」时，则可以操作页面内所有内容。「普通对话框」是指没有脱离文档流的对话框，可以在这个基础上开发更多的插件。可选项：modal/modeless/normal/full-screen | N
 placement | String | top | 对话框位置，内置两种：垂直水平居中显示 和 靠近顶部（top:20%）显示。默认情况，为避免贴顶或贴底，顶部和底部距离最小为 `48px`，可通过调整 `top` 覆盖默认大小。可选项：top/center | N
 preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
+sizeDraggable | Boolean / Object | false | 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。TS 类型：`boolean \| DialogSizeDragLimit` `interface DialogSizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
 theme | String | default | 对话框风格。可选项：default/info/warning/danger/success | N
 top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级大于 placement | N
 visible | Boolean | - | 控制对话框是否显示 | N

@@ -615,7 +615,7 @@
     "field_type": [
       "Boolean"
     ],
-    "field_default_value": "false",
+    "field_default_value": "true",
     "field_desc_zh": "是否启用对话框懒加载，启用时对话框内的内容不渲染",
     "field_desc_en": "Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable"
   },

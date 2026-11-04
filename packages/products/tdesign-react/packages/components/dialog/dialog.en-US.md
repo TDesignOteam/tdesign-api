@@ -8,7 +8,18 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
-`Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm'>` | TNode | - | extends `Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm'>`。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+body | TNode | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+cancelBtn | TNode | - | Typescript: `string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts). [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
+closeBtn | TNode | true | Typescript: `string \| boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+confirmBtn | TNode | - | Typescript: `string \| ButtonProps \| TNode \| null`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+confirmLoading | Boolean | undefined | confirm button loading status | N
+footer | TNode | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+header | TNode | true | Typescript: `string \| boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+theme | String | default | options: default/info/warning/danger/success | N
+`Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm' \| 'confirmLoading'>` | TNode | - | extends `Pick<DialogProps, 'body' \| 'cancelBtn' \| 'closeBtn' \| 'confirmBtn' \| 'footer' \| 'header' \| 'theme' \| 'onCancel' \| 'onCloseBtnClick' \| 'onConfirm' \| 'confirmLoading'>`. Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+onCancel | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
+onCloseBtnClick | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
+onConfirm | Function |  | Typescript: `(context: { e: MouseEvent \| KeyboardEvent }) => void`<br/> | N
 
 
 ### Dialog Props
@@ -29,16 +40,18 @@ confirmLoading | Boolean | undefined | confirm button loading status | N
 confirmOnEnter | Boolean | - | confirm on enter | N
 destroyOnClose | Boolean | false | \- | N
 dialogClassName | String / Object / Array | - | Class name of the dialog element. Supports string (e.g. 't-class-dialog-first t-class-dialog-second'), array (e.g. ['name1', 'name2']), or object array (e.g. [{ 'name1': true }]). Typescript: `ClassName`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+dialogStyle | Object | - | Styles that apply to the dialog box itself. Typescript: `Styles`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 draggable | Boolean | false | not effective in `full-screen` mode | N
 focusable | Object | - | Dialog focus control. `defaultFocus` determines the default focus after opening; `focusTrap` determines whether focus is trapped within the current dialog; `focusTriggerAfterClose` determines whether focus is returned to the trigger element after closing. Typescript: `DialogFocusable` `interface DialogFocusable { defaultFocus?: null \| 'confirm-button' \| 'cancel-button' \| (() => HTMLElement \| null); focusTrap?: boolean; focusTriggerAfterClose: boolean }`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
 footer | TNode | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 header | TNode | true | Typescript: `string \| boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-lazy | Boolean | false | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
+lazy | Boolean | true | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
 mode | String | modal | options: modal/modeless/normal/full-screen | N
 placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
 showOverlay | Boolean | true | \- | N
+sizeDraggable | Boolean / Object | false | allow resizing dialog width/height, set max or min to limit size. Typescript: `boolean \| DialogSizeDragLimit` `interface DialogSizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/dialog/type.ts) | N
 theme | String | default | options: default/info/warning/danger/success | N
 top | String / Number | - | \- | N
 visible | Boolean | - | \- | N
