@@ -8,7 +8,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-actions | Array | - | Typescript: `Array<CommentActionItem> ` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; placement?: ActionPlacement; disabled?: boolean}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts) | N
+actions | Array | - | Typescript: `Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts) | N
 author | String | - | \- | N
 avatar | String / Object | - | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts) | N
 content | String | - | \- | N
@@ -27,7 +27,7 @@ folds | `(detail: { fold: CommentFold;})` | \-
 
 name | Description
 -- | --
-actions | Typescript: `Array<CommentActionItem> ` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; placement?: ActionPlacement; disabled?: boolean}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts)
+actions | Typescript: `Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts)
 author | \-
 avatar | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/comment/type.ts)
 content | \-

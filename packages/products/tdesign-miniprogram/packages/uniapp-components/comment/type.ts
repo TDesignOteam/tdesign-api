@@ -54,6 +54,7 @@ export type ActionPlacement = 'start' | 'end';
 export interface CommentActionItem {
   key: string;
   content?: string;
+  icon?: string | object;
   placement?: ActionPlacement;
   disabled?: boolean;
 }

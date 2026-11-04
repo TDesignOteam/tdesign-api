@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
-actions | Array | - | 操作。TS 类型：`Array<CommentActionItem> ` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; placement?: ActionPlacement; disabled?: boolean}`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts) | N
+actions | Array | - | 操作。TS 类型：`Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts) | N
 author | String | - | 作者 | N
 avatar | String / Object | - | 头像。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts) | N
 content | String | - | 内容 | N
@@ -26,7 +26,7 @@ folds | `(context: { fold: CommentFold; e: Event })` | 用户点击“展开回�
 
 名称 | 描述
 -- | --
-actions | 自定义 `actions` 显示内容。TS 类型：`Array<CommentActionItem> ` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; placement?: ActionPlacement; disabled?: boolean}`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts)
+actions | 自定义 `actions` 显示内容。TS 类型：`Array<CommentActionItem>` `type ActionPlacement = 'start' \| 'end'` `interface CommentActionItem { key: string; content?: string; icon?: string \| object; placement?: ActionPlacement; disabled?: boolean}`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts)
 author | 自定义 `author` 显示内容
 avatar | 自定义 `avatar` 显示内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/comment/type.ts)
 content | 自定义 `content` 显示内容
