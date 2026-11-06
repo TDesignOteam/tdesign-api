@@ -32,12 +32,30 @@
     "custom_field_type": "Array<CommentActionItem> | TNode 【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string | TNode; placement?: ActionPlacement; disabled?: boolean}】"
   },
   {
+    "id": 1793934834,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Comment",
+    "field_category": "Props",
+    "field_name": "actions",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "操作",
+    "custom_field_type": "Array<CommentActionItem>【type ActionPlacement = 'start' | 'end'】【interface CommentActionItem { key: string; content?: string; icon?: string | object; placement?: ActionPlacement; disabled?: boolean}】"
+  },
+  {
     "id": 1637,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Props",
@@ -67,7 +85,9 @@
     "id": 1792057074,
     "platform_framework": [
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Props",
@@ -101,7 +121,9 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Props",
@@ -118,7 +140,9 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Props",
@@ -146,6 +170,22 @@
     "syntactic_sugar": "v-model"
   },
   {
+    "id": 1793934835,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Comment",
+    "field_category": "Props",
+    "field_name": "folds",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "折叠/展开配置项",
+    "custom_field_type": "CommentFold 【type CommentFoldState = 'collapsed' | 'partial' | 'expanded'】【interface CommentFold { state: CommentFoldState; total?: number; step?: number; content?: Partial<Record<CommentFoldState, string | [string, string]>>}】",
+    "syntactic_sugar": "v-model"
+  },
+  {
     "id": 1641,
     "platform_framework": [
       "Vue(PC)",
@@ -166,7 +206,9 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Props",
@@ -191,10 +233,25 @@
     "event_input": "(context: { action: CommentActionItem | TNode; e: Event })"
   },
   {
+    "id": 1793934836,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Comment",
+    "field_category": "Events",
+    "field_name": "actions",
+    "field_type": [],
+    "field_desc_zh": "点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项",
+    "event_input": "(context: { action: CommentActionItem; e: Event })"
+  },
+  {
     "id": 1788791492,
     "platform_framework": [
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Comment",
     "field_category": "Events",

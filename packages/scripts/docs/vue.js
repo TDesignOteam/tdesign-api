@@ -218,7 +218,11 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
         });
       customFieldType = customFieldType.join('` `');
     }
-    if (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp)) {
+    // 插槽描述不展示 TS 类型相关内容
+    if (
+      category !== 'Slots' &&
+      (((isMiniprogram || isUniApp) && customFieldType.indexOf('TNode') === -1) || !(isMiniprogram || isUniApp))
+    ) {
       // tsTypeText 中文"TS 类型"
       const language = languageConfig[LANGUAGE];
       const tsLabel = api.field_name === 'externalClasses' ? '' : `${language.tsTypeText}`;
@@ -229,7 +233,7 @@ function formatDesc(api, { isUncontrol, current: config, framework, category }) 
       const text = languageConfig[LANGUAGE].commonDefineText;
       desc.push(`[${text}](${config.commonTypePath})`);
     }
-    if (isComplicatedType) {
+    if (category !== 'Slots' && isComplicatedType) {
       const text = languageConfig[LANGUAGE].detailDefineText;
       desc.push(
         `[${text}](${getComponentBasePath(api.component, config.componentPath, currentFramework)}${getTsTypeFileName(api.component, config)})`,
