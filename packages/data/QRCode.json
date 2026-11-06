@@ -1,0 +1,264 @@
+[
+  {
+    "id": 1749615249,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "bgColor",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "二维码背景颜色",
+    "field_desc_en": "QR code background color"
+  },
+  {
+    "id": 1749615258,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否有边框",
+    "field_desc_en": "Is there a border"
+  },
+  {
+    "id": 1749615266,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "二维码颜色",
+    "field_desc_en": "QR code color"
+  },
+  {
+    "id": 1749615274,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "二维码中图片的地址",
+    "field_desc_en": "The address of the picture in the QR code"
+  },
+  {
+    "id": 1749615281,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "iconSize",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_default_value": "40",
+    "field_desc_zh": "二维码中图片的大小",
+    "field_desc_en": "The size of the picture in the QR code",
+    "custom_field_type": "number | { width: number; height: number }"
+  },
+  {
+    "id": 1749615287,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "level",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "M",
+    "field_enum": [
+      "L",
+      "M",
+      "Q",
+      "H"
+    ],
+    "field_desc_zh": "二维码纠错等级",
+    "field_desc_en": "QR code error correction level"
+  },
+  {
+    "id": 1749615299,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "160",
+    "field_desc_zh": "二维码大小",
+    "field_desc_en": "QR code size"
+  },
+  {
+    "id": 1749615308,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "active",
+    "field_enum": [
+      "active",
+      "expired",
+      "loading",
+      "scanned"
+    ],
+    "field_desc_zh": "二维码状态",
+    "field_desc_en": "QR code status",
+    "custom_field_type": "QRStatus【type QRStatus = \"active\" | \"expired\" | \"loading\" | \"scanned\"】"
+  },
+  {
+    "id": 1749615330,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "statusRender",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义状态渲染器",
+    "field_desc_en": "Custom state renderer",
+    "custom_field_type": "(info:StatusRenderInfo) => TNode【type StatusRenderInfo = {status:QRStatus;onRefresh?: () => void;}】"
+  },
+  {
+    "id": 1749615337,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "canvas",
+    "field_enum": [
+      "canvas",
+      "svg"
+    ],
+    "field_desc_zh": "渲染类型",
+    "field_desc_en": "render type"
+  },
+  {
+    "id": 1749615344,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "扫描后的文本",
+    "field_desc_en": "scanned text"
+  },
+  {
+    "id": 1761301615,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Events",
+    "field_name": "refresh",
+    "field_type": [],
+    "field_desc_zh": "点击\"点击刷新\"的回调",
+    "field_desc_en": "Click the \"Click to refresh\" callback"
+  },
+  {
+    "id": 1759200062,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCode",
+    "field_category": "Slots",
+    "field_name": "status-render",
+    "field_type": [],
+    "field_desc_zh": "自定义状态渲染器"
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1724847046,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ToastOptions",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1724844914,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ToastOptions",
+    "field_category": "Props",
+    "field_name": "className",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "弹框类名，示例：'t-class-toast-first t-class-toast-second'"
+  },
+  {
+    "id": 599,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "ToastOptions",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+    "custom_field_type": "string | Styles"
+  },
+  {
+    "id": 1724844802,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "ToastOptions",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 1724844844,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ToastOptions",
+    "field_category": "Extends",
+    "field_name": "TdToastProps",
+    "field_type": []
+  }
+]

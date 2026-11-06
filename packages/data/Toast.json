@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1352,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "row",
+    "field_enum": [
+      "row",
+      "column"
+    ],
+    "field_desc_zh": "图标排列方式"
+  },
+  {
+    "id": 1351,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "2000",
+    "field_desc_zh": "弹窗显示毫秒数"
+  },
+  {
+    "id": 1347,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义图标。传入对象则透传至 Icon 组件"
+  },
+  {
+    "id": 1792,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义图标"
+  },
+  {
+    "id": 1349,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "弹窗显示文字"
+  },
+  {
+    "id": 2652,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "overlayProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "遮罩层属性，透传至 Overlay",
+    "custom_field_type": "OverlayProps 【import { OverlayProps } from '@Overlay'】"
+  },
+  {
+    "id": 1350,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "middle",
+    "field_enum": [
+      " top",
+      "middle",
+      "bottom"
+    ],
+    "field_desc_zh": "弹窗展示位置"
+  },
+  {
+    "id": 1353,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "防止滚动穿透，即不允许点击和滚动"
+  },
+  {
+    "id": 2639,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示遮罩层"
+  },
+  {
+    "id": 1348,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "loading",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "提示类型"
+  },
+  {
+    "id": 1719908493,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 1761301312,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "轻提示隐藏的时候触发"
+  },
+  {
+    "id": 1761301320,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Events",
+    "field_name": "destroy",
+    "field_type": [],
+    "field_desc_zh": "轻提示销毁的时候触发"
+  },
+  {
+    "id": 1712058581,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1759216343,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Slots",
+    "field_name": "icon",
+    "field_type": [],
+    "field_desc_zh": "自定义图标"
+  },
+  {
+    "id": 1759216358,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Toast",
+    "field_category": "Slots",
+    "field_name": "message",
+    "field_type": [],
+    "field_desc_zh": "弹窗显示文字"
+  }
+]

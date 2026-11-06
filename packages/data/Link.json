@@ -1,0 +1,517 @@
+[
+  {
+    "id": 2892,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "链接内容，同 content",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 2891,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "链接内容",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 3367,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "链接内容"
+  },
+  {
+    "id": 2922,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "链接内容，同 content",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 2895,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "禁用链接。优先级：Link.disabled > Form.disabled",
+    "field_desc_en": "make link to be disabled",
+    "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1712650024,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否为禁用态",
+    "field_desc_en": "make link to be disabled"
+  },
+  {
+    "id": 1690964502,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "download",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_desc_zh": "使得浏览器将链接的 URL 视为可下载资源",
+    "field_desc_en": "Causes the browser to treat the linked URL as a download"
+  },
+  {
+    "id": 2900,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "hover",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "underline",
+    "field_enum": [
+      "color",
+      "underline"
+    ],
+    "field_desc_zh": "链接悬浮态样式，有 文本颜色变化、添加下划线等 2 种方法",
+    "field_desc_en": "hover link style",
+    "test_description": "{\"PC\":{\"className\":\"t-link--hover-${item}\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 3369,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "hover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否开启点击反馈"
+  },
+  {
+    "id": 2894,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "href",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "跳转链接",
+    "test_description": "{\"PC\":{\"attribute\":{\"href\":\"https://tdesign.tencent.com/\"},\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 3370,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "navigatorProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "与 navigator 原生组件属性保持一致，具体使用参考：[微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)。使用时请将形如 `open-type` 风格的属性名改为 `openType` 风格"
+  },
+  {
+    "id": 1762412022,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "navigatorProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "与 navigator 原生组件属性保持一致，具体使用参考：[微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)。使用时请将形如 `open-type` 风格的属性名改为 `openType` 风格"
+  },
+  {
+    "id": 2897,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "前置图标",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 3371,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "前置图标"
+  },
+  {
+    "id": 2923,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "尺寸",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1711969735,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "active",
+      "disabled"
+    ],
+    "field_desc_zh": "组件状态",
+    "deprecated": true
+  },
+  {
+    "id": 2898,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 1712916560,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标"
+  },
+  {
+    "id": 2899,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "target",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+    "field_desc_en": "target is an attribute of `<a>`",
+    "test_description": "{\"PC\":{\"attribute\":{\"target\":\"_blank\"},\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 2896,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "primary",
+      "danger",
+      "warning",
+      "success"
+    ],
+    "field_desc_zh": "组件风格，依次为默认色、品牌色、危险色、警告色、成功色",
+    "test_description": "{\"PC\":{\"className\":\"t-link--theme-${item}\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 2893,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "underline",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否显示链接下划线",
+    "test_description": "{\"PC\":{\"className\":\"t-is-underline\",\"content\":\"Text\"}}"
+  },
+  {
+    "id": 1712580168,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Props",
+    "field_name": "underline",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "普通状态是否显示链接下划线"
+  },
+  {
+    "id": 2924,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Link",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击事件，禁用状态不会触发点击事件",
+    "field_desc_en": "click event, it won't trigger when it's disabled",
+    "event_input": "(e: MouseEvent)",
+    "trigger_elements": "MouseEvent<HTMLAnchorElement>",
+    "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"stopPropagation\":true,\"type\":\"click\"}]}}}}"
+  },
+  {
+    "id": 1761301096,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Events",
+    "field_name": "complete",
+    "field_type": [],
+    "field_desc_zh": "页面链接执行完成后触发（失败或成功均会触发）"
+  },
+  {
+    "id": 1761301108,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Events",
+    "field_name": "fail",
+    "field_type": [],
+    "field_desc_zh": "页面链接跳转失败后触发"
+  },
+  {
+    "id": 3375,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Events",
+    "field_name": "success",
+    "field_type": [],
+    "field_desc_zh": "页面链接跳转成功后触发"
+  },
+  {
+    "id": 1711969962,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类",
+    "field_desc_en": "class name of root node"
+  },
+  {
+    "id": 1711970091,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1711970044,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "External Classes",
+    "field_name": "t-class-hover",
+    "field_type": [],
+    "field_desc_zh": "悬停样式类"
+  },
+  {
+    "id": 1711970084,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "External Classes",
+    "field_name": "t-class-prefix-icon",
+    "field_type": [],
+    "field_desc_zh": "前置图标样式类"
+  },
+  {
+    "id": 1711970097,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "External Classes",
+    "field_name": "t-class-suffix-icon",
+    "field_type": [],
+    "field_desc_zh": "后置图标样式类"
+  },
+  {
+    "id": 1759059499,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Link",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "默认插槽，作用同 `content` 插槽"
+  }
+]

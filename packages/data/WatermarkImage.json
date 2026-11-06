@@ -1,0 +1,39 @@
+[
+  {
+    "id": 2593,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkImage",
+    "field_category": "Props",
+    "field_name": "isGrayscale",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "水印图片是否需要灰阶显示"
+  },
+  {
+    "id": 2590,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "WatermarkImage",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "水印图片源地址，为了显示清楚，建议导出 2 倍或 3 倍图"
+  }
+]

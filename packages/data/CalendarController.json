@@ -1,0 +1,92 @@
+[
+  {
+    "id": 666,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "“今天(本月)”按钮控制器",
+    "custom_field_type": "{ visible?: boolean; currentDayButtonProps?: ButtonProps; currentMonthButtonProps?: ButtonProps }【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 660,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用右上角控制器"
+  },
+  {
+    "id": 662,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历展示维度控制器",
+    "custom_field_type": "{ visible?: boolean; radioGroupProps?: RadioGroupProps }【import { RadioGroupProps } from '@Radio'】"
+  },
+  {
+    "id": 664,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "month",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历月份控制器",
+    "custom_field_type": "{ visible?: boolean; selectProps?: SelectProps }"
+  },
+  {
+    "id": 665,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "weekend",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "隐藏/显示周末控制器",
+    "custom_field_type": "{ visible?: boolean; showWeekendButtonProps?: CheckTagProps; hideWeekendButtonProps?: CheckTagProps }【import { CheckTagProps } from '@Tag'】"
+  },
+  {
+    "id": 663,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarController",
+    "field_category": "Props",
+    "field_name": "year",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历年份控制器",
+    "custom_field_type": "{ visible?: boolean; selectProps?: SelectProps }【import { SelectProps } from '@Select'】"
+  }
+]

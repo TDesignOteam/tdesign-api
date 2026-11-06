@@ -1,0 +1,314 @@
+[
+  {
+    "id": 76,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "当前页",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 86,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用分页组件"
+  },
+  {
+    "id": 410,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "foldedMaxPageBtn",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "5",
+    "field_desc_zh": "折叠时最多显示页码按钮数"
+  },
+  {
+    "id": 409,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "maxPageBtn",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "10",
+    "field_desc_zh": "最多显示页码按钮数"
+  },
+  {
+    "id": 2760,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "pageEllipsisMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "mid",
+    "field_enum": [
+      "mid",
+      "both-ends"
+    ],
+    "field_desc_zh": "页码数量超出时，前后省略模式, `mid`表示中间省略, `both-ends` 表示两端省略"
+  },
+  {
+    "id": 80,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "pageSize",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "10",
+    "field_desc_zh": "每一页的数据量",
+    "field_desc_en": "each page count",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 408,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "pageSizeOptions",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[5, 10, 20, 50]",
+    "field_desc_zh": "分页大小控制器，值为 [] 则不显示",
+    "custom_field_type": "Array<number | { label: string; value: number }>"
+  },
+  {
+    "id": 3042,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "selectProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传全部属性到 Select 组件，也可使用 `selectProps.popupProps` 透传全部 Popup 组件",
+    "custom_field_type": "SelectProps【import { SelectProps } from '@Select'】"
+  },
+  {
+    "id": 2634,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "showFirstAndLastPageBtn",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示跳转首页尾页页码控制器"
+  },
+  {
+    "id": 84,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "showJumper",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示跳转页码控制器"
+  },
+  {
+    "id": 2638,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "showPageNumber",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示页码控制器"
+  },
+  {
+    "id": 2637,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "showPageSize",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示分页数量控制器"
+  },
+  {
+    "id": 2636,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "showPreviousAndNextBtn",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示跳转前后页页码控制器"
+  },
+  {
+    "id": 78,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium"
+    ],
+    "field_desc_zh": "分页组件尺寸"
+  },
+  {
+    "id": 77,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "simple"
+    ],
+    "field_desc_zh": "分页组件风格"
+  },
+  {
+    "id": 79,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "total",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "数据总条数"
+  },
+  {
+    "id": 83,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Props",
+    "field_name": "totalContent",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "用于自定义总条数呈现内容。默认显示总条数，值为 false 则不显示"
+  },
+  {
+    "id": 1166,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "当前页或分页大小发生变化时触发",
+    "event_input": "(pageInfo: PageInfo)【interface PageInfo { current: number; previous: number; pageSize: number }】"
+  },
+  {
+    "id": 87,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Events",
+    "field_name": "currentChange",
+    "field_type": [],
+    "field_desc_zh": "当前页发生变化时触发",
+    "event_input": "(current: number, pageInfo: PageInfo)"
+  },
+  {
+    "id": 88,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Pagination",
+    "field_category": "Events",
+    "field_name": "pageSizeChange",
+    "field_type": [],
+    "field_desc_zh": "分页大小发生变化时触发",
+    "event_input": "(pageSize: number, pageInfo: PageInfo)"
+  }
+]

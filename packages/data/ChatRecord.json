@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1784307237,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Props",
+    "field_name": "adapter",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语音识别适配器（Adapter）。不传时按平台自动选择内置适配器。 微信小程序使用 WechatSIAdapter（依赖 WechatSI 插件），H5 使用 WebSpeechAdapter（依赖浏览器 Web Speech API），APP / 其他小程序 → NoopSpeechAdapter（占位，提示需自定义）",
+    "custom_field_type": "Adapter【type AdapterStartOptions = { duration: number; lang: string;}】【type AdapterStopResult = {tempFilePath: string; duration: number;result: string;}】【type AdapterPartialResult = {result: string}】【type AdapterEventType = 'start' | 'partial' | 'stop' | 'error'】【type Adapter = { checkAuth(): Promise<boolean>; requestAuth(): Promise<boolean>; start(opts: AdapterStartOptions): Promise<void>; stop(): Promise<void>; on<E extends AdapterEventType>(event: E, cb: AdapterEventMap[E]): void; off<E extends AdapterEventType>(event: E, cb?: AdapterEventMap[E]): void; destroy(): void; }】【type AdapterEventMap = { start: () => void;partial: (payload: AdapterPartialResult) => void;stop: (payload: AdapterStopResult) => void;error: (err: unknown) => void;}】"
+  },
+  {
+    "id": 1783911884,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Props",
+    "field_name": "autoSend",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否自动发送（预留扩展） "
+  },
+  {
+    "id": 1783911857,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Props",
+    "field_name": "bottomHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "底部高度，用于适配键盘弹出时的布局"
+  },
+  {
+    "id": 1783911836,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "60000",
+    "field_desc_zh": "最大录音时长（ms）"
+  },
+  {
+    "id": 1783911788,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Props",
+    "field_name": "lang",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "zh_CN",
+    "field_desc_zh": "识别语言（WechatSI 插件参数）"
+  },
+  {
+    "id": 1783912267,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "取消录音时触发"
+  },
+  {
+    "id": 1783912253,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Events",
+    "field_name": "error",
+    "field_type": [],
+    "field_desc_zh": "录音识别错误时触发",
+    "event_input": "(err: any)"
+  },
+  {
+    "id": 1783912192,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Events",
+    "field_name": "recognize",
+    "field_type": [],
+    "field_desc_zh": "语音识别完成时触发",
+    "event_input": "(context: { voicePath: string, voiceText: string, duration: number })"
+  },
+  {
+    "id": 1783912022,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Slots",
+    "field_name": "speech-input",
+    "field_type": [],
+    "field_desc_zh": "语音输入按钮插槽，自定义语音输入按钮区域内容"
+  },
+  {
+    "id": 1783912078,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatRecord",
+    "field_category": "Slots",
+    "field_name": "speech-no-auth",
+    "field_type": [],
+    "field_desc_zh": "语音授权按钮插槽，自定义语音授权按钮区域内容"
+  }
+]

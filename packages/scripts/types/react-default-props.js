@@ -6,22 +6,23 @@ import path from 'path';
 import chalk from 'chalk';
 import { lowerFirst, upperFirst } from 'lodash-es';
 import prettier from 'prettier';
-import { getFolderName, getCmpTypeCombineMap } from '../common.js';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
 import {
   FRAMEWORK_MAP,
-  TYPES_COMBINE_MAP,
-  MOBILE_TYPES_COMBINE_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
   MOBILE_FRAMES,
+  MOBILE_TYPES_COMBINE_MAP,
+  TYPES_COMBINE_MAP,
   getChatComponentMap,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
-import { needPickRequiredType } from '../config/reac-default-props.js';
+import { getCmpTypeCombineMap, getFolderName } from '../core/context.js';
+import { getComponentBasePath } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
-import { getComponentBasePath } from '../utils.js';
+import { formatTypeImport } from './import.js';
 
-const CONFIG = { needPickRequiredType };
+// 需要使用 Pick 的组件白名单：API 平台中定义的名字，比如：是 PrimaryTable，不是 TdPrimaryTableProps
+const needPickRequiredType = ['PrimaryTable'];
 
 const COMPONENTS_MAP = getComponentsMap(map.data.components);
 
@@ -43,7 +44,7 @@ function getDefaultValue(api) {
   if (defaultValue === '') return;
   if (defaultValue === "''") return defaultValue;
   // 输出 Number 类型的默认值
-  if (api.field_type_text.includes('Number')) {
+  if (api.field_type.includes('Number')) {
     if (defaultValue) {
       // 支持诸如 210/332 的分数形式默认值配置原样返回
       const frac = defaultValue.match(/^\s*([+-]?\d+(?:\.\d+)?)\s*\/\s*([+-]?\d+(?:\.\d+)?)\s*$/);
@@ -73,7 +74,7 @@ function getOneComponentProps(cmp, tsTypeName, apiList) {
   const properties = [];
   apiList.forEach((api) => {
     const defaultPropsValue = getDefaultValue(api);
-    if (api.field_category_text === 'Props' && defaultPropsValue !== undefined) {
+    if (api.field_category === 'Props' && defaultPropsValue !== undefined) {
       // 受控属性，直接输出；非受控属性添加前缀 `default`
       const name = api.support_default_value ? `default${upperFirst(api.field_name)}` : api.field_name;
       defaultProps.push(`${name}: ${defaultPropsValue},`);
@@ -81,7 +82,7 @@ function getOneComponentProps(cmp, tsTypeName, apiList) {
     }
   });
   let finalTsType = tsTypeName;
-  if (CONFIG.needPickRequiredType.includes(cmp)) {
+  if (needPickRequiredType.includes(cmp)) {
     finalTsType = `Pick<${tsTypeName}, ${properties.map((t) => `'${t}'`).join(' | ')}>`;
   }
   defaultProps.unshift(`export const ${lowerFirst(cmp)}DefaultProps: ${finalTsType} = {`);
@@ -133,7 +134,7 @@ async function generateReactDefaultProps(baseData, framework) {
   // 输出组合 defaultProps 到文件
   // console.log(finalApiDefaultProps);
   for (const parentCmp of Object.keys(finalApiDefaultProps)) {
-    const importsString = `import { ${importsMap[parentCmp].join(', ')} } from './type';\n\n`;
+    const importsString = `${formatTypeImport(importsMap[parentCmp], './type')}\n\n`;
     let apiStr = importsString + finalApiDefaultProps[parentCmp].join('\n\n');
 
     try {

@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1742886989,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "actions",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义的操作内容"
+  },
+  {
+    "id": 1742887762,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "skeleton",
+    "field_enum": [
+      "skeleton",
+      "moving",
+      "gradient"
+    ],
+    "field_desc_zh": "动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种"
+  },
+  {
+    "id": 1742887213,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "avatar",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义的头像配置",
+    "custom_field_type": "String | AvatarProps | TNode 【import { AvatarProps } from '@Avatar'】"
+  },
+  {
+    "id": 1742887477,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话单元的内容"
+  },
+  {
+    "id": 1742887654,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "datetime",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "对话单元的时间配置"
+  },
+  {
+    "id": 1742887067,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义的昵称"
+  },
+  {
+    "id": 1742887828,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "reasoning",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "值为false不显示思维链，为string则显示内置推理内容交互，为对象则单独配置推理内容",
+    "custom_field_type": "boolean | TdChatReasoning 【 interface TdChatReasoning { expandIconPlacement?: 'left' | 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } 】"
+  },
+  {
+    "id": 1742887703,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "role",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "user",
+      "assistant",
+      "error",
+      "model-change",
+      "system"
+    ],
+    "field_desc_zh": "角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息"
+  },
+  {
+    "id": 1742886870,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "textLoading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "新消息是否处于加载状态，加载状态默认显示骨架屏，接口请求返回数据时请将新消息加载状态置为false"
+  },
+  {
+    "id": 1742887448,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatItem",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "text",
+    "field_enum": [
+      "base",
+      "outline",
+      "text"
+    ],
+    "field_desc_zh": "气泡框样式，支持基础、线框、文字三种类型"
+  }
+]

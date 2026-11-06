@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1602,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "copyright",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "版权信息，type 为`text`生效",
+    "deprecated": true
+  },
+  {
+    "id": 218,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "底栏高度。样式表（class）中定义的默认高度为：24px"
+  },
+  {
+    "id": 3401,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "links",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "链接列表。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
+    "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; openType?: 'navigate' | 'redirect' | 'relaunch' | 'switchTab' | 'navigateBack' }】",
+    "version": {
+      "Miniprogram": "1.0.0"
+    }
+  },
+  {
+    "id": 3425,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "links",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "链接列表。name 表示链接名称， url 表示跳转链接，target 表示跳转方式，如：当前页面打开、新页面打开等，同 HTML 属性 target 含义相同",
+    "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; target?: string}】"
+  },
+  {
+    "id": 1619,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "logo",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接跳转地址，`logo.target` 表示跳转方式",
+    "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string; target?: string; }】"
+  },
+  {
+    "id": 1712565039,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "logo",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图标配置。`logo.icon` 表示图标链接地址，`logo.title` 表示标题文本，`logo.url` 表示链接",
+    "custom_field_type": "FooterLogo【interface FooterLogo { icon: string; title?: string; url?: string }】"
+  },
+  {
+    "id": 3402,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "版权信息",
+    "version": {
+      "Miniprogram": "1.0.0"
+    }
+  },
+  {
+    "id": 1603,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "textLinkList",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "链接列表，type 为`text`生效。name 表示链接名称， url 表示链接 page 路径，目前只支持小程序内部跳转，openType 表示跳转方式",
+    "custom_field_type": "Array<LinkObj>【interface LinkObj { name: string; url?: string; openType?: 'navigate' | 'redirect' | 'relaunch' | 'switchTab' | 'navigateBack' }】",
+    "deprecated": true
+  },
+  {
+    "id": 1601,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Footer",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'text'",
+    "field_enum": [
+      "text",
+      "logo"
+    ],
+    "field_desc_zh": "页脚展示类型",
+    "deprecated": true
+  }
+]

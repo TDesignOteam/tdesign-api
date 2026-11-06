@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1741184846,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“加载中”描述文本"
+  },
+  {
+    "id": 2252,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "loadingMoreText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'点击加载更多' 描述文本"
+  },
+  {
+    "id": 2253,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'正在加载中，请稍后' 描述文本"
+  },
+  {
+    "id": 1741185248,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "loosing",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“释放即可刷新”描述文本"
+  },
+  {
+    "id": 1741185227,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "pulling",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“下拉即可刷新”描述文本"
+  },
+  {
+    "id": 1741185269,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ListConfig",
+    "field_category": "Props",
+    "field_name": "success",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“刷新成功”描述文本"
+  }
+]

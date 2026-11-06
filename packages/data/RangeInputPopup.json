@@ -1,0 +1,205 @@
+[
+  {
+    "id": 2473,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "宽度随内容自适应"
+  },
+  {
+    "id": 2468,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用范围输入框，值为数组表示可分别控制某一个输入框是否禁用"
+  },
+  {
+    "id": 2469,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "inputValue",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "输入框的值",
+    "custom_field_type": "RangeInputValue",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 1715410545,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本"
+  },
+  {
+    "id": 2464,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "panel",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "下拉框内容，可完全自定义"
+  },
+  {
+    "id": 2462,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2461,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "popupVisible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否显示下拉框",
+    "support_default_value": true
+  },
+  {
+    "id": 2463,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "rangeInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 RangeInput 组件全部属性",
+    "custom_field_type": "RangeInputProps【import { RangeInputProps } from '@RangeInput'】"
+  },
+  {
+    "id": 2467,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框"
+  },
+  {
+    "id": 2914,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态"
+  },
+  {
+    "id": 2915,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式"
+  },
+  {
+    "id": 2470,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Events",
+    "field_name": "inputChange",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发等",
+    "event_input": "(value: RangeInputValue, context?: RangeInputValueChangeContext) 【type RangeInputValueChangeContext = { e?: InputEvent | MouseEvent; trigger?: 'input' | 'clear', position?: RangeInputPosition }】",
+    "trigger_elements": "FormEvent<HTMLInputElement>/MouseEvent<HTMLElement | SVGElement>"
+  },
+  {
+    "id": 2465,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RangeInputPopup",
+    "field_category": "Events",
+    "field_name": "popupVisibleChange",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "下拉框显示或隐藏时触发",
+    "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【import { PopupVisibleChangeContext } from '@Popup'】"
+  }
+]

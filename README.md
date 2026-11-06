@@ -10,7 +10,7 @@
 
 <img width="500" alt="image" src="https://github.com/TDesignOteam/tdesign-api/assets/36812439/5b6c5dc0-54ee-4838-8978-5f7d4a9699c2">
 
-你可以主界面里做组件 API 的增删改查操作。
+可以主界面里做组件 API 的增删改查操作。
 
 ### 生成 API 
 
@@ -20,7 +20,7 @@
 
 ### 提交
 
-本地生成了相关文件，修改 db 中的数据后，需要将所有修改都以 PR 方式提交到仓库中，找其他同学 review，PR 合并后 GitHub Action 会自动根据本次提交的内容，使用 @github-actions
+本地生成了相关文件，需要将所有修改都以 PR 方式提交到仓库中，找其他同学 review，PR 合并后 GitHub Action 会自动根据本次提交的内容，使用 @github-actions
 github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，并提交本次修改的代码。
 
 例：https://github.com/TDesignOteam/tdesign-api/pull/12
@@ -38,5 +38,3 @@ github-actions[bot] 的账号自动向对应 TDesign 组件仓库创建分支，
 组件仓库放在同级目录 然后执行脚本 如 npm run api:docs Button 'Vue(PC)' finalProject
 
 更多指令见 [命令行操作](./packages/scripts/README.md)
-
-

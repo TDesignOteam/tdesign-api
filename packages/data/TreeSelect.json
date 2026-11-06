@@ -1,0 +1,980 @@
+[
+  {
+    "id": 2375,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "宽度随内容自适应"
+  },
+  {
+    "id": 3298,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动聚焦",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}],\"global\":{\"afterEach\":[\"document.querySelectorAll('.t-popup').forEach((node) => node?.remove())\"]}}}"
+  },
+  {
+    "id": 2376,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "无边框模式",
+    "test_description": "{\"PC\":{\"className\":\"t-select-input--borderless\"}}"
+  },
+  {
+    "id": 1133,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许清空",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value can not show clear icon\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":1},\"description\":\"show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":0,\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":[1]},\"description\":\"show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-tag-input__suffix-clear\"]}]}]}}"
+  },
+  {
+    "id": 1822,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "collapsedItems",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
+    "custom_field_type": "TNode<{ value: DataOption[]; collapsedSelectedItems: DataOption[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":2,\"value\":[1,3,\"5\"],\"data\":[{\"label\":\"tdesign-vue\",\"value\":1},{\"label\":\"tdesign-react\",\"value\":2},{\"label\":\"tdesign-miniprogram\",\"value\":3},{\"label\":\"tdesign-angular\",\"value\":\"5\"},{\"label\":\"tdesign-mobile-vue\",\"value\":\"6\"}]},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"count\":1,\"value\":[{\"label\":\"tdesign-vue\",\"value\":1},{\"label\":\"tdesign-miniprogram\",\"value\":3},{\"label\":\"tdesign-angular\",\"value\":\"5\"}],\"collapsedSelectedItems\":[{\"label\":\"tdesign-angular\",\"value\":\"5\"}]}]}}}"
+  },
+  {
+    "id": 1745217452,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "customValue",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "自定义选中值，优先级高于 `value`",
+    "custom_field_type": "TreeSelectValue"
+  },
+  {
+    "id": 1149,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "树选择的数据列表。结构：`[{ label: TNode, value: string | number, text: string, ... }]`，其中 `label` 表示选项呈现的内容，可自定义；`value` 表示选项的唯一值；表示当 `label` 用于选项复杂内容呈现时，`text` 用于搜索功能。<br />其中 `label` 和 `value` 可以使用 `keys` 属性定义别名",
+    "custom_field_type": "Array<DataOption>",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"data\":[]},\"description\":\"empty data with panel content node\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__empty\"]}]}]}}"
+  },
+  {
+    "id": 1136,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件",
+    "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\",\"event\":[{\"description\":\"disabled TreeSelect can not open popup\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":\"not\"}}]},{\"props\":{\"value\":1,\"disabled\":true},\"description\":\"cant not show clear icon on mouse enter in single tree select\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"delay\":0,\"exist\":[{\".t-input__suffix-clear\":false}]}]},{\"props\":{\"value\":[1],\"disabled\":true},\"description\":\"cant not show clear icon on mouse enter in multiple tree select\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[{\".t-tag-input__suffix-clear\":false}]}]}]}}"
+  },
+  {
+    "id": 1142,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "当下拉列表为空时显示的内容",
+    "test_description": "{\"PC\":{\"tnode\":{\"dom\":[\"document.custom-node\"],\"trigger\":\"click(.t-input)\"}}}"
+  },
+  {
+    "id": 294,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据",
+    "custom_field_type": "(filterWords: string, option: DataOption) => boolean",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filter\":\"(filterWord, node) => !filterWord || node.data.label === filterWord\"},\"description\":\"multiple tree select & filterable\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item:not(.t-tree__item--hidden)\":1,\"clearElementAtEnd\":\".t-popup\"}],\"delay\":100}]},{\"description\":\"priority of onSearch is higher than props.filter, props.filter is forbidden to work in this scene\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"onSearch\":\"() => {}\",\"filter\":\"(filterWord, option) => !filterWord || option.label === filterWord\"},\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-react')\",\"exist\":[{\"document.t-tree__item:not(.t-tree__item--hidden)\":6,\"clearElementAtEnd\":\".t-popup\"}],\"delay\":100}]},{\"description\":\"multiple tree select, check filter nodes\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"filterable\":true},\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"delay\":100},{\"trigger\":\"click(document.t-tree__item:first-child)\",\"events\":{\"change\":[[1],{\"node\":\"toBeTruthy\",\"data\":{\"label\":\"tdesign-vue\",\"value\":1},\"index\":0,\"trigger\":\"check\",\"e.type\":\"change\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"description\":\"single tree select, check filter nodes\",\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"filterable\":true},\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"delay\":100},{\"trigger\":\"click(document.t-tree__item:first-child)\",\"event\":{\"change\":[1,{\"node\":\"toBeTruthy\",\"data\":{\"label\":\"tdesign-vue\",\"value\":1},\"trigger\":\"check\",\"e.type\":\"click\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 1138,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "filterable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可搜索",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-tree__item:not(.t-tree__item--hidden)\":1,\"clearElementAtEnd\":\".t-popup\"}],\"delay\":100}]}]}}"
+  },
+  {
+    "id": 3224,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "336",
+    "field_desc_zh": "高度，默认单位为 px"
+  },
+  {
+    "id": 2367,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传给 输入框 Input 组件的全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"{name:'tree-select-input-name'}\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"name\":\"tree-select-input-name\"}}]}],\"attributeDom\":\"\"}}"
+  },
+  {
+    "id": 2368,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "inputValue",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "custom_field_type": "string",
+    "syntactic_sugar": "sync",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true},\"description\":\"uncontrolled inputValue works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign')\",\"event\":{\"inputChange\":[\"tdesign\",{\"e.type\":\"input\",\"trigger\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"tdesign\"}}}]}]},{\"props\":{\"filterable\":true,\"inputValue\":\"tdesign\",\"popupVisible\":true},\"description\":\"controlled inputValue works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"inputChange\":[\"Hello TDesign\",{\"e.type\":\"input\",\"trigger\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"tdesign\"}},\"clearElementAtEnd\":\".t-popup\"}]}]}]}}",
+    "support_default_value": true
+  },
+  {
+    "id": 3228,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`",
+    "field_desc_en": "alias filed name in data",
+    "custom_field_type": "TreeKeysType",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectKeysMount\",\"trigger\":\"delay(200)\",\"dom\":[{\"description\":\"single tree select, keys works fined\",\"props\":{\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"popupVisible\":true,\"treeProps\":{\"expandAll\":true},\"popupProps\":{\"overlayClassName\":\"singleTreeSelectKeys\"}},\"dom\":[{\"document.singleTreeSelectKeys .t-tree__item\":{\"text\":\"tdesign-vue\"},\"document.singleTreeSelectKeys .t-tree__item:nth-child(2)\":{\"text\":\"tdesign-react\"},\"document.singleTreeSelectKeys .t-tree__item:nth-child(3)\":{\"text\":\"tdesign-web-react\"},\"document.singleTreeSelectKeys .t-tree__item:last-child\":{\"text\":\"tdesign-miniprogram\"}}]},{\"description\":\"multiple tree select, keys works fined\",\"props\":{\"multiple\":true,\"popupVisible\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"},\"treeProps\":{\"expandAll\":true},\"popupProps\":{\"overlayClassName\":\"multipleTreeSelectKeys\"}},\"dom\":[{\"document.multipleTreeSelectKeys .t-tree__item\":{\"text\":\"tdesign-vue\"},\"document.multipleTreeSelectKeys .t-tree__item:nth-child(2)\":{\"text\":\"tdesign-react\"},\"document.multipleTreeSelectKeys .t-tree__item:nth-child(3)\":{\"text\":\"tdesign-web-react\"},\"document.multipleTreeSelectKeys .t-tree__item:last-child\":{\"text\":\"tdesign-miniprogram\"}}]}],\"event\":[{\"description\":\"single tree select, change event works fine\",\"props\":{\"value\":1,\"popupVisible\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"keysPropsSingle\"}},\"expect\":[{\"trigger\":\"click(document.keysPropsSingle .t-tree__item:last-child)\",\"event\":{\"change\":[3]}}]},{\"description\":\"multiple tree select, change event works fine\",\"props\":{\"value\":[1],\"multiple\":true,\"popupVisible\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"keysPropsMultiple\"}},\"expect\":[{\"trigger\":\"click(document.keysPropsMultiple .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,3]]}}]}]}}"
+  },
+  {
+    "id": 1748334587,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`",
+    "field_desc_en": "alias filed name in options",
+    "custom_field_type": "TreeKeysType"
+  },
+  {
+    "id": 3323,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本"
+  },
+  {
+    "id": 1140,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否正在加载数据",
+    "test_description": "{\"PC\":{\"dom\":\".t-loading\"}}"
+  },
+  {
+    "id": 1141,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "远程加载时显示的文字，支持自定义。如加上超链接",
+    "test_description": "{\"PC\":{\"props\":{\"loading\":true},\"tnode\":{\"dom\":[\"document.custom-node\",\"document.t-select__loading-tips\"],\"trigger\":\"click(.t-input)\"},\"event\":[{\"props\":{\"loading\":true},\"description\":\"loading status show loading text in panel\",\"wrapper\":\"\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[\"document.t-select__loading-tips\"]}]}]}}"
+  },
+  {
+    "id": 1190,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "用于控制多选数量，值为 0 则不限制",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"max\":2,\"value\":\"[1,'4']\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":300},{\"trigger\":\"click(document.t-popup .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":\"not\"},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 1821,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "minCollapsedNum",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "最小折叠数量，用于多选情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"minCollapsedNum\":2},\"dom\":[{\".t-tag\":3,\".t-tag:last-child\":{\"text\":\"+3\"}}]}}"
+  },
+  {
+    "id": 1134,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "multiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许多选"
+  },
+  {
+    "id": 3229,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选项",
+    "custom_field_type": "Array<DataOption>"
+  },
+  {
+    "id": 3484,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "panelBottomContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的底部内容"
+  },
+  {
+    "id": 3483,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "panelTopContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的顶部内容"
+  },
+  {
+    "id": 1137,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符",
+    "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"this is tree select placeholder\"},\"attributeDom\":\"input\"}}"
+  },
+  {
+    "id": 1144,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"popupProps\":\"{overlayClassName: 'custom-popup-class-name'}\"},\"expect\":[{\"trigger\":\"click(.t-input)\",\"exist\":[{\"document.t-popup\":{\"className\":[\"custom-popup-class-name\"]},\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 2396,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "popupVisible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否显示下拉框",
+    "field_desc_en": "show popup",
+    "syntactic_sugar": "sync",
+    "test_description": "{\"PC\":{\"className\":\"t-select-input--popup-visible\"}}",
+    "support_default_value": true
+  },
+  {
+    "id": 1145,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 2387,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":\"not\"}}]}]}}"
+  },
+  {
+    "id": 3333,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "reserveKeyword",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词"
+  },
+  {
+    "id": 2330,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "selectInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "【开发中】透传 SelectInput 筛选器输入框组件的全部属性",
+    "custom_field_type": "SelectInputProps【import { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext } from '@SelectInput'】"
+  },
+  {
+    "id": 1132,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "尺寸",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 2916,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态",
+    "test_description": "{\"PC\":{\"className\":[{\"t-is-default\":false},\"t-is-success\",\"t-is-warning\",\"t-is-error\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 3321,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标前的后置内容"
+  },
+  {
+    "id": 3322,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件后置图标"
+  },
+  {
+    "id": 2329,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "tagProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Tag 标签组件全部属性",
+    "custom_field_type": "TagProps【import { TagProps } from '@Tag'】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"dom\":{\"{ theme: 'warning' }\":{\".t-tag--warning\":5}}}}"
+  },
+  {
+    "id": 2917,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+    "test_description": "{\"PC\":{\"dom\":{\"this is a tip\":{\".t-input__tips\":1}}}}"
+  },
+  {
+    "id": 1156,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "treeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Tree 组件的全部属性",
+    "custom_field_type": "TreeProps【import { TreeProps, TreeNodeModel } from '@Tree'】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectKeysMount\",\"trigger\":\"delay(200)\",\"dom\":[{\"description\":\"single tree select, treeProps.keys works fined\",\"props\":{\"popupVisible\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"singleTreeSelectKeys\"}},\"dom\":[{\"document.singleTreeSelectKeys .t-tree__item\":{\"text\":\"tdesign-vue\"},\"document.singleTreeSelectKeys .t-tree__item:nth-child(2)\":{\"text\":\"tdesign-react\"},\"document.singleTreeSelectKeys .t-tree__item:nth-child(3)\":{\"text\":\"tdesign-web-react\"},\"document.singleTreeSelectKeys .t-tree__item:last-child\":{\"text\":\"tdesign-miniprogram\"}}]},{\"description\":\"multiple tree select, treeProps.keys works fined\",\"props\":{\"multiple\":true,\"popupVisible\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"multipleTreeSelectKeys\"}},\"dom\":[{\"document.multipleTreeSelectKeys .t-tree__item\":{\"text\":\"tdesign-vue\"},\"document.multipleTreeSelectKeys .t-tree__item:nth-child(2)\":{\"text\":\"tdesign-react\"},\"document.multipleTreeSelectKeys .t-tree__item:nth-child(3)\":{\"text\":\"tdesign-web-react\"},\"document.multipleTreeSelectKeys .t-tree__item:last-child\":{\"text\":\"tdesign-miniprogram\"}}]}],\"event\":[{\"description\":\"single tree select, trigger change event to check treeProps.keys\",\"props\":{\"value\":1,\"popupVisible\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"treePropsKeysSingle\"}},\"expect\":[{\"trigger\":\"click(document.treePropsKeysSingle .t-tree__item:last-child)\",\"event\":{\"change\":[3]}}]},{\"description\":\"multiple tree select, trigger change event to check treeProps.keys\",\"props\":{\"value\":[1],\"popupVisible\":true,\"multiple\":true,\"treeProps\":{\"expandAll\":true,\"keys\":{\"label\":\"name\",\"value\":\"key\"}},\"popupProps\":{\"overlayClassName\":\"treePropsKeysMultiple\"}},\"expect\":[{\"trigger\":\"click(document.treePropsKeysMultiple .t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,3]]}}]}]}}"
+  },
+  {
+    "id": 1131,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Object",
+      "Array",
+      "BigInt"
+    ],
+    "field_desc_zh": "选中值，泛型 `TreeValueType` 继承自 `TreeSelectValue`",
+    "custom_field_type": "TreeValueType【type TreeSelectValue = string | number | bigint | TreeOptionData | Array<string | number | bigint | TreeOptionData>】",
+    "syntactic_sugar": "v-model",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"tdesign-vue\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"value\":\"tdesign-vue\"}}]}]}}",
+    "support_default_value": true
+  },
+  {
+    "id": 1712652245,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "选中值",
+    "custom_field_type": "TreeSelectValue【type TreeSelectValue = string | number | Array<TreeSelectValue>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1833,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "valueDisplay",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义选中项呈现方式",
+    "custom_field_type": "string | TNode<{ value: TreeOptionData | TreeOptionData[]; onClose: (index: number) => void }>",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"value\":1,\"data\":\"[{label: 'tdesign-vue',value: 1}]\"},\"tnode\":{\"dom\":[],\"trigger\":\"\",\"params\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}],\"onClose\":\"toBeTruthy\"}]}}}"
+  },
+  {
+    "id": 1143,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Props",
+    "field_name": "valueType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "value",
+    "field_enum": [
+      "value",
+      "object"
+    ],
+    "field_desc_zh": "用于控制选中值的类型。假设数据选项为：`[{ label: '姓名', value: 'name' }]`，value 表示值仅返回数据选项中的 value， object 表示值返回全部数据",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"multiple\":true,\"value\":\"[{ label: 'tdesign-vue', value: 1 }]\"},\"dom\":{\"object\":{\".t-tag\":1}}}}"
+  },
+  {
+    "id": 1155,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "输入框失去焦点时触发",
+    "event_input": "(context: SelectInputBlurContext & { value: TreeSelectValue })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":1},\"description\":\"single select blur works fine\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":100,\"event\":{\"focus\":[{\"e.type\":\"focus\",\"value\":1}]}},{\"trigger\":\"simulateDocumentMouseEvent(document, 'mousedown')\",\"event\":{\"blur\":[{\"e.type\":\"mousedown\",\"value\":1}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"filterable\":true,\"value\":[1]},\"description\":\"multiple select blur works fine\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"focus\":[{\"e.type\":\"focus\"}]}},{\"trigger\":\"simulateDocumentMouseEvent(document, 'mousedown')\",\"event\":{\"blur\":[{\"e.type\":\"mousedown\",\"value\":[1]}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 1148,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "节点选中状态变化时触发，`context.node` 表示当前变化的选项，`context. trigger` 表示触发变化的来源。泛型 `TreeValueType` 继承自 `TreeSelectValue` ",
+    "event_input": "(value: TreeValueType, context: TreeSelectChangeContext<DataOption>)【interface TreeSelectChangeContext<DataOption> { node: TreeNodeModel<DataOption>; data: DataOption; index?: number; trigger: TreeSelectValueChangeTrigger; e?: MouseEvent | KeyboardEvent | Event }】【type TreeSelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck'】",
+    "trigger_elements": "MouseEvent<any>/KeyboardEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"Single TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectDefaultMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:nth-child(3))\",\"event\":{\"change\":[\"2.1\",{\"e.type\":\"click\",\"node.label\":\"tdesign-web-react\",\"data\":{\"label\":\"tdesign-web-react\",\"value\":\"2.1\"}}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"description\":\"Multiple TreeSelect, click one tree item to trigger value change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:last-child .t-checkbox__label)\",\"event\":{\"change\":[[1,\"2.1\",\"2.2\",3,\"4\",\"5\",\"6\"],{\"trigger\":\"check\",\"e.type\":\"change\",\"node.label\":\"tdesign-mobile-vue\",\"data\":{\"label\":\"tdesign-mobile-vue\",\"value\":\"6\"}}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"description\":\"Multiple TreeSelect, click one tree item to delete\",\"wrapper\":\"getTreeSelectMultipleMount\",\"props\":{\"treeProps\":{\"expandAll\":true}},\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"change\":[[\"2.1\",\"2.2\",3,\"4\",\"5\"],{\"trigger\":\"uncheck\",\"e.type\":\"change\",\"node.label\":\"tdesign-vue\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 3232,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "点击任何节点均会触发；level 代表当前点击的层级，0 代表最左侧，依次递进",
+    "event_input": "(value: TreeSelectValue, level: TreeLevel) 【type TreeLevel = 0 | 1 | 2】"
+  },
+  {
+    "id": 1153,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "点击清除按钮时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<SVGSVGElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"clearable\":true},\"description\":\"Multiple TreeSelect, clear all value on click clear icon\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-tag-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[[],{\"trigger\":\"clear\"}],\"popupVisibleChange\":[false,{\"trigger\":\"clear\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"value\":1,\"clearable\":true},\"description\":\"Single TreeSelect, clear value on click clear icon\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\"},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.type\":\"click\"}],\"change\":[\"undefined\",{\"trigger\":\"clear\"}],\"popupVisibleChange\":[false,{\"trigger\":\"clear\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 3314,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "回车键按下时触发。`inputValue` 表示输入框的值，`value` 表示选中值。泛型 `TreeValueType` 继承 `TreeSelectValue`",
+    "event_input": "(context: { inputValue: string; e: KeyboardEvent; value: TreeValueType })"
+  },
+  {
+    "id": 1154,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "输入框获得焦点时触发",
+    "event_input": "(context: { value: TreeSelectValue; e: FocusEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true,\"value\":[1]},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"value\":[1],\"e.type\":\"focus\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]},{\"props\":{\"filterable\":true,\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}]},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[{\"value\":[{\"label\":\"tdesign-vue\",\"value\":1}],\"e.type\":\"focus\"}]},\"exist\":[{\"clearElementAtEnd\":\".t-popup\"}]}]}]}}"
+  },
+  {
+    "id": 2370,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "inputChange",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、失去焦点等",
+    "event_input": "(value: string, context: SelectInputValueChangeContext)",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign-vue\"},\"description\":\"clear filter words on change\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"delay\":200},{\"trigger\":\"click(document.t-tree__item:first-child .t-checkbox__label)\",\"event\":{\"inputChange\":[\"\",{\"trigger\":\"change\"}]}}]}]}}"
+  },
+  {
+    "id": 2395,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "popupVisibleChange",
+    "field_type": [],
+    "field_desc_zh": "下拉框显示或隐藏时触发。单选场景，选中某个选项时触发关闭，此时需要添加参数 `node`",
+    "event_input": "(visible: boolean, context: TreeSelectPopupVisibleContext<DataOption>)【import { PopupVisibleChangeContext, PopupTriggerEvent, PopupTriggerSource } from '@Popup'】【interface TreeSelectPopupVisibleContext<T> { e?: PopupTriggerEvent | Event; node?: TreeNodeModel<T>; trigger?: PopupTriggerSource | 'clear'; }】",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"inputValue\":\"tdesign\"},\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\",\"event\":{\"popupVisibleChange\":[true]},\"delay\":200}]}]}}"
+  },
+  {
+    "id": 1152,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "多选模式下，选中数据被移除时触发",
+    "event_input": "(options: RemoveOptions<DataOption, TreeValueType>)【export interface RemoveOptions<T extends TreeOptionData = TreeOptionData, N extends TreeSelectValue = TreeSelectValue> { value: N; data: T; index: number; node: TreeNodeModel<T>; e?: MouseEvent | KeyboardEvent; trigger: 'tag-remove' | 'backspace'; }】",
+    "trigger_elements": "MouseEvent<SVGSVGElement>/KeyboardEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"remove first value on click close icon\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-tag__icon-close)\",\"event\":{\"remove\":[{\"value\":1,\"index\":0,\"trigger\":\"tag-remove\",\"data\":{\"label\":\"tdesign-vue\",\"value\":1},\"e.type\":\"click\"}]}}]},{\"props\":{\"filterable\":true},\"description\":\"remove last child on keydown.backspace\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"keydown.backspace(input)\",\"event\":{\"remove\":[{\"value\":\"5\",\"index\":4,\"trigger\":\"backspace\",\"data\":{\"label\":\"tdesign-angular\",\"value\":\"5\"},\"e.type\":\"keydown\"}]}}]}]}}"
+  },
+  {
+    "id": 1151,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "Events",
+    "field_name": "search",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "输入值变化时，触发搜索事件。主要用于远程搜索新数据。设置 `filterable=true` 开启此功能。优先级高于本地数据搜索 `filter`，即一旦存在这个远程搜索事件 `filter` 失效",
+    "event_input": "(filterWords: string, context: { e: KeyboardEvent | SelectInputValueChangeContext['e'] })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"filterable\":true},\"description\":\"Single TreeSelect, trigger search event on input text\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"event\":{\"search\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Single TreeSelect, trigger search event on input enter\",\"wrapper\":\"getTreeSelectDefaultMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\"},{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"search.calls[1]\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Multiple TreeSelect, trigger search event on input text\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\",\"event\":{\"search\":[\"tdesign-vue\"]}}]},{\"props\":{\"filterable\":true},\"description\":\"Multiple TreeSelect, trigger search event on input enter\",\"wrapper\":\"getTreeSelectMultipleMount\",\"expect\":[{\"trigger\":\"click(.t-input)\"},{\"trigger\":\"simulateInputChange('input', 'tdesign-vue')\"},{\"trigger\":\"simulateInputEnter('input')\",\"event\":{\"search.calls[1]\":[\"tdesign-vue\"]}}]}]}}"
+  },
+  {
+    "id": 1150,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelect",
+    "field_category": "<T>",
+    "field_name": "<DataOption extends TreeOptionData = TreeOptionData, TreeValueType extends TreeSelectValue  = TreeSelectValue>",
+    "field_type": []
+  },
+  {
+    "id": 1725346547,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "<T>",
+    "field_name": "<DataOption extends TreeOptionData = TreeOptionData>",
+    "field_type": []
+  },
+  {
+    "id": 1735094148,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1735094123,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-left-column",
+    "field_type": [],
+    "field_desc_zh": "左侧第一列样式类"
+  },
+  {
+    "id": 1735094180,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-left-item",
+    "field_type": [],
+    "field_desc_zh": "左侧第一列子项样式类"
+  },
+  {
+    "id": 1735094197,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-middle-item",
+    "field_type": [],
+    "field_desc_zh": "中间列子项样式类"
+  },
+  {
+    "id": 1735094245,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-right-column",
+    "field_type": [],
+    "field_desc_zh": "右侧第一列样式类"
+  },
+  {
+    "id": 1735094259,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-right-item",
+    "field_type": [],
+    "field_desc_zh": "右侧第一列子项样式类"
+  },
+  {
+    "id": 1735094317,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeSelect",
+    "field_category": "External Classes",
+    "field_name": "t-class-right-item-label",
+    "field_type": [],
+    "field_desc_zh": "右侧第一列子项标签样式类"
+  }
+]

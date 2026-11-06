@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <template v-if="[API_CATEGORY_PROPS, API_CATEGORY_PLUGINS].includes(Number(formData.apiCategory))">
+    <template v-if="[API_CATEGORY_PROPS, API_CATEGORY_PLUGINS].includes(formData.apiCategory)">
       <div class="t-form-item">
         <label style="vertical-align: top">
           <span>API 类型</span>
@@ -201,7 +201,7 @@
           <t-input v-model="formData.descEn" :placeholder="currentApiCategory.placeholder.descEn"></t-input>
         </div>
       </div>
-      <div class="t-form-item" v-show="Number(formData.apiCategory) === API_CATEGORY_EVENTS">
+      <div class="t-form-item" v-show="formData.apiCategory === API_CATEGORY_EVENTS">
         <label>
           <span>触发元素(React)</span>
           <t-popup
@@ -314,7 +314,7 @@ const props = defineProps({
 const formData = reactive({
   platform: [],
   component: '',
-  apiCategory: '1',
+  apiCategory: API_CATEGORY_PROPS,
   fieldType: [],
   customFieldType: '',
   defaultValue: '',
@@ -354,36 +354,36 @@ const currentApiCategory = computed(() => {
 });
 
 const isShowSugar = computed(() => {
-  const intersection = formData.platform.filter((item) => [P_VUE_PC, P_VUE_MOBILE, P_UNIAPP].includes(Number(item)));
+  const intersection = formData.platform.filter((item) => [P_VUE_PC, P_VUE_MOBILE, P_UNIAPP].includes(item));
   const platformAllow = !!intersection.length;
   const categoryAllow = [API_CATEGORY_EVENTS, API_CATEGORY_PROPS, API_CATEGORY_PLUGINS].includes(
-    Number(formData.apiCategory),
+    formData.apiCategory,
   );
   return platformAllow && categoryAllow;
 });
 
 const isExtendsApi = computed(() => {
-  return String(formData.apiCategory) === String(API_CATEGORY_EXTENDS);
+  return formData.apiCategory === API_CATEGORY_EXTENDS;
 });
 
 const isReturnApi = computed(() => {
-  return String(formData.apiCategory) === String(API_CATEGORY_RETURN);
+  return formData.apiCategory === API_CATEGORY_RETURN;
 });
 
 const isT = computed(() => {
-  return String(formData.apiCategory) === String(API_CATEGORY_T);
+  return formData.apiCategory === API_CATEGORY_T;
 });
 
 const isShowEnumField = computed(() => {
-  return formData.fieldType.includes(String(STRING)) || formData.fieldType.includes(String(NUMBER));
+  return formData.fieldType.includes(STRING) || formData.fieldType.includes(NUMBER);
 });
 
 const isShowParams = computed(() => {
-  return [API_CATEGORY_FUNCTIONS, API_CATEGORY_EVENTS].includes(Number(formData.apiCategory));
+  return [API_CATEGORY_FUNCTIONS, API_CATEGORY_EVENTS].includes(formData.apiCategory);
 });
 
 const isShowReturn = computed(() => {
-  return [API_CATEGORY_FUNCTIONS].includes(Number(formData.apiCategory));
+  return [API_CATEGORY_FUNCTIONS].includes(formData.apiCategory);
 });
 
 watch(
@@ -401,17 +401,17 @@ watch(
     if (!val) return;
     formData.platform = val.platform_framework;
     formData.component = val.component;
-    formData.apiCategory = val.field_category ? String(val.field_category) : '1';
+    formData.apiCategory = val.field_category || API_CATEGORY_PROPS;
     formData.fieldType = val.field_type;
     formData.customFieldType = val.custom_field_type;
     formData.defaultValue = val.field_default_value;
     formData.required = !!val.field_required;
     formData.deprecated = !!val.deprecated;
-    formData.fieldEnums = val.field_enum;
+    formData.fieldEnums = val.field_enum?.join('/') || '';
     formData.descZh = val.field_desc_zh;
     formData.descEn = val.field_desc_en;
     formData.testDescription = val.test_description;
-    formData.version = val.version;
+    formData.version = val.version ? JSON.stringify(val.version, undefined, 2) : '';
     formData.supportDefaultValue = Boolean(val.support_default_value);
     formData.htmlAttribute = Boolean(val.html_attribute);
     formData.name = val.field_name;
@@ -429,7 +429,7 @@ watch(
 );
 
 function onFieldTypeChange(val) {
-  if (!val.includes(String(STRING))) {
+  if (!val.includes(STRING)) {
     formData.fieldEnums = '';
   }
 }

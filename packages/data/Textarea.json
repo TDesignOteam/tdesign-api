@@ -1,0 +1,860 @@
+[
+  {
+    "id": 1719,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "adjustPosition",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "键盘弹起时，是否自动上推页面"
+  },
+  {
+    "id": 2726,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "allowInputOverMax",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入",
+    "field_desc_en": "Allow input after exceeding `maxlength` or `maxcharacter`",
+    "version": {
+      "Miniprogram": "1.8.6"
+    }
+  },
+  {
+    "id": 1058,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动聚焦，拉起键盘"
+  },
+  {
+    "id": 1669,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "autosize",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度",
+    "custom_field_type": "boolean | { minRows?: number; maxRows?: number }"
+  },
+  {
+    "id": 1723,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "autosize",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否自动增高，值为 true 时，style.height 不生效。支持传入对象，如 { maxHeight: 120, minHeight: 20 }",
+    "custom_field_type": "boolean | { maxHeight?: number, minHeight?: number }"
+  },
+  {
+    "id": 3391,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示外边框"
+  },
+  {
+    "id": 1720,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "confirmHold",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "点击键盘右下角按钮时是否保持键盘不收起点"
+  },
+  {
+    "id": 1721,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "confirmType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "return",
+    "field_enum": [
+      "return",
+      "send",
+      "search",
+      "next",
+      "go",
+      "done"
+    ],
+    "field_desc_zh": "设置键盘右下角按钮的文字，仅在 type='text'时生效",
+    "custom_field_type": "'return' | 'send' | 'search' | 'next' | 'go' | 'done'"
+  },
+  {
+    "id": 1765200398,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "count",
+    "field_type": [
+      "Boolean",
+      "Function"
+    ],
+    "field_desc_zh": "文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true",
+    "field_desc_en": "Character counter. It is enabled by default when `maxLength` or `maxCharacter` is set.",
+    "custom_field_type": "boolean | ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode)"
+  },
+  {
+    "id": 3392,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "指定 focus 时的光标位置"
+  },
+  {
+    "id": 1754468710,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "【实验】光标颜色，仅在 Skyline 下有效"
+  },
+  {
+    "id": 1754469037,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "光标颜色"
+  },
+  {
+    "id": 3393,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "cursorSpacing",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离"
+  },
+  {
+    "id": 3394,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "disableDefaultPadding",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否去掉 iOS 下的默认内边距"
+  },
+  {
+    "id": 963,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用文本框"
+  },
+  {
+    "id": 1712045054,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "fixed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "如果 textarea 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true"
+  },
+  {
+    "id": 1801,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "focus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动聚焦"
+  },
+  {
+    "id": 3395,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "holdKeyboard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "focus时，点击页面的时候不收起键盘"
+  },
+  {
+    "id": 3396,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "indicator",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效"
+  },
+  {
+    "id": 2273,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本"
+  },
+  {
+    "id": 1712658977,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "标题输入框布局方式"
+  },
+  {
+    "id": 1740,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "maxcharacter",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度"
+  },
+  {
+    "id": 966,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的字符个数",
+    "custom_field_type": "string | number"
+  },
+  {
+    "id": 1725357311,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "用户最多可以输入的字符个数，值为 -1 的时候不限制最大长度"
+  },
+  {
+    "id": 967,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "名称，HTML 元素原生属性"
+  },
+  {
+    "id": 965,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符"
+  },
+  {
+    "id": 1737451311,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "placeholderClass",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "textarea-placeholder",
+    "field_desc_zh": "指定 placeholder 的样式类，目前仅支持color,font-size和font-weight"
+  },
+  {
+    "id": 1712044962,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "placeholderStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定 placeholder 的样式，目前仅支持 color ,font-size和font-weight"
+  },
+  {
+    "id": 964,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态",
+    "version": {
+      "Miniprogram": "1.8.6"
+    }
+  },
+  {
+    "id": 3397,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "selectionEnd",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标结束位置，自动聚集时有效，需与 selection-start 搭配使用"
+  },
+  {
+    "id": 3398,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "selectionStart",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标起始位置，自动聚集时有效，需与 selection-end 搭配使用"
+  },
+  {
+    "id": 3399,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "showConfirmBar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示键盘上方带有”完成“按钮那一栏"
+  },
+  {
+    "id": 2167,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "文本框状态"
+  },
+  {
+    "id": 2169,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式"
+  },
+  {
+    "id": 962,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "文本框值",
+    "custom_field_type": "TextareaValue【type TextareaValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 974,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: TextareaValue, context: { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 2532,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: TextareaValue, cursor: number)",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 968,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入内容变化时触发",
+    "event_input": "(value: TextareaValue, context?: { e?: InputEvent })",
+    "trigger_elements": "FormEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 2531,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入内容变化时触发",
+    "event_input": "(value: TextareaValue, cursor: number)",
+    "trigger_elements": "FormEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 1743353978,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "compositionend",
+    "field_type": [],
+    "field_desc_zh": "中文输入结束时触发",
+    "field_desc_en": "trigger on compositionend",
+    "event_input": "(value: string, context: { e: CompositionEvent })"
+  },
+  {
+    "id": 1743353995,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "compositionstart",
+    "field_type": [],
+    "field_desc_zh": "中文输入开始时触发",
+    "field_desc_en": "trigger on compositionstart",
+    "event_input": "(value: string, context: { e: CompositionEvent })"
+  },
+  {
+    "id": 1724,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "点击完成时触发",
+    "event_input": "(value: TextareaValue)",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 972,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(value: TextareaValue, context : { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 2530,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(value: TextareaValue)",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 3400,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "keyboardheightchange",
+    "field_type": [],
+    "field_desc_zh": "键盘高度发生变化的时候触发此事件",
+    "event_input": "(height: number, duration: number)"
+  },
+  {
+    "id": 969,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "keydown",
+    "field_type": [],
+    "field_desc_zh": "键盘按下时触发",
+    "event_input": "(value: TextareaValue, context: { e: KeyboardEvent })",
+    "trigger_elements": "KeyboardEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 971,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "keypress",
+    "field_type": [],
+    "field_desc_zh": "按下字符键时触发（keydown -> keypress -> keyup）",
+    "event_input": "(value: TextareaValue, context: { e: KeyboardEvent })",
+    "trigger_elements": "KeyboardEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 970,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "keyup",
+    "field_type": [],
+    "field_desc_zh": "释放键盘时触发",
+    "event_input": "(value: TextareaValue, context: { e: KeyboardEvent })",
+    "trigger_elements": "KeyboardEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 1725,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "lineChange",
+    "field_type": [],
+    "field_desc_zh": "行高发生变化时触发",
+    "event_input": "(value: TextareaValue)",
+    "trigger_elements": "FocusEvent<HTMLTextAreaElement>"
+  },
+  {
+    "id": 1712560690,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Events",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "字数超出限制时触发",
+    "event_input": "(context: { error?: 'exceed-maximum' | 'below-minimum' })"
+  },
+  {
+    "id": 1712045223,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712045259,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "External Classes",
+    "field_name": "t-class-indicator",
+    "field_type": [],
+    "field_desc_zh": "计数器样式类"
+  },
+  {
+    "id": 1712045254,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "External Classes",
+    "field_name": "t-class-label",
+    "field_type": [],
+    "field_desc_zh": "左侧文本样式类"
+  },
+  {
+    "id": 1712045249,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "External Classes",
+    "field_name": "t-class-textarea",
+    "field_type": [],
+    "field_desc_zh": "多行文本框样式类"
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "id": 1730970180,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "autoClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible"
+  },
+  {
+    "id": 1715162325,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "无边框模式"
+  },
+  {
+    "id": 3207,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可清空"
+  },
+  {
+    "id": 2341,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "colorModes",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[\"monochrome\", \"linear-gradient\"]",
+    "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
+    "custom_field_type": "Array<'monochrome' | 'linear-gradient'>"
+  },
+  {
+    "id": 1749698394,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "colorModes",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "\"monochrome\"",
+    "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
+    "custom_field_type": "colorModesEnum | colorModesEnum[] 【type colorModesEnum = 'monochrome' | 'linear-gradient'】"
+  },
+  {
+    "id": 2119,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 2121,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "enableAlpha",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启透明通道"
+  },
+  {
+    "id": 3426,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "enableMultipleGradient",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色"
+  },
+  {
+    "id": 1735814342,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "fixed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "如果 color-picker 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true",
+    "version": {
+      "Miniprogram": "1.8.5"
+    }
+  },
+  {
+    "id": 1732704565,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "底部插槽，仅在 `usePopup` 为 `true` 时有效"
+  },
+  {
+    "id": 2120,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "RGB",
+    "field_enum": [
+      "HEX",
+      "HEX8",
+      "RGB",
+      "RGBA",
+      "HSL",
+      "HSLA",
+      "HSV",
+      "HSVA",
+      "CMYK",
+      "CSS"
+    ],
+    "field_desc_zh": "格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效",
+    "field_desc_en": "When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid"
+  },
+  {
+    "id": 1732704577,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "顶部插槽，仅在 `usePopup` 为 `true` 时有效"
+  },
+  {
+    "id": 2344,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Input 输入框组件全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 2122,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性，如 `placement` `overlayStyle` `overlayClassName` `trigger`等",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1730984839,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2342,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "recentColors",
+    "field_type": [
+      "Boolean",
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色”",
+    "field_desc_en": "used color recently",
+    "custom_field_type": "Array<string> | boolean | null",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 2345,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "selectInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 SelectInputProps 筛选器输入框组件全部属性",
+    "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】"
+  },
+  {
+    "id": 3206,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "showPrimaryColorPreview",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否展示颜色选择条右侧的颜色预览区域"
+  },
+  {
+    "id": 1715691745,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 2124,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "swatchColors",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色",
+    "field_desc_en": "swatch colors",
+    "custom_field_type": "Array<string> | null | undefined"
+  },
+  {
+    "id": 1705294739,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "base",
+    "field_enum": [
+      "base",
+      "multiple"
+    ],
+    "field_desc_zh": "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容",
+    "custom_field_type": "TypeEnum 【type TypeEnum = 'base' | 'multiple'】"
+  },
+  {
+    "id": 1730970213,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "usePopup",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用弹出层包裹颜色选择器"
+  },
+  {
+    "id": 2118,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "色值",
+    "field_desc_en": "color value",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1705294511,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "色值",
+    "field_desc_en": "color value",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1730970283,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示颜色选择器。`usePopup` 为 true 时有效"
+  },
+  {
+    "id": 2126,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源",
+    "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' 】"
+  },
+  {
+    "id": 1705294804,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源",
+    "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-hue-bar' | 'palette-alpha-bar' | 'preset' 】"
+  },
+  {
+    "id": 1741675522,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "SVGElement"
+  },
+  {
+    "id": 1730970251,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮时触发",
+    "event_input": "(trigger: ColorPickerTrigger)【type ColorPickerTrigger = 'overlay'】"
+  },
+  {
+    "id": 2125,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "paletteBarChange",
+    "field_type": [],
+    "field_desc_zh": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值",
+    "event_input": "(context: { color: ColorObject })【interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }】"
+  },
+  {
+    "id": 1705394290,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "paletteBarChange",
+    "field_type": [],
+    "field_desc_zh": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值",
+    "event_input": "(context: { color: ColorObject })【interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; value: number;}】"
+  },
+  {
+    "id": 2424,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPicker",
+    "field_category": "Events",
+    "field_name": "recentColorsChange",
+    "field_type": [],
+    "field_desc_zh": "最近使用颜色发生变化时触发",
+    "event_input": "(value: Array<string>)"
+  }
+]

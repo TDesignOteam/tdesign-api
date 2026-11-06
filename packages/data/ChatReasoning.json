@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1742886437,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Props",
+    "field_name": "collapsePanelProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{ destroyOnCollapse: false }",
+    "field_desc_zh": "透传给 CollapsePanel 组件的全部属性",
+    "custom_field_type": "CollapsePanelProps【import { CollapsePanelProps } from '@Collapse'】"
+  },
+  {
+    "id": 1742886498,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Props",
+    "field_name": "expandIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "当前折叠面板展开图标。优先级低于collapsePanelProps.expandIcon"
+  },
+  {
+    "id": 1742886303,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Props",
+    "field_name": "expandIconPlacement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "展开图标位置，可选项：left/right"
+  },
+  {
+    "id": 1742886466,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "折叠面板头内容。优先级低于collapsePanelProps.header"
+  },
+  {
+    "id": 1742886481,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Props",
+    "field_name": "headerRightContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "折叠面板尾内容。优先级低于collapsePanelProps.headerRightContent"
+  },
+  {
+    "id": 1742886536,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatReasoning",
+    "field_category": "Events",
+    "field_name": "expandChange",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "展开图标点击事件",
+    "event_input": "(value: CollapseValue)【import { CollapseValue } from '@Collapse'】"
+  }
+]

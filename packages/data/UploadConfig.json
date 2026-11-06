@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1958,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "cancelUploadText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消上传” 描述文本"
+  },
+  {
+    "id": 2234,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "dragger",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，拖拽相关。示例：{ dragDropText: '释放图标', draggingText: '拖拽到此区域', clickAndDragText: '点击上方“选择文件”或将文件拖到此区域' }",
+    "custom_field_type": "UploadConfigDragger"
+  },
+  {
+    "id": 2235,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "file",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，文件信息相关。示例：{  fileNameText: '文件名', fileSizeText: '文件尺寸', fileStatusText: '状态', fileOperationText: '操作', fileOperationDateText: '上传日期' }",
+    "custom_field_type": "UploadConfigFileList"
+  },
+  {
+    "id": 2224,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "progress",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，上传进度相关。示例：{ uploadText: '上传中', waitingText: '待上传', 'failText': '上传失败', successText: '上传成功' }",
+    "custom_field_type": "UploadConfigProgress"
+  },
+  {
+    "id": 1929,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "sizeLimitMessage",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，文件大小超出限制时提醒文本。示例：`'文件大小不能超过 {sizeLimit}'`"
+  },
+  {
+    "id": 2241,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfig",
+    "field_category": "Props",
+    "field_name": "triggerUploadText",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，上传功能触发文案。示例：{ image: '点击上传图片', normal: '点击上传',  fileInput: '选择文件', reupload: '重新上传', delete: '删除', continueUpload?: '继续选择' }",
+    "custom_field_type": "UploadTriggerUploadText【interface UploadTriggerUploadText { image?: string, normal?: string, fileInput?: string, reupload?: string, continueUpload?: string, delete?: string }】"
+  }
+]

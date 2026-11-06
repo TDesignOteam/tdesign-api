@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1318,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transition",
+    "field_category": "Props",
+    "field_name": "appear",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "首次出现是否展示动画"
+  },
+  {
+    "id": 1317,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transition",
+    "field_category": "Props",
+    "field_name": "destoryOnHide",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏时是否销毁内容"
+  },
+  {
+    "id": 1319,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transition",
+    "field_category": "Props",
+    "field_name": "durations",
+    "field_type": [
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "指定过渡时间",
+    "custom_field_type": "number | number[]"
+  },
+  {
+    "id": 1314,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transition",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "t-transition",
+    "field_desc_zh": "过渡类名"
+  },
+  {
+    "id": 1315,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transition",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示"
+  }
+]

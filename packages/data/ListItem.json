@@ -1,0 +1,66 @@
+[
+  {
+    "id": 990,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ListItem",
+    "field_category": "Props",
+    "field_name": "action",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "操作栏"
+  },
+  {
+    "id": 1225,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "ListItem",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容，同 content"
+  },
+  {
+    "id": 913,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ListItem",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容"
+  },
+  {
+    "id": 912,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "ListItem",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容，同 content"
+  }
+]

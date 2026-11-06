@@ -1,0 +1,34 @@
+[
+  {
+    "id": 2735,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputAdornment",
+    "field_category": "Props",
+    "field_name": "append",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后缀装饰",
+    "field_desc_en": "The suffix decoration"
+  },
+  {
+    "id": 2734,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "InputAdornment",
+    "field_category": "Props",
+    "field_name": "prepend",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "前缀装饰",
+    "field_desc_en": "The prefix decoration"
+  }
+]

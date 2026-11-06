@@ -1,0 +1,181 @@
+[
+  {
+    "id": 843,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "collapsed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否收起菜单"
+  },
+  {
+    "id": 840,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "expandMutex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "同级别互斥展开"
+  },
+  {
+    "id": 844,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "expandType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "popup"
+    ],
+    "field_desc_zh": "二级菜单展开方式，平铺展开和浮层展开"
+  },
+  {
+    "id": 839,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "子菜单展开的导航集合",
+    "custom_field_type": "Array<MenuValue>",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 1264,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "logo",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "站点 LOGO"
+  },
+  {
+    "id": 1328,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "operations",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "导航操作区域"
+  },
+  {
+    "id": 837,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "light",
+    "field_enum": [
+      "light",
+      "dark",
+      "global",
+      "system"
+    ],
+    "field_desc_zh": "菜单风格，有亮色模式和暗色模式两种。当 `theme = global` 时，模式随整个组件库；当 `theme = system` 时，模式跟随系统。⚠️ `global/system` 正在开发中，暂勿使用",
+    "field_desc_en": "Menu can be light mode or dark mode"
+  },
+  {
+    "id": 838,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "激活菜单项",
+    "custom_field_type": "MenuValue【type MenuValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 841,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Props",
+    "field_name": "width",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_default_value": "'232px'",
+    "field_desc_zh": "菜单宽度。值类型为数组时，分别表示菜单展开和折叠的宽度。[ 展开时的宽度, 折叠时的宽度 ]，示例：['200px', '80px']",
+    "custom_field_type": "string | number | Array<string | number>"
+  },
+  {
+    "id": 856,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "激活菜单项发生变化时触发",
+    "event_input": "(value: MenuValue)"
+  },
+  {
+    "id": 857,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Menu",
+    "field_category": "Events",
+    "field_name": "expand",
+    "field_type": [],
+    "field_desc_zh": "展开的菜单项发生变化时触发",
+    "event_input": "(value: Array<MenuValue>)"
+  }
+]

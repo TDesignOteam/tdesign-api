@@ -1,0 +1,1308 @@
+[
+  {
+    "id": 3300,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "自动聚焦"
+  },
+  {
+    "id": 1691465578,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "无边框模式"
+  },
+  {
+    "id": 397,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "checkProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "参考 checkbox 组件 API",
+    "custom_field_type": "CheckboxProps【import { CheckboxProps } from '@Checkbox'】"
+  },
+  {
+    "id": 391,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "checkStrictly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "父子节点选中状态不再关联，可各自选中或取消"
+  },
+  {
+    "id": 1712570880,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "checkStrictly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "父子节点选中状态不再关联，可各自选中或取消"
+  },
+  {
+    "id": 388,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否支持清空选项"
+  },
+  {
+    "id": 3019,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "关闭按钮"
+  },
+  {
+    "id": 1823,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "collapsedItems",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "多选情况下，用于设置折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调",
+    "custom_field_type": "TNode<{ value: CascaderOption[]; collapsedSelectedItems: CascaderOption[]; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>"
+  },
+  {
+    "id": 1778749788,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "columnFooter",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "每一列的底部自定义内容。`panelIndex` 表示当前列索引，`options` 表示当前列原始选项，`filteredOptions` 表示当前列过滤后的选项（未过滤时与 options 相同），`onFilter` 用于过滤当前列选项（传入字符串时内置大小写不敏感匹配；如需自定义匹配逻辑请传入过滤函数）。当内置搜索（filterable）有输入时，面板切换为扁平模式，`onFilter` 为空操作",
+    "field_desc_en": "Custom content at the bottom of each column. `panelIndex` indicates the current column index, `options` is the original option list, `filteredOptions` is the filtered option list (same as `options` when no filter is applied), `onFilter` is used to filter the current column options (built-in case-insensitive matching for strings; pass a filter function for custom matching). When the built-in search (filterable) has input, the panel switches to flat mode and `onFilter` becomes a noop",
+    "custom_field_type": "TNode<{ panelIndex: number; options: TreeOptionData[]; filteredOptions: TreeOptionData[]; onFilter: (filter: string | ((node: TreeOptionData, panelIndex: number) => boolean)) => void }>"
+  },
+  {
+    "id": 1778746356,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "columnHeader",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "每一列的顶部自定义内容。`panelIndex` 表示当前列索引，`options` 表示当前列原始选项，`filteredOptions` 表示当前列过滤后的选项（未过滤时与 options 相同），`onFilter` 用于过滤当前列选项（传入字符串时内置大小写不敏感匹配；如需自定义匹配逻辑请传入过滤函数）。当内置搜索（filterable）有输入时，面板切换为扁平模式，`onFilter` 为空操作。",
+    "field_desc_en": "Custom content at the top of each column. `panelIndex` indicates the current column index, `options` is the original option list, `filteredOptions` is the filtered option list (same as `options` when no filter is applied), `onFilter` is used to filter the current column options (built-in case-insensitive matching for strings; pass a filter function for custom matching). When the built-in search (filterable) has input, the panel switches to flat mode and `onFilter` becomes a noop",
+    "custom_field_type": "TNode<{ panelIndex: number; options: TreeOptionData[]; filteredOptions: TreeOptionData[]; onFilter: (filter: string | ((node: TreeOptionData, panelIndex: number) => boolean)) => void }>"
+  },
+  {
+    "id": 1135,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 405,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "无匹配选项时的内容，默认全局配置为 '暂无数据'"
+  },
+  {
+    "id": 2765,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据",
+    "custom_field_type": "(filterWords: string, node: TreeNodeModel) => boolean | Promise<boolean>"
+  },
+  {
+    "id": 1780383135,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": " 自定义过滤函数。返回 true 表示匹配，未设置时使用内置匹配规则：对路径中所有 label 拼接后做大小写不敏感的 includes 匹配",
+    "custom_field_type": "CascaderFilterFunction 【type CascaderFilterFunction<CascaderOption extends TreeOptionData = TreeOptionData> = (keyword: string, option: CascaderOption, path: CascaderOption[]) => boolean】"
+  },
+  {
+    "id": 1780382505,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filterPlaceholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索框占位符描述文本"
+  },
+  {
+    "id": 393,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filterable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可搜索"
+  },
+  {
+    "id": 1780382452,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filterable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可搜索，开启后顶部会展示一个搜索框 "
+  },
+  {
+    "id": 1745737040,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "头部",
+    "version": {
+      "Miniprogram": "1.9.1",
+      "Vue(Mobile)": "1.11.0",
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 2805,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Input 输入框组件的全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 382,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / children / disabled 在 `options` 中对应的字段别名",
+    "custom_field_type": "TreeKeysType"
+  },
+  {
+    "id": 1723804837,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / children / disabled 在 `options` 中对应的字段别名",
+    "custom_field_type": "CascaderKeysType【type CascaderKeysType = TreeKeysType】"
+  },
+  {
+    "id": 3318,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本"
+  },
+  {
+    "id": 395,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "延迟加载 children 为 true 的子节点，即使 expandAll 被设置为 true，也同样延迟加载"
+  },
+  {
+    "id": 394,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "load",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "加载子树数据的方法（仅当节点 children 为 true 时生效）",
+    "field_desc_en": "loading subtree data (only effective when the node's children value is true)",
+    "custom_field_type": "(node: TreeNodeModel<CascaderOption>) => Promise<Array<CascaderOption>>"
+  },
+  {
+    "id": 1764036186,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "load",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "加载子树数据的方法（仅当节点 children 为 true 时生效）",
+    "field_desc_en": "loading subtree data (only effective when the node's children value is true)",
+    "custom_field_type": "(node: CascaderOption) => Promise<Array<CascaderOption>>",
+    "version": {
+      "Vue(Mobile)": "1.12.0"
+    }
+  },
+  {
+    "id": 3537,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "loadCompleted",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否完成异步加载"
+  },
+  {
+    "id": 1970,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否为加载状态"
+  },
+  {
+    "id": 1971,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "远程加载时显示的文字，支持自定义。如加上超链接"
+  },
+  {
+    "id": 1187,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "用于控制多选数量，值为 0 则不限制"
+  },
+  {
+    "id": 1749021449,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "middleContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "中间内容",
+    "version": {
+      "Miniprogram": "1.12.2",
+      "Vue(Mobile)": "1.9.0",
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 1824,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "minCollapsedNum",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "最小折叠数量，用于多选情况下折叠选中项，超出该数值的选中项折叠。值为 0 则表示不折叠"
+  },
+  {
+    "id": 390,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "multiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许多选"
+  },
+  {
+    "id": 3485,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "option",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义单个级联选项, item 是选项本身的值，index 是下标，onChange 用于触发当前节点选中，onExpand 用于触发当前节点展开",
+    "field_desc_en": "customize one option",
+    "custom_field_type": "TNode<{ item: CascaderOption; index: number, onChange: ()=> void, onExpand: ()=> void }>"
+  },
+  {
+    "id": 381,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "可选项数据源",
+    "custom_field_type": "Array<CascaderOption>"
+  },
+  {
+    "id": 1759199384,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "overlayProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "遮罩层的属性，透传至 overlay",
+    "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+    "version": {
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 1725941069,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "panelBottomContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的底部内容",
+    "field_desc_en": "bottom content of the cascader panel"
+  },
+  {
+    "id": 1725941091,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "panelTopContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的顶部内容",
+    "field_desc_en": "top content of the cascader panel"
+  },
+  {
+    "id": 386,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符"
+  },
+  {
+    "id": 1712024363,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "未选中时的提示文案。组件内置默认值为：'选择选项'"
+  },
+  {
+    "id": 398,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1773112767,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "field_desc_en": "popup properties",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2397,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "popupVisible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否显示下拉框",
+    "support_default_value": true
+  },
+  {
+    "id": 1695533113,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标"
+  },
+  {
+    "id": 2389,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态，值为真会隐藏输入框，且无法打开下拉框"
+  },
+  {
+    "id": 3332,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "reserveKeyword",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词"
+  },
+  {
+    "id": 1760882689,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "懒加载和虚拟滚动。为保证组件收益最大化，当数据量小于阈值 `scroll.threshold` 时，无论虚拟滚动的配置是否存在，组件内部都不会开启虚拟滚动，`scroll.threshold` 默认为 `100`",
+    "field_desc_en": "Lazy loading and virtual scrolling. To maximize the benefits of the component, when the amount of data is less than the threshold `scroll.threshold`, regardless of whether the virtual scrolling configuration exists, virtual scrolling will not be enabled within the component. `scroll.threshold` defaults to `100`",
+    "custom_field_type": "TScroll"
+  },
+  {
+    "id": 2332,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "selectInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 SelectInput 筛选器输入框组件的全部属性",
+    "custom_field_type": "SelectInputProps【import { SelectInputProps, SelectInputBlurContext } from '@SelectInput'】"
+  },
+  {
+    "id": 392,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "showAllLevels",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "选中值使用完整路径，输入框在单选时也显示完整路径"
+  },
+  {
+    "id": 385,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "large",
+      "medium",
+      "small"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 2903,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态"
+  },
+  {
+    "id": 3348,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "subTitles",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "每级展示的次标题",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 3319,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标前的后置内容"
+  },
+  {
+    "id": 3320,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件后置图标"
+  },
+  {
+    "id": 2806,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "tagInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 TagInput 标签输入框组件的全部属性",
+    "custom_field_type": "TagInputProps【import { TagInputProps } from '@TagInput'】"
+  },
+  {
+    "id": 2807,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "tagProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Tag 标签组件全部属性",
+    "custom_field_type": "TagProps【import { TagProps } from '@Tag'】"
+  },
+  {
+    "id": 3349,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "step",
+    "field_enum": [
+      "step",
+      "tab"
+    ],
+    "field_desc_zh": "展示风格"
+  },
+  {
+    "id": 2904,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+    "field_desc_en": "tips at the bottom of cascader"
+  },
+  {
+    "id": 3018,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 389,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "click",
+    "field_enum": [
+      "click",
+      "hover"
+    ],
+    "field_desc_zh": "展开下一层级的方式"
+  },
+  {
+    "id": 379,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Array",
+      "BigInt"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中项的值",
+    "custom_field_type": "CascaderValue<CascaderOption>【type CascaderValue<T extends TreeOptionData = TreeOptionData> = string | number | bigint | T | Array<CascaderValue<T>>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3020,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选项值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3115,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "null",
+    "field_desc_zh": "选项值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1762353319,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选项值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3324,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "valueDisplay",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义选中项呈现的内容",
+    "field_desc_en": "`MouseEvent<SVGElement>`",
+    "custom_field_type": "string | TNode<{ value: CascaderValue<CascaderOption>; onClose: (index: number) => void; displayValue?: CascaderValue<CascaderOption>; selectedOptions: CascaderOption[] }>"
+  },
+  {
+    "id": 396,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "valueMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "onlyLeaf",
+    "field_enum": [
+      "onlyLeaf",
+      "parentFirst",
+      "all"
+    ],
+    "field_desc_zh": "选中值模式。all 表示父节点和子节点全部会出现在选中值里面；parentFirst 表示当子节点全部选中时，仅父节点在选中值里面；onlyLeaf 表示无论什么情况，选中值仅呈现叶子节点"
+  },
+  {
+    "id": 2053,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "valueType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "single",
+    "field_enum": [
+      "single",
+      "full"
+    ],
+    "field_desc_zh": "用于控制选中值的类型。single 表示输入输出值为 叶子结点值， full 表示输入输出值为全路径"
+  },
+  {
+    "id": 3114,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示"
+  },
+  {
+    "id": 402,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "当输入框失去焦点时触发",
+    "event_input": "(context: { value: CascaderValue<CascaderOption> } & SelectInputBlurContext )",
+    "trigger_elements": "FocusEvent"
+  },
+  {
+    "id": 400,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发。TreeNodeModel 从树组件中导出。`context.node` 表示触发事件的节点，`context.source` 表示触发事件的来源",
+    "event_input": "(value: CascaderValue<CascaderOption>, context: CascaderChangeContext<CascaderOption>)【interface CascaderChangeContext<CascaderOption> { node?: TreeNodeModel<CascaderOption>; source: CascaderChangeSource }】【import { TreeNodeModel } from '@Tree'】【type CascaderChangeSource = 'invalid-value' | 'check' | 'clear' | 'uncheck'】"
+  },
+  {
+    "id": 3345,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值发生变更时触发",
+    "event_input": "(context: { value: string | number, selectedOptions: string[] })",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1723805281,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值发生变更时触发",
+    "event_input": "(value: string | number, selectedOptions: CascaderOption[])",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1744870803,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发",
+    "field_desc_en": "Triggered when the clear button is clicked",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "SVGElement"
+  },
+  {
+    "id": 3346,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(trigger: CascaderTriggerSource)【type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish'】",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1762353507,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(context: { trigger: CascaderTriggerSource })【type CascaderTriggerSource = 'overlay' | 'close-btn' | 'finish'】",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 403,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(context: { value: CascaderValue<CascaderOption>; e: FocusEvent })"
+  },
+  {
+    "id": 3344,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选择后触发",
+    "event_input": "(value: string | number, label: string, index: number, level: number)",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1712578704,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选择后触发",
+    "event_input": "(context: { value: string | number, label: string, index: number, level: number })",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1762353463,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选择后触发",
+    "event_input": "(context: { value: string | number, label: string, index: number, level: number })",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 2398,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "popupVisibleChange",
+    "field_type": [],
+    "field_desc_zh": "下拉框显示或隐藏时触发",
+    "event_input": "(visible: boolean, context: PopupVisibleChangeContext)【import { PopupVisibleChangeContext } from '@Popup'】"
+  },
+  {
+    "id": 404,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Cascader",
+    "field_category": "Events",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "多选模式下，选中数据被移除时触发",
+    "event_input": "(context: RemoveContext<CascaderOption>)【interface RemoveContext<T> { value: CascaderValue<T>; node: TreeNodeModel<T> }】"
+  },
+  {
+    "id": 582,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cascader",
+    "field_category": "<T>",
+    "field_name": "<CascaderOption extends TreeOptionData = TreeOptionData>",
+    "field_type": [],
+    "syntactic_sugar": "v-model"
+  }
+]

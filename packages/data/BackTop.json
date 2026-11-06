@@ -1,0 +1,454 @@
+[
+  {
+    "id": 3023,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "回到顶部内容，同 `content`",
+    "field_desc_en": "Backtop's children elements, same as `content`",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 3029,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "监听滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1716954799,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "滚动的容器",
+    "custom_field_type": "() => HTMLElement"
+  },
+  {
+    "id": 3024,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "回到顶部内容",
+    "field_desc_en": "Backtop's children elements",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 3328,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "回到顶部内容，同 `content`",
+    "field_desc_en": "Backtop's children elements, same as `content`",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 3026,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "200",
+    "field_desc_zh": "回到顶部的耗时单位：毫秒"
+  },
+  {
+    "id": 1593,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "fixed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否绝对定位固定到屏幕右下方"
+  },
+  {
+    "id": 1595,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "图标。值为 `false` 表示不显示图标。不传表示使用默认图标 `'backtop'`"
+  },
+  {
+    "id": 2392,
+    "platform_framework": [],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_default_value": "backtop",
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 1712643871,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 3025,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[\"24px\", \"80px\"]",
+    "field_desc_zh": "回到顶部相对右下角的位置偏移，示例：[10, 20] 或 ['10em', '8rem']",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1711970525,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "scrollTop",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "页面滚动距离"
+  },
+  {
+    "id": 3027,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "shape",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "square",
+    "field_enum": [
+      "circle",
+      "square"
+    ],
+    "field_desc_zh": "回到顶部的形状",
+    "field_desc_en": "shape of BackTop element",
+    "custom_field_type": "BackTopShapeEnum 【type BackTopShapeEnum = 'circle' | 'square'】",
+    "test_description": "{\"PC\":{\"className\":\"t-back-top--${item}\",\"snapshot\":true}}"
+  },
+  {
+    "id": 3330,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "medium",
+      "small"
+    ],
+    "field_desc_zh": "组件尺寸",
+    "field_desc_en": "size of BackTop",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",\"t-size-m\"],\"content\":\"BackTop\",\"snapshot\":true}}"
+  },
+  {
+    "id": 2336,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "target",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "定位滚动到指定对象",
+    "custom_field_type": "() => HTMLElement"
+  },
+  {
+    "id": 3030,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "target",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "指定回到该对象。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1594,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "文案",
+    "test_description": "skip: true\\npreDepend: { 'text': '返回' }"
+  },
+  {
+    "id": 1592,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "round",
+    "field_enum": [
+      "round",
+      "half-round",
+      "round-dark",
+      "half-round-dark"
+    ],
+    "field_desc_zh": "预设的样式类型"
+  },
+  {
+    "id": 3329,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "light",
+    "field_enum": [
+      "light",
+      "primary",
+      "dark"
+    ],
+    "field_desc_zh": "组件主题风格，浅色、主色、深色",
+    "field_desc_en": "theme of BackTop",
+    "test_description": "{\"PC\":{\"className\":\"t-back-top--theme-${item}\",\"content\":\"Text\",\"snapshot\":true}}"
+  },
+  {
+    "id": 1711970473,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "visibilityHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "200",
+    "field_desc_zh": "滚动高度达到此参数值才出现"
+  },
+  {
+    "id": 3028,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Props",
+    "field_name": "visibleHeight",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "'200px'",
+    "field_desc_zh": "滚动高度达到此参数值才出现"
+  },
+  {
+    "id": 3022,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "BackTop",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击回到顶部时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLElement>",
+    "test_description": "{\"PC\":{\"event\":{\"click\":{\"arguments\":[{\"stopPropagation\":true,\"e.type\":\"click\"}]}}}}"
+  },
+  {
+    "id": 1596,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Events",
+    "field_name": "toTop",
+    "field_type": [],
+    "field_default_value": "''",
+    "field_desc_zh": "点击触发"
+  },
+  {
+    "id": 1711970247,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1711970256,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "External Classes",
+    "field_name": "t-class-icon",
+    "field_type": [],
+    "field_desc_zh": "图标样式类"
+  },
+  {
+    "id": 1711970261,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "External Classes",
+    "field_name": "t-class-text",
+    "field_type": [],
+    "field_desc_zh": "文本样式类"
+  },
+  {
+    "id": 1759130738,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  },
+  {
+    "id": 1759130814,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "BackTop",
+    "field_category": "Slots",
+    "field_name": "icon",
+    "field_type": [],
+    "field_desc_zh": " 自定义图标内容"
+  }
+]

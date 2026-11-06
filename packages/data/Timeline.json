@@ -1,0 +1,104 @@
+[
+  {
+    "id": 2823,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Timeline",
+    "field_category": "Props",
+    "field_name": "labelAlign",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right",
+      "alternate",
+      "top",
+      "bottom"
+    ],
+    "field_desc_zh": "标签信息放在时间轴的位置，`mode='alternate'` 时生效。纵向时间轴信息位置：左侧、右侧或两侧，默认信息在时间轴右侧。横向时间轴信息位置：上方、下方、两侧",
+    "field_desc_en": "label info placement",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"className\":{\"left\":\"t-timeline-left\",\"alternate\":\"t-timeline-alternate\",\"right\":\"t-timeline-right\"},\"event\":[{\"props\":{\"layout\":\"horizontal\",\"labelAlign\":\"top\"},\"description\":\"layout=horizontal labelAlign=top works fine\",\"wrapper\":\"getTimelineDefaultMount\",\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-timeline\":{\"className\":[\"t-timeline-top\"]}}]}]},{\"props\":{\"layout\":\"horizontal\",\"labelAlign\":\"bottom\"},\"description\":\"layout=horizontal labelAlign=bottom works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[{\".t-timeline\":{\"className\":[\"t-timeline-bottom\"]}}]}]}]}}"
+  },
+  {
+    "id": 2824,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Timeline",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "vertical",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "时间轴方向：水平方向、垂直方向",
+    "field_desc_en": "time line layout",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"className\":\"t-timeline-${item}\"}}"
+  },
+  {
+    "id": 2913,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Timeline",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "alternate",
+    "field_enum": [
+      "alternate",
+      "same"
+    ],
+    "field_desc_zh": "标签与内容文本的位置关系，`alternate` 为展示在轴两侧，`same` 为展示在同一侧",
+    "field_desc_en": "The position relationship between the label and the content text, 'alternate' is displayed on both sides of the axis, and 'same' is displayed on the same side",
+    "test_description": "{\"PC\":{\"className\":\"t-timeline-label--${item}\"}}"
+  },
+  {
+    "id": 2826,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Timeline",
+    "field_category": "Props",
+    "field_name": "reverse",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "时间轴是否表现为倒序",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"dom\":[{\"props\":{\"reverse\":true},\"dom\":[{\".t-timeline-item__content\":{\"text\":\"Event4\"}}]}]}}"
+  },
+  {
+    "id": 2825,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Timeline",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "dot"
+    ],
+    "field_desc_zh": "时间轴风格",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTimelineDefaultMount\",\"dom\":{\"dot\":{\".t-timeline-item__tail--theme-dot\":4}}}}"
+  }
+]

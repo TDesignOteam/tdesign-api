@@ -1,0 +1,374 @@
+[
+  {
+    "id": 275,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "boolean",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值类型是否为布尔类型，示例：`{ boolean: true, message: '数据类型必须是布尔类型' }`"
+  },
+  {
+    "id": 273,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "date",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为日期格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ date: { delimiters: '-' }, message: '日期分隔线必须是短横线（-）' }`",
+    "custom_field_type": "boolean | IsDateOptions【interface IsDateOptions { format: string; strictMode: boolean; delimiters: string[] }】"
+  },
+  {
+    "id": 272,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "email",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为邮件格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ email: { ignore_max_length: true }, message: '请输入正确的邮箱地址' }`",
+    "custom_field_type": "boolean | IsEmailOptions【import { IsEmailOptions } from 'validator/es/lib/isEmail'】"
+  },
+  {
+    "id": 1774406436,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "email",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为邮件格式，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ email: { ignore_max_length: true }, message: '请输入正确的邮箱地址' }`",
+    "custom_field_type": "boolean | IsEmailOptions【import { IsEmailOptions } from '@common'】"
+  },
+  {
+    "id": 282,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "enum",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否属于枚举值中的值。示例：`{ enum: ['primary', 'info', 'warning'], message: '值只能是 primary/info/warning 中的一种' }`",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 280,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "idcard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为身份证号码，组件校验正则为 `/^(\\\\d{18,18}|\\\\d{15,15}|\\\\d{17,17}x)$/i`，示例：`{ idcard: true, message: '请输入正确的身份证号码' }`"
+  },
+  {
+    "id": 279,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "len",
+    "field_type": [
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值固定长度，如：len: 10 表示值的字符长度只能等于 10 ，中文表示 2 个字符，英文为 1 个字符。示例：`{ len: 10, message: '内容长度不对' }`。<br />如果希望字母和中文都是同样的长度，示例：`{ validator: (val) => val.length === 10, message: '内容文本长度只能是 10 个字' }`"
+  },
+  {
+    "id": 277,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值最大长度，如：max: 100 表示值最多不能超过 100 个字符，中文表示 2 个字符，英文为 1 个字符。示例：`{ max: 10, message: '内容超出' }`。<br />如果希望字母和中文都是同样的长度，示例：`{ validator: (val) => val.length <= 10, message: '内容文本长度不能超过 10 个字' }`<br />如果数据类型数字（Number），则自动变为数字大小的比对"
+  },
+  {
+    "id": 267,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "校验未通过时呈现的错误信息，值为空则不显示"
+  },
+  {
+    "id": 278,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "min",
+    "field_type": [
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值最小长度，如：min: 10 表示值最多不能少于 10 个字符，中文表示 2 个字符，英文为 1 个字符。示例：`{ min: 10, message: '内容长度不够' }`。<br />如果希望字母和中文都是同样的长度，示例：`{ validator: (val) => val.length >= 10, message: '内容文本长度至少为 10 个字' }`。<br />如果数据类型数字（Number），则自动变为数字大小的比对"
+  },
+  {
+    "id": 276,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "number",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为数字（1.2 、 1e5  都算数字），示例：`{ number: true, message: '请输入数字' }`"
+  },
+  {
+    "id": 283,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "pattern",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否符合正则表达式匹配结果，示例：`{ pattern: /@qq.com/, message: '请输入 QQ 邮箱' }`",
+    "custom_field_type": "RegExp | string"
+  },
+  {
+    "id": 271,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "required",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否已经填写。该值为 true，默认显示必填标记，可通过设置 `requiredMark: false` 隐藏必填标记"
+  },
+  {
+    "id": 281,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "telnumber",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为手机号码，校验正则为 `/^1[3-9]\\d{9}$/`，示例：`{ telnumber: true, message: '请输入正确的手机号码' }`"
+  },
+  {
+    "id": 268,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "change",
+    "field_desc_zh": "校验触发方式",
+    "custom_field_type": "ValidateTriggerType"
+  },
+  {
+    "id": 270,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "error",
+    "field_enum": [
+      "error",
+      "warning"
+    ],
+    "field_desc_zh": "校验未通过时呈现的错误信息类型，有 告警信息提示 和 错误信息提示 等两种"
+  },
+  {
+    "id": 274,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为网络链接地址，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ url: { protocols: ['http','https','ftp'] }, message: '请输入正确的 Url 地址' }`",
+    "custom_field_type": "boolean | IsURLOptions【import { IsURLOptions } from 'validator/es/lib/isURL'】"
+  },
+  {
+    "id": 1774339801,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为网络链接地址，[参数文档](https://github.com/validatorjs/validator.js)，示例：`{ url: { protocols: ['http','https','ftp'] }, message: '请输入正确的 Url 地址' }`",
+    "custom_field_type": "boolean | IsURLOptions【import { IsURLOptions } from '@common'】"
+  },
+  {
+    "id": 269,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "validator",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义校验规则，context 中 formData 为当前完整表单值，name为该字段的标识，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`",
+    "custom_field_type": "CustomValidator【type CustomValidator = (val: ValueType, context?: { formData: Data , name: string }) => CustomValidateResolveType | Promise<CustomValidateResolveType>】【type CustomValidateResolveType = boolean | CustomValidateObj】【interface CustomValidateObj { result: boolean; message: string; type?: 'error' | 'warning' | 'success' }】【type ValueType = any】"
+  },
+  {
+    "id": 2797,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormRule",
+    "field_category": "Props",
+    "field_name": "whitespace",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "内置校验方法，校验值是否为空格。示例：`{ whitespace: true, message: '值不能为空' }`"
+  }
+]

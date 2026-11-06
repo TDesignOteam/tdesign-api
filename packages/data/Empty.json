@@ -1,0 +1,219 @@
+[
+  {
+    "id": 1387,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "action",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "操作按钮",
+    "field_desc_en": "action block"
+  },
+  {
+    "id": 1386,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述文字",
+    "field_desc_en": "empty component description"
+  },
+  {
+    "id": 1809,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`"
+  },
+  {
+    "id": 1712661318,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 1385,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "组件图片，可以完全自定义内容。值类型为字符串时，表示图片地址；值类型为对象时，则表示透传全部属性到图片组件，示例：`<Empty image={{ src: '', shape: 'round' }} />`",
+    "field_desc_en": "image url, or Image component props, or custom any node you need",
+    "custom_field_type": "string | ImageProps | TNode 【import { ImageProps } from '@Image'】"
+  },
+  {
+    "id": 1712661364,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "图片地址",
+    "field_desc_en": "image url, or Image component props, or custom any node you need"
+  },
+  {
+    "id": 1701690759,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "imageStyle",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传图片样式表",
+    "field_desc_en": "pass `Cascading Style Sheets` to image element",
+    "custom_field_type": "Styles"
+  },
+  {
+    "id": 1724231461,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "空状态的尺寸，默认为 `medium`",
+    "field_desc_en": "size of Empty,  default value is `medium`",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 1701690668,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "错误标题",
+    "field_desc_en": "empty component title"
+  },
+  {
+    "id": 1701691111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Empty",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "empty",
+    "field_enum": [
+      "empty",
+      "success",
+      "fail",
+      "network-error",
+      "maintenance"
+    ],
+    "field_desc_zh": "组件类型，如：空数据/成功/失败/网络错误/建设中",
+    "field_desc_en": "Empty component type"
+  },
+  {
+    "id": 1712050270,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712050244,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "External Classes",
+    "field_name": "t-class-description",
+    "field_type": [],
+    "field_desc_zh": "描述样式类"
+  },
+  {
+    "id": 1712050210,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Empty",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "图片样式类"
+  }
+]

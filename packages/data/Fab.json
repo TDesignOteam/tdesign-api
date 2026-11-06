@@ -1,0 +1,258 @@
+[
+  {
+    "id": 2502,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "buttonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Button 组件",
+    "custom_field_type": "ButtonProps【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1711969167,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可拖拽。`true` / `'all'`可拖动<br>`'vertical'`可垂直拖动<br>`'horizontal'`可水平拖动<br>`false`禁止拖动",
+    "custom_field_type": "boolean | FabDirectionEnum 【type FabDirectionEnum = 'all' | 'vertical' | 'horizontal'】"
+  },
+  {
+    "id": 2500,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 2501,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "图标名称。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon` 组件",
+    "field_desc_en": "icon name"
+  },
+  {
+    "id": 1769484024,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "magnet",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_desc_zh": "是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附",
+    "custom_field_type": "boolean | MagnetEnum 【type MagnetEnum = 'left' | 'right'】",
+    "version": {
+      "Miniprogram": "1.12.3",
+      "Vue(Mobile)": "1.13.1",
+      "React(Mobile)": "1.0.0"
+    }
+  },
+  {
+    "id": 2503,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right: 16px; bottom: 32px;",
+    "field_desc_zh": "悬浮按钮的样式，常用于调整位置（即将废弃，建议使用 `style`）"
+  },
+  {
+    "id": 1712648453,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_default_value": "'right: 16px; bottom: 32px;'",
+    "field_desc_zh": "悬浮按钮的样式，常用于调整位置",
+    "custom_field_type": "string | Styles"
+  },
+  {
+    "id": 2499,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "text",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "文本内容"
+  },
+  {
+    "id": 1719908461,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 1769481764,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "xBounds",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "设置水平方向边界限制，示例：[16, 16] 或 ['16px', 16]",
+    "custom_field_type": "Array<string | number>",
+    "version": {
+      "Miniprogram": "1.12.3",
+      "Vue(Mobile)": "1.13.1",
+      "React(Mobile)": "1.0.0"
+    }
+  },
+  {
+    "id": 1739415473,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Props",
+    "field_name": "yBounds",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "设置垂直方向边界限制，示例：[48, 48] 或 ['96px', 80]",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 2505,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "悬浮按钮点击事件",
+    "event_input": "(context: {e: Event})"
+  },
+  {
+    "id": 1712579257,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Fab",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "悬浮按钮点击事件",
+    "event_input": "(context: {e: MouseEvent})"
+  },
+  {
+    "id": 1734953654,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Events",
+    "field_name": "dragEnd",
+    "field_type": [],
+    "field_desc_zh": "结束拖拽时触发",
+    "event_input": "(context: { e: TouchEvent })"
+  },
+  {
+    "id": 1734953623,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Events",
+    "field_name": "dragStart",
+    "field_type": [],
+    "field_desc_zh": "开始拖拽时触发",
+    "event_input": "(context: { e: TouchEvent })"
+  },
+  {
+    "id": 1760085630,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Fab",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，按钮内容"
+  }
+]

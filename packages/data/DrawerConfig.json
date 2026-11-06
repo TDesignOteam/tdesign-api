@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1915,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerConfig",
+    "field_category": "Props",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消”描述文本",
+    "custom_field_type": "string | ButtonProps"
+  },
+  {
+    "id": 2785,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerConfig",
+    "field_category": "Props",
+    "field_name": "closeOnEscKeydown",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "按下 ESC 时是否触发抽屉关闭事件",
+    "field_desc_en": "trigger drawer close event on `ESC` keydown"
+  },
+  {
+    "id": 2784,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerConfig",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "点击蒙层时是否触发关闭事件"
+  },
+  {
+    "id": 1909,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确认”描述文本",
+    "custom_field_type": "string | ButtonProps"
+  },
+  {
+    "id": 2766,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DrawerConfig",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'small'",
+    "field_desc_zh": "尺寸配置，配置Drawer尺寸"
+  }
+]

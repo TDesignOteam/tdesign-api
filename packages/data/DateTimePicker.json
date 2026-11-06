@@ -1,0 +1,538 @@
+[
+  {
+    "id": 1731046786,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "autoClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible"
+  },
+  {
+    "id": 1516,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "取消按钮文字"
+  },
+  {
+    "id": 1782805679,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "取消按钮文字"
+  },
+  {
+    "id": 1518,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "确定按钮文字"
+  },
+  {
+    "id": 1710844467,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "customLocale",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "zh",
+    "field_desc_zh": " 组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言"
+  },
+  {
+    "id": 2678,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "end",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选择器的最大可选时间，默认为当前时间+10年"
+  },
+  {
+    "id": 1729774456,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)",
+    "custom_field_type": "(type: TimeModeValues, columns: DateTimePickerColumn) => DateTimePickerColumn【type DateTimePickerColumn = DateTimePickerColumnItem[]】【interface DateTimePickerColumnItem { label: string,value: string}】"
+  },
+  {
+    "id": 1710844322,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "底部内容"
+  },
+  {
+    "id": 1572,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss'。当值为 'time-stamp' 时，表示事件参数与 v-model 返回毫秒级时间戳数值（number） [详细文档](https://day.js.org/docs/en/display/format)"
+  },
+  {
+    "id": 1712579026,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
+    "field_desc_zh": "用于格式化 pick、change、confirm 事件返回的值，[详细文档](https://day.js.org/docs/en/display/format)"
+  },
+  {
+    "id": 1740731296,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "formatter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "格式化标签",
+    "custom_field_type": "(option: DateTimePickerColumnItem, columnIndex: number) => DateTimePickerColumnItem"
+  },
+  {
+    "id": 2509,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容"
+  },
+  {
+    "id": 1752045453,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "头部内容"
+  },
+  {
+    "id": 1573,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "'date'",
+    "field_desc_zh": "year = 年；month = 年月；date = 年月日；hour = 年月日时； minute = 年月日时分；当类型为数组时，第一个值控制年月日，第二个值控制时分秒",
+    "custom_field_type": "DateTimePickerMode【type DateTimePickerMode = TimeModeValues | Array<TimeModeValues> 】【type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minute' | 'second'】"
+  },
+  {
+    "id": 1710844420,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "field_desc_en": "popup properties",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2795,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "renderLabel",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义label",
+    "custom_field_type": "(type: string, value: number) => string"
+  },
+  {
+    "id": 1584,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "showWeek",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在日期旁边显示周几（如周一，周二，周日等）",
+    "version": {
+      "Miniprogram": "1.9.0"
+    }
+  },
+  {
+    "id": 2677,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "start",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选择器的最小可选时间，默认为当前时间-10年"
+  },
+  {
+    "id": 3482,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "steps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "时间间隔步数，示例：`{ minute: 5 }`",
+    "custom_field_type": "{ [key in TimeModeValues]?: number }",
+    "version": {
+      "Vue(Mobile)": "1.8.6"
+    }
+  },
+  {
+    "id": 1734,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "标题",
+    "field_desc_en": "title of picker"
+  },
+  {
+    "id": 1725285145,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "usePopup",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否使用弹出层包裹"
+  },
+  {
+    "id": 1520,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选中值",
+    "custom_field_type": "DateValue【type DateValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1522,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示"
+  },
+  {
+    "id": 1531,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "取消按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 2533,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "取消按钮点击时触发"
+  },
+  {
+    "id": 1530,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "value改变时触发",
+    "event_input": "(value: DateValue)"
+  },
+  {
+    "id": 2536,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "确认按钮点击时触发",
+    "event_input": "(value: DateValue)"
+  },
+  {
+    "id": 3354,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn'】",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1761300877,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "确认按钮点击时触发",
+    "event_input": "(value: DateValue)",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1575,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发",
+    "event_input": "(value: DateValue)"
+  },
+  {
+    "id": 2534,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发",
+    "event_input": "(value: DateValue)"
+  },
+  {
+    "id": 1712025091,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712025120,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "External Classes",
+    "field_name": "t-class-cancel",
+    "field_type": [],
+    "field_desc_zh": "取消样式类"
+  },
+  {
+    "id": 1712025115,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "External Classes",
+    "field_name": "t-class-confirm",
+    "field_type": [],
+    "field_desc_zh": "确认样式类"
+  },
+  {
+    "id": 1712025124,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePicker",
+    "field_category": "External Classes",
+    "field_name": "t-class-title",
+    "field_type": [],
+    "field_desc_zh": "标题样式类"
+  }
+]

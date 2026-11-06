@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1706635543,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文本内容，同content",
+    "field_desc_en": "children of text"
+  },
+  {
+    "id": 1706635187,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "code",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加代码样式",
+    "field_desc_en": "add code style"
+  },
+  {
+    "id": 1706635518,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文本内容",
+    "field_desc_en": "content of text"
+  },
+  {
+    "id": 1706638324,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "copyable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可复制，可通过配置参数自定义复制操作的具体功能和样式",
+    "field_desc_en": "add copyable style",
+    "custom_field_type": "boolean | TypographyCopyable"
+  },
+  {
+    "id": 1776740497,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "copyable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可复制",
+    "custom_field_type": "boolean | TypographyCopyable 【interface TypographyCopyable { text?: string, suffix?: boolean; }】"
+  },
+  {
+    "id": 1706635501,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文本内容",
+    "field_desc_en": "default slot of text"
+  },
+  {
+    "id": 1706635746,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "delete",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加删除线样式",
+    "field_desc_en": "add delete line style"
+  },
+  {
+    "id": 1706635833,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加不可用样式",
+    "field_desc_en": "add disabled style"
+  },
+  {
+    "id": 1706636550,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis"
+  },
+  {
+    "id": 1776828398,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis 【interface TypographyEllipsis { collapsible?: boolean; expandable?: boolean; row?: number;suffix?: boolean;}】"
+  },
+  {
+    "id": 1706635810,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "italic",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "文本是否为斜体",
+    "field_desc_en": "add italic style"
+  },
+  {
+    "id": 1706635845,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "keyboard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加键盘样式",
+    "field_desc_en": "add keyboard style"
+  },
+  {
+    "id": 1706635902,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "mark",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加标记样式，默认为黄色，可通过配置颜色修改标记样式，如#0052D9",
+    "field_desc_en": "add mark style"
+  },
+  {
+    "id": 1706635791,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "strong",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "文本是否加粗",
+    "field_desc_en": "add bold style"
+  },
+  {
+    "id": 1706635970,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "主题",
+    "field_desc_en": "theme of text"
+  },
+  {
+    "id": 1706635764,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Text",
+    "field_category": "Props",
+    "field_name": "underline",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否添加下划线样式",
+    "field_desc_en": "add underline style"
+  }
+]

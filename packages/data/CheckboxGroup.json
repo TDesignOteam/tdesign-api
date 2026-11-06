@@ -1,0 +1,327 @@
+[
+  {
+    "id": 3521,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启无边框模式。优先级低于 Checkbox.borderless"
+  },
+  {
+    "id": 1789894182,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "vertical",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "复选框按钮排列方式",
+    "field_desc_en": "Radio option arrangement",
+    "version": {
+      "Miniprogram": "1.17.0",
+      "Vue(Mobile)": "1.16.3",
+      "React(Mobile)": "1.0.0",
+      "UniApp": "1.0.0"
+    }
+  },
+  {
+    "id": 149,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled"
+  },
+  {
+    "id": 1728464703,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 1689498234,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "lazyLoad",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否启用懒加载。子组件 Checkbox 数据量大时建议开启；加载复杂内容或大量图片时建议开启",
+    "field_desc_en": "load checkbox content when it entering the visible area"
+  },
+  {
+    "id": 1415,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "支持最多选中的数量"
+  },
+  {
+    "id": 150,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "统一设置内部复选框 HTML 属性"
+  },
+  {
+    "id": 1290,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」",
+    "custom_field_type": "Array<CheckboxOption>【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj extends TdCheckboxProps { text?: string; }】"
+  },
+  {
+    "id": 1416,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」",
+    "custom_field_type": "Array<CheckboxOption>【import { CheckboxIconType } from '@Checkbox'】【type CheckboxOption = string | number | CheckboxOptionObj】【interface CheckboxOptionObj { label?: string; value?: string | number; disabled?: boolean; icon?: CheckboxIconType; checkAll?: true }】"
+  },
+  {
+    "id": 1731594217,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态"
+  },
+  {
+    "id": 1762356728,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "relationKey",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "-1 时代表独立，不再寻找 parent，用于头条小程序"
+  },
+  {
+    "id": 148,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中值",
+    "custom_field_type": "T【type CheckboxGroupValue = Array<string | number | boolean>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1762402636,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "选中值",
+    "custom_field_type": "T【type CheckboxGroupValue = Array<string | number | boolean>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 152,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项",
+    "event_input": "(value: T, context: CheckboxGroupChangeContext)【interface CheckboxGroupChangeContext { e: Event; current: string | number | boolean; option: CheckboxOption | TdCheckboxProps; type: 'check' | 'uncheck' }】"
+  },
+  {
+    "id": 1233,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发，`context.current` 表示当前变化的数据值，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中；`context.option` 表示当前变化的数据项；`context.current` 即将废弃，请勿使用",
+    "event_input": "(value: T, context: CheckboxGroupChangeContext)【interface CheckboxGroupChangeContext { e: ChangeEvent; current: CheckboxOption | TdCheckboxProps; option: CheckboxOption | TdCheckboxProps; type: 'check' | 'uncheck' }】",
+    "trigger_elements": "ChangeEvent<HTMLDivElement>"
+  },
+  {
+    "id": 3524,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发。`context` 表示当前点击项内容",
+    "event_input": "(value: CheckboxGroupValue, context: { value: boolean|number|string, label: boolean|number|string })"
+  },
+  {
+    "id": 1712648151,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项",
+    "event_input": "(value: T, context: CheckboxGroupChangeContext)【interface CheckboxGroupChangeContext { e: Event; current: string | number; option: CheckboxOption | TdCheckboxProps; type: 'check' | 'uncheck' }】"
+  },
+  {
+    "id": 1772557316,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值变化时触发。`context` 表示当前点击项内容",
+    "event_input": "(context: { value: CheckboxGroupValue, context: { value: boolean|number|string, label: boolean|number|string }})"
+  },
+  {
+    "id": 3340,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "<T>",
+    "field_name": "<T = CheckboxGroupValue>",
+    "field_type": []
+  },
+  {
+    "id": 1760085403,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CheckboxGroup",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，多选框组内容"
+  }
+]

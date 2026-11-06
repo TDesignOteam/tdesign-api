@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1653,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "ListItemMeta",
+    "field_category": "Props",
+    "field_name": "avatar",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "列表项图片",
+    "deprecated": true
+  },
+  {
+    "id": 916,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ListItemMeta",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "列表项内容"
+  },
+  {
+    "id": 914,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ListItemMeta",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "列表项图片"
+  },
+  {
+    "id": 915,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ListItemMeta",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "列表项标题"
+  }
+]

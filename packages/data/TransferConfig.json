@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1903,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TransferConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”空数据描述文本"
+  },
+  {
+    "id": 1904,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TransferConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“请输入关键词搜索”占位符描述文本"
+  },
+  {
+    "id": 1902,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TransferConfig",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，穿梭框标题描述文本，示例：“{checked} / {total} 项”"
+  }
+]

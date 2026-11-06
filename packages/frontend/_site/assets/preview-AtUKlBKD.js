@@ -1,1 +1,0 @@
-import{J as e,L as t,T as n}from"./index-MICRph32.js";import r from"./api-B_tlzkfV.js";var i={__name:`preview`,setup(i){return(i,a)=>(t(),n(e(r),{preview:``}))}};export{i as default};

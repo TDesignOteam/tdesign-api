@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1343,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuGroup",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "菜单组标题"
+  }
+]

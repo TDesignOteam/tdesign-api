@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1695565419,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Props",
+    "field_name": "checkedProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传标签选中态属性",
+    "field_desc_en": "used to set checked tag props",
+    "custom_field_type": "TdTagProps"
+  },
+  {
+    "id": 1695554166,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Props",
+    "field_name": "multiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否支持选中多个标签",
+    "field_desc_en": "allow to select multiple tags"
+  },
+  {
+    "id": 1695564598,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "标签选项列表",
+    "field_desc_en": "tag list",
+    "custom_field_type": "CheckTagGroupOption[]【interface CheckTagGroupOption extends TdCheckTagProps { label: string | TNode; value: string | number }】"
+  },
+  {
+    "id": 1695564897,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Props",
+    "field_name": "uncheckedProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传标签未选态属性",
+    "field_desc_en": "used to set unchecked tag props",
+    "custom_field_type": "TdTagProps"
+  },
+  {
+    "id": 1695554043,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中标签值",
+    "field_desc_en": "selected tag value list",
+    "custom_field_type": "CheckTagGroupValue【type CheckTagGroupValue = Array<string | number>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1695564191,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CheckTagGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "event_input": "(value: CheckTagGroupValue, context: CheckTagGroupChangeContext)【interface CheckTagGroupChangeContext { type: 'check' | 'uncheck'; e: MouseEvent | KeyboardEvent; value: string | number }】"
+  }
+]

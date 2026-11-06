@@ -1,0 +1,60 @@
+[
+  {
+    "id": 3267,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerItem",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "格式化标签",
+    "custom_field_type": "(option: PickerItemOption, columnIndex: number) => PickerItemOption"
+  },
+  {
+    "id": 1720093990,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerItem",
+    "field_category": "Props",
+    "field_name": "itemHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "80",
+    "field_desc_zh": "PickerItem的子项高度，单位 rpx"
+  },
+  {
+    "id": 3268,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerItem",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "数据源",
+    "custom_field_type": "PickerItemOption[]【interface PickerItemOption { label: string; value: string | number; icon?: string }】"
+  },
+  {
+    "id": 1760086147,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PickerItem",
+    "field_category": "Slots",
+    "field_name": "label-suffix--[index]",
+    "field_type": [],
+    "field_desc_zh": "列表子项后置插槽，用于自定义标签文本之后的内容。"
+  }
+]

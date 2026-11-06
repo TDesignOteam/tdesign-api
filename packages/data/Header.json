@@ -1,0 +1,16 @@
+[
+  {
+    "id": 217,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Header",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "顶栏高度。样式表（class）中定义的默认高度为：64px"
+  }
+]

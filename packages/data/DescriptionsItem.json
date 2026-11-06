@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1703750907,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DescriptionsItem",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述项内容",
+    "field_desc_en": "content of description item"
+  },
+  {
+    "id": 1704432423,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DescriptionsItem",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述项内容，同 `content`",
+    "field_desc_en": "content of description item"
+  },
+  {
+    "id": 3500,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DescriptionsItem",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "描述项标签",
+    "field_desc_en": "label of description item",
+    "test_description": "{\"PC\":{\"tnode\":true,\"snapshot\":true}}"
+  },
+  {
+    "id": 3501,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DescriptionsItem",
+    "field_category": "Props",
+    "field_name": "span",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "占用的宽度数量",
+    "field_desc_en": "width count"
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "id": 850,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "菜单项内容，同 content"
+  },
+  {
+    "id": 849,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "菜单项内容"
+  },
+  {
+    "id": 848,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "菜单项内容，同 content"
+  },
+  {
+    "id": 846,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用菜单项展开/收起/跳转等功能"
+  },
+  {
+    "id": 853,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "href",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "跳转链接"
+  },
+  {
+    "id": 1327,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 855,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "replace",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "路由跳转是否采用覆盖的方式（覆盖后将没有浏览器历史记录）"
+  },
+  {
+    "id": 851,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "router",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "路由对象。如果项目存在 Router，则默认使用 Router",
+    "custom_field_type": "Record<string, any>"
+  },
+  {
+    "id": 1713607606,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "routerLink",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "当且仅当 Router 存在时，该 API 有效。开启菜单项内容渲染为与router-link行为一致的`<a />`标签",
+    "field_desc_en": "This API is valid if and only if the Router exists. Enable menu item content to be rendered as an `<a />` consistent with router-link behavior",
+    "version": {
+      "Vue(PC)": "1.5.0",
+      "VueNext(PC)": "1.3.11"
+    }
+  },
+  {
+    "id": 854,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "target",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "_self",
+    "field_enum": [
+      "_blank",
+      "_self",
+      "_parent",
+      "_top"
+    ],
+    "field_desc_zh": "链接或路由跳转方式"
+  },
+  {
+    "id": 852,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "to",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "路由跳转目标，当且仅当 Router 存在时，该 API 有效",
+    "custom_field_type": "MenuRoute【interface MenuRoute { path?: string; name?: string; hash?: string; query?: MenuQueryData; params?: MenuQueryData }】【type MenuQueryData = { [key: string]: string | string[] }】"
+  },
+  {
+    "id": 1731555489,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "tooltipProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Tooltip 组件的特性，作用于一级菜单收起下聚焦时出现的节点",
+    "field_desc_en": "Transparent all feature props of the Tooltip",
+    "custom_field_type": "TooltipProps【import { TooltipProps } from '@Tooltip'】"
+  },
+  {
+    "id": 845,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "菜单项唯一标识",
+    "custom_field_type": "MenuValue"
+  },
+  {
+    "id": 1445,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MenuItem",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击时触发",
+    "field_desc_en": "trigger on click",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  }
+]

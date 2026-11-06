@@ -1,0 +1,146 @@
+[
+  {
+    "id": 2020,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "表格行是否禁用选中"
+  },
+  {
+    "id": 2016,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "expandChildrenLength",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "当前节点展开的子节点数量"
+  },
+  {
+    "id": 2012,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "表格行是否展开",
+    "field_required": true
+  },
+  {
+    "id": 2679,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "id",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "唯一标识",
+    "field_required": true
+  },
+  {
+    "id": 2014,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "level",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "当前节点层级",
+    "custom_field_type": "number"
+  },
+  {
+    "id": 2013,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "parent",
+    "field_type": [],
+    "field_desc_zh": "父节点",
+    "custom_field_type": "TableRowState<T>"
+  },
+  {
+    "id": 2015,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "path",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "当前节点路径",
+    "custom_field_type": "TableRowState<T>[]"
+  },
+  {
+    "id": 2010,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "row",
+    "field_type": [],
+    "field_desc_zh": "原始表格行数据",
+    "custom_field_type": "T",
+    "field_required": true
+  },
+  {
+    "id": 2011,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "Props",
+    "field_name": "rowIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "表格行下标，值为 `-1` 标识当前行未展开显示",
+    "field_required": true
+  },
+  {
+    "id": 2009,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableRowState",
+    "field_category": "<T>",
+    "field_name": "<T extends TableRowData = TableRowData>",
+    "field_type": []
+  }
+]

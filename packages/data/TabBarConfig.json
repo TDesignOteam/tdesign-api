@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1741186773,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarConfig",
+    "field_category": "Props",
+    "field_name": "haveMoreNewsAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“有n+条新的消息”描述文本。示例：“有 {value}+ 条消息”"
+  },
+  {
+    "id": 1741186793,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarConfig",
+    "field_category": "Props",
+    "field_name": "haveNewsAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“有n条新的消息”描述文本。示例：“有 {value} 条消息”"
+  },
+  {
+    "id": 1741186744,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarConfig",
+    "field_category": "Props",
+    "field_name": "moreNewsAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“有很多消息”描述文本"
+  },
+  {
+    "id": 1741186722,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarConfig",
+    "field_category": "Props",
+    "field_name": "newsAriaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“有新的消息”描述文本"
+  }
+]

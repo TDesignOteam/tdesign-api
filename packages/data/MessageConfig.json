@@ -1,0 +1,13 @@
+[
+  {
+    "id": 3218,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageConfig",
+    "field_category": "Extends",
+    "field_name": "MessageOptions【import { MessageOptions } from '@Message'】",
+    "field_type": []
+  }
+]

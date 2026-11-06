@@ -1,0 +1,251 @@
+[
+  {
+    "id": 511,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "activable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否允许被激活"
+  },
+  {
+    "id": 510,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "actived",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否被激活"
+  },
+  {
+    "id": 513,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "checkable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否允许被选中"
+  },
+  {
+    "id": 514,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "checked",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否被选中"
+  },
+  {
+    "id": 516,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否被禁用",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"description\":\"TreeNode is not disabled && Tree is not disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":false}],\"disabled\":false},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":1},\"event\":[{\"change\":[[1]]},{\"click\":[]}]}]},{\"description\":\"TreeNode is not disabled && Tree is disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":false}],\"disabled\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]},{\"description\":\"TreeNode is disabled && Tree is disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":true}],\"disabled\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]},{\"description\":\"TreeNode is disabled && Tree is not disabled\",\"props\":{\"checkable\":true,\"data\":[{\"value\":1,\"label\":1,\"disabled\":true}],\"disabled\":false},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-checkbox__input\":1}},{\"trigger\":\"click(.t-checkbox__input)\",\"delay\":300,\"exist\":{\".t-is-checked\":0},\"event\":[{\"change\":\"not\"},{\"click\":[]}]}]}]}}"
+  },
+  {
+    "id": 3487,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "该节点是否允许被拖动，当树本身开启时，默认允许"
+  },
+  {
+    "id": 509,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "expandMutex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "子节点是否互斥展开"
+  },
+  {
+    "id": 508,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否已展开"
+  },
+  {
+    "id": 515,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "indeterminate",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否为半选中状态"
+  },
+  {
+    "id": 506,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "节点标签文案"
+  },
+  {
+    "id": 518,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "子节点数据是否在加载中"
+  },
+  {
+    "id": 505,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "节点值"
+  },
+  {
+    "id": 1792401069,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "BigInt"
+    ],
+    "field_desc_zh": "节点值",
+    "custom_field_type": "TreeNodeValue"
+  },
+  {
+    "id": 517,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "节点是否可视"
+  }
+]

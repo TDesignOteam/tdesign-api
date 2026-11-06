@@ -2,7 +2,7 @@ import path from 'path';
 import {load as yamlLoad} from 'js-yaml';
 import { includes } from 'lodash-es';
 import { FRAMEWORK_MAP } from '../config/index.js';
-import { kebabCaseComponent } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
 import {
   getTestImportSegment as getReactTestImportSegment,
   getTNodeSegment as getReactTNodeSegment,
@@ -10,17 +10,17 @@ import {
   getDefaultSegment as getReactDefaultSegment,
 } from './segment/react.js';
 import {
+  getTestImportSegment as getVue2TestImportSegment,
+  getTNodeSegment as getVue2TNodeSegment,
+  getDisabledSegment as getVue2DisabledSegment,
+  getDefaultSegment as getVue2DefaultSegment,
+} from './segment/vue-2.js';
+import {
   getTestImportSegment as getVueTestImportSegment,
   getTNodeSegment as getVueTNodeSegment,
   getDisabledSegment as getVueDisabledSegment,
   getDefaultSegment as getVueDefaultSegment,
 } from './segment/vue.js';
-import {
-  getTestImportSegment as getVue2TestImportSegment,
-  getTNodeSegment as getVue2TNodeSegment,
-  getDisabledSegment as getVue2DisabledSegment,
-  getDefaultSegment as getVue2DefaultSegment,
-} from './segment/vue2.js';
 
 /**
  * 自动生成的单测文件的路径位置
@@ -101,7 +101,7 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
   let preDependProp = {};
   // 预处理
   componentInfo.forEach((p) => {
-    if (p.field_category === 1) {
+    if (p.field_category === 'Props') {
       // props
       if (p.test_description) {
         const propsDoc = yamlLoad(p.test_description);
@@ -136,7 +136,7 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
   });
 
   componentInfo.forEach((p) => {
-    if (p.field_category === 1) {
+    if (p.field_category === 'Props') {
       // props
       let porpsObj = {};
       if (includes(skipProps, p.field_name)) {
@@ -156,9 +156,9 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
       }
 
       let values = [];
-      if (p.field_enum.length > 0) {
+      if (p.field_enum?.length > 0) {
         // 处理枚举值
-        values = values.concat(p.field_enum.split('/'));
+        values = values.concat(p.field_enum);
       } else {
         values.push(p.field_default_value);
       }
@@ -169,7 +169,7 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
           propsTest.push(disabledSegment);
         }
       }
-      if (p.field_type_text.includes('TNode') && getTNodeSegment) {
+      if (p.field_type.includes('TNode') && getTNodeSegment) {
         const tnodeSegment = getTNodeSegment(componentName, p);
         if (tnodeSegment) {
           propsTest.push(getTNodeSegment(componentName, p));
@@ -178,7 +178,7 @@ function generateComponentUnitTest(framework, componentName, componentInfo) {
       // 默认生成案例
       if (getDefaultSegment) {
         values.forEach((val) => {
-          porpsObj[p.field_name] = getPropValue(val, p.field_type_text);
+          porpsObj[p.field_name] = getPropValue(val, p.field_type);
           const defaultSegment = getDefaultSegment(componentName, p, porpsObj);
           if (defaultSegment) {
             propsTest.push(defaultSegment);

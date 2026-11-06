@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1928,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SelectConfig",
+    "field_category": "Props",
+    "field_name": "clearIcon",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "清除图标，【注意】使用渲染函数输出图标组件",
+    "custom_field_type": "TNode"
+  },
+  {
+    "id": 1924,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SelectConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”描述文本"
+  },
+  {
+    "id": 2781,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SelectConfig",
+    "field_category": "Props",
+    "field_name": "filterable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "全局配置是否可筛选"
+  },
+  {
+    "id": 1925,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SelectConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“加载中”描述文本"
+  },
+  {
+    "id": 1927,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "SelectConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“请选择”占位符描述文本",
+    "field_desc_en": "placeholder text"
+  }
+]
