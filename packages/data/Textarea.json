@@ -110,6 +110,24 @@
     "field_desc_zh": "是否显示外边框"
   },
   {
+    "id": 1794211555,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示清空按钮。值为 `true` 时等价于 `{ position: 'top', type: 'icon' }`。`position` 表示清空按钮位置，可选值：top / center / bottom。`type` 表示清空按钮类型，可选值：icon / text",
+    "field_desc_en": "Whether to show the clear button. `true` is equivalent to `{ position: 'top', type: 'icon' }`. `position` sets the clear button position: top, center, or bottom. `type` sets the clear button type: icon or text",
+    "custom_field_type": "boolean | TextareaClearable【interface TextareaClearable { position?: 'top' | 'center' | 'bottom'; type?: 'icon' | 'text' }】"
+  },
+  {
     "id": 1720,
     "platform_framework": [
       "Miniprogram",
@@ -226,21 +244,6 @@
     "field_desc_zh": "指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离"
   },
   {
-    "id": 3394,
-    "platform_framework": [
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "Textarea",
-    "field_category": "Props",
-    "field_name": "disableDefaultPadding",
-    "field_type": [
-      "Boolean"
-    ],
-    "field_default_value": "false",
-    "field_desc_zh": "是否去掉 iOS 下的默认内边距"
-  },
-  {
     "id": 963,
     "platform_framework": [
       "Vue(PC)",
@@ -258,6 +261,21 @@
     ],
     "field_default_value": "undefined",
     "field_desc_zh": "是否禁用文本框"
+  },
+  {
+    "id": 3394,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Textarea",
+    "field_category": "Props",
+    "field_name": "disableDefaultPadding",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否去掉 iOS 下的默认内边距"
   },
   {
     "id": 1712045054,
