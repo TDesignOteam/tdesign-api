@@ -70,8 +70,8 @@ catalogs:
       specifier: ^10.6.2
       version: 10.6.2
     axios:
-      specifier: ^1.20.0
-      version: 1.20.0
+      specifier: ^1.21.1
+      version: 1.21.1
     chalk:
       specifier: ^6.0.1
       version: 6.0.1
@@ -257,7 +257,7 @@ importers:
         version: 8.65.0(eslint@10.13.0(jiti@2.4.2)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@6.0.3)
       axios:
         specifier: 'catalog:'
-        version: 1.20.0(debug@4.3.7(supports-color@5.5.0))(supports-color@5.5.0)
+        version: 1.21.1(debug@4.3.7(supports-color@5.5.0))(supports-color@5.5.0)
       chalk:
         specifier: 'catalog:'
         version: 6.0.1
@@ -311,7 +311,7 @@ importers:
         version: 0.20.5
       axios:
         specifier: 'catalog:'
-        version: 1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+        version: 1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       codemirror:
         specifier: 'catalog:'
         version: 6.0.2
@@ -399,7 +399,7 @@ importers:
     dependencies:
       axios:
         specifier: 'catalog:'
-        version: 1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+        version: 1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       chalk:
         specifier: 'catalog:'
         version: 6.0.1
@@ -1370,8 +1370,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
-  axios@1.20.0:
-    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
+  axios@1.21.1:
+    resolution: {integrity: sha512-6eI5Q/Y4u/Um9dDlsRoq5pY2rxnUTv+L4PpLitnbk/i4jb3MxLZ5CsN5Ih3IysbeRYK4pR+P7qfMsOQl9fwwFQ==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2079,6 +2079,15 @@ packages:
 
   follow-redirects@1.16.0:
     resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
+  follow-redirects@1.16.3:
+    resolution: {integrity: sha512-toOSoqN6d51Wjf1aOFJYcoVv1aND9rj/CwjLU0Vz40oDuSpWDayCeKe4JpL5NL0WdFvoOOCI3BRo69HahjbR1A==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -4914,9 +4923,9 @@ snapshots:
       postcss: 8.5.32
       postcss-value-parser: 4.2.0
 
-  axios@1.20.0(debug@4.3.7(supports-color@5.5.0))(supports-color@5.5.0):
+  axios@1.21.1(debug@4.3.7(supports-color@5.5.0))(supports-color@5.5.0):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.7(supports-color@5.5.0))
+      follow-redirects: 1.16.3(debug@4.3.7(supports-color@5.5.0))
       form-data: 4.0.6
       https-proxy-agent: 5.0.1(supports-color@5.5.0)
       proxy-from-env: 2.1.0
@@ -4924,9 +4933,9 @@ snapshots:
       - debug
       - supports-color
 
-  axios@1.20.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
+  axios@1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.4.3(supports-color@7.2.0))
+      follow-redirects: 1.16.3(debug@4.4.3(supports-color@7.2.0))
       form-data: 4.0.6
       https-proxy-agent: 5.0.1(supports-color@7.2.0)
       proxy-from-env: 2.1.0
@@ -5753,7 +5762,11 @@ snapshots:
     optionalDependencies:
       debug: 4.3.7(supports-color@5.5.0)
 
-  follow-redirects@1.16.0(debug@4.4.3(supports-color@7.2.0)):
+  follow-redirects@1.16.3(debug@4.3.7(supports-color@5.5.0)):
+    optionalDependencies:
+      debug: 4.3.7(supports-color@5.5.0)
+
+  follow-redirects@1.16.3(debug@4.4.3(supports-color@7.2.0)):
     optionalDependencies:
       debug: 4.4.3(supports-color@7.2.0)
 
