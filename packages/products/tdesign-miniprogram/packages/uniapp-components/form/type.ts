@@ -18,7 +18,7 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 表单内容对齐方式：左对齐、右对齐
    * @default left
    */
-  contentAlign?: 'left' | 'right';
+  contentAlign?: 'left' | 'center' | 'right';
   /**
    * 表单数据
    * @default {}

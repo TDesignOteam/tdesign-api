@@ -13,7 +13,7 @@ export default {
     type: String,
     validator(val: TdFormItemProps['contentAlign']): boolean {
       if (!val) return true;
-      return ['left', 'right'].includes(val);
+      return ['left', 'center', 'right'].includes(val);
     },
   },
   /** 表单项说明内容 */

@@ -14,7 +14,7 @@ export default {
     default: 'left' as TdFormProps['contentAlign'],
     validator(val: TdFormProps['contentAlign']): boolean {
       if (!val) return true;
-      return ['left', 'right'].includes(val);
+      return ['left', 'center', 'right'].includes(val);
     },
   },
   /** 表单数据 */

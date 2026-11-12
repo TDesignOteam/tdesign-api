@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdFormProps } from './type';
+import type { TdFormProps } from './type';
 const props: TdFormProps = {
   /** 是否在表单标签字段右侧显示冒号 */
   colon: {
