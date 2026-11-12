@@ -19,10 +19,10 @@
   {
     "id": 1712574874,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "FormItem",
     "field_category": "Props",
@@ -32,9 +32,10 @@
     ],
     "field_enum": [
       "left",
+      "center",
       "right"
     ],
-    "field_desc_zh": "表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign"
+    "field_desc_zh": "表单内容对齐方式：左对齐、居中对齐及右对齐，优先级高于 Form.contentAlign"
   },
   {
     "id": 182,
