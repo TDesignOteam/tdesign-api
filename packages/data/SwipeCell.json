@@ -45,6 +45,20 @@
     "field_desc_zh": "是否禁用滑动"
   },
   {
+    "id": 1794476420,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "SwipeCell",
+    "field_category": "Props",
+    "field_name": "fullSwipe",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": " 是否启用滑动到底自动执行操作。"
+  },
+  {
     "id": 1747,
     "platform_framework": [
       "Vue(Mobile)",
