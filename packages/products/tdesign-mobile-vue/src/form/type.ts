@@ -339,7 +339,7 @@ export interface SubmitContext<T extends Data = Data> {
   fields?: any;
 }
 
-export type FormValidateResult<T> = boolean | ValidateResultObj<T>;
+export type FormValidateResult<T> = true | ValidateResultObj<T>;
 
 export type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList };
 

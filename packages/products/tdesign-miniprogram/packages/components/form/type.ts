@@ -326,7 +326,7 @@ export interface FormValidateParams {
 
 export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
-export type FormValidateResult<T> = boolean | ValidateResultObj<T>;
+export type FormValidateResult<T> = true | ValidateResultObj<T>;
 
 export type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList };
 
