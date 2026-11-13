@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1785650133,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ScrollbarValues",
+    "field_category": "Props",
+    "field_name": "PositionEdge",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "left",
+      "right",
+      "top",
+      "bottom"
+    ],
+    "field_desc_zh": "滚动到某一边",
+    "field_desc_en": "Scroll to one side"
+  },
+  {
+    "id": 1785650036,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ScrollbarValues",
+    "field_category": "Props",
+    "field_name": "PositionValues",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "获取包含完整滚动信息的视图对象",
+    "field_desc_en": "Get the view object containing complete scrolling information",
+    "custom_field_type": "{ left: number; top: number; scrollLeft: number; scrollTop: number; scrollWidth: number; scrollHeight: number; clientWidth: number; clientHeight: number }"
+  }
+]

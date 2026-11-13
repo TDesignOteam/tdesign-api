@@ -1,0 +1,60 @@
+[
+  {
+    "id": 3289,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageConfig",
+    "field_category": "Props",
+    "field_name": "errorText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图片加载失败显示的文本，中文默认为“图片无法显示”",
+    "field_desc_en": "loading text, default value is \"Error\""
+  },
+  {
+    "id": 3288,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图片加载中显示的文本，中文默认为“图片加载中”",
+    "field_desc_en": "loading text, default value is \"loading\""
+  },
+  {
+    "id": 3338,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ImageConfig",
+    "field_category": "Props",
+    "field_name": "replaceImageSrc",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "统一替换图片 `src` 地址，参数为组件的全部属性，返回值为新的图片地址",
+    "field_desc_en": "replace all `src` attribute of images",
+    "custom_field_type": "(params: ImageProps) => string【import { ImageProps } from '@Image'】"
+  }
+]

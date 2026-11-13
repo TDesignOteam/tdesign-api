@@ -1,0 +1,68 @@
+[
+  {
+    "id": 3233,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "IndexesAnchor",
+    "field_category": "Props",
+    "field_name": "index",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "索引字符"
+  },
+  {
+    "id": 1711972926,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "IndexesAnchor",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类",
+    "field_desc_en": "class name of root node"
+  },
+  {
+    "id": 1711972955,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "IndexesAnchor",
+    "field_category": "External Classes",
+    "field_name": "t-class-sidebar",
+    "field_type": [],
+    "field_desc_zh": "侧边栏样式类"
+  },
+  {
+    "id": 1711972960,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "IndexesAnchor",
+    "field_category": "External Classes",
+    "field_name": "t-class-sidebar-item",
+    "field_type": [],
+    "field_desc_zh": "侧边栏选项样式类"
+  },
+  {
+    "id": 1760085682,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "IndexesAnchor",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

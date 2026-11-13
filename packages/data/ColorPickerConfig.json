@@ -1,0 +1,44 @@
+[
+  {
+    "id": 2423,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerConfig",
+    "field_category": "Props",
+    "field_name": "clearConfirmText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定清空最近使用的颜色吗？”清空颜色确认文案"
+  },
+  {
+    "id": 2415,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerConfig",
+    "field_category": "Props",
+    "field_name": "recentColorTitle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“最近使用颜色” 区域标题文本"
+  },
+  {
+    "id": 2416,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerConfig",
+    "field_category": "Props",
+    "field_name": "swatchColorTitle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“系统预设颜色” 区域标题文本"
+  }
+]

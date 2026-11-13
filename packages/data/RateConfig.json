@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1741186556,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RateConfig",
+    "field_category": "Props",
+    "field_name": "noValueText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“未评分”描述文本"
+  },
+  {
+    "id": 1723453113,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RateConfig",
+    "field_category": "Props",
+    "field_name": "rateText",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "评分描述，默认值：['极差', '失望', '一般', '满意', '惊喜']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1741186536,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RateConfig",
+    "field_category": "Props",
+    "field_name": "valueText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，评分值描述文本。示例：“{value} 分”"
+  }
+]

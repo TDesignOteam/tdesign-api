@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1740540293,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Content",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容，同 content"
+  },
+  {
+    "id": 1740540122,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Content",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容"
+  },
+  {
+    "id": 1740540046,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Content",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "内容，同 content"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1706635398,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Paragraph",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "段落内容，同 content",
+    "field_desc_en": "children of paragraph"
+  },
+  {
+    "id": 1706635275,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Paragraph",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "段落内容",
+    "field_desc_en": "content of paragraph"
+  },
+  {
+    "id": 1706635334,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "Paragraph",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "段落内容",
+    "field_desc_en": "default slot of paragraph"
+  },
+  {
+    "id": 1706638282,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Paragraph",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis"
+  },
+  {
+    "id": 1776828574,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Paragraph",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否省略展示，可通过配置参数自定义省略操作的具体功能和样式",
+    "field_desc_en": "add ellipsis style",
+    "custom_field_type": "boolean | TypographyEllipsis 【import { TypographyEllipsis } from '@Text'】"
+  }
+]

@@ -77,10 +77,13 @@
       "data",
       "empty",
       "fixed-rows",
+      "footer-summary",
       "height",
       "loading",
+      "loading-mode",
       "loading-props",
       "max-height",
+      "pagination",
       "row-attributes",
       "row-class-name",
       "row-key",
@@ -92,7 +95,8 @@
       "vertical-align",
       "cell-click",
       "row-click",
-      "scroll"
+      "scroll",
+      "scroll-to-bottom"
     ],
     "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
   },
@@ -101,13 +105,16 @@
       "block",
       "content",
       "disabled",
+      "form",
       "ghost",
+      "href",
       "icon",
       "loading",
       "loading-props",
       "shape",
       "size",
       "suffix",
+      "tag",
       "theme",
       "type",
       "variant",
@@ -143,6 +150,9 @@
     "attributes": [
       "check-strictly",
       "close-btn",
+      "filter",
+      "filter-placeholder",
+      "filterable",
       "header",
       "keys",
       "load",
@@ -229,6 +239,7 @@
   "t-checkbox-group": {
     "attributes": [
       "borderless",
+      "direction",
       "disabled",
       "keys",
       "max",
@@ -290,6 +301,20 @@
     ],
     "description": "ColorPicker\n\n颜色选择器\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker)"
   },
+  "t-comment": {
+    "attributes": [
+      "actions",
+      "author",
+      "avatar",
+      "content",
+      "datetime",
+      "folds",
+      "reply",
+      "actions",
+      "folds"
+    ],
+    "description": "Comment\n\n评论\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment)"
+  },
   "t-config-provider": {
     "attributes": [
       "global-config"
@@ -313,11 +338,9 @@
   },
   "t-date-time-picker": {
     "attributes": [
-      "auto-close",
       "cancel-btn",
       "confirm-btn",
       "end",
-      "filter",
       "footer",
       "format",
       "header",
@@ -327,7 +350,6 @@
       "start",
       "steps",
       "title",
-      "use-popup",
       "value",
       "cancel",
       "change",
@@ -370,8 +392,7 @@
       "content",
       "dashed",
       "default",
-      "layout",
-      "size"
+      "layout"
     ],
     "description": "Divider\n\n分割线\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/divider)"
   },
@@ -399,6 +420,7 @@
       "disabled",
       "footer",
       "icon",
+      "keep-label-active",
       "keys",
       "label",
       "multiple",
@@ -525,6 +547,7 @@
   "t-guide": {
     "attributes": [
       "back-button-props",
+      "counter",
       "current",
       "finish-button-props",
       "hide-back",
@@ -605,6 +628,7 @@
       "image",
       "images",
       "index",
+      "loop",
       "max-zoom",
       "show-index",
       "visible",
@@ -854,6 +878,66 @@
     ],
     "description": "Popup\n\n气泡框\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popup)"
   },
+  "t-primary-table": {
+    "attributes": [
+      "columns",
+      "display-columns",
+      "drag-sort",
+      "drag-sort-options",
+      "expand-icon",
+      "expand-on-row-click",
+      "expanded-row",
+      "expanded-row-keys",
+      "filter-icon",
+      "filter-row",
+      "filter-value",
+      "hide-sort-tips",
+      "indeterminate-selected-row-keys",
+      "multiple-sort",
+      "reserve-selected-row-on-paginate",
+      "select-on-row-click",
+      "selected-row-keys",
+      "show-sort-column-bg-color",
+      "sort",
+      "sort-icon",
+      "cell-click",
+      "change",
+      "column-change",
+      "data-change",
+      "display-columns-change",
+      "drag-sort",
+      "expand-change",
+      "filter-change",
+      "select-change",
+      "sort-change",
+      "bordered",
+      "cell-empty-content",
+      "data",
+      "empty",
+      "fixed-rows",
+      "footer-summary",
+      "height",
+      "loading",
+      "loading-mode",
+      "loading-props",
+      "max-height",
+      "pagination",
+      "row-attributes",
+      "row-class-name",
+      "row-key",
+      "rowspan-and-colspan",
+      "show-header",
+      "stripe",
+      "table-content-width",
+      "table-layout",
+      "vertical-align",
+      "cell-click",
+      "row-click",
+      "scroll",
+      "scroll-to-bottom"
+    ],
+    "description": "PrimaryTable\n\n主表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
+  },
   "t-progress": {
     "attributes": [
       "color",
@@ -927,6 +1011,7 @@
     "attributes": [
       "allow-uncheck",
       "borderless",
+      "direction",
       "disabled",
       "icon",
       "keys",
@@ -1166,7 +1251,6 @@
       "theme",
       "value",
       "z-index",
-      "change",
       "change"
     ],
     "description": "TabBar\n\n标签栏\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tab-bar)"
@@ -1321,6 +1405,7 @@
       "capture",
       "data",
       "disabled",
+      "draggable",
       "files",
       "format",
       "format-request",
@@ -1334,11 +1419,14 @@
       "remove-btn",
       "request-method",
       "size-limit",
+      "theme",
       "use-mock-progress",
       "value",
       "with-credentials",
       "change",
       "click-upload",
+      "drag",
+      "drop",
       "fail",
       "preview",
       "progress",

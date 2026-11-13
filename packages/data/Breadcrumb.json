@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1743170896,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "ellipsis",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义折叠时省略号的内容",
+    "custom_field_type": "string | TNode<{ items: Array<TdBreadcrumbItemProps>, separator: TdBreadcrumbProps['separator'] }>"
+  },
+  {
+    "id": 1743167580,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "itemsAfterCollapse",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "超过面包屑最大显示数量时，省略号后显示几项。`maxItems > 0`时有效"
+  },
+  {
+    "id": 1743167627,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "itemsBeforeCollapse",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "超过面包屑最大显示数量时，省略号前显示几项。`maxItems > 0`时有效"
+  },
+  {
+    "id": 605,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "maxItemWidth",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "单项最大宽度，超出后会以省略号形式呈现"
+  },
+  {
+    "id": 1743167656,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "maxItems",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值`<= 0`代表不限制"
+  },
+  {
+    "id": 722,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "面包屑项，功能同 BreadcrumbItem",
+    "custom_field_type": "Array<TdBreadcrumbItemProps>"
+  },
+  {
+    "id": 223,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义分隔符"
+  },
+  {
+    "id": 221,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Breadcrumb",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "light",
+    "field_enum": [
+      "light"
+    ],
+    "field_desc_zh": "组件风格"
+  }
+]

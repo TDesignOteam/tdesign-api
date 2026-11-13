@@ -2,7 +2,7 @@
  * Vue unit test, see: https://test-utils.vuejs.org/migration/
  */
 
-import { kebabCaseComponent } from '../../utils.js';
+import { kebabCaseComponent } from '../../core/utils.js';
 import { getUnitTestDescription } from '../utils.js';
 
 /**

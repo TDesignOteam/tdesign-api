@@ -1,0 +1,1307 @@
+[
+  {
+    "id": 1542,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "action",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "自定义右侧操作按钮文字"
+  },
+  {
+    "id": 1712657362,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "action",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "自定义右侧操作按钮文字，如：“取消”"
+  },
+  {
+    "id": 1712031065,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "adjustPosition",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "键盘弹起时，是否自动上推页面"
+  },
+  {
+    "id": 1712030264,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "alwaysEmbed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效)"
+  },
+  {
+    "id": 2864,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "搜索框宽度自适应"
+  },
+  {
+    "id": 2843,
+    "platform_framework": [],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autocompleteOptions",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "联想词列表，如果不存在或长度为 0 则不显示联想框。支持自定义联想词为任意内容。如果 `group` 值为 `true` 则表示当前项为分组标题",
+    "field_desc_en": "autocomplete words list",
+    "custom_field_type": "Array<AutocompleteOption>【type AutocompleteOption = string | { label: string | TNode; group?: boolean }】"
+  },
+  {
+    "id": 2865,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autocompleteOptions",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题",
+    "field_desc_en": "autocomplete words list",
+    "custom_field_type": "Array<AutocompleteOption>【type AutocompleteOption = string | { label: string | TNode; group?: boolean }】"
+  },
+  {
+    "id": 2866,
+    "platform_framework": [],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autocompleteOptions",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "【开发中】联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题",
+    "field_desc_en": "autocomplete words list",
+    "custom_field_type": "Array<AutocompleteOption>【type AutocompleteOption = string | { label: string; group?: boolean }】"
+  },
+  {
+    "id": 3436,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autocompleteOptions",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "【讨论中】联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题",
+    "field_desc_en": "autocomplete words list",
+    "custom_field_type": "Array<AutocompleteOption>【type AutocompleteOption = string | { label: string | TNode; group?: boolean }】"
+  },
+  {
+    "id": 1543,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否默认聚焦",
+    "field_desc_en": "auto focus as default"
+  },
+  {
+    "id": 2863,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "无边框模式"
+  },
+  {
+    "id": 1544,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "center",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否居中"
+  },
+  {
+    "id": 1736333588,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "clearTrigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "always",
+    "field_enum": [
+      "always ",
+      " focus"
+    ],
+    "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效",
+    "field_desc_en": "show clear icon, clicked to clear input value"
+  },
+  {
+    "id": 2780,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否启用清除控件"
+  },
+  {
+    "id": 1712657403,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否可清空"
+  },
+  {
+    "id": 1712030357,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "confirmHold",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "点击键盘右下角按钮时是否保持键盘不收起"
+  },
+  {
+    "id": 1712030225,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "confirmType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "search",
+    "field_enum": [
+      "send",
+      "search",
+      "next",
+      "go",
+      "done"
+    ],
+    "field_desc_zh": "设置键盘右下角按钮的文字，仅在type='text'时生效。<br />具体释义：<br />`send` 右下角按钮为“发送”；<br />`search` 右下角按钮为“搜索”；<br />`next` 右下角按钮为“下一个”；<br />`go` 右下角按钮为“前往”；<br />`done` 右下角按钮为“完成”。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)"
+  },
+  {
+    "id": 1712030723,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "指定 focus 时的光标位置",
+    "field_required": true
+  },
+  {
+    "id": 1769008713,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "指定 focus 时的光标位置"
+  },
+  {
+    "id": 1767007591,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制",
+    "version": {
+      "Miniprogram": "1.12.1"
+    }
+  },
+  {
+    "id": 1767007611,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "光标颜色",
+    "version": {
+      "Vue(Mobile)": "1.12.2",
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 1712030114,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "cursorSpacing",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "搜索框聚焦时底部与键盘的距离"
+  },
+  {
+    "id": 1541,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用"
+  },
+  {
+    "id": 1712657432,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "禁用状态"
+  },
+  {
+    "id": 2853,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "filter",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义过滤方法，用于对现有数据进行搜索过滤，判断是否过滤某一项数据。其中参数 `keyword` 指当前的搜索词，参数 `option` 指每一项联想词，函数返回 true 则显示当前联想词，函数返回 `false` 则隐藏当前联想词",
+    "custom_field_type": "(keyword: string, option: any) => boolean | Promise<boolean>"
+  },
+  {
+    "id": 2859,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "focus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否聚焦"
+  },
+  {
+    "id": 1712031083,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "holdKeyboard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "focus时，点击页面的时候不收起键盘"
+  },
+  {
+    "id": 2845,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "inputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Input 组件全部属性",
+    "custom_field_type": "InputProps【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 1546,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "搜索框内部左侧内容，位于 `prefixIcon` 左侧"
+  },
+  {
+    "id": 3386,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "左侧文本",
+    "deprecated": true
+  },
+  {
+    "id": 3387,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "leftIcon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "'search'",
+    "field_desc_zh": "左侧图标。如果需要使用 `Slot` 进行自定义，必须将该值设置为假值"
+  },
+  {
+    "id": 1712657479,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "leftIcon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "'search'",
+    "field_desc_zh": "左侧图标"
+  },
+  {
+    "id": 1712030157,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "maxcharacter",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用",
+    "field_desc_en": "The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength`"
+  },
+  {
+    "id": 1712030181,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用"
+  },
+  {
+    "id": 1733883439,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+    "field_desc_en": "The maximum length of text that the user can enter. One Chinese character is equal to one count length. By default, it is empty, and the input length is not limited. Use either `maxcharacter` or `maxlength`"
+  },
+  {
+    "id": 2841,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "multiline",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "批量搜索模式，也叫多行搜索，输入框表现为类似 `textarea`，允许输入多行搜索内容"
+  },
+  {
+    "id": 1540,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "占位符"
+  },
+  {
+    "id": 1712031137,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "placeholderClass",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "input-placeholder",
+    "field_desc_zh": "指定 placeholder 的样式类"
+  },
+  {
+    "id": 1712031112,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "placeholderStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定 placeholder 的样式",
+    "field_required": true
+  },
+  {
+    "id": 1762412888,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "placeholderStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定 placeholder 的样式"
+  },
+  {
+    "id": 2847,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2854,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "前置图标"
+  },
+  {
+    "id": 2862,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态"
+  },
+  {
+    "id": 1719488506,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "resultList",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "预览结果列表",
+    "custom_field_type": "Array<string>"
+  },
+  {
+    "id": 1712031376,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "rightIcon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "'close-circle-filled'",
+    "field_desc_zh": "右侧图标",
+    "deprecated": true
+  },
+  {
+    "id": 2844,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "selectInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "基于 SelectInput 组件开发，透传组件全部属性",
+    "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】"
+  },
+  {
+    "id": 1712031040,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "selectionEnd",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标结束位置，自动聚集时有效，需与 selection-start 搭配使用"
+  },
+  {
+    "id": 1712031024,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "selectionStart",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标起始位置，自动聚集时有效，需与 selection-end 搭配使用"
+  },
+  {
+    "id": 1545,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "shape",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'square'",
+    "field_enum": [
+      "square",
+      "round"
+    ],
+    "field_desc_zh": "搜索框形状"
+  },
+  {
+    "id": 2858,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "搜索框内部右侧内容，位于 `suffixIcon` 右侧"
+  },
+  {
+    "id": 2855,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标",
+    "deprecated": true
+  },
+  {
+    "id": 2856,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标，默认为搜索图标。值为 `null` 时则不显示"
+  },
+  {
+    "id": 2857,
+    "platform_framework": [],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "已废弃。后置图标"
+  },
+  {
+    "id": 2867,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "textareaProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Textarea 组件全部属性",
+    "custom_field_type": "TextareaProps【import { TextareaProps } from '@Textarea'】"
+  },
+  {
+    "id": 1712031485,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'text'",
+    "field_enum": [
+      "text",
+      "number",
+      "idcard",
+      "digit",
+      "nickname"
+    ],
+    "field_desc_zh": "拉起键盘的类型"
+  },
+  {
+    "id": 1539,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712653782,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "值"
+  },
+  {
+    "id": 1712657638,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值，搜索关键词",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712657706,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "actionClick",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击搜索框右侧操作内容时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1761301722,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "actionClick",
+    "field_type": [],
+    "field_desc_zh": "点击右侧操作按钮文字时触发",
+    "event_input": "({})"
+  },
+  {
+    "id": 1769008745,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "actionClick",
+    "field_type": [],
+    "field_desc_zh": "点击右侧操作按钮文字时触发"
+  },
+  {
+    "id": 2616,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(context: { value: string; e: FocusEvent })"
+  },
+  {
+    "id": 1761301730,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "({ value: string })"
+  },
+  {
+    "id": 1769008763,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(context: { value: string })"
+  },
+  {
+    "id": 2615,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词",
+    "event_input": "(value: string, context: { trigger: 'input-change' | 'option-click'; e?: InputEvent | MouseEvent })"
+  },
+  {
+    "id": 1761301744,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值发生变化时触发",
+    "event_input": "({ value: string, trigger: 'input-change' | 'option-click' | 'clear' })"
+  },
+  {
+    "id": 1769597322,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索关键词发生变化时触发，可能场景有：搜索框内容发生变化、点击联想词",
+    "event_input": "(value: string, context: { trigger: 'input-change' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent })"
+  },
+  {
+    "id": 2614,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击清除时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1761301756,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "点击清除时触发",
+    "event_input": "({ value: string })"
+  },
+  {
+    "id": 1769008797,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "点击清除时触发",
+    "event_input": "(context: { value: string })"
+  },
+  {
+    "id": 2850,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "回车键按下时触发",
+    "event_input": "(context: { value: string; e: KeyboardEvent })",
+    "trigger_elements": "KeyboardEvent<HTMLInputElement>"
+  },
+  {
+    "id": 2613,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(context: { value: string; e: FocusEvent })"
+  },
+  {
+    "id": 1761301768,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "聚焦时触发",
+    "event_input": "({ value: string })"
+  },
+  {
+    "id": 1769008812,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "聚焦时触发",
+    "event_input": "(context: { value: string })"
+  },
+  {
+    "id": 2848,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "search",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索触发，包含：Enter 键、联想关键词点击、清空按钮点击、搜索框后置内容点击（含后置图标）、搜索框前置内容点击（含前置图标）等",
+    "event_input": "(context?: { value: string; trigger: 'enter' | 'option-click' | 'clear' | 'suffix-click' | 'prefix-click'; e?: InputEvent | MouseEvent })"
+  },
+  {
+    "id": 2860,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "search",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "【讨论中】搜索触发，包含：手机键盘提交健、联想关键词点击、清空按钮点击等",
+    "event_input": "(context?: { value: string; trigger: 'submit' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent })"
+  },
+  {
+    "id": 2861,
+    "platform_framework": [],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "search",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索触发，包含：手机键盘提交健、联想关键词点击、清空按钮点击等",
+    "event_input": "(context?: { value: string; trigger: 'submit' | 'option-click' | 'clear'; e?: InputEvent | MouseEvent })"
+  },
+  {
+    "id": 2612,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "submit",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "提交时触发，如：手机键盘提交按钮点击",
+    "event_input": "(context: { value: string; e: KeyboardEvent })"
+  },
+  {
+    "id": 1761301778,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "submit",
+    "field_type": [],
+    "field_desc_zh": "提交时触发",
+    "event_input": "({ value: string })"
+  },
+  {
+    "id": 1769008829,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Events",
+    "field_name": "submit",
+    "field_type": [],
+    "field_desc_zh": "提交时触发",
+    "event_input": "(context: { value: string })"
+  },
+  {
+    "id": 1712043309,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712043350,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class-action",
+    "field_type": [],
+    "field_desc_zh": "操作按钮样式类"
+  },
+  {
+    "id": 1712043361,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class-clear",
+    "field_type": [],
+    "field_desc_zh": "右侧图标样式类"
+  },
+  {
+    "id": 1712043345,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class-input",
+    "field_type": [],
+    "field_desc_zh": "输入框样式类"
+  },
+  {
+    "id": 1712043323,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class-input-container",
+    "field_type": [],
+    "field_desc_zh": "输入框容器样式类"
+  },
+  {
+    "id": 1712043356,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "External Classes",
+    "field_name": "t-class-left",
+    "field_type": [],
+    "field_desc_zh": "左侧图标样式类"
+  },
+  {
+    "id": 1760086411,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Search",
+    "field_category": "Slots",
+    "field_name": "left-icon",
+    "field_type": [],
+    "field_desc_zh": "左侧图标"
+  }
+]

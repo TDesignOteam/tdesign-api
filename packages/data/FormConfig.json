@@ -1,0 +1,83 @@
+[
+  {
+    "id": 3511,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormConfig",
+    "field_category": "Props",
+    "field_name": "colonText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "字段旁边的冒号，中文为“：”",
+    "field_desc_en": "colon on the right of label \":\""
+  },
+  {
+    "id": 2205,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormConfig",
+    "field_category": "Props",
+    "field_name": "errorMessage",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`",
+    "custom_field_type": "FormErrorMessage【import { FormErrorMessage } from '@Form' 】"
+  },
+  {
+    "id": 1957,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormConfig",
+    "field_category": "Props",
+    "field_name": "requiredMark",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示必填符号（*），默认显示"
+  },
+  {
+    "id": 1748409879,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormConfig",
+    "field_category": "Props",
+    "field_name": "requiredMarkPosition",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "表单必填符号（*）显示位置",
+    "field_desc_en": "Display position of required symbols"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "id": 862,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "expandType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "popup"
+    ],
+    "field_desc_zh": "二级菜单展开方式，平铺展开和浮层展开"
+  },
+  {
+    "id": 861,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "展开的子菜单集合",
+    "custom_field_type": "Array<MenuValue>",
+    "syntactic_sugar": "sync"
+  },
+  {
+    "id": 1266,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "logo",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "站点 LOGO"
+  },
+  {
+    "id": 1265,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "operations",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "导航操作区域"
+  },
+  {
+    "id": 859,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "light",
+    "field_enum": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "id": 860,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "激活菜单项",
+    "custom_field_type": "MenuValue【type MenuValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 863,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "激活菜单项发生变化时触发",
+    "event_input": "(value: MenuValue)"
+  },
+  {
+    "id": 865,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "HeadMenu",
+    "field_category": "Events",
+    "field_name": "expand",
+    "field_type": [],
+    "field_desc_zh": "展开的菜单项发生变化时触发",
+    "event_input": "(value: Array<MenuValue>)"
+  }
+]

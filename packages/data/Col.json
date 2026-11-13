@@ -1,0 +1,248 @@
+[
+  {
+    "id": 203,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "flex",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "flex 布局填充。CSS 属性 flex 值。示例：2 / 3 / '100px' / 'auto' / '1 1 200px'"
+  },
+  {
+    "id": 213,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "lg",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象（小尺寸电脑）",
+    "custom_field_type": "number | BaseColProps"
+  },
+  {
+    "id": 212,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "md",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象（超小尺寸电脑）",
+    "custom_field_type": "number | BaseColProps"
+  },
+  {
+    "id": 204,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "栅格左侧的间隔格数，间隔内不可以有栅格"
+  },
+  {
+    "id": 3430,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "列的偏移量（默认单位px）"
+  },
+  {
+    "id": 205,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "order",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "栅格顺序，flex 布局模式下有效"
+  },
+  {
+    "id": 206,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "pull",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "栅格向左移动格数"
+  },
+  {
+    "id": 207,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "push",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "栅格向右移动格数"
+  },
+  {
+    "id": 211,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "sm",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象（平板）",
+    "custom_field_type": "number | BaseColProps"
+  },
+  {
+    "id": 208,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "span",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "栅格占位格数，为 0 时相当于 display: none"
+  },
+  {
+    "id": 3429,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "span",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "列的宽度（默认单位px）"
+  },
+  {
+    "id": 209,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "div",
+    "field_desc_zh": "自定义元素标签"
+  },
+  {
+    "id": 214,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "xl",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "≥1400px 响应式栅格，可为栅格数或一个包含其他属性的对象（中尺寸电脑）",
+    "custom_field_type": "number | BaseColProps"
+  },
+  {
+    "id": 210,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "xs",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "<768px 响应式栅格，可为栅格数或一个包含其他属性的对象（手机）",
+    "custom_field_type": "number | BaseColProps【interface BaseColProps { offset?: number; order?: number; pull?: number; push?: number; span?: number }】"
+  },
+  {
+    "id": 215,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Col",
+    "field_category": "Props",
+    "field_name": "xxl",
+    "field_type": [
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "≥1880px 响应式栅格，可为栅格数或一个包含其他属性的对象（大尺寸电脑）",
+    "custom_field_type": "number | BaseColProps"
+  },
+  {
+    "id": 1760085916,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Col",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，列内容"
+  }
+]

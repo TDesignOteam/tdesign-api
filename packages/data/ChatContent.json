@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1742883575,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "聊天内容，支持 markdown 格式"
+  },
+  {
+    "id": 1762418144,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "聊天内容对象",
+    "custom_field_type": "TdChatContentType 【interface TdChatContentType { type: 'text' | 'markdown'; data: string; }】",
+    "field_required": true
+  },
+  {
+    "id": 1762418268,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "markdownProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "marked 解析器的配置选项",
+    "custom_field_type": "ChatMarkdownProps【import { ChatMarkdownProps } from '@ChatMarkdown'】"
+  },
+  {
+    "id": 1742883540,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "role",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "user",
+      "assistant",
+      "error",
+      "model-change",
+      "system"
+    ],
+    "field_desc_zh": "角色，不同选项配置不同的样式，支持类型包括用户、助手、错误、模型切换、系统消息"
+  },
+  {
+    "id": 1762418174,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "role",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "user",
+      "assistant",
+      "system"
+    ],
+    "field_desc_zh": "消息角色，用于区分用户和助手的消息样式\t",
+    "field_required": true
+  },
+  {
+    "id": 1762418206,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatContent",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "error ",
+      " ''"
+    ],
+    "field_desc_zh": "正文状态"
+  },
+  {
+    "id": 1772539447,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatContent",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击链接时触发",
+    "event_input": "(context: MarkdownClickContext)【import { MarkdownClickContext } from '@ChatMarkdown'】"
+  }
+]

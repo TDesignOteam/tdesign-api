@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1865,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "OptionGroup",
+    "field_category": "Props",
+    "field_name": "divider",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示分隔线"
+  },
+  {
+    "id": 363,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "OptionGroup",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "分组别名"
+  }
+]

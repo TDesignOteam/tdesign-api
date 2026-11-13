@@ -12,7 +12,7 @@ const router = new Router({
 
 router.post('/api', async (ctx: Koa.Context) => {
   const data = ctx.request.body as BaseObject;
-  ctx.body = ComponentApiController.apiCreate(data);
+  ctx.body = await ComponentApiController.apiCreate(data);
 });
 
 router.get('/api', async (ctx: Koa.Context) => {
@@ -48,8 +48,8 @@ router.post('/unit-test', async (ctx: Koa.Context) => {
   );
 });
 
-router.get('/export-api-data', async(ctx: Koa.Context) => {
-  ctx.body = await ComponentApiController.exportAPI();
+router.get('/export-data', async(ctx: Koa.Context) => {
+  ctx.body = await ComponentApiController.exportData();
 });
 
 export default router.routes();

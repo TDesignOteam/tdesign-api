@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { TNode, Styles, AttachNode } from '../common';
-import { MouseEvent, KeyboardEvent } from 'react';
+import type { MouseEvent, KeyboardEvent } from 'react';
+import type { ButtonProps } from '../button';
+import type { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDrawerProps {
   /**
@@ -57,11 +57,6 @@ export interface TdDrawerProps {
    */
   footer?: TNode;
   /**
-   * 是否强制渲染Drawer
-   * @default false
-   */
-  forceRender?: boolean;
-  /**
    * 头部内容。值为 true 显示空白头部，值为 false 不显示头部，值类型为 string 则直接显示值，值类型为 TNode 表示自定义头部内容
    * @default true
    */
@@ -111,7 +106,7 @@ export interface TdDrawerProps {
    */
   visible?: boolean;
   /**
-   * 抽屉层级，样式默认为 1500
+   * 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: number;
   /**

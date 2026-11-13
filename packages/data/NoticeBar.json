@@ -1,0 +1,366 @@
+[
+  {
+    "id": 1095,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "文本内容",
+    "custom_field_type": "string | string[] | TNode"
+  },
+  {
+    "id": 3412,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "滚动方向"
+  },
+  {
+    "id": 1712057349,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "interval",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "2000",
+    "field_desc_zh": "间隔时间【仅在 direction='vertical' 有效】"
+  },
+  {
+    "id": 1394,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "marquee",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放【仅在 direction='horizontal' 有效】",
+    "custom_field_type": "boolean | NoticeBarMarquee【interface NoticeBarMarquee { speed?: number; loop?: number; delay?: number }】"
+  },
+  {
+    "id": 1712718767,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "marquee",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放",
+    "custom_field_type": "boolean | NoticeBarMarquee【interface NoticeBarMarquee { speed?: number; loop?: number; delay?: number }】"
+  },
+  {
+    "id": 1104,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "operation",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "右侧额外信息"
+  },
+  {
+    "id": 1101,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "前缀图标"
+  },
+  {
+    "id": 2610,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "String",
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "前缀图标。值为字符串表示图标名称，值为 `false` 表示不显示前缀图标，值为 `Object` 类型，表示透传至 `icon`，不传表示使用主题图标"
+  },
+  {
+    "id": 1712718839,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "用于自定义公告栏前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标",
+    "custom_field_type": "Boolean | TNode"
+  },
+  {
+    "id": 1102,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "后缀图标"
+  },
+  {
+    "id": 2608,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "后缀图标。值为字符串表示图标名称。值为 `Object` 类型，表示透传至 `icon`，不传表示不显示后缀图标"
+  },
+  {
+    "id": 2609,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "info",
+    "field_enum": [
+      "info",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "内置主题"
+  },
+  {
+    "id": 2607,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "显示/隐藏",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712057632,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "当 `direction=\"vertical\"` 时轮播切换时触发",
+    "event_input": "(current: number, source: '' | 'autoplay' | 'touch')"
+  },
+  {
+    "id": 1750932626,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "当 `direction=\"vertical\"` 时轮播切换时触发",
+    "event_input": "(current: number, context: { source: NoticeBarChangeSource })【type NoticeBarChangeSource = '' | 'autoplay' | 'touch'】"
+  },
+  {
+    "id": 1108,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击事件",
+    "event_input": "(trigger: NoticeBarTrigger)【type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';】"
+  },
+  {
+    "id": 1712057672,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712057692,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1712057703,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "External Classes",
+    "field_name": "t-class-operation",
+    "field_type": [],
+    "field_desc_zh": "右侧额外信息样式类"
+  },
+  {
+    "id": 1712057698,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "External Classes",
+    "field_name": "t-class-prefix-icon",
+    "field_type": [],
+    "field_desc_zh": "前置图标样式类"
+  },
+  {
+    "id": 1712057708,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "External Classes",
+    "field_name": "t-class-suffix-icon",
+    "field_type": [],
+    "field_desc_zh": "后置图标样式类"
+  },
+  {
+    "id": 1759215434,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Slots",
+    "field_name": "content",
+    "field_type": [],
+    "field_desc_zh": "文本内容"
+  },
+  {
+    "id": 1759215447,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Slots",
+    "field_name": "prefix-icon",
+    "field_type": [],
+    "field_desc_zh": "前缀图标"
+  },
+  {
+    "id": 1759215465,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "NoticeBar",
+    "field_category": "Slots",
+    "field_name": "suffix-icon",
+    "field_type": [],
+    "field_desc_zh": "后缀图标"
+  }
+]

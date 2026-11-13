@@ -1,0 +1,832 @@
+[
+  {
+    "id": 333,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "asyncLoading",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `load-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容",
+    "field_desc_en": "async loading state",
+    "custom_field_type": "'loading' | 'load-more' | TNode"
+  },
+  {
+    "id": 2005,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "columnController",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自定义显示列控制器，值为空不会显示。具体属性请看下方 `TableColumnController` 文档",
+    "custom_field_type": "TableColumnController"
+  },
+  {
+    "id": 2527,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "columnControllerVisible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否显示列配置弹框控制器，只要该属性值不为 `undefined`，弹框的显示/隐藏完全由该属性控制",
+    "syntactic_sugar": "sync"
+  },
+  {
+    "id": 593,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "columns",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "列配置，泛型 T 指表格数据类型",
+    "field_desc_en": "table column configs",
+    "custom_field_type": "Array<PrimaryTableCol<T>>"
+  },
+  {
+    "id": 2491,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "displayColumns",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "列配置功能中，当前显示的列",
+    "custom_field_type": "CheckboxGroupValue",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 2349,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "dragSort",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "row",
+      "row-handler",
+      "col",
+      "row-handler-col",
+      "drag-col"
+    ],
+    "field_desc_zh": "拖拽排序方式，值为 `row` 表示行拖拽排序，这种方式无法进行文本复制，慎用。值为`row-handler` 表示通过拖拽手柄进行行拖拽排序。值为 `col` 表示列顺序拖拽。值为 `row-handler-col` 表示同时支持行拖拽和列拖拽。⚠️`drag-col` 已废弃，请勿使用",
+    "field_desc_en": "dag sort"
+  },
+  {
+    "id": 2589,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "dragSortOptions",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "拖拽排序扩展参数，具体参数见 [Sortable](https://github.com/SortableJS/Sortable)",
+    "field_desc_en": "drag sort params",
+    "custom_field_type": "SortableOptions"
+  },
+  {
+    "id": 2937,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "editableCellState",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "单元格是否允许编辑。返回值为 `true` 则表示可编辑；返回值为 `false` 则表示不可编辑，只读状态",
+    "custom_field_type": "EditableCellType<T>【type EditableCellType<T> = (params: PrimaryTableCellParams<T>) => boolean】"
+  },
+  {
+    "id": 2817,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "editableRowKeys",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "处于编辑状态的行",
+    "field_desc_en": "editable row keys, row key value is from data[rowKey]",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1240,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "expandIcon",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`",
+    "field_desc_en": "to show expand icon. expand icon is set in first column",
+    "custom_field_type": "boolean | TNode<ExpandArrowRenderParams<T>>【interface ExpandArrowRenderParams<T> { row: T; index: number }】"
+  },
+  {
+    "id": 1219,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "expandOnRowClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否允许点击行展开",
+    "field_desc_en": "expand row on click"
+  },
+  {
+    "id": 809,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "expandedRow",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "展开行内容，泛型 T 指表格数据类型",
+    "field_desc_en": "table expanded row, to show more detail information",
+    "custom_field_type": "TNode<TableExpandedRowParams<T>>【interface TableExpandedRowParams<T> { row: T; index: number; columns: PrimaryTableCol<T>[] | BaseTableCol<T>[] }】"
+  },
+  {
+    "id": 335,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "expandedRowKeys",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "展开行",
+    "field_desc_en": "expanded row keys, row key value is from data[rowKey]",
+    "custom_field_type": "Array<string | number>",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 830,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "filterIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义过滤图标，支持全局配置 `GlobalConfigProvider`",
+    "field_desc_en": "filter icon",
+    "custom_field_type": "TNode<{ col: PrimaryTableCol<T>; colIndex: number }>"
+  },
+  {
+    "id": 2063,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "filterRow",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "自定义过滤状态行及清空筛选等",
+    "field_desc_en": "filter value"
+  },
+  {
+    "id": 836,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "filterValue",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "过滤数据的值",
+    "field_desc_en": "filter value",
+    "custom_field_type": "FilterValue【type FilterValue = { [key: string]: any }】",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 2675,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "hideSortTips",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "隐藏排序文本提示，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `false`",
+    "field_desc_en": "hide sort tips"
+  },
+  {
+    "id": 2799,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "indeterminateSelectedRowKeys",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "半选状态行。选中行请更为使用 `selectedRowKeys` 控制",
+    "field_desc_en": "indeterminate selected row keys, row key is from data[rowKey]",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 985,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "multipleSort",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否支持多列排序",
+    "field_desc_en": "support multiple column fields sort"
+  },
+  {
+    "id": 3201,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "reserveSelectedRowOnPaginate",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "行选中功能，是否在分页时保留上一页选中结果不清空。分页场景下，会全选所有页数据，保留跨分页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页。",
+    "field_desc_en": "Controls whether selected rows are retained across pagination. When enabled, selections persist across all pages, allowing batch operations on multi-page data. If set to `false`, selections are confined to the current page and do not extend to other pages."
+  },
+  {
+    "id": 1702875824,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "rowSelectionAllowUncheck",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "行选中单选场景，是否允许取消选中",
+    "field_desc_en": "allow to uncheck selection in table with single row selection"
+  },
+  {
+    "id": 1702872178,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "rowSelectionType",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "single",
+      "multiple"
+    ],
+    "field_desc_zh": "行选中类型，单选或多选。效果和 `columns` 中配置的 `{ colKey: 'row-select', type: 'single' }` 一样",
+    "field_desc_en": "single row selection, or multiple row selection"
+  },
+  {
+    "id": 3209,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "selectOnRowClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否在点击整行时选中",
+    "field_desc_en": "select row data on row click"
+  },
+  {
+    "id": 337,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "selectedRowKeys",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制",
+    "field_desc_en": "selected row keys, row key is from data[rowKey]",
+    "custom_field_type": "Array<string | number>",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 3011,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "showSortColumnBgColor",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "当前排序列是否显示背景色",
+    "field_desc_en": "column shows sort bg color"
+  },
+  {
+    "id": 834,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "sort",
+    "field_type": [
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序",
+    "field_desc_en": "sort configs",
+    "custom_field_type": "TableSort【type TableSort = SortInfo | Array<SortInfo>】【interface SortInfo { sortBy: string; descending: boolean }】",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 2379,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "sortIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义排序图标，支持全局配置 `GlobalConfigProvider`",
+    "field_desc_en": "sort icon"
+  },
+  {
+    "id": 1457,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Props",
+    "field_name": "sortOnRowDraggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "允许表格行拖拽时排序。请更为使用 `dragSort=\\\"row\\\"`",
+    "field_desc_en": "sort on row draggable",
+    "deprecated": true
+  },
+  {
+    "id": 1448,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "asyncLoadingClick",
+    "field_type": [],
+    "field_desc_zh": "异步加载区域被点击时触发",
+    "field_desc_en": "trigger on async loading text clicked",
+    "event_input": "(context: { status: 'loading' | 'load-more' })"
+  },
+  {
+    "id": 2197,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "cellClick",
+    "field_type": [],
+    "field_desc_zh": "单元格点击时触发",
+    "field_desc_en": "trigger on cell clicked",
+    "event_input": "(context: PrimaryTableCellEventContext<T>)【interface PrimaryTableCellEventContext<T> { row: T; col: PrimaryTableCol; rowIndex: number; colIndex: number; e: MouseEvent }】"
+  },
+  {
+    "id": 1270,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，`currentData` 表示变化后的数据",
+    "event_input": "(data: TableChangeData, context: TableChangeContext<T>)【interface TableChangeData { sorter?: TableSort; filter?: FilterValue; pagination?: PaginationProps }】【interface TableChangeContext<T> { trigger: TableChangeTrigger; currentData?: T[] }】【type TableChangeTrigger = 'filter' | 'sorter' | 'pagination'】",
+    "trigger_elements": "trigger on paginate/sort/filter changing"
+  },
+  {
+    "id": 2353,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "columnChange",
+    "field_type": [],
+    "field_desc_zh": "确认操作之前列配置发生变化时触发。`context.columns` 表示已选中的列；`context.currentColumn` 表示本次变化操作的列，值不存在表示全选操作；`context.type` 表示当前操作属于选中列或是取消列",
+    "event_input": "(context: PrimaryTableColumnChange<T>)【interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: Event }】"
+  },
+  {
+    "id": 2555,
+    "platform_framework": [
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "columnChange",
+    "field_type": [],
+    "field_desc_zh": "确认操作之前列配置发生变化时触发。`context.columns` 表示已选中的列；`context.currentColumn` 表示本次变化操作的列，值不存在表示全选操作；`context.type` 表示当前操作属于选中列或是取消列",
+    "event_input": "(context: PrimaryTableColumnChange<T>)【interface PrimaryTableColumnChange<T> { columns?: CheckboxGroupValue; currentColumn?: PrimaryTableCol<T>; type?: 'check' | 'uncheck'; e?: ChangeEvent }】",
+    "trigger_elements": "ChangeEvent<HTMLDivElement>"
+  },
+  {
+    "id": 2529,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "columnControllerVisibleChange",
+    "field_type": [],
+    "field_desc_zh": "列配置弹窗显示或隐藏变化时触发",
+    "event_input": "(visible: boolean, context: { trigger: 'cancel' | 'confirm' })"
+  },
+  {
+    "id": 1447,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "dataChange",
+    "field_type": [],
+    "field_desc_zh": "本地数据排序导致 `data` 变化时触发，第一个参数指变化后的数据，第二个参数 `context.trigger` 表示触发本次变化的来源",
+    "field_desc_en": "trigger on data changing",
+    "event_input": "(data: Array<T>, context: TableDataChangeContext)【interface TableDataChangeContext { trigger: 'sort' }】"
+  },
+  {
+    "id": 2492,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "displayColumnsChange",
+    "field_type": [],
+    "field_desc_zh": "确认列配置时触发",
+    "event_input": "(value: CheckboxGroupValue)【import { CheckboxGroupValue } from '@Checkbox'】"
+  },
+  {
+    "id": 1496,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "dragSort",
+    "field_type": [],
+    "field_desc_zh": "拖拽排序时触发，`data` 表示排序前的数据，`newData` 表示拖拽排序结束后的新数据，`sort=row` 表示行拖拽事件触发，`sort=col` 表示列拖拽事件触发",
+    "field_desc_en": "trigger on drag sort",
+    "event_input": "(context: DragSortContext<T>)【interface DragSortContext<T> { currentIndex: number; current: T; targetIndex: number; target: T; data: T[]; newData: T[]; currentData?: T[]; e: SortableEvent; sort: 'row' | 'col' }】【import { SortableEvent, SortableOptions } from 'sortablejs'】"
+  },
+  {
+    "id": 353,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "expandChange",
+    "field_type": [],
+    "field_desc_zh": "展开行发生变化时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on expand row keys changing",
+    "event_input": "(expandedRowKeys: Array<string | number>, options: ExpandOptions<T>)【interface ExpandOptions<T> { expandedRowData: Array<T>; currentRowData: T }】"
+  },
+  {
+    "id": 829,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "filterChange",
+    "field_type": [],
+    "field_desc_zh": "过滤参数发生变化时触发，泛型 T 指表格数据类型",
+    "field_desc_en": "trigger on filter value changing",
+    "event_input": "(filterValue: FilterValue, context: TableFilterChangeContext<T>)【interface TableFilterChangeContext<T> { col?: PrimaryTableCol<T>; trigger: 'filter-change' | 'confirm' | 'reset' | 'clear' }】"
+  },
+  {
+    "id": 2819,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "rowEdit",
+    "field_type": [],
+    "field_desc_zh": "行编辑时触发",
+    "field_desc_en": "trigger on row data is editing",
+    "event_input": "(context: PrimaryTableRowEditContext<T>)【type PrimaryTableRowEditContext<T> = PrimaryTableCellParams<T> & { value: any; editedRow: T }】"
+  },
+  {
+    "id": 2820,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "rowValidate",
+    "field_type": [],
+    "field_desc_zh": "行编辑校验完成后触发，即组件实例方法 `validateRowData` 执行结束后触发。`result` 表示校验结果，`trigger=self` 表示编辑组件内部触发的校验，`trigger='parent'` 表示表格父组件触发的校验",
+    "field_desc_en": "trigger after row data validated",
+    "event_input": "(context: PrimaryTableRowValidateContext<T>)【type PrimaryTableRowValidateContext<T> = { result: TableRowValidateResult<T>[]; trigger: TableValidateTrigger }】【type TableValidateTrigger = 'self' | 'parent'】【export type TableRowValidateResult<T> = PrimaryTableCellParams<T> & { errorList: AllValidateResult[]; value: any }】"
+  },
+  {
+    "id": 338,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "selectChange",
+    "field_type": [],
+    "field_desc_zh": "选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：`type = uncheck` 表示当前行操作为「取消行选中」；`type = check` 表示当前行操作为「行选中」； `currentRowKey` 表示当前操作行的 rowKey 值； `currentRowData` 表示当前操作行的行数据",
+    "field_desc_en": "trigger on select changing",
+    "event_input": "(selectedRowKeys: Array<string | number>, options: SelectOptions<T>)【interface SelectOptions<T> { selectedRowData: Array<T>; type: 'uncheck' | 'check'; currentRowKey?: string; currentRowData?: T }】"
+  },
+  {
+    "id": 339,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "sortChange",
+    "field_type": [],
+    "field_desc_zh": "排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序",
+    "field_desc_en": "trigger on sort changing",
+    "event_input": "(sort: TableSort, options: SortOptions<T>)【interface SortOptions<T> { currentDataSource?: Array<T>; col: PrimaryTableCol }】"
+  },
+  {
+    "id": 2907,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Events",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "可编辑行表格，全部数据校验完成后触发。即组件实例方法 `validateTableData` 执行结束后触发",
+    "field_desc_en": "trigger after row data validated",
+    "event_input": "(context: PrimaryTableValidateContext)【interface PrimaryTableValidateContext { result: TableErrorListMap }】【type TableErrorListMap = { [key: string]: AllValidateResult[] }】"
+  },
+  {
+    "id": 1707217419,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Functions",
+    "field_name": "clearValidateData",
+    "field_type": [],
+    "field_desc_zh": "清空所有校验结果",
+    "field_desc_en": "clear all validated errors",
+    "field_required": true
+  },
+  {
+    "id": 2821,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Functions",
+    "field_name": "validateRowData",
+    "field_type": [],
+    "field_desc_zh": "校验行信息，校验完成后，会触发事件 `onRowValidate`。参数 `rowValue` 表示行唯一标识的值",
+    "event_input": "(rowValue: any)",
+    "event_output": "Promise<{ trigger: TableValidateTrigger, result: ErrorListObjectType<T>[] }>【type ErrorListObjectType<T> = PrimaryTableRowEditContext<T> & { errorList: AllValidateResult[] }】",
+    "field_required": true
+  },
+  {
+    "id": 1737484100,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Functions",
+    "field_name": "validateTableCellData",
+    "field_type": [],
+    "field_desc_zh": "校验表格可编辑单元格数据，校验完成后，会触发事件 `onValidate`",
+    "event_output": "Promise<{ result: TableErrorListMap }>",
+    "field_required": true
+  },
+  {
+    "id": 2908,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Functions",
+    "field_name": "validateTableData",
+    "field_type": [],
+    "field_desc_zh": "校验表格全部数据，校验完成后，会触发事件 `onValidate`",
+    "event_output": "Promise<{ result: TableErrorListMap }>",
+    "field_required": true
+  },
+  {
+    "id": 596,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "Extends",
+    "field_name": "Omit<TdBaseTableProps<T>, 'columns' | 'onCellClick'>",
+    "field_type": []
+  },
+  {
+    "id": 595,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "PrimaryTable",
+    "field_category": "<T>",
+    "field_name": "<T extends TableRowData =  TableRowData>",
+    "field_type": []
+  }
+]

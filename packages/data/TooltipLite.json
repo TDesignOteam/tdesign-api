@@ -1,0 +1,117 @@
+[
+  {
+    "id": 2998,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素，同 triggerElement",
+    "field_desc_en": "trigger element"
+  },
+  {
+    "id": 3000,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "文字提示内容",
+    "field_desc_en": "tip content"
+  },
+  {
+    "id": 3002,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "top",
+      "bottom",
+      "mouse"
+    ],
+    "field_desc_zh": "提示浮层出现的位置"
+  },
+  {
+    "id": 3003,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "showArrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示箭头"
+  },
+  {
+    "id": 3013,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "showShadow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "文字提示浮层是否需要阴影"
+  },
+  {
+    "id": 3004,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "light",
+      "default"
+    ],
+    "field_desc_zh": "组件风格，有亮色模式和暗色模式两种"
+  },
+  {
+    "id": 3007,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TooltipLite",
+    "field_category": "Props",
+    "field_name": "triggerElement",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "触发元素"
+  }
+]

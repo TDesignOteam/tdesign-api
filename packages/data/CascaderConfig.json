@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1888,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”描述文本"
+  },
+  {
+    "id": 1790068365,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "filterPlaceholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“搜索框”占位描述文本"
+  },
+  {
+    "id": 1972,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“加载中”描述文本"
+  },
+  {
+    "id": 1890,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“请选择”占位描述文本",
+    "field_desc_en": "select placeholder text"
+  },
+  {
+    "id": 1741183832,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，未选中时的提示文案“选择选项”描述文本"
+  },
+  {
+    "id": 1741183804,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CascaderConfig",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，组件标题“选择地址”描述文本"
+  }
+]

@@ -18,6 +18,7 @@ action-sheet | Object | - | ActionSheet global configs。Typescript: `ActionShee
 calendar | Object | - | Calendar global configs。Typescript: `CalendarConfig` | N
 cascader | Object | - | Cascader global configs。Typescript: `CascaderConfig` | N
 class-prefix | String | t | \- | N
+comment | Object | - | Comment global configs。Typescript: `CommentConfig` | N
 date-time-picker | Object | - | DateTimePicker global configs。Typescript: `DateTimePickerConfig` | N
 dropdown-menu | Object | - | DropdownMenu global configs。Typescript: `DropdownMenuConfig` | N
 guide | Object | - | Guide global configs。Typescript: `GuideConfig` | N
@@ -44,6 +45,7 @@ status | Object | - | Typescript: `{ pending: string; fail: string; }` | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+confirm | String | - | confirm text | N
 month-title | String | - | \- | N
 months | Array | - | Typescript: `string[]` | N
 title | String | - | \- | N
@@ -75,6 +77,14 @@ stop-text | String | - | \- | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 status | Object | - | Typescript: `{ pending: string; complete: string; stop: string; }` | N
+
+### CommentConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+collapse-text | String | - | \- | N
+collapsed-text | String | - | \- | N
+expand-more-text | String | - | \- | N
 
 ### DateTimePickerConfig
 

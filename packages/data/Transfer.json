@@ -1,0 +1,450 @@
+[
+  {
+    "id": 794,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "checkboxProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用于控制复选框属性",
+    "custom_field_type": "CheckboxProps【import { CheckboxProps } from '@Checkbox'】"
+  },
+  {
+    "id": 773,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "checked",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "数据列表选中项",
+    "custom_field_type": "Array<TransferValue>",
+    "syntactic_sugar": "sync"
+  },
+  {
+    "id": 771,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "data",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "全量数据",
+    "custom_field_type": "Array<T>"
+  },
+  {
+    "id": 778,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "both",
+    "field_enum": [
+      "left",
+      "right",
+      "both"
+    ],
+    "field_desc_zh": "穿梭框可操作方向"
+  },
+  {
+    "id": 775,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean",
+      "Array"
+    ],
+    "field_desc_zh": "禁用全部操作：搜索、选中、移动、分页等。[源列表, 目标列表]，示例：[true, false] 或者 true",
+    "custom_field_type": "boolean | Array<boolean>"
+  },
+  {
+    "id": 783,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "Array",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "列表为空时呈现的内容。值类型为数组，则表示分别控制源列表和目标列表数据为空的呈现内容",
+    "custom_field_type": "EmptyType | Array<EmptyType> | TNode【type EmptyType = string | TNode】"
+  },
+  {
+    "id": 782,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "穿梭框底部内容",
+    "custom_field_type": "Array<string | TNode> | TNode<{ type: TransferListType }>"
+  },
+  {
+    "id": 784,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / disabled 在 `data` 中对应的字段别名，示例：`{ label: 'text', value: 'id' }`，表示选项文本取 `text` 字段，选项值取 `id` 字段",
+    "field_desc_en": "alias field name in data",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 779,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "operation",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "方向操作按钮。默认显示组件内置操作图标。自定义操作图标示例：['向左', '向右'] 或者 `[() => <i class='left' />, () => <i class='left' />]` 或者 `(h, direction) => direction === 'left' ? '《' : '》'`",
+    "custom_field_type": "Array<string | TNode> | TNode<{ direction: 'left' | 'right' }>"
+  },
+  {
+    "id": 780,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "pagination",
+    "field_type": [
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "分页配置，值为空则不显示。具体 API 参考分页组件。值类型为数组，表示可分别控制源列表和目标列表分页组件",
+    "custom_field_type": "PaginationProps | Array<PaginationProps>【import { PaginationProps, PageInfo } from '@Pagination'】"
+  },
+  {
+    "id": 776,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "search",
+    "field_type": [
+      "Boolean",
+      "Object",
+      "Array"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "搜索框配置，值为 false 表示不显示搜索框；值为 true 表示显示默认搜索框；值类型为对象，用于透传 Props 到 Input 组件；值类型为数组，则分别表示控制两侧搜索框",
+    "custom_field_type": "SearchOption | Array<SearchOption>【type SearchOption = boolean | InputProps】【import { InputProps } from '@Input'】"
+  },
+  {
+    "id": 781,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "showCheckAll",
+    "field_type": [
+      "Boolean",
+      "Array"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示全选，值类型为数组则表示分别控制源列表和目标列表",
+    "custom_field_type": "boolean | Array<boolean>"
+  },
+  {
+    "id": 1690185530,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "targetDraggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许通过拖拽对目标列表进行排序",
+    "field_desc_en": "allowed to sort the target list by dragging"
+  },
+  {
+    "id": 785,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "targetSort",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "original",
+    "field_enum": [
+      "original",
+      "push",
+      "unshift"
+    ],
+    "field_desc_zh": "目标数据列表排列顺序"
+  },
+  {
+    "id": 777,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "穿梭框标题，示例：['源列表', '目标列表'] 或者 `[() => 'A', () => 'B']` 或者 `({ type }) => type === 'source' ? '源' : '目标'`",
+    "custom_field_type": "Array<TitleType> | TNode<{ type: TransferListType }>【type TitleType = string | TNode】【type TransferListType = 'source' | 'target'】"
+  },
+  {
+    "id": 786,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "transferItem",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义渲染节点",
+    "custom_field_type": "TNode<TransferItem<T>>【interface TransferItem<T extends DataOption = DataOption> { data: T; index: number; type: TransferListType}】"
+  },
+  {
+    "id": 2217,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "tree",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "传入 Tree 组件定义树形结构",
+    "custom_field_type": "(tree: TreeProps) => TNode【import { TreeProps } from '@Tree'】"
+  },
+  {
+    "id": 772,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "目标数据列表数据",
+    "custom_field_type": "Array<TransferValue>",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 788,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "数据列表发生变化时触发，`type` 值为 `source`，表示源列表移动到目标列表，值为 `target` 表示目标列表移动到源列表，movedValue 则表示被移动的选项",
+    "event_input": "(targetValue: Array<TransferValue>, context: TargetParams)【interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }】"
+  },
+  {
+    "id": 789,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Events",
+    "field_name": "checkedChange",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "源数据列表或目标数据列表的选中项发生变化时触发，`context.type` 可以区分触发来源是目标列表，还是源列表",
+    "event_input": "(options: CheckedOptions)【interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }】"
+  },
+  {
+    "id": 1112,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Events",
+    "field_name": "pageChange",
+    "field_type": [],
+    "field_desc_zh": "分页发生变化时触发",
+    "event_input": "(page: PageInfo, context: { type: TransferListType })"
+  },
+  {
+    "id": 790,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "列表滚动时触发，bottomDistance 表示元素滚动到底部的距离",
+    "event_input": "(options: { e: Event; bottomDistance: number; type: TransferListType })"
+  },
+  {
+    "id": 791,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Transfer",
+    "field_category": "Events",
+    "field_name": "search",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "搜索时触发，options.query 表示用户输入的内容",
+    "event_input": "(options: SearchContext)【interface SearchContext { query: string; type: TransferListType; trigger: 'input' | 'enter'; e: InputEvent | KeyboardEvent }】"
+  },
+  {
+    "id": 1214,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Transfer",
+    "field_category": "<T>",
+    "field_name": "<T extends DataOption = DataOption>【type DataOption = { label?: string; value?: TransferValue; disabled?: boolean } & Record<string, any>】【type TransferValue = string | number】",
+    "field_type": [
+      "Function"
+    ]
+  }
+]

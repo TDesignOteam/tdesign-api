@@ -54,7 +54,7 @@ function getReactTNodeType(type, customType) {
   return r;
 }
 
-// field_type_text 和 custom_field_type 共同决定各框架的 TNode 定义
+// field_type 和 custom_field_type 共同决定各框架的 TNode 定义
 function formatTNode(framework, type, customType) {
   // remove import type and export type
   const newCustomType = customType ? customType.replace(/【.*】/g, '') : customType;

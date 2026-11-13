@@ -1,0 +1,44 @@
+[
+  {
+    "id": 2229,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigDragger",
+    "field_category": "Props",
+    "field_name": "clickAndDragText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“ 点击上方“选择文件”或将文件拖到此区域 ” 描述文本"
+  },
+  {
+    "id": 2230,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigDragger",
+    "field_category": "Props",
+    "field_name": "dragDropText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“释放图标” 描述文本"
+  },
+  {
+    "id": 2231,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigDragger",
+    "field_category": "Props",
+    "field_name": "draggingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'拖拽到此区域' 描述文本"
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "id": 1901,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "cellMonth",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，月份描述文本，示例：'一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月'"
+  },
+  {
+    "id": 1741183085,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定” 按钮描述文本",
+    "field_desc_en": "confirm text"
+  },
+  {
+    "id": 1964,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "controllerConfig",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历右上角控制器按钮配置",
+    "custom_field_type": "CalendarController【import { CalendarController } from '@Calendar'】"
+  },
+  {
+    "id": 1891,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "fillWithZero",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "当日期数字小于 10 时，是否使用 '0' 填充"
+  },
+  {
+    "id": 1934,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "firstDayOfWeek",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_enum": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "field_desc_zh": "第一天从星期几开始"
+  },
+  {
+    "id": 1896,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "hideWeekend",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“隐藏周末”描述文本"
+  },
+  {
+    "id": 1895,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "monthRadio",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，模式切换时的“月”描述文本"
+  },
+  {
+    "id": 1893,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "monthSelection",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "语言配置，“月”选择描述文本。示例：`'{month} 月'`",
+    "custom_field_type": "string | (( data: { month: number })=>string)"
+  },
+  {
+    "id": 1741183537,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "monthTitle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，日期月面板标题描述文本。示例：“{year} / {month}”"
+  },
+  {
+    "id": 1741190561,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "months",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1897,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "showWeekend",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“显示周末”描述文本"
+  },
+  {
+    "id": 1899,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "thisMonth",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“本月”描述文本"
+  },
+  {
+    "id": 1741183315,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，组件标题“请选择日期”描述文本"
+  },
+  {
+    "id": 1898,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "today",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“今天”描述文本"
+  },
+  {
+    "id": 1900,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "week",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，星期描述文本，示例：`'周一,周二,周三,周四,周五,周六,周日'`"
+  },
+  {
+    "id": 1741183385,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "weekdays",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1894,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "yearRadio",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，模式切换时的“年”描述文本"
+  },
+  {
+    "id": 1892,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarConfig",
+    "field_category": "Props",
+    "field_name": "yearSelection",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“年”选择描述文本，示例：`'{year} 年'`"
+  }
+]

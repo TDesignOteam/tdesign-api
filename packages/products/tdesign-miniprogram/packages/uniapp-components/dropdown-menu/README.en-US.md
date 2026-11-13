@@ -42,6 +42,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 disabled | Boolean | false | \- | N
+keep-label-active | Boolean | false | `1.0.1` | N
 keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N

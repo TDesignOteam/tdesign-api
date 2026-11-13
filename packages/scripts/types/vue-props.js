@@ -1,21 +1,23 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
+import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
 import {
   getTdCmpName,
   getEventName,
   getFolderName,
   isTypeApi,
   isPlugin,
+  componentsMap,
   getDefaultValueName,
   getCmpTypeCombineMap,
-} from '../common.js';
-import { FILE_RIGHTS_DESC } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+} from '../core/context.js';
 // 移动端 H5 父子组件的 props 需要合并输出到父组件目录；小程序和 UniApp 父子组件保持独立输出
 const MOBILE_PROPS_MERGE_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
-import { kebabCaseComponent } from '../utils.js';
-import { getComponentBasePath } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
+import { getComponentBasePath } from '../core/utils.js';
+import { formatTypeImport } from './import.js';
 import { fetchApiDataFromOfficialWebsite } from './miniprogram.js';
 
 let currentFramework = '';
@@ -29,12 +31,20 @@ function getPropType(cmp, name) {
 function isNeedPropType(typeName, api) {
   if (['Miniprogram', 'UniApp'].includes(currentFramework)) return false;
   const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
-  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type_text.length > 1;
+  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type.length > 1;
   return multipleTypeStr || complicatedApi;
 }
 
+function customFieldTypeHasNull(customFieldType) {
+  if (!customFieldType) return false;
+  // 只看对外类型，忽略【interface / type / import】里的内部 null
+  const visible = String(customFieldType).replace(/【[\s\S]*?】/g, '');
+  const withoutGenerics = visible.replace(/<[^<>]*>/g, '');
+  return /(^|\|)\s*null\s*(\||$)/.test(withoutGenerics);
+}
+
 function getType(cmp, api, name) {
-  let type = api.field_type_text;
+  let type = api.field_type;
   type = type
     .map((t) => {
       // 小程序只需要支持插槽，不需要支持 function
@@ -42,12 +52,20 @@ function getType(cmp, api, name) {
       return t === 'TNode' ? nodeType : t;
     })
     .filter((v) => !!v);
+  // custom_field_type 顶级 `| null` 写入 Vue runtime type，对应可显式传 null 的 API
+  if (
+    !['Miniprogram', 'UniApp'].includes(currentFramework) &&
+    customFieldTypeHasNull(api.custom_field_type) &&
+    !type.includes('null')
+  ) {
+    type.push('null');
+  }
   const typeName = type.length <= 1 ? type[0] : `[${type.join(', ')}]`;
   return isNeedPropType(typeName, api) ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
 }
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
-  const type = api.field_type_text.join();
+  const type = api.field_type.join();
   const defaultValue = api.field_default_value;
   let dl = defaultValue;
   // 如果 API 显示指明 undefined，则一定返回 default: undefined
@@ -102,8 +120,10 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
         dl = defaultValue;
       }
     } else if (type === 'String') {
-      // 为字符串添加单引号
-      dl = `'${defaultValue}'`;
+      /* 与 types/index.js 一致
+         String 且无默认值时按空字符串处理，避免 `'undefined'` */
+      const stringDefault = defaultValue ?? '';
+      dl = `'${stringDefault}'`;
       // 值不为 '' 时，避免连续两个单引号出现
       dl.length !== 2 && (dl = dl.replace(/''/g, "'"));
     }
@@ -126,7 +146,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
 // Number 类型的数据也有可选值
 function getEnumValue(api, enumValue) {
   const val = enumValue ? enumValue.trim() : enumValue;
-  return api.field_type_text.join('') === 'Number' ? Number(val) : `'${val}'`;
+  return api.field_type.join('') === 'Number' ? Number(val) : `'${val}'`;
 }
 
 // API 有可选值，但是没有设置默认值，则默认值为 undefined
@@ -146,7 +166,7 @@ function getDefaultWithType(api, dl, valueType) {
   // Vue3 所有默认值均需要 as 类型，否则 Vue3 无法正常编译出数据类型
   const isVue3NeedDefaultTsType =
     ['Vue(Mobile)', 'VueNext(PC)', 'UniApp'].includes(currentFramework) &&
-    (api.field_type_text?.length > 1 || (api.custom_field_type && ["''", 'undefined'].includes(dl)));
+    (api.field_type?.length > 1 || (api.custom_field_type && ["''", 'undefined'].includes(dl)));
 
   // UniApp 中 null 默认值也需要 as 类型断言
   const isUniAppNullDefault = currentFramework === 'UniApp' && dl === 'null';
@@ -168,7 +188,7 @@ function formatNormalProps(api, cmp, extraParams = {}) {
   // Boolean 类型，且默认值为 false，则不需要过多的处理（小程序 prop 只能是 Object，不能是 block: Boolean
   if (
     !isMiniprogram &&
-    api.field_type_text.join() === 'Boolean' &&
+    api.field_type.join() === 'Boolean' &&
     (api.field_default_value === 'false' || !api.field_default_value)
   ) {
     if (modelValue) {
@@ -235,7 +255,6 @@ function formatNormalProps(api, cmp, extraParams = {}) {
     // 小程序没有 validator
     if (api.field_enum && currentFramework !== 'Miniprogram') {
       const enumData = api.field_enum
-        .split('/')
         .map((item) => {
           let tmp = getEnumValue(api, item);
           if (typeof tmp === 'string') {
@@ -268,23 +287,15 @@ function formatEventProps(api, cmp, framework) {
 
 // 类型定义可能来自组件基础文件，比如：ForItemProps 类型定义来源于 Form 目录
 function getImportPath(body, cmp, framework) {
-  let r = '';
-  const isUniApp = framework === 'UniApp';
   const tdName = getTdCmpName(cmp);
-  if (body.indexOf(tdName) !== -1) {
-    if (framework === 'Vue(PC)' || framework === 'VueNext(PC)' || framework === 'Vue(Mobile)') {
-      // 子组件 props 文件与父组件 type.ts 同目录输出（见 getFolderPath），统一使用 './type'
-      r = `import { ${tdName} } from './type';\n`;
-    } else if (isUniApp) {
-      // UniApp 子组件 props 文件同步至上游子组件自身目录，需通过 '../父组件目录/type' 引用类型
-      const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-      r =
-        parentCmp && parentCmp !== cmp
-          ? `import type { ${tdName} } from '../${getFolderName(parentCmp)}/type';\n`
-          : `import type { ${tdName} } from './type';\n`;
-    }
-  }
-  return r;
+  if (body.indexOf(tdName) === -1) return '';
+  const isUniApp = framework === 'UniApp';
+  if (!(isUniApp || ['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)'].includes(framework))) return '';
+  const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
+  // UniApp 子组件 props 同步至上游子组件目录，需通过 '../父组件目录/type' 引用；其余框架与 type.ts 同目录
+  const from =
+    isUniApp && parentCmp && parentCmp !== cmp ? `../${getFolderName(parentCmp)}/type` : './type';
+  return `${formatTypeImport(tdName, from)}\n`;
 }
 
 /**
@@ -301,7 +312,7 @@ function getImportPath(body, cmp, framework) {
 //   );
 //   const apiArr = [];
 //   apis.forEach((api) => {
-//     if (!['Props'].includes(api.field_category_text)) return;
+//     if (!['Props'].includes(api.field_category)) return;
 //     const propsCode = formatNormalProps(api, cmp);
 //     propsCode
 //       && apiArr.push(`  /** ${api.deprecated ? '已废弃。' : ''}${
@@ -334,7 +345,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
       if (MP_PROPS.includes(api.field_name)) return;
       // html 原生属性，不放在 props 中
       if (api.html_attribute) return;
-      const category = api.field_category_text;
+      const category = api.field_category;
       if (!['Props', 'Events'].includes(category)) return;
       if (isMiniprogram && !['Props'].includes(category)) return;
       const propsCode = category === 'Props' ? formatNormalProps(api, cmp) : formatEventProps(api, cmp, framework);
@@ -356,7 +367,7 @@ function formatApiToProps(baseData, framework, isUseDefault) {
         propStrs.push(modelValueApi);
       }
       // 根据 value 添加非受控属性
-      if (api.syntactic_sugar && api.field_category_text !== 'Events') {
+      if (api.syntactic_sugar && api.field_category !== 'Events') {
         const uncontrolApi = formatNormalProps(api, cmp, {
           isUncontrolApi: true,
         });
@@ -374,15 +385,15 @@ function formatApiToProps(baseData, framework, isUseDefault) {
     let body = '';
     if (isMiniprogram) {
       const name = getTdCmpName(cmp);
-      body = [`import { ${name} } from './type';`, `const props: ${name} = {\n${propStrs.join(',\n')}`].join('\n');
+      body = [`${formatTypeImport(name, './type')}`, `const props: ${name} = {\n${propStrs.join(',\n')}`].join('\n');
     } else {
       body = `export default {\n${propStrs.join(',\n')}`;
     }
-    // Vue 需要 PropType 进行类型定义
-    if (body.indexOf('PropType') !== -1) {
-      body = `import { PropType } from 'vue';\n\n${body}`;
-    }
+    // 内部 type 先就位，再把 vue 的 type-only import 写到最前
     body = getImportPath(body, cmp, framework) + body;
+    if (body.indexOf('PropType') !== -1) {
+      body = `${formatTypeImport('PropType', 'vue')}\n${body}`;
+    }
     if (isMiniprogram) {
       body = `${body}\nexport default props;\n`;
     }
@@ -404,6 +415,11 @@ function getPropsFileName(folder, cmp) {
   return path.resolve(folder, fileName);
 }
 
+function hasChildComponentImpl(folder, cmp) {
+  const name = kebabCaseComponent(cmp);
+  return ['tsx', 'vue', 'jsx', 'ts', 'js'].some((ext) => fs.existsSync(path.resolve(folder, `${name}.${ext}`)));
+}
+
 // 根据组件获取 API 类型数据
 function getPropsByComponent(baseData, framework, component, isUseDefault) {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram'].includes(framework)) return;
@@ -423,22 +439,17 @@ function generateVueProps(baseData, framework, isUseDefault) {
   );
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);
   Object.keys(vueProps).forEach((cmp) => {
-    if (!vueProps[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;
+    if (!vueProps[cmp] || !componentsMap[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;
     const basePath = FRAMEWORK_MAP[framework].propsBasePath;
     const folder = getFolderPath(basePath, cmp);
-    fs.mkdir(folder, { recursive: true }, (err) => {
-      if (err) {
-        return console.error(err);
-      }
-      const outputPath = getPropsFileName(folder, cmp);
-      const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
-      fs.writeFile(outputPath, `/* eslint-disable */\n\n${data}`, (err) => {
-        if (err) {
-          return console.error(err);
-        }
-        console.log(chalk.green(`vue props: ${outputPath} has been created.`));
-      });
-    });
+    const outputPath = getPropsFileName(folder, cmp);
+    const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
+    // 子组件没有实现文件时不写独立 props，避免 Vue2 误出 dialog-card-props.ts
+    if (parentCmp && parentCmp !== cmp && !hasChildComponentImpl(folder, cmp)) return;
+    const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
+    fs.mkdirSync(folder, { recursive: true });
+    fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);
+    console.log(chalk.green(`vue props: ${outputPath} has been created.`));
   });
 }
 

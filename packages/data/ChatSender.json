@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1762419565,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "adjustPosition",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "默认键盘弹起不会把页面顶起来"
+  },
+  {
+    "id": 1783911226,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "allowSpeech",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许语音输入。为 true 时显示语音切换按钮，语音输入 UI 由开发者通过 speech 插槽自行提供",
+    "version": {
+      "Miniprogram": "1.16.0",
+      "UniApp": "0.11.0"
+    }
+  },
+  {
+    "id": 1762419289,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "attachmentsProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "附件列表属性",
+    "custom_field_type": "AttachmentsProps【import { AttachmentsProps, FileItem} from '@Attachments'】"
+  },
+  {
+    "id": 1762419583,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "autoRiseWithKeyboard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "键盘弹起时自动顶起来输入框"
+  },
+  {
+    "id": 1743345130,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用输入框"
+  },
+  {
+    "id": 1762419254,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "fileList",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "附件文件列表",
+    "custom_field_type": "FileItem[]"
+  },
+  {
+    "id": 1762419067,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "发送按钮是否处于加载状态"
+  },
+  {
+    "id": 1743345147,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入框默认文案。组件内置默认值为：'请输入消息...'"
+  },
+  {
+    "id": 1773633054,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "请输入消息...",
+    "field_desc_zh": "输入框默认文案"
+  },
+  {
+    "id": 1742886190,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "prefix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框左下角区域扩展"
+  },
+  {
+    "id": 1762419528,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "renderPresets",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[{name: 'upload', presets: ['uploadCamera', 'uploadImage', 'uploadAttachment'], status: ''},{ name: 'send', type: 'icon'}]",
+    "field_desc_zh": "预设发送区渲染配置，用于灵活配置发送区的上传入口和发送按钮，支持自定义类型、顺序、样式",
+    "custom_field_type": "ChatActionButtons【type ChatActionButtons = Array<ChatActionButton>】【type ChatActionButton = UploadButton | SendButton】【interface UploadButton { name: 'upload'; presets: string[]; status?: string; }】【interface SendButton { name: 'send'; type: 'icon' | 'text';}】"
+  },
+  {
+    "id": 1742886100,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "stopDisabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "中止按钮是否可点击。等流式数据全部返回结束置为false，注意跟textLoading的控制时机不是同一个"
+  },
+  {
+    "id": 1742886164,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框右下角区域扩展"
+  },
+  {
+    "id": 1743345474,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "textareaProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传给  Textarea 组件的全部属性",
+    "custom_field_type": "TextareaProps【import { TextareaProps } from '@Textarea'】"
+  },
+  {
+    "id": 1762485875,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "textareaProps",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "{ autosize: { maxHeight: 264, minHeight: 48 } }",
+    "field_desc_zh": "透传给 Textarea 组件的属性，autosize数值单位为 rpx"
+  },
+  {
+    "id": 1743345258,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1762491604,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value"
+  },
+  {
+    "id": 1762419553,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "上传面板是否可见"
+  },
+  {
+    "id": 1743345176,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "(value: string, context: { e: FocusEvent })"
+  },
+  {
+    "id": 1743345163,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发",
+    "event_input": "(value: string, context: { e: InputEvent | MouseEvent | KeyboardEvent })"
+  },
+  {
+    "id": 1762420010,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "fileChange",
+    "field_type": [],
+    "field_desc_zh": "附件列表变化时触发",
+    "event_input": "(file: FileItem)"
+  },
+  {
+    "id": 1762419955,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "fileClick",
+    "field_type": [],
+    "field_desc_zh": "点击附件时触发",
+    "event_input": "(file: FileItem)"
+  },
+  {
+    "id": 1762419983,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "fileDelete",
+    "field_type": [],
+    "field_desc_zh": "删除附件时触发",
+    "event_input": "(file: FileItem)"
+  },
+  {
+    "id": 1762420057,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "fileSelect",
+    "field_type": [],
+    "field_desc_zh": "选择文件（图片/微信文件）时触发",
+    "event_input": "(context: {files: FileList, name: UploadActionType}) 【type UploadActionType = 'uploadAttachment' | 'uploadImage'】"
+  },
+  {
+    "id": 1743345186,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "输入框聚焦时触发",
+    "event_input": "(value: string, context: { e: FocusEvent })"
+  },
+  {
+    "id": 1762420136,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "keyboardheightchange",
+    "field_type": [],
+    "field_desc_zh": "选择文件（图片/微信文件）时触发",
+    "event_input": "(context: {height: number, duration: number})"
+  },
+  {
+    "id": 1742886045,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "send",
+    "field_type": [],
+    "field_desc_zh": "点击消息发送的回调方法",
+    "event_input": "(value: string, context: { e: MouseEvent | KeyboardEvent })"
+  },
+  {
+    "id": 1742886073,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "stop",
+    "field_type": [],
+    "field_desc_zh": "点击消息终止的回调方法",
+    "event_input": "(value: string, context: { e: MouseEvent })"
+  },
+  {
+    "id": 1773631842,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "updateValue",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发",
+    "event_input": "(value: boolean)"
+  },
+  {
+    "id": 1773631857,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "updateVisible",
+    "field_type": [],
+    "field_desc_zh": "上传面板可见性发生变化时触发",
+    "event_input": "(value: boolean)"
+  },
+  {
+    "id": 1762419936,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Events",
+    "field_name": "uploadClick",
+    "field_type": [],
+    "field_desc_zh": "【实验】点击上传按钮时触发"
+  },
+  {
+    "id": 1783910373,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Slots",
+    "field_name": "footer-prefix",
+    "field_type": [],
+    "field_desc_zh": "输入框底部左侧插槽，自定义输入框底部区域内容"
+  },
+  {
+    "id": 1783909910,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Slots",
+    "field_name": "header",
+    "field_type": [],
+    "field_desc_zh": "输入框顶部插槽，自定义输入框顶部区域内容"
+  },
+  {
+    "id": 1783910319,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Slots",
+    "field_name": "input-prefix",
+    "field_type": [],
+    "field_desc_zh": "输入框左侧插槽，自定义输入框左侧区域内容"
+  },
+  {
+    "id": 1783910399,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatSender",
+    "field_category": "Slots",
+    "field_name": "suffix",
+    "field_type": [],
+    "field_desc_zh": "输入框底部操作插槽，自定义输入框底部操作区域区域内容"
+  }
+]

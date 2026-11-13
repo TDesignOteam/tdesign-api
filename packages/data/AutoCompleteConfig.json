@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1736330829,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AutoCompleteConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”描述文本"
+  }
+]

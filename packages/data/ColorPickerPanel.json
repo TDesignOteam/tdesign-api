@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1748927769,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "colorModes",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[\"monochrome\", \"linear-gradient\"]",
+    "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
+    "custom_field_type": "Array<'monochrome' | 'linear-gradient'>"
+  },
+  {
+    "id": 1748927779,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 1748927789,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "enableAlpha",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启透明通道"
+  },
+  {
+    "id": 1748927798,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "enableMultipleGradient",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色"
+  },
+  {
+    "id": 1748927813,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "RGB",
+    "field_enum": [
+      "HEX",
+      "HEX8",
+      "RGB",
+      "RGBA",
+      "HSL",
+      "HSLA",
+      "HSV",
+      "HSVA",
+      "CMYK",
+      "CSS"
+    ],
+    "field_desc_zh": "格式化色值。`enableAlpha` 为真时，`HEX8/RGBA/HSLA/HSVA` 有效",
+    "field_desc_en": "When `enableAlpha` is true, `HEX8/RGBA/HSLA/HSVA` are valid"
+  },
+  {
+    "id": 1748927824,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "recentColors",
+    "field_type": [
+      "Boolean",
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色”",
+    "field_desc_en": "used color recently",
+    "custom_field_type": "Array<string> | boolean | null",
+    "syntactic_sugar": "sync",
+    "support_default_value": true
+  },
+  {
+    "id": 1790738147,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "selectInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 SelectInputProps 筛选器输入框组件全部属性",
+    "custom_field_type": "SelectInputProps【import { SelectInputProps } from '@SelectInput'】"
+  },
+  {
+    "id": 1748927833,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "showPrimaryColorPreview",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否展示颜色选择条右侧的颜色预览区域"
+  },
+  {
+    "id": 1748927987,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "swatchColors",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色",
+    "field_desc_en": "swatch colors",
+    "custom_field_type": "Array<string> | null | undefined"
+  },
+  {
+    "id": 1748927871,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "色值",
+    "field_desc_en": "color value",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1748927879,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中的色值发生变化时触发，第一个参数 `value` 表示新色值，`context.color` 表示当前调色板控制器的色值，`context.trigger` 表示触发颜色变化的来源",
+    "event_input": "(value: string, context: { color: ColorObject; trigger: ColorPickerChangeTrigger })【type ColorPickerChangeTrigger = 'palette-saturation-brightness' | 'palette-saturation' | 'palette-brightness' | 'palette-hue-bar' | 'palette-alpha-bar' | 'input' | 'preset' | 'recent' 】"
+  },
+  {
+    "id": 1748927896,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Events",
+    "field_name": "paletteBarChange",
+    "field_type": [],
+    "field_desc_zh": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值",
+    "event_input": "(context: { color: ColorObject })【interface ColorObject { alpha: number; css: string; hex: string; hex8: string; hsl: string; hsla: string; hsv: string; hsva: string; rgb: string; rgba: string; saturation: number; value: number; isGradient: boolean; linearGradient?: string; }】"
+  },
+  {
+    "id": 1748927906,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ColorPickerPanel",
+    "field_category": "Events",
+    "field_name": "recentColorsChange",
+    "field_type": [],
+    "field_desc_zh": "最近使用颜色发生变化时触发",
+    "event_input": "(value: Array<string>)"
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1741184344,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消”按钮描述文本"
+  },
+  {
+    "id": 1741184367,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确定”按钮描述文本"
+  },
+  {
+    "id": 1741184498,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "dateLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“日” 描述文本"
+  },
+  {
+    "id": 1741184408,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'YYYY-MM-DD HH:mm:ss'",
+    "field_desc_zh": "日期格式化规则"
+  },
+  {
+    "id": 1741184520,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "hourLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“时” 描述文本"
+  },
+  {
+    "id": 1741184535,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "minuteLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“分” 描述文本"
+  },
+  {
+    "id": 1741184463,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "monthLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“月” 描述文本"
+  },
+  {
+    "id": 1741184543,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "secondLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“秒” 描述文本"
+  },
+  {
+    "id": 1741184308,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，组件标题“选择时间”描述文本"
+  },
+  {
+    "id": 1741184432,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimePickerConfig",
+    "field_category": "Props",
+    "field_name": "yearLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“年” 描述文本"
+  }
+]

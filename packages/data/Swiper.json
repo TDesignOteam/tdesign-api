@@ -1,0 +1,737 @@
+[
+  {
+    "id": 1277,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "slide",
+    "field_enum": [
+      "slide"
+    ],
+    "field_desc_zh": "轮播切换动画效果类型"
+  },
+  {
+    "id": 2048,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "slide",
+    "field_enum": [
+      "slide",
+      "fade"
+    ],
+    "field_desc_zh": "轮播切换动画效果类型：滑动、淡入淡出等"
+  },
+  {
+    "id": 1274,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "autoplay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否自动播放"
+  },
+  {
+    "id": 1744614994,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "cardScale",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "210/332",
+    "field_desc_zh": "卡片模式下非当前展示轮播图的缩放比例"
+  },
+  {
+    "id": 1275,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "当前轮播在哪一项（下标）",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3248,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "当前轮播在哪一项（下标）"
+  },
+  {
+    "id": 1273,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "轮播滑动方向，包括横向滑动和纵向滑动两个方向"
+  },
+  {
+    "id": 3241,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "displayMultipleItems",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "同时显示的滑块数量",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1272,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "duration",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "300",
+    "field_desc_zh": "滑动动画时长"
+  },
+  {
+    "id": 3242,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "easingFunction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "linear",
+      "easeInCubic",
+      "easeOutCubic",
+      "easeInOutCubic"
+    ],
+    "field_desc_zh": "指定 swiper 切换缓动动画类型",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1662,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "当使用垂直方向滚动时的高度"
+  },
+  {
+    "id": 1712653681,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "192",
+    "field_desc_zh": "轮播的高度；默认单位 `px`"
+  },
+  {
+    "id": 1712662667,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "轮播的高度"
+  },
+  {
+    "id": 1734341911,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "height",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "当使用垂直方向滚动时的高度"
+  },
+  {
+    "id": 3255,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "imageProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Image 组件",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 1762406769,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "imageProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传至 Image 组件",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 1271,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "interval",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "5000",
+    "field_desc_zh": "轮播间隔时间"
+  },
+  {
+    "id": 3244,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "list",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "图片列表",
+    "custom_field_type": "string[] | SwiperList[]【interface SwiperList { value: string, ariaLabel: string }】",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 2050,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "loop",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否循环播放"
+  },
+  {
+    "id": 2044,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "navigation",
+    "field_type": [
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "导航器全部配置",
+    "custom_field_type": "SwiperNavigation | TNode"
+  },
+  {
+    "id": 3256,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "navigation",
+    "field_type": [
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "导航器全部配置，true 的话使用默认配置",
+    "custom_field_type": "SwiperNavProps | boolean【import { SwiperNavProps } from '@SwiperNav'】"
+  },
+  {
+    "id": 1788961927,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "navigation",
+    "field_type": [
+      "Boolean",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "导航器全部配置",
+    "custom_field_type": "SwiperNavigation | TNode | Boolean"
+  },
+  {
+    "id": 3245,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "nextMargin",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "后边距，可用于露出后一项的一小部分。默认单位 `px`",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1712662758,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "nextMargin",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px`",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 2804,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "paginationPosition",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "bottom",
+    "field_enum": [
+      "top-left",
+      "top",
+      "top-right",
+      "bottom-left",
+      "bottom",
+      "bottom-right",
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "页码信息展示位置"
+  },
+  {
+    "id": 3246,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "previousMargin",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "前边距，可用于露出前一项的一小部分。默认单位 `px`",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1712662794,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "previousMargin",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "【开发中】前边距，可用于露出前一项的一小部分。默认单位 `px`",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 3247,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "snapToEdge",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 2047,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "stopOnHover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否悬浮时停止轮播"
+  },
+  {
+    "id": 2046,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "hover",
+    "field_enum": [
+      "hover",
+      "click"
+    ],
+    "field_desc_zh": "触发切换的方式：悬浮、点击等"
+  },
+  {
+    "id": 2045,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "card"
+    ],
+    "field_desc_zh": "样式类型：默认样式、卡片样式"
+  },
+  {
+    "id": 1756450656,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "animationfinish",
+    "field_type": [],
+    "field_desc_zh": "轮播切换时触发",
+    "field_desc_en": "动画结束时会触发 animationfinish 事件",
+    "event_input": "(current: number, source: SwiperChangeSource)",
+    "version": {
+      "Miniprogram": "1.11.0"
+    }
+  },
+  {
+    "id": 1276,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "轮播切换时触发",
+    "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】"
+  },
+  {
+    "id": 2051,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "轮播切换时触发",
+    "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'click' | 'hover'】"
+  },
+  {
+    "id": 2538,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "轮播切换时触发",
+    "event_input": "(current: number, source: SwiperChangeSource)【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】"
+  },
+  {
+    "id": 1712662865,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "轮播切换时触发",
+    "event_input": "(current: number, context: { source: SwiperChangeSource })【type SwiperChangeSource = 'autoplay' | 'touch' | 'nav'】"
+  },
+  {
+    "id": 3279,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击轮播项时触发",
+    "event_input": "(index: number)",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 1712053721,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Events",
+    "field_name": "imageLoad",
+    "field_type": [],
+    "field_desc_zh": "图片加载时触发",
+    "event_input": "(index: number)",
+    "version": {
+      "Miniprogram": "1.1.4"
+    }
+  },
+  {
+    "id": 1712053610,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712053620,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "当前图片样式类"
+  },
+  {
+    "id": 1712053615,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "External Classes",
+    "field_name": "t-class-nav",
+    "field_type": [],
+    "field_desc_zh": "导航样式类"
+  },
+  {
+    "id": 1712053629,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "External Classes",
+    "field_name": "t-class-next-image",
+    "field_type": [],
+    "field_desc_zh": "下一图片样式类"
+  },
+  {
+    "id": 1712053624,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "External Classes",
+    "field_name": "t-class-prev-image",
+    "field_type": [],
+    "field_desc_zh": "上一图片样式类"
+  },
+  {
+    "id": 1759200637,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Swiper",
+    "field_category": "Slots",
+    "field_name": "navigation",
+    "field_type": [],
+    "field_desc_zh": "导航器全部配置"
+  }
+]
