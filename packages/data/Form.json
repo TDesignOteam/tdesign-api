@@ -21,10 +21,10 @@
   {
     "id": 1712574615,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "Form",
     "field_category": "Props",
@@ -35,9 +35,10 @@
     "field_default_value": "left",
     "field_enum": [
       "left",
+      "center",
       "right"
     ],
-    "field_desc_zh": "表单内容对齐方式：左对齐、右对齐"
+    "field_desc_zh": "表单内容对齐方式：左对齐、居中对齐及右对齐"
   },
   {
     "id": 166,
@@ -555,23 +556,6 @@
     "event_output": "HTMLFormElement"
   },
   {
-    "id": 1068,
-    "platform_framework": [
-      "React(PC)",
-      "React(Mobile)"
-    ],
-    "component": "Form",
-    "field_category": "Functions",
-    "field_name": "getFieldValue",
-    "field_type": [
-      "Function"
-    ],
-    "field_desc_zh": "获取单个字段值",
-    "event_input": "(field: NamePath)",
-    "event_output": "unknown",
-    "field_required": true
-  },
-  {
     "id": 2272,
     "platform_framework": [
       "React(PC)",
@@ -586,6 +570,23 @@
     "field_desc_zh": "获取一组字段名对应的值，当调用 getFieldsValue(true) 时返回所有表单数据",
     "event_input": "(nameList: string[] | boolean)【interface getFieldsValue<T>{ (nameList: true): T; (nameList: any[]): Record<keyof T, unknown>;}】",
     "event_output": "getFieldsValue<FormData>",
+    "field_required": true
+  },
+  {
+    "id": 1068,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Form",
+    "field_category": "Functions",
+    "field_name": "getFieldValue",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "获取单个字段值",
+    "event_input": "(field: NamePath)",
+    "event_output": "unknown",
     "field_required": true
   },
   {
