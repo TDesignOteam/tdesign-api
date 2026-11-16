@@ -217,6 +217,22 @@
     "field_desc_zh": "是否锁定内容滚动"
   },
   {
+    "id": 1794841867,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "maxWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "顶部和底部弹出层的最大宽度，设置后水平居中。数字单位为 px，支持 CSS 长度字符串。不设置时保持原有布局",
+    "field_desc_en": "Maximum width of top and bottom popups. When set, the popup is horizontally centered. Numbers are interpreted as pixels; CSS length strings are supported. The existing layout is preserved when omitted"
+  },
+  {
     "id": 131,
     "platform_framework": [
       "Vue(PC)",
