@@ -63,24 +63,6 @@
     "custom_field_type": "Array<'monochrome' | 'linear-gradient'>"
   },
   {
-    "id": 1749698394,
-    "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram"
-    ],
-    "component": "ColorPicker",
-    "field_category": "Props",
-    "field_name": "colorModes",
-    "field_type": [
-      "String",
-      "Array"
-    ],
-    "field_default_value": "\"monochrome\"",
-    "field_desc_zh": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色",
-    "custom_field_type": "colorModesEnum | colorModesEnum[] 【type colorModesEnum = 'monochrome' | 'linear-gradient'】"
-  },
-  {
     "id": 2119,
     "platform_framework": [
       "Vue(PC)",
@@ -117,11 +99,8 @@
   {
     "id": 3426,
     "platform_framework": [
-      "Vue(PC)",
       "React(PC)",
-      "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram"
+      "Vue(PC)"
     ],
     "component": "ColorPicker",
     "field_category": "Props",
