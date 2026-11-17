@@ -10,7 +10,8 @@ import type { CheckboxGroupValue } from '../checkbox';
 import type { SortableEvent, SortableOptions } from 'sortablejs';
 import type { CheckboxProps } from '../checkbox';
 import type { RadioProps } from '../radio';
-import type { TNode, ClassName, HTMLElementAttributes } from '../common';
+import type { InputProps } from '../input';
+import type { TNode, OptionData, ClassName, Styles, HTMLElementAttributes, ComponentType } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -116,6 +117,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    * 单元格点击时触发
    */
   onCellClick?: (context: BaseTableCellEventContext<T>) => void;
+  /**
+   * 分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型
+   */
+  onPageChange?: (pageInfo: PageInfo, newDataSource: Array<T>) => void;
   /**
    * 行点击时触发，泛型 T 指表格数据类型
    */
@@ -404,6 +409,60 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
   type?: 'single' | 'multiple';
 }
 
+export interface TableColumnFilter {
+  /**
+   * 用于透传筛选器属性到自定义组件 `component`，HTML 原生属性
+   */
+  attrs?: HTMLElementAttributes;
+  /**
+   * 透传类名到自定义组件 `component`
+   * @default ''
+   */
+  classNames?: ClassName;
+  /**
+   * 用于自定义筛选器，只要保证自定义筛选器包含 value 属性 和 change 事件，即可像内置筛选器一样正常使用。示例：`component: DatePicker`
+   */
+  component?: ComponentType;
+  /**
+   * 哪些事件触发后会进行过滤搜索（确认按钮无需配置，会默认触发搜索）。输入框组件示例：`confirmEvents: ['onEnter']`
+   */
+  confirmEvents?: string[];
+  /**
+   * 过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于表头标题和过滤文本行中的列标题不一样的场景
+   */
+  label?: string | TNode;
+  /**
+   * 用于配置当前筛选器可选值有哪些，仅当 `filter.type` 等于 `single` 或 `multiple` 时有效
+   */
+  list?: Array<OptionData>;
+  /**
+   * 透传 Popup 组件全部属性到筛选器浮层
+   */
+  popupProps?: PopupProps;
+  /**
+   * 用于透传筛选器属性到自定义组件 `component`，可以对筛选器进行任何原组件支持的属性配置
+   */
+  props?: FilterProps;
+  /**
+   * 重置时设置的值，示例：'' 或 []
+   */
+  resetValue?: any;
+  /**
+   * 是否显示重置和确认。值为真，过滤事件（filter-change）会在确定时触发；值为假，则数据变化时会立即触发过滤事件
+   * @default false
+   */
+  showConfirmAndReset?: boolean;
+  /**
+   * 透传内联样式到自定义组件 `component`
+   */
+  style?: Styles;
+  /**
+   * 用于设置筛选器类型：单选按钮筛选器、复选框筛选器、输入框筛选器。更多复杂组件，请更为使用 `component` 自定义任意组件
+   * @default ''
+   */
+  type?: FilterType;
+}
+
 export interface PaginationProps {
   current?: number;
   defaultCurrent?: number;
@@ -604,3 +663,7 @@ export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
 export type SorterFun<T> = (a: T, b: T) => number;
 
 export type SortType = 'desc' | 'asc' | 'all';
+
+export type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any };
+
+export type FilterType = 'input' | 'single' | 'multiple';
