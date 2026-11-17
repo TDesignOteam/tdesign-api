@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { FILE_RIGHTS_DESC, BASE_PATH_URL, BASE_PATH_URL_LOCAL } from '../config/const.js';
 import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
 import {
   getTdCmpName,
@@ -446,8 +446,11 @@ function generateVueProps(baseData, framework, isUseDefault) {
     const folder = getFolderPath(basePath, cmp);
     const outputPath = getPropsFileName(folder, cmp);
     const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-    // 子组件没有实现文件时不写独立 props，避免 Vue2 误出 dialog-card-props.ts
-    if (parentCmp && parentCmp !== cmp && !hasChildComponentImpl(folder, cmp)) return;
+    // 子组件实现文件以真实组件库目录（LOCAL）为准，避免 products 输出目录无实现文件导致误判
+    const localFolder = getFolderPath(basePath.replace(BASE_PATH_URL, BASE_PATH_URL_LOCAL), cmp);
+    // 仅当父组件自身已生成 props，且子组件在真实组件库中无实现文件时才跳过
+    // 例：Vue2 跳过 dialog-card-props.ts；Vue3 有 dialog-card.tsx 则生成；Icon 父组件无 props 不跳过
+    if (parentCmp && parentCmp !== cmp && vueProps[parentCmp] && !hasChildComponentImpl(localFolder, cmp)) return;
     const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
     fs.mkdirSync(folder, { recursive: true });
     fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);
