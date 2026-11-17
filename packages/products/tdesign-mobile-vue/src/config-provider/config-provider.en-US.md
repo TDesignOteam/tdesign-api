@@ -51,6 +51,8 @@ weekdays | Array | - | Typescript: `string[]` | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+empty | String | - | \- | N
+filterPlaceholder | String | - | \- | N
 placeholder | String | - | \- | N
 title | String | - | \- | N
 
