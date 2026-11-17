@@ -2,9 +2,12 @@
   {
     "id": 1888,
     "platform_framework": [
-      "Vue(PC)",
+      "Miniprogram",
+      "React(Mobile)",
       "React(PC)",
-      "React(Mobile)"
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
     ],
     "component": "CascaderConfig",
     "field_category": "Props",
@@ -17,7 +20,10 @@
   {
     "id": 1790068365,
     "platform_framework": [
-      "React(Mobile)"
+      "Miniprogram",
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "CascaderConfig",
     "field_category": "Props",

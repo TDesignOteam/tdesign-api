@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { OverlayProps } from '../overlay';
+import type { OverlayProps } from '../overlay';
 import type { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
@@ -23,15 +23,15 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   filter?: CascaderFilterFunction;
   /**
-   * 搜索框占位符描述文本
-   * @default ''
-   */
-  filterPlaceholder?: string;
-  /**
    * 是否可搜索，开启后顶部会展示一个搜索框
    * @default false
    */
   filterable?: boolean;
+  /**
+   * 搜索框占位符描述文本
+   * @default ''
+   */
+  filterPlaceholder?: string;
   /**
    * 头部
    */
@@ -59,10 +59,10 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
    */
   overlayProps?: OverlayProps;
   /**
-   * 未选中时的提示文案
-   * @default '选择选项'
+   * 未选中时的提示文案。组件内置默认值为：'选择选项'
+   * @default ''
    */
-  placeholder?: string | TNode;
+  placeholder?: string;
   /**
    * 每级展示的次标题
    * @default []

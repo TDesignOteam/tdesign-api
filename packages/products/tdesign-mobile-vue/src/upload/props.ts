@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdUploadProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdUploadProps } from './type';
 export default {
   /** 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file) */
   accept: {

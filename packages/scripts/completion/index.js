@@ -15,7 +15,13 @@ import path from 'path';
 import chalk from 'chalk';
 import { uniq } from 'lodash-es';
 import prettier from 'prettier';
-import { FRAMEWORK_MAP, COMPONENT_API_MD_MAP, getChatComponentMap, getChatConfig } from '../config/index.js';
+import {
+  FRAMEWORK_MAP,
+  COMPONENT_API_MD_MAP,
+  MOBILE_FRAMES,
+  getChatComponentMap,
+  getChatConfig,
+} from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import {
   groupByComponent,
@@ -57,7 +63,6 @@ function start() {
   if ('Vue(Mobile)' === framework) {
     delete aliasComponents['Radio'];
     delete aliasComponents['Swiper'];
-    delete aliasComponents['PrimaryTable'];
   }
 
   console.log(chalk.blue(`\n ----- 代码提示文件相关文件自动生成开始（框架：${framework}） ------ \n`));
@@ -139,6 +144,10 @@ function getHelperData(baseData, framework) {
 
   for (const key in baseData) {
     if (!isComponent(key)) {
+      continue;
+    }
+    // 移动端框架不导出 PrimaryTable 组件，跳过相关内容生成
+    if (MOBILE_FRAMES.includes(framework) && key === 'PrimaryTable') {
       continue;
     }
 
@@ -310,26 +319,26 @@ async function writeVolar(framework, data, isChat = false) {
   const packageName = chatConfig?.name || current.name;
   const readerGlobalComponents = uniq(
     data.map((item) => {
-    if (item === 'IconSVG') {
-      return `Icon: typeof import('${current.iconPath}')['Icon'];`;
-    }
-    if (item === 'IconFont') {
-      return `${item}: typeof import('${current.iconPath}')['${item}'];`;
-    }
-    if (['Text', 'Title', 'Paragraph'].includes(item)) {
-      return `TTypography${item}: typeof import('${packageName}')['${item}'];`;
-    }
-    if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
-      return `TTable: typeof import('${packageName}')['Table'];`;
-    }
-    if (item === 'QRCode') {
-      return `TQrcode: typeof import('${packageName}')['${item}'];`;
-    }
-    if (framework === 'UniApp') {
-      const kebabName = kebabCaseComponent(item);
-      return `T${item}: typeof import('${packageName}/${kebabName}/${kebabName}.vue').default`;
-    }
-    return `T${item}: typeof import('${packageName}')['${item}'];`;
+      if (item === 'IconSVG') {
+        return `Icon: typeof import('${current.iconPath}')['Icon'];`;
+      }
+      if (item === 'IconFont') {
+        return `${item}: typeof import('${current.iconPath}')['${item}'];`;
+      }
+      if (['Text', 'Title', 'Paragraph'].includes(item)) {
+        return `TTypography${item}: typeof import('${packageName}')['${item}'];`;
+      }
+      if ('BaseTable' === item && 'Vue(Mobile)' === framework) {
+        return `TTable: typeof import('${packageName}')['Table'];`;
+      }
+      if (item === 'QRCode') {
+        return `TQrcode: typeof import('${packageName}')['${item}'];`;
+      }
+      if (framework === 'UniApp') {
+        const kebabName = kebabCaseComponent(item);
+        return `T${item}: typeof import('${packageName}/${kebabName}/${kebabName}.vue').default`;
+      }
+      return `T${item}: typeof import('${packageName}')['${item}'];`;
     }),
   );
   const declareModule = framework == 'Vue(PC)' ? '@vue/runtime-core' : 'vue';
@@ -344,7 +353,7 @@ async function writeVolar(framework, data, isChat = false) {
       ${readerGlobalComponents.join('\n')}
     }
   }
-  
+
   export {};
 
   `;

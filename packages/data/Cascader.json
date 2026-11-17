@@ -205,10 +205,10 @@
   {
     "id": 1780383135,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "Cascader",
     "field_category": "Props",
@@ -217,23 +217,11 @@
       "Function"
     ],
     "field_desc_zh": " 自定义过滤函数。返回 true 表示匹配，未设置时使用内置匹配规则：对路径中所有 label 拼接后做大小写不敏感的 includes 匹配",
-    "custom_field_type": "CascaderFilterFunction 【type CascaderFilterFunction<CascaderOption extends TreeOptionData = TreeOptionData> = (keyword: string, option: CascaderOption, path: CascaderOption[]) => boolean】"
-  },
-  {
-    "id": 1780382505,
-    "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "Cascader",
-    "field_category": "Props",
-    "field_name": "filterPlaceholder",
-    "field_type": [
-      "String"
-    ],
-    "field_desc_zh": "搜索框占位符描述文本"
+    "custom_field_type": "CascaderFilterFunction 【type CascaderFilterFunction<CascaderOption extends TreeOptionData = TreeOptionData> = (keyword: string, option: CascaderOption, path: CascaderOption[]) => boolean】",
+    "version": {
+      "Miniprogram": "1.15.1",
+      "Vue(Mobile)": "1.17.2"
+    }
   },
   {
     "id": 393,
@@ -253,10 +241,10 @@
   {
     "id": 1780382452,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "Cascader",
     "field_category": "Props",
@@ -265,7 +253,31 @@
       "Boolean"
     ],
     "field_default_value": "false",
-    "field_desc_zh": "是否可搜索，开启后顶部会展示一个搜索框 "
+    "field_desc_zh": "是否可搜索，开启后顶部会展示一个搜索框 ",
+    "version": {
+      "Miniprogram": "1.15.1",
+      "Vue(Mobile)": "1.17.2"
+    }
+  },
+  {
+    "id": 1780382505,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
+    ],
+    "component": "Cascader",
+    "field_category": "Props",
+    "field_name": "filterPlaceholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "搜索框占位符描述文本",
+    "version": {
+      "Miniprogram": "1.15.1",
+      "Vue(Mobile)": "1.17.2"
+    }
   },
   {
     "id": 1745737040,
@@ -615,10 +627,10 @@
   {
     "id": 1712024363,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "Cascader",
     "field_category": "Props",

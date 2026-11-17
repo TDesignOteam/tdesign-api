@@ -6,15 +6,15 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-disableInput | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
+disableInput | Boolean | false | \- | N
 inputWidth | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
-size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+size | String | medium | options: small/medium/large. Typescript: `SizeEnum`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 step | Number | 1 | \- | N
-theme | String | normal | stylish。options: normal/filled/outline | N
+theme | String | normal | stylish. options: normal/filled/outline | N
 value | String / Number | 0 | `v-model` and `v-model:value` is supported | N
 defaultValue | String / Number | 0 | uncontrolled property | N
 onBlur | Function |  | Typescript: `(value: string \| number) => void`<br/> | N

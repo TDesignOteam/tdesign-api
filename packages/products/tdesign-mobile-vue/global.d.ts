@@ -59,7 +59,6 @@ declare module 'vue' {
     TPicker: (typeof import('tdesign-mobile-vue'))['Picker'];
     TPopover: (typeof import('tdesign-mobile-vue'))['Popover'];
     TPopup: (typeof import('tdesign-mobile-vue'))['Popup'];
-    TPrimaryTable: (typeof import('tdesign-mobile-vue'))['PrimaryTable'];
     TProgress: (typeof import('tdesign-mobile-vue'))['Progress'];
     TPullDownRefresh: (typeof import('tdesign-mobile-vue'))['PullDownRefresh'];
     TQrcode: (typeof import('tdesign-mobile-vue'))['QRCode'];
