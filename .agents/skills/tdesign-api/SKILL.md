@@ -12,7 +12,7 @@ description: 用于新增或更新 TDesign 组件 API，校验定义并导出文
 1. 根据任务类型，读取帮助文档
 2. 根据用户提供的信息和命令帮助，执行新增或更新命令
 3. 执行校验命令，确保 API 格式通过
-4. 读取文档导出帮助，逐个执行对应框架的命令，导出数据到当前仓库
+4. 读取文档导出帮助，逐个执行对应框架的命令，导出文档/类型/props；涉及 Vue 端 API 时还要用 `api:completion` 重新生成 helper 代码提示文件，统一导出到当前仓库
 5. 向用户确认格式是否正确，没问题后导出数据到指定组件库仓库
 6. 验收导出文件
 
@@ -88,6 +88,9 @@ pnpm api:docs -- <component> '<framework>' finalProject
 - Web 依次导出 `Vue(PC)`、`VueNext(PC)`、`React(PC)`；移动端依次导出 `Vue(Mobile)`、`React(Mobile)`、`Miniprogram`；UniApp 单独跑。
 - 除非用户明确要求，禁止添加 `vitest`、`onlyDocs`；Vue2 受控组件（Table、Select、Upload 等）需要时添加 `useDefault`。
 - 全量 `ALL` 只允许 `onlyDocs`，且不带 `useDefault`；`ALL` 只处理 `map.json` 已登记的名称，中英文各跑一遍。
+- **涉及 Vue 端 API（`Vue(PC)` / `VueNext(PC)` / `Vue(Mobile)` / `UniApp`）时，必须另用 `api:completion` 重新生成 helper 代码提示文件**（`helper/` 下的 `web-types.json`、`tags.json`、`attributes.json`，以及 `global.d.ts`），否则代码提示不会随 API 更新。
+  - 每个 Vue 框架各执行一次：`pnpm api:completion -- '<framework>'`；`Vue(PC)` 与 `VueNext(PC)` 的 API 相同，但分别对应各自的组件库，都要执行。
+  - 需要写入组件库时加 `finalProject`（如 `pnpm api:completion -- 'VueNext(PC)' 1 finalProject`）；`UniApp` 无 helper 文件，仅生成 volar。
 
 ## 5. 验收产物
 
@@ -97,7 +100,11 @@ pnpm api:docs -- <component> '<framework>' finalProject
 
 对刚导出的组件目录进行类型检查。如果报错则修复生成器或 API 数据后重导，禁止把错误类型留在组件库。
 
-### 5.2 额外 API
+### 5.2 Vue helper
+
+涉及 Vue 端 API 时，核对本轮 `api:completion` 生成的 helper 文件（`web-types.json`、`tags.json`、`attributes.json`、`global.d.ts`）确实包含变更的 API，且与数据源一致。
+
+### 5.3 额外 API
 
 只验收 `finalProject` 写入的组件库本体。`packages/products` 必须与数据源一致，禁止按组件库现状回删。
 
