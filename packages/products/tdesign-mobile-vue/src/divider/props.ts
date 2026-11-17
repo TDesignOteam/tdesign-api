@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDividerProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdDividerProps } from './type';
 export default {
   /** 文本位置（仅在水平分割线有效） */
   align: {
@@ -35,9 +34,5 @@ export default {
       if (!val) return true;
       return ['horizontal', 'vertical'].includes(val);
     },
-  },
-  /** 间距大小 */
-  size: {
-    type: [String, Number] as PropType<TdDividerProps['size']>,
   },
 };

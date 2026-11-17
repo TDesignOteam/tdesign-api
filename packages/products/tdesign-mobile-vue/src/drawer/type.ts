@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { OverlayProps } from '../overlay';
+import type { OverlayProps } from '../overlay';
 import type { TNode, Styles, AttachNode } from '../common';
 
 export interface TdDrawerProps {
@@ -55,7 +55,7 @@ export interface TdDrawerProps {
    */
   visible?: boolean;
   /**
-   * 抽屉层级，样式默认为 1500
+   * 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: number;
   /**

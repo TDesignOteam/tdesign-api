@@ -615,10 +615,10 @@
   {
     "id": 1712024363,
     "platform_framework": [
-      "Vue(Mobile)",
-      "React(Mobile)",
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "Cascader",
     "field_category": "Props",
