@@ -1,0 +1,327 @@
+[
+  {
+    "id": 2516,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "cancelText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“取消” 描述文本"
+  },
+  {
+    "id": 2514,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "clearFilterResultButtonText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，过滤功能中，“清空筛选” 描述文本"
+  },
+  {
+    "id": 2513,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "columnConfigButtonText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，列配置功能中，“列配置” 按钮描述文本"
+  },
+  {
+    "id": 2519,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "columnConfigDescriptionText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“请选择需要在表格中显示的数据列” 描述文本，列配置功能中弹框顶部描述"
+  },
+  {
+    "id": 2518,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "columnConfigTitleText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“表格列配置” 描述文本，列配置功能中弹框的标题"
+  },
+  {
+    "id": 2512,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "confirmText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“确认” 描述文本"
+  },
+  {
+    "id": 1918,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据” 描述文本"
+  },
+  {
+    "id": 1919,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "expandIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "展开和收起图标（配置传入收起图标即可），如果没有配置，会使用组件内置的默认图标"
+  },
+  {
+    "id": 2378,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "filterIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "过滤图标，如果没有配置，会使用组件内置的默认图标"
+  },
+  {
+    "id": 2676,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "hideSortTips",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏排序文本提示",
+    "field_desc_en": "hide sort tips"
+  },
+  {
+    "id": 2246,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "loadingMoreText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“点击加载更多” 描述文本"
+  },
+  {
+    "id": 2242,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“正在加载中，请稍后” 描述文本"
+  },
+  {
+    "id": 2511,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "resetText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“重置” 描述文本"
+  },
+  {
+    "id": 2515,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "searchResultText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果'"
+  },
+  {
+    "id": 2517,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "selectAllText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'全选' 描述文本"
+  },
+  {
+    "id": 1709288328,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "全局表格尺寸配置",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 2244,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "sortAscendingOperationText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'点击升序' 描述文本"
+  },
+  {
+    "id": 2245,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "sortCancelOperationText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'点击取消排序' 描述文本"
+  },
+  {
+    "id": 2243,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "sortDescendingOperationText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，'点击降序' 描述文本"
+  },
+  {
+    "id": 1920,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "sortIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "排序图标（配置传入降序图标即可），如果没有配置，会使用组件内置的默认图标"
+  },
+  {
+    "id": 2671,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableConfig",
+    "field_category": "Props",
+    "field_name": "treeExpandAndFoldIcon",
+    "field_type": [
+      "Function"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "树形结构，展开和折叠图标。如果没有配置，会使用组件内置的默认图标",
+    "custom_field_type": "TNode<{ type: 'expand' | 'fold' }>"
+  }
+]

@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1785643138,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "ariaLabel",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "视图层的 aria-label 文本",
+    "field_desc_en": "aria-label text in view layer"
+  },
+  {
+    "id": 1785642956,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "autoExpand",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "滚动条 hover 时是否向外扩展（增加交互热区）",
+    "field_desc_en": "Should the scrollbar expand outwards when hovering (to increase the interactive hotspot)?"
+  },
+  {
+    "id": 1785642246,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "autoresize",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "容器尺寸是否响应变化",
+    "field_desc_en": "Does the container size respond to changes"
+  },
+  {
+    "id": 1785642550,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "container",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "设置滚动容器的最大高度/宽度",
+    "field_desc_en": "Set the maximum height/width of the scrolling container",
+    "custom_field_type": "{ height?:string | number; maxHeight?: string | number; width?: string | number; maxWidth?: string | number }"
+  },
+  {
+    "id": 1785642610,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "禁止滚动",
+    "field_desc_en": "disabled scroll"
+  },
+  {
+    "id": 1785643082,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "id",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "视图层的 ID",
+    "field_desc_en": "ID of the view layer"
+  },
+  {
+    "id": 1785643111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "role",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "scrollbar",
+    "field_desc_zh": "视图层的 WAI-ARIA 角色",
+    "field_desc_en": "WAI-ARIA role in the view layer"
+  },
+  {
+    "id": 1785642680,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "step",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "滚动步长",
+    "field_desc_en": "Rolling step",
+    "custom_field_type": "{ x?: number; y?: number}"
+  },
+  {
+    "id": 1785643171,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "tabindex",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "包裹容器的 tabindex",
+    "field_desc_en": "tabindex of the container"
+  },
+  {
+    "id": 1785642391,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "thumbMinSize",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "20",
+    "field_desc_zh": "滚动条滑块的最小尺寸（px）",
+    "field_desc_en": "Minimum size (px) of the scroll bar slider."
+  },
+  {
+    "id": 1785642840,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "viewClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "视图（内容区）的自定义类名",
+    "field_desc_en": "Custom class name for the view (content area)"
+  },
+  {
+    "id": 1785642898,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "visibility",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "hover",
+    "field_enum": [
+      "always",
+      "hover",
+      "hide"
+    ],
+    "field_desc_zh": "滚动条的显示形式",
+    "field_desc_en": "Scroll bar display format"
+  },
+  {
+    "id": 1785642797,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Props",
+    "field_name": "wrapClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "包裹容器的自定义类名",
+    "field_desc_en": "Custom class name of the wrapper container"
+  },
+  {
+    "id": 1785643580,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "滚动时触发",
+    "field_desc_en": "Triggered while scrolling",
+    "event_input": "({ scrollTop: number, scrollLeft: number })"
+  },
+  {
+    "id": 1785647487,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Functions",
+    "field_name": "getValues",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "获取包含完整滚动信息的视图对象",
+    "field_desc_en": "Get the view object containing complete scrolling information",
+    "event_output": "PositionValues【interface PositionValues { left: number; top: number; scrollLeft: number; scrollTop: number; scrollWidth: number; scrollHeight: number; clientWidth: number; clientHeight: number }】",
+    "field_required": true
+  },
+  {
+    "id": 1785646744,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Functions",
+    "field_name": "scrollTo",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "滚动到一组特定坐标",
+    "field_desc_en": "Scroll to a specific set of coordinates",
+    "event_input": "ScrollToFn【type ScrollToFn = { (x: number, y: number): void; (options: { top?: number; left?: number; behavior?: ScrollBehavior }): void; }】",
+    "field_required": true
+  },
+  {
+    "id": 1785646985,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "Functions",
+    "field_name": "scrollToEdge",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "滚动到某一边",
+    "field_desc_en": "Scroll to one side",
+    "event_input": "(position:PositionEdge) 【type PositionEdge = \"left\"|\"right\"|\"top\"|\"bottom\"】",
+    "field_required": true
+  },
+  {
+    "id": 1785642818,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "CSS Variables",
+    "field_name": "viewStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "视图（内容区）的自定义内联样式",
+    "field_desc_en": "Custom inline styles for view (content area)"
+  },
+  {
+    "id": 1785642756,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Scrollbar",
+    "field_category": "CSS Variables",
+    "field_name": "wrapStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "包裹容器的自定义内联样式",
+    "field_desc_en": "Custom inline styles for wrapping containers"
+  }
+]

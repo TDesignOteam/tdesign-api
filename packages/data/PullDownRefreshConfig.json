@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1741186345,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "PullDownRefreshConfig",
+    "field_category": "Props",
+    "field_name": "loadingTexts",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "提示文本描述，默认值：['下拉刷新', '松手刷新', '正在刷新', '刷新完成']",
+    "custom_field_type": "string[]"
+  }
+]

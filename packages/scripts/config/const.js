@@ -66,9 +66,11 @@ const REACT_EVENTS = [
 ];
 const REACT_TYPES = ['CSSProperties'].concat(REACT_EVENTS);
 
-const [component, framework, allParams] = process.argv.slice(2);
+const args = process.argv.slice(2);
+if (args[0] === '--') args.shift();
+const [component, framework, allParams] = args;
 // const { finalProject } = parseParams(allParams);
-const finalProject = allParams && allParams.includes('finalProject');
+const finalProject = typeof allParams === 'string' && allParams.includes('finalProject');
 
 const FILE_RIGHTS_DESC = ['/**', '该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC', '*/'].join('\n * ');
 

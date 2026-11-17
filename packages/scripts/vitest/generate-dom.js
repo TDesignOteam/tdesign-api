@@ -29,7 +29,7 @@ function generateDomUnitCase(test, oneApiData, framework, component) {
       delete oneDom.variables;
       delete oneDom.description;
       delete oneDom.snapshot;
-      oneApiData.field_enum = '';
+      oneApiData.field_enum = [];
       const tmpTest = {
         ...test,
         dom: oneDom.dom,
@@ -55,7 +55,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   const async = getItAsync(trigger, framework);
   const propsCode = getCategoryDesc(oneApiData, component);
   // API 为 Boolean 类型，检测 DOM
-  if (typeof dom === 'string' && oneApiData.field_type_text.includes('Boolean')) {
+  if (typeof dom === 'string' && oneApiData.field_type.includes('Boolean')) {
     const mountCode = getMountComponent(framework, component, { ...props }, extraCode);
     const mountCode1 = getMountComponent(framework, component, { [oneApiData.field_name]: false, ...props }, extraCode);
     const mountCode2 = getMountComponent(framework, component, { [oneApiData.field_name]: true, ...props }, extraCode);
@@ -94,7 +94,7 @@ function generateVueAndReactDomCase(test, oneApiData, framework, component) {
   if (Array.isArray(dom)) {
     // API 存在枚举值，DOM 检测依赖枚举值
     if (oneApiData.field_enum) {
-      const enums = oneApiData.field_enum.split('/');
+      const enums = oneApiData.field_enum;
       const expectedVariable = `${oneApiData.field_name}ExpectedDom`;
       const mountCode = getMountComponent(
         framework,

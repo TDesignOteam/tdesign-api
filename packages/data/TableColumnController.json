@@ -1,0 +1,163 @@
+[
+  {
+    "id": 2525,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "buttonProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自定义列配置按钮，包括 Button 组件的全部属性。比如：按钮颜色和文本",
+    "custom_field_type": "ButtonProps【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 2522,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "checkboxProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传复选框组件全部特性",
+    "custom_field_type": "CheckboxGroupProps【import { CheckboxGroupProps } from '@Checkbox'】"
+  },
+  {
+    "id": 1694519913,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "columnControllerBottomContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "列配置控制器底部内容",
+    "field_desc_en": "column controller content at bottom of checkbox list"
+  },
+  {
+    "id": 1694519569,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "columnControllerTopContent",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "列配置控制器顶部内容",
+    "field_desc_en": "column controller content at top of checkbox list"
+  },
+  {
+    "id": 2523,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "dialogProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传弹框组件全部特性，如：防止滚动穿透",
+    "custom_field_type": "DialogProps【import { DialogProps } from '@Dialog'】"
+  },
+  {
+    "id": 2521,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "displayType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "auto-width",
+    "field_enum": [
+      "fixed-width",
+      "auto-width"
+    ],
+    "field_desc_zh": "指列配置弹框中，各列的字段平铺方式：`fixed-width` 表示固定宽度，每行固定数量，横向和纵向均对齐，`auto-width` 表示宽度随列标题数量自由显示，横向铺满，纵向不要求对齐"
+  },
+  {
+    "id": 2520,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "fields",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "用于设置允许用户对哪些列进行显示或隐藏的控制，默认为全部字段",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1694508459,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "groupColumns",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "列分组功能配置，当列数量过多的时候，为了方便阅读，一般需要进行列分组设置",
+    "field_desc_en": "show columns by group",
+    "custom_field_type": "TableColumnGroup[]【interface TableColumnGroup { label: string; value?: string | number; columns: string[] }】"
+  },
+  {
+    "id": 2528,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "hideTriggerButton",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否隐藏表格组件内置的“列配置”按钮"
+  },
+  {
+    "id": 2524,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TableColumnController",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top-right",
+    "field_enum": [
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right"
+    ],
+    "field_desc_zh": "列配置按钮基于表格的放置位置：左上角、右上角、左下角、右下角等"
+  }
+]

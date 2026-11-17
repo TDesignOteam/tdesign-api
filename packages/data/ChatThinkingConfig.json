@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1772103456,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatThinkingConfig",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "语言配置，思考状态描述文本",
+    "custom_field_type": "{ pending: string; complete: string; stop: string; }"
+  }
+]

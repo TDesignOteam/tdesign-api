@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1439,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图标右上角提示信息",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 1762401966,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "图标右上角提示信息",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 1724677465,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标签内容",
+    "custom_field_type": "TNode"
+  },
+  {
+    "id": 1437,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "图标名称。传入对象时透传至 Icon 组件"
+  },
+  {
+    "id": 2069,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标名称"
+  },
+  {
+    "id": 1781684813,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "linkType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "redirectTo",
+    "field_enum": [
+      "redirectTo",
+      "switchTab",
+      "reLaunch",
+      "navigateTo"
+    ],
+    "field_desc_zh": "页面跳转类型",
+    "version": {
+      "Miniprogram": "1.15.2"
+    }
+  },
+  {
+    "id": 1442,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "subTabBar",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "二级菜单",
+    "custom_field_type": "SubTabBarItem[] 【interface SubTabBarItem { value: string; label: string }】"
+  },
+  {
+    "id": 1781683307,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击后跳转的页面路径, 需要以 `/` 开头",
+    "version": {
+      "Miniprogram": "1.15.2"
+    }
+  },
+  {
+    "id": 1436,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabBarItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "标识符"
+  }
+]

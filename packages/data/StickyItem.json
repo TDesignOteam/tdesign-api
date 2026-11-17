@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1853,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 1852,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyItem",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "名称"
+  },
+  {
+    "id": 1854,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyItem",
+    "field_category": "Props",
+    "field_name": "popup",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "浮层内容"
+  },
+  {
+    "id": 1855,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyItem",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1856,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyItem",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "hover",
+    "field_enum": [
+      "hover",
+      "click"
+    ],
+    "field_desc_zh": "触发浮层显示的方式"
+  }
+]

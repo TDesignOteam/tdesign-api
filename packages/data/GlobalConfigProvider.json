@@ -1,0 +1,771 @@
+[
+  {
+    "id": 1741187123,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "actionSheet",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "动作面板全局配置",
+    "field_desc_en": "ActionSheet global configs",
+    "custom_field_type": "ActionSheetConfig"
+  },
+  {
+    "id": 2400,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "alert",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "警告全局配置",
+    "field_desc_en": "Alert global configs",
+    "custom_field_type": "AlertConfig"
+  },
+  {
+    "id": 2406,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "anchor",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "锚点全局配置",
+    "field_desc_en": "Anchor global configs",
+    "custom_field_type": "AnchorConfig"
+  },
+  {
+    "id": 2346,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "动画效果控制，`ripple` 指波纹动画， `expand` 指展开动画，`fade` 指渐变动画。默认为 `{ include: ['ripple','expand','fade'], exclude: [] }`",
+    "custom_field_type": "Partial<Record<'include'|'exclude', Array<AnimationType>>>【type AnimationType = 'ripple' | 'expand' | 'fade'】"
+  },
+  {
+    "id": 1721378181,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Object",
+      "Function"
+    ],
+    "field_desc_zh": "浮层挂载节点，可统一设置或按 imageViewer、popup、dialog、drawer 分别设置。组件的 attach 属性优先于全局配置；未配置时保持各组件原有的默认挂载行为",
+    "field_desc_en": "Popup container, configured for all overlays or separately for imageViewer, popup, dialog and drawer. The component attach prop takes precedence. Unconfigured components retain their default mounting behavior",
+    "custom_field_type": "AttachNode | { imageViewer?: AttachNode; popup?: AttachNode; dialog?: AttachNode; drawer?: AttachNode; }"
+  },
+  {
+    "id": 1736340408,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "autoComplete",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "自动填充组件全局配置",
+    "field_desc_en": "AutoComplete global configs",
+    "custom_field_type": "AutoCompleteConfig"
+  },
+  {
+    "id": 1873,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "calendar",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历组件全局配置",
+    "field_desc_en": "Calendar global configs",
+    "custom_field_type": "CalendarConfig"
+  },
+  {
+    "id": 1874,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "cascader",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "级联选择器全局配置",
+    "field_desc_en": "Cascader global configs",
+    "custom_field_type": "CascaderConfig"
+  },
+  {
+    "id": 2284,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "classPrefix",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "t",
+    "field_desc_zh": "CSS 类名前缀"
+  },
+  {
+    "id": 2417,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "colorPicker",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "颜色选择器全局配置",
+    "field_desc_en": "ColorPicker global configs",
+    "custom_field_type": "ColorPickerConfig"
+  },
+  {
+    "id": 1793256814,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "comment",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "评论组件全局配置",
+    "field_desc_en": "Comment global configs",
+    "custom_field_type": "CommentConfig"
+  },
+  {
+    "id": 1877,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "datePicker",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日期选择器全局配置",
+    "field_desc_en": "DatePicker global configs",
+    "custom_field_type": "DatePickerConfig"
+  },
+  {
+    "id": 1741187493,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "dateTimePicker",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "时间选择器全局配置",
+    "field_desc_en": "DateTimePicker global configs",
+    "custom_field_type": "DateTimePickerConfig"
+  },
+  {
+    "id": 1723620343,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "descriptions",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "描述全局配置",
+    "field_desc_en": "Descriptions global configs",
+    "custom_field_type": "DescriptionsConfig"
+  },
+  {
+    "id": 1878,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "dialog",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "对话框全局配置",
+    "field_desc_en": "Dialog global configs",
+    "custom_field_type": "DialogConfig"
+  },
+  {
+    "id": 1879,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "drawer",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "抽屉全局配置",
+    "field_desc_en": "Drawer global configs",
+    "custom_field_type": "DrawerConfig"
+  },
+  {
+    "id": 1741187326,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "dropdownMenu",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "下拉菜单全局配置",
+    "field_desc_en": "DropdownMenu global configs",
+    "custom_field_type": "DropdownMenuConfig"
+  },
+  {
+    "id": 1723455728,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "空状态全局配置",
+    "field_desc_en": "Empty global configs",
+    "custom_field_type": "EmptyConfig"
+  },
+  {
+    "id": 1872,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "form",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表单组件全局配置",
+    "field_desc_en": "Form global configs",
+    "custom_field_type": "FormConfig"
+  },
+  {
+    "id": 3216,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "guide",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "引导全局配置",
+    "field_desc_en": "Guide global configs",
+    "custom_field_type": "GuideConfig"
+  },
+  {
+    "id": 2986,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图标全局配置",
+    "field_desc_en": "icon config",
+    "custom_field_type": "IconConfig【type IconConfig = GlobalIconConfig】【import { GlobalIconConfig } from '@icon'】"
+  },
+  {
+    "id": 3306,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图片全局配置",
+    "field_desc_en": "image global configs",
+    "custom_field_type": "ImageConfig"
+  },
+  {
+    "id": 3305,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "imageViewer",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "图片预览器全局配置",
+    "field_desc_en": "imageViewer global configs",
+    "custom_field_type": "ImageViewerConfig"
+  },
+  {
+    "id": 2078,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "input",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "输入框组件全局配置",
+    "field_desc_en": "Input global configs",
+    "custom_field_type": "InputConfig"
+  },
+  {
+    "id": 1744010077,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "isContextEffectPlugin",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "全局配置是否影响函数式调用方法使用的组件 ",
+    "field_desc_en": "Whether the global configuration affects the components used by the functional invocation method"
+  },
+  {
+    "id": 2254,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "list",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "列表组件全局配置",
+    "field_desc_en": "List global configs",
+    "custom_field_type": "ListConfig"
+  },
+  {
+    "id": 1782292204,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "loading",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "加载中组件全局配置",
+    "field_desc_en": "Loading global configs",
+    "custom_field_type": "LoadingConfig"
+  },
+  {
+    "id": 3217,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "message",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "消息组件全局配置",
+    "field_desc_en": "Message Component global configs",
+    "custom_field_type": "MessageConfig"
+  },
+  {
+    "id": 1866,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "pagination",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "分页组件全局配置",
+    "field_desc_en": "Pagination global configs",
+    "custom_field_type": "PaginationConfig"
+  },
+  {
+    "id": 1741187708,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "picker",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "选择器全局配置",
+    "field_desc_en": "Picker global configs",
+    "custom_field_type": "PickerConfig"
+  },
+  {
+    "id": 1880,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "popconfirm",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "气泡确认框全局配置",
+    "field_desc_en": "Popconfirm global configs",
+    "custom_field_type": "PopconfirmConfig"
+  },
+  {
+    "id": 1741187753,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "pullDownRefresh",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "下拉刷新全局配置",
+    "field_desc_en": "PullDownRefresh global configs",
+    "custom_field_type": "PullDownRefreshConfig"
+  },
+  {
+    "id": 1749266222,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "qrcode",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "二维码全局配置",
+    "field_desc_en": "QRCode global configs",
+    "custom_field_type": "QRCodeConfig"
+  },
+  {
+    "id": 1723455704,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "rate",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "评分全局配置",
+    "field_desc_en": "Rate global configs",
+    "custom_field_type": "RateConfig"
+  },
+  {
+    "id": 1868,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "select",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "选择器组件全局配置",
+    "field_desc_en": "Select global configs",
+    "custom_field_type": "SelectConfig"
+  },
+  {
+    "id": 1959,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "steps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "步骤条组件全局配置",
+    "field_desc_en": "Steps global configs",
+    "custom_field_type": "StepsConfig"
+  },
+  {
+    "id": 1741187827,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "tabBar",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "标签栏全局配置",
+    "field_desc_en": "TabBar global configs",
+    "custom_field_type": "TabBarConfig"
+  },
+  {
+    "id": 1867,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "table",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "表格组件全局配置",
+    "field_desc_en": "Table global configs",
+    "custom_field_type": "TableConfig"
+  },
+  {
+    "id": 1881,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "标签全局配置",
+    "field_desc_en": "Tag global configs",
+    "custom_field_type": "TagConfig"
+  },
+  {
+    "id": 1876,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "timePicker",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "时间选择器全局配置",
+    "field_desc_en": "TimePicker global configs",
+    "custom_field_type": "TimePickerConfig"
+  },
+  {
+    "id": 1875,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "transfer",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "穿梭框全局配置",
+    "field_desc_en": "Transfer global configs",
+    "custom_field_type": "TransferConfig"
+  },
+  {
+    "id": 1869,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "tree",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "树组件全局配置",
+    "field_desc_en": "Tree global configs",
+    "custom_field_type": "TreeConfig"
+  },
+  {
+    "id": 1870,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "treeSelect",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "树选择器组件全局配置",
+    "field_desc_en": "TreeSelect global configs",
+    "custom_field_type": "TreeSelectConfig"
+  },
+  {
+    "id": 1723519338,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "typography",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "排版组件全局配置",
+    "field_desc_en": "Typography global configs",
+    "custom_field_type": "TypographyConfig"
+  },
+  {
+    "id": 1871,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "upload",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "上传组件全局配置",
+    "field_desc_en": "Upload global configs",
+    "custom_field_type": "UploadConfig"
+  }
+]

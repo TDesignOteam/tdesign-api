@@ -1,0 +1,72 @@
+[
+  {
+    "id": 2236,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigFileList",
+    "field_category": "Props",
+    "field_name": "fileNameText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“文件名” 描述文本"
+  },
+  {
+    "id": 2240,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigFileList",
+    "field_category": "Props",
+    "field_name": "fileOperationDateText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“上传日期” 描述文本"
+  },
+  {
+    "id": 2239,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigFileList",
+    "field_category": "Props",
+    "field_name": "fileOperationText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“操作” 描述文本"
+  },
+  {
+    "id": 2237,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigFileList",
+    "field_category": "Props",
+    "field_name": "fileSizeText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“文件尺寸” 描述文本"
+  },
+  {
+    "id": 2238,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "UploadConfigFileList",
+    "field_category": "Props",
+    "field_name": "fileStatusText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“状态” 描述文本"
+  }
+]

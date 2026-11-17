@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1845,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "list",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "列表",
+    "custom_field_type": "Array<TdStickyItemProps>"
+  },
+  {
+    "id": 1847,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 1846,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right-bottom",
+    "field_enum": [
+      "right-top",
+      "right-center",
+      "right-bottom",
+      "left-top",
+      "left-center",
+      "left-bottom"
+    ],
+    "field_desc_zh": "固定位置"
+  },
+  {
+    "id": 3336,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性，优先级低于 StickyItem.popupProps",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 3334,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "shape",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "square",
+    "field_enum": [
+      "square",
+      "round"
+    ],
+    "field_desc_zh": "侧边栏菜单形状，有 2 种：方形、圆形",
+    "field_desc_en": "stickytool shape"
+  },
+  {
+    "id": 3335,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "normal",
+    "field_enum": [
+      "normal",
+      "compact"
+    ],
+    "field_desc_zh": "侧边栏菜单类型，有 2 种：常规型和紧凑型",
+    "field_desc_en": "stickytool type"
+  },
+  {
+    "id": 1848,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Props",
+    "field_name": "width",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "宽度"
+  },
+  {
+    "id": 1857,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击某一项时触发",
+    "event_input": "(context: { e: MouseEvent; item: TdStickyItemProps })"
+  },
+  {
+    "id": 1858,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "StickyTool",
+    "field_category": "Events",
+    "field_name": "hover",
+    "field_type": [],
+    "field_desc_zh": "悬浮到某一项时触发",
+    "event_input": "(context: { e: MouseEvent; item: TdStickyItemProps })"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1526,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "取消按钮文字"
+  },
+  {
+    "id": 1528,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "确定按钮文字"
+  },
+  {
+    "id": 1576,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "disableDate",
+    "field_type": [
+      "Object",
+      "Array",
+      "Function"
+    ],
+    "field_desc_zh": "禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用",
+    "custom_field_type": "DisableRangeDate【type DisableRangeDate = Array<DateValue> | DisableDateObj | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean)】【interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }】【type DateRangePickerPartial = 'start' | 'end'】"
+  },
+  {
+    "id": 1577,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'YYYY-MM-DD'",
+    "field_desc_zh": "用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format)"
+  },
+  {
+    "id": 1586,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "date",
+    "field_enum": [
+      "year",
+      "month",
+      "date",
+      "hour",
+      "minutes",
+      "second"
+    ],
+    "field_desc_zh": "选择器模式，用于表示可以选择到哪一个层级"
+  },
+  {
+    "id": 1585,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "showWeek",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在日期旁边显示周几（如周一，周二，周日等）"
+  },
+  {
+    "id": 1735,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "标题",
+    "field_desc_en": "title of picker"
+  },
+  {
+    "id": 1533,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "选中值",
+    "custom_field_type": "DateRangeValue【type DateRangeValue = Array<string | number>】",
+    "syntactic_sugar": "v-model"
+  },
+  {
+    "id": 1523,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示"
+  },
+  {
+    "id": 1535,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "取消按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1580,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发",
+    "event_input": "(value: DateRangeValue)"
+  },
+  {
+    "id": 1536,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Events",
+    "field_name": "columnChange",
+    "field_type": [],
+    "field_desc_zh": "每一列选中数据变化时触发",
+    "event_input": "(context: DateRangePickerColumnChangeContext)【interface DateRangePickerColumnChangeContext { value: DateValue; index: number; partial: DateRangePickerPartial }】"
+  },
+  {
+    "id": 1534,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DateTimeRangePicker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "确认按钮点击时触发",
+    "event_input": "(context: { value: DateValue; e: MouseEvent })"
+  }
+]

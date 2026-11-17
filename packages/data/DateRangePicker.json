@@ -1,0 +1,671 @@
+[
+  {
+    "id": 1019,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "allowInput",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许输入日期"
+  },
+  {
+    "id": 1715162164,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "无边框模式"
+  },
+  {
+    "id": 1702466637,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "cancelRangeSelectLimit",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "默认的日期选择交互是根据点击前后日期的顺序来决定并且会加以限制。比如：用户先点击开始时间输入框，选择了一个日期例如2020-05-15，紧接着交互会自动将焦点跳到结束日期输入框，等待用户选择结束时间。此时用户只能选择大于2020-05-15的日期（之前的日期会被灰态禁止点击，限制用户的点击）。当该值传递`true`时，则取消该限制",
+    "field_desc_en": "The default date selection interaction is determined based on the order of dates clicked and will be restricted. For example, if a user first clicks on the start date input box and chooses a date, for instance, 2020-05-15, the interaction will automatically shift focus to the end date input box, waiting for the user to select the end time. At this point, the user can only select a date later than 2020-05-15 (previous dates will be grayed out and disabled, restricting the user's selection). When this value is set to `true`, this restriction is lifted"
+  },
+  {
+    "id": 1773470675,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "cell",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义日期单元格的内容",
+    "custom_field_type": "TNode<{ value: DateValue }>"
+  },
+  {
+    "id": 1020,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示清除按钮"
+  },
+  {
+    "id": 3362,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "defaultTime",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[\"00:00:00\", \"23:59:59\"]",
+    "field_desc_zh": "时间选择器默认值，当 value/defaultValue 未设置值时有效",
+    "field_desc_en": "Time selector default value",
+    "custom_field_type": "string[]"
+  },
+  {
+    "id": 1022,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "disableDate",
+    "field_type": [
+      "Object",
+      "Array",
+      "Function"
+    ],
+    "field_desc_zh": "禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用",
+    "custom_field_type": "DisableRangeDate【type DisableRangeDate = Array<DateValue> | DisableDateObj | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean)】【interface DisableDateObj { from?: string; to?: string; before?: string; after?: string }】【type DateRangePickerPartial = 'start' | 'end'】"
+  },
+  {
+    "id": 1731055533,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "disableTime",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "禁用时间项的配置函数，仅在日期区间选择器中开启时间展示时可用",
+    "field_desc_en": "disable time config function",
+    "custom_field_type": "(times: Array<Date | null>, context: { partial: DateRangePickerPartial }) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>"
+  },
+  {
+    "id": 1021,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean",
+      "Array"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用组件",
+    "custom_field_type": "boolean | Array<boolean>"
+  },
+  {
+    "id": 2483,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "enableTimePicker",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式",
+    "custom_field_type": "boolean | TimePanelConfig【interface TimePanelConfig { mode?: TimePanelMode }】【type TimePanelMode = 'parallel' | 'switch' 】"
+  },
+  {
+    "id": 1963,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "firstDayOfWeek",
+    "field_type": [
+      "Number"
+    ],
+    "field_enum": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "field_desc_zh": "第一天从星期几开始"
+  },
+  {
+    "id": 1023,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format)"
+  },
+  {
+    "id": 1715406318,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本",
+    "test_description": "{\"PC\":{\"tnode\":true}}"
+  },
+  {
+    "id": 1024,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "date",
+    "field_enum": [
+      "year",
+      "quarter",
+      "month",
+      "week",
+      "date"
+    ],
+    "field_desc_zh": "选择器模式"
+  },
+  {
+    "id": 1721207957,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "needConfirm",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "决定在日期时间区间选择器的场景下是否需要点击确认按钮才完成选择动作，默认为 `true`",
+    "field_desc_en": "whether a confirmation button needs to be clicked to complete the action in the date-time range picker scenario, default is true"
+  },
+  {
+    "id": 1767605471,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "panelActiveDate",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "日期选择器中年月下拉框的选中值",
+    "custom_field_type": "PanelActiveDate | [PanelActiveDate, PanelActiveDate]【interface PanelActiveDate {year?: DateValue, month?: DateValue}】"
+  },
+  {
+    "id": 2801,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "panelPreselection",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "在开始日期选中之前，面板是否显示预选状态，即是否高亮预选日期"
+  },
+  {
+    "id": 1026,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_desc_zh": "占位符，值为数组表示可分别为开始日期和结束日期设置占位符",
+    "custom_field_type": "string | Array<string>"
+  },
+  {
+    "id": 2484,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 1208,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标"
+  },
+  {
+    "id": 1018,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "presets",
+    "field_type": [
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "预设快捷日期选择，示例：{ '特定日期范围': ['2021-01-01', '2022-01-01'], '本月': [dayjs().startOf('month'), dayjs().endOf('month')] }",
+    "custom_field_type": "TNode | PresetRange【interface PresetRange { [range: string]: DateRange | (() => DateRange)}】【type DateRange = [DateValue, DateValue]】"
+  },
+  {
+    "id": 2490,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "presetsPlacement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "bottom",
+    "field_enum": [
+      "left",
+      "top",
+      "right",
+      "bottom"
+    ],
+    "field_desc_zh": "预设面板展示区域（包含确定按钮）"
+  },
+  {
+    "id": 1767604073,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "range",
+    "field_type": [
+      "Array",
+      "Function"
+    ],
+    "field_desc_zh": "日期可选择范围。值为数组则第一项是开始面板的可选范围，第二项是结束面板的可选范围。示例：`['2025-01-01', '2025-12-31']` 表示'2025-01-01'至'2025-12-31'为可选日期。值为`null`表示不限制；`['2025-01-01', null]` 表示可选日期从'2025-01-01'开始，不限制结束。`[['2025-01-01', '2025-02-01'], ['2025-12-31', '2026-01-01']]` 表示开始面板的'2025-01-01'至'2025-02-01'为可选日期，结束面板的'2025-12-31'至'2026-01-01'为可选日期。类型为 Function 则函数返回值为 `true` 的日期为可选。⚠️ 此API应与 `panelActiveDate` 一起使用，若未设置 `panelActiveDate` 则以 `range` 左区间为默认面板展示，如果没有左区间，则以右区间为默认展示。与`disableDate`共用时，`disableDate`优先级更高。",
+    "custom_field_type": "PickerDateRange | PickerDateRange[]【type PickerDateRange = DateValue[] | ((date: DateValue) => boolean)】"
+  },
+  {
+    "id": 2485,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "rangeInputProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传给范围输入框 RangeInput 组件的参数",
+    "custom_field_type": "RangeInputProps【import { RangeInputProps } from '@RangeInput'】"
+  },
+  {
+    "id": 1746803786,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否只读，优先级大于 `allowInput`",
+    "field_desc_en": "Whether it is read only, the priority is greater than allowInput"
+  },
+  {
+    "id": 1224,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "日期分隔符，支持全局配置，默认为 '-'"
+  },
+  {
+    "id": 3449,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "输入框尺寸",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 2909,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态"
+  },
+  {
+    "id": 1210,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件后置图标"
+  },
+  {
+    "id": 2488,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "timePickerProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 TimePicker 组件属性",
+    "custom_field_type": "TimePickerProps【import { TimePickerProps } from '@TimePicker'】"
+  },
+  {
+    "id": 2910,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式"
+  },
+  {
+    "id": 1028,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选中值",
+    "custom_field_type": "DateRangeValue【type DateRangeValue = Array<DateValue>】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3015,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Props",
+    "field_name": "valueType",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "time-stamp",
+      "Date",
+      "YYYY",
+      "YYYY-MM",
+      "YYYY-MM-DD",
+      "YYYY-MM-DD HH",
+      "YYYY-MM-DD HH:mm",
+      "YYYY-MM-DD HH:mm:ss",
+      "YYYY-MM-DD HH:mm:ss:SSS"
+    ],
+    "field_desc_zh": "用于格式化日期的值，仅支持部分格式，时间戳、日期等。⚠️ `YYYYMMDD` 这种格式不支持，请勿使用，如果希望支持可以给 `dayjs` 提个 PR。注意和 `format` 的区别，`format` 仅用于处理日期在页面中呈现的格式"
+  },
+  {
+    "id": 1032,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "当输入框失去焦点时触发",
+    "event_input": "(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent })"
+  },
+  {
+    "id": 1029,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发",
+    "event_input": "(value: DateRangeValue, context: { dayjsValue?: Dayjs[], trigger?: DatePickerTriggerSource })【import { Dayjs } from 'dayjs'】"
+  },
+  {
+    "id": 3497,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "如果存在“确定”按钮，则点击“确定”按钮时触发",
+    "event_input": "(context: { date: Date[], e: MouseEvent, partial: DateRangePickerPartial })"
+  },
+  {
+    "id": 1034,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "输入框获得焦点时触发",
+    "event_input": "(context: { value: DateRangeValue; partial: DateRangePickerPartial; e: FocusEvent })"
+  },
+  {
+    "id": 1035,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "input",
+    "field_type": [],
+    "field_desc_zh": "输入框数据发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值",
+    "event_input": "(context: { input: string; value: DateRangeValue; partial: DateRangePickerPartial; e: InputEvent })"
+  },
+  {
+    "id": 1767174051,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "monthChange",
+    "field_type": [],
+    "field_desc_zh": "月份切换发生变化时触发",
+    "event_input": "(context: { month: number, date: Date[], partial: DateRangePickerPartial, e?: MouseEvent, trigger: DatePickerMonthChangeTrigger })"
+  },
+  {
+    "id": 1828,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [],
+    "field_desc_zh": "选中日期时触发，可能是开始日期，也可能是结束日期，第二个参数可以区分是开始日期或是结束日期",
+    "event_input": "(value: DateValue, context: PickContext)【interface PickContext { e: MouseEvent; partial: DateRangePickerPartial }】"
+  },
+  {
+    "id": 3447,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "presetClick",
+    "field_type": [],
+    "field_desc_zh": "点击预设按钮后触发",
+    "event_input": "(context: { preset: PresetDate, e: MouseEvent })"
+  },
+  {
+    "id": 1767174012,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DateRangePicker",
+    "field_category": "Events",
+    "field_name": "yearChange",
+    "field_type": [],
+    "field_desc_zh": "年份切换发生变化时触发",
+    "event_input": "(context: { year: number, date: Date[], partial: DateRangePickerPartial, trigger: DatePickerYearChangeTrigger, e?: MouseEvent })"
+  }
+]

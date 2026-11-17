@@ -1,0 +1,457 @@
+[
+  {
+    "id": 1368,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "middle",
+    "field_enum": [
+      "top",
+      "middle",
+      "bottom"
+    ],
+    "field_desc_zh": "右侧内容的对齐方式，默认居中对齐"
+  },
+  {
+    "id": 1371,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "arrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示右侧箭头"
+  },
+  {
+    "id": 1725283679,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "arrow",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示右侧箭头"
+  },
+  {
+    "id": 1335,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示下边框"
+  },
+  {
+    "id": 1367,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "description",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "下方内容描述"
+  },
+  {
+    "id": 1369,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "hover",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否开启点击反馈"
+  },
+  {
+    "id": 1365,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "image",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "主图"
+  },
+  {
+    "id": 1338,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "jumpType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "navigateTo",
+    "field_enum": [
+      "switchTab",
+      "reLaunch",
+      "redirectTo",
+      "navigateTo"
+    ],
+    "field_desc_zh": "链接跳转类型"
+  },
+  {
+    "id": 1075,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "leftIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "左侧图标，出现在单元格标题的左侧"
+  },
+  {
+    "id": 1665,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "leftIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧图标，出现在单元格标题的左侧"
+  },
+  {
+    "id": 1333,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "note",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "和标题同行的说明文字"
+  },
+  {
+    "id": 1762353899,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "noteStyle",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "说明文字自定义样式"
+  },
+  {
+    "id": 1339,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "required",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示表单必填星号"
+  },
+  {
+    "id": 1074,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "rightIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "最右侧图标"
+  },
+  {
+    "id": 1666,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "rightIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "最右侧图标"
+  },
+  {
+    "id": 1762354389,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "rightIconStyle",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "右侧图标自定义样式"
+  },
+  {
+    "id": 1070,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 1762353839,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "titleStyle",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "标题自定义样式"
+  },
+  {
+    "id": 1337,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "点击后跳转链接地址。如果值为空，则表示不需要跳转"
+  },
+  {
+    "id": 1761300404,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "右侧内容",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1712048545,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712048589,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-center",
+    "field_type": [],
+    "field_desc_zh": "中间（`title`, `description`）内容样式类"
+  },
+  {
+    "id": 1712048559,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-description",
+    "field_type": [],
+    "field_desc_zh": "下方描述内容样式类"
+  },
+  {
+    "id": 1712048568,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-hover",
+    "field_type": [],
+    "field_desc_zh": "悬停样式类"
+  },
+  {
+    "id": 1712048573,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-image",
+    "field_type": [],
+    "field_desc_zh": "图片样式类"
+  },
+  {
+    "id": 1712048578,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-left",
+    "field_type": [],
+    "field_desc_zh": "左侧内容样式类"
+  },
+  {
+    "id": 1712048583,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-left-icon",
+    "field_type": [],
+    "field_desc_zh": "左侧图标样式类"
+  },
+  {
+    "id": 1712048563,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-note",
+    "field_type": [],
+    "field_desc_zh": "右侧说明文字样式类"
+  },
+  {
+    "id": 1712048594,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-right",
+    "field_type": [],
+    "field_desc_zh": "右侧内容样式类"
+  },
+  {
+    "id": 1712048599,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-right-icon",
+    "field_type": [],
+    "field_desc_zh": "右侧图标样式类"
+  },
+  {
+    "id": 1712048553,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Cell",
+    "field_category": "External Classes",
+    "field_name": "t-class-title",
+    "field_type": [],
+    "field_desc_zh": "标题样式类"
+  }
+]

@@ -1,0 +1,600 @@
+[
+  {
+    "id": 2834,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "autoClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible"
+  },
+  {
+    "id": 1712580223,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "取消按钮文字",
+    "custom_field_type": "boolean | string"
+  },
+  {
+    "id": 2778,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "columns",
+    "field_type": [
+      "Array",
+      "Function"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "配置每一列的选项",
+    "custom_field_type": "PickerColumn | Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>)【type PickerColumn = PickerColumnItem[]】【interface PickerColumnItem { label: string,value: string,disabled?: boolean}】",
+    "field_required": true
+  },
+  {
+    "id": 1712577316,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "确定按钮文字",
+    "custom_field_type": "boolean | string"
+  },
+  {
+    "id": 1710843235,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "底部内容"
+  },
+  {
+    "id": 2507,
+    "platform_framework": [],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容"
+  },
+  {
+    "id": 3476,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容"
+  },
+  {
+    "id": 1712581602,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "自定义头部内容"
+  },
+  {
+    "id": 1720094053,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "itemHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "40",
+    "field_desc_zh": "PickerItem 的子项高度，单位 `px`"
+  },
+  {
+    "id": 3475,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / icon 在 `options` 中对应的字段别名",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 1739442023,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / disabled 在 `columns ` 中对应的字段别名",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 1729074658,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "option",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义选项内容。参数为 `option: PickerColumnItem, index: number`",
+    "custom_field_type": "(option: PickerColumnItem, index: number) => string | Record<string, string | boolean>"
+  },
+  {
+    "id": 1710843688,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "field_desc_en": "popup properties",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 2779,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "renderLabel",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "自定义label",
+    "custom_field_type": "(item: PickerColumnItem, index: number) => string"
+  },
+  {
+    "id": 1748926310,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "swipeDuration",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "300",
+    "field_desc_zh": "⚠️ 即将废弃，请使用 `wheelConfig.inertiaDuration` 代替。快速滑动时惯性滚动的时长，单位 ms，为 0 时表示取消惯性滚动",
+    "field_desc_en": "The duration of inertial scrolling during fast swiping, in milliseconds (ms). When set to 0, it disables inertial scrolling.",
+    "custom_field_type": "string | number"
+  },
+  {
+    "id": 1472,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 1719909526,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "usePopup",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否使用弹出层包裹"
+  },
+  {
+    "id": 1719908481,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 1485,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "选中值",
+    "custom_field_type": "Array<PickerValue>【type PickerValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1471,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示"
+  },
+  {
+    "id": 1769178306,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示。支持语法糖 `v-model:visible`"
+  },
+  {
+    "id": 1762917807,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "visibleItemCount",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "5",
+    "field_desc_zh": "可视区域 PickerItem 的子项个数",
+    "version": {
+      "Miniprogram": "1.11.2"
+    }
+  },
+  {
+    "id": 1773297544,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Props",
+    "field_name": "wheelConfig",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "【实验】滚轮滑动相关配置，用于自定义滚轮的动画和交互行为。`inertiaDuration` 表示惯性滚动的持续时长；`bounceDuration` 表示边界归位动画时长；`transitionDuration` 表示切换选项时的过渡动画时长； `inertiaTimeThreshold` 表示惯性触发的时间阈值； `inertiaDistanceThreshold` 表示惯性触发的距离阈值； `boundOffset` 表示边界偏移量；`clickDistanceThreshold` 表示点击操作的距离阈值；`clickTimeThreshold` 表示点击操作的时间阈值",
+    "custom_field_type": "PickerWheelConfig【interface PickerWheelConfig { inertiaDuration?: number; bounceDuration?: number; transitionDuration?: number; inertiaTimeThreshold?: number; inertiaDistanceThreshold?: number; boundOffset?: number; clickDistanceThreshold?: number; clickTimeThreshold?: number;}】",
+    "version": {
+      "Mobile(Vue)": "1.13.1"
+    }
+  },
+  {
+    "id": 1475,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "点击取消按钮时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1769178412,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "点击取消按钮时触发",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1477,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "选中变化时候触发",
+    "event_input": "(value: Array<PickerValue>, context: { columns: Array<PickerContext>, e: MouseEvent }) 【interface PickerContext{ column: number,index: number }】"
+  },
+  {
+    "id": 2692,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "选中变化时候触发，即确认变化时触发",
+    "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )"
+  },
+  {
+    "id": 1769178453,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "选中变化时候触发，即确认变化时触发",
+    "event_input": "(context: { value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> } )"
+  },
+  {
+    "id": 3353,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(trigger: TriggerSource)【type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn'】",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 1769178836,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "event_input": "(context: { trigger: TriggerSource })【type TriggerSource = 'overlay' | 'cancel-btn' | 'confirm-btn'】",
+    "version": {
+      "Miniprogram": "1.0.1"
+    }
+  },
+  {
+    "id": 2728,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(value: Array<PickerValue>, context: { index: number[], e: MouseEvent, label: string[] })"
+  },
+  {
+    "id": 3269,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> )"
+  },
+  {
+    "id": 1769178639,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(context: { value: Array<PickerValue>, label: string, columns: Array<{ column: number; index: number; disabled?: boolean; }> } )"
+  },
+  {
+    "id": 1476,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标",
+    "event_input": "(value: Array<PickerValue>, context: PickerContext)",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 3270,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "任何一列选中都会触发，不同的列参数不同。`column` 表示第几列变化，`index` 表示变化那一列的选中项下标",
+    "event_input": "(value: Array<PickerValue>, label: string, column: number, index: number)",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1769178824,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Events",
+    "field_name": "pick",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "取消",
+    "field_desc_zh": "任何一列选中都会触发，不同的列参数不同。`column` 表示第几列变化，`index` 表示变化那一列的选中项下标",
+    "event_input": "(context: { value: Array<PickerValue>, label: string, column: number, index: number })",
+    "trigger_elements": "MouseEvent<HTMLButtonElement>"
+  },
+  {
+    "id": 1760085971,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容"
+  },
+  {
+    "id": 1760086010,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Picker",
+    "field_category": "Slots",
+    "field_name": "content",
+    "field_type": [],
+    "field_desc_zh": "中间内容，介于头部跟内容之间"
+  }
+]

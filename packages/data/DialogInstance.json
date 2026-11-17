@@ -1,0 +1,78 @@
+[
+  {
+    "id": 713,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DialogInstance",
+    "field_category": "Functions",
+    "field_name": "destroy",
+    "field_type": [],
+    "field_desc_zh": "销毁弹框",
+    "field_required": true
+  },
+  {
+    "id": 711,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DialogInstance",
+    "field_category": "Functions",
+    "field_name": "hide",
+    "field_type": [],
+    "field_desc_zh": "隐藏弹框",
+    "field_required": true
+  },
+  {
+    "id": 1693635704,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DialogInstance",
+    "field_category": "Functions",
+    "field_name": "setConfirmLoading",
+    "field_type": [],
+    "field_desc_zh": "设置确认按钮加载状态",
+    "field_desc_en": "set confirm button loading status",
+    "event_input": "(loading: boolean)",
+    "field_required": true
+  },
+  {
+    "id": 710,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DialogInstance",
+    "field_category": "Functions",
+    "field_name": "show",
+    "field_type": [],
+    "field_desc_zh": "显示弹框",
+    "field_required": true
+  },
+  {
+    "id": 712,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DialogInstance",
+    "field_category": "Functions",
+    "field_name": "update",
+    "field_type": [],
+    "field_desc_zh": "更新弹框内容",
+    "event_input": "(props: DialogOptions)",
+    "field_required": true
+  }
+]

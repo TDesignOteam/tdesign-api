@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1923,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelectConfig",
+    "field_category": "Props",
+    "field_name": "empty",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“暂无数据”描述文本"
+  },
+  {
+    "id": 1926,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelectConfig",
+    "field_category": "Props",
+    "field_name": "loadingText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“加载中”描述文本"
+  },
+  {
+    "id": 2202,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeSelectConfig",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“请选择”占位符描述文本",
+    "field_desc_en": "placeholder text"
+  }
+]

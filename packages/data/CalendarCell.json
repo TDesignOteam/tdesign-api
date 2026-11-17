@@ -1,0 +1,98 @@
+[
+  {
+    "id": 674,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "belongTo",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "用于表示日期单元格属于哪一个月份。值为 0 表示是当前日历显示的月份中的日期，值为 -1 表示是上个月的，值为 1 表示是下个月的（日历展示维度是“月”时有值）"
+  },
+  {
+    "id": 669,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "date",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "日历单元格日期",
+    "custom_field_type": "Date"
+  },
+  {
+    "id": 671,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "day",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "日期单元格对应的星期，值为 1~7，表示周一到周日。（日历展示维度是“月”时有值）"
+  },
+  {
+    "id": 670,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "formattedDate",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "日历单元格日期字符串（输出日期的格式和 format 有关）"
+  },
+  {
+    "id": 673,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "isCurrent",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "日期单元格是否为当前高亮日期或高亮月份"
+  },
+  {
+    "id": 672,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Props",
+    "field_name": "weekOrder",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "日期在本月的第几周（日历展示维度是“月”时有值）"
+  },
+  {
+    "id": 678,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "CalendarCell",
+    "field_category": "Extends",
+    "field_name": "ControllerOptions",
+    "field_type": []
+  }
+]

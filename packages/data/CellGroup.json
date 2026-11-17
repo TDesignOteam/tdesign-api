@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1712660966,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "Props",
+    "field_name": "bordered",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示组边框"
+  },
+  {
+    "id": 3427,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "card"
+    ],
+    "field_desc_zh": "单元格组风格",
+    "version": {
+      "Vue(Mobile)": "0.15.0"
+    }
+  },
+  {
+    "id": 1078,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "单元格组标题"
+  },
+  {
+    "id": 1712027724,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712027793,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "External Classes",
+    "field_name": "t-class-title",
+    "field_type": [],
+    "field_desc_zh": "标题样式类"
+  },
+  {
+    "id": 1759139151,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "CellGroup",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

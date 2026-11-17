@@ -1,0 +1,810 @@
+[
+  {
+    "id": 1748949679,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Drawer",
+    "field_category": "Props",
+    "field_name": "context",
+    "field_type": [],
+    "custom_field_type": "AppContext",
+    "order": 1
+  },
+  {
+    "id": 3040,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "$Drawer",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [],
+    "custom_field_type": "DrawerOptions",
+    "order": 0
+  },
+  {
+    "id": 1751351068,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "$Drawer",
+    "field_category": "Return",
+    "field_name": "DrawerInstance",
+    "field_type": [],
+    "order": 2
+  },
+  {
+    "id": 692,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_desc_zh": "抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 1127,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "body",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "抽屉内容"
+  },
+  {
+    "id": 1061,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "cancelBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件",
+    "custom_field_type": "FooterButton"
+  },
+  {
+    "id": 1129,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "children",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "抽屉内容，同 body"
+  },
+  {
+    "id": 680,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "closeBtn",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_desc_zh": "关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例"
+  },
+  {
+    "id": 695,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "closeOnEscKeydown",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "按下 ESC 时是否触发抽屉关闭事件",
+    "field_desc_en": "trigger drawer close event on `ESC` keydown"
+  },
+  {
+    "id": 696,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "点击蒙层时是否触发抽屉关闭事件"
+  },
+  {
+    "id": 1734495038,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "closeOnOverlayClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "点击蒙层时是否触发抽屉关闭事件"
+  },
+  {
+    "id": 1062,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "确认按钮，可自定义。值为 null 则不显示确认按钮。类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件",
+    "custom_field_type": "FooterButton【type FooterButton = string | ButtonProps | TNode | null 】【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 1128,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "抽屉内容，同 body"
+  },
+  {
+    "id": 693,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "destroyOnClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "抽屉关闭时是否销毁节点"
+  },
+  {
+    "id": 1740207527,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "drawerClassName",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "抽屉元素类名。"
+  },
+  {
+    "id": 681,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 或 null 不显示任何内容，值类型为 TNode 表示自定义底部内容"
+  },
+  {
+    "id": 3351,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "抽屉的底部",
+    "version": {
+      "Miniprogram": "0.29.0"
+    }
+  },
+  {
+    "id": 683,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "header",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "头部内容。值为 true 显示空白头部，值为 false 不显示头部，值类型为 string 则直接显示值，值类型为 TNode 表示自定义头部内容"
+  },
+  {
+    "id": 2494,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "抽屉里的列表项",
+    "custom_field_type": "DrawerItem[] 【interface DrawerItem { title: string; icon?: TNode; }】"
+  },
+  {
+    "id": 3350,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "items",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "抽屉里的列表项",
+    "custom_field_type": "DrawerItem[]【interface DrawerItem { title: string; icon: string; }】"
+  },
+  {
+    "id": 1745545785,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否启用抽屉懒加载，启用时抽屉的内容不渲染",
+    "field_desc_en": "Enable Drawer lazy loading, the contents of the Drawer are not rendered when enable"
+  },
+  {
+    "id": 686,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "overlay",
+    "field_enum": [
+      "overlay",
+      "push"
+    ],
+    "field_desc_zh": "展开方式，有两种：直接展示在内容上方 和 推开内容区域"
+  },
+  {
+    "id": 1759993379,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "overlayProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "遮罩层的属性，透传至 overlay",
+    "custom_field_type": "OverlayProps【import { OverlayProps } from '@Overlay'】",
+    "version": {
+      "miniprogram": "1.11.0"
+    }
+  },
+  {
+    "id": 689,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right",
+    "field_enum": [
+      "left",
+      "right",
+      "top",
+      "bottom"
+    ],
+    "field_desc_zh": "抽屉方向"
+  },
+  {
+    "id": 2838,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "抽屉方向"
+  },
+  {
+    "id": 2082,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "preventScrollThrough",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "防止滚动穿透"
+  },
+  {
+    "id": 1130,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "showInAttachedElement",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative"
+  },
+  {
+    "id": 687,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "showOverlay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示遮罩层"
+  },
+  {
+    "id": 729,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "尺寸，支持 'small', 'medium', 'large'，'35px', '30%',  '3em' 等。纵向抽屉调整的是抽屉宽度，横向抽屉调整的是抽屉高度"
+  },
+  {
+    "id": 1839,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "sizeDraggable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "抽屉大小可拖拽调整，横向抽屉调整宽度，纵向抽屉调整高度。`sizeDraggable.max` 和 `sizeDraggable.min` 用于控制拖拽尺寸大小限制",
+    "field_desc_en": "allow resizing drawer width/height, set `max` or `min` to limit size",
+    "custom_field_type": "boolean | SizeDragLimit【interface SizeDragLimit { max: number, min: number }】"
+  },
+  {
+    "id": 3352,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "抽屉的标题",
+    "version": {
+      "Miniprogram": "0.29.0"
+    }
+  },
+  {
+    "id": 1719908453,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 679,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "组件是否可见"
+  },
+  {
+    "id": 690,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500"
+  },
+  {
+    "id": 3135,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500"
+  },
+  {
+    "id": 1731453410,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "beforeClose",
+    "field_type": [],
+    "field_desc_zh": "抽屉执行关闭动画效果前触发"
+  },
+  {
+    "id": 1731453385,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "beforeOpen",
+    "field_type": [],
+    "field_desc_zh": "抽屉执行打开动画效果前触发"
+  },
+  {
+    "id": 701,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "cancel",
+    "field_type": [],
+    "field_desc_zh": "如果“取消”按钮存在，点击“取消”按钮时触发，同时触发关闭事件",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>"
+  },
+  {
+    "id": 699,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭事件，取消按钮点击时、关闭按钮点击时、ESC 按下时、点击蒙层时均会触发",
+    "event_input": "(context: DrawerCloseContext)【type DrawerEventSource = 'esc' | 'close-btn' | 'cancel' | 'overlay'】【interface DrawerCloseContext { trigger: DrawerEventSource; e: MouseEvent | KeyboardEvent }】",
+    "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>"
+  },
+  {
+    "id": 2545,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发。",
+    "event_input": "(trigger: DrawerTriggerSource)【type DrawerTriggerSource = 'overlay'】"
+  },
+  {
+    "id": 700,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "closeBtnClick",
+    "field_type": [],
+    "field_desc_zh": "如果关闭按钮存在，点击关闭按钮时触发该事件，同时触发关闭事件",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 1755087499,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "closed",
+    "field_type": [],
+    "field_desc_zh": "抽屉关闭后触发"
+  },
+  {
+    "id": 706,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "如果“确认”按钮存在，则点击“确认”按钮时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLDivElement | HTMLButtonElement>"
+  },
+  {
+    "id": 702,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "escKeydown",
+    "field_type": [],
+    "field_desc_zh": "按下 ESC 键时触发",
+    "event_input": "(context: { e: KeyboardEvent })"
+  },
+  {
+    "id": 2546,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "itemClick",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "点击抽屉里的列表项",
+    "event_input": "( index: number, item: DrawerItem, context: { e: MouseEvent })"
+  },
+  {
+    "id": 1761300989,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "itemClick",
+    "field_type": [],
+    "field_desc_zh": "点击抽屉里的列表项",
+    "event_input": "(index: number; item: DrawerItem)"
+  },
+  {
+    "id": 1762362490,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "itemClick",
+    "field_type": [],
+    "field_desc_zh": "点击抽屉里的列表项",
+    "event_input": "(context: { index: number; item: DrawerItem })"
+  },
+  {
+    "id": 1754230138,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "opened",
+    "field_type": [],
+    "field_desc_zh": "抽屉打开后触发"
+  },
+  {
+    "id": 703,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "overlayClick",
+    "field_type": [],
+    "field_desc_zh": "如果蒙层存在，点击蒙层时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  },
+  {
+    "id": 2544,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "overlayClick",
+    "field_type": [],
+    "field_desc_zh": "如果蒙层存在，点击蒙层时触发"
+  },
+  {
+    "id": 1709520529,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Drawer",
+    "field_category": "Events",
+    "field_name": "sizeDragEnd",
+    "field_type": [],
+    "field_desc_zh": "抽屉大小拖拽结束时触发，事件参数 `size` 在横向抽屉中表示宽度，在纵向抽屉中表示高度",
+    "field_desc_en": "trigger on size drag end",
+    "event_input": "(context: { e: MouseEvent; size: number })"
+  },
+  {
+    "id": 1760085602,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Drawer",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "自定义抽屉的底部"
+  },
+  {
+    "id": 1760584285,
+    "platform_framework": [],
+    "component": "Drawer",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，作用同 footer 插槽"
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "id": 127,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "right",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "多层级操作时，子层级展开方向"
+  },
+  {
+    "id": 113,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用组件"
+  },
+  {
+    "id": 112,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "hideAfterItemClick",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "点击选项后是否自动隐藏弹窗"
+  },
+  {
+    "id": 118,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "maxColumnWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "100",
+    "field_desc_zh": "选项最大宽度，内容超出时，显示为省略号。值为字符串时，值就是最大宽度；值为数字时，单位：px"
+  },
+  {
+    "id": 116,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "maxHeight",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "300",
+    "field_desc_zh": "弹窗最大高度，单位：px 。统一控制每一列的高度"
+  },
+  {
+    "id": 117,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "minColumnWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "10",
+    "field_desc_zh": "选项最小宽度。值为字符串时，值就是最小宽度；值为数字时，单位：px"
+  },
+  {
+    "id": 111,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "下拉操作项",
+    "custom_field_type": "Array<DropdownOption>【type DropdownOption = { children?: DropdownOption[] } & TdDropdownItemProps & Record<string, any>】"
+  },
+  {
+    "id": 1690256011,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "panelBottomContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的底部内容",
+    "field_desc_en": "bottom content of the dropdown panel"
+  },
+  {
+    "id": 1690256029,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "panelTopContent",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "面板内的顶部内容",
+    "field_desc_en": "top content of the dropdown panel"
+  },
+  {
+    "id": 114,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "bottom-left",
+    "field_enum": [
+      "top",
+      "left",
+      "right",
+      "bottom",
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right",
+      "left-top",
+      "left-bottom",
+      "right-top",
+      "right-bottom"
+    ],
+    "field_desc_zh": "弹窗定位方式，可选值同 Popup 组件"
+  },
+  {
+    "id": 462,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传 Popup 组件全部属性，方便更加自由地控制。比如使用 popupProps.overlayStyle 设置浮层样式",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 115,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Props",
+    "field_name": "trigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "hover",
+    "field_enum": [
+      "hover",
+      "click",
+      "focus",
+      "context-menu"
+    ],
+    "field_desc_zh": "触发下拉显示的方式"
+  },
+  {
+    "id": 759,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Dropdown",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "下拉操作项点击时触发",
+    "event_input": "(dropdownItem: DropdownOption, context: { e: MouseEvent })"
+  }
+]

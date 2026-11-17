@@ -1,93 +1,50 @@
 import { MapItem, MapOptions } from '../../../types';
 
-const PC = 1;
-const MOBILE = 2;
-const MINIPROGRAM = 3;
-
-const VUE = 1;
-const REACT = 2;
-
-const STRING = 1;
-const NUMBER = 2;
-const BOOLEAN = 4;
-const OBJECT = 8;
-const ARRAY = 16;
-const FUNCTION = 32;
-const TNODE = 64;
-const Date = 128;
-const FILE = 256;
-const ANY = 512;
-const BIGINT = 1024;
-
-const P_VUE_PC = 1;
-const P_REACT_PC = 2;
-const P_ANGULAR_PC = 4;
-const P_VUE_MOBILE = 8;
-const P_REACT_MOBILE = 16;
-const P_ANGULAR_MOBILE = 32;
-const P_MINIPROGRAM = 64;
-const P_UNI_APP = 128;
-
-const API_CATEGORY_PROPS = 1;
-const API_CATEGORY_EVENTS = 2;
-const API_CATEGORY_FUNCTIONS = 4;
-// const API_CATEGORY_PLUGIN_API = 8;
-const API_CATEGORY_EXTENDS_API = 16;
-const API_CATEGORY_RETURN_API = 32;
-const API_CATEGORY_T_API = 64;
-const API_CATEGORY_CLASS_API = 128;
-const API_CATEGORY_CSS_VAR_API = 256;
-const API_CATEGORY_SLOT_API = 512;
-
 export const API_CATEGORY: MapOptions = {
-  [API_CATEGORY_PROPS]: 'Props',
-  [API_CATEGORY_EVENTS]: 'Events',
-  [API_CATEGORY_FUNCTIONS]: 'Functions',
-  // [API_CATEGORY_PLUGIN_API]: 'PluginAPI',
-  [API_CATEGORY_EXTENDS_API]: 'Extends',
-  [API_CATEGORY_RETURN_API]: 'Return',
-  [API_CATEGORY_T_API]: '<T>',
-  [API_CATEGORY_CLASS_API]: 'External Classes',
-  [API_CATEGORY_CSS_VAR_API]: 'CSS Variables',
-  [API_CATEGORY_SLOT_API]: 'Slots',
+  Props: 'Props',
+  Events: 'Events',
+  Functions: 'Functions',
+  Extends: 'Extends',
+  Return: 'Return',
+  '<T>': '<T>',
+  'External Classes': 'External Classes',
+  'CSS Variables': 'CSS Variables',
+  Slots: 'Slots',
 };
 
 export const PLATFORM_MAP: MapOptions = {
-  [PC]: 'PC',
-  [MOBILE]: 'Mobile',
-  [MINIPROGRAM]: 'MP',
+  PC: 'PC',
+  Mobile: 'Mobile',
+  MP: 'MP',
 };
 
 export const FRAMEWORK_MAP: MapOptions = {
-  [VUE]: 'Vue',
-  [REACT]: 'React',
-  [MINIPROGRAM]: 'MP',
+  Vue: 'Vue',
+  React: 'React',
+  MP: 'MP',
 };
 
 export const FIELD_TYPE_MAP: MapOptions = {
-  [STRING]: 'String',
-  [NUMBER]: 'Number',
-  [BOOLEAN]: 'Boolean',
-  [OBJECT]: 'Object',
-  [ARRAY]: 'Array',
-  [FUNCTION]: 'Function',
-  [TNODE]: 'TNode',
-  [Date]: 'Date',
-  [FILE]: 'File',
-  [ANY]: 'any',
-  [BIGINT]: 'BigInt',
+  String: 'String',
+  Number: 'Number',
+  Boolean: 'Boolean',
+  Object: 'Object',
+  Array: 'Array',
+  Function: 'Function',
+  TNode: 'TNode',
+  Date: 'Date',
+  File: 'File',
+  any: 'any',
+  BigInt: 'BigInt',
 };
 
 export const PLATFORM_FRAMEWORK: MapOptions = {
-  [P_VUE_PC]: 'Vue(PC)',
-  [P_REACT_PC]: 'React(PC)',
-  [P_VUE_MOBILE]: 'Vue(Mobile)',
-  [P_REACT_MOBILE]: 'React(Mobile)',
-  // Angular 暂未有开发计划
-  // [P_ANGULAR_PC]: 'Angular(PC)',
-  // [P_ANGULAR_MOBILE]: 'Angular(Mobile)',
-  [P_MINIPROGRAM]: 'Miniprogram',
-  [P_UNI_APP]: 'UniApp',
+  'Vue(PC)': 'Vue(PC)',
+  'React(PC)': 'React(PC)',
+  'Vue(Mobile)': 'Vue(Mobile)',
+  'React(Mobile)': 'React(Mobile)',
+  Miniprogram: 'Miniprogram',
+  UniApp: 'UniApp',
 };
 
 /**

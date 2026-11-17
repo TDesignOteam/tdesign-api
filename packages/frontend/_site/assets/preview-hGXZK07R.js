@@ -1,0 +1,1 @@
+import{E as e,L as t,q as n}from"./index-C5aZhBJW.js";import r from"./api-DqCcGkU5.js";var i={__name:`preview`,setup(i){return(i,a)=>(t(),e(n(r),{preview:``}))}};export{i as default};

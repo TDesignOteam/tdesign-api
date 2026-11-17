@@ -126,11 +126,11 @@ function getAPIData(mainApiTable, component, exclude, mpApiurl) {
     const apiObj = {
       component,
       field_name: camelCase(apiName),
-      field_category_text: type === 'eventhandle' ? 'Events' : 'Props',
-      field_type_text: [upperFirst(type)],
+      field_category: type === 'eventhandle' ? 'Events' : 'Props',
+      field_type: [upperFirst(type)],
       field_default_value: defaultValue,
-      field_required: required === '否' ? 0 : 1,
-      field_enum: childrenData.map((t) => t.value).join('/'),
+      field_required: required !== '否',
+      field_enum: childrenData.map((t) => t.value),
       field_desc_zh: enumDesc.length
         ? [
             mainDesc,

@@ -1,0 +1,457 @@
+[
+  {
+    "id": 3118,
+    "platform_framework": [],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_desc_zh": "复选框和内容相对位置；仅在使用 options 时生效"
+  },
+  {
+    "id": 3254,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "allowUncheck",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许取消选中",
+    "test_description": "{\"PC\":{\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"],\"event\":[{\"props\":{\"value\":1},\"expect\":[{\"trigger\":\"click(.t-radio)\",\"event\":{\"change\":[\"undefined\",{\"e.type\":\"click\"}]}}]}]}}"
+  },
+  {
+    "id": 3422,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启无边框模式；优先级低于 Radio"
+  },
+  {
+    "id": 1712028976,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启无边框模式"
+  },
+  {
+    "id": 1775111660,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "单选框按钮排列方式",
+    "field_desc_en": "Radio option arrangement"
+  },
+  {
+    "id": 1789894129,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "direction",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "vertical",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "单选框按钮排列方式",
+    "field_desc_en": "Radio option arrangement",
+    "version": {
+      "Miniprogram": "1.17.0",
+      "Vue(Mobile)": "1.16.3",
+      "React(Mobile)": "1.0.0",
+      "UniApp": "1.0.0"
+    }
+  },
+  {
+    "id": 498,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled",
+    "test_description": "{\"PC\":{\"dom\":{\"true\":{\".t-radio.t-is-disabled\":4}},\"event\":[{\"description\":\"disabled radio can not trigger change\",\"expect\":[{\"trigger\":\"click(.t-radio)\",\"event\":{\"change\":\"not\"}}]}],\"snapshot\":true,\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}"
+  },
+  {
+    "id": 1712651056,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用全部子单选框"
+  },
+  {
+    "id": 3119,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "'circle'",
+    "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标；仅在使用 options 时生效",
+    "custom_field_type": "'circle' | 'line' | 'dot' | Array<string>"
+  },
+  {
+    "id": 3540,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_default_value": "'circle'",
+    "field_desc_zh": "自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标",
+    "custom_field_type": "'circle' | 'line' | 'dot' | Array<TNode>"
+  },
+  {
+    "id": 3419,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 496,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "HTML 元素原生属性",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"wrapper\":\"getRadioGroupDefaultMount\",\"attribute\":[{\"value\":\"'custom-radio-name'\",\"expect\":[{\"dom\":\"input\",\"attribute\":{\"name\":\"custom-radio-name\"}}]}],\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}"
+  },
+  {
+    "id": 500,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同",
+    "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string | TNode; value?: string | number | boolean; disabled?: boolean }】",
+    "test_description": "{\"PC\":{\"wrapper\":\"getRadioGroupDefaultMount\",\"dom\":[{\".t-radio\":4},\".custom-node\",{\".t-radio.t-is-disabled\":1}]}}"
+  },
+  {
+    "id": 1425,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同",
+    "custom_field_type": "Array<RadioOption>【type RadioOption = string | number | RadioOptionObj】【interface RadioOptionObj { label?: string; value?: string | number; readonly?: boolean; disabled?: boolean; allowUncheck?: boolean; }】"
+  },
+  {
+    "id": 3420,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "复选框和内容相对位置。优先级低于 Radio.placement"
+  },
+  {
+    "id": 1731648799,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态",
+    "version": {
+      "Miniprogram": "1.8.6"
+    }
+  },
+  {
+    "id": 1762402367,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "relationKey",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "-1 时代表独立，不再寻找 parent，用于头条小程序"
+  },
+  {
+    "id": 497,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "组件尺寸【讨论中】",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 1735405582,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "radio",
+    "field_enum": [
+      "radio",
+      "button"
+    ],
+    "field_desc_zh": "用于在使用 options 方式渲染时决定组件的风格",
+    "field_desc_en": "Determine the style of radio when using options API"
+  },
+  {
+    "id": 495,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Boolean"
+    ],
+    "field_desc_zh": "选中的值",
+    "custom_field_type": "T【type RadioValue = string | number | boolean】",
+    "syntactic_sugar": "v-model",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":\"'2'\",\"expect\":[{\"dom\":\".t-radio.t-is-checked input\",\"attribute\":{\"value\":\"2\"}}]}],\"wrapper\":\"getRadioGroupDefaultMount\",\"copyTestToWrapper\":[\"getRadioGroupKidsMount\"]}}",
+    "support_default_value": true
+  },
+  {
+    "id": 1651,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "outline",
+    "field_enum": [
+      "outline",
+      "primary-filled",
+      "default-filled"
+    ],
+    "field_desc_zh": "单选组件按钮形式",
+    "test_description": "{\"PC\":{\"className\":[\"t-radio-group__outline\",\"t-radio-group--primary-filled\",\"t-radio-group--filled\"]}}"
+  },
+  {
+    "id": 501,
+    "platform_framework": [
+      "Vue(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性",
+    "event_input": "(value: T, context: { e: Event; name?:string })",
+    "test_description": "{\n    \"PC\": {\n        \"wrapper\": \"getRadioGroupDefaultMount\",\n         \"copyTestToWrapper\": [\"getRadioGroupKidsMount\"],\n        \"event\": [\n            {\n                \"props\": {\n                    \"value\": 2\n                },\n                \"description\": \"default value is 2, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            },\n            {\n                \"description\": \"default value is empty, trigger change after click\",\n                \"expect\": [\n                    {\n                        \"trigger\": \"click(.t-radio)\",\n                        \"event\": {\n                            \"change\": [\n                                1,\n                                {\n                                    \"e.type\": \"click\"\n                                }\n                            ]\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+  },
+  {
+    "id": 1231,
+    "platform_framework": [
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发, `context.name` 指 RadioGroup 的 name 属性",
+    "event_input": "(value: T, context: { e: ChangeEvent; name?: string })"
+  },
+  {
+    "id": 1712657088,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选中值发生变化时触发",
+    "event_input": "(value: RadioValue, context: { e: Event })"
+  },
+  {
+    "id": 2919,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "<T>",
+    "field_name": "<T = RadioValue>",
+    "field_type": []
+  },
+  {
+    "id": 1760086270,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "RadioGroup",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，单选框组内容"
+  }
+]

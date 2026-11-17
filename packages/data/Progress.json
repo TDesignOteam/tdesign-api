@@ -1,0 +1,256 @@
+[
+  {
+    "id": 925,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "进度条颜色。示例：'#ED7B2F' 或 'orange' 或 `['#f00', '#0ff', '#f0f']` 或 `{ '0%': '#f00', '100%': '#0ff' }` 或  `{ from: '#000', to: '#000' }` 等",
+    "custom_field_type": "string | Array<string> | Record<string, string>"
+  },
+  {
+    "id": 923,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "Boolean",
+      "TNode"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "进度百分比，可自定义"
+  },
+  {
+    "id": 921,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "percentage",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "进度条百分比"
+  },
+  {
+    "id": 928,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "'medium'",
+    "field_desc_zh": "进度条尺寸，示例：small/medium/large/240。line 和 plump 主题只支持 small/medium。circle 主题尺寸映射 small(72)、medium(112)、large(160)并支持自定义数值"
+  },
+  {
+    "id": 1744881020,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "'default'",
+    "field_desc_zh": "进度条尺寸，仅对环形进度条有效。可选值：default/micro。default 值为 112； micro 值为 24"
+  },
+  {
+    "id": 924,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "success",
+      "error",
+      "warning",
+      "active"
+    ],
+    "field_desc_zh": "进度条状态",
+    "custom_field_type": "ProgressStatus【type ProgressStatus = 'success' | 'error' | 'warning' | 'active'】"
+  },
+  {
+    "id": 927,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "strokeWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度"
+  },
+  {
+    "id": 1712650604,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "strokeWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "进度条线宽，默认单位 `px`"
+  },
+  {
+    "id": 920,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "line",
+    "field_enum": [
+      "line",
+      "plump",
+      "circle"
+    ],
+    "field_desc_zh": "进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间",
+    "custom_field_type": "ProgressTheme【type ProgressTheme = 'line' | 'plump' | 'circle'】"
+  },
+  {
+    "id": 926,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Props",
+    "field_name": "trackColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "进度条未完成部分颜色"
+  },
+  {
+    "id": 1712052944,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712052948,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "External Classes",
+    "field_name": "t-class-bar",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "进度文字样式类"
+  },
+  {
+    "id": 1712052956,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "External Classes",
+    "field_name": "t-class-label",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "标签样式类"
+  },
+  {
+    "id": 1759199823,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Progress",
+    "field_category": "Slots",
+    "field_name": "label",
+    "field_type": [],
+    "field_desc_zh": "进度百分比"
+  }
+]

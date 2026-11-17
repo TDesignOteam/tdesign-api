@@ -1,0 +1,76 @@
+[
+  {
+    "id": 3301,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewerConfig",
+    "field_category": "Props",
+    "field_name": "errorText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "全局语言配置，默认为 “图片加载失败，可尝试重新加载”"
+  },
+  {
+    "id": 3302,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewerConfig",
+    "field_category": "Props",
+    "field_name": "mirrorTipText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "全局语言配置，默认为 “镜像”",
+    "field_desc_en": "mirror operation text"
+  },
+  {
+    "id": 3304,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewerConfig",
+    "field_category": "Props",
+    "field_name": "originalSizeTipText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "全局语言配置，默认为 “原始大小”",
+    "field_desc_en": "original size tips"
+  },
+  {
+    "id": 1766063951,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewerConfig",
+    "field_category": "Props",
+    "field_name": "previewText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "全局语言配置，默认为 “预览”",
+    "field_desc_en": "preview text"
+  },
+  {
+    "id": 3303,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ImageViewerConfig",
+    "field_category": "Props",
+    "field_name": "rotateTipText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "全局语言配置，默认为 “旋转”",
+    "field_desc_en": "rotate operation text"
+  }
+]

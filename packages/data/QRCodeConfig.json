@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1749615440,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCodeConfig",
+    "field_category": "Props",
+    "field_name": "expiredText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“二维码过期”描述文本",
+    "field_desc_en": "Language configuration, \"QR code expired\" description text"
+  },
+  {
+    "id": 1749615415,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCodeConfig",
+    "field_category": "Props",
+    "field_name": "refreshText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“点击刷新”描述文本",
+    "field_desc_en": "Language configuration, \"QR code refresh\" description text"
+  },
+  {
+    "id": 1749615421,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "QRCodeConfig",
+    "field_category": "Props",
+    "field_name": "scannedText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“已扫描”描述文本",
+    "field_desc_en": "Language configuration, \"QR code scanned\" description text"
+  }
+]

@@ -1,5 +1,39 @@
 :: BASE_DOC ::
 
+### 插件函数式调用
+
+#### 插件调用
+
+- 方式一：`this.$dialog(options)`
+
+- 方式二：`this.$dialog.confirm(options)`
+
+- 方式三：`this.$dialog.alert(options)`
+
+#### 函数调用
+
+- 方式一：`DialogPlugin(options)`
+
+- 方式二：`DialogPlugin.confirm(options)`
+
+- 方式三：`DialogPlugin.alert(options)`
+
+#### 组件实例方法
+
+组件实例指的是 `DialogInstance = this.$dialog(options)` 或者 `DialogInstance = DialogPlugin(options)`。
+
+- 销毁弹框：`DialogInstance.destroy()`
+
+- 隐藏弹框：`DialogInstance.hide()`
+
+- 显示弹窗：`DialogInstance.show()`
+
+- 更新弹框：`DialogInstance.update()`
+
+注意在以下使用示例中，有多处并未销毁 DOM 元素。在实际应用中，需要考虑销毁 DOM 元素，否则当用户重复点击、创建插件或函数调用的实例后，会产生大量 DOM 元素、容易造成内存泄漏。
+
+{{ plugin }}
+
 ## API
 
 ### DialogCard Props
@@ -8,9 +42,9 @@
 -- | -- | -- | -- | --
 body | String / Slot / Function | - | 对话框内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 cancelBtn | String / Object / Slot / Function | - | 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件。TS 类型：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
-closeBtn | String / Boolean / Slot / Function | true | 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例。TS 类型：`string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
-confirmBtn | String / Object / Slot / Function | true | 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：`string \| ButtonProps \| TNode \| null`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-confirmLoading | Boolean | - | 确认按钮加载状态。TS 类型：`string \| ButtonProps \| TNode \| null`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+closeBtn | String / Boolean / Slot / Function | true | 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。值类型为 TNode，则表示呈现自定义按钮示例。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+confirmBtn | String / Object / Slot / Function | - | 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件。TS 类型：`string \| ButtonProps \| TNode \| null`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+confirmLoading | Boolean | undefined | 确认按钮加载状态 | N
 footer | Boolean / Slot / Function | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 header | String / Boolean / Slot / Function | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 theme | String | default | 对话框风格。可选项：default/info/warning/danger/success | N
@@ -43,9 +77,10 @@ confirmLoading | Boolean | undefined | 确认按钮加载状态 | N
 confirmOnEnter | Boolean | - | 是否在按下回车键时，触发确认事件 | N
 default | String / Slot / Function | - | 对话框内容，同 body。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | 是否在关闭弹框的时候销毁子元素 | N
-dialogClassName | String | - | 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' | N
+dialogClassName | String / Object / Array | - | 弹框元素类名，示例：'t-class-dialog-first t-class-dialog-second' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`。TS 类型：`ClassName`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 dialogStyle | Object | - | 作用于对话框本身的样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 draggable | Boolean | false | 是否可以拖拽（对全屏对话框无效） | N
+focusable | Object | - | 对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。TS 类型：`DialogFocusable` `interface DialogFocusable { defaultFocus?: null \| 'confirm-button' \| 'cancel-button' \| (() => HTMLElement \| null); focusTrap?: boolean; focusTriggerAfterClose: boolean }`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
 footer | Boolean / Slot / Function | true | 底部操作栏，默认会有“确认”和“取消”两个按钮。值为 true 显示默认操作按钮，值为 false 不显示任何内容，值类型为 Function 表示自定义底部内容。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 header | String / Boolean / Slot / Function | true | 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 string 则直接显示值，值类型为 Function 表示自定义头部内容。TS 类型：`string \| boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 lazy | Boolean | false | 是否启用对话框懒加载，启用时对话框内的内容不渲染 | N
@@ -54,12 +89,12 @@ placement | String | top | 对话框位置，内置两种：垂直水平居中�
 preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-sizeDraggable | Boolean / Object | false | 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。。TS 类型：`boolean \| DialogSizeDragLimit` `interface DialogSizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
+sizeDraggable | Boolean / Object | false | 弹窗大小可拖拽调整。`sizeDraggable.maxWidth`、`sizeDraggable.minWidth`、`sizeDraggable.maxHeight`、`sizeDraggable.minHeight` 用于控制拖拽尺寸大小限制。TS 类型：`boolean \| DialogSizeDragLimit` `interface DialogSizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
 theme | String | default | 对话框风格。可选项：default/info/warning/danger/success | N
 top | String / Number | - | 用于弹框具体窗口顶部的距离，优先级大于 placement | N
 visible | Boolean | - | 控制对话框是否显示 | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
-zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
+zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 | N
 onBeforeClose | Function |  | TS 类型：`() => void`<br/>对话框执行消失动画效果前触发 | N
 onBeforeOpen | Function |  | TS 类型：`() => void`<br/>对话框执行弹出动画效果前触发 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N

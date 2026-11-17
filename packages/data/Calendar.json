@@ -1,0 +1,984 @@
+[
+  {
+    "id": 1762761101,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "allowSameDay",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效",
+    "version": {
+      "Miniprogram": "1.11.2"
+    }
+  },
+  {
+    "id": 3263,
+    "platform_framework": [
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "autoClose",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 656,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "cell",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "单元格插槽",
+    "custom_field_type": "string | TNode<CalendarCell>"
+  },
+  {
+    "id": 657,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "cellAppend",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "单元格插槽，在原来的内容之后追加",
+    "custom_field_type": "string | TNode<CalendarCell>"
+  },
+  {
+    "id": 3140,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "confirmBtn",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性",
+    "custom_field_type": "string | ButtonProps | TNode | null【import { ButtonProps } from '@Button'】"
+  },
+  {
+    "id": 658,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "controllerConfig",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "右上角控制器配置。支持全局配置。值为 false 则表示不显示控制器，值为 true 则显示控制器默认配置，值类型为 CalendarController 则显示为自定义控制器配置",
+    "custom_field_type": "boolean | CalendarController"
+  },
+  {
+    "id": 1840,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "fillWithZero",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "小于 10 的日期，是否使用 '0' 填充。支持全局配置。默认表现为 `01` `02`，值为 false 表现为 `1` `2` `9`"
+  },
+  {
+    "id": 647,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "firstDayOfWeek",
+    "field_type": [
+      "Number"
+    ],
+    "field_enum": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "field_desc_zh": "第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1"
+  },
+  {
+    "id": 3141,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "firstDayOfWeek",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "第一天从星期几开始，默认 0 = 周日"
+  },
+  {
+    "id": 667,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "'YYYY-MM-DD'",
+    "field_desc_zh": "用于格式化日期，决定事件参数 formattedFilterDate 的输出值。[详细文档](https://day.js.org/docs/en/display/format)"
+  },
+  {
+    "id": 3139,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "用于格式化日期的函数",
+    "custom_field_type": "CalendarFormatType 【type CalendarFormatType = (day: TDate) => TDate】【type TDateType = 'selected' | 'disabled' | 'start' | 'start-end' |'centre' | 'end' | ''】【interface TDate { date: Date; day: number; type: TDateType; className?: string; prefix?: string; suffix?: string;}】"
+  },
+  {
+    "id": 655,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "head",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "头部插槽（左上角处，默认不显示任何内容）",
+    "custom_field_type": "string | TNode<ControllerOptions>"
+  },
+  {
+    "id": 650,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "isShowWeekendDefault",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "默认是否显示周末"
+  },
+  {
+    "id": 1731402896,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "localeText",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "国际化文案",
+    "custom_field_type": "CalendarLocaleText【interface CalendarLocaleText {title?: string; weekdays?: string[]; monthTitle?: string; months?: string[]; confirm?: string;}】"
+  },
+  {
+    "id": 3142,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "maxDate",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "最大可选的日期，不传则默认半年后"
+  },
+  {
+    "id": 3440,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "maxDate",
+    "field_type": [
+      "Number",
+      "Date"
+    ],
+    "field_desc_zh": "最大可选的日期，不传则默认半年后",
+    "custom_field_type": "number | Date"
+  },
+  {
+    "id": 3143,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "minDate",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "最小可选的日期，不传则默认今天"
+  },
+  {
+    "id": 3441,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "minDate",
+    "field_type": [
+      "Number",
+      "Date"
+    ],
+    "field_desc_zh": "最小可选的日期，不传则默认今天",
+    "custom_field_type": "number | Date"
+  },
+  {
+    "id": 645,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "mode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "month",
+    "field_enum": [
+      "month",
+      "year"
+    ],
+    "field_desc_zh": "日历展示维度"
+  },
+  {
+    "id": 2622,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "month",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "控制当前面板展示月份，优先级高于 `controllerConfig.month`"
+  },
+  {
+    "id": 3193,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "multiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否高亮多个日期单元格"
+  },
+  {
+    "id": 1770345080,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "popupProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传 Popup 组件全部属性",
+    "field_desc_en": "popup properties",
+    "custom_field_type": "PopupProps【import { PopupProps } from '@Popup'】"
+  },
+  {
+    "id": 649,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "preventCellContextmenu",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用单元格右键默认系统菜单"
+  },
+  {
+    "id": 646,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "range",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "用于设置日历的年月份显示范围，[范围开始，范围结束]。示例一：`['2018-08', '2028-04']`。示例二：`[new Date(2018, 8), new Date(2028, 4)]`。传入列表的两项均能被`dayjs`正常解析时才能使指定的日历范围生效，仅有一项正常解析时则为仅指定日历范围上限或下限",
+    "field_desc_en": "Set the year and month display range of calendar, [start, end]. Example 1: `['2018-08', '2028-04']`. Example 2: `[new Date(2018, 8), new Date(2028, 4)]`. Only when both items from the input list can be parsed normally by `dayjs` can the specified calendar range take effect, while you can set the start or end of the range separately by inputting a list with only one item that can be parsed normally",
+    "custom_field_type": "Array<CalendarValue>【type CalendarValue = string | Date】"
+  },
+  {
+    "id": 1751268445,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否只读，只读状态下不能选择日期",
+    "version": {
+      "Miniprogram": "1.9.7",
+      "Vue(Mobile)": "1.9.3",
+      "React(Mobile)": "0.16.0"
+    }
+  },
+  {
+    "id": 1731498486,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "switchMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "none",
+    "field_enum": [
+      "none",
+      "month",
+      "year-month"
+    ],
+    "field_desc_zh": "切换模式。 `none` 表示平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换",
+    "version": {
+      "Miniprogram": "1.8.2",
+      "Vue(Mobile)": "1.8.1",
+      "React(Mobile)": "0.16.0"
+    }
+  },
+  {
+    "id": 644,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "full",
+    "field_enum": [
+      "full",
+      "card"
+    ],
+    "field_desc_zh": "日历风格"
+  },
+  {
+    "id": 3144,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "标题，不传默认为“请选择日期”"
+  },
+  {
+    "id": 3145,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "single",
+    "field_enum": [
+      "single",
+      "multiple",
+      "range"
+    ],
+    "field_desc_zh": "日历的选择类型，single = 单选；multiple = 多选; range = 区间选择"
+  },
+  {
+    "id": 3220,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "usePopup",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否使用弹出层包裹日历",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1719908432,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "usingCustomNavbar",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否使用了自定义导航栏"
+  },
+  {
+    "id": 643,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Array",
+      "Date"
+    ],
+    "field_desc_zh": "当前高亮的日期",
+    "custom_field_type": "CalendarValue | CalendarValue[]【type CalendarValue = string | Date】"
+  },
+  {
+    "id": 3138,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Number",
+      "Array"
+    ],
+    "field_desc_zh": "当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组",
+    "custom_field_type": "number | number[]",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3442,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "Number",
+      "Array",
+      "Date"
+    ],
+    "field_desc_zh": "当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组",
+    "custom_field_type": "CalendarValue【type CalendarValue = TCalendarValue | TCalendarValue[]】【type TCalendarValue = number | Date】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3146,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示日历；`usePopup` 为 true 时有效"
+  },
+  {
+    "id": 1255,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "week",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义日历星期呈现方式。CalendarWeek.day 表示当前是星期几。示例一：['周一', '周二', '周三', '周四', '周五', '星期六', '星期天']。示例二：`({ day }) => '周' + day`",
+    "custom_field_type": "Array<string> | TNode<CalendarWeek>【interface CalendarWeek { day: WeekDay }】【type WeekDay = 1 | 2 | 3 | 4 | 5 | 6 | 7】"
+  },
+  {
+    "id": 2621,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Props",
+    "field_name": "year",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "控制当前面板展示年份，优先级高于 `controllerConfig.year`"
+  },
+  {
+    "id": 651,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "cellClick",
+    "field_type": [],
+    "field_desc_zh": "日历单元格点击时触发",
+    "event_input": "(options: { cell: CalendarCell; e: MouseEvent })"
+  },
+  {
+    "id": 652,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "cellDoubleClick",
+    "field_type": [],
+    "field_desc_zh": "日历单元格双击时触发",
+    "event_input": "(options: { cell: CalendarCell; e: MouseEvent })"
+  },
+  {
+    "id": 653,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "cellRightClick",
+    "field_type": [],
+    "field_desc_zh": "日历单元格右击时触发",
+    "event_input": "(options: { cell: CalendarCell; e: MouseEvent })"
+  },
+  {
+    "id": 3221,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）",
+    "event_input": "(value: timestamp)",
+    "version": {
+      "Miniprogram": "0.28.0"
+    }
+  },
+  {
+    "id": 3443,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）",
+    "event_input": "(value: CalendarValue)"
+  },
+  {
+    "id": 1762352534,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）",
+    "event_input": "(context: { value: number | number[] })",
+    "version": {
+      "Miniprogram": "0.28.0"
+    }
+  },
+  {
+    "id": 3264,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮时触发",
+    "event_input": "(trigger: CalendarTrigger)【type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay' | 'auto-close'】",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 1769273793,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭按钮时触发",
+    "event_input": "(context: { trigger: CalendarTrigger })【type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay' | 'auto-close'】",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 3222,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(value: timestamp)"
+  },
+  {
+    "id": 3444,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(value: CalendarValue)"
+  },
+  {
+    "id": 1762352506,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "点击确认按钮时触发",
+    "event_input": "(context: { value: number | number[] })"
+  },
+  {
+    "id": 654,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "controllerChange",
+    "field_type": [],
+    "field_desc_zh": "右上角控件组选中值有变化的时候触发",
+    "event_input": "(options: ControllerOptions)【interface ControllerOptions { filterDate: Date; formattedFilterDate: string; mode: string; isShowWeekend: boolean }】"
+  },
+  {
+    "id": 2036,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "monthChange",
+    "field_type": [],
+    "field_desc_zh": "月份切换时触发",
+    "event_input": "(options: { month: string; year: string })"
+  },
+  {
+    "id": 1734943734,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "panelChange",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "切换月或年时触发（switch-mode 不为 none 时有效）",
+    "event_input": "(context: { year: number, month: number })",
+    "version": {
+      "Miniprogram": "1.8.4",
+      "Vue(Mobile)": "1.8.1",
+      "React(Mobile)": "0.16.0"
+    }
+  },
+  {
+    "id": 1720685482,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动时触发",
+    "field_desc_en": "triggered when scrolling",
+    "event_input": "({scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY})",
+    "version": {
+      "Miniprogram": "1.4.6"
+    }
+  },
+  {
+    "id": 1738927900,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动时触发",
+    "field_desc_en": "triggered when scrolling",
+    "event_input": "(context: {e: Event})",
+    "version": {
+      "Vue(Mobile)": "1.8.1"
+    }
+  },
+  {
+    "id": 1751472646,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动时触发",
+    "field_desc_en": "triggered when scrolling",
+    "event_input": "(context: {e: React.UIEvent})",
+    "version": {
+      "React(Mobile)": "0.16.0"
+    }
+  },
+  {
+    "id": 1769273885,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "scroll",
+    "field_type": [],
+    "field_desc_zh": "滚动时触发",
+    "field_desc_en": "triggered when scrolling",
+    "event_input": "(context: {scrollLeft: number, scrollTop: number, scrollHeight: number, scrollWidth: number, deltaX: number, deltaY: number})",
+    "version": {
+      "Miniprogram": "1.4.6"
+    }
+  },
+  {
+    "id": 3223,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "select",
+    "field_type": [],
+    "field_desc_zh": "点击日期时触发",
+    "event_input": "(value: timestamp)",
+    "version": {
+      "Miniprogram": "0.28.0"
+    }
+  },
+  {
+    "id": 3445,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "select",
+    "field_type": [],
+    "field_desc_zh": "点击日期时触发",
+    "event_input": "(value: Date)"
+  },
+  {
+    "id": 1762352614,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Events",
+    "field_name": "select",
+    "field_type": [],
+    "field_desc_zh": "点击日期时触发",
+    "event_input": "(context: { value: number | number[] })",
+    "version": {
+      "Miniprogram": "0.28.0"
+    }
+  },
+  {
+    "id": 1707207245,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Calendar",
+    "field_category": "Functions",
+    "field_name": "toCurrent",
+    "field_type": [],
+    "field_desc_zh": "跳转到今天",
+    "field_desc_en": "go to today"
+  },
+  {
+    "id": 1759132103,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Slots",
+    "field_name": "confirm-btn",
+    "field_type": [],
+    "field_desc_zh": "确认按钮"
+  },
+  {
+    "id": 1759132116,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Calendar",
+    "field_category": "Slots",
+    "field_name": "title",
+    "field_type": [],
+    "field_desc_zh": "标题"
+  }
+]

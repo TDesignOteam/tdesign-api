@@ -1,0 +1,269 @@
+[
+  {
+    "id": 3286,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Badge 组件"
+  },
+  {
+    "id": 1762402124,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "{}",
+    "field_desc_zh": "透传至 Badge 组件"
+  },
+  {
+    "id": 735,
+    "platform_framework": [
+      "Vue(PC)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "default",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义选项卡导航，同 panel"
+  },
+  {
+    "id": 165,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "destroyOnHide",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "选项卡内容隐藏时是否销毁"
+  },
+  {
+    "id": 163,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用当前选项卡"
+  },
+  {
+    "id": 3337,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "draggable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "选项卡组件开启允许拖动排序时，当前选项卡是否允许拖动"
+  },
+  {
+    "id": 1711974931,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "`1.0.0-rc.1`。图标，传对象则透传至 Icon"
+  },
+  {
+    "id": 1736961692,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 162,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "选项卡名称，可自定义选项卡导航内容"
+  },
+  {
+    "id": 2654,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "选项卡名称"
+  },
+  {
+    "id": 1697074419,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "lazy",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否启用选项卡懒加载",
+    "field_desc_en": "Enable tab lazy loading"
+  },
+  {
+    "id": 737,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "panel",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "用于自定义选项卡面板内容"
+  },
+  {
+    "id": 164,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "removable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "当前选项卡是否允许移除"
+  },
+  {
+    "id": 161,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选项卡的值，唯一标识",
+    "custom_field_type": "TabValue"
+  },
+  {
+    "id": 3523,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "选项卡的值，唯一标识",
+    "custom_field_type": "TabValue【import { TabValue } from '@Tabs'】"
+  },
+  {
+    "id": 727,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TabPanel",
+    "field_category": "Events",
+    "field_name": "remove",
+    "field_type": [],
+    "field_desc_zh": "点击删除按钮时触发",
+    "event_input": "(options: { value: TabValue; e: MouseEvent })",
+    "trigger_elements": "MouseEvent<SVGSVGElement>"
+  },
+  {
+    "id": 1760086671,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "TabPanel",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义选项卡面板内容"
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1762424934,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "actionBar",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "['replay', 'copy', 'good', 'bad', 'share']",
+    "field_desc_zh": "操作栏配置",
+    "custom_field_type": "Array<'replay'|'copy'|'good'|'bad'|'share'|'quote'>"
+  },
+  {
+    "id": 1762424897,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "chatId",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "【实验】聊天消息的唯一标识"
+  },
+  {
+    "id": 1762424950,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "comment",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "good",
+      "bad"
+    ],
+    "field_desc_zh": "评价类型， 可选 'good'（点赞） 或者 'bad'（点踩）， 默认为空"
+  },
+  {
+    "id": 1762425190,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "被复制的内容"
+  },
+  {
+    "id": 1762425266,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "copyMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "markdown",
+    "field_enum": [
+      "markdown",
+      "text"
+    ],
+    "field_desc_zh": "【实验】复制内容的模式，可选 'markdown'（复制markdown原文）或 'text'（复制纯文本）"
+  },
+  {
+    "id": 1762425307,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "【讨论中】操作按钮是否可点击"
+  },
+  {
+    "id": 1773835656,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "longPressPosition",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "【实验】长按操作栏位置",
+    "custom_field_type": "ChatActionbarLongPressPosition 【interface ChatActionbarLongPressPosition { type?: object, value?: LongPressPositionValue }】 【interface LongPressPositionValue { pageX?: number, pageY?: number, clientX?: number, clientY?: number, x?: number, y?: number }】"
+  },
+  {
+    "id": 1762425290,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "start",
+    "field_enum": [
+      "start",
+      "end",
+      "space-around",
+      "space-between",
+      "longpress"
+    ],
+    "field_desc_zh": "【实验】操作栏位置"
+  },
+  {
+    "id": 1762424600,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ChatActionbar",
+    "field_category": "Events",
+    "field_name": "actions",
+    "field_type": [],
+    "field_desc_zh": "点击点赞，点踩，复制，分享，重新生成按钮时触发发",
+    "event_input": "(context: {name: string, active: boolean, chatId: string})"
+  }
+]

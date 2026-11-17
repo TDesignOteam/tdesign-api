@@ -1,0 +1,45 @@
+[
+  {
+    "id": 2024,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheetItem",
+    "field_category": "Props",
+    "field_name": "color",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "选项的文本颜色"
+  },
+  {
+    "id": 2025,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheetItem",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用选项"
+  },
+  {
+    "id": 2023,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "ActionSheetItem",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "选项的展示文本",
+    "field_required": true
+  }
+]

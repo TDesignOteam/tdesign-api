@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1740488877,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ConfigProvider",
+    "field_category": "Props",
+    "field_name": "globalConfig",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "全局配置",
+    "field_desc_en": "global config",
+    "custom_field_type": "GlobalConfigProvider"
+  },
+  {
+    "id": 1770278274,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "ConfigProvider",
+    "field_category": "Props",
+    "field_name": "themeVars",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "全局配置",
+    "field_desc_en": "theme Variables"
+  }
+]

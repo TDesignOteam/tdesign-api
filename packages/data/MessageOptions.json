@@ -1,0 +1,118 @@
+[
+  {
+    "id": 126,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "attach",
+    "field_type": [
+      "String",
+      "Function"
+    ],
+    "field_default_value": "'body'",
+    "field_desc_zh": "指定弹框挂载的父节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body",
+    "custom_field_type": "AttachNode"
+  },
+  {
+    "id": 2889,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "className",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "类名",
+    "field_desc_en": "HTMLElement class"
+  },
+  {
+    "id": 123,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "offset",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "相对于 placement 的偏移量，示例：[-10, 20] 或 ['10em', '8rem']",
+    "custom_field_type": "Array<string | number>"
+  },
+  {
+    "id": 122,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "top",
+    "field_enum": [
+      "center",
+      "top",
+      "left",
+      "right",
+      "bottom",
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right"
+    ],
+    "field_desc_zh": "弹出消息位置",
+    "custom_field_type": "MessagePlacementList【type MessagePlacementList = 'center' | 'top' | 'left' | 'right' | 'bottom' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'】"
+  },
+  {
+    "id": 2888,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "内敛样式",
+    "field_desc_en": "CSS style",
+    "custom_field_type": "CSSProperties"
+  },
+  {
+    "id": 124,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "6000",
+    "field_desc_zh": "消息层级"
+  },
+  {
+    "id": 249,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "MessageOptions",
+    "field_category": "Extends",
+    "field_name": "TdMessageProps",
+    "field_type": []
+  }
+]

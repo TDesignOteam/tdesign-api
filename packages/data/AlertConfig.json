@@ -1,0 +1,30 @@
+[
+  {
+    "id": 2403,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AlertConfig",
+    "field_category": "Props",
+    "field_name": "collapseText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“收起”描述文本"
+  },
+  {
+    "id": 2402,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "AlertConfig",
+    "field_category": "Props",
+    "field_name": "expandText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，“展开更多”描述文本"
+  }
+]

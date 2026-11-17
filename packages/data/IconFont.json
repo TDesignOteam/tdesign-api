@@ -1,0 +1,120 @@
+[
+  {
+    "id": 240,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "loadDefaultIcons",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否加载组件库内置图标"
+  },
+  {
+    "id": 235,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "图标名称",
+    "field_required": true
+  },
+  {
+    "id": 236,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等"
+  },
+  {
+    "id": 237,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "style",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "可用于设置图标颜色，如：style=\\\"color: red\\\"",
+    "html_attribute": true
+  },
+  {
+    "id": 238,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "tag",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "i",
+    "field_desc_zh": "图标 DOM 元素，可选值：i/span/div/..."
+  },
+  {
+    "id": 239,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_desc_zh": "图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.css)。也可以在 index.html 中引入图标地址",
+    "custom_field_type": "string | Array<string>"
+  },
+  {
+    "id": 1248,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "IconFont",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击时触发",
+    "event_input": "(context: { e: MouseEvent })"
+  }
+]

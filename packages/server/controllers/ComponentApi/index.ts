@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { BaseObject, MapItem, MapOptions, QueryPaginationProps } from '../../../types';
 import TAPI from '../../services';
 import execScript from '../../services/execute';
@@ -13,23 +12,11 @@ import {
   API_CATEGORY,
 } from './const';
 
-function handleSuccess(resolve: Function) {
-  return (data: any) => {
-    resolve({
-      code: 0,
-      msg: 'success',
-      data,
-    });
-  };
-}
-
-function handleError(reject: Function) {
-  return (e: any) => {
-    reject({
-      code: 10001,
-      msg: 'failed',
-      error: e,
-    });
+function success(data: any) {
+  return {
+    code: 0,
+    msg: 'success',
+    data,
   };
 }
 
@@ -45,72 +32,23 @@ function removeRepeat(array: Array<MapItem>) {
   return r;
 }
 
-// 仅真正的 JSON null 表示「清空字段」，需要落库为 SQL NULL。
-// 注意：字符串 'null'/'undefined' 是合法的默认值字面量（如 Calendar.readonly 默认值即为 undefined），
-// 用于生成脚本判断是否为受控/非受控属性，不能归一成 NULL，否则默认值信息会丢失。
-function isClearValue(value: any) {
-  return value === null;
-}
-
-// 仅创建时使用：过滤掉未填写的字段（空字符串、NaN、字符串 'null'/'undefined'）
 function filterParams(params: BaseObject) {
   const r: BaseObject = {};
   Object.keys(params).forEach((key) => {
     const value = params[key];
-    if (!['', 'NaN', 'null', 'undefined'].includes(String(value))) {
+    if (value !== null && value !== undefined && value !== '' && !Number.isNaN(value)) {
       r[key] = value;
     }
   });
   return r;
 }
 
-function formatParams(params: BaseObject, clearEmpty?: Boolean) {
-  // 创建时过滤未填写字段；更新时保留传入的所有字段，显式 null 落库为 NULL 以清空可空字段
-  const _params = clearEmpty ? filterParams(params) : params;
-  Object.keys(_params).forEach((key) => {
-    if (isClearValue(_params[key])) _params[key] = null;
-  });
-  // 处理框架类型
-  if (_params.platform_framework) {
-    const p = _params.platform_framework as Array<string | number>;
-    _params.platform_framework = p.length ? p.reduce((r, v) => Number(r) + Number(v)) : 0;
-  }
-  // 处理API类型
-  if (_params.field_type) {
-    const q = _params.field_type as Array<string | number>;
-    if (q.length) {
-      _params.field_type = q.reduce((r, v) => Number(r) + Number(v));
-    } else {
-      delete _params.field_type;
-    }
-  }
-  // 处理 API 分类
-  if (_params.field_category) {
-    _params.field_category = Number(_params.field_category);
-  }
-  // 字段没传，表示不修改这个字段。不能赋值为 ''
-  if (params.trigger_elements !== undefined) {
-    _params.trigger_elements = _params.trigger_elements || '';
-  }
-  return _params;
-}
-
 async function apiCreate(params: BaseObject) {
-  return new Promise((resolve, reject) => {
-    console.info('~~~~~', formatParams(params, true));
-    TAPI.create(formatParams(params, true)).then(handleSuccess(resolve), handleError(reject));
-  });
+  return success(await TAPI.create(params));
 }
 
-function formatIntToArray(map: MapOptions, p: number) {
-  const platforms = Object.keys(map);
-  return platforms.filter((num: string) => (Number(num) & p) === Number(num));
-}
-
-export function apiDelete(params: BaseObject) {
-  return new Promise((resolve, reject) => {
-    TAPI.delete(Number(params.id)).then(handleSuccess(resolve), handleError(reject));
-  });
+export async function apiDelete(params: BaseObject) {
+  return success(await TAPI.delete(Number(params.id)));
 }
 
 export function getMap() {
@@ -125,14 +63,9 @@ export function getMap() {
   };
 }
 
-export function apiUpdate(params: BaseObject) {
-  console.info(params);
-
-  return new Promise((resolve, reject) => {
-    const { id } = params;
-    delete params.id;
-    TAPI.update(formatParams(params), Number(id)).then(handleSuccess(resolve), handleError(reject));
-  });
+export async function apiUpdate(params: BaseObject) {
+  const { id, ...changes } = params;
+  return success(await TAPI.update(changes, Number(id)));
 }
 
 function formatMap(obj: { [key: string]: string }) {
@@ -140,23 +73,10 @@ function formatMap(obj: { [key: string]: string }) {
   Object.keys(obj).forEach((key: string) => {
     r.push({
       label: obj[key],
-      value: key,
+      value: obj[key],
     });
   });
   return r;
-}
-
-function formatRecords(records: any) {
-  return records.map((item: any) => {
-    item.create_time = moment(item.create_time).format('YYYY-MM-DD HH:mm:ss');
-    item.update_time = moment(item.update_time).format('YYYY-MM-DD HH:mm:ss');
-    item.field_category_text = API_CATEGORY[String(item.field_category)];
-    item.platform_framework = formatIntToArray(PLATFORM_FRAMEWORK, item.platform_framework);
-    item.platform_framework_text = item.platform_framework.map((index: string) => PLATFORM_FRAMEWORK[index]);
-    item.field_type = formatIntToArray(FIELD_TYPE_MAP, item.field_type);
-    item.field_type_text = item.field_type.map((index: string) => FIELD_TYPE_MAP[index]);
-    return item;
-  });
 }
 
 async function queryRecords(params: BaseObject) {
@@ -172,12 +92,10 @@ async function queryRecords(params: BaseObject) {
 
   const [res, total]: any = await TAPI.query(p, paginationParams);
 
-  const formattedData = formatRecords(res);
-
   return {
     code: 0,
     msg: 'success',
-    data: formattedData,
+    data: res,
     total,
   };
 }
@@ -194,15 +112,14 @@ async function generateAPI(params: { commandLines: string[] }) {
   };
 }
 
-async function exportAPI() {
+async function exportData()
+{
   const [res]: any = await TAPI.query();
-
-  const formattedData = formatRecords(res);
-
+  
   return {
     code: 0,
     msg: 'success',
-    data: formattedData,
+    data: res,
   };
 }
 
@@ -250,6 +167,6 @@ export default {
   apiDelete,
   apiUpdate,
   generateAPI,
-  exportAPI,
+  exportData,
   generateUnitTest,
 };

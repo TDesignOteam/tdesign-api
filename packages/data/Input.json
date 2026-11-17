@@ -1,0 +1,1807 @@
+[
+  {
+    "id": 2670,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "MP_EXCLUDE_PROPS",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "为避免重复或冲突，需要过滤掉的小程序原生属性",
+    "custom_field_type": "value,placeholder,disabled,maxlength"
+  },
+  {
+    "id": 2669,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "MP_PROPS",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "[小程序原生属性](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)",
+    "custom_field_type": "input"
+  },
+  {
+    "id": 1712027041,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "adjustPosition",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "键盘弹起时，是否自动上推页面"
+  },
+  {
+    "id": 1738,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "align",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "center",
+      "right"
+    ],
+    "field_desc_zh": "文本内容位置，居左/居中/居右",
+    "field_desc_en": "text align type",
+    "test_description": "{\"PC\":{\"className\":[{\"t-align-left\":false},\"t-align-center\",\"t-align-right\"],\"classNameDom\":\".t-input\",\"snapshot\":true}}"
+  },
+  {
+    "id": 2727,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "allowInputOverMax",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入",
+    "field_desc_en": "allow to continue input on value length is over `maxlength` or `maxcharacter`",
+    "version": {
+      "Miniprogram": "1.8.6"
+    },
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello\",\"maxlength\":5},\"expect\":[{\"trigger\":\"simulateInputChange('input', \\\"Hello TDesign\\\")\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello\"}}}]}]}]}}"
+  },
+  {
+    "id": 1712026816,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "alwaysEmbed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效)"
+  },
+  {
+    "id": 1712026485,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "autoFocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "(即将废弃，请直接使用 focus )自动聚焦，拉起键盘"
+  },
+  {
+    "id": 2320,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "autoWidth",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "宽度随内容自适应",
+    "field_desc_en": "input width is fit to input content"
+  },
+  {
+    "id": 2365,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "autocomplete",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)",
+    "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)",
+    "test_description": "{\"PC\":{\"attribute\":{\"autocomplete\":\"https://tdesign.tencent.com/\"},\"attributeDom\":\"input\"}}"
+  },
+  {
+    "id": 1059,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "自动聚焦",
+    "field_desc_en": "autofocus on first rendered",
+    "test_description": "{\"PC\":{\"attribute\":[{\"value\":false,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":false}}]},{\"value\":true,\"expect\":[{\"dom\":\"input\",\"attribute\":{\"autofocus\":\"toBeDefined\"}}]}]}}"
+  },
+  {
+    "id": 2372,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "borderless",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启无边框模式",
+    "field_desc_en": "input without border"
+  },
+  {
+    "id": 1712025475,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "clearTrigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "always",
+    "field_enum": [
+      "always ",
+      " focus"
+    ],
+    "field_desc_zh": "清空图标触发方式，仅在输入框有值时有效",
+    "field_desc_en": "show clear icon, clicked to clear input value"
+  },
+  {
+    "id": 742,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可清空",
+    "field_desc_en": "show clear icon, clicked to clear input value",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"clear icon should exist on input mouseenter\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]},{\"props\":{\"value\":\"'Default Keyword'\"},\"description\":\"click clear icon could clear input value to be empty\",\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300},{\"trigger\":\"click(.t-input__suffix-clear)\",\"event\":{\"clear\":[{\"e.stopPropagation\":true,\"e.type\":\"click\"}],\"change\":[\"\",{\"e.stopPropagation\":true,\"e.type\":\"click\"}]}}]},{\"props\":{\"type\":\"password\",\"value\":\"'this is my password'\"},\"description\":\"type=password, browseIcon and clearableIcon works fine\",\"expect\":[{\"trigger\":\"\",\"exist\":[\".t-icon-browse-off\"]},{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"],\"delay\":300}]}]}}"
+  },
+  {
+    "id": 1712579780,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "clearable",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon`",
+    "field_desc_en": "show clear icon, clicked to clear input value"
+  },
+  {
+    "id": 1712026829,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "confirmHold",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "点击键盘右下角按钮时是否保持键盘不收起"
+  },
+  {
+    "id": 1712026588,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "confirmType",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "done",
+    "field_enum": [
+      "send",
+      "search",
+      "next",
+      "go",
+      "done"
+    ],
+    "field_desc_zh": "设置键盘右下角按钮的文字，仅在type='text'时生效。<br />具体释义：<br />`send` 右下角按钮为“发送”；<br />`search` 右下角按钮为“搜索”；<br />`next` 右下角按钮为“下一个”；<br />`go` 右下角按钮为“前往”；<br />`done` 右下角按钮为“完成”。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)"
+  },
+  {
+    "id": 1712026897,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "指定 focus 时的光标位置"
+  },
+  {
+    "id": 1762412985,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "cursor",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "指定 focus 时的光标位置"
+  },
+  {
+    "id": 1729500769,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "光标颜色。iOS 下的格式为十六进制颜色值 #000000，安卓下的只支持 default 和 green，Skyline 下无限制"
+  },
+  {
+    "id": 1735811572,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "cursorColor",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "#0052d9",
+    "field_desc_zh": "光标颜色"
+  },
+  {
+    "id": 1712026462,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "cursorSpacing",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离"
+  },
+  {
+    "id": 745,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "是否禁用输入框",
+    "field_desc_en": "make input to be disabled",
+    "test_description": "{\"PC\":{\"className\":\"t-is-disabled\",\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 1732163188,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "enterkeyhint",
+    "field_type": [
+      "String"
+    ],
+    "field_enum": [
+      "enter",
+      "done",
+      "go",
+      "next",
+      "previous",
+      "search",
+      "send"
+    ],
+    "field_desc_zh": "用于控制回车键样式，此 API 仅在部分浏览器支持，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)",
+    "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)"
+  },
+  {
+    "id": 1710,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "errorMessage",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "错误提示文本，值为空不显示（废弃属性，如果需要，请更为使用 status 和 tips）",
+    "deprecated": true
+  },
+  {
+    "id": 1745737076,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "extra",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "右侧额外内容",
+    "version": {
+      "Miniprogram": "1.9.1"
+    }
+  },
+  {
+    "id": 1712026549,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "focus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "获取焦点"
+  },
+  {
+    "id": 2198,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "指定输入框展示值的格式。注意 `type=number` 时请勿使用，此功能建议更为使用 `InputNumber` 组件",
+    "field_desc_en": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better",
+    "custom_field_type": "InputFormatType【type InputFormatType = (value: string) => string】",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"format\":\"(val) => `${val} 元`\",\"value\":\"'100'\"},\"description\":\"focus and blur states have different value\",\"expect\":[{\"trigger\":\"focus(input)\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"100\"}}}]},{\"trigger\":\"blur(input)\",\"exist\":[{\"input\":{\"attribute\":{\"value\":\"100 元\"}}}]}]}]}}"
+  },
+  {
+    "id": 1712579861,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "format",
+    "field_type": [
+      "Function"
+    ],
+    "field_desc_zh": "指定输入框展示值的格式",
+    "field_desc_en": "input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better",
+    "custom_field_type": "InputFormatType【type InputFormatType = (value: InputValue) => string】"
+  },
+  {
+    "id": 1712027060,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "holdKeyboard",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "focus时，点击页面的时候不收起键盘"
+  },
+  {
+    "id": 2429,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "inputClass",
+    "field_type": [
+      "String",
+      "Object",
+      "Array"
+    ],
+    "field_desc_zh": "t-input 同级类名，示例：'name1 name2 name3' 或 `['name1', 'name2']` 或 `[{ 'name1': true }]`",
+    "field_desc_en": "add className to the element with `t-input` class",
+    "custom_field_type": "ClassName",
+    "test_description": "{\"PC\":{\"className\":[{\"value\":\"name1 name2\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":true}}]},{\"value\":\"['name1', 'name2']\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":true}}]},{\"value\":\"{ name1: true, name2: false }\",\"expect\":[{\"dom\":\".t-input\",\"className\":{\"name1\":true,\"name2\":false}}]}]}}"
+  },
+  {
+    "id": 2070,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧文本",
+    "field_desc_en": "text on the left of input",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"trigger\":\"\",\"dom\":[\".t-input__prefix\"]}}}"
+  },
+  {
+    "id": 3382,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "vertical",
+      "horizontal"
+    ],
+    "field_desc_zh": "标题输入框布局方式"
+  },
+  {
+    "id": 1402,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "maxcharacter",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"你好 TDesign\",\"maxcharacter\":4},\"description\":\"length of value is over than maxcharacter\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"你好\",{\"trigger\":\"initial\"}]}}]}]}}"
+  },
+  {
+    "id": 749,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为空，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello TDesign\",\"maxlength\":5},\"description\":\"length of value is over than maxlength\",\"expect\":[{\"trigger\":\"\",\"event\":{\"change\":[\"Hello\",{\"trigger\":\"initial\"}]}}]}]}}"
+  },
+  {
+    "id": 1712579914,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "maxlength",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "用户最多可以输入的文本长度，一个中文等于一个计数长度。默认为 -1，不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用"
+  },
+  {
+    "id": 750,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "名称",
+    "test_description": "{\"PC\":{\"attribute\":{\"name\":\"input-name\"},\"attributeDom\":\"input\"}}"
+  },
+  {
+    "id": 1712026279,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "password",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否是密码类型（已废弃，请更为使用 type 指定输入框类型）",
+    "deprecated": true
+  },
+  {
+    "id": 748,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "占位符",
+    "test_description": "{\"PC\":{\"attribute\":{\"placeholder\":\"this is input placeholder\"},\"attributeDom\":\"input\"}}"
+  },
+  {
+    "id": 1712026378,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "placeholderClass",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "input-placeholder",
+    "field_desc_zh": "指定 placeholder 的样式类"
+  },
+  {
+    "id": 1712026359,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "placeholderStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定 placeholder 的样式",
+    "field_required": true
+  },
+  {
+    "id": 1762412872,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "placeholderStyle",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "指定 placeholder 的样式"
+  },
+  {
+    "id": 743,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标",
+    "test_description": "{\"PC\":{\"tnode\":{\"trigger\":\"\",\"dom\":[\".t-input__prefix-icon\"]}}}"
+  },
+  {
+    "id": 2052,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标。值为字符串表示图标名称，值为 `Object` 类型，表示透传至 `icon`"
+  },
+  {
+    "id": 746,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "只读状态",
+    "version": {
+      "Miniprogram": "1.7.1"
+    },
+    "test_description": "{\"PC\":{\"className\":\"t-is-readonly\",\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 1712027133,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordCertPath",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "安全键盘加密公钥的路径，只支持包内路径"
+  },
+  {
+    "id": 1712027232,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordCustomHash",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "安全键盘计算 hash 的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))`"
+  },
+  {
+    "id": 1712027153,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordLength",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "安全键盘输入密码长度"
+  },
+  {
+    "id": 1712027186,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordNonce",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "安全键盘加密盐值"
+  },
+  {
+    "id": 1712027200,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordSalt",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "安全键盘计算 hash 盐值，若指定custom-hash 则无效"
+  },
+  {
+    "id": 1712027168,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "safePasswordTimeStamp",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "安全键盘加密时间戳"
+  },
+  {
+    "id": 1712026971,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "selectionEnd",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标结束位置，自动聚集时有效，需与 selection-start 搭配使用"
+  },
+  {
+    "id": 1712026955,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "selectionStart",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "-1",
+    "field_desc_zh": "光标起始位置，自动聚集时有效，需与 selection-end 搭配使用"
+  },
+  {
+    "id": 2358,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "showClearIconOnEmpty",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "输入框内容为空时，悬浮状态是否显示清空按钮，默认不显示",
+    "field_desc_en": "show clear icon on empty input value",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"exist\":[\".t-input__suffix-clear\"]}]}]}}"
+  },
+  {
+    "id": 2926,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "showLimitNumber",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否在输入框右侧显示字数统计",
+    "field_desc_en": "show limit number text on the right",
+    "test_description": "{\"PC\":{\"props\":{\"showLimitNumber\":true,\"maxlength\":5,\"value\":\"TD\"},\"dom\":[{\".t-input__limit-number\":{\"text\":\"2/5\"}}]}}"
+  },
+  {
+    "id": 741,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "输入框尺寸",
+    "field_desc_en": "make input to be different size",
+    "custom_field_type": "SizeEnum",
+    "test_description": "{\"PC\":{\"className\":[\"t-size-s\",{\"t-size-m\":false},\"t-size-l\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 1713,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium"
+    ],
+    "field_desc_zh": "输入框尺寸",
+    "custom_field_type": "'medium' | 'small'",
+    "deprecated": true
+  },
+  {
+    "id": 1712579983,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "small",
+    "field_enum": [
+      "small",
+      "medium"
+    ],
+    "field_desc_zh": "输入框尺寸",
+    "custom_field_type": "'medium' | 'small'",
+    "deprecated": true
+  },
+  {
+    "id": 1717603340,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "spellCheck",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+    "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)"
+  },
+  {
+    "id": 1732518837,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "spellcheck",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否开启拼写检查，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)",
+    "field_desc_en": "attribute of input element, [see here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck)"
+  },
+  {
+    "id": 822,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "输入框状态",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"className\":[{\"t-is-default\":false},\"t-is-success\",\"t-is-warning\",\"t-is-error\"],\"classNameDom\":\".t-input\"}}"
+  },
+  {
+    "id": 2073,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "suffix",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "后置图标前的后置内容",
+    "field_desc_en": "suffix content before suffixIcon",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[\".t-input__suffix\"],\"trigger\":\"\"}}}"
+  },
+  {
+    "id": 744,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件后置图标",
+    "field_desc_en": "suffix icon of input",
+    "test_description": "{\"PC\":{\"snapshot\":true,\"tnode\":{\"dom\":[\".t-input__suffix-icon\"],\"trigger\":\"\"}}}"
+  },
+  {
+    "id": 1711,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "suffixIcon",
+    "field_type": [
+      "String",
+      "Object",
+      "TNode"
+    ],
+    "field_desc_zh": "后置文本内容。值为字符串则表示图标名称，值为 `Object` 类型，表示透传至 `icon`"
+  },
+  {
+    "id": 2103,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "输入框下方提示文本，会根据不同的 `status` 呈现不同的样式",
+    "field_desc_en": "tips on the bottom of input, different `status` can make tips to be different color",
+    "test_description": "{\"PC\":{\"dom\":{\"this is a tip\":{\".t-input__tips\":1}}}}"
+  },
+  {
+    "id": 751,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "text",
+    "field_enum": [
+      "text",
+      "number",
+      "url",
+      "tel",
+      "password",
+      "search",
+      "submit",
+      "hidden"
+    ],
+    "field_desc_zh": "输入框类型。`type=number` 仅支持最基础的数字输入功能，更多功能建议使用 `InputNumber` 组件",
+    "field_desc_en": "type attribute of input element. if you are using `type=number`, `InputNumber` Component might be better",
+    "test_description": "{\"PC\":{\"attribute\":{\"type\":[\"text\",\"number\",\"url\",\"tel\",\"password\",\"search\",\"submit\",\"hidden\"]},\"attributeDom\":\"input\",\"dom\":{\"password\":{\".t-icon-browse-off\":1}},\"event\":[{\"props\":{\"type\":\"password\"},\"description\":\"password could be visible by click browse icon\",\"expect\":[{\"trigger\":\"click(.t-icon-browse-off)\",\"exist\":[\".t-icon-browse\",{\"input\":{\"attribute\":{\"type\":\"text\"}}}]},{\"trigger\":\"click(.t-icon-browse)\",\"exist\":[\".t-icon-browse-off\",{\"input\":{\"attribute\":{\"type\":\"password\"}}}]}]}]}}"
+  },
+  {
+    "id": 1712026101,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "text",
+    "field_enum": [
+      "text",
+      "number",
+      "idcard",
+      "digit",
+      "safe-password",
+      "password",
+      "nickname"
+    ],
+    "field_desc_zh": "输入框类型"
+  },
+  {
+    "id": 1712649360,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "type",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "text",
+    "field_enum": [
+      "text",
+      "number",
+      "url",
+      "tel",
+      "password",
+      "search",
+      "submit",
+      "hidden"
+    ],
+    "field_desc_zh": "输入框类型",
+    "field_desc_en": "type attribute of input element. if you are using `type=number`, `InputNumber` Component might be better"
+  },
+  {
+    "id": 740,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "custom_field_type": "T【type InputValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712580045,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "custom_field_type": "InputValue【type InputValue = string | number】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1712649530,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "输入框的值",
+    "field_desc_en": "input value",
+    "custom_field_type": "InputValue【type InputValue = string | number】",
+    "support_default_value": true
+  },
+  {
+    "id": 756,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: T, context: { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"initial-input-value\"},\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[\"initial-input-value\",{\"e.type\":\"focus\"}]}},{\"trigger\":\"blur(input)\",\"event\":{\"blur\":[\"initial-input-value\",{\"e.type\":\"blur\"}]},\"delay\":300}]}]}}"
+  },
+  {
+    "id": 2540,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: InputValue)",
+    "trigger_elements": "FocusEvent<HTMLInputElement>"
+  },
+  {
+    "id": 1712649678,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "blur",
+    "field_type": [],
+    "field_desc_zh": "失去焦点时触发",
+    "event_input": "(value: InputValue, context: { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>"
+  },
+  {
+    "id": 754,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发。参数 `trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
+    "field_desc_en": "trigger on input value changed",
+    "event_input": "(value: T, context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' })",
+    "trigger_elements": "MouseEvent<any>",
+    "test_description": "{\"PC\":{\"event\":[{\"description\":\"empty value could trigger change event\",\"expect\":[{\"trigger\":\"simulateInputChange('input', 'initial value')\",\"event\":{\"change\":[\"initial value\",{\"e.type\":\"input\"}]}}]},{\"props\":{\"value\":\"TDesign\"},\"description\":\"controlled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"TDesign\"}}}]}]},{\"props\":{\"defaultValue\":\"Hello\"},\"description\":\"uncontrolled value test\",\"expect\":[{\"trigger\":\" simulateInputChange('input', 'Hello TDesign')\",\"event\":{\"change\":[\"Hello TDesign\",{\"e.type\":\"input\"}]},\"exist\":[{\"input\":{\"attribute\":{\"value\":\"Hello TDesign\"}}}]}]}]}}"
+  },
+  {
+    "id": 1739,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发；cursor 为光标位置；",
+    "event_input": "(value: InputValue, cursor: number, keyCode: number)"
+  },
+  {
+    "id": 1712649727,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "输入框值发生变化时触发。`trigger=initial` 表示传入的数据不符合预期，组件自动处理后触发 change 告知父组件。如：初始值长度超过 `maxlength` 限制",
+    "field_desc_en": "trigger on input value changed",
+    "event_input": "(value: InputValue, context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' | 'blur'})",
+    "trigger_elements": "MouseEvent<any>"
+  },
+  {
+    "id": 821,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<SVGElement>"
+  },
+  {
+    "id": 2541,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发"
+  },
+  {
+    "id": 1720676958,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "clear",
+    "field_type": [],
+    "field_desc_zh": "清空按钮点击时触发",
+    "event_input": "(context: { e: TouchEvent })",
+    "trigger_elements": "MouseEvent<SVGElement>"
+  },
+  {
+    "id": 2322,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击组件时触发",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":{\"click(.t-input)\":{\"arguments\":[{\"e.type\":\"click\"}]}}}}"
+  },
+  {
+    "id": 1712027432,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击事件。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/input/type.ts)。<br/>`type InputTrigger = 'suffix' | 'suffix-icon';`<br/>",
+    "event_input": "(trigger: InputTrigger)",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 2281,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "compositionend",
+    "field_type": [],
+    "field_desc_zh": "中文输入结束时触发",
+    "field_desc_en": "trigger on compositionend",
+    "event_input": "(value: string, context: { e: CompositionEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"输入结束\"},\"expect\":[{\"trigger\":\"compositionend(input)\",\"event\":{\"compositionend\":[\"输入结束\",{\"e.type\":\"compositionend\"}]}}]}]}}"
+  },
+  {
+    "id": 2280,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "compositionstart",
+    "field_type": [],
+    "field_desc_zh": "中文输入开始时触发",
+    "field_desc_en": "trigger on compositionstart",
+    "event_input": "(value: string, context: { e: CompositionEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"输入开始\"},\"expect\":[{\"trigger\":\"compositionstart(input)\",\"event\":{\"compositionstart\":[\"输入开始\",{\"e.type\":\"compositionstart\"}]}}]}]}}"
+  },
+  {
+    "id": 753,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "回车键按下时触发",
+    "event_input": "(value: T, context: { e: KeyboardEvent })",
+    "trigger_elements": "KeyboardEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"text\"},\"expect\":[{\"trigger\":\"focus(input)\"},{\"trigger\":\"keydown.enter(input)\",\"event\":{\"enter\":[\"text\",{\"e.type\":\"keydown\"}]}}]}]}}"
+  },
+  {
+    "id": 2542,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "enter",
+    "field_type": [],
+    "field_desc_zh": "回车键按下时触发",
+    "event_input": "(value: InputValue)",
+    "trigger_elements": "KeyboardEvent<HTMLInputElement>"
+  },
+  {
+    "id": 755,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(value: T, context: { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"focus(input)\",\"event\":{\"focus\":[\"undefined\",{\"e.type\":\"focus\"}]}}]}]}}"
+  },
+  {
+    "id": 2543,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(value: InputValue)",
+    "trigger_elements": "FocusEvent<HTMLInputElement>"
+  },
+  {
+    "id": 1712649844,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "focus",
+    "field_type": [],
+    "field_desc_zh": "获得焦点时触发",
+    "event_input": "(value: InputValue, context: { e: FocusEvent })",
+    "trigger_elements": "FocusEvent<HTMLInputElement>"
+  },
+  {
+    "id": 3383,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "keyboardheightchange",
+    "field_type": [],
+    "field_desc_zh": "键盘高度发生变化的时候触发此事件",
+    "event_input": "(height: number, duration: number)"
+  },
+  {
+    "id": 818,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "keydown",
+    "field_type": [],
+    "field_desc_zh": "键盘按下时触发",
+    "event_input": "(value: T, context: { e: KeyboardEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"text\"},\"expect\":[{\"trigger\":\"keydown(input)\",\"event\":{\"keydown\":[\"text\",{\"e.type\":\"keydown\"}]}}]}]}}"
+  },
+  {
+    "id": 820,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "keypress",
+    "field_type": [],
+    "field_desc_zh": "按下字符键时触发（keydown -> keypress -> keyup）",
+    "event_input": "(value: T, context: { e: KeyboardEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"text\"},\"expect\":[{\"trigger\":\"keydown(input)\",\"event\":{\"keydown\":[\"text\",{\"e.type\":\"keydown\"}]}}]}]}}"
+  },
+  {
+    "id": 819,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "keyup",
+    "field_type": [],
+    "field_desc_zh": "释放键盘时触发",
+    "event_input": "(value: T, context: { e: KeyboardEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"text\"},\"expect\":[{\"trigger\":\"keyup(input)\",\"event\":{\"keyup\":[\"text\",{\"e.type\":\"keyup\"}]}}]}]}}"
+  },
+  {
+    "id": 2109,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "mouseenter",
+    "field_type": [],
+    "field_desc_zh": "进入输入框时触发",
+    "field_desc_en": "trigger on mouseenter",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"mouseenter(.t-input)\",\"event\":{\"mouseenter\":[{\"e.type\":\"mouseenter\"}]}}]}]}}"
+  },
+  {
+    "id": 2110,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "mouseleave",
+    "field_type": [],
+    "field_desc_zh": "离开输入框时触发",
+    "field_desc_en": "trigger on mouseleave",
+    "event_input": "(context: { e: MouseEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"mouseleave(.t-input)\",\"event\":{\"mouseleave\":[{\"e.type\":\"mouseleave\"}]}}]}]}}"
+  },
+  {
+    "id": 1712027364,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "nicknamereview",
+    "field_type": [],
+    "field_desc_zh": "用户昵称审核完毕后触发，仅在 type 为 \"nickname\" 时有效",
+    "event_input": "(pass: boolean, timeout: boolean)"
+  },
+  {
+    "id": 2116,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "paste",
+    "field_type": [],
+    "field_desc_zh": "粘贴事件，`pasteValue` 表示粘贴板的内容",
+    "event_input": "(context: { e: ClipboardEvent; pasteValue: string })",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"paste(input)\",\"event\":{\"paste\":[{\"e.type\":\"paste\"}]}}]}]}}"
+  },
+  {
+    "id": 2927,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "validate",
+    "field_type": [],
+    "field_desc_zh": "字数超出限制时触发",
+    "field_desc_en": "trigger on text length being over max length or max character",
+    "event_input": "(context: { error?: 'exceed-maximum' | 'below-minimum' })",
+    "version": {
+      "Vue(Mobile)": "1.9.1"
+    },
+    "test_description": "{\"PC\":{\"event\":[{\"props\":{\"value\":\"Hello World\",\"maxlength\":5},\"expect\":[{\"trigger\":\"\",\"event\":{\"validate\":[{\"error\":\"exceed-maximum\"}]}}]}]}}"
+  },
+  {
+    "id": 2279,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "Events",
+    "field_name": "wheel",
+    "field_type": [],
+    "field_desc_zh": "输入框中滚动鼠标时触发",
+    "field_desc_en": "trigger on mouse wheel",
+    "event_input": "(context: { e: WheelEvent })",
+    "test_description": "{\"PC\":{\"event\":[{\"expect\":[{\"trigger\":\"wheel(input)\",\"event\":{\"wheel\":[{\"e.type\":\"wheel\"}]}}]}]}}"
+  },
+  {
+    "id": 1699771883,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "Input",
+    "field_category": "<T>",
+    "field_name": "<T = InputValue>",
+    "field_type": []
+  },
+  {
+    "id": 1712473155,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712473182,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-clearable",
+    "field_type": [],
+    "field_desc_zh": "清空按钮样式类"
+  },
+  {
+    "id": 1712473174,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-input",
+    "field_type": [],
+    "field_desc_zh": "输入框样式类"
+  },
+  {
+    "id": 1712473169,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-label",
+    "field_type": [],
+    "field_desc_zh": "标签样式类"
+  },
+  {
+    "id": 1712473164,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-prefix-icon",
+    "field_type": [],
+    "field_desc_zh": "前置图标样式类"
+  },
+  {
+    "id": 1712473187,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-suffix",
+    "field_type": [],
+    "field_desc_zh": "后置样式类"
+  },
+  {
+    "id": 1712473193,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-suffix-icon",
+    "field_type": [],
+    "field_desc_zh": "后置图标样式类"
+  },
+  {
+    "id": 1712473199,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "External Classes",
+    "field_name": "t-class-tips",
+    "field_type": [],
+    "field_desc_zh": "提示样式类"
+  },
+  {
+    "id": 1760085774,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Slots",
+    "field_name": "prefix-icon",
+    "field_type": [],
+    "field_desc_zh": "组件前置图标"
+  },
+  {
+    "id": 1760085808,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Slots",
+    "field_name": "suffix-icon",
+    "field_type": [],
+    "field_desc_zh": "后置文本图标"
+  },
+  {
+    "id": 1760085837,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Input",
+    "field_category": "Slots",
+    "field_name": "tips",
+    "field_type": [],
+    "field_desc_zh": "输入框下方提示内容"
+  }
+]

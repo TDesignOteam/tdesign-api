@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1776240186,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "Props",
+    "field_name": "block",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否撑满父元素宽度"
+  },
+  {
+    "id": 1776234202,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "是否禁用"
+  },
+  {
+    "id": 1776222196,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "Segmented",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "数据化配置选项内容",
+    "custom_field_type": "string[] | number[] | SegmentedItem[] 【interface SegmentedItem { value: string | number; label?: string | TNode; icon?: TNode; disabled?: boolean }】"
+  },
+  {
+    "id": 1776223785,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Object"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "数据化配置选项内容",
+    "custom_field_type": "string[] | number[] | SegmentedItem[] 【interface SegmentedItem { value: string | number; label?: string; icon?: string | object; disabled?: boolean }】"
+  },
+  {
+    "id": 1776222350,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "当前选中的值",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1777290235,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "选项值发生变化时触发",
+    "event_input": "(context: { value: string | number, selectedOption: SegmentedItem })"
+  },
+  {
+    "id": 1776252441,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1776252373,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "External Classes",
+    "field_name": "t-class-item",
+    "field_type": [],
+    "field_desc_zh": "列表子项样式类"
+  },
+  {
+    "id": 1776252344,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Segmented",
+    "field_category": "External Classes",
+    "field_name": "t-class-thumb",
+    "field_type": [],
+    "field_desc_zh": "动画背景样式类"
+  }
+]

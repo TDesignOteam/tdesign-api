@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1742882297,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "被复制的内容"
+  },
+  {
+    "id": 1742882320,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "操作按钮是否可点击"
+  },
+  {
+    "id": 1742882276,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Props",
+    "field_name": "isBad",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否点踩"
+  },
+  {
+    "id": 1742882227,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Props",
+    "field_name": "isGood",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否点赞"
+  },
+  {
+    "id": 1742882371,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Props",
+    "field_name": "operationBtn",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[\"replay\", \"copy\", \"good\", \"bad\"]",
+    "field_desc_zh": "操作按钮配置项，可配置操作按钮选项和顺序",
+    "custom_field_type": "Array<'replay'|'copy'|'good'|'bad'>"
+  },
+  {
+    "id": 1742882448,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "ChatAction",
+    "field_category": "Events",
+    "field_name": "operation",
+    "field_type": [],
+    "field_desc_zh": "点击点赞，点踩，复制，重新生成按钮时触发",
+    "event_input": "(value:string, context: { e: MouseEvent })",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  }
+]

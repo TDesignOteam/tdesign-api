@@ -1,0 +1,591 @@
+[
+  {
+    "id": 1645,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "animation",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否添加动画效果"
+  },
+  {
+    "id": 1624,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "background",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "背景",
+    "field_desc_en": "background",
+    "deprecated": true
+  },
+  {
+    "id": 3376,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "capsule",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "左侧胶囊区域"
+  },
+  {
+    "id": 1627,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "delta",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "后退按钮后退层数，含义参考 [wx.navigateBack](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html)，特殊的，传入 0 不会发生执行 wx.navigateBack"
+  },
+  {
+    "id": 1621,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "fixed",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否固定在顶部"
+  },
+  {
+    "id": 1626,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "homeIcon",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "首页图标地址。值为 '' 或者 undefined 则表示不显示返回图标，值为 'circle' 表示显示默认图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+    "field_desc_en": "homeIcon",
+    "deprecated": true
+  },
+  {
+    "id": 1781510500,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "isHiddenInSpecialScene",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "【实验】是否销毁导航栏，仅场景值为 1433、1434、1177、1175 时有效",
+    "version": {
+      "Miniprogram": "1.15.2"
+    }
+  },
+  {
+    "id": 1630,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "left",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "左侧区域。值为 `string` 表示文本，为其他表示自定义内容"
+  },
+  {
+    "id": 3377,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "left",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "左侧内容区域",
+    "version": {
+      "Miniprogram": "0.26.0"
+    }
+  },
+  {
+    "id": 1712650258,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "left",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "左侧区域"
+  },
+  {
+    "id": 3378,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "leftArrow",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示左侧箭头",
+    "version": {
+      "Miniprogram": "0.26.0"
+    }
+  },
+  {
+    "id": 1625,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "leftIcon",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "左侧图标地址，值为 '' 或者 undefined 则表示不显示返回图标，值为 'arrow-left' 表示显示返回图标，值为 'slot' 表示使用插槽渲染，值为其他则表示图标地址",
+    "deprecated": true
+  },
+  {
+    "id": 1765337621,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "固定在顶部时是否开启占位",
+    "version": {
+      "Miniprogram": "1.12.1",
+      "Vue(Mobile)": "1.12.0",
+      "React(Mobile)": "0.21.1"
+    }
+  },
+  {
+    "id": 1768837975,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "固定在顶部时是否开启占位"
+  },
+  {
+    "id": 1629,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "right",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "右侧区域。值为 `string` 表示文本，为其他表示自定义内容"
+  },
+  {
+    "id": 1712650311,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "right",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "右侧区域"
+  },
+  {
+    "id": 1768838421,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "right",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "右侧内容区域"
+  },
+  {
+    "id": 1745829536,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "safeAreaInsetTop",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否开启顶部安全区适配"
+  },
+  {
+    "id": 1622,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "title",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_desc_zh": "页面标题",
+    "field_desc_en": "page title"
+  },
+  {
+    "id": 1633,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "titleMaxLength",
+    "field_type": [
+      "Number"
+    ],
+    "field_desc_zh": "标题文字最大长度，超出的范围使用 `...` 表示"
+  },
+  {
+    "id": 1620,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否显示"
+  },
+  {
+    "id": 1765356641,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "导航条层级",
+    "version": {
+      "Miniprogram": "1.12.1",
+      "Vue(Mobile)": "1.12.0",
+      "React(Mobile)": "0.21.1"
+    }
+  },
+  {
+    "id": 1768837934,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Props",
+    "field_name": "zIndex",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "导航栏栏层级",
+    "version": {
+      "Miniprogram": "1.12.1",
+      "Vue(Mobile)": "1.12.0",
+      "React(Mobile)": "0.21.1"
+    }
+  },
+  {
+    "id": 1648,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "complete",
+    "field_type": [],
+    "field_desc_zh": "navigateBack 执行完成后触发（失败或成功均会触发）"
+  },
+  {
+    "id": 1647,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "fail",
+    "field_type": [],
+    "field_desc_zh": "navigateBack 执行失败后触发"
+  },
+  {
+    "id": 1649,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "goBack",
+    "field_type": [],
+    "field_desc_zh": "点击左侧箭头时触发"
+  },
+  {
+    "id": 1650,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "goHome",
+    "field_type": [],
+    "field_desc_zh": "点击 Home 触发",
+    "deprecated": true
+  },
+  {
+    "id": 2650,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "leftClick",
+    "field_type": [],
+    "field_desc_zh": "点击左侧区域时触发"
+  },
+  {
+    "id": 1712650377,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "leftClick",
+    "field_type": [],
+    "field_desc_zh": "点击左侧按钮时触发"
+  },
+  {
+    "id": 2651,
+    "platform_framework": [
+      "React(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "rightClick",
+    "field_type": [],
+    "field_desc_zh": "点击右侧区域时触发"
+  },
+  {
+    "id": 1712650405,
+    "platform_framework": [
+      "Vue(Mobile)"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "rightClick",
+    "field_type": [],
+    "field_desc_zh": "点击右侧图标时触发"
+  },
+  {
+    "id": 1768838375,
+    "platform_framework": [
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "rightClick",
+    "field_type": [],
+    "field_desc_zh": "点击右侧图标时触发"
+  },
+  {
+    "id": 1646,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "Events",
+    "field_name": "success",
+    "field_type": [],
+    "field_desc_zh": "navigateBack 执行成功后触发"
+  },
+  {
+    "id": 1711973180,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1711973213,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-capsule",
+    "field_type": [],
+    "field_desc_zh": "左侧胶囊区域样式类"
+  },
+  {
+    "id": 1711973196,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-center",
+    "field_type": [],
+    "field_desc_zh": "中间内容样式类"
+  },
+  {
+    "id": 1711973208,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-home-icon",
+    "field_type": [],
+    "field_desc_zh": "首页图标样式类"
+  },
+  {
+    "id": 1711973190,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-left",
+    "field_type": [],
+    "field_desc_zh": "左侧内容样式类"
+  },
+  {
+    "id": 1711973200,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-left-icon",
+    "field_type": [],
+    "field_desc_zh": "左侧图标样式类"
+  },
+  {
+    "id": 1711973218,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-nav-btn",
+    "field_type": [],
+    "field_desc_zh": "导航按钮样式类"
+  },
+  {
+    "id": 1711973186,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Navbar",
+    "field_category": "External Classes",
+    "field_name": "t-class-title",
+    "field_type": [],
+    "field_desc_zh": "标题样式类"
+  }
+]

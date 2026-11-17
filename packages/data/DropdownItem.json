@@ -1,0 +1,577 @@
+[
+  {
+    "id": 427,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "active",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否高亮当前操作项"
+  },
+  {
+    "id": 426,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "content",
+    "field_type": [
+      "String",
+      "TNode"
+    ],
+    "field_default_value": "''",
+    "field_desc_zh": "下拉操作项内容"
+  },
+  {
+    "id": 429,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用操作项"
+  },
+  {
+    "id": 428,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "divider",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示操作项之间的分隔线（分隔线默认在下方）"
+  },
+  {
+    "id": 1724827990,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "footer",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "底部"
+  },
+  {
+    "id": 1763542717,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "Array",
+      "TNode"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]",
+    "custom_field_type": "TNode | TNode[] | undefined"
+  },
+  {
+    "id": 2815,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "keys",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "用来定义 value / label / disabled 在 `options` 中对应的字段别名",
+    "custom_field_type": "KeysType"
+  },
+  {
+    "id": 1792396819,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "keepLabelActive",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否保持标题高亮（含菜单收起态），仅多选场景生效",
+    "version": {
+      "React(Mobile)": "1.0.1",
+      "Vue(Mobile)": "1.17.0",
+      "Miniprogram": "1.18.0",
+      "UniApp": "1.0.1"
+    }
+  },
+  {
+    "id": 1699,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "标题"
+  },
+  {
+    "id": 1703,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "multiple",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否多选"
+  },
+  {
+    "id": 1701,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "options",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "选项数据",
+    "custom_field_type": "Array<DropdownOption>【interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }】"
+  },
+  {
+    "id": 1705,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "optionsColumns",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_default_value": "1",
+    "field_desc_zh": "选项分栏（1-3）"
+  },
+  {
+    "id": 1704,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "optionsLayout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "columns",
+    "field_desc_zh": "选项排列；不再支持 tree 布局，可与 treeSelect 配合使用",
+    "deprecated": true
+  },
+  {
+    "id": 1733309141,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "placement",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "left",
+    "field_enum": [
+      "left",
+      "right"
+    ],
+    "field_desc_zh": "复选框和内容相对位置，仅单选菜单栏有效"
+  },
+  {
+    "id": 2912,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "prefixIcon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "组件前置图标"
+  },
+  {
+    "id": 2890,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "theme",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "success",
+      "warning",
+      "error"
+    ],
+    "field_desc_zh": "下拉菜单选项主题",
+    "custom_field_type": "DropdownItemTheme【type DropdownItemTheme = 'default' | 'success' | 'warning' | 'error'】"
+  },
+  {
+    "id": 761,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Object"
+    ],
+    "field_desc_zh": "下拉操作项唯一标识",
+    "custom_field_type": "string | number | { [key: string]: any }"
+  },
+  {
+    "id": 1700,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "选中值",
+    "custom_field_type": "DropdownValue 【type DropdownValue = string | number | Array<DropdownValue>;】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3494,
+    "platform_framework": [],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number",
+      "Array"
+    ],
+    "field_default_value": "undefined",
+    "field_desc_zh": "选中值",
+    "custom_field_type": "DropdownValue 【type DropdownValue = string | number | Array<DropdownValue>;】",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 3539,
+    "platform_framework": [],
+    "component": "DropdownItem",
+    "field_category": "Props",
+    "field_name": "visible",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否展示"
+  },
+  {
+    "id": 2304,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "值改变时触发",
+    "event_input": "(value: DropdownValue)"
+  },
+  {
+    "id": 758,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "click",
+    "field_type": [],
+    "field_desc_zh": "点击时触发",
+    "event_input": "(dropdownItem: DropdownOption, context: { e: MouseEvent })"
+  },
+  {
+    "id": 1712056353,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发",
+    "version": {
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 1790603782,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "close",
+    "field_type": [],
+    "field_desc_zh": "关闭时触发"
+  },
+  {
+    "id": 1768815105,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "closed",
+    "field_type": [],
+    "field_desc_zh": "关闭且动画结束后触发",
+    "version": {
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 2816,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "confirm",
+    "field_type": [],
+    "field_desc_zh": "点击确认时触发",
+    "event_input": "(value: DropdownValue)"
+  },
+  {
+    "id": 1768815124,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "open",
+    "field_type": [],
+    "field_desc_zh": "打开时触发",
+    "version": {
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 1768815143,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "opened",
+    "field_type": [],
+    "field_desc_zh": "打开且动画结束后触发",
+    "version": {
+      "React(Mobile)": "0.21.2"
+    }
+  },
+  {
+    "id": 3495,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "reset",
+    "field_type": [],
+    "field_desc_zh": "点击重置时触发",
+    "event_input": "(value: DropdownValue)"
+  },
+  {
+    "id": 1712056340,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Events",
+    "field_name": "reset",
+    "field_type": [],
+    "field_desc_zh": "点击重置时触发"
+  },
+  {
+    "id": 1712056427,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class",
+    "field_type": [],
+    "field_desc_zh": "根节点样式类"
+  },
+  {
+    "id": 1712056460,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-column",
+    "field_type": [],
+    "field_desc_zh": "菜单列样式类"
+  },
+  {
+    "id": 1712056465,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-column-item",
+    "field_type": [],
+    "field_desc_zh": "菜单列选项样式类"
+  },
+  {
+    "id": 1712056470,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-column-item-label",
+    "field_type": [],
+    "field_desc_zh": "菜单列选项标签样式类"
+  },
+  {
+    "id": 1712056454,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-content",
+    "field_type": [],
+    "field_desc_zh": "内容样式类"
+  },
+  {
+    "id": 1712056476,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "External Classes",
+    "field_name": "t-class-footer ",
+    "field_type": [],
+    "field_desc_zh": "底部样式类"
+  },
+  {
+    "id": 1759214633,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "DropdownItem",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]

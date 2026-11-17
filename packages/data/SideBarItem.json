@@ -1,0 +1,110 @@
+[
+  {
+    "id": 3533,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "badgeProps",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "透传至 Badge 组件",
+    "custom_field_type": "BadgeProps【import { BadgeProps } from '@Badge'】"
+  },
+  {
+    "id": 3536,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用"
+  },
+  {
+    "id": 3534,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "String",
+      "Object"
+    ],
+    "field_desc_zh": "图标，传对象则透传至 Icon"
+  },
+  {
+    "id": 1712580374,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "icon",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "图标"
+  },
+  {
+    "id": 3535,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "label",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "展示的标签"
+  },
+  {
+    "id": 3515,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "当前选项的值"
+  },
+  {
+    "id": 1760086476,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "SideBarItem",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义侧边导航项内容"
+  }
+]

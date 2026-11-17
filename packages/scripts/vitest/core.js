@@ -1,5 +1,5 @@
 import { camelCase, upperFirst } from 'lodash-es';
-import { kebabCaseComponent } from '../utils.js';
+import { kebabCaseComponent } from '../core/utils.js';
 import { UNIT_TEST_EVENTS_MAP } from './const/events-map.js';
 import { reactNeedMockDelayEvents } from './const/react-need-mock-delay.js';
 
@@ -21,7 +21,7 @@ const SIMULATE_FUNCTIONS = [
 const GET_VAR_FUNCTIONS = ['getFakeFileList'];
 
 function getItDescription(oneApiData) {
-  const type = oneApiData.field_category_text.toLocaleLowerCase();
+  const type = oneApiData.field_category.toLocaleLowerCase();
   return `'${type}.${oneApiData.field_name} works fine'`;
 }
 

@@ -1,0 +1,254 @@
+[
+  {
+    "id": 2269,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "boolean",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "布尔类型校验不通过时的表单项显示文案，全局配置默认是：`'${name}数据类型必须是布尔类型'`"
+  },
+  {
+    "id": 2258,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "date",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "日期校验规则不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'`"
+  },
+  {
+    "id": 2264,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "enum",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "枚举值校验规则不通过时的表单项显示文案，全局配置默认是：`${name}只能是${validate}等`"
+  },
+  {
+    "id": 2265,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "idcard",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "身份证号码校验不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'`"
+  },
+  {
+    "id": 2263,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "len",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值长度校验不通过时的表单项显示文案，全局配置默认是：`'${name}字符长度必须是 ${validate}'`"
+  },
+  {
+    "id": 2261,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "max",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值的长度太长或值本身太大时，校验不通过的表单项显示文案，全局配置默认是：`'${name}字符长度不能超过 ${validate} 个字符，一个中文等于两个字符'`"
+  },
+  {
+    "id": 2262,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "min",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值的长度太短或值本身太小时，校验不通过的表单项显示文案，全局配置默认是：`'${name}字符长度不能少于 ${validate} 个字符，一个中文等于两个字符'`"
+  },
+  {
+    "id": 2270,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "number",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "数字类型校验不通过时的表单项显示文案，全局配置默认是：`'${name}必须是数字'`"
+  },
+  {
+    "id": 2267,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "pattern",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "正则表达式校验不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'`"
+  },
+  {
+    "id": 2260,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "required",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "没有填写必填项时的表单项显示文案，全局配置默认是：`'${name}必填'`"
+  },
+  {
+    "id": 2266,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "telnumber",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "手机号号码校验不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'`"
+  },
+  {
+    "id": 2259,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "url",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "链接校验规则不通过时的表单项显示文案，全局配置默认是：`'请输入正确的${name}'`"
+  },
+  {
+    "id": 2268,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "validator",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "自定义校验规则校验不通过时的表单项显示文案，全局配置默认是：'${name}不符合要求'"
+  },
+  {
+    "id": 1724825440,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "FormErrorMessage",
+    "field_category": "Props",
+    "field_name": "whitespace",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "值为空格校验不通过时表单项显示文案，全局配置默认是：`'${name}不能为空`"
+  }
+]

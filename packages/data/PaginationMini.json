@@ -1,0 +1,126 @@
+[
+  {
+    "id": 2791,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean",
+      "Object"
+    ],
+    "field_desc_zh": "按钮禁用配置",
+    "custom_field_type": "boolean | JumperDisabledConfig【type JumperDisabledConfig = { prev?: boolean; current?: boolean; next?: boolean; }】"
+  },
+  {
+    "id": 2787,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "layout",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "horizontal",
+    "field_enum": [
+      "horizontal",
+      "vertical"
+    ],
+    "field_desc_zh": "按钮方向",
+    "field_desc_en": "horizontal or vertical"
+  },
+  {
+    "id": 2792,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "showCurrent",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "是否展示当前按钮",
+    "custom_field_type": "boolean"
+  },
+  {
+    "id": 2793,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "按钮尺寸",
+    "field_desc_en": "Button size",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 2790,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "tips",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "提示文案配置，值为 `true` 显示默认文案；值为 `false` 不显示提示文案；值类型为对象则单独配置文案内容",
+    "custom_field_type": "boolean | JumperTipsConfig【type JumperTipsConfig = { prev?: string; current?: string; next?: string; }】"
+  },
+  {
+    "id": 2794,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Props",
+    "field_name": "variant",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "text",
+    "field_enum": [
+      "text",
+      "outline"
+    ],
+    "field_desc_zh": "按钮形式"
+  },
+  {
+    "id": 2789,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "PaginationMini",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_desc_zh": "按钮点击事件回调",
+    "event_input": "(context: {e: MouseEvent, trigger: JumperTrigger})【type JumperTrigger = 'prev' | 'current' | 'next'】",
+    "trigger_elements": "MouseEvent<HTMLElement>"
+  }
+]

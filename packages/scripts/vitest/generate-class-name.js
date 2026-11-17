@@ -31,14 +31,14 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
     { ...props, [oneApiData.field_name]: '/-item-/' },
     extraCode,
   );
-  const enums = oneApiData.field_enum.split('/').filter((v) => v);
+  const enums = oneApiData.field_enum || [];
   const propsCode = getCategoryDesc(oneApiData, component);
   // 不同的值控制不同的类名，类名的一部分是 API 的值，如：button.variant
   if (
     typeof className === 'string' &&
     className.indexOf('${item}') != -1 &&
     enums.length &&
-    oneApiData.field_type_text[0] === 'String'
+    oneApiData.field_type[0] === 'String'
   ) {
     const arr = [
       `[${enums.map((val) => `'${val}'`).join(', ')}].forEach((item) => {`,
@@ -56,7 +56,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
   if (Array.isArray(className)) {
     // 处理数组：不同的值控制不同的类名（一个值可能对应着空类名，也可能对应着别的名字，如：size=small 对应着 t-size-s）
     // API 存在枚举值，和类名一一对应
-    if (oneApiData.field_type_text[0] === 'String' && enums.length) {
+    if (oneApiData.field_type[0] === 'String' && enums.length) {
       const classNameVariable = `${oneApiData.field_name}ClassNameList`;
       const hasObjectClassName = hasObjectInArray(className);
       const propsCode = getCategoryDesc(oneApiData, component);
@@ -110,7 +110,7 @@ function generateVueAndReactClassName(test, oneApiData, framework, component) {
 
   // 控制单个类名是否显示，如：disabled 对应着类名 `t-is-disabled` 是否存在
   if (typeof className === 'string') {
-    if (oneApiData.field_type_text[0] === 'Boolean') {
+    if (oneApiData.field_type[0] === 'Boolean') {
       const mountCode1 = getMountComponent(framework, component, { ...props }, extraCode);
       const mountCode2 = getMountComponent(
         framework,

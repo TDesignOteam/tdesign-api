@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1751448238,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "current",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "索引列表的激活项，默认首项",
+    "syntactic_sugar": "v-model",
+    "version": {
+      "Miniprogram": "1.9.7"
+    },
+    "support_default_value": true
+  },
+  {
+    "id": 3234,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "indexList",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "索引字符列表。不传默认 `A-Z`",
+    "custom_field_type": "Array<string | number>",
+    "version": {
+      "Miniprogram": "0.32.0"
+    }
+  },
+  {
+    "id": 1458,
+    "platform_framework": [
+      "Miniprogram"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "list",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "索引列表的列表数据。每个元素包含三个子元素，index(string)：索引值，例如1，2，3，...或A，B，C等；title(string): 索引标题，可不填将默认设为索引值；children(Array<{title: string}>): 子元素列表，title为子元素的展示文案",
+    "custom_field_type": "ListItem[] 【interface ListItem { title: string; index: string; children: { title: string; [key: string]: any} [] }】",
+    "deprecated": true
+  },
+  {
+    "id": 1775705475,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "showFullIndex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否显示完整的索引内容，默认只显示首字符",
+    "custom_field_type": "Boolean",
+    "version": {
+      "Miniprogram": "1.13.2",
+      "Vue(Mobile)": "1.13.3",
+      "React(Mobile)": "0.21.4",
+      "UniApp": "0.9.0"
+    }
+  },
+  {
+    "id": 2691,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "sticky",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "true",
+    "field_desc_zh": "索引是否吸顶，默认为true",
+    "custom_field_type": "Boolean"
+  },
+  {
+    "id": 3291,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Props",
+    "field_name": "stickyOffset",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "0",
+    "field_desc_zh": "锚点吸顶时与顶部的距离\t",
+    "version": {
+      "Miniprogram": "1.0.0"
+    }
+  },
+  {
+    "id": 1761301156,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "索引发生变更时触发事件",
+    "event_input": "(index: string | number)",
+    "version": {
+      "Miniprogram": "0.34.0"
+    }
+  },
+  {
+    "id": 1761301170,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Events",
+    "field_name": "select",
+    "field_type": [],
+    "field_desc_zh": "点击侧边栏时触发事件",
+    "event_input": "(index: string | number)"
+  },
+  {
+    "id": 1760085666,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Indexes",
+    "field_category": "Slots",
+    "field_name": "-",
+    "field_type": [],
+    "field_desc_zh": "默认插槽，自定义内容区域内容"
+  }
+]
