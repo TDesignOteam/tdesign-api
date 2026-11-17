@@ -28,10 +28,11 @@ function getPropType(cmp, name) {
   return `${getTdCmpName(cmp)}['${name}']`;
 }
 
-function isNeedPropType(typeName, api) {
+function isNeedPropType(typeNames, api) {
   if (['Miniprogram', 'UniApp'].includes(currentFramework)) return false;
+  const typeName = typeNames.length <= 1 ? typeNames[0] : `[${typeNames.join(', ')}]`;
   const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
-  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type.length > 1;
+  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || typeNames.length > 1;
   return multipleTypeStr || complicatedApi;
 }
 
@@ -52,6 +53,7 @@ function getType(cmp, api, name) {
       return t === 'TNode' ? nodeType : t;
     })
     .filter((v) => !!v);
+  const needPropType = isNeedPropType(type, api);
   // custom_field_type 顶级 `| null` 写入 Vue runtime type，对应可显式传 null 的 API
   if (
     !['Miniprogram', 'UniApp'].includes(currentFramework) &&
@@ -61,7 +63,7 @@ function getType(cmp, api, name) {
     type.push('null');
   }
   const typeName = type.length <= 1 ? type[0] : `[${type.join(', ')}]`;
-  return isNeedPropType(typeName, api) ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
+  return needPropType ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
 }
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
@@ -82,7 +84,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
         const tmp = JSON.parse(dl);
         if (tmp instanceof Array) {
           isArray = true;
-        } else if (['object', 'function'].includes(typeof tmp)) {
+        } else if (tmp !== null && ['object', 'function'].includes(typeof tmp)) {
           isObject = true;
         }
       } catch (e) {
