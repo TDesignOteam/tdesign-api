@@ -605,7 +605,7 @@ export interface PrimaryTableColumnChange<T> {
   columns?: CheckboxGroupValue;
   currentColumn?: PrimaryTableCol<T>;
   type?: 'check' | 'uncheck';
-  e?: ChangeEvent;
+  e?: Event;
 }
 
 export interface TableDataChangeContext {
