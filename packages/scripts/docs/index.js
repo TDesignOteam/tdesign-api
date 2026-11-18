@@ -162,8 +162,8 @@ function generateDocs(baseData, framework, extra) {
   api = combineApi(api, extra.component);
   removeChildComponentDocs(api, framework, current, isVscode);
   Object.keys(api).forEach((cmp) => {
-    // 未注册组件、未合并的独立 TS 类型不输出文档目录
-    if (!componentsMap[cmp] || isTypeApi(cmp)) return;
+    // 未注册组件、未合并的独立 TS 类型不输出文档目录（合并父组件除外）
+    if (!componentsMap[cmp] || (isTypeApi(cmp) && !getComponentApiMdMap()[cmp])) return;
     const folder = isVscode
       ? current.vscodePath
       : path.resolve(getComponentBasePath(cmp, current.apiBasePath, framework), kebabCaseComponent(cmp));

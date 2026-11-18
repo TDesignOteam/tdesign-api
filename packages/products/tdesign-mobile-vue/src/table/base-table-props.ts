@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBaseTableProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdBaseTableProps } from './type';
 export default {
   /** 是否显示表格边框 */
   bordered: Boolean,
@@ -117,6 +116,8 @@ export default {
   },
   /** 单元格点击时触发 */
   onCellClick: Function as PropType<TdBaseTableProps['onCellClick']>,
+  /** 分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型 */
+  onPageChange: Function as PropType<TdBaseTableProps['onPageChange']>,
   /** 行点击时触发，泛型 T 指表格数据类型 */
   onRowClick: Function as PropType<TdBaseTableProps['onRowClick']>,
   /** 表格内容滚动时触发 */

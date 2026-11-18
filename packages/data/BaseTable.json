@@ -1011,6 +1011,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
+      "Vue(Mobile)",
       "React(Mobile)"
     ],
     "component": "BaseTable",
