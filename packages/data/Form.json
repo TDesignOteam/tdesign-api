@@ -476,7 +476,7 @@
     "field_name": "submit",
     "field_type": [],
     "field_desc_zh": "表单提交时触发。其中 `context.validateResult` 表示校验结果，`context.firstError` 表示校验不通过的第一个规则提醒。`context.validateResult` 值为 `true` 表示校验通过；如果校验不通过，`context.validateResult` 值为校验结果列表。<br />【注意】⚠️ 默认情况，输入框按下 Enter 键会自动触发提交事件，如果希望禁用这个默认行为，可以给输入框添加  enter 事件，并在事件中设置 `e.preventDefault()`",
-    "event_input": "(context: SubmitContext<FormData>)【interface SubmitContext<T extends Data = Data> { e?: FormSubmitEvent; validateResult: FormValidateResult<T>; firstError?: string; fields?: any }】【type FormValidateResult<T> = boolean | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】【type ValidateResult<T> = { [key in keyof T]: boolean | ErrorList }】【type ErrorList = Array<FormRule>】"
+    "event_input": "(context: SubmitContext<FormData>)【interface SubmitContext<T extends Data = Data> { e?: FormSubmitEvent; validateResult: FormValidateResult<T>; firstError?: string; fields?: any }】【type FormValidateResult<T> = true | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】【type ValidateResult<T> = { [key in keyof T]: boolean | ErrorList }】【type ErrorList = Array<FormRule>】"
   },
   {
     "id": 1428,
@@ -705,7 +705,7 @@
     "field_type": [],
     "field_desc_zh": "校验函数，包含错误文本提示等功能。泛型 `FormData` 表示表单数据 TS 类型。<br/>【关于参数】`params.fields` 表示校验字段，如果设置了 `fields`，本次校验将仅对这些字段进行校验。`params.trigger` 表示本次触发校验的范围，'params.trigger = blur' 表示只触发校验规则设定为 trigger='blur' 的字段，'params.trigger = change' 表示只触发校验规则设定为 trigger='change' 的字段，默认触发全范围校验。`params.showErrorMessage` 表示校验结束后是否显示错误文本提示，默认显示。<br />【关于返回值】返回值为 true 表示校验通过；如果校验不通过，返回值为校验结果列表",
     "event_input": "(params?: FormValidateParams)【interface FormValidateParams { fields?: Array<string>; showErrorMessage?: boolean; trigger?: ValidateTriggerType }】【type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all'】",
-    "event_output": "Promise<FormValidateResult<FormData>> 【type FormValidateResult<T> = boolean | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】",
+    "event_output": "Promise<FormValidateResult<FormData>> 【type FormValidateResult<T> = true | ValidateResultObj<T>】【type ValidateResultObj<T> = { [key in keyof T]: boolean | ValidateResultList }】【type ValidateResultList = Array<AllValidateResult>】【type AllValidateResult = CustomValidateObj | ValidateResultType】【interface ValidateResultType extends FormRule { result: boolean }】",
     "field_required": true
   },
   {
