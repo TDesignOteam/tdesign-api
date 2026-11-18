@@ -56,7 +56,11 @@
       "Boolean"
     ],
     "field_default_value": "false",
-    "field_desc_zh": " 是否启用滑动到底自动执行操作。"
+    "field_desc_zh": " 是否启用滑动到底自动执行操作。",
+    "version": {
+      "Vue(Mobile)": "1.7.2",
+      "React(Mobile)": "1.0.1"
+    }
   },
   {
     "id": 1747,
