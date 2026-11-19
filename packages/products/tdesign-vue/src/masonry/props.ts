@@ -1,0 +1,47 @@
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
+import type { PropType } from 'vue';
+import type { TdMasonryProps } from './type';
+export default {
+  /** 瀑布流内容，每个带 key 的子元素为一项，适用于静态内容。（与 `items` + `renderItem` 为两种互斥的使用方式） */
+  children: {
+    type: Function as PropType<TdMasonryProps['children']>,
+  },
+  /** 间距，可传入固定数值或按容器宽度断点配置（如 `{ 0: 8, 640: 12, 1024: 16 }`） */
+  gap: {
+    type: [Number, Object] as PropType<TdMasonryProps['gap']>,
+    default: 0,
+  },
+  /** 瀑布流数据源数组，配合 `renderItem` 使用，除 `key` 外不限制数据项的字段和内容 */
+  items: {
+    type: Array as PropType<TdMasonryProps['items']>,
+  },
+  /** 自定义渲染每一个瀑布流 item 的函数，接收数据项和索引，返回要展示的节点，配合 `items` 使用 */
+  renderItem: {
+    type: Function as PropType<TdMasonryProps['renderItem']>,
+  },
+  /** 数据排布策略，可选值 `shortest`（最短列优先，将新项放入当前累计高度最小的列）、`sequential`（按序轮流，新项按固定顺序轮流放入各列） */
+  strategy: {
+    type: String as PropType<TdMasonryProps['strategy']>,
+    default: 'shortest' as TdMasonryProps['strategy'],
+    validator(val: TdMasonryProps['strategy']): boolean {
+      if (!val) return true;
+      return ['shortest', 'sequential'].includes(val);
+    },
+  },
+  /** 瀑布流类型，可选值 `fixed-width`（固定宽度和自适应高度）、`fixed-both`（固定宽度和高度）、`fixed-height`（自适应宽度和固定高度）、`free-size`（动态宽高） */
+  type: {
+    type: String as PropType<TdMasonryProps['type']>,
+    default: 'fixed-width' as TdMasonryProps['type'],
+    validator(val: TdMasonryProps['type']): boolean {
+      if (!val) return true;
+      return ['fixed-width', 'fixed-both', 'fixed-height', 'free-size'].includes(val);
+    },
+  },
+  /** 布局发生变化时触发 */
+  onLayoutChange: Function as PropType<TdMasonryProps['onLayoutChange']>,
+};

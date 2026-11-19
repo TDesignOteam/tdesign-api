@@ -329,6 +329,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Scrollbar', label: '滚动条' },
   { value: 'Split', label: '分割面板' },
   { value: 'SplitPanel', label: '分割面板内容' },
+  { value: 'Masonry', label: '瀑布流' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export const COMPONENTS_MOBILE: Array<MapItem> = [
@@ -419,6 +420,7 @@ export const COMPONENTS_MOBILE: Array<MapItem> = [
   { value: 'ChatActionbarConfig', label: '对话操作全局配置', type: 'TS' },
   { value: 'ChatSenderConfig', label: '对话输入全局配置', type: 'TS' },
   { value: 'ChatThinkingConfig', label: '思考过程全局配置', type: 'TS' },
+  { value: 'Masonry', label: '瀑布流' },
 ].sort((a, b) => a.value.localeCompare(b.value));
 
 export default {
