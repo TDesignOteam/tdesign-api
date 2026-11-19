@@ -9,7 +9,8 @@ name | type | default | description | required
 allowInputOverMax | Boolean | false | Allow input after exceeding `maxlength` or `maxcharacter` | N
 autofocus | Boolean | false | \- | N
 autosize | Boolean / Object | false | Typescript: `boolean \| { minRows?: number; maxRows?: number }` | N
-count | Boolean / Function | - | Character counter. It is enabled by default when `maxLength` or `maxCharacter` is set.。Typescript: `boolean \| ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode)`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+clearable | Boolean / Object | false | Whether to show the clear button. `true` is equivalent to `{ position: 'top', type: 'icon' }`. `position` sets the clear button position: top, center, or bottom. `type` sets the clear button type: icon or text. Typescript: `boolean \| TextareaClearable` `interface TextareaClearable { position?: 'top' \| 'center' \| 'bottom'; type?: 'icon' \| 'text' }`. [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
+count | Boolean / Function | - | Character counter. It is enabled by default when `maxLength` or `maxCharacter` is set. Typescript: `boolean \| ((ctx: { value: string; count: number; maxLength?: number; maxCharacter?: number }) => TNode)`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | \- | N
 maxcharacter | Number | - | \- | N
 maxlength | String / Number | - | Typescript: `string \| number` | N
@@ -17,9 +18,9 @@ name | String | - | \- | N
 placeholder | String | undefined | \- | N
 readonly | Boolean | undefined | \- | N
 status | String | default | options: default/success/warning/error | N
-tips | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-value | String / Number | - | `v-model` is supported。Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
-defaultValue | String / Number | - | uncontrolled property。Typescript: `TextareaValue` `type TextareaValue = string \| number`。[see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
+tips | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+value | String / Number | - | `v-model` is supported. Typescript: `TextareaValue` `type TextareaValue = string \| number`. [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
+defaultValue | String / Number | - | uncontrolled property. Typescript: `TextareaValue` `type TextareaValue = string \| number`. [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/textarea/type.ts) | N
 onBlur | Function |  | Typescript: `(value: TextareaValue, context: { e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript: `(value: TextareaValue, context?: { e?: InputEvent }) => void`<br/> | N
 onFocus | Function |  | Typescript: `(value: TextareaValue, context : { e: FocusEvent }) => void`<br/> | N

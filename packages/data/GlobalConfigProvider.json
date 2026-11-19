@@ -667,6 +667,21 @@
     "custom_field_type": "TagConfig"
   },
   {
+    "id": 1794217178,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "GlobalConfigProvider",
+    "field_category": "Props",
+    "field_name": "textarea",
+    "field_type": [
+      "Object"
+    ],
+    "field_desc_zh": "多行文本框组件全局配置",
+    "field_desc_en": "Textarea global configs",
+    "custom_field_type": "TextareaConfig"
+  },
+  {
     "id": 1876,
     "platform_framework": [
       "Vue(PC)",
