@@ -236,6 +236,7 @@
   {
     "id": 1760085916,
     "platform_framework": [
+      "Miniprogram",
       "UniApp"
     ],
     "component": "Col",

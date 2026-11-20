@@ -99,6 +99,7 @@
   {
     "id": 1760085899,
     "platform_framework": [
+      "Miniprogram",
       "UniApp"
     ],
     "component": "Row",
