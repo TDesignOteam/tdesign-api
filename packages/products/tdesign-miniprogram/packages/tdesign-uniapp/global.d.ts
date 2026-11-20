@@ -91,7 +91,6 @@ declare module 'vue' {
     TTextarea: typeof import('tdesign-uniapp/textarea/textarea.vue').default;
     TTypographyTitle: (typeof import('tdesign-uniapp'))['Title'];
     TToast: typeof import('tdesign-uniapp/toast/toast.vue').default;
-    TTransfer: typeof import('tdesign-uniapp/transfer/transfer.vue').default;
     TTransition: typeof import('tdesign-uniapp/transition/transition.vue').default;
     TTree: typeof import('tdesign-uniapp/tree/tree.vue').default;
     TTreeSelect: typeof import('tdesign-uniapp/tree-select/tree-select.vue').default;
