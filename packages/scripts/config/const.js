@@ -12,6 +12,7 @@ import {
   CHAT_COMPONENT_MAP,
   CHAT_FRAMEWORKS,
   getChatComponentMap,
+  mergeComponentMaps,
 } from './files-combine.js';
 import VUE_TITLE_MAP from './language/api-docs-title.js';
 
@@ -106,4 +107,5 @@ export {
   CHAT_COMPONENT_MAP,
   CHAT_FRAMEWORKS,
   getChatComponentMap,
+  mergeComponentMaps,
 };

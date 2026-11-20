@@ -8,6 +8,7 @@ import {
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
   getChatComponentMap,
+  mergeComponentMaps,
 } from '../config/index.js';
 import { getApiComponentMapByFrameWork, componentsMap, isTypeApi, isPlugin } from '../core/context.js';
 import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
@@ -18,16 +19,10 @@ let currentFramework = '';
 function getComponentApiMdMap() {
   return getApiComponentMapByFrameWork(
     currentFramework === 'Miniprogram' || currentFramework === 'UniApp'
-      ? Object.assign(
-          {},
-          COMPONENT_API_MD_MAP,
-          MOBILE_COMPONENT_API_MD_MAP,
-          MINIPROGRAM_COMPONENT_API_MD_MAP,
-          getChatComponentMap(currentFramework),
-        )
+      ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
       : MOBILE_FRAMES.includes(currentFramework)
-        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
-        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
+        ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
+        : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
     currentFramework,
   );
 }

@@ -20,6 +20,7 @@ import {
   COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
   getChatComponentMap,
+  mergeComponentMaps,
   getChatConfig,
 } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
@@ -134,7 +135,7 @@ async function generateCompletion(baseData, framework) {
 function getHelperData(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
   const cmpMap = getApiComponentMapByFrameWork(
-    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
+    mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
     framework,
   );
   const tags = {};

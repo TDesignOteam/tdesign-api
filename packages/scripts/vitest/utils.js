@@ -21,7 +21,17 @@ function getSkipCode(skip) {
 }
 
 function groupByComponent(allApi, framework) {
-  const categoryOrder = ['Props', 'Events', 'Functions', 'Extends', 'Return', '<T>', 'External Classes', 'CSS Variables', 'Slots'];
+  const categoryOrder = [
+    'Props',
+    'Events',
+    'Functions',
+    'Extends',
+    'Return',
+    '<T>',
+    'External Classes',
+    'CSS Variables',
+    'Slots',
+  ];
   const result = {};
   allApi.forEach((api) => {
     if (framework && !api.platform_framework.includes(framework)) return;
@@ -47,28 +57,44 @@ function groupByComponent(allApi, framework) {
   return result;
 }
 
+// 判断某条父子关系配置是否在当前框架生效
+// 没有 includes，并且没有 excludes，则认为适用所有框架。
+// 存在 includes，则表示仅在 includes 里面的框架才生效
+// 存在 excludes，则表示在 excludes 中的框架，父子关系不生效
+function isMergeConfigApplied(config, framework) {
+  return (
+    (!config.includes && !config.excludes) ||
+    (config.includes && config.includes.includes(framework)) ||
+    (config.excludes && !config.excludes.includes(framework))
+  );
+}
+
+// 将一条配置规范化为「带 include/exclude 的配置对象」列表，支持三种写法：
+// 1. ['List', 'ListItem']            → 纯组件名，适用于所有框架
+// 2. { list: [], includes: [] }      → 单条配置
+// 3. [{ list: [], includes: [] }]    → 同一父组件在不同框架下的多套配置
+function normalizeMergeConfigs(item, parentComponent) {
+  if (item instanceof Array) {
+    if (item.every((v) => typeof v === 'string')) return [{ list: item }];
+    return item.filter((v) => v && typeof v === 'object').map((config) => ({ ...config }));
+  }
+  if (item && typeof item === 'object') return [{ ...item }];
+  console.warn(`组件 ${parentComponent} 的父子关系配置结构不对，只能是 Array 或者 Object 类型`);
+  return [];
+}
+
 // 根据框架获取 API 文档输出路径关系（不同的框架，父子组件关系不一样）
 function getApiComponentMapByFrameWork(map, framework) {
   const rMap = {};
   Object.keys(map).forEach((parentComponent) => {
     if (!parentComponent) return;
-    const item = map[parentComponent];
-    if (item instanceof Array) {
-      rMap[parentComponent] = item;
-    } else if (typeof item === 'object') {
-      // 没有 includes，并且没有 excludes，则认为适用所有框架。
-      // 存在 includes，则表示仅在 includes 里面的框架才生效
-      // 存在 excludes，则表示在 excludes 中的框架，父子关系不生效
-      if (
-        (!item.includes && !item.excludes) ||
-        (item.includes && item.includes.includes(framework)) ||
-        (item.excludes && !item.excludes.includes(framework))
-      ) {
-        rMap[parentComponent] = item.list;
-      }
-    } else {
-      console.warn('COMPONENT_API_MD_MAP 数据结构不对，只能是 Array 或者 Object 类型');
-    }
+    const configs = normalizeMergeConfigs(map[parentComponent], parentComponent);
+    const merged = [
+      ...new Set(
+        configs.filter((config) => isMergeConfigApplied(config, framework)).flatMap((config) => config.list || []),
+      ),
+    ];
+    if (merged.length) rMap[parentComponent] = merged;
   });
   return rMap;
 }
